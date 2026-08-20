@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>매너리즘 — 르네상스의 완벽한 균형을 일부러 흔들다</title>
+<style>
+:root {
+  --bg:#0a0c0f; --panel:#12161b; --panel2:#181d23; --text:#f2efe9;
+  --muted:#aeb6bf; --line:#2a3037; --gold:#d8aa4b; --violet:#b59ad9;
+  --rose:#c86e82; --blue:#8eb6d9;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--text);line-height:1.75;
+  font-family:Inter,"Pretendard","Noto Sans KR",Arial,sans-serif;
+  background:
+    radial-gradient(circle at 15% 7%,rgba(181,154,217,.10),transparent 26rem),
+    radial-gradient(circle at 85% 8%,rgba(216,170,75,.10),transparent 27rem),
+    linear-gradient(180deg,#090b0e,#0d1014);
+}
+a{color:#efca78;text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{width:min(1200px,92vw);margin:auto}
+.hero{padding:76px 0 40px;border-bottom:1px solid var(--line)}
+.kicker{font-size:.84rem;font-weight:800;letter-spacing:.12em;color:var(--gold)}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.55rem,6vw,5.3rem);line-height:1.03;margin:.35rem 0 1rem}
+.hero p{max-width:1000px;color:#d3d9df;font-size:1.14rem}
+nav{position:sticky;top:0;z-index:20;background:rgba(10,12,15,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:18px;overflow:auto;padding:12px 0;white-space:nowrap;font-size:.9rem}
+section{padding:58px 0;border-bottom:1px solid var(--line)}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,3.5vw,3.15rem);margin:0 0 20px}
+h3{margin:.1rem 0 .55rem;font-size:1.18rem}
+.lead{font-size:1.08rem;color:#d6dce2;max-width:980px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:linear-gradient(180deg,var(--panel2),var(--panel));box-shadow:0 14px 34px rgba(0,0,0,.23)}
+.imgbox{background:#07090b;display:flex;align-items:center;justify-content:center;min-height:430px}
+.imgbox img{display:block;width:100%;height:570px;object-fit:contain}
+.caption{padding:18px 20px 20px}
+.caption small{display:block;color:var(--muted);margin-top:6px}
+.badge{display:inline-block;padding:4px 9px;border-radius:99px;border:1px solid #544323;background:rgba(216,170,75,.08);color:#f0ce83;font-size:.76rem;font-weight:800;margin-bottom:8px}
+.callout{border-left:4px solid var(--gold);padding:18px 21px;background:rgba(216,170,75,.08);border-radius:0 12px 12px 0;margin:24px 0}
+.bigline{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.3rem,2.6vw,1.95rem);padding:24px 28px;border-top:1px solid #59471f;border-bottom:1px solid #59471f;color:#f1ddb4;margin:25px 0;line-height:1.48}
+.features{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:26px 0}
+.feature{padding:17px;border:1px solid var(--line);border-radius:12px;background:var(--panel);min-height:150px}
+.feature b{color:var(--gold);font-size:.8rem}
+.feature span{display:block;font-weight:800;margin:.35rem 0}
+.feature p{font-size:.9rem;color:var(--muted);margin:0;line-height:1.55}
+.branch{border:1px solid var(--line);border-radius:15px;background:var(--panel);padding:22px}
+.branch.a{border-top:4px solid var(--violet)}
+.branch.b{border-top:4px solid var(--rose)}
+.branch.c{border-top:4px solid var(--blue)}
+.branch .eyebrow{font-size:.76rem;font-weight:800;letter-spacing:.08em;color:var(--muted)}
+.branch h3{font-size:1.3rem}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;margin-top:24px}
+table{width:100%;border-collapse:collapse;min-width:860px;background:var(--panel)}
+th,td{padding:14px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:#171b20;color:#f0d79f;font-size:.9rem}
+td:first-child{font-weight:750;color:#eef1f4;width:18%}
+tr:last-child td{border-bottom:0}
+.note{font-size:.94rem;color:var(--muted);background:#10141a;border:1px solid var(--line);padding:17px 19px;border-radius:12px}
+.chain{display:flex;align-items:stretch;gap:10px;overflow:auto;padding:8px 0 4px}
+.chain .node{min-width:185px;flex:1;padding:17px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.chain .arrow{display:flex;align-items:center;color:var(--gold);font-size:1.4rem}
+footer{padding:36px 0 60px;color:#7f8993;font-size:.86rem}
+mark{background:rgba(216,170,75,.17);color:#ffe2a8;padding:.03em .22em;border-radius:4px}
+ul{padding-left:1.25rem}
+li{margin:.4rem 0}
+@media(max-width:920px){
+ .grid2,.grid3{grid-template-columns:1fr}
+ .features{grid-template-columns:1fr 1fr}
+ .imgbox img{height:auto;max-height:610px}
+}
+@media(max-width:560px){
+ .features{grid-template-columns:1fr}
+}
+</style>
+<link rel="stylesheet" href="../../uhangul/uhangul-runtime.css" data-uhangul-integration="v0.3">
+<style id="art-atlas-artist-link-style">
+.art-atlas-artist-link{font-weight:900;color:#191007!important;background:linear-gradient(180deg,rgba(255,232,151,.98),rgba(255,198,86,.9));border-bottom:2px solid #a96f12;border-radius:.22em;padding:0 .16em;text-decoration:none!important;box-decoration-break:clone;-webkit-box-decoration-break:clone}.art-atlas-artist-link:hover{filter:brightness(1.08);box-shadow:0 0 0 2px rgba(255,214,102,.24)}
+</style>
+</head>
+<body>
+<div data-uhangul-corner-bar style="position:sticky!important;top:0!important;z-index:2147483647!important;clear:both!important;height:64px!important;display:flex!important;align-items:center!important;padding:10px 18px!important;background:#0c1014!important;border-bottom:1px solid #2d3540!important"><button type="button" data-uhangul-corner-button aria-label="uHangul 켜기" title="uHangul 켜기" aria-pressed="false" style="position:relative!important;z-index:2147483647!important;display:block!important;border:2px solid #f4c55b!important;border-radius:50%!important;width:38px!important;height:38px!important;padding:0!important;background:#18221e!important;color:#f4c55b!important;font:800 23px/34px Georgia,serif!important;text-align:center!important;cursor:pointer!important;visibility:visible!important;opacity:1!important">u</button></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="hero">
+
+
+
+<div class="wrap">
+  <div class="kicker">미술사 · 전성기 르네상스에서 바로크 사이</div>
+  <h1>매너리즘<br><span style="color:var(--gold)">완벽한 균형을 일부러 흔들다</span></h1>
+  <p>
+    매너리즘은 르네상스의 실패가 아니라, 오히려 <strong>르네상스가 너무 완벽하게 완성된 뒤 등장한 의도적인 변형</strong>에 가깝다.
+    <a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q5597" target="_blank" rel="noopener" data-artist-id="artist-Q5597" data-uh-original="Raffaello Sanzio da Urbino" data-uh-korean="라파엘로 산치오" data-uh-display-korean="라파엘로" title="라파엘로 산치오 연표로 이동">라파엘로</a>와 <a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q5592" target="_blank" rel="noopener" data-artist-id="artist-Q5592" data-uh-original="Michelangelo Buonarroti" data-uh-korean="미켈란젤로 부오나로티" data-uh-display-korean="미켈란젤로" title="미켈란젤로 부오나로티 연표로 이동">미켈란젤로</a> 세대가 구축한 이상적 인체, 명료한 원근법, 균형 잡힌 구도를 그대로 반복하는 대신,
+    매너리즘 화가들은 <strong>길어진 인체, 불안정한 공간, 복잡한 자세, 차가운 색, 지적인 암시</strong>를 통해
+    새롭고 인공적인 아름다움을 추구했다.
+  </p>
+</div>
+</header>
+
+<nav>
+<div class="wrap">
+  <a href="#question">0. 무엇을 바꾸었나</a>
+  <a href="#before">1. 이전: 르네상스</a>
+  <a href="#pontormo">2. 첫 번째 전환</a>
+  <a href="#traits">3. 핵심 특징</a>
+  <a href="#branches">4. 주요 경향</a>
+  <a href="#parmigianino">5. 파르미자니노</a>
+  <a href="#bronzino">6. 브론치노</a>
+  <a href="#after">7. 바로크로</a>
+  <a href="#compare">8. 직접 비교</a>
+  <a href="#countries">국가별 전개</a>
+</div>
+</nav>
+
+<main>
+
+<section id="question">
+<div class="wrap">
+  <h2>0. 매너리즘은 무엇을 바꾸려 했는가?</h2>
+  <p class="lead">
+    전성기 르네상스의 이상은 <strong>균형, 조화, 자연스러운 인체, 명료한 공간, 고전적 질서</strong>였다.
+    매너리즘은 이 완벽한 공식이 더 이상 새롭지 않다고 느끼고,
+    자연을 정확히 재현하는 것보다 <strong>화가의 세련된 방식과 의도적인 왜곡</strong>을 더 중요한 가치로 끌어올렸다.
+  </p>
+
+  <div class="features">
+    <div class="feature"><b>01 · 비례</b><span>자연 → 의도적 왜곡</span><p>목, 손가락, 팔다리를 비정상적으로 늘여 세련미와 긴장을 만든다.</p></div>
+    <div class="feature"><b>02 · 공간</b><span>명료 → 불안정</span><p>원근법적으로 가능한 공간보다 모호하고 압축된 공간을 선호한다.</p></div>
+    <div class="feature"><b>03 · 자세</b><span>안정 → 복잡</span><p>몸을 비틀고 꼬는 자세가 행동보다 그 자체로 미적 가치가 된다.</p></div>
+    <div class="feature"><b>04 · 색채</b><span>자연색 → 비현실적 색</span><p>분홍, 청록, 보라 같은 차갑고 인공적인 색조가 자주 사용된다.</p></div>
+    <div class="feature"><b>05 · 의미</b><span>명료 → 지적 암시</span><p>주제와 상징을 의도적으로 복잡하게 만들어 해석의 여지를 남긴다.</p></div>
+  </div>
+
+  <div class="callout">
+    <strong>핵심:</strong> 매너리즘은 “현실을 더 정확히 그리는 법”을 찾은 것이 아니라,
+    <strong>이미 완성된 르네상스 문법을 얼마나 세련되고 독창적으로 변형할 수 있는가</strong>를 탐구했다.
+  </div>
+</div>
+</section>
+
+<section id="before">
+<div class="wrap">
+  <h2>1. Before — 전성기 르네상스의 완성</h2>
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Raffael-058-a68f7cff3330.jpg" alt="라파엘로, 아테네 학당"></div>
+      <div class="caption">
+        <span class="badge">전성기 르네상스</span>
+        <h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q5597" target="_blank" rel="noopener" data-artist-id="artist-Q5597" data-uh-original="Raffaello Sanzio da Urbino" data-uh-korean="라파엘로 산치오" data-uh-display-korean="라파엘로" title="라파엘로 산치오 연표로 이동">라파엘로</a>, 《아테네 학당》</h3>
+        <small>1509–1511 · 바티칸 궁전</small>
+      </div>
+    </article>
+
+    <div>
+      <h3>르네상스가 이상적으로 생각한 회화</h3>
+      <ul>
+        <li><strong>완벽한 중앙 원근법:</strong> 건축과 인물이 하나의 논리적 공간에 놓인다.</li>
+        <li><strong>균형:</strong> 좌우의 인물군이 안정적으로 대응한다.</li>
+        <li><strong>이상적 인체:</strong> 실제 인간을 관찰하지만 고전적 비례와 이상으로 정제한다.</li>
+        <li><strong>명료한 이야기:</strong> 중앙의 플라톤과 아리스토텔레스가 장면의 의미를 조직한다.</li>
+        <li><strong>고전적 조화:</strong> 각각의 인물과 건축은 전체 질서를 깨뜨리지 않는다.</li>
+      </ul>
+      <div class="bigline">
+        전성기 르네상스의 목표는<br>
+        <strong>“자연과 인간을 가장 조화롭고 완전한 질서 안에서 보여주는 것”</strong>이었다.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="pontormo">
+<div class="wrap">
+  <h2>2. Break — 폰토르모가 균형을 무너뜨리다</h2>
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Jacopo-20Pontormo-20004-2dcaf20c0708.jpg" alt="폰토르모, 십자가에서 내려지는 그리스도"></div>
+      <div class="caption">
+        <span class="badge">초기 매너리즘</span>
+        <h3>폰토르모, 《십자가에서 내려지는 그리스도》</h3>
+        <small>1525–1528 · 피렌체 산타 펠리치타 성당</small>
+      </div>
+    </article>
+
+    <div>
+      <h3>르네상스의 문법이 의도적으로 흔들린다</h3>
+      <ul>
+        <li><strong>공간:</strong> 바닥과 배경이 거의 사라져 인물들이 공중에 떠 있는 것처럼 보인다.</li>
+        <li><strong>무게:</strong> 인체는 부피가 있지만 중력의 압박을 충분히 받지 않는 듯하다.</li>
+        <li><strong>구도:</strong> 안정된 삼각형 대신 인물들이 소용돌이치듯 얽힌다.</li>
+        <li><strong>색:</strong> 분홍, 청록, 푸른색이 실제 자연보다 더 인공적이고 차갑다.</li>
+        <li><strong>정서:</strong> 슬픔은 존재하지만 자연스러운 감정보다 낯설고 몽환적인 긴장이 강하다.</li>
+      </ul>
+
+      <div class="bigline">
+        <a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q5597" target="_blank" rel="noopener" data-artist-id="artist-Q5597" data-uh-original="Raffaello Sanzio da Urbino" data-uh-korean="라파엘로 산치오" data-uh-display-korean="라파엘로" title="라파엘로 산치오 연표로 이동">라파엘로</a>가 <strong>세계를 정리</strong>했다면,<br>
+        폰토르모는 그 질서를 <strong>의도적으로 불안하게 만든다.</strong>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="traits">
+<div class="wrap">
+  <h2>3. 매너리즘을 그림에서 알아보는 핵심 특징</h2>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>관찰 항목</th><th>전성기 르네상스</th><th>매너리즘</th></tr></thead>
+    <tbody>
+      <tr><td>인체</td><td>이상적이지만 자연스러운 비례</td><td>길어지고 가늘어지거나 비틀린 비례</td></tr>
+      <tr><td>자세</td><td>안정적이며 의미가 명확함</td><td>복잡한 회전, 인공적인 몸짓</td></tr>
+      <tr><td>공간</td><td>원근법적으로 명료함</td><td>압축되거나 모호하고 비논리적</td></tr>
+      <tr><td>구도</td><td>대칭·균형·중심성</td><td>불균형·과밀·예측하기 어려운 배열</td></tr>
+      <tr><td>색채</td><td>자연스럽고 조화로움</td><td>차갑고 비현실적인 색 대비</td></tr>
+      <tr><td>감정</td><td>절제되고 고전적</td><td>긴장되고 심리적으로 불안정</td></tr>
+      <tr><td>화가의 목표</td><td>자연과 이상을 조화롭게 재현</td><td>화가의 솜씨와 독창적 방식 자체를 과시</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout">
+    매너리즘의 영어 이름 <strong>Mannerism</strong>은 ‘방식·스타일’을 뜻하는
+    이탈리아어 <strong>maniera</strong>와 관련된다.
+    즉 자연을 그대로 따르기보다 <strong>세련된 ‘그리는 방식’ 자체</strong>가 중요한 가치가 된 것이다.
+  </div>
+</div>
+</section>
+
+<section id="branches">
+<div class="wrap">
+  <h2>4. 매너리즘도 한 가지 모습만 있었던 것은 아니다</h2>
+  <p class="lead">
+    바로크처럼 명확한 두 학파로 분리되었다고 말하기는 어렵지만,
+    작품을 이해하기 위해서는 다음 세 경향을 구분하면 유용하다.
+  </p>
+
+  <div class="grid3" style="margin-top:28px">
+    <div class="branch a">
+      <div class="eyebrow">피렌체·로마</div>
+      <h3>① 불안정한 공간과 감정</h3>
+      <p>폰토르모, 로소 피오렌티노 등에서 보이는 복잡한 자세, 불안한 공간, 비현실적 색채가 특징이다.</p>
+    </div>
+
+    <div class="branch b">
+      <div class="eyebrow">파르마</div>
+      <h3>② 우아한 인체의 과장</h3>
+      <p>파르미자니노처럼 신체를 길고 가늘게 변형하여 세련되고 비현실적인 아름다움을 추구한다.</p>
+    </div>
+
+    <div class="branch c">
+      <div class="eyebrow">궁정적 매너리즘</div>
+      <h3>③ 냉정한 세련미와 지적 상징</h3>
+      <p>브론치노 같은 화가에게서 귀족적 냉정함, 정교한 피부 표현, 복잡한 알레고리가 두드러진다.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="parmigianino">
+<div class="wrap">
+  <h2>5. 파르미자니노 — 아름다움을 위해 인체를 일부러 늘이다</h2>
+
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Parmigianino-Madonna-dal-collo-lungo-Google-Art-Project-0558c795727f.jpg" alt="파르미자니노, 긴 목의 성모"></div>
+      <div class="caption">
+        <span class="badge">우아한 매너리즘</span>
+        <h3>파르미자니노, 《긴 목의 성모》</h3>
+        <small>1534–1540 · 피렌체 우피치 미술관</small>
+      </div>
+    </article>
+
+    <div>
+      <h3>왜 목이 이렇게 긴가?</h3>
+      <ul>
+        <li>성모의 목과 손가락은 실제 인체보다 훨씬 길다.</li>
+        <li>아기 예수의 몸도 비현실적으로 늘어져 있다.</li>
+        <li>오른쪽의 작은 인물과 거대한 기둥은 정상적인 원근 관계를 깨뜨린다.</li>
+        <li>하지만 이런 왜곡은 실수가 아니라 <strong>의도적인 우아함</strong>을 위한 선택이다.</li>
+      </ul>
+
+      <div class="bigline">
+        르네상스라면 “올바른 비례인가?”가 중요하지만,<br>
+        매너리즘에서는 <strong>“더 우아하게 보이는가?”</strong>가 더 중요할 수 있다.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="bronzino">
+<div class="wrap">
+  <h2>6. 브론치노 — 차갑고 지적인 궁정 매너리즘</h2>
+
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Angelo-20Bronzino-20-20Venus-20Cupid-20Folly-20and-20Time-20-20Nationa-72f45c00b9b9.jpg" alt="브론치노, 비너스와 큐피드의 알레고리"></div>
+      <div class="caption">
+        <span class="badge">궁정 매너리즘</span>
+        <h3>브론치노, 《비너스와 큐피드의 알레고리》</h3>
+        <small>약 1545 · 런던 내셔널 갤러리</small>
+      </div>
+    </article>
+
+    <div>
+      <h3>여기서는 자연스러움보다 지적 게임이 중요하다</h3>
+      <ul>
+        <li>피부는 실제 피부보다 매끈한 도자기처럼 보인다.</li>
+        <li>인물 자세는 복잡하고 친밀하지만 동시에 부자연스럽다.</li>
+        <li>화면 곳곳에 시간, 쾌락, 기만, 질투와 관련된 복잡한 상징이 배치된다.</li>
+        <li>관람자는 장면을 즉시 이해하기보다 <strong>무엇을 뜻하는지 해석</strong>해야 한다.</li>
+      </ul>
+
+      <div class="callout">
+        이 작품은 매너리즘이 단순한 “신체 왜곡”이 아니라
+        <strong>세련된 궁정 문화, 지적 암시, 복잡한 상징 체계</strong>와도 깊게 연결되어 있음을 잘 보여준다.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="after">
+<div class="wrap">
+  <h2>7. After — 왜 다음 세대는 다시 현실로 돌아가려 했는가?</h2>
+
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Caravaggio-27s-The-Calling-of-St-Matthew-3ab8156a9736.jpg" alt="카라바조, 성 마태오의 소명"></div>
+      <div class="caption">
+        <span class="badge">초기 바로크 · <a class="art-atlas-artist-link" href="../../index.html?artist=artist-1786371252483" target="_blank" rel="noopener" data-artist-id="artist-1786371252483" data-uh-original="Michelangelo Merisi da Caravaggio" data-uh-korean="미켈란젤로 메리시 다 카라바조" data-uh-display-korean="카라바조" title="미켈란젤로 메리시 다 카라바조 연표로 이동">카라바조</a></span>
+        <h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-1786371252483" target="_blank" rel="noopener" data-artist-id="artist-1786371252483" data-uh-original="Michelangelo Merisi da Caravaggio" data-uh-korean="미켈란젤로 메리시 다 카라바조" data-uh-display-korean="카라바조" title="미켈란젤로 메리시 다 카라바조 연표로 이동">카라바조</a>, 《성 마태오의 소명》</h3>
+        <small>1599–1600 · 로마 산 루이지 데이 프란체지 성당</small>
+      </div>
+    </article>
+
+    <div>
+      <h3>매너리즘에 대한 반작용</h3>
+      <p>
+        16세기 말이 되면 매너리즘의 세련된 인공성은 일부 화가들에게
+        현실과 지나치게 멀어진 것으로 느껴졌다.
+        <a class="art-atlas-artist-link" href="../../index.html?artist=artist-1786371252483" target="_blank" rel="noopener" data-artist-id="artist-1786371252483" data-uh-original="Michelangelo Merisi da Caravaggio" data-uh-korean="미켈란젤로 메리시 다 카라바조" data-uh-display-korean="카라바조" title="미켈란젤로 메리시 다 카라바조 연표로 이동">카라바조</a>와 <a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q7824" target="_blank" rel="noopener" data-artist-id="artist-Q7824" data-uh-original="Annibale Carracci" data-uh-korean="안니발레 카라치" data-uh-display-korean="안니발레 카라치" title="안니발레 카라치 연표로 이동">안니발레 카라치</a>는 서로 다른 방식으로 이에 반응했다.
+      </p>
+      <ul>
+        <li><strong><a class="art-atlas-artist-link" href="../../index.html?artist=artist-1786371252483" target="_blank" rel="noopener" data-artist-id="artist-1786371252483" data-uh-original="Michelangelo Merisi da Caravaggio" data-uh-korean="미켈란젤로 메리시 다 카라바조" data-uh-display-korean="카라바조" title="미켈란젤로 메리시 다 카라바조 연표로 이동">카라바조</a>:</strong> 평범한 인간, 거친 현실, 강한 명암, 결정적 순간으로 돌아감.</li>
+        <li><strong>카라치:</strong> 자연 관찰과 르네상스 고전주의의 질서를 새롭게 결합함.</li>
+      </ul>
+      <div class="bigline">
+        매너리즘이 <strong>현실을 의도적으로 변형</strong>했다면,<br>
+        바로크의 두 출발점은 서로 다른 방법으로 <strong>현실과 자연의 설득력을 회복</strong>하려 했다.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="compare">
+<div class="wrap">
+  <h2>8. 르네상스 → 매너리즘 → 바로크를 한눈에 비교하면</h2>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>비교 항목</th><th>전성기 르네상스</th><th>매너리즘</th><th>초기 바로크</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>대표적 목표</td><td>조화롭고 완전한 세계</td><td>세련되고 독창적인 변형</td><td>현실적이고 강렬한 체험</td></tr>
+      <tr><td>인체</td><td>이상적·자연적</td><td>길고 비틀리며 과장됨</td><td>현실적이며 행동성이 강함</td></tr>
+      <tr><td>공간</td><td>명료한 원근법</td><td>압축·모호·비논리적</td><td>극적이고 관람자에게 열림</td></tr>
+      <tr><td>구도</td><td>균형·대칭·중심성</td><td>불균형·복잡성</td><td>대각선·운동·긴장</td></tr>
+      <tr><td>색과 빛</td><td>조화롭고 자연스러움</td><td>인공적이고 차가운 색</td><td>강한 명암과 극적 조명</td></tr>
+      <tr><td>관람자 경험</td><td>이상적 세계를 감상</td><td>세련된 방식과 난해함을 해석</td><td>사건의 목격자가 됨</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout">
+    <strong>가장 간단한 기억법</strong><br><br>
+    르네상스: <strong>“완벽하게 정리한다.”</strong><br>
+    매너리즘: <strong>“일부러 비튼다.”</strong><br>
+    바로크: <strong>“다시 현실을 강렬하게 움직인다.”</strong>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <h2>전체 흐름</h2>
+  <div class="chain">
+    <div class="node"><strong>전성기 르네상스</strong><br><span style="color:var(--muted)">균형·조화·이상적 인체</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong>초기 매너리즘</strong><br><span style="color:var(--muted)">공간과 인체의 의도적 왜곡</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong>성숙한 매너리즘</strong><br><span style="color:var(--muted)">우아함·인공성·궁정적 세련미</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong>초기 바로크</strong><br><span style="color:var(--muted)">자연·현실·운동의 재강조</span></div>
+  </div>
+
+  <div class="note" style="margin-top:26px">
+    ※ 매너리즘은 엄밀한 하나의 “학파”라기보다 1520년경 이후 이탈리아에서 시작되어
+    유럽 궁정 문화로 확산된 복수의 경향을 묶는 미술사적 명칭이다.
+    지역과 화가에 따라 차이가 크며, 모든 매너리즘 작품이 동일한 특징을 보이는 것은 아니다.
+  </div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <h2>작품 이미지</h2>
+  <div class="note">
+    작품 이미지는 자료 폴더의 로컬 이미지 파일을 사용하도록 구성했다.
+    외부 링크가 바뀌거나 인터넷 연결이 없어도 이미지가 표시된다.
+  </div>
+</div>
+</section>
+
+
+<section id="countries"><div class="wrap">
+<h2>여러 국가에서의 전개 — 매너리즘은 궁정 네트워크를 따라 국제화되었다</h2>
+<p class="lead">매너리즘의 공통점은 <strong>전성기 르네상스의 자연스러운 조화보다 세련된 인공성, 복잡한 자세, 의도적 왜곡과 지적인 암시</strong>를 선호했다는 데 있다.</p>
+<div class="table-wrap"><table><thead><tr><th>국가·지역</th><th>특징</th><th>대표 화가·중심</th></tr></thead><tbody>
+<tr><td>이탈리아</td><td>피렌체·로마·파르마에서 전성기 르네상스의 균형을 의도적으로 비틀며 길어진 인체, 불안정한 공간, 복잡한 색채가 나타났다.</td><td>폰토르모, 파르미자니노, 브론치노</td></tr>
+<tr><td>프랑스</td><td>퐁텐블로 궁정을 중심으로 이탈리아 매너리즘이 장식·신화·관능적인 인체와 결합해 국제적 궁정양식으로 발전했다.</td><td>로소 피오렌티노, 프리마티초, 퐁텐블로파</td></tr>
+<tr><td>스페인</td><td><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q301" target="_blank" rel="noopener" data-artist-id="artist-Q301" data-uh-original="El Greco" data-uh-korean="엘 그레코" data-uh-display-korean="엘 그레코" title="엘 그레코 연표로 이동">엘 그레코</a>의 길어진 인체와 비현실적 색채는 매너리즘과 연결되지만, 스페인의 강한 종교적 영성과 개인적 양식이 결합된 독자적 사례로 보는 것이 적절하다.</td><td><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q301" target="_blank" rel="noopener" data-artist-id="artist-Q301" data-uh-original="El Greco" data-uh-korean="엘 그레코" data-uh-display-korean="엘 그레코" title="엘 그레코 연표로 이동">엘 그레코</a></td></tr>
+<tr><td>프라하·합스부르크 궁정</td><td>루돌프 2세 궁정에서 신화·에로티시즘·기괴한 변형·수집문화가 결합한 국제적 궁정 매너리즘이 번성했다.</td><td>바르톨로메우스 슈프랑어, 주세페 아르침볼도</td></tr>
+</tbody></table></div>
+<div class="callout"><strong>공통 철학:</strong> 자연스러운 르네상스 규범보다 ‘세련된 방식(maniera)’ 자체를 강조한다.<br><strong>지역적 차이:</strong> 이탈리아에서는 회화적 실험, 프랑스와 프라하에서는 궁정적 장식과 지적 유희, 스페인에서는 종교적 긴장과 결합했다.</div>
+</div></section>
+
+</main>
+
+<footer>
+<div class="wrap">매너리즘 — 르네상스의 완벽한 균형을 일부러 흔들다 · 비교를 통한 미술사 이해</div>
+</footer>
+
+<script defer src="../../uhangul/uhangul-runtime.js" data-uhangul-integration="v0.4"></script>
+
+</body>
+</html>

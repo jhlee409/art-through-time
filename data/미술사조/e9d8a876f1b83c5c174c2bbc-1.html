@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>다다 — 이성과 예술의 규칙을 의심하다</title>
+<style>
+:root {
+  --bg:#090b0e; --panel:#12161b; --panel2:#181d23; --text:#f2efe8;
+  --muted:#aab3bc; --line:#2a3037; --gold:#d7a74a; --red:#c35d55;
+  --blue:#7f9fc3; --green:#8dad93; --violet:#9a8bc0;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--text);line-height:1.75;
+  font-family:Inter,"Pretendard","Noto Sans KR",Arial,sans-serif;
+  background:
+    radial-gradient(circle at 12% 6%,rgba(195,93,85,.10),transparent 28rem),
+    radial-gradient(circle at 84% 8%,rgba(127,159,195,.08),transparent 28rem),
+    linear-gradient(180deg,#080a0d,#0d1014);
+}
+a{color:#edc777;text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{width:min(1200px,92vw);margin:auto}
+.hero{padding:76px 0 40px;border-bottom:1px solid var(--line)}
+.kicker{font-size:.84rem;font-weight:800;letter-spacing:.12em;color:var(--gold)}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.5rem,6vw,5.25rem);line-height:1.04;margin:.35rem 0 1rem}
+.hero p{max-width:1060px;color:#d2d8df;font-size:1.14rem}
+nav{position:sticky;top:0;z-index:20;background:rgba(9,11,14,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:18px;overflow:auto;padding:12px 0;white-space:nowrap;font-size:.9rem}
+section{padding:58px 0;border-bottom:1px solid var(--line)}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,3.5vw,3.1rem);margin:0 0 20px}
+h3{margin:.1rem 0 .55rem;font-size:1.18rem}
+.lead{font-size:1.08rem;color:#d5dbe1;max-width:1000px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:linear-gradient(180deg,var(--panel2),var(--panel));box-shadow:0 14px 34px rgba(0,0,0,.23)}
+.imgbox{background:#07090b;display:flex;align-items:center;justify-content:center;min-height:430px}
+.imgbox img{display:block;width:100%;height:570px;object-fit:contain}
+.caption{padding:18px 20px 20px}
+.caption small{display:block;color:var(--muted);margin-top:6px}
+.badge{display:inline-block;padding:4px 9px;border-radius:99px;border:1px solid #544323;background:rgba(215,167,74,.08);color:#efcb80;font-size:.76rem;font-weight:800;margin-bottom:8px}
+.callout{border-left:4px solid var(--gold);padding:18px 21px;background:rgba(215,167,74,.08);border-radius:0 12px 12px 0;margin:24px 0}
+.bigline{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.3rem,2.6vw,1.95rem);padding:24px 28px;border-top:1px solid #59471f;border-bottom:1px solid #59471f;color:#f0dcb1;margin:25px 0;line-height:1.48}
+.features{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:26px 0}
+.feature{padding:17px;border:1px solid var(--line);border-radius:12px;background:var(--panel);min-height:150px}
+.feature b{color:var(--gold);font-size:.8rem}
+.feature span{display:block;font-weight:800;margin:.35rem 0}
+.feature p{font-size:.9rem;color:var(--muted);margin:0;line-height:1.55}
+.timeline{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:28px 0}
+.time{padding:17px;border:1px solid var(--line);border-radius:12px;background:var(--panel);min-height:178px}
+.time .year{font-family:Georgia,serif;color:var(--gold);font-size:1.22rem;font-weight:700}
+.time strong{display:block;margin:.35rem 0}
+.time p{font-size:.88rem;color:var(--muted);margin:0;line-height:1.5}
+.branch{border:1px solid var(--line);border-radius:15px;background:var(--panel);padding:22px}
+.branch.a{border-top:4px solid var(--red)}
+.branch.b{border-top:4px solid var(--blue)}
+.branch.c{border-top:4px solid var(--green)}
+.branch .eyebrow{font-size:.76rem;font-weight:800;letter-spacing:.08em;color:var(--muted)}
+.branch h3{font-size:1.28rem}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;margin-top:24px}
+table{width:100%;border-collapse:collapse;min-width:920px;background:var(--panel)}
+th,td{padding:14px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:#171b20;color:#efd69c;font-size:.9rem}
+td:first-child{font-weight:750;color:#eef1f4;width:18%}
+tr:last-child td{border-bottom:0}
+.note{font-size:.94rem;color:var(--muted);background:#10141a;border:1px solid var(--line);padding:17px 19px;border-radius:12px}
+.chain{display:flex;align-items:stretch;gap:10px;overflow:auto;padding:8px 0 4px}
+.chain .node{min-width:185px;flex:1;padding:17px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.chain .arrow{display:flex;align-items:center;color:var(--gold);font-size:1.4rem}
+.source-list{font-size:.9rem;color:var(--muted)}
+footer{padding:36px 0 60px;color:#7f8993;font-size:.86rem}
+ul{padding-left:1.25rem}
+li{margin:.4rem 0}
+@media(max-width:980px){
+ .grid2,.grid3{grid-template-columns:1fr}
+ .features,.timeline{grid-template-columns:1fr 1fr}
+ .imgbox img{height:auto;max-height:610px}
+}
+@media(max-width:560px){
+ .features,.timeline{grid-template-columns:1fr}
+}
+</style>
+<link rel="stylesheet" href="../../uhangul/uhangul-runtime.css" data-uhangul-integration="v0.3">
+<style id="art-atlas-artist-link-style">
+.art-atlas-artist-link{font-weight:900;color:#191007!important;background:linear-gradient(180deg,rgba(255,232,151,.98),rgba(255,198,86,.9));border-bottom:2px solid #a96f12;border-radius:.22em;padding:0 .16em;text-decoration:none!important;box-decoration-break:clone;-webkit-box-decoration-break:clone}.art-atlas-artist-link:hover{filter:brightness(1.08);box-shadow:0 0 0 2px rgba(255,214,102,.24)}
+</style>
+</head>
+
+<body>
+<div data-uhangul-corner-bar style="position:sticky!important;top:0!important;z-index:2147483647!important;clear:both!important;height:64px!important;display:flex!important;align-items:center!important;padding:10px 18px!important;background:#0c1014!important;border-bottom:1px solid #2d3540!important"><button type="button" data-uhangul-corner-button aria-label="uHangul 켜기" title="uHangul 켜기" aria-pressed="false" style="position:relative!important;z-index:2147483647!important;display:block!important;border:2px solid #f4c55b!important;border-radius:50%!important;width:38px!important;height:38px!important;padding:0!important;background:#18221e!important;color:#f4c55b!important;font:800 23px/34px Georgia,serif!important;text-align:center!important;cursor:pointer!important;visibility:visible!important;opacity:1!important">u</button></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="hero">
+
+
+
+<div class="wrap">
+  <div class="kicker">미술사 · 제1차 세계대전과 반예술의 탄생</div>
+  <h1>다다<br><span style="color:var(--gold)">이성과 예술의 규칙을 의심하다</span></h1>
+  <p>
+    다다(Dada)는 하나의 통일된 화풍이라기보다 <strong>1916년경부터 1920년대 초까지 여러 도시에서 전개된 국제적 전위예술운동</strong>이다.
+    공통된 것은 특정한 붓질이나 색채가 아니라
+    <strong>제1차 세계대전까지 초래한 유럽 문명의 합리성·진보·권위·예술제도에 대한 불신</strong>이었다.
+    다다는 “새로운 아름다움”을 만들기보다 먼저
+    <strong>무엇이 예술이며, 왜 예술은 고상해야 하는가</strong>를 공격적으로 질문했다.
+  </p>
+</div>
+</header>
+
+<nav><div class="wrap">
+  <a href="#answer">0. 다다는 무엇인가</a>
+  <a href="#war">1. 왜 등장했나</a>
+  <a href="#zurich">2. 취리히</a>
+  <a href="#duchamp">3. 뒤샹</a>
+  <a href="#methods">4. 주요 기법</a>
+  <a href="#centers">5. 여러 도시</a>
+  <a href="#hoch">6. 베를린</a>
+  <a href="#schwitters">7. 하노버</a>
+  <a href="#surrealism">8. 초현실주의로</a>
+  <a href="#countries">9. 여러 국가에서의 전개</a>
+</div></nav>
+
+<main>
+
+<section id="answer"><div class="wrap">
+<h2>0. 먼저 결론 — 다다는 하나의 사조인가?</h2>
+<p class="lead">
+  그렇다. 다다는 미술사에서 <strong>하나의 예술운동 또는 전위운동</strong>으로 다룬다.
+  다만 야수주의처럼 공통된 색채, 입체주의처럼 공통된 공간해체법을 가진 “화풍”은 아니다.
+</p>
+
+<div class="features">
+  <div class="feature"><b>01 · 태도</b><span>창조 → 부정</span><p>기존 예술의 규칙과 권위를 의도적으로 공격한다.</p></div>
+  <div class="feature"><b>02 · 이성</b><span>합리 → 부조리</span><p>합리성을 절대적인 가치로 보는 근대 문명을 의심한다.</p></div>
+  <div class="feature"><b>03 · 제작</b><span>솜씨 → 선택</span><p>잘 그리는 기술보다 무엇을 선택하고 어떤 맥락에 두는지가 중요해진다.</p></div>
+  <div class="feature"><b>04 · 재료</b><span>미술재료 → 일상물</span><p>신문·사진·표·기계부품·공산품 등 일상 사물을 작품에 사용한다.</p></div>
+  <div class="feature"><b>05 · 목적</b><span>아름다움 → 질문</span><p>관람자를 즐겁게 하기보다 “이것도 예술인가?”라고 묻게 만든다.</p></div>
+</div>
+
+<div class="callout">
+  <strong>가장 간단한 기억법:</strong><br><br>
+  야수주의는 <strong>색</strong>을 해방했고,<br>
+  입체주의는 <strong>형태와 공간</strong>을 해방했으며,<br>
+  다다는 더 나아가 <strong>예술이라는 개념 자체</strong>를 해체하기 시작했다.
+</div>
+</div></section>
+
+<section id="war"><div class="wrap">
+<h2>1. 역사적 배경 — 왜 제1차 세계대전이 그렇게 중요했나?</h2>
+
+<div class="timeline">
+  <div class="time"><div class="year">1914</div><strong>제1차 세계대전 발발</strong><p>산업·과학·기술이 전례 없는 대량살상에 사용된다.</p></div>
+  <div class="time"><div class="year">1916</div><strong>카바레 볼테르</strong><p>중립국 스위스 취리히에서 망명 예술가들이 공연·시·소음·가면을 실험한다.</p></div>
+  <div class="time"><div class="year">1917</div><strong>뒤샹 《샘》</strong><p>레디메이드가 “작가의 솜씨”라는 기존 예술관을 정면으로 흔든다.</p></div>
+  <div class="time"><div class="year">1918</div><strong>전쟁 종료</strong><p>혁명·경제위기·정치적 불안이 유럽 여러 도시로 이어진다.</p></div>
+  <div class="time"><div class="year">1918–20</div><strong>베를린 다다</strong><p>포토몽타주와 강한 정치비판이 발전한다.</p></div>
+  <div class="time"><div class="year">1924</div><strong>초현실주의 선언</strong><p>파리의 다다 일부가 무의식과 꿈을 탐구하는 초현실주의로 이동한다.</p></div>
+</div>
+
+<div class="bigline">
+  “이성과 과학과 진보를 자랑하던 문명이 이런 전쟁을 만들었다면,<br>
+  <strong>그 문명이 말하는 합리성과 고상한 예술도 믿을 수 있는가?</strong>”
+</div>
+
+<div class="note">
+  다다의 모든 예술가가 동일한 정치적 입장을 가졌던 것은 아니다.
+  그러나 전쟁과 기존 유럽 문화에 대한 불신이 다다의 여러 중심지를 연결하는 중요한 공통 배경이었다.
+</div>
+</div></section>
+
+<section id="zurich"><div class="wrap">
+<h2>2. 1916 취리히 — 카바레 볼테르에서 시작하다</h2>
+
+<div class="grid2">
+<article class="card">
+  <div class="imgbox"><img src="images/Cabaret-20Voltaire-748ab748664a.jpg" alt="카바레 볼테르"></div>
+  <div class="caption"><span class="badge">취리히 다다</span><h3>카바레 볼테르</h3><small>1916 · 취리히</small></div>
+</article>
+
+<div>
+<h3>미술관이 아니라 카바레에서 시작했다</h3>
+<ul>
+  <li>후고 발, 에미 헤닝스, 트리스탄 차라, 한스 아르프 등이 중심이 되었다.</li>
+  <li>그림뿐 아니라 소리시(sound poetry), 공연, 가면, 음악, 낭독을 결합했다.</li>
+  <li>의미 있는 언어를 해체하여 뜻을 알 수 없는 음절을 낭독하기도 했다.</li>
+  <li>우연과 즉흥성을 통해 예술가의 의식적 통제를 줄였다.</li>
+</ul>
+
+<div class="bigline">
+  취리히 다다는 <strong>“새로운 화풍”보다 “새로운 예술 행동”</strong>에 가까웠다.
+</div>
+</div>
+</div>
+</div></section>
+
+<section id="duchamp"><div class="wrap">
+<h2>3. 마르셀 뒤샹 — “잘 만드는 것”보다 “선택하는 것”</h2>
+
+<div class="grid2">
+<article class="card">
+  <div class="imgbox"><img src="images/Marcel-Duchamp-1917-Fountain-photograph-by-Alfred-Stieglitz-17209e2773c3.jpg" alt="마르셀 뒤샹, 샘"></div>
+  <div class="caption"><span class="badge">레디메이드</span><h3>마르셀 뒤샹, 《샘》</h3><small>1917 · 알프레드 스티글리츠 사진</small></div>
+</article>
+
+<div>
+<h3>왜 소변기가 미술사가 되었는가?</h3>
+<ul>
+  <li>뒤샹은 공장에서 생산된 소변기를 선택하고 방향을 바꿔 전시 대상으로 제출했다.</li>
+  <li>중요한 것은 조각 솜씨나 아름다운 형태가 아니다.</li>
+  <li>“예술가가 선택하고 미술의 맥락에 놓으면 이것도 예술인가?”라는 질문이 작품의 핵심이다.</li>
+  <li>작품의 가치가 <strong>손의 기술에서 개념과 선택</strong>으로 이동한다.</li>
+</ul>
+
+<div class="callout">
+  <strong>레디메이드(Readymade)</strong>는 이미 만들어진 일상 사물을 예술가가 선택하여
+  작품의 맥락에 놓는 방식이다.
+</div>
+
+<div class="bigline">
+  전통미술: <strong>“예술가는 무엇을 얼마나 잘 만들었는가?”</strong><br>
+  뒤샹: <strong>“무엇을 예술이라고 부를 수 있는가?”</strong>
+</div>
+</div>
+</div>
+</div></section>
+
+<section id="methods"><div class="wrap">
+<h2>4. 다다에서 자주 사용한 방법</h2>
+
+<div class="grid3">
+<div class="branch a">
+  <div class="eyebrow">READYMADE</div>
+  <h3>레디메이드</h3>
+  <p>공산품이나 일상 사물을 선택하여 예술의 맥락에 놓는다. 작가의 손기술보다 선택과 개념을 강조한다.</p>
+</div>
+<div class="branch b">
+  <div class="eyebrow">COLLAGE / PHOTOMONTAGE</div>
+  <h3>콜라주·포토몽타주</h3>
+  <p>신문·사진·광고 이미지를 잘라 붙여 기존 현실의 조각들을 새로운 정치적·비판적 관계로 재조합한다.</p>
+</div>
+<div class="branch c">
+  <div class="eyebrow">CHANCE / PERFORMANCE</div>
+  <h3>우연·공연·소리시</h3>
+  <p>우연한 배열, 즉흥 공연, 의미를 없앤 음절과 소리를 사용하여 논리와 계획의 통제를 약화한다.</p>
+</div>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th>기법</th><th>무엇을 공격하거나 바꾸는가?</th></tr></thead>
+<tbody>
+<tr><td>레디메이드</td><td>“예술은 작가가 직접 만든 아름다운 물건이어야 한다”는 생각</td></tr>
+<tr><td>콜라주</td><td>“회화는 물감과 캔버스만으로 구성되어야 한다”는 생각</td></tr>
+<tr><td>포토몽타주</td><td>사진의 객관성을 깨고 대중매체 이미지를 비판적으로 재조합</td></tr>
+<tr><td>우연</td><td>작가가 작품의 모든 요소를 의식적으로 통제해야 한다는 생각</td></tr>
+<tr><td>소리시</td><td>언어는 의미와 문법을 가져야 한다는 생각</td></tr>
+<tr><td>퍼포먼스</td><td>예술은 영구적으로 남는 물건이어야 한다는 생각</td></tr>
+</tbody>
+</table>
+</div>
+</div></section>
+
+<section id="centers"><div class="wrap">
+<h2>5. 다다는 도시마다 성격이 크게 달랐다</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>중심지</th><th>대표 인물</th><th>특징</th></tr></thead>
+<tbody>
+<tr><td>취리히</td><td>후고 발, 에미 헤닝스, 트리스탄 차라, 한스 아르프</td><td>반전·공연·소리시·우연·카바레 문화</td></tr>
+<tr><td>뉴욕</td><td>마르셀 뒤샹, 프란시스 피카비아, 만 레이</td><td>레디메이드·기계 이미지·예술 개념에 대한 질문</td></tr>
+<tr><td>베를린</td><td>한나 회흐, 라울 하우스만, 게오르게 그로스, 존 하트필드</td><td>강한 정치성·포토몽타주·바이마르 사회 비판</td></tr>
+<tr><td>하노버</td><td>쿠르트 슈비터스</td><td>폐기물과 인쇄물로 만든 ‘메르츠(Merz)’ 작업</td></tr>
+<tr><td>파리</td><td>트리스탄 차라, 앙드레 브르통, 루이 아라공 등</td><td>다다의 도발과 문학적 실험이 초현실주의로 이동</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="callout">
+  따라서 다다는 <strong>국가마다 별도 사조가 된 것이 아니라 하나의 국제적 문제의식이 지역의 정치·문화 환경에 따라 다른 형태로 나타난 운동</strong>으로 보는 것이 가장 적절하다.
+</div>
+</div></section>
+
+<section id="hoch"><div class="wrap">
+<h2>6. 베를린 다다 — 포토몽타주가 정치적 무기가 되다</h2>
+
+<div class="grid2">
+<article class="card">
+  <div class="imgbox"><img src="images/Hoch-Cut-With-the-Kitchen-Knife-78af8df2b81f.jpg" alt="한나 회흐, 부엌칼로 자르기"></div>
+  <div class="caption"><span class="badge">베를린 다다 · 포토몽타주</span><h3>한나 회흐, 《부엌칼로 자르기》</h3><small>1919–1920</small></div>
+</article>
+
+<div>
+<ul>
+  <li>신문과 잡지의 사진을 잘라 서로 충돌하는 이미지로 다시 조합한다.</li>
+  <li>정치인·기계·대중문화·여성 이미지가 복잡하게 뒤섞인다.</li>
+  <li>사진의 “현실 기록” 이미지를 오히려 사회 비판과 풍자의 도구로 사용한다.</li>
+</ul>
+<div class="bigline">
+  취리히 다다가 <strong>부조리와 반예술</strong>에 가까웠다면,<br>
+  베를린 다다는 더 직접적으로 <strong>정치와 사회를 공격</strong>했다.
+</div>
+</div>
+</div>
+</div></section>
+
+<section id="schwitters"><div class="wrap">
+<h2>7. 하노버 — 슈비터스는 버려진 현실을 작품으로 재조립했다</h2>
+
+<div class="grid2">
+<article class="card">
+  <div class="imgbox"><img src="images/Kurt-Schwitters-22Merz-50-22-Composition-Google-Art-Project-78373d57277d.jpg" alt="쿠르트 슈비터스, 메르츠 50 구성"></div>
+  <div class="caption"><span class="badge">메르츠</span><h3>쿠르트 슈비터스, 《Merz 50》 구성</h3><small>1919년 이후</small></div>
+</article>
+
+<div>
+<ul>
+  <li>버스표, 신문조각, 포장지, 철사, 폐기물 등을 화면에 붙였다.</li>
+  <li>값싼 일상 폐기물이 미술 재료가 될 수 있음을 보여준다.</li>
+  <li>‘메르츠(Merz)’라는 이름 아래 콜라주뿐 아니라 공간·시·출판까지 확장했다.</li>
+</ul>
+<div class="callout">
+  이 태도는 후대의 어셈블라주, 정크아트, 팝아트와 설치미술로 이어지는 중요한 선례가 된다.
+</div>
+</div>
+</div>
+</div></section>
+
+<section id="surrealism"><div class="wrap">
+<h2>8. 다다에서 초현실주의로 — 파괴 다음에 무엇을 할 것인가?</h2>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th>질문</th><th>다다</th><th>초현실주의</th></tr></thead>
+<tbody>
+<tr><td>출발점</td><td>전쟁과 문명에 대한 불신</td><td>다다의 반이성적 태도 + 프로이트의 무의식</td></tr>
+<tr><td>핵심 태도</td><td>부정·도발·해체</td><td>무의식·꿈·욕망을 통한 새로운 현실 탐구</td></tr>
+<tr><td>우연</td><td>합리적 질서를 깨뜨리는 수단</td><td>의식의 통제를 줄이고 무의식을 끌어내는 수단</td></tr>
+<tr><td>목표</td><td>“기존 예술을 믿지 않는다.”</td><td>“이성 너머에서 새로운 현실을 찾는다.”</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="bigline">
+  다다가 <strong>문을 부수었다면</strong>,<br>
+  초현실주의는 그 열린 문을 통해 <strong>무의식으로 들어갔다.</strong>
+</div>
+</div></section>
+
+<section id="countries"><div class="wrap">
+<h2>9. 여러 국가에서의 전개</h2>
+<p class="lead">
+  다다는 국가별로 별도의 HTML을 만들 필요가 없는 대표적인 사례다.
+  공통 철학은 <strong>반예술·반권위·우연·기존 합리성에 대한 불신</strong>이지만,
+  각 도시의 정치·문화 상황에 따라 강조점이 크게 달라졌다.
+</p>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th>지역</th><th>지역적 특징</th><th>대표 인물</th></tr></thead>
+<tbody>
+<tr><td>스위스 · 취리히</td><td>전쟁을 피해 모인 국제적 망명 예술가들의 반전적·공연적 다다. 소리시, 가면, 우연과 즉흥성이 중요했다.</td><td>후고 발, 에미 헤닝스, 차라, 아르프</td></tr>
+<tr><td>미국 · 뉴욕</td><td>유럽 전쟁 경험보다 산업·기계·대량생산과 예술 개념 자체에 대한 질문이 강했다.</td><td>뒤샹, 피카비아, 만 레이</td></tr>
+<tr><td>독일 · 베를린</td><td>전후 혁명과 바이마르 정치의 혼란 속에서 가장 정치적인 다다가 전개되었다. 포토몽타주가 핵심 수단이 되었다.</td><td>회흐, 하우스만, 그로스, 하트필드</td></tr>
+<tr><td>독일 · 하노버</td><td>직접 정치운동보다 폐기물과 일상 인쇄물을 새로운 조형언어로 재조합한 개인적 ‘메르츠’가 특징이다.</td><td>슈비터스</td></tr>
+<tr><td>프랑스 · 파리</td><td>문학적 도발과 자동기술 실험이 강해지며 1920년대 초 초현실주의로 이어졌다.</td><td>차라, 브르통, 아라공</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="callout">
+  <strong>공통 철학:</strong> 기존 예술과 합리적 질서의 권위를 의심한다.<br><br>
+  <strong>지역별 차이:</strong> 취리히는 반전·공연, 뉴욕은 개념과 레디메이드, 베를린은 정치·포토몽타주,
+  하노버는 폐기물 조형, 파리는 문학과 무의식으로 전개되었다.
+</div>
+</div></section>
+
+<section><div class="wrap">
+<h2>전체 흐름</h2>
+<div class="chain">
+  <div class="node"><strong>제1차 세계대전</strong><br><span style="color:var(--muted)">진보·이성에 대한 충격</span></div>
+  <div class="arrow">→</div>
+  <div class="node"><strong>취리히 다다</strong><br><span style="color:var(--muted)">부조리·공연·우연</span></div>
+  <div class="arrow">→</div>
+  <div class="node"><strong>뉴욕·베를린·하노버</strong><br><span style="color:var(--muted)">레디메이드·정치·콜라주</span></div>
+  <div class="arrow">→</div>
+  <div class="node"><strong>파리 다다</strong><br><span style="color:var(--muted)">문학·자동기술</span></div>
+  <div class="arrow">→</div>
+  <div class="node"><strong>초현실주의</strong><br><span style="color:var(--muted)">무의식·꿈·욕망</span></div>
+</div>
+
+<div class="note" style="margin-top:24px">
+  ※ “다다”라는 명칭의 정확한 어원에는 여러 설이 있으며, 운동 자체도 일부러 명확한 정의를 거부했다.
+  따라서 하나의 교리나 미학으로 지나치게 단순화하기보다 <strong>전쟁과 기존 예술질서에 대한 국제적 반응의 네트워크</strong>로 이해하는 편이 정확하다.
+</div>
+</div></section>
+
+<section><div class="wrap">
+<h2>작품 이미지</h2>
+<div class="source-list">
+  <p>이미지는 자료 폴더의 로컬 이미지 파일을 사용한다.</p>
+  <ul>
+    <li>카바레 볼테르 관련 이미지</li>
+    <li>마르셀 뒤샹, 《샘》</li>
+    <li>한나 회흐, 《부엌칼로 자르기》</li>
+    <li>쿠르트 슈비터스, 메르츠 작업</li>
+  </ul>
+</div>
+</div></section>
+
+</main>
+
+<footer><div class="wrap">다다 — 이성과 예술의 규칙을 의심하다 · 제1차 세계대전에서 초현실주의로</div></footer>
+<script defer src="../../uhangul/uhangul-runtime.js" data-uhangul-integration="v0.4"></script>
+
+</body>
+</html>

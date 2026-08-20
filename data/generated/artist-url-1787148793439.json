@@ -1,0 +1,1520 @@
+{
+  "schema": 18,
+  "artistId": "artist-url-1787148793439",
+  "qid": "Q47551",
+  "artist": {
+    "name": {
+      "ko": "티치아노",
+      "en": "Titian"
+    },
+    "birth": 1488,
+    "death": 1576,
+    "nationality": {
+      "ko": "베네치아 공화국",
+      "en": "Republic of Venice"
+    }
+  },
+  "fetchedAt": "2026-08-20T02:20:10.859Z",
+  "works": [
+    {
+      "id": "wikidata-Q3805922",
+      "year": 1504,
+      "popularity": 10,
+      "title": {
+        "ko": "Jacopo Pesaro, Bishop of Paphos, being presented by Pope Alexander VI to Saint Peter",
+        "en": "Jacopo Pesaro, Bishop of Paphos, being presented by Pope Alexander VI to Saint Peter"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jacopo%20Pesaro%2C%20bisschop%20van%20Paphos%2C%20door%20paus%20Alexander%20VI%20Borgia%20voorgesteld%20aan%20de%20heilige%20Petrus%2C%20Titiaan%2C%20%281503-1510%29%2C%20Koninklijk%20Museum%20voor%20Schone%20Kunsten%20Antwerpen%2C%20357.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q3805922",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q500812",
+      "year": 1509,
+      "popularity": 37,
+      "title": {
+        "ko": "잠자는 비너스",
+        "en": "잠자는 비너스"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Sleeping%20Venus%20-%20Google%20Art%20Project%202.jpg",
+      "description": {
+        "ko": "조르조네와 티치아노의 그림",
+        "en": "조르조네와 티치아노의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q500812",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q1633898",
+      "year": 1510,
+      "popularity": 15,
+      "title": {
+        "ko": "La Schiavona",
+        "en": "La Schiavona"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Titian%20-%20Portrait%20of%20a%20Lady%20%28%27La%20Schiavona%27%29%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q1633898",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3686086",
+      "year": 1510,
+      "popularity": 15,
+      "title": {
+        "ko": "전원 음악회",
+        "en": "전원 음악회"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Le%20Concert%20champ%C3%AAtre%2C%20by%20Titian%2C%20from%20C2RMF%20retouched.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q3686086",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3842778",
+      "year": 1510,
+      "popularity": 13,
+      "title": {
+        "ko": "The Gypsy Madonna",
+        "en": "The Gypsy Madonna"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tiziano%20Vecellio%2C%20called%20Titian%20-%20Gipsy%20Madonna%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q3842778",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1238886",
+      "year": 1510,
+      "popularity": 12,
+      "title": {
+        "ko": "Portrait of Gerolamo (?) Barbarigo",
+        "en": "Portrait of Gerolamo (?) Barbarigo"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Titian%20-%20Portrait%20of%20a%20man%20with%20a%20quilted%20sleeve.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q1238886",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q653930",
+      "year": 1511,
+      "popularity": 9,
+      "title": {
+        "ko": "Miracle of the Jealous Husband",
+        "en": "Miracle of the Jealous Husband"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tizian%20023.jpg",
+      "description": {
+        "ko": "fresco by Titian",
+        "en": "fresco by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q653930",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3936368",
+      "year": 1512,
+      "popularity": 9,
+      "title": {
+        "ko": "Rest on the Flight into Egypt",
+        "en": "Rest on the Flight into Egypt"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Rest%20on%20the%20Flight%20into%20Egypt%20%28by%20Titian%29%20%E2%80%93%20National%20Gallery.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q3936368",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3998115",
+      "year": 1513,
+      "popularity": 11,
+      "title": {
+        "ko": "The Three Ages of Man",
+        "en": "The Three Ages of Man"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tiziano%2C%20tre%20et%C3%A0%20dell%27uomo%2001.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q3998115",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q794077",
+      "year": 1514,
+      "popularity": 26,
+      "title": {
+        "ko": "신성한 사랑과 세속적인 사랑",
+        "en": "신성한 사랑과 세속적인 사랑"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tiziano%20-%20Amor%20Sacro%20y%20Amor%20Profano%20%28Galer%C3%ADa%20Borghese%2C%20Roma%2C%201514%29FXD.jpg",
+      "description": {
+        "ko": "painting by Titian in the Galleria Borghese",
+        "en": "painting by Titian in the Galleria Borghese"
+      },
+      "source": "http://www.wikidata.org/entity/Q794077",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q15008032",
+      "year": 1514,
+      "popularity": 22,
+      "title": {
+        "ko": "The Feast of the Gods",
+        "en": "The Feast of the Gods"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20and%20Titian%20-%20The%20Feast%20of%20the%20Gods%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini and Titian",
+        "en": "painting by Giovanni Bellini and Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q15008032",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q3877895",
+      "year": 1514,
+      "popularity": 14,
+      "title": {
+        "ko": "Noli me tangere",
+        "en": "Noli me tangere"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Noli-me-tangere-titien.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q3877895",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q23922",
+      "year": 1515,
+      "popularity": 18,
+      "title": {
+        "ko": "거울 앞의 여인",
+        "en": "거울 앞의 여인"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20d%27une%20Femme%20%C3%A0%20sa%20Toilette%2C%20by%20Titian%2C%20from%20C2RMF%20retouched.jpg",
+      "description": {
+        "ko": "티티안의 회화",
+        "en": "티티안의 회화"
+      },
+      "source": "http://www.wikidata.org/entity/Q23922",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3495790",
+      "year": 1515,
+      "popularity": 14,
+      "title": {
+        "ko": "Salome with the Head of John the Baptist",
+        "en": "Salome with the Head of John the Baptist"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tiziano%20Vecellio%20-%20Salom%C3%A8%20con%20la%20testa%20del%20Battista%20-%20FC%20517%20-%20Galleria%20Doria%20Pamphilj.jpg",
+      "description": {
+        "ko": "painting by Titian in the Galleria Doria Pamphilj, Rome",
+        "en": "painting by Titian in the Galleria Doria Pamphilj, Rome"
+      },
+      "source": "http://www.wikidata.org/entity/Q3495790",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q4013804",
+      "year": 1515,
+      "popularity": 14,
+      "title": {
+        "ko": "Violante",
+        "en": "Violante"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tiziano%20Vecellio%2C%20gen.%20Tizian%2C%20Kunsthistorisches%20Museum%20Wien%20-%20Violante%20-%20GG%2065%20-%20Kunsthistorisches%20Museum.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q4013804",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3937410",
+      "year": 1515,
+      "popularity": 11,
+      "title": {
+        "ko": "Portrait of a Man",
+        "en": "Portrait of a Man"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20a%20Man%20MET%20DT2774.jpg",
+      "description": {
+        "ko": "painting by Titian in the Metropolitan Museum of Art",
+        "en": "painting by Titian in the Metropolitan Museum of Art"
+      },
+      "source": "http://www.wikidata.org/entity/Q3937410",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q4008601",
+      "year": 1515,
+      "popularity": 11,
+      "title": {
+        "ko": "Vanity",
+        "en": "Vanity"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tiziano%20Vecellio%2C%20gen.%20Tizian%20-%20Die%20Eitelkeit%20der%20Welt%20-%20483%20-%20Bavarian%20State%20Painting%20Collections.jpg",
+      "description": {
+        "ko": "painting by Titian in the Alte Pinakothek, Munich",
+        "en": "painting by Titian in the Alte Pinakothek, Munich"
+      },
+      "source": "http://www.wikidata.org/entity/Q4008601",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q2459887",
+      "year": 1516,
+      "popularity": 15,
+      "title": {
+        "ko": "The Tribute Money",
+        "en": "The Tribute Money"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Titian%20-%20The%20Tribute%20Money%20-%20Google%20Art%20Project%20%28715452%29.jpg",
+      "description": {
+        "ko": "painting by Titian in the Gemäldegalerie Alte Meister, Dresden",
+        "en": "painting by Titian in the Gemäldegalerie Alte Meister, Dresden"
+      },
+      "source": "http://www.wikidata.org/entity/Q2459887",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1899740",
+      "year": 1517,
+      "popularity": 27,
+      "title": {
+        "ko": "성모 승천",
+        "en": "성모 승천"
+      },
+      "country": {
+        "ko": "베네치아 공화국",
+        "en": "베네치아 공화국"
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tizian%20041.jpg",
+      "description": {
+        "ko": "painting by Titian in Venice",
+        "en": "painting by Titian in Venice"
+      },
+      "source": "http://www.wikidata.org/entity/Q1899740",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q2046100",
+      "year": 1517,
+      "popularity": 23,
+      "title": {
+        "ko": "Flora",
+        "en": "Flora"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tiziano%20-%20Flora%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q2046100",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q3743879",
+      "year": 1518,
+      "popularity": 13,
+      "title": {
+        "ko": "The Worship of Venus",
+        "en": "The Worship of Venus"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ofrenda%20a%20Venus.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q3743879",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1206860",
+      "year": 1520,
+      "popularity": 20,
+      "title": {
+        "ko": "바쿠스와 아리아드네",
+        "en": "바쿠스와 아리아드네"
+      },
+      "country": {
+        "ko": "베네치아 공화국",
+        "en": "베네치아 공화국"
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Titian%20Bacchus%20and%20Ariadne.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q1206860",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q2466780",
+      "year": 1520,
+      "popularity": 14,
+      "title": {
+        "ko": "Venus Anadyomene",
+        "en": "Venus Anadyomene"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/TITIAN%20-%20Venus%20Anadyomene%20%28National%20Galleries%20of%20Scotland%2C%20c.%201520.%20Oil%20on%20canvas%2C%2075.8%20x%2057.6%20cm%29.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q2466780",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1848811",
+      "year": 1520,
+      "popularity": 13,
+      "title": {
+        "ko": "Man with a Glove",
+        "en": "Man with a Glove"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tizian%20079.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q1848811",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q572697",
+      "year": 1522,
+      "popularity": 19,
+      "title": {
+        "ko": "Pesaro Madonna",
+        "en": "Pesaro Madonna"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Frari%20%28Venice%29%20nave%20left%20-%20Altar%20of%20Madona%20di%20Ca%27Pesaro.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q572697",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q3632485",
+      "year": 1523,
+      "popularity": 16,
+      "title": {
+        "ko": "The Bacchanal of the Andrians",
+        "en": "The Bacchanal of the Andrians"
+      },
+      "country": {
+        "ko": "베네치아 공화국",
+        "en": "베네치아 공화국"
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bacanal%20de%20los%20andrios.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q3632485",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q24249",
+      "year": 1530,
+      "popularity": 10,
+      "title": {
+        "ko": "Madonna of the Rabbit",
+        "en": "Madonna of the Rabbit"
+      },
+      "country": {
+        "ko": "베네치아 공화국",
+        "en": "베네치아 공화국"
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/La%20Vierge%20au%20Lapin%20%C3%A0%20la%20Loupe.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q24249",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q19798137",
+      "year": 1533,
+      "popularity": 14,
+      "title": {
+        "ko": "Portrait of Charles V with a Dog",
+        "en": "Portrait of Charles V with a Dog"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tizian%20081.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q19798137",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q15974339",
+      "year": 1533,
+      "popularity": 13,
+      "title": {
+        "ko": "Penitent Magdalene",
+        "en": "Penitent Magdalene"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Magdalena%20penitente%2C%20por%20Tiziano.jpg",
+      "description": {
+        "ko": "painting by Titian in the Galleria Palatina, Florence",
+        "en": "painting by Titian in the Galleria Palatina, Florence"
+      },
+      "source": "http://www.wikidata.org/entity/Q15974339",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3853901",
+      "year": 1535,
+      "popularity": 14,
+      "title": {
+        "ko": "Portrait of Isabella d'Este",
+        "en": "Portrait of Isabella d'Este"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tizian%20-%20Portr%C3%A4t%20der%20Isabella%20d%27Este.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q3853901",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3910929",
+      "year": 1536,
+      "popularity": 10,
+      "title": {
+        "ko": "The Presentation of the Virgin at the Temple",
+        "en": "The Presentation of the Virgin at the Temple"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%22Pr%C3%A9sentation%20de%20la%20Vierge%20au%20Temple%22%20de%20Titien%20%28Accademia%2C%20Venise%29%20%288103563222%29.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q3910929",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3784247",
+      "year": 1537,
+      "popularity": 17,
+      "title": {
+        "ko": "La Bella",
+        "en": "La Bella"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tiziano%20Vecellio%20%28Pieve%20di%20Cadore%201488-90%20-%20Venezia%201576%29%20-%20Ritratto%20di%20gentildonna%20%28La%20Bella%29%20-%2018%20-%20Galleria%20Palatina.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q3784247",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q727875",
+      "year": 1538,
+      "popularity": 40,
+      "title": {
+        "ko": "우르비노의 비너스",
+        "en": "우르비노의 비너스"
+      },
+      "country": {
+        "ko": "베네치아 공화국",
+        "en": "베네치아 공화국"
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tiziano%27s%20Venere%20di%20Urbino%20%28from%20The%20History%20BLog%29.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q727875",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q7401482",
+      "year": 1540,
+      "popularity": 11,
+      "title": {
+        "ko": "Saint John the Baptist",
+        "en": "Saint John the Baptist"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Accademia%20-%20St%20John%20the%20Baptist%20by%20Titian%20Cat314.jpg",
+      "description": {
+        "ko": "painting by Titian in the Gallerie dell'Accademia, Venice",
+        "en": "painting by Titian in the Gallerie dell'Accademia, Venice"
+      },
+      "source": "http://www.wikidata.org/entity/Q7401482",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q5128805",
+      "year": 1542,
+      "popularity": 14,
+      "title": {
+        "ko": "Portrait of Clarissa Strozzi",
+        "en": "Portrait of Clarissa Strozzi"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Clarissa%20Strozzi%20%281540-1581%29%20im%20Alter%20von%20zwei%20Jahren%20-%20Gem%C3%A4ldegalerie%20Berlin%20-%205416289.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q5128805",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q24090",
+      "year": 1542,
+      "popularity": 12,
+      "title": {
+        "ko": "The Crowning with Thorns",
+        "en": "The Crowning with Thorns"
+      },
+      "country": {
+        "ko": "밀라노 공국",
+        "en": "밀라노 공국"
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Titian%20-%20Crowning%20with%20Thorns%20-%20WGA22806.jpg",
+      "description": {
+        "ko": "painting by Titian in the Louvre",
+        "en": "painting by Titian in the Louvre"
+      },
+      "source": "http://www.wikidata.org/entity/Q24090",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3937643",
+      "year": 1543,
+      "popularity": 11,
+      "title": {
+        "ko": "Portrait of Pope Paul III",
+        "en": "Portrait of Pope Paul III"
+      },
+      "country": {
+        "ko": "페라라 공국",
+        "en": "페라라 공국"
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20Pope%20Paul%20III%20Farnese%20%28by%20Titian%29%20-%20National%20Museum%20of%20Capodimonte.jpg",
+      "description": {
+        "ko": "painting by Titian in the National Museum of Capodimonte",
+        "en": "painting by Titian in the National Museum of Capodimonte"
+      },
+      "source": "http://www.wikidata.org/entity/Q3937643",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q180632",
+      "year": 1546,
+      "popularity": 17,
+      "title": {
+        "ko": "Pope Paul III and His Grandsons",
+        "en": "Pope Paul III and His Grandsons"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Titian%20%E2%80%93%20Portrait%20of%20Pope%20Paul%20III%20with%20his%20Grandsons%20%E2%80%93%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q180632",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1123378",
+      "year": 1548,
+      "popularity": 23,
+      "title": {
+        "ko": "Equestrian Portrait of Charles V",
+        "en": "Equestrian Portrait of Charles V"
+      },
+      "country": {
+        "ko": "신성 로마 제국",
+        "en": "신성 로마 제국"
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carlos%20V%20en%20M%C3%BChlberg%2C%20by%20Titian%2C%20from%20Prado%20in%20Google%20Earth.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q1123378",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q2609585",
+      "year": 1548,
+      "popularity": 11,
+      "title": {
+        "ko": "Portrait of Charles V",
+        "en": "Portrait of Charles V"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20Charles%20V%2C%20Holy%20Roman%20Emperor%2C%20seated%20%281500%E2%80%931558%29%2C%20formerly%20attributed%20to%20Titian%20%28Alte%20Pinakothek%2C%20Munich%29.jpg",
+      "description": {
+        "ko": "painting attributed to Titian, Alte Pinakothek, Munich",
+        "en": "painting attributed to Titian, Alte Pinakothek, Munich"
+      },
+      "source": "http://www.wikidata.org/entity/Q2609585",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q2528145",
+      "year": 1550,
+      "popularity": 21,
+      "title": {
+        "ko": "신중의 우의",
+        "en": "신중의 우의"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Titian%20-%20Allegorie%20der%20Zeit.jpg",
+      "description": {
+        "ko": "티치아노의 그림",
+        "en": "티치아노의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q2528145",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q9140602",
+      "year": 1550,
+      "popularity": 11,
+      "title": {
+        "ko": "The Fall of Man",
+        "en": "The Fall of Man"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tizian%20091.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q9140602",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q973260",
+      "year": 1551,
+      "popularity": 11,
+      "title": {
+        "ko": "Philip II in Armour",
+        "en": "Philip II in Armour"
+      },
+      "country": {
+        "ko": "신성 로마 제국",
+        "en": "신성 로마 제국"
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Philip%20II.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q973260",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q603703",
+      "year": 1554,
+      "popularity": 13,
+      "title": {
+        "ko": "Venus and Adonis",
+        "en": "Venus and Adonis"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Titian%20-%20Venus%20and%20Adonis.jpeg",
+      "description": {
+        "ko": "painting by Titian in the Museo del Prado",
+        "en": "painting by Titian in the Museo del Prado"
+      },
+      "source": "http://www.wikidata.org/entity/Q603703",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q34191856",
+      "year": 1554,
+      "popularity": 10,
+      "title": {
+        "ko": "Perseus and Andromeda",
+        "en": "Perseus and Andromeda"
+      },
+      "country": {
+        "ko": "베네치아 공화국",
+        "en": "베네치아 공화국"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Perseo%20y%20Andr%C3%B3meda%2C%20por%20Tiziano.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q34191856",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q7920648",
+      "year": 1555,
+      "popularity": 15,
+      "title": {
+        "ko": "Venus with a Mirror",
+        "en": "Venus with a Mirror"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Titian%20-%20Venus%20with%20a%20Mirror%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Titian in Washington, D.C.",
+        "en": "painting by Titian in Washington, D.C."
+      },
+      "source": "http://www.wikidata.org/entity/Q7920648",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q2528177",
+      "year": 1557,
+      "popularity": 20,
+      "title": {
+        "ko": "Diana and Actaeon",
+        "en": "Diana and Actaeon"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Titian%20-%20Diana%20and%20Actaeon%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q2528177",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q4161055",
+      "year": 1557,
+      "popularity": 14,
+      "title": {
+        "ko": "Diana and Callisto",
+        "en": "Diana and Callisto"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tizian%20015%20%282%29.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q4161055",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3705722",
+      "year": 1559,
+      "popularity": 10,
+      "title": {
+        "ko": "The Entombment",
+        "en": "The Entombment"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Entierro%20de%20Cristo%20%28Tiziano%29.jpg",
+      "description": {
+        "ko": "painting by Titian, Prado P440",
+        "en": "painting by Titian, Prado P440"
+      },
+      "source": "http://www.wikidata.org/entity/Q3705722",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q18002417",
+      "year": 1560,
+      "popularity": 19,
+      "title": {
+        "ko": "The Rape of Europa",
+        "en": "The Rape of Europa"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tizian%20085.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q18002417",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q14425553",
+      "year": 1560,
+      "popularity": 11,
+      "title": {
+        "ko": "Danaë",
+        "en": "Danaë"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tizian%20-%20Danae%20receiving%20the%20Golden%20Rain%20-%20Prado.jpg",
+      "description": {
+        "ko": "painting by Titian in the Museo del Prado",
+        "en": "painting by Titian in the Museo del Prado"
+      },
+      "source": "http://www.wikidata.org/entity/Q14425553",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q4448822",
+      "year": 1563,
+      "popularity": 16,
+      "title": {
+        "ko": "Penitent Magdalene",
+        "en": "Penitent Magdalene"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Titian%20%28Tiziano%20Vecellio%29%2C%20between%201485%20and%201490-1576%20-%20Repentant%20Mary%20Magdalene%20-%20%D0%93%D0%AD-117%20-%20Hermitage%20Museum.jpg",
+      "description": {
+        "ko": "painting by Titian in the Hermitage Museum, Saint Petersburg",
+        "en": "painting by Titian in the Hermitage Museum, Saint Petersburg"
+      },
+      "source": "http://www.wikidata.org/entity/Q4448822",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q2920183",
+      "year": 1564,
+      "popularity": 12,
+      "title": {
+        "ko": "Annunciation",
+        "en": "Annunciation"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Titian%20-%20The%20Annunciation%20-%20WGA22827.jpg",
+      "description": {
+        "ko": "painting by Titian in San Salvador, Venice",
+        "en": "painting by Titian in San Salvador, Venice"
+      },
+      "source": "http://www.wikidata.org/entity/Q2920183",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q698993",
+      "year": 1567,
+      "popularity": 12,
+      "title": {
+        "ko": "Portrait of Jacopo Strada",
+        "en": "Portrait of Jacopo Strada"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tiziano%20Vecellio%2C%20called%20Titian%20-%20Jacopo%20Strada%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q698993",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q2898121",
+      "year": 1567,
+      "popularity": 11,
+      "title": {
+        "ko": "The Death of Actaeon",
+        "en": "The Death of Actaeon"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Actaeon.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q2898121",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q10296499",
+      "year": 1570,
+      "popularity": 11,
+      "title": {
+        "ko": "The Crowning with Thorns",
+        "en": "The Crowning with Thorns"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Crowning%20with%20Thorns%20by%20Titian%20-%20Alte%20Pinakothek%20-%20Munich%20-%20Germany%202017.jpg",
+      "description": {
+        "ko": "painting by Titian in the Alte Pinakothek, Munich",
+        "en": "painting by Titian in the Alte Pinakothek, Munich"
+      },
+      "source": "http://www.wikidata.org/entity/Q10296499",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1652981",
+      "year": 1571,
+      "popularity": 15,
+      "title": {
+        "ko": "Tarquin and Lucretia",
+        "en": "Tarquin and Lucretia"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tizian%20094.jpg",
+      "description": {
+        "ko": "painting by Titian in the Fitzwilliam Museum, Cambridge",
+        "en": "painting by Titian in the Fitzwilliam Museum, Cambridge"
+      },
+      "source": "http://www.wikidata.org/entity/Q1652981",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3925598",
+      "year": 1573,
+      "popularity": 13,
+      "title": {
+        "ko": "The Flaying of Marsyas",
+        "en": "The Flaying of Marsyas"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tizian%20-%20Apoll%C3%B3n%20a%20Marsyas%2C%20z%C3%A1mek%20Krom%C4%9B%C5%99%C3%AD%C5%BE%201.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q3925598",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q2665840",
+      "year": 1575,
+      "popularity": 18,
+      "title": {
+        "ko": "Pietà",
+        "en": "Pietà"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Accademia%20-%20Piet%C3%A0%20by%20Titian.jpg",
+      "description": {
+        "ko": "painting by Titian, finished by Palma il Giovane",
+        "en": "painting by Titian, finished by Palma il Giovane"
+      },
+      "source": "http://www.wikidata.org/entity/Q2665840",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3643957",
+      "year": 1600,
+      "popularity": 11,
+      "title": {
+        "ko": "The Bravo",
+        "en": "The Bravo"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tiziano%20Vecellio%2C%20gen.%20Tizian%2C%20Kunsthistorisches%20Museum%20Wien%20-%20Der%20Bravo%20-%20GG%2064%20-%20Kunsthistorisches%20Museum.jpg",
+      "description": {
+        "ko": "painting by Titian",
+        "en": "painting by Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q3643957",
+      "verified": true,
+      "representative": false
+    }
+  ]
+}

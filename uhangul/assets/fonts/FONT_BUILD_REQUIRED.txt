@@ -1,0 +1,13 @@
+uHangul v0.5 font binary is intentionally not included.
+
+Run the installer with source font paths, for example:
+
+INSTALL_uHangul_v0_5.cmd "C:\Fonts\UnDotum.ttf" "C:\Fonts\UnBatang.ttf"
+
+or from PowerShell:
+
+.\INSTALL_uHangul_v0_5.ps1 `
+  -BaseFont "C:\Fonts\UnDotum.ttf" `
+  -OldJamoFont "C:\Fonts\UnBatang.ttf"
+
+The resulting uHangul-v0.5.woff2 is built locally inside Art_through_Time\uhangul\assets\fonts.

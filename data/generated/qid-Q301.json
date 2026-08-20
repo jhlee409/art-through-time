@@ -1,0 +1,1520 @@
+{
+  "schema": 18,
+  "artistId": "artist-Q301",
+  "qid": "Q301",
+  "artist": {
+    "name": {
+      "ko": "엘 그레코",
+      "en": "El Greco"
+    },
+    "birth": 1541,
+    "death": 1614,
+    "nationality": {
+      "ko": "카스티야 연합왕국",
+      "en": "Crown of Castile"
+    }
+  },
+  "fetchedAt": "2026-08-12T10:39:01.628Z",
+  "works": [
+    {
+      "id": "wikidata-Q3078569",
+      "year": 1565,
+      "popularity": 12,
+      "title": {
+        "ko": "Dormition of the Virgin",
+        "en": "Dormition of the Virgin"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "비잔틴 미술",
+        "en": "비잔틴 미술"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dormition%20El%20Greco.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q3078569",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q15711253",
+      "year": 1566,
+      "popularity": 8,
+      "title": {
+        "ko": "Adoration of the Kings",
+        "en": "Adoration of the Kings"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "비잔틴 미술",
+        "en": "비잔틴 미술"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20-%20The%20Adoration%20of%20the%20Magi%20-%20Google%20Art%20Project%20%28721007%29.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q15711253",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3208041",
+      "year": 1568,
+      "popularity": 10,
+      "title": {
+        "ko": "최후의 만찬",
+        "en": "최후의 만찬"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20020.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q3208041",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3280557",
+      "year": 1568,
+      "popularity": 10,
+      "title": {
+        "ko": "Modena Triptych",
+        "en": "Modena Triptych"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "Cretan school",
+        "en": "Cretan school"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Adorazione%20dei%20pastori%2C%20Allegoria%20del%20Cavalier%20Cristiano%20e%20battesimo%20di%20Cristo%20di%20El%20Greco%20%28Domenico%20Theotokopulos%29%2C%201567-68.JPG",
+      "description": {
+        "ko": "triptych by El Greco",
+        "en": "triptych by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q3280557",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q9026835",
+      "year": 1570,
+      "popularity": 11,
+      "title": {
+        "ko": "The Penitent Mary Magdalene",
+        "en": "The Penitent Mary Magdalene"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20-%20The%20Penitent%20Magdalene%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by El Greco in Museum of Fine Arts, Budapest",
+        "en": "painting by El Greco in Museum of Fine Arts, Budapest"
+      },
+      "source": "http://www.wikidata.org/entity/Q9026835",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3929380",
+      "year": 1570,
+      "popularity": 10,
+      "title": {
+        "ko": "El Soplón",
+        "en": "El Soplón"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "르네상스 회화",
+        "en": "르네상스 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20%E2%80%93%20Boy%20Blowing%20an%20Ember%20%E2%80%93%20Google%20Art%20Project%20%E2%80%93%20edited.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q3929380",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q6121364",
+      "year": 1570,
+      "popularity": 9,
+      "title": {
+        "ko": "The Entombment of Christ",
+        "en": "The Entombment of Christ"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%2003.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q6121364",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q5108848",
+      "year": 1570,
+      "popularity": 8,
+      "title": {
+        "ko": "Christ Driving the Money Changers from the Temple (1571)",
+        "en": "Christ Driving the Money Changers from the Temple (1571)"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20Christ%20Driving%20the%20Money%20Changers%20from%20the%20Temple.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q5108848",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q5967017",
+      "year": 1570,
+      "popularity": 8,
+      "title": {
+        "ko": "The Flight into Egypt",
+        "en": "The Flight into Egypt"
+      },
+      "country": {
+        "ko": "스페인",
+        "en": "스페인"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/La%20huida%20a%20Egipto%20%28El%20Greco%29.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q5967017",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3937561",
+      "year": 1571,
+      "popularity": 11,
+      "title": {
+        "ko": "Portrait of Giulio Clovio",
+        "en": "Portrait of Giulio Clovio"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mus%C3%A9e%20de%20Capodimonte%20-%20Le%20Gr%C3%A9co%2C%20portrait%20de%20Giulio%20Clovio%2C%20en%201571-572%20-01.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q3937561",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q6075225",
+      "year": 1571,
+      "popularity": 9,
+      "title": {
+        "ko": "Lamentation",
+        "en": "Lamentation"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20Piet%C3%A0.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q6075225",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q5393073",
+      "year": 1572,
+      "popularity": 9,
+      "title": {
+        "ko": "Christ Healing the Blind",
+        "en": "Christ Healing the Blind"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/La%20curacion%20del%20ciego%20El%20Greco%20Dresde.jpg",
+      "description": {
+        "ko": "painting by El Greco at Gemäldegalerie Alte Meister, Dresden, Germany",
+        "en": "painting by El Greco at Gemäldegalerie Alte Meister, Dresden, Germany"
+      },
+      "source": "http://www.wikidata.org/entity/Q5393073",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3720171",
+      "year": 1577,
+      "popularity": 10,
+      "title": {
+        "ko": "The Martyrdom of Saint Sebastian",
+        "en": "The Martyrdom of Saint Sebastian"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/San%20Sebastian%20El%20Greco.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q3720171",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q6553555",
+      "year": 1577,
+      "popularity": 10,
+      "title": {
+        "ko": "The Holy Trinity",
+        "en": "The Holy Trinity"
+      },
+      "country": {
+        "ko": "스페인",
+        "en": "스페인"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/La%20Trinidad%20%28El%20Greco%2C%201577-1579%29.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q6553555",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q11837891",
+      "year": 1577,
+      "popularity": 8,
+      "title": {
+        "ko": "The Assumption of the Virgin",
+        "en": "The Assumption of the Virgin"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Domenikos%20Theotok%C3%B3poulos%2C%20called%20El%20Greco%20-%20The%20Assumption%20of%20the%20Virgin%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by El Greco (Santo Domingo el Antiguo)",
+        "en": "painting by El Greco (Santo Domingo el Antiguo)"
+      },
+      "source": "http://www.wikidata.org/entity/Q11837891",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q5557529",
+      "year": 1577,
+      "popularity": 8,
+      "title": {
+        "ko": "Apparition of the Virgin to Saint Lawrence",
+        "en": "Apparition of the Virgin to Saint Lawrence"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Aparicion%20de%20la%20Virgen%20a%20san%20Lorenzo%20El%20Greco.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q5557529",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q5658259",
+      "year": 1577,
+      "popularity": 8,
+      "title": {
+        "ko": "Adoration of the name of Jesus",
+        "en": "Adoration of the name of Jesus"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20001.jpg",
+      "description": {
+        "ko": "painting by El Greco in the Escorial",
+        "en": "painting by El Greco in the Escorial"
+      },
+      "source": "http://www.wikidata.org/entity/Q5658259",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q2714617",
+      "year": 1578,
+      "popularity": 21,
+      "title": {
+        "ko": "그리스도의 옷 벗김",
+        "en": "그리스도의 옷 벗김"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Expolio%2C%20por%20El%20Greco.jpg",
+      "description": {
+        "ko": "painting by El Greco at the Toledo Cathedral",
+        "en": "painting by El Greco at the Toledo Cathedral"
+      },
+      "source": "http://www.wikidata.org/entity/Q2714617",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q6402081",
+      "year": 1580,
+      "popularity": 19,
+      "title": {
+        "ko": "The Nobleman with his Hand on his Chest",
+        "en": "The Nobleman with his Hand on his Chest"
+      },
+      "country": {
+        "ko": "스페인",
+        "en": "스페인"
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20caballero%20de%20la%20mano%20en%20el%20pecho%2C%20by%20El%20Greco%2C%20from%20Prado%20in%20Google%20Earth.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q6402081",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q5966793",
+      "year": 1580,
+      "popularity": 10,
+      "title": {
+        "ko": "The Fable",
+        "en": "The Fable"
+      },
+      "country": {
+        "ko": "스페인",
+        "en": "스페인"
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/F%C3%A1bula%20%28El%20Greco%2C%20c.%201600%29.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q5966793",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q5949742",
+      "year": 1580,
+      "popularity": 9,
+      "title": {
+        "ko": "The Martyrdom of St. Maurice",
+        "en": "The Martyrdom of St. Maurice"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Martirio%20de%20San%20Mauricio%20El%20Greco.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q5949742",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q94802",
+      "year": 1586,
+      "popularity": 29,
+      "title": {
+        "ko": "오르가스 백작의 매장",
+        "en": "오르가스 백작의 매장"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20-%20The%20Burial%20of%20the%20Count%20of%20Orgaz.JPG",
+      "description": {
+        "ko": "엘 그레코의 그림",
+        "en": "엘 그레코의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q94802",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q6116829",
+      "year": 1586,
+      "popularity": 9,
+      "title": {
+        "ko": "The Holy Family",
+        "en": "The Holy Family"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20-%20The%20Holy%20Family%20-%20WGA10482.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q6116829",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q9396559",
+      "year": 1587,
+      "popularity": 11,
+      "title": {
+        "ko": "Saints Peter and Paul",
+        "en": "Saints Peter and Paul"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Greco%2C%20El%20-%20Sts%20Peter%20and%20Paul.jpg",
+      "description": {
+        "ko": "painting by El Greco in the Hermitage Museum",
+        "en": "painting by El Greco in the Hermitage Museum"
+      },
+      "source": "http://www.wikidata.org/entity/Q9396559",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q6106772",
+      "year": 1587,
+      "popularity": 8,
+      "title": {
+        "ko": "Portrait of an Elderly Man",
+        "en": "Portrait of an Elderly Man"
+      },
+      "country": {
+        "ko": "스페인",
+        "en": "스페인"
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20-%20An%20Elderly%20Gentleman%20-%20WGA10506.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q6106772",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q2680589",
+      "year": 1590,
+      "popularity": 10,
+      "title": {
+        "ko": "The Agony in the Garden",
+        "en": "The Agony in the Garden"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20019.jpg",
+      "description": {
+        "ko": "painting by El Greco or his studio",
+        "en": "painting by El Greco or his studio"
+      },
+      "source": "http://www.wikidata.org/entity/Q2680589",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q6106748",
+      "year": 1590,
+      "popularity": 10,
+      "title": {
+        "ko": "Portrait of Antonio de Covarrubias",
+        "en": "Portrait of Antonio de Covarrubias"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20-%20Antonio%20de%20Covarrubias%20-%20WGA10555.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q6106748",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q5791685",
+      "year": 1590,
+      "popularity": 8,
+      "title": {
+        "ko": "Christ on the Cross Adored by Donors",
+        "en": "Christ on the Cross Adored by Donors"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20-%20Le%20Christ%20en%20croix%20ador%C3%A9%20par%20deux%20donateurs%2002.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q5791685",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q6034865",
+      "year": 1592,
+      "popularity": 8,
+      "title": {
+        "ko": "Saint Louis, King of France",
+        "en": "Saint Louis, King of France"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saint%20Louis%2C%20roi%20de%20France%2C%20et%20un%20page.jpg",
+      "description": {
+        "ko": "painting by el Greco",
+        "en": "painting by el Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q6034865",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q2842584",
+      "year": 1595,
+      "popularity": 11,
+      "title": {
+        "ko": "Saint Peter and Saint Paul",
+        "en": "Saint Peter and Saint Paul"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20-%20Saint%20Peter%20and%20Saint%20Paul%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q2842584",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q5712837",
+      "year": 1595,
+      "popularity": 11,
+      "title": {
+        "ko": "Self-Portrait (?)",
+        "en": "Self-Portrait (?)"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20-%20Portrait%20of%20a%20Man%20-%20WGA10554.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q5712837",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q5841454",
+      "year": 1595,
+      "popularity": 8,
+      "title": {
+        "ko": "St. Andrew and St. Francis",
+        "en": "St. Andrew and St. Francis"
+      },
+      "country": {
+        "ko": "스페인",
+        "en": "스페인"
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/San%20Andr%C3%A9s%20y%20san%20Francisco.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q5841454",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q883994",
+      "year": 1596,
+      "popularity": 28,
+      "title": {
+        "ko": "톨레도 풍경",
+        "en": "톨레도 풍경"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/View%20of%20Toledo%20MET%20DP349564.jpg",
+      "description": {
+        "ko": "엘 그레코의 그림",
+        "en": "엘 그레코의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q883994",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q5965648",
+      "year": 1596,
+      "popularity": 8,
+      "title": {
+        "ko": "Adoration of the Shepherds",
+        "en": "Adoration of the Shepherds"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20-%20The%20Adoration%20of%20the%20Shepherds%20%28Bukarest%29.jpg",
+      "description": {
+        "ko": "painting by El Greco in the National Museum of Art of Romania",
+        "en": "painting by El Greco in the National Museum of Art of Romania"
+      },
+      "source": "http://www.wikidata.org/entity/Q5965648",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q6119366",
+      "year": 1597,
+      "popularity": 15,
+      "title": {
+        "ko": "Saint Martin and the Beggar",
+        "en": "Saint Martin and the Beggar"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20-%20San%20Mart%C3%ADn%20y%20el%20mendigo.jpg",
+      "description": {
+        "ko": "1597 painting by El Greco in the National Gallery of Art",
+        "en": "1597 painting by El Greco in the National Gallery of Art"
+      },
+      "source": "http://www.wikidata.org/entity/Q6119366",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q5966323",
+      "year": 1597,
+      "popularity": 12,
+      "title": {
+        "ko": "The Coronation of the Virgin",
+        "en": "The Coronation of the Virgin"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/GRECO%20Coronacion.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q5966323",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q5965524",
+      "year": 1597,
+      "popularity": 11,
+      "title": {
+        "ko": "The Madonna of Charity",
+        "en": "The Madonna of Charity"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20-%20The%20Madonna%20of%20Charity%20-%20WGA10573.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q5965524",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q6461660",
+      "year": 1597,
+      "popularity": 10,
+      "title": {
+        "ko": "Nativity",
+        "en": "Nativity"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/GRECO%20Natividad.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q6461660",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q617629",
+      "year": 1598,
+      "popularity": 12,
+      "title": {
+        "ko": "The Resurrection",
+        "en": "The Resurrection"
+      },
+      "country": {
+        "ko": "스페인",
+        "en": "스페인"
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20-%20The%20Resurrection%20%28La%20Resurrecci%C3%B3n%20de%20Cristo%29%201597-1600.jpg",
+      "description": {
+        "ko": "1597 painting by El Greco",
+        "en": "1597 painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q617629",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q5824027",
+      "year": 1598,
+      "popularity": 8,
+      "title": {
+        "ko": "The Baptism of Christ",
+        "en": "The Baptism of Christ"
+      },
+      "country": {
+        "ko": "스페인",
+        "en": "스페인"
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20bautismo%20de%20Cristo%20%28El%20Greco%2C%201597%29.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q5824027",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q6106760",
+      "year": 1600,
+      "popularity": 13,
+      "title": {
+        "ko": "Portrait of Jorge Manuel Theotocópuli",
+        "en": "Portrait of Jorge Manuel Theotocópuli"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20-%20Portrait%20of%20the%20Artist%27s%20Son%20Jorge%20Manuel%20Theotokopoulos%20-%20WGA10567.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q6106760",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q5781032",
+      "year": 1600,
+      "popularity": 12,
+      "title": {
+        "ko": "The Concert of the Angels",
+        "en": "The Concert of the Angels"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20-%20The%20Concert%20of%20the%20Angels%2C%20ca%201608-1614%2C%20%CE%A0.152.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q5781032",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q11824907",
+      "year": 1600,
+      "popularity": 9,
+      "title": {
+        "ko": "Portrait of Diego de Covarrubias y Leiva",
+        "en": "Portrait of Diego de Covarrubias y Leiva"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20-%20Portrait%20of%20Diego%20de%20Covarrubias%20y%20Leiva%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q11824907",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3649313",
+      "year": 1600,
+      "popularity": 9,
+      "title": {
+        "ko": "Christ Driving the Money Changers from the Temple",
+        "en": "Christ Driving the Money Changers from the Temple"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20016.jpg",
+      "description": {
+        "ko": "painting by El Greco in the National Gallery, London",
+        "en": "painting by El Greco in the National Gallery, London"
+      },
+      "source": "http://www.wikidata.org/entity/Q3649313",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3784753",
+      "year": 1600,
+      "popularity": 9,
+      "title": {
+        "ko": "추기경의 초상, 돈 페르난도 니뇨 데 게바라 추기경 추정 (1541년 – 1609년)",
+        "en": "추기경의 초상, 돈 페르난도 니뇨 데 게바라 추기경 추정 (1541년 – 1609년)"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Cardinal%20Fernando%20Ni%C3%B1o%20de%20Guevara%20%281541%E2%80%931609%29%20MET%20DT854.jpg",
+      "description": {
+        "ko": "painting by El Greco (Domenikos Theotokopoulos) (MET, 29.100.5)",
+        "en": "painting by El Greco (Domenikos Theotokopoulos) (MET, 29.100.5)"
+      },
+      "source": "http://www.wikidata.org/entity/Q3784753",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q6106776",
+      "year": 1600,
+      "popularity": 8,
+      "title": {
+        "ko": "Portrait of a Young Gentleman",
+        "en": "Portrait of a Young Gentleman"
+      },
+      "country": {
+        "ko": "스페인",
+        "en": "스페인"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caballero%20joven.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q6106776",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q5965719",
+      "year": 1603,
+      "popularity": 11,
+      "title": {
+        "ko": "Annunciation",
+        "en": "Annunciation"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/GRECO%20Anunciacion.jpg",
+      "description": {
+        "ko": "128 cm diameter round painting by El Greco now at Hospital de la Caridad de Illescas (1603-05)",
+        "en": "128 cm diameter round painting by El Greco now at Hospital de la Caridad de Illescas (1603-05)"
+      },
+      "source": "http://www.wikidata.org/entity/Q5965719",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q9073350",
+      "year": 1603,
+      "popularity": 8,
+      "title": {
+        "ko": "San Bernardino de Siena",
+        "en": "San Bernardino de Siena"
+      },
+      "country": {
+        "ko": "스페인",
+        "en": "스페인"
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/San%20Bernardino%20%28El%20Greco%29.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q9073350",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q6119106",
+      "year": 1605,
+      "popularity": 8,
+      "title": {
+        "ko": "St John the Evangelist",
+        "en": "St John the Evangelist"
+      },
+      "country": {
+        "ko": "스페인",
+        "en": "스페인"
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20034.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q6119106",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q9073676",
+      "year": 1608,
+      "popularity": 9,
+      "title": {
+        "ko": "Saint Peter (1608)",
+        "en": "Saint Peter (1608)"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20-%20Saint%20Peter%20-%20WGA10621.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q9073676",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q949323",
+      "year": 1609,
+      "popularity": 13,
+      "title": {
+        "ko": "Fray Hortensio Félix Paravicino",
+        "en": "Fray Hortensio Félix Paravicino"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "바로크",
+        "en": "바로크"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20%28Domenikos%20Theotokopoulos%29%20-%20Fray%20Hortensio%20F%C3%A9lix%20Paravicino%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q949323",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q3809182",
+      "year": 1609,
+      "popularity": 9,
+      "title": {
+        "ko": "Portrait of Jerónimo de Cevallos",
+        "en": "Portrait of Jerónimo de Cevallos"
+      },
+      "country": {
+        "ko": "스페인",
+        "en": "스페인"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jer%C3%B3nimo%20de%20Cevallos.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q3809182",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q6106796",
+      "year": 1609,
+      "popularity": 9,
+      "title": {
+        "ko": "Portrait of Cardinal Tavera",
+        "en": "Portrait of Cardinal Tavera"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Cardenal%20Tavera.jpg",
+      "description": {
+        "ko": "1609 painting by El Greco, now in the Hospital de Tavera in Toledo",
+        "en": "1609 painting by El Greco, now in the Hospital de Tavera in Toledo"
+      },
+      "source": "http://www.wikidata.org/entity/Q6106796",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1220013",
+      "year": 1610,
+      "popularity": 19,
+      "title": {
+        "ko": "다섯째 봉인의 개봉",
+        "en": "다섯째 봉인의 개봉"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%2C%20The%20Vision%20of%20Saint%20John%20%281608-1614%29.jpg",
+      "description": {
+        "ko": "엘 그레코의 그림",
+        "en": "엘 그레코의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q1220013",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q2255224",
+      "year": 1610,
+      "popularity": 16,
+      "title": {
+        "ko": "Laocoön",
+        "en": "Laocoön"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20%28Domenikos%20Theotokopoulos%29%20-%20Laoco%C3%B6n%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q2255224",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q6163991",
+      "year": 1610,
+      "popularity": 10,
+      "title": {
+        "ko": "View and Plan of Toledo",
+        "en": "View and Plan of Toledo"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20-%20View%20and%20Plan%20of%20Toledo%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q6163991",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3784764",
+      "year": 1610,
+      "popularity": 8,
+      "title": {
+        "ko": "Martyrdom of Saint Sebastian",
+        "en": "Martyrdom of Saint Sebastian"
+      },
+      "country": {
+        "ko": "스페인",
+        "en": "스페인"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/San%20Sebasti%C3%A1n%2C%20de%20El%20Greco%2C%20completo%20%28Museo%20del%20Prado%29.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q3784764",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1114913",
+      "year": 1612,
+      "popularity": 13,
+      "title": {
+        "ko": "Adoration of the Shepherds",
+        "en": "Adoration of the Shepherds"
+      },
+      "country": {
+        "ko": "스페인",
+        "en": "스페인"
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/La%20adoraci%C3%B3n%20de%20los%20pastores%20%28El%20Greco%29.jpg",
+      "description": {
+        "ko": "painting by El Greco in the Museo del Prado",
+        "en": "painting by El Greco in the Museo del Prado"
+      },
+      "source": "http://www.wikidata.org/entity/Q1114913",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q2842448",
+      "year": 1612,
+      "popularity": 9,
+      "title": {
+        "ko": "Portrait of Dr. Francisco de Pisa",
+        "en": "Portrait of Dr. Francisco de Pisa"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20%28Domenikos%20Theotokopoulos%29%20-%20Portrait%20of%20Dr.%20Francisco%20de%20Pisa%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q2842448",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q16619520",
+      "year": 1613,
+      "popularity": 10,
+      "title": {
+        "ko": "The Marriage of the Virgin",
+        "en": "The Marriage of the Virgin"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Greco%20-%20The%20Marriage%20of%20the%20Virgin%20-%20WGA10630.jpg",
+      "description": {
+        "ko": "painting by El Greco",
+        "en": "painting by El Greco"
+      },
+      "source": "http://www.wikidata.org/entity/Q16619520",
+      "verified": true,
+      "representative": false
+    }
+  ]
+}

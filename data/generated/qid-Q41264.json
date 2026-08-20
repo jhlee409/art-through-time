@@ -1,0 +1,920 @@
+{
+  "schema": 18,
+  "artistId": "artist-Q41264",
+  "qid": "Q41264",
+  "artist": {
+    "name": {
+      "ko": "요하네스 페르메이르",
+      "en": "Johannes Vermeer"
+    },
+    "birth": 1632,
+    "death": 1675,
+    "nationality": {
+      "ko": "네덜란드 공화국",
+      "en": "Dutch Republic"
+    }
+  },
+  "fetchedAt": "2026-08-12T20:55:04.332Z",
+  "works": [
+    {
+      "id": "wikidata-Q927449",
+      "year": 1650,
+      "popularity": 23,
+      "title": {
+        "ko": "마르다와 마리아의 집에 있는 그리스도",
+        "en": "마르다와 마리아의 집에 있는 그리스도"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Johannes%20%28Jan%29%20Vermeer%20-%20Christ%20in%20the%20House%20of%20Martha%20and%20Mary%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Johannes Vermeer, Scottish National Gallery",
+        "en": "painting by Johannes Vermeer, Scottish National Gallery"
+      },
+      "source": "http://www.wikidata.org/entity/Q927449",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1169874",
+      "year": 1650,
+      "popularity": 22,
+      "title": {
+        "ko": "숙녀와 두 신사",
+        "en": "숙녀와 두 신사"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20Vermeer%20van%20Delft%20006.jpg",
+      "description": {
+        "ko": "painting by Johannes Vermeer, Herzog Anton Ulrich-Museum",
+        "en": "painting by Johannes Vermeer, Herzog Anton Ulrich-Museum"
+      },
+      "source": "http://www.wikidata.org/entity/Q1169874",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q32234",
+      "year": 1650,
+      "popularity": 18,
+      "title": {
+        "ko": "디아나와 요정들",
+        "en": "디아나와 요정들"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Johannes%20Vermeer%20-%20Diana%20and%20her%20Nymphs%20-%20406%20-%20Mauritshuis.jpg",
+      "description": {
+        "ko": "painting by Johannes Vermeer",
+        "en": "painting by Johannes Vermeer"
+      },
+      "source": "http://www.wikidata.org/entity/Q32234",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q94006",
+      "year": 1655,
+      "popularity": 15,
+      "title": {
+        "ko": "성녀 프락세디스",
+        "en": "성녀 프락세디스"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "매너리즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vermeer%20saint%20praxedis.jpg",
+      "description": {
+        "ko": "painting attributed to Johannes Vermeer, National Museum of Western Art",
+        "en": "painting attributed to Johannes Vermeer, National Museum of Western Art"
+      },
+      "source": "http://www.wikidata.org/entity/Q94006",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q63692",
+      "year": 1656,
+      "popularity": 24,
+      "title": {
+        "ko": "The Procuress",
+        "en": "The Procuress"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Johannes%20Vermeer%20-%20The%20Procuress%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Johannes Vermeer at Gemäldegalerie Alte Meister, Dresden, Germany",
+        "en": "painting by Johannes Vermeer at Gemäldegalerie Alte Meister, Dresden, Germany"
+      },
+      "source": "http://www.wikidata.org/entity/Q63692",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q684935",
+      "year": 1657,
+      "popularity": 21,
+      "title": {
+        "ko": "잠이 든 여인",
+        "en": "잠이 든 여인"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vermeer%20young%20women%20sleeping.jpg",
+      "description": {
+        "ko": "painting by Johannes Vermeer",
+        "en": "painting by Johannes Vermeer"
+      },
+      "source": "http://www.wikidata.org/entity/Q684935",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q586035",
+      "year": 1658,
+      "popularity": 31,
+      "title": {
+        "ko": "The Little Street",
+        "en": "The Little Street"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Johannes%20Vermeer%20-%20Gezicht%20op%20huizen%20in%20Delft%2C%20bekend%20als%20%27Het%20straatje%27%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Johannes Vermeer, Rijksmuseum Amsterdam",
+        "en": "painting by Johannes Vermeer, Rijksmuseum Amsterdam"
+      },
+      "source": "http://www.wikidata.org/entity/Q586035",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q700251",
+      "year": 1658,
+      "popularity": 27,
+      "title": {
+        "ko": "Girl Reading a Letter at an Open Window",
+        "en": "Girl Reading a Letter at an Open Window"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20Vermeer%20van%20Delft%20-%20Brieflezend%20meisje%20bij%20het%20venster%20%28ca.%201657-59%29.jpg",
+      "description": {
+        "ko": "painting by Johannes Vermeer at Gemäldegalerie Alte Meister, Dresden, Germany",
+        "en": "painting by Johannes Vermeer at Gemäldegalerie Alte Meister, Dresden, Germany"
+      },
+      "source": "http://www.wikidata.org/entity/Q700251",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q467376",
+      "year": 1658,
+      "popularity": 24,
+      "title": {
+        "ko": "Officer and Laughing Girl",
+        "en": "Officer and Laughing Girl"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Johannes%20Vermeer%20-%20De%20Soldaat%20en%20het%20Lachende%20Meisje%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Johannes Vermeer",
+        "en": "painting by Johannes Vermeer"
+      },
+      "source": "http://www.wikidata.org/entity/Q467376",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q782639",
+      "year": 1659,
+      "popularity": 20,
+      "title": {
+        "ko": "포도주 마시는 여인",
+        "en": "포도주 마시는 여인"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20Vermeer%20van%20Delft%20-%20The%20Glass%20of%20Wine%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Johannes Vermeer",
+        "en": "painting by Johannes Vermeer"
+      },
+      "source": "http://www.wikidata.org/entity/Q782639",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q167605",
+      "year": 1660,
+      "popularity": 44,
+      "title": {
+        "ko": "우유 짜는 여인",
+        "en": "우유 짜는 여인"
+      },
+      "country": {
+        "ko": "네덜란드",
+        "en": "네덜란드"
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Johannes%20Vermeer%20-%20Het%20melkmeisje%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "요하네스 페르멜의 그림",
+        "en": "요하네스 페르멜의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q167605",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q386453",
+      "year": 1660,
+      "popularity": 23,
+      "title": {
+        "ko": "물주전자를 들고 있는 젊은 여인",
+        "en": "물주전자를 들고 있는 젊은 여인"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20Vermeer%20van%20Delft%20019.jpg",
+      "description": {
+        "ko": "painting by Johannes Vermeer",
+        "en": "painting by Johannes Vermeer"
+      },
+      "source": "http://www.wikidata.org/entity/Q386453",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q151143",
+      "year": 1660,
+      "popularity": 19,
+      "title": {
+        "ko": "Woman with a Pearl Necklace",
+        "en": "Woman with a Pearl Necklace"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20Vermeer%20van%20Delft%20-%20Young%20Woman%20with%20a%20Pearl%20Necklace%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Johannes Vermeer",
+        "en": "painting by Johannes Vermeer"
+      },
+      "source": "http://www.wikidata.org/entity/Q151143",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1219698",
+      "year": 1660,
+      "popularity": 17,
+      "title": {
+        "ko": "Girl Interrupted at her Music",
+        "en": "Girl Interrupted at her Music"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vermeer%20Girl%20Interrupted%20at%20Her%20Music.jpg",
+      "description": {
+        "ko": "1660–1661 painting by Johannes Vermeer",
+        "en": "1660–1661 painting by Johannes Vermeer"
+      },
+      "source": "http://www.wikidata.org/entity/Q1219698",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q523974",
+      "year": 1661,
+      "popularity": 40,
+      "title": {
+        "ko": "델프트 풍경",
+        "en": "델프트 풍경"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Johannes%20Vermeer%20-%20View%20of%20Delft%20-%2092%20-%20Mauritshuis.jpg",
+      "description": {
+        "ko": "요하네스 페르메이르의 그림",
+        "en": "요하네스 페르메이르의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q523974",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q2336984",
+      "year": 1662,
+      "popularity": 25,
+      "title": {
+        "ko": "The Music Lesson",
+        "en": "The Music Lesson"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Johannes%20Vermeer%20-%20Lady%20at%20the%20Virginal%20with%20a%20Gentleman%2C%20%27The%20Music%20Lesson%27%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Johannes Vermeer, Buckingham Palace",
+        "en": "painting by Johannes Vermeer, Buckingham Palace"
+      },
+      "source": "http://www.wikidata.org/entity/Q2336984",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q839359",
+      "year": 1662,
+      "popularity": 16,
+      "title": {
+        "ko": "루트를 든 여인",
+        "en": "루트를 든 여인"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vermeer%20-%20Woman%20with%20a%20Lute%20near%20a%20window.jpg",
+      "description": {
+        "ko": "painting of Johannes Vermeer",
+        "en": "painting of Johannes Vermeer"
+      },
+      "source": "http://www.wikidata.org/entity/Q839359",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1169395",
+      "year": 1663,
+      "popularity": 25,
+      "title": {
+        "ko": "The Concert",
+        "en": "The Concert"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vermeer%20The%20Concert.jpg",
+      "description": {
+        "ko": "stolen painting by Johannes Vermeer",
+        "en": "stolen painting by Johannes Vermeer"
+      },
+      "source": "http://www.wikidata.org/entity/Q1169395",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q544315",
+      "year": 1664,
+      "popularity": 33,
+      "title": {
+        "ko": "천문학자",
+        "en": "천문학자"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "바로크",
+        "en": "바로크"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Johannes%20Vermeer%20-%20The%20Astronomer%20-%201668.jpg",
+      "description": {
+        "ko": "painting by Johannes Vermeer",
+        "en": "painting by Johannes Vermeer"
+      },
+      "source": "http://www.wikidata.org/entity/Q544315",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q166937",
+      "year": 1664,
+      "popularity": 25,
+      "title": {
+        "ko": "편지를 읽는 여인 (페르메이르)",
+        "en": "편지를 읽는 여인 (페르메이르)"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vermeer%2C%20Johannes%20-%20Woman%20reading%20a%20letter%20-%20ca.%201662-1663.jpg",
+      "description": {
+        "ko": "painting by Johannes Vermeer",
+        "en": "painting by Johannes Vermeer"
+      },
+      "source": "http://www.wikidata.org/entity/Q166937",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q185372",
+      "year": 1665,
+      "popularity": 72,
+      "title": {
+        "ko": "진주 귀고리를 한 소녀",
+        "en": "진주 귀고리를 한 소녀"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/1665%20Girl%20with%20a%20Pearl%20Earring.jpg",
+      "description": {
+        "ko": "painting by Johannes Vermeer",
+        "en": "painting by Johannes Vermeer"
+      },
+      "source": "http://www.wikidata.org/entity/Q185372",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q969367",
+      "year": 1665,
+      "popularity": 27,
+      "title": {
+        "ko": "저울질을 하는 여인",
+        "en": "저울질을 하는 여인"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Johannes%20Vermeer%20-%20Woman%20Holding%20a%20Balance%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Johannes Vermeer",
+        "en": "painting by Johannes Vermeer"
+      },
+      "source": "http://www.wikidata.org/entity/Q969367",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q958088",
+      "year": 1665,
+      "popularity": 17,
+      "title": {
+        "ko": "젊은 여인의 초상",
+        "en": "젊은 여인의 초상"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vermeer-Portrait%20of%20a%20Young%20Woman.jpg",
+      "description": {
+        "ko": "painting by Johannes Vermeer",
+        "en": "painting by Johannes Vermeer"
+      },
+      "source": "http://www.wikidata.org/entity/Q958088",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q914984",
+      "year": 1665,
+      "popularity": 15,
+      "title": {
+        "ko": "편지를 쓰는 숙녀",
+        "en": "편지를 쓰는 숙녀"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/A%20Lady%20Writing%20by%20Johannes%20Vermeer%2C%201665-6.png",
+      "description": {
+        "ko": "painting by Johannes Vermeer",
+        "en": "painting by Johannes Vermeer"
+      },
+      "source": "http://www.wikidata.org/entity/Q914984",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3739396",
+      "year": 1666,
+      "popularity": 17,
+      "title": {
+        "ko": "Mistress and Maid",
+        "en": "Mistress and Maid"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vermeer%20Lady%20Maidservant%20Holding%20Letter.jpg",
+      "description": {
+        "ko": "painting by Johannes Vermeer",
+        "en": "painting by Johannes Vermeer"
+      },
+      "source": "http://www.wikidata.org/entity/Q3739396",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q588695",
+      "year": 1667,
+      "popularity": 32,
+      "title": {
+        "ko": "회화의 기술",
+        "en": "회화의 기술"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20Vermeer%20-%20The%20Art%20of%20Painting%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "요하네스 페르메이르의 그림",
+        "en": "요하네스 페르메이르의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q588695",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q45130",
+      "year": 1668,
+      "popularity": 25,
+      "title": {
+        "ko": "The Geographer",
+        "en": "The Geographer"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Johannes%20Vermeer%2C%20Der%20Geograf%2C%201669.png",
+      "description": {
+        "ko": "painting by Johannes Vermeer at the Städel Museum, Frankfurt, Germany",
+        "en": "painting by Johannes Vermeer at the Städel Museum, Frankfurt, Germany"
+      },
+      "source": "http://www.wikidata.org/entity/Q45130",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q735061",
+      "year": 1668,
+      "popularity": 19,
+      "title": {
+        "ko": "The Love Letter",
+        "en": "The Love Letter"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Johannes%20Vermeer%20-%20%27De%20liefdesbrief%27%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Johannes Vermeer",
+        "en": "painting by Johannes Vermeer"
+      },
+      "source": "http://www.wikidata.org/entity/Q735061",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1216387",
+      "year": 1669,
+      "popularity": 24,
+      "title": {
+        "ko": "레이스 뜨는 여인",
+        "en": "레이스 뜨는 여인"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Johannes%20Vermeer%20-%20The%20lacemaker%20%28c.1669-1671%29.jpg",
+      "description": {
+        "ko": "1669년~1670년 요하네스 페이메르의 회화 작품",
+        "en": "1669년~1670년 요하네스 페이메르의 회화 작품"
+      },
+      "source": "http://www.wikidata.org/entity/Q1216387",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q614047",
+      "year": 1669,
+      "popularity": 19,
+      "title": {
+        "ko": "Girl with a Red Hat",
+        "en": "Girl with a Red Hat"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vermeer%20-%20Girl%20with%20a%20Red%20Hat.JPG",
+      "description": {
+        "ko": "painting by Johannes Vermeer",
+        "en": "painting by Johannes Vermeer"
+      },
+      "source": "http://www.wikidata.org/entity/Q614047",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q467359",
+      "year": 1670,
+      "popularity": 19,
+      "title": {
+        "ko": "Allegory of the Catholic Faith",
+        "en": "Allegory of the Catholic Faith"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Johannes%20Vermeer%2C%20Allegory%20of%20the%20Catholic%20Faith%2C%20The%20Metropolitan%20Museum%20of%20Art.jpg",
+      "description": {
+        "ko": "painting by Johannes Vermeer, Metropolitan Museum of Art",
+        "en": "painting by Johannes Vermeer, Metropolitan Museum of Art"
+      },
+      "source": "http://www.wikidata.org/entity/Q467359",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q641666",
+      "year": 1670,
+      "popularity": 19,
+      "title": {
+        "ko": "편지를 쓰는 숙녀와 하녀",
+        "en": "편지를 쓰는 숙녀와 하녀"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Woman%20writing%20a%20letter%2C%20with%20her%20maid%2C%20by%20Johannes%20Vermeer.jpg",
+      "description": {
+        "ko": "painting by Johannes Vermeer",
+        "en": "painting by Johannes Vermeer"
+      },
+      "source": "http://www.wikidata.org/entity/Q641666",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q2267440",
+      "year": 1670,
+      "popularity": 18,
+      "title": {
+        "ko": "버지널 앞의 숙녀",
+        "en": "버지널 앞의 숙녀"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20Vermeer%20van%20Delft%20-%20Jonge%20vrouw%20aan%20een%20virginaal%20%28ca.%201670-72%29.jpg",
+      "description": {
+        "ko": "painting by Johannes Vermeer",
+        "en": "painting by Johannes Vermeer"
+      },
+      "source": "http://www.wikidata.org/entity/Q2267440",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q2624258",
+      "year": 1670,
+      "popularity": 18,
+      "title": {
+        "ko": "버지널 앞에 서 있는 여인",
+        "en": "버지널 앞에 서 있는 여인"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20Vermeer%20van%20Delft%20-%20Jonge%20vrouw%20staande%20bij%20een%20virginaal%20%28ca.%201670-72%29.jpg",
+      "description": {
+        "ko": "painting by Johannes Vermeer",
+        "en": "painting by Johannes Vermeer"
+      },
+      "source": "http://www.wikidata.org/entity/Q2624258",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q4660880",
+      "year": 1670,
+      "popularity": 18,
+      "title": {
+        "ko": "버지널에 앉아 있는 젊은 여인",
+        "en": "버지널에 앉아 있는 젊은 여인"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Young%20Woman%20Seated%20at%20a%20Virginal%2C%20Johannes%20Vermeer%2C%201670-1672%2C%20oil%20on%20canvas%2C%2025.5%20by%2020.1%20cm%2C%20The%20Leiden%20Collection.jpg",
+      "description": {
+        "ko": "painting by Johannes Vermeer",
+        "en": "painting by Johannes Vermeer"
+      },
+      "source": "http://www.wikidata.org/entity/Q4660880",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q4358442",
+      "year": 1672,
+      "popularity": 15,
+      "title": {
+        "ko": "The Guitar Player",
+        "en": "The Guitar Player"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20Vermeer%20van%20Delft%20013.jpg",
+      "description": {
+        "ko": "painting by Johannes Vermeer",
+        "en": "painting by Johannes Vermeer"
+      },
+      "source": "http://www.wikidata.org/entity/Q4358442",
+      "verified": true,
+      "representative": false
+    }
+  ]
+}

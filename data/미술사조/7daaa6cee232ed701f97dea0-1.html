@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>사실주의 — 영웅과 격정에서 평범한 현실과 노동으로</title>
+<style>
+:root {
+  --bg:#090b0e; --panel:#12161b; --panel2:#181d23; --text:#f1eee8;
+  --muted:#aab3bc; --line:#2a3037; --gold:#d7a74a; --earth:#b88758;
+  --red:#b85a51; --blue:#8299b2; --green:#8daa90;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--text);line-height:1.75;
+  font-family:Inter,"Pretendard","Noto Sans KR",Arial,sans-serif;
+  background:
+    radial-gradient(circle at 13% 6%,rgba(184,135,88,.10),transparent 28rem),
+    radial-gradient(circle at 84% 8%,rgba(130,153,178,.08),transparent 28rem),
+    linear-gradient(180deg,#080a0d,#0d1014);
+}
+a{color:#edc777;text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{width:min(1200px,92vw);margin:auto}
+.hero{padding:76px 0 40px;border-bottom:1px solid var(--line)}
+.kicker{font-size:.84rem;font-weight:800;letter-spacing:.12em;color:var(--gold)}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.5rem,6vw,5.25rem);line-height:1.04;margin:.35rem 0 1rem}
+.hero p{max-width:1040px;color:#d2d8df;font-size:1.14rem}
+nav{position:sticky;top:0;z-index:20;background:rgba(9,11,14,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:18px;overflow:auto;padding:12px 0;white-space:nowrap;font-size:.9rem}
+section{padding:58px 0;border-bottom:1px solid var(--line)}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,3.5vw,3.15rem);margin:0 0 20px}
+h3{margin:.1rem 0 .55rem;font-size:1.18rem}
+.lead{font-size:1.08rem;color:#d5dbe1;max-width:1000px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:linear-gradient(180deg,var(--panel2),var(--panel));box-shadow:0 14px 34px rgba(0,0,0,.23)}
+.imgbox{background:#07090b;display:flex;align-items:center;justify-content:center;min-height:430px}
+.imgbox img{display:block;width:100%;height:570px;object-fit:contain}
+.caption{padding:18px 20px 20px}
+.caption small{display:block;color:var(--muted);margin-top:6px}
+.badge{display:inline-block;padding:4px 9px;border-radius:99px;border:1px solid #544323;background:rgba(215,167,74,.08);color:#efcb80;font-size:.76rem;font-weight:800;margin-bottom:8px}
+.callout{border-left:4px solid var(--gold);padding:18px 21px;background:rgba(215,167,74,.08);border-radius:0 12px 12px 0;margin:24px 0}
+.bigline{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.3rem,2.6vw,1.95rem);padding:24px 28px;border-top:1px solid #59471f;border-bottom:1px solid #59471f;color:#f0dcb1;margin:25px 0;line-height:1.48}
+.features{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:26px 0}
+.feature{padding:17px;border:1px solid var(--line);border-radius:12px;background:var(--panel);min-height:150px}
+.feature b{color:var(--gold);font-size:.8rem}
+.feature span{display:block;font-weight:800;margin:.35rem 0}
+.feature p{font-size:.9rem;color:var(--muted);margin:0;line-height:1.55}
+.timeline{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:28px 0}
+.time{padding:17px;border:1px solid var(--line);border-radius:12px;background:var(--panel);min-height:175px}
+.time .year{font-family:Georgia,serif;color:var(--gold);font-size:1.22rem;font-weight:700}
+.time strong{display:block;margin:.35rem 0}
+.time p{font-size:.88rem;color:var(--muted);margin:0;line-height:1.5}
+.branch{border:1px solid var(--line);border-radius:15px;background:var(--panel);padding:22px}
+.branch.courbet{border-top:4px solid var(--earth)}
+.branch.millet{border-top:4px solid var(--green)}
+.branch.daumier{border-top:4px solid var(--blue)}
+.branch .eyebrow{font-size:.76rem;font-weight:800;letter-spacing:.08em;color:var(--muted)}
+.branch h3{font-size:1.28rem}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;margin-top:24px}
+table{width:100%;border-collapse:collapse;min-width:880px;background:var(--panel)}
+th,td{padding:14px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:#171b20;color:#efd69c;font-size:.9rem}
+td:first-child{font-weight:750;color:#eef1f4;width:18%}
+tr:last-child td{border-bottom:0}
+.note{font-size:.94rem;color:var(--muted);background:#10141a;border:1px solid var(--line);padding:17px 19px;border-radius:12px}
+.chain{display:flex;align-items:stretch;gap:10px;overflow:auto;padding:8px 0 4px}
+.chain .node{min-width:185px;flex:1;padding:17px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.chain .arrow{display:flex;align-items:center;color:var(--gold);font-size:1.4rem}
+.source-list{font-size:.9rem;color:var(--muted)}
+footer{padding:36px 0 60px;color:#7f8993;font-size:.86rem}
+mark{background:rgba(215,167,74,.17);color:#ffe0a4;padding:.03em .22em;border-radius:4px}
+ul{padding-left:1.25rem}
+li{margin:.4rem 0}
+@media(max-width:980px){
+ .grid2,.grid3{grid-template-columns:1fr}
+ .features,.timeline{grid-template-columns:1fr 1fr}
+ .imgbox img{height:auto;max-height:610px}
+}
+@media(max-width:560px){
+ .features,.timeline{grid-template-columns:1fr}
+}
+</style>
+<link rel="stylesheet" href="../../uhangul/uhangul-runtime.css" data-uhangul-integration="v0.3">
+<style id="art-atlas-artist-link-style">
+.art-atlas-artist-link{font-weight:900;color:#191007!important;background:linear-gradient(180deg,rgba(255,232,151,.98),rgba(255,198,86,.9));border-bottom:2px solid #a96f12;border-radius:.22em;padding:0 .16em;text-decoration:none!important;box-decoration-break:clone;-webkit-box-decoration-break:clone}.art-atlas-artist-link:hover{filter:brightness(1.08);box-shadow:0 0 0 2px rgba(255,214,102,.24)}
+</style>
+</head>
+
+<body>
+<div data-uhangul-corner-bar style="position:sticky!important;top:0!important;z-index:2147483647!important;clear:both!important;height:64px!important;display:flex!important;align-items:center!important;padding:10px 18px!important;background:#0c1014!important;border-bottom:1px solid #2d3540!important"><button type="button" data-uhangul-corner-button aria-label="uHangul 켜기" title="uHangul 켜기" aria-pressed="false" style="position:relative!important;z-index:2147483647!important;display:block!important;border:2px solid #f4c55b!important;border-radius:50%!important;width:38px!important;height:38px!important;padding:0!important;background:#18221e!important;color:#f4c55b!important;font:800 23px/34px Georgia,serif!important;text-align:center!important;cursor:pointer!important;visibility:visible!important;opacity:1!important">u</button></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="hero">
+
+
+
+<div class="wrap">
+  <div class="kicker">미술사 · 낭만주의에서 사실주의로</div>
+  <h1>사실주의<br><span style="color:var(--gold)">영웅과 격정에서 평범한 현실과 노동으로</span></h1>
+  <p>
+    19세기 프랑스 사실주의는 단순히 <strong>“사진처럼 똑같이 그리는 기법”</strong>이 아니다.
+    더 근본적인 변화는 <strong>무엇을 큰 그림의 주제로 삼을 가치가 있는가</strong>에 있었다.
+    역사화가 고대 영웅을, 낭만주의가 혁명과 재난·숭고한 감정을 그렸다면,
+    사실주의 화가들은 <strong>농민, 노동자, 지방의 장례식, 기차의 3등석 승객처럼 동시대의 평범한 현실</strong>을
+    미화하거나 영웅화하지 않고 주요 회화의 중심으로 끌어올렸다.
+  </p>
+</div>
+</header>
+
+<nav>
+<div class="wrap">
+  <a href="#answer">0. 무엇을 바꾸었나</a>
+  <a href="#before">1. 이전: 낭만주의</a>
+  <a href="#history">2. 역사적 배경</a>
+  <a href="#courbet">3. 쿠르베의 혁명</a>
+  <a href="#branches">4. 세 방향</a>
+  <a href="#millet">5. 밀레</a>
+  <a href="#daumier">6. 도미에</a>
+  <a href="#traits">7. 핵심 특징</a>
+  <a href="#compare">8. 직접 비교</a>
+  <a href="#after">9. 인상주의로</a>
+  <a href="#countries">국가별 전개</a>
+</div>
+</nav>
+
+<main>
+
+<section id="answer">
+<div class="wrap">
+  <h2>0. 먼저 결론 — 사실주의는 무엇을 바꾸었는가?</h2>
+  <p class="lead">
+    낭만주의가 현실의 사건을 다루더라도 그것을 <strong>극적이고 영웅적이며 감정적으로 확대</strong>했다면,
+    사실주의는 한 단계 더 나아가 <strong>특별하지 않은 현실 자체도 미술의 주제가 될 수 있다</strong>고 주장했다.
+  </p>
+
+  <div class="features">
+    <div class="feature"><b>01 · 주제</b><span>영웅 → 보통 사람</span><p>농민·노동자·시민·승객처럼 역사화에서 주변부에 있던 사람이 화면의 중심이 된다.</p></div>
+    <div class="feature"><b>02 · 시간</b><span>과거 → 현재</span><p>고대나 중세보다 화가 자신이 살아가는 동시대의 사건과 생활을 직접 다룬다.</p></div>
+    <div class="feature"><b>03 · 태도</b><span>극화 → 관찰</span><p>과장된 영웅주의와 이국적 환상보다 눈앞의 삶을 구체적으로 관찰한다.</p></div>
+    <div class="feature"><b>04 · 사회</b><span>상류층 → 노동</span><p>산업화·도시화 속에서 농민과 도시 노동자의 삶이 새로운 시각적 주제가 된다.</p></div>
+    <div class="feature"><b>05 · 위계</b><span>역사화 → 일상</span><p>대형 캔버스와 장엄한 형식을 평범한 일상에 사용하여 아카데미의 장르 위계를 흔든다.</p></div>
+  </div>
+
+  <div class="callout">
+    <strong>가장 중요한 기억법:</strong><br><br>
+    사실주의는 <strong>“얼마나 똑같이 그렸는가”보다 “무엇을 그릴 가치가 있다고 선언했는가”</strong>가 더 중요하다.
+  </div>
+</div>
+</section>
+
+<section id="before">
+<div class="wrap">
+  <h2>1. Before — 낭만주의는 현실을 어떻게 그렸는가?</h2>
+
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Eug-C3-A8ne-Delacroix-Le-28-Juillet-La-Libert-C3-A9-guidant-le-peuple-808a8bab8e3b.jpg" alt="외젠 들라크루아, 민중을 이끄는 자유의 여신"></div>
+      <div class="caption">
+        <span class="badge">낭만주의</span>
+        <h3>외젠 들라크루아, 《민중을 이끄는 자유의 여신》</h3>
+        <small>1830 · 파리 루브르 박물관</small>
+      </div>
+    </article>
+
+    <div>
+      <h3>이 작품도 ‘현실’을 그렸다. 그런데 사실주의와 무엇이 다른가?</h3>
+      <ul>
+        <li>1830년 7월 혁명이라는 실제 동시대 사건을 다룬다.</li>
+        <li>그러나 자유는 현실의 여성인 동시에 <strong>알레고리적 영웅</strong>으로 제시된다.</li>
+        <li>시체·연기·삼색기·전진하는 군중이 극적인 피라미드 구도를 만든다.</li>
+        <li>색채와 움직임이 사건의 감정과 영웅성을 극대화한다.</li>
+      </ul>
+
+      <div class="bigline">
+        낭만주의는 현실을 <strong>드라마로 만든다.</strong><br>
+        사실주의는 묻게 된다.<br>
+        <strong>“드라마가 없는 평범한 현실은 왜 그림이 될 수 없는가?”</strong>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="history">
+<div class="wrap">
+  <h2>2. 역사적 배경 — 왜 1840~50년대에 ‘평범한 현재’가 중요해졌나?</h2>
+
+  <div class="timeline">
+    <div class="time"><div class="year">1830s–40s</div><strong>산업화·철도</strong><p>철도망과 산업 생산이 확대되고 농촌과 도시의 생활방식이 빠르게 변한다.</p></div>
+    <div class="time"><div class="year">1839</div><strong>사진술의 공개</strong><p>다게레오타이프가 파리에서 공개되며 현실의 외관을 기계적으로 기록할 수 있는 새로운 매체가 등장한다.</p></div>
+    <div class="time"><div class="year">1848</div><strong>2월 혁명</strong><p>루이필리프 왕정이 무너지고 제2공화국이 수립된다. 민주주의와 계급 문제가 사회의 전면에 등장한다.</p></div>
+    <div class="time"><div class="year">1848</div><strong>6월 봉기</strong><p>파리 노동계층의 봉기가 군대에 의해 진압되며 사회적 계급 갈등이 극적으로 드러난다.</p></div>
+    <div class="time"><div class="year">1849–51</div><strong>쿠르베의 등장</strong><p>《오르낭의 매장》 등에서 평범한 지방 사람들을 거대한 역사화 규모로 그린다.</p></div>
+    <div class="time"><div class="year">1855</div><strong>‘사실주의관’</strong><p>쿠르베가 만국박람회 공식 체계 밖에 독립 전시 공간인 ‘사실주의관’을 세운다.</p></div>
+  </div>
+
+  <div class="callout">
+    <strong>1848년 혁명은 특히 중요하다.</strong>
+    메트로폴리탄 미술관은 프랑스 사실주의가 1848년 혁명 이후 본격적으로 형성되었으며,
+    민주적 개혁을 둘러싼 사회 변화와 함께 미술도 노동계층과 일상생활을 주요 주제로 삼았다고 설명한다.
+  </div>
+
+  <div class="note">
+    사진술이 사실주의를 “만들었다”고 단정하는 것은 과도하다.
+    그러나 1839년 이후 사진은 <strong>보이는 현실을 직접 기록한다는 새로운 기준</strong>을 제시했고,
+    회화가 현실·현재·관찰과 어떤 관계를 맺을 것인지 다시 생각하게 만든 19세기의 중요한 시각 환경이었다.
+  </div>
+</div>
+</section>
+
+<section id="courbet">
+<div class="wrap">
+  <h2>3. Breakthrough — 쿠르베는 평범한 장례식을 ‘역사화 크기’로 그렸다</h2>
+
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Gustave-Courbet-A-Burial-at-Ornans-Google-Art-Project-2-45d9e62b27f4.jpg" alt="귀스타브 쿠르베, 오르낭의 매장"></div>
+      <div class="caption">
+        <span class="badge">사실주의의 선언</span>
+        <h3>귀스타브 쿠르베, 《오르낭의 매장》</h3>
+        <small>1849–1850 · 파리 오르세 미술관</small>
+      </div>
+    </article>
+
+    <div>
+      <h3>왜 당시에는 충격적이었는가?</h3>
+      <ul>
+        <li>화면의 폭이 6m가 넘는 <strong>기념비적인 크기</strong>다.</li>
+        <li>그런 대형 화면에 왕·성인·신화적 영웅이 아니라 지방 마을의 장례식이 등장한다.</li>
+        <li>등장인물들은 이상적인 미남·미녀가 아니라 쿠르베가 알고 지내던 실제 지역 사람들의 개별성을 지닌다.</li>
+        <li>특별한 영웅적 중심인물이 없고, 사람들은 수평으로 길게 배열된다.</li>
+        <li>장례라는 사건 자체보다 <strong>그 사회에 실제 존재하는 사람들의 집단적 현실</strong>이 강조된다.</li>
+      </ul>
+
+      <div class="bigline">
+        쿠르베의 가장 급진적인 선택은<br>
+        <strong>“평범한 사람이 거대한 그림을 차지할 자격이 있다”</strong>고 선언한 것이다.
+      </div>
+
+      <div class="callout">
+        오르세 미술관은 《오르낭의 매장》을 새로운 사실주의 미학의
+        <strong>선언적 작품</strong>으로 설명한다.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="branches">
+<div class="wrap">
+  <h2>4. 프랑스 사실주의의 세 가지 대표적 방향</h2>
+  <p class="lead">
+    사실주의를 하나의 화풍으로만 보면 쿠르베·밀레·도미에의 차이가 사라진다.
+    작품을 이해하기 위해서는 다음 세 방향으로 나누어 보는 것이 유용하다.
+  </p>
+
+  <div class="grid3" style="margin-top:26px">
+    <div class="branch courbet">
+      <div class="eyebrow">쿠르베</div>
+      <h3>① 회화의 위계를 깨뜨린 사실주의</h3>
+      <p>평범한 지방 생활과 보통 사람을 역사화의 거대한 형식으로 끌어올려 아카데미가 정한 “고귀한 주제”의 위계를 공격한다.</p>
+    </div>
+    <div class="branch millet">
+      <div class="eyebrow">밀레</div>
+      <h3>② 농촌 노동의 사실주의</h3>
+      <p>밭에서 이삭을 줍고 씨를 뿌리는 농민의 반복적인 노동과 삶의 무게를 존엄하게 그린다.</p>
+    </div>
+    <div class="branch daumier">
+      <div class="eyebrow">도미에</div>
+      <h3>③ 도시·계급·사회 관찰</h3>
+      <p>신문 풍자화와 회화를 통해 정치인·부르주아·도시의 빈민·기차 승객 등 근대 도시사회의 계급과 일상을 관찰한다.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="millet">
+<div class="wrap">
+  <h2>5. 장프랑수아 밀레 — 노동이 그림의 주인공이 되다</h2>
+
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Jean-Fran-C3-A7ois-Millet-Gleaners-Google-Art-Project-2-2a5eac9e18cd.jpg" alt="장프랑수아 밀레, 이삭 줍는 여인들"></div>
+      <div class="caption">
+        <span class="badge">농촌 사실주의</span>
+        <h3>장프랑수아 밀레, 《이삭 줍는 여인들》</h3>
+        <small>1857 · 파리 오르세 미술관</small>
+      </div>
+    </article>
+
+    <div>
+      <h3>무슨 일이 일어나고 있는가?</h3>
+      <ul>
+        <li>세 명의 농촌 여성이 추수가 끝난 밭에서 남은 이삭을 하나씩 줍고 있다.</li>
+        <li>화면 앞에는 반복적으로 허리를 굽힌 노동자의 몸이 크게 자리한다.</li>
+        <li>뒤쪽에는 풍성한 수확물이 쌓여 있어 전경의 가난한 노동과 대비된다.</li>
+        <li>영웅적 사건은 없지만 <strong>반복되는 육체 노동의 무게</strong> 자체가 화면의 중심이 된다.</li>
+      </ul>
+
+      <div class="bigline">
+        역사화의 영웅이 몸을 뻗어 맹세했다면,<br>
+        밀레의 인물은 <strong>하루 종일 허리를 굽혀 이삭을 줍는다.</strong>
+      </div>
+
+      <div class="note">
+        밀레의 농민화를 모두 직접적인 정치 선전으로 해석하는 것은 주의해야 한다.
+        중요한 것은 농촌 노동자가 이전보다 훨씬 큰 규모와 존엄성을 지닌 회화의 주인공이 되었다는 점이다.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="daumier">
+<div class="wrap">
+  <h2>6. 오노레 도미에 — 근대 도시의 이름 없는 사람을 바라보다</h2>
+
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Honor-C3-A9-20Daumier-20-French-20Marseilles-201808-E2-80-931879-20Val-d34f3d1251df.jpg" alt="오노레 도미에, 삼등열차"></div>
+      <div class="caption">
+        <span class="badge">도시 사실주의</span>
+        <h3>오노레 도미에, 《삼등열차》</h3>
+        <small>약 1862–1864 · 뉴욕 메트로폴리탄 미술관의 판본</small>
+      </div>
+    </article>
+
+    <div>
+      <h3>철도가 새로운 사회 공간을 만든다</h3>
+      <ul>
+        <li>화려한 객실이 아니라 <strong>3등석</strong> 승객들이 그림의 주인공이다.</li>
+        <li>노인, 여성, 아이 등 이름 없는 사람들이 좁은 객차에 모여 있다.</li>
+        <li>이들은 영웅적인 행동을 하지 않고 말없이 앉아 이동할 뿐이다.</li>
+        <li>도미에는 세밀한 외형 복제보다 인물의 피로와 계급적 현실을 단순하고 강한 형태로 전달한다.</li>
+      </ul>
+
+      <div class="callout">
+        이 작품은 “사실주의 = 사진처럼 세밀한 그림”이라는 오해를 특히 잘 깨준다.
+        도미에의 붓질과 형태는 오히려 요약적이지만,
+        <strong>무엇을 보고 어떤 현실을 드러내는가</strong>라는 점에서 매우 사실주의적이다.
+      </div>
+
+      <div class="bigline">
+        사실주의에서 ‘진실’은<br>
+        <strong>표면을 정밀하게 복사하는 것만이 아니라 사회적 현실을 보이게 하는 것</strong>이다.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="traits">
+<div class="wrap">
+  <h2>7. 사실주의를 그림에서 알아보는 핵심 특징</h2>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>관찰 항목</th><th>낭만주의</th><th>사실주의</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>주제</td><td>혁명·재난·이국·역사·숭고한 자연</td><td>농민·노동·장례식·도시·일상</td></tr>
+      <tr><td>주인공</td><td>영웅·반항자·고독한 개인</td><td>이름 없는 보통 사람</td></tr>
+      <tr><td>감정</td><td>격정과 극적 경험</td><td>절제된 관찰과 삶의 물질성</td></tr>
+      <tr><td>현실 처리</td><td>현실을 극적·상징적으로 확대</td><td>동시대 현실을 특별한 미화 없이 제시</td></tr>
+      <tr><td>시간</td><td>현재뿐 아니라 중세·이국·역사에 관심</td><td>자신이 살아가는 현재를 중시</td></tr>
+      <tr><td>사회계층</td><td>영웅적 개인과 혁명적 군중</td><td>농민·노동자·소시민과 일상의 군중</td></tr>
+      <tr><td>회화의 위계</td><td>역사화의 극적 전통을 여전히 활용</td><td>일상적 소재를 대형 회화의 수준으로 끌어올림</td></tr>
+      <tr><td>한 문장</td><td><strong>“현실을 강렬하게 느껴라.”</strong></td><td><strong>“지금 존재하는 현실을 보라.”</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout">
+    <strong>사실주의의 세 단어:</strong><br><br>
+    <strong>현재 — 평범한 사람 — 직접 관찰</strong>
+  </div>
+</div>
+</section>
+
+<section id="compare">
+<div class="wrap">
+  <h2>8. 《민중을 이끄는 자유의 여신》과 《오르낭의 매장》을 비교하면</h2>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>질문</th><th>들라크루아 《민중을 이끄는 자유의 여신》</th><th>쿠르베 《오르낭의 매장》</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>사건</td><td>혁명이라는 역사적 대사건</td><td>지방 마을의 평범한 장례</td></tr>
+      <tr><td>주인공</td><td>자유를 의인화한 영웅적 여성</td><td>명확한 영웅이 없음</td></tr>
+      <tr><td>구도</td><td>전진하는 피라미드와 대각선</td><td>수평으로 길게 늘어선 집단</td></tr>
+      <tr><td>감정</td><td>흥분·투쟁·열정</td><td>무겁고 일상적인 장례의 분위기</td></tr>
+      <tr><td>의미</td><td>현실을 상징적·영웅적 사건으로 상승</td><td>평범한 현실 자체의 중요성을 주장</td></tr>
+      <tr><td>관람자에게</td><td><strong>“이 사건에 참여하라.”</strong></td><td><strong>“이 사람들을 있는 그대로 보라.”</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+</section>
+
+<section id="after">
+<div class="wrap">
+  <h2>9. After — 사실주의가 인상주의로 무엇을 넘겨주었는가?</h2>
+
+  <p class="lead">
+    사실주의는 후대 인상주의와 동일한 운동은 아니지만,
+    <strong>고대·신화보다 현대의 일상을 그려도 된다는 자유</strong>와
+    아카데미의 전통적 장르 위계에 대한 도전을 다음 세대에 넘겨주었다.
+  </p>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>사실주의</th><th>→</th><th>인상주의</th></tr></thead>
+    <tbody>
+      <tr><td>동시대 현실</td><td>→</td><td>현대 도시·카페·극장·거리·여가</td></tr>
+      <tr><td>평범한 사람</td><td>→</td><td>부르주아·노동자·무용수·행인 등 현대인</td></tr>
+      <tr><td>아카데미의 주제 위계 거부</td><td>→</td><td>공식 살롱 밖 독립 전시</td></tr>
+      <tr><td>현실의 사회적 조건</td><td>→</td><td>현실이 빛과 시각 속에서 순간적으로 어떻게 보이는지</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="bigline">
+    사실주의가 <strong>“무엇을 보아야 하는가?”</strong>를 바꾸었다면,<br>
+    인상주의는 이어서 <strong>“그 현실은 눈에 실제로 어떻게 보이는가?”</strong>를 바꾸게 된다.
+  </div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <h2>전체 흐름</h2>
+  <div class="chain">
+    <div class="node"><strong>낭만주의</strong><br><span style="color:var(--muted)">감정·혁명·숭고·영웅</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong>1839 사진술</strong><br><span style="color:var(--muted)">현실 기록의 새로운 매체</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong>1848 혁명</strong><br><span style="color:var(--muted)">민주주의·계급 갈등·사회 현실</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong>사실주의</strong><br><span style="color:var(--muted)">현재·노동·평범한 사람</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong>인상주의</strong><br><span style="color:var(--muted)">현대생활·빛·순간적 시각</span></div>
+  </div>
+
+  <div class="note" style="margin-top:25px">
+    ※ 여기서 말하는 사실주의는 주로 19세기 중반 프랑스의 Realism을 뜻한다.
+    “현실적으로 보이는 모든 그림”을 사실주의 사조에 포함시키는 것은 옳지 않다.
+    또한 쿠르베, 밀레, 도미에는 정치적 태도와 회화적 관심이 서로 달랐기 때문에
+    세 사람을 하나의 사회주의적 프로그램으로 묶는 것도 지나친 단순화다.
+  </div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <h2>참고 자료</h2>
+  <div class="source-list">
+    <ul>
+      <li><a href="https://www.metmuseum.org/essays/nineteenth-century-french-realism" target="_blank" rel="noopener">메트로폴리탄 미술관 — 19세기 프랑스 사실주의와 1848년 혁명</a></li>
+      <li><a href="https://www.musee-orsay.fr/en/artworks/un-enterrement-ornans-924" target="_blank" rel="noopener">오르세 미술관 — 쿠르베 《오르낭의 매장》</a></li>
+      <li><a href="https://www.musee-orsay.fr/en/artworks/des-glaneuses-342" target="_blank" rel="noopener">오르세 미술관 — 밀레 《이삭 줍는 여인들》</a></li>
+      <li><a href="https://www.metmuseum.org/art/collection/search/436095" target="_blank" rel="noopener">메트로폴리탄 미술관 — 도미에 《삼등열차》</a></li>
+      <li><a href="https://www.metmuseum.org/essays/daguerre-1787-1851-and-the-invention-of-photography" target="_blank" rel="noopener">메트로폴리탄 미술관 — 1839년 다게레오타이프와 사진술의 등장</a></li>
+      <li><a href="https://www.musee-orsay.fr/en/artworks/latelier-du-peintre-927" target="_blank" rel="noopener">오르세 미술관 — 1855년 쿠르베의 사실주의관</a></li>
+    </ul>
+    <p>작품 이미지는 자료 폴더의 로컬 이미지 파일을 사용한다.</p>
+  </div>
+</div>
+</section>
+
+
+<section id="countries"><div class="wrap">
+<h2>여러 국가에서의 전개 — ‘현실’은 각 사회에서 서로 달랐다</h2>
+<p class="lead">사실주의의 공통 핵심은 <strong>고대·신화·영웅 대신 자신이 살아가는 동시대의 현실과 평범한 사람</strong>을 중요하게 본다는 것이다. 그러나 각국이 직면한 사회문제가 달랐기 때문에 주제도 달라졌다.</p>
+<div class="table-wrap"><table><thead><tr><th>국가</th><th>지역적 특징</th><th>대표 화가</th></tr></thead><tbody>
+<tr><td>프랑스</td><td>1848년 혁명 이후 농민·노동·도시 계급과 지방사회를 대형 회화의 정당한 주제로 끌어올렸다.</td><td>쿠르베, 밀레, 도미에</td></tr>
+<tr><td>러시아</td><td>이동파를 중심으로 농민의 삶, 빈곤, 사회적 불평등, 러시아 역사와 광대한 국토를 사실적·도덕적 시선으로 다루었다.</td><td>일리야 레핀, 바실리 페로프, 이반 크람스코이</td></tr>
+<tr><td>독일</td><td>급속히 변화하는 프로이센·독일 사회의 도시, 산업, 궁정과 일상생활을 정밀하면서도 비영웅적으로 관찰했다.</td><td>아돌프 멘첼</td></tr>
+<tr><td>미국</td><td>남북전쟁 이후 일상생활, 노동, 스포츠, 과학적 인체관찰과 현대 미국사회를 직접적인 시선으로 다루었다.</td><td>윈슬로 호머, 토머스 에이킨스</td></tr>
+</tbody></table></div>
+<div class="callout"><strong>공통 철학:</strong> 지금 여기의 현실을 미술의 중심으로 올린다.<br><strong>지역적 차이:</strong> 프랑스는 계급과 현대사회, 러시아는 농민과 사회적 도덕, 미국은 현대생활과 경험적 관찰이 두드러졌다.</div>
+</div></section>
+
+</main>
+
+<footer>
+<div class="wrap">사실주의 — 영웅과 격정에서 평범한 현실과 노동으로 · 역사와 작품의 비교</div>
+</footer>
+
+<script defer src="../../uhangul/uhangul-runtime.js" data-uhangul-integration="v0.4"></script>
+
+</body>
+</html>

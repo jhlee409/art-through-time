@@ -1,0 +1,1520 @@
+{
+  "schema": 18,
+  "artistId": "artist-Q187310",
+  "qid": "Q187310",
+  "artist": {
+    "name": {
+      "ko": "칼 라르손",
+      "en": "Carl Larsson"
+    },
+    "birth": 1853,
+    "death": 1919,
+    "nationality": {
+      "ko": "스웨덴",
+      "en": "Sweden"
+    }
+  },
+  "fetchedAt": "2026-08-11T13:27:25.773Z",
+  "works": [
+    {
+      "id": "wikidata-Q110805667",
+      "year": 1867,
+      "popularity": 0,
+      "title": {
+        "ko": "Törnekrönt Kristushuvud",
+        "en": "Törnekrönt Kristushuvud"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20T%C3%B6rnekr%C3%B6nt%20Kristushuvud%20-%20NMH%20A%2057-2014%20-%20Nationalmuseum.jpg",
+      "description": {
+        "ko": "drawing by Carl Larsson",
+        "en": "drawing by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q110805667",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q108741509",
+      "year": 1874,
+      "popularity": 0,
+      "title": {
+        "ko": "En dörr på Gripsholm, Gustav Vasas tid",
+        "en": "En dörr på Gripsholm, Gustav Vasas tid"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "drawing by Carl Larsson",
+        "en": "drawing by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q108741509",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q130538305",
+      "year": 1876,
+      "popularity": 0,
+      "title": {
+        "ko": "Sten Sture the Elder Frees the Captive Danish Queen Kristina from the Vadstena Monastery",
+        "en": "Sten Sture the Elder Frees the Captive Danish Queen Kristina from the Vadstena Monastery"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sten%20Sture%20the%20Elder%20Frees%20the%20Captive%20Danish%20Queen%20Kristina%20from%20the%20Vadstena%20Monastery%20%28Carl%20Larsson%29%20-%20Gothenburg%20Museum%20of%20Art%20-%20GKM%202013-116.tif",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "http://www.wikidata.org/entity/Q130538305",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q136698715",
+      "year": 1877,
+      "popularity": 0,
+      "title": {
+        "ko": "Light-Shadow",
+        "en": "Light-Shadow"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Clair-Obscur.jpg",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q136698715",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q110805030",
+      "year": 1880,
+      "popularity": 0,
+      "title": {
+        "ko": "Porträtt av Ernst Josephson",
+        "en": "Porträtt av Ernst Josephson"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Portr%C3%A4tt%20av%20Ernst%20Josephson%20-%20NMH%2024-2015%20-%20Nationalmuseum.jpg",
+      "description": {
+        "ko": "drawing by Carl Larsson",
+        "en": "drawing by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q110805030",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q110788270",
+      "year": 1883,
+      "popularity": 0,
+      "title": {
+        "ko": "Fransk bondgård",
+        "en": "Fransk bondgård"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Fransk%20bondg%C3%A5rd%20-%20NMH%20385-1927%20-%20Nationalmuseum.jpg",
+      "description": {
+        "ko": "drawing by Carl Larsson",
+        "en": "drawing by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q110788270",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q135218965",
+      "year": 1883,
+      "popularity": 0,
+      "title": {
+        "ko": "The Bride",
+        "en": "The Bride"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bruden.jpg",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q135218965",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q102251693",
+      "year": 1883,
+      "popularity": 0,
+      "title": {
+        "ko": "A la Campagne",
+        "en": "A la Campagne"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%2C%201883%20-%20%C3%80%20la%20Campagne.jpg",
+      "description": {
+        "ko": "painting by Carl Larsson from 1883",
+        "en": "painting by Carl Larsson from 1883"
+      },
+      "source": "http://www.wikidata.org/entity/Q102251693",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q130730389",
+      "year": 1884,
+      "popularity": 0,
+      "title": {
+        "ko": "Electricity",
+        "en": "Electricity"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Electricity%20%28Carl%20Larsson%29%20-%20Gothenburg%20Museum%20of%20Art%20-%20F%20220.tif",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q130730389",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q136698651",
+      "year": 1884,
+      "popularity": 0,
+      "title": {
+        "ko": "Q136698651",
+        "en": "Q136698651"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20%27Vallmor%27%201884.jpg",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q136698651",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q65194593",
+      "year": 1885,
+      "popularity": 3,
+      "title": {
+        "ko": "Interior of the Fürstenberg Gallery",
+        "en": "Interior of the Fürstenberg Gallery"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Interior%20of%20the%20F%C3%BCrstenberg%20Gallery%20%28Carl%20Larsson%29%20-%20Gothenburg%20Museum%20of%20Art%20-%20F%2067.tif",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q65194593",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q110787624",
+      "year": 1885,
+      "popularity": 0,
+      "title": {
+        "ko": "Study of a Tree",
+        "en": "Study of a Tree"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Study%20of%20a%20Tree%20-%20NMH%205-1908%20-%20Nationalmuseum.jpg",
+      "description": {
+        "ko": "drawing by Carl Larsson",
+        "en": "drawing by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q110787624",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q136698141",
+      "year": 1886,
+      "popularity": 0,
+      "title": {
+        "ko": "A Lady Reading a Newspaper",
+        "en": "A Lady Reading a Newspaper"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20A%20Lady%20Reading%20a%20Newspaper.jpg",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q136698141",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q136698761",
+      "year": 1886,
+      "popularity": 0,
+      "title": {
+        "ko": "Guests II",
+        "en": "Guests II"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Fr%C3%A4mmande%20II%201886-1889.jpg",
+      "description": {
+        "ko": "painting by Carl Larsson (1853–1919)",
+        "en": "painting by Carl Larsson (1853–1919)"
+      },
+      "source": "http://www.wikidata.org/entity/Q136698761",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q110763117",
+      "year": 1887,
+      "popularity": 0,
+      "title": {
+        "ko": "I Egypten. Robert and Elin Thegerström on their honeymoon",
+        "en": "I Egypten. Robert and Elin Thegerström on their honeymoon"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20I%20Egypten.%20Robert%20and%20Elin%20Thegerstr%C3%B6m%20on%20their%20honeymoon%20-%20NMH%2070-2017%20-%20Nationalmuseum.jpg",
+      "description": {
+        "ko": "drawing by Carl Larsson",
+        "en": "drawing by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q110763117",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q110763548",
+      "year": 1887,
+      "popularity": 0,
+      "title": {
+        "ko": "Seasickness. Robert and Elin Thegerström on their honeymoon",
+        "en": "Seasickness. Robert and Elin Thegerström on their honeymoon"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Seasickness.%20Robert%20and%20Elin%20Thegerstr%C3%B6m%20on%20their%20honeymoon%20-%20NMH%2067-2017%20-%20Nationalmuseum.jpg",
+      "description": {
+        "ko": "drawing by Carl Larsson",
+        "en": "drawing by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q110763548",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q110800213",
+      "year": 1887,
+      "popularity": 0,
+      "title": {
+        "ko": "Together at the piano. Robert and Elin Thegerström on their honeymoon",
+        "en": "Together at the piano. Robert and Elin Thegerström on their honeymoon"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Together%20at%20the%20piano.%20Robert%20and%20Elin%20Thegerstr%C3%B6m%20on%20their%20honeymoon%20-%20NMH%2069-2017%20-%20Nationalmuseum.jpg",
+      "description": {
+        "ko": "drawing by Carl Larsson",
+        "en": "drawing by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q110800213",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q110800215",
+      "year": 1887,
+      "popularity": 0,
+      "title": {
+        "ko": "Embrace in a railway compartment. Robert and Elin Thegerström on their honeymoon",
+        "en": "Embrace in a railway compartment. Robert and Elin Thegerström on their honeymoon"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Embrace%20in%20a%20railway%20compartment.%20Robert%20and%20Elin%20Thegerstr%C3%B6m%20on%20their%20honeymoon%20-%20NMH%2068-2017%20-%20Nationalmuseum.jpg",
+      "description": {
+        "ko": "drawing by Carl Larsson",
+        "en": "drawing by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q110800215",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q10656419",
+      "year": 1888,
+      "popularity": 1,
+      "title": {
+        "ko": "Rococo - Renaissance - Contemporary art",
+        "en": "Rococo - Renaissance - Contemporary art"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Rococo-Renaissance-Contemporary%20art.jpg",
+      "description": {
+        "ko": "triptych by Carl Larsson",
+        "en": "triptych by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q10656419",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q110787789",
+      "year": 1888,
+      "popularity": 0,
+      "title": {
+        "ko": "Parisutsikt",
+        "en": "Parisutsikt"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Parisutsikt%20-%20NMH%2029-1908%20-%20Nationalmuseum.jpg",
+      "description": {
+        "ko": "drawing by Carl Larsson",
+        "en": "drawing by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q110787789",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q136702251",
+      "year": 1888,
+      "popularity": 0,
+      "title": {
+        "ko": "Q136702251",
+        "en": "Q136702251"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20God%20forts%C3%A4ttning%20Fr%C3%A5n%20Valand%201888.jpg",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q136702251",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q76290647",
+      "year": 1888,
+      "popularity": 0,
+      "title": {
+        "ko": "Contemporary art",
+        "en": "Contemporary art"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "아카데믹 미술",
+        "en": "아카데믹 미술"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Nutida%20konst%201888.jpg",
+      "description": {
+        "ko": "painting by Carl Larsson in Gothenburg Museum of Art",
+        "en": "painting by Carl Larsson in Gothenburg Museum of Art"
+      },
+      "source": "http://www.wikidata.org/entity/Q76290647",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q76293066",
+      "year": 1889,
+      "popularity": 0,
+      "title": {
+        "ko": "Renaissance",
+        "en": "Renaissance"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "아카데믹 미술",
+        "en": "아카데믹 미술"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Renaissance.jpg",
+      "description": {
+        "ko": "painting by Carl Larsson in Gothenburg Museum of Art",
+        "en": "painting by Carl Larsson in Gothenburg Museum of Art"
+      },
+      "source": "http://www.wikidata.org/entity/Q76293066",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q76293120",
+      "year": 1889,
+      "popularity": 0,
+      "title": {
+        "ko": "Rococo",
+        "en": "Rococo"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "아카데믹 미술",
+        "en": "아카데믹 미술"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Rococo.jpg",
+      "description": {
+        "ko": "painting by Carl Larsson in Gothenburg Museum of Art",
+        "en": "painting by Carl Larsson in Gothenburg Museum of Art"
+      },
+      "source": "http://www.wikidata.org/entity/Q76293120",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q110788282",
+      "year": 1890,
+      "popularity": 0,
+      "title": {
+        "ko": "Studie av sovande barn",
+        "en": "Studie av sovande barn"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Studie%20av%20sovande%20barn%20-%20NMH%2033-1908%20recto%20-%20Nationalmuseum.jpg",
+      "description": {
+        "ko": "drawing by Carl Larsson",
+        "en": "drawing by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q110788282",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q130781496",
+      "year": 1891,
+      "popularity": 0,
+      "title": {
+        "ko": "Göthilda Fürstenberg",
+        "en": "Göthilda Fürstenberg"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/G%C3%B6thilda%20F%C3%BCrstenberg%20%28Carl%20Larsson%29%20-%20Gothenburg%20Museum%20of%20Art%20-%20F%2071.tif",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q130781496",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q138529729",
+      "year": 1891,
+      "popularity": 0,
+      "title": {
+        "ko": "Porträt des CGW Carleman",
+        "en": "Porträt des CGW Carleman"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Cl%20Gustaf%20Carleman.jpg",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q138529729",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q130870450",
+      "year": 1893,
+      "popularity": 0,
+      "title": {
+        "ko": "Magnus Olsson",
+        "en": "Magnus Olsson"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Magnus%20Olsson%20%28Carl%20Larsson%29%20-%20Gothenburg%20Museum%20of%20Art%20-%20GKM%200976.tif",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q130870450",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q110788309",
+      "year": 1894,
+      "popularity": 0,
+      "title": {
+        "ko": "Björkar vid bäck",
+        "en": "Björkar vid bäck"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Bj%C3%B6rkar%20vid%20b%C3%A4ck%20-%20NMH%2055-1908%20-%20Nationalmuseum.jpg",
+      "description": {
+        "ko": "drawing by Carl Larsson",
+        "en": "drawing by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q110788309",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q110762323",
+      "year": 1895,
+      "popularity": 0,
+      "title": {
+        "ko": "Sketch For Lovisa Ulrika's Costume: Preliminary Drawing for the Lovisa Ulrika Fresco in the Staircase of Nationalmuseum, Stockholm",
+        "en": "Sketch For Lovisa Ulrika's Costume: Preliminary Drawing for the Lovisa Ulrika Fresco in the Staircase of Nationalmuseum, Stockholm"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Sketch%20For%20Lovisa%20Ulrika%27s%20Costume%2C%20Preliminary%20Drawing%20for%20the%20Lovisa%20Ulrika%20Fresco%20in%20the%20Staircase%20of%20Nationalmuseum%2C%20Stockholm%20-%20NMH%2063-1908%20-%20Nationalmuseum.jpg",
+      "description": {
+        "ko": "drawing by Carl Larsson",
+        "en": "drawing by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q110762323",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q110787532",
+      "year": 1895,
+      "popularity": 0,
+      "title": {
+        "ko": "Sergel-fresken. Studie till Sergels huvud",
+        "en": "Sergel-fresken. Studie till Sergels huvud"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Sergel-fresken.%20Studie%20till%20Sergels%20huvud%20-%20NMH%2088-1908%20-%20Nationalmuseum.jpg",
+      "description": {
+        "ko": "drawing by Carl Larsson",
+        "en": "drawing by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q110787532",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q125998277",
+      "year": 1895,
+      "popularity": 0,
+      "title": {
+        "ko": "Anna Norrie (1848-1922). Portrait.",
+        "en": "Anna Norrie (1848-1922). Portrait."
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Anna%20Norrie-by%20Carl%20Larsson.jpg",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q125998277",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q132147268",
+      "year": 1895,
+      "popularity": 0,
+      "title": {
+        "ko": "The Art of Sculpture: Carl Michael Bellman in Sergel's studio",
+        "en": "The Art of Sculpture: Carl Michael Bellman in Sergel's studio"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bellman%20i%20sergels%20atelj%C3%A9.jpg",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "http://www.wikidata.org/entity/Q132147268",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q106368926",
+      "year": 1895,
+      "popularity": 0,
+      "title": {
+        "ko": "The Art of Painting: Ehrenstrahl and Karl XI. Cartoon for the Fresco in the Lower Hall of the NM",
+        "en": "The Art of Painting: Ehrenstrahl and Karl XI. Cartoon for the Fresco in the Lower Hall of the NM"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q106368926",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q106368930",
+      "year": 1895,
+      "popularity": 0,
+      "title": {
+        "ko": "The Art of Architecture: Tessin the Younger and Hårleman. Cartoon for the Fresco in the Lower Hall of the NM",
+        "en": "The Art of Architecture: Tessin the Younger and Hårleman. Cartoon for the Fresco in the Lower Hall of the NM"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q106368930",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q106368934",
+      "year": 1895,
+      "popularity": 0,
+      "title": {
+        "ko": "The Founders of the Art Collections: Lovisa Ulrika and C.G. Tessin Cartoon for the Fresco in the Lower Hall of the NM",
+        "en": "The Founders of the Art Collections: Lovisa Ulrika and C.G. Tessin Cartoon for the Fresco in the Lower Hall of the NM"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q106368934",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q106368938",
+      "year": 1895,
+      "popularity": 0,
+      "title": {
+        "ko": "Cartoon for the Lower Hall of the NM. Patron of the Fine Arts and Founder of the Museum King Gustav III of Sweden Receiving Antique Pieces of Art",
+        "en": "Cartoon for the Lower Hall of the NM. Patron of the Fine Arts and Founder of the Museum King Gustav III of Sweden Receiving Antique Pieces of Art"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Cartoon%20for%20the%20Lower%20Hall%20of%20the%20NM%20-%20Nationalmuseum%20-%2025334.tif",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q106368938",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q110802591",
+      "year": 1896,
+      "popularity": 0,
+      "title": {
+        "ko": "Sky Study",
+        "en": "Sky Study"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Sky%20Study%20-%20NMH%20519-2016%20-%20Nationalmuseum.jpg",
+      "description": {
+        "ko": "drawing by Carl Larsson",
+        "en": "drawing by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q110802591",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q111821710",
+      "year": 1896,
+      "popularity": 0,
+      "title": {
+        "ko": "Christ and Nicodemus",
+        "en": "Christ and Nicodemus"
+      },
+      "country": {
+        "ko": "스웨덴",
+        "en": "Sweden"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20Slottsbygget%201896.jpg",
+      "description": {
+        "ko": "watercolor by Carl Larsson",
+        "en": "watercolor by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q111821710",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q136698787",
+      "year": 1896,
+      "popularity": 0,
+      "title": {
+        "ko": "Q136698787",
+        "en": "Q136698787"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Kvinnofigur%20och%20himmel.jpg",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q136698787",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q110787777",
+      "year": 1898,
+      "popularity": 0,
+      "title": {
+        "ko": "Studie för porträtt av Gösta Laurin",
+        "en": "Studie för porträtt av Gösta Laurin"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Studie%20f%C3%B6r%20portr%C3%A4tt%20av%20G%C3%B6sta%20Laurin%20-%20NMH%2062-1972%20verso%20-%20Nationalmuseum.jpg",
+      "description": {
+        "ko": "drawing by Carl Larsson",
+        "en": "drawing by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q110787777",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q117462291",
+      "year": 1899,
+      "popularity": 0,
+      "title": {
+        "ko": "A Fairy",
+        "en": "A Fairy"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/En%20f%C3%A9.jpg",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q117462291",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q110787786",
+      "year": 1900,
+      "popularity": 0,
+      "title": {
+        "ko": "Karikatyr av Anna Boberg",
+        "en": "Karikatyr av Anna Boberg"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Karikatyr%20av%20Anna%20Boberg%20-%20NMH%20389-1946%20-%20Nationalmuseum.jpg",
+      "description": {
+        "ko": "drawing by Carl Larsson",
+        "en": "drawing by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q110787786",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q130711084",
+      "year": 1900,
+      "popularity": 0,
+      "title": {
+        "ko": "Before the Mirror. Self Portait",
+        "en": "Before the Mirror. Self Portait"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Framf%C3%B6r%20spegeln%20-%20sj%C3%A4lvportr%C3%A4tt%20-%20Carl%20Larsson.JPG",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q130711084",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q136706040",
+      "year": 1900,
+      "popularity": 0,
+      "title": {
+        "ko": "Porträt der Inga-Maria Thiel",
+        "en": "Porträt der Inga-Maria Thiel"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q136706040",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q136708665",
+      "year": 1900,
+      "popularity": 0,
+      "title": {
+        "ko": "At the Piano",
+        "en": "At the Piano"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q136708665",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q136708674",
+      "year": 1900,
+      "popularity": 0,
+      "title": {
+        "ko": "Around the Evening Lamp",
+        "en": "Around the Evening Lamp"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q136708674",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q10697904",
+      "year": 1901,
+      "popularity": 1,
+      "title": {
+        "ko": "Getting Ready for a Game",
+        "en": "Getting Ready for a Game"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Getting%20Ready%20for%20a%20Game%20%28Carl%20Larsson%29%20-%20Nationalmuseum%20-%2018965.tif",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q10697904",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q136498397",
+      "year": 1903,
+      "popularity": 1,
+      "title": {
+        "ko": "Q136498397",
+        "en": "Q136498397"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson-Dora%20Lamm.jpg",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "http://www.wikidata.org/entity/Q136498397",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q10541152",
+      "year": 1904,
+      "popularity": 1,
+      "title": {
+        "ko": "Christmas Eve dinner",
+        "en": "Christmas Eve dinner"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Julaftonen%20av%20Carl%20Larsson%201904.jpg",
+      "description": {
+        "ko": "watercolor by Carl Larsson",
+        "en": "watercolor by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q10541152",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q10543635",
+      "year": 1904,
+      "popularity": 1,
+      "title": {
+        "ko": "Karin Peeling Apples",
+        "en": "Karin Peeling Apples"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Karin%20skalar%20%C3%A4pplen%20%28Karin%20Peeling%20Apples%29.jpg",
+      "description": {
+        "ko": "watercolor by Carl Larsson",
+        "en": "watercolor by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q10543635",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q10577856",
+      "year": 1904,
+      "popularity": 1,
+      "title": {
+        "ko": "Martina med frukostbrickan",
+        "en": "Martina med frukostbrickan"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Martina%20med%20frukostbrickan.JPG",
+      "description": {
+        "ko": "1904 Carl Larsson painting",
+        "en": "1904 Carl Larsson painting"
+      },
+      "source": "http://www.wikidata.org/entity/Q10577856",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q52157977",
+      "year": 1906,
+      "popularity": 1,
+      "title": {
+        "ko": "Self-portrait",
+        "en": "Self-portrait"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Self%20Portrait.png",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q52157977",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q28052734",
+      "year": 1907,
+      "popularity": 1,
+      "title": {
+        "ko": "Q28052734",
+        "en": "Q28052734"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Now%20is%20it%20Christmas%20again%20%281907%29%20by%20Carl%20Larsson.jpg",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q28052734",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q20064873",
+      "year": 1908,
+      "popularity": 8,
+      "title": {
+        "ko": "Karin by the shore",
+        "en": "Karin by the shore"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Karin%20by%20the%20shore%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "watercolor by Carl Larsson",
+        "en": "watercolor by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q20064873",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q1800916",
+      "year": 1908,
+      "popularity": 6,
+      "title": {
+        "ko": "Gustav Vasas intåg i Stockholm 1523",
+        "en": "Gustav Vasas intåg i Stockholm 1523"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Entry%20of%20King%20Gustav%20Vasa%20of%20Sweden%20into%20Stockholm%2C%201523%20%28Carl%20Larsson%29%20-%20Nationalmuseum%20-%2023935.tif",
+      "description": {
+        "ko": "picture by Carl Larsson",
+        "en": "picture by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q1800916",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q10665407",
+      "year": 1908,
+      "popularity": 1,
+      "title": {
+        "ko": "Selma Lagerlöf",
+        "en": "Selma Lagerlöf"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Selma%20Lagerlof%20%281908%29%2C%20painted%20by%20Carl%20Larsson.jpg",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q10665407",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q17189257",
+      "year": 1908,
+      "popularity": 1,
+      "title": {
+        "ko": "Brita at the Piano",
+        "en": "Brita at the Piano"
+      },
+      "country": {
+        "ko": "스웨덴",
+        "en": "Sweden"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Larsson%20-%20Brita%20at%20the%20Piano.jpg",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q17189257",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q761681",
+      "year": 1915,
+      "popularity": 9,
+      "title": {
+        "ko": "Midwinter's Sacrifice",
+        "en": "Midwinter's Sacrifice"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Midvinterblot%20%28Carl%20Larsson%29%20-%20Nationalmuseum%20-%20edited.jpg",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q761681",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q25407981",
+      "year": 1919,
+      "popularity": 2,
+      "title": {
+        "ko": "Q25407981",
+        "en": "Q25407981"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Larsson%20-%20breakfast%20in%20the%20open.jpg",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q25407981",
+      "verified": true,
+      "representative": true
+    }
+  ]
+}

@@ -1,0 +1,1958 @@
+{
+  "techniques": [
+    {
+      "id": "fresco",
+      "introduced": -475,
+      "name": {
+        "ko": "프레스코",
+        "en": "Fresco"
+      },
+      "subtitle": {
+        "ko": "젖은 회벽에 안료를 스며들게 하는 벽화",
+        "en": "Wall painting bound into wet plaster"
+      },
+      "definition": {
+        "ko": "프레스코(Fresco)는 석회 반죽으로 만든 젖은 회벽 위에 물에 푼 안료를 칠해, 벽이 마르며 색이 표면 안에 고정되게 하는 벽화 기법입니다. 특히 buon fresco는 하루에 칠할 수 있는 만큼의 매끈한 마감층(intonaco)만 올리고 그 위에 바로 그리기 때문에, 완성된 그림이 벽 자체와 결합합니다.",
+        "en": "Fresco is a wall-painting technique in which pigments mixed with water are applied to wet lime plaster so that the colour becomes fixed as the wall dries. In buon fresco, only the amount of smooth intonaco that can be painted in a day is laid on the wall, binding the finished image into the plaster itself."
+      },
+      "explanation": {
+        "ko": "프레스코는 에트루리아와 로마 벽화에서 이미 사용된 매우 오래된 방식이라, 처음 소개한 한 명의 예술가를 특정하기는 어렵습니다. 서양 미술사에서 이 기법을 대형 서사 회화의 중심 형식으로 정착시킨 인물로는 13세기 말-14세기 초의 조토가 특히 중요합니다. 조토는 아시시와 파도바 스크로베니 예배당에서 인물의 무게, 감정, 건축적 공간을 벽면 전체의 이야기 구조로 조직했습니다. 15세기 피렌체에서는 마사초가 브랑카치 예배당과 《성삼위일체》에서 프레스코를 자연스러운 몸과 선원근법의 실험장으로 만들었고, 16세기에는 라파엘로의 바티칸 스탄차와 미켈란젤로의 시스티나 예배당 천장이 기법의 절정을 보여주었습니다. 젖은 회벽이 마르기 전에 한 구역(giornata)을 끝내야 하므로, 프레스코는 빠른 손놀림과 철저한 밑그림, 큰 화면을 나누어 계획하는 능력을 동시에 요구했습니다.",
+        "en": "Fresco is an ancient technique already used in Etruscan and Roman wall painting, so no single artist can be named as its first introducer. In Western art history, Giotto was crucial in establishing fresco as a central vehicle for large narrative painting in the late 13th and early 14th centuries. At Assisi and in the Scrovegni Chapel at Padua, he organised bodily weight, emotion, and architectural space across entire walls. In 15th-century Florence, Masaccio turned fresco into a testing ground for natural bodies and linear perspective in the Brancacci Chapel and the Holy Trinity; in the 16th century Raphael's Vatican Stanze and Michelangelo's Sistine Chapel ceiling showed the technique at its High Renaissance peak. Because each giornata had to be finished before the wet plaster dried, fresco demanded speed, precise preparation, and careful planning of a large image in daily sections."
+      },
+      "examples": [
+        {
+          "year": "기원전 5세기",
+          "artist": {
+            "ko": "에트루리아 장인",
+            "en": "Etruscan artisan"
+          },
+          "title": {
+            "ko": "표범의 무덤, 춤추는 사람들과 음악가들",
+            "en": "Tomb of the Leopards, Dancers and Musicians"
+          },
+          "image": "data/techniques/fresco/tomb-of-the-leopards.jpg",
+          "role": {
+            "ko": "고대 벽화 전통",
+            "en": "Ancient wall-painting tradition"
+          },
+          "note": {
+            "ko": "무덤 벽면의 인물과 악사들은 프레스코가 르네상스 이전부터 의례와 생활 장면을 건축 내부에 고정하는 방식으로 쓰였음을 보여줍니다. 평평한 벽은 그림을 걸어두는 장소가 아니라, 죽은 자를 위한 공간 전체를 둘러싼 이미지 환경이 됩니다.",
+            "en": "The figures and musicians on the tomb wall show that fresco long predated the Renaissance as a way of fixing ritual and everyday imagery inside architecture. The wall is not merely a support for a picture; it becomes an image environment surrounding the space of the dead."
+          }
+        },
+        {
+          "year": "1304-1306",
+          "artist": {
+            "ko": "조토 디 본도네",
+            "en": "Giotto di Bondone"
+          },
+          "title": {
+            "ko": "《애도》, 스크로베니 예배당",
+            "en": "Lamentation, Scrovegni Chapel"
+          },
+          "image": "data/techniques/fresco/giotto-lamentation.jpg",
+          "role": {
+            "ko": "서사 프레스코의 정착",
+            "en": "Establishing narrative fresco"
+          },
+          "note": {
+            "ko": "조토는 인물들의 몸짓과 시선을 하나의 감정적 흐름으로 묶어, 벽화가 단순한 장식이 아니라 관람자가 따라 읽는 서사 공간이 될 수 있음을 보여주었습니다. 파란 하늘, 바위 사선, 모인 인물들의 무게가 한 장면의 비극을 압축합니다.",
+            "en": "Giotto binds gesture and gaze into a single emotional current, showing that a wall painting could be a narrative space rather than only decoration. Blue sky, the diagonal rock, and the gathered weight of the figures compress the tragedy into one scene."
+          }
+        },
+        {
+          "year": "1511경",
+          "artist": {
+            "ko": "미켈란젤로 부오나로티",
+            "en": "Michelangelo Buonarroti"
+          },
+          "title": {
+            "ko": "《아담의 창조》",
+            "en": "The Creation of Adam"
+          },
+          "image": "data/techniques/fresco/michelangelo-creation-of-adam.jpg",
+          "role": {
+            "ko": "르네상스 절정",
+            "en": "High Renaissance peak"
+          },
+          "note": {
+            "ko": "시스티나 예배당 천장에서 미켈란젤로는 거대한 곡면과 제한된 작업 시간 속에서도 인체의 조각적 힘을 프레스코로 구현했습니다. 젖은 회벽에 빠르게 고정되는 색은 선명한 윤곽과 강한 신체감을 동시에 만들어냅니다.",
+            "en": "On the Sistine Chapel ceiling, Michelangelo used fresco to give sculptural force to the human body across a vast curved surface and under strict time limits. Colour fixed quickly into wet plaster supports both clear contour and powerful physical presence."
+          }
+        }
+      ]
+    },
+    {
+      "id": "tempera",
+      "introduced": 1200,
+      "name": {
+        "ko": "템페라",
+        "en": "Tempera"
+      },
+      "subtitle": {
+        "ko": "달걀 같은 결합재로 빠르게 마르는 선명한 회화",
+        "en": "Fast-drying paint bound with egg or similar emulsions"
+      },
+      "definition": {
+        "ko": "템페라는 안료를 달걀노른자 같은 결합재와 섞어 쓰는 회화 기법입니다. 빨리 마르고 표면이 단단하게 굳기 때문에 선명한 윤곽, 세밀한 선, 밝고 깨끗한 색을 만들기 좋습니다.",
+        "en": "Tempera is a painting technique that mixes pigment with a binder such as egg yolk. It dries quickly into a firm surface, making it well suited to clear contours, fine linear detail, and bright, clean colour."
+      },
+      "explanation": {
+        "ko": "중세와 초기 르네상스의 패널화에서 템페라는 매우 중요한 매체였습니다. 금박 배경, 또렷한 윤곽, 정교한 옷 주름, 세밀한 장식 표현에 강하지만, 유화처럼 젖은 상태에서 오래 섞거나 투명한 색층을 깊게 쌓기는 어렵습니다. 그래서 템페라 - 유화 비교는 단순히 재료 이름의 차이가 아니라, 선과 형태를 먼저 고정하는 회화에서 빛·살결·공기·색층을 유연하게 조절하는 회화로 넘어가는 변화를 설명해 줍니다. 보티첼리의 날카롭고 우아한 선, 초기 이탈리아 패널화의 맑은 색은 템페라의 장점을 잘 보여주고, 벨리니와 티치아노로 이어지는 베네치아 회화에서는 유화가 더 깊은 색조와 부드러운 전이를 가능하게 했습니다.",
+        "en": "Tempera was a major medium for medieval and early Renaissance panel painting. It excels at gold grounds, crisp contour, precise drapery, and detailed ornament, but it is less suited than oil to prolonged wet blending or deep transparent layers. The tempera - oil comparison therefore explains a shift from painting that fixes line and form early toward painting that can flexibly control light, flesh, atmosphere, and layered colour. Botticelli's sharp, elegant line and the clear colour of early Italian panels show tempera's strengths, while Venetian painting from Bellini to Titian shows how oil enabled deeper tonality and softer transitions."
+      },
+      "examples": []
+    },
+    {
+      "id": "linear-perspective",
+      "introduced": 1420,
+      "name": {
+        "ko": "선원근법",
+        "en": "Linear Perspective"
+      },
+      "subtitle": {
+        "ko": "소실점과 수학으로 만드는 깊이",
+        "en": "Depth built with vanishing points and geometry"
+      },
+      "definition": {
+        "ko": "선원근법은 평면 위에 3차원 공간의 착시를 만들기 위해 수평선, 소실점, 그곳으로 모이는 사선(orthogonals)을 사용하는 기법입니다. 같은 크기의 대상도 멀어질수록 작게 보이도록 수학적으로 배치해, 화면이 관람자 앞에 열린 창처럼 느껴지게 합니다.",
+        "en": "Linear perspective uses a horizon line, vanishing point, and receding orthogonals to create the illusion of three-dimensional space on a flat surface. Objects of equal size are scaled mathematically as they move into depth, making the picture feel like a window opened before the viewer."
+      },
+      "explanation": {
+        "ko": "단일 소실점 선원근법을 처음 소개한 인물로는 피렌체의 건축가 필리포 브루넬레스키가 일반적으로 언급됩니다. 그는 1420년 무렵 건축을 정확히 재현하는 시각 실험으로 원리를 보였고, 레온 바티스타 알베르티가 1435년 『회화론』에서 화가들이 사용할 수 있는 규칙으로 체계화했습니다. 회화에서 이 발견을 가장 이른 시기에 강력하게 적용한 작가는 마사초로, 《성삼위일체》에서 소실점을 관람자의 눈높이에 맞춰 벽 안쪽에 실제 예배당이 뚫린 듯한 효과를 만들었습니다. 이후 피에로 델라 프란체스카는 화가이자 수학자로서 원근법을 엄격한 공간 질서로 다듬었고, 페루지노, 만테냐, 레오나르도, 라파엘로는 성당과 궁전, 역사화에서 원근법을 시선의 방향과 의미를 조직하는 장치로 활발히 사용했습니다.",
+        "en": "Filippo Brunelleschi, the Florentine architect, is generally credited with first presenting the single-point system of linear perspective. Around 1420 he demonstrated the principle through optical experiments with architecture, and Leon Battista Alberti codified it for painters in De pictura in 1435. The painter who applied the discovery earliest and most powerfully was Masaccio, whose Holy Trinity places the vanishing point at the viewer's eye level so the wall seems to open into a real chapel. Piero della Francesca, both painter and mathematician, later refined perspective into a rigorous spatial order, while Perugino, Mantegna, Leonardo, and Raphael used it actively in churches, palaces, and history painting to organise not only depth but also the viewer's attention and the meaning of a scene."
+      },
+      "examples": [
+        {
+          "year": "1425-1428",
+          "artist": {
+            "ko": "마사초",
+            "en": "Masaccio"
+          },
+          "title": {
+            "ko": "《성삼위일체》",
+            "en": "Holy Trinity"
+          },
+          "image": "data/techniques/linear-perspective/masaccio-holy-trinity.jpg",
+          "role": {
+            "ko": "초기 회화 적용",
+            "en": "Early pictorial application"
+          },
+          "note": {
+            "ko": "소실점이 관람자의 눈높이에 놓이면서, 실제 벽 뒤에 고전식 예배당이 열린 듯한 착시가 생깁니다. 브루넬레스키의 발견을 회화 안에서 가장 설득력 있게 보여준 초기 사례로, 신성한 장면을 측정 가능한 인간의 공간 안에 배치합니다.",
+            "en": "With the vanishing point placed at the viewer's eye level, the wall appears to open into a classical chapel. It is one of the most persuasive early uses of Brunelleschi's discovery in painting, placing a sacred vision inside measurable human space."
+          }
+        },
+        {
+          "year": "1455경",
+          "artist": {
+            "ko": "피에로 델라 프란체스카",
+            "en": "Piero della Francesca"
+          },
+          "title": {
+            "ko": "《그리스도의 채찍질》",
+            "en": "The Flagellation of Christ"
+          },
+          "image": "data/techniques/linear-perspective/piero-flagellation.jpg",
+          "role": {
+            "ko": "수학적 정교화",
+            "en": "Mathematical refinement"
+          },
+          "note": {
+            "ko": "건축의 바닥, 기둥, 천장이 엄격한 소실점 체계 안에서 맞물립니다. 피에로는 인물의 수수께끼 같은 침묵과 냉정한 기하학을 결합해, 원근법이 단순한 재현 기술을 넘어 화면의 지적 구조가 될 수 있음을 보여줍니다.",
+            "en": "Floor, columns, and ceiling lock into a strict vanishing-point system. Piero joins enigmatic human stillness to cool geometry, showing that perspective could become the intellectual structure of a picture rather than only a tool for imitation."
+          }
+        },
+        {
+          "year": "1481-1482",
+          "artist": {
+            "ko": "피에트로 페루지노",
+            "en": "Pietro Perugino"
+          },
+          "title": {
+            "ko": "《성 베드로에게 열쇠를 주는 그리스도》",
+            "en": "Christ Handing the Keys to Saint Peter"
+          },
+          "image": "data/techniques/linear-perspective/perugino-delivery-of-the-keys.jpg",
+          "role": {
+            "ko": "르네상스 공간의 확산",
+            "en": "Renaissance diffusion"
+          },
+          "note": {
+            "ko": "넓은 광장과 중앙 건축물, 좌우 대칭의 개선문이 하나의 소실점으로 수렴합니다. 원근법은 깊이를 만드는 동시에 그리스도와 베드로의 행위를 화면 중앙의 역사적·신학적 사건으로 집중시킵니다.",
+            "en": "The broad square, central building, and symmetrical arches converge toward a single vanishing point. Perspective creates depth while concentrating the action of Christ and Peter as the historical and theological centre of the image."
+          }
+        }
+      ]
+    },
+    {
+      "id": "glazing",
+      "introduced": 1430,
+      "name": {
+        "ko": "글레이징",
+        "en": "Glazing"
+      },
+      "subtitle": {
+        "ko": "투명한 색층을 겹쳐 깊은 빛을 만드는 방식",
+        "en": "Transparent colour layers that deepen light"
+      },
+      "definition": {
+        "ko": "글레이징(Glazing)은 마른 밑색 위에 투명하거나 반투명한 얇은 색층을 덧발라, 아래층의 색과 명암이 비쳐 보이게 하는 회화 기법입니다. 물감을 두껍게 덮어 색을 바꾸는 것이 아니라, 유리판을 겹치듯 빛이 층을 통과하고 반사되면서 더 깊고 빛나는 색조를 만듭니다.",
+        "en": "Glazing is the application of thin transparent or translucent layers of paint over a dried underlayer, allowing the colour and tone beneath to show through. Rather than covering the lower paint opaquely, it lets light pass through layered films and return with a deeper, more luminous tone."
+      },
+      "explanation": {
+        "ko": "투명한 색층을 덧입히는 방식은 중세에도 금속박 위 보석이나 유리 같은 광택을 흉내 내기 위해 쓰였으므로, 처음 소개한 한 명의 예술가를 특정하기는 어렵습니다. 그러나 글레이징을 유화 회화의 핵심 언어로 정착시킨 흐름은 1420-1430년대 플랑드르의 초기 네덜란드 화가들에게서 뚜렷해집니다. 특히 얀 반 에이크는 유화를 발명한 사람이라기보다, 건조가 느리고 투명도를 조절하기 쉬운 유성 매체를 극도로 정교하게 활용해 피부, 보석, 직물, 금속, 깊은 풍경을 층층이 빛나게 만든 인물로 중요합니다. 16세기 베네치아의 티치아노는 따뜻한 붉은색과 황금빛 글레이즈로 살결과 천의 색을 깊게 만들었고, 17세기 베르메르와 렘브란트는 얇은 색층과 불투명한 터치를 함께 써서 빛이 실내와 인물 표면에서 조용히 번지는 효과를 만들었습니다. 문맥상 '두 번째 층을 얇게 덮어 색을 바꾸는 것'이면 글레이징이고, '윤곽이 연기처럼 사라지도록 부드럽게 흐리는 것'이면 스푸마토에 가깝습니다.",
+        "en": "Transparent overpainting existed in medieval practice, often to imitate gems, glass, or glossy precious materials over metal leaf, so no single first artist can be named. Glazing became a central language of oil painting, however, in early Netherlandish art of the 1420s and 1430s. Jan van Eyck is important not because he simply invented oil paint, but because he used the slow-drying and controllable translucency of oil with extraordinary refinement, building skin, jewels, textiles, metal, and distant landscapes through luminous layers. In 16th-century Venice, Titian deepened flesh and fabric with warm red and golden glazes; in the 17th century Vermeer and Rembrandt combined thin colour films with opaque touches so light seems to spread quietly across interiors and surfaces. In context, if a second layer modifies colour while remaining transparent, the technique is glazing; if edges dissolve like smoke through soft tonal transitions, it is closer to sfumato."
+      },
+      "examples": [
+        {
+          "year": "1436-1438경",
+          "artist": {
+            "ko": "얀 반 에이크",
+            "en": "Jan van Eyck"
+          },
+          "title": {
+            "ko": "《십자가형; 최후의 심판》",
+            "en": "The Crucifixion; The Last Judgment"
+          },
+          "image": "data/techniques/glazing/jan-van-eyck-crucifixion-last-judgment.jpg",
+          "role": {
+            "ko": "초기 네덜란드 유화의 층",
+            "en": "Early Netherlandish oil layers"
+          },
+          "note": {
+            "ko": "작은 화면 안에서도 보석 같은 색과 먼 풍경의 깊이가 살아나는 것은 얇은 유성 색층의 효과와 관련됩니다. 반 에이크의 회화에서 글레이징은 세부 묘사와 광택, 깊은 공간감을 동시에 만드는 정교한 방법이 됩니다.",
+            "en": "Even in a small format, jewel-like colour and deep distant space are connected to the effect of thin oil layers. In Van Eyck's painting, glazing becomes a refined method for detail, sheen, and spatial depth at once."
+          }
+        },
+        {
+          "year": "1565-1570경",
+          "artist": {
+            "ko": "티치아노",
+            "en": "Titian"
+          },
+          "title": {
+            "ko": "《비너스와 류트 연주자》",
+            "en": "Venus and the Lute Player"
+          },
+          "image": "data/techniques/glazing/titian-venus-and-lute-player.jpg",
+          "role": {
+            "ko": "베네치아 색채의 깊이",
+            "en": "Venetian colour depth"
+          },
+          "note": {
+            "ko": "티치아노는 밑색 위에 따뜻한 붉은색과 황금빛 색층을 겹쳐 살결과 직물의 풍부한 색감을 만들었습니다. 색은 표면에 단번에 놓인 것이 아니라, 여러 층의 빛이 겹쳐진 듯한 깊이를 얻습니다.",
+            "en": "Titian layered warm reds and golden tones over underpainting to enrich flesh and fabric. The colour does not feel laid on in a single pass; it gains depth through stacked films of light."
+          }
+        },
+        {
+          "year": "1662경",
+          "artist": {
+            "ko": "요하네스 베르메르",
+            "en": "Johannes Vermeer"
+          },
+          "title": {
+            "ko": "《물병을 든 젊은 여인》",
+            "en": "Young Woman with a Water Pitcher"
+          },
+          "image": "data/techniques/glazing/vermeer-young-woman-water-pitcher.jpg",
+          "role": {
+            "ko": "실내 빛의 조율",
+            "en": "Modulating interior light"
+          },
+          "note": {
+            "ko": "푸른 천, 노란 의자, 흰 두건의 색은 얇은 색층과 섬세한 명암 조절을 통해 차분하게 빛납니다. 베르메르에게 글레이징은 강한 효과보다 조용한 투명감과 실내 공기의 밀도를 만드는 수단입니다.",
+            "en": "The blue cloth, yellow chair, and white head covering glow through delicate tonal control and thin colour layers. For Vermeer, glazing creates quiet transparency and interior atmosphere rather than a loud effect."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sfumato",
+      "introduced": 1490,
+      "name": {
+        "ko": "스푸마토",
+        "en": "Sfumato"
+      },
+      "subtitle": {
+        "ko": "윤곽을 연기처럼 흐려 부드러운 생동감을 만드는 기법",
+        "en": "Smoky transitions that soften contour"
+      },
+      "definition": {
+        "ko": "스푸마토(Sfumato)는 이탈리아어로 '연기처럼 흐릿하게 된'이라는 뜻에 가까우며, 선명한 윤곽선 대신 아주 부드러운 명암 변화로 형태가 주변과 자연스럽게 이어지게 하는 기법입니다. 색층을 투명하게 덧바르는 글레이징과 겹칠 수 있지만, 핵심은 색을 투명하게 바꾸는 것보다 경계와 윤곽을 거의 보이지 않게 녹이는 데 있습니다.",
+        "en": "Sfumato, from the Italian idea of something smoky or softened, is a technique in which forms pass into their surroundings through extremely gradual tonal transitions instead of sharp outlines. It can overlap with glazing, but its core is the dissolution of edge and contour rather than the transparent modification of colour alone."
+      },
+      "explanation": {
+        "ko": "스푸마토를 회화 이론과 작품에서 가장 뚜렷하게 정착시킨 인물은 레오나르도 다 빈치입니다. 15세기 말 밀라노와 피렌체에서 레오나르도는 눈, 입가, 얼굴의 가장자리, 손의 윤곽을 선으로 닫지 않고 빛과 그림자가 연기처럼 섞이게 처리했습니다. 그는 회화론에서 빛과 그림자가 선이나 경계 없이 섞여야 한다고 보았고, 《암굴의 성모》와 《모나리자》에서 이 방식을 통해 표정이 고정되지 않는 생동감과 심리적 모호함을 만들었습니다. 따라서 스푸마토의 최초 소개자로는 레오나르도를 언급하는 것이 가장 자연스럽지만, 베네치아에서는 조르조네가 1500년대 초 부드러운 색조 변화와 흐릿한 분위기로 인물과 풍경을 서로 녹아들게 하며 다른 방향의 확산을 보여주었습니다. 16세기 초에는 레오나르도의 영향을 받은 로렌초 디 크레디, 코레조, 안드레아 델 사르토 같은 화가들이 이 부드러운 경계와 감정적 애매함을 종교화와 초상화에 적극적으로 응용했습니다.",
+        "en": "Leonardo da Vinci is the artist most clearly associated with establishing sfumato in both theory and practice. In late 15th-century Milan and Florence, he avoided enclosing eyes, mouths, faces, and hands with hard line, letting light and shadow mingle like smoke. In his writing on painting he advised transitions without visible lines or borders, and in works such as the Virgin of the Rocks and the Mona Lisa this produced living ambiguity and expressions that never seem fixed. It is therefore most natural to name Leonardo as the key introducer of sfumato, while in Venice Giorgione developed a related atmospheric softness in the early 1500s, allowing figures and landscape to merge through subtle tone. In the early 16th century, painters influenced by Leonardo, including Lorenzo di Credi, Correggio, and Andrea del Sarto, adapted these softened edges and emotional ambiguities in portraiture and religious painting."
+      },
+      "examples": [
+        {
+          "year": "1483-1486경",
+          "artist": {
+            "ko": "레오나르도 다 빈치",
+            "en": "Leonardo da Vinci"
+          },
+          "title": {
+            "ko": "《암굴의 성모》",
+            "en": "Virgin of the Rocks"
+          },
+          "image": "data/techniques/aerial-perspective/leonardo-virgin-of-the-rocks.jpg",
+          "role": {
+            "ko": "레오나르도의 초기 스푸마토",
+            "en": "Leonardo's early sfumato"
+          },
+          "note": {
+            "ko": "인물의 얼굴과 손, 동굴의 그림자는 선으로 딱 끊기지 않고 어둠 속으로 천천히 사라집니다. 형태가 공기와 하나가 되는 듯한 이 부드러운 변화가 스푸마토의 핵심입니다.",
+            "en": "Faces, hands, and cave shadows do not stop at hard lines, but fade slowly into darkness. This soft passage of form into air is the essence of sfumato."
+          }
+        },
+        {
+          "year": "1490-1500경",
+          "artist": {
+            "ko": "로렌초 디 크레디",
+            "en": "Lorenzo di Credi"
+          },
+          "title": {
+            "ko": "《젊은 여인의 초상》",
+            "en": "Portrait of a Young Woman"
+          },
+          "image": "data/techniques/sfumato/lorenzo-di-credi-portrait-young-woman.jpg",
+          "role": {
+            "ko": "레오나르도식 부드러운 초상의 확산",
+            "en": "Spread of Leonardesque softness"
+          },
+          "note": {
+            "ko": "얼굴의 둥근 면과 배경으로 이어지는 경계가 부드럽게 처리되어, 표정이 단정한 선보다 미묘한 명암으로 읽힙니다. 레오나르도 주변의 화가들이 스푸마토적 효과를 초상화에 받아들인 흐름을 보여줍니다.",
+            "en": "The rounded face and its transition toward the background are softened so expression is read through subtle tone rather than firm contour. It shows how painters around Leonardo absorbed sfumato-like effects into portraiture."
+          }
+        },
+        {
+          "year": "1515경",
+          "artist": {
+            "ko": "코레조",
+            "en": "Correggio"
+          },
+          "title": {
+            "ko": "《성 베드로, 마르타, 막달레나, 레오나르도》",
+            "en": "Saints Peter, Martha, Mary Magdalen, and Leonard"
+          },
+          "image": "data/techniques/sfumato/correggio-four-saints.jpg",
+          "role": {
+            "ko": "부드러운 빛과 감정의 확장",
+            "en": "Soft light and emotional extension"
+          },
+          "note": {
+            "ko": "어두운 숲 앞의 성인들은 부드러운 빛에 감싸여 각자 생각에 잠긴 듯 보입니다. 코레조는 레오나르도의 영향을 받아 경계를 누그러뜨리고, 인물의 감정을 명확한 표정보다 감도는 분위기로 전달했습니다.",
+            "en": "The saints stand before a dark grove, wrapped in soft light and absorbed in thought. Correggio adapted Leonardo's ideas by softening boundaries and conveying emotion through atmosphere rather than explicit expression."
+          }
+        }
+      ]
+    },
+    {
+      "id": "impasto",
+      "introduced": 1550,
+      "name": {
+        "ko": "임파스토",
+        "en": "Impasto"
+      },
+      "subtitle": {
+        "ko": "두껍게 쌓은 물감이 빛과 질감을 드러내는 기법",
+        "en": "Thick paint that catches light and texture"
+      },
+      "definition": {
+        "ko": "임파스토(Impasto)는 물감을 두껍게 올려 붓질, 나이프 자국, 물감의 높낮이가 표면에 그대로 남게 하는 회화 기법입니다. 평평한 색면으로 이미지를 만드는 대신, 물감 자체가 작은 부조처럼 빛을 받고 그림자를 만들며 실제 질감을 드러냅니다.",
+        "en": "Impasto is the technique of applying paint thickly so that brushstrokes, knife marks, and raised ridges remain visible on the surface. Instead of forming an image with flat colour alone, the paint itself catches light and casts tiny shadows like low relief."
+      },
+      "explanation": {
+        "ko": "물감을 두껍게 올리는 방식은 여러 시대에 나타나므로 최초의 한 예술가를 특정하기는 어렵습니다. 다만 임파스토가 의식적인 회화 효과로 뚜렷해진 것은 16세기 베네치아 르네상스의 티치아노와 틴토레토가 색채와 붓질의 물질감을 적극적으로 드러내면서부터입니다. 이 기법은 17세기 바로크에서 렘브란트, 프란스 할스, 벨라스케스, 루벤스에 의해 더욱 활발해졌고, 피부의 주름, 보석의 반짝임, 갑옷과 비단의 광택처럼 빛을 받아야 하는 부분에 두꺼운 물감을 얹어 실제 표면 효과를 만들었습니다. 19세기에는 쿠르베, 마네, 인상주의와 후기인상주의 화가들이 빠른 붓질과 야외의 빛을 기록하는 방법으로 임파스토를 사용했고, 반 고흐는 소용돌이치는 선과 두꺼운 색을 통해 풍경과 감정을 거의 조각적 표면으로 바꾸었습니다. 20세기에는 표현주의, 추상표현주의, 앵포르멜 회화에서 물감의 두께 자체가 작가의 신체 움직임과 감정, 회화의 물질성을 보여주는 중심 요소가 되었습니다.",
+        "en": "Thick paint appears in many periods, so no single first artist can be named. Impasto became clearly intentional as a pictorial effect in the 16th-century Venetian Renaissance, especially through Titian and Tintoretto, who made the material presence of colour and brushwork increasingly visible. In the 17th-century Baroque, Rembrandt, Frans Hals, Velazquez, and Rubens used it more actively, placing thick paint in wrinkles, jewels, armour, silk, and highlights where light needed to catch the surface. In the 19th century, Courbet, Manet, the Impressionists, and Post-Impressionists used impasto to record rapid touch and outdoor light, while Van Gogh turned landscape and emotion into an almost sculptural surface of swirling strokes and thick colour. In the 20th century, Expressionism, Abstract Expressionism, and Art Informel made paint thickness itself a sign of bodily movement, feeling, and the material reality of painting."
+      },
+      "examples": [
+        {
+          "year": "1550년대",
+          "artist": {
+            "ko": "티치아노",
+            "en": "Titian"
+          },
+          "title": {
+            "ko": "《비너스와 아도니스》",
+            "en": "Venus and Adonis"
+          },
+          "image": "data/techniques/impasto/titian-venus-and-adonis.jpg",
+          "role": {
+            "ko": "베네치아 회화의 물질적 붓질",
+            "en": "Material Venetian brushwork"
+          },
+          "note": {
+            "ko": "티치아노의 후기 색채와 붓질은 매끈한 마감보다 물감의 움직임과 표면감을 더 드러냅니다. 임파스토는 여기서 완전히 독립된 표현주의적 효과라기보다, 살결과 천, 빛의 감각을 강하게 만드는 회화적 수단입니다.",
+            "en": "Titian's later colour and brushwork reveal the movement and surface of paint more than a polished finish. Here impasto is not yet an independent expressionist effect, but a pictorial means of intensifying flesh, fabric, and light."
+          }
+        },
+        {
+          "year": "1653",
+          "artist": {
+            "ko": "렘브란트 반 레인",
+            "en": "Rembrandt van Rijn"
+          },
+          "title": {
+            "ko": "《호메로스 흉상을 바라보는 아리스토텔레스》",
+            "en": "Aristotle with a Bust of Homer"
+          },
+          "image": "data/techniques/chiaroscuro/rembrandt-aristotle-bust-homer.jpg",
+          "role": {
+            "ko": "바로크 하이라이트의 두께",
+            "en": "Baroque thickness in highlights"
+          },
+          "note": {
+            "ko": "사슬과 소매, 얼굴 주변의 밝은 부분은 물감의 두께가 빛을 직접 붙잡는 듯한 효과를 냅니다. 렘브란트에게 임파스토는 보이는 질감과 정신적 무게를 동시에 만드는 장치가 됩니다.",
+            "en": "Bright passages around the chain, sleeve, and face make the thickness of paint seem to catch light physically. For Rembrandt, impasto creates visible texture and psychological weight at the same time."
+          }
+        },
+        {
+          "year": "1889",
+          "artist": {
+            "ko": "빈센트 반 고흐",
+            "en": "Vincent van Gogh"
+          },
+          "title": {
+            "ko": "《사이프러스가 있는 밀밭》",
+            "en": "Wheat Field with Cypresses"
+          },
+          "image": "data/techniques/impasto/van-gogh-wheat-field-cypresses.jpg",
+          "role": {
+            "ko": "후기인상주의의 표현적 표면",
+            "en": "Post-Impressionist expressive surface"
+          },
+          "note": {
+            "ko": "하늘, 나무, 밀밭은 두꺼운 붓질의 방향과 리듬으로 움직입니다. 반 고흐는 임파스토를 단순한 질감 표현이 아니라 풍경의 에너지와 감정의 진동을 직접 보여주는 방식으로 바꾸었습니다.",
+            "en": "Sky, trees, and wheat field move through the direction and rhythm of thick strokes. Van Gogh turns impasto from surface texture into a direct sign of landscape energy and emotional vibration."
+          }
+        }
+      ],
+      "links": [
+        {
+          "url": "https://www.youtube.com/watch?v=Ar2YvZSODF4"
+        }
+      ]
+    },
+    {
+      "id": "chiaroscuro",
+      "introduced": 1500,
+      "name": {
+        "ko": "키아로스쿠로",
+        "en": "Chiaroscuro"
+      },
+      "subtitle": {
+        "ko": "빛과 어둠으로 형태를 빚는 명암법",
+        "en": "Light and dark used to model form"
+      },
+      "definition": {
+        "ko": "키아로스쿠로(Chiaroscuro)는 이탈리아어로 '밝음과 어둠'을 뜻하며, 화면 안의 밝은 부분과 어두운 부분의 단계적 대비를 이용해 인물과 사물이 입체적으로 보이게 하는 명암 기법입니다. 단순히 그림자를 짙게 칠하는 것이 아니라, 빛이 닿는 면과 사라지는 면을 조절해 몸의 부피, 표면의 질감, 장면의 분위기를 함께 만듭니다.",
+        "en": "Chiaroscuro, literally 'light-dark' in Italian, is the use of tonal contrast between light and shade to make figures and objects appear three-dimensional. It is not simply the addition of dark shadow; it organises lit and receding planes to create volume, surface, and atmosphere."
+      },
+      "explanation": {
+        "ko": "키아로스쿠로는 르네상스 이전에도 부분적으로 쓰였지만, 15세기 말-16세기 초 이탈리아 르네상스에서 인체와 공간을 자연스럽게 보이게 하는 핵심 회화 언어로 정착했습니다. 기법을 처음 소개한 한 명의 예술가를 특정하기는 어렵지만, 의식적으로 관찰하고 이론화하며 회화의 중심 효과로 끌어올린 인물로는 레오나르도 다 빈치가 특히 중요합니다. 레오나르도는 선으로 윤곽을 단단히 닫기보다 빛에서 그림자로 이어지는 부드러운 변화로 인물의 살과 공간감을 만들었고, 《암굴의 성모》와 《모나리자》에서 그 효과를 분명히 보여주었습니다. 1600년 전후 카라바조는 이 명암 대비를 훨씬 극적으로 강화해 인물이 어둠 속에서 갑자기 눈앞에 나타나는 듯한 효과를 만들었고, 17세기 렘브란트는 빛이 얼굴과 손, 천의 표면을 더듬게 하며 내면의 심리와 기억까지 드러내는 방식으로 발전시켰습니다. 따라서 키아로스쿠로는 넓은 의미의 명암 모델링이고, 테네브리즘처럼 화면 대부분을 검은 어둠으로 잠그는 극단적 방식만을 뜻하지는 않습니다.",
+        "en": "Although light-and-shade modelling existed before the Renaissance, chiaroscuro became a central pictorial language in late 15th- and early 16th-century Italy for making bodies and spaces look natural. No single artist can be securely named as its first introducer, but Leonardo da Vinci was especially important in observing, theorising, and elevating it into a major artistic effect. Rather than closing forms with hard outlines, Leonardo used soft transitions from light into shadow to create flesh and spatial presence, as seen in the Virgin of the Rocks and the Mona Lisa. Around 1600, Caravaggio intensified these contrasts dramatically so figures seem to emerge suddenly from darkness; in the 17th century Rembrandt developed light into a psychological instrument, letting it move across faces, hands, and fabrics to suggest inward life and memory. Chiaroscuro therefore means broad tonal modelling through light and dark, not only the extreme dark-field drama associated with tenebrism."
+      },
+      "examples": [
+        {
+          "year": "1483-1486경",
+          "artist": {
+            "ko": "레오나르도 다 빈치",
+            "en": "Leonardo da Vinci"
+          },
+          "title": {
+            "ko": "《암굴의 성모》",
+            "en": "Virgin of the Rocks"
+          },
+          "image": "data/techniques/aerial-perspective/leonardo-virgin-of-the-rocks.jpg",
+          "role": {
+            "ko": "르네상스 명암 모델링",
+            "en": "Renaissance tonal modelling"
+          },
+          "note": {
+            "ko": "얼굴과 손, 옷자락은 밝은 면에서 어두운 면으로 천천히 넘어가며 둥근 부피를 얻습니다. 레오나르도는 딱딱한 윤곽선보다 명암의 연속을 통해 인물이 공기 속에 놓인 실제 몸처럼 느껴지게 만들었습니다.",
+            "en": "Faces, hands, and drapery move gradually from lit planes into shadow, gaining rounded volume. Leonardo makes the figures feel like real bodies in air through continuous tonal change rather than hard contour."
+          }
+        },
+        {
+          "year": "1597",
+          "artist": {
+            "ko": "카라바조",
+            "en": "Caravaggio"
+          },
+          "title": {
+            "ko": "《음악가들》",
+            "en": "The Musicians"
+          },
+          "image": "data/techniques/chiaroscuro/caravaggio-musicians.jpg",
+          "role": {
+            "ko": "극적 명암의 강화",
+            "en": "Dramatic intensification"
+          },
+          "note": {
+            "ko": "젊은 인물들의 피부와 흰 옷은 어두운 배경 앞에서 밝게 떠오르며, 빛은 장면을 설명하는 동시에 관람자의 시선을 얼굴과 손으로 모읍니다. 카라바조는 키아로스쿠로를 우아한 모델링에서 즉각적인 극적 사건의 도구로 밀어붙였습니다.",
+            "en": "The figures' skin and pale clothing rise sharply against a dark setting, and the light both describes the scene and pulls attention to faces and hands. Caravaggio pushes chiaroscuro from elegant modelling toward immediate dramatic encounter."
+          }
+        },
+        {
+          "year": "1653",
+          "artist": {
+            "ko": "렘브란트 반 레인",
+            "en": "Rembrandt van Rijn"
+          },
+          "title": {
+            "ko": "《호메로스 흉상을 바라보는 아리스토텔레스》",
+            "en": "Aristotle with a Bust of Homer"
+          },
+          "image": "data/techniques/chiaroscuro/rembrandt-aristotle-bust-homer.jpg",
+          "role": {
+            "ko": "심리적 명암",
+            "en": "Psychological chiaroscuro"
+          },
+          "note": {
+            "ko": "황금빛 사슬과 손, 얼굴에 닿는 빛은 인물의 사회적 지위와 사색의 무게를 동시에 드러냅니다. 렘브란트에게 명암은 형태를 만드는 기술을 넘어, 인물의 생각과 시간의 깊이를 느끼게 하는 장치가 됩니다.",
+            "en": "Light touching the chain, hand, and face reveals both social status and the weight of thought. For Rembrandt, chiaroscuro becomes more than a means of modelling form; it suggests the depth of mind and time."
+          }
+        }
+      ]
+    },
+    {
+      "id": "tenebrism",
+      "introduced": 1600,
+      "name": {
+        "ko": "테네브리즘",
+        "en": "Tenebrism"
+      },
+      "subtitle": {
+        "ko": "짙은 어둠 속에서 사건을 폭발시키는 빛",
+        "en": "Light staged against engulfing darkness"
+      },
+      "definition": {
+        "ko": "테네브리즘(Tenebrism)은 화면 대부분을 짙은 어둠으로 두고, 얼굴·손·몸의 일부 같은 중요한 요소만 강한 빛으로 드러내는 극단적 명암 기법입니다. 키아로스쿠로가 넓은 의미의 입체 명암이라면, 테네브리즘은 어둠 자체를 무대처럼 사용해 장면의 긴장과 신앙적·심리적 충격을 키우는 방식입니다.",
+        "en": "Tenebrism is an extreme light-and-dark technique in which most of the image is held in deep darkness while crucial details such as faces, hands, or parts of the body are struck by strong light. If chiaroscuro broadly models form, tenebrism turns darkness itself into a stage that heightens tension, devotion, and psychological shock."
+      },
+      "explanation": {
+        "ko": "테네브리즘은 1600년 전후 로마에서 카라바조가 사실상 정착시킨 바로크 회화의 대표적 효과로 이해됩니다. 완전히 무에서 발명한 한 순간의 기술이라기보다, 기존 키아로스쿠로를 극단적으로 압축해 검은 공간과 날카로운 빛의 충돌로 만든 방식입니다. 특히 산 루이지 데이 프란체시 성당 콘타렐리 예배당의 《성 마태오의 소명》과 《성 마태오의 순교》가 1600년에 공개되며 카라바조의 명성을 세웠고, 어두운 방 안에서 한 방향의 빛이 인물들을 갑자기 드러내는 그의 방식이 강하게 모방되었습니다. 1610년 전후의 후기 작품에서는 어둠이 더 넓고 무겁게 장면을 삼키며, 인물의 선택과 죄책감, 계시의 순간이 빛 아래에 집중됩니다. 이후 바르톨로메오 만프레디, 헨드릭 테르 브뤼헌, 헤라르트 판 혼토르스트, 발랑탱 드 불로뉴, 조르주 드 라 투르, 후세페 데 리베라, 프란시스코 데 수르바란 같은 카라바조파 화가들이 17세기 전반 유럽 전역에서 이 어둠의 무대 효과를 활발히 전개했습니다.",
+        "en": "Tenebrism is generally understood as a defining Baroque effect established around 1600 in Rome through Caravaggio. It was not an isolated invention from nothing, but an extreme compression of earlier chiaroscuro into a collision between black space and sharp illumination. Caravaggio's Calling of Saint Matthew and Martyrdom of Saint Matthew in the Contarelli Chapel of San Luigi dei Francesi were unveiled in 1600 and made his reputation; his method of revealing figures suddenly with directional light in a dark room was widely imitated. In his late works around 1610, darkness becomes broader and heavier, concentrating moral choice, guilt, and revelation under a small zone of light. In the first half of the 17th century, Caravaggist painters including Bartolomeo Manfredi, Hendrick ter Brugghen, Gerrit van Honthorst, Valentin de Boulogne, Georges de La Tour, Jusepe de Ribera, and Francisco de Zurbaran carried this dark-stage effect across Europe."
+      },
+      "examples": [
+        {
+          "year": "1610",
+          "artist": {
+            "ko": "카라바조",
+            "en": "Caravaggio"
+          },
+          "title": {
+            "ko": "《성 베드로의 부인》",
+            "en": "The Denial of Saint Peter"
+          },
+          "image": "data/techniques/tenebrism/caravaggio-denial-saint-peter.jpg",
+          "role": {
+            "ko": "후기 카라바조의 어둠",
+            "en": "Late Caravaggio darkness"
+          },
+          "note": {
+            "ko": "대부분의 배경은 검은 공간으로 잠기고, 손가락질과 얼굴, 불빛에 닿은 피부만 사건의 핵심처럼 떠오릅니다. 베드로의 부정과 죄책감은 복잡한 배경 설명보다 빛과 어둠의 압박으로 전달됩니다.",
+            "en": "Most of the background sinks into black space, while pointing hands, faces, and firelit skin rise as the core of the event. Peter's denial and guilt are carried less by setting than by the pressure of light against darkness."
+          }
+        },
+        {
+          "year": "1624-1625경",
+          "artist": {
+            "ko": "헨드릭 테르 브뤼헌",
+            "en": "Hendrick ter Brugghen"
+          },
+          "title": {
+            "ko": "《성모와 성 요한이 있는 십자가형》",
+            "en": "The Crucifixion with the Virgin and Saint John"
+          },
+          "image": "data/techniques/tenebrism/hendrick-ter-brugghen-crucifixion.jpg",
+          "role": {
+            "ko": "카라바조파의 북유럽 확산",
+            "en": "Northern spread of Caravaggism"
+          },
+          "note": {
+            "ko": "십자가 위의 몸과 아래 인물들은 깊은 어둠 속에서 분리되어 보이며, 빛은 고통의 육체성과 침묵의 애도를 한곳에 집중시킵니다. 로마에서 카라바조의 방식을 접한 북유럽 화가들이 그 강한 조명 효과를 종교화로 옮긴 사례입니다.",
+            "en": "The body on the cross and the mourners below are isolated within deep darkness, concentrating physical suffering and silent grief. It shows how northern painters who absorbed Caravaggio's Roman example carried his forceful lighting into religious painting."
+          }
+        },
+        {
+          "year": "1640경",
+          "artist": {
+            "ko": "조르주 드 라 투르",
+            "en": "Georges de La Tour"
+          },
+          "title": {
+            "ko": "《참회하는 막달레나》",
+            "en": "The Penitent Magdalen"
+          },
+          "image": "data/techniques/tenebrism/georges-de-la-tour-penitent-magdalen.jpg",
+          "role": {
+            "ko": "촛불 명상의 테네브리즘",
+            "en": "Candlelit contemplative tenebrism"
+          },
+          "note": {
+            "ko": "촛불 하나가 손, 해골, 얼굴 주변만 조용히 밝히고 나머지 공간은 깊은 어둠으로 남습니다. 라 투르는 카라바조식 극적 충돌을 소란스러운 사건보다 명상과 참회의 침묵으로 바꾸어 사용했습니다.",
+            "en": "A single candle quietly lights the hand, skull, and area around the face while the rest of the room remains dark. La Tour transforms Caravaggesque drama into silence, meditation, and penitence."
+          }
+        }
+      ]
+    },
+    {
+      "id": "scumbling",
+      "introduced": 1600,
+      "name": {
+        "ko": "스컴블링",
+        "en": "Scumbling"
+      },
+      "subtitle": {
+        "ko": "마른 밑색 위에 밝고 얇은 불투명층을 문질러 얹는 기법",
+        "en": "Light dry paint dragged over a darker underlayer"
+      },
+      "definition": {
+        "ko": "스컴블링(Scumbling)은 마른 밑색 위에 밝은 불투명 또는 반불투명 물감을 아주 얇고 건조하게 문지르듯 얹어, 아래 색이 부분적으로 비쳐 보이게 하는 기법입니다. 글레이징이 투명한 색층으로 아래층을 물들이는 방식이라면, 스컴블링은 가볍게 걸린 밝은 입자와 붓자국으로 안개, 먼지, 낡은 표면, 부드러운 빛을 만듭니다.",
+        "en": "Scumbling is the application of a thin, dry, opaque or semi-opaque lighter paint layer over a dried underlayer so that the lower colour remains partly visible. If glazing stains the underlayer through transparent colour, scumbling creates mist, dust, worn surfaces, and soft light through pale dragged particles and broken brushwork."
+      },
+      "explanation": {
+        "ko": "스컴블링처럼 얇고 밝은 물감을 어두운 층 위에 끌어 바르는 방식은 오래된 회화 관행 속에서 자연스럽게 발달했으므로, 처음 소개한 한 명의 예술가를 특정하기는 어렵습니다. 17세기 유화가 성숙하면서 렘브란트, 벨라스케스, 루벤스 같은 바로크 화가들은 피부, 수염, 직물, 하이라이트를 한 번에 덮지 않고 마른 층 위에 거친 밝은 터치를 얹어 표면의 떨림과 빛의 반사를 만들었습니다. 18-19세기 풍경화에서는 존 컨스터블과 J. M. W. 터너가 구름, 물안개, 대기, 햇빛을 표현하는 데 이런 깨진 밝은 층을 적극적으로 활용했고, 이후 인상주의와 근대 회화에서는 빠른 붓질과 광학적 색 변화를 만드는 수단으로 이어졌습니다. 스컴블링은 색층이 투명해서가 아니라 얇고 끊겨 있기 때문에 아래색과 섞여 보이며, 같은 밝은 회색이라도 어두운 밑색 위에서는 더 차갑고 푸르게 느껴질 수 있습니다. 따라서 문맥상 '밝은 마른 물감을 위에 긁듯 얹어 아래층이 보이는 효과'라면 글레이징보다 스컴블링으로 보는 것이 적절합니다.",
+        "en": "Dragging a thin light paint over a darker dried layer grew naturally from long workshop practice, so no single artist can be named as its first introducer. As oil painting matured in the 17th century, Baroque painters such as Rembrandt, Velazquez, and Rubens used broken pale touches over dry paint to suggest skin, beards, fabrics, and highlights without covering the surface completely. In 18th- and 19th-century landscape painting, John Constable and J. M. W. Turner used related broken light layers for clouds, mist, atmosphere, and sunlight; later Impressionist and modern painters extended the method as a way to create quick touch and optical colour shifts. Scumbling works not because the paint is inherently transparent, but because it is thin and broken enough for the lower colour to show through. A pale grey dragged over a dark ground can even appear cooler and bluer. In context, if a pale dry layer is rubbed or dragged over a darker underlayer while letting it show through, scumbling is the better term than glazing."
+      },
+      "examples": [
+        {
+          "year": "1660",
+          "artist": {
+            "ko": "렘브란트 반 레인",
+            "en": "Rembrandt van Rijn"
+          },
+          "title": {
+            "ko": "《자화상》",
+            "en": "Self-Portrait"
+          },
+          "image": "data/techniques/scumbling/rembrandt-self-portrait-1660.jpg",
+          "role": {
+            "ko": "바로크 표면과 빛",
+            "en": "Baroque surface and light"
+          },
+          "note": {
+            "ko": "얼굴과 옷의 밝은 부분은 매끈하게 칠한 색면보다 거칠게 걸린 붓질로 살아납니다. 어두운 밑색 위에 얇게 얹힌 밝은 터치는 노년의 피부와 천의 표면을 실제 빛이 스치는 듯 보이게 합니다.",
+            "en": "Bright passages in the face and clothing come alive through dragged, broken paint rather than smooth flat colour. Thin pale touches over dark underpaint make aged skin and fabric seem physically brushed by light."
+          }
+        },
+        {
+          "year": "1825경",
+          "artist": {
+            "ko": "존 컨스터블",
+            "en": "John Constable"
+          },
+          "title": {
+            "ko": "《주교 관저에서 본 솔즈베리 대성당》",
+            "en": "Salisbury Cathedral from the Bishop's Grounds"
+          },
+          "image": "data/techniques/scumbling/constable-salisbury-cathedral.jpg",
+          "role": {
+            "ko": "구름과 대기의 밝은 터치",
+            "en": "Broken light in cloud and air"
+          },
+          "note": {
+            "ko": "하늘과 나무 주변의 밝은 붓질은 아래의 어두운 색을 완전히 가리지 않고 흔들리는 대기감을 만듭니다. 컨스터블의 풍경에서 스컴블링은 구름과 빛이 고정된 형태가 아니라 계속 변하는 현상임을 보여주는 데 효과적입니다.",
+            "en": "Pale touches around sky and trees do not fully cover the darker paint beneath, creating a vibrating sense of atmosphere. In Constable's landscape, scumbling-like handling helps make cloud and light feel changeable rather than fixed."
+          }
+        },
+        {
+          "year": "1835경",
+          "artist": {
+            "ko": "J. M. W. 터너",
+            "en": "J. M. W. Turner"
+          },
+          "title": {
+            "ko": "《마돈나 델라 살루테 현관에서 본 베네치아》",
+            "en": "Venice, from the Porch of Madonna della Salute"
+          },
+          "image": "data/techniques/scumbling/turner-venice-porch-salute.jpg",
+          "role": {
+            "ko": "안개와 빛의 확장",
+            "en": "Mist and expanded light"
+          },
+          "note": {
+            "ko": "건축과 물, 하늘의 경계는 밝은 색의 얇은 층과 끊긴 터치 속에서 흐려집니다. 터너는 스컴블링적 효과를 통해 대상의 윤곽보다 수증기와 햇빛, 반사광이 화면을 채우는 느낌을 앞세웠습니다.",
+            "en": "The boundaries of architecture, water, and sky blur through thin pale layers and broken touches. Turner uses scumbling-like effects to foreground vapour, sunlight, and reflected light over firm contour."
+          }
+        }
+      ]
+    },
+    {
+      "id": "alla-prima",
+      "introduced": 1616,
+      "name": {
+        "ko": "알라 프리마",
+        "en": "Alla prima"
+      },
+      "subtitle": {
+        "ko": "마르기 전에 한 번의 흐름으로 완성하는 직접화법",
+        "en": "Direct painting completed wet into wet"
+      },
+      "definition": {
+        "ko": "알라 프리마(Alla prima)는 이탈리아어로 '첫 시도에'라는 뜻이며, 밑층이 마르기를 기다리지 않고 젖은 물감 위에 바로 젖은 물감을 올려 한 번의 작업 흐름으로 그림을 완성하는 직접화법입니다. 여러 날에 걸쳐 말리고 다시 덧칠하는 간접화법과 달리, 색과 가장자리, 붓질이 화면 위에서 즉석으로 섞이고 결정됩니다.",
+        "en": "Alla prima, Italian for 'at first attempt', is a direct painting method in which wet paint is applied into still-wet paint and the picture is brought together in one working flow. Unlike indirect painting, where layers dry before later additions, alla prima lets colour, edges, and brushwork mix and resolve directly on the surface."
+      },
+      "explanation": {
+        "ko": "젖은 물감 위에 바로 그리는 방식은 유화가 널리 쓰이기 시작한 뒤 여러 화가가 부분적으로 사용했기 때문에, 알라 프리마의 최초 소개자를 한 명으로 단정하기는 어렵습니다. 다만 17세기 네덜란드의 프란스 할스는 빠르고 자신 있는 붓질로 표정과 옷, 손짓을 즉각적으로 포착해 알라 프리마적 직접화법을 대표하는 초기 인물로 자주 언급됩니다. 같은 세기의 벨라스케스도 적은 붓질로 인물의 생생한 존재감을 세우며, 멀리서 보면 완성된 형태로 합쳐지는 대담한 직접 터치를 보여주었습니다. 19세기에는 마네, 인상주의 화가들, 카롤뤼스-뒤랑과 존 싱어 사전트가 야외의 순간적 빛과 초상의 생동감을 붙잡기 위해 이 방식을 적극적으로 사용했습니다. 특히 휴대용 물감 튜브와 야외 제작 문화가 확산되면서 알라 프리마는 빠르게 변하는 빛을 한 자리에서 포착하는 근대 회화의 중요한 방법이 되었습니다. 핵심은 '빠르다'는 사실 자체보다, 젖은 층들이 서로 섞이는 조건 안에서 붓질을 결단력 있게 남기는 데 있습니다.",
+        "en": "Painting directly into wet paint was used in parts by many painters after oil became widespread, so alla prima cannot be assigned to one first inventor. Frans Hals in 17th-century Holland is often treated as an early master of this direct approach because his quick, confident brushwork catches expression, costume, and gesture with startling immediacy. Velazquez in the same century also used economical strokes that merge into living form at a distance. In the 19th century, Manet, the Impressionists, Carolus-Duran, and John Singer Sargent made alla prima central to capturing fleeting outdoor light and the vitality of portraiture. With portable paint tubes and plein-air practice, it became an important modern method for finishing a painting within the same encounter with changing light. Its core is not speed alone, but decisive brushwork made while wet layers can still mingle on the surface."
+      },
+      "examples": [
+        {
+          "year": "1616-1617경",
+          "artist": {
+            "ko": "프란스 할스",
+            "en": "Frans Hals"
+          },
+          "title": {
+            "ko": "《사육제의 흥겨운 사람들》",
+            "en": "Merrymakers at Shrovetide"
+          },
+          "image": "data/techniques/alla-prima/frans-hals-merrymakers-shrovetide.jpg",
+          "role": {
+            "ko": "17세기 직접 붓질",
+            "en": "Seventeenth-century direct brushwork"
+          },
+          "note": {
+            "ko": "얼굴, 손, 옷의 묘사는 세밀하게 다듬은 윤곽보다 빠르고 생생한 붓질로 이루어집니다. 할스의 회화는 젖은 물감의 즉흥성과 결단이 인물의 웃음과 움직임을 어떻게 살릴 수 있는지 보여줍니다.",
+            "en": "Faces, hands, and costumes are built through brisk, living strokes rather than carefully polished contours. Hals shows how the immediacy of wet paint and decisive handling can animate laughter and movement."
+          }
+        },
+        {
+          "year": "1650",
+          "artist": {
+            "ko": "디에고 벨라스케스",
+            "en": "Diego Velazquez"
+          },
+          "title": {
+            "ko": "《후안 데 파레하》",
+            "en": "Juan de Pareja"
+          },
+          "image": "data/techniques/alla-prima/velazquez-juan-de-pareja.jpg",
+          "role": {
+            "ko": "절제된 직접화법",
+            "en": "Economical direct painting"
+          },
+          "note": {
+            "ko": "가까이서 보면 옷깃과 얼굴 주변의 붓질은 놀랄 만큼 절제되어 있지만, 떨어져 보면 인물의 자세와 시선이 단단하게 살아납니다. 벨라스케스의 방식은 알라 프리마적 터치가 얼마나 적은 손수로 강한 존재감을 만들 수 있는지 보여줍니다.",
+            "en": "Up close, the strokes around collar and face are strikingly economical; from a distance, posture and gaze become fully present. Velazquez shows how direct handling can create powerful presence with remarkably few marks."
+          }
+        },
+        {
+          "year": "1874",
+          "artist": {
+            "ko": "에두아르 마네",
+            "en": "Edouard Manet"
+          },
+          "title": {
+            "ko": "《보트 타기》",
+            "en": "Boating"
+          },
+          "image": "data/techniques/alla-prima/manet-boating.jpg",
+          "role": {
+            "ko": "근대 야외 회화의 즉시성",
+            "en": "Modern outdoor immediacy"
+          },
+          "note": {
+            "ko": "푸른 물과 밝은 옷, 보트의 형태는 여러 번 말린 층보다 넓고 직접적인 색면과 붓질로 정리됩니다. 마네는 순간의 빛과 현대적 장면을 빠르게 결정된 표면으로 바꾸며, 인상주의와 알라 프리마의 감각을 연결합니다.",
+            "en": "Blue water, bright clothing, and the boat are organised through broad direct colour and brushwork rather than many dried layers. Manet turns modern light and leisure into a surface of immediate decisions, linking alla prima to Impressionist sensibility."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ruckenfigur",
+      "introduced": 1808,
+      "name": {
+        "ko": "뤼켄피구어",
+        "en": "Rückenfigur"
+      },
+      "subtitle": {
+        "ko": "등을 보인 인물로 관람자의 시선을 이끄는 구도",
+        "en": "A back-turned figure that guides the viewer's gaze"
+      },
+      "definition": {
+        "ko": "뤼켄피구어(Rückenfigur)는 독일어로 '등을 보인 인물'을 뜻하며, 화면 속 인물을 뒤에서 보이게 배치해 관람자가 그 인물과 같은 방향을 바라보도록 만드는 구도 장치입니다. 얼굴 표정을 보여주지 않기 때문에 인물의 감정을 단정하지 않고, 관람자가 그 자리에 서 있는 듯한 몰입과 거리감을 동시에 만듭니다.",
+        "en": "Rückenfigur, German for a figure seen from behind, is a compositional device that places a back-turned figure in the image so the viewer looks in the same direction as that figure. Because the face is withheld, the figure's emotion remains open, creating both identification and distance."
+      },
+      "explanation": {
+        "ko": "뒤돌아선 인물 자체는 고대와 르네상스, 바로크 미술에서도 발견되므로 이 기법을 처음 소개한 한 명의 예술가를 특정하기는 어렵습니다. 그러나 뤼켄피구어를 근대 회화의 핵심적 시선 장치로 정착시킨 작가는 19세기 독일 낭만주의의 카스파르 다비트 프리드리히입니다. 프리드리히의 작품에서 이 방식은 1808-1810년경 《해변의 수도사》에서 이른 형태로 나타나고, 1810-1820년대에 《안개 바다 위의 방랑자》, 《창가의 여인》, 《달을 바라보는 두 남자》 같은 작품을 통해 활발히 사용되었습니다. 인물은 풍경을 설명하는 안내자이면서 동시에 시야를 가로막는 실루엣이 되며, 관람자는 자연의 숭고함을 함께 바라보지만 그 의미를 완전히 소유하지는 못합니다. 이 점에서 뤼켄피구어는 단순한 뒷모습 묘사가 아니라, 낭만주의가 중요하게 여긴 고독, 동경, 신앙, 무한한 자연 앞의 인간 의식을 시각화하는 장치입니다. 이후 칼 구스타프 카루스와 요한 크리스티안 달 같은 독일·북유럽 낭만주의 화가들도 비슷한 시점 구성을 사용했고, 오늘날에는 영화, 사진, 게임의 후방 시점 이미지에서도 관람자와 인물의 시선을 겹치게 하는 방식으로 이어집니다.",
+        "en": "Back-turned figures appear in ancient, Renaissance, and Baroque art, so no single artist can be named as the first inventor of the device. The artist who established the Rückenfigur as a central modern device of looking, however, was Caspar David Friedrich in German Romanticism. In Friedrich's work the method appears in an early form in Monk by the Sea around 1808-1810, then becomes especially active in the 1810s and 1820s in works such as Wanderer above the Sea of Fog, Woman at the Window, and Two Men Contemplating the Moon. The figure guides the viewer into the landscape while also blocking part of the view; we look with the figure, but cannot fully possess what is being contemplated. For that reason, the Rückenfigur is not merely a person shown from behind. It visualises solitude, longing, faith, and human consciousness before the infinite natural world, all central concerns of Romanticism. Later German and northern Romantic artists such as Carl Gustav Carus and Johan Christian Dahl used related viewpoint structures, and the device continues today in film, photography, and games whenever a rear-view figure aligns the viewer's sight with a character's gaze."
+      },
+      "examples": [
+        {
+          "year": "1818경",
+          "artist": {
+            "ko": "카스파르 다비트 프리드리히",
+            "en": "Caspar David Friedrich"
+          },
+          "title": {
+            "ko": "《안개 바다 위의 방랑자》",
+            "en": "Wanderer above the Sea of Fog"
+          },
+          "image": "data/techniques/ruckenfigur/friedrich-wanderer-sea-of-fog.jpg",
+          "role": {
+            "ko": "대표적 뤼켄피구어",
+            "en": "Iconic Rückenfigur"
+          },
+          "note": {
+            "ko": "중앙의 인물은 얼굴을 보이지 않은 채 안개 낀 산악 풍경을 내려다봅니다. 관람자는 그의 시선 뒤에 서게 되지만, 그의 정체와 감정을 알 수 없기 때문에 풍경은 단순한 전망이 아니라 사색과 숭고의 장면이 됩니다.",
+            "en": "The central figure looks out over a fog-filled mountain landscape without revealing his face. The viewer stands behind his gaze, yet his identity and feeling remain unknowable, turning the view into a scene of contemplation and the sublime."
+          }
+        },
+        {
+          "year": "1822",
+          "artist": {
+            "ko": "카스파르 다비트 프리드리히",
+            "en": "Caspar David Friedrich"
+          },
+          "title": {
+            "ko": "《창가의 여인》",
+            "en": "Woman at the Window"
+          },
+          "image": "data/techniques/ruckenfigur/friedrich-woman-at-window.jpg",
+          "role": {
+            "ko": "실내와 바깥 세계의 연결",
+            "en": "Linking interior and outside world"
+          },
+          "note": {
+            "ko": "여인은 좁은 실내에서 창밖을 바라보지만, 관람자는 그녀가 무엇을 보고 무엇을 원하는지 직접 알 수 없습니다. 뒷모습과 창틀은 일상의 작은 장면을 내면의 기다림과 바깥 세계에 대한 동경으로 바꿉니다.",
+            "en": "The woman looks out from a narrow interior, but the viewer cannot directly know what she sees or desires. Her turned back and the window frame transform a quiet domestic scene into an image of inward waiting and longing for the outside world."
+          }
+        },
+        {
+          "year": "1825-1830경",
+          "artist": {
+            "ko": "카스파르 다비트 프리드리히",
+            "en": "Caspar David Friedrich"
+          },
+          "title": {
+            "ko": "《달을 바라보는 두 남자》",
+            "en": "Two Men Contemplating the Moon"
+          },
+          "image": "data/techniques/ruckenfigur/friedrich-two-men-contemplating-moon.jpg",
+          "role": {
+            "ko": "공동의 시선과 낭만주의적 명상",
+            "en": "Shared gaze and Romantic meditation"
+          },
+          "note": {
+            "ko": "두 인물은 관람자에게 등을 보인 채 달빛과 뒤틀린 나무를 바라봅니다. 한 명의 고독한 시점이 아니라 함께 바라보는 시선이 만들어지며, 자연은 대화 없이도 사유와 신앙, 우정을 품는 장소가 됩니다.",
+            "en": "Two figures turn away from the viewer toward moonlight and a twisted tree. Instead of a single solitary viewpoint, the painting creates a shared act of looking, making nature a place for thought, faith, and friendship without spoken narrative."
+          }
+        }
+      ]
+    },
+    {
+      "id": "stucco",
+      "introduced": 50,
+      "name": {
+        "ko": "스투코",
+        "en": "Stucco"
+      },
+      "subtitle": {
+        "ko": "회반죽을 빚고 새겨 만든 입체 장식",
+        "en": "Modelled and carved plaster decoration"
+      },
+      "definition": {
+        "ko": "스투코(Stucco)는 석회나 석고 계열의 젖은 회반죽을 벽·천장·기둥에 바른 뒤, 굳기 전후에 빚고 찍고 새겨 부조와 장식을 만드는 기법입니다. 회화처럼 표면을 덮지만 조각처럼 빛과 그림자를 만들기 때문에, 건축과 장식미술 사이에서 강한 입체감을 냅니다.",
+        "en": "Stucco is a technique in which wet lime- or gypsum-based plaster is applied to walls, ceilings, or columns, then modelled, moulded, or carved into relief decoration. It covers surfaces like painting but catches light like sculpture, giving architecture a strong three-dimensional skin."
+      },
+      "explanation": {
+        "ko": "스투코는 고대부터 이어진 장인 기술이라 기법을 처음 소개한 한 명의 예술가를 특정하기는 어렵습니다. 로마 제국의 실내 장식에서 이미 널리 쓰였고, 중세 이슬람 건축에서는 8~14세기 사이 사마라, 카이로, 이란, 알함브라 같은 지역에서 기하 문양과 서체 장식의 핵심 매체가 되었습니다. 유럽에서는 15세기 토스카나 르네상스에 도나텔로, 기베르티, 안토니오 로셀리노 계열의 부조를 복제·채색하는 방식으로 다시 주목받았고, 16세기에는 조반니 다 우디네, 페리노 델 바가, 프란체스코 프리마티초, 조반니 바티스타 만토바노가 라파엘로의 로지아, 바티칸, 팔라초 테, 퐁텐블로 장식에서 고전 유물의 흰 부조 효과를 궁정 취향으로 되살렸습니다. 젖은 상태에서는 손과 도구로 형태를 세우고, 반쯤 굳은 뒤에는 윤곽과 무늬를 날카롭게 다듬을 수 있어, 스투코는 값싼 마감재를 넘어 회화·조각·건축을 잇는 장식 언어로 정착했습니다.",
+        "en": "Because stucco grew from ancient workshop practice, no single artist can be identified as the first to introduce the technique. It was already common in Roman interior decoration, and from the 8th to 14th centuries it became a central medium for geometric ornament and inscription in Islamic architecture from Samarra and Cairo to Iran and the Alhambra. In Europe it re-emerged strongly in 15th-century Tuscan Renaissance workshops, where reliefs associated with Donatello, Ghiberti, and Antonio Rossellino could be replicated and painted; in the 16th century Giovanni da Udine, Perino del Vaga, Francesco Primaticcio, and Giovanni Battista Mantovano used it in the Vatican, Raphael's Logge, Palazzo Te, and Fontainebleau to revive the white relief effects of antiquity for courtly interiors. Because wet plaster could be modelled and partly set plaster could be cut sharply, stucco settled as a decorative language joining painting, sculpture, and architecture rather than merely a cheap wall finish."
+      },
+      "examples": [
+        {
+          "year": "1세기 중엽",
+          "artist": {
+            "ko": "로마 장인",
+            "en": "Roman artisan"
+          },
+          "title": {
+            "ko": "《스투코 부조 패널》",
+            "en": "Stucco Relief Panel"
+          },
+          "image": "data/techniques/stucco/roman-stucco-relief-panel.jpg",
+          "role": {
+            "ko": "고대 실내 장식",
+            "en": "Ancient interior decoration"
+          },
+          "note": {
+            "ko": "얕은 회반죽 층을 조각처럼 세워 인물과 식물 무늬를 만들었습니다. 돌을 깊게 파는 조각보다 가볍고 빠르게 벽면을 장식할 수 있었고, 표면의 작은 높낮이가 실내 조명 아래에서 섬세한 그림자를 만들었습니다.",
+            "en": "A shallow layer of plaster is raised into figures and vegetal ornament. Compared with carving stone, stucco could decorate interiors lightly and quickly, while small changes in relief height produced delicate shadows under indoor light."
+          }
+        },
+        {
+          "year": "14세기",
+          "artist": {
+            "ko": "이란 장인",
+            "en": "Iranian artisan"
+          },
+          "title": {
+            "ko": "바라민 모스크 미흐라브 장식",
+            "en": "Mihrab Ornament, Varamin Mosque"
+          },
+          "image": "data/techniques/stucco/varamin-mosque-mihrab.jpg",
+          "role": {
+            "ko": "문양과 서체의 확장",
+            "en": "Expansion into pattern and script"
+          },
+          "note": {
+            "ko": "스투코는 반복 문양과 아라베스크, 글자를 촘촘히 새기기에 알맞았습니다. 흰 회반죽 표면의 깊고 얕은 조각은 색이 적어도 강한 리듬을 만들며, 건축 표면을 읽고 따라가는 장식적 장으로 바꿉니다.",
+            "en": "Stucco was well suited to dense repeating pattern, arabesque, and inscription. Deep and shallow carving in pale plaster creates rhythm even with little colour, turning an architectural surface into an ornamental field that the eye can read and follow."
+          }
+        },
+        {
+          "year": "1529–1531",
+          "artist": {
+            "ko": "프란체스코 프리마티초 · 조반니 바티스타 만토바노",
+            "en": "Francesco Primaticcio · Giovanni Battista Mantovano"
+          },
+          "title": {
+            "ko": "팔라초 테, 스투코의 방",
+            "en": "Camera degli Stucchi, Palazzo Te"
+          },
+          "image": "data/techniques/stucco/palazzo-te-camera-degli-stucchi.jpg",
+          "role": {
+            "ko": "르네상스 궁전 장식",
+            "en": "Renaissance palace decoration"
+          },
+          "note": {
+            "ko": "하얀 스투코 부조가 벽과 천장의 구조를 따라 이어지며, 회화 장면과 건축 장식을 하나의 실내 경험으로 묶습니다. 이 시기 스투코는 단순한 마감재가 아니라 고전 조각의 권위와 궁정 취향을 가볍고 유연하게 재현하는 매체가 됩니다.",
+            "en": "White stucco relief follows the structure of walls and vaults, binding painted scenes and architectural ornament into a single interior experience. Here stucco is no longer merely a finish; it becomes a flexible medium for reviving the authority of classical sculpture within courtly decoration."
+          }
+        }
+      ]
+    },
+    {
+      "id": "quadratura",
+      "introduced": 1610,
+      "name": {
+        "ko": "Quadratura",
+        "en": "Quadratura"
+      },
+      "subtitle": {
+        "ko": "가짜 건축과 천장 환영",
+        "en": "Illusory architecture and ceiling painting"
+      },
+      "definition": {
+        "ko": "Quadratura(콰드라투라)는 원근법으로 그린 가짜 건축을 실제 건축과 이어 보이게 하는 벽화·천장화 기법입니다. 난간, 기둥, 코니스, 열린 하늘을 그려 평평한 천장이 위로 열리거나 공간이 계속되는 듯한 착시를 만듭니다.",
+        "en": "Quadratura is the painting of fictive architecture in perspective so that it appears to continue the real architecture. Balustrades, columns, cornices, and open sky make a flat ceiling seem to open above the viewer."
+      },
+      "explanation": {
+        "ko": "콰드라투라는 한 사람이 갑자기 소개한 기법이라기보다 르네상스 원근법 실험이 바로크 장식 체계로 발전한 경우입니다. 선구적 사례로는 안드레아 만테냐가 1465~1474년에 그린 만토바 궁전의 《카메라 델리 스포지》 천장 오쿨루스가 자주 언급됩니다. 이 작품은 아래에서 올려다보는 di sotto in su와 가짜 건축 장식을 통해 천장이 열린 것처럼 보이게 한 매우 이른 사례입니다. 이후 16세기 말 이탈리아의 원근법 연구와 장식 벽화 전통을 거쳐, 17세기 로마·볼로냐·만토바의 바로크 궁전과 성당 천장화에서 본격적으로 정착했습니다. 아고스티노 타시와 구에르치노는 실제 방의 구조와 그려진 건축 틀이 이어지는 초기 전개를 보여주고, 피에트로 다 코르토나는 팔라초 바르베리니 천장에서 프레임을 넘어서는 인물과 하늘로 경계를 흔들었습니다. 후반에는 예수회 화가 안드레아 포초가 산티냐치오 성당과 『화가와 건축가의 원근법』에서 단일 시점, 가짜 돔, 천장 환영을 체계화해 유럽 전역에 퍼뜨렸습니다.",
+        "en": "Quadratura was not introduced by one artist at a single moment; it developed from Renaissance experiments in perspective into a Baroque decorative system. A key precursor is Andrea Mantegna's ceiling oculus in the Camera degli Sposi in Mantua, painted in 1465-1474, an early example of di sotto in su and fictive architectural illusion making a ceiling appear open. After late 16th-century Italian perspective studies and decorative fresco practice, the method became established in 17th-century Baroque palace and church ceilings in Rome, Bologna, and Mantua. Agostino Tassi and Guercino show an early stage in which painted architecture extends the real room; Pietro da Cortona's Barberini ceiling pushed figures and sky across fictive frames, destabilising the boundary between painting and architecture. Later in the century, the Jesuit artist Andrea Pozzo systematised the single viewing point, false dome, and ceiling illusion in Sant'Ignazio and in his treatise Perspectiva de' pittori e architetti, helping spread the method across Europe."
+      },
+      "examples": [
+        {
+          "year": "1612–1614",
+          "artist": {
+            "ko": "귀도 레니",
+            "en": "Guido Reni"
+          },
+          "title": {
+            "ko": "《오로라》",
+            "en": "Aurora"
+          },
+          "image": "data/techniques/quadratura/guido-reni-aurora.jpg",
+          "role": {
+            "ko": "비교 기준: quadro riportato",
+            "en": "Comparison: quadro riportato"
+          },
+          "note": {
+            "ko": "아폴론의 행렬은 길게 짜인 하나의 ‘그림 패널’처럼 보입니다. 화면 가장자리의 틀이 장면을 안정적으로 가두며, 실제 천장이 뚫렸다는 느낌보다 고전적 부조·캔버스를 천장에 옮긴 효과가 강합니다. 그래서 Quadratura가 무엇을 바꾸는지 비교하기 좋은 기준점입니다.",
+            "en": "Apollo's procession reads as a single framed picture. Its border contains the scene, producing the effect of a classical relief or canvas transferred to the ceiling rather than an opened roof. It is a useful baseline for seeing what quadratura changes."
+          }
+        },
+        {
+          "year": "1621",
+          "artist": {
+            "ko": "구에르치노 · 아고스티노 타시",
+            "en": "Guercino · Agostino Tassi"
+          },
+          "title": {
+            "ko": "《오로라》, 루도비시 카지노",
+            "en": "Aurora, Casino Ludovisi"
+          },
+          "image": "data/techniques/quadratura/guercino-aurora.jpg",
+          "role": {
+            "ko": "초기 전개",
+            "en": "Early development"
+          },
+          "note": {
+            "ko": "구에르치노의 오로라 장면을 아고스티노 타시가 그린 가짜 건축 틀이 둘러쌉니다. 난간과 프레임은 실제 방의 구조를 연장하는 듯 보이고, 중앙 장면은 그 안쪽 또는 위쪽에 놓인 것처럼 읽힙니다. 아직 중심 장면은 명확히 구획되지만, 회화와 건축의 경계가 흔들리기 시작합니다.",
+            "en": "Guercino's Aurora is surrounded by fictive architectural framing painted by Agostino Tassi. The balustrade and frames appear to extend the room, placing the central image within or above that structure. The scene remains bounded, but the boundary between painting and architecture begins to destabilize."
+          }
+        },
+        {
+          "year": "1633–1639",
+          "artist": {
+            "ko": "피에트로 다 코르토나",
+            "en": "Pietro da Cortona"
+          },
+          "title": {
+            "ko": "《신의 섭리와 바르베리니 권력의 알레고리》",
+            "en": "Allegory of Divine Providence and Barberini Power"
+          },
+          "image": "data/techniques/quadratura/pietro-da-cortona-divine-providence.jpg",
+          "role": {
+            "ko": "극단적 발전",
+            "en": "Full Baroque expansion"
+          },
+          "note": {
+            "ko": "가짜 틀이 더 이상 장면을 조용히 두르지 않습니다. 구름, 인물, 표식이 프레임을 넘거나 무너뜨리며 실제 천장 전체를 열린 하늘과 극장 무대로 바꿉니다. 아래에서 올려다보는 원근(di sotto in su)과 소용돌이치는 배치가 관람자의 실내와 천상 공간을 하나로 묶습니다.",
+            "en": "The fictive framework no longer quietly contains a scene. Clouds, figures, and emblems cross or break it, converting the entire ceiling into an open sky and theatrical stage. The upward-looking perspective (di sotto in su) and spiralling composition bind the viewer's room to celestial space."
+          }
+        }
+      ]
+    },
+    {
+      "id": "aerial-perspective",
+      "introduced": 1483,
+      "name": {
+        "ko": "대기 원근법",
+        "en": "Aerial Perspective"
+      },
+      "subtitle": {
+        "ko": "공기와 빛으로 만드는 깊이",
+        "en": "Depth made with air and light"
+      },
+      "definition": {
+        "ko": "대기 원근법은 멀리 있는 대상일수록 공기층 때문에 대비·윤곽·채도가 약해지고, 푸르거나 회색으로 흐려져 보이는 현상을 회화의 깊이에 이용하는 기법입니다. 선원근법처럼 선을 모으지 않고, 색과 명암의 변화로 거리를 느끼게 합니다.",
+        "en": "Aerial perspective uses the way layers of air reduce contrast, soften edges, and shift distant forms toward blue or grey. Rather than converging lines, it creates distance through changes in colour, clarity, and light."
+      },
+      "explanation": {
+        "ko": "대기 원근법은 15세기 초 네덜란드 회화의 유화 풍경 배경에서 먼저 나타났기 때문에 최초의 한 예술가를 특정하기는 어렵습니다. 다만 이 현상을 의식적으로 설명하고 회화 이론으로 정착시킨 인물로는 레오나르도 다 빈치가 가장 중요합니다. 이탈리아에서는 알베르티가 먼저 현상을 언급했지만, 레오나르도는 색의 원근, 윤곽이 사라지는 원근, 공기층에 의한 푸른 변화로 더 자세히 이론화했습니다. 그는 《암굴의 성모》, 《모나리자》 같은 작품에서 원경의 산과 물길을 푸른 회색과 흐린 윤곽으로 처리해 공간을 깊게 만들었습니다. 이후 베네치아와 북유럽 풍경화, 17세기 클로드 로랭의 항구 풍경, 19세기 J. M. W. 터너의 비와 증기 장면처럼 빛과 공기를 주제로 삼는 화가들에게 활발히 쓰였습니다. 가까운 전경에는 선명한 윤곽, 짙은 명암, 따뜻하거나 강한 색을 두고, 중경과 원경으로 갈수록 대비를 줄여 하늘빛에 섞이게 합니다.",
+        "en": "Because aerial perspective first appears in early 15th-century Netherlandish oil landscapes, no single first artist can be named securely. The artist most important for consciously explaining and establishing it as pictorial theory is Leonardo da Vinci. Alberti had noted the phenomenon in Italy, but Leonardo developed it more fully as changes of colour, loss of contour, and bluish atmospheric distance. He made it visible in works such as the Virgin of the Rocks and the Mona Lisa, where mountains and waterways recede through blue-grey colour and softened outlines. It remained active in Venetian and northern landscape traditions, in Claude Lorrain's 17th-century harbour scenes, and in J. M. W. Turner's 19th-century paintings of rain, steam, and light. Foregrounds retain sharper edges, stronger contrast, and warmer or more saturated colour, while middle and far distance lose contrast and merge with sky light."
+      },
+      "examples": [
+        {
+          "year": "1483–1486경",
+          "artist": {
+            "ko": "레오나르도 다 빈치",
+            "en": "Leonardo da Vinci"
+          },
+          "title": {
+            "ko": "《암굴의 성모》",
+            "en": "Virgin of the Rocks"
+          },
+          "image": "data/techniques/aerial-perspective/leonardo-virgin-of-the-rocks.jpg",
+          "role": {
+            "ko": "초기 체계화",
+            "en": "Early formulation"
+          },
+          "note": {
+            "ko": "인물 뒤의 바위와 수로는 가까운 곳의 어두운 갈색에서 멀리 갈수록 푸른 회색으로 옅어집니다. 원경의 윤곽은 선명하게 닫히지 않고 공기 속에 풀려, 동굴의 깊이와 습한 빛을 동시에 느끼게 합니다. 레오나르도는 이 변화를 관찰과 이론으로 설명하며 기법을 체계화했습니다.",
+            "en": "Rocks and waterways behind the figures shift from dark brown nearby to pale blue-grey at a distance. Distant edges dissolve into air rather than closing sharply, creating both depth and humid light. Leonardo systematised this effect through observation and theory."
+          }
+        },
+        {
+          "year": "1648",
+          "artist": {
+            "ko": "클로드 로랭",
+            "en": "Claude Lorrain"
+          },
+          "title": {
+            "ko": "《시바 여왕의 승선이 있는 항구》",
+            "en": "Seaport with the Embarkation of the Queen of Sheba"
+          },
+          "image": "data/techniques/aerial-perspective/claude-lorrain-seaport.jpg",
+          "role": {
+            "ko": "풍경화의 확장",
+            "en": "Expansion in landscape"
+          },
+          "note": {
+            "ko": "전경의 건축과 인물은 짙고 단단하지만, 항구 끝의 배·수평선·태양 주위는 빛 속으로 희미해집니다. 거리가 멀어질수록 형태를 지우는 대신 황금빛 대기를 축적하여, 시선이 화면 안쪽의 바다와 빛으로 자연스럽게 이동합니다.",
+            "en": "Foreground architecture and figures are solid and dark, while ships, horizon, and the area around the sun dissolve into light. Rather than simply erasing distant form, Claude accumulates golden atmosphere, drawing the eye toward sea and light."
+          }
+        },
+        {
+          "year": "1844 이전",
+          "artist": {
+            "ko": "J. M. W. 터너",
+            "en": "J. M. W. Turner"
+          },
+          "title": {
+            "ko": "《비, 증기, 속도》",
+            "en": "Rain, Steam and Speed"
+          },
+          "image": "data/techniques/aerial-perspective/turner-rain-steam-speed.jpg",
+          "role": {
+            "ko": "근대적 극대화",
+            "en": "Modern intensification"
+          },
+          "note": {
+            "ko": "비·증기·빛이 선로와 풍경의 경계를 녹입니다. 멀리 있는 대상만 흐리는 수준을 넘어, 공기 자체가 화면 전체를 관통하는 물질처럼 작동합니다. 기차의 속도와 산업 시대의 감각은 정확한 윤곽보다 대기 속에서 흔들리는 색과 광선으로 전달됩니다.",
+            "en": "Rain, steam, and light dissolve the boundary between railway and landscape. Rather than merely blurring distant objects, atmosphere becomes a material that runs through the whole image. Speed and industrial sensation are conveyed through colour and rays trembling in air rather than precise contours."
+          }
+        }
+      ]
+    },
+    {
+      "id": "grisaille",
+      "introduced": 1300,
+      "name": {
+        "ko": "그리자유",
+        "en": "Grisaille"
+      },
+      "subtitle": {
+        "ko": "회색 단색으로 세우는 명암과 형태",
+        "en": "Form and light built in monochrome grey"
+      },
+      "definition": {
+        "ko": "그리자유(Grisaille)는 회색이나 갈색에 가까운 제한된 단색 범위로 형태와 명암을 구성하는 기법입니다. 색채보다 빛과 그림자의 구조를 먼저 보이게 하며, 조각처럼 보이는 환영이나 유화의 밑층으로도 사용됩니다.",
+        "en": "Grisaille is a technique that builds form and value with a restricted monochrome range, usually greys or muted browns. It foregrounds light and shadow before colour, and can function as a sculptural illusion or as an underlayer for oil painting."
+      },
+      "explanation": {
+        "ko": "그리자유는 중세 말과 초기 르네상스의 제단화, 필사본, 장식 회화에서 널리 쓰였기 때문에 한 명의 창시자를 특정하기 어렵습니다. 북유럽에서는 얀 반 에이크가 제단화 바깥쪽 인물들을 돌 조각처럼 보이게 처리하며 이 방식의 대표적 기준을 만들었습니다. 색을 줄이면 관람자는 표면의 화려함보다 부피, 접힘, 빛의 방향을 먼저 읽게 됩니다. 이후 르네상스와 바로크 화가들은 그리자유를 완성 작품, 벽화 준비 단계, 판화처럼 보이는 장식 효과에 두루 사용했습니다.",
+        "en": "Grisaille was widely used in late medieval and early Renaissance altarpieces, manuscripts, and decorative painting, so no single inventor can be named. In northern Europe, Jan van Eyck made it a major reference point by painting exterior altarpiece figures to resemble stone sculpture. With colour reduced, the viewer reads volume, drapery, and the direction of light before surface richness. Later Renaissance and Baroque artists used grisaille as a finished effect, a preparatory stage for murals, and a way to imitate relief or print."
+      },
+      "examples": [
+        {
+          "year": "1430년대",
+          "artist": {
+            "ko": "얀 반 에이크",
+            "en": "Jan van Eyck"
+          },
+          "title": {
+            "ko": "그리자유식 제단화 외부 인물",
+            "en": "Grisaille exterior figures on altarpieces"
+          },
+          "image": "data/techniques/glazing/jan-van-eyck-crucifixion-last-judgment.jpg",
+          "role": {
+            "ko": "북유럽 기준점",
+            "en": "Northern European reference"
+          },
+          "note": {
+            "ko": "얀 반 에이크의 제단화 전통에서 회색조 인물은 돌 조각처럼 보이도록 계획됩니다. 색을 거의 쓰지 않기 때문에 옷 주름과 몸의 부피가 명암의 단계로 선명해집니다.",
+            "en": "In Jan van Eyck's altarpiece tradition, grey-toned figures are planned to resemble stone sculpture. With colour nearly absent, folds and bodily volume become legible through value alone."
+          }
+        },
+        {
+          "year": "1304-1306",
+          "artist": {
+            "ko": "조토 디 본도네",
+            "en": "Giotto di Bondone"
+          },
+          "title": {
+            "ko": "스크로베니 예배당의 덕목과 악덕상",
+            "en": "Virtues and Vices, Scrovegni Chapel"
+          },
+          "image": "data/techniques/fresco/giotto-lamentation.jpg",
+          "role": {
+            "ko": "벽화 장식의 조각 환영",
+            "en": "Sculptural illusion in fresco"
+          },
+          "note": {
+            "ko": "조토의 예배당 장식은 단색 인물을 실제 조각처럼 읽히게 하는 중세 말 회화의 감각을 보여줍니다. 회색조는 이야기 장면 사이에서 도덕적 상징을 단단한 부조처럼 고정합니다.",
+            "en": "Giotto's chapel decoration shows the late medieval habit of making monochrome figures read like actual sculpture. Grisaille fixes moral symbols between narrative scenes as if they were solid reliefs."
+          }
+        },
+        {
+          "year": "1600년대",
+          "artist": {
+            "ko": "페테르 파울 루벤스",
+            "en": "Peter Paul Rubens"
+          },
+          "title": {
+            "ko": "대형 회화를 위한 단색 스케치와 밑그림",
+            "en": "Monochrome studies for large paintings"
+          },
+          "image": "data/thumbnails/artist-url-1786879941678/wikidata-Q2594673.jpg",
+          "role": {
+            "ko": "바로크 준비 과정",
+            "en": "Baroque preparation"
+          },
+          "note": {
+            "ko": "바로크의 큰 화면에서는 색채를 올리기 전에 단색으로 전체 명암과 인물 배치를 검토하는 과정이 중요했습니다. 그리자유는 빠른 구성 검토와 완성 효과 사이를 오가는 실용적 언어가 됩니다.",
+            "en": "For large Baroque pictures, artists often tested the whole value structure and figure arrangement before applying full colour. Grisaille became a practical language between study and finished effect."
+          }
+        }
+      ]
+    },
+    {
+      "id": "underpainting",
+      "introduced": 1430,
+      "name": {
+        "ko": "밑칠",
+        "en": "Underpainting"
+      },
+      "subtitle": {
+        "ko": "본채색 전에 명암과 구조를 잡는 층",
+        "en": "The structural layer before full colour"
+      },
+      "definition": {
+        "ko": "밑칠(Underpainting)은 완성 색을 올리기 전에 명암, 형태, 큰 색조 관계를 먼저 잡는 준비층입니다. 단색으로 만들 수도 있고 제한된 색으로 만들 수도 있으며, 이후의 투명층과 불투명층이 안정적으로 놓일 뼈대를 제공합니다.",
+        "en": "Underpainting is a preparatory layer that establishes value, form, and broad tonal relationships before the final colours are applied. It may be monochrome or limited in colour, giving later transparent and opaque layers a stable structure."
+      },
+      "explanation": {
+        "ko": "밑칠은 르네상스와 북유럽 유화에서 체계화되어 아카데미 회화까지 이어진 기본 절차입니다. 얀 반 에이크와 초기 네덜란드 화가들은 밝은 바탕과 섬세한 밑층 위에 투명한 색을 쌓아 깊은 광택을 만들었습니다. 티치아노와 베네치아 화가들은 더 따뜻하고 유연한 밑층을 통해 화면 전체의 색조를 잡았고, 루벤스와 렘브란트는 빠른 갈색 계열의 밑칠 위에 살갗, 빛, 천의 질감을 세웠습니다. 밑칠은 보이지 않는 준비 단계처럼 느껴지지만, 완성작의 명암과 색의 힘을 오래 붙잡는 내부 구조입니다.",
+        "en": "Underpainting became a systematic part of Renaissance and northern European oil painting and continued into academic practice. Jan van Eyck and early Netherlandish painters built luminous colour over pale grounds and carefully prepared layers. Titian and Venetian painters used warmer, more flexible underlayers to organise the whole tonality of a picture, while Rubens and Rembrandt built flesh, light, and fabric over rapid brown underpaintings. Though often hidden in the finished work, underpainting is the inner structure that holds value and colour together."
+      },
+      "examples": [
+        {
+          "year": "1434",
+          "artist": {
+            "ko": "얀 반 에이크",
+            "en": "Jan van Eyck"
+          },
+          "title": {
+            "ko": "《아르놀피니 부부의 초상》",
+            "en": "Arnolfini Portrait"
+          },
+          "image": "data/미술사조/images/Van-Eyck-Arnolfini-Portrait-997900945212.jpg",
+          "role": {
+            "ko": "초기 유화의 층 구조",
+            "en": "Layered early oil painting"
+          },
+          "note": {
+            "ko": "세밀한 형태와 광택은 한 번의 색칠보다 준비층과 투명한 색층의 축적으로 만들어집니다. 밑칠은 작은 반사와 옷감, 피부의 명암이 흐트러지지 않게 받쳐줍니다.",
+            "en": "The precision and sheen come from accumulated preparation and translucent colour rather than a single pass. Underpainting supports small reflections, fabric, and flesh values without letting them fall apart."
+          }
+        },
+        {
+          "year": "1550년대",
+          "artist": {
+            "ko": "티치아노",
+            "en": "Titian"
+          },
+          "title": {
+            "ko": "베네치아식 따뜻한 밑층",
+            "en": "Venetian warm underlayers"
+          },
+          "image": "data/techniques/glazing/titian-venus-and-lute-player.jpg",
+          "role": {
+            "ko": "색조의 기초",
+            "en": "Tonal foundation"
+          },
+          "note": {
+            "ko": "티치아노의 회화에서는 따뜻한 준비층이 살갗과 붉은 천, 어두운 배경의 관계를 묶습니다. 밑칠은 완성 색 아래에서 전체 화면의 온도를 조율합니다.",
+            "en": "In Titian's painting, warm preparation binds flesh, red fabric, and dark background together. The underlayer regulates the temperature of the whole image beneath the final colour."
+          }
+        },
+        {
+          "year": "1600년대",
+          "artist": {
+            "ko": "렘브란트 반 레인",
+            "en": "Rembrandt van Rijn"
+          },
+          "title": {
+            "ko": "갈색 밑칠 위의 빛",
+            "en": "Light over brown underpainting"
+          },
+          "image": "data/techniques/chiaroscuro/rembrandt-aristotle-bust-homer.jpg",
+          "role": {
+            "ko": "바로크 유화의 구조",
+            "en": "Baroque oil structure"
+          },
+          "note": {
+            "ko": "어두운 갈색 계열의 밑칠은 인물과 배경을 먼저 하나의 명암 덩어리로 잡습니다. 그 위에 밝은 살색과 금빛을 올리면 빛이 어둠에서 솟아나는 듯한 효과가 강해집니다.",
+            "en": "A dark brown underpainting first holds figure and background as one value mass. When flesh tones and golds are added above it, light appears to rise out of darkness."
+          }
+        }
+      ]
+    },
+    {
+      "id": "imprimatura",
+      "introduced": 1500,
+      "name": {
+        "ko": "임프리마투라",
+        "en": "Imprimatura"
+      },
+      "subtitle": {
+        "ko": "흰 바탕을 잠재우는 첫 색조",
+        "en": "The first tone that quiets a white ground"
+      },
+      "definition": {
+        "ko": "임프리마투라(Imprimatura)는 흰 캔버스나 패널 위에 아주 얇게 까는 첫 색조층입니다. 바탕의 강한 흰색을 낮추고, 이후의 명암과 색이 서로 어울릴 공통 분위기를 제공합니다.",
+        "en": "Imprimatura is a very thin initial tone laid over a white canvas or panel. It lowers the glare of the ground and gives later values and colours a shared atmosphere."
+      },
+      "explanation": {
+        "ko": "임프리마투라는 르네상스와 바로크 유화에서 널리 쓰인 작업 단계입니다. 흰 바탕을 그대로 두면 중간톤과 어둠을 판단하기 어렵기 때문에, 화가들은 황토색, 갈색, 회색, 붉은색을 얇게 깔아 화면의 기본 온도를 정했습니다. 티치아노 같은 베네치아 화가는 따뜻한 바탕 위에 색을 쌓아 풍부한 살빛과 깊은 어둠을 만들었고, 카라바조와 렘브란트는 어두운 화면에서 빛을 집중시키는 데 이런 톤 바탕을 적극적으로 활용했습니다. 임프리마투라는 밑칠보다 더 얇고 전체적이며, 화면이 시작되는 공기의 색에 가깝습니다.",
+        "en": "Imprimatura was a common working stage in Renaissance and Baroque oil painting. A raw white ground makes middle tones and darks hard to judge, so painters laid thin ochres, browns, greys, or reds to set the picture's basic temperature. Venetian painters such as Titian built rich flesh and deep shadows over warm grounds, while Caravaggio and Rembrandt used toned grounds to concentrate light within darkness. Imprimatura is thinner and more atmospheric than underpainting: it is closer to the colour of the air in which the picture begins."
+      },
+      "examples": [
+        {
+          "year": "1520년대",
+          "artist": {
+            "ko": "티치아노",
+            "en": "Titian"
+          },
+          "title": {
+            "ko": "베네치아 유화의 따뜻한 색조",
+            "en": "Warm tonal ground in Venetian oil"
+          },
+          "image": "data/미술사조/images/Tizian-041-c1f1a35ec75c.jpg",
+          "role": {
+            "ko": "르네상스 색조 통일",
+            "en": "Renaissance tonal unity"
+          },
+          "note": {
+            "ko": "따뜻한 바탕색은 피부와 천, 배경의 색을 서로 멀어지지 않게 묶습니다. 밝은 부분은 더 빛나고, 어두운 부분은 흰 캔버스의 차가움 없이 깊어집니다.",
+            "en": "A warm ground keeps flesh, fabric, and background from separating too sharply. Highlights glow more strongly, while darks deepen without the chill of a raw white canvas."
+          }
+        },
+        {
+          "year": "1599-1600",
+          "artist": {
+            "ko": "카라바조",
+            "en": "Caravaggio"
+          },
+          "title": {
+            "ko": "《성 마태오를 부르심》",
+            "en": "The Calling of Saint Matthew"
+          },
+          "image": "data/미술사조/images/Caravaggio-27s-The-Calling-of-St-Matthew-2068cdb551fc.jpg",
+          "role": {
+            "ko": "어두운 바탕과 집중 조명",
+            "en": "Dark ground and focused light"
+          },
+          "note": {
+            "ko": "어두운 색조의 바탕은 장면 전체를 한 번에 낮추고, 그 위에 들어오는 빛을 더 극적으로 만듭니다. 임프리마투라는 테네브리즘의 무대가 되는 첫 공기층입니다.",
+            "en": "A dark toned ground lowers the whole scene at once and makes the entering light more dramatic. Imprimatura becomes the first atmospheric layer for tenebrism."
+          }
+        },
+        {
+          "year": "1653",
+          "artist": {
+            "ko": "렘브란트 반 레인",
+            "en": "Rembrandt van Rijn"
+          },
+          "title": {
+            "ko": "《호메로스 흉상을 든 아리스토텔레스》",
+            "en": "Aristotle with a Bust of Homer"
+          },
+          "image": "data/techniques/chiaroscuro/rembrandt-aristotle-bust-homer.jpg",
+          "role": {
+            "ko": "갈색조 화면의 깊이",
+            "en": "Depth from a brown tonal field"
+          },
+          "note": {
+            "ko": "갈색 바탕은 인물과 배경을 처음부터 같은 어둠 속에 놓습니다. 금사슬과 얼굴의 밝은 색은 그 바탕을 뚫고 올라오며 더 무겁고 따뜻하게 보입니다.",
+            "en": "A brown tonal field places figure and background inside the same darkness from the start. Gold chain and face rise through that ground, appearing warmer and weightier."
+          }
+        }
+      ]
+    },
+    {
+      "id": "wet-on-wet",
+      "introduced": 1550,
+      "name": {
+        "ko": "웻 온 웻",
+        "en": "Wet-on-wet"
+      },
+      "subtitle": {
+        "ko": "마르기 전의 색이 화면에서 직접 만나는 방식",
+        "en": "Colours meet directly before the paint dries"
+      },
+      "definition": {
+        "ko": "웻 온 웻(Wet-on-wet)은 먼저 칠한 물감이 마르기 전에 다른 색을 얹어 화면 위에서 섞이게 하는 방식입니다. 경계가 부드러워지고 색의 이동이 자연스러워지며, 빠른 붓질의 생동감이 남습니다.",
+        "en": "Wet-on-wet applies new colour before the previous paint has dried, allowing colours to blend on the surface itself. Edges soften, colour transitions become fluid, and the vitality of quick brushwork remains visible."
+      },
+      "explanation": {
+        "ko": "웻 온 웻은 유화 전반에서 오래 사용된 방법이라 특정 시대나 화가 한 명에게만 묶이지 않습니다. 베네치아 화가들은 젖은 색을 부드럽게 밀어 살갗과 천의 색을 이어 붙였고, 바로크 화가들은 빠른 터치 안에서 빛과 어둠을 섞었습니다. 19세기에는 야외 제작과 인상주의의 빠른 관찰이 이 방식을 더 널리 쓰게 만들었습니다. 이 기법의 핵심은 색을 팔레트에서 완전히 결정하지 않고, 화면 위에서 서로 반응하게 하는 데 있습니다.",
+        "en": "Wet-on-wet has been used throughout oil painting, so it is not tied to one inventor or period. Venetian painters pushed wet colours into one another to connect flesh and fabric, and Baroque painters blended light and shadow within rapid handling. In the 19th century, plein-air practice and Impressionist observation made the method even more prominent. Its core is to let colours react on the picture surface rather than fixing every mixture on the palette first."
+      },
+      "examples": [
+        {
+          "year": "1550년대",
+          "artist": {
+            "ko": "티치아노",
+            "en": "Titian"
+          },
+          "title": {
+            "ko": "젖은 색으로 이어지는 살빛과 천",
+            "en": "Flesh and fabric joined in wet colour"
+          },
+          "image": "data/techniques/impasto/titian-venus-and-adonis.jpg",
+          "role": {
+            "ko": "베네치아식 유연한 색",
+            "en": "Venetian fluid colour"
+          },
+          "note": {
+            "ko": "티치아노의 늦은 붓질은 색과 색의 경계를 단단히 닫기보다 젖은 상태에서 밀고 당기며 연결합니다. 표면에는 부드러운 변화와 살아 있는 손의 흔적이 함께 남습니다.",
+            "en": "Titian's late handling links colours by pushing and drawing them while wet rather than sealing their edges. The surface holds both soft transition and the trace of an active hand."
+          }
+        },
+        {
+          "year": "1660",
+          "artist": {
+            "ko": "렘브란트 반 레인",
+            "en": "Rembrandt van Rijn"
+          },
+          "title": {
+            "ko": "《자화상》",
+            "en": "Self-Portrait"
+          },
+          "image": "data/thumbnails/artist-rembrandt/met-437397.jpg",
+          "role": {
+            "ko": "젖은 층의 즉흥적 혼합",
+            "en": "Improvised wet blending"
+          },
+          "note": {
+            "ko": "얼굴의 중간톤과 어둠은 붓질 사이에서 서로 녹아듭니다. 마르기 전의 색을 다루면 피부의 변화와 늙은 얼굴의 불규칙성이 한층 자연스럽게 살아납니다.",
+            "en": "Middle tones and shadows in the face melt into one another between strokes. Working into wet paint makes the shifts of skin and the irregularity of age feel immediate."
+          }
+        },
+        {
+          "year": "1869",
+          "artist": {
+            "ko": "클로드 모네",
+            "en": "Claude Monet"
+          },
+          "title": {
+            "ko": "《라 그르누이예르》",
+            "en": "La Grenouillere"
+          },
+          "image": "data/thumbnails/claude-monet/wikidata-Q941549.jpg",
+          "role": {
+            "ko": "빠르게 변하는 야외 빛",
+            "en": "Rapid outdoor light"
+          },
+          "note": {
+            "ko": "물과 사람, 나무의 반짝임은 마르기 전의 붓질이 서로 스치며 만들어집니다. 젖은 색의 즉각적 혼합은 순간의 빛을 오래 설명하지 않고 바로 붙잡습니다.",
+            "en": "Sparkles of water, figures, and trees are made as wet strokes touch and disturb each other. Immediate blending catches a moment of light without overexplaining it."
+          }
+        }
+      ]
+    },
+    {
+      "id": "dry-brush",
+      "introduced": 1600,
+      "name": {
+        "ko": "드라이 브러시",
+        "en": "Dry brush"
+      },
+      "subtitle": {
+        "ko": "마른 붓끝으로 남기는 끊어진 질감",
+        "en": "Broken texture left by a nearly dry brush"
+      },
+      "definition": {
+        "ko": "드라이 브러시(Dry brush)는 붓에 물감이나 물을 적게 묻혀 표면을 거칠고 끊어지게 스치는 기법입니다. 밑색이나 바탕 결이 사이사이에 드러나며, 털, 천, 나무, 낡은 표면 같은 질감을 빠르게 만들 수 있습니다.",
+        "en": "Dry brush uses a brush with little paint or liquid so that it skips across the surface. The ground or undercolour shows through the gaps, making it useful for hair, fabric, wood, worn surfaces, and rough texture."
+      },
+      "explanation": {
+        "ko": "드라이 브러시는 유화, 수채, 소묘, 판화적 효과 등 여러 매체에서 쓰이는 폭넓은 방법입니다. 붓이 표면을 완전히 덮지 않기 때문에, 칠하지 않은 틈이 질감의 일부가 됩니다. 렘브란트는 거친 표면과 빛나는 하이라이트를 위해 붓질을 끊어 남겼고, 터너는 대기와 물결의 흔들림을 마른 듯한 터치로 흩뜨렸습니다. 근대 이후에는 재료의 결을 드러내는 방식 자체가 표현의 중요한 요소가 되었습니다.",
+        "en": "Dry brush is a broad method used across oil, watercolour, drawing, and print-like effects. Because the brush does not fully cover the surface, the unpainted gaps become part of the texture. Rembrandt left broken strokes for rough surfaces and sparkling highlights, while Turner scattered dry touches into atmosphere and water. In modern practice, revealing the grain of the material became expressive in itself."
+      },
+      "examples": [
+        {
+          "year": "1660",
+          "artist": {
+            "ko": "렘브란트 반 레인",
+            "en": "Rembrandt van Rijn"
+          },
+          "title": {
+            "ko": "《자화상》",
+            "en": "Self-Portrait"
+          },
+          "image": "data/techniques/scumbling/rembrandt-self-portrait-1660.jpg",
+          "role": {
+            "ko": "거친 표면과 하이라이트",
+            "en": "Rough surface and highlights"
+          },
+          "note": {
+            "ko": "붓이 표면을 가볍게 긁고 지나가며 수염, 주름, 옷감의 결을 짧은 흔적으로 남깁니다. 물감이 부족한 붓끝은 완전히 칠한 면보다 더 많은 표면 정보를 보여줍니다.",
+            "en": "The brush scratches lightly over the surface, leaving beard, wrinkles, and fabric as short traces. A paint-starved brush can reveal more surface information than a fully covered plane."
+          }
+        },
+        {
+          "year": "1830년대",
+          "artist": {
+            "ko": "J. M. W. 터너",
+            "en": "J. M. W. Turner"
+          },
+          "title": {
+            "ko": "베네치아 풍경의 흩어진 빛",
+            "en": "Scattered light in Venetian views"
+          },
+          "image": "data/techniques/scumbling/turner-venice-porch-salute.jpg",
+          "role": {
+            "ko": "대기와 물결의 파편",
+            "en": "Fragments of atmosphere and water"
+          },
+          "note": {
+            "ko": "터너의 밝은 터치는 물과 공기 위에 끊어진 흔적으로 남아 화면을 진동시킵니다. 마른 붓질은 형태를 고정하기보다 빛이 흩어지는 느낌을 만듭니다.",
+            "en": "Turner's light touches remain as broken marks across water and air, making the image vibrate. Dry handling suggests light scattering rather than fixed form."
+          }
+        },
+        {
+          "year": "1882",
+          "artist": {
+            "ko": "빈센트 반 고흐",
+            "en": "Vincent van Gogh"
+          },
+          "title": {
+            "ko": "《슬픔》",
+            "en": "Sorrow"
+          },
+          "image": "data/thumbnails/vincent-van-gogh/wikidata-Q13107262.jpg",
+          "role": {
+            "ko": "선과 표면의 긴장",
+            "en": "Tension between line and surface"
+          },
+          "note": {
+            "ko": "드로잉과 회화 사이의 건조한 터치는 인물의 피부와 주변 공간을 거칠게 분리합니다. 충분히 젖지 않은 재료는 선을 끊어 놓아 감정의 거친 표면을 드러냅니다.",
+            "en": "Dry handling between drawing and painting separates body and surrounding space with roughness. Material that is not fully fluid breaks the line and exposes an emotional surface."
+          }
+        }
+      ]
+    },
+    {
+      "id": "en-plein-air",
+      "introduced": 1830,
+      "name": {
+        "ko": "야외제작",
+        "en": "En plein air"
+      },
+      "subtitle": {
+        "ko": "현장에서 빛과 색을 직접 관찰해 그리기",
+        "en": "Painting light and colour directly on site"
+      },
+      "definition": {
+        "ko": "야외제작(En plein air)은 화실 밖으로 나가 실제 장소의 빛, 날씨, 색 변화를 직접 보며 그리는 방식입니다. 완성작 전체를 야외에서 그릴 수도 있고, 현장 스케치를 바탕으로 화실에서 큰 그림을 완성할 수도 있습니다.",
+        "en": "En plein air means painting outdoors, directly observing a real site's light, weather, and changing colour. A work may be completed outside, or outdoor studies may later support a larger studio painting."
+      },
+      "explanation": {
+        "ko": "야외제작은 19세기 바르비종파와 인상주의를 이해하는 핵심입니다. 휴대용 이젤과 금속 물감 튜브가 보급되면서 화가들은 숲, 들판, 강가에서 더 쉽게 작업할 수 있었습니다. 바르비종파의 밀레와 테오도르 루소는 농촌 풍경과 노동의 현장을 가까이 관찰했고, 모네와 르누아르 같은 인상주의 화가들은 변화하는 빛을 빠르게 붙잡았습니다. 야외제작은 단순히 장소를 옮긴 일이 아니라, 그림의 색과 붓질, 완성의 기준을 순간적 경험 쪽으로 바꾼 사건이었습니다.",
+        "en": "En plein air is central to both the Barbizon school and Impressionism. Portable easels and metal paint tubes made it easier to work in forests, fields, and riversides. Barbizon painters such as Millet and Theodore Rousseau observed rural landscape and labour at close range, while Impressionists such as Monet and Renoir caught changing light with speed. Plein-air painting did not merely change where artists worked; it changed colour, brushwork, and the standard of finish toward immediate experience."
+      },
+      "examples": [
+        {
+          "year": "1857",
+          "artist": {
+            "ko": "장 프랑수아 밀레",
+            "en": "Jean-François Millet"
+          },
+          "title": {
+            "ko": "《이삭 줍는 여인들》",
+            "en": "The Gleaners"
+          },
+          "image": "data/미술사조/images/Jean-Fran-C3-A7ois-Millet-Gleaners-Google-Art-Project-2-2a5eac9e18cd.jpg",
+          "role": {
+            "ko": "바르비종파의 현장 관찰",
+            "en": "Barbizon observation"
+          },
+          "note": {
+            "ko": "밀레는 농촌의 노동과 들판의 빛을 가까이 관찰해 장엄한 일상 장면으로 바꾸었습니다. 야외에서의 관찰은 인물의 자세뿐 아니라 흙과 먼지의 색까지 화면에 남깁니다.",
+            "en": "Millet turned close observation of rural labour and field light into monumental everyday scenes. Outdoor observation remains not only in posture but also in the colour of soil and dust."
+          }
+        },
+        {
+          "year": "1873",
+          "artist": {
+            "ko": "클로드 모네",
+            "en": "Claude Monet"
+          },
+          "title": {
+            "ko": "《양귀비》",
+            "en": "Poppies"
+          },
+          "image": "data/thumbnails/claude-monet/monet-poppies.jpg",
+          "role": {
+            "ko": "인상주의의 순간적 빛",
+            "en": "Impressionist momentary light"
+          },
+          "note": {
+            "ko": "흐린 하늘과 들판의 붉은 점들은 한 장소에서 본 빛의 인상을 빠르게 조직합니다. 야외제작은 색을 사물의 고정된 속성이 아니라 날씨와 시간의 사건으로 보게 합니다.",
+            "en": "Clouded sky and red points in the field organise a quick impression of light seen on site. Plein-air painting treats colour as an event of weather and time, not a fixed property of objects."
+          }
+        },
+        {
+          "year": "1876",
+          "artist": {
+            "ko": "르누아르",
+            "en": "Pierre-Auguste Renoir"
+          },
+          "title": {
+            "ko": "《물랭 드 라 갈레트의 무도회》",
+            "en": "Dance at Le Moulin de la Galette"
+          },
+          "image": "data/미술사조/images/Pierre-Auguste-Renoir-Le-Moulin-de-la-Galette-a1377b95cdef.jpg",
+          "role": {
+            "ko": "야외 빛과 사회적 장면",
+            "en": "Outdoor light and social scene"
+          },
+          "note": {
+            "ko": "나뭇잎 사이로 떨어지는 빛은 인물과 옷 위에 움직이는 반점으로 흩어집니다. 야외의 조건은 장면의 분위기와 붓질의 속도를 함께 결정합니다.",
+            "en": "Light filtering through leaves breaks into moving patches on figures and clothing. Outdoor conditions shape both the mood of the scene and the speed of the brushwork."
+          }
+        }
+      ]
+    },
+    {
+      "id": "broken-color",
+      "introduced": 1869,
+      "name": {
+        "ko": "분할된 붓질",
+        "en": "Broken color"
+      },
+      "subtitle": {
+        "ko": "완전히 섞지 않은 색을 짧은 터치로 병치하기",
+        "en": "Short adjacent strokes of incompletely mixed colour"
+      },
+      "definition": {
+        "ko": "분할된 붓질(Broken color)은 색을 팔레트에서 완전히 섞어 균일한 면으로 바르지 않고, 서로 다른 색의 짧은 붓질을 나란히 놓아 눈에서 섞이게 하는 방식입니다. 표면은 살아 움직이고, 빛은 작은 색 조각들의 관계로 느껴집니다.",
+        "en": "Broken color places short strokes of different, incompletely mixed colours side by side rather than applying a uniform blended tone. The surface stays active, and light is felt through the relationship of small colour fragments."
+      },
+      "explanation": {
+        "ko": "분할된 붓질은 인상주의 회화의 중요한 특징입니다. 모네, 르누아르, 피사로는 그림자를 검게 칠하기보다 주변 색과 보색의 작은 터치를 나란히 놓아 빛이 흔들리는 효과를 만들었습니다. 점묘법처럼 규칙적인 점으로 제한되지는 않으며, 붓질의 길이와 방향이 더 자유롭습니다. 가까이서 보면 색 조각들이 분리되어 있지만, 멀어지면 물, 하늘, 피부, 거리의 빛으로 합쳐집니다.",
+        "en": "Broken color is a key feature of Impressionist painting. Monet, Renoir, and Pissarro often built shadow and light from adjacent touches of surrounding colours and complements rather than blackened mixtures. Unlike Pointillism, it is not limited to regular dots; stroke length and direction remain freer. Up close the colours stay fragmented, but at distance they join into water, sky, skin, or street light."
+      },
+      "examples": [
+        {
+          "year": "1872",
+          "artist": {
+            "ko": "클로드 모네",
+            "en": "Claude Monet"
+          },
+          "title": {
+            "ko": "《인상, 해돋이》",
+            "en": "Impression, Sunrise"
+          },
+          "image": "data/미술사조/images/Claude-Monet-Impression-soleil-levant-ffa6676be90d.jpg",
+          "role": {
+            "ko": "인상주의 표면",
+            "en": "Impressionist surface"
+          },
+          "note": {
+            "ko": "물과 하늘은 매끈한 그라데이션이 아니라 짧고 분리된 색의 흔적으로 이루어집니다. 주황색 태양과 푸른 회색 주변색은 눈에서 긴장하며 섞입니다.",
+            "en": "Water and sky are made from short separated traces rather than smooth gradients. The orange sun and blue-grey surroundings mix in the viewer's eye through tension."
+          }
+        },
+        {
+          "year": "1876",
+          "artist": {
+            "ko": "르누아르",
+            "en": "Pierre-Auguste Renoir"
+          },
+          "title": {
+            "ko": "《물랭 드 라 갈레트의 무도회》",
+            "en": "Dance at Le Moulin de la Galette"
+          },
+          "image": "data/미술사조/images/Pierre-Auguste-Renoir-Le-Moulin-de-la-Galette-a1377b95cdef.jpg",
+          "role": {
+            "ko": "인물 위의 흔들리는 빛",
+            "en": "Flickering light on figures"
+          },
+          "note": {
+            "ko": "푸른 그림자와 분홍빛 살색, 흰 하이라이트가 짧은 붓질로 나뉘어 인물 위를 움직입니다. 색을 깨뜨리면 야외의 빛이 고정되지 않고 흔들립니다.",
+            "en": "Blue shadows, pink flesh, and white highlights move across the figures in short strokes. Breaking colour keeps outdoor light from becoming fixed."
+          }
+        },
+        {
+          "year": "1897",
+          "artist": {
+            "ko": "카미유 피사로",
+            "en": "Camille Pissarro"
+          },
+          "title": {
+            "ko": "《몽마르트르 대로, 봄》",
+            "en": "Boulevard Montmartre, Spring"
+          },
+          "image": "data/미술사조/images/Camille-20Pissarro-20-20Boulevard-20Montmartre-20Spring-20-20Google-20-7cc6d722c418.jpg",
+          "role": {
+            "ko": "도시 빛의 분할",
+            "en": "Fragmented urban light"
+          },
+          "note": {
+            "ko": "거리, 마차, 군중은 작은 색 터치로 흩어져 도시의 공기와 움직임을 만듭니다. 완전히 섞지 않은 색은 대로의 소음과 빛을 동시에 전달합니다.",
+            "en": "Street, carriages, and crowd scatter into small colour touches that create urban air and movement. Incompletely mixed colour carries both boulevard noise and light."
+          }
+        }
+      ]
+    },
+    {
+      "id": "pointillism",
+      "introduced": 1886,
+      "name": {
+        "ko": "점묘법",
+        "en": "Pointillism"
+      },
+      "subtitle": {
+        "ko": "작은 색점들이 눈에서 섞이는 회화",
+        "en": "Small colour dots mixed by the eye"
+      },
+      "definition": {
+        "ko": "점묘법(Pointillism)은 작은 점이나 짧은 점상 터치를 규칙적으로 배치해, 색이 팔레트가 아니라 관람자의 눈에서 섞이도록 하는 기법입니다. 순색의 병치를 통해 빛과 색의 진동을 만들려는 신인상주의의 대표 방식입니다.",
+        "en": "Pointillism arranges small dots or dot-like touches so that colours mix in the viewer's eye rather than on the palette. It is a defining Neo-Impressionist method for creating vibration from adjacent pure colours."
+      },
+      "explanation": {
+        "ko": "점묘법은 1880년대 중반 조르주 쇠라와 폴 시냐크가 색채 이론과 광학적 혼합에 관심을 두며 발전시킨 방식입니다. 인상주의의 즉흥적 붓질보다 더 계획적이고 규칙적인 면이 강합니다. 쇠라는 큰 구도를 작은 색점의 질서로 조직했고, 시냐크는 더 밝고 장식적인 색면으로 확장했습니다. 가까이서 보면 점들이 분리되어 있지만, 멀리서 보면 잔디, 물, 그림자, 햇빛이 하나의 빛나는 장면으로 합쳐집니다.",
+        "en": "Pointillism was developed in the mid-1880s by Georges Seurat and Paul Signac through an interest in colour theory and optical mixture. It is more systematic than the spontaneous brushwork of Impressionism. Seurat organised large compositions through ordered dots of colour, while Signac expanded the method into brighter, more decorative fields. Up close the dots remain separate; from a distance they become grass, water, shadow, and sunlight in one luminous scene."
+      },
+      "examples": [
+        {
+          "year": "1884-1886",
+          "artist": {
+            "ko": "조르주 쇠라",
+            "en": "Georges Seurat"
+          },
+          "title": {
+            "ko": "《그랑드 자트 섬의 일요일 오후》",
+            "en": "A Sunday Afternoon on the Island of La Grande Jatte"
+          },
+          "image": "data/미술사조/images/Georges-20Seurat-20-20Un-20dimanche-20apr-C3-A8s-midi-20-C3-A0-20l-C3-8037631ce03d.jpg",
+          "role": {
+            "ko": "점묘법의 대표작",
+            "en": "Canonical Pointillism"
+          },
+          "note": {
+            "ko": "잔디와 물, 인물의 그림자는 작은 색점들의 질서로 구성됩니다. 색점은 멀리서 합쳐지지만, 표면 가까이에서는 회화가 얼마나 계산적으로 세워졌는지 드러냅니다.",
+            "en": "Grass, water, and figure shadows are built from ordered small colour marks. They merge at distance, while the surface reveals how deliberately the painting is constructed."
+          }
+        },
+        {
+          "year": "1880년대 후반",
+          "artist": {
+            "ko": "폴 시냐크",
+            "en": "Paul Signac"
+          },
+          "title": {
+            "ko": "항구와 강변의 색점 실험",
+            "en": "Harbour and riverside colour-dot studies"
+          },
+          "image": "data/미술사조/images/Georges-Seurat-Un-dimanche-apr-C3-A8s-midi-C3-A0-l-27-C3-8Ele-de-la-Gr-8037631ce03d.jpg",
+          "role": {
+            "ko": "신인상주의 확산",
+            "en": "Expansion of Neo-Impressionism"
+          },
+          "note": {
+            "ko": "시냐크는 쇠라와 함께 점묘적 색채 이론을 널리 알렸고, 물가와 항구 장면에서 밝은 순색의 병치를 강조했습니다. 점은 분석적이면서도 장식적인 리듬이 됩니다.",
+            "en": "Signac helped spread Seurat's dot-based colour theory and emphasised bright adjacent colours in riverside and harbour scenes. The dot becomes both analytical and decorative rhythm."
+          }
+        },
+        {
+          "year": "1890년대",
+          "artist": {
+            "ko": "카미유 피사로",
+            "en": "Camille Pissarro"
+          },
+          "title": {
+            "ko": "신인상주의 시기의 도시 풍경",
+            "en": "Urban scenes during his Neo-Impressionist phase"
+          },
+          "image": "data/미술사조/images/Camille-20Pissarro-20-20Boulevard-20Montmartre-20Spring-20-20Google-20-7cc6d722c418.jpg",
+          "role": {
+            "ko": "인상주의와 점묘법의 접점",
+            "en": "Bridge from Impressionism"
+          },
+          "note": {
+            "ko": "피사로는 한때 점묘적 방법을 받아들여 도시와 시골의 빛을 더 작은 색 단위로 분석했습니다. 인상주의의 관찰과 신인상주의의 체계가 겹치는 지점입니다.",
+            "en": "Pissarro adopted pointillist methods for a time, analysing urban and rural light into smaller colour units. His work marks an overlap between Impressionist observation and Neo-Impressionist system."
+          }
+        }
+      ]
+    },
+    {
+      "id": "divisionism",
+      "introduced": 1886,
+      "name": {
+        "ko": "분할주의",
+        "en": "Divisionism"
+      },
+      "subtitle": {
+        "ko": "색을 섞지 않고 순색 성분으로 나누어 놓기",
+        "en": "Separating colour into adjacent pure components"
+      },
+      "definition": {
+        "ko": "분할주의(Divisionism)는 색을 물감에서 미리 섞지 않고, 순색 또는 가까운 색 성분으로 나누어 화면에 병치하는 색채 원리입니다. 점묘법은 그 원리를 점 형태로 실행한 대표적 방법입니다.",
+        "en": "Divisionism separates colour into adjacent pure or near-pure components instead of premixing them as pigment. Pointillism is one well-known way of applying this principle through dots."
+      },
+      "explanation": {
+        "ko": "분할주의는 신인상주의의 이론적 핵심입니다. 쇠라와 시냐크는 보색, 대비, 광학적 혼합에 관한 당대 색채 이론을 회화에 적용하며 색을 성분별로 분할했습니다. 점묘법이 붓질의 모양을 가리킨다면, 분할주의는 색을 어떻게 사고하고 배치하는가에 더 가까운 개념입니다. 이후 이탈리아 분할주의와 후기인상주의 화가들에게도 영향을 주어, 빛과 감정, 사회적 주제를 순색의 긴장으로 표현하게 했습니다.",
+        "en": "Divisionism is the theoretical core of Neo-Impressionism. Seurat and Signac applied contemporary colour theory on complements, contrast, and optical mixture by dividing colour into components. If Pointillism names a mark type, Divisionism names a way of thinking and placing colour. It also influenced Italian Divisionism and Post-Impressionist painters, who used tensions of pure colour for light, emotion, and social subjects."
+      },
+      "examples": [
+        {
+          "year": "1884-1886",
+          "artist": {
+            "ko": "조르주 쇠라",
+            "en": "Georges Seurat"
+          },
+          "title": {
+            "ko": "《그랑드 자트 섬의 일요일 오후》",
+            "en": "A Sunday Afternoon on the Island of La Grande Jatte"
+          },
+          "image": "data/미술사조/images/Georges-20Seurat-20-20Un-20dimanche-20apr-C3-A8s-midi-20-C3-A0-20l-C3-8037631ce03d.jpg",
+          "role": {
+            "ko": "분할주의 원리의 체계화",
+            "en": "Systematising divided colour"
+          },
+          "note": {
+            "ko": "그림자는 단순히 검지 않고 보라, 파랑, 녹색, 주황의 관계로 구성됩니다. 색을 분할해 놓으면 화면의 빛은 물감의 혼합보다 눈의 지각에서 생깁니다.",
+            "en": "Shadows are not simply blackened but built from relations among violet, blue, green, and orange. Dividing colour makes light arise in perception rather than in pigment mixture alone."
+          }
+        },
+        {
+          "year": "1887",
+          "artist": {
+            "ko": "빈센트 반 고흐",
+            "en": "Vincent van Gogh"
+          },
+          "title": {
+            "ko": "《탕기 영감의 초상》",
+            "en": "Portrait of Pere Tanguy"
+          },
+          "image": "data/thumbnails/vincent-van-gogh/wikidata-Q13528770.JPG",
+          "role": {
+            "ko": "후기인상주의적 수용",
+            "en": "Post-Impressionist adaptation"
+          },
+          "note": {
+            "ko": "반 고흐는 파리에서 신인상주의의 색채 분할을 접한 뒤 더 밝고 병치적인 색을 사용했습니다. 엄격한 점묘는 아니지만, 순색을 나누어 놓는 감각이 화면을 강하게 밀어 올립니다.",
+            "en": "After encountering Neo-Impressionist divided colour in Paris, Van Gogh used brighter adjacent colours. It is not strict Pointillism, but the pressure of separated colour energises the surface."
+          }
+        },
+        {
+          "year": "1897",
+          "artist": {
+            "ko": "카미유 피사로",
+            "en": "Camille Pissarro"
+          },
+          "title": {
+            "ko": "《몽마르트르 대로, 봄》",
+            "en": "Boulevard Montmartre, Spring"
+          },
+          "image": "data/미술사조/images/Camille-20Pissarro-20-20Boulevard-20Montmartre-20Spring-20-20Google-20-7cc6d722c418.jpg",
+          "role": {
+            "ko": "분할된 색의 도시 풍경",
+            "en": "Urban landscape through divided colour"
+          },
+          "note": {
+            "ko": "피사로의 늦은 도시 풍경은 작은 색 단위가 거리의 공기와 사람들의 움직임을 구성합니다. 분할된 색은 현대 도시의 빛을 분석하면서도 활기 있게 만듭니다.",
+            "en": "Pissarro's later urban views use small units of colour to form air and movement in the street. Divided colour analyses modern city light while keeping it lively."
+          }
+        }
+      ]
+    },
+    {
+      "id": "disegno",
+      "introduced": 1500,
+      "name": {
+        "ko": "디세뇨",
+        "en": "Disegno"
+      },
+      "subtitle": {
+        "ko": "선, 구조, 구성을 회화의 출발점으로 삼는 이탈리아 르네상스의 관념",
+        "en": "The Renaissance priority of drawing, structure, and design"
+      },
+      "definition": {
+        "ko": "디세뇨(Disegno)는 단순히 윤곽을 그리는 솜씨가 아니라, 머릿속의 착상을 선과 구성을 통해 질서 있는 형상으로 만드는 능력입니다. 특히 피렌체와 로마의 르네상스 전통에서 인체 연구, 소묘, 원근, 구성은 회화와 조각을 떠받치는 지적 설계로 여겨졌습니다.",
+        "en": "Disegno is more than skill in outlining: it is the ability to give an imagined idea orderly form through drawing and composition. In the Florentine and Roman Renaissance, studies of the figure, drawing, perspective, and composition were regarded as the intellectual design underlying both painting and sculpture."
+      },
+      "explanation": {
+        "ko": "디세뇨와 콜로리토는 흔히 피렌체와 베네치아를 대비해 설명합니다. 디세뇨가 선명한 윤곽, 해부학적 구조, 설계된 구성을 우선한다면, 콜로리토는 색의 변화, 빛, 공기, 붓질이 만들어 내는 통일감을 우선합니다. 미켈란젤로와 라파엘로의 화면에서는 인물의 자세와 전체 구성에서 먼저 뼈대가 읽히며, 색은 그 구조를 강화합니다. 반대로 티치아노가 대표하는 콜로리토에서는 윤곽이 색과 명암 속에서 유연하게 풀리고, 색 자체가 형태와 감정을 만들어 냅니다. 이는 어느 한쪽에 색이나 선이 없다는 뜻이 아니라, 무엇을 회화의 핵심으로 보았는지의 차이입니다. 이 대립은 17세기 후반부터 18세기 초 프랑스 왕립 회화·조각 아카데미의 푸생주의와 루벤스주의 논쟁으로 다시 전개됩니다. 푸생주의자들은 니콜라 푸생을 본보기로 선, 드로잉, 이성적 구성을 옹호했고, 루벤스주의자들은 페테르 파울 루벤스를 본보기로 색채와 감각적 효과의 힘을 옹호했습니다. 이는 디세뇨와 콜로리토를 그대로 복제한 구분은 아니지만, 선과 색 중 무엇이 회화의 우선 원리인가를 프랑스에서 새롭게 묻는 계기였습니다.",
+        "en": "Disegno and colorito are often used to contrast Florence with Venice. Disegno gives priority to clear contour, anatomical structure, and planned composition; colorito gives priority to the unity made by changing colour, light, air, and brushwork. In Michelangelo and Raphael, the pose of a figure and the total arrangement are read first as a framework, with colour reinforcing it. In Titian's representative colorito, contour loosens into colour and value, and colour itself makes form and feeling. The distinction does not mean that one side lacked colour or line, but that they placed the heart of painting in different places. From the late seventeenth into the early eighteenth century, the opposition reappeared in the French Royal Academy's quarrel between the Poussinistes and the Rubenistes. Taking Nicolas Poussin as their model, the Poussinistes defended line, drawing, and rational composition; taking Peter Paul Rubens as theirs, the Rubenistes defended the force of colour and sensuous effect. This was not a direct copy of the disegno-colorito distinction, but a French reopening of the question of whether line or colour should be painting's governing principle."
+      },
+      "examples": [
+        {
+          "year": "1508-1512",
+          "artist": {
+            "ko": "미켈란젤로 부오나로티",
+            "en": "Michelangelo"
+          },
+          "title": {
+            "ko": "《아담의 창조》",
+            "en": "The Creation of Adam"
+          },
+          "image": "data/techniques/fresco/michelangelo-creation-of-adam.jpg",
+          "role": {
+            "ko": "인체와 구성의 설계",
+            "en": "Designed figure and composition"
+          },
+          "note": {
+            "ko": "두 팔의 간격과 몸의 비틀림, 인물군의 배치는 선과 인체 구조가 화면의 긴장을 먼저 조직하는 방식을 보여 줍니다. 색은 이 강한 설계를 보완하지만, 장면의 힘은 이미 소묘적 사고에서 시작됩니다.",
+            "en": "The gap between the hands, the twisting bodies, and the placement of the groups show line and figure structure organising the tension first. Colour supports the powerful design, but the scene begins with drawing-based thought."
+          }
+        },
+        {
+          "year": "1483-1486",
+          "artist": {
+            "ko": "레오나르도",
+            "en": "Leonardo da Vinci"
+          },
+          "title": {
+            "ko": "《암굴의 성모》",
+            "en": "Virgin of the Rocks"
+          },
+          "image": "data/techniques/aerial-perspective/leonardo-virgin-of-the-rocks.jpg",
+          "role": {
+            "ko": "구조와 관찰의 결합",
+            "en": "Structure joined to observation"
+          },
+          "note": {
+            "ko": "레오나르도의 스푸마토와 공기 원근은 부드럽지만, 인물들을 묶는 삼각형 구성과 손짓의 연결은 디세뇨의 설계 원리를 보여 줍니다. 디세뇨는 딱딱한 윤곽만을 뜻하지 않는다는 좋은 예입니다.",
+            "en": "Leonardo's sfumato and aerial perspective are soft, yet the triangular grouping and linked gestures show disegno's principle of design. It is a strong reminder that disegno does not mean hard contour alone."
+          }
+        }
+      ]
+    },
+    {
+      "id": "colorito",
+      "introduced": 1500,
+      "name": {
+        "ko": "콜로리토",
+        "en": "Colorito"
+      },
+      "subtitle": {
+        "ko": "색, 빛, 톤의 관계로 형태와 정서를 만드는 베네치아 회화의 관념",
+        "en": "The Venetian priority of form and feeling made through colour, light, and tone"
+      },
+      "definition": {
+        "ko": "콜로리토(Colorito)는 색을 이미 그려진 형태에 덧입히는 마감이 아니라, 색과 명암의 변화로 형태, 공간, 질감, 정서를 함께 만들어 내는 회화적 사고입니다. 베네치아의 유화 전통에서는 물감의 층, 따뜻한 색조, 부드러운 전이, 살아 있는 붓질이 화면의 통일을 이끕니다.",
+        "en": "Colorito treats colour not as a finishing coat applied to an already drawn form, but as a way of making form, space, texture, and feeling together through changes of colour and value. In the Venetian oil tradition, layers of paint, warm tonality, soft transitions, and living brushwork create the unity of the picture."
+      },
+      "explanation": {
+        "ko": "콜로리토는 디세뇨와 짝을 이루어 이해할 때 가장 선명합니다. 디세뇨가 선과 구성을 먼저 세운 뒤 색으로 강화하는 경향이라면, 콜로리토는 색의 온도와 명암의 흐름 속에서 윤곽과 공간이 생겨나는 경향입니다. 베네치아 화가들은 캔버스와 유화의 유연성을 살려 붓질을 겹치고, 따뜻한 붉은색과 금빛, 차가운 그림자를 서로 반응하게 했습니다. 티치아노의 인물과 신화화에서는 몸의 경계가 배경과 천, 하늘의 색조 속에서 미세하게 흔들립니다. 그러나 이 역시 무계획적인 색칠이 아닙니다. 콜로리토에도 구성과 드로잉은 있으며, 다만 회화의 설득력을 색과 물감의 작용에서 더 강하게 찾습니다. 이 관점은 17세기 후반 프랑스의 푸생주의-루벤스주의 논쟁에서 색채를 옹호한 루벤스주의와 이어 읽을 수 있습니다. 로제 드 필이 이끈 루벤스주의자들은 색채가 눈을 사로잡고 자연과 생동감을 전달한다고 보았으며, 푸생주의자들의 선·드로잉 우선론에 맞섰습니다. 다만 루벤스주의는 베네치아 콜로리토와 동일한 기법명이 아니라, 색채의 회화적 지위를 둘러싼 후대의 이론적 논쟁이라는 점이 중요합니다.",
+        "en": "Colorito becomes clearest when read beside disegno. Where disegno tends to establish line and composition first and reinforce them with colour, colorito lets contour and space emerge through the flow of temperature and value. Venetian painters used the flexibility of canvas and oil to layer brushwork and make warm reds and golds respond to cool shadows. In Titian's figures and mythologies, the edge of a body subtly trembles within the colours of background, fabric, and sky. This is not unplanned colouring: colorito also has composition and drawing, but locates painting's persuasive power more strongly in colour and paint itself. This position can be read forward into the late seventeenth-century French quarrel between the Poussinistes and the Rubenistes, whose colour side was defended by the Rubenistes. Led intellectually by Roger de Piles, they argued that colour seizes the eye and conveys nature and liveliness, against the Poussinistes' priority for line and drawing. Rubenism is not the same technique as Venetian colorito; it is a later theoretical debate about colour's status in painting."
+      },
+      "examples": [
+        {
+          "year": "1554",
+          "artist": {
+            "ko": "티치아노",
+            "en": "Titian"
+          },
+          "title": {
+            "ko": "《비너스와 아도니스》",
+            "en": "Venus and Adonis"
+          },
+          "image": "data/techniques/impasto/titian-venus-and-adonis.jpg",
+          "role": {
+            "ko": "색으로 움직이는 서사",
+            "en": "Narrative animated by colour"
+          },
+          "note": {
+            "ko": "살갗의 따뜻한 색, 붉은 천, 어두운 숲의 관계가 인물의 움직임과 감정의 온도를 만듭니다. 윤곽은 분명하지만 색의 흐름에서 더 생생하게 작동합니다.",
+            "en": "Warm flesh, red drapery, and the dark woods create both movement and emotional temperature. The contours remain clear, yet they work most vividly through the flow of colour."
+          }
+        },
+        {
+          "year": "1565-1570",
+          "artist": {
+            "ko": "티치아노",
+            "en": "Titian"
+          },
+          "title": {
+            "ko": "《류트를 연주하는 비너스》",
+            "en": "Venus and the Lute Player"
+          },
+          "image": "data/techniques/glazing/titian-venus-and-lute-player.jpg",
+          "role": {
+            "ko": "빛과 색조의 통일",
+            "en": "Unity through light and tonality"
+          },
+          "note": {
+            "ko": "피부, 붉은 천, 푸른 하늘, 어두운 실내가 하나의 따뜻한 빛 속에서 이어집니다. 이처럼 색조의 관계가 형태를 묶고 분위기를 만드는 방식이 콜로리토의 핵심입니다.",
+            "en": "Flesh, red cloth, blue sky, and dark interior are joined within one warm light. This way tonal relationships bind form and make atmosphere is central to colorito."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1520 @@
+{
+  "schema": 18,
+  "artistId": "artist-1786369007570",
+  "qid": "Q762",
+  "artist": {
+    "name": {
+      "ko": "레오나르도 다 빈치",
+      "en": "Leonardo da Vinci"
+    },
+    "birth": 1452,
+    "death": 1519,
+    "nationality": {
+      "ko": "피렌체 공화국",
+      "en": "Republic of Florence"
+    }
+  },
+  "fetchedAt": "2026-08-10T13:50:59.717Z",
+  "works": [
+    {
+      "id": "wikidata-Q1105846",
+      "year": 1450,
+      "popularity": 16,
+      "title": {
+        "ko": "Codex Arundel",
+        "en": "Codex Arundel"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Codex%20arundel.jpg",
+      "description": {
+        "ko": "book by Leonardo da Vinci",
+        "en": "book by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q1105846",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q123980757",
+      "year": 1460,
+      "popularity": 2,
+      "title": {
+        "ko": "Madonna with the Laughing Child",
+        "en": "Madonna with the Laughing Child"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20vinci%20%28attr.%29%2C%20madonna%20col%20bambino%20sorridente%2C%201472%20ca.%20%28v%26a%29%2002.jpg",
+      "description": {
+        "ko": "sculpture attributed to Leonardo da Vinci",
+        "en": "sculpture attributed to Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q123980757",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1059211",
+      "year": 1472,
+      "popularity": 30,
+      "title": {
+        "ko": "그리스도의 세례",
+        "en": "The Baptism of Christ"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Verrocchio%20and%20Leonardo%2C%20Baptism%20of%20Christ%2C%20c1470-75%2C%20Uffizi.jpg",
+      "description": {
+        "ko": "painting by Andrea del Verrocchio and Leonardo da Vinci, Uffizi",
+        "en": "painting by Andrea del Verrocchio and Leonardo da Vinci, Uffizi"
+      },
+      "source": "http://www.wikidata.org/entity/Q1059211",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q3922633",
+      "year": 1475,
+      "popularity": 4,
+      "title": {
+        "ko": "Warrior with Helmet and Breastplate in Profile",
+        "en": "Warrior with Helmet and Breastplate in Profile"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20Vinci%20-%201895%2C0915.474%2C%20A%20bust%20of%20a%20warrior%20in%20profile%20to%20left%2C%20wearing%20a%20winged%20helmet%20and%20armour%20bearing%20a%20lion%20on%20the%20breastplate.jpg",
+      "description": {
+        "ko": "drawing by Leonardo da Vinci",
+        "en": "drawing by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q3922633",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1217213",
+      "year": 1472,
+      "popularity": 30,
+      "title": {
+        "ko": "수태고지",
+        "en": "Annunciation"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Annunciation%20%28Leonardo%29%20%28cropped%29.jpg",
+      "description": {
+        "ko": "레오나르도 다 빈치의 작품",
+        "en": "레오나르도 다 빈치의 작품"
+      },
+      "source": "http://www.wikidata.org/entity/Q1217213",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3373694",
+      "year": 1473,
+      "popularity": 8,
+      "title": {
+        "ko": "Arno Landscape",
+        "en": "Arno Landscape"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "초기 르네상스",
+        "en": "초기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Paisagem%20do%20Arno%20-%20Leonardo%20da%20Vinci.jpg",
+      "description": {
+        "ko": "drawing by Leonardo da Vinci",
+        "en": "drawing by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q3373694",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q698015",
+      "year": 1475,
+      "popularity": 30,
+      "title": {
+        "ko": "카네이션의 성모",
+        "en": "Madonna of the Carnation"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "초기 르네상스",
+        "en": "초기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/LEONARDO-DA-VINCI%20-%20MADONNA-MIT-DER-NELKE-7779%20917154%20BSTGS.jpg",
+      "description": {
+        "ko": "레오나르도 다 빈치의 유화 작품",
+        "en": "레오나르도 다 빈치의 유화 작품"
+      },
+      "source": "http://www.wikidata.org/entity/Q698015",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3618186",
+      "year": 1475,
+      "popularity": 6,
+      "title": {
+        "ko": "수태고지",
+        "en": "Annunciation"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/L%27Annonciation%2C%20by%20Leonardo%20da%20Vinci%2C%20from%20C2RMF%20retouched.jpg",
+      "description": {
+        "ko": "레오나르도 다 빈치 또는 로렌초 디 크레디의 작품으로 추정되는 작품",
+        "en": "레오나르도 다 빈치 또는 로렌초 디 크레디의 작품으로 추정되는 작품"
+      },
+      "source": "http://www.wikidata.org/entity/Q3618186",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1267893",
+      "year": 1476,
+      "popularity": 40,
+      "title": {
+        "ko": "지네브라 데 벤치",
+        "en": "Ginevra de' Benci"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "초기 르네상스",
+        "en": "초기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ginevra%20de%27%20Benci%20-%20National%20Gallery%20of%20Art.jpg",
+      "description": {
+        "ko": "레오나르도 다 빈치의 그림",
+        "en": "레오나르도 다 빈치의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q1267893",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q1142058",
+      "year": 1480,
+      "popularity": 37,
+      "title": {
+        "ko": "베누아 마돈나",
+        "en": "Benois Madonna"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "초기 르네상스",
+        "en": "초기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%2C%20Madonna%20Benois.JPG",
+      "description": {
+        "ko": "painting by Leonardo da Vinci",
+        "en": "painting by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q1142058",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q972196",
+      "year": 1480,
+      "popularity": 24,
+      "title": {
+        "ko": "광야의 성 히에로니무스",
+        "en": "Saint Jerome in the Wilderness"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "Florentine Renaissance art",
+        "en": "Florentine Renaissance art"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20Vinci%20%E2%80%94%20Jerome.jpg",
+      "description": {
+        "ko": "레오나르도 다빈치 그림",
+        "en": "레오나르도 다빈치 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q972196",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q11765908",
+      "year": 1480,
+      "popularity": 8,
+      "title": {
+        "ko": "Study for the Madonna of the Cat",
+        "en": "Study for the Madonna of the Cat"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20Vinci%20-%201856%2C0621.1%2C%20The%20Virgin%20and%20Christ%20Child%20with%20a%20cat%20%28cropped%29.jpg",
+      "description": {
+        "ko": "sheet with drawings by Leonardo da Vinci in the British Museum",
+        "en": "sheet with drawings by Leonardo da Vinci in the British Museum"
+      },
+      "source": "http://www.wikidata.org/entity/Q11765908",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q28497182",
+      "year": 1480,
+      "popularity": 5,
+      "title": {
+        "ko": "The Martyrdom of Saint Sebastian",
+        "en": "The Martyrdom of Saint Sebastian"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saint%20Sebastian%20-%20Leonardo%20da%20Vinci.jpg",
+      "description": {
+        "ko": "drawing by Leonardo da Vinci",
+        "en": "drawing by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q28497182",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q107460193",
+      "year": 1480,
+      "popularity": 3,
+      "title": {
+        "ko": "Drawing of the Head of a Bear",
+        "en": "Drawing of the Head of a Bear"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Da%20Vinci%20-%20Head%20of%20a%20Bear.jpg",
+      "description": {
+        "ko": "drawing by Leonardo da Vinci",
+        "en": "drawing by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q107460193",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q11825876",
+      "year": 1479,
+      "popularity": 2,
+      "title": {
+        "ko": "Study of the Hanged Bernardo di Bandino Baroncelli",
+        "en": "Study of the Hanged Bernardo di Bandino Baroncelli"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20Vinci%20-%20Hanging%20of%20Bernardo%20Baroncelli%201479.jpg",
+      "description": {
+        "ko": "drawing by Leonardo da Vinci",
+        "en": "drawing by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q11825876",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1638622",
+      "year": 1482,
+      "popularity": 34,
+      "title": {
+        "ko": "동방박사의 경배",
+        "en": "Adoration of the Magi"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "초기 르네상스",
+        "en": "초기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20Vinci%2C%20Adoration%2C%20c1481%2C%20Uffizi.jpg",
+      "description": {
+        "ko": "painting by Leonardo da Vinci",
+        "en": "painting by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q1638622",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q11935346",
+      "year": 1484,
+      "popularity": 7,
+      "title": {
+        "ko": "Virgin of the Rocks",
+        "en": "Virgin of the Rocks"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "초기 르네상스",
+        "en": "초기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20Da%20Vinci%20-%20Vergine%20delle%20Rocce%20%28Louvre%29.jpg",
+      "description": {
+        "ko": "painting by Leonardo da Vinci in the Louvre, Paris",
+        "en": "painting by Leonardo da Vinci in the Louvre, Paris"
+      },
+      "source": "http://www.wikidata.org/entity/Q11935346",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q29384842",
+      "year": 1482,
+      "popularity": 2,
+      "title": {
+        "ko": "Studies of a Virgin worshipping the Christ Child",
+        "en": "Studies of a Virgin worshipping the Christ Child"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "Italy"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Compositional%20Sketches%20for%20the%20Virgin%20Adoring%20the%20Christ%20Child%2C%20with%20and%20without%20the%20Infant%20St.%20John%20the%20Baptist%3B%20Diagram%20of%20a%20Perspectival%20Projection%20%28recto%29%3B%20Slight%20Doodles%20%28verso%29%20MET%20DP136369.jpg",
+      "description": {
+        "ko": "drawing by Leonardo da Vinci",
+        "en": "drawing by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q29384842",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q52707816",
+      "year": 1483,
+      "popularity": 6,
+      "title": {
+        "ko": "Study for the Head of a Girl",
+        "en": "Study for the Head of a Girl"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20study%20Madonna%20of%20the%20rocks.jpeg",
+      "description": {
+        "ko": "drawing by Leonardo da Vinci",
+        "en": "drawing by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q52707816",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q60835898",
+      "year": 1483,
+      "popularity": 2,
+      "title": {
+        "ko": "Cartoon for the head of the infant Saint John the Baptist",
+        "en": "Cartoon for the head of the infant Saint John the Baptist"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%C3%89tude%20pour%20la%20t%C3%AAte%20de%20l%27enfant%20Jean%20Baptiste.png",
+      "description": {
+        "ko": "drawing by Leonardo da Vinci",
+        "en": "drawing by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q60835898",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q2338404",
+      "year": 1485,
+      "popularity": 28,
+      "title": {
+        "ko": "음악가의 초상",
+        "en": "Portrait of a Musician"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "Florentine Renaissance art",
+        "en": "Florentine Renaissance art"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20Vinci%20-%20Portrait%20of%20a%20Musician%20-%20Pinacoteca%20Ambrosiana.jpg",
+      "description": {
+        "ko": "painting widely attributed to Leonardo da Vinci",
+        "en": "painting widely attributed to Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q2338404",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q5237905",
+      "year": 1486,
+      "popularity": 5,
+      "title": {
+        "ko": "The Holy Infants Embracing",
+        "en": "The Holy Infants Embracing"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20Vinci%20%28attrib%29%20-%20The%20Holy%20Infants.jpg",
+      "description": {
+        "ko": "lost painting by Leonardo da Vinci and renaissance art theme",
+        "en": "lost painting by Leonardo da Vinci and renaissance art theme"
+      },
+      "source": "http://www.wikidata.org/entity/Q5237905",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q128910",
+      "year": 1490,
+      "popularity": 88,
+      "title": {
+        "ko": "최후의 만찬",
+        "en": "The Last Supper"
+      },
+      "country": {
+        "ko": "피렌체 공화국",
+        "en": "Republic of Florence"
+      },
+      "movement": {
+        "ko": "르네상스",
+        "en": "르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20Vinci%20%281452-1519%29%20-%20The%20Last%20Supper%20%281495-1498%29.jpg",
+      "description": {
+        "ko": "레오나르도 다 빈치의 1490년 그림",
+        "en": "레오나르도 다 빈치의 1490년 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q128910",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q215486",
+      "year": 1490,
+      "popularity": 71,
+      "title": {
+        "ko": "비트루비우스적 인간",
+        "en": "Vitruvian Man"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Da%20Vinci%20Vitruve%20Luc%20Viatour.jpg",
+      "description": {
+        "ko": "레오나르도 다 빈치의 소묘 작품",
+        "en": "레오나르도 다 빈치의 소묘 작품"
+      },
+      "source": "http://www.wikidata.org/entity/Q215486",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q474338",
+      "year": 1490,
+      "popularity": 50,
+      "title": {
+        "ko": "흰 족제비를 안은 여인",
+        "en": "Lady with an Ermine"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lady%20with%20an%20Ermine%20-%20Leonardo%20da%20Vinci%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "레오나르도 다 빈치의 회화 작품",
+        "en": "레오나르도 다 빈치의 회화 작품"
+      },
+      "source": "http://www.wikidata.org/entity/Q474338",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q1327676",
+      "year": 1490,
+      "popularity": 30,
+      "title": {
+        "ko": "마돈나 리타",
+        "en": "Madonna Litta"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "초기 르네상스",
+        "en": "초기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20Vinci%20attributed%20-%20Madonna%20Litta.jpg",
+      "description": {
+        "ko": "painting attributed to Leonardo da Vinci",
+        "en": "painting attributed to Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q1327676",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q8254439",
+      "year": 1490,
+      "popularity": 3,
+      "title": {
+        "ko": "Five Grotesque Heads",
+        "en": "Five Grotesque Heads"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20Vinci%20-%20RCIN%20912495%2C%20Recto%20A%20man%20tricked%20by%20Gypsies.jpg",
+      "description": {
+        "ko": "drawing by Leonardo da Vinci",
+        "en": "drawing by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q8254439",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q97171787",
+      "year": 1490,
+      "popularity": 2,
+      "title": {
+        "ko": "Study of the Head of a Woman",
+        "en": "Study of the Head of a Woman"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20Vinci%20-%20study%20of%20a%20woman%27s%20head.jpg",
+      "description": {
+        "ko": "drawing by Leonardo da Vinci in the Louvre",
+        "en": "drawing by Leonardo da Vinci in the Louvre"
+      },
+      "source": "http://www.wikidata.org/entity/Q97171787",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3976305",
+      "year": 1490,
+      "popularity": 2,
+      "title": {
+        "ko": "Sheet of Studies of Hands and Arms",
+        "en": "Sheet of Studies of Hands and Arms"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20Vinci%20-%20RCIN%20912558%2C%20A%20study%20of%20a%20woman%27s%20hands%20c.1490.jpg",
+      "description": {
+        "ko": "drawing by Leonardo da Vinci",
+        "en": "drawing by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q3976305",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3985169",
+      "year": 1494,
+      "popularity": 4,
+      "title": {
+        "ko": "Head of Christ",
+        "en": "Head of Christ"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%2C%20testa%20di%20cristo%2C%201494%20circa%2C%20pinacoteca%20di%20brera.jpg",
+      "description": {
+        "ko": "painting by Leonardo da Vinci",
+        "en": "painting by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q3985169",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q4009972",
+      "year": 1494,
+      "popularity": 3,
+      "title": {
+        "ko": "Virgin of the Rocks",
+        "en": "Virgin of the Rocks"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20Vinci%20Virgin%20of%20the%20Rocks%20%28National%20Gallery%20London%29.jpg",
+      "description": {
+        "ko": "painting by Leonardo da Vinci in the National Gallery, London",
+        "en": "painting by Leonardo da Vinci in the National Gallery, London"
+      },
+      "source": "http://www.wikidata.org/entity/Q4009972",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q32998757",
+      "year": 1494,
+      "popularity": 2,
+      "title": {
+        "ko": "studies for the Last Supper",
+        "en": "studies for the Last Supper"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "르네상스",
+        "en": "르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20vinci%2C%20Study%20for%20the%20Last%20Supper.jpg",
+      "description": {
+        "ko": "group of drawings by Leonardo da Vinci",
+        "en": "group of drawings by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q32998757",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q656434",
+      "year": 1495,
+      "popularity": 35,
+      "title": {
+        "ko": "La Belle Ferronnière",
+        "en": "La Belle Ferronnière"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/La%20Belle%20Ferroni%C3%A8re%20-%20Google%20Arts.jpg",
+      "description": {
+        "ko": "painting by Leonardo da Vinci (Louvre INV 778)",
+        "en": "painting by Leonardo da Vinci (Louvre INV 778)"
+      },
+      "source": "http://www.wikidata.org/entity/Q656434",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q2072801",
+      "year": 1495,
+      "popularity": 19,
+      "title": {
+        "ko": "Portrait of a Young Fiancée",
+        "en": "Portrait of a Young Fiancée"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Profile%20of%20a%20Young%20Fiancee%20-%20da%20Vinci.jpg",
+      "description": {
+        "ko": "portrait attributed to Leonardo da Vinci",
+        "en": "portrait attributed to Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q2072801",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q2198705",
+      "year": 1495,
+      "popularity": 5,
+      "title": {
+        "ko": "Salone dei Cinquecento",
+        "en": "Salone dei Cinquecento"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Firenze-palazzo%20vecchio%2024.jpg",
+      "description": {
+        "ko": "large hall in Palazzo Vecchio, Florence, Italy",
+        "en": "large hall in Palazzo Vecchio, Florence, Italy"
+      },
+      "source": "http://www.wikidata.org/entity/Q2198705",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3937378",
+      "year": 1497,
+      "popularity": 2,
+      "title": {
+        "ko": "Sforza Family portraits in Santa Maria delle Grazie by Leonardo da Vinci",
+        "en": "Sforza Family portraits in Santa Maria delle Grazie by Leonardo da Vinci"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20vinci%2C%20Ritratti%20dei%20duchi%20di%20Milano%20con%20i%20figli.jpg",
+      "description": {
+        "ko": "painting by Leonardo da Vinci",
+        "en": "painting by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q3937378",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3800774",
+      "year": 1498,
+      "popularity": 10,
+      "title": {
+        "ko": "Sala delle Asse",
+        "en": "Sala delle Asse"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/6.2%201980-1990%20Saporetti%20angolo%20sud.jpg",
+      "description": {
+        "ko": "room decorated by Leonardo da Vinci in the Castello Sforzesco, Milan",
+        "en": "room decorated by Leonardo da Vinci in the Castello Sforzesco, Milan"
+      },
+      "source": "http://www.wikidata.org/entity/Q3800774",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1892745",
+      "year": 1490,
+      "popularity": 49,
+      "title": {
+        "ko": "살바토르 문디",
+        "en": "Salvator Mundi"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20Vinci%2C%20Salvator%20Mundi%2C%20c.1500%2C%20oil%20on%20walnut%2C%2045.4%20%C3%97%2065.6%20cm.jpg",
+      "description": {
+        "ko": "painting attributed to Leonardo da Vinci",
+        "en": "painting attributed to Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q1892745",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q797902",
+      "year": 1500,
+      "popularity": 16,
+      "title": {
+        "ko": "헝클어진 머리의 여인",
+        "en": "Head of a Woman"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lascapigliata.jpg",
+      "description": {
+        "ko": "painting attributed to Leonardo da Vinci",
+        "en": "painting attributed to Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q797902",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q2471531",
+      "year": 1500,
+      "popularity": 16,
+      "title": {
+        "ko": "The Virgin and Child with Saint Anne and Saint John the Baptist",
+        "en": "The Virgin and Child with Saint Anne and Saint John the Baptist"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20Vinci%20-%20Virgin%20and%20Child%20with%20Ss%20Anne%20and%20John%20the%20Baptist.jpg",
+      "description": {
+        "ko": "cartoon by Leonardo da Vinci",
+        "en": "cartoon by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q2471531",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q591128",
+      "year": 1500,
+      "popularity": 10,
+      "title": {
+        "ko": "이사벨라 데스테의 초상",
+        "en": "Portrait of Isabella d'Este"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20Vinci%2C%20Portrait%20of%20Isabella%20d%27Este.jpg",
+      "description": {
+        "ko": "drawing by Leonardo da Vinci",
+        "en": "drawing by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q591128",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3704129",
+      "year": 1500,
+      "popularity": 6,
+      "title": {
+        "ko": "De ludo scachorum",
+        "en": "De ludo scachorum"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Scacchi%20pacioli.jpg",
+      "description": {
+        "ko": "manuscript on the game of chess",
+        "en": "manuscript on the game of chess"
+      },
+      "source": "http://www.wikidata.org/entity/Q3704129",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q102329170",
+      "year": 1500,
+      "popularity": 3,
+      "title": {
+        "ko": "Studies for the Infant Christ",
+        "en": "Studies for the Infant Christ"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Study%20for%20the%20Saint-Anne%20-%20The%20Child.jpg",
+      "description": {
+        "ko": "set of drawings by Leonardo da Vinci",
+        "en": "set of drawings by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q102329170",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q97170016",
+      "year": 1500,
+      "popularity": 2,
+      "title": {
+        "ko": "Virgin and Child with Saint Anne",
+        "en": "Virgin and Child with Saint Anne"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Brescianino%2C%20d%27apr%C3%A8s%20un%20projet%20de%20L%C3%A9onard%20sainte%20Anne%2C%201501%2C%20Perdu%2C%20Berlin%2C%20Kaiser-Friedrich%20Museum.png",
+      "description": {
+        "ko": "lost cartoon by Leonardo da Vinci",
+        "en": "lost cartoon by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q97170016",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1477693",
+      "year": 1501,
+      "popularity": 18,
+      "title": {
+        "ko": "실감개의 성모",
+        "en": "Madonna of the Yarnwinder"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Several%20versions%20of%20Madonna%20with%20Yarnwinder%20after%20Leonardo%20da%20Vinci.jpg",
+      "description": {
+        "ko": "레오나르도 다 빈치의 마지막 그림",
+        "en": "레오나르도 다 빈치의 마지막 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q1477693",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q4390923",
+      "year": 1502,
+      "popularity": 12,
+      "title": {
+        "ko": "Isleworth Mona Lisa",
+        "en": "Isleworth Mona Lisa"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Isleworth%20Mona%20Lisa.jpg",
+      "description": {
+        "ko": "painting attributed to Leonardo da Vinci",
+        "en": "painting attributed to Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q4390923",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q131841258",
+      "year": 1502,
+      "popularity": 3,
+      "title": {
+        "ko": "Map of Imola",
+        "en": "Map of Imola"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20Vinci%20-%20Plan%20of%20Imola%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "drawing by Leonardo da Vinci",
+        "en": "drawing by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q131841258",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q12418",
+      "year": 1503,
+      "popularity": 146,
+      "title": {
+        "ko": "모나리자",
+        "en": "Mona Lisa"
+      },
+      "country": {
+        "ko": "피렌체 공화국",
+        "en": "Republic of Florence"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mona%20Lisa%2C%20by%20Leonardo%20da%20Vinci%2C%20from%20C2RMF%20natural%20color.jpg",
+      "description": {
+        "ko": "16세기 르네상스 시대에 레오나르도 다 빈치가 그린 초상화",
+        "en": "16세기 르네상스 시대에 레오나르도 다 빈치가 그린 초상화"
+      },
+      "source": "http://www.wikidata.org/entity/Q12418",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q2045726",
+      "year": 1503,
+      "popularity": 26,
+      "title": {
+        "ko": "The Battle of Anghiari",
+        "en": "The Battle of Anghiari"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Peter%20Paul%20Ruben%27s%20copy%20of%20the%20lost%20Battle%20of%20Anghiari.jpg",
+      "description": {
+        "ko": "lost wall painting by Leonardo da Vinci",
+        "en": "lost wall painting by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q2045726",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q2397593",
+      "year": 1503,
+      "popularity": 6,
+      "title": {
+        "ko": "Tavola Doria",
+        "en": "Tavola Doria"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/La%20Battaglia%20di%20Anghiari%20di%20Leonardo.jpg",
+      "description": {
+        "ko": "painting by Leonardo da Vinci",
+        "en": "painting by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q2397593",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3829345",
+      "year": 1505,
+      "popularity": 9,
+      "title": {
+        "ko": "Leda and the Swan",
+        "en": "Leda and the Swan"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "Italy"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leda%20Melzi%20Uffizi.jpg",
+      "description": {
+        "ko": "painting by Francesco Melzi after a lost painting by Leonardo da Vinci",
+        "en": "painting by Francesco Melzi after a lost painting by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q3829345",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q6696013",
+      "year": 1505,
+      "popularity": 9,
+      "title": {
+        "ko": "Lucan portrait of Leonardo da Vinci",
+        "en": "Lucan portrait of Leonardo da Vinci"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%81%94%E6%96%87%E8%A5%BF%E8%87%AA%E7%95%AB%E5%83%8F.jpg",
+      "description": {
+        "ko": "late 15th – early 16th century portrait of a man, said to be Leonardo da Vinci",
+        "en": "late 15th – early 16th century portrait of a man, said to be Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q6696013",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q100998017",
+      "year": 1508,
+      "popularity": 3,
+      "title": {
+        "ko": "Drapery Study for the Virgin",
+        "en": "Drapery Study for the Virgin"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20Vinci%20-%20Draperie%20enveloppant%20les%20jambes%20d%27une%20figure%20assise%2C%20INV%202257%2C%20Recto.jpg",
+      "description": {
+        "ko": "drawing by Leonardo da Vinci in the Louvre",
+        "en": "drawing by Leonardo da Vinci in the Louvre"
+      },
+      "source": "http://www.wikidata.org/entity/Q100998017",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q20382123",
+      "year": 1509,
+      "popularity": 3,
+      "title": {
+        "ko": "Horse and Rider",
+        "en": "Horse and Rider"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20Da%20Vinci%20Horse%20and%20Rider.jpg",
+      "description": {
+        "ko": "sculpture attributed to Leonardo da Vinci",
+        "en": "sculpture attributed to Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q20382123",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q2308934",
+      "year": 1510,
+      "popularity": 19,
+      "title": {
+        "ko": "Leda and the Swan",
+        "en": "Leda and the Swan"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Study%20for%20the%20Kneeling%20Leda.jpg",
+      "description": {
+        "ko": "lost painting by Leonardo da Vinci",
+        "en": "lost painting by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q2308934",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q563727",
+      "year": 1511,
+      "popularity": 39,
+      "title": {
+        "ko": "성 안나와 성 모자",
+        "en": "The Virgin and Child with Saint Anne"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sainte%20Anne%20Leonard.jpg",
+      "description": {
+        "ko": "painting by Leonardo da Vinci",
+        "en": "painting by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q563727",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q29384852",
+      "year": 1511,
+      "popularity": 4,
+      "title": {
+        "ko": "성모 마리아 두상",
+        "en": "The Head of the Virgin in Three-Quarter View Facing Right"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "Italy"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Head%20of%20the%20Virgin%20in%20Three-Quarter%20View%20Facing%20Right%20MET%20DP102382.jpg",
+      "description": {
+        "ko": "drawing by Leonardo da Vinci",
+        "en": "drawing by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q29384852",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q783215",
+      "year": 1514,
+      "popularity": 35,
+      "title": {
+        "ko": "세례자 요한",
+        "en": "Saint John the Baptist"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20Vinci%20-%20Saint%20John%20the%20Baptist%20C2RMF%20retouched.jpg",
+      "description": {
+        "ko": "painting by Leonardo da Vinci in the Louvre",
+        "en": "painting by Leonardo da Vinci in the Louvre"
+      },
+      "source": "http://www.wikidata.org/entity/Q783215",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q993743",
+      "year": 1569,
+      "popularity": 21,
+      "title": {
+        "ko": "Head of a Bearded Man (so-called Self-portrait)",
+        "en": "Head of a Bearded Man (so-called Self-portrait)"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20Vinci%20-%20presumed%20self-portrait%20-%20WGA12798.jpg",
+      "description": {
+        "ko": "drawing by Leonardo da Vinci",
+        "en": "drawing by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q993743",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3492887",
+      "year": 1597,
+      "popularity": 9,
+      "title": {
+        "ko": "Medusa",
+        "en": "Medusa"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Medusa%20uffizi.jpg",
+      "description": {
+        "ko": "either of two lost paintings by Leonardo da Vinci",
+        "en": "either of two lost paintings by Leonardo da Vinci"
+      },
+      "source": "http://www.wikidata.org/entity/Q3492887",
+      "verified": true,
+      "representative": false
+    }
+  ]
+}

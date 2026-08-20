@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>야수주의 — 보이는 색에서 느끼는 색으로</title>
+<style>
+:root {
+  --bg:#090b0e; --panel:#12161b; --panel2:#181d23; --text:#f3efe8;
+  --muted:#aab3bc; --line:#2a3037; --gold:#d8a84c;
+  --red:#d85f51; --blue:#619fd2; --green:#7eaa74; --pink:#d882a4;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--text);line-height:1.75;
+  font-family:Inter,"Pretendard","Noto Sans KR",Arial,sans-serif;
+  background:
+    radial-gradient(circle at 10% 4%,rgba(216,95,81,.11),transparent 28rem),
+    radial-gradient(circle at 86% 7%,rgba(97,159,210,.10),transparent 28rem),
+    linear-gradient(180deg,#080a0d,#0d1014);
+}
+a{color:#efc97b;text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{width:min(1200px,92vw);margin:auto}
+.hero{padding:76px 0 40px;border-bottom:1px solid var(--line)}
+.kicker{font-size:.84rem;font-weight:800;letter-spacing:.12em;color:var(--gold)}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.5rem,6vw,5.25rem);line-height:1.04;margin:.35rem 0 1rem}
+.hero p{max-width:1050px;color:#d2d8df;font-size:1.14rem}
+nav{position:sticky;top:0;z-index:20;background:rgba(9,11,14,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:18px;overflow:auto;padding:12px 0;white-space:nowrap;font-size:.9rem}
+section{padding:58px 0;border-bottom:1px solid var(--line)}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,3.5vw,3.15rem);margin:0 0 20px}
+h3{margin:.1rem 0 .55rem;font-size:1.18rem}
+.lead{font-size:1.08rem;color:#d5dbe1;max-width:1000px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:linear-gradient(180deg,var(--panel2),var(--panel));box-shadow:0 14px 34px rgba(0,0,0,.23)}
+.imgbox{background:#07090b;display:flex;align-items:center;justify-content:center;min-height:430px}
+.imgbox img{display:block;width:100%;height:570px;object-fit:contain}
+.caption{padding:18px 20px 20px}
+.caption small{display:block;color:var(--muted);margin-top:6px}
+.badge{display:inline-block;padding:4px 9px;border-radius:99px;border:1px solid #544323;background:rgba(216,168,76,.08);color:#efcd84;font-size:.76rem;font-weight:800;margin-bottom:8px}
+.callout{border-left:4px solid var(--gold);padding:18px 21px;background:rgba(216,168,76,.08);border-radius:0 12px 12px 0;margin:24px 0}
+.bigline{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.3rem,2.6vw,1.95rem);padding:24px 28px;border-top:1px solid #59471f;border-bottom:1px solid #59471f;color:#f1ddb5;margin:25px 0;line-height:1.48}
+.features{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:26px 0}
+.feature{padding:17px;border:1px solid var(--line);border-radius:12px;background:var(--panel);min-height:150px}
+.feature b{color:var(--gold);font-size:.8rem}
+.feature span{display:block;font-weight:800;margin:.35rem 0}
+.feature p{font-size:.9rem;color:var(--muted);margin:0;line-height:1.55}
+.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:28px 0}
+.time{padding:17px;border:1px solid var(--line);border-radius:12px;background:var(--panel);min-height:175px}
+.time .year{font-family:Georgia,serif;color:var(--gold);font-size:1.22rem;font-weight:700}
+.time strong{display:block;margin:.35rem 0}
+.time p{font-size:.88rem;color:var(--muted);margin:0;line-height:1.5}
+.branch{border:1px solid var(--line);border-radius:15px;background:var(--panel);padding:22px}
+.branch.matisse{border-top:4px solid var(--pink)}
+.branch.derain{border-top:4px solid var(--blue)}
+.branch.vlaminck{border-top:4px solid var(--red)}
+.branch .eyebrow{font-size:.76rem;font-weight:800;letter-spacing:.08em;color:var(--muted)}
+.branch h3{font-size:1.28rem}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;margin-top:24px}
+table{width:100%;border-collapse:collapse;min-width:900px;background:var(--panel)}
+th,td{padding:14px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:#171b20;color:#efd79e;font-size:.9rem}
+td:first-child{font-weight:750;color:#eef1f4;width:18%}
+tr:last-child td{border-bottom:0}
+.note{font-size:.94rem;color:var(--muted);background:#10141a;border:1px solid var(--line);padding:17px 19px;border-radius:12px}
+.chain{display:flex;align-items:stretch;gap:10px;overflow:auto;padding:8px 0 4px}
+.chain .node{min-width:185px;flex:1;padding:17px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.chain .arrow{display:flex;align-items:center;color:var(--gold);font-size:1.4rem}
+.source-list{font-size:.9rem;color:var(--muted)}
+footer{padding:36px 0 60px;color:#7f8993;font-size:.86rem}
+ul{padding-left:1.25rem}
+li{margin:.4rem 0}
+@media(max-width:980px){
+ .grid2,.grid3{grid-template-columns:1fr}
+ .features,.timeline{grid-template-columns:1fr 1fr}
+ .imgbox img{height:auto;max-height:610px}
+}
+@media(max-width:560px){
+ .features,.timeline{grid-template-columns:1fr}
+}
+</style>
+<link rel="stylesheet" href="../../uhangul/uhangul-runtime.css" data-uhangul-integration="v0.3">
+<style id="art-atlas-artist-link-style">
+.art-atlas-artist-link{font-weight:900;color:#191007!important;background:linear-gradient(180deg,rgba(255,232,151,.98),rgba(255,198,86,.9));border-bottom:2px solid #a96f12;border-radius:.22em;padding:0 .16em;text-decoration:none!important;box-decoration-break:clone;-webkit-box-decoration-break:clone}.art-atlas-artist-link:hover{filter:brightness(1.08);box-shadow:0 0 0 2px rgba(255,214,102,.24)}
+</style>
+</head>
+
+<body>
+<div data-uhangul-corner-bar style="position:sticky!important;top:0!important;z-index:2147483647!important;clear:both!important;height:64px!important;display:flex!important;align-items:center!important;padding:10px 18px!important;background:#0c1014!important;border-bottom:1px solid #2d3540!important"><button type="button" data-uhangul-corner-button aria-label="uHangul 켜기" title="uHangul 켜기" aria-pressed="false" style="position:relative!important;z-index:2147483647!important;display:block!important;border:2px solid #f4c55b!important;border-radius:50%!important;width:38px!important;height:38px!important;padding:0!important;background:#18221e!important;color:#f4c55b!important;font:800 23px/34px Georgia,serif!important;text-align:center!important;cursor:pointer!important;visibility:visible!important;opacity:1!important">u</button></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="hero">
+
+
+
+<div class="wrap">
+  <div class="kicker">미술사 · 후기 인상주의에서 20세기 현대미술로</div>
+  <h1>야수주의<br><span style="color:var(--gold)">보이는 색에서 느끼는 색으로</span></h1>
+  <p>
+    야수주의는 1905년 전후 프랑스에서 매우 짧게 폭발한 색채 중심의 운동이다.
+    후기 인상주의가 이미 색을 현실의 복제에서 해방시켰다면,
+    야수주의 화가들은 한 단계 더 나아가 <strong>“사물이 실제로 무슨 색인가?”라는 질문 자체를 거의 버렸다.</strong>
+    얼굴은 초록색, 하늘은 붉은색, 나무는 파란색이어도 된다.
+    중요한 것은 대상의 정확한 색이 아니라 <strong>화면 전체의 감정·리듬·강도</strong>였다.
+  </p>
+</div>
+</header>
+
+<nav>
+<div class="wrap">
+  <a href="#answer">0. 무엇을 바꾸었나</a>
+  <a href="#before">1. 이전: 후기 인상주의</a>
+  <a href="#history">2. 1905 가을 살롱</a>
+  <a href="#matisse">3. 마티스</a>
+  <a href="#branches">4. 세 방향</a>
+  <a href="#derain">5. 드랭</a>
+  <a href="#vlaminck">6. 블라맹크</a>
+  <a href="#traits">7. 핵심 특징</a>
+  <a href="#compare">8. 직접 비교</a>
+  <a href="#after">9. 이후 현대미술</a>
+  <a href="#countries">국가별 전개</a>
+</div>
+</nav>
+
+<main>
+
+<section id="answer">
+<div class="wrap">
+  <h2>0. 먼저 결론 — 야수주의는 무엇을 바꾸었는가?</h2>
+  <p class="lead">
+    인상주의가 <strong>빛에 따라 실제로 보이는 색</strong>을 연구했고,
+    후기 인상주의가 색을 감정·상징·구조에 사용하기 시작했다면,
+    야수주의는 색을 <strong>현실에서 거의 완전히 독립된 자율적 조형 요소</strong>로 만들었다.
+  </p>
+
+  <div class="features">
+    <div class="feature"><b>01 · 색</b><span>관찰 → 자유</span><p>사물의 실제색과 관계없이 강렬한 순색을 선택한다.</p></div>
+    <div class="feature"><b>02 · 형태</b><span>정확성 → 단순화</span><p>해부학적·원근법적 정확성보다 큰 형태와 윤곽을 중시한다.</p></div>
+    <div class="feature"><b>03 · 공간</b><span>깊이 → 평면</span><p>명암으로 깊이를 만드는 대신 색면이 화면 자체를 구성한다.</p></div>
+    <div class="feature"><b>04 · 붓질</b><span>묘사 → 에너지</span><p>넓고 빠르며 거친 붓질을 숨기지 않는다.</p></div>
+    <div class="feature"><b>05 · 목적</b><span>재현 → 표현</span><p>대상을 닮게 만드는 것보다 색 자체로 감정과 조화를 만드는 것이 중요해진다.</p></div>
+  </div>
+
+  <div class="callout">
+    <strong>가장 간단한 기억법:</strong><br><br>
+    인상주의: <strong>“눈에 어떻게 보이는가?”</strong><br>
+    <a class="art-atlas-artist-link" href="../../index.html?artist=vincent-van-gogh" target="_blank" rel="noopener" data-artist-id="vincent-van-gogh" data-uh-original="Vincent van Gogh" data-uh-korean="빈센트 반 고흐" data-uh-display-korean="반 고흐" title="빈센트 반 고흐 연표로 이동">반 고흐</a>·고갱: <strong>“나는 어떻게 느끼고 무엇을 의미하는가?”</strong><br>
+    야수주의: <strong>“그 감정과 조화를 위해 색을 마음대로 사용할 수 있다.”</strong>
+  </div>
+</div>
+</section>
+
+<section id="before">
+<div class="wrap">
+  <h2>1. Before — 후기 인상주의가 이미 색을 흔들기 시작했다</h2>
+
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Van-Gogh-Starry-Night-Google-Art-Project-33e561a6a488.jpg" alt="빈센트 반 고흐, 별이 빛나는 밤"></div>
+      <div class="caption">
+        <span class="badge">후기 인상주의 · 감정의 색</span>
+        <h3><a class="art-atlas-artist-link" href="../../index.html?artist=vincent-van-gogh" target="_blank" rel="noopener" data-artist-id="vincent-van-gogh" data-uh-original="Vincent van Gogh" data-uh-korean="빈센트 반 고흐" data-uh-display-korean="빈센트 반 고흐" title="빈센트 반 고흐 연표로 이동">빈센트 반 고흐</a>, 《별이 빛나는 밤》</h3>
+        <small>1889 · 뉴욕 현대미술관</small>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="imgbox"><img src="images/Paul-Gauguin-056-000390385852.jpg" alt="폴 고갱, 우리는 어디서 왔는가"></div>
+      <div class="caption">
+        <span class="badge">후기 인상주의 · 상징의 색</span>
+        <h3>폴 고갱, 《우리는 어디서 왔는가? 우리는 무엇인가? 우리는 어디로 가는가?》</h3>
+        <small>1897–1898 · 보스턴 미술관</small>
+      </div>
+    </article>
+  </div>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>화가</th><th>색의 역할</th><th>야수주의가 이어받은 것</th></tr></thead>
+    <tbody>
+      <tr><td><a class="art-atlas-artist-link" href="../../index.html?artist=vincent-van-gogh" target="_blank" rel="noopener" data-artist-id="vincent-van-gogh" data-uh-original="Vincent van Gogh" data-uh-korean="빈센트 반 고흐" data-uh-display-korean="반 고흐" title="빈센트 반 고흐 연표로 이동">반 고흐</a></td><td>눈앞의 현실보다 감정을 전달</td><td>강렬한 색·거친 붓질·감정의 직접성</td></tr>
+      <tr><td>고갱</td><td>색을 현실과 분리하여 상징적으로 사용</td><td>평면적 색면·단순한 윤곽·비자연적인 색</td></tr>
+      <tr><td>쇠라</td><td>보색과 순색의 시각 효과를 체계적으로 분석</td><td>강한 보색 대비와 순색의 병치</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="bigline">
+    야수주의의 혁명은 갑자기 생긴 것이 아니다.<br>
+    후기 인상주의가 <strong>색과 현실 사이의 끈을 느슨하게 만든 뒤</strong>,<br>
+    야수주의가 그 끈을 거의 끊어버린 것이다.
+  </div>
+</div>
+</section>
+
+<section id="history">
+<div class="wrap">
+  <h2>2. 역사적 전환점 — 1905년 파리 가을 살롱</h2>
+
+  <div class="timeline">
+    <div class="time"><div class="year">1880s</div><strong>후기 인상주의</strong><p><a class="art-atlas-artist-link" href="../../index.html?artist=vincent-van-gogh" target="_blank" rel="noopener" data-artist-id="vincent-van-gogh" data-uh-original="Vincent van Gogh" data-uh-korean="빈센트 반 고흐" data-uh-display-korean="반 고흐" title="빈센트 반 고흐 연표로 이동">반 고흐</a>·고갱·쇠라 등이 색을 관찰의 도구에서 감정·상징·이론의 도구로 변화시킨다.</p></div>
+    <div class="time"><div class="year">1904</div><strong>마티스의 색채 실험</strong><p>신인상주의의 분할색 기법을 경험하면서 순색과 보색 대비를 적극적으로 연구한다.</p></div>
+    <div class="time"><div class="year">1905 여름</div><strong>콜리우르</strong><p>마티스와 드랭이 프랑스 남부 콜리우르에서 강렬한 햇빛과 색채를 극단적으로 단순화한다.</p></div>
+    <div class="time"><div class="year">1905 10월</div><strong>가을 살롱</strong><p>마티스·드랭·블라맹크 등의 강렬한 색채 작품이 한 공간에 전시되어 큰 논란을 일으킨다.</p></div>
+    <div class="time"><div class="year">1908 전후</div><strong>분화</strong><p>야수주의는 짧은 기간 뒤 각자의 방향으로 흩어진다. 마티스는 색채와 장식성, 드랭은 보다 고전적 구조로 이동한다.</p></div>
+  </div>
+
+  <div class="callout">
+    1905년 가을 살롱에서 비평가 <strong>루이 보셀</strong>은
+    강렬한 색채의 그림들 사이에 놓인 고전적인 조각을 보고
+    이를 <strong>“야수들 사이의 도나텔로”</strong>에 비유했다.
+    여기서 <strong>야수(Fauves)</strong>라는 이름이 유래한다.
+  </div>
+
+  <div class="note">
+    야수주의는 정치혁명이나 전쟁 같은 단일 역사 사건에서 직접 생긴 운동이라기보다,
+    <strong>인상주의 이후 색채 실험의 누적과 20세기 초 파리의 전시 문화</strong>에서 탄생한 미학적 혁신에 가깝다.
+  </div>
+</div>
+</section>
+
+<section id="matisse">
+<div class="wrap">
+  <h2>3. Breakthrough — 마티스는 얼굴을 실제 피부색으로 그리지 않는다</h2>
+
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Matisse-Woman-with-a-Hat-4552a63769d7.jpg" alt="앙리 마티스, 모자를 쓴 여인"></div>
+      <div class="caption">
+        <span class="badge">1905 가을 살롱의 대표작</span>
+        <h3>앙리 마티스, 《모자를 쓴 여인》</h3>
+        <small>1905 · 샌프란시스코 현대미술관</small>
+      </div>
+    </article>
+
+    <div>
+      <h3>왜 당시 관람객에게 충격이었나?</h3>
+      <ul>
+        <li>얼굴에 초록·노랑·분홍·파랑이 자유롭게 놓인다.</li>
+        <li>피부의 실제색이나 자연스러운 명암을 재현하려 하지 않는다.</li>
+        <li>배경과 인물의 경계도 전통적 공간감보다 색의 충돌로 결정된다.</li>
+        <li>붓질은 매끈하게 숨겨지지 않고 화면 위에 그대로 드러난다.</li>
+      </ul>
+
+      <div class="bigline">
+        색은 더 이상 <strong>사물에 붙어 있는 속성</strong>이 아니라,<br>
+        화가가 화면을 구성하기 위해 선택하는 <strong>독립적인 언어</strong>가 된다.
+      </div>
+    </div>
+  </div>
+
+  <div class="grid2" style="margin-top:28px">
+    <article class="card">
+      <div class="imgbox"><img src="images/Open-Window-Collioure-1905-Henri-Matisse-9eef9b5e61ba.jpg" alt="앙리 마티스, 콜리우르의 열린 창"></div>
+      <div class="caption">
+        <span class="badge">색채의 공간</span>
+        <h3>앙리 마티스, 《콜리우르의 열린 창》</h3>
+        <small>1905 · 워싱턴 내셔널 갤러리</small>
+      </div>
+    </article>
+
+    <div>
+      <h3>색이 원근법을 대신한다</h3>
+      <p>
+        전통적인 회화라면 창밖 풍경의 원근과 명암을 계산하여 깊이를 만들었을 것이다.
+        그러나 마티스는 분홍·초록·파랑·주황 같은 색면을 나란히 놓아
+        <strong>깊이보다 화면 전체의 색채 균형</strong>을 우선한다.
+      </p>
+      <div class="callout">
+        여기서 중요한 것은 “실제보다 화려하게 그렸다”가 아니다.
+        <strong>화면의 색채 관계가 현실의 공간보다 더 중요한 조직 원리가 되었다</strong>는 점이다.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="branches">
+<div class="wrap">
+  <h2>4. 야수주의 안에서도 세 화가는 조금 다르다</h2>
+
+  <div class="grid3">
+    <div class="branch matisse">
+      <div class="eyebrow">앙리 마티스</div>
+      <h3>① 조화와 장식의 색</h3>
+      <p>강렬한 색을 사용하지만 궁극적으로는 화면 전체의 균형, 평온함, 장식적 조화를 추구한다.</p>
+    </div>
+    <div class="branch derain">
+      <div class="eyebrow">앙드레 드랭</div>
+      <h3>② 빛과 풍경의 색</h3>
+      <p>도시와 풍경을 보색의 강한 대비로 재구성한다. 실제 빛보다 색 자체의 리듬이 중요해진다.</p>
+    </div>
+    <div class="branch vlaminck">
+      <div class="eyebrow">모리스 드 블라맹크</div>
+      <h3>③ 격정적인 색</h3>
+      <p><a class="art-atlas-artist-link" href="../../index.html?artist=vincent-van-gogh" target="_blank" rel="noopener" data-artist-id="vincent-van-gogh" data-uh-original="Vincent van Gogh" data-uh-korean="빈센트 반 고흐" data-uh-display-korean="반 고흐" title="빈센트 반 고흐 연표로 이동">반 고흐</a>의 영향이 강하며, 거친 붓질과 강렬한 원색으로 보다 폭발적이고 감정적인 화면을 만든다.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="derain">
+<div class="wrap">
+  <h2>5. 드랭 — 런던의 안개도 원색으로 다시 만든다</h2>
+
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Derain-CharingCrossBridge-dffb011f9c2f.png" alt="앙드레 드랭, 채링크로스 다리"></div>
+      <div class="caption">
+        <span class="badge">풍경의 야수주의</span>
+        <h3>앙드레 드랭, 《채링크로스 다리》</h3>
+        <small>1906년경 · 런던 연작</small>
+      </div>
+    </article>
+
+    <div>
+      <h3><a class="art-atlas-artist-link" href="../../index.html?artist=claude-monet" target="_blank" rel="noopener" data-artist-id="claude-monet" data-uh-original="Claude Monet" data-uh-korean="클로드 모네" data-uh-display-korean="모네" title="클로드 모네 연표로 이동">모네</a>가 그린 런던과 무엇이 다른가?</h3>
+      <ul>
+        <li>인상주의자 <a class="art-atlas-artist-link" href="../../index.html?artist=claude-monet" target="_blank" rel="noopener" data-artist-id="claude-monet" data-uh-original="Claude Monet" data-uh-korean="클로드 모네" data-uh-display-korean="모네" title="클로드 모네 연표로 이동">모네</a>도 런던의 안개와 빛을 그렸지만 관찰되는 대기효과가 출발점이었다.</li>
+        <li>드랭은 실제 안개색과 무관하게 강한 파랑·주황·빨강·초록을 배치한다.</li>
+        <li>강·다리·건물은 색면을 조직하기 위한 단순한 형태로 환원된다.</li>
+        <li>풍경을 기록하기보다 <strong>색채로 다시 설계</strong>한다.</li>
+      </ul>
+
+      <div class="bigline">
+        <a class="art-atlas-artist-link" href="../../index.html?artist=claude-monet" target="_blank" rel="noopener" data-artist-id="claude-monet" data-uh-original="Claude Monet" data-uh-korean="클로드 모네" data-uh-display-korean="모네" title="클로드 모네 연표로 이동">모네</a>: <strong>“런던이 이 빛에서 어떻게 보이는가?”</strong><br>
+        드랭: <strong>“런던을 어떤 색의 관계로 다시 만들 것인가?”</strong>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="vlaminck">
+<div class="wrap">
+  <h2>6. 블라맹크 — <a class="art-atlas-artist-link" href="../../index.html?artist=vincent-van-gogh" target="_blank" rel="noopener" data-artist-id="vincent-van-gogh" data-uh-original="Vincent van Gogh" data-uh-korean="빈센트 반 고흐" data-uh-display-korean="반 고흐" title="빈센트 반 고흐 연표로 이동">반 고흐</a>의 감정적 색채가 더 폭발적으로 변하다</h2>
+
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Portrait-20of-20Maurice-20de-20Vlaminck-20-by-20Andr-C3-A9-20Derain-20-eef65c6c0de8.jpg" alt="앙드레 드랭, 모리스 드 블라맹크의 초상"></div>
+      <div class="caption">
+        <span class="badge">격정적 야수주의</span>
+        <h3>앙드레 드랭, 《모리스 드 블라맹크의 초상》</h3>
+        <small>1905 · 샤르트르 미술관</small>
+      </div>
+    </article>
+
+    <div>
+      <h3><a class="art-atlas-artist-link" href="../../index.html?artist=vincent-van-gogh" target="_blank" rel="noopener" data-artist-id="vincent-van-gogh" data-uh-original="Vincent van Gogh" data-uh-korean="빈센트 반 고흐" data-uh-display-korean="반 고흐" title="빈센트 반 고흐 연표로 이동">반 고흐</a>와 가까운 야수주의</h3>
+      <ul>
+        <li>거칠고 두꺼운 붓질이 화면의 에너지를 만든다.</li>
+        <li>강렬한 빨강·파랑·노랑이 실제 풍경보다 감정의 강도를 전달한다.</li>
+        <li>형태는 정확한 묘사를 위해서가 아니라 색채를 지탱하는 큰 덩어리로 단순화된다.</li>
+      </ul>
+
+      <div class="callout">
+        야수주의 안에서도 마티스는 보다 조화롭고 장식적인 방향,
+        블라맹크는 보다 직접적이고 격정적인 방향으로 색을 사용했다.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="traits">
+<div class="wrap">
+  <h2>7. 후기 인상주의와 야수주의를 그림에서 구별하면</h2>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>비교 항목</th><th>후기 인상주의</th><th>야수주의</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>운동의 성격</td><td>서로 다른 화가들을 후대에 묶은 넓은 범주</td><td>1905년 전후 프랑스에서 나타난 비교적 짧은 그룹적 현상</td></tr>
+      <tr><td>색</td><td>구조·감정·상징·과학 등 화가마다 목적이 다름</td><td>강렬한 순색 자체가 화면의 중심적 언어가 됨</td></tr>
+      <tr><td>실제색과의 관계</td><td>점차 자유로워짐</td><td>필요하면 거의 완전히 무시</td></tr>
+      <tr><td>형태</td><td>세잔의 구조, 고갱의 평면화 등 다양</td><td>대체로 단순한 윤곽과 넓은 색면</td></tr>
+      <tr><td>공간</td><td>각 화가마다 다름</td><td>깊이보다 평면적 색채 관계가 두드러짐</td></tr>
+      <tr><td>목표</td><td>인상주의 이후 각자의 문제 해결</td><td>색을 현실로부터 해방하여 표현과 조화의 직접적 도구로 사용</td></tr>
+      <tr><td>한 문장</td><td><strong>“보이는 세계를 각자의 방식으로 재구성한다.”</strong></td><td><strong>“색은 현실에 복종할 필요가 없다.”</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+</section>
+
+<section id="compare">
+<div class="wrap">
+  <h2>8. <a class="art-atlas-artist-link" href="../../index.html?artist=vincent-van-gogh" target="_blank" rel="noopener" data-artist-id="vincent-van-gogh" data-uh-original="Vincent van Gogh" data-uh-korean="빈센트 반 고흐" data-uh-display-korean="반 고흐" title="빈센트 반 고흐 연표로 이동">반 고흐</a>와 마티스를 직접 비교하면</h2>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>질문</th><th><a class="art-atlas-artist-link" href="../../index.html?artist=vincent-van-gogh" target="_blank" rel="noopener" data-artist-id="vincent-van-gogh" data-uh-original="Vincent van Gogh" data-uh-korean="빈센트 반 고흐" data-uh-display-korean="반 고흐" title="빈센트 반 고흐 연표로 이동">반 고흐</a></th><th>마티스</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>왜 색을 바꾸는가?</td><td>감정과 정신 상태를 전달하기 위해</td><td>화면 전체의 조화·강도·장식성을 만들기 위해</td></tr>
+      <tr><td>붓질</td><td>소용돌이치고 감정적으로 방향성을 가짐</td><td>넓고 자유로운 색면과 단순한 터치</td></tr>
+      <tr><td>형태 왜곡</td><td>감정의 압력을 전달</td><td>색채 관계를 단순화·강조</td></tr>
+      <tr><td>색의 독립성</td><td>현실에서 크게 벗어나지만 대상과 감정에 연결</td><td>색채 관계 자체가 화면의 독립된 목적이 됨</td></tr>
+      <tr><td>후대 영향</td><td>표현주의</td><td>야수주의 이후 현대 색채회화·추상으로 연결</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="bigline">
+    <a class="art-atlas-artist-link" href="../../index.html?artist=vincent-van-gogh" target="_blank" rel="noopener" data-artist-id="vincent-van-gogh" data-uh-original="Vincent van Gogh" data-uh-korean="빈센트 반 고흐" data-uh-display-korean="반 고흐" title="빈센트 반 고흐 연표로 이동">반 고흐</a>는 <strong>감정을 표현하기 위해 색을 왜곡</strong>했고,<br>
+    마티스는 더 나아가 <strong>색 자체가 화면을 조직하는 독립된 힘</strong>이 될 수 있음을 보여주었다.
+  </div>
+</div>
+</section>
+
+<section id="after">
+<div class="wrap">
+  <h2>9. After — 야수주의는 왜 짧았지만 중요한가?</h2>
+
+  <p class="lead">
+    야수주의는 대략 1905–1908년의 짧은 기간만 강하게 유지되었다.
+    그러나 미술사적 영향은 매우 크다.
+    색이 현실의 재현에서 자유로워질 수 있다는 사실을 극단적으로 보여주었기 때문이다.
+  </p>
+
+  <div class="chain">
+    <div class="node"><strong>인상주의</strong><br><span style="color:var(--muted)">빛에 따라 변하는 색</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong><a class="art-atlas-artist-link" href="../../index.html?artist=vincent-van-gogh" target="_blank" rel="noopener" data-artist-id="vincent-van-gogh" data-uh-original="Vincent van Gogh" data-uh-korean="빈센트 반 고흐" data-uh-display-korean="반 고흐" title="빈센트 반 고흐 연표로 이동">반 고흐</a>·고갱</strong><br><span style="color:var(--muted)">감정·상징의 색</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong>야수주의</strong><br><span style="color:var(--muted)">자율적인 순색</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong>표현주의</strong><br><span style="color:var(--muted)">색과 형태의 심리적 왜곡</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong>추상미술</strong><br><span style="color:var(--muted)">대상 없이도 색·형태가 독립</span></div>
+  </div>
+
+  <div class="callout">
+    <strong>야수주의의 가장 큰 의미:</strong><br><br>
+    서양 회화에서 색은 오랫동안 <strong>대상을 설명하는 수단</strong>이었다.<br>
+    야수주의 이후에는 색 그 자체가 <strong>그림의 주제이자 감정이며 구조</strong>가 될 수 있게 되었다.
+  </div>
+
+  <div class="note">
+    ※ 야수주의는 엄격한 선언문이나 장기간의 조직을 가진 학파가 아니었다.
+    마티스·드랭·블라맹크·마르케·망갱 등 여러 화가가 1905년 전후 강한 색채 실험으로 묶였지만,
+    몇 년 뒤 각기 다른 방향으로 빠르게 분화했다.
+  </div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <h2>작품 이미지</h2>
+  <div class="source-list">
+    <p>작품 이미지는 자료 폴더의 로컬 이미지 파일을 사용하도록 구성했다.</p>
+    <ul>
+      <li><a class="art-atlas-artist-link" href="../../index.html?artist=vincent-van-gogh" target="_blank" rel="noopener" data-artist-id="vincent-van-gogh" data-uh-original="Vincent van Gogh" data-uh-korean="빈센트 반 고흐" data-uh-display-korean="빈센트 반 고흐" title="빈센트 반 고흐 연표로 이동">빈센트 반 고흐</a>, 《별이 빛나는 밤》</li>
+      <li>폴 고갱, 《우리는 어디서 왔는가? 우리는 무엇인가? 우리는 어디로 가는가?》</li>
+      <li>앙리 마티스, 《모자를 쓴 여인》</li>
+      <li>앙리 마티스, 《콜리우르의 열린 창》</li>
+      <li>앙드레 드랭, 《채링크로스 다리》</li>
+      <li>모리스 드 블라맹크, 《부지발의 레스토랑 드 라 마신》</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+
+<section id="countries"><div class="wrap">
+<h2>여러 국가에서의 전개 — 야수주의는 프랑스의 짧은 핵심 운동과 국제적 색채 확산으로 보아야 한다</h2>
+<p class="lead">야수주의 자체는 주로 <strong>1905–1908년 프랑스에서 활동한 화가들의 짧은 집단적 현상</strong>이다. 다른 나라의 강렬한 색채 운동을 모두 야수주의라고 부르는 것은 부정확하지만, 색의 해방이라는 원리는 빠르게 국제화되었다.</p>
+<div class="table-wrap"><table><thead><tr><th>국가·지역</th><th>전개 방식</th><th>대표 사례</th></tr></thead><tbody>
+<tr><td>프랑스</td><td>마티스·드랭·블라맹크가 실제색과 무관한 순색, 평면화, 단순화를 통해 야수주의의 핵심 언어를 만들었다.</td><td>마티스, 드랭, 블라맹크</td></tr>
+<tr><td>독일</td><td>같은 시기 다리파가 강렬한 색과 형태왜곡을 사용했지만, 이는 야수주의의 독일 지부라기보다 독일 표현주의라는 별도 운동으로 보는 것이 정확하다.</td><td>키르히너, 헤켈</td></tr>
+<tr><td>헝가리</td><td>파리에서 마티스의 색채를 접한 젊은 화가들이 귀국하여 이른바 ‘헝가리 야수들’ 또는 네오스라는 강렬한 색채 경향을 발전시켰다.</td><td>벨러 초벨 등</td></tr>
+<tr><td>러시아</td><td>프랑스 야수주의와 후기 인상주의의 색채 해방이 러시아 전위미술에 영향을 주었지만 곧 신원시주의·레이요니즘 등 독자적 운동으로 변형되었다.</td><td>나탈리아 곤차로바, 미하일 라리오노프</td></tr>
+</tbody></table></div>
+<div class="callout"><strong>공통 영향:</strong> 색은 현실을 설명하는 수단이 아니라 독립적인 표현수단이 될 수 있다.<br><strong>주의:</strong> 프랑스 밖의 강렬한 색채 운동을 모두 ‘야수주의’로 동일시하지 않고, 별도 사조가 형성되었다면 그 이름으로 분류하는 것이 정확하다.</div>
+</div></section>
+
+</main>
+
+<footer>
+<div class="wrap">야수주의 — 보이는 색에서 느끼는 색으로 · 후기 인상주의에서 현대미술로</div>
+</footer>
+
+<script defer src="../../uhangul/uhangul-runtime.js" data-uhangul-integration="v0.4"></script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+{
+  "topics": [
+    {
+      "id": "resurrection-of-jesus",
+      "name": { "ko": "예수 - 부활", "en": "Jesus - Resurrection" },
+      "keywords": ["예수", "그리스도", "기독교", "부활", "빈 무덤", "막달라 마리아", "resurrection", "risen christ", "jesus"],
+      "description": { "ko": "부활을 다룬 대표작을 사조의 변화에 따라 살펴봅니다. 제작연도보다 사조의 흐름을 우선하여, 매너리즘의 엘 그레코를 바로크의 카라치보다 앞에 둡니다." },
+      "works": [
+        { "id": "piero-resurrection", "title": "부활", "artist": "피에로 델라 프란체스카", "year": "1463–1465경", "sortYear": 1463, "movement": "초기 르네상스", "thumbnail": "https://www.scuoladomuspicturae.it/wp-content/uploads/2021/08/Resurrezione-1.jpg", "description": "균형 잡힌 원근법과 고요한 인물 표현으로 부활의 질서와 영속성을 보여 주는 초기 르네상스의 대표작입니다." },
+        { "id": "raphael-resurrection", "title": "그리스도의 부활", "artist": "라파엘로 산치오", "year": "1500경", "sortYear": 1500, "movement": "전성기 르네상스", "thumbnail": "data/thumbnails/artist-Q5597/wikidata-Q677682.jpg", "description": "조화로운 구도와 명료한 인물 군상이 전성기 르네상스의 이상을 드러냅니다." },
+        { "id": "el-greco-resurrection", "title": "부활", "artist": "엘 그레코", "year": "1597–1600", "sortYear": 1597, "movement": "매너리즘", "thumbnail": "data/thumbnails/artist-Q301/wikidata-Q617629.jpg", "description": "늘씬하게 왜곡된 인체와 강렬한 빛이 현실보다 영적 긴장을 우선하는 매너리즘의 특성을 보여 줍니다." },
+        { "id": "carracci-resurrection", "title": "그리스도의 부활", "artist": "안니발레 카라치", "year": "1593", "sortYear": 1593, "movement": "바로크", "thumbnail": "data/thumbnails/artist-Q7824/wikidata-Q935815.jpg", "description": "자연스러운 인체와 설득력 있는 공간을 회복하려는 카라치의 태도는 매너리즘에 대한 반발과 초기 바로크의 출발을 보여 줍니다." },
+        { "id": "rubens-resurrection", "title": "그리스도의 부활", "artist": "피터 파울 루벤스", "year": "1611–1612", "sortYear": 1611, "movement": "바로크", "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Peter_Paul_Rubens_-_Resurrection_of_Christ_triptych_%28central_panel%29.jpg", "description": "힘찬 대각선 구도와 격렬한 움직임으로 부활의 승리를 극적으로 표현한 바로크의 대표작입니다." },
+        { "id": "rembrandt-noli-me-tangere", "title": "막달라 마리아에게 나타난 부활한 그리스도", "artist": "렘브란트 판 레인", "year": "1638", "sortYear": 1638, "movement": "바로크", "thumbnail": "data/topic-images/rembrandt-christ-mary-magdalen-at-tomb.jpg", "description": "부활 이후 막달라 마리아에게 나타난 그리스도를 친밀한 빛과 인간적인 감정으로 묘사한 바로크 작품입니다." }
+      ]
+    },
+    {
+      "id": "venus-reclining-nude",
+      "name": { "ko": "비너스 - 누운 여인", "en": "Venus - Reclining Figure" },
+      "keywords": ["비너스", "베누스", "누운 여인", "누드", "조르조네", "티치아노", "마네", "올랭피아", "venus", "reclining nude", "olympia"],
+      "description": { "ko": "조르조네의 ‘드레스덴의 비너스’에서 티치아노·벨라스케스·고야·앵그르를 거쳐 마네의 《올랭피아》로 이어지는 누운 여성 누드의 계보입니다. 제작 연도 순으로 배치해, 이상화된 비너스가 근대의 현실적 인물로 바뀌는 과정을 살펴봅니다." },
+      "works": [
+        { "id": "giorgione-sleeping-venus", "sequence": 1, "title": "잠자는 비너스 (드레스덴의 비너스)", "artist": "조르조네", "year": "1508–1510경", "sortYear": 1508, "movement": "전성기 르네상스", "thumbnail": "https://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Sleeping%20Venus%20-%20Google%20Art%20Project%202.jpg", "description": "드레스덴 알테 마이스터 회화관 소장작으로, 풍경 속에 누운 비너스라는 이후 도상의 중요한 출발점입니다. 완성에 티치아노가 관여했을 가능성이 오래 논의되어 왔습니다." },
+        { "id": "titian-venus-of-urbino", "sequence": 2, "title": "우르비노의 비너스", "artist": "Tiziano Vecellio (티치아노)", "year": "1538", "sortYear": 1538, "movement": "르네상스 · 베네치아 화파", "thumbnail": "data/thumbnails/artist-Q47551/wikidata-Q727875.jpg", "description": "실내 침상 위의 비너스로 전환한 작품입니다. 관람자를 향한 시선과 손의 자세가 이후 누운 여성 누드 도상의 핵심이 됩니다." },
+        { "id": "velazquez-rokeby-venus", "sequence": 3, "title": "거울 앞의 비너스 (로크비의 비너스)", "artist": "디에고 벨라스케스", "year": "1647–1651경", "sortYear": 1647, "movement": "바로크", "thumbnail": "data/topic-images/velazquez-rokeby-venus.jpg", "description": "등을 보인 채 거울을 보는 비너스를 통해, 신화적 누드의 관람 구조 자체를 의식하게 만드는 바로크 작품입니다." },
+        { "id": "goya-nude-maja", "sequence": 4, "title": "옷 벗은 마하", "artist": "프란시스코 데 고야", "year": "1797–1800경", "sortYear": 1797, "movement": "낭만주의", "thumbnail": "data/topic-images/goya-nude-maja.jpg", "description": "비너스라는 신화적 이름을 빌리지 않고 동시대 여성을 정면으로 제시해, 전통 도상의 이상화를 흔든 작품입니다." },
+        { "id": "ingres-grand-odalisque", "sequence": 5, "title": "그랑드 오달리스크", "artist": "장 오귀스트 도미니크 앵그르", "year": "1814", "sortYear": 1814, "movement": "신고전주의", "thumbnail": "data/topic-images/ingres-grand-odalisque.jpg", "description": "누운 누드의 전통을 오리엔탈리즘의 상상 속으로 옮기며, 해부학보다 길고 유연한 선의 리듬을 우선한 작품입니다." },
+        { "id": "manet-olympia", "sequence": 6, "title": "올랭피아", "artist": "에두아르 마네", "year": "1863", "sortYear": 1863, "movement": "근대 회화", "thumbnail": "data/thumbnails/artist-Q40599/wikidata-Q737062.jpg", "description": "티치아노의 《우르비노의 비너스》와 고야의 《옷 벗은 마하》를 의식적으로 인용하면서, 이상화된 여신 대신 동시대 파리의 인물을 정면으로 제시했습니다." }
+      ]
+    },
+    {
+      "id": "pastoral-four-figures-variations",
+      "name": { "ko": "전원 - 네 인물의 변주", "en": "Pastoral - Variations on Four Figures" },
+      "keywords": ["전원", "네 인물", "전원 음악회", "풀밭 위의 점심", "목가", "피크닉", "티치아노", "마네", "모네", "세잔", "피카소", "pastoral", "four figures", "luncheon on the grass"],
+      "description": { "ko": "티치아노의 목가적 네 인물에서 출발해 마네·모네·세잔·피카소가 야외 인물군을 어떻게 다시 해석했는지 살펴봅니다. 이상적 전원은 근대 피크닉으로, 다시 색채·형태·인물 관계를 실험하는 회화의 장으로 바뀝니다." },
+      "works": [
+        { "id": "titian-pastoral-concert", "sequence": 1, "title": "전원 음악회", "artist": "Tiziano Vecellio (티치아노)", "year": "1500–1525", "sortYear": 1500, "movement": "르네상스 · 베네치아 화파", "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Le_Concert_champ%C3%AAtre%2C_by_Titian%2C_from_C2RMF_retouched.jpg/1280px-Le_Concert_champ%C3%AAtre%2C_by_Titian%2C_from_C2RMF_retouched.jpg", "description": "음악가와 목가적 풍경, 이상화된 여성 인물을 결합한 전원 음악회의 출발점입니다. 현재 루브르는 티치아노 작품으로 분류하지만, 오랫동안 조르조네 귀속으로도 알려졌습니다." },
+        { "id": "manet-luncheon-on-the-grass", "sequence": 2, "title": "풀밭 위의 점심", "artist": "에두아르 마네", "year": "1863", "sortYear": 1863, "movement": "근대 회화", "thumbnail": "data/thumbnails/artist-Q40599/wikidata-Q152509.jpg", "description": "티치아노의 《전원 음악회》에서 목가적 주제와 누드·남성 인물의 대비를 가져와 현대 파리의 피크닉으로 바꾼 핵심 작품입니다. 중앙 세 인물의 배치는 라파엘로의 《파리스의 심판》을 옮긴 마르칸토니오 라이몬디의 판화도 참조했습니다." },
+        { "id": "monet-luncheon-on-the-grass", "sequence": 3, "title": "풀밭 위의 점심", "artist": "클로드 모네", "year": "1865–1866", "sortYear": 1865, "movement": "인상주의", "thumbnail": "data/topic-images/monet-luncheon-on-the-grass-pushkin.jpg", "description": "마네의 작품에 대한 경의이자 도전으로 시작한 대형 야외 피크닉입니다. 마네의 도발적 인물 관계를, 자연광과 동시대 복식이 어우러진 인상주의적 야외 장면으로 전환합니다. 전체 구도가 남아 있는 1866년 푸시킨 미술관 소장 소형본을 사용했습니다." },
+        { "id": "cezanne-luncheon-on-the-grass", "sequence": 4, "title": "풀밭 위의 점심", "artist": "폴 세잔", "year": "1876–1877", "sortYear": 1876, "movement": "후기 인상주의", "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Paul_C%C3%A9zanne_-_Le_D%C3%A9jeuner_sur_l%27herbe_%28Orangerie%29.jpg/1280px-Paul_C%C3%A9zanne_-_Le_D%C3%A9jeuner_sur_l%27herbe_%28Orangerie%29.jpg", "description": "마네를 떠올리게 하는 제목과 야외 인물군을 사용하면서도, 방향성 있는 붓질과 단순화된 형태로 장면을 재구성합니다. 인물의 서사보다 화면의 구조와 색채가 중요해지는 전환점입니다." },
+        { "id": "picasso-luncheon-after-manet", "sequence": 5, "title": "풀밭 위의 점심 — 마네를 따라", "artist": "파블로 피카소", "year": "1961", "sortYear": 1961, "movement": "현대 미술", "thumbnail": "https://cep.museepicassoparis.fr/sites/default/files/styles/image_liste_visionneuse_desktop/public/medias/image/import/navigart/4C24913.jpg?itok=adnXCSS_", "description": "피카소는 마네의 《풀밭 위의 점심》을 바탕으로 대규모 연작을 만들었습니다. 이 작품에서는 인물의 수와 관계, 공간을 자유롭게 바꾸며 ‘원작을 다시 그리는 행위’ 자체를 주제로 삼습니다." }
+      ]
+    }
+  ]
+}

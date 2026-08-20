@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<title>uHangul v0.5.4 diagnostics</title>
+<link rel="stylesheet" href="./uhangul-runtime.css">
+<style>
+body{background:#11151a;color:#e9edf1;font-family:Malgun Gothic,sans-serif;padding:28px}
+h1{margin-bottom:8px}.sub{color:#9eabb7}.ok{color:#8ed5a6}.bad{color:#ff9c9c}
+.uh{font-family:uHangul,Malgun Gothic,sans-serif;font-size:44px}
+table{border-collapse:collapse;width:100%;margin-top:20px}td,th{border-bottom:1px solid #303842;padding:10px;text-align:left}
+code{color:#a9c7e8}
+</style></head>
+<body>
+<h1>uHangul v0.5.4 diagnostics</h1>
+<p class="sub">file:// 직접 열기 지원 · module/fetch 사용 안 함</p>
+<div id="status">runtime loading…</div>
+<table><thead><tr><th>word</th><th>notation</th><th>render</th></tr></thead><tbody id="body"></tbody></table>
+<script src="./uhangul-runtime.js"></script>
+<script>
+(function(){
+ const samples=[
+ ["fan","[Fㅐㄴ]"],["van","[Vㅐㄴ]"],["zoo","[Zㅜ]"],["road","[Rㅗ]드"],
+ ["think","[THㅣㅇ]크"],["Bach","바[Xㅡ]"],["ich","이[CHㅡ]"],
+ ["Friedrich","[Fㅡ]리드리[CHㅡ]"],["river","[Rㅣ][Vㅓ]"],["Jasper","재스퍼"]
+ ];
+ function run(){
+   const s=document.getElementById("status");
+   if(!window.uHangulV05){s.className="bad";s.textContent="runtime FAILED";return;}
+   s.className="ok";
+   s.textContent="runtime OK · "+location.protocol+" · font check below";
+   const tb=document.getElementById("body");
+   samples.forEach(x=>{
+     const tr=document.createElement("tr");
+     tr.innerHTML="<td>"+x[0]+"</td><td><code>"+x[1]+"</code></td><td class='uh'></td>";
+     tr.lastElementChild.textContent=window.uHangulV05.encodeNotation(x[1]);
+     tb.appendChild(tr);
+   });
+   document.fonts.ready.then(()=>{
+     const loaded=document.fonts.check("44px uHangul");
+     s.textContent += loaded ? " · FONT OK" : " · FONT NOT LOADED";
+     if(!loaded) s.className="bad";
+   });
+ }
+ if(document.readyState==="loading") document.addEventListener("DOMContentLoaded",run);
+ else run();
+})();
+</script></body></html>

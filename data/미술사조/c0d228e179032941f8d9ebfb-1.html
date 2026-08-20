@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>로코코 — 바로크의 장엄함에서 우아함과 유희로</title>
+<style>
+:root {
+  --bg:#0a0c0f; --panel:#12161b; --panel2:#181d23; --text:#f2efe9;
+  --muted:#aeb6bf; --line:#2a3037; --gold:#d8aa4b; --pink:#d99bb2;
+  --blue:#91b9d8; --green:#9fc2a5; --cream:#ead9b6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--text);line-height:1.75;
+  font-family:Inter,"Pretendard","Noto Sans KR",Arial,sans-serif;
+  background:
+    radial-gradient(circle at 14% 7%,rgba(217,155,178,.10),transparent 28rem),
+    radial-gradient(circle at 85% 8%,rgba(216,170,75,.10),transparent 28rem),
+    linear-gradient(180deg,#090b0e,#0d1014);
+}
+a{color:#efca78;text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{width:min(1200px,92vw);margin:auto}
+.hero{padding:76px 0 40px;border-bottom:1px solid var(--line)}
+.kicker{font-size:.84rem;font-weight:800;letter-spacing:.12em;color:var(--gold)}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.55rem,6vw,5.3rem);line-height:1.03;margin:.35rem 0 1rem}
+.hero p{max-width:1020px;color:#d3d9df;font-size:1.14rem}
+nav{position:sticky;top:0;z-index:20;background:rgba(10,12,15,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:18px;overflow:auto;padding:12px 0;white-space:nowrap;font-size:.9rem}
+section{padding:58px 0;border-bottom:1px solid var(--line)}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,3.5vw,3.15rem);margin:0 0 20px}
+h3{margin:.1rem 0 .55rem;font-size:1.18rem}
+.lead{font-size:1.08rem;color:#d6dce2;max-width:980px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:linear-gradient(180deg,var(--panel2),var(--panel));box-shadow:0 14px 34px rgba(0,0,0,.23)}
+.imgbox{background:#07090b;display:flex;align-items:center;justify-content:center;min-height:430px}
+.imgbox img{display:block;width:100%;height:570px;object-fit:contain}
+.caption{padding:18px 20px 20px}
+.caption small{display:block;color:var(--muted);margin-top:6px}
+.badge{display:inline-block;padding:4px 9px;border-radius:99px;border:1px solid #544323;background:rgba(216,170,75,.08);color:#f0ce83;font-size:.76rem;font-weight:800;margin-bottom:8px}
+.callout{border-left:4px solid var(--gold);padding:18px 21px;background:rgba(216,170,75,.08);border-radius:0 12px 12px 0;margin:24px 0}
+.bigline{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.3rem,2.6vw,1.95rem);padding:24px 28px;border-top:1px solid #59471f;border-bottom:1px solid #59471f;color:#f1ddb4;margin:25px 0;line-height:1.48}
+.features{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:26px 0}
+.feature{padding:17px;border:1px solid var(--line);border-radius:12px;background:var(--panel);min-height:150px}
+.feature b{color:var(--gold);font-size:.8rem}
+.feature span{display:block;font-weight:800;margin:.35rem 0}
+.feature p{font-size:.9rem;color:var(--muted);margin:0;line-height:1.55}
+.branch{border:1px solid var(--line);border-radius:15px;background:var(--panel);padding:22px}
+.branch.a{border-top:4px solid var(--pink)}
+.branch.b{border-top:4px solid var(--blue)}
+.branch.c{border-top:4px solid var(--green)}
+.branch .eyebrow{font-size:.76rem;font-weight:800;letter-spacing:.08em;color:var(--muted)}
+.branch h3{font-size:1.3rem}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;margin-top:24px}
+table{width:100%;border-collapse:collapse;min-width:860px;background:var(--panel)}
+th,td{padding:14px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:#171b20;color:#f0d79f;font-size:.9rem}
+td:first-child{font-weight:750;color:#eef1f4;width:18%}
+tr:last-child td{border-bottom:0}
+.note{font-size:.94rem;color:var(--muted);background:#10141a;border:1px solid var(--line);padding:17px 19px;border-radius:12px}
+.chain{display:flex;align-items:stretch;gap:10px;overflow:auto;padding:8px 0 4px}
+.chain .node{min-width:185px;flex:1;padding:17px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.chain .arrow{display:flex;align-items:center;color:var(--gold);font-size:1.4rem}
+footer{padding:36px 0 60px;color:#7f8993;font-size:.86rem}
+mark{background:rgba(216,170,75,.17);color:#ffe2a8;padding:.03em .22em;border-radius:4px}
+ul{padding-left:1.25rem}
+li{margin:.4rem 0}
+@media(max-width:920px){
+ .grid2,.grid3{grid-template-columns:1fr}
+ .features{grid-template-columns:1fr 1fr}
+ .imgbox img{height:auto;max-height:610px}
+}
+@media(max-width:560px){
+ .features{grid-template-columns:1fr}
+}
+</style>
+<link rel="stylesheet" href="../../uhangul/uhangul-runtime.css" data-uhangul-integration="v0.3">
+<style id="art-atlas-artist-link-style">
+.art-atlas-artist-link{font-weight:900;color:#191007!important;background:linear-gradient(180deg,rgba(255,232,151,.98),rgba(255,198,86,.9));border-bottom:2px solid #a96f12;border-radius:.22em;padding:0 .16em;text-decoration:none!important;box-decoration-break:clone;-webkit-box-decoration-break:clone}.art-atlas-artist-link:hover{filter:brightness(1.08);box-shadow:0 0 0 2px rgba(255,214,102,.24)}
+</style>
+</head>
+
+<body>
+<div data-uhangul-corner-bar style="position:sticky!important;top:0!important;z-index:2147483647!important;clear:both!important;height:64px!important;display:flex!important;align-items:center!important;padding:10px 18px!important;background:#0c1014!important;border-bottom:1px solid #2d3540!important"><button type="button" data-uhangul-corner-button aria-label="uHangul 켜기" title="uHangul 켜기" aria-pressed="false" style="position:relative!important;z-index:2147483647!important;display:block!important;border:2px solid #f4c55b!important;border-radius:50%!important;width:38px!important;height:38px!important;padding:0!important;background:#18221e!important;color:#f4c55b!important;font:800 23px/34px Georgia,serif!important;text-align:center!important;cursor:pointer!important;visibility:visible!important;opacity:1!important">u</button></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="hero">
+
+
+
+<div class="wrap">
+  <div class="kicker">미술사 · 바로크에서 18세기 로코코로</div>
+  <h1>로코코<br><span style="color:var(--gold)">장엄한 권력의 미술에서 우아한 사적 즐거움의 미술로</span></h1>
+  <p>
+    로코코는 바로크와 완전히 단절된 새로운 미술이라기보다,
+    <strong>바로크가 발전시킨 곡선, 운동감, 장식성, 감정적 효과를 더 가볍고 사적이며 감각적인 방향으로 바꾼 18세기의 양식</strong>이다.
+    특히 프랑스에서 루이 14세 시대의 공식적이고 장엄한 궁정문화가 약화된 뒤,
+    귀족의 저택과 살롱 같은 보다 친밀한 공간에서
+    <strong>사랑, 유희, 우아한 사교, 목가적 환상, 감각적 즐거움</strong>이 중요한 주제가 되었다.
+  </p>
+</div>
+</header>
+
+<nav>
+<div class="wrap">
+  <a href="#question">0. 무엇을 바꾸었나</a>
+  <a href="#before">1. 이전: 바로크 궁정미술</a>
+  <a href="#watteau">2. 와토의 전환</a>
+  <a href="#traits">3. 핵심 특징</a>
+  <a href="#branches">4. 주요 경향</a>
+  <a href="#boucher">5. 부셰</a>
+  <a href="#fragonard">6. 프라고나르</a>
+  <a href="#tiepolo">7. 티에폴로</a>
+  <a href="#compare">8. 바로크와 비교</a>
+  <a href="#after">9. 이후의 반작용</a>
+  <a href="#countries">국가별 전개</a>
+</div>
+</nav>
+
+<main>
+
+<section id="question">
+<div class="wrap">
+  <h2>0. 로코코는 무엇을 바꾸려 했는가?</h2>
+  <p class="lead">
+    바로크의 핵심에는 <strong>권력, 종교, 장엄함, 극적 감정, 거대한 공간</strong>이 있었다.
+    로코코는 그 시각언어를 완전히 버리지 않으면서
+    중심을 <strong>공적 세계에서 사적 세계로, 장엄함에서 우아함으로, 영웅적 사건에서 개인적 즐거움으로</strong> 이동시켰다.
+  </p>
+
+  <div class="features">
+    <div class="feature"><b>01 · 공간</b><span>궁전 → 살롱</span><p>거대한 공적 공간보다 귀족 저택의 친밀한 실내와 정원이 중요해진다.</p></div>
+    <div class="feature"><b>02 · 주제</b><span>영웅 → 연애와 유희</span><p>전쟁·순교·왕권보다 사랑, 사교, 음악, 놀이와 목가적 환상이 늘어난다.</p></div>
+    <div class="feature"><b>03 · 감정</b><span>숭고 → 쾌락</span><p>경외감과 비극보다 매혹, 유머, 유혹, 우아한 감각을 강조한다.</p></div>
+    <div class="feature"><b>04 · 색채</b><span>강한 대비 → 밝은 색</span><p>연한 청색, 분홍, 크림색, 황금빛 같은 밝고 섬세한 색조가 두드러진다.</p></div>
+    <div class="feature"><b>05 · 형태</b><span>중량 → 경쾌함</span><p>비대칭 곡선과 소용돌이 장식이 시선을 가볍게 움직이게 한다.</p></div>
+  </div>
+
+  <div class="callout">
+    <strong>핵심:</strong> 로코코는 바로크의 “움직임”과 “장식”을 계승했지만,
+    그것을 <strong>왕·교회·국가의 장엄함이 아니라 개인의 즐거움과 세련된 취향</strong>을 위해 사용했다.
+  </div>
+</div>
+</section>
+
+<section id="before">
+<div class="wrap">
+  <h2>1. Before — 루이 14세 시대의 공식적 궁정미술</h2>
+
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Louis-XIV-of-France-063c4adf6cf3.jpg" alt="야생트 리고, 루이 14세의 초상"></div>
+      <div class="caption">
+        <span class="badge">프랑스 궁정 바로크</span>
+        <h3>야생트 리고, 《루이 14세의 초상》</h3>
+        <small>1701 · 프랑스 왕권의 공식적 이미지</small>
+      </div>
+    </article>
+
+    <div>
+      <h3>이 그림이 보여주는 세계</h3>
+      <ul>
+        <li><strong>주인공:</strong> 국가와 왕권을 대표하는 군주가 화면의 절대적 중심이다.</li>
+        <li><strong>의상과 장식:</strong> 왕관, 망토, 검, 기둥과 휘장이 권력과 위계를 강조한다.</li>
+        <li><strong>자세:</strong> 관람자에게 친근하게 다가오기보다 거리를 두고 위엄을 유지한다.</li>
+        <li><strong>목적:</strong> 개인의 사적인 감정을 보여주기보다 왕권의 권위와 영속성을 시각화한다.</li>
+      </ul>
+
+      <div class="bigline">
+        바로크 궁정미술이 묻는 것은<br>
+        <strong>“권력은 얼마나 위대하고 장엄하게 보이는가?”</strong>였다.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="watteau">
+<div class="wrap">
+  <h2>2. Transition — 와토가 완전히 다른 세계를 그리다</h2>
+
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Antoine-20Watteau-20-20Pilgrimage-20to-20Cythera-20-20WGA25454-de23e298c518.jpg" alt="앙투안 와토, 키테라 섬으로의 순례"></div>
+      <div class="caption">
+        <span class="badge">초기 로코코 · 페트 갈랑트</span>
+        <h3>앙투안 와토, 《키테라 섬으로의 순례》</h3>
+        <small>1717 · 파리 루브르 박물관</small>
+      </div>
+    </article>
+
+    <div>
+      <h3>왕도, 영웅도, 순교자도 없다</h3>
+      <ul>
+        <li>우아하게 차려입은 남녀가 사랑의 섬인 키테라에서 연애와 사교를 즐긴다.</li>
+        <li>전쟁이나 종교적 사건 대신 <strong>사랑의 분위기와 관계</strong>가 주제가 된다.</li>
+        <li>인물은 자연 속에 흩어져 있고, 중앙에 하나의 영웅적 사건이 존재하지 않는다.</li>
+        <li>빛과 색은 부드럽고 대기는 꿈처럼 흐릿하다.</li>
+        <li>장면에는 즐거움과 동시에 곧 끝날 것 같은 <strong>덧없음과 서정성</strong>이 있다.</li>
+      </ul>
+
+      <div class="bigline">
+        리고가 <strong>왕의 권위를 보여주었다면</strong>,<br>
+        와토는 <strong>사람 사이의 미묘한 감정과 한때의 즐거움</strong>을 보여준다.
+      </div>
+
+      <div class="callout">
+        와토의 이러한 작품을 위해 프랑스 왕립미술아카데미는
+        <strong>페트 갈랑트(fête galante, 우아한 야외 연회·사교 장면)</strong>라는 특별한 범주를 사용하게 되었다.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="traits">
+<div class="wrap">
+  <h2>3. 로코코를 그림에서 알아보는 핵심 특징</h2>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>관찰 항목</th><th>바로크</th><th>로코코</th></tr></thead>
+    <tbody>
+      <tr><td>주요 기능</td><td>왕권·교회·국가의 권위와 종교적 감동</td><td>귀족의 사교, 개인적 취향, 장식과 즐거움</td></tr>
+      <tr><td>주제</td><td>성서, 순교, 역사, 영웅, 왕권</td><td>연애, 유희, 목가, 신화적 사랑, 일상의 즐거움</td></tr>
+      <tr><td>공간감</td><td>크고 깊으며 극적</td><td>친밀하고 가볍고 장식적</td></tr>
+      <tr><td>구도</td><td>강한 대각선과 극적 집중</td><td>비대칭 곡선, 느슨하고 리듬감 있는 배열</td></tr>
+      <tr><td>빛</td><td>극적인 명암과 집중 조명</td><td>부드럽고 산란된 빛</td></tr>
+      <tr><td>색</td><td>강한 명암과 깊은 색조</td><td>분홍·하늘색·크림·금빛 등 밝고 섬세한 색조</td></tr>
+      <tr><td>감정</td><td>경외, 비극, 영웅적 감동</td><td>매혹, 유혹, 즐거움, 우아함, 때로는 덧없음</td></tr>
+      <tr><td>관람자 경험</td><td>압도되고 감동한다</td><td>매혹되고 즐긴다</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout">
+    로코코라는 말은 조개껍질과 바위 장식 등을 뜻하는 프랑스어
+    <strong>로카유(rocaille)</strong>와 관련되어 있다.
+    회화뿐 아니라 실내장식, 가구, 도자기, 건축 장식에서
+    비대칭 곡선과 조개 모양 장식이 중요한 특징이 된다.
+  </div>
+</div>
+</section>
+
+<section id="branches">
+<div class="wrap">
+  <h2>4. 로코코의 주요 경향</h2>
+  <p class="lead">
+    로코코도 하나의 엄격한 학파라기보다 여러 지역과 장르에서 나타난 공통된 미적 경향이다.
+    그림을 이해할 때는 다음 세 방향으로 나누어 보면 효과적이다.
+  </p>
+
+  <div class="grid3" style="margin-top:28px">
+    <div class="branch a">
+      <div class="eyebrow">프랑스 · 와토</div>
+      <h3>① 페트 갈랑트</h3>
+      <p>우아한 남녀의 야외 사교와 연애를 꿈같은 자연 속에 배치한다. 즐거움과 동시에 섬세한 서정성과 덧없음이 존재한다.</p>
+    </div>
+
+    <div class="branch b">
+      <div class="eyebrow">프랑스 · 부셰·프라고나르</div>
+      <h3>② 감각적·유희적 로코코</h3>
+      <p>사랑, 에로티시즘, 목가, 신화와 사적인 즐거움을 화려하고 감각적인 색채로 표현한다.</p>
+    </div>
+
+    <div class="branch c">
+      <div class="eyebrow">이탈리아·중부유럽 · 티에폴로</div>
+      <h3>③ 장식적·기념비적 로코코</h3>
+      <p>궁전과 교회의 거대한 천장을 밝은 빛과 열린 하늘, 떠오르는 인물들로 채우며 바로크의 규모와 로코코의 경쾌함을 결합한다.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="boucher">
+<div class="wrap">
+  <h2>5. 프랑수아 부셰 — 신화가 감각적 유희가 되다</h2>
+
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/The-20Toilet-20of-20Venus-20by-20Fran-C3-A7ois-20Boucher-fc27175742d6.jpg" alt="프랑수아 부셰, 비너스의 화장"></div>
+      <div class="caption">
+        <span class="badge">감각적 로코코</span>
+        <h3>프랑수아 부셰, 《비너스의 화장》</h3>
+        <small>1751 · 뉴욕 메트로폴리탄 미술관</small>
+      </div>
+    </article>
+
+    <div>
+      <h3>고대 신화가 더 이상 장엄하지 않다</h3>
+      <ul>
+        <li>비너스는 위엄 있는 고대 신이라기보다 아름답고 매혹적인 여성으로 나타난다.</li>
+        <li>살결, 비단, 꽃, 진주와 천의 촉감이 세심하게 강조된다.</li>
+        <li>신화는 도덕적·영웅적 교훈보다 <strong>감각적 아름다움을 즐기기 위한 무대</strong>가 된다.</li>
+        <li>분홍빛 피부와 청색·크림색의 조합이 화면 전체를 부드럽게 만든다.</li>
+      </ul>
+
+      <div class="bigline">
+        바로크 신화화가 <strong>웅장한 이야기</strong>를 만들었다면,<br>
+        부셰에게 신화는 <strong>세련된 감각과 아름다움을 즐기는 언어</strong>가 된다.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="fragonard">
+<div class="wrap">
+  <h2>6. 프라고나르 — 로코코의 유희성이 절정에 이르다</h2>
+
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Fragonard-20The-20Swing-93c60ad2bfcf.jpg" alt="장오노레 프라고나르, 그네"></div>
+      <div class="caption">
+        <span class="badge">후기 프랑스 로코코</span>
+        <h3>장오노레 프라고나르, 《그네》</h3>
+        <small>1767–1768 · 런던 월리스 컬렉션</small>
+      </div>
+    </article>
+
+    <div>
+      <h3>왜 이 작품이 로코코의 상징처럼 보이는가?</h3>
+      <ul>
+        <li>화면의 중심은 국가도 종교도 아닌 <strong>사적인 연애 게임</strong>이다.</li>
+        <li>그네의 운동이 치맛자락, 나뭇잎, 대각선 구도와 결합하며 경쾌한 리듬을 만든다.</li>
+        <li>숨겨진 남성의 시선과 벗겨져 날아가는 신발은 노골적이지 않지만 분명한 에로틱한 암시를 준다.</li>
+        <li>정원은 실제 자연이라기보다 연애를 위한 비밀스럽고 환상적인 무대처럼 보인다.</li>
+        <li>빛은 극적 비극이 아니라 피부·천·꽃을 반짝이게 하는 감각적 효과를 만든다.</li>
+      </ul>
+
+      <div class="bigline">
+        <a class="art-atlas-artist-link" href="../../index.html?artist=artist-1786371252483" target="_blank" rel="noopener" data-artist-id="artist-1786371252483" data-uh-original="Michelangelo Merisi da Caravaggio" data-uh-korean="미켈란젤로 메리시 다 카라바조" data-uh-display-korean="카라바조" title="미켈란젤로 메리시 다 카라바조 연표로 이동">카라바조</a>의 바로크가 관람자를 <strong>극적인 사건의 목격자</strong>로 만들었다면,<br>
+        프라고나르의 로코코는 관람자를 <strong>비밀스러운 유희의 공모자</strong>로 만든다.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="tiepolo">
+<div class="wrap">
+  <h2>7. 조반니 바티스타 티에폴로 — 로코코가 거대한 공간으로 확장될 때</h2>
+
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Giovanni-20Battista-20Tiepolo-20-20Apollo-20and-20the-20Continents-20-4da05d03665b.jpg" alt="조반니 바티스타 티에폴로, 아폴론과 대륙들"></div>
+      <div class="caption">
+        <span class="badge">이탈리아·중부유럽의 장식적 로코코</span>
+        <h3>조반니 바티스타 티에폴로, 《아폴론과 대륙들》</h3>
+        <small>1752–1753 · 뷔르츠부르크 궁전 계단실 천장화</small>
+      </div>
+    </article>
+
+    <div>
+      <h3>프랑스 로코코와 다른 길</h3>
+      <ul>
+        <li>규모는 여전히 바로크처럼 거대하지만 화면의 무게감은 훨씬 가볍다.</li>
+        <li>천장이 실제로 열려 하늘로 이어지는 것처럼 밝은 공간을 만든다.</li>
+        <li>인물과 구름이 위로 떠오르며 중력보다 부유하는 감각을 강조한다.</li>
+        <li>강렬한 어둠보다 밝은 청색, 흰 구름, 금빛과 파스텔 계열이 화면을 지배한다.</li>
+      </ul>
+
+      <div class="callout">
+        따라서 로코코를 “작고 사적인 프랑스 귀족 그림”으로만 이해해서는 안 된다.
+        티에폴로에서는 <strong>바로크의 기념비적 천장화 전통과 로코코의 밝음·경쾌함·장식성</strong>이 결합한다.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="compare">
+<div class="wrap">
+  <h2>8. 바로크와 로코코를 대표작으로 직접 비교하면</h2>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>비교 항목</th><th>바로크</th><th>로코코</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>대표 이미지</td><td>리고 《루이 14세의 초상》 / <a class="art-atlas-artist-link" href="../../index.html?artist=artist-1786371252483" target="_blank" rel="noopener" data-artist-id="artist-1786371252483" data-uh-original="Michelangelo Merisi da Caravaggio" data-uh-korean="미켈란젤로 메리시 다 카라바조" data-uh-display-korean="카라바조" title="미켈란젤로 메리시 다 카라바조 연표로 이동">카라바조</a>·<a class="art-atlas-artist-link" href="../../index.html?artist=artist-url-1786879941678" target="_blank" rel="noopener" data-artist-id="artist-url-1786879941678" data-uh-original="Peter Paul Rubens" data-uh-korean="페테르 파울 루벤스" data-uh-display-korean="루벤스" title="페테르 파울 루벤스 연표로 이동">루벤스</a>의 극적 회화</td><td>와토 《키테라 섬으로의 순례》 / 프라고나르 《그네》</td></tr>
+      <tr><td>누구를 위한 미술인가</td><td>왕실·교회·국가·대중</td><td>귀족·상류층·개인적 후원자와 사적 공간</td></tr>
+      <tr><td>주요 감정</td><td>경외·감동·비극·영웅성</td><td>즐거움·매혹·우아함·유혹</td></tr>
+      <tr><td>인간</td><td>행동하는 영웅·성인·군주</td><td>사랑하고 놀고 사교하는 개인</td></tr>
+      <tr><td>구도</td><td>강한 대각선과 극적 집중</td><td>비대칭 곡선과 유동적 리듬</td></tr>
+      <tr><td>색채</td><td>깊고 강하며 명암대비가 큼</td><td>밝고 가벼운 파스텔 계열</td></tr>
+      <tr><td>공간</td><td>기념비적·공적</td><td>친밀하거나 환상적·장식적</td></tr>
+      <tr><td>한 문장</td><td><strong>“나를 압도한다.”</strong></td><td><strong>“나를 매혹한다.”</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout">
+    <strong>가장 간단한 기억법</strong><br><br>
+    바로크: <strong>권력과 신앙을 극적으로 보여준다.</strong><br>
+    로코코: <strong>사랑과 즐거움을 우아하게 즐긴다.</strong>
+  </div>
+</div>
+</section>
+
+<section id="after">
+<div class="wrap">
+  <h2>9. After — 왜 신고전주의가 로코코를 거부하게 되었나?</h2>
+
+  <p class="lead">
+    18세기 후반이 되면 로코코의 귀족적·감각적·장식적 세계는
+    계몽주의적 도덕관, 고대 유적에 대한 새로운 관심, 시민적 덕목과 엄격한 질서를 중시하는 분위기 속에서
+    지나치게 가볍고 사치스러운 것으로 비판받기 시작한다.
+    이에 대한 강한 반작용이 <strong>신고전주의</strong>다.
+  </p>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>로코코</th><th>→</th><th>신고전주의</th></tr></thead>
+    <tbody>
+      <tr><td>곡선과 비대칭</td><td>→</td><td>직선과 명확한 구조</td></tr>
+      <tr><td>사랑과 유희</td><td>→</td><td>의무와 시민적 덕목</td></tr>
+      <tr><td>감각적 색채</td><td>→</td><td>절제된 색채와 선명한 윤곽</td></tr>
+      <tr><td>귀족적 사적 세계</td><td>→</td><td>고대 공화국·역사·공적 가치</td></tr>
+      <tr><td>즐거움</td><td>→</td><td>도덕적 엄숙성</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="bigline">
+    로코코가 <strong>“어떻게 즐겁고 아름답게 살 것인가”</strong>를 보여주었다면,<br>
+    신고전주의는 다시 <strong>“어떻게 올바르게 행동할 것인가”</strong>를 묻기 시작한다.
+  </div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <h2>전체 흐름</h2>
+  <div class="chain">
+    <div class="node"><strong>바로크</strong><br><span style="color:var(--muted)">권력·종교·장엄함·극적 사건</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong>와토</strong><br><span style="color:var(--muted)">사랑·사교·서정적 페트 갈랑트</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong>부셰·프라고나르</strong><br><span style="color:var(--muted)">감각·유희·에로티시즘</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong>티에폴로</strong><br><span style="color:var(--muted)">밝고 경쾌한 기념비적 장식화</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong>신고전주의</strong><br><span style="color:var(--muted)">절제·고대·도덕·공적 가치</span></div>
+  </div>
+
+  <div class="note" style="margin-top:26px">
+    ※ 로코코는 엄격한 하나의 “학파”라기보다 18세기 유럽에서 회화·건축·실내장식·가구·도자기 등에 걸쳐 나타난
+    미적 경향을 가리킨다. 특히 프랑스에서 중요한 형식을 갖추었지만, 독일·오스트리아·이탈리아 등에서는
+    각 지역의 바로크 전통과 결합하여 서로 다른 형태로 발전했다.
+  </div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <h2>작품 이미지와 출처</h2>
+  <div class="note">
+    작품 이미지는 자료 폴더의 로컬 이미지 파일을 사용하도록 구성했다.
+    외부 링크가 바뀌거나 인터넷 연결이 없어도 이미지가 표시된다.
+  </div>
+  <div style="margin-top:16px" class="source-list">
+    <ul>
+      <li>야생트 리고, 《루이 14세의 초상》</li>
+      <li>앙투안 와토, 《키테라 섬으로의 순례》</li>
+      <li>프랑수아 부셰, 《비너스의 화장》</li>
+      <li>장오노레 프라고나르, 《그네》</li>
+      <li>조반니 바티스타 티에폴로, 《아폴론과 대륙들》</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+
+<section id="countries"><div class="wrap">
+<h2>여러 국가에서의 전개 — 로코코의 공통 언어와 지역적 차이</h2>
+<p class="lead">로코코는 <strong>가벼움, 비대칭 곡선, 우아함, 장식성, 감각적 즐거움</strong>을 공유했지만 지역별로 회화·건축·종교장식의 비중이 달랐다.</p>
+<div class="table-wrap"><table><thead><tr><th>국가·지역</th><th>특징</th><th>대표 인물</th></tr></thead><tbody>
+<tr><td>프랑스</td><td>귀족 살롱과 저택을 중심으로 사랑·사교·페트 갈랑트·신화적 에로티시즘이 발달했다.</td><td>와토, 부셰, 프라고나르</td></tr>
+<tr><td>독일·오스트리아</td><td>프랑스의 사적 살롱문화보다 교회·수도원·궁전 내부의 흰색·금색 장식, 빛, 곡선이 결합한 화려한 건축적 로코코가 특히 강했다.</td><td>치머만 형제, 노이만, 아삼 형제</td></tr>
+<tr><td>이탈리아</td><td>베네치아를 중심으로 밝고 가벼운 천장화, 도시 풍경, 축제와 궁정문화가 발전했다.</td><td>티에폴로, 카날레토</td></tr>
+<tr><td>영국</td><td>프랑스식 로코코 회화가 그대로 정착했다기보다 가구·실내장식·은세공 등 장식예술에서 선택적으로 수용되었고, 회화는 초상과 풍속화가 독자적으로 발전했다.</td><td>토머스 게인즈버러, 윌리엄 호가스</td></tr>
+</tbody></table></div>
+<div class="callout"><strong>공통 철학:</strong> 바로크의 중량감과 공적 권위에서 벗어나 더 친밀하고 유연한 아름다움을 추구한다.<br><strong>지역적 차이:</strong> 프랑스는 사교와 연애, 중부유럽은 종교건축, 이탈리아는 천장화와 도시적 화려함이 중심이었다.</div>
+</div></section>
+
+</main>
+
+<footer>
+<div class="wrap">로코코 — 바로크의 장엄함에서 우아함과 유희로 · 비교를 통한 미술사 이해</div>
+</footer>
+
+<script defer src="../../uhangul/uhangul-runtime.js" data-uhangul-integration="v0.4"></script>
+
+</body>
+</html>

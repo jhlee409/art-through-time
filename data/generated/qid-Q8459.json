@@ -1,0 +1,1095 @@
+{
+  "schema": 18,
+  "artistId": "artist-Q8459",
+  "qid": "Q8459",
+  "artist": {
+    "name": {
+      "ko": "조르조네",
+      "en": "Giorgione"
+    },
+    "birth": 1478,
+    "death": 1510,
+    "nationality": {
+      "ko": "베네치아 공화국",
+      "en": "Republic of Venice"
+    }
+  },
+  "fetchedAt": "2026-08-20T07:25:12.388Z",
+  "works": [
+    {
+      "id": "wikidata-Q3752977",
+      "year": 1496,
+      "popularity": 2,
+      "title": {
+        "ko": "Frieze of the Liberal and Mechanical Arts",
+        "en": "Frieze of the Liberal and Mechanical Arts"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20035.jpg",
+      "description": {
+        "ko": "painting in the Casa Giorgione, Castelfranco Veneto, Italy, by Giorgione",
+        "en": "painting in the Casa Giorgione, Castelfranco Veneto, Italy, by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q3752977",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3842552",
+      "year": 1498,
+      "popularity": 4,
+      "title": {
+        "ko": "Virgin and Child in a Landscape",
+        "en": "Virgin and Child in a Landscape"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%2C%20Virgin%20and%20Child%20in%20a%20Landscape.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q3842552",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q877191",
+      "year": 1500,
+      "popularity": 28,
+      "title": {
+        "ko": "세 철학자",
+        "en": "세 철학자"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Three%20Philosophers%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q877191",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q2452374",
+      "year": 1500,
+      "popularity": 11,
+      "title": {
+        "ko": "The Judgement of Solomon",
+        "en": "The Judgement of Solomon"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%2C%20giudizio%20di%20salomone.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q2452374",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q3937417",
+      "year": 1500,
+      "popularity": 2,
+      "title": {
+        "ko": "Portrait of a Warrior",
+        "en": "Portrait of a Warrior"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgio%20da%20Castelfranco%2C%20gen.%20Giorgione%2C%20Kunsthistorisches%20Museum%20Wien%2C%20Gem%C3%A4ldegalerie%20-%20Krieger%20-%20GG%201526%20-%20Kunsthistorisches%20Museum.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q3937417",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3944458",
+      "year": 1500,
+      "popularity": 2,
+      "title": {
+        "ko": "Holy Family",
+        "en": "Holy Family"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Sacra%20Famiglia%20Benson%20%28ca.%201500%29.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q3944458",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q87533881",
+      "year": 1500,
+      "popularity": 0,
+      "title": {
+        "ko": "Judith",
+        "en": "Judith"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giuditta-Giorgione.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q87533881",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q87534049",
+      "year": 1500,
+      "popularity": 0,
+      "title": {
+        "ko": "David with the Head of Goliath",
+        "en": "David with the Head of Goliath"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/David-Giorgione-02.jpg",
+      "description": {
+        "ko": "painting by Giorgione in the Kathedrale of the Assuncion of Mary, Montagnana",
+        "en": "painting by Giorgione in the Kathedrale of the Assuncion of Mary, Montagnana"
+      },
+      "source": "http://www.wikidata.org/entity/Q87534049",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q20440585",
+      "year": 1501,
+      "popularity": 0,
+      "title": {
+        "ko": "Portrait of a Young Man",
+        "en": "Portrait of a Young Man"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Portrait%20of%20a%20Young%20Man%20-%20KMS553%20-%20Statens%20Museum%20for%20Kunst.jpg",
+      "description": {
+        "ko": "painting by Giorgione (SMK, KMS553)",
+        "en": "painting by Giorgione (SMK, KMS553)"
+      },
+      "source": "http://www.wikidata.org/entity/Q20440585",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q20547967",
+      "year": 1501,
+      "popularity": 0,
+      "title": {
+        "ko": "David",
+        "en": "David"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ubekendt%20italiensk%20KMSsp139%20-%20David%20-%20KMSsp139%20-%20Statens%20Museum%20for%20Kunst.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q20547967",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3937532",
+      "year": 1502,
+      "popularity": 6,
+      "title": {
+        "ko": "Portrait of Francesco Maria della Rovere",
+        "en": "Portrait of Francesco Maria della Rovere"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Bildnis%20des%20Francesco%20Maria%20I.%20della%20Rovere%2C%20um%201502.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q3937532",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3937736",
+      "year": 1502,
+      "popularity": 3,
+      "title": {
+        "ko": "Portrait of a soldier with his squire",
+        "en": "Portrait of a soldier with his squire"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%2C%20Portrait%20of%20Warrior%20with%20his%20Equerry.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q3937736",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3714154",
+      "year": 1502,
+      "popularity": 2,
+      "title": {
+        "ko": "Double Portrait",
+        "en": "Double Portrait"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20100.jpg",
+      "description": {
+        "ko": "painting by Giorgione, Museo di Palazzo Venezia",
+        "en": "painting by Giorgione, Museo di Palazzo Venezia"
+      },
+      "source": "http://www.wikidata.org/entity/Q3714154",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1720631",
+      "year": 1503,
+      "popularity": 15,
+      "title": {
+        "ko": "Castelfranco Madonna",
+        "en": "Castelfranco Madonna"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Pala%20di%20Castelfranco.jpg",
+      "description": {
+        "ko": "Altarpiece by Giorgione",
+        "en": "Altarpiece by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q1720631",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q3656034",
+      "year": 1503,
+      "popularity": 9,
+      "title": {
+        "ko": "Portrait of a Youth",
+        "en": "Portrait of a Youth"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20a%20Young%20Man%20Giorgione%20-%20Museum%20of%20Fine%20Arts%20-%20Budapest.jpg",
+      "description": {
+        "ko": "painting by Giorgione, 1500, Szépművészeti Múzeum",
+        "en": "painting by Giorgione, 1500, Szépművészeti Múzeum"
+      },
+      "source": "http://www.wikidata.org/entity/Q3656034",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q3937389",
+      "year": 1503,
+      "popularity": 6,
+      "title": {
+        "ko": "Giustiniani Portrait",
+        "en": "Giustiniani Portrait"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Portrait%20of%20a%20young%20man%2C%2016th%20century%20-Gem%C3%A4ldegalerie%20Berlin.jpg",
+      "description": {
+        "ko": "painting attributed to Giorgione",
+        "en": "painting attributed to Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q3937389",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q2537695",
+      "year": 1504,
+      "popularity": 17,
+      "title": {
+        "ko": "Judith",
+        "en": "Judith"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Judith%20Holofernes%20Giorgione.jpg",
+      "description": {
+        "ko": "painting by Giorgione in the Hermitage Museum",
+        "en": "painting by Giorgione in the Hermitage Museum"
+      },
+      "source": "http://www.wikidata.org/entity/Q2537695",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q3998112",
+      "year": 1504,
+      "popularity": 5,
+      "title": {
+        "ko": "The Three Ages of Man",
+        "en": "The Three Ages of Man"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%2C%20Three%20Ages.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q3998112",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q121547247",
+      "year": 1504,
+      "popularity": 0,
+      "title": {
+        "ko": "Mary with the Christ-child, Saint Francis and another saint",
+        "en": "Mary with the Christ-child, Saint Francis and another saint"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q121547247",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3924389",
+      "year": 1505,
+      "popularity": 7,
+      "title": {
+        "ko": "The Test of Fire of Moses",
+        "en": "The Test of Fire of Moses"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Mos%C3%A8%20alla%20prova%20del%20fuoco%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q3924389",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q3098667",
+      "year": 1505,
+      "popularity": 3,
+      "title": {
+        "ko": "Young Man with Arrow",
+        "en": "Young Man with Arrow"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgio%20da%20Castelfranco%2C%20gen.%20Giorgione%2C%20Kunsthistorisches%20Museum%20Wien%2C%20Gem%C3%A4ldegalerie%20-%20Knabe%20mit%20Pfeil%20-%20GG%20323%20-%20Kunsthistorisches%20Museum.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q3098667",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3766873",
+      "year": 1505,
+      "popularity": 2,
+      "title": {
+        "ko": "Giovanni Borgherini and His Tutor",
+        "en": "Giovanni Borgherini and His Tutor"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20%28attr.%29%2C%20giovanni%20borgherini%20e%20il%20suo%20tutore.jpg",
+      "description": {
+        "ko": "painting attributed to Giorgione, National Gallery of Art",
+        "en": "painting attributed to Giorgione, National Gallery of Art"
+      },
+      "source": "http://www.wikidata.org/entity/Q3766873",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q137594811",
+      "year": 1505,
+      "popularity": 1,
+      "title": {
+        "ko": "Q137594811",
+        "en": "Q137594811"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Sacra%20Conversazione%20-%20WGA21123.jpg",
+      "description": {
+        "ko": "painting by Giorgione, Gallerie dell'Accademia",
+        "en": "painting by Giorgione, Gallerie dell'Accademia"
+      },
+      "source": "http://www.wikidata.org/entity/Q137594811",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q930137",
+      "year": 1506,
+      "popularity": 35,
+      "title": {
+        "ko": "폭풍",
+        "en": "폭풍"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Das%20Gewitter.jpg",
+      "description": {
+        "ko": "조르조네의 그림",
+        "en": "조르조네의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q930137",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q595707",
+      "year": 1506,
+      "popularity": 14,
+      "title": {
+        "ko": "Laura",
+        "en": "Laura"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20043.jpg",
+      "description": {
+        "ko": "painting by Giorgione, c. 1506, Kunsthistorisches Museum Wien",
+        "en": "painting by Giorgione, c. 1506, Kunsthistorisches Museum Wien"
+      },
+      "source": "http://www.wikidata.org/entity/Q595707",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q4009159",
+      "year": 1506,
+      "popularity": 10,
+      "title": {
+        "ko": "Old Woman",
+        "en": "Old Woman"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Col%20tempo%20by%20Giorgione.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q4009159",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q3697665",
+      "year": 1506,
+      "popularity": 7,
+      "title": {
+        "ko": "Christ Carrying the Cross",
+        "en": "Christ Carrying the Cross"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tiziano%20o%20giorgione%2C%20cristo%20portacroce.jpg",
+      "description": {
+        "ko": "painting by Giorgione or Titian in the Scuola Grande di San Rocco",
+        "en": "painting by Giorgione or Titian in the Scuola Grande di San Rocco"
+      },
+      "source": "http://www.wikidata.org/entity/Q3697665",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3605531",
+      "year": 1506,
+      "popularity": 2,
+      "title": {
+        "ko": "Adoration of the Magi",
+        "en": "Adoration of the Magi"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Adorazione%20dei%20Magi%20%281506-1507%29.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q3605531",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3605563",
+      "year": 1507,
+      "popularity": 14,
+      "title": {
+        "ko": "Adoration of the Shepherds",
+        "en": "Adoration of the Shepherds"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Adoration%20of%20the%20Shepherds%20-%20National%20Gallery%20of%20Art.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q3605563",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q3997388",
+      "year": 1508,
+      "popularity": 6,
+      "title": {
+        "ko": "Il Tramonto (The Sunset)",
+        "en": "Il Tramonto (The Sunset)"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Il%20Tramonto%20%281506-1510%29.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q3997388",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3656454",
+      "year": 1508,
+      "popularity": 3,
+      "title": {
+        "ko": "Cantore appassionato",
+        "en": "Cantore appassionato"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%2C%20Impassioned%20Singer.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q3656454",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3879242",
+      "year": 1508,
+      "popularity": 3,
+      "title": {
+        "ko": "Nude",
+        "en": "Nude"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20La%20Nuda%2C%201508%20ca.%2C%201034.jpg",
+      "description": {
+        "ko": "fresco by Giorgione in the Gallerie dell'Accademia, Venice",
+        "en": "fresco by Giorgione in the Gallerie dell'Accademia, Venice"
+      },
+      "source": "http://www.wikidata.org/entity/Q3879242",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3937411",
+      "year": 1508,
+      "popularity": 2,
+      "title": {
+        "ko": "Portrait of a Man",
+        "en": "Portrait of a Man"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%2C%20Portrait%20of%20a%20Man.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q3937411",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3977127",
+      "year": 1508,
+      "popularity": 2,
+      "title": {
+        "ko": "Q3977127",
+        "en": "Q3977127"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%2C%20suonatore%20di%20flauto%202.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q3977127",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3948603",
+      "year": 1508,
+      "popularity": 1,
+      "title": {
+        "ko": "Q3948603",
+        "en": "Q3948603"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%28Venice%29%20Il%20Concerto%20-%20Giorgione.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q3948603",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q27968196",
+      "year": 1508,
+      "popularity": 0,
+      "title": {
+        "ko": "Portrait of An Archer",
+        "en": "Portrait of An Archer"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20%28attrib.%29%20-%20Portrait%20of%20An%20Archer.jpg",
+      "description": {
+        "ko": "painting attributed to Giorgione",
+        "en": "painting attributed to Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q27968196",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q500812",
+      "year": 1509,
+      "popularity": 37,
+      "title": {
+        "ko": "잠자는 비너스",
+        "en": "잠자는 비너스"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Sleeping%20Venus%20-%20Google%20Art%20Project%202.jpg",
+      "description": {
+        "ko": "조르조네와 티치아노의 그림",
+        "en": "조르조네와 티치아노의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q500812",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q2872711",
+      "year": 1509,
+      "popularity": 9,
+      "title": {
+        "ko": "Self-portrait",
+        "en": "Self-portrait"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Self%20portrait%2C%20by%20Giorgio%20da%20Castelfranco.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q2872711",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q29916352",
+      "year": 1509,
+      "popularity": 0,
+      "title": {
+        "ko": "Portrait of Giovanni Borgherini and Trifone Gabriele",
+        "en": "Portrait of Giovanni Borgherini and Trifone Gabriele"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgio%20da%20Castelfranco%20Giorgione%20-%20Bildnis%20eines%20Venezianischen%20Senators%20-%207452%20-%20Bavarian%20State%20Painting%20Collections.jpg",
+      "description": {
+        "ko": "painting by Giorgio da Castelfranco (Giorgione)",
+        "en": "painting by Giorgio da Castelfranco (Giorgione)"
+      },
+      "source": "http://www.wikidata.org/entity/Q29916352",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q133503451",
+      "year": 1509,
+      "popularity": 0,
+      "title": {
+        "ko": "Head of a Venetian Girl",
+        "en": "Head of a Venetian Girl"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%27Head%20of%20a%20Venetian%20Girl%27%20by%20Giorgione%2C%20Norton%20Simon%20Museum.JPG",
+      "description": {
+        "ko": "painting by Giorgione, Norton Simon Museum",
+        "en": "painting by Giorgione, Norton Simon Museum"
+      },
+      "source": "http://www.wikidata.org/entity/Q133503451",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3998923",
+      "year": 1510,
+      "popularity": 5,
+      "title": {
+        "ko": "Detroit Trio",
+        "en": "Detroit Trio"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Titian%20-%20The%20Appeal%20-%2026.107%20-%20Detroit%20Institute%20of%20Arts.jpg",
+      "description": {
+        "ko": "painting attributed to Giorgione, Titian and Sebastiano del Piombo",
+        "en": "painting attributed to Giorgione, Titian and Sebastiano del Piombo"
+      },
+      "source": "http://www.wikidata.org/entity/Q3998923",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q7448169",
+      "year": 1510,
+      "popularity": 4,
+      "title": {
+        "ko": "Self-portrait",
+        "en": "Self-portrait"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Portrait%20of%20Giorgione%2C%20ca.%201508%2C%2086.jpg",
+      "description": {
+        "ko": "painting by Giorgione, Szépművészeti Múzeum, 1510",
+        "en": "painting by Giorgione, Szépművészeti Múzeum, 1510"
+      },
+      "source": "http://www.wikidata.org/entity/Q7448169",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q17335702",
+      "year": 1510,
+      "popularity": 1,
+      "title": {
+        "ko": "Woman with a Unicorn",
+        "en": "Woman with a Unicorn"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Anoniem%20-%20Vrouw%20met%20eenhoorn.jpg",
+      "description": {
+        "ko": "painting by unknown in the manner of Giorgione",
+        "en": "painting by unknown in the manner of Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q17335702",
+      "verified": true,
+      "representative": false
+    }
+  ]
+}

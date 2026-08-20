@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>신고전주의 — 쾌락의 미술에서 의무와 시민적 덕목의 미술로</title>
+<style>
+:root {
+ --bg:#0a0c0f; --panel:#12161b; --panel2:#181d23; --text:#f2efe9;
+ --muted:#aeb6bf; --line:#2b3138; --gold:#d6a74a; --red:#bd554e;
+ --blue:#879fba; --stone:#c8c1b4; --green:#93b29a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;color:var(--text);line-height:1.75;
+ font-family:Inter,"Pretendard","Noto Sans KR",Arial,sans-serif;
+ background:
+ radial-gradient(circle at 12% 5%,rgba(135,159,186,.09),transparent 27rem),
+ radial-gradient(circle at 84% 8%,rgba(214,167,74,.10),transparent 28rem),
+ linear-gradient(180deg,#090b0e,#0d1014);
+}
+a{color:#efc875;text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{width:min(1200px,92vw);margin:auto}
+.hero{padding:76px 0 40px;border-bottom:1px solid var(--line)}
+.kicker{font-size:.84rem;font-weight:800;letter-spacing:.12em;color:var(--gold)}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.5rem,6vw,5.25rem);line-height:1.04;margin:.35rem 0 1rem}
+.hero p{max-width:1030px;color:#d3d9df;font-size:1.14rem}
+nav{position:sticky;top:0;z-index:20;background:rgba(10,12,15,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:18px;overflow:auto;padding:12px 0;white-space:nowrap;font-size:.9rem}
+section{padding:58px 0;border-bottom:1px solid var(--line)}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,3.5vw,3.15rem);margin:0 0 20px}
+h3{margin:.1rem 0 .55rem;font-size:1.18rem}
+.lead{font-size:1.08rem;color:#d6dce2;max-width:1000px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:linear-gradient(180deg,var(--panel2),var(--panel));box-shadow:0 14px 34px rgba(0,0,0,.23)}
+.imgbox{background:#07090b;display:flex;align-items:center;justify-content:center;min-height:430px}
+.imgbox img{display:block;width:100%;height:570px;object-fit:contain}
+.caption{padding:18px 20px 20px}
+.caption small{display:block;color:var(--muted);margin-top:6px}
+.badge{display:inline-block;padding:4px 9px;border-radius:99px;border:1px solid #544323;background:rgba(214,167,74,.08);color:#efcc81;font-size:.76rem;font-weight:800;margin-bottom:8px}
+.callout{border-left:4px solid var(--gold);padding:18px 21px;background:rgba(214,167,74,.08);border-radius:0 12px 12px 0;margin:24px 0}
+.bigline{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.3rem,2.6vw,1.95rem);padding:24px 28px;border-top:1px solid #59471f;border-bottom:1px solid #59471f;color:#f0dcb1;margin:25px 0;line-height:1.48}
+.features{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:26px 0}
+.feature{padding:17px;border:1px solid var(--line);border-radius:12px;background:var(--panel);min-height:150px}
+.feature b{color:var(--gold);font-size:.8rem}
+.feature span{display:block;font-weight:800;margin:.35rem 0}
+.feature p{font-size:.9rem;color:var(--muted);margin:0;line-height:1.55}
+.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:28px 0}
+.time{padding:18px;border:1px solid var(--line);border-radius:12px;background:var(--panel);min-height:175px}
+.time .year{font-family:Georgia,serif;color:var(--gold);font-size:1.3rem;font-weight:700}
+.time strong{display:block;margin:.35rem 0}
+.time p{font-size:.89rem;color:var(--muted);margin:0;line-height:1.52}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;margin-top:24px}
+table{width:100%;border-collapse:collapse;min-width:880px;background:var(--panel)}
+th,td{padding:14px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:#171b20;color:#f0d79f;font-size:.9rem}
+td:first-child{font-weight:750;color:#eef1f4;width:18%}
+tr:last-child td{border-bottom:0}
+.factor-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:24px 0}
+.factor{padding:21px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+.factor .num{color:var(--gold);font-weight:800;font-size:.8rem;letter-spacing:.05em}
+.factor h3{margin:.3rem 0 .55rem}
+.factor p{color:#cbd2d9;margin:.3rem 0}
+.note{font-size:.94rem;color:var(--muted);background:#10141a;border:1px solid var(--line);padding:17px 19px;border-radius:12px}
+.source-list{font-size:.9rem;color:var(--muted)}
+footer{padding:36px 0 60px;color:#7f8993;font-size:.86rem}
+mark{background:rgba(214,167,74,.17);color:#ffe1a5;padding:.03em .22em;border-radius:4px}
+ul{padding-left:1.25rem}
+li{margin:.4rem 0}
+@media(max-width:920px){
+ .grid2,.factor-grid{grid-template-columns:1fr}
+ .features,.timeline{grid-template-columns:1fr 1fr}
+ .imgbox img{height:auto;max-height:610px}
+}
+@media(max-width:560px){
+ .features,.timeline{grid-template-columns:1fr}
+}
+</style>
+<link rel="stylesheet" href="../../uhangul/uhangul-runtime.css" data-uhangul-integration="v0.3">
+<style id="art-atlas-artist-link-style">
+.art-atlas-artist-link{font-weight:900;color:#191007!important;background:linear-gradient(180deg,rgba(255,232,151,.98),rgba(255,198,86,.9));border-bottom:2px solid #a96f12;border-radius:.22em;padding:0 .16em;text-decoration:none!important;box-decoration-break:clone;-webkit-box-decoration-break:clone}.art-atlas-artist-link:hover{filter:brightness(1.08);box-shadow:0 0 0 2px rgba(255,214,102,.24)}
+</style>
+</head>
+<body>
+<div data-uhangul-corner-bar style="position:sticky!important;top:0!important;z-index:2147483647!important;clear:both!important;height:64px!important;display:flex!important;align-items:center!important;padding:10px 18px!important;background:#0c1014!important;border-bottom:1px solid #2d3540!important"><button type="button" data-uhangul-corner-button aria-label="uHangul 켜기" title="uHangul 켜기" aria-pressed="false" style="position:relative!important;z-index:2147483647!important;display:block!important;border:2px solid #f4c55b!important;border-radius:50%!important;width:38px!important;height:38px!important;padding:0!important;background:#18221e!important;color:#f4c55b!important;font:800 23px/34px Georgia,serif!important;text-align:center!important;cursor:pointer!important;visibility:visible!important;opacity:1!important">u</button></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="hero">
+
+
+
+<div class="wrap">
+ <div class="kicker">미술사 · 로코코에서 신고전주의로</div>
+ <h1>신고전주의<br><span style="color:var(--gold)">쾌락의 미술에서 의무와 시민적 덕목의 미술로</span></h1>
+ <p>
+   18세기 중반까지 프랑스 상류사회에서 사랑·사교·감각적 즐거움을 다룬 로코코가 번성했는데,
+   불과 수십 년 뒤 자크루이 다비드는 <strong>의무, 절제, 희생, 죽음, 공공의 가치</strong>를 그림의 중심에 놓았다.
+   이 변화는 한 사건 때문에 갑자기 일어난 것이 아니다.
+   <strong>고대 도시의 발굴, 계몽주의의 도덕·이성 담론, 혁명기의 시민 정치</strong>가 순차적으로 겹치면서
+   미술에 요구되는 역할 자체가 달라졌다.
+ </p>
+</div>
+</header>
+
+<nav>
+<div class="wrap">
+ <a href="#answer">0. 무엇이 바꾸었나?</a>
+ <a href="#before">1. 로코코의 세계</a>
+ <a href="#history">2. 역사적 사건</a>
+ <a href="#horatii">3. 호라티우스 형제</a>
+ <a href="#socrates">4. 소크라테스</a>
+ <a href="#revolution">5. 프랑스 혁명</a>
+ <a href="#traits">6. 화풍의 변화</a>
+ <a href="#compare">7. 직접 비교</a>
+  <a href="#countries">국가별 전개</a>
+</div>
+</nav>
+
+<main>
+
+<section id="answer">
+<div class="wrap">
+ <h2>0. 먼저 결론 — 어떤 역사적 사건이 로코코를 신고전주의로 바꾸었는가?</h2>
+ <p class="lead">
+   <strong>단 하나의 사건을 고르면 안 된다.</strong>
+   신고전주의는 프랑스 혁명 이전부터 이미 형성되어 있었다.
+   특히 다비드의 대표작 《호라티우스 형제의 맹세》는 <strong>1784년</strong> 작품으로,
+   프랑스 혁명 <strong>1789년</strong>보다 5년 앞선다.
+ </p>
+
+ <div class="factor-grid">
+   <div class="factor">
+     <div class="num">원인 1 · 1738 / 1748 이후</div>
+     <h3>헤르쿨라네움과 폼페이 발굴</h3>
+     <p>고대 로마가 책 속의 추상적인 과거가 아니라 실제 건축·벽화·가구·생활공간을 가진 세계로 눈앞에 나타났다. 고대의 단순한 형태와 엄격한 질서가 새로운 미적 모델이 되었다.</p>
+   </div>
+   <div class="factor">
+     <div class="num">원인 2 · 18세기 중반</div>
+     <h3>계몽주의와 로코코에 대한 도덕적 비판</h3>
+     <p>이성, 자연법, 교육, 공공성에 대한 관심이 커지면서 귀족의 사적 쾌락과 장식성에 집중하는 미술은 점차 가볍고 도덕적으로 공허하다는 비판을 받게 된다.</p>
+   </div>
+   <div class="factor">
+     <div class="num">원인 3 · 1775–1783</div>
+     <h3>미국 독립혁명</h3>
+     <p>공화국, 시민의 자유, 애국심, 고대 로마의 시민적 덕목이 더 이상 역사책 속의 개념이 아니라 현대 정치의 언어가 된다.</p>
+   </div>
+   <div class="factor">
+     <div class="num">원인 4 · 1789 이후</div>
+     <h3>프랑스 혁명</h3>
+     <p>이미 존재하던 신고전주의의 절제·고대 로마·희생이라는 언어가 실제 혁명의 시민적·정치적 이미지와 결합한다. 다비드는 이후 혁명 자체를 그리는 화가가 된다.</p>
+   </div>
+ </div>
+
+ <div class="callout">
+   따라서 가장 정확한 인과관계는<br><br>
+   <strong>고대의 재발견 + 계몽주의적 도덕 비판</strong> → 신고전주의의 형성 → 
+   <strong>미국·프랑스 혁명</strong> → 신고전주의의 시민적·정치적 의미 강화
+ </div>
+</div>
+</section>
+
+<section id="before">
+<div class="wrap">
+ <h2>1. Before — 로코코가 중요하게 생각했던 세계</h2>
+ <div class="grid2">
+   <article class="card">
+     <div class="imgbox"><img src="images/Fragonard-The-Swing-af227c46d654.jpg" alt="장오노레 프라고나르, 그네"></div>
+     <div class="caption">
+       <span class="badge">로코코</span>
+       <h3>장오노레 프라고나르, 《그네》</h3>
+       <small>1767년경 · 런던 월리스 컬렉션</small>
+     </div>
+   </article>
+   <div>
+     <h3>무엇을 보여주려는 그림인가?</h3>
+     <ul>
+       <li>역사적 의무나 종교적 교훈이 아니라 <strong>사적인 연애와 유희</strong>가 중심이다.</li>
+       <li>그네, 날아가는 신발, 치맛자락과 숨은 연인의 시선이 에로틱한 장난을 만든다.</li>
+       <li>자연은 실제 숲이라기보다 은밀한 연애를 위한 환상적 무대다.</li>
+       <li>분홍·녹색·부드러운 빛이 감각적 쾌락을 극대화한다.</li>
+     </ul>
+     <div class="bigline">
+       로코코의 질문:<br>
+       <strong>“삶을 얼마나 우아하고 즐겁게 누릴 것인가?”</strong>
+     </div>
+   </div>
+ </div>
+</div>
+</section>
+
+<section id="history">
+<div class="wrap">
+ <h2>2. 그림보다 먼저 역사적 시간표를 보면 변화가 이해된다</h2>
+
+ <div class="timeline">
+   <div class="time"><div class="year">1738</div><strong>헤르쿨라네움 발굴</strong><p>고대 로마 유적에 대한 유럽인의 관심이 폭발적으로 커지는 계기 중 하나가 된다.</p></div>
+   <div class="time"><div class="year">1748</div><strong>폼페이 발굴 본격화</strong><p>고대의 건축·벽화·생활문화가 직접 연구와 모방의 대상이 된다.</p></div>
+   <div class="time"><div class="year">1750s–70s</div><strong>계몽주의의 전성기</strong><p>이성·도덕·자연법·교육·공적 책임에 대한 논의가 문화 전반에 영향을 미친다.</p></div>
+   <div class="time"><div class="year">1775–83</div><strong>미국 독립혁명</strong><p>공화주의와 시민적 덕목이 현대 정치 현실로 등장한다.</p></div>
+   <div class="time"><div class="year">1789</div><strong>프랑스 혁명</strong><p>덕성·희생·공화국·시민이라는 신고전주의적 언어가 직접 정치 선전과 역사 기록으로 연결된다.</p></div>
+ </div>
+
+ <div class="callout">
+   특히 중요한 것은 <strong>순서</strong>다.
+   신고전주의가 먼저 생기고 프랑스 혁명이 그 양식을 정치적으로 활용했다.
+   그러므로 <strong>“프랑스 혁명 때문에 신고전주의가 생겼다”</strong>고 하면 시간적으로 맞지 않는다.
+ </div>
+</div>
+</section>
+
+<section id="horatii">
+<div class="wrap">
+ <h2>3. Breakthrough — 《호라티우스 형제의 맹세》에서 가치관이 완전히 바뀐다</h2>
+
+ <div class="grid2">
+   <article class="card">
+     <div class="imgbox"><img src="images/David-Oath-of-the-Horatii-1784-d473275ac167.jpg" alt="자크루이 다비드, 호라티우스 형제의 맹세"></div>
+     <div class="caption">
+       <span class="badge">신고전주의의 대표작</span>
+       <h3>자크루이 다비드, 《호라티우스 형제의 맹세》</h3>
+       <small>1784 · 파리 루브르 박물관</small>
+     </div>
+   </article>
+
+   <div>
+     <h3>프라고나르의 세계와 거의 정반대다</h3>
+     <ul>
+       <li>세 형제는 개인적 행복보다 <strong>국가와 공동체에 대한 의무</strong>를 선택한다.</li>
+       <li>손을 뻗어 맹세하는 몸은 단단하고 조각처럼 명확하다.</li>
+       <li>장식은 최소화되고, 세 개의 아치와 인물군이 엄격하게 대응한다.</li>
+       <li>색채보다 <strong>선·윤곽·형태</strong>가 강하게 느껴진다.</li>
+       <li>남성들은 의무를 선택하고, 여성들은 그 선택이 가져올 개인적 비극을 슬퍼한다.</li>
+     </ul>
+
+     <div class="bigline">
+       로코코가 <strong>개인의 욕망</strong>을 아름답게 만들었다면,<br>
+       다비드는 <strong>욕망을 억제하고 의무를 선택하는 인간</strong>을 영웅으로 만든다.
+     </div>
+
+     <div class="callout">
+       이 그림은 1784년에 제작되었다.
+       따라서 혁명 선전화를 목적으로 그려진 작품은 아니지만,
+       이후 혁명기 사람들이 강조한 <strong>시민적 희생·공적 의무·공화적 덕성</strong>과 매우 쉽게 결합할 수 있는 시각언어를 이미 갖고 있었다.
+     </div>
+   </div>
+ </div>
+</div>
+</section>
+
+<section id="socrates">
+<div class="wrap">
+ <h2>4. 《소크라테스의 죽음》 — 살아남는 것보다 원칙이 중요하다</h2>
+
+ <div class="grid2">
+   <article class="card">
+     <div class="imgbox"><img src="images/David-The-Death-of-Socrates-ebacbfdd4138.jpg" alt="자크루이 다비드, 소크라테스의 죽음"></div>
+     <div class="caption">
+       <span class="badge">도덕적 신고전주의</span>
+       <h3>자크루이 다비드, 《소크라테스의 죽음》</h3>
+       <small>1787 · 뉴욕 메트로폴리탄 미술관</small>
+     </div>
+   </article>
+
+   <div>
+     <h3>여기서 신고전주의의 윤리적 성격이 더 분명해진다</h3>
+     <ul>
+       <li>소크라테스는 죽음을 피할 수 있지만 자신의 원칙을 버리지 않는다.</li>
+       <li>독배를 받으면서도 몸은 곧고 손가락은 위를 가리킨다.</li>
+       <li>주변 사람들의 슬픔과 대비되어 그의 이성적 자기통제가 더욱 강조된다.</li>
+       <li>고대사는 단순한 고풍스러운 소재가 아니라 <strong>현대인이 따라야 할 윤리적 모델</strong>이 된다.</li>
+     </ul>
+
+     <div class="bigline">
+       신고전주의의 고대는<br>
+       <strong>“예쁜 옛날”이 아니라 “현재를 판단하는 도덕적 거울”</strong>이다.
+     </div>
+   </div>
+ </div>
+</div>
+</section>
+
+<section id="revolution">
+<div class="wrap">
+ <h2>5. 프랑스 혁명 — 신고전주의가 실제 정치와 결합하다</h2>
+
+ <div class="grid2">
+   <article class="card">
+     <div class="imgbox"><img src="images/Death-of-Marat-by-David-a6625a3ca21b.jpg" alt="자크루이 다비드, 마라의 죽음"></div>
+     <div class="caption">
+       <span class="badge">혁명기의 신고전주의</span>
+       <h3>자크루이 다비드, 《마라의 죽음》</h3>
+       <small>1793 · 브뤼셀 벨기에 왕립미술관</small>
+     </div>
+   </article>
+
+   <div>
+     <h3>고대 영웅이 아니라 현대의 정치적 순교자를 그린다</h3>
+     <ul>
+       <li>1793년 암살된 혁명가 장폴 마라가 욕조에서 죽은 모습이다.</li>
+       <li>배경과 장식은 거의 제거되어 시선이 죽은 인물과 편지에 집중된다.</li>
+       <li>마라의 몸은 실제 사건의 피해자이면서 동시에 고전적·종교적 순교자의 이미지처럼 정제된다.</li>
+       <li>다비드는 이제 과거 로마의 덕목을 빌리는 데서 더 나아가 <strong>현재의 혁명을 역사화</strong>한다.</li>
+     </ul>
+
+     <div class="callout">
+       이것이 프랑스 혁명의 역할이다.
+       혁명은 신고전주의를 처음 만든 것이 아니라,
+       이미 준비되어 있던 <strong>절제·희생·공공성·고대 공화국의 언어</strong>에
+       실제 정치적 주체와 사건을 넣었다.
+     </div>
+   </div>
+ </div>
+</div>
+</section>
+
+<section id="traits">
+<div class="wrap">
+ <h2>6. 로코코에서 신고전주의로 — 그림의 문법도 가치관과 함께 바뀐다</h2>
+
+ <div class="table-wrap">
+ <table>
+   <thead><tr><th>관찰 항목</th><th>로코코</th><th>신고전주의</th></tr></thead>
+   <tbody>
+     <tr><td>핵심 가치</td><td>즐거움·우아함·사랑·감각</td><td>의무·절제·희생·덕성</td></tr>
+     <tr><td>주인공</td><td>연인·귀족·목가적 인물</td><td>시민·영웅·철학자·혁명가</td></tr>
+     <tr><td>역사관</td><td>신화를 감각적 유희로 이용</td><td>고대를 윤리적·정치적 모범으로 이용</td></tr>
+     <tr><td>선</td><td>부드럽고 유동적</td><td>날카롭고 명확한 윤곽</td></tr>
+     <tr><td>구도</td><td>비대칭·곡선·소용돌이</td><td>수평·수직·삼각형·건축적 질서</td></tr>
+     <tr><td>색채</td><td>파스텔·감각적·화려함</td><td>절제되고 형태를 방해하지 않음</td></tr>
+     <tr><td>표면</td><td>부드러운 붓질과 빛나는 질감</td><td>매끈하고 조각 같은 표면</td></tr>
+     <tr><td>관람자에게 요구</td><td>“즐겨라.”</td><td>“판단하고 본받아라.”</td></tr>
+   </tbody>
+ </table>
+ </div>
+</div>
+</section>
+
+<section id="compare">
+<div class="wrap">
+ <h2>7. 《그네》와 《호라티우스 형제의 맹세》를 나란히 보면</h2>
+
+ <div class="table-wrap">
+ <table>
+   <thead><tr><th>질문</th><th>프라고나르 《그네》</th><th>다비드 《호라티우스 형제의 맹세》</th></tr></thead>
+   <tbody>
+     <tr><td>무엇이 중요한가?</td><td>개인의 욕망과 즐거움</td><td>공동체에 대한 의무</td></tr>
+     <tr><td>행동</td><td>놀이와 유혹</td><td>맹세와 자기희생</td></tr>
+     <tr><td>공간</td><td>환상적이고 무성한 정원</td><td>단순하고 엄격한 로마식 건축</td></tr>
+     <tr><td>움직임</td><td>곡선·흔들림·우연</td><td>직선·긴장·결단</td></tr>
+     <tr><td>색</td><td>분홍·녹색·빛의 향연</td><td>절제된 색과 강한 형태</td></tr>
+     <tr><td>관람자 역할</td><td>비밀스러운 유희를 엿본다</td><td>인물의 선택을 도덕적으로 판단한다</td></tr>
+     <tr><td>삶에 대한 태도</td><td><strong>“즐거움을 놓치지 말라.”</strong></td><td><strong>“옳은 일을 위해 욕망을 희생하라.”</strong></td></tr>
+   </tbody>
+ </table>
+ </div>
+
+ <div class="bigline">
+   불과 20년 정도 사이에 프랑스 미술의 이상적 인간상은<br>
+   <strong>“즐길 줄 아는 세련된 귀족”에서 “자신을 통제하고 공동체를 위해 희생하는 시민”으로 이동한다.</strong>
+ </div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+ <h2>그래서 가장 중요한 역사적 해석은</h2>
+ <div class="callout">
+   <strong>1단계 — 미적 토대:</strong> 헤르쿨라네움·폼페이 발굴이 고전 고대에 새로운 현실감을 부여했다.<br><br>
+   <strong>2단계 — 사상적 토대:</strong> 계몽주의가 이성·도덕·공공성·교육을 강조하며 로코코의 사적 쾌락 문화에 대한 비판적 분위기를 만들었다.<br><br>
+   <strong>3단계 — 정치적 토대:</strong> 미국 독립혁명과 프랑스 혁명이 공화국·시민·희생·공적 덕목을 실제 현대 정치의 문제로 만들었다.<br><br>
+   <strong>4단계 — 회화적 완성:</strong> 다비드는 이 모든 요소를 고대 로마식 단순성, 선명한 윤곽, 엄격한 구성과 결합하여 신고전주의의 대표적 시각언어를 만들었다.
+ </div>
+
+ <div class="note">
+   ※ “로코코 = 부도덕, 신고전주의 = 도덕”이라는 단순한 가치판단은 피해야 한다.
+   이는 두 시대가 예술에 요구한 사회적 역할이 달랐다는 뜻이다.
+   또한 신고전주의는 프랑스 혁명의 산물이 아니라 18세기 중반부터 형성된 국제적 고전주의 부흥이며,
+   혁명은 그중 프랑스의 한 흐름을 강하게 정치화했다.
+ </div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+ <h2>참고 자료</h2>
+ <div class="source-list">
+   <ul>
+     <li><a href="https://www.metmuseum.org/toah/ht/09/euwf.html" target="_blank" rel="noopener">메트로폴리탄 미술관 — 1600–1800년 프랑스 연표: 계몽주의, 폼페이·헤르쿨라네움, 혁명과 신고전주의의 관계</a></li>
+     <li><a href="https://www.getty.edu/art/collection/gallery/1145Y1" target="_blank" rel="noopener">게티 미술관 — 폼페이·헤르쿨라네움 발굴과 신고전주의</a></li>
+     <li><a href="https://collections.louvre.fr/ark:/53355/cl010062239" target="_blank" rel="noopener">루브르 박물관 — 자크루이 다비드 《호라티우스 형제의 맹세》, 1784</a></li>
+     <li><a href="https://www.louvre.fr/en/exhibitions-and-events/exhibitions/jacques-louis-david" target="_blank" rel="noopener">루브르 박물관 — 다비드와 프랑스 혁명</a></li>
+     <li><a href="https://www.getty.edu/art/collection/exhibition/103NSK" target="_blank" rel="noopener">게티 미술관 — 1770–1820 유럽 드로잉과 고대 유적 발견의 영향</a></li>
+   </ul>
+   <p>작품 이미지는 자료 폴더의 로컬 이미지 파일을 사용한다.</p>
+ </div>
+</div>
+</section>
+
+
+<section id="countries"><div class="wrap">
+<h2>여러 국가에서의 전개 — 고대라는 공통 모델, 서로 다른 정치적 의미</h2>
+<p class="lead">신고전주의는 <strong>고대 그리스·로마, 명료한 선, 절제, 질서</strong>를 공유했지만 각국의 정치와 사회에 따라 고대가 의미하는 바가 달랐다.</p>
+<div class="table-wrap"><table><thead><tr><th>국가·지역</th><th>특징</th><th>대표 인물</th></tr></thead><tbody>
+<tr><td>프랑스</td><td>시민적 덕목과 희생의 이미지가 혁명과 결합했고, 이후 나폴레옹 시대에는 제국의 권위와 고대 로마 이미지로 전환되었다.</td><td>자크루이 다비드, 앵그르</td></tr>
+<tr><td>로마·이탈리아</td><td>고대 유적과 발굴품을 직접 접할 수 있는 국제적 연구·교육 중심지였으며, 유럽 각국의 예술가들이 로마에서 고전주의를 학습했다.</td><td>안토니오 카노바</td></tr>
+<tr><td>영국</td><td>그랜드 투어, 고고학, 고전건축의 영향이 강했고 귀족문화와 새로운 공공건축에 고전주의가 폭넓게 적용되었다.</td><td>조슈아 레이놀즈, 로버트 애덤</td></tr>
+<tr><td>독일어권</td><td>빙켈만의 고대미술 이론을 통해 ‘고귀한 단순성과 고요한 위대함’이라는 고전주의 미학이 강하게 정립되었다.</td><td>요한 요아힘 빙켈만, 안톤 라파엘 멩스</td></tr>
+<tr><td>미국</td><td>새 공화국은 고대 그리스·로마의 공화정 이미지를 의회·공공건축과 국가 상징에 적극 사용했다.</td><td>벤저민 웨스트, 토머스 제퍼슨의 건축</td></tr>
+</tbody></table></div>
+<div class="callout"><strong>공통 철학:</strong> 고대의 질서와 절제를 현대의 기준으로 되살린다.<br><strong>지역적 차이:</strong> 프랑스에서는 혁명과 시민적 덕성, 미국에서는 공화국, 영국에서는 고고학과 건축, 독일어권에서는 미학이 특히 강조되었다.</div>
+</div></section>
+
+</main>
+
+<footer>
+<div class="wrap">신고전주의 — 쾌락의 미술에서 의무와 시민적 덕목의 미술로 · 역사와 작품의 비교</div>
+</footer>
+
+<script defer src="../../uhangul/uhangul-runtime.js" data-uhangul-integration="v0.4"></script>
+
+</body>
+</html>

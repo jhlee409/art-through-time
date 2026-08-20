@@ -1,0 +1,14 @@
+.env
+logs/
+delivery/
+data/backups/
+data/*.tmp
+data/.image-staging/
+
+data/thumbnails/*
+!data/thumbnails/_placeholder/
+!data/thumbnails/_placeholder/artwork-placeholder.png
+
+data/high-resolution/
+data/topic-images/
+data/미술사조/images/

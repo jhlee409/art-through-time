@@ -1,0 +1,1598 @@
+{
+  "schema": 18,
+  "artistId": "artist-Q82445",
+  "qid": "Q82445",
+  "artist": {
+    "name": {
+      "ko": "앙리 드 툴루즈로트레크",
+      "en": "Henri de Toulouse-Lautrec"
+    },
+    "birth": 1864,
+    "death": 1901,
+    "nationality": {
+      "ko": "프랑스",
+      "en": "France"
+    }
+  },
+  "fetchedAt": "2026-08-11T23:17:30.885Z",
+  "works": [
+    {
+      "id": "wikidata-Q17429571",
+      "year": 1889,
+      "popularity": 9,
+      "title": {
+        "ko": "세탁부",
+        "en": "La Blanchisseuse"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toulouse-Lautrec%20-%20La%20Blanchisseuse.jpg",
+      "description": {
+        "ko": "툴루즈로트레크의 그림",
+        "en": "툴루즈로트레크의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q17429571",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q3612977",
+      "year": 1880,
+      "popularity": 6,
+      "title": {
+        "ko": "우편 마차를 모는 알퐁스 드 툴루즈 로트레크 백작",
+        "en": "Alphonse de Toulouse-Lautrec-Monfa Driving his Mail-Coach in Nice"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%20024.jpg",
+      "description": {
+        "ko": "앙리 드 툴루즈로트레크의 그림",
+        "en": "앙리 드 툴루즈로트레크의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q3612977",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q28769270",
+      "year": 1880,
+      "popularity": 1,
+      "title": {
+        "ko": "Touc, Seated on a Table",
+        "en": "Touc, Seated on a Table"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%2C%20Touc%2C%20Seated%20on%20a%20Table%2C%20ca.%201879-81%2C%20oil%20on%20panel%20%28Hammer%20Museum%29%2C%20cropped.JPG",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q28769270",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q49869714",
+      "year": 1880,
+      "popularity": 1,
+      "title": {
+        "ko": "Madame Countess Adèle de Toulouse-Lautrec in the Garden of Malromé",
+        "en": "Madame Countess Adèle de Toulouse-Lautrec in the Garden of Malromé"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toulouse-Lautrec%20-%20Ad%C3%A8le%20de%20Toulouse-Lautrec.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q49869714",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q118181428",
+      "year": 1881,
+      "popularity": 2,
+      "title": {
+        "ko": "White horse GAZELLE",
+        "en": "White horse GAZELLE"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%28Albi%29%20Cheval%20blanc%20GAZELLE%20-%20Toulouse-Lautrec.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q118181428",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3630732",
+      "year": 1882,
+      "popularity": 8,
+      "title": {
+        "ko": "거울 앞의 자화상",
+        "en": "Self-portrait in front of a mirror"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%28Albi%29%20Auto-portrait%20devant%20un%20miroir%20-%201882%20Toulouse-Lautrec%20-%20MLT.20.jpg",
+      "description": {
+        "ko": "앙리 드 툴루즈로트레크의 그림",
+        "en": "앙리 드 툴루즈로트레크의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q3630732",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q3794238",
+      "year": 1882,
+      "popularity": 4,
+      "title": {
+        "ko": "Q3794238",
+        "en": "Q3794238"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%28Albi%29%20Le%20jeune%20Routy%20%C3%A0%20C%C3%A9leyran%20-%20Toulouse-Lautrec%20-%201882.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q3794238",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q21712319",
+      "year": 1882,
+      "popularity": 1,
+      "title": {
+        "ko": "The Jockeys",
+        "en": "The Jockeys"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%20-%20Les%20jockeys.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q21712319",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3821901",
+      "year": 1886,
+      "popularity": 4,
+      "title": {
+        "ko": "Adéle de Toulouse-Lautrec in the salon at Malromé",
+        "en": "Adéle de Toulouse-Lautrec in the salon at Malromé"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%28Albi%29%20La%20Comtesse%20Ad%C3%A8le%20de%20Toulouse-Lautrec%20dans%20le%20salon%20du%20Ch%C3%A2teau%20de%20Malrom%C3%A9%20-%20Toulouse-Lautrec%20MTL.inv122.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q3821901",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q124260245",
+      "year": 1884,
+      "popularity": 2,
+      "title": {
+        "ko": "Q124260245",
+        "en": "Q124260245"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toulouse-Lautrec%2C%20de%20dos.jpg",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "http://www.wikidata.org/entity/Q124260245",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q32032740",
+      "year": 1884,
+      "popularity": 1,
+      "title": {
+        "ko": "Sacred Grove",
+        "en": "Sacred Grove"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Sacred%20Grove%20by%20Henri%20de%20Toulouse-Lautrec%2C%20French%2C%201884%2C%20oil%20on%20canvas%20-%20Princeton%20University%20Art%20Museum%20-%20DSC07014.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q32032740",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q27954929",
+      "year": 1885,
+      "popularity": 5,
+      "title": {
+        "ko": "수잔 발라동의 초상",
+        "en": "Portrait of Suzanne Valadon"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toulouse-Lautrec%2C%20Henri%20de%20-%20Portrait%20de%20Suzanne%20Valadon%20%28Madame%20Suzanne%20Valadon%2C%20artiste%20peintre%29%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "앙리 드 툴루즈로트레크의 그림",
+        "en": "앙리 드 툴루즈로트레크의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q27954929",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q3937771",
+      "year": 1885,
+      "popularity": 3,
+      "title": {
+        "ko": "Émile Bernard",
+        "en": "Émile Bernard"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lautrecx07.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q3937771",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q20189748",
+      "year": 1885,
+      "popularity": 1,
+      "title": {
+        "ko": "Carmen Gaudin",
+        "en": "Carmen Gaudin"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%2C%20Carmen%20Gaudin%2C%201885%2C%20NGA%2052229.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q20189748",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q108333700",
+      "year": 1886,
+      "popularity": 2,
+      "title": {
+        "ko": "그르넬의 압생트 마시는 여인",
+        "en": "At Grenelle, Absinthe Drinker"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toulouse-Lautrec%20-%20Bebedora%20de%20ajenjo%20en%20Grenelle.jpg",
+      "description": {
+        "ko": "앙리 드 툴루즈로트레크의 그림",
+        "en": "앙리 드 툴루즈로트레크의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q108333700",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q50113232",
+      "year": 1886,
+      "popularity": 1,
+      "title": {
+        "ko": "Clown",
+        "en": "Clown"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/1886%20Toulouse-Lautrec%20Clown%20anagoria.JPG",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec at the Alte Nationalgalerie, Berlin, Germany",
+        "en": "painting by Henri de Toulouse-Lautrec at the Alte Nationalgalerie, Berlin, Germany"
+      },
+      "source": "http://www.wikidata.org/entity/Q50113232",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q56239082",
+      "year": 1887,
+      "popularity": 3,
+      "title": {
+        "ko": "빈센트 반 고흐의 초상",
+        "en": "Portrait of Vincent van Gogh (1887)"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toulouse-Lautrec%20de%20Henri%20Vincent%20van%20Gogh%20Sun.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q56239082",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3607561",
+      "year": 1888,
+      "popularity": 8,
+      "title": {
+        "ko": "페르난도 서커스단에서",
+        "en": "Equestrienne (At the Cirque Fernando)"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%20-%20Equestrienne%20%28At%20the%20Cirque%20Fernando%29%20-%201925.523%20-%20Art%20Institute%20of%20Chicago.jpg",
+      "description": {
+        "ko": "앙리 드 툴루즈로트레크의 그림",
+        "en": "앙리 드 툴루즈로트레크의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q3607561",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q20540063",
+      "year": 1888,
+      "popularity": 1,
+      "title": {
+        "ko": "Carmen Gaudin in the Artist's Studio",
+        "en": "Carmen Gaudin in the Artist's Studio"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%20-%20Carmen%20Gaudin%20in%20the%20Artist%27s%20Studio%20-%2048.605%20-%20Museum%20of%20Fine%20Arts.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q20540063",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3824633",
+      "year": 1896,
+      "popularity": 9,
+      "title": {
+        "ko": "화장",
+        "en": "La Toilette"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%28Albi%29%20Rousse%20%28La%20Toilette%29%20-%201889%20-%20Henri%20de%20Toulouse-Lautrec%20-%20Mus%C3%A9e%20d%27Orsay%2C%20Paris.jpg",
+      "description": {
+        "ko": "툴루즈로트레크의 그림",
+        "en": "툴루즈로트레크의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q3824633",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q12899487",
+      "year": 1889,
+      "popularity": 8,
+      "title": {
+        "ko": "숙취 (수잔 발라동)",
+        "en": "The Hangover (Suzanne Valadon)"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toulouse-Lautrec%20-%20The%20Hangover%20%28Suzanne%20Valadon%29%2C%201887-1889%20color%20corrected.jpg",
+      "description": {
+        "ko": "앙리 드 툴루즈로트레크의 그림",
+        "en": "앙리 드 툴루즈로트레크의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q12899487",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q6022118",
+      "year": 1889,
+      "popularity": 5,
+      "title": {
+        "ko": "Monsieur Fourcade",
+        "en": "Monsieur Fourcade"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toulouse-Lautrec%20-%20Monsieur%20Fourcade.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q6022118",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q32201097",
+      "year": 1889,
+      "popularity": 4,
+      "title": {
+        "ko": "Woman with a parasol",
+        "en": "Woman with a parasol"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toulouse-Lautrec%20--%20Femme%20%C3%A0%20l%27ombrelle.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q32201097",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q5967779",
+      "year": 1889,
+      "popularity": 4,
+      "title": {
+        "ko": "La Rousse in a White Blouse",
+        "en": "La Rousse in a White Blouse"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%20-%20La%20rousse%20avec%20chemisier%20blanc.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q5967779",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q17027477",
+      "year": 1889,
+      "popularity": 3,
+      "title": {
+        "ko": "Henry Samary de la Comédie Française",
+        "en": "Henry Samary de la Comédie Française"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lautrec%20the%20actor%20henry%20samary%201889.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q17027477",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q20268479",
+      "year": 1889,
+      "popularity": 1,
+      "title": {
+        "ko": "Moulin de la Galette",
+        "en": "Moulin de la Galette"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%20-%20Moulin%20de%20la%20Galette%20-%201933.458%20-%20Art%20Institute%20of%20Chicago.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q20268479",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3633443",
+      "year": 1890,
+      "popularity": 11,
+      "title": {
+        "ko": "물랭 루주에서, 춤",
+        "en": "At the Moulin Rouge, The Dance"
+      },
+      "country": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%2C%20French%20-%20At%20the%20Moulin%20Rouge-%20The%20Dance%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "앙리 드 툴루즈로트레크의 그림",
+        "en": "앙리 드 툴루즈로트레크의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q3633443",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q17505777",
+      "year": 1890,
+      "popularity": 1,
+      "title": {
+        "ko": "Mademoiselle Dihau au piano - Toulouse-Lautrec - 1890 - MTL.132",
+        "en": "Mademoiselle Dihau au piano - Toulouse-Lautrec - 1890 - MTL.132"
+      },
+      "country": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%28Albi%29%20Mademoiselle%20Dihau%20au%20piano%20-%20Toulouse-Lautrec%20-%201890%20MTL.132.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q17505777",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q19912009",
+      "year": 1890,
+      "popularity": 1,
+      "title": {
+        "ko": "The Streetwalker",
+        "en": "The Streetwalker"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%2C%20The%20Streetwalker%2C%20ca.%201890%E2%80%9391.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec (MET, 2003.20.13)",
+        "en": "painting by Henri de Toulouse-Lautrec (MET, 2003.20.13)"
+      },
+      "source": "http://www.wikidata.org/entity/Q19912009",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q80989451",
+      "year": 1890,
+      "popularity": 1,
+      "title": {
+        "ko": "A Woman Seated in a Garden",
+        "en": "A Woman Seated in a Garden"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toulouse-Lautrec%20-%20A%20Woman%20Seated%20in%20a%20Garden%2C%20about%201890.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec, Barber Institute of Fine Arts",
+        "en": "painting by Henri de Toulouse-Lautrec, Barber Institute of Fine Arts"
+      },
+      "source": "http://www.wikidata.org/entity/Q80989451",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q17026577",
+      "year": 1891,
+      "popularity": 5,
+      "title": {
+        "ko": "물랭 루주: 라 굴뤼",
+        "en": "Moulin Rouge: La Goulue"
+      },
+      "country": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%20049.jpg",
+      "description": {
+        "ko": "poster by Henri de Toulouse-Lautrec (1891)",
+        "en": "poster by Henri de Toulouse-Lautrec (1891)"
+      },
+      "source": "http://www.wikidata.org/entity/Q17026577",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3602924",
+      "year": 1891,
+      "popularity": 2,
+      "title": {
+        "ko": "카페 라 미에서",
+        "en": "At the Café La Mie"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%20001.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q3602924",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q17491841",
+      "year": 1891,
+      "popularity": 1,
+      "title": {
+        "ko": "Q17491841",
+        "en": "Q17491841"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%20052a.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q17491841",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3607521",
+      "year": 1892,
+      "popularity": 18,
+      "title": {
+        "ko": "물랭 루주에서",
+        "en": "At the Moulin Rouge"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%20-%20At%20the%20Moulin%20Rouge%20-%201928.610%20-%20Art%20Institute%20of%20Chicago.jpg",
+      "description": {
+        "ko": "툴루즈로트레크의 그림",
+        "en": "툴루즈로트레크의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q3607521",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q12015473",
+      "year": 1892,
+      "popularity": 6,
+      "title": {
+        "ko": "침대",
+        "en": "Le Lit"
+      },
+      "country": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lautrec%20in%20bed%201893.jpg",
+      "description": {
+        "ko": "앙리 드 툴루즈로트레크의 그림",
+        "en": "앙리 드 툴루즈로트레크의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q12015473",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q19905264",
+      "year": 1892,
+      "popularity": 5,
+      "title": {
+        "ko": "물랭 루주의 영국인",
+        "en": "The Englishman (William Tom Warrener, 1861–1934) at the Moulin Rouge"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%2C%20The%20Englishman%20at%20the%20Moulin%20Rouge%2C%201892.jpg",
+      "description": {
+        "ko": "앙리 드 툴루즈로트레크의 그림",
+        "en": "앙리 드 툴루즈로트레크의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q19905264",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q28495679",
+      "year": 1892,
+      "popularity": 4,
+      "title": {
+        "ko": "In bed - the kiss",
+        "en": "In bed - the kiss"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toulouse%20Lautrec%20In%20bed%20the%20kiss.jpg",
+      "description": {
+        "ko": "painting by Toulouse Lautrec",
+        "en": "painting by Toulouse Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q28495679",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q28497105",
+      "year": 1892,
+      "popularity": 4,
+      "title": {
+        "ko": "The Kiss",
+        "en": "The Kiss"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lautrec%20the%20kiss%201892.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q28497105",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3622664",
+      "year": 1892,
+      "popularity": 4,
+      "title": {
+        "ko": "암바사되르",
+        "en": "Ambassadeurs (Aristide Bruant dans son cabaret)"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lautrec%20ambassadeurs%2C%20aristide%20bruant%20%28poster%29%201892.jpg",
+      "description": {
+        "ko": "앙리 드 툴루즈로트레크의 석판화",
+        "en": "앙리 드 툴루즈로트레크의 석판화"
+      },
+      "source": "http://www.wikidata.org/entity/Q3622664",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q5831987",
+      "year": 1892,
+      "popularity": 4,
+      "title": {
+        "ko": "At the Moulin Rouge: Two women waltzing",
+        "en": "At the Moulin Rouge: Two women waltzing"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%2C%201892%2C%20Deux%20femmes%20dansant%20au%20Moulin-Rouge%2C%20oil%20on%20cardboard%2C%2093%20x%2080%20cm%2C%20National%20Gallery%20in%20Prague.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q5831987",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q87367872",
+      "year": 1892,
+      "popularity": 3,
+      "title": {
+        "ko": "Jane Avril Leaving the Moulin Rouge",
+        "en": "Jane Avril Leaving the Moulin Rouge"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%2C%201892%2C%20Wadsworth%20Atheneum.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q87367872",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q17491728",
+      "year": 1892,
+      "popularity": 2,
+      "title": {
+        "ko": "춤추는 제인 아브릴",
+        "en": "Jeanne avril dansant"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%20-%20Jane%20Avril%20Dancing%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "앙리 드 툴루즈로트레크의 그림",
+        "en": "앙리 드 툴루즈로트레크의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q17491728",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q18685995",
+      "year": 1892,
+      "popularity": 1,
+      "title": {
+        "ko": "Flirt",
+        "en": "Flirt"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%2C%20French%20-%20Flirt%20%28An%20Englishman%20at%20the%20Moulin%20Rouge%29%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "lithograph by Henri de Toulouse-Lautrec",
+        "en": "lithograph by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q18685995",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q20190306",
+      "year": 1892,
+      "popularity": 1,
+      "title": {
+        "ko": "A Corner of the Moulin de la Galette",
+        "en": "A Corner of the Moulin de la Galette"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%20-%20A%20Corner%20of%20the%20Moulin%20de%20la%20Galette%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q20190306",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q18758800",
+      "year": 1893,
+      "popularity": 4,
+      "title": {
+        "ko": "디방 자포네",
+        "en": "Divan Japonais"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%28Albi%29%20Le%20Divan%20japonais%201893%20lithographie%20-%20Toulouse-Lautrec%20MTH.A3.jpg",
+      "description": {
+        "ko": "앙리 드 툴루즈로트레크의 석판화",
+        "en": "앙리 드 툴루즈로트레크의 석판화"
+      },
+      "source": "http://www.wikidata.org/entity/Q18758800",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3607539",
+      "year": 1894,
+      "popularity": 8,
+      "title": {
+        "ko": "물랭 가의 살롱",
+        "en": "In the Salon at the Rue des Moulins"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%28Albi%29%20Au%20Salon%20de%20la%20rue%20des%20Moulins%20-%20Henri%20de%20Toulouse-Lautrec%201894%20MTL.inv180%20%28small%29.jpg",
+      "description": {
+        "ko": "앙리 드 툴루즈로트레크의 그림",
+        "en": "앙리 드 툴루즈로트레크의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q3607539",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q121434609",
+      "year": 1894,
+      "popularity": 3,
+      "title": {
+        "ko": "Q121434609",
+        "en": "Q121434609"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%28Albi%29%20Femme%20qui%20tire%20son%20bas%201894%20-%20Toulouse-Lautrec%20-%20Mus%C3%A9e%20Toulouse-Lautrec%20MTL.177.jpg",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "http://www.wikidata.org/entity/Q121434609",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q19905335",
+      "year": 1894,
+      "popularity": 2,
+      "title": {
+        "ko": "소파",
+        "en": "The Sofa"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%20009.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec (MET, 51.33.2)",
+        "en": "painting by Henri de Toulouse-Lautrec (MET, 51.33.2)"
+      },
+      "source": "http://www.wikidata.org/entity/Q19905335",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q20190438",
+      "year": 1894,
+      "popularity": 2,
+      "title": {
+        "ko": "Rue des Moulins, 1894",
+        "en": "Rue des Moulins, 1894"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rue%20des%20Moulins%2C%201894%20sc001208.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q20190438",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q64491271",
+      "year": 1895,
+      "popularity": 3,
+      "title": {
+        "ko": "Q64491271",
+        "en": "Q64491271"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%20-%20Panneaux%20pour%20la%20baraque%20de%20la%20Goulue%2C%20%C3%A0%20la%20Foire%20du%20Tr%C3%B4ne%20%C3%A0%20Paris%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q64491271",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q64491272",
+      "year": 1895,
+      "popularity": 3,
+      "title": {
+        "ko": "La danse mauresque by Henri de Toulouse-Lautrec",
+        "en": "La danse mauresque by Henri de Toulouse-Lautrec"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%20043.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q64491272",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q951954",
+      "year": 1895,
+      "popularity": 3,
+      "title": {
+        "ko": "물랭 루즈의 연기자, 여자 어릿광대 차-우-코",
+        "en": "The clownesse cha-u-kao at the Moulin Rouge"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lautrec%20the%20clownesse%20cha-u-kao%20at%20the%20moulin%20rouge%20ii%201895.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q951954",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q18191111",
+      "year": 1895,
+      "popularity": 2,
+      "title": {
+        "ko": "The Two Girl Friends",
+        "en": "The Two Girl Friends"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%20-%20Les%20Deux%20Amies%20-%20106%20-%20Foundation%20E.G.%20B%C3%BChrle%20Collection.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q18191111",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q23499306",
+      "year": 1895,
+      "popularity": 2,
+      "title": {
+        "ko": "May Belfort",
+        "en": "May Belfort"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%20-%20May%20Belfort%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "artwork by Henri de Toulouse-Lautrec, Albi, 1864 – Malromé, 1901 (1895)",
+        "en": "artwork by Henri de Toulouse-Lautrec, Albi, 1864 – Malromé, 1901 (1895)"
+      },
+      "source": "http://www.wikidata.org/entity/Q23499306",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q17354350",
+      "year": 1896,
+      "popularity": 3,
+      "title": {
+        "ko": "Conquête de passage",
+        "en": "Conquête de passage"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Augustins%20-%20Conqu%C3%AAte%20de%20passage%2C%201896%20-%20Henri%20de%20Toulouse-Lautrec%20RO%20618.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q17354350",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q4212198",
+      "year": 1899,
+      "popularity": 6,
+      "title": {
+        "ko": "줄타는 무용수",
+        "en": "The Rope Dancer"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Rope%20Dancer%20%28Henri%20de%20Toulouse-Lautrec%29%20-%20Nationalmuseum%20-%2025885.tif",
+      "description": {
+        "ko": "앙리 드 툴루즈로트레크의 그림",
+        "en": "앙리 드 툴루즈로트레크의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q4212198",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q3945755",
+      "year": 1899,
+      "popularity": 4,
+      "title": {
+        "ko": "In a Private Dining Room",
+        "en": "In a Private Dining Room"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Au%20Rat%20Mort.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q3945755",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q18030970",
+      "year": 1900,
+      "popularity": 3,
+      "title": {
+        "ko": "The modiste",
+        "en": "The modiste"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%28Albi%29%20La%20modiste%2C%20Melle%20Louise%20Blouet%20dite%20d%27Enguin%201900%20-%20Toulouse-Lautrec%2C%20MTL.212.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q18030970",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q49869220",
+      "year": 1901,
+      "popularity": 3,
+      "title": {
+        "ko": "Paul Viaud em almirante do século XVIII",
+        "en": "Paul Viaud em almirante do século XVIII"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toulouse-Lautrec%20-%20Paul%20Viaud.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q49869220",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q113137653",
+      "year": 1901,
+      "popularity": 2,
+      "title": {
+        "ko": "Examination at faculty of medicine of Paris",
+        "en": "Examination at faculty of medicine of Paris"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%28Albi%29%20Un%20examen%20%C3%A0%20la%20facult%C3%A9%20de%20M%C3%A9decine%20de%20Paris%20-%20Toulouse-Lautrec%201901%20MTL.216.jpg",
+      "description": {
+        "ko": "painting by Henri de Toulouse-Lautrec",
+        "en": "painting by Henri de Toulouse-Lautrec"
+      },
+      "source": "http://www.wikidata.org/entity/Q113137653",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "curated-jane-avril-jardin-de-paris-1893",
+      "year": 1893,
+      "popularity": 100,
+      "title": {
+        "ko": "제인 아브릴 (자르댕 드 파리)",
+        "en": "Jane Avril (Jardin de Paris)"
+      },
+      "country": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lautrec%20jane%20avril%20at%20the%20jardin%20de%20paris%20%28poster%29%201893.jpg",
+      "description": {
+        "ko": "제인 아브릴의 자르댕 드 파리 공연을 알린 석판화 포스터.",
+        "en": "Lithographic poster advertising Jane Avril's performance at the Jardin de Paris."
+      },
+      "source": "https://www.metmuseum.org/art/collection/search/333993",
+      "verified": true,
+      "representative": true,
+      "origin": "curated"
+    },
+    {
+      "id": "curated-lestampe-originale-jane-avril-1893",
+      "year": 1893,
+      "popularity": 90,
+      "title": {
+        "ko": "《L’Estampe originale》 제1집 표지",
+        "en": "Cover for L'Estampe originale, Album I"
+      },
+      "country": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "",
+      "description": {
+        "ko": "인쇄소에서 새 판화를 살펴보는 제인 아브릴을 그린 석판화 표지.",
+        "en": "Lithographic cover depicting Jane Avril examining a newly printed work."
+      },
+      "source": "https://www.metmuseum.org/art/collection/search/340098",
+      "verified": true,
+      "representative": true,
+      "origin": "curated"
+    },
+    {
+      "id": "curated-jane-avril-1899",
+      "year": 1899,
+      "popularity": 100,
+      "title": {
+        "ko": "제인 아브릴",
+        "en": "Jane Avril"
+      },
+      "country": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "movement": {
+        "ko": "후기 인상주의",
+        "en": "Post-Impressionism"
+      },
+      "image": "",
+      "description": {
+        "ko": "제인 아브릴을 위한 로트렉의 마지막 포스터.",
+        "en": "Toulouse-Lautrec's last poster image of Jane Avril."
+      },
+      "source": "https://www.artic.edu/artworks/67181/jane-avril",
+      "verified": true,
+      "representative": true,
+      "origin": "curated"
+    }
+  ]
+}

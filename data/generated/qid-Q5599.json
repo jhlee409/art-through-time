@@ -1,0 +1,1520 @@
+{
+  "schema": 18,
+  "artistId": "artist-Q5599",
+  "qid": "Q5599",
+  "artist": {
+    "name": {
+      "ko": "페테르 파울 루벤스",
+      "en": "Peter Paul Rubens"
+    },
+    "birth": 1577,
+    "death": 1640,
+    "nationality": {
+      "ko": "스페인령 네덜란드",
+      "en": "Spanish Netherlands"
+    }
+  },
+  "fetchedAt": "2026-08-11T05:38:09.851Z",
+  "works": [
+    {
+      "id": "wikipedia-Q5599-6",
+      "year": 1618,
+      "title": {
+        "ko": "The Rape of the Daughters of Leucippus , Alte Pinakothek",
+        "en": "The Rape of the Daughters of Leucippus , Alte Pinakothek"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Raub_der_T%C3%B6chter_des_Leukippos_07leucip.jpg/250px-Raub_der_T%C3%B6chter_des_Leukippos_07leucip.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": true,
+      "popularity": 993
+    },
+    {
+      "id": "wikipedia-Q5599-33",
+      "year": 1620,
+      "title": {
+        "ko": "King Ixion fooled by Juno , whom he wanted to seduce , Louvre",
+        "en": "King Ixion fooled by Juno , whom he wanted to seduce , Louvre"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Le_roi_Ixion_tromp%C3%A9_par_Junon%2C_qu%27il_voulait_s%C3%A9duire_%28Louvre_RF_2121%29_01.jpg/250px-Le_roi_Ixion_tromp%C3%A9_par_Junon%2C_qu%27il_voulait_s%C3%A9duire_%28Louvre_RF_2121%29_01.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 966
+    },
+    {
+      "id": "wikipedia-Q5599-43",
+      "year": 1615,
+      "title": {
+        "ko": "Jan Brueghel the Elder and Peter Paul Rubens, The Garden of Eden with the Fall of Man , Mauritshuis , The Hague",
+        "en": "Jan Brueghel the Elder and Peter Paul Rubens, The Garden of Eden with the Fall of Man , Mauritshuis , The Hague"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Jan_Brueghel_de_Oude_en_Peter_Paul_Rubens_-_Het_aards_paradijs_met_de_zondeval_van_Adam_en_Eva.jpg/250px-Jan_Brueghel_de_Oude_en_Peter_Paul_Rubens_-_Het_aards_paradijs_met_de_zondeval_van_Adam_en_Eva.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 956
+    },
+    {
+      "id": "wikipedia-Q5599-45",
+      "year": 1616,
+      "title": {
+        "ko": "The Holy Trinity , Kunstmuseum Basel",
+        "en": "The Holy Trinity , Kunstmuseum Basel"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Die_Heilige_Dreifaltigkeit_-_Peter_Paul_Rubens.jpg/250px-Die_Heilige_Dreifaltigkeit_-_Peter_Paul_Rubens.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 954
+    },
+    {
+      "id": "wikipedia-Q5599-46",
+      "year": 1618,
+      "title": {
+        "ko": "Christ Triumphant over Sin and Death , Musée des Beaux-Arts de Strasbourg",
+        "en": "Christ Triumphant over Sin and Death , Musée des Beaux-Arts de Strasbourg"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Christ_triumphing_over_Death_and_Sin_mg_0050.jpg/250px-Christ_triumphing_over_Death_and_Sin_mg_0050.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 953
+    },
+    {
+      "id": "wikipedia-Q5599-50",
+      "year": 1600,
+      "title": {
+        "ko": "The Farnese bull , 1600–1608, British Museum",
+        "en": "The Farnese bull , 1600–1608, British Museum"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Peter_Paul_Rubens_-_The_Farnese_bull.jpg/250px-Peter_Paul_Rubens_-_The_Farnese_bull.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 949
+    },
+    {
+      "id": "wikipedia-Q5599-1",
+      "year": 1603,
+      "title": {
+        "ko": "Equestrian Portrait of the Duke of Lerma , 1603, Museo del Prado",
+        "en": "Equestrian Portrait of the Duke of Lerma , 1603, Museo del Prado"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Retrato_ecuestre_del_duque_de_Lerma_%28Rubens%29.jpg/250px-Retrato_ecuestre_del_duque_de_Lerma_%28Rubens%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": true,
+      "popularity": 998
+    },
+    {
+      "id": "wikipedia-Q5599-2",
+      "year": 1606,
+      "title": {
+        "ko": "Portrait of Marchesa Brigida Spinola-Doria , 1606, Museo del Prado",
+        "en": "Portrait of Marchesa Brigida Spinola-Doria , 1606, Museo del Prado"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Marchesa_Brigida_Spinola-Doria.jpg/250px-Marchesa_Brigida_Spinola-Doria.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": true,
+      "popularity": 997
+    },
+    {
+      "id": "wikipedia-Q5599-3",
+      "year": 1606,
+      "title": {
+        "ko": "The Judgement of Paris , c. &#8201;1606 , Museo del Prado",
+        "en": "The Judgement of Paris , c. &#8201;1606 , Museo del Prado"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Peter_Paul_Rubens_-_The_Judgement_of_Paris%2C_c.1606_%28Museo_del_Prado%29.jpg/250px-Peter_Paul_Rubens_-_The_Judgement_of_Paris%2C_c.1606_%28Museo_del_Prado%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": true,
+      "popularity": 996
+    },
+    {
+      "id": "wikipedia-Q5599-49",
+      "year": 1607,
+      "title": {
+        "ko": "The Night , c, 1607, Jan Krugier Foundation",
+        "en": "The Night , c, 1607, Jan Krugier Foundation"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Peter_Paul_Rubens_-_Anatomical_study_of_a_man.jpg/250px-Peter_Paul_Rubens_-_Anatomical_study_of_a_man.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 950
+    },
+    {
+      "id": "wikipedia-Q5599-42",
+      "year": 1609,
+      "title": {
+        "ko": "Susanna and the Elders , 1609–1610, Real Academia de Bellas Artes de San Fernando",
+        "en": "Susanna and the Elders , 1609–1610, Real Academia de Bellas Artes de San Fernando"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Pedro_Pablo_Rubens_-_Susana_y_los_viejos_-_Google_Art_Project.jpg/250px-Pedro_Pablo_Rubens_-_Susana_y_los_viejos_-_Google_Art_Project.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 957
+    },
+    {
+      "id": "wikidata-Q571416",
+      "year": 1609,
+      "popularity": 18,
+      "title": {
+        "ko": "인동덩굴 그늘에서 루벤스와 이사벨라 브란트",
+        "en": "Rubens and Isabella Brant in the honeysuckle bower"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Peter%20Paul%20Rubens%20-%20Rubens%20and%20Isabella%20Brant%20in%20the%20honeysuckle%20bower.jpg",
+      "description": {
+        "ko": "painting by Peter Paul Rubens, Alte Pinakothek",
+        "en": "painting by Peter Paul Rubens, Alte Pinakothek"
+      },
+      "source": "http://www.wikidata.org/entity/Q571416",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q2594673",
+      "year": 1609,
+      "popularity": 18,
+      "title": {
+        "ko": "Samson and Delilah",
+        "en": "Samson and Delilah"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Samson%20and%20Delilah%20by%20Rubens.jpg",
+      "description": {
+        "ko": "painting by Peter Paul Rubens",
+        "en": "painting by Peter Paul Rubens"
+      },
+      "source": "http://www.wikidata.org/entity/Q2594673",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q2653851",
+      "year": 1609,
+      "popularity": 24,
+      "title": {
+        "ko": "십자가를 세움",
+        "en": "The Elevation of the Cross"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "바로크",
+        "en": "바로크"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Peter%20Paul%20Rubens%20-%20Raising%20of%20the%20Cross%20%28Cathedral%20of%20Antwerp%29.jpg",
+      "description": {
+        "ko": "triptych by Peter Paul Rubens in Cathedral of Our Lady, Antwerp",
+        "en": "triptych by Peter Paul Rubens in Cathedral of Our Lady, Antwerp"
+      },
+      "source": "http://www.wikidata.org/entity/Q2653851",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikipedia-Q5599-22",
+      "year": 1611,
+      "title": {
+        "ko": "Sleeping Silenus , collaboration with David Rijckaert II , c. &#8201;1611 , Academy of Fine Arts Vienna",
+        "en": "Sleeping Silenus , collaboration with David Rijckaert II , c. &#8201;1611 , Academy of Fine Arts Vienna"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Peter_Paul_Rubens_-_Sleeping_Silenus.jpg/250px-Peter_Paul_Rubens_-_Sleeping_Silenus.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 977
+    },
+    {
+      "id": "wikidata-Q2667782",
+      "year": 1611,
+      "popularity": 18,
+      "title": {
+        "ko": "The Descent from the Cross",
+        "en": "The Descent from the Cross"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Peter%20Paul%20Rubens%20-%20Descent%20from%20the%20Cross%20-%20WGA20212.jpg",
+      "description": {
+        "ko": "triptych by Peter Paul Rubens in Cathedral of Our Lady, Antwerp",
+        "en": "triptych by Peter Paul Rubens in Cathedral of Our Lady, Antwerp"
+      },
+      "source": "http://www.wikidata.org/entity/Q2667782",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1247103",
+      "year": 1611,
+      "popularity": 17,
+      "title": {
+        "ko": "Massacre of the Innocents",
+        "en": "Massacre of the Innocents"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/0%20Le%20Massacre%20des%20Innocents%20d%27apr%C3%A8s%20P.P.%20Rubens%20-%20Mus%C3%A9es%20royaux%20des%20beaux-arts%20de%20Belgique%20%282%29.JPG",
+      "description": {
+        "ko": "two Paintings in the Art Gallery of Toronto and the Alte Pinakothek, Munich and one version by his workshop in the Royal Museums of Fine Arts, Brussels",
+        "en": "two Paintings in the Art Gallery of Toronto and the Alte Pinakothek, Munich and one version by his workshop in the Royal Museums of Fine Arts, Brussels"
+      },
+      "source": "http://www.wikidata.org/entity/Q1247103",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikipedia-Q5599-23",
+      "year": 1612,
+      "title": {
+        "ko": "Venus, Cupid, Bacchus and Ceres , 1612",
+        "en": "Venus, Cupid, Bacchus and Ceres , 1612"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Peter_Paul_Rubens_-_Venus%2C_Amor%2C_Bacchus_and_Ceres.jpg/250px-Peter_Paul_Rubens_-_Venus%2C_Amor%2C_Bacchus_and_Ceres.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 976
+    },
+    {
+      "id": "wikipedia-Q5599-47",
+      "year": 1612,
+      "title": {
+        "ko": "The Lamentation of Christ , c. 1612, Liechtenstein Museum",
+        "en": "The Lamentation of Christ , c. 1612, Liechtenstein Museum"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Peter_Paul_Rubens_-_Lamentation_of_Christ_%28Liechtenstein_Museum%29.jpg/250px-Peter_Paul_Rubens_-_Lamentation_of_Christ_%28Liechtenstein_Museum%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 952
+    },
+    {
+      "id": "wikipedia-Q5599-4",
+      "year": 1613,
+      "title": {
+        "ko": "Venus at the Mirror , 1613–14",
+        "en": "Venus at the Mirror , 1613–14"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Rubens_Venus_at_a_Mirror_c1615.jpg/250px-Rubens_Venus_at_a_Mirror_c1615.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": true,
+      "popularity": 995
+    },
+    {
+      "id": "wikipedia-Q5599-24",
+      "year": 1613,
+      "title": {
+        "ko": "Jupiter and Callisto , 1613, Museumslandschaft Hessen Kassel",
+        "en": "Jupiter and Callisto , 1613, Museumslandschaft Hessen Kassel"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Peter_Paul_Rubens_-_Jupiter_and_Callisto.jpg/250px-Peter_Paul_Rubens_-_Jupiter_and_Callisto.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 975
+    },
+    {
+      "id": "wikipedia-Q5599-44",
+      "year": 1613,
+      "title": {
+        "ko": "Lot and His Daughters , c. &#8201;1613–14",
+        "en": "Lot and His Daughters , c. &#8201;1613–14"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Lot_and_his_daughters%2C_by_Peter_Paul_Rubens.jpg/250px-Lot_and_his_daughters%2C_by_Peter_Paul_Rubens.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 955
+    },
+    {
+      "id": "wikipedia-Q5599-8",
+      "year": 1614,
+      "title": {
+        "ko": "Child with a bird , 1614 and 1625, Gemäldegalerie, Berlin",
+        "en": "Child with a bird , 1614 and 1625, Gemäldegalerie, Berlin"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Peter_Paul_Rubens_-_Das_Kind_mit_dem_Vogel_%28Gem%C3%A4ldegalerie_Berlin%29.jpg/250px-Peter_Paul_Rubens_-_Das_Kind_mit_dem_Vogel_%28Gem%C3%A4ldegalerie_Berlin%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": true,
+      "popularity": 991
+    },
+    {
+      "id": "wikipedia-Q5599-15",
+      "year": 1615,
+      "title": {
+        "ko": "Landscape with the Ruins of Mount Palatine in Rome , 1615",
+        "en": "Landscape with the Ruins of Mount Palatine in Rome , 1615"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Peter_Paul_Rubens_-_Landscape_with_the_Ruins_of_Mount_Palatine_in_Rome.JPG/250px-Peter_Paul_Rubens_-_Landscape_with_the_Ruins_of_Mount_Palatine_in_Rome.JPG?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 984
+    },
+    {
+      "id": "wikidata-Q3940915",
+      "year": 1615,
+      "popularity": 16,
+      "title": {
+        "ko": "Romulus and Remus",
+        "en": "Romulus and Remus"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Romulus%20and%20Remus%20by%20Peter%20Paul%20Rubens.jpg",
+      "description": {
+        "ko": "painting by Peter Paul Rubens",
+        "en": "painting by Peter Paul Rubens"
+      },
+      "source": "http://www.wikidata.org/entity/Q3940915",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikipedia-Q5599-5",
+      "year": 1617,
+      "title": {
+        "ko": "Diana Returning from the Hunt , c. &#8201;1617 , oil on canvas, Hessisches Landesmuseum Darmstadt , collaboration with Snyders",
+        "en": "Diana Returning from the Hunt , c. &#8201;1617 , oil on canvas, Hessisches Landesmuseum Darmstadt , collaboration with Snyders"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Peter_Paul_Rubens_and_Frans_Snyders_-_Diana_Returning_from_the_Hunt.jpg/250px-Peter_Paul_Rubens_and_Frans_Snyders_-_Diana_Returning_from_the_Hunt.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": true,
+      "popularity": 994
+    },
+    {
+      "id": "wikipedia-Q5599-11",
+      "year": 1617,
+      "title": {
+        "ko": "Portrait of George Villiers, 1st Duke of Buckingham , c. &#8201;1617–1628 , Pollok House",
+        "en": "Portrait of George Villiers, 1st Duke of Buckingham , c. &#8201;1617–1628 , Pollok House"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Peter_Paul_Rubens_-_Portrait_of_George_Villiers%2C_1st_Duke_of_Buckingham_GL_GM_PC_49.jpg/250px-Peter_Paul_Rubens_-_Portrait_of_George_Villiers%2C_1st_Duke_of_Buckingham_GL_GM_PC_49.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": true,
+      "popularity": 988
+    },
+    {
+      "id": "wikipedia-Q5599-16",
+      "year": 1617,
+      "title": {
+        "ko": "Miracle of Saint Hubert , painted together with Jan Bruegel, 1617",
+        "en": "Miracle of Saint Hubert , painted together with Jan Bruegel, 1617"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/La_Visi%C3%B3n_de_San_Huberto_por_Jan_Brueghel_el_Viejo_con_Rubens.jpg/250px-La_Visi%C3%B3n_de_San_Huberto_por_Jan_Brueghel_el_Viejo_con_Rubens.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 983
+    },
+    {
+      "id": "wikipedia-Q5599-51",
+      "year": 1617,
+      "title": {
+        "ko": "Man in Korean Costume , c. &#8201;1617 , black chalk with touches of red chalk, J. Paul Getty Museum",
+        "en": "Man in Korean Costume , c. &#8201;1617 , black chalk with touches of red chalk, J. Paul Getty Museum"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Peter_Paul_Rubens_-_Man_in_Korean_Costume%2C_about_1617.jpg/250px-Peter_Paul_Rubens_-_Man_in_Korean_Costume%2C_about_1617.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 948
+    },
+    {
+      "id": "wikipedia-Q5599-17",
+      "year": 1618,
+      "title": {
+        "ko": "Landscape with Milkmaids and Cattle , 1618",
+        "en": "Landscape with Milkmaids and Cattle , 1618"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Rubens_Milkmaids_cattle_landscape.jpg/250px-Rubens_Milkmaids_cattle_landscape.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 982
+    },
+    {
+      "id": "wikipedia-Q5599-25",
+      "year": 1618,
+      "title": {
+        "ko": "Pythagoras Advocating Vegetarianism , 1618–1630, by Rubens and Frans Snyders , inspired by Pythagoras 's speech in Ovid 's Metamorphoses , Royal Collection",
+        "en": "Pythagoras Advocating Vegetarianism , 1618–1630, by Rubens and Frans Snyders , inspired by Pythagoras 's speech in Ovid 's Metamorphoses , Royal Collection"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Pythagoras_advocating_vegetarianism_%281618-20%29%3B_Peter_Paul_Rubens.jpg/250px-Pythagoras_advocating_vegetarianism_%281618-20%29%3B_Peter_Paul_Rubens.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 974
+    },
+    {
+      "id": "wikidata-Q644936",
+      "year": 1618,
+      "popularity": 21,
+      "title": {
+        "ko": "레우키포스 딸들의 납치",
+        "en": "The Rape of the Daughters of Leucippus"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "바로크",
+        "en": "바로크"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Peter%20Paul%20Rubens%20-%20The%20Rape%20of%20the%20Daughters%20of%20Leucippus.jpg",
+      "description": {
+        "ko": "painting by Peter Paul Rubens and Jan Wildens, Alte Pinakothek",
+        "en": "painting by Peter Paul Rubens and Jan Wildens, Alte Pinakothek"
+      },
+      "source": "http://www.wikidata.org/entity/Q644936",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q647202",
+      "year": 1618,
+      "popularity": 15,
+      "title": {
+        "ko": "Head of Medusa",
+        "en": "Head of Medusa"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "Flemish Baroque painting",
+        "en": "Flemish Baroque painting"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rubens%20Medusa.jpeg",
+      "description": {
+        "ko": "painting by Peter Paul Rubens in Vienna, Kunsthistorisches Museum Wien",
+        "en": "painting by Peter Paul Rubens in Vienna, Kunsthistorisches Museum Wien"
+      },
+      "source": "http://www.wikidata.org/entity/Q647202",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikipedia-Q5599-13",
+      "year": 1620,
+      "title": {
+        "ko": "Portrait of a Man as Mars , 1620–1625, private collection",
+        "en": "Portrait of a Man as Mars , 1620–1625, private collection"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Peter_Paul_Rubens_-_Portrait_of_a_Man_as_Mars.jpg/250px-Peter_Paul_Rubens_-_Portrait_of_a_Man_as_Mars.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": true,
+      "popularity": 986
+    },
+    {
+      "id": "wikipedia-Q5599-52",
+      "year": 1620,
+      "title": {
+        "ko": "Robin, the Dwarf of the Earl of Arundel , 1620, pen and brown ink over red, black and white chalk, Nationalmuseum Stockholm",
+        "en": "Robin, the Dwarf of the Earl of Arundel , 1620, pen and brown ink over red, black and white chalk, Nationalmuseum Stockholm"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Rubensad.jpg/250px-Rubensad.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 947
+    },
+    {
+      "id": "wikipedia-Q5599-26",
+      "year": 1622,
+      "title": {
+        "ko": "Perseus and Andromeda , c. &#8201;1622 , Hermitage Museum , Saint Petersburg",
+        "en": "Perseus and Andromeda , c. &#8201;1622 , Hermitage Museum , Saint Petersburg"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Peter_Paul_Rubens_-_Perseus_and_Andromeda_%28Hermitage_Museum%29.jpg/250px-Peter_Paul_Rubens_-_Perseus_and_Andromeda_%28Hermitage_Museum%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 973
+    },
+    {
+      "id": "wikipedia-Q5599-53",
+      "year": 1623,
+      "title": {
+        "ko": "Possibly Rubens's daughter Clara Serena , c. &#8201;1623 , Albertina",
+        "en": "Possibly Rubens's daughter Clara Serena , c. &#8201;1623 , Albertina"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Rubens%27_daughter_Clara_Serena_%28or_Infanta_Isabella%27s_lady-in-waiting%29_by_Peter_Paul_Rubens.jpg/250px-Rubens%27_daughter_Clara_Serena_%28or_Infanta_Isabella%27s_lady-in-waiting%29_by_Peter_Paul_Rubens.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 946
+    },
+    {
+      "id": "wikipedia-Q5599-10",
+      "year": 1627,
+      "title": {
+        "ko": "Portrait of Ambrogio Spinola , c. &#8201;1627 , National Gallery Prague",
+        "en": "Portrait of Ambrogio Spinola , c. &#8201;1627 , National Gallery Prague"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Peter_Paul_Rubens_-_Portrait_of_Marchese_Ambrogio_Spinola_%28NG_Prague%29.jpg/250px-Peter_Paul_Rubens_-_Portrait_of_Marchese_Ambrogio_Spinola_%28NG_Prague%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": true,
+      "popularity": 989
+    },
+    {
+      "id": "wikipedia-Q5599-9",
+      "year": 1628,
+      "title": {
+        "ko": "Portrait of King Philip IV of Spain , c. &#8201;1628 –29",
+        "en": "Portrait of King Philip IV of Spain , c. &#8201;1628 –29"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Pieter_Paul_Rubens_-_Portrait_of_King_Philip_IV_%28Hermitage%29.jpg/250px-Pieter_Paul_Rubens_-_Portrait_of_King_Philip_IV_%28Hermitage%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": true,
+      "popularity": 990
+    },
+    {
+      "id": "wikipedia-Q5599-27",
+      "year": 1628,
+      "title": {
+        "ko": "Ermit and sleeping Angelica , 1628",
+        "en": "Ermit and sleeping Angelica , 1628"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Peter_Paul_Rubens_147.jpg/250px-Peter_Paul_Rubens_147.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 972
+    },
+    {
+      "id": "wikidata-Q3605057",
+      "year": 1628,
+      "popularity": 15,
+      "title": {
+        "ko": "아담과 하와",
+        "en": "The Fall of Man"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Peter%20Paul%20Rubens%20-%20Adam%20and%20Eve%2C%20after%20Titian%2C%20between%201628%20and%201629.jpg",
+      "description": {
+        "ko": "painting by Peter Paul Rubens",
+        "en": "painting by Peter Paul Rubens"
+      },
+      "source": "http://www.wikidata.org/entity/Q3605057",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikipedia-Q5599-29",
+      "year": 1629,
+      "title": {
+        "ko": "Minerva Protecting Peace from Mars , 1629–1630, National Gallery London",
+        "en": "Minerva Protecting Peace from Mars , 1629–1630, National Gallery London"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Peter_Paul_Rubens_%281577-1640%29_Peace_and_War_%281629%29.jpg/250px-Peter_Paul_Rubens_%281577-1640%29_Peace_and_War_%281629%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 970
+    },
+    {
+      "id": "wikipedia-Q5599-54",
+      "year": 1629,
+      "title": {
+        "ko": "Young Woman with Folded Hands , c. &#8201;1629–30 , red and black chalk, heightened with white, Museum Boijmans Van Beuningen",
+        "en": "Young Woman with Folded Hands , c. &#8201;1629–30 , red and black chalk, heightened with white, Museum Boijmans Van Beuningen"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Peter_Paul_Rubens_-_Young_Woman_with_Folded_Hands.jpg/250px-Peter_Paul_Rubens_-_Young_Woman_with_Folded_Hands.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 945
+    },
+    {
+      "id": "wikipedia-Q5599-36",
+      "year": 1630,
+      "title": {
+        "ko": "Helena Fourment in Wedding Dress , c. &#8201;1630 , Alte Pinakothek",
+        "en": "Helena Fourment in Wedding Dress , c. &#8201;1630 , Alte Pinakothek"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Peter_Paul_Rubens_-_Helena_Fourment_in_her_wedding_dress.jpg/250px-Peter_Paul_Rubens_-_Helena_Fourment_in_her_wedding_dress.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 963
+    },
+    {
+      "id": "wikidata-Q2268524",
+      "year": 1630,
+      "popularity": 18,
+      "title": {
+        "ko": "삼미신",
+        "en": "The Three Graces"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Three%20Graces%2C%20by%20Peter%20Paul%20Rubens%2C%20from%20Prado%20in%20Google%20Earth.jpg",
+      "description": {
+        "ko": "painting by Peter Paul Rubens in Madrid",
+        "en": "painting by Peter Paul Rubens in Madrid"
+      },
+      "source": "http://www.wikidata.org/entity/Q2268524",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikipedia-Q5599-12",
+      "year": 1634,
+      "title": {
+        "ko": "The Portrait of Nicolaas Rubens , c. &#8201;1634–1636 , Mimara Museum",
+        "en": "The Portrait of Nicolaas Rubens , c. &#8201;1634–1636 , Mimara Museum"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/The_Portrait_of_Nicolaas_Rubens_%281636%29_-_Peter_Paul_Rubens%2C_Mimara_Museum.jpg/250px-The_Portrait_of_Nicolaas_Rubens_%281636%29_-_Peter_Paul_Rubens%2C_Mimara_Museum.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": true,
+      "popularity": 987
+    },
+    {
+      "id": "wikipedia-Q5599-18",
+      "year": 1635,
+      "title": {
+        "ko": "The Dance of the Villagers , c. 1635, Museo del Prado",
+        "en": "The Dance of the Villagers , c. 1635, Museo del Prado"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Danza_aldeanos_Rubens_lou.jpg/250px-Danza_aldeanos_Rubens_lou.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 981
+    },
+    {
+      "id": "wikipedia-Q5599-19",
+      "year": 1635,
+      "title": {
+        "ko": "A View of Het Steen in the Early Morning , c. &#8201;1635–1638 , National Gallery London",
+        "en": "A View of Het Steen in the Early Morning , c. &#8201;1635–1638 , National Gallery London"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Peter_Paul_Rubens_-_A_View_of_Het_Steen_in_the_Early_Morning.jpg/250px-Peter_Paul_Rubens_-_A_View_of_Het_Steen_in_the_Early_Morning.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 980
+    },
+    {
+      "id": "wikipedia-Q5599-30",
+      "year": 1635,
+      "title": {
+        "ko": "The Three Graces , 1635, Museo del Prado",
+        "en": "The Three Graces , 1635, Museo del Prado"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Rubens%2C_Peter_Paul_-_The_Three_Graces.jpg/250px-Rubens%2C_Peter_Paul_-_The_Three_Graces.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 969
+    },
+    {
+      "id": "wikipedia-Q5599-32",
+      "year": 1635,
+      "title": {
+        "ko": "Venus and Adonis , 1635–1638, Metropolitan Museum of Art",
+        "en": "Venus and Adonis , 1635–1638, Metropolitan Museum of Art"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Rubens_-_Venus_and_Adonis.jpg/250px-Rubens_-_Venus_and_Adonis.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 967
+    },
+    {
+      "id": "wikipedia-Q5599-38",
+      "year": 1635,
+      "title": {
+        "ko": "Bathsheba at the Fountain , c. 1635, Gemäldegalerie Alte Meister",
+        "en": "Bathsheba at the Fountain , c. 1635, Gemäldegalerie Alte Meister"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Peter_Paul_Rubens_013.jpg/250px-Peter_Paul_Rubens_013.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 961
+    },
+    {
+      "id": "wikipedia-Q5599-20",
+      "year": 1636,
+      "title": {
+        "ko": "Feasting and dancing peasants , c. 1636, Louvre",
+        "en": "Feasting and dancing peasants , c. 1636, Louvre"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Peter_Paul_Rubens_-_Feasting_and_dancing_peasants.jpg/250px-Peter_Paul_Rubens_-_Feasting_and_dancing_peasants.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 979
+    },
+    {
+      "id": "wikipedia-Q5599-37",
+      "year": 1636,
+      "title": {
+        "ko": "Helena Fourment in a Fur Wrap , also known as Het Pelsken , 1636–1638, Kunsthistorisches Museum",
+        "en": "Helena Fourment in a Fur Wrap , also known as Het Pelsken , 1636–1638, Kunsthistorisches Museum"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Peter_Paul_Rubens_-_Helena_Fourment_in_a_Fur_Robe_-_Google_Art_Project.jpg/120px-Peter_Paul_Rubens_-_Helena_Fourment_in_a_Fur_Robe_-_Google_Art_Project.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 962
+    },
+    {
+      "id": "wikipedia-Q5599-40",
+      "year": 1636,
+      "title": {
+        "ko": "The Birth of the Milky Way , 1636, Museo del Prado",
+        "en": "The Birth of the Milky Way , 1636, Museo del Prado"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Peter_Paul_Rubens_-_The_Birth_of_the_Milky_Way%2C_1636-1637.jpg/250px-Peter_Paul_Rubens_-_The_Birth_of_the_Milky_Way%2C_1636-1637.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 959
+    },
+    {
+      "id": "wikidata-Q2273452",
+      "year": 1636,
+      "popularity": 15,
+      "title": {
+        "ko": "The Judgement of Paris",
+        "en": "The Judgement of Paris"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Peter%20Paul%20Rubens%20115.jpg",
+      "description": {
+        "ko": "any of the several paintings of the Judgement of Paris produced by Peter Paul Rubens",
+        "en": "any of the several paintings of the Judgement of Paris produced by Peter Paul Rubens"
+      },
+      "source": "http://www.wikidata.org/entity/Q2273452",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikipedia-Q5599-39",
+      "year": 1637,
+      "title": {
+        "ko": "Pastoral Scene , c. 1637, Hermitage Museum",
+        "en": "Pastoral Scene , c. 1637, Hermitage Museum"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Peter_Paul_Rubens_-_Pastoral_Scene_-_WGA20325.jpg/250px-Peter_Paul_Rubens_-_Pastoral_Scene_-_WGA20325.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 960
+    },
+    {
+      "id": "wikidata-Q3788158",
+      "year": 1638,
+      "popularity": 15,
+      "title": {
+        "ko": "Helena Fourment in a Fur Robe",
+        "en": "Helena Fourment in a Fur Robe"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Peter%20Paul%20Rubens%20019.jpg",
+      "description": {
+        "ko": "painting by Peter Paul Rubens",
+        "en": "painting by Peter Paul Rubens"
+      },
+      "source": "http://www.wikidata.org/entity/Q3788158",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikipedia-Q5599-28",
+      "year": 1639,
+      "title": {
+        "ko": "Perseus Liberating Andromeda , 1639–40, Museo del Prado",
+        "en": "Perseus Liberating Andromeda , 1639–40, Museo del Prado"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Rubens_-_Perseo_y_Andr%C3%B3meda.jpg/250px-Rubens_-_Perseo_y_Andr%C3%B3meda.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 971
+    },
+    {
+      "id": "wikipedia-Q5599-31",
+      "year": 1639,
+      "title": {
+        "ko": "Diana and her Nymphs surprised by the Fauns , c. &#8201;1639–40 , Museo del Prado",
+        "en": "Diana and her Nymphs surprised by the Fauns , c. &#8201;1639–40 , Museo del Prado"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Peter_Paul_Rubens_-_Diana_and_her_Nymphs_Surprised_by_the_Fauns_%28Prado%29.jpg/250px-Peter_Paul_Rubens_-_Diana_and_her_Nymphs_Surprised_by_the_Fauns_%28Prado%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 968
+    },
+    {
+      "id": "wikipedia-Q5599-35",
+      "year": 1639,
+      "title": {
+        "ko": "Rubens with Helena Fourment and their Son Peter Paul , 1639, Metropolitan Museum of Art",
+        "en": "Rubens with Helena Fourment and their Son Peter Paul , 1639, Metropolitan Museum of Art"
+      },
+      "country": {
+        "ko": "스페인령 네덜란드",
+        "en": "Spanish Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Peter_Paul_Rubens_300.jpg/250px-Peter_Paul_Rubens_300.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "verified": true,
+      "representative": false,
+      "popularity": 964
+    }
+  ]
+}

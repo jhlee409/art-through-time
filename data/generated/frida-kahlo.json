@@ -1,0 +1,883 @@
+{
+  "schema": 8,
+  "artistId": "frida-kahlo",
+  "qid": "Q5588",
+  "fetchedAt": "2026-08-10T02:22:27.212Z",
+  "works": [
+    {
+      "id": "wikidata-Q3232010",
+      "year": 1939,
+      "title": {
+        "ko": "The Two Fridas",
+        "en": "The Two Fridas"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "초현실주의",
+        "en": "초현실주의"
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q3232010",
+      "verified": false,
+      "representative": true,
+      "thumbnail": "data/thumbnails/frida-kahlo/wikidata-Q3232010.jpg"
+    },
+    {
+      "id": "wikidata-Q21056477",
+      "year": 1944,
+      "title": {
+        "ko": "The Broken Column",
+        "en": "The Broken Column"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "소박파",
+        "en": "소박파"
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q21056477",
+      "verified": false,
+      "representative": true,
+      "thumbnail": "data/thumbnails/frida-kahlo/wikidata-Q21056477.jpg"
+    },
+    {
+      "id": "wikidata-Q5880026",
+      "year": 1940,
+      "title": {
+        "ko": "Self-Portrait with Thorn Necklace and Hummingbird",
+        "en": "Self-Portrait with Thorn Necklace and Hummingbird"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q5880026",
+      "verified": false,
+      "representative": true,
+      "thumbnail": "data/thumbnails/frida-kahlo/wikidata-Q5880026.jpg"
+    },
+    {
+      "id": "wikidata-Q21010270",
+      "year": 1946,
+      "title": {
+        "ko": "The Wounded Deer",
+        "en": "The Wounded Deer"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q21010270",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q5712848",
+      "year": 1938,
+      "title": {
+        "ko": "Self-Portrait with Monkey",
+        "en": "Self-Portrait with Monkey"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q5712848",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q43281370",
+      "year": 1931,
+      "title": {
+        "ko": "Frieda and Diego Rivera",
+        "en": "Frieda and Diego Rivera"
+      },
+      "country": {
+        "ko": "미국",
+        "en": "United States"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q43281370",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q45895679",
+      "year": 1937,
+      "title": {
+        "ko": "The Frame",
+        "en": "The Frame"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q45895679",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q19897995",
+      "year": 1940,
+      "title": {
+        "ko": "The Wounded Table",
+        "en": "The Wounded Table"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q19897995",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q19898216",
+      "year": 1938,
+      "title": {
+        "ko": "What the Water Gave Me",
+        "en": "What the Water Gave Me"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q19898216",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q5941128",
+      "year": 1937,
+      "title": {
+        "ko": "Memory or the Heart",
+        "en": "Memory or the Heart"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q5941128",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q23663690",
+      "year": 1949,
+      "title": {
+        "ko": "The Love Embrace of the Universe, the Earth (Mexico), Myself, Diego, and Señor Xolotl",
+        "en": "The Love Embrace of the Universe, the Earth (Mexico), Myself, Diego, and Señor Xolotl"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q23663690",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q8773940",
+      "year": 1954,
+      "title": {
+        "ko": "Marxism Will Give Health to the Sick",
+        "en": "Marxism Will Give Health to the Sick"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q8773940",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q26000749",
+      "year": 1939,
+      "title": {
+        "ko": "The Suicide of Dorothy Hale",
+        "en": "The Suicide of Dorothy Hale"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q26000749",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q136892338",
+      "year": 1940,
+      "title": {
+        "ko": "The Dream (The Bed)",
+        "en": "The Dream (The Bed)"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "초현실주의",
+        "en": "초현실주의"
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q136892338",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q63341526",
+      "year": 1939,
+      "title": {
+        "ko": "Two Nudes in a Forest",
+        "en": "Two Nudes in a Forest"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q63341526",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q97164416",
+      "year": 1937,
+      "title": {
+        "ko": "Self-Portrait Dedicated to Leon Trotsky",
+        "en": "Self-Portrait Dedicated to Leon Trotsky"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q97164416",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q109620518",
+      "year": null,
+      "title": {
+        "ko": "Diego and Me",
+        "en": "Diego and Me"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q109620518",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q118190557",
+      "year": 1932,
+      "title": {
+        "ko": "Henry Ford Hospital",
+        "en": "Henry Ford Hospital"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q118190557",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q8471027",
+      "year": 1949,
+      "title": {
+        "ko": "Diego and I",
+        "en": "Diego and I"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q8471027",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q16038651",
+      "year": 2026,
+      "title": {
+        "ko": "My Grandparents, My Parents, and I (Family Tree)",
+        "en": "My Grandparents, My Parents, and I (Family Tree)"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "Il y en a toujours un autre",
+        "en": "Il y en a toujours un autre"
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q16038651",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q16488383",
+      "year": 1933,
+      "title": {
+        "ko": "My Dress Hangs There",
+        "en": "My Dress Hangs There"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "초현실주의",
+        "en": "초현실주의"
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q16488383",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q17629443",
+      "year": 1954,
+      "title": {
+        "ko": "Viva la Vida, Watermelons",
+        "en": "Viva la Vida, Watermelons"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q17629443",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q5943279",
+      "year": 1946,
+      "title": {
+        "ko": "Arbol de la Esperanza, Mantente Firme",
+        "en": "Arbol de la Esperanza, Mantente Firme"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q5943279",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q19884325",
+      "year": 1937,
+      "title": {
+        "ko": "Fulang-Chang and I",
+        "en": "Fulang-Chang and I"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q19884325",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q28339146",
+      "year": 1935,
+      "title": {
+        "ko": "A Few Small Nips",
+        "en": "A Few Small Nips"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "소박파",
+        "en": "소박파"
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q28339146",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q18343221",
+      "year": 1938,
+      "title": {
+        "ko": "Still Life: Pitahayas",
+        "en": "Still Life: Pitahayas"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "초현실주의",
+        "en": "초현실주의"
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q18343221",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q19884567",
+      "year": 1940,
+      "title": {
+        "ko": "Self-Portrait with Cropped Hair",
+        "en": "Self-Portrait with Cropped Hair"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "초현실주의",
+        "en": "초현실주의"
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q19884567",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q20879937",
+      "year": 1951,
+      "title": {
+        "ko": "Weeping Coconuts",
+        "en": "Weeping Coconuts"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q20879937",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q106811218",
+      "year": 1954,
+      "title": {
+        "ko": "Self portrait with Stalin",
+        "en": "Self portrait with Stalin"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q106811218",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q110103503",
+      "year": null,
+      "title": {
+        "ko": "Q110103503",
+        "en": "Q110103503"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "http://www.wikidata.org/entity/Q110103503",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q111207414",
+      "year": 1932,
+      "title": {
+        "ko": "Self Portrait Along the Border Line Between Mexico and the United States",
+        "en": "Self Portrait Along the Border Line Between Mexico and the United States"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q111207414",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q118901053",
+      "year": 1947,
+      "title": {
+        "ko": "Self Portrait with Loose Hair",
+        "en": "Self Portrait with Loose Hair"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "1947 painting by Frida Kahlo",
+        "en": "1947 painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q118901053",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q131841200",
+      "year": null,
+      "title": {
+        "ko": "Girl with Death Mask",
+        "en": "Girl with Death Mask"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "http://www.wikidata.org/entity/Q131841200",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q136891708",
+      "year": 1940,
+      "title": {
+        "ko": "Q136891708",
+        "en": "Q136891708"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "초현실주의",
+        "en": "초현실주의"
+      },
+      "image": "",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "http://www.wikidata.org/entity/Q136891708",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    },
+    {
+      "id": "wikidata-Q109930455",
+      "year": 1928,
+      "title": {
+        "ko": "Portrait of Cristina, My Sister",
+        "en": "Portrait of Cristina, My Sister"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q109930455",
+      "verified": false,
+      "representative": true,
+      "thumbnail": ""
+    }
+  ]
+}

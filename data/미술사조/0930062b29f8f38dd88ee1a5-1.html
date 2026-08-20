@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>낭만주의 — 이성과 의무의 세계에서 감정·자연·자유의 세계로</title>
+<style>
+:root {
+  --bg:#090b0e; --panel:#12161b; --panel2:#181d23; --text:#f1eee8;
+  --muted:#aab3bc; --line:#2a3037; --gold:#d7a74a; --red:#c45a52;
+  --blue:#839fc1; --green:#8eaf96; --violet:#a18fc2;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--text);line-height:1.75;
+  font-family:Inter,"Pretendard","Noto Sans KR",Arial,sans-serif;
+  background:
+    radial-gradient(circle at 14% 6%,rgba(131,159,193,.10),transparent 28rem),
+    radial-gradient(circle at 84% 8%,rgba(196,90,82,.08),transparent 28rem),
+    linear-gradient(180deg,#080a0d,#0d1014);
+}
+a{color:#edc777;text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{width:min(1200px,92vw);margin:auto}
+.hero{padding:76px 0 40px;border-bottom:1px solid var(--line)}
+.kicker{font-size:.84rem;font-weight:800;letter-spacing:.12em;color:var(--gold)}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.5rem,6vw,5.25rem);line-height:1.04;margin:.35rem 0 1rem}
+.hero p{max-width:1040px;color:#d2d8df;font-size:1.14rem}
+nav{position:sticky;top:0;z-index:20;background:rgba(9,11,14,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:18px;overflow:auto;padding:12px 0;white-space:nowrap;font-size:.9rem}
+section{padding:58px 0;border-bottom:1px solid var(--line)}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,3.5vw,3.15rem);margin:0 0 20px}
+h3{margin:.1rem 0 .55rem;font-size:1.18rem}
+.lead{font-size:1.08rem;color:#d5dbe1;max-width:1000px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:linear-gradient(180deg,var(--panel2),var(--panel));box-shadow:0 14px 34px rgba(0,0,0,.23)}
+.imgbox{background:#07090b;display:flex;align-items:center;justify-content:center;min-height:430px}
+.imgbox img{display:block;width:100%;height:570px;object-fit:contain}
+.caption{padding:18px 20px 20px}
+.caption small{display:block;color:var(--muted);margin-top:6px}
+.badge{display:inline-block;padding:4px 9px;border-radius:99px;border:1px solid #544323;background:rgba(215,167,74,.08);color:#efcb80;font-size:.76rem;font-weight:800;margin-bottom:8px}
+.callout{border-left:4px solid var(--gold);padding:18px 21px;background:rgba(215,167,74,.08);border-radius:0 12px 12px 0;margin:24px 0}
+.bigline{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.3rem,2.6vw,1.95rem);padding:24px 28px;border-top:1px solid #59471f;border-bottom:1px solid #59471f;color:#f0dcb1;margin:25px 0;line-height:1.48}
+.features{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:26px 0}
+.feature{padding:17px;border:1px solid var(--line);border-radius:12px;background:var(--panel);min-height:150px}
+.feature b{color:var(--gold);font-size:.8rem}
+.feature span{display:block;font-weight:800;margin:.35rem 0}
+.feature p{font-size:.9rem;color:var(--muted);margin:0;line-height:1.55}
+.timeline{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:28px 0}
+.time{padding:17px;border:1px solid var(--line);border-radius:12px;background:var(--panel);min-height:175px}
+.time .year{font-family:Georgia,serif;color:var(--gold);font-size:1.23rem;font-weight:700}
+.time strong{display:block;margin:.35rem 0}
+.time p{font-size:.88rem;color:var(--muted);margin:0;line-height:1.5}
+.branch{border:1px solid var(--line);border-radius:15px;background:var(--panel);padding:22px}
+.branch.france{border-top:4px solid var(--red)}
+.branch.germany{border-top:4px solid var(--violet)}
+.branch.britain{border-top:4px solid var(--blue)}
+.branch .eyebrow{font-size:.76rem;font-weight:800;letter-spacing:.08em;color:var(--muted)}
+.branch h3{font-size:1.28rem}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;margin-top:24px}
+table{width:100%;border-collapse:collapse;min-width:880px;background:var(--panel)}
+th,td{padding:14px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:#171b20;color:#efd69c;font-size:.9rem}
+td:first-child{font-weight:750;color:#eef1f4;width:18%}
+tr:last-child td{border-bottom:0}
+.note{font-size:.94rem;color:var(--muted);background:#10141a;border:1px solid var(--line);padding:17px 19px;border-radius:12px}
+.chain{display:flex;align-items:stretch;gap:10px;overflow:auto;padding:8px 0 4px}
+.chain .node{min-width:185px;flex:1;padding:17px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.chain .arrow{display:flex;align-items:center;color:var(--gold);font-size:1.4rem}
+footer{padding:36px 0 60px;color:#7f8993;font-size:.86rem}
+mark{background:rgba(215,167,74,.17);color:#ffe0a4;padding:.03em .22em;border-radius:4px}
+ul{padding-left:1.25rem}
+li{margin:.4rem 0}
+@media(max-width:980px){
+ .grid2,.grid3{grid-template-columns:1fr}
+ .features,.timeline{grid-template-columns:1fr 1fr}
+ .imgbox img{height:auto;max-height:610px}
+}
+@media(max-width:560px){
+ .features,.timeline{grid-template-columns:1fr}
+}
+</style>
+<link rel="stylesheet" href="../../uhangul/uhangul-runtime.css" data-uhangul-integration="v0.3">
+<style id="art-atlas-artist-link-style">
+.art-atlas-artist-link{font-weight:900;color:#191007!important;background:linear-gradient(180deg,rgba(255,232,151,.98),rgba(255,198,86,.9));border-bottom:2px solid #a96f12;border-radius:.22em;padding:0 .16em;text-decoration:none!important;box-decoration-break:clone;-webkit-box-decoration-break:clone}.art-atlas-artist-link:hover{filter:brightness(1.08);box-shadow:0 0 0 2px rgba(255,214,102,.24)}
+</style>
+</head>
+
+<body>
+<div data-uhangul-corner-bar style="position:sticky!important;top:0!important;z-index:2147483647!important;clear:both!important;height:64px!important;display:flex!important;align-items:center!important;padding:10px 18px!important;background:#0c1014!important;border-bottom:1px solid #2d3540!important"><button type="button" data-uhangul-corner-button aria-label="uHangul 켜기" title="uHangul 켜기" aria-pressed="false" style="position:relative!important;z-index:2147483647!important;display:block!important;border:2px solid #f4c55b!important;border-radius:50%!important;width:38px!important;height:38px!important;padding:0!important;background:#18221e!important;color:#f4c55b!important;font:800 23px/34px Georgia,serif!important;text-align:center!important;cursor:pointer!important;visibility:visible!important;opacity:1!important">u</button></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="hero">
+
+
+
+<div class="wrap">
+  <div class="kicker">미술사 · 신고전주의에서 낭만주의로</div>
+  <h1>낭만주의<br><span style="color:var(--gold)">이성과 의무의 세계에서 감정·자연·자유의 세계로</span></h1>
+  <p>
+    낭만주의는 단순히 “감성적인 그림”을 뜻하지 않는다.
+    18세기 말과 19세기 전반의 유럽은 <strong>프랑스 혁명, 혁명기의 폭력, 나폴레옹 전쟁,
+    왕정복고, 민족주의, 산업화</strong>를 연속적으로 경험했다.
+    신고전주의가 고대의 이성·질서·시민적 의무를 통해 인간이 따라야 할 규범을 보여주었다면,
+    낭만주의는 점차 <strong>규범으로 설명되지 않는 인간의 감정, 자유, 공포, 상상력,
+    자연의 압도적 힘과 개인의 내면</strong>을 회화의 중심으로 끌어들였다.
+  </p>
+</div>
+</header>
+
+<nav>
+<div class="wrap">
+  <a href="#answer">0. 무엇이 바꾸었나</a>
+  <a href="#before">1. 이전: 신고전주의</a>
+  <a href="#history">2. 역사적 배경</a>
+  <a href="#gericault">3. 제리코의 전환</a>
+  <a href="#branches">4. 세 계열</a>
+  <a href="#france">5. 프랑스</a>
+  <a href="#germany">6. 독일</a>
+  <a href="#britain">7. 영국</a>
+  <a href="#compare">8. 직접 비교</a>
+  <a href="#after">9. 사실주의로</a>
+  <a href="#countries">국가별 전개</a>
+</div>
+</nav>
+
+<main>
+
+<section id="answer">
+<div class="wrap">
+  <h2>0. 먼저 결론 — 무엇이 신고전주의를 낭만주의로 바꾸었는가?</h2>
+  <p class="lead">
+    <strong>한 사건이 낭만주의를 만들었다고 말할 수는 없다.</strong>
+    오히려 신고전주의가 믿었던 “이성·질서·고대의 덕목”만으로는
+    새 시대의 경험을 충분히 설명하기 어려워졌다는 데 핵심이 있다.
+  </p>
+
+  <div class="features">
+    <div class="feature"><b>01 · 혁명</b><span>이성의 이상과 폭력</span><p>1789년 혁명은 자유를 약속했지만 공포정치와 전쟁도 낳았다. 인간은 이성만으로 움직이지 않는다는 경험이 강해졌다.</p></div>
+    <div class="feature"><b>02 · 전쟁</b><span>영웅과 참사의 공존</span><p>나폴레옹 시대는 영웅주의와 동시에 대규모 전쟁·죽음·폐허를 유럽 전역에 남겼다.</p></div>
+    <div class="feature"><b>03 · 개인</b><span>규범 → 내면</span><p>예술가는 보편적인 모범보다 개인의 경험·감정·상상력을 중요한 진실로 보기 시작했다.</p></div>
+    <div class="feature"><b>04 · 자연</b><span>질서 → 숭고</span><p>자연은 인간이 측정하고 지배하는 대상이 아니라 인간을 압도하는 거대한 힘으로 나타난다.</p></div>
+    <div class="feature"><b>05 · 민족·자유</b><span>고대 로마 → 현재의 역사</span><p>혁명과 민족운동이 과거의 영웅이 아니라 현재 살아 있는 정치와 역사를 그림의 주제로 만든다.</p></div>
+  </div>
+
+  <div class="callout">
+    가장 간단히 말하면:<br><br>
+    신고전주의가 <strong>“인간은 어떻게 행동해야 하는가?”</strong>를 물었다면,<br>
+    낭만주의는 <strong>“인간은 실제로 무엇을 느끼며, 세계는 우리에게 어떻게 경험되는가?”</strong>를 묻기 시작했다.
+  </div>
+</div>
+</section>
+
+<section id="before">
+<div class="wrap">
+  <h2>1. Before — 신고전주의가 보여주던 인간</h2>
+
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/David-Oath-of-the-Horatii-1784-0eededa85a03.jpg" alt="자크루이 다비드, 호라티우스 형제의 맹세"></div>
+      <div class="caption">
+        <span class="badge">신고전주의</span>
+        <h3>자크루이 다비드, 《호라티우스 형제의 맹세》</h3>
+        <small>1784 · 파리 루브르 박물관</small>
+      </div>
+    </article>
+
+    <div>
+      <h3>신고전주의가 이상적으로 생각한 인간</h3>
+      <ul>
+        <li>개인적 감정보다 <strong>의무와 공동체</strong>를 우선한다.</li>
+        <li>몸은 고대 조각처럼 단단하고 명확하다.</li>
+        <li>건축적 공간은 수평·수직선으로 엄격하게 정리되어 있다.</li>
+        <li>감정은 존재하지만 전체 질서를 무너뜨리지 않는다.</li>
+        <li>그림은 관람자에게 <strong>본받아야 할 행동</strong>을 제시한다.</li>
+      </ul>
+
+      <div class="bigline">
+        신고전주의의 이상:<br>
+        <strong>감정을 통제하고 옳은 일을 선택하는 인간.</strong>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="history">
+<div class="wrap">
+  <h2>2. 역사적 배경 — 왜 ‘질서’만으로 충분하지 않게 되었나?</h2>
+
+  <div class="timeline">
+    <div class="time"><div class="year">1789</div><strong>프랑스 혁명</strong><p>자유와 시민의 권리를 선언하지만 기존 사회질서를 근본적으로 흔든다.</p></div>
+    <div class="time"><div class="year">1793–94</div><strong>공포정치</strong><p>혁명의 이상과 정치적 폭력이 동시에 존재할 수 있다는 충격을 남긴다.</p></div>
+    <div class="time"><div class="year">1799–1815</div><strong>나폴레옹 시대</strong><p>혁명 이념, 제국, 영웅주의, 대규모 전쟁과 민족적 저항이 뒤섞인다.</p></div>
+    <div class="time"><div class="year">1815 이후</div><strong>왕정복고</strong><p>빈 체제의 보수적 질서와 자유주의·민족주의 운동이 충돌한다.</p></div>
+    <div class="time"><div class="year">1821 이후</div><strong>민족주의 운동</strong><p>그리스 독립전쟁 등 민족의 자유를 위한 투쟁이 낭만주의 예술가들의 중요한 주제가 된다.</p></div>
+    <div class="time"><div class="year">1830</div><strong>7월 혁명</strong><p>파리의 실제 거리 혁명이 들라크루아의 《민중을 이끄는 자유의 여신》으로 직접 회화화된다.</p></div>
+  </div>
+
+  <div class="callout">
+    동시에 영국을 중심으로 <strong>산업혁명</strong>이 진행되면서 도시·기계·철도·공장이라는 완전히 새로운 세계가 나타났다.
+    낭만주의가 자연과 과거에 강하게 끌린 것은 단순한 취향이 아니라
+    <strong>급속한 근대화에 대한 매혹과 불안</strong>이라는 측면에서도 이해할 수 있다.
+  </div>
+</div>
+</section>
+
+<section id="gericault">
+<div class="wrap">
+  <h2>3. Breakthrough — 제리코는 영웅 대신 실제 재난을 그린다</h2>
+
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Th-C3-A9odore-G-C3-A9ricault-The-Raft-of-the-Medusa-WGA08630-849f4ffd1efd.jpg" alt="테오도르 제리코, 메두사호의 뗏목"></div>
+      <div class="caption">
+        <span class="badge">프랑스 낭만주의의 전환점</span>
+        <h3>테오도르 제리코, 《메두사호의 뗏목》</h3>
+        <small>1818–1819 · 파리 루브르 박물관</small>
+      </div>
+    </article>
+
+    <div>
+      <h3>고대 영웅담이 아니라 동시대의 참사</h3>
+      <ul>
+        <li>1816년 프랑스 군함 메두사호의 난파라는 <strong>실제 동시대 사건</strong>을 다룬다.</li>
+        <li>인물들은 고귀한 죽음을 선택하는 영웅이 아니라 살아남기 위해 몸부림치는 인간들이다.</li>
+        <li>시체, 절망, 광기, 희망이 한 화면 안에 동시에 존재한다.</li>
+        <li>구도는 고전적 피라미드 구조를 이용하지만 전체적으로 파도·바람·몸의 움직임이 질서를 흔든다.</li>
+        <li>관람자는 “무엇이 옳은가?”보다 <strong>“이 상황에서 인간은 무엇을 느끼는가?”</strong>를 경험한다.</li>
+      </ul>
+
+      <div class="bigline">
+        다비드의 인간은 <strong>원칙을 위해 죽음을 선택</strong>하지만,<br>
+        제리코의 인간은 <strong>살아남기 위해 필사적으로 싸운다.</strong>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="branches">
+<div class="wrap">
+  <h2>4. 낭만주의는 세 가지 대표적 방향으로 보면 이해하기 쉽다</h2>
+
+  <div class="grid3" style="margin-top:26px">
+    <div class="branch france">
+      <div class="eyebrow">프랑스</div>
+      <h3>① 역사·혁명·격정</h3>
+      <p>제리코와 들라크루아는 동시대 사건, 전쟁, 혁명, 폭력과 자유를 강한 색채와 운동감으로 표현했다.</p>
+    </div>
+
+    <div class="branch germany">
+      <div class="eyebrow">독일</div>
+      <h3>② 자연·내면·정신성</h3>
+      <p>카스파르 다비트 프리드리히에게 자연은 풍경의 복제가 아니라 인간의 고독·신앙·죽음·무한을 성찰하는 공간이다.</p>
+    </div>
+
+    <div class="branch britain">
+      <div class="eyebrow">영국</div>
+      <h3>③ 숭고·빛·대기</h3>
+      <p>터너는 폭풍, 바다, 불, 빛과 대기의 힘을 통해 인간의 통제를 넘어서는 자연과 근대의 속도를 표현했다.</p>
+    </div>
+  </div>
+
+  <div class="note" style="margin-top:22px">
+    ※ 이 구분은 작품 감상을 위한 교육적 틀이다. 실제 낭만주의는 문학·음악·철학·정치까지 연결된 국제적 문화운동이며,
+    국가별·화가별 차이가 매우 크다.
+  </div>
+</div>
+</section>
+
+<section id="france">
+<div class="wrap">
+  <h2>5. 프랑스 계열 — 혁명과 자유가 현재의 역사로 들어오다</h2>
+
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/dellibwholesm-2d54e3a322c8.jpg" alt="외젠 들라크루아, 민중을 이끄는 자유의 여신"></div>
+      <div class="caption">
+        <span class="badge">프랑스 낭만주의</span>
+        <h3>외젠 들라크루아, 《민중을 이끄는 자유의 여신》</h3>
+        <small>1830 · 7월 혁명을 주제로 한 작품 · 파리 루브르 박물관</small>
+      </div>
+    </article>
+
+    <div>
+      <h3>신고전주의 역사화와 무엇이 다른가?</h3>
+      <ul>
+        <li>고대 로마가 아니라 <strong>1830년 파리에서 벌어진 현실의 혁명</strong>이 주제다.</li>
+        <li>자유는 현실의 여성과 알레고리적 여신 사이의 존재로 등장한다.</li>
+        <li>노동자, 부르주아, 소년 등 서로 다른 계층이 함께 전진한다.</li>
+        <li>죽은 시체와 연기, 총, 깃발이 화면을 뒤섞으며 실제 거리의 혼란을 전달한다.</li>
+        <li>선보다 색채와 붓질, 대각선 운동이 강하게 느껴진다.</li>
+      </ul>
+
+      <div class="bigline">
+        신고전주의가 <strong>과거의 영웅을 통해 현재를 가르쳤다면</strong>,<br>
+        낭만주의는 <strong>현재의 역사를 그 자체로 영웅적이고 비극적인 사건</strong>으로 만든다.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="germany">
+<div class="wrap">
+  <h2>6. 독일 계열 — 자연을 보는 것이 곧 자기 내면을 보는 것</h2>
+
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Caspar-David-Friedrich-Wanderer-above-the-sea-of-fog-d5966e14b524.jpg" alt="카스파르 다비트 프리드리히, 안개 바다 위의 방랑자"></div>
+      <div class="caption">
+        <span class="badge">독일 낭만주의</span>
+        <h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-1786332007363" target="_blank" rel="noopener" data-artist-id="artist-1786332007363" data-uh-original="Caspar David Friedrich" data-uh-korean="카스파 다비드 프리드리히" data-uh-display-korean="카스파르 다비트 프리드리히" title="카스파 다비드 프리드리히 연표로 이동">카스파르 다비트 프리드리히</a>, 《안개 바다 위의 방랑자》</h3>
+        <small>약 1818 · 함부르크 미술관</small>
+      </div>
+    </article>
+
+    <div>
+      <h3>여기에는 혁명도 전투도 없지만 낭만주의의 핵심이 있다</h3>
+      <ul>
+        <li>인물은 등을 보이고 있어 개인의 얼굴보다 <strong>관람자의 대리인</strong>처럼 기능한다.</li>
+        <li>앞에 펼쳐진 자연은 명료하게 측정되지 않고 안개 속에서 끝없이 열린다.</li>
+        <li>인간은 높은 곳에 서 있지만 자연을 완전히 지배하지 못한다.</li>
+        <li>광대한 자연 앞에서 경외·두려움·매혹이 동시에 발생한다.</li>
+      </ul>
+
+      <div class="callout">
+        이러한 감정을 미학에서는 흔히 <strong>숭고(sublime)</strong>와 연결한다.
+        아름다움이 조화와 쾌적함이라면, 숭고는 너무 크고 강하거나 무한하여
+        인간의 이해와 통제를 넘어서는 대상 앞에서 느끼는 경외와 두려움의 혼합에 가깝다.
+      </div>
+
+      <div class="bigline">
+        자연은 더 이상 <strong>그림의 배경</strong>이 아니라,<br>
+        <strong>인간 자신의 존재를 생각하게 만드는 정신적 공간</strong>이 된다.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="britain">
+<div class="wrap">
+  <h2>7. 영국 계열 — 터너가 형태를 빛과 폭풍 속에 녹이다</h2>
+
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Slave-ship-7b5afac07e61.jpg" alt="윌리엄 터너, 노예선"></div>
+      <div class="caption">
+        <span class="badge">영국 낭만주의</span>
+        <h3>조지프 말로드 윌리엄 터너, 《노예선》</h3>
+        <small>1840 · 보스턴 미술관</small>
+      </div>
+    </article>
+
+    <div>
+      <h3>자연은 인간의 질서를 완전히 압도한다</h3>
+      <ul>
+        <li>배와 인간의 형태는 폭풍·파도·빛·색채 속에서 거의 녹아든다.</li>
+        <li>붉은 하늘과 거친 바다는 아름답지만 동시에 공포스럽다.</li>
+        <li>자연의 힘은 인간의 소유·계산·도덕적 합리화를 무력화한다.</li>
+        <li>색채와 대기의 효과가 명확한 윤곽보다 중요해지며 후대 회화의 방향을 예고한다.</li>
+      </ul>
+
+      <div class="bigline">
+        다비드에게 세계는 <strong>선과 질서로 정리될 수 있는 공간</strong>이었다면,<br>
+        터너에게 세계는 <strong>빛·바람·물질이 끊임없이 변하는 경험</strong>이다.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="compare">
+<div class="wrap">
+  <h2>8. 신고전주의와 낭만주의를 직접 비교하면</h2>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>비교 항목</th><th>신고전주의</th><th>낭만주의</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>핵심 질문</td><td>인간은 어떻게 올바르게 행동해야 하는가?</td><td>인간은 무엇을 느끼며 세계를 어떻게 경험하는가?</td></tr>
+      <tr><td>중심 가치</td><td>이성·질서·의무·절제</td><td>감정·자유·상상력·개성</td></tr>
+      <tr><td>시간</td><td>고대 그리스·로마의 역사</td><td>중세·이국·현재의 혁명·동시대 사건</td></tr>
+      <tr><td>인물</td><td>도덕적 모범과 영웅</td><td>고통받는 개인·반항자·혁명가·고독한 인간</td></tr>
+      <tr><td>자연</td><td>질서 있는 배경</td><td>인간을 압도하는 숭고한 존재</td></tr>
+      <tr><td>구도</td><td>안정적·명료·건축적</td><td>대각선·비대칭·운동·혼란</td></tr>
+      <tr><td>선과 색</td><td>선과 윤곽이 우선</td><td>색·빛·붓질과 분위기가 중요</td></tr>
+      <tr><td>감정</td><td>통제된 감정</td><td>격정·공포·고독·경외·열광</td></tr>
+      <tr><td>관람자</td><td>행동을 판단하고 교훈을 얻는다</td><td>사건과 자연의 감정을 직접 체험한다</td></tr>
+      <tr><td>한 문장</td><td><strong>“자신을 통제하라.”</strong></td><td><strong>“느끼고 경험하라.”</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout">
+    <strong>중요한 주의점:</strong>
+    낭만주의는 “이성을 버린 운동”이 아니다.
+    낭만주의자들은 계몽주의가 열어 놓은 자유와 개인의 가치도 계승했다.
+    다만 인간과 세계를 <strong>이성만으로 충분히 설명할 수 있다는 믿음의 한계</strong>를 강조하며
+    감정·상상력·역사·자연·무의식적인 힘까지 예술의 영역으로 확대했다.
+  </div>
+</div>
+</section>
+
+<section id="after">
+<div class="wrap">
+  <h2>9. After — 왜 사실주의가 다시 낭만주의에 반발했는가?</h2>
+
+  <p class="lead">
+    낭만주의는 현실의 혁명과 참사를 적극적으로 다루었지만,
+    동시에 영웅적 감정, 이국적 세계, 숭고한 자연과 극적인 사건을 선호했다.
+    1848년 혁명 전후의 다음 세대는 이런 극적·시적인 해석조차 현실을 미화한다고 보기 시작한다.
+    그 결과 쿠르베 등을 중심으로 <strong>사실주의</strong>가 등장한다.
+  </p>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>낭만주의</th><th>→</th><th>사실주의</th></tr></thead>
+    <tbody>
+      <tr><td>특별하고 극적인 사건</td><td>→</td><td>평범한 일상과 노동</td></tr>
+      <tr><td>영웅·혁명가·고독한 개인</td><td>→</td><td>농민·노동자·보통 사람</td></tr>
+      <tr><td>감정의 극대화</td><td>→</td><td>관찰과 사회 현실</td></tr>
+      <tr><td>숭고한 자연·이국적 세계</td><td>→</td><td>자신이 실제 살아가는 동시대 사회</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="bigline">
+    신고전주의가 <strong>“어떻게 살아야 하는가”</strong>를 물었고,<br>
+    낭만주의가 <strong>“나는 무엇을 느끼는가”</strong>를 물었다면,<br>
+    사실주의는 다시 <strong>“사회는 실제로 어떻게 살아가고 있는가”</strong>를 묻게 된다.
+  </div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <h2>전체 흐름</h2>
+  <div class="chain">
+    <div class="node"><strong>신고전주의</strong><br><span style="color:var(--muted)">이성·질서·의무·고대</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong>프랑스 혁명·나폴레옹</strong><br><span style="color:var(--muted)">자유·폭력·전쟁·영웅주의</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong>낭만주의</strong><br><span style="color:var(--muted)">감정·자유·상상력·숭고</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong>1830·민족주의</strong><br><span style="color:var(--muted)">현재의 혁명과 역사</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong>1848·사실주의</strong><br><span style="color:var(--muted)">평범한 현실·노동·사회</span></div>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <h2>작품 이미지 및 참고</h2>
+  <div class="note">
+    작품 이미지는 자료 폴더의 로컬 이미지 파일을 사용하도록 구성했다.
+    외부 링크가 바뀌거나 인터넷 연결이 없어도 이미지가 표시된다.
+  </div>
+  <div style="margin-top:16px;color:var(--muted);font-size:.9rem">
+    <ul>
+      <li>자크루이 다비드, 《호라티우스 형제의 맹세》</li>
+      <li>테오도르 제리코, 《메두사호의 뗏목》</li>
+      <li>외젠 들라크루아, 《민중을 이끄는 자유의 여신》</li>
+      <li><a class="art-atlas-artist-link" href="../../index.html?artist=artist-1786332007363" target="_blank" rel="noopener" data-artist-id="artist-1786332007363" data-uh-original="Caspar David Friedrich" data-uh-korean="카스파 다비드 프리드리히" data-uh-display-korean="카스파르 다비트 프리드리히" title="카스파 다비드 프리드리히 연표로 이동">카스파르 다비트 프리드리히</a>, 《안개 바다 위의 방랑자》</li>
+      <li>조지프 말로드 윌리엄 터너, 《노예선》</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+
+<section id="countries"><div class="wrap">
+<h2>여러 국가에서의 전개 — 낭만주의는 국가마다 가장 다른 얼굴을 가졌다</h2>
+<p class="lead">낭만주의의 공통 철학은 <strong>이성만으로 설명할 수 없는 감정·자유·상상력·역사·자연의 힘</strong>을 중시하는 것이었다. 그러나 무엇에서 ‘낭만적 진실’을 찾는가는 국가마다 크게 달랐다.</p>
+<div class="table-wrap"><table><thead><tr><th>국가</th><th>핵심 관심</th><th>대표 화가</th></tr></thead><tbody>
+<tr><td>프랑스</td><td>혁명·전쟁·자유·동시대 역사와 격렬한 감정. 강한 색채와 운동감이 중요했다.</td><td>제리코, 들라크루아</td></tr>
+<tr><td>독일</td><td>자연 앞의 고독한 개인, 종교적 내면성, 죽음과 무한, 숭고를 통해 정신세계를 탐구했다.</td><td><a class="art-atlas-artist-link" href="../../index.html?artist=artist-1786332007363" target="_blank" rel="noopener" data-artist-id="artist-1786332007363" data-uh-original="Caspar David Friedrich" data-uh-korean="카스파 다비드 프리드리히" data-uh-display-korean="카스파르 다비트 프리드리히" title="카스파 다비드 프리드리히 연표로 이동">카스파르 다비트 프리드리히</a></td></tr>
+<tr><td>영국</td><td>폭풍·바다·빛·대기 등 자연의 숭고와 산업화되는 근대세계의 변화가 중요한 주제가 되었다.</td><td>터너, 컨스터블</td></tr>
+<tr><td>스페인</td><td>궁정사회에서 출발한 고야는 전쟁, 폭력, 광기, 악몽과 인간의 비합리성을 극단적으로 드러내며 낭만주의적 감수성의 중요한 선구가 되었다.</td><td>프란시스코 고야</td></tr>
+<tr><td>미국</td><td>유럽의 역사적 폐허 대신 광대한 자연과 개척지의 풍경에서 숭고와 국가적 정체성을 찾았다.</td><td>토머스 콜, 프레더릭 에드윈 처치</td></tr>
+</tbody></table></div>
+<div class="callout"><strong>공통 철학:</strong> 질서보다 감정과 경험의 진실을 중시한다.<br><strong>지역적 차이:</strong> 프랑스는 혁명, 독일은 내면, 영국은 자연과 대기, 미국은 광대한 풍경에서 낭만주의를 구현했다.</div>
+</div></section>
+
+</main>
+
+<footer>
+<div class="wrap">낭만주의 — 이성과 의무의 세계에서 감정·자연·자유의 세계로 · 역사와 작품의 비교</div>
+</footer>
+
+<script defer src="../../uhangul/uhangul-runtime.js" data-uhangul-integration="v0.4"></script>
+
+</body>
+</html>

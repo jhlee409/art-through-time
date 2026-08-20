@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>르네상스 — 중세에서 인간과 현실의 세계로</title>
+<style>
+:root {
+  --bg:#0a0c0f; --panel:#12161b; --panel2:#181d23; --text:#f2efe9;
+  --muted:#aeb6bf; --line:#2a3037; --gold:#d8aa4b; --red:#c95f55;
+  --blue:#8eb6d9; --green:#91b99a; --violet:#ac98ca;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--text);line-height:1.75;
+  font-family:Inter,"Pretendard","Noto Sans KR",Arial,sans-serif;
+  background:
+    radial-gradient(circle at 12% 6%,rgba(142,182,217,.08),transparent 28rem),
+    radial-gradient(circle at 85% 8%,rgba(216,170,75,.10),transparent 28rem),
+    linear-gradient(180deg,#090b0e,#0d1014);
+}
+a{color:#efca78;text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{width:min(1200px,92vw);margin:auto}
+.hero{padding:76px 0 40px;border-bottom:1px solid var(--line)}
+.kicker{font-size:.84rem;font-weight:800;letter-spacing:.12em;color:var(--gold)}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.55rem,6vw,5.4rem);line-height:1.03;margin:.35rem 0 1rem}
+.hero p{max-width:1000px;color:#d3d9df;font-size:1.14rem}
+nav{position:sticky;top:0;z-index:20;background:rgba(10,12,15,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:18px;overflow:auto;padding:12px 0;white-space:nowrap;font-size:.9rem}
+section{padding:58px 0;border-bottom:1px solid var(--line)}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,3.5vw,3.15rem);margin:0 0 20px}
+h3{margin:.1rem 0 .55rem;font-size:1.18rem}
+.lead{font-size:1.08rem;color:#d6dce2;max-width:980px}
+.callout{border-left:4px solid var(--gold);padding:18px 21px;background:rgba(216,170,75,.08);border-radius:0 12px 12px 0;margin:24px 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:linear-gradient(180deg,var(--panel2),var(--panel));box-shadow:0 14px 34px rgba(0,0,0,.23)}
+.imgbox{background:#07090b;display:flex;align-items:center;justify-content:center;min-height:430px;position:relative}
+.imgbox img{display:block;width:100%;height:570px;object-fit:contain}
+.imgbox img:after{content:"이미지를 불러올 수 없습니다";color:#aaa}
+.caption{padding:18px 20px 20px}
+.caption small{display:block;color:var(--muted);margin-top:6px}
+.badge{display:inline-block;padding:4px 9px;border-radius:99px;border:1px solid #544323;background:rgba(216,170,75,.08);color:#f0ce83;font-size:.76rem;font-weight:800;margin-bottom:8px}
+.bigline{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.3rem,2.6vw,1.95rem);padding:24px 28px;border-top:1px solid #59471f;border-bottom:1px solid #59471f;color:#f1ddb4;margin:25px 0;line-height:1.48}
+.branch{border:1px solid var(--line);border-radius:15px;background:var(--panel);padding:22px}
+.branch.florence{border-top:4px solid var(--red)}
+.branch.venice{border-top:4px solid var(--blue)}
+.branch.north{border-top:4px solid var(--green)}
+.branch .eyebrow{font-size:.76rem;font-weight:800;letter-spacing:.08em;color:var(--muted)}
+.branch h3{font-size:1.3rem}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;margin-top:24px}
+table{width:100%;border-collapse:collapse;min-width:840px;background:var(--panel)}
+th,td{padding:14px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:#171b20;color:#f0d79f;font-size:.9rem}
+td:first-child{font-weight:750;color:#eef1f4;width:18%}
+tr:last-child td{border-bottom:0}
+.features{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:26px 0}
+.feature{padding:17px;border:1px solid var(--line);border-radius:12px;background:var(--panel);min-height:145px}
+.feature b{color:var(--gold);font-size:.8rem}
+.feature span{display:block;font-weight:800;margin:.35rem 0}
+.feature p{font-size:.9rem;color:var(--muted);margin:0;line-height:1.55}
+.chain{display:flex;align-items:stretch;gap:10px;overflow:auto;padding:8px 0 4px}
+.chain .node{min-width:180px;flex:1;padding:17px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.chain .arrow{display:flex;align-items:center;color:var(--gold);font-size:1.4rem}
+.note{font-size:.94rem;color:var(--muted);background:#10141a;border:1px solid var(--line);padding:17px 19px;border-radius:12px}
+.source-list{font-size:.9rem;color:var(--muted)}
+footer{padding:36px 0 60px;color:#7f8993;font-size:.86rem}
+mark{background:rgba(216,170,75,.17);color:#ffe2a8;padding:.03em .22em;border-radius:4px}
+ul{padding-left:1.25rem}
+li{margin:.4rem 0}
+@media(max-width:920px){
+ .grid2,.grid3{grid-template-columns:1fr}
+ .features{grid-template-columns:1fr 1fr}
+ .imgbox img{height:auto;max-height:610px}
+}
+@media(max-width:560px){
+ .features{grid-template-columns:1fr}
+}
+</style>
+<link rel="stylesheet" href="../../uhangul/uhangul-runtime.css" data-uhangul-integration="v0.3">
+<style id="art-atlas-artist-link-style">
+.art-atlas-artist-link{font-weight:900;color:#191007!important;background:linear-gradient(180deg,rgba(255,232,151,.98),rgba(255,198,86,.9));border-bottom:2px solid #a96f12;border-radius:.22em;padding:0 .16em;text-decoration:none!important;box-decoration-break:clone;-webkit-box-decoration-break:clone}.art-atlas-artist-link:hover{filter:brightness(1.08);box-shadow:0 0 0 2px rgba(255,214,102,.24)}
+</style>
+</head>
+<body>
+<div data-uhangul-corner-bar style="position:sticky!important;top:0!important;z-index:2147483647!important;clear:both!important;height:64px!important;display:flex!important;align-items:center!important;padding:10px 18px!important;background:#0c1014!important;border-bottom:1px solid #2d3540!important"><button type="button" data-uhangul-corner-button aria-label="uHangul 켜기" title="uHangul 켜기" aria-pressed="false" style="position:relative!important;z-index:2147483647!important;display:block!important;border:2px solid #f4c55b!important;border-radius:50%!important;width:38px!important;height:38px!important;padding:0!important;background:#18221e!important;color:#f4c55b!important;font:800 23px/34px Georgia,serif!important;text-align:center!important;cursor:pointer!important;visibility:visible!important;opacity:1!important">u</button></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="hero">
+
+
+
+<div class="wrap">
+  <div class="kicker">미술사 · 중세 후기에서 르네상스로</div>
+  <h1>르네상스<br><span style="color:var(--gold)">인간과 현실의 세계를 다시 구축하다</span></h1>
+  <p>
+    르네상스는 하나의 화가가 갑자기 시작한 단일 양식이 아니다.
+    중세 후기의 종교적·상징적 회화에서 출발하여,
+    <strong>인간의 몸, 감정, 자연, 공간을 관찰하고 고대 그리스·로마의 지적·미적 전통을 새롭게 해석하려 한 장기적 변화</strong>였다.
+    이후 이탈리아에서는 <strong>피렌체·로마 계열</strong>과 <strong>베네치아 계열</strong>이 뚜렷한 차이를 보였고,
+    북유럽에서는 유화와 세밀한 관찰을 중심으로 한 <strong>북유럽 르네상스</strong>가 독자적으로 발전했다.
+  </p>
+</div>
+</header>
+
+<nav>
+<div class="wrap">
+  <a href="#question">0. 무엇을 바꾸었나</a>
+  <a href="#before">1. 르네상스 이전</a>
+  <a href="#giotto">2. 조토의 전환</a>
+  <a href="#masaccio">3. 마사초의 혁신</a>
+  <a href="#branches">4. 세 계열</a>
+  <a href="#florence">5. 피렌체·로마</a>
+  <a href="#venice">6. 베네치아</a>
+  <a href="#north">7. 북유럽</a>
+  <a href="#compare">8. 직접 비교</a>
+  <a href="#countries">9. 국가별 전개</a>
+</div>
+</nav>
+
+<main>
+
+<section id="question">
+<div class="wrap">
+  <h2>0. 르네상스는 무엇을 바꾸려 했는가?</h2>
+  <p class="lead">
+    가장 단순화하면, 르네상스 회화의 변화는
+    <strong>“성스러운 의미를 상징적으로 보여주는 것”에서 “성스러운 사건도 인간이 살아가는 실제 세계 안에서 설득력 있게 보여주는 것”</strong>으로의 이동이다.
+  </p>
+  <div class="features">
+    <div class="feature"><b>01 · 인간</b><span>역할 → 개별 인간</span><p>성인도 무게를 가진 신체와 구체적 표정을 지닌 인간으로 나타난다.</p></div>
+    <div class="feature"><b>02 · 공간</b><span>상징 → 측정 가능 공간</span><p>원근법과 건축 구조를 통해 그림 속 공간을 논리적으로 조직한다.</p></div>
+    <div class="feature"><b>03 · 자연</b><span>도식 → 관찰</span><p>인체·풍경·빛·사물의 실제 모습을 적극적으로 연구한다.</p></div>
+    <div class="feature"><b>04 · 고대</b><span>망각 → 재해석</span><p>그리스·로마의 조각, 건축, 철학과 인간관을 새로운 시대에 맞게 재구성한다.</p></div>
+    <div class="feature"><b>05 · 관람자</b><span>성상 앞 → 공간 앞</span><p>관람자의 눈높이와 위치가 그림의 공간 구성에 실제로 관여한다.</p></div>
+  </div>
+  <div class="callout">
+    중요한 점은 <strong>“중세 화가는 못 그렸고 르네상스 화가는 잘 그렸다”가 아니라는 것</strong>이다.
+    중세 회화는 초월적 의미와 종교적 위계를 중시했고,
+    르네상스는 회화가 담당해야 할 목표 자체를 인간·자연·공간의 설득력 있는 재현 쪽으로 이동시켰다.
+  </div>
+</div>
+</section>
+
+<section id="before">
+<div class="wrap">
+  <h2>1. Before — 르네상스 이전의 전형적인 종교 회화</h2>
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Cimabue-Maest-C3-A0-di-Santa-Trinita-Google-Art-Project-d9011e484d49.jpg" alt="치마부에, 산타 트리니타의 성모"></div>
+      <div class="caption">
+        <span class="badge">중세 후기 · 이탈리아</span>
+        <h3>치마부에, 《산타 트리니타의 성모》</h3>
+        <small>약 1280–1290 · 피렌체 우피치 미술관</small>
+      </div>
+    </article>
+    <div>
+      <h3>이 그림에서 먼저 볼 것</h3>
+      <ul>
+        <li><strong>금빛 배경:</strong> 실제 하늘이나 방이 아니라 초월적인 종교 공간을 만든다.</li>
+        <li><strong>위계:</strong> 성모와 아기 예수는 주변 천사보다 크고 중심적이다.</li>
+        <li><strong>신체:</strong> 몸의 무게와 근육보다 성스러운 형식과 선이 중요하다.</li>
+        <li><strong>공간:</strong> 왕좌에 깊이를 표현하려는 시도는 있지만, 하나의 통일된 현실 공간으로 완전히 조직되지는 않는다.</li>
+        <li><strong>목적:</strong> “실제 장면의 재현”보다 “성스러운 존재의 현현”이 우선한다.</li>
+      </ul>
+      <div class="bigline">
+        관람자는 <strong>현실의 한 장면</strong>을 보는 것이 아니라,<br>
+        <strong>성스러운 존재가 나타난 성상</strong> 앞에 선다.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="giotto">
+<div class="wrap">
+  <h2>2. Transition — 조토가 먼저 인간을 다시 화면 속에 넣었다</h2>
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Giotto-20-20Scrovegni-20-20-36-20-20Lamentation-20-The-20Mourning-20of-feb53c4a2d22.jpg" alt="조토, 그리스도를 애도함"></div>
+      <div class="caption">
+        <span class="badge">프로토 르네상스</span>
+        <h3>조토, 《그리스도를 애도함》</h3>
+        <small>약 1305 · 파도바 스크로베니 예배당</small>
+      </div>
+    </article>
+    <div>
+      <h3>치마부에와 무엇이 달라졌는가?</h3>
+      <ul>
+        <li>인물들이 단순한 종교적 기호가 아니라 <strong>슬퍼하는 인간 집단</strong>처럼 보인다.</li>
+        <li>몸이 옷 아래에서 부피를 가지고 있으며, 서로 기대고 몸을 숙인다.</li>
+        <li>표정·손짓·시선이 하나의 감정적 사건을 만든다.</li>
+        <li>비스듬히 내려오는 바위가 관람자의 눈을 그리스도의 얼굴로 유도한다.</li>
+        <li>천사들조차 추상적 상징이라기보다 격렬한 슬픔을 표현한다.</li>
+      </ul>
+      <div class="callout">
+        조토를 완전한 르네상스 화가라고 부르기보다는
+        <strong>프로토 르네상스의 핵심 선구자</strong>로 보는 것이 적절하다.
+        그는 아직 수학적 선원근법을 사용하지 않았지만,
+        회화의 관심을 다시 <strong>인간의 몸·감정·행동</strong>으로 돌렸다.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="masaccio">
+<div class="wrap">
+  <h2>3. Breakthrough — 마사초가 실제 공간을 만들다</h2>
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Masaccio-20trinit-C3-A0-6267fffe36ee.jpg" alt="마사초, 성 삼위일체"></div>
+      <div class="caption">
+        <span class="badge">초기 르네상스</span>
+        <h3>마사초, 《성 삼위일체》</h3>
+        <small>약 1425–1428 · 피렌체 산타 마리아 노벨라 성당</small>
+      </div>
+    </article>
+    <div>
+      <h3>여기서 르네상스의 공간 혁명이 명확해진다</h3>
+      <ul>
+        <li><strong>선원근법:</strong> 하나의 소실점을 중심으로 건축 공간이 논리적으로 수렴한다.</li>
+        <li><strong>관람자 위치:</strong> 소실점이 실제 관람자의 눈높이와 관계를 맺는다.</li>
+        <li><strong>인체의 무게:</strong> 인물들이 실제 공간을 점유하는 입체적인 존재처럼 보인다.</li>
+        <li><strong>고전 건축:</strong> 로마식 아치와 기둥이 기독교 주제 안으로 들어온다.</li>
+        <li><strong>초월성과 현실성의 결합:</strong> 삼위일체라는 신학적 주제가 현실적인 건축 공간 안에서 제시된다.</li>
+      </ul>
+      <div class="bigline">
+        중세의 성상은 <strong>우리와 다른 성스러운 공간</strong>에 있었다.<br>
+        마사초의 성스러운 세계는 <strong>우리의 공간과 수학적으로 연결</strong>된다.
+      </div>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>관찰 항목</th><th>중세 후기 회화</th><th>초기 르네상스</th></tr></thead>
+    <tbody>
+      <tr><td>공간</td><td>상징적·초월적 공간</td><td>선원근법으로 조직된 논리적 공간</td></tr>
+      <tr><td>인물</td><td>종교적 역할과 위계가 우선</td><td>무게·부피·감정을 가진 인간</td></tr>
+      <tr><td>배경</td><td>금빛·비현실적</td><td>건축·풍경·실내 등 현실적 환경</td></tr>
+      <tr><td>빛</td><td>성스러움과 장식성을 강조</td><td>입체와 공간을 만드는 자연스러운 빛</td></tr>
+      <tr><td>고대문화</td><td>제한적</td><td>고대 그리스·로마의 인체와 건축을 적극 재해석</td></tr>
+      <tr><td>관람자</td><td>성상을 경배하는 위치</td><td>그림 속 공간과 시각적으로 연결된 위치</td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+</section>
+
+<section id="branches">
+<div class="wrap">
+  <h2>4. 르네상스는 이후 세 가지 중요한 방향으로 발전한다</h2>
+  <p class="lead">
+    모든 르네상스 회화를 하나의 양식으로 묶으면 차이가 보이지 않는다.
+    작품을 보는 데 가장 유용한 구분은 다음 세 방향이다.
+  </p>
+
+  <div class="grid3" style="margin-top:28px">
+    <div class="branch florence">
+      <div class="eyebrow">이탈리아 · 피렌체와 로마</div>
+      <h3>① 선·구조·인체</h3>
+      <p><strong>디세뇨(disegno)</strong> — 드로잉, 윤곽, 원근법, 해부학, 기하학적 구성을 중시한다.</p>
+      <p>마사초 → <a class="art-atlas-artist-link" href="../../index.html?artist=artist-1786369007570" target="_blank" rel="noopener" data-artist-id="artist-1786369007570" data-uh-original="Leonardo da Vinci" data-uh-korean="레오나르도 다 빈치" data-uh-display-korean="레오나르도" title="레오나르도 다 빈치 연표로 이동">레오나르도</a> → <a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q5592" target="_blank" rel="noopener" data-artist-id="artist-Q5592" data-uh-original="Michelangelo Buonarroti" data-uh-korean="미켈란젤로 부오나로티" data-uh-display-korean="미켈란젤로" title="미켈란젤로 부오나로티 연표로 이동">미켈란젤로</a> → <a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q5597" target="_blank" rel="noopener" data-artist-id="artist-Q5597" data-uh-original="Raffaello Sanzio da Urbino" data-uh-korean="라파엘로 산치오" data-uh-display-korean="라파엘로" title="라파엘로 산치오 연표로 이동">라파엘로</a></p>
+    </div>
+    <div class="branch venice">
+      <div class="eyebrow">이탈리아 · 베네치아</div>
+      <h3>② 색·빛·대기</h3>
+      <p><strong>콜로레(colore)</strong> — 색채의 층과 빛, 대기, 재질감을 통해 형태와 감정을 만든다.</p>
+      <p><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q17169" target="_blank" rel="noopener" data-artist-id="artist-Q17169" data-uh-original="Giovanni Bellini" data-uh-korean="조반니 벨리니" data-uh-display-korean="조반니 벨리니" title="조반니 벨리니 연표로 이동">조반니 벨리니</a> → <a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q8459" target="_blank" rel="noopener" data-artist-id="artist-Q8459" data-uh-original="Giorgione" data-uh-korean="조르조네" data-uh-display-korean="조르조네" title="조르조네 연표로 이동">조르조네</a> → <a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q47551" target="_blank" rel="noopener" data-artist-id="artist-Q47551" data-uh-original="Tiziano Vecellio (Titian)" data-uh-korean="티치아노 베첼리오" data-uh-display-korean="티치아노" title="티치아노 베첼리오 연표로 이동">티치아노</a></p>
+    </div>
+    <div class="branch north">
+      <div class="eyebrow">플랑드르·독일 등 북유럽</div>
+      <h3>③ 관찰·표면·유화</h3>
+      <p>미세한 빛의 반사와 사물의 표면을 정밀하게 관찰하여 놀라운 현실감을 만든다.</p>
+      <p>얀 반 에이크 → 로히어르 판 데르 베이던 → 뒤러</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    이 세 계열은 같은 질문에 다른 답을 준다.<br>
+    <strong>“회화 안에서 현실을 어떻게 설득력 있게 만들 것인가?”</strong><br><br>
+    피렌체·로마는 <strong>구조</strong>, 베네치아는 <strong>색과 빛</strong>,
+    북유럽은 <strong>세밀한 관찰과 표면</strong>에 특히 강점을 보였다.
+  </div>
+</div>
+</section>
+
+<section id="florence">
+<div class="wrap">
+  <h2>5. 피렌체·로마 계열 — 선과 구조로 완전한 세계를 만든다</h2>
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Raffael-058-d7bc21cf0bca.jpg" alt="라파엘로, 아테네 학당"></div>
+      <div class="caption">
+        <span class="badge">전성기 르네상스</span>
+        <h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q5597" target="_blank" rel="noopener" data-artist-id="artist-Q5597" data-uh-original="Raffaello Sanzio da Urbino" data-uh-korean="라파엘로 산치오" data-uh-display-korean="라파엘로" title="라파엘로 산치오 연표로 이동">라파엘로</a>, 《아테네 학당》</h3>
+        <small>1509–1511 · 바티칸 궁전</small>
+      </div>
+    </article>
+    <div>
+      <h3>초기 르네상스의 발견이 완성된 형태</h3>
+      <ul>
+        <li><strong>원근법:</strong> 거대한 건축과 모든 인물이 하나의 통일된 공간 안에 놓인다.</li>
+        <li><strong>기하학적 질서:</strong> 중앙의 플라톤과 아리스토텔레스를 중심으로 균형 잡힌 구도를 만든다.</li>
+        <li><strong>이상적 인체:</strong> 자연을 관찰하지만 최종적으로는 고전적 이상에 맞게 정제한다.</li>
+        <li><strong>고대의 부활:</strong> 고대 철학자들이 기독교 교황청 공간 안에서 인간 지성의 위대함을 상징한다.</li>
+        <li><strong>인문주의:</strong> 인간의 이성과 지적 탐구가 존엄한 주제가 된다.</li>
+      </ul>
+      <div class="bigline">
+        마사초가 <strong>현실적인 공간을 만드는 법</strong>을 열었다면,<br>
+        <a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q5597" target="_blank" rel="noopener" data-artist-id="artist-Q5597" data-uh-original="Raffaello Sanzio da Urbino" data-uh-korean="라파엘로 산치오" data-uh-display-korean="라파엘로" title="라파엘로 산치오 연표로 이동">라파엘로</a>는 그 공간 안에 <strong>이상적으로 조직된 인간 세계</strong>를 완성했다.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="venice">
+<div class="wrap">
+  <h2>6. 베네치아 계열 — 색과 빛으로 세계를 만든다</h2>
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Tizian-041-c1f1a35ec75c.jpg" alt="티치아노, 성모 승천"></div>
+      <div class="caption">
+        <span class="badge">베네치아 르네상스</span>
+        <h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q47551" target="_blank" rel="noopener" data-artist-id="artist-Q47551" data-uh-original="Tiziano Vecellio (Titian)" data-uh-korean="티치아노 베첼리오" data-uh-display-korean="티치아노" title="티치아노 베첼리오 연표로 이동">티치아노</a>, 《성모 승천》</h3>
+        <small>1516–1518 · 베네치아 산타 마리아 글로리오사 데이 프라리 성당</small>
+      </div>
+    </article>
+    <div>
+      <h3>피렌체와 다른 방식으로 형태를 만든다</h3>
+      <ul>
+        <li><strong>색채가 구조:</strong> 빨강·금빛·피부색의 큰 덩어리가 화면의 층을 만든다.</li>
+        <li><strong>빛과 대기:</strong> 형태가 단단한 윤곽선보다 색과 빛의 변화 속에서 나타난다.</li>
+        <li><strong>감각성:</strong> 피부, 천, 구름, 하늘의 질감이 강한 시각적 경험을 만든다.</li>
+        <li><strong>움직임:</strong> 아래의 사도, 상승하는 성모, 위의 천상이 수직적 운동을 만든다.</li>
+        <li><strong>후대 영향:</strong> <a class="art-atlas-artist-link" href="../../index.html?artist=artist-url-1786879941678" target="_blank" rel="noopener" data-artist-id="artist-url-1786879941678" data-uh-original="Peter Paul Rubens" data-uh-korean="페테르 파울 루벤스" data-uh-display-korean="루벤스" title="페테르 파울 루벤스 연표로 이동">루벤스</a>·벨라스케스 등 후대 회화의 색채적·회화적 전통에 큰 영향을 준다.</li>
+      </ul>
+      <div class="bigline">
+        피렌체가 <strong>선을 그어 형태를 확정</strong>하려 했다면,<br>
+        베네치아는 <strong>색과 빛의 관계 속에서 형태가 나타나게</strong> 했다.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="north">
+<div class="wrap">
+  <h2>7. 북유럽 르네상스 — 사물의 표면까지 현실로 만든다</h2>
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Van-Eyck-Arnolfini-Portrait-997900945212.jpg" alt="얀 반 에이크, 아르놀피니 부부의 초상"></div>
+      <div class="caption">
+        <span class="badge">북유럽 르네상스</span>
+        <h3>얀 반 에이크, 《아르놀피니 부부의 초상》</h3>
+        <small>1434 · 런던 내셔널 갤러리</small>
+      </div>
+    </article>
+    <div>
+      <h3>마사초와 거의 같은 시대인데 현실을 만드는 방법이 다르다</h3>
+      <ul>
+        <li><strong>유화의 정교한 활용:</strong> 투명한 색층을 쌓아 광택과 깊이를 만든다.</li>
+        <li><strong>재질의 구별:</strong> 모피, 나무, 금속, 유리, 피부가 서로 다른 표면으로 느껴진다.</li>
+        <li><strong>빛의 관찰:</strong> 창문에서 들어오는 빛과 반사광을 세밀하게 묘사한다.</li>
+        <li><strong>미세한 사물:</strong> 거울·샹들리에·과일·신발까지 놀라울 정도로 구체적이다.</li>
+        <li><strong>상징과 현실의 공존:</strong> 실제처럼 보이는 일상 사물이 동시에 상징적 의미를 지닐 수 있다.</li>
+      </ul>
+      <div class="callout">
+        <strong>얀 반 에이크가 유화를 발명했다는 설명은 정확하지 않다.</strong>
+        유화는 이전에도 존재했지만, 반 에이크를 포함한 초기 네덜란드 화가들이
+        그 가능성을 비약적으로 발전시켜 이전과 다른 수준의 세밀함과 광학적 효과를 만들어냈다.
+      </div>
+      <div class="bigline">
+        마사초가 <strong>수학으로 공간을 현실화</strong>했다면,<br>
+        반 에이크는 <strong>빛과 표면의 관찰로 사물을 현실화</strong>했다.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="compare">
+<div class="wrap">
+  <h2>8. 세 계열의 대표작을 직접 비교하면</h2>
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>비교 항목</th><th>피렌체·로마</th><th>베네치아</th><th>북유럽</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>대표작</td><td><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q5597" target="_blank" rel="noopener" data-artist-id="artist-Q5597" data-uh-original="Raffaello Sanzio da Urbino" data-uh-korean="라파엘로 산치오" data-uh-display-korean="라파엘로" title="라파엘로 산치오 연표로 이동">라파엘로</a> 《아테네 학당》</td><td><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q47551" target="_blank" rel="noopener" data-artist-id="artist-Q47551" data-uh-original="Tiziano Vecellio (Titian)" data-uh-korean="티치아노 베첼리오" data-uh-display-korean="티치아노" title="티치아노 베첼리오 연표로 이동">티치아노</a> 《성모 승천》</td><td>얀 반 에이크 《아르놀피니 부부의 초상》</td></tr>
+      <tr><td>핵심 질문</td><td>세계를 어떻게 논리적이고 이상적으로 조직할까?</td><td>색과 빛으로 어떻게 살아 있는 감각을 만들까?</td><td>눈앞의 사물을 얼마나 정확하게 관찰할 수 있을까?</td></tr>
+      <tr><td>형태</td><td>윤곽·드로잉·해부학</td><td>색면·붓질·빛</td><td>미세한 표면 묘사</td></tr>
+      <tr><td>공간</td><td>선원근법과 기하학적 질서</td><td>빛·대기·색의 깊이</td><td>경험적 공간과 세밀한 실내 관찰</td></tr>
+      <tr><td>인체</td><td>이상적이고 구조적으로 명확함</td><td>빛과 색 속에서 감각적으로 나타남</td><td>개별 인물의 얼굴·복식·표면을 세밀히 묘사</td></tr>
+      <tr><td>고전 고대</td><td>매우 적극적</td><td>적극적이지만 색채적 전통과 결합</td><td>초기에는 상대적으로 약하며 이후 이탈리아 영향과 결합</td></tr>
+      <tr><td>기억법</td><td><strong>구조</strong></td><td><strong>색과 빛</strong></td><td><strong>표면과 관찰</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout">
+    <strong>한 문장으로 기억하면:</strong><br><br>
+    피렌체·로마 르네상스는 <strong>“세계를 구조화”</strong>했고,<br>
+    베네치아 르네상스는 <strong>“세계를 색과 빛으로 감각화”</strong>했으며,<br>
+    북유럽 르네상스는 <strong>“세계를 끝까지 관찰”</strong>했다.
+  </div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <h2>전체 흐름을 한눈에</h2>
+  <div class="chain">
+    <div class="node"><strong>중세 후기</strong><br><span style="color:var(--muted)">상징·위계·초월적 공간</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong>조토</strong><br><span style="color:var(--muted)">몸·감정·인간관계</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong>마사초</strong><br><span style="color:var(--muted)">원근법·입체·실제 공간</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong>전성기 르네상스</strong><br><span style="color:var(--muted)">자연과 이상적 질서의 통합</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong>세 방향의 발전</strong><br><span style="color:var(--muted)">구조 / 색·빛 / 세밀한 관찰</span></div>
+  </div>
+
+  <div class="note" style="margin-top:26px">
+    ※ “피렌체·로마 / 베네치아 / 북유럽”이라는 구분은 작품을 이해하기 위한 교육적 틀이다.
+    실제 르네상스 미술은 지역·후원자·매체·시기에 따라 훨씬 복잡하며,
+    각 화가를 하나의 계열에 완전히 고정할 수는 없다.
+    특히 16세기에는 이탈리아 각 지역 간의 상호 영향이 매우 강해진다.
+  </div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <h2>작품 이미지</h2>
+  <div class="source-list">
+    <p>화면의 작품 이미지는 원작이 공공영역에 속하는 회화의 Wikimedia Commons 공개 이미지를 불러오도록 구성했다.</p>
+    <p>※ 작품 이미지는 자료 폴더의 로컬 이미지 파일을 사용한다. 본문의 설명도 파일 자체에 모두 포함되어 있다.</p>
+  </div>
+</div>
+</section>
+
+
+<section id="countries">
+<div class="wrap">
+  <h2>9. 여러 국가에서의 전개 — 특히 독일 르네상스는 어떻게 달랐나?</h2>
+  <p class="lead">
+    르네상스의 공통 핵심은 <strong>인간과 자연의 관찰, 고전 고대의 재해석, 설득력 있는 공간과 인체</strong>였지만,
+    그것을 실현하는 방법은 지역마다 달랐다. 특히 독일 르네상스는 단순한 이탈리아 양식의 수입이 아니라,
+    <strong>북유럽의 정밀한 관찰·판화 전통·후기고딕의 강한 선적 표현</strong>에
+    <strong>이탈리아의 비례·원근법·고전주의</strong>를 결합했다는 점이 중요하다.
+  </p>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>지역·국가</th><th>지역적 특징</th><th>대표 화가</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>이탈리아 — 피렌체·로마</td>
+        <td>선, 드로잉, 해부학, 선원근법과 고전적 비례를 통해 세계를 구조적으로 조직했다.</td>
+        <td>마사초, <a class="art-atlas-artist-link" href="../../index.html?artist=artist-1786369007570" target="_blank" rel="noopener" data-artist-id="artist-1786369007570" data-uh-original="Leonardo da Vinci" data-uh-korean="레오나르도 다 빈치" data-uh-display-korean="레오나르도" title="레오나르도 다 빈치 연표로 이동">레오나르도</a>, <a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q5592" target="_blank" rel="noopener" data-artist-id="artist-Q5592" data-uh-original="Michelangelo Buonarroti" data-uh-korean="미켈란젤로 부오나로티" data-uh-display-korean="미켈란젤로" title="미켈란젤로 부오나로티 연표로 이동">미켈란젤로</a>, <a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q5597" target="_blank" rel="noopener" data-artist-id="artist-Q5597" data-uh-original="Raffaello Sanzio da Urbino" data-uh-korean="라파엘로 산치오" data-uh-display-korean="라파엘로" title="라파엘로 산치오 연표로 이동">라파엘로</a></td>
+      </tr>
+      <tr>
+        <td>이탈리아 — 베네치아</td>
+        <td>형태의 윤곽보다 색채·빛·대기의 효과를 중시하여 보다 감각적이고 회화적인 전통을 발전시켰다.</td>
+        <td><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q17169" target="_blank" rel="noopener" data-artist-id="artist-Q17169" data-uh-original="Giovanni Bellini" data-uh-korean="조반니 벨리니" data-uh-display-korean="조반니 벨리니" title="조반니 벨리니 연표로 이동">조반니 벨리니</a>, <a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q8459" target="_blank" rel="noopener" data-artist-id="artist-Q8459" data-uh-original="Giorgione" data-uh-korean="조르조네" data-uh-display-korean="조르조네" title="조르조네 연표로 이동">조르조네</a>, <a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q47551" target="_blank" rel="noopener" data-artist-id="artist-Q47551" data-uh-original="Tiziano Vecellio (Titian)" data-uh-korean="티치아노 베첼리오" data-uh-display-korean="티치아노" title="티치아노 베첼리오 연표로 이동">티치아노</a></td>
+      </tr>
+      <tr>
+        <td>네덜란드·플랑드르</td>
+        <td>유화의 투명한 층, 반사광, 사물의 재질과 일상 공간을 세밀하게 관찰하는 방식이 두드러졌다.</td>
+        <td>얀 반 에이크, 로히어르 판 데르 베이던</td>
+      </tr>
+      <tr>
+        <td><strong>독일</strong></td>
+        <td>
+          북유럽의 세밀한 관찰과 강한 선적 전통을 유지하면서 이탈리아 르네상스의
+          비례·원근법·고전적 인체 이론을 적극적으로 받아들였다.
+          특히 <strong>판화</strong>가 회화와 동등하게 중요한 지적·예술적 매체가 되었다.
+        </td>
+        <td>알브레히트 뒤러, 루카스 크라나흐, 한스 홀바인 2세, 알브레히트 알트도르퍼</td>
+      </tr>
+      <tr>
+        <td>프랑스</td>
+        <td>16세기 왕실 후원 아래 이탈리아 르네상스가 건축·궁정미술과 결합했고, 이후 퐁텐블로파에서 매너리즘적 성격도 강해졌다.</td>
+        <td>장 클루에, 프랑수아 클루에</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="bigline">
+    독일 르네상스를 한 문장으로 말하면:<br>
+    <strong>“북유럽의 관찰과 판화 + 이탈리아의 비례와 고전적 이론”</strong>
+  </div>
+
+  <div class="grid3" style="margin-top:28px">
+    <div class="branch north">
+      <div class="eyebrow">알브레히트 뒤러</div>
+      <h3>① 이탈리아 이론과 독일 판화의 결합</h3>
+      <p>
+        뒤러는 이탈리아 여행을 통해 인체 비례, 원근법, 고전주의에 깊은 관심을 가졌지만
+        이를 북유럽 특유의 정밀한 관찰과 탁월한 목판·동판화 기술에 결합했다.
+      </p>
+      <p>
+        따라서 뒤러는 <strong>독일 르네상스와 이탈리아 르네상스를 연결한 가장 중요한 인물</strong>로 볼 수 있다.
+      </p>
+    </div>
+
+    <div class="branch north">
+      <div class="eyebrow">루카스 크라나흐 · 한스 홀바인</div>
+      <h3>② 종교개혁과 초상화</h3>
+      <p>
+        크라나흐는 루터와 긴밀하게 연결되어 종교개혁 시대의 초상·종교 이미지·인쇄문화에 중요한 역할을 했다.
+        홀바인은 극도로 정밀한 초상화를 통해 개인의 얼굴뿐 아니라 의복·직업·사회적 지위를 세밀하게 기록했다.
+      </p>
+      <p>
+        독일 르네상스는 이처럼 <strong>인문주의와 종교개혁이라는 새로운 사회적 환경</strong>과도 깊게 결합했다.
+      </p>
+    </div>
+
+    <div class="branch north">
+      <div class="eyebrow">도나우파</div>
+      <h3>③ 독일어권 내부의 독자적 지역 경향</h3>
+      <p>
+        알트도르퍼와 볼프 후버를 중심으로 한 도나우파는 남독일·오스트리아에서
+        숲·산·하늘과 대기 같은 <strong>자연 자체를 화면의 주인공</strong>으로 끌어올렸다.
+      </p>
+      <p>
+        따라서 도나우파는 르네상스의 상위 범주에 속하지만,
+        독자적인 조형적 성격이 뚜렷해 별도의 <strong>도나우파.html</strong>로 연결할 가치가 있다.
+      </p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <strong>데이터베이스에서의 권장 연결:</strong><br><br>
+    뒤러·크라나흐·홀바인 → 기본적으로 <strong>르네상스.html</strong><br>
+    알트도르퍼·볼프 후버 → <strong>르네상스.html + 도나우파.html</strong><br><br>
+    즉 <strong>“독일 북방 르네상스”라는 별도 HTML은 만들 필요가 없고</strong>,
+    르네상스 안의 독일 전개를 명확히 설명하면서 독자적 지역학파인 도나우파만 별도 연결하는 구조가 가장 깔끔하다.
+  </div>
+
+  <div class="note">
+    ※ “북유럽 르네상스”는 네덜란드·플랑드르·독일·프랑스 북부 등 알프스 이북의 여러 전통을 묶는 넓은 후대 분류다.
+    독일 르네상스 역시 그 안에 포함되지만, 판화·종교개혁·이탈리아 미술이론의 적극적 수용이라는 점에서
+    네덜란드 초기 르네상스와는 상당히 다른 전개를 보였다.
+  </div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="wrap">르네상스 — 중세에서 인간과 현실의 세계로 · 비교를 통한 미술사 이해</div>
+</footer>
+
+<script defer src="../../uhangul/uhangul-runtime.js" data-uhangul-integration="v0.4"></script>
+
+</body>
+</html>

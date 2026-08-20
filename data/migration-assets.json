@@ -1,0 +1,5646 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-08-16T22:05:42.783Z",
+  "assets": [
+    {
+      "path": "data/thumbnails/artist-1786332007363/index.json",
+      "type": "thumbnail",
+      "bytes": 12214
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q11753188.jpg",
+      "type": "thumbnail",
+      "bytes": 11580
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q1197913.png",
+      "type": "thumbnail",
+      "bytes": 1562
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q1198515.jpg",
+      "type": "thumbnail",
+      "bytes": 14913
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q1214313.jpg",
+      "type": "thumbnail",
+      "bytes": 12030
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q1423223.png",
+      "type": "thumbnail",
+      "bytes": 1610
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q1451490.jpg",
+      "type": "thumbnail",
+      "bytes": 76060
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q1545495.png",
+      "type": "thumbnail",
+      "bytes": 1562
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q1587929.png",
+      "type": "thumbnail",
+      "bytes": 4802
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q15971584.jpg",
+      "type": "thumbnail",
+      "bytes": 13251
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q16038520.jpg",
+      "type": "thumbnail",
+      "bytes": 33345
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q16038671.jpg",
+      "type": "thumbnail",
+      "bytes": 15670
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q16038674.jpg",
+      "type": "thumbnail",
+      "bytes": 7912
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q16038768.jpg",
+      "type": "thumbnail",
+      "bytes": 12092
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q16331419.jpg",
+      "type": "thumbnail",
+      "bytes": 14672
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q1652361.jpg",
+      "type": "thumbnail",
+      "bytes": 20628
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q17325449.jpg",
+      "type": "thumbnail",
+      "bytes": 20693
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q17493547.png",
+      "type": "thumbnail",
+      "bytes": 1562
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q1787143.jpg",
+      "type": "thumbnail",
+      "bytes": 143049
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q18021530.jpg",
+      "type": "thumbnail",
+      "bytes": 13936
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q18202267.png",
+      "type": "thumbnail",
+      "bytes": 2450
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q18602442.jpg",
+      "type": "thumbnail",
+      "bytes": 14800
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q18602445.jpg",
+      "type": "thumbnail",
+      "bytes": 15545
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q18602446.png",
+      "type": "thumbnail",
+      "bytes": 4802
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q18602448.jpg",
+      "type": "thumbnail",
+      "bytes": 37351
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q18602466.jpg",
+      "type": "thumbnail",
+      "bytes": 15584
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q18602468.jpg",
+      "type": "thumbnail",
+      "bytes": 10239
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q18602473.jpg",
+      "type": "thumbnail",
+      "bytes": 47999
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q18602483.jpg",
+      "type": "thumbnail",
+      "bytes": 9017
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q18602549.jpg",
+      "type": "thumbnail",
+      "bytes": 23816
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q18602616.jpg",
+      "type": "thumbnail",
+      "bytes": 83129
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q18602629.jpg",
+      "type": "thumbnail",
+      "bytes": 7377
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q18602630.jpg",
+      "type": "thumbnail",
+      "bytes": 8323
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q18602632.jpg",
+      "type": "thumbnail",
+      "bytes": 8854
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q18602635.jpg",
+      "type": "thumbnail",
+      "bytes": 24663
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q18603131.png",
+      "type": "thumbnail",
+      "bytes": 1610
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q18603190.jpg",
+      "type": "thumbnail",
+      "bytes": 19587
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q194137.jpg",
+      "type": "thumbnail",
+      "bytes": 61217
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q232084.png",
+      "type": "thumbnail",
+      "bytes": 1562
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q232087.jpg",
+      "type": "thumbnail",
+      "bytes": 60027
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q24213.jpg",
+      "type": "thumbnail",
+      "bytes": 78380
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q2517970.png",
+      "type": "thumbnail",
+      "bytes": 1562
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q311243.jpg",
+      "type": "thumbnail",
+      "bytes": 74847
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q3139782.png",
+      "type": "thumbnail",
+      "bytes": 476
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q334360.jpg",
+      "type": "thumbnail",
+      "bytes": 33229
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q4292427.jpg",
+      "type": "thumbnail",
+      "bytes": 29636
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q4346085.jpg",
+      "type": "thumbnail",
+      "bytes": 19143
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q4478994.jpg",
+      "type": "thumbnail",
+      "bytes": 10152
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q4531523.jpg",
+      "type": "thumbnail",
+      "bytes": 43652
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q507120.jpg",
+      "type": "thumbnail",
+      "bytes": 12567
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q56238864.jpg",
+      "type": "thumbnail",
+      "bytes": 44403
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q693746.jpg",
+      "type": "thumbnail",
+      "bytes": 8908
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q745415.jpg",
+      "type": "thumbnail",
+      "bytes": 26937
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q884782.jpg",
+      "type": "thumbnail",
+      "bytes": 21998
+    },
+    {
+      "path": "data/thumbnails/artist-1786332007363/wikidata-Q999836.png",
+      "type": "thumbnail",
+      "bytes": 1562
+    },
+    {
+      "path": "data/thumbnails/artist-1786333400214/index.json",
+      "type": "thumbnail",
+      "bytes": 2810
+    },
+    {
+      "path": "data/thumbnails/artist-1786333400214/wikidata-Q18602436.jpg",
+      "type": "thumbnail",
+      "bytes": 11541
+    },
+    {
+      "path": "data/thumbnails/artist-1786333400214/wikidata-Q18602437.jpg",
+      "type": "thumbnail",
+      "bytes": 9899
+    },
+    {
+      "path": "data/thumbnails/artist-1786333400214/wikidata-Q18602454.jpg",
+      "type": "thumbnail",
+      "bytes": 16574
+    },
+    {
+      "path": "data/thumbnails/artist-1786333400214/wikidata-Q18602455.jpg",
+      "type": "thumbnail",
+      "bytes": 25515
+    },
+    {
+      "path": "data/thumbnails/artist-1786333400214/wikidata-Q18602491.jpg",
+      "type": "thumbnail",
+      "bytes": 14972
+    },
+    {
+      "path": "data/thumbnails/artist-1786333400214/wikidata-Q18602536.jpg",
+      "type": "thumbnail",
+      "bytes": 37173
+    },
+    {
+      "path": "data/thumbnails/artist-1786333400214/wikidata-Q18602537.jpg",
+      "type": "thumbnail",
+      "bytes": 25529
+    },
+    {
+      "path": "data/thumbnails/artist-1786333400214/wikidata-Q18602539.jpg",
+      "type": "thumbnail",
+      "bytes": 34402
+    },
+    {
+      "path": "data/thumbnails/artist-1786333400214/wikidata-Q18602614.jpg",
+      "type": "thumbnail",
+      "bytes": 21924
+    },
+    {
+      "path": "data/thumbnails/artist-1786333400214/wikidata-Q18602616.jpg",
+      "type": "thumbnail",
+      "bytes": 28261
+    },
+    {
+      "path": "data/thumbnails/artist-1786333400214/wikidata-Q18602618.jpg",
+      "type": "thumbnail",
+      "bytes": 14152
+    },
+    {
+      "path": "data/thumbnails/artist-1786333400214/wikidata-Q18603181.jpg",
+      "type": "thumbnail",
+      "bytes": 36693
+    },
+    {
+      "path": "data/thumbnails/artist-1786333400214/wikidata-Q2517970.jpg",
+      "type": "thumbnail",
+      "bytes": 44775
+    },
+    {
+      "path": "data/thumbnails/artist-1786333400214/wikidata-Q999836.jpg",
+      "type": "thumbnail",
+      "bytes": 14243
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/index.json",
+      "type": "thumbnail",
+      "bytes": 5996
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q113262.jpg",
+      "type": "thumbnail",
+      "bytes": 23342
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q1192090.jpg",
+      "type": "thumbnail",
+      "bytes": 34580
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q123286344.jpg",
+      "type": "thumbnail",
+      "bytes": 28016
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q124704977.jpg",
+      "type": "thumbnail",
+      "bytes": 19467
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q126467.jpg",
+      "type": "thumbnail",
+      "bytes": 42304
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q1551926.jpg",
+      "type": "thumbnail",
+      "bytes": 12367
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q16648934.jpg",
+      "type": "thumbnail",
+      "bytes": 24246
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q17495108.jpg",
+      "type": "thumbnail",
+      "bytes": 18930
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q1810341.jpg",
+      "type": "thumbnail",
+      "bytes": 24834
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q18208688.jpg",
+      "type": "thumbnail",
+      "bytes": 16835
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q18413043.jpg",
+      "type": "thumbnail",
+      "bytes": 47560
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q18620351.jpg",
+      "type": "thumbnail",
+      "bytes": 39742
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q18625546.jpg",
+      "type": "thumbnail",
+      "bytes": 34010
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q20198758.jpg",
+      "type": "thumbnail",
+      "bytes": 31750
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q2105269.jpg",
+      "type": "thumbnail",
+      "bytes": 15870
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q2494850.jpg",
+      "type": "thumbnail",
+      "bytes": 19088
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q2899286.jpg",
+      "type": "thumbnail",
+      "bytes": 18564
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q2997933.jpg",
+      "type": "thumbnail",
+      "bytes": 22142
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q3207826.jpg",
+      "type": "thumbnail",
+      "bytes": 9060
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q3224381.jpg",
+      "type": "thumbnail",
+      "bytes": 21556
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q3227448.jpg",
+      "type": "thumbnail",
+      "bytes": 21524
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q43325424.jpg",
+      "type": "thumbnail",
+      "bytes": 21567
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q4373335.jpg",
+      "type": "thumbnail",
+      "bytes": 13913
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q665028.jpg",
+      "type": "thumbnail",
+      "bytes": 38993
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q66763675.jpg",
+      "type": "thumbnail",
+      "bytes": 19642
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q67089144.jpg",
+      "type": "thumbnail",
+      "bytes": 50477
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q71715445.jpg",
+      "type": "thumbnail",
+      "bytes": 7593
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q7720924.jpg",
+      "type": "thumbnail",
+      "bytes": 32688
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q96216689.jpg",
+      "type": "thumbnail",
+      "bytes": 19207
+    },
+    {
+      "path": "data/thumbnails/artist-1786343948059/wikidata-Q978841.jpg",
+      "type": "thumbnail",
+      "bytes": 24952
+    },
+    {
+      "path": "data/thumbnails/artist-1786346958745/index.json",
+      "type": "thumbnail",
+      "bytes": 404
+    },
+    {
+      "path": "data/thumbnails/artist-1786346958745/wikidata-Q113764391.jpg",
+      "type": "thumbnail",
+      "bytes": 16912
+    },
+    {
+      "path": "data/thumbnails/artist-1786346958745/wikidata-Q3918079.jpg",
+      "type": "thumbnail",
+      "bytes": 24456
+    },
+    {
+      "path": "data/thumbnails/artist-1786347518103/index.json",
+      "type": "thumbnail",
+      "bytes": 2826
+    },
+    {
+      "path": "data/thumbnails/artist-1786347518103/wikidata-Q105079097.jpg",
+      "type": "thumbnail",
+      "bytes": 19139
+    },
+    {
+      "path": "data/thumbnails/artist-1786347518103/wikidata-Q112030206.jpg",
+      "type": "thumbnail",
+      "bytes": 16064
+    },
+    {
+      "path": "data/thumbnails/artist-1786347518103/wikidata-Q11800610.jpg",
+      "type": "thumbnail",
+      "bytes": 17286
+    },
+    {
+      "path": "data/thumbnails/artist-1786347518103/wikidata-Q119084532.jpg",
+      "type": "thumbnail",
+      "bytes": 24466
+    },
+    {
+      "path": "data/thumbnails/artist-1786347518103/wikidata-Q124334121.jpg",
+      "type": "thumbnail",
+      "bytes": 24628
+    },
+    {
+      "path": "data/thumbnails/artist-1786347518103/wikidata-Q135822399.jpg",
+      "type": "thumbnail",
+      "bytes": 26711
+    },
+    {
+      "path": "data/thumbnails/artist-1786347518103/wikidata-Q140934474.jpg",
+      "type": "thumbnail",
+      "bytes": 22948
+    },
+    {
+      "path": "data/thumbnails/artist-1786347518103/wikidata-Q16518912.jpg",
+      "type": "thumbnail",
+      "bytes": 15838
+    },
+    {
+      "path": "data/thumbnails/artist-1786347518103/wikidata-Q18114400.jpg",
+      "type": "thumbnail",
+      "bytes": 17671
+    },
+    {
+      "path": "data/thumbnails/artist-1786347518103/wikidata-Q18689408.jpg",
+      "type": "thumbnail",
+      "bytes": 18208
+    },
+    {
+      "path": "data/thumbnails/artist-1786347518103/wikidata-Q21723051.jpg",
+      "type": "thumbnail",
+      "bytes": 14841
+    },
+    {
+      "path": "data/thumbnails/artist-1786347518103/wikidata-Q4340473.jpg",
+      "type": "thumbnail",
+      "bytes": 18486
+    },
+    {
+      "path": "data/thumbnails/artist-1786347518103/wikidata-Q50320975.jpg",
+      "type": "thumbnail",
+      "bytes": 21582
+    },
+    {
+      "path": "data/thumbnails/artist-1786347518103/wikidata-Q61761762.jpg",
+      "type": "thumbnail",
+      "bytes": 21498
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/index.json",
+      "type": "thumbnail",
+      "bytes": 13123
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q100998017.jpg",
+      "type": "thumbnail",
+      "bytes": 17114
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q102329170.jpg",
+      "type": "thumbnail",
+      "bytes": 16598
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q1059211.jpg",
+      "type": "thumbnail",
+      "bytes": 31518
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q107460193.jpg",
+      "type": "thumbnail",
+      "bytes": 16982
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q1105846.jpg",
+      "type": "thumbnail",
+      "bytes": 36380
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q1142058.JPG",
+      "type": "thumbnail",
+      "bytes": 32973
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q11765908.jpg",
+      "type": "thumbnail",
+      "bytes": 35680
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q11825876.jpg",
+      "type": "thumbnail",
+      "bytes": 78867
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q11935346.jpg",
+      "type": "thumbnail",
+      "bytes": 36771
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q1217213.jpg",
+      "type": "thumbnail",
+      "bytes": 21748
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q123980757.jpg",
+      "type": "thumbnail",
+      "bytes": 34228
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q12418.jpg",
+      "type": "thumbnail",
+      "bytes": 21855
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q1267893.jpg",
+      "type": "thumbnail",
+      "bytes": 22157
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q128910.jpg",
+      "type": "thumbnail",
+      "bytes": 13242
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q131841258.jpg",
+      "type": "thumbnail",
+      "bytes": 13942
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q1327676.jpg",
+      "type": "thumbnail",
+      "bytes": 28020
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q1477693.jpg",
+      "type": "thumbnail",
+      "bytes": 12997
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q1638622.jpg",
+      "type": "thumbnail",
+      "bytes": 29288
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q1892745.jpg",
+      "type": "thumbnail",
+      "bytes": 23209
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q20382123.jpg",
+      "type": "thumbnail",
+      "bytes": 28198
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q2045726.jpg",
+      "type": "thumbnail",
+      "bytes": 21935
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q2072801.jpg",
+      "type": "thumbnail",
+      "bytes": 26059
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q215486.jpg",
+      "type": "thumbnail",
+      "bytes": 32849
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q2198705.jpg",
+      "type": "thumbnail",
+      "bytes": 15515
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q2308934.jpg",
+      "type": "thumbnail",
+      "bytes": 31231
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q2338404.jpg",
+      "type": "thumbnail",
+      "bytes": 19611
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q2397593.jpg",
+      "type": "thumbnail",
+      "bytes": 21493
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q2471531.jpg",
+      "type": "thumbnail",
+      "bytes": 21994
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q29384852.jpg",
+      "type": "thumbnail",
+      "bytes": 25079
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q32998757.jpg",
+      "type": "thumbnail",
+      "bytes": 15475
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q3373694.jpg",
+      "type": "thumbnail",
+      "bytes": 23231
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q3492887.jpg",
+      "type": "thumbnail",
+      "bytes": 12595
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q3618186.jpg",
+      "type": "thumbnail",
+      "bytes": 7176
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q3704129.jpg",
+      "type": "thumbnail",
+      "bytes": 39520
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q3800774.jpg",
+      "type": "thumbnail",
+      "bytes": 35074
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q3829345.jpg",
+      "type": "thumbnail",
+      "bytes": 44077
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q3922633.jpg",
+      "type": "thumbnail",
+      "bytes": 25235
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q3937378.jpg",
+      "type": "thumbnail",
+      "bytes": 15892
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q3976305.jpg",
+      "type": "thumbnail",
+      "bytes": 22786
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q3985169.jpg",
+      "type": "thumbnail",
+      "bytes": 36047
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q4009972.jpg",
+      "type": "thumbnail",
+      "bytes": 30069
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q4390923.jpg",
+      "type": "thumbnail",
+      "bytes": 22384
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q474338.jpg",
+      "type": "thumbnail",
+      "bytes": 14288
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q5237905.jpg",
+      "type": "thumbnail",
+      "bytes": 20707
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q52707816.jpg",
+      "type": "thumbnail",
+      "bytes": 25699
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q563727.jpg",
+      "type": "thumbnail",
+      "bytes": 26637
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q591128.jpg",
+      "type": "thumbnail",
+      "bytes": 31597
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q60835898.png",
+      "type": "thumbnail",
+      "bytes": 119694
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q656434.jpg",
+      "type": "thumbnail",
+      "bytes": 15662
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q6696013.jpg",
+      "type": "thumbnail",
+      "bytes": 19572
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q698015.jpg",
+      "type": "thumbnail",
+      "bytes": 26861
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q783215.jpg",
+      "type": "thumbnail",
+      "bytes": 13883
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q797902.jpg",
+      "type": "thumbnail",
+      "bytes": 33181
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q8254439.jpg",
+      "type": "thumbnail",
+      "bytes": 24489
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q97170016.png",
+      "type": "thumbnail",
+      "bytes": 48300
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q97171787.jpg",
+      "type": "thumbnail",
+      "bytes": 22433
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q972196.jpg",
+      "type": "thumbnail",
+      "bytes": 29318
+    },
+    {
+      "path": "data/thumbnails/artist-1786369007570/wikidata-Q993743.jpg",
+      "type": "thumbnail",
+      "bytes": 44991
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/index.json",
+      "type": "thumbnail",
+      "bytes": 12515
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q102852946.jpg",
+      "type": "thumbnail",
+      "bytes": 13634
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q1117094.jpg",
+      "type": "thumbnail",
+      "bytes": 17692
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q1122537.jpg",
+      "type": "thumbnail",
+      "bytes": 53787
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q1132479.jpg",
+      "type": "thumbnail",
+      "bytes": 23300
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q1132486.jpg",
+      "type": "thumbnail",
+      "bytes": 14068
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q1213151.jpg",
+      "type": "thumbnail",
+      "bytes": 29712
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q1433194.jpg",
+      "type": "thumbnail",
+      "bytes": 28488
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q1448728.JPG",
+      "type": "thumbnail",
+      "bytes": 24502
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q1460271.jpg",
+      "type": "thumbnail",
+      "bytes": 36068
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2011510.jpg",
+      "type": "thumbnail",
+      "bytes": 22337
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2097931.jpg",
+      "type": "thumbnail",
+      "bytes": 12136
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2264942.jpg",
+      "type": "thumbnail",
+      "bytes": 22513
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2270291.jpg",
+      "type": "thumbnail",
+      "bytes": 15664
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2270955.jpg",
+      "type": "thumbnail",
+      "bytes": 14656
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2273517.jpg",
+      "type": "thumbnail",
+      "bytes": 29810
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2275353.jpg",
+      "type": "thumbnail",
+      "bytes": 18508
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2277635.jpg",
+      "type": "thumbnail",
+      "bytes": 25547
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2284829.jpg",
+      "type": "thumbnail",
+      "bytes": 16652
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2293905.jpg",
+      "type": "thumbnail",
+      "bytes": 20142
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2293936.jpg",
+      "type": "thumbnail",
+      "bytes": 24470
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2318325.jpg",
+      "type": "thumbnail",
+      "bytes": 17635
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2318957.jpg",
+      "type": "thumbnail",
+      "bytes": 12479
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2325834.jpg",
+      "type": "thumbnail",
+      "bytes": 22238
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2327715.jpg",
+      "type": "thumbnail",
+      "bytes": 28056
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2337873.jpg",
+      "type": "thumbnail",
+      "bytes": 28225
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2338417.jpg",
+      "type": "thumbnail",
+      "bytes": 19289
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2370247.jpg",
+      "type": "thumbnail",
+      "bytes": 14532
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2395137.jpg",
+      "type": "thumbnail",
+      "bytes": 26888
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2419166.jpg",
+      "type": "thumbnail",
+      "bytes": 13670
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2429754.jpg",
+      "type": "thumbnail",
+      "bytes": 10295
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2470123.jpg",
+      "type": "thumbnail",
+      "bytes": 17438
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2574120.jpg",
+      "type": "thumbnail",
+      "bytes": 23957
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2609235.jpg",
+      "type": "thumbnail",
+      "bytes": 11571
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2610675.jpg",
+      "type": "thumbnail",
+      "bytes": 17051
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2610936.jpg",
+      "type": "thumbnail",
+      "bytes": 22011
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2626595.jpg",
+      "type": "thumbnail",
+      "bytes": 28655
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2627034.jpg",
+      "type": "thumbnail",
+      "bytes": 20605
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2627056.jpg",
+      "type": "thumbnail",
+      "bytes": 15821
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2713203.jpg",
+      "type": "thumbnail",
+      "bytes": 30893
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2715177.jpg",
+      "type": "thumbnail",
+      "bytes": 9729
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2715302.jpg",
+      "type": "thumbnail",
+      "bytes": 21587
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2721037.jpg",
+      "type": "thumbnail",
+      "bytes": 14528
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2727560.jpg",
+      "type": "thumbnail",
+      "bytes": 12605
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2732274.jpg",
+      "type": "thumbnail",
+      "bytes": 18814
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2734111.jpg",
+      "type": "thumbnail",
+      "bytes": 18755
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q2734679.jpg",
+      "type": "thumbnail",
+      "bytes": 14512
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q318947.jpg",
+      "type": "thumbnail",
+      "bytes": 11373
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q474024.jpg",
+      "type": "thumbnail",
+      "bytes": 27076
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q510799.jpg",
+      "type": "thumbnail",
+      "bytes": 13543
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q585437.jpg",
+      "type": "thumbnail",
+      "bytes": 19182
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q597114.jpg",
+      "type": "thumbnail",
+      "bytes": 25027
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q626791.jpg",
+      "type": "thumbnail",
+      "bytes": 20955
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q655705.jpg",
+      "type": "thumbnail",
+      "bytes": 20713
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q663133.jpg",
+      "type": "thumbnail",
+      "bytes": 14985
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q685916.jpg",
+      "type": "thumbnail",
+      "bytes": 28854
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q698228.jpg",
+      "type": "thumbnail",
+      "bytes": 29910
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q745098.jpg",
+      "type": "thumbnail",
+      "bytes": 21513
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q746716.jpg",
+      "type": "thumbnail",
+      "bytes": 16468
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q931837.jpg",
+      "type": "thumbnail",
+      "bytes": 15058
+    },
+    {
+      "path": "data/thumbnails/artist-1786371252483/wikidata-Q969377.jpg",
+      "type": "thumbnail",
+      "bytes": 14765
+    },
+    {
+      "path": "data/thumbnails/artist-Q187310/index.json",
+      "type": "thumbnail",
+      "bytes": 6433
+    },
+    {
+      "path": "data/thumbnails/artist-Q187310/wikidata-Q102251693.jpg",
+      "type": "thumbnail",
+      "bytes": 16623
+    },
+    {
+      "path": "data/thumbnails/artist-Q187310/wikidata-Q10541152.jpg",
+      "type": "thumbnail",
+      "bytes": 22392
+    },
+    {
+      "path": "data/thumbnails/artist-Q187310/wikidata-Q10665407.jpg",
+      "type": "thumbnail",
+      "bytes": 24215
+    },
+    {
+      "path": "data/thumbnails/artist-Q187310/wikidata-Q110763117.jpg",
+      "type": "thumbnail",
+      "bytes": 8817
+    },
+    {
+      "path": "data/thumbnails/artist-Q187310/wikidata-Q110763548.jpg",
+      "type": "thumbnail",
+      "bytes": 6784
+    },
+    {
+      "path": "data/thumbnails/artist-Q187310/wikidata-Q110787624.jpg",
+      "type": "thumbnail",
+      "bytes": 39417
+    },
+    {
+      "path": "data/thumbnails/artist-Q187310/wikidata-Q110788270.jpg",
+      "type": "thumbnail",
+      "bytes": 19009
+    },
+    {
+      "path": "data/thumbnails/artist-Q187310/wikidata-Q110800213.jpg",
+      "type": "thumbnail",
+      "bytes": 5856
+    },
+    {
+      "path": "data/thumbnails/artist-Q187310/wikidata-Q110800215.jpg",
+      "type": "thumbnail",
+      "bytes": 6320
+    },
+    {
+      "path": "data/thumbnails/artist-Q187310/wikidata-Q110805030.jpg",
+      "type": "thumbnail",
+      "bytes": 27348
+    },
+    {
+      "path": "data/thumbnails/artist-Q187310/wikidata-Q110805667.jpg",
+      "type": "thumbnail",
+      "bytes": 15459
+    },
+    {
+      "path": "data/thumbnails/artist-Q187310/wikidata-Q130538305.jpg",
+      "type": "thumbnail",
+      "bytes": 11174
+    },
+    {
+      "path": "data/thumbnails/artist-Q187310/wikidata-Q132147268.jpg",
+      "type": "thumbnail",
+      "bytes": 32262
+    },
+    {
+      "path": "data/thumbnails/artist-Q187310/wikidata-Q135218965.jpg",
+      "type": "thumbnail",
+      "bytes": 42351
+    },
+    {
+      "path": "data/thumbnails/artist-Q187310/wikidata-Q136698141.jpg",
+      "type": "thumbnail",
+      "bytes": 44107
+    },
+    {
+      "path": "data/thumbnails/artist-Q187310/wikidata-Q136698651.jpg",
+      "type": "thumbnail",
+      "bytes": 35653
+    },
+    {
+      "path": "data/thumbnails/artist-Q187310/wikidata-Q136698715.jpg",
+      "type": "thumbnail",
+      "bytes": 29902
+    },
+    {
+      "path": "data/thumbnails/artist-Q187310/wikidata-Q52157977.jpg",
+      "type": "thumbnail",
+      "bytes": 47060
+    },
+    {
+      "path": "data/thumbnails/artist-Q187310/wikidata-Q65194593.jpg",
+      "type": "thumbnail",
+      "bytes": 27537
+    },
+    {
+      "path": "data/thumbnails/artist-Q187310/wikidata-Q76290647.jpg",
+      "type": "thumbnail",
+      "bytes": 26939
+    },
+    {
+      "path": "data/thumbnails/artist-Q187310/wikidata-Q76293066.jpg",
+      "type": "thumbnail",
+      "bytes": 56630
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/index.json",
+      "type": "thumbnail",
+      "bytes": 11332
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q104773738.jpg",
+      "type": "thumbnail",
+      "bytes": 14260
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q105632611.jpg",
+      "type": "thumbnail",
+      "bytes": 24593
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q105731234.jpg",
+      "type": "thumbnail",
+      "bytes": 26121
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q107053326.jpg",
+      "type": "thumbnail",
+      "bytes": 27637
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q107124863.png",
+      "type": "thumbnail",
+      "bytes": 131600
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q114744029.jpg",
+      "type": "thumbnail",
+      "bytes": 28946
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q115247688.jpg",
+      "type": "thumbnail",
+      "bytes": 24461
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q125339798.jpg",
+      "type": "thumbnail",
+      "bytes": 24328
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q130384609.jpg",
+      "type": "thumbnail",
+      "bytes": 22972
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q131468737.png",
+      "type": "thumbnail",
+      "bytes": 107864
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q135659123.jpg",
+      "type": "thumbnail",
+      "bytes": 20178
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q135917141.jpg",
+      "type": "thumbnail",
+      "bytes": 20032
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q135917349.jpg",
+      "type": "thumbnail",
+      "bytes": 22542
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q15723876.jpg",
+      "type": "thumbnail",
+      "bytes": 25124
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q18719530.jpg",
+      "type": "thumbnail",
+      "bytes": 28301
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q18719540.jpg",
+      "type": "thumbnail",
+      "bytes": 21715
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q18923677.jpg",
+      "type": "thumbnail",
+      "bytes": 27796
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q19005132.jpg",
+      "type": "thumbnail",
+      "bytes": 23678
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q19005175.JPG",
+      "type": "thumbnail",
+      "bytes": 18168
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q19005202.JPG",
+      "type": "thumbnail",
+      "bytes": 16995
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q19006513.jpg",
+      "type": "thumbnail",
+      "bytes": 17543
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q19273424.jpg",
+      "type": "thumbnail",
+      "bytes": 21654
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q19273465.jpg",
+      "type": "thumbnail",
+      "bytes": 16256
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q19273481.jpg",
+      "type": "thumbnail",
+      "bytes": 19800
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q19361572.jpg",
+      "type": "thumbnail",
+      "bytes": 20363
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q19868575.jpg",
+      "type": "thumbnail",
+      "bytes": 18673
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q19905205.jpg",
+      "type": "thumbnail",
+      "bytes": 22301
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q19912372.jpg",
+      "type": "thumbnail",
+      "bytes": 25541
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q20810265.jpg",
+      "type": "thumbnail",
+      "bytes": 19876
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q20891241.jpg",
+      "type": "thumbnail",
+      "bytes": 25262
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q21001124.jpg",
+      "type": "thumbnail",
+      "bytes": 21334
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q21731529.jpg",
+      "type": "thumbnail",
+      "bytes": 18814
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q23037735.jpg",
+      "type": "thumbnail",
+      "bytes": 13401
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q23037740.jpg",
+      "type": "thumbnail",
+      "bytes": 24292
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q23653935.jpg",
+      "type": "thumbnail",
+      "bytes": 27295
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q27981371.jpg",
+      "type": "thumbnail",
+      "bytes": 28471
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q28016074.jpg",
+      "type": "thumbnail",
+      "bytes": 21439
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q3937618.jpg",
+      "type": "thumbnail",
+      "bytes": 23640
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q3937621.jpg",
+      "type": "thumbnail",
+      "bytes": 24224
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q41433015.jpg",
+      "type": "thumbnail",
+      "bytes": 23597
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q52241959.jpg",
+      "type": "thumbnail",
+      "bytes": 22379
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q55619837.jpg",
+      "type": "thumbnail",
+      "bytes": 26312
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q59339702.jpg",
+      "type": "thumbnail",
+      "bytes": 26418
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q61041226.jpg",
+      "type": "thumbnail",
+      "bytes": 32025
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q61473576.jpg",
+      "type": "thumbnail",
+      "bytes": 21928
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q62272805.jpg",
+      "type": "thumbnail",
+      "bytes": 16401
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q62571116.jpg",
+      "type": "thumbnail",
+      "bytes": 23918
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q65097412.jpg",
+      "type": "thumbnail",
+      "bytes": 32337
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q67185140.jpg",
+      "type": "thumbnail",
+      "bytes": 21306
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q68372796.png",
+      "type": "thumbnail",
+      "bytes": 95579
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q71828444.jpg",
+      "type": "thumbnail",
+      "bytes": 18257
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q71828579.jpg",
+      "type": "thumbnail",
+      "bytes": 24797
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q73295245.jpg",
+      "type": "thumbnail",
+      "bytes": 17709
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q83507891.jpg",
+      "type": "thumbnail",
+      "bytes": 26957
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q88966144.jpg",
+      "type": "thumbnail",
+      "bytes": 18977
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q9557962.jpg",
+      "type": "thumbnail",
+      "bytes": 15651
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q96634683.jpg",
+      "type": "thumbnail",
+      "bytes": 22684
+    },
+    {
+      "path": "data/thumbnails/artist-Q213163/wikidata-Q97653557.jpg",
+      "type": "thumbnail",
+      "bytes": 24630
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/index.json",
+      "type": "thumbnail",
+      "bytes": 13456
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q1114913.jpg",
+      "type": "thumbnail",
+      "bytes": 45762
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q11824907.jpg",
+      "type": "thumbnail",
+      "bytes": 20819
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q11837891.jpg",
+      "type": "thumbnail",
+      "bytes": 50413
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q1220013.jpg",
+      "type": "thumbnail",
+      "bytes": 33974
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q15711253.jpg",
+      "type": "thumbnail",
+      "bytes": 27657
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q16619520.jpg",
+      "type": "thumbnail",
+      "bytes": 37796
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q2255224.jpg",
+      "type": "thumbnail",
+      "bytes": 21955
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q2680589.jpg",
+      "type": "thumbnail",
+      "bytes": 24643
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q2714617.jpg",
+      "type": "thumbnail",
+      "bytes": 46625
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q2842448.jpg",
+      "type": "thumbnail",
+      "bytes": 18278
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q2842584.jpg",
+      "type": "thumbnail",
+      "bytes": 29726
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q3078569.jpg",
+      "type": "thumbnail",
+      "bytes": 37884
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q3208041.jpg",
+      "type": "thumbnail",
+      "bytes": 23163
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q3280557.JPG",
+      "type": "thumbnail",
+      "bytes": 19023
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q3649313.jpg",
+      "type": "thumbnail",
+      "bytes": 22676
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q3720171.jpg",
+      "type": "thumbnail",
+      "bytes": 33648
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q3784753.jpg",
+      "type": "thumbnail",
+      "bytes": 31656
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q3784764.jpg",
+      "type": "thumbnail",
+      "bytes": 44804
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q3809182.jpg",
+      "type": "thumbnail",
+      "bytes": 19886
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q3929380.jpg",
+      "type": "thumbnail",
+      "bytes": 25873
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q3937561.jpg",
+      "type": "thumbnail",
+      "bytes": 11873
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q5108848.jpg",
+      "type": "thumbnail",
+      "bytes": 20949
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q5393073.jpg",
+      "type": "thumbnail",
+      "bytes": 25936
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q5557529.jpg",
+      "type": "thumbnail",
+      "bytes": 35967
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q5658259.jpg",
+      "type": "thumbnail",
+      "bytes": 41565
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q5712837.jpg",
+      "type": "thumbnail",
+      "bytes": 19776
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q5781032.jpg",
+      "type": "thumbnail",
+      "bytes": 14486
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q5791685.jpg",
+      "type": "thumbnail",
+      "bytes": 26404
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q5824027.jpg",
+      "type": "thumbnail",
+      "bytes": 68974
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q5841454.jpg",
+      "type": "thumbnail",
+      "bytes": 34786
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q5949742.jpg",
+      "type": "thumbnail",
+      "bytes": 49047
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q5965524.jpg",
+      "type": "thumbnail",
+      "bytes": 41066
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q5965648.jpg",
+      "type": "thumbnail",
+      "bytes": 71708
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q5965719.jpg",
+      "type": "thumbnail",
+      "bytes": 22319
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q5966323.jpg",
+      "type": "thumbnail",
+      "bytes": 21637
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q5966793.jpg",
+      "type": "thumbnail",
+      "bytes": 12489
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q5967017.jpg",
+      "type": "thumbnail",
+      "bytes": 21003
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q6034865.jpg",
+      "type": "thumbnail",
+      "bytes": 31629
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q6075225.jpg",
+      "type": "thumbnail",
+      "bytes": 35567
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q6106748.jpg",
+      "type": "thumbnail",
+      "bytes": 20989
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q6106760.jpg",
+      "type": "thumbnail",
+      "bytes": 25927
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q6106772.jpg",
+      "type": "thumbnail",
+      "bytes": 16483
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q6106776.jpg",
+      "type": "thumbnail",
+      "bytes": 21091
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q6106796.jpg",
+      "type": "thumbnail",
+      "bytes": 25030
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q6116829.jpg",
+      "type": "thumbnail",
+      "bytes": 67006
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q6119106.jpg",
+      "type": "thumbnail",
+      "bytes": 30432
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q6119366.jpg",
+      "type": "thumbnail",
+      "bytes": 44757
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q6121364.jpg",
+      "type": "thumbnail",
+      "bytes": 32447
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q617629.jpg",
+      "type": "thumbnail",
+      "bytes": 53599
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q6402081.jpg",
+      "type": "thumbnail",
+      "bytes": 18293
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q6461660.jpg",
+      "type": "thumbnail",
+      "bytes": 21148
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q6553555.jpg",
+      "type": "thumbnail",
+      "bytes": 40386
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q883994.jpg",
+      "type": "thumbnail",
+      "bytes": 23338
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q9026835.jpg",
+      "type": "thumbnail",
+      "bytes": 30165
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q9073350.jpg",
+      "type": "thumbnail",
+      "bytes": 42728
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q9073676.jpg",
+      "type": "thumbnail",
+      "bytes": 48055
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q9396559.jpg",
+      "type": "thumbnail",
+      "bytes": 26532
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q94802.JPG",
+      "type": "thumbnail",
+      "bytes": 38558
+    },
+    {
+      "path": "data/thumbnails/artist-Q301/wikidata-Q949323.jpg",
+      "type": "thumbnail",
+      "bytes": 57763
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/index.json",
+      "type": "thumbnail",
+      "bytes": 15125
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q113262.jpg",
+      "type": "thumbnail",
+      "bytes": 23342
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q1163504.jpg",
+      "type": "thumbnail",
+      "bytes": 22520
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q1192090.jpg",
+      "type": "thumbnail",
+      "bytes": 34580
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q1212098.jpg",
+      "type": "thumbnail",
+      "bytes": 24140
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q1212269.jpg",
+      "type": "thumbnail",
+      "bytes": 23493
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q1245354.jpg",
+      "type": "thumbnail",
+      "bytes": 33929
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q126467.jpg",
+      "type": "thumbnail",
+      "bytes": 42304
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q152509.jpg",
+      "type": "thumbnail",
+      "bytes": 17907
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q15290965.jpg",
+      "type": "thumbnail",
+      "bytes": 18475
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q15973357.jpg",
+      "type": "thumbnail",
+      "bytes": 12741
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q1632817.jpg",
+      "type": "thumbnail",
+      "bytes": 274638
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q1810341.jpg",
+      "type": "thumbnail",
+      "bytes": 24834
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q18208688.jpg",
+      "type": "thumbnail",
+      "bytes": 16835
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q18223037.jpg",
+      "type": "thumbnail",
+      "bytes": 104490
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q1844748.jpg",
+      "type": "thumbnail",
+      "bytes": 15749
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q18620351.jpg",
+      "type": "thumbnail",
+      "bytes": 39742
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q18625546.jpg",
+      "type": "thumbnail",
+      "bytes": 34010
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q2024709.jpg",
+      "type": "thumbnail",
+      "bytes": 18763
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q210277.jpg",
+      "type": "thumbnail",
+      "bytes": 20224
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q2529703.jpg",
+      "type": "thumbnail",
+      "bytes": 24894
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q26689493.jpg",
+      "type": "thumbnail",
+      "bytes": 31819
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q2752079.jpg",
+      "type": "thumbnail",
+      "bytes": 25838
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q2860945.jpg",
+      "type": "thumbnail",
+      "bytes": 37616
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q2899286.jpg",
+      "type": "thumbnail",
+      "bytes": 18564
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q2977843.jpg",
+      "type": "thumbnail",
+      "bytes": 19721
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q3088614.jpg",
+      "type": "thumbnail",
+      "bytes": 31354
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q3178376.jpg",
+      "type": "thumbnail",
+      "bytes": 21397
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q3203711.jpg",
+      "type": "thumbnail",
+      "bytes": 7684
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q3227448.jpg",
+      "type": "thumbnail",
+      "bytes": 21524
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q3231193.jpg",
+      "type": "thumbnail",
+      "bytes": 61000
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q39226.jpg",
+      "type": "thumbnail",
+      "bytes": 34145
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q44124.jpg",
+      "type": "thumbnail",
+      "bytes": 32451
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q481454.jpg",
+      "type": "thumbnail",
+      "bytes": 64215
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q536024.jpg",
+      "type": "thumbnail",
+      "bytes": 31149
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q59815.jpg",
+      "type": "thumbnail",
+      "bytes": 19667
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q661803.jpg",
+      "type": "thumbnail",
+      "bytes": 22116
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q72650.jpg",
+      "type": "thumbnail",
+      "bytes": 22200
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q731639.jpg",
+      "type": "thumbnail",
+      "bytes": 31990
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q737062.jpg",
+      "type": "thumbnail",
+      "bytes": 15831
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q7720924.jpg",
+      "type": "thumbnail",
+      "bytes": 32688
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q7744027.jpg",
+      "type": "thumbnail",
+      "bytes": 18146
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q775407.jpg",
+      "type": "thumbnail",
+      "bytes": 30849
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q942276.jpg",
+      "type": "thumbnail",
+      "bytes": 35666
+    },
+    {
+      "path": "data/thumbnails/artist-Q40599/wikidata-Q942523.jpg",
+      "type": "thumbnail",
+      "bytes": 77398
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/index.json",
+      "type": "thumbnail",
+      "bytes": 6854
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q1169395.jpg",
+      "type": "thumbnail",
+      "bytes": 21043
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q1169874.jpg",
+      "type": "thumbnail",
+      "bytes": 22799
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q1216387.jpg",
+      "type": "thumbnail",
+      "bytes": 28016
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q1219698.jpg",
+      "type": "thumbnail",
+      "bytes": 15186
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q151143.jpg",
+      "type": "thumbnail",
+      "bytes": 15927
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q166937.jpg",
+      "type": "thumbnail",
+      "bytes": 16579
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q167605.jpg",
+      "type": "thumbnail",
+      "bytes": 20789
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q185372.jpg",
+      "type": "thumbnail",
+      "bytes": 20185
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q2267440.jpg",
+      "type": "thumbnail",
+      "bytes": 16726
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q2336984.jpg",
+      "type": "thumbnail",
+      "bytes": 26949
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q2624258.jpg",
+      "type": "thumbnail",
+      "bytes": 16662
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q32234.jpg",
+      "type": "thumbnail",
+      "bytes": 18763
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q3739396.jpg",
+      "type": "thumbnail",
+      "bytes": 19425
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q386453.jpg",
+      "type": "thumbnail",
+      "bytes": 26551
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q4358442.jpg",
+      "type": "thumbnail",
+      "bytes": 20232
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q45130.png",
+      "type": "thumbnail",
+      "bytes": 113522
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q4660880.jpg",
+      "type": "thumbnail",
+      "bytes": 25685
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q467359.jpg",
+      "type": "thumbnail",
+      "bytes": 23620
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q467376.jpg",
+      "type": "thumbnail",
+      "bytes": 23960
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q523974.jpg",
+      "type": "thumbnail",
+      "bytes": 14608
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q544315.jpg",
+      "type": "thumbnail",
+      "bytes": 17075
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q586035.jpg",
+      "type": "thumbnail",
+      "bytes": 29596
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q588695.jpg",
+      "type": "thumbnail",
+      "bytes": 25997
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q614047.JPG",
+      "type": "thumbnail",
+      "bytes": 21433
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q63692.jpg",
+      "type": "thumbnail",
+      "bytes": 26434
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q641666.jpg",
+      "type": "thumbnail",
+      "bytes": 21632
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q684935.jpg",
+      "type": "thumbnail",
+      "bytes": 25110
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q700251.jpg",
+      "type": "thumbnail",
+      "bytes": 29236
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q735061.jpg",
+      "type": "thumbnail",
+      "bytes": 18101
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q782639.jpg",
+      "type": "thumbnail",
+      "bytes": 20131
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q839359.jpg",
+      "type": "thumbnail",
+      "bytes": 15895
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q914984.png",
+      "type": "thumbnail",
+      "bytes": 99024
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q927449.jpg",
+      "type": "thumbnail",
+      "bytes": 20284
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q94006.jpg",
+      "type": "thumbnail",
+      "bytes": 23890
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q958088.jpg",
+      "type": "thumbnail",
+      "bytes": 13071
+    },
+    {
+      "path": "data/thumbnails/artist-Q41264/wikidata-Q969367.jpg",
+      "type": "thumbnail",
+      "bytes": 17170
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/index.json",
+      "type": "thumbnail",
+      "bytes": 11338
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q1087244.jpg",
+      "type": "thumbnail",
+      "bytes": 12971
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q1122842.jpg",
+      "type": "thumbnail",
+      "bytes": 26345
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q1134250.jpg",
+      "type": "thumbnail",
+      "bytes": 27066
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q1192570.jpg",
+      "type": "thumbnail",
+      "bytes": 15470
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q1198007.jpg",
+      "type": "thumbnail",
+      "bytes": 13550
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q1211030.jpg",
+      "type": "thumbnail",
+      "bytes": 22387
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q1213437.jpg",
+      "type": "thumbnail",
+      "bytes": 24067
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q131357860.jpg",
+      "type": "thumbnail",
+      "bytes": 24403
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q131358283.jpg",
+      "type": "thumbnail",
+      "bytes": 21733
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q131358621.jpg",
+      "type": "thumbnail",
+      "bytes": 18720
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q131359656.jpg",
+      "type": "thumbnail",
+      "bytes": 21700
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q1434332.jpg",
+      "type": "thumbnail",
+      "bytes": 18872
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q15293656.jpg",
+      "type": "thumbnail",
+      "bytes": 20160
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q15295671.jpg",
+      "type": "thumbnail",
+      "bytes": 21251
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q1803755.jpg",
+      "type": "thumbnail",
+      "bytes": 17205
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q18686393.jpg",
+      "type": "thumbnail",
+      "bytes": 24336
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q1887184.jpg",
+      "type": "thumbnail",
+      "bytes": 25142
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q19857193.jpg",
+      "type": "thumbnail",
+      "bytes": 24686
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q2059447.jpg",
+      "type": "thumbnail",
+      "bytes": 17728
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q22814425.JPG",
+      "type": "thumbnail",
+      "bytes": 27385
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q231953.jpg",
+      "type": "thumbnail",
+      "bytes": 18775
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q257048.jpg",
+      "type": "thumbnail",
+      "bytes": 17423
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q3605524.jpg",
+      "type": "thumbnail",
+      "bytes": 25730
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q3702434.jpg",
+      "type": "thumbnail",
+      "bytes": 85120
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q3712512.jpg",
+      "type": "thumbnail",
+      "bytes": 19079
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q375216.jpg",
+      "type": "thumbnail",
+      "bytes": 18346
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q3772184.jpg",
+      "type": "thumbnail",
+      "bytes": 22752
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q3855265.jpg",
+      "type": "thumbnail",
+      "bytes": 24067
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q3863232.jpg",
+      "type": "thumbnail",
+      "bytes": 12360
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q3976754.jpg",
+      "type": "thumbnail",
+      "bytes": 15879
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q3985190.jpg",
+      "type": "thumbnail",
+      "bytes": 19530
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q4009224.jpg",
+      "type": "thumbnail",
+      "bytes": 14336
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q4680634.jpg",
+      "type": "thumbnail",
+      "bytes": 35322
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q47470067.jpg",
+      "type": "thumbnail",
+      "bytes": 22918
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q500985.jpg",
+      "type": "thumbnail",
+      "bytes": 24577
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q533619.jpg",
+      "type": "thumbnail",
+      "bytes": 24991
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q556553.jpg",
+      "type": "thumbnail",
+      "bytes": 18356
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q56394941.jpg",
+      "type": "thumbnail",
+      "bytes": 17670
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q594406.jpg",
+      "type": "thumbnail",
+      "bytes": 24557
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q603751.jpg",
+      "type": "thumbnail",
+      "bytes": 19637
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q644856.jpg",
+      "type": "thumbnail",
+      "bytes": 25175
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q665337.jpg",
+      "type": "thumbnail",
+      "bytes": 17890
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q666982.jpg",
+      "type": "thumbnail",
+      "bytes": 23597
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q686107.jpg",
+      "type": "thumbnail",
+      "bytes": 26572
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q689236.jpg",
+      "type": "thumbnail",
+      "bytes": 26552
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q697332.jpg",
+      "type": "thumbnail",
+      "bytes": 24237
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q698219.jpg",
+      "type": "thumbnail",
+      "bytes": 16101
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q698254.jpg",
+      "type": "thumbnail",
+      "bytes": 22555
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q698510.jpg",
+      "type": "thumbnail",
+      "bytes": 19121
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q699091.jpg",
+      "type": "thumbnail",
+      "bytes": 22417
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q776175.jpg",
+      "type": "thumbnail",
+      "bytes": 18927
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q80869.jpg",
+      "type": "thumbnail",
+      "bytes": 22364
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q873639.jpg",
+      "type": "thumbnail",
+      "bytes": 20787
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikidata-Q95562.jpg",
+      "type": "thumbnail",
+      "bytes": 20401
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikipedia-Q43270-0.jpg",
+      "type": "thumbnail",
+      "bytes": 25142
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikipedia-Q43270-1.jpg",
+      "type": "thumbnail",
+      "bytes": 25142
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikipedia-Q43270-2.jpg",
+      "type": "thumbnail",
+      "bytes": 25142
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikipedia-Q43270-3.jpg",
+      "type": "thumbnail",
+      "bytes": 25142
+    },
+    {
+      "path": "data/thumbnails/artist-Q43270/wikipedia-Q43270-4.jpg",
+      "type": "thumbnail",
+      "bytes": 25142
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/index.json",
+      "type": "thumbnail",
+      "bytes": 14178
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/michelangelo-bacchus.jpg",
+      "type": "thumbnail",
+      "bytes": 25097
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/michelangelo-battle-centaurs.JPG",
+      "type": "thumbnail",
+      "bytes": 19777
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/michelangelo-creation-adam.jpg",
+      "type": "thumbnail",
+      "bytes": 12518
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/michelangelo-crucifixion-st-peter.jpg",
+      "type": "thumbnail",
+      "bytes": 29376
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/michelangelo-david.jpg",
+      "type": "thumbnail",
+      "bytes": 19966
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/michelangelo-doni-tondo.jpg",
+      "type": "thumbnail",
+      "bytes": 26374
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/michelangelo-last-judgment.jpg",
+      "type": "thumbnail",
+      "bytes": 40865
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/michelangelo-madonna-stairs.JPG",
+      "type": "thumbnail",
+      "bytes": 26530
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/michelangelo-moses.jpg",
+      "type": "thumbnail",
+      "bytes": 35288
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/michelangelo-pieta.jpg",
+      "type": "thumbnail",
+      "bytes": 29150
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/michelangelo-sistine-ceiling.jpg",
+      "type": "thumbnail",
+      "bytes": 45676
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q1213160.jpg",
+      "type": "thumbnail",
+      "bytes": 24973
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q1572984.JPG",
+      "type": "thumbnail",
+      "bytes": 20836
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q1684762.JPG",
+      "type": "thumbnail",
+      "bytes": 41185
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q1878666.jpg",
+      "type": "thumbnail",
+      "bytes": 16395
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q1984954.jpg",
+      "type": "thumbnail",
+      "bytes": 20754
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q1985154.jpg",
+      "type": "thumbnail",
+      "bytes": 17329
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q2154351.jpg",
+      "type": "thumbnail",
+      "bytes": 48079
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q2182509.jpg",
+      "type": "thumbnail",
+      "bytes": 42483
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q2236899.jpg",
+      "type": "thumbnail",
+      "bytes": 19562
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q2255664.JPG",
+      "type": "thumbnail",
+      "bytes": 32352
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q2280603.JPG",
+      "type": "thumbnail",
+      "bytes": 22474
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q2327759.jpg",
+      "type": "thumbnail",
+      "bytes": 31413
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q2342843.jpg",
+      "type": "thumbnail",
+      "bytes": 70242
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q2354236.jpg",
+      "type": "thumbnail",
+      "bytes": 29908
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q2417706.jpg",
+      "type": "thumbnail",
+      "bytes": 48034
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q2418609.jpg",
+      "type": "thumbnail",
+      "bytes": 39790
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q2429976.jpg",
+      "type": "thumbnail",
+      "bytes": 43098
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q2432043.jpg",
+      "type": "thumbnail",
+      "bytes": 21293
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q2437149.jpg",
+      "type": "thumbnail",
+      "bytes": 108800
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q2437692.jpg",
+      "type": "thumbnail",
+      "bytes": 32992
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q2438217.jpg",
+      "type": "thumbnail",
+      "bytes": 21283
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q2440879.jpg",
+      "type": "thumbnail",
+      "bytes": 79694
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q2454248.JPG",
+      "type": "thumbnail",
+      "bytes": 32203
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q2500541.jpg",
+      "type": "thumbnail",
+      "bytes": 15133
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q2500548.JPG",
+      "type": "thumbnail",
+      "bytes": 24949
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q2626926.jpg",
+      "type": "thumbnail",
+      "bytes": 29870
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q2627551.JPG",
+      "type": "thumbnail",
+      "bytes": 27387
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q2709726.jpg",
+      "type": "thumbnail",
+      "bytes": 32955
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q3057930.jpg",
+      "type": "thumbnail",
+      "bytes": 31067
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q3203231.jpg",
+      "type": "thumbnail",
+      "bytes": 23125
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q3482971.jpg",
+      "type": "thumbnail",
+      "bytes": 40550
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q3613121.jpg",
+      "type": "thumbnail",
+      "bytes": 44030
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q3696827.jpg",
+      "type": "thumbnail",
+      "bytes": 14112
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q3701849.jpg",
+      "type": "thumbnail",
+      "bytes": 26365
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q3707697.jpg",
+      "type": "thumbnail",
+      "bytes": 22400
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q3829347.jpg",
+      "type": "thumbnail",
+      "bytes": 18558
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q3878834.jpg",
+      "type": "thumbnail",
+      "bytes": 17767
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q3898510.jpg",
+      "type": "thumbnail",
+      "bytes": 13582
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q3937559.jpg",
+      "type": "thumbnail",
+      "bytes": 29111
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q3944655.jpg",
+      "type": "thumbnail",
+      "bytes": 19440
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q3955636.jpg",
+      "type": "thumbnail",
+      "bytes": 29673
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q567833.jpg",
+      "type": "thumbnail",
+      "bytes": 29055
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q581925.jpg",
+      "type": "thumbnail",
+      "bytes": 12431
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q651551.jpg",
+      "type": "thumbnail",
+      "bytes": 30013
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q660876.jpg",
+      "type": "thumbnail",
+      "bytes": 16860
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q785767.jpg",
+      "type": "thumbnail",
+      "bytes": 15214
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikidata-Q83862.jpg",
+      "type": "thumbnail",
+      "bytes": 23178
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikipedia-Q5592-0.jpg",
+      "type": "thumbnail",
+      "bytes": 25427
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikipedia-Q5592-1.jpg",
+      "type": "thumbnail",
+      "bytes": 25427
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikipedia-Q5592-10.jpg",
+      "type": "thumbnail",
+      "bytes": 25427
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikipedia-Q5592-11.jpg",
+      "type": "thumbnail",
+      "bytes": 25427
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikipedia-Q5592-12.jpg",
+      "type": "thumbnail",
+      "bytes": 25427
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikipedia-Q5592-13.jpg",
+      "type": "thumbnail",
+      "bytes": 25427
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikipedia-Q5592-14.jpg",
+      "type": "thumbnail",
+      "bytes": 25427
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikipedia-Q5592-15.jpg",
+      "type": "thumbnail",
+      "bytes": 25427
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikipedia-Q5592-2.jpg",
+      "type": "thumbnail",
+      "bytes": 25427
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikipedia-Q5592-3.jpg",
+      "type": "thumbnail",
+      "bytes": 25427
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikipedia-Q5592-4.jpg",
+      "type": "thumbnail",
+      "bytes": 25427
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikipedia-Q5592-5.jpg",
+      "type": "thumbnail",
+      "bytes": 25427
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikipedia-Q5592-7.jpg",
+      "type": "thumbnail",
+      "bytes": 25427
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikipedia-Q5592-8.jpg",
+      "type": "thumbnail",
+      "bytes": 25427
+    },
+    {
+      "path": "data/thumbnails/artist-Q5592/wikipedia-Q5592-9.jpg",
+      "type": "thumbnail",
+      "bytes": 25427
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/index.json",
+      "type": "thumbnail",
+      "bytes": 11237
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q1245388.jpg",
+      "type": "thumbnail",
+      "bytes": 24145
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q153441.jpg",
+      "type": "thumbnail",
+      "bytes": 20045
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q1778000.jpg",
+      "type": "thumbnail",
+      "bytes": 21824
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q186953.jpg",
+      "type": "thumbnail",
+      "bytes": 23871
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2030685.jpg",
+      "type": "thumbnail",
+      "bytes": 32479
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2035209.jpg",
+      "type": "thumbnail",
+      "bytes": 20107
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2165279.jpg",
+      "type": "thumbnail",
+      "bytes": 25692
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2275653.jpg",
+      "type": "thumbnail",
+      "bytes": 16013
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2294201.jpg",
+      "type": "thumbnail",
+      "bytes": 23501
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2343778.jpg",
+      "type": "thumbnail",
+      "bytes": 33425
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2343939.jpg",
+      "type": "thumbnail",
+      "bytes": 29026
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2344357.jpg",
+      "type": "thumbnail",
+      "bytes": 47817
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2344368.jpg",
+      "type": "thumbnail",
+      "bytes": 43787
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2344396.jpg",
+      "type": "thumbnail",
+      "bytes": 22409
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2344437.jpg",
+      "type": "thumbnail",
+      "bytes": 40666
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2344505.jpg",
+      "type": "thumbnail",
+      "bytes": 32859
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2360329.jpg",
+      "type": "thumbnail",
+      "bytes": 23419
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2415259.jpg",
+      "type": "thumbnail",
+      "bytes": 25475
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2420918.jpg",
+      "type": "thumbnail",
+      "bytes": 24720
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2422889.jpg",
+      "type": "thumbnail",
+      "bytes": 35073
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2427320.jpg",
+      "type": "thumbnail",
+      "bytes": 24333
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2452858.jpg",
+      "type": "thumbnail",
+      "bytes": 22153
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2467082.jpg",
+      "type": "thumbnail",
+      "bytes": 34749
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q249449.jpg",
+      "type": "thumbnail",
+      "bytes": 28270
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2500226.jpg",
+      "type": "thumbnail",
+      "bytes": 28553
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2503581.jpg",
+      "type": "thumbnail",
+      "bytes": 21980
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2528106.jpg",
+      "type": "thumbnail",
+      "bytes": 17331
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2529918.jpg",
+      "type": "thumbnail",
+      "bytes": 31056
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2529969.jpg",
+      "type": "thumbnail",
+      "bytes": 22266
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2531790.jpg",
+      "type": "thumbnail",
+      "bytes": 23683
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2535486.jpg",
+      "type": "thumbnail",
+      "bytes": 22726
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2535563.jpg",
+      "type": "thumbnail",
+      "bytes": 17898
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q254923.jpg",
+      "type": "thumbnail",
+      "bytes": 19372
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2607050.jpg",
+      "type": "thumbnail",
+      "bytes": 24152
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2610709.jpg",
+      "type": "thumbnail",
+      "bytes": 37969
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2610729.jpg",
+      "type": "thumbnail",
+      "bytes": 24996
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2622161.jpg",
+      "type": "thumbnail",
+      "bytes": 32431
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2627028.jpg",
+      "type": "thumbnail",
+      "bytes": 28837
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2629134.jpg",
+      "type": "thumbnail",
+      "bytes": 22176
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2631335.jpg",
+      "type": "thumbnail",
+      "bytes": 25822
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2664637.jpg",
+      "type": "thumbnail",
+      "bytes": 36731
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2713620.jpg",
+      "type": "thumbnail",
+      "bytes": 33578
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2713671.jpg",
+      "type": "thumbnail",
+      "bytes": 26388
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2715152.jpg",
+      "type": "thumbnail",
+      "bytes": 21822
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2716974.JPG",
+      "type": "thumbnail",
+      "bytes": 20655
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q2719737.jpg",
+      "type": "thumbnail",
+      "bytes": 24267
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q328079.jpg",
+      "type": "thumbnail",
+      "bytes": 29702
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q546977.jpg",
+      "type": "thumbnail",
+      "bytes": 21726
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q549953.jpg",
+      "type": "thumbnail",
+      "bytes": 22545
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q552040.jpg",
+      "type": "thumbnail",
+      "bytes": 21348
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q555821.jpg",
+      "type": "thumbnail",
+      "bytes": 16037
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q598913.jpg",
+      "type": "thumbnail",
+      "bytes": 38542
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q602813.jpg",
+      "type": "thumbnail",
+      "bytes": 29195
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q677682.jpg",
+      "type": "thumbnail",
+      "bytes": 44407
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q686848.jpg",
+      "type": "thumbnail",
+      "bytes": 25369
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q919294.jpg",
+      "type": "thumbnail",
+      "bytes": 33583
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q919861.jpg",
+      "type": "thumbnail",
+      "bytes": 20226
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q948034.jpg",
+      "type": "thumbnail",
+      "bytes": 24856
+    },
+    {
+      "path": "data/thumbnails/artist-Q5597/wikidata-Q966681.jpg",
+      "type": "thumbnail",
+      "bytes": 22200
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/index.json",
+      "type": "thumbnail",
+      "bytes": 41756
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikidata-Q1247103.JPG",
+      "type": "thumbnail",
+      "bytes": 279828
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikidata-Q2268524.jpg",
+      "type": "thumbnail",
+      "bytes": 30423
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikidata-Q2273452.jpg",
+      "type": "thumbnail",
+      "bytes": 15163
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikidata-Q2594673.jpg",
+      "type": "thumbnail",
+      "bytes": 20670
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikidata-Q2653851.jpg",
+      "type": "thumbnail",
+      "bytes": 171890
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikidata-Q2667782.jpg",
+      "type": "thumbnail",
+      "bytes": 14990
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikidata-Q3605057.jpg",
+      "type": "thumbnail",
+      "bytes": 295448
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikidata-Q3788158.jpg",
+      "type": "thumbnail",
+      "bytes": 28806
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikidata-Q3940915.jpg",
+      "type": "thumbnail",
+      "bytes": 25206
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikidata-Q571416.jpg",
+      "type": "thumbnail",
+      "bytes": 27896
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikidata-Q644936.jpg",
+      "type": "thumbnail",
+      "bytes": 23849
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikidata-Q647202.jpg",
+      "type": "thumbnail",
+      "bytes": 12011
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-1.jpg",
+      "type": "thumbnail",
+      "bytes": 36868
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-10.jpg",
+      "type": "thumbnail",
+      "bytes": 14199
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-11.jpg",
+      "type": "thumbnail",
+      "bytes": 18967
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-12.jpg",
+      "type": "thumbnail",
+      "bytes": 25702
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-13.jpg",
+      "type": "thumbnail",
+      "bytes": 14199
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-15.jpg",
+      "type": "thumbnail",
+      "bytes": 15041
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-16.jpg",
+      "type": "thumbnail",
+      "bytes": 18324
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-17.jpg",
+      "type": "thumbnail",
+      "bytes": 14199
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-18.jpg",
+      "type": "thumbnail",
+      "bytes": 18772
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-19.jpg",
+      "type": "thumbnail",
+      "bytes": 16103
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-2.jpg",
+      "type": "thumbnail",
+      "bytes": 38198
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-20.jpg",
+      "type": "thumbnail",
+      "bytes": 14001
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-22.jpg",
+      "type": "thumbnail",
+      "bytes": 20820
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-23.jpg",
+      "type": "thumbnail",
+      "bytes": 13854
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-24.jpg",
+      "type": "thumbnail",
+      "bytes": 14699
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-25.jpg",
+      "type": "thumbnail",
+      "bytes": 14199
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-26.jpg",
+      "type": "thumbnail",
+      "bytes": 14199
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-27.jpg",
+      "type": "thumbnail",
+      "bytes": 14199
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-28.jpg",
+      "type": "thumbnail",
+      "bytes": 37173
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-29.jpg",
+      "type": "thumbnail",
+      "bytes": 21447
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-3.jpg",
+      "type": "thumbnail",
+      "bytes": 14199
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-30.jpg",
+      "type": "thumbnail",
+      "bytes": 30173
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-32.jpg",
+      "type": "thumbnail",
+      "bytes": 23415
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-33.jpg",
+      "type": "thumbnail",
+      "bytes": 17580
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-36.jpg",
+      "type": "thumbnail",
+      "bytes": 23703
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-37.jpg",
+      "type": "thumbnail",
+      "bytes": 7825
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-38.jpg",
+      "type": "thumbnail",
+      "bytes": 31174
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-39.jpg",
+      "type": "thumbnail",
+      "bytes": 22371
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-4.jpg",
+      "type": "thumbnail",
+      "bytes": 23079
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-40.jpg",
+      "type": "thumbnail",
+      "bytes": 16087
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-42.jpg",
+      "type": "thumbnail",
+      "bytes": 21453
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-43.jpg",
+      "type": "thumbnail",
+      "bytes": 22479
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-44.jpg",
+      "type": "thumbnail",
+      "bytes": 18225
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-45.jpg",
+      "type": "thumbnail",
+      "bytes": 14199
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-46.jpg",
+      "type": "thumbnail",
+      "bytes": 14199
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-47.jpg",
+      "type": "thumbnail",
+      "bytes": 17593
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-49.jpg",
+      "type": "thumbnail",
+      "bytes": 14199
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-5.jpg",
+      "type": "thumbnail",
+      "bytes": 25691
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-50.jpg",
+      "type": "thumbnail",
+      "bytes": 14199
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-51.jpg",
+      "type": "thumbnail",
+      "bytes": 14199
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-52.jpg",
+      "type": "thumbnail",
+      "bytes": 14199
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-53.jpg",
+      "type": "thumbnail",
+      "bytes": 14199
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-54.jpg",
+      "type": "thumbnail",
+      "bytes": 14199
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-6.jpg",
+      "type": "thumbnail",
+      "bytes": 29845
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-8.jpg",
+      "type": "thumbnail",
+      "bytes": 14199
+    },
+    {
+      "path": "data/thumbnails/artist-Q5599/wikipedia-Q5599-9.jpg",
+      "type": "thumbnail",
+      "bytes": 14199
+    },
+    {
+      "path": "data/thumbnails/artist-Q6394591/index.json",
+      "type": "thumbnail",
+      "bytes": 5102
+    },
+    {
+      "path": "data/thumbnails/artist-Q6394591/wikidata-Q113764391.jpg",
+      "type": "thumbnail",
+      "bytes": 16912
+    },
+    {
+      "path": "data/thumbnails/artist-Q6394591/wikidata-Q3918079.jpg",
+      "type": "thumbnail",
+      "bytes": 24456
+    },
+    {
+      "path": "data/thumbnails/artist-Q6394591/wikipedia-Q6394591-0.jpg",
+      "type": "thumbnail",
+      "bytes": 33563
+    },
+    {
+      "path": "data/thumbnails/artist-Q6394591/wikipedia-Q6394591-1.jpg",
+      "type": "thumbnail",
+      "bytes": 23360
+    },
+    {
+      "path": "data/thumbnails/artist-Q6394591/wikipedia-Q6394591-2.jpg",
+      "type": "thumbnail",
+      "bytes": 27313
+    },
+    {
+      "path": "data/thumbnails/artist-Q6394591/wikipedia-Q6394591-4.jpg",
+      "type": "thumbnail",
+      "bytes": 32120
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/curated-jane-avril-1899.jpg",
+      "type": "thumbnail",
+      "bytes": 93527
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/curated-jane-avril-jardin-de-paris-1893.jpg",
+      "type": "thumbnail",
+      "bytes": 43705
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/curated-lestampe-originale-jane-avril-1893.jpg",
+      "type": "thumbnail",
+      "bytes": 33427
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/index.json",
+      "type": "thumbnail",
+      "bytes": 12602
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q108333700.jpg",
+      "type": "thumbnail",
+      "bytes": 30750
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q113137653.jpg",
+      "type": "thumbnail",
+      "bytes": 18078
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q118181428.jpg",
+      "type": "thumbnail",
+      "bytes": 18213
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q12015473.jpg",
+      "type": "thumbnail",
+      "bytes": 22895
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q121434609.jpg",
+      "type": "thumbnail",
+      "bytes": 46818
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q124260245.jpg",
+      "type": "thumbnail",
+      "bytes": 23873
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q12899487.jpg",
+      "type": "thumbnail",
+      "bytes": 26950
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q17026577.jpg",
+      "type": "thumbnail",
+      "bytes": 38388
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q17027477.jpg",
+      "type": "thumbnail",
+      "bytes": 40102
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q17354350.jpg",
+      "type": "thumbnail",
+      "bytes": 42323
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q17429571.jpg",
+      "type": "thumbnail",
+      "bytes": 21521
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q17491728.jpg",
+      "type": "thumbnail",
+      "bytes": 42966
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q17491841.jpg",
+      "type": "thumbnail",
+      "bytes": 38717
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q17505777.jpg",
+      "type": "thumbnail",
+      "bytes": 41333
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q18030970.jpg",
+      "type": "thumbnail",
+      "bytes": 32503
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q18191111.jpg",
+      "type": "thumbnail",
+      "bytes": 20076
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q18685995.jpg",
+      "type": "thumbnail",
+      "bytes": 23164
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q18758800.jpg",
+      "type": "thumbnail",
+      "bytes": 37145
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q19905264.jpg",
+      "type": "thumbnail",
+      "bytes": 33432
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q19905335.jpg",
+      "type": "thumbnail",
+      "bytes": 18635
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q19912009.jpg",
+      "type": "thumbnail",
+      "bytes": 34209
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q20189748.jpg",
+      "type": "thumbnail",
+      "bytes": 26433
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q20190306.jpg",
+      "type": "thumbnail",
+      "bytes": 27942
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q20190438.jpg",
+      "type": "thumbnail",
+      "bytes": 28622
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q20268479.jpg",
+      "type": "thumbnail",
+      "bytes": 21409
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q20540063.jpg",
+      "type": "thumbnail",
+      "bytes": 29609
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q21712319.jpg",
+      "type": "thumbnail",
+      "bytes": 39427
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q23499306.jpg",
+      "type": "thumbnail",
+      "bytes": 21283
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q27954929.jpg",
+      "type": "thumbnail",
+      "bytes": 39983
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q28495679.jpg",
+      "type": "thumbnail",
+      "bytes": 22774
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q28497105.jpg",
+      "type": "thumbnail",
+      "bytes": 19245
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q28769270.JPG",
+      "type": "thumbnail",
+      "bytes": 32448
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q32032740.jpg",
+      "type": "thumbnail",
+      "bytes": 10184
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q32201097.jpg",
+      "type": "thumbnail",
+      "bytes": 47016
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q3602924.jpg",
+      "type": "thumbnail",
+      "bytes": 29084
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q3607521.jpg",
+      "type": "thumbnail",
+      "bytes": 16380
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q3607539.jpg",
+      "type": "thumbnail",
+      "bytes": 24616
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q3607561.jpg",
+      "type": "thumbnail",
+      "bytes": 16125
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q3612977.jpg",
+      "type": "thumbnail",
+      "bytes": 20921
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q3622664.jpg",
+      "type": "thumbnail",
+      "bytes": 30336
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q3630732.jpg",
+      "type": "thumbnail",
+      "bytes": 34386
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q3633443.jpg",
+      "type": "thumbnail",
+      "bytes": 20050
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q3794238.jpg",
+      "type": "thumbnail",
+      "bytes": 34809
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q3821901.jpg",
+      "type": "thumbnail",
+      "bytes": 38967
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q3824633.jpg",
+      "type": "thumbnail",
+      "bytes": 41650
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q3937771.jpg",
+      "type": "thumbnail",
+      "bytes": 16492
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q3945755.jpg",
+      "type": "thumbnail",
+      "bytes": 34366
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q4212198.jpg",
+      "type": "thumbnail",
+      "bytes": 23875
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q50113232.JPG",
+      "type": "thumbnail",
+      "bytes": 37619
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q56239082.jpg",
+      "type": "thumbnail",
+      "bytes": 27657
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q5831987.jpg",
+      "type": "thumbnail",
+      "bytes": 30369
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q5967779.jpg",
+      "type": "thumbnail",
+      "bytes": 30403
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q6022118.jpg",
+      "type": "thumbnail",
+      "bytes": 697093
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q64491271.jpg",
+      "type": "thumbnail",
+      "bytes": 21780
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q64491272.jpg",
+      "type": "thumbnail",
+      "bytes": 27307
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q80989451.jpg",
+      "type": "thumbnail",
+      "bytes": 53406
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q87367872.jpg",
+      "type": "thumbnail",
+      "bytes": 39880
+    },
+    {
+      "path": "data/thumbnails/artist-Q82445/wikidata-Q951954.jpg",
+      "type": "thumbnail",
+      "bytes": 31806
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/index.json",
+      "type": "thumbnail",
+      "bytes": 12188
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikidata-Q2268524.jpg",
+      "type": "thumbnail",
+      "bytes": 84259
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikidata-Q2273452.jpg",
+      "type": "thumbnail",
+      "bytes": 52620
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikidata-Q2594673.jpg",
+      "type": "thumbnail",
+      "bytes": 63419
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikidata-Q2667782.jpg",
+      "type": "thumbnail",
+      "bytes": 44158
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikidata-Q3605057.jpg",
+      "type": "thumbnail",
+      "bytes": 59966
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikidata-Q571416.jpg",
+      "type": "thumbnail",
+      "bytes": 97270
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikidata-Q644936.jpg",
+      "type": "thumbnail",
+      "bytes": 38480
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikidata-Q647202.jpg",
+      "type": "thumbnail",
+      "bytes": 42256
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-1.jpg",
+      "type": "thumbnail",
+      "bytes": 36868
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-10.jpg",
+      "type": "thumbnail",
+      "bytes": 30057
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-11.jpg",
+      "type": "thumbnail",
+      "bytes": 18967
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-12.jpg",
+      "type": "thumbnail",
+      "bytes": 25702
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-13.jpg",
+      "type": "thumbnail",
+      "bytes": 24304
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-15.JPG",
+      "type": "thumbnail",
+      "bytes": 15041
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-16.jpg",
+      "type": "thumbnail",
+      "bytes": 18324
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-17.jpg",
+      "type": "thumbnail",
+      "bytes": 22033
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-18.jpg",
+      "type": "thumbnail",
+      "bytes": 18772
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-19.jpg",
+      "type": "thumbnail",
+      "bytes": 16103
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-2.jpg",
+      "type": "thumbnail",
+      "bytes": 38198
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-20.jpg",
+      "type": "thumbnail",
+      "bytes": 14001
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-22.jpg",
+      "type": "thumbnail",
+      "bytes": 20820
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-23.jpg",
+      "type": "thumbnail",
+      "bytes": 13854
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-24.jpg",
+      "type": "thumbnail",
+      "bytes": 14699
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-25.jpg",
+      "type": "thumbnail",
+      "bytes": 21195
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-26.jpg",
+      "type": "thumbnail",
+      "bytes": 19135
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-27.jpg",
+      "type": "thumbnail",
+      "bytes": 11972
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-28.jpg",
+      "type": "thumbnail",
+      "bytes": 37173
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-29.jpg",
+      "type": "thumbnail",
+      "bytes": 21447
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-3.jpg",
+      "type": "thumbnail",
+      "bytes": 20515
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-30.jpg",
+      "type": "thumbnail",
+      "bytes": 30173
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-31.jpg",
+      "type": "thumbnail",
+      "bytes": 13228
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-32.jpg",
+      "type": "thumbnail",
+      "bytes": 23415
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-33.jpg",
+      "type": "thumbnail",
+      "bytes": 17580
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-35.jpg",
+      "type": "thumbnail",
+      "bytes": 25563
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-36.jpg",
+      "type": "thumbnail",
+      "bytes": 23703
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-37.jpg",
+      "type": "thumbnail",
+      "bytes": 7825
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-38.jpg",
+      "type": "thumbnail",
+      "bytes": 31174
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-39.jpg",
+      "type": "thumbnail",
+      "bytes": 22371
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-4.jpg",
+      "type": "thumbnail",
+      "bytes": 23079
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-40.jpg",
+      "type": "thumbnail",
+      "bytes": 16087
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-42.jpg",
+      "type": "thumbnail",
+      "bytes": 21453
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-43.jpg",
+      "type": "thumbnail",
+      "bytes": 22479
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-44.jpg",
+      "type": "thumbnail",
+      "bytes": 18225
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-45.jpg",
+      "type": "thumbnail",
+      "bytes": 34683
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-46.jpg",
+      "type": "thumbnail",
+      "bytes": 25837
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-47.jpg",
+      "type": "thumbnail",
+      "bytes": 17593
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-49.jpg",
+      "type": "thumbnail",
+      "bytes": 26319
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-5.jpg",
+      "type": "thumbnail",
+      "bytes": 25691
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-50.jpg",
+      "type": "thumbnail",
+      "bytes": 18491
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-51.jpg",
+      "type": "thumbnail",
+      "bytes": 24703
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-52.jpg",
+      "type": "thumbnail",
+      "bytes": 32851
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-53.jpg",
+      "type": "thumbnail",
+      "bytes": 22791
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-54.jpg",
+      "type": "thumbnail",
+      "bytes": 19475
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-6.jpg",
+      "type": "thumbnail",
+      "bytes": 29845
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-8.jpg",
+      "type": "thumbnail",
+      "bytes": 27463
+    },
+    {
+      "path": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-9.jpg",
+      "type": "thumbnail",
+      "bytes": 19104
+    },
+    {
+      "path": "data/thumbnails/claude-monet/impression-sunrise.jpg",
+      "type": "thumbnail",
+      "bytes": 15232
+    },
+    {
+      "path": "data/thumbnails/claude-monet/index.json",
+      "type": "thumbnail",
+      "bytes": 24146
+    },
+    {
+      "path": "data/thumbnails/claude-monet/monet-haystacks.jpg",
+      "type": "thumbnail",
+      "bytes": 14104
+    },
+    {
+      "path": "data/thumbnails/claude-monet/monet-houses-parliament.jpg",
+      "type": "thumbnail",
+      "bytes": 15009
+    },
+    {
+      "path": "data/thumbnails/claude-monet/monet-japanese-bridge.jpg",
+      "type": "thumbnail",
+      "bytes": 37030
+    },
+    {
+      "path": "data/thumbnails/claude-monet/monet-late-japanese-bridge.jpg",
+      "type": "thumbnail",
+      "bytes": 26338
+    },
+    {
+      "path": "data/thumbnails/claude-monet/monet-late-water-lilies.jpg",
+      "type": "thumbnail",
+      "bytes": 44924
+    },
+    {
+      "path": "data/thumbnails/claude-monet/monet-poppies.jpg",
+      "type": "thumbnail",
+      "bytes": 15917
+    },
+    {
+      "path": "data/thumbnails/claude-monet/monet-rouen-cathedral.JPG",
+      "type": "thumbnail",
+      "bytes": 40798
+    },
+    {
+      "path": "data/thumbnails/claude-monet/monet-saint-lazare.jpg",
+      "type": "thumbnail",
+      "bytes": 20926
+    },
+    {
+      "path": "data/thumbnails/claude-monet/monet-water-lilies.jpg",
+      "type": "thumbnail",
+      "bytes": 13038
+    },
+    {
+      "path": "data/thumbnails/claude-monet/monet-woman-parasol.jpg",
+      "type": "thumbnail",
+      "bytes": 51745
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q10315096.jpg",
+      "type": "thumbnail",
+      "bytes": 22778
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q10317575.jpg",
+      "type": "thumbnail",
+      "bytes": 24813
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q10322900.jpg",
+      "type": "thumbnail",
+      "bytes": 46556
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q105099581.jpg",
+      "type": "thumbnail",
+      "bytes": 42384
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q105099586.jpg",
+      "type": "thumbnail",
+      "bytes": 22279
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q105099589.JPG",
+      "type": "thumbnail",
+      "bytes": 25043
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q105099590.JPG",
+      "type": "thumbnail",
+      "bytes": 25996
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q105099598.JPG",
+      "type": "thumbnail",
+      "bytes": 20347
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q105099599.JPG",
+      "type": "thumbnail",
+      "bytes": 20171
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q105099603.JPG",
+      "type": "thumbnail",
+      "bytes": 27932
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q105099607.JPG",
+      "type": "thumbnail",
+      "bytes": 32380
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q1167912.jpg",
+      "type": "thumbnail",
+      "bytes": 47847
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q1189907.jpg",
+      "type": "thumbnail",
+      "bytes": 44924
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q1212084.jpg",
+      "type": "thumbnail",
+      "bytes": 17348
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q135087938.jpg",
+      "type": "thumbnail",
+      "bytes": 683922
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q1451508.jpg",
+      "type": "thumbnail",
+      "bytes": 34445
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q1650049.jpg",
+      "type": "thumbnail",
+      "bytes": 12752
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q17002537.jpg",
+      "type": "thumbnail",
+      "bytes": 31650
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q17491886.jpg",
+      "type": "thumbnail",
+      "bytes": 15577
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q17495596.jpg",
+      "type": "thumbnail",
+      "bytes": 37790
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q18922918.jpg",
+      "type": "thumbnail",
+      "bytes": 27750
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q19564337.jpg",
+      "type": "thumbnail",
+      "bytes": 19043
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q19912578.jpg",
+      "type": "thumbnail",
+      "bytes": 20827
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q19914267.jpg",
+      "type": "thumbnail",
+      "bytes": 29176
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q20180920.jpg",
+      "type": "thumbnail",
+      "bytes": 15625
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q20272169.jpg",
+      "type": "thumbnail",
+      "bytes": 18252
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q2070487.jpg",
+      "type": "thumbnail",
+      "bytes": 16297
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q20890879.jpg",
+      "type": "thumbnail",
+      "bytes": 25583
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q21712160.jpg",
+      "type": "thumbnail",
+      "bytes": 51465
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q2381272.JPG",
+      "type": "thumbnail",
+      "bytes": 32897
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q2395218.jpg",
+      "type": "thumbnail",
+      "bytes": 31364
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q24046494.jpg",
+      "type": "thumbnail",
+      "bytes": 18564
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q24058801.jpg",
+      "type": "thumbnail",
+      "bytes": 21029
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q26707964.jpg",
+      "type": "thumbnail",
+      "bytes": 27214
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q2734892.jpg",
+      "type": "thumbnail",
+      "bytes": 41876
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q27665416.jpg",
+      "type": "thumbnail",
+      "bytes": 24269
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q27883272.jpg",
+      "type": "thumbnail",
+      "bytes": 32061
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q28042166.jpg",
+      "type": "thumbnail",
+      "bytes": 35668
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q28777018.jpg",
+      "type": "thumbnail",
+      "bytes": 28123
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q28797613.jpg",
+      "type": "thumbnail",
+      "bytes": 21656
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q3146246.jpg",
+      "type": "thumbnail",
+      "bytes": 31397
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q3212522.jpg",
+      "type": "thumbnail",
+      "bytes": 56652
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q3231771.jpg",
+      "type": "thumbnail",
+      "bytes": 15184
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q3234987.jpg",
+      "type": "thumbnail",
+      "bytes": 15603
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q328523.jpg",
+      "type": "thumbnail",
+      "bytes": 14072
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q3454959.jpg",
+      "type": "thumbnail",
+      "bytes": 13318
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q3794121.jpg",
+      "type": "thumbnail",
+      "bytes": 31414
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q3794124.jpg",
+      "type": "thumbnail",
+      "bytes": 31822
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q3795194.jpg",
+      "type": "thumbnail",
+      "bytes": 9309
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q3795196.jpg",
+      "type": "thumbnail",
+      "bytes": 10539
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q3877090.jpg",
+      "type": "thumbnail",
+      "bytes": 4977
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q3947218.jpg",
+      "type": "thumbnail",
+      "bytes": 19921
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q3966658.jpg",
+      "type": "thumbnail",
+      "bytes": 16033
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q432253.jpg",
+      "type": "thumbnail",
+      "bytes": 19890
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q4429116.jpg",
+      "type": "thumbnail",
+      "bytes": 19117
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q4931530.jpg",
+      "type": "thumbnail",
+      "bytes": 679302
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q4949676.jpg",
+      "type": "thumbnail",
+      "bytes": 36266
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q49985736.jpg",
+      "type": "thumbnail",
+      "bytes": 18150
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q5074352.jpg",
+      "type": "thumbnail",
+      "bytes": 33066
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q50772913.jpg",
+      "type": "thumbnail",
+      "bytes": 23246
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q6082483.jpg",
+      "type": "thumbnail",
+      "bytes": 14631
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q637414.jpg",
+      "type": "thumbnail",
+      "bytes": 46922
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q64174089.jpg",
+      "type": "thumbnail",
+      "bytes": 11945
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q681876.jpg",
+      "type": "thumbnail",
+      "bytes": 25502
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q733458.jpg",
+      "type": "thumbnail",
+      "bytes": 36234
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q734082.jpg",
+      "type": "thumbnail",
+      "bytes": 16189
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q7548371.jpg",
+      "type": "thumbnail",
+      "bytes": 15928
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q7581196.jpg",
+      "type": "thumbnail",
+      "bytes": 19878
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q7620298.jpg",
+      "type": "thumbnail",
+      "bytes": 25933
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q829572.JPG",
+      "type": "thumbnail",
+      "bytes": 19270
+    },
+    {
+      "path": "data/thumbnails/claude-monet/wikidata-Q941549.jpg",
+      "type": "thumbnail",
+      "bytes": 27849
+    },
+    {
+      "path": "data/thumbnails/failures.json",
+      "type": "thumbnail",
+      "bytes": 1284
+    },
+    {
+      "path": "data/thumbnails/frida-kahlo/frida-broken-column.jpg",
+      "type": "thumbnail",
+      "bytes": 43084
+    },
+    {
+      "path": "data/thumbnails/frida-kahlo/frida-wounded-deer.jpg",
+      "type": "thumbnail",
+      "bytes": 43777
+    },
+    {
+      "path": "data/thumbnails/frida-kahlo/index.json",
+      "type": "thumbnail",
+      "bytes": 4067
+    },
+    {
+      "path": "data/thumbnails/frida-kahlo/manual-wounded-deer.jpg",
+      "type": "thumbnail",
+      "bytes": 184898
+    },
+    {
+      "path": "data/thumbnails/frida-kahlo/two-fridas.jpg",
+      "type": "thumbnail",
+      "bytes": 104061
+    },
+    {
+      "path": "data/thumbnails/frida-kahlo/wikidata-Q18343221.jpg",
+      "type": "thumbnail",
+      "bytes": 42292
+    },
+    {
+      "path": "data/thumbnails/frida-kahlo/wikidata-Q19884325.jpg",
+      "type": "thumbnail",
+      "bytes": 78887
+    },
+    {
+      "path": "data/thumbnails/frida-kahlo/wikidata-Q19884567.jpg",
+      "type": "thumbnail",
+      "bytes": 64126
+    },
+    {
+      "path": "data/thumbnails/frida-kahlo/wikidata-Q19898216.png",
+      "type": "thumbnail",
+      "bytes": 867
+    },
+    {
+      "path": "data/thumbnails/frida-kahlo/wikidata-Q21010270.jpg",
+      "type": "thumbnail",
+      "bytes": 43777
+    },
+    {
+      "path": "data/thumbnails/frida-kahlo/wikidata-Q21056477.jpg",
+      "type": "thumbnail",
+      "bytes": 43084
+    },
+    {
+      "path": "data/thumbnails/frida-kahlo/wikidata-Q23663690.jpg",
+      "type": "thumbnail",
+      "bytes": 112612
+    },
+    {
+      "path": "data/thumbnails/frida-kahlo/wikidata-Q26000749.jpg",
+      "type": "thumbnail",
+      "bytes": 64744
+    },
+    {
+      "path": "data/thumbnails/frida-kahlo/wikidata-Q3232010.jpg",
+      "type": "thumbnail",
+      "bytes": 104061
+    },
+    {
+      "path": "data/thumbnails/frida-kahlo/wikidata-Q43281370.jpg",
+      "type": "thumbnail",
+      "bytes": 30986
+    },
+    {
+      "path": "data/thumbnails/frida-kahlo/wikidata-Q45895679.jpg",
+      "type": "thumbnail",
+      "bytes": 20052
+    },
+    {
+      "path": "data/thumbnails/frida-kahlo/wikidata-Q5712848.jpg",
+      "type": "thumbnail",
+      "bytes": 64924
+    },
+    {
+      "path": "data/thumbnails/frida-kahlo/wikidata-Q5880026.jpg",
+      "type": "thumbnail",
+      "bytes": 33436
+    },
+    {
+      "path": "data/thumbnails/frida-kahlo/wikidata-Q5941128.jpg",
+      "type": "thumbnail",
+      "bytes": 19115
+    },
+    {
+      "path": "data/thumbnails/frida-kahlo/wikidata-Q63341526.JPG",
+      "type": "thumbnail",
+      "bytes": 46855
+    },
+    {
+      "path": "data/thumbnails/frida-kahlo/wikidata-Q97164416.jpg",
+      "type": "thumbnail",
+      "bytes": 64435
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/index.json",
+      "type": "thumbnail",
+      "bytes": 21369
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/starry-night.jpg",
+      "type": "thumbnail",
+      "bytes": 19060
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/sunflowers.jpg",
+      "type": "thumbnail",
+      "bytes": 30478
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q1025704.jpg",
+      "type": "thumbnail",
+      "bytes": 34037
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q1118295.jpg",
+      "type": "thumbnail",
+      "bytes": 29570
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q1132723.jpg",
+      "type": "thumbnail",
+      "bytes": 40424
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q114708084.jpg",
+      "type": "thumbnail",
+      "bytes": 30172
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q1171740.jpg",
+      "type": "thumbnail",
+      "bytes": 29052
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q1213917.jpg",
+      "type": "thumbnail",
+      "bytes": 42199
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q13107262.jpg",
+      "type": "thumbnail",
+      "bytes": 41168
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q13528770.JPG",
+      "type": "thumbnail",
+      "bytes": 42249
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q1432536.jpg",
+      "type": "thumbnail",
+      "bytes": 23661
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q1464531.jpg",
+      "type": "thumbnail",
+      "bytes": 20677
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q14866847.jpg",
+      "type": "thumbnail",
+      "bytes": 30172
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q154469.jpg",
+      "type": "thumbnail",
+      "bytes": 15635
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q157541.jpg",
+      "type": "thumbnail",
+      "bytes": 28622
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q16589468.jpg",
+      "type": "thumbnail",
+      "bytes": 14417
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q17023940.jpg",
+      "type": "thumbnail",
+      "bytes": 47382
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q17023954.jpg",
+      "type": "thumbnail",
+      "bytes": 42300
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q17511613.jpg",
+      "type": "thumbnail",
+      "bytes": 21279
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q18608298.jpg",
+      "type": "thumbnail",
+      "bytes": 26279
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q18650971.jpg",
+      "type": "thumbnail",
+      "bytes": 16390
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q18689641.jpg",
+      "type": "thumbnail",
+      "bytes": 27887
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q1926628.jpg",
+      "type": "thumbnail",
+      "bytes": 30600
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q19356352.jpg",
+      "type": "thumbnail",
+      "bytes": 18842
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q19363211.jpg",
+      "type": "thumbnail",
+      "bytes": 31496
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q19363214.jpg",
+      "type": "thumbnail",
+      "bytes": 27641
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q19836168.jpg",
+      "type": "thumbnail",
+      "bytes": 34171
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q19836180.jpg",
+      "type": "thumbnail",
+      "bytes": 18792
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q19836182.jpg",
+      "type": "thumbnail",
+      "bytes": 39983
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q19836194.jpg",
+      "type": "thumbnail",
+      "bytes": 21915
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q19836201.jpg",
+      "type": "thumbnail",
+      "bytes": 22857
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q19836204.jpg",
+      "type": "thumbnail",
+      "bytes": 56856
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q19836206.jpg",
+      "type": "thumbnail",
+      "bytes": 22970
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q19836209.jpg",
+      "type": "thumbnail",
+      "bytes": 40194
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q19836211.jpg",
+      "type": "thumbnail",
+      "bytes": 24467
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q19836258.jpg",
+      "type": "thumbnail",
+      "bytes": 34846
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q19836312.jpg",
+      "type": "thumbnail",
+      "bytes": 38166
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q19836315.jpg",
+      "type": "thumbnail",
+      "bytes": 29245
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q19836316.jpg",
+      "type": "thumbnail",
+      "bytes": 38237
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q19836319.jpg",
+      "type": "thumbnail",
+      "bytes": 26283
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q2200610.jpg",
+      "type": "thumbnail",
+      "bytes": 18595
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q22329831.jpg",
+      "type": "thumbnail",
+      "bytes": 29439
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q2269788.jpg",
+      "type": "thumbnail",
+      "bytes": 41296
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q2269835.jpg",
+      "type": "thumbnail",
+      "bytes": 25256
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q2271805.jpg",
+      "type": "thumbnail",
+      "bytes": 23002
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q2278818.jpg",
+      "type": "thumbnail",
+      "bytes": 35141
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q2282256.jpg",
+      "type": "thumbnail",
+      "bytes": 29444
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q2335084.jpg",
+      "type": "thumbnail",
+      "bytes": 22254
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q26220165.jpg",
+      "type": "thumbnail",
+      "bytes": 10650
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q26221192.jpg",
+      "type": "thumbnail",
+      "bytes": 39549
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q26221193.jpg",
+      "type": "thumbnail",
+      "bytes": 25588
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q26221197.jpg",
+      "type": "thumbnail",
+      "bytes": 27267
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q26221219.jpg",
+      "type": "thumbnail",
+      "bytes": 23249
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q26221220.jpg",
+      "type": "thumbnail",
+      "bytes": 24254
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q26221221.jpg",
+      "type": "thumbnail",
+      "bytes": 27457
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q26221224.jpg",
+      "type": "thumbnail",
+      "bytes": 17701
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q26221225.jpg",
+      "type": "thumbnail",
+      "bytes": 15921
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q26221226.jpg",
+      "type": "thumbnail",
+      "bytes": 18953
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q26221233.jpg",
+      "type": "thumbnail",
+      "bytes": 29287
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q26221234.jpg",
+      "type": "thumbnail",
+      "bytes": 27315
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q26221236.jpg",
+      "type": "thumbnail",
+      "bytes": 29576
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q26221238.jpg",
+      "type": "thumbnail",
+      "bytes": 22709
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q26221239.jpg",
+      "type": "thumbnail",
+      "bytes": 24501
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q26221240.jpg",
+      "type": "thumbnail",
+      "bytes": 18249
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q26221242.jpg",
+      "type": "thumbnail",
+      "bytes": 42033
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q262360.jpg",
+      "type": "thumbnail",
+      "bytes": 24178
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q27700844.jpg",
+      "type": "thumbnail",
+      "bytes": 18548
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q28146907.jpg",
+      "type": "thumbnail",
+      "bytes": 39389
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q3314658.jpg",
+      "type": "thumbnail",
+      "bytes": 27831
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q3399534.jpg",
+      "type": "thumbnail",
+      "bytes": 31667
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q3630735.jpg",
+      "type": "thumbnail",
+      "bytes": 30361
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q3832428.jpg",
+      "type": "thumbnail",
+      "bytes": 33256
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q3929322.jpg",
+      "type": "thumbnail",
+      "bytes": 13382
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q4110564.jpg",
+      "type": "thumbnail",
+      "bytes": 16430
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q4110565.jpg",
+      "type": "thumbnail",
+      "bytes": 37070
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q4118041.jpg",
+      "type": "thumbnail",
+      "bytes": 35510
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q4126322.jpg",
+      "type": "thumbnail",
+      "bytes": 31747
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q4233325.jpg",
+      "type": "thumbnail",
+      "bytes": 20472
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q45585.jpg",
+      "type": "thumbnail",
+      "bytes": 26647
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q4657634.jpg",
+      "type": "thumbnail",
+      "bytes": 39152
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q4892867.jpg",
+      "type": "thumbnail",
+      "bytes": 21982
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q4924524.jpg",
+      "type": "thumbnail",
+      "bytes": 40594
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q4928450.jpg",
+      "type": "thumbnail",
+      "bytes": 31171
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q4987244.jpg",
+      "type": "thumbnail",
+      "bytes": 16946
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q500554.jpg",
+      "type": "thumbnail",
+      "bytes": 29648
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q5047026.jpg",
+      "type": "thumbnail",
+      "bytes": 14366
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q5435849.jpg",
+      "type": "thumbnail",
+      "bytes": 25215
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q5564475.jpg",
+      "type": "thumbnail",
+      "bytes": 36679
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q5930190.jpg",
+      "type": "thumbnail",
+      "bytes": 49084
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q602980.jpg",
+      "type": "thumbnail",
+      "bytes": 26376
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q6159323.jpg",
+      "type": "thumbnail",
+      "bytes": 56617
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q634122.jpg",
+      "type": "thumbnail",
+      "bytes": 19087
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q6426375.jpg",
+      "type": "thumbnail",
+      "bytes": 24509
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q65026319.jpg",
+      "type": "thumbnail",
+      "bytes": 34923
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q674846.jpg",
+      "type": "thumbnail",
+      "bytes": 21646
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q7087213.jpg",
+      "type": "thumbnail",
+      "bytes": 25062
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q7232350.jpg",
+      "type": "thumbnail",
+      "bytes": 25564
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q724377.jpg",
+      "type": "thumbnail",
+      "bytes": 19561
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q7536969.jpg",
+      "type": "thumbnail",
+      "bytes": 26379
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q7617094.jpg",
+      "type": "thumbnail",
+      "bytes": 14077
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q838798.jpg",
+      "type": "thumbnail",
+      "bytes": 21905
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q867510.jpg",
+      "type": "thumbnail",
+      "bytes": 42191
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q9339733.jpg",
+      "type": "thumbnail",
+      "bytes": 32110
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q9378388.jpg",
+      "type": "thumbnail",
+      "bytes": 23344
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q9391004.jpg",
+      "type": "thumbnail",
+      "bytes": 26694
+    },
+    {
+      "path": "data/thumbnails/vincent-van-gogh/wikidata-Q948894.jpg",
+      "type": "thumbnail",
+      "bytes": 35258
+    },
+    {
+      "path": "data/thumbnails/_placeholder/artwork-placeholder.png",
+      "type": "thumbnail",
+      "bytes": 10365
+    },
+    {
+      "path": "data/thumbnails/_placeholder/artwork-placeholder.svg",
+      "type": "thumbnail",
+      "bytes": 1022
+    },
+    {
+      "path": "data/high-resolution/artist-1786332007363/wikidata-Q311243_프리드리히.display.jpg",
+      "type": "high-resolution",
+      "bytes": 11808245
+    },
+    {
+      "path": "data/high-resolution/artist-1786332007363/wikidata-Q693746_프리드리히.display.jpg",
+      "type": "high-resolution",
+      "bytes": 2140479
+    },
+    {
+      "path": "data/high-resolution/artist-1786371252483/wikidata-Q2627056_카라바조.display.jpg",
+      "type": "high-resolution",
+      "bytes": 6593605
+    },
+    {
+      "path": "data/high-resolution/artist-Q213163/wikidata-Q18719540_비제르브룅.display.jpg",
+      "type": "high-resolution",
+      "bytes": 3734330
+    },
+    {
+      "path": "data/high-resolution/artist-Q301/wikidata-Q883994_엘그레코.display.jpg",
+      "type": "high-resolution",
+      "bytes": 3154421
+    },
+    {
+      "path": "data/high-resolution/artist-Q41264/wikidata-Q185372_페르메이르.display.jpg",
+      "type": "high-resolution",
+      "bytes": 12904311
+    },
+    {
+      "path": "data/high-resolution/artist-Q43270/wikidata-Q699091_브뤼헐.display.jpg",
+      "type": "high-resolution",
+      "bytes": 17208381
+    },
+    {
+      "path": "data/high-resolution/artist-Q6394591/featured-Q3918079_푸키레프.display.jpg",
+      "type": "high-resolution",
+      "bytes": 1008094
+    },
+    {
+      "path": "data/high-resolution/vincent-van-gogh/wikidata-Q45585_반고흐.display.jpg",
+      "type": "high-resolution",
+      "bytes": 6065279
+    },
+    {
+      "path": "data/미술사조/images/1914-20Gris-20Le-20Petit-20D-C3-A9jeuner-b84d34a4a263.jpg",
+      "type": "movement-image",
+      "bytes": 59254
+    },
+    {
+      "path": "data/미술사조/images/Albert-20Gleizes-20l-Homme-20au-20Balcon-201912-20oil-20on-20canvas-20-47ac16bbe59c.jpg",
+      "type": "movement-image",
+      "bytes": 928375
+    },
+    {
+      "path": "data/미술사조/images/Angelo-20Bronzino-20-20Venus-20Cupid-20Folly-20and-20Time-20-20Nationa-72f45c00b9b9.jpg",
+      "type": "movement-image",
+      "bytes": 292925
+    },
+    {
+      "path": "data/미술사조/images/Antoine-20Watteau-20-20Pilgrimage-20to-20Cythera-20-20WGA25454-de23e298c518.jpg",
+      "type": "movement-image",
+      "bytes": 88353
+    },
+    {
+      "path": "data/미술사조/images/Artemisia-Gentileschi-Judith-Beheading-Holofernes-WGA8563-822bc56fc2a3.jpg",
+      "type": "movement-image",
+      "bytes": 205541
+    },
+    {
+      "path": "data/미술사조/images/Cabaret-20Voltaire-748ab748664a.jpg",
+      "type": "movement-image",
+      "bytes": 70000
+    },
+    {
+      "path": "data/미술사조/images/Camille-20Pissarro-20-20Boulevard-20Montmartre-20Spring-20-20Google-20-7cc6d722c418.jpg",
+      "type": "movement-image",
+      "bytes": 336312
+    },
+    {
+      "path": "data/미술사조/images/Caravaggio-27s-The-Calling-of-St-Matthew-2068cdb551fc.jpg",
+      "type": "movement-image",
+      "bytes": 172491
+    },
+    {
+      "path": "data/미술사조/images/Caravaggio-27s-The-Calling-of-St-Matthew-3ab8156a9736.jpg",
+      "type": "movement-image",
+      "bytes": 172491
+    },
+    {
+      "path": "data/미술사조/images/Caspar-David-Friedrich-Wanderer-above-the-sea-of-fog-d5966e14b524.jpg",
+      "type": "movement-image",
+      "bytes": 264366
+    },
+    {
+      "path": "data/미술사조/images/Cimabue-Maest-C3-A0-di-Santa-Trinita-Google-Art-Project-d9011e484d49.jpg",
+      "type": "movement-image",
+      "bytes": 998300
+    },
+    {
+      "path": "data/미술사조/images/Claude-Monet-Impression-soleil-levant-ffa6676be90d.jpg",
+      "type": "movement-image",
+      "bytes": 253676
+    },
+    {
+      "path": "data/미술사조/images/David-Oath-of-the-Horatii-1784-0eededa85a03.jpg",
+      "type": "movement-image",
+      "bytes": 249768
+    },
+    {
+      "path": "data/미술사조/images/David-Oath-of-the-Horatii-1784-d473275ac167.jpg",
+      "type": "movement-image",
+      "bytes": 249768
+    },
+    {
+      "path": "data/미술사조/images/David-The-Death-of-Socrates-ebacbfdd4138.jpg",
+      "type": "movement-image",
+      "bytes": 192576
+    },
+    {
+      "path": "data/미술사조/images/De-Chirico-27s-Love-Song-ed731c7032ce.jpg",
+      "type": "movement-image",
+      "bytes": 1337010
+    },
+    {
+      "path": "data/미술사조/images/Death-of-Marat-by-David-a6625a3ca21b.jpg",
+      "type": "movement-image",
+      "bytes": 429335
+    },
+    {
+      "path": "data/미술사조/images/dellibwholesm-2d54e3a322c8.jpg",
+      "type": "movement-image",
+      "bytes": 798039
+    },
+    {
+      "path": "data/미술사조/images/Derain-CharingCrossBridge-dffb011f9c2f.png",
+      "type": "movement-image",
+      "bytes": 1402825
+    },
+    {
+      "path": "data/미술사조/images/Edgar-20Degas-20-20The-20Ballet-20Class-20-20Google-20Art-20Project-842d02fde04d.jpg",
+      "type": "movement-image",
+      "bytes": 318371
+    },
+    {
+      "path": "data/미술사조/images/Eug-C3-A8ne-Delacroix-Le-28-Juillet-La-Libert-C3-A9-guidant-le-peuple-808a8bab8e3b.jpg",
+      "type": "movement-image",
+      "bytes": 232923
+    },
+    {
+      "path": "data/미술사조/images/europe-after-rain-d6203265c1a4.jpg",
+      "type": "movement-image",
+      "bytes": 100475
+    },
+    {
+      "path": "data/미술사조/images/Fragonard-20The-20Swing-93c60ad2bfcf.jpg",
+      "type": "movement-image",
+      "bytes": 394381
+    },
+    {
+      "path": "data/미술사조/images/Fragonard-The-Swing-af227c46d654.jpg",
+      "type": "movement-image",
+      "bytes": 683079
+    },
+    {
+      "path": "data/미술사조/images/Georges-20Seurat-20-20Un-20dimanche-20apr-C3-A8s-midi-20-C3-A0-20l-C3-8037631ce03d.jpg",
+      "type": "movement-image",
+      "bytes": 146525
+    },
+    {
+      "path": "data/미술사조/images/Georges-Seurat-Un-dimanche-apr-C3-A8s-midi-C3-A0-l-27-C3-8Ele-de-la-Gr-8037631ce03d.jpg",
+      "type": "movement-image",
+      "bytes": 146525
+    },
+    {
+      "path": "data/미술사조/images/Giotto-20-20Scrovegni-20-20-36-20-20Lamentation-20-The-20Mourning-20of-feb53c4a2d22.jpg",
+      "type": "movement-image",
+      "bytes": 317708
+    },
+    {
+      "path": "data/미술사조/images/Giovanni-20Battista-20Tiepolo-20-20Apollo-20and-20the-20Continents-20-4da05d03665b.jpg",
+      "type": "movement-image",
+      "bytes": 293110
+    },
+    {
+      "path": "data/미술사조/images/grwpCmPpSImm938JFHIaTITKJr4-6e4868fbf57e.jpg",
+      "type": "movement-image",
+      "bytes": 344587
+    },
+    {
+      "path": "data/미술사조/images/Gustave-20Courbet-20-20A-20Burial-20at-20Ornans-20-20Google-20Art-20Pr-133612793849.jpg",
+      "type": "movement-image",
+      "bytes": 134572
+    },
+    {
+      "path": "data/미술사조/images/Gustave-Courbet-A-Burial-at-Ornans-Google-Art-Project-2-45d9e62b27f4.jpg",
+      "type": "movement-image",
+      "bytes": 134572
+    },
+    {
+      "path": "data/미술사조/images/Hameau-20-C3-A0-20Payennet-20pr-C3-A8s-20de-20Gardanne-20par-20Paul-20-dd2ecb68fedf.jpg",
+      "type": "movement-image",
+      "bytes": 239335
+    },
+    {
+      "path": "data/미술사조/images/Hoch-Cut-With-the-Kitchen-Knife-78af8df2b81f.jpg",
+      "type": "movement-image",
+      "bytes": 431545
+    },
+    {
+      "path": "data/미술사조/images/Honor-C3-A9-20Daumier-20-French-20Marseilles-201808-E2-80-931879-20Val-d34f3d1251df.jpg",
+      "type": "movement-image",
+      "bytes": 189368
+    },
+    {
+      "path": "data/미술사조/images/index.json",
+      "type": "movement-image",
+      "bytes": 39801
+    },
+    {
+      "path": "data/미술사조/images/Jacopo-20Pontormo-20004-2dcaf20c0708.jpg",
+      "type": "movement-image",
+      "bytes": 398653
+    },
+    {
+      "path": "data/미술사조/images/Jean-Fran-C3-A7ois-Millet-Gleaners-Google-Art-Project-2-2a5eac9e18cd.jpg",
+      "type": "movement-image",
+      "bytes": 195295
+    },
+    {
+      "path": "data/미술사조/images/Juan-20Gris-20-20Portrait-20of-20Pablo-20Picasso-20-20Google-20Art-20P-5708b16ee683.jpg",
+      "type": "movement-image",
+      "bytes": 384054
+    },
+    {
+      "path": "data/미술사조/images/Juan-Gris-Portrait-of-Pablo-Picasso-Google-Art-Project-5708b16ee683.jpg",
+      "type": "movement-image",
+      "bytes": 384054
+    },
+    {
+      "path": "data/미술사조/images/Kurt-Schwitters-22Merz-50-22-Composition-Google-Art-Project-78373d57277d.jpg",
+      "type": "movement-image",
+      "bytes": 400433
+    },
+    {
+      "path": "data/미술사조/images/La-20Gare-20Saint-Lazare-20-20Claude-20Monet-1f6fbbea3c19.jpg",
+      "type": "movement-image",
+      "bytes": 248197
+    },
+    {
+      "path": "data/미술사조/images/La-Trahison-des-images-c3e88df9933f.jpg",
+      "type": "movement-image",
+      "bytes": 55529
+    },
+    {
+      "path": "data/미술사조/images/Louis-XIV-of-France-063c4adf6cf3.jpg",
+      "type": "movement-image",
+      "bytes": 666986
+    },
+    {
+      "path": "data/미술사조/images/Marcel-Duchamp-1917-Fountain-photograph-by-Alfred-Stieglitz-17209e2773c3.jpg",
+      "type": "movement-image",
+      "bytes": 262659
+    },
+    {
+      "path": "data/미술사조/images/Masaccio-20trinit-C3-A0-6267fffe36ee.jpg",
+      "type": "movement-image",
+      "bytes": 475323
+    },
+    {
+      "path": "data/미술사조/images/Matisse-Woman-with-a-Hat-4552a63769d7.jpg",
+      "type": "movement-image",
+      "bytes": 459536
+    },
+    {
+      "path": "data/미술사조/images/Open-Window-Collioure-1905-Henri-Matisse-9eef9b5e61ba.jpg",
+      "type": "movement-image",
+      "bytes": 314463
+    },
+    {
+      "path": "data/미술사조/images/Parmigianino-Madonna-dal-collo-lungo-Google-Art-Project-0558c795727f.jpg",
+      "type": "movement-image",
+      "bytes": 370168
+    },
+    {
+      "path": "data/미술사조/images/Parmigianino-Madonna-dal-collo-lungo-Google-Art-Project-a5bf2ea948fb.jpg",
+      "type": "movement-image",
+      "bytes": 370168
+    },
+    {
+      "path": "data/미술사조/images/Paul-C-C3-A9zanne-Ch-C3-A2teau-Noir-and-Mont-Sainte-Victoire-c-1890-18-a8ffbbc35183.jpg",
+      "type": "movement-image",
+      "bytes": 128677
+    },
+    {
+      "path": "data/미술사조/images/Paul-Gauguin-056-000390385852.jpg",
+      "type": "movement-image",
+      "bytes": 384887
+    },
+    {
+      "path": "data/미술사조/images/Pierre-Auguste-Renoir-Le-Moulin-de-la-Galette-a1377b95cdef.jpg",
+      "type": "movement-image",
+      "bytes": 779672
+    },
+    {
+      "path": "data/미술사조/images/Portrait-20of-20Maurice-20de-20Vlaminck-20-by-20Andr-C3-A9-20Derain-20-eef65c6c0de8.jpg",
+      "type": "movement-image",
+      "bytes": 336191
+    },
+    {
+      "path": "data/미술사조/images/Raffael-058-a68f7cff3330.jpg",
+      "type": "movement-image",
+      "bytes": 258540
+    },
+    {
+      "path": "data/미술사조/images/Raffael-058-d7bc21cf0bca.jpg",
+      "type": "movement-image",
+      "bytes": 436875
+    },
+    {
+      "path": "data/미술사조/images/Slave-ship-7b5afac07e61.jpg",
+      "type": "movement-image",
+      "bytes": 328784
+    },
+    {
+      "path": "data/미술사조/images/Th-C3-A9odore-G-C3-A9ricault-The-Raft-of-the-Medusa-WGA08630-849f4ffd1efd.jpg",
+      "type": "movement-image",
+      "bytes": 210176
+    },
+    {
+      "path": "data/미술사조/images/The-20Toilet-20of-20Venus-20by-20Fran-C3-A7ois-20Boucher-fc27175742d6.jpg",
+      "type": "movement-image",
+      "bytes": 360626
+    },
+    {
+      "path": "data/미술사조/images/The-20Triumph-20of-20Bacchus-20and-20Ariadne-20-20Annibale-20Carracci-fd287b491bf5.jpg",
+      "type": "movement-image",
+      "bytes": 176757
+    },
+    {
+      "path": "data/미술사조/images/The-Harlequin-27s-Carnival-a136210e2369.jpg",
+      "type": "movement-image",
+      "bytes": 100170
+    },
+    {
+      "path": "data/미술사조/images/The-Persistence-of-Memory-2ad13469edc2.jpg",
+      "type": "movement-image",
+      "bytes": 36722
+    },
+    {
+      "path": "data/미술사조/images/Tizian-041-c1f1a35ec75c.jpg",
+      "type": "movement-image",
+      "bytes": 1475547
+    },
+    {
+      "path": "data/미술사조/images/Van-Eyck-Arnolfini-Portrait-997900945212.jpg",
+      "type": "movement-image",
+      "bytes": 247553
+    },
+    {
+      "path": "data/미술사조/images/Van-Gogh-Starry-Night-Google-Art-Project-33e561a6a488.jpg",
+      "type": "movement-image",
+      "bytes": 1381879
+    }
+  ]
+}

@@ -1,0 +1,1520 @@
+{
+  "schema": 18,
+  "artistId": "vincent-van-gogh",
+  "qid": "Q5582",
+  "artist": {
+    "name": {
+      "ko": "빈센트 반 고흐",
+      "en": "Vincent van Gogh"
+    },
+    "birth": 1853,
+    "death": 1890,
+    "nationality": {
+      "ko": "네덜란드 왕국",
+      "en": "Kingdom of the Netherlands"
+    }
+  },
+  "fetchedAt": "2026-08-10T13:21:43.815Z",
+  "works": [
+    {
+      "id": "wikidata-Q13107262",
+      "year": 1882,
+      "popularity": 18,
+      "title": {
+        "ko": "슬픔",
+        "en": "Sorrow"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Sorrow.jpg",
+      "description": {
+        "ko": "drawing by Vincent van Gogh produced in 1882",
+        "en": "drawing by Vincent van Gogh produced in 1882"
+      },
+      "source": "http://www.wikidata.org/entity/Q13107262",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q4110564",
+      "year": 1882,
+      "popularity": 13,
+      "title": {
+        "ko": "폭풍우 치는 스헤베닝겐 해변",
+        "en": "View of the Sea at Scheveningen"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기인상주의",
+        "en": "후기인상주의"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Zeegezicht%20bij%20Scheveningen%20%281882%29.jpg",
+      "description": {
+        "ko": "painting by Vincent van Gogh, Van Gogh Museum",
+        "en": "painting by Vincent van Gogh, Van Gogh Museum"
+      },
+      "source": "http://www.wikidata.org/entity/Q4110564",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3929322",
+      "year": 1882,
+      "popularity": 12,
+      "title": {
+        "ko": "흰 옷을 입은 숲 속의 소녀",
+        "en": "Girl in a Wood"
+      },
+      "country": {
+        "ko": "네덜란드",
+        "en": "Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Meisje%20in%20het%20bos%20%28Girl%20in%20a%20Wood%29%201882.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q3929322",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q4987244",
+      "year": 1883,
+      "popularity": 14,
+      "title": {
+        "ko": "네덜란드의 꽃밭",
+        "en": "Bulb Fields"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "사실주의",
+        "en": "사실주의"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bulb%20Fields.jpg",
+      "description": {
+        "ko": "painting by Vincent van Gogh (1883)",
+        "en": "painting by Vincent van Gogh (1883)"
+      },
+      "source": "http://www.wikidata.org/entity/Q4987244",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q7536969",
+      "year": 1884,
+      "popularity": 24,
+      "title": {
+        "ko": "담배 피는 해골",
+        "en": "Skull of a Skeleton with Burning Cigarette"
+      },
+      "country": {
+        "ko": "네덜란드",
+        "en": "Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kop%20van%20een%20skelet%20met%20brandende%20sigaret%20-%20s0083V1962%20-%20Van%20Gogh%20Museum.jpg",
+      "description": {
+        "ko": "painting by Vincent van Gogh",
+        "en": "painting by Vincent van Gogh"
+      },
+      "source": "http://www.wikidata.org/entity/Q7536969",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q26220165",
+      "year": 1884,
+      "popularity": 24,
+      "title": {
+        "ko": "봄 뉘넌의 목사관 정원",
+        "en": "The Parsonage Garden at Nuenen"
+      },
+      "country": {
+        "ko": "네덜란드",
+        "en": "Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20The%20Parsonage%20Garden%20at%20Nuenen.jpg",
+      "description": {
+        "ko": "1884 painting by Vincent van Gogh, Groninger Museum",
+        "en": "1884 painting by Vincent van Gogh, Groninger Museum"
+      },
+      "source": "http://www.wikidata.org/entity/Q26220165",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q5047026",
+      "year": 1884,
+      "popularity": 12,
+      "title": {
+        "ko": "검은 소가 끄는 수레",
+        "en": "Cart with Black Ox"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "사실주의",
+        "en": "사실주의"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Charrette%20de%20boeuf.jpg",
+      "description": {
+        "ko": "painting by Vincent van Gogh",
+        "en": "painting by Vincent van Gogh"
+      },
+      "source": "http://www.wikidata.org/entity/Q5047026",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q154469",
+      "year": 1885,
+      "popularity": 53,
+      "title": {
+        "ko": "감자 먹는 사람들",
+        "en": "The Potato Eaters"
+      },
+      "country": {
+        "ko": "네덜란드",
+        "en": "Netherlands"
+      },
+      "movement": {
+        "ko": "후기인상주의",
+        "en": "후기인상주의"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/De%20aardappeleters%20-%20s0005V1962%20-%20Van%20Gogh%20Museum.jpg",
+      "description": {
+        "ko": "painting by Vincent van Gogh",
+        "en": "painting by Vincent van Gogh"
+      },
+      "source": "http://www.wikidata.org/entity/Q154469",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q7617094",
+      "year": 1885,
+      "popularity": 12,
+      "title": {
+        "ko": "밀짚모자가 있는 정물",
+        "en": "Still Life with Straw Hat"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Still%20Life%20with%20Yellow%20Straw%20Hat%20-%20Vincent%20Van%20Gogh.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q7617094",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q13528770",
+      "year": 1887,
+      "popularity": 24,
+      "title": {
+        "ko": "탕기 영감의 초상화",
+        "en": "Portrait of Père Tanguy"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "자포니즘",
+        "en": "자포니즘"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Portrait%20of%20Pere%20Tanguy%201887-8.JPG",
+      "description": {
+        "ko": "빈센트 반 고흐가 1887년에 그린 작품",
+        "en": "빈센트 반 고흐가 1887년에 그린 작품"
+      },
+      "source": "http://www.wikidata.org/entity/Q13528770",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q2278818",
+      "year": 1887,
+      "popularity": 22,
+      "title": {
+        "ko": "카페 탕부랭에 앉아 있는 아고스티나 세가토리",
+        "en": "Agostina Segatori Sitting in the Café du Tambourin"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20In%20the%20caf%C3%A9%20-%20Agostina%20Segatori%20in%20Le%20Tambourin%20-%20Google%20Art%20Project%202.jpg",
+      "description": {
+        "ko": "painting by Vincent van Gogh",
+        "en": "painting by Vincent van Gogh"
+      },
+      "source": "http://www.wikidata.org/entity/Q2278818",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q4118041",
+      "year": 1887,
+      "popularity": 17,
+      "title": {
+        "ko": "양귀비꽃",
+        "en": "Poppy Flowers"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Vase%20mit%20Pechnelken.jpeg",
+      "description": {
+        "ko": "painting by Vincent van Gogh",
+        "en": "painting by Vincent van Gogh"
+      },
+      "source": "http://www.wikidata.org/entity/Q4118041",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q17511613",
+      "year": 1887,
+      "popularity": 14,
+      "title": {
+        "ko": "뒤집힌 게",
+        "en": "Crab on its Back"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Crustacean%2C%20lying%20on%20his%20back%20by%20Vincent%20van%20Gogh%20%28Van%20Gogh%20museum%20photograph%29.jpg",
+      "description": {
+        "ko": "painting by Vincent van Gogh, 1887",
+        "en": "painting by Vincent van Gogh, 1887"
+      },
+      "source": "http://www.wikidata.org/entity/Q17511613",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q4110565",
+      "year": 1887,
+      "popularity": 13,
+      "title": {
+        "ko": "레피크가의 빈센트 방에서 본 파리 풍경",
+        "en": "View of Paris from Vincent's Room in the Rue Lepic"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20View%20from%20Theo%E2%80%99s%20apartment%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q4110565",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q6159323",
+      "year": 1887,
+      "popularity": 12,
+      "title": {
+        "ko": "자포네즈리",
+        "en": "Japonaiserie"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20la%20courtisane.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐가 받은 일본 예술의 영향을 표한하는 용어",
+        "en": "빈센트 반 고흐가 받은 일본 예술의 영향을 표한하는 용어"
+      },
+      "source": "http://www.wikidata.org/entity/Q6159323",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q262360",
+      "year": 1887,
+      "popularity": 12,
+      "title": {
+        "ko": "종달새가 있는 밀밭",
+        "en": "Wheat Field with a Lark"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Getreidefeld%20mit%20Mohnblumen%20und%20Lerche.jpeg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q262360",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q157541",
+      "year": 1888,
+      "popularity": 49,
+      "title": {
+        "ko": "해바라기",
+        "en": "Sunflowers"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기인상주의",
+        "en": "후기인상주의"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20Willem%20van%20Gogh%20127.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 유화 시리즈",
+        "en": "빈센트 반 고흐의 유화 시리즈"
+      },
+      "source": "http://www.wikidata.org/entity/Q157541",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q724377",
+      "year": 1888,
+      "popularity": 43,
+      "title": {
+        "ko": "아를의 방",
+        "en": "Bedroom in Arles"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20De%20slaapkamer%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q724377",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q1025704",
+      "year": 1888,
+      "popularity": 40,
+      "title": {
+        "ko": "밤의 카페 테라스",
+        "en": "Café Terrace at Night"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기인상주의",
+        "en": "후기인상주의"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Terrace%20of%20a%20Caf%C3%A9%20at%20Night%20%28Place%20du%20Forum%29%201888.jpg",
+      "description": {
+        "ko": "1888년 빈센트 반 고흐가 그린 그림",
+        "en": "1888년 빈센트 반 고흐가 그린 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q1025704",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q674846",
+      "year": 1888,
+      "popularity": 38,
+      "title": {
+        "ko": "밤의 카페",
+        "en": "The Night Café"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "신인상주의",
+        "en": "신인상주의"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20Willem%20van%20Gogh%20076.jpg",
+      "description": {
+        "ko": "painting by Vincent van Gogh (Yale University Art Gallery)",
+        "en": "painting by Vincent van Gogh (Yale University Art Gallery)"
+      },
+      "source": "http://www.wikidata.org/entity/Q674846",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q1464531",
+      "year": 1888,
+      "popularity": 38,
+      "title": {
+        "ko": "론강의 별이 빛나는 밤",
+        "en": "Starry Night Over the Rhone"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기인상주의",
+        "en": "후기인상주의"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Starry%20Night%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q1464531",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q1926628",
+      "year": 1888,
+      "popularity": 37,
+      "title": {
+        "ko": "아를의 붉은 포도밭",
+        "en": "The Red Vineyard"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Red%20Vineyard%20at%20Arles%20%281888%29.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q1926628",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q2200610",
+      "year": 1888,
+      "popularity": 37,
+      "title": {
+        "ko": "노란 집",
+        "en": "The Yellow House"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20The%20yellow%20house%20%28%27The%20street%27%29.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q2200610",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q14866847",
+      "year": 1888,
+      "popularity": 31,
+      "title": {
+        "ko": "몽마주르의 일몰",
+        "en": "Sunset at Montmajour"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sunset%20at%20Montmajour%201888%20Van%20Gogh.jpg",
+      "description": {
+        "ko": "painting by Vincent van Gogh",
+        "en": "painting by Vincent van Gogh"
+      },
+      "source": "http://www.wikidata.org/entity/Q14866847",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q838798",
+      "year": 1888,
+      "popularity": 17,
+      "title": {
+        "ko": "아를의 랑글루아 다리",
+        "en": "Langlois Bridge at Arles"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20Van%20Gogh%200014.jpg",
+      "description": {
+        "ko": "series of paintings by Vincent van Gogh",
+        "en": "series of paintings by Vincent van Gogh"
+      },
+      "source": "http://www.wikidata.org/entity/Q838798",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q948894",
+      "year": 1888,
+      "popularity": 17,
+      "title": {
+        "ko": "라 무스메",
+        "en": "La Mousmé"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vangogh%20mousme.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q948894",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q7232350",
+      "year": 1888,
+      "popularity": 16,
+      "title": {
+        "ko": "화가 어머니의 초상",
+        "en": "Portrait of the Artist's Mother"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Bildnis%20der%20Mutter%20des%20K%C3%BCnstlers.jpeg",
+      "description": {
+        "ko": "1888 painting by Vincent van Gogh",
+        "en": "1888 painting by Vincent van Gogh"
+      },
+      "source": "http://www.wikidata.org/entity/Q7232350",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q4126322",
+      "year": 1888,
+      "popularity": 16,
+      "title": {
+        "ko": "에텐 정원의 추억 (아를의 여인들)",
+        "en": "Memory of the Garden at Etten"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20Willem%20van%20Gogh%20098.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q4126322",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q6426375",
+      "year": 1888,
+      "popularity": 15,
+      "title": {
+        "ko": "눈 덮인 풍경",
+        "en": "Landscape with Snow"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Landschaft%20im%20Schnee.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q6426375",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q4892867",
+      "year": 1888,
+      "popularity": 15,
+      "title": {
+        "ko": "수확",
+        "en": "Harvest at La Crau, with Montmajour in the Background"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20De%20oogst%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q4892867",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q5435849",
+      "year": 1888,
+      "popularity": 13,
+      "title": {
+        "ko": "프로방스의 농가",
+        "en": "Farmhouse in Provence"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Farmhouse%20in%20Provence%2C%201888%2C%20Vincent%20van%20Gogh%2C%20NGA.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q5435849",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q2269835",
+      "year": 1888,
+      "popularity": 13,
+      "title": {
+        "ko": "아를의 원형 경기장",
+        "en": "Arena in Arles"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20Willem%20van%20Gogh%20028.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q2269835",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q4657634",
+      "year": 1888,
+      "popularity": 13,
+      "title": {
+        "ko": "아를 근처의 길",
+        "en": "A Lane near Arles"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "인상주의",
+        "en": "인상주의"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Allee%20bei%20Arles%20mit%20H%C3%A4usern.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q4657634",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q4924524",
+      "year": 1888,
+      "popularity": 13,
+      "title": {
+        "ko": "알리스캉",
+        "en": "Les Alyscamps"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Les%20Alyscamps%2C%20Allee%20in%20Arles1.jpeg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q4924524",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3399534",
+      "year": 1888,
+      "popularity": 12,
+      "title": {
+        "ko": "룰랭 가족",
+        "en": "The Roulin Family"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Portret%20van%20de%20postbode%20Joseph%20Roulin.jpg",
+      "description": {
+        "ko": "painting series by Vincent van Gogh",
+        "en": "painting series by Vincent van Gogh"
+      },
+      "source": "http://www.wikidata.org/entity/Q3399534",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q45585",
+      "year": 1889,
+      "popularity": 76,
+      "title": {
+        "ko": "별이 빛나는 밤",
+        "en": "The Starry Night"
+      },
+      "country": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "movement": {
+        "ko": "후기인상주의",
+        "en": "후기인상주의"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Starry%20Night%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "1889년 빈센트 반 고흐의 그림",
+        "en": "1889년 빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q45585",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q2282256",
+      "year": 1889,
+      "popularity": 43,
+      "title": {
+        "ko": "붓꽃",
+        "en": "Irises"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기인상주의",
+        "en": "후기인상주의"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Irises-Vincent%20van%20Gogh.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q2282256",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q2271805",
+      "year": 1889,
+      "popularity": 24,
+      "title": {
+        "ko": "사이프러스가 있는 밀밭",
+        "en": "Wheat Field with Cypresses"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Wheat%20Field%20with%20Cypresses%20%28National%20Gallery%20version%29.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 연작",
+        "en": "빈센트 반 고흐의 연작"
+      },
+      "source": "http://www.wikidata.org/entity/Q2271805",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3630735",
+      "year": 1889,
+      "popularity": 21,
+      "title": {
+        "ko": "자화상",
+        "en": "Self-portrait"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Self-Portrait%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림(파리 버전)",
+        "en": "빈센트 반 고흐의 그림(파리 버전)"
+      },
+      "source": "http://www.wikidata.org/entity/Q3630735",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1118295",
+      "year": 1889,
+      "popularity": 19,
+      "title": {
+        "ko": "반 고흐의 의자",
+        "en": "Van Gogh's Chair"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기인상주의",
+        "en": "후기인상주의"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20Willem%20van%20Gogh%20138.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q1118295",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q22329831",
+      "year": 1889,
+      "popularity": 18,
+      "title": {
+        "ko": "수염 없는 자화상",
+        "en": "Self-portrait without beard"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20Willem%20van%20Gogh%20102.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q22329831",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q9391004",
+      "year": 1889,
+      "popularity": 15,
+      "title": {
+        "ko": "사이프러스가 있는 푸른 밀밭",
+        "en": "Green Wheat Field with Cypress"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Green%20Field%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q9391004",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q19363211",
+      "year": 1889,
+      "popularity": 14,
+      "title": {
+        "ko": "귀에 붕대를 감은 자화상",
+        "en": "Self-Portrait with Bandaged Ear"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Self-Portrait%20with%20a%20Bandaged%20Ear%20-%20Vincent%20van%20Gogh.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 자화상",
+        "en": "빈센트 반 고흐의 자화상"
+      },
+      "source": "http://www.wikidata.org/entity/Q19363211",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q7087213",
+      "year": 1889,
+      "popularity": 14,
+      "title": {
+        "ko": "올리브 나무",
+        "en": "Olive Trees"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20The%20Olive%20Trees..jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 연작",
+        "en": "빈센트 반 고흐의 연작"
+      },
+      "source": "http://www.wikidata.org/entity/Q7087213",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3314658",
+      "year": 1889,
+      "popularity": 14,
+      "title": {
+        "ko": "아를의 풍경, 꽃피는 과수원",
+        "en": "View of Arles, Flowering Orchards"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Muenchen%20Neue%20Pinakothek%20van%20Gogh%20Arles.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q3314658",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q19356352",
+      "year": 1889,
+      "popularity": 13,
+      "title": {
+        "ko": "두 마리의 게",
+        "en": "Two Crabs"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Two%20Crabs%20%281889%29.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q19356352",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q2269788",
+      "year": 1889,
+      "popularity": 13,
+      "title": {
+        "ko": "레이 박사의 초상",
+        "en": "Portrait of Doctor Felix Rey"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Portrait%20of%20Doctor%20F%C3%A9lix%20Rey%20%28F500%29.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q2269788",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3832428",
+      "year": 1889,
+      "popularity": 13,
+      "title": {
+        "ko": "라일락 덤불",
+        "en": "Lilac Bush"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20Willem%20van%20Gogh%20044.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q3832428",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q19363214",
+      "year": 1889,
+      "popularity": 12,
+      "title": {
+        "ko": "귀에 붕대를 감고 파이프를 문 자화상",
+        "en": "Self-Portrait With a Bandaged Ear"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Selbstbildnis%20mit%20verbundenem%20Ohr%20und%20Pfeife.jpeg",
+      "description": {
+        "ko": "빈센트 반 고흐의 자화상",
+        "en": "빈센트 반 고흐의 자화상"
+      },
+      "source": "http://www.wikidata.org/entity/Q19363214",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q867510",
+      "year": 1889,
+      "popularity": 12,
+      "title": {
+        "ko": "사이프러스 나무",
+        "en": "Cypresses"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Cypresses%20MET%20DP130999.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q867510",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q17023954",
+      "year": 1890,
+      "popularity": 44,
+      "title": {
+        "ko": "가셰 박사의 초상",
+        "en": "Portrait paintings of Dr. Gachet"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20Dr.%20Gachet.jpg",
+      "description": {
+        "ko": "series of two paintings by Vincent van Gogh (1890)",
+        "en": "series of two paintings by Vincent van Gogh (1890)"
+      },
+      "source": "http://www.wikidata.org/entity/Q17023954",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q634122",
+      "year": 1890,
+      "popularity": 43,
+      "title": {
+        "ko": "까마귀가 나는 밀밭",
+        "en": "Wheatfield with Crows"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "인상주의",
+        "en": "인상주의"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Korenveld%20met%20kraaien%20-%20s0149V1962%20-%20Van%20Gogh%20Museum.jpg",
+      "description": {
+        "ko": "painting by Vincent van Gogh",
+        "en": "painting by Vincent van Gogh"
+      },
+      "source": "http://www.wikidata.org/entity/Q634122",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q1213917",
+      "year": 1890,
+      "popularity": 37,
+      "title": {
+        "ko": "오베르의 교회",
+        "en": "The Church at Auvers"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "후기인상주의",
+        "en": "후기인상주의"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20The%20Church%20in%20Auvers-sur-Oise%2C%20View%20from%20the%20Chevet%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q1213917",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q500554",
+      "year": 1890,
+      "popularity": 29,
+      "title": {
+        "ko": "영원의 문",
+        "en": "At Eternity's Gate"
+      },
+      "country": {
+        "ko": "네덜란드",
+        "en": "Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/At%20Eternity%27s%20Gate%20-%20Vincent%20Van%20Gogh.jpg",
+      "description": {
+        "ko": "painting by Vincent van Gogh",
+        "en": "painting by Vincent van Gogh"
+      },
+      "source": "http://www.wikidata.org/entity/Q500554",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q5930190",
+      "year": 1890,
+      "popularity": 25,
+      "title": {
+        "ko": "사이프러스와 별이 있는 길",
+        "en": "Road with Cypress and Star"
+      },
+      "country": {
+        "ko": "네덜란드",
+        "en": "Netherlands"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Road%20with%20Cypress%20and%20Star%20-%20c.%2012-15%20May%201890.jpg",
+      "description": {
+        "ko": "1890 painting by Vincent van Gogh",
+        "en": "1890 painting by Vincent van Gogh"
+      },
+      "source": "http://www.wikidata.org/entity/Q5930190",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1171740",
+      "year": 1890,
+      "popularity": 24,
+      "title": {
+        "ko": "밤의 하얀 집",
+        "en": "White House at Night"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Whitehousenight.jpg",
+      "description": {
+        "ko": "oil painting by Vincent van Gogh",
+        "en": "oil painting by Vincent van Gogh"
+      },
+      "source": "http://www.wikidata.org/entity/Q1171740",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1432536",
+      "year": 1890,
+      "popularity": 21,
+      "title": {
+        "ko": "꽃피는 아몬드 나무",
+        "en": "Almond Blossom"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Amandelbloesem%20-%20s0176V1962%20-%20Van%20Gogh%20Museum.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림 모음",
+        "en": "빈센트 반 고흐의 그림 모음"
+      },
+      "source": "http://www.wikidata.org/entity/Q1432536",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1132723",
+      "year": 1890,
+      "popularity": 18,
+      "title": {
+        "ko": "죄수들의 원형 보행",
+        "en": "Prisoners Exercising"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20Willem%20van%20Gogh%20037.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q1132723",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q4233325",
+      "year": 1890,
+      "popularity": 16,
+      "title": {
+        "ko": "나무 뿌리",
+        "en": "Tree Roots"
+      },
+      "country": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "movement": {
+        "ko": "후기인상주의",
+        "en": "후기인상주의"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Tree%20Roots%20and%20Trunks%20%28F816%29.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q4233325",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q5564475",
+      "year": 1890,
+      "popularity": 13,
+      "title": {
+        "ko": "흰 옷 입은 소녀",
+        "en": "Girl in White"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Girl%20in%20White%20by%20Vincent%20Van%20Gogh%20-%20NGA.jpg",
+      "description": {
+        "ko": "빈센트 반 고흐의 그림",
+        "en": "빈센트 반 고흐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q5564475",
+      "verified": true,
+      "representative": false
+    }
+  ]
+}

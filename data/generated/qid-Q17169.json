@@ -1,0 +1,1520 @@
+{
+  "schema": 18,
+  "artistId": "artist-Q17169",
+  "qid": "Q17169",
+  "artist": {
+    "name": {
+      "ko": "조반니 벨리니",
+      "en": "Giovanni Bellini"
+    },
+    "birth": 1430,
+    "death": 1516,
+    "nationality": {
+      "ko": "베네치아 공화국",
+      "en": "Republic of Venice"
+    }
+  },
+  "fetchedAt": "2026-08-20T06:40:08.305Z",
+  "works": [
+    {
+      "id": "wikidata-Q65057453",
+      "year": 1450,
+      "popularity": 5,
+      "title": {
+        "ko": "Saint Jerome in the Desert",
+        "en": "Saint Jerome in the Desert"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20-%20San%20Girolamo%20nel%20deserto.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini in the Barber Institute of Fine Arts, Birmingham",
+        "en": "painting by Giovanni Bellini in the Barber Institute of Fine Arts, Birmingham"
+      },
+      "source": "http://www.wikidata.org/entity/Q65057453",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q16669100",
+      "year": 1453,
+      "popularity": 4,
+      "title": {
+        "ko": "Passio Mauricii et sotiorum ejus - Arsenal 940",
+        "en": "Passio Mauricii et sotiorum ejus - Arsenal 940"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Passion%20de%20saint%20Maurice%20-%20Arsenal940%20-%20saint%20Maurice%20f34v.jpg",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "http://www.wikidata.org/entity/Q16669100",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3697654",
+      "year": 1454,
+      "popularity": 4,
+      "title": {
+        "ko": "Dead Christ Supported by Two Angels",
+        "en": "Dead Christ Supported by Two Angels"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Giovanni%20-%20Dead%20Christ%20Supported%20by%20Two%20Angels.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini in the Museo Correr",
+        "en": "painting by Giovanni Bellini in the Museo Correr"
+      },
+      "source": "http://www.wikidata.org/entity/Q3697654",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3997716",
+      "year": 1455,
+      "popularity": 7,
+      "title": {
+        "ko": "Transfiguration of Christ",
+        "en": "Transfiguration of Christ"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20-%20Trasfigurazione%20di%20Cristo%20%28Venezia%29.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini (Museo Correr)",
+        "en": "painting by Giovanni Bellini (Museo Correr)"
+      },
+      "source": "http://www.wikidata.org/entity/Q3997716",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3904392",
+      "year": 1455,
+      "popularity": 6,
+      "title": {
+        "ko": "Pietà with Madonna and St. John the Evangelist",
+        "en": "Pietà with Madonna and St. John the Evangelist"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Giovanni%20-%20Piet%C3%A0%20with%20Madonna%20and%20St.%20John%20the%20Evangelist%20-%20Accademia%20Carrara%20Bergamo.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini in the Accademia Carrara",
+        "en": "painting by Giovanni Bellini in the Accademia Carrara"
+      },
+      "source": "http://www.wikidata.org/entity/Q3904392",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1131110",
+      "year": 1459,
+      "popularity": 13,
+      "title": {
+        "ko": "Agony in the Garden",
+        "en": "Agony in the Garden"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "초기 르네상스",
+        "en": "초기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2CGiovanni%20-%20Agony%20in%20the%20Garden%20-%20National%20Gallery.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini, National Gallery",
+        "en": "painting by Giovanni Bellini, National Gallery"
+      },
+      "source": "http://www.wikidata.org/entity/Q1131110",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q3842748",
+      "year": 1460,
+      "popularity": 10,
+      "title": {
+        "ko": "Madonna with the Child",
+        "en": "Madonna with the Child"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giovannei%20bellini%2C%20madonna%20greca%2C%20brera.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini in the Pinacoteca di Brera",
+        "en": "painting by Giovanni Bellini in the Pinacoteca di Brera"
+      },
+      "source": "http://www.wikidata.org/entity/Q3842748",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3904393",
+      "year": 1460,
+      "popularity": 6,
+      "title": {
+        "ko": "Pietà",
+        "en": "Pietà"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pieta%20Bellini.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini in the Pinacoteca di Brera",
+        "en": "painting by Giovanni Bellini in the Pinacoteca di Brera"
+      },
+      "source": "http://www.wikidata.org/entity/Q3904393",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3842481",
+      "year": 1460,
+      "popularity": 4,
+      "title": {
+        "ko": "Madonna and Child",
+        "en": "Madonna and Child"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20bellini%2C%20madonna%20col%20bambino%2C%201460-65.JPG",
+      "description": {
+        "ko": "painting by Giovanni Bellini in the Pinacoteca del Castello Sforzesco, Milan",
+        "en": "painting by Giovanni Bellini in the Pinacoteca del Castello Sforzesco, Milan"
+      },
+      "source": "http://www.wikidata.org/entity/Q3842481",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3999107",
+      "year": 1464,
+      "popularity": 4,
+      "title": {
+        "ko": "Triptych of the Madonna",
+        "en": "Triptych of the Madonna"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jacopo%2C%20gentile%20e%20giovanni%20bellini%2C%20polittico%20della%20madonna%2C%20da%20s.m.%20della%20carit%C3%A0%2C%201464-70%20ca.%2C%2001.JPG",
+      "description": {
+        "ko": "painting by Jacopo, Gentile und Giovanni Bellini and workshop, Gallerie dell'Accademia Venice",
+        "en": "painting by Jacopo, Gentile und Giovanni Bellini and workshop, Gallerie dell'Accademia Venice"
+      },
+      "source": "http://www.wikidata.org/entity/Q3999107",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3999113",
+      "year": 1464,
+      "popularity": 4,
+      "title": {
+        "ko": "Triptych of birth of Christ",
+        "en": "Triptych of birth of Christ"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jacopo%2C%20gentile%20e%20giovanni%20bellini%2C%20polittico%20della%20nativit%C3%A0%2C%20da%20s.m.%20della%20carit%C3%A0%2C%201464-70%20ca.%2C%2001.JPG",
+      "description": {
+        "ko": "triptych by Giovanni Bellini, Gallerie dell'Accademia, Venice",
+        "en": "triptych by Giovanni Bellini, Gallerie dell'Accademia, Venice"
+      },
+      "source": "http://www.wikidata.org/entity/Q3999113",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3999126",
+      "year": 1464,
+      "popularity": 4,
+      "title": {
+        "ko": "Triptych of Saint Lawrence",
+        "en": "Triptych of Saint Lawrence"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jacopo%2C%20gentile%20e%20giovanni%20bellini%2C%20polittico%20di%20s.%20lorenzo%2C%20da%20s.m.%20della%20carit%C3%A0%2C%201464-70%20ca.%2C%2001.JPG",
+      "description": {
+        "ko": "painting by Jacopo, Gentile and Giovanni Bellini and workshop, Accademia, Venice",
+        "en": "painting by Jacopo, Gentile and Giovanni Bellini and workshop, Accademia, Venice"
+      },
+      "source": "http://www.wikidata.org/entity/Q3999126",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3999128",
+      "year": 1464,
+      "popularity": 4,
+      "title": {
+        "ko": "Triptych of Saint Sebastian",
+        "en": "Triptych of Saint Sebastian"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20bellini%20e%20altri%2C%20trittico%20di%20san%20sebastiano.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini",
+        "en": "painting by Giovanni Bellini"
+      },
+      "source": "http://www.wikidata.org/entity/Q3999128",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q5189807",
+      "year": 1465,
+      "popularity": 8,
+      "title": {
+        "ko": "Crucifixion",
+        "en": "Crucifixion"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini-Giovanni-Crocifissione.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini, Museo Correr",
+        "en": "painting by Giovanni Bellini, Museo Correr"
+      },
+      "source": "http://www.wikidata.org/entity/Q5189807",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3221336",
+      "year": 1465,
+      "popularity": 7,
+      "title": {
+        "ko": "Blessing Christ",
+        "en": "Blessing Christ"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Blessing%20Christ%20by%20Giovanni%20Bellini%20%28Louvre%20RF%202039%29.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini",
+        "en": "painting by Giovanni Bellini"
+      },
+      "source": "http://www.wikidata.org/entity/Q3221336",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3910910",
+      "year": 1469,
+      "popularity": 11,
+      "title": {
+        "ko": "Presentation at the Temple",
+        "en": "Presentation at the Temple"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%28Venice%29%20Presentazione%20di%20Ges%C3%B9%20al%20Tempio%20by%20Giovanni%20Bellini%20-%20Pinacoteca%20Querini%20Stampalia.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini in the Pinacoteca Querini Stampalia",
+        "en": "painting by Giovanni Bellini in the Pinacoteca Querini Stampalia"
+      },
+      "source": "http://www.wikidata.org/entity/Q3910910",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q20184408",
+      "year": 1470,
+      "popularity": 6,
+      "title": {
+        "ko": "Lehman Madonna",
+        "en": "Lehman Madonna"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Madonna%20and%20Child%20MET%20SLP0081.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini (MET, 1975.1.81)",
+        "en": "painting by Giovanni Bellini (MET, 1975.1.81)"
+      },
+      "source": "http://www.wikidata.org/entity/Q20184408",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q47870920",
+      "year": 1470,
+      "popularity": 6,
+      "title": {
+        "ko": "Frizzoni Madonna",
+        "en": "Frizzoni Madonna"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%28Venice%29%20Madonna%20Frizzoni%20by%20Giovanni%20Bellini%20-%20Correr%20Museum.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini, Museo Correr",
+        "en": "painting by Giovanni Bellini, Museo Correr"
+      },
+      "source": "http://www.wikidata.org/entity/Q47870920",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3937676",
+      "year": 1470,
+      "popularity": 5,
+      "title": {
+        "ko": "Giovanni Emo",
+        "en": "Giovanni Emo"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20-%20Portrait%20of%20Giovanni%20Emo%20-%20National%20Gallery%20of%20Art%2C%20Washington.jpg",
+      "description": {
+        "ko": "painting attributed to Giovanni Bellini",
+        "en": "painting attributed to Giovanni Bellini"
+      },
+      "source": "http://www.wikidata.org/entity/Q3937676",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3889247",
+      "year": 1471,
+      "popularity": 8,
+      "title": {
+        "ko": "Pesaro Altarpiece",
+        "en": "Pesaro Altarpiece"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pala%20di%20pesaro%2001.jpg",
+      "description": {
+        "ko": "altarpiece by Giovanni Bellini",
+        "en": "altarpiece by Giovanni Bellini"
+      },
+      "source": "http://www.wikidata.org/entity/Q3889247",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3697653",
+      "year": 1472,
+      "popularity": 6,
+      "title": {
+        "ko": "Dead Christ Supported by Two Angels",
+        "en": "Dead Christ Supported by Two Angels"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20%28um%201435%20-%201516%29%20-%20The%20Dead%20Christ%20supported%20by%20Two%20Angels%20-%2028%20-%20Gem%C3%A4ldegalerie.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini, Gemäldegalerie Berlin",
+        "en": "painting by Giovanni Bellini, Gemäldegalerie Berlin"
+      },
+      "source": "http://www.wikidata.org/entity/Q3697653",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3937589",
+      "year": 1474,
+      "popularity": 5,
+      "title": {
+        "ko": "Portrait of Joerg Fugger",
+        "en": "Portrait of Joerg Fugger"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20-%20Ritratto%20di%20J%C3%B6rg%20Fugger.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini, Norton Simon Museum",
+        "en": "painting by Giovanni Bellini, Norton Simon Museum"
+      },
+      "source": "http://www.wikidata.org/entity/Q3937589",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1762826",
+      "year": 1475,
+      "popularity": 12,
+      "title": {
+        "ko": "Contarini Madonna",
+        "en": "Contarini Madonna"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%28Venice%29%20Madonna%20col%20bambino%20in%20piedi%20benedicente%20-%20Giovanni%20Bellini%20-%20gallerie%20Accademia.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini",
+        "en": "painting by Giovanni Bellini"
+      },
+      "source": "http://www.wikidata.org/entity/Q1762826",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q48383869",
+      "year": 1475,
+      "popularity": 9,
+      "title": {
+        "ko": "Resurrection of Christ",
+        "en": "Resurrection of Christ"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Die%20Auferstehung%20Christi%20-%20Gem%C3%A4ldegalerie%20Berlin%20-%205193421.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini, Gemäldegalerie Berlin",
+        "en": "painting by Giovanni Bellini, Gemäldegalerie Berlin"
+      },
+      "source": "http://www.wikidata.org/entity/Q48383869",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q47818848",
+      "year": 1475,
+      "popularity": 5,
+      "title": {
+        "ko": "Enthroned Madonna Adoring the Sleeping Christ Child",
+        "en": "Enthroned Madonna Adoring the Sleeping Christ Child"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%20%E2%80%94%20Enthroned%20Madonna%20Adoring%20the%20Sleeping%20Christ%20Child.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini",
+        "en": "painting by Giovanni Bellini"
+      },
+      "source": "http://www.wikidata.org/entity/Q47818848",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3842412",
+      "year": 1476,
+      "popularity": 6,
+      "title": {
+        "ko": "Lochis Madonna",
+        "en": "Lochis Madonna"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Giovanni%20-%20Madonna%20and%20Child%20-%20Madonna%20Lochis%20-%20Accademia%20Carrara%2C%20Bergamo.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini in the Accademia Carrara",
+        "en": "painting by Giovanni Bellini in the Accademia Carrara"
+      },
+      "source": "http://www.wikidata.org/entity/Q3842412",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3997723",
+      "year": 1478,
+      "popularity": 10,
+      "title": {
+        "ko": "Transfiguration of Christ",
+        "en": "Transfiguration of Christ"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Paris%201er%20-%20Mus%C3%A9e%20du%20Louvre%20-%20Exposition%20Naples%20%C3%A0%20Paris%20-%20La%20Transfiguration%20%28Giovanni%20Bellini%29.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini in the National Museum of Capodimonte",
+        "en": "painting by Giovanni Bellini in the National Museum of Capodimonte"
+      },
+      "source": "http://www.wikidata.org/entity/Q3997723",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3947115",
+      "year": 1480,
+      "popularity": 12,
+      "title": {
+        "ko": "Saint Francis in the Desert",
+        "en": "Saint Francis in the Desert"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "초기 르네상스",
+        "en": "초기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20-%20Saint%20Francis%20in%20the%20Desert%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini, Frick Collection",
+        "en": "painting by Giovanni Bellini, Frick Collection"
+      },
+      "source": "http://www.wikidata.org/entity/Q3947115",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q3947292",
+      "year": 1480,
+      "popularity": 5,
+      "title": {
+        "ko": "Saint Jerome Reading in the Desert",
+        "en": "Saint Jerome Reading in the Desert"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20%E2%80%94%20Saint%20Jerome%20Reading%20in%20the%20Desert.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini in the Uffizi",
+        "en": "painting by Giovanni Bellini in the Uffizi"
+      },
+      "source": "http://www.wikidata.org/entity/Q3947292",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3842596",
+      "year": 1485,
+      "popularity": 10,
+      "title": {
+        "ko": "Madonna of the Red Cherubim",
+        "en": "Madonna of the Red Cherubim"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%28Venice%29%20Madonna%20dai%20cherubini%20rossi%20-%20Giovanni%20Bellini%20-%20gallerie%20Accademia.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini",
+        "en": "painting by Giovanni Bellini"
+      },
+      "source": "http://www.wikidata.org/entity/Q3842596",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q6728393",
+      "year": 1485,
+      "popularity": 6,
+      "title": {
+        "ko": "Willys Madonna",
+        "en": "Willys Madonna"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20Madonna%20Willys.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini",
+        "en": "painting by Giovanni Bellini"
+      },
+      "source": "http://www.wikidata.org/entity/Q6728393",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3842705",
+      "year": 1486,
+      "popularity": 11,
+      "title": {
+        "ko": "Alzano Madonna",
+        "en": "Alzano Madonna"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Giovanni%20-%20Madonna%20di%20Alzano%20-%20Accademia%20Carrara.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini",
+        "en": "painting by Giovanni Bellini"
+      },
+      "source": "http://www.wikidata.org/entity/Q3842705",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q1751408",
+      "year": 1487,
+      "popularity": 13,
+      "title": {
+        "ko": "Madonna and Child enthroned with Saints and Angels",
+        "en": "Madonna and Child enthroned with Saints and Angels"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "초기 르네상스",
+        "en": "초기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Accademia%20-%20Pala%20di%20San%20Giobbe%20by%20Giovanni%20Bellini.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini in the Gallerie dell'Accademia, Venice",
+        "en": "painting by Giovanni Bellini in the Gallerie dell'Accademia, Venice"
+      },
+      "source": "http://www.wikidata.org/entity/Q1751408",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q3842597",
+      "year": 1487,
+      "popularity": 9,
+      "title": {
+        "ko": "Madonna of the Small Trees",
+        "en": "Madonna of the Small Trees"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Accademia%20-%20Madonna%20degli%20Alberetti%20-%20Giovanni%20Bellini.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini",
+        "en": "painting by Giovanni Bellini"
+      },
+      "source": "http://www.wikidata.org/entity/Q3842597",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q19911447",
+      "year": 1488,
+      "popularity": 5,
+      "title": {
+        "ko": "성모자상",
+        "en": "성모자상"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20Madona%20and%20Child%20%281%29.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini (MET, 08.183.1)",
+        "en": "painting by Giovanni Bellini (MET, 08.183.1)"
+      },
+      "source": "http://www.wikidata.org/entity/Q19911447",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1629015",
+      "year": 1490,
+      "popularity": 10,
+      "title": {
+        "ko": "Holy Allegory",
+        "en": "Holy Allegory"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20%E2%80%94%20Holy%20Allegory.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini in the Uffizi",
+        "en": "painting by Giovanni Bellini in the Uffizi"
+      },
+      "source": "http://www.wikidata.org/entity/Q1629015",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q726430",
+      "year": 1490,
+      "popularity": 7,
+      "title": {
+        "ko": "Allegories",
+        "en": "Allegories"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "르네상스",
+        "en": "르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Andrea%20previtali%20e%20giovanni%20bellini%2C%20allegorie%2C%201490%20ca.%2001.JPG",
+      "description": {
+        "ko": "series of paintings by Giovanni Bellini and Andrea Previtali in the Gallerie dell'Accademia, Venice",
+        "en": "series of paintings by Giovanni Bellini and Andrea Previtali in the Gallerie dell'Accademia, Venice"
+      },
+      "source": "http://www.wikidata.org/entity/Q726430",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3842590",
+      "year": 1490,
+      "popularity": 7,
+      "title": {
+        "ko": "The Virgin and Child between two Saints",
+        "en": "The Virgin and Child between two Saints"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/La%20Virgen%20y%20el%20Ni%C3%B1o%20entre%20dos%20santas%20%28Giovanni%20Bellini%29.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini in the Museo del Prado",
+        "en": "painting by Giovanni Bellini in the Museo del Prado"
+      },
+      "source": "http://www.wikidata.org/entity/Q3842590",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3842594",
+      "year": 1490,
+      "popularity": 7,
+      "title": {
+        "ko": "Madonna and Child between Saints Catherine and Mary Magdalene",
+        "en": "Madonna and Child between Saints Catherine and Mary Magdalene"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Accademia%20-%20Madonna%20con%20Bambino%20tra%20le%20sante%20Caterina%20e%20Maria%20Maddalena%20-%20Giovanni%20Bellini%20-%20Cat%20613.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini in the Gallerie dell'Accademia, Venice",
+        "en": "painting by Giovanni Bellini in the Gallerie dell'Accademia, Venice"
+      },
+      "source": "http://www.wikidata.org/entity/Q3842594",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3685124",
+      "year": 1490,
+      "popularity": 6,
+      "title": {
+        "ko": "Lamentation of Christ",
+        "en": "Lamentation of Christ"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%2C%20unfinished%20Lamentation%2C%20c1500%2C%20Uffizi.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini in the Uffizi",
+        "en": "painting by Giovanni Bellini in the Uffizi"
+      },
+      "source": "http://www.wikidata.org/entity/Q3685124",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q48388241",
+      "year": 1490,
+      "popularity": 5,
+      "title": {
+        "ko": "Portrait of a man",
+        "en": "Portrait of a man"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20Felt%C3%A9telezett%C3%96narck%C3%A9peKJ.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini in the Capitoline Museums, Rome",
+        "en": "painting by Giovanni Bellini in the Capitoline Museums, Rome"
+      },
+      "source": "http://www.wikidata.org/entity/Q48388241",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q1115613",
+      "year": 1500,
+      "popularity": 14,
+      "title": {
+        "ko": "Madonna del Prato",
+        "en": "Madonna del Prato"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Giovanni%20-%20Madonna%20of%20the%20Meadow.jpeg",
+      "description": {
+        "ko": "painting by Giovanni Bellini, National Gallery",
+        "en": "painting by Giovanni Bellini, National Gallery"
+      },
+      "source": "http://www.wikidata.org/entity/Q1115613",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q1759759",
+      "year": 1500,
+      "popularity": 14,
+      "title": {
+        "ko": "Portrait of Doge Leonardo Loredan",
+        "en": "Portrait of Doge Leonardo Loredan"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%2C%20portrait%20of%20Doge%20Leonardo%20Loredan.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini in the National Gallery, London",
+        "en": "painting by Giovanni Bellini in the National Gallery, London"
+      },
+      "source": "http://www.wikidata.org/entity/Q1759759",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q3910087",
+      "year": 1500,
+      "popularity": 14,
+      "title": {
+        "ko": "Saint Mark Preaching in Alexandria",
+        "en": "Saint Mark Preaching in Alexandria"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gentile%20and%20Giovanni%20Bellini%20%E2%80%94%20Saint%20Mark%20Preaching%20in%20Alexandria.jpg",
+      "description": {
+        "ko": "painting by Gentile and Giovanni Bellini",
+        "en": "painting by Gentile and Giovanni Bellini"
+      },
+      "source": "http://www.wikidata.org/entity/Q3910087",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q1122002",
+      "year": 1500,
+      "popularity": 5,
+      "title": {
+        "ko": "Altarpiece of St. Vincent Ferrer",
+        "en": "Altarpiece of St. Vincent Ferrer"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스 회화",
+        "en": "이탈리아 르네상스 회화"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Polittico%20di%20san%20vincenzo%20ferrer%2001.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini",
+        "en": "painting by Giovanni Bellini"
+      },
+      "source": "http://www.wikidata.org/entity/Q1122002",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3220282",
+      "year": 1500,
+      "popularity": 5,
+      "title": {
+        "ko": "Baptism of Christ",
+        "en": "Baptism of Christ"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20battesimo%20di%20cristo.jpg",
+      "description": {
+        "ko": "painting in the Santa Corona, Vicenza, Italy, by Giovanni Bellini",
+        "en": "painting in the Santa Corona, Vicenza, Italy, by Giovanni Bellini"
+      },
+      "source": "http://www.wikidata.org/entity/Q3220282",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q65068185",
+      "year": 1500,
+      "popularity": 5,
+      "title": {
+        "ko": "Christ Blessing",
+        "en": "Christ Blessing"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%27Christ%20Blessing%27%2C%20tempera%2C%20oil%2C%20and%20gold%20on%20panel%20by%20Giovanni%20Bellini%2C%20c.%201500%2C%20Kimbell%20Art%20Museum.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini, Kimbell Art Museum",
+        "en": "painting by Giovanni Bellini, Kimbell Art Museum"
+      },
+      "source": "http://www.wikidata.org/entity/Q65068185",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3944517",
+      "year": 1504,
+      "popularity": 8,
+      "title": {
+        "ko": "Madonna and Child between Saint John the Baptist and a Saint",
+        "en": "Madonna and Child between Saint John the Baptist and a Saint"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Giovanni%20-%20Madonna%20col%20Bambino%20tra%20il%20Battista%20e%20una%20Santa%20-%20Accademia%20Venice.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini, Accademia",
+        "en": "painting by Giovanni Bellini, Accademia"
+      },
+      "source": "http://www.wikidata.org/entity/Q3944517",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q2269343",
+      "year": 1505,
+      "popularity": 14,
+      "title": {
+        "ko": "San Zaccaria Altarpiece",
+        "en": "San Zaccaria Altarpiece"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pala%20di%20San%20Zaccaria%20%28Venezia%29.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini",
+        "en": "painting by Giovanni Bellini"
+      },
+      "source": "http://www.wikidata.org/entity/Q2269343",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q3904404",
+      "year": 1505,
+      "popularity": 10,
+      "title": {
+        "ko": "Pietà",
+        "en": "Pietà"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Accademia%20-%20Piet%C3%A0%20Martinengo%20by%20Giovanni%20Bellini%20Cat.883.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini in the Gallerie dell'Accademia, Venice",
+        "en": "painting by Giovanni Bellini in the Gallerie dell'Accademia, Venice"
+      },
+      "source": "http://www.wikidata.org/entity/Q3904404",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3842485",
+      "year": 1506,
+      "popularity": 8,
+      "title": {
+        "ko": "Madonna and Child",
+        "en": "Madonna and Child"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%20-%20Madonna%20con%20Bambino%2C%201510%20circa%20o%201502-1503%2C%20176.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini in the Galleria Borghese",
+        "en": "painting by Giovanni Bellini in the Galleria Borghese"
+      },
+      "source": "http://www.wikidata.org/entity/Q3842485",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q658825",
+      "year": 1506,
+      "popularity": 7,
+      "title": {
+        "ko": "The Clemency of Scipio",
+        "en": "The Clemency of Scipio"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20-%20Un%20episodio%20della%20vita%20di%20Publio%20Cornelio%20Scipione.jpg",
+      "description": {
+        "ko": "painting by Bellini in the National Gallery of Art, Washington D.C.",
+        "en": "painting by Bellini in the National Gallery of Art, Washington D.C."
+      },
+      "source": "http://www.wikidata.org/entity/Q658825",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q21712112",
+      "year": 1507,
+      "popularity": 6,
+      "title": {
+        "ko": "Sacred conversation",
+        "en": "Sacred conversation"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20-%20Nunc%20Dimittis%20-%20Madrid%20Thyssen.jpg",
+      "description": {
+        "ko": "painting in the Thyssen-Bornemisza Museum, Madrid, Spain, by Giovanni Bellini",
+        "en": "painting in the Thyssen-Bornemisza Museum, Madrid, Spain, by Giovanni Bellini"
+      },
+      "source": "http://www.wikidata.org/entity/Q21712112",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3842483",
+      "year": 1509,
+      "popularity": 7,
+      "title": {
+        "ko": "Madonna and Child",
+        "en": "Madonna and Child"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20-%20Madonna%20and%20Child%20-%2028.115%20-%20Detroit%20Institute%20of%20Arts.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini in the Detroit Institute of Arts",
+        "en": "painting by Giovanni Bellini in the Detroit Institute of Arts"
+      },
+      "source": "http://www.wikidata.org/entity/Q3842483",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3842482",
+      "year": 1510,
+      "popularity": 9,
+      "title": {
+        "ko": "Madonna and Child",
+        "en": "Madonna and Child"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%20%E2%80%94%20Madonna%20and%20Child%201510.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini in the Pinacoteca di Brera, Milan",
+        "en": "painting by Giovanni Bellini in the Pinacoteca di Brera, Milan"
+      },
+      "source": "http://www.wikidata.org/entity/Q3842482",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3949347",
+      "year": 1513,
+      "popularity": 8,
+      "title": {
+        "ko": "Saints Christopher, Jerome and Louis of Toulouse",
+        "en": "Saints Christopher, Jerome and Louis of Toulouse"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Sts%20Christopher%2C%20Jerome%20and%20Louis%20of%20Toulouse.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini, San Giovanni Crisostomo",
+        "en": "painting by Giovanni Bellini, San Giovanni Crisostomo"
+      },
+      "source": "http://www.wikidata.org/entity/Q3949347",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q15008032",
+      "year": 1514,
+      "popularity": 22,
+      "title": {
+        "ko": "The Feast of the Gods",
+        "en": "The Feast of the Gods"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20and%20Titian%20-%20The%20Feast%20of%20the%20Gods%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini and Titian",
+        "en": "painting by Giovanni Bellini and Titian"
+      },
+      "source": "http://www.wikidata.org/entity/Q15008032",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q3766167",
+      "year": 1515,
+      "popularity": 12,
+      "title": {
+        "ko": "Naked Young Woman in Front of the Mirror",
+        "en": "Naked Young Woman in Front of the Mirror"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20-%20Giovane%20donna%20nuda%20allo%20specchio.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini, Kunsthistorisches Museum",
+        "en": "painting by Giovanni Bellini, Kunsthistorisches Museum"
+      },
+      "source": "http://www.wikidata.org/entity/Q3766167",
+      "verified": true,
+      "representative": true
+    },
+    {
+      "id": "wikidata-Q633587",
+      "year": 1515,
+      "popularity": 10,
+      "title": {
+        "ko": "Drunkenness of Noah",
+        "en": "Drunkenness of Noah"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Drunkenness%20of%20Noah%20bellini.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini, Musée des Beaux-Arts et d’Archéologie de Besançon",
+        "en": "painting by Giovanni Bellini, Musée des Beaux-Arts et d’Archéologie de Besançon"
+      },
+      "source": "http://www.wikidata.org/entity/Q633587",
+      "verified": true,
+      "representative": false
+    },
+    {
+      "id": "wikidata-Q3937688",
+      "year": 1515,
+      "popularity": 7,
+      "title": {
+        "ko": "Portrait of Fra Teodoro of Urbino as Saint Dominic",
+        "en": "Portrait of Fra Teodoro of Urbino as Saint Dominic"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20-%20Fra%20Teodoro%20of%20Urbino%20as%20Saint%20Dominic%202.jpg",
+      "description": {
+        "ko": "painting by Giovanni Bellini",
+        "en": "painting by Giovanni Bellini"
+      },
+      "source": "http://www.wikidata.org/entity/Q3937688",
+      "verified": true,
+      "representative": false
+    }
+  ]
+}

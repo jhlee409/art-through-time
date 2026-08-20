@@ -1,0 +1,34 @@
+{
+  "artists": [
+    {
+      "id": "claude-monet",
+      "works": [
+        {"id":"impression-sunrise","year":1872,"title":{"ko":"인상, 해돋이","en":"Impression, Sunrise"},"country":{"ko":"프랑스","en":"France"},"movement":{"ko":"인상주의","en":"Impressionism"},"description":{"ko":"르아브르 항구의 아침을 빠른 붓질로 포착한 작품으로, 인상주의라는 명칭의 계기가 되었습니다.","en":"The Le Havre harbour view that gave Impressionism its name."},"source":"https://en.wikipedia.org/wiki/Impression,_Sunrise","representative":true},
+        {"id":"monet-poppies","year":1873,"title":{"ko":"양귀비","en":"Poppies"},"country":{"ko":"프랑스","en":"France"},"movement":{"ko":"인상주의","en":"Impressionism"},"description":{"ko":"아르장퇴유 들판의 양귀비와 산책하는 인물을 다룬 초기 인상주의 대표작입니다.","en":"An early Impressionist scene of poppies and strolling figures at Argenteuil."},"source":"https://en.wikipedia.org/wiki/Poppies_(Monet)","representative":true},
+        {"id":"monet-woman-parasol","year":1875,"title":{"ko":"양산을 든 여인 — 모네 부인과 아들","en":"Woman with a Parasol — Madame Monet and Her Son"},"country":{"ko":"프랑스","en":"France"},"movement":{"ko":"인상주의","en":"Impressionism"},"description":{"ko":"카미유와 아들 장을 바람 부는 여름 풍경 속에 담은 작품입니다.","en":"A wind-swept portrait of Camille Monet and their son Jean."},"source":"https://en.wikipedia.org/wiki/Woman_with_a_Parasol_%E2%80%93_Madame_Monet_and_Her_Son","representative":true},
+        {"id":"monet-saint-lazare","year":1877,"title":{"ko":"생라자르 역","en":"The Gare Saint-Lazare"},"country":{"ko":"프랑스","en":"France"},"movement":{"ko":"인상주의","en":"Impressionism"},"description":{"ko":"증기와 빛으로 가득한 파리의 철도역을 연작으로 탐구한 대표작입니다.","en":"A landmark of Monet's series studying steam and light at a Paris railway station."},"source":"https://en.wikipedia.org/wiki/Gare_Saint-Lazare_(Monet)","representative":true},
+        {"id":"monet-haystacks","year":1890,"title":{"ko":"건초더미","en":"Haystacks"},"country":{"ko":"프랑스","en":"France"},"movement":{"ko":"인상주의","en":"Impressionism"},"description":{"ko":"같은 풍경을 다른 계절과 시간의 빛 속에서 관찰한 연작의 출발점입니다.","en":"A defining series observing the same motif under changing seasons and light."},"source":"https://en.wikipedia.org/wiki/Haystacks_(Monet)","representative":true},
+        {"id":"monet-rouen-cathedral","year":1894,"title":{"ko":"루앙 대성당","en":"Rouen Cathedral"},"country":{"ko":"프랑스","en":"France"},"movement":{"ko":"인상주의","en":"Impressionism"},"description":{"ko":"대성당 정면이 시간과 날씨에 따라 어떻게 달라지는지 탐구한 연작입니다.","en":"A celebrated series on changing light and atmosphere across a cathedral facade."},"source":"https://en.wikipedia.org/wiki/Rouen_Cathedral_(Monet)","representative":true},
+        {"id":"monet-japanese-bridge","year":1899,"title":{"ko":"수련과 일본식 다리","en":"Water Lilies and Japanese Bridge"},"country":{"ko":"프랑스","en":"France"},"movement":{"ko":"인상주의","en":"Impressionism"},"description":{"ko":"지베르니 정원의 연못과 일본식 다리를 다룬 수련 연작의 핵심 작품입니다.","en":"A key work from the Water Lilies series at Monet's Giverny garden."},"source":"https://artmuseum.princeton.edu/art/collections/objects/31852","representative":true},
+        {"id":"monet-houses-parliament","year":1903,"title":{"ko":"국회의사당, 햇빛의 효과","en":"The Houses of Parliament, Sunlight Effect"},"country":{"ko":"영국","en":"United Kingdom"},"movement":{"ko":"인상주의","en":"Impressionism"},"description":{"ko":"런던의 안개와 햇빛이 국회의사당을 변화시키는 모습을 다룬 연작입니다.","en":"A London series exploring fog and sunlight around the Houses of Parliament."},"source":"https://en.wikipedia.org/wiki/Houses_of_Parliament_Series","representative":true},
+        {"id":"monet-water-lilies","year":1906,"title":{"ko":"수련","en":"Water Lilies"},"country":{"ko":"프랑스","en":"France"},"movement":{"ko":"인상주의","en":"Impressionism"},"description":{"ko":"지베르니 연못을 주제로 한 장기 연작으로, 후기 회화의 중심을 이룹니다.","en":"A central Water Lilies work from Monet's long-running Giverny pond series."},"source":"https://en.wikipedia.org/wiki/Water_Lilies_(Monet_series)","representative":true},
+        {"id":"monet-late-water-lilies","year":1916,"title":{"ko":"수련","en":"Water Lilies"},"country":{"ko":"프랑스","en":"France"},"movement":{"ko":"인상주의","en":"Impressionism"},"description":{"ko":"후기 수련 연작은 더 큰 화면과 추상에 가까운 색면으로 발전합니다.","en":"The late series expands into larger, near-abstract fields of color."},"source":"https://www.nmwa.go.jp/en/collection/1959-0151.html","representative":true},
+        {"id":"monet-late-japanese-bridge","year":1921,"title":{"ko":"일본식 다리","en":"The Japanese Footbridge"},"country":{"ko":"프랑스","en":"France"},"movement":{"ko":"인상주의","en":"Impressionism"},"description":{"ko":"시력 저하 이후에도 수련 연못을 반복해 그린 후기 작품입니다.","en":"A late work revisiting the water-lily pond and Japanese bridge."},"source":"https://www.moma.org/collection/works/79254","representative":true}
+      ]
+    },
+    {
+      "id": "frida-kahlo",
+      "works": [
+        {"id":"frida-broken-column","year":1944,"title":{"ko":"부서진 기둥","en":"The Broken Column"},"country":{"ko":"멕시코","en":"Mexico"},"movement":{"ko":"초현실주의","en":"Surrealism"},"description":{"ko":"척추 수술 뒤의 신체적 고통을 부서진 기둥과 못의 이미지로 표현한 자화상입니다.","en":"A self-portrait expressing physical pain after spinal surgery through a broken column and nails."},"source":"https://en.wikipedia.org/wiki/The_Broken_Column","representative":true},
+        {"id":"frida-wounded-deer","year":1946,"title":{"ko":"상처 입은 사슴","en":"The Wounded Deer"},"country":{"ko":"멕시코","en":"Mexico"},"movement":{"ko":"초현실주의","en":"Surrealism"},"description":{"ko":"화살에 맞은 사슴의 몸에 자신의 얼굴을 겹쳐 고통과 불안을 표현한 자화상입니다.","en":"A self-portrait that overlays Kahlo's face on an arrow-struck deer to express pain and vulnerability."},"source":"https://en.wikipedia.org/wiki/The_Wounded_Deer","representative":true}
+      ]
+    },
+    {
+      "id": "artist-1786369007570",
+      "qid": "Q762",
+      "works": [
+        {"id":"wikidata-Q128910","year":1495,"title":{"ko":"최후의 만찬","en":"The Last Supper"},"country":{"ko":"밀라노 공국","en":"Duchy of Milan"},"movement":{"ko":"전성기 르네상스","en":"High Renaissance"},"image":"https://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20Vinci%20%281452-1519%29%20-%20The%20Last%20Supper%20%281495-1498%29.jpg","description":{"ko":"밀라노 산타 마리아 델레 그라치에 수도원 식당 벽에 그린 레오나르도의 대표 벽화입니다.","en":"Leonardo's landmark mural for the refectory of Santa Maria delle Grazie in Milan."},"source":"https://en.wikipedia.org/wiki/The_Last_Supper_(Leonardo)","representative":true,"popularity":10000}
+      ]
+    }
+  ]
+}

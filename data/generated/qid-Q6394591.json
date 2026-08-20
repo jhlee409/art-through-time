@@ -1,0 +1,170 @@
+{
+  "schema": 18,
+  "artistId": "artist-Q6394591",
+  "qid": "Q6394591",
+  "artist": {
+    "name": {
+      "ko": "바실리 푸키레프",
+      "en": "Vassili Vladimirovich Pukiryov"
+    },
+    "birth": 1832,
+    "death": 1890,
+    "nationality": {
+      "ko": "러시아 제국",
+      "en": "Russian Empire"
+    }
+  },
+  "fetchedAt": "2026-08-10T13:22:15.828Z",
+  "works": [
+    {
+      "id": "wikipedia-Q6394591-0",
+      "year": 1856,
+      "title": {
+        "ko": "Boy with Bird's Nest",
+        "en": "Boy with Bird's Nest"
+      },
+      "country": {
+        "ko": "러시아 제국",
+        "en": "Russian Empire"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Pukirev-Nest.jpg/250px-Pukirev-Nest.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Vasili_Pukirev",
+      "verified": true,
+      "representative": true,
+      "popularity": 999
+    },
+    {
+      "id": "featured-Q3918079",
+      "year": 1862,
+      "title": {
+        "ko": "불평등한 결혼",
+        "en": "The Unequal Marriage"
+      },
+      "country": {
+        "ko": "러시아 제국",
+        "en": "Russian Empire"
+      },
+      "movement": {
+        "ko": "사실주의",
+        "en": "Realism"
+      },
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Vasily_Pukirev_-_%D0%9D%D0%B5%D1%80%D0%B0%D0%B2%D0%BD%D1%8B%D0%B9_%D0%B1%D1%80%D0%B0%D0%BA_-_Google_Art_Project.jpg",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Vasili_Pukirev",
+      "verified": true,
+      "representative": true,
+      "popularity": 1000
+    },
+    {
+      "id": "wikipedia-Q6394591-1",
+      "year": 1865,
+      "title": {
+        "ko": "The Gambler",
+        "en": "The Gambler"
+      },
+      "country": {
+        "ko": "러시아 제국",
+        "en": "Russian Empire"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/The_Gambler_by_Vasiliy_Pukirev.jpg/250px-The_Gambler_by_Vasiliy_Pukirev.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Vasili_Pukirev",
+      "verified": true,
+      "representative": true,
+      "popularity": 998
+    },
+    {
+      "id": "wikipedia-Q6394591-2",
+      "year": 1865,
+      "title": {
+        "ko": "In the Artist's Studio",
+        "en": "In the Artist's Studio"
+      },
+      "country": {
+        "ko": "러시아 제국",
+        "en": "Russian Empire"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/V_masterskoj_hudozhnika_by_Vasiliy_Pukirev.jpg/330px-V_masterskoj_hudozhnika_by_Vasiliy_Pukirev.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Vasili_Pukirev",
+      "verified": true,
+      "representative": true,
+      "popularity": 997
+    },
+    {
+      "id": "wikipedia-Q6394591-3",
+      "year": 1873,
+      "title": {
+        "ko": "Reception of a Dowry in a Merchant Family",
+        "en": "Reception of a Dowry in a Merchant Family"
+      },
+      "country": {
+        "ko": "러시아 제국",
+        "en": "Russian Empire"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Wassilij_Wladimirowitsch_Pukirew_001.jpg/330px-Wassilij_Wladimirowitsch_Pukirew_001.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Vasili_Pukirev",
+      "verified": true,
+      "representative": true,
+      "popularity": 996
+    },
+    {
+      "id": "wikipedia-Q6394591-4",
+      "year": 1877,
+      "title": {
+        "ko": "Wedding Interrupted",
+        "en": "Wedding Interrupted"
+      },
+      "country": {
+        "ko": "러시아 제국",
+        "en": "Russian Empire"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/%D0%92._%D0%9F%D1%83%D0%BA%D0%B8%D1%80%D0%B5%D0%B2._%D0%9F%D1%80%D0%B5%D1%80%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B5_%D0%B2%D0%B5%D0%BD%D1%87%D0%B0%D0%BD%D0%B8%D0%B5.jpg/250px-%D0%92._%D0%9F%D1%83%D0%BA%D0%B8%D1%80%D0%B5%D0%B2._%D0%9F%D1%80%D0%B5%D1%80%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B5_%D0%B2%D0%B5%D0%BD%D1%87%D0%B0%D0%BD%D0%B8%D0%B5.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Vasili_Pukirev",
+      "verified": true,
+      "representative": true,
+      "popularity": 995
+    }
+  ]
+}

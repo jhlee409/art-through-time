@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>입체주의 — 하나의 시점을 해체하다</title>
+<style>
+:root {
+  --bg:#090b0e; --panel:#12161b; --panel2:#181d23; --text:#f2efe8;
+  --muted:#aab3bc; --line:#2a3037; --gold:#d7a74a; --blue:#849fc3;
+  --brick:#b87560; --green:#8daa90; --violet:#9e91bd;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--text);line-height:1.75;
+  font-family:Inter,"Pretendard","Noto Sans KR",Arial,sans-serif;
+  background:
+    radial-gradient(circle at 12% 6%,rgba(132,159,195,.10),transparent 28rem),
+    radial-gradient(circle at 84% 8%,rgba(184,117,96,.08),transparent 28rem),
+    linear-gradient(180deg,#080a0d,#0d1014);
+}
+a{color:#edc777;text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{width:min(1200px,92vw);margin:auto}
+.hero{padding:76px 0 40px;border-bottom:1px solid var(--line)}
+.kicker{font-size:.84rem;font-weight:800;letter-spacing:.12em;color:var(--gold)}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.5rem,6vw,5.25rem);line-height:1.04;margin:.35rem 0 1rem}
+.hero p{max-width:1050px;color:#d2d8df;font-size:1.14rem}
+nav{position:sticky;top:0;z-index:20;background:rgba(9,11,14,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:18px;overflow:auto;padding:12px 0;white-space:nowrap;font-size:.9rem}
+section{padding:58px 0;border-bottom:1px solid var(--line)}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,3.5vw,3.15rem);margin:0 0 20px}
+h3{margin:.1rem 0 .55rem;font-size:1.18rem}
+.lead{font-size:1.08rem;color:#d5dbe1;max-width:1000px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:linear-gradient(180deg,var(--panel2),var(--panel));box-shadow:0 14px 34px rgba(0,0,0,.23)}
+.imgbox{background:#07090b;display:flex;align-items:center;justify-content:center;min-height:430px;position:relative}
+.imgbox img{display:block;width:100%;height:570px;object-fit:contain}
+.caption{padding:18px 20px 20px}
+.caption small{display:block;color:var(--muted);margin-top:6px}
+.badge{display:inline-block;padding:4px 9px;border-radius:99px;border:1px solid #544323;background:rgba(215,167,74,.08);color:#efcb80;font-size:.76rem;font-weight:800;margin-bottom:8px}
+.callout{border-left:4px solid var(--gold);padding:18px 21px;background:rgba(215,167,74,.08);border-radius:0 12px 12px 0;margin:24px 0}
+.bigline{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.3rem,2.6vw,1.95rem);padding:24px 28px;border-top:1px solid #59471f;border-bottom:1px solid #59471f;color:#f0dcb1;margin:25px 0;line-height:1.48}
+.features{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:26px 0}
+.feature{padding:17px;border:1px solid var(--line);border-radius:12px;background:var(--panel);min-height:150px}
+.feature b{color:var(--gold);font-size:.8rem}
+.feature span{display:block;font-weight:800;margin:.35rem 0}
+.feature p{font-size:.9rem;color:var(--muted);margin:0;line-height:1.55}
+.timeline{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:28px 0}
+.time{padding:17px;border:1px solid var(--line);border-radius:12px;background:var(--panel);min-height:180px}
+.time .year{font-family:Georgia,serif;color:var(--gold);font-size:1.22rem;font-weight:700}
+.time strong{display:block;margin:.35rem 0}
+.time p{font-size:.88rem;color:var(--muted);margin:0;line-height:1.5}
+.branch{border:1px solid var(--line);border-radius:15px;background:var(--panel);padding:22px}
+.branch.analytic{border-top:4px solid var(--blue)}
+.branch.synthetic{border-top:4px solid var(--brick)}
+.branch.salon{border-top:4px solid var(--green)}
+.branch .eyebrow{font-size:.76rem;font-weight:800;letter-spacing:.08em;color:var(--muted)}
+.branch h3{font-size:1.28rem}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;margin-top:24px}
+table{width:100%;border-collapse:collapse;min-width:920px;background:var(--panel)}
+th,td{padding:14px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:#171b20;color:#efd69c;font-size:.9rem}
+td:first-child{font-weight:750;color:#eef1f4;width:18%}
+tr:last-child td{border-bottom:0}
+.note{font-size:.94rem;color:var(--muted);background:#10141a;border:1px solid var(--line);padding:17px 19px;border-radius:12px}
+.chain{display:flex;align-items:stretch;gap:10px;overflow:auto;padding:8px 0 4px}
+.chain .node{min-width:185px;flex:1;padding:17px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.chain .arrow{display:flex;align-items:center;color:var(--gold);font-size:1.4rem}
+.source-list{font-size:.9rem;color:var(--muted)}
+.fallback{font-size:.85rem;color:var(--muted);padding:10px 18px;border-top:1px solid var(--line)}
+footer{padding:36px 0 60px;color:#7f8993;font-size:.86rem}
+ul{padding-left:1.25rem}
+li{margin:.4rem 0}
+@media(max-width:980px){
+ .grid2,.grid3{grid-template-columns:1fr}
+ .features,.timeline{grid-template-columns:1fr 1fr}
+ .imgbox img{height:auto;max-height:610px}
+}
+@media(max-width:560px){
+ .features,.timeline{grid-template-columns:1fr}
+}
+</style>
+<link rel="stylesheet" href="../../uhangul/uhangul-runtime.css" data-uhangul-integration="v0.3">
+<style id="art-atlas-artist-link-style">
+.art-atlas-artist-link{font-weight:900;color:#191007!important;background:linear-gradient(180deg,rgba(255,232,151,.98),rgba(255,198,86,.9));border-bottom:2px solid #a96f12;border-radius:.22em;padding:0 .16em;text-decoration:none!important;box-decoration-break:clone;-webkit-box-decoration-break:clone}.art-atlas-artist-link:hover{filter:brightness(1.08);box-shadow:0 0 0 2px rgba(255,214,102,.24)}
+</style>
+</head>
+
+<body>
+<div data-uhangul-corner-bar style="position:sticky!important;top:0!important;z-index:2147483647!important;clear:both!important;height:64px!important;display:flex!important;align-items:center!important;padding:10px 18px!important;background:#0c1014!important;border-bottom:1px solid #2d3540!important"><button type="button" data-uhangul-corner-button aria-label="uHangul 켜기" title="uHangul 켜기" aria-pressed="false" style="position:relative!important;z-index:2147483647!important;display:block!important;border:2px solid #f4c55b!important;border-radius:50%!important;width:38px!important;height:38px!important;padding:0!important;background:#18221e!important;color:#f4c55b!important;font:800 23px/34px Georgia,serif!important;text-align:center!important;cursor:pointer!important;visibility:visible!important;opacity:1!important">u</button></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="hero">
+
+
+
+<div class="wrap">
+  <div class="kicker">미술사 · 세잔 이후, 20세기 회화의 구조 혁명</div>
+  <h1>입체주의<br><span style="color:var(--gold)">하나의 시점을 해체하다</span></h1>
+  <p>
+    입체주의는 사물을 단순히 <strong>“각진 모양”이나 “큐브 형태”로 그리는 화풍</strong>이 아니다.
+    더 근본적인 혁신은 르네상스 이후 서양회화가 당연하게 사용해온
+    <strong>한 사람·한 위치·한 순간에서 바라본 하나의 원근법</strong>을 포기한 것이다.
+    피카소와 브라크는 대상을 여러 방향에서 관찰하고 해체한 뒤,
+    서로 다른 면과 정보를 <strong>한 화면에 동시에 재구성</strong>했다.
+  </p>
+</div>
+</header>
+
+<nav>
+<div class="wrap">
+  <a href="#answer">0. 무엇을 바꾸었나</a>
+  <a href="#before">1. 세잔의 전조</a>
+  <a href="#history">2. 1907–1914</a>
+  <a href="#picasso">3. 피카소의 전환</a>
+  <a href="#analytic">4. 분석적 입체주의</a>
+  <a href="#synthetic">5. 종합적 입체주의</a>
+  <a href="#branches">6. 세 방향</a>
+  <a href="#compare">7. 직접 비교</a>
+  <a href="#meaning">8. 왜 혁명인가</a>
+  <a href="#after">9. 이후 현대미술</a>
+  <a href="#countries">국가별 전개</a>
+</div>
+</nav>
+
+<main>
+
+<section id="answer">
+<div class="wrap">
+  <h2>0. 먼저 결론 — 입체주의는 무엇을 바꾸었는가?</h2>
+
+  <div class="features">
+    <div class="feature"><b>01 · 시점</b><span>하나 → 여러 개</span><p>한 자리에서 본 모습을 고정하지 않고 앞·옆·위의 정보를 한 화면에 함께 넣는다.</p></div>
+    <div class="feature"><b>02 · 대상</b><span>모사 → 분석</span><p>사물을 외형 그대로 복제하기보다 면과 구조로 분해하여 다시 조립한다.</p></div>
+    <div class="feature"><b>03 · 공간</b><span>창문 → 평면</span><p>그림을 현실로 열린 창처럼 만드는 원근법 대신 캔버스의 평면성을 드러낸다.</p></div>
+    <div class="feature"><b>04 · 시간</b><span>한 순간 → 관찰의 축적</span><p>여러 방향에서 본 경험이 하나의 화면에 겹치면서 시간적 관찰이 암시된다.</p></div>
+    <div class="feature"><b>05 · 재료</b><span>그림 → 실제 사물</span><p>신문·벽지·라벨 등을 붙이며 회화와 현실 사물의 경계 자체를 흔든다.</p></div>
+  </div>
+
+  <div class="callout">
+    <strong>핵심:</strong><br><br>
+    르네상스 원근법: <strong>“한 눈으로 한 순간 본 세계를 그린다.”</strong><br>
+    입체주의: <strong>“대상에 대해 알고 있는 여러 시각적 정보를 한 화면에 다시 구성한다.”</strong>
+  </div>
+
+  <div class="note">
+    흔히 “입체주의는 4차원이나 상대성이론을 그림으로 표현했다”고 단정하기도 하지만,
+    이를 직접적 원인으로 보는 것은 근거가 약하다.
+    당시 수학·과학·철학에 대한 관심이 문화적 배경이 된 것은 맞지만,
+    피카소와 브라크의 실제 회화적 출발점으로는 <strong>세잔의 구조적 형태, 서양 원근법에 대한 실험,
+    이베리아 조각과 아프리카 조각을 비롯한 비서구 조형 전통</strong>이 더 직접적으로 중요하다.
+  </div>
+</div>
+</section>
+
+<section id="before">
+<div class="wrap">
+  <h2>1. Before — 세잔이 먼저 원근법의 안정성을 흔들었다</h2>
+
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Hameau-20-C3-A0-20Payennet-20pr-C3-A8s-20de-20Gardanne-20par-20Paul-20-dd2ecb68fedf.jpg" alt="폴 세잔, 가르단 근처의 마을 풍경"></div>
+      <div class="caption">
+        <span class="badge">후기 인상주의 → 입체주의의 전조</span>
+        <h3>폴 세잔, 《가르단 근처의 마을 풍경》</h3>
+        <small>1880년대 · 건축과 자연을 단순한 덩어리로 조직</small>
+      </div>
+    </article>
+
+    <div>
+      <h3>세잔에게서 피카소와 브라크가 본 것</h3>
+      <ul>
+        <li>집과 산을 세밀한 표면보다 <strong>큰 기하학적 덩어리</strong>로 본다.</li>
+        <li>전통 원근법처럼 하나의 소실점에 완전히 복종하지 않는다.</li>
+        <li>색면이 형태를 만들고 서로 맞물리며 공간을 조직한다.</li>
+        <li>눈앞의 자연을 그대로 복제하기보다 <strong>회화적 구조로 다시 만든다.</strong></li>
+      </ul>
+
+      <div class="bigline">
+        세잔이 <strong>사물을 구조로 단순화</strong>했다면,<br>
+        피카소와 브라크는 다음 단계에서 그 구조를 <strong>분해하고 다시 조립</strong>한다.
+      </div>
+
+      <div class="callout">
+        1906년 세잔이 사망한 뒤 1907년 파리에서 열린 대규모 회고전은
+        젊은 전위 화가들에게 그의 작품을 집중적으로 볼 수 있는 중요한 계기가 되었다.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="history">
+<div class="wrap">
+  <h2>2. 역사적 흐름 — 입체주의는 놀라울 정도로 짧은 기간에 급격히 변했다</h2>
+
+  <div class="timeline">
+    <div class="time"><div class="year">1906</div><strong>세잔 사망</strong><p>세잔의 구조적 회화에 대한 관심이 더욱 커진다.</p></div>
+    <div class="time"><div class="year">1907</div><strong>세잔 회고전</strong><p>파리 가을 살롱의 회고전이 새로운 세대에게 강한 영향을 준다.</p></div>
+    <div class="time"><div class="year">1907</div><strong>《아비뇽의 처녀들》</strong><p>피카소가 전통적 인체와 하나의 공간을 극단적으로 해체한다. 같은 해 피카소와 브라크가 만나기 시작한다.</p></div>
+    <div class="time"><div class="year">1908</div><strong>브라크의 레스타크</strong><p>기하학적으로 단순화된 풍경을 계기로 비평에서 ‘큐브’라는 표현이 등장하고 Cubism이라는 명칭으로 발전한다.</p></div>
+    <div class="time"><div class="year">1910–12</div><strong>분석적 입체주의</strong><p>피카소와 브라크가 대상과 공간을 작은 면으로 철저히 분해한다.</p></div>
+    <div class="time"><div class="year">1912–14</div><strong>종합적 입체주의</strong><p>콜라주·종이붙이기를 사용하며 더 단순하고 선명한 형태로 다시 ‘조립’하는 단계로 이동한다.</p></div>
+  </div>
+
+  <div class="callout">
+    피카소와 브라크의 긴밀한 공동 실험은 대략 <strong>1907–1914년</strong>에 집중된다.
+    제1차 세계대전의 발발로 브라크가 군에 입대하면서 이 특별한 협업의 시기는 사실상 끝난다.
+  </div>
+</div>
+</section>
+
+<section id="picasso">
+<div class="wrap">
+  <h2>3. Breakthrough — 피카소는 인체와 공간을 동시에 깨뜨린다</h2>
+
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/grwpCmPpSImm938JFHIaTITKJr4-6e4868fbf57e.jpg" alt="파블로 피카소, 아비뇽의 처녀들"></div>
+      <div class="caption">
+        <span class="badge">입체주의의 결정적 전조</span>
+        <h3>파블로 피카소, 《아비뇽의 처녀들》</h3>
+        <small>1907 · 뉴욕 현대미술관(MoMA)</small>
+      </div>
+      <div class="fallback">
+        외부 이미지가 표시되지 않으면
+        <a href="https://www.moma.org/collection/works/79766" target="_blank" rel="noopener">MoMA 작품 페이지에서 보기</a>
+      </div>
+    </article>
+
+    <div>
+      <h3>왜 이 작품이 그렇게 충격적인가?</h3>
+      <ul>
+        <li>인체가 부드러운 해부학적 덩어리가 아니라 <strong>날카로운 면</strong>으로 갈라진다.</li>
+        <li>배경과 인물이 분리되지 않고 모두 같은 평면 위에서 서로 침범한다.</li>
+        <li>오른쪽 인물들의 얼굴은 당시 유럽에서 접한 아프리카 조각과 가면의 조형적 영향을 강하게 보여준다.</li>
+        <li>정상적인 깊이와 통일된 시점이 붕괴한다.</li>
+        <li>관람자는 안정된 거리에서 장면을 보는 대신 화면의 공격적인 평면과 직접 마주한다.</li>
+      </ul>
+
+      <div class="bigline">
+        문제는 “여성이 실제로 이렇게 생겼는가?”가 아니다.<br>
+        피카소가 묻는 것은 <strong>“회화는 반드시 한 시점에서 자연스럽게 보이는 공간을 만들어야 하는가?”</strong>이다.
+      </div>
+
+      <div class="note">
+        《아비뇽의 처녀들》 자체를 완성된 입체주의의 전형이라고 보는 것보다는,
+        <strong>입체주의로 넘어가는 결정적인 전환점</strong>으로 보는 편이 정확하다.
+        피카소와 브라크가 이후 몇 년간 함께 발전시킨 시각언어가 본격적인 입체주의가 된다.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="analytic">
+<div class="wrap">
+  <h2>4. 분석적 입체주의 — 대상을 보이지 않을 정도까지 분해하다</h2>
+
+  <p class="lead">
+    약 1910–1912년 피카소와 브라크의 그림에서는 색이 갈색·회색·황토색처럼 제한되고,
+    인물·악기·탁자 같은 대상이 작은 면으로 끝없이 분해된다.
+    이를 보통 <strong>분석적 입체주의(Analytic Cubism)</strong>라고 부른다.
+  </p>
+
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/Juan-20Gris-20-20Portrait-20of-20Pablo-20Picasso-20-20Google-20Art-20P-5708b16ee683.jpg" alt="후안 그리스, 파블로 피카소의 초상"></div>
+      <div class="caption">
+        <span class="badge">입체주의의 확산</span>
+        <h3>후안 그리스, 《파블로 피카소의 초상》</h3>
+        <small>1912 · 시카고 미술관</small>
+      </div>
+    </article>
+
+    <div>
+      <h3>분석적 입체주의의 화면을 읽는 방법</h3>
+      <ul>
+        <li>먼저 “무엇을 그렸나?”를 찾으려 하면 매우 어렵다.</li>
+        <li>얼굴·옷·의자·배경의 경계가 서로 섞인다.</li>
+        <li>앞면과 옆면이 동시에 나타나며 한 방향의 조명이 사라진다.</li>
+        <li>색을 줄여 관람자가 색채보다 <strong>형태와 면의 관계</strong>에 집중하게 한다.</li>
+      </ul>
+
+      <div class="callout">
+        여기서 중요한 것은 “여러 사진을 겹쳤다”는 식의 단순 설명이 아니다.
+        화가는 실제로 관찰한 대상의 정보를 <strong>분석한 뒤 캔버스 위에 새로운 조형 질서로 배치</strong>한다.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="synthetic">
+<div class="wrap">
+  <h2>5. 종합적 입체주의 — 분해한 세계를 다시 조립하다</h2>
+
+  <div class="grid2">
+    <article class="card">
+      <div class="imgbox"><img src="images/1914-20Gris-20Le-20Petit-20D-C3-A9jeuner-b84d34a4a263.jpg" alt="후안 그리스, 아침식사"></div>
+      <div class="caption">
+        <span class="badge">종합적 입체주의</span>
+        <h3>후안 그리스, 《아침식사》</h3>
+        <small>1914 · 콜라주와 회화가 결합된 시기의 대표적 예</small>
+      </div>
+    </article>
+
+    <div>
+      <h3>왜 다시 형태가 단순해졌나?</h3>
+      <ul>
+        <li>분석적 입체주의처럼 대상을 끝없이 쪼개기보다 <strong>큰 형태를 다시 합성</strong>한다.</li>
+        <li>신문, 벽지, 악보, 포장지 같은 실제 재료가 화면에 들어온다.</li>
+        <li>색채가 다시 밝고 다양해진다.</li>
+        <li>“그려진 나무무늬”와 “실제 무늬 종이”가 섞이며 무엇이 현실이고 무엇이 재현인지 모호해진다.</li>
+      </ul>
+
+      <div class="bigline">
+        분석적 입체주의: <strong>“사물을 어떻게 분해할까?”</strong><br>
+        종합적 입체주의: <strong>“그림을 어떤 기호와 재료로 다시 만들까?”</strong>
+      </div>
+
+      <div class="callout">
+        1912년 피카소와 브라크의 콜라주·종이붙이기 실험은
+        이후 다다, 구성주의, 팝아트, 어셈블라주까지 이어지는
+        <strong>실제 사물을 미술작품 안에 넣는 전통</strong>의 중요한 출발점이 된다.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="branches">
+<div class="wrap">
+  <h2>6. 입체주의는 피카소와 브라크 둘에게만 머물지 않았다</h2>
+
+  <div class="grid3">
+    <div class="branch analytic">
+      <div class="eyebrow">피카소 · 브라크</div>
+      <h3>① ‘갤러리 입체주의’의 핵심 실험</h3>
+      <p>1907–1914년 매우 긴밀한 대화를 통해 분석적·종합적 입체주의의 핵심 언어를 발전시켰다.</p>
+    </div>
+
+    <div class="branch synthetic">
+      <div class="eyebrow">후안 그리스</div>
+      <h3>② 더 명료한 구조와 종합</h3>
+      <p>피카소·브라크의 언어를 받아들이면서 보다 선명한 구성, 색채, 계획된 구조를 발전시켰다.</p>
+    </div>
+
+    <div class="branch salon">
+      <div class="eyebrow">글레즈 · 메챙제 · 레제 등</div>
+      <h3>③ 살롱 입체주의와 확산</h3>
+      <p>대규모 살롱 전시와 저술을 통해 입체주의를 보다 공개적이고 이론적인 국제 운동으로 확산시켰다.</p>
+    </div>
+  </div>
+
+  <div class="grid2" style="margin-top:28px">
+    <article class="card">
+      <div class="imgbox"><img src="images/Albert-20Gleizes-20l-Homme-20au-20Balcon-201912-20oil-20on-20canvas-20-47ac16bbe59c.jpg" alt="알베르 글레즈, 발코니의 남자"></div>
+      <div class="caption">
+        <span class="badge">살롱 입체주의</span>
+        <h3>알베르 글레즈, 《발코니의 남자》</h3>
+        <small>1912 · 필라델피아 미술관</small>
+      </div>
+    </article>
+
+    <div>
+      <p class="lead">
+        글레즈와 장 메챙제는 1912년 <strong>《입체주의에 관하여(Du “Cubisme”)》</strong>를 출판하며
+        새 회화를 이론적으로 설명하려 했다.
+        따라서 입체주의는 피카소와 브라크의 사적 실험에서 출발했지만 빠르게 유럽 전위미술 전체의 문제로 확장되었다.
+      </p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="compare">
+<div class="wrap">
+  <h2>7. 세잔 → 분석적 입체주의 → 종합적 입체주의를 비교하면</h2>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>비교 항목</th><th>세잔</th><th>분석적 입체주의</th><th>종합적 입체주의</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>핵심 질문</td><td>자연의 구조를 어떻게 견고하게 만들까?</td><td>대상을 여러 면으로 얼마나 분석할 수 있을까?</td><td>기호와 재료로 어떻게 다시 구성할까?</td></tr>
+      <tr><td>대상</td><td>단순한 덩어리로 정리</td><td>작은 면으로 분해</td><td>큰 기호적 형태로 합성</td></tr>
+      <tr><td>시점</td><td>전통 원근법에서 미묘하게 벗어남</td><td>복수의 시점이 적극적으로 결합</td><td>시점보다 기호와 조형 관계가 중요</td></tr>
+      <tr><td>색</td><td>형태를 구축하는 색</td><td>갈색·회색 등 제한된 색</td><td>보다 밝고 다양한 색</td></tr>
+      <tr><td>재료</td><td>전통적 유화</td><td>주로 유화</td><td>신문·벽지·라벨·종이 등 실제 재료</td></tr>
+      <tr><td>화면</td><td>현실의 구조를 재구성</td><td>대상과 공간의 경계가 붕괴</td><td>평면 위 기호와 실제 사물이 공존</td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+</section>
+
+<section id="meaning">
+<div class="wrap">
+  <h2>8. 왜 입체주의가 르네상스 이후 가장 큰 회화 혁명 중 하나인가?</h2>
+
+  <p class="lead">
+    르네상스 이후 서양 회화의 기본 전제는 캔버스를
+    <strong>현실 세계로 열린 창</strong>처럼 만드는 것이었다.
+    입체주의는 그 전제를 의도적으로 깨뜨린다.
+  </p>
+
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>르네상스 이후의 전통</th><th>입체주의</th></tr></thead>
+    <tbody>
+      <tr><td>한 명의 관람자</td><td>여러 시점의 정보</td></tr>
+      <tr><td>한 순간</td><td>시간을 두고 관찰한 정보의 축적</td></tr>
+      <tr><td>하나의 소실점</td><td>복수·불연속적 공간</td></tr>
+      <tr><td>화면은 현실을 보여주는 창</td><td>화면은 독립된 평면적 구조</td></tr>
+      <tr><td>그림은 현실의 모사</td><td>그림은 현실을 분석하고 새롭게 구성한 체계</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="bigline">
+    입체주의 이후 화가는 더 이상<br>
+    <strong>“눈앞의 세계를 닮게 그려야 한다”는 의무에서 크게 벗어난다.</strong>
+  </div>
+</div>
+</section>
+
+<section id="after">
+<div class="wrap">
+  <h2>9. After — 입체주의에서 현대미술의 여러 길이 갈라진다</h2>
+
+  <div class="chain">
+    <div class="node"><strong>세잔</strong><br><span style="color:var(--muted)">구조와 다중적 공간</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong>입체주의</strong><br><span style="color:var(--muted)">분해·복수 시점·콜라주</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong>미래주의</strong><br><span style="color:var(--muted)">시간·속도·운동</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong>구성주의·추상</strong><br><span style="color:var(--muted)">순수한 기하학적 구조</span></div>
+    <div class="arrow">→</div>
+    <div class="node"><strong>다다·팝아트</strong><br><span style="color:var(--muted)">콜라주·일상 사물·기호</span></div>
+  </div>
+
+  <div class="callout">
+    <strong>입체주의의 가장 큰 유산:</strong><br><br>
+    야수주의가 <strong>색을 현실에서 해방</strong>했다면,<br>
+    입체주의는 <strong>형태와 공간을 현실의 외형에서 해방</strong>했다.<br><br>
+    이 두 혁명이 결합하면서 20세기 회화는 결국
+    <strong>대상을 전혀 닮지 않은 추상미술</strong>로도 나아갈 수 있게 된다.
+  </div>
+
+  <div class="note">
+    ※ 야수주의와 입체주의는 단순히 앞뒤로 교체된 사조가 아니다.
+    두 운동은 1900년대 파리에서 상당 부분 시기가 겹쳤다.
+    브라크는 입체주의 이전 야수주의 전시에 참여했고,
+    이후 피카소와의 협업을 통해 전혀 다른 구조적 방향으로 이동했다.
+  </div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <h2>참고 자료</h2>
+  <div class="source-list">
+    <ul>
+      <li><a href="https://www.moma.org/collection/terms/cubism" target="_blank" rel="noopener">뉴욕 현대미술관(MoMA) — 입체주의 개요</a></li>
+      <li><a href="https://www.moma.org/collection/terms/cubism/what-is-cubism" target="_blank" rel="noopener">MoMA — 피카소와 브라크, 입체주의의 형성</a></li>
+      <li><a href="https://www.moma.org/collection/terms/cubism/analytic-and-synthetic-cubism" target="_blank" rel="noopener">MoMA — 분석적·종합적 입체주의</a></li>
+      <li><a href="https://www.tate.org.uk/art/art-terms/c/cubism" target="_blank" rel="noopener">테이트 — 입체주의</a></li>
+      <li><a href="https://www.metmuseum.org/essays/cubism" target="_blank" rel="noopener">메트로폴리탄 미술관 — 입체주의와 20세기 미술</a></li>
+      <li><a href="https://www.metmuseum.org/essays/paul-cezanne-1839-1906" target="_blank" rel="noopener">메트로폴리탄 미술관 — 세잔과 입체주의의 전조</a></li>
+      <li><a href="https://www.museepicassoparis.fr/en/cubism" target="_blank" rel="noopener">피카소 미술관 파리 — 피카소와 입체주의</a></li>
+    </ul>
+    <p>
+      세잔·후안 그리스·알베르 글레즈 작품은 Wikimedia Commons의 공개 이미지를 외부에서 불러온다.
+      피카소 《아비뇽의 처녀들》은 저작권 상태가 지역별로 다르므로 파일에 이미지를 내장하지 않고 외부 웹 이미지를 참조하며,
+      공식 MoMA 작품 페이지 링크를 함께 제공했다. 인터넷 연결이 필요하다.
+    </p>
+  </div>
+</div>
+</section>
+
+
+<section id="countries"><div class="wrap">
+<h2>여러 국가에서의 전개 — 입체주의는 각국의 전위운동을 촉발했다</h2>
+<p class="lead">입체주의의 공통 혁신은 <strong>단일 시점과 전통 원근법을 해체하고 대상을 구조·면·기호로 재구성</strong>한 것이다. 다른 나라에서는 이 언어가 속도·기계·건축·혁명 같은 새로운 목표와 결합했다.</p>
+<div class="table-wrap"><table><thead><tr><th>국가·지역</th><th>변형</th><th>대표 사례</th></tr></thead><tbody>
+<tr><td>프랑스·파리</td><td>피카소와 브라크의 분석적·종합적 입체주의가 핵심 언어를 만들었고 후안 그리스 등이 이를 더 명료한 구조로 발전시켰다.</td><td>피카소, 브라크, 후안 그리스</td></tr>
+<tr><td>이탈리아</td><td>입체주의의 분해된 형태를 받아들이되 정지된 대상보다 <strong>속도·기계·운동·현대도시</strong>를 표현하는 미래주의로 변형했다.</td><td>보초니, 발라, 세베리니</td></tr>
+<tr><td>러시아</td><td>입체주의와 미래주의가 결합한 입체미래주의를 거쳐 절대주의·구성주의 등 혁명적 추상으로 발전했다.</td><td>말레비치, 포포바, 타틀린</td></tr>
+<tr><td>체코</td><td>회화뿐 아니라 건축·가구·디자인까지 입체주의의 각진 구조를 실제 3차원 환경에 적용한 독특한 체코 입체주의가 등장했다.</td><td>에밀 필라, 파벨 야나크</td></tr>
+<tr><td>영국</td><td>입체주의의 구조적 분해가 기계·에너지·운동의 이미지와 결합해 보티시즘으로 전개되었다.</td><td>윈덤 루이스, 에드워드 워즈워스</td></tr>
+</tbody></table></div>
+<div class="callout"><strong>공통 철학:</strong> 보이는 외형을 복사하지 않고 형태와 공간을 재구성한다.<br><strong>지역적 차이:</strong> 이탈리아는 속도, 러시아는 혁명적 추상, 체코는 건축, 영국은 기계적 에너지로 확장했다.</div>
+</div></section>
+
+</main>
+
+<footer>
+<div class="wrap">입체주의 — 하나의 시점을 해체하다 · 세잔에서 분석·종합 입체주의와 현대미술로</div>
+</footer>
+
+<script defer src="../../uhangul/uhangul-runtime.js" data-uhangul-integration="v0.4"></script>
+
+</body>
+</html>
