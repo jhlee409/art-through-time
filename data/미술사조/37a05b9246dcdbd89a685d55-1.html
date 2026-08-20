@@ -131,6 +131,9 @@ li{margin:.38rem 0}
 
 
 
+
+
+
 <header class="hero">
 
 
@@ -458,90 +461,101 @@ li{margin:.38rem 0}
 </div></section>
 
 <!-- art-atlas-enhancement:start -->
-
-<style id="art-atlas-movement-enhancement-style">
-.movement-enhancement{padding:58px 0;border-bottom:1px solid var(--line,#2a3037)}
-.movement-enhancement .enhancement-intro{font-size:1.07rem;color:var(--muted,#aeb6bf);max-width:1040px}
-.movement-enhancement .enhancement-panel{border:1px solid var(--line,#2a3037);border-radius:14px;background:rgba(18,22,27,.86);padding:22px;margin:22px 0}
-.movement-enhancement .enhancement-panel h3{margin:.05rem 0 .6rem;font-size:1.18rem}
-.movement-enhancement .enhancement-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.movement-enhancement .movement-work-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:22px}
-.movement-enhancement .movement-work-card{border:1px solid var(--line,#2a3037);border-radius:14px;overflow:hidden;background:linear-gradient(180deg,var(--panel2,#181d23),var(--panel,#12161b));box-shadow:0 12px 28px rgba(0,0,0,.18)}
-.movement-enhancement .movement-work-image{background:#07090b;display:flex;align-items:center;justify-content:center;min-height:260px}
+<style>
+.movement-enhancement{margin:38px auto 0;padding:26px;border:1px solid var(--line,#2a3037);background:linear-gradient(180deg,var(--panel2,#181d23),var(--panel,#12161b));border-radius:18px;box-shadow:0 18px 45px rgba(0,0,0,.24);color:var(--text,#f2efe9)}
+.movement-enhancement h2{margin:0 0 14px;font-size:clamp(1.55rem,2.2vw,2.15rem);color:#f1d18b}
+.movement-enhancement h3{margin:0 0 10px;font-size:1.05rem;color:#f2efe9}
+.movement-enhancement p{line-height:1.82;color:#cfd6dd}
+.movement-enhancement ul{margin:0;padding-left:1.15rem}
+.movement-enhancement li{margin:.45rem 0;line-height:1.72;color:#cfd6dd}
+.movement-enhancement .enhancement-intro{margin:0 0 20px;color:#d6dce2}
+.movement-enhancement .enhancement-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:20px 0 26px}
+.movement-enhancement .enhancement-panel{padding:18px;border:1px solid var(--line,#2a3037);border-radius:12px;background:rgba(10,12,15,.48);color:#cfd6dd}
+.movement-enhancement .movement-work-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:16px}
+.movement-enhancement .movement-work-card{overflow:hidden;border:1px solid var(--line,#2a3037);border-radius:12px;background:linear-gradient(180deg,var(--panel2,#181d23),var(--panel,#12161b));box-shadow:0 12px 28px rgba(0,0,0,.22)}
+.movement-enhancement .movement-work-image{background:#090b0d;display:flex;align-items:center;justify-content:center;min-height:260px}
 .movement-enhancement .movement-work-image img{display:block;width:100%;height:320px;object-fit:contain}
-.movement-enhancement .movement-work-body{padding:16px 18px 18px}
-.movement-enhancement .movement-work-body h3{font-size:1.05rem;margin:.3rem 0 .2rem}
-.movement-enhancement .movement-work-body small{display:block;color:var(--muted,#aeb6bf);margin-bottom:.7rem}
-.movement-enhancement .movement-work-body p{margin:.5rem 0 0;color:#cfd6dd;line-height:1.62}
-.movement-enhancement .mini-label{display:inline-block;border:1px solid rgba(216,170,75,.35);background:rgba(216,170,75,.08);color:#f0cf87;border-radius:999px;padding:3px 8px;font-size:.74rem;font-weight:800}
-@media(max-width:900px){.movement-enhancement .enhancement-grid,.movement-enhancement .movement-work-grid{grid-template-columns:1fr}.movement-enhancement .movement-work-image img{height:auto;max-height:420px}}
+.movement-enhancement .movement-work-body{padding:16px;color:#cfd6dd}
+.movement-enhancement .mini-label{display:inline-flex;margin-bottom:8px;padding:4px 8px;border-radius:999px;background:rgba(216,170,75,.14);border:1px solid #544323;color:#f0ce83;font-size:.82rem;font-weight:700}
+.movement-enhancement .work-meta{margin:.2rem 0 .8rem;color:#9aa5af;font-size:.93rem}
+@media(max-width:900px){.movement-enhancement{padding:18px}.movement-enhancement .enhancement-grid,.movement-enhancement .movement-work-grid{grid-template-columns:1fr}.movement-enhancement .movement-work-image img{height:auto;max-height:420px}}
 </style>
-<section class="movement-enhancement" id="movement-deepening">
-<div class="wrap">
-  <h2>심화 보강 — 바로크 내부 화파와 국가별 전개</h2>
-  <p class="enhancement-intro">바로크는 단일 공식이 아니라 로마의 종교적 극장성, 플랑드르의 육체적 에너지, 네덜란드 시민시장의 장르화, 프랑스의 고전적 질서가 함께 만든 17세기 시각 문화다.</p>
+<section class="movement-enhancement">
+  <h2>심화 보강 - 지역 화파와 대표작으로 보는 바로크</h2>
+  <p class="enhancement-intro">바로크는 단순히 장식이 많은 양식이 아니다. 종교개혁 이후 가톨릭 교회가 감각적으로 강한 이미지를 필요로 했고, 절대왕정과 도시 시민 사회가 각자 다른 시각 언어를 요구하면서 빛, 몸짓, 공간, 관람자의 위치가 모두 극적으로 바뀐 사조다.</p>
   <div class="enhancement-grid">
     <div class="enhancement-panel">
       <h3>따로 HTML로 나누지 않은 내부 화파</h3>
-      <ul><li>카라바조주의: 강한 명암과 비이상화된 현실 인물을 통해 성스러운 사건을 관람자의 현재로 끌어온다.</li><li>볼로냐 고전주의: 카라치 가문과 그 제자들은 자연 관찰을 르네상스적 질서와 결합해 고전주의적 바로크를 만들었다.</li><li>위트레흐트·플랑드르·네덜란드 계열: <a class="art-atlas-artist-link" href="../../index.html?artist=artist-1786371252483" target="_blank" rel="noopener" data-artist-id="artist-1786371252483" data-uh-original="Michelangelo Merisi da Caravaggio" data-uh-korean="미켈란젤로 메리시 다 카라바조" data-uh-display-korean="카라바조" title="미켈란젤로 메리시 다 카라바조 연표로 이동">카라바조</a>의 빛은 위트레흐트 화가들에게, 베네치아 색채와 대형 서사는 루벤스에게, 시민적 내면성은 렘브란트와 페르메이르에게 이어졌다.</li></ul>
+      <ul>
+        <li>카라바조주의는 강한 명암 대비, 거리의 실제 인물 같은 모델, 화면 밖에서 들어오는 빛을 통해 성스러운 사건을 관람자의 현재로 끌어온다. 리베라, 조르주 드 라 투르, 위트레흐트 화가들은 이 빛의 연출을 각 지역의 종교화와 풍속화에 맞게 바꾸었다.</li>
+        <li>볼로냐 고전주의는 카라치 가문을 중심으로 자연 관찰과 르네상스의 조화, 고대적 질서를 결합했다. 격렬한 명암보다 탄탄한 구성과 이상화된 신체를 중시해 푸생과 프랑스 고전주의 바로크로 이어졌다.</li>
+        <li>플랑드르 바로크는 <a class="art-atlas-artist-link" href="../../index.html?artist=artist-url-1786879941678" target="_blank" rel="noopener" data-artist-id="artist-url-1786879941678" data-uh-original="Peter Paul Rubens" data-uh-korean="페테르 파울 루벤스" data-uh-display-korean="루벤스" title="페테르 파울 루벤스 연표로 이동">루벤스</a>를 중심으로 가톨릭 제단화, 왕실 외교, 신화화가 결합한 대형 화면의 언어를 만들었다. 풍부한 살색, 붉고 금빛 도는 색채, 밀려드는 몸의 운동이 특징이며 반 다이크의 귀족 초상으로도 확장되었다.</li>
+        <li>네덜란드 바로크는 교회 제단화보다 시민 시장이 중심이었다. 렘브란트는 빛으로 인간 내면을 파고들었고, 베르메르는 조용한 실내와 일상의 순간을 엄격한 빛의 구조로 만들었다. 같은 바로크라도 영웅적 장면보다 초상, 풍속, 정물, 풍경이 핵심이 되었다.</li>
+        <li>로마 바로크 조각과 건축은 베르니니, 보로미니를 통해 회화적 공간을 실제 도시와 성당 내부로 확장했다. 조각은 고정된 물체가 아니라 빛과 시선, 제단 장치 속에서 하나의 사건처럼 작동했다.</li>
+      </ul>
     </div>
     <div class="enhancement-panel">
       <h3>국가별 발전 방식</h3>
-      <ul><li>이탈리아에서는 반종교개혁 교회가 설교처럼 즉각적으로 이해되는 종교 이미지를 요구했다.</li><li>플랑드르는 가톨릭 궁정과 교회의 후원 아래 대형 제단화와 신화화에서 역동적 육체와 색채를 키웠다.</li><li>네덜란드 공화국은 시장경제 속에서 초상·정물·풍속·풍경을 발전시켜 바로크의 빛과 심리를 일상 세계로 옮겼다.</li><li>프랑스와 스페인은 각각 왕권의 질서, 가톨릭적 사실성과 궁정 초상이라는 방향으로 바로크를 변형했다.</li></ul>
+      <ul>
+        <li>이탈리아에서는 반종교개혁의 요구가 강했다. 로마의 성당과 예배당은 교리를 설명하는 장소이자 감정을 움직이는 무대가 되었고, 회화와 조각, 건축이 하나의 종교적 체험으로 결합했다.</li>
+        <li>스페인에서는 강한 가톨릭 신앙과 궁정 문화가 만났다. 수르바란의 수도원적 엄숙함, 리베라의 육체적 현실감, 벨라스케스의 궁정 초상과 복합적 시선은 스페인 바로크의 폭을 보여준다.</li>
+        <li>프랑스에서는 절대왕정 아래 바로크의 에너지가 궁정 질서로 통제되었다. 베르사유의 미술은 운동감보다 권위, 축, 의례, 국가 이미지를 강조했고, 푸생은 고전주의적 구성으로 바로크를 절제했다.</li>
+        <li>플랑드르는 가톨릭과 합스부르크 후원 아래 대형 제단화와 궁정화가 번성했고, 네덜란드 공화국은 시장경제 속에서 소형 회화, 집단 초상, 일상 실내, 정물이 발달했다. 두 지역의 차이가 바로크의 지역성을 가장 선명하게 보여준다.</li>
+      </ul>
     </div>
   </div>
-  <div class="enhancement-panel">
-    <h3>대표 화가와 대표작으로 확인하기</h3>
-    <p class="enhancement-intro">본문에 이름이 등장하는 주요 화가는 아래처럼 대표작 한 점과 함께 읽어야 한다. 작품은 해당 사조의 핵심 특징을 실제 화면에서 확인하도록 고른 것이다.</p>
-    <div class="movement-work-grid">
-      <article class="movement-work-card">
-  <div class="movement-work-image"><img src="images/Caravaggio-27s-The-Calling-of-St-Matthew-2068cdb551fc.jpg" alt="카라바조, 《성 마태오의 소명》"></div>
-  <div class="movement-work-body">
-    <span class="mini-label"><a class="art-atlas-artist-link" href="../../index.html?artist=artist-1786371252483" target="_blank" rel="noopener" data-artist-id="artist-1786371252483" data-uh-original="Michelangelo Merisi da Caravaggio" data-uh-korean="미켈란젤로 메리시 다 카라바조" data-uh-display-korean="카라바조" title="미켈란젤로 메리시 다 카라바조 연표로 이동">카라바조</a></span>
-    <h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-1786371252483" target="_blank" rel="noopener" data-artist-id="artist-1786371252483" data-uh-original="Michelangelo Merisi da Caravaggio" data-uh-korean="미켈란젤로 메리시 다 카라바조" data-uh-display-korean="카라바조" title="미켈란젤로 메리시 다 카라바조 연표로 이동">카라바조</a>, 《성 마태오의 소명》</h3>
-    <small>1599–1600 · 로마 산 루이지 데이 프란체지</small>
-    <p>어둠 속 한 줄기 빛이 선택의 순간을 만든다. 바로크적 극장성과 현실주의가 동시에 작동한다.</p>
+  <h3>표에는 나오지만 문서 상단에 도판이 없던 대표작</h3>
+  <p class="enhancement-intro">아래 카드는 앞부분에서 이미 제시한 <a class="art-atlas-artist-link" href="../../index.html?artist=artist-1786371252483" target="_blank" rel="noopener" data-artist-id="artist-1786371252483" data-uh-original="Michelangelo Merisi da Caravaggio" data-uh-korean="미켈란젤로 메리시 다 카라바조" data-uh-display-korean="카라바조" title="미켈란젤로 메리시 다 카라바조 연표로 이동">카라바조</a>, 아르테미시아, <a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q7824" target="_blank" rel="noopener" data-artist-id="artist-Q7824" data-uh-original="Annibale Carracci" data-uh-korean="안니발레 카라치" data-uh-display-korean="안니발레 카라치" title="안니발레 카라치 연표로 이동">안니발레 카라치</a>를 반복하지 않고 바로크가 각 지역에서 어떻게 달라졌는지를 보여준다.</p>
+  <div class="movement-work-grid">
+    <article class="movement-work-card">
+      <div class="movement-work-image"><img src="../thumbnails/artist-url-1786879941678/rubens-descent-antwerp-1612.jpg" alt="루벤스, 십자가에서 내려짐"></div>
+      <div class="movement-work-body"><span class="mini-label"><a class="art-atlas-artist-link" href="../../index.html?artist=artist-url-1786879941678" target="_blank" rel="noopener" data-artist-id="artist-url-1786879941678" data-uh-original="Peter Paul Rubens" data-uh-korean="페테르 파울 루벤스" data-uh-display-korean="루벤스" title="페테르 파울 루벤스 연표로 이동">루벤스</a></span><h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-url-1786879941678" target="_blank" rel="noopener" data-artist-id="artist-url-1786879941678" data-uh-original="Peter Paul Rubens" data-uh-korean="페테르 파울 루벤스" data-uh-display-korean="루벤스" title="페테르 파울 루벤스 연표로 이동">루벤스</a>, 《십자가에서 내려짐》</h3><p class="work-meta">1612-1614, 안트베르펜 성모 대성당</p><p>인물들이 십자가에서 사선으로 쏟아져 내려오며 화면 전체가 하나의 몸짓이 된다. 풍부한 색채와 육체적 무게, 집단적 감정이 플랑드르 바로크의 핵심을 압축한다.</p></div>
+    </article>
+    <article class="movement-work-card">
+      <div class="movement-work-image"><img src="../thumbnails/artist-rembrandt/rijksmuseum-SK-C-5.jpg" alt="렘브란트, 야경"></div>
+      <div class="movement-work-body"><span class="mini-label">렘브란트</span><h3>렘브란트, 《야경》</h3><p class="work-meta">1642, 암스테르담 국립미술관</p><p>집단 초상을 행진 직전의 사건처럼 만들었다. 빛은 인물을 단순히 밝히는 장치가 아니라 시민 공동체의 활력과 심리적 긴장을 조직하는 힘으로 작동한다.</p></div>
+    </article>
+    <article class="movement-work-card">
+      <div class="movement-work-image"><img src="../thumbnails/artist-Q41264/wikidata-Q185372.jpg" alt="베르메르, 진주 귀걸이를 한 소녀"></div>
+      <div class="movement-work-body"><span class="mini-label">베르메르</span><h3>베르메르, 《진주 귀걸이를 한 소녀》</h3><p class="work-meta">1665년경, 마우리츠하위스</p><p>거대한 사건은 없지만, 어둠 속에서 얼굴과 진주가 떠오르는 순간이 강한 집중을 만든다. 네덜란드 바로크가 일상의 고요함 속에서도 빛의 드라마를 만들 수 있음을 보여준다.</p></div>
+    </article>
+    <article class="movement-work-card">
+      <div class="movement-work-image"><img src="images/Bernini-Ecstasy-Saint-Teresa.jpg" alt="베르니니, 성 테레사의 황홀경"></div>
+      <div class="movement-work-body"><span class="mini-label">베르니니</span><h3>베르니니, 《성 테레사의 황홀경》</h3><p class="work-meta">1647-1652, 산타 마리아 델라 비토리아, 로마</p><p>조각, 건축, 숨은 창의 빛, 관람석 같은 측면 장치가 합쳐져 성인의 환시를 실제 무대처럼 경험하게 한다. 바로크가 매체의 경계를 넘어 관람자를 사건 안으로 끌어들이는 방식을 보여준다.</p></div>
+    </article>
+    <article class="movement-work-card">
+      <div class="movement-work-image"><img src="images/Van-Dyck-Charles-I-at-the-Hunt-WGA07382.jpg" alt="반 다이크, 사냥 중인 찰스 1세"></div>
+      <div class="movement-work-body"><span class="mini-label">안토니 반 다이크</span><h3>반 다이크, 《사냥 중인 찰스 1세》</h3><p class="work-meta">1635년경, 루브르</p><p><a class="art-atlas-artist-link" href="../../index.html?artist=artist-url-1786879941678" target="_blank" rel="noopener" data-artist-id="artist-url-1786879941678" data-uh-original="Peter Paul Rubens" data-uh-korean="페테르 파울 루벤스" data-uh-display-korean="루벤스" title="페테르 파울 루벤스 연표로 이동">루벤스</a>의 육체적 에너지와 달리 반 다이크는 길고 우아한 자세, 느슨한 귀족적 태도, 세련된 의상을 통해 권위를 부드럽게 연출했다. 플랑드르 바로크가 궁정 초상의 국제 양식으로 퍼진 사례다.</p></div>
+    </article>
+    <article class="movement-work-card">
+      <div class="movement-work-image"><img src="images/Frans-Hals-Laughing-Cavalier.jpg" alt="프란스 할스, 웃는 기사"></div>
+      <div class="movement-work-body"><span class="mini-label">프란스 할스</span><h3>프란스 할스, 《웃는 기사》</h3><p class="work-meta">1624, 월리스 컬렉션</p><p>빠르고 열린 붓질, 순간적으로 살아나는 표정, 화려한 소매의 질감이 네덜란드 시민 초상의 생동감을 만든다. 할스의 바로크성은 극적인 사건보다 사람의 사회적 활력과 눈앞의 현존감에 있다.</p></div>
+    </article>
+    <article class="movement-work-card">
+      <div class="movement-work-image"><img src="images/Velazquez-Las-Meninas.jpg" alt="벨라스케스, 시녀들"></div>
+      <div class="movement-work-body"><span class="mini-label">디에고 벨라스케스</span><h3>벨라스케스, 《시녀들》</h3><p class="work-meta">1656, 프라도 미술관</p><p>궁정 초상, 작업실, 거울 속 왕과 왕비, 관람자의 위치가 한 화면에서 뒤섞인다. 스페인 바로크가 단순한 사실 묘사를 넘어 시선과 권력의 구조까지 회화의 주제로 삼았음을 보여준다.</p></div>
+    </article>
+    <article class="movement-work-card">
+      <div class="movement-work-image"><img src="images/Zurbaran-Saint-Serapion.jpg" alt="수르바란, 성 세라피온"></div>
+      <div class="movement-work-body"><span class="mini-label">프란시스코 데 수르바란</span><h3>수르바란, 《성 세라피온》</h3><p class="work-meta">1628, 워즈워스 애서니엄</p><p>흰 수도복의 무게와 침묵이 화면을 지배한다. 카라바조적 명암을 받아들이되 폭발적 행동보다 순교 직후의 정적과 물질감으로 스페인 수도원 바로크의 엄숙함을 드러낸다.</p></div>
+    </article>
+    <article class="movement-work-card">
+      <div class="movement-work-image"><img src="images/Murillo-The-Young-Beggar-WGA16348.jpg" alt="무리요, 어린 거지"></div>
+      <div class="movement-work-body"><span class="mini-label">바르톨로메 에스테반 무리요</span><h3>무리요, 《어린 거지》</h3><p class="work-meta">1645-1650년경, 루브르</p><p>세비야의 거리 현실을 부드러운 빛과 온화한 정서로 바라본다. 무리요는 스페인 바로크의 종교적 감수성을 일상적 빈곤과 인간적 연민의 장면으로 확장했다.</p></div>
+    </article>
+    <article class="movement-work-card">
+      <div class="movement-work-image"><img src="images/Poussin-Et-in-Arcadia-Ego-WGA18305.jpg" alt="니콜라 푸생, 아르카디아에도 나는 있다"></div>
+      <div class="movement-work-body"><span class="mini-label">니콜라 푸생</span><h3>푸생, 《아르카디아에도 나는 있다》</h3><p class="work-meta">1637-1638년경, 루브르</p><p>감정의 폭발을 절제하고 인물의 위치, 제스처, 고전적 풍경을 엄격하게 배열한다. 프랑스 바로크가 격정보다 이성적 구성과 도덕적 사유를 중시한 방향을 대표한다.</p></div>
+    </article>
+    <article class="movement-work-card">
+      <div class="movement-work-image"><img src="images/Claude-Lorrain-Embarkation-Queen-of-Sheba-WGA05002.jpg" alt="클로드 로랭, 시바 여왕의 승선이 있는 항구"></div>
+      <div class="movement-work-body"><span class="mini-label">클로드 로랭</span><h3>클로드 로랭, 《시바 여왕의 승선이 있는 항구》</h3><p class="work-meta">1648, 내셔널 갤러리, 런던</p><p>주제는 성서 이야기지만 화면의 주인공은 새벽빛과 고전적 항구 공간이다. 클로드는 바로크의 극적 빛을 격렬한 명암이 아니라 이상적 풍경의 질서와 원경으로 바꾸었다.</p></div>
+    </article>
+    <article class="movement-work-card">
+      <div class="movement-work-image"><img src="images/Le-Brun-Chancellor-Seguier-WGA12547.jpg" alt="샤를 르 브룅, 세귀에 재상"></div>
+      <div class="movement-work-body"><span class="mini-label">샤를 르 브룅</span><h3>르 브룅, 《세귀에 재상》</h3><p class="work-meta">1660-1661년경, 루브르</p><p>프랑스 바로크의 에너지는 궁정 의례와 국가적 위계로 정리된다. 말, 수행원, 의상, 행렬의 질서가 개인 초상을 왕권 주변의 공식 이미지로 확장한다.</p></div>
+    </article>
   </div>
-</article>
-      <article class="movement-work-card">
-  <div class="movement-work-image"><img src="images/The-20Triumph-20of-20Bacchus-20and-20Ariadne-20-20Annibale-20Carracci-fd287b491bf5.jpg" alt="안니발레 카라치, 《바쿠스와 아리아드네의 승리》"></div>
-  <div class="movement-work-body">
-    <span class="mini-label"><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q7824" target="_blank" rel="noopener" data-artist-id="artist-Q7824" data-uh-original="Annibale Carracci" data-uh-korean="안니발레 카라치" data-uh-display-korean="안니발레 카라치" title="안니발레 카라치 연표로 이동">안니발레 카라치</a></span>
-    <h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q7824" target="_blank" rel="noopener" data-artist-id="artist-Q7824" data-uh-original="Annibale Carracci" data-uh-korean="안니발레 카라치" data-uh-display-korean="안니발레 카라치" title="안니발레 카라치 연표로 이동">안니발레 카라치</a>, 《바쿠스와 아리아드네의 승리》</h3>
-    <small>1597–1600년대 초 · 파르네세 궁전</small>
-    <p>격렬한 운동을 고전적 구도 안에 정리해 “질서 있는 에너지”라는 또 다른 바로크를 보여준다.</p>
-  </div>
-</article>
-      <article class="movement-work-card">
-  <div class="movement-work-image"><img src="images/Artemisia-Gentileschi-Judith-Beheading-Holofernes-WGA8563-822bc56fc2a3.jpg" alt="아르테미시아 젠틸레스키, 《홀로페르네스의 목을 베는 유디트》"></div>
-  <div class="movement-work-body">
-    <span class="mini-label">아르테미시아 젠틸레스키</span>
-    <h3>아르테미시아 젠틸레스키, 《홀로페르네스의 목을 베는 유디트》</h3>
-    <small>약 1612–1613 · 카포디몬테</small>
-    <p>카라바조주의의 강한 명암을 여성 주체의 힘과 물리적 긴장으로 재해석한다.</p>
-  </div>
-</article>
-      <article class="movement-work-card">
-  <div class="movement-work-image"><img src="../thumbnails/artist-rembrandt/met-437394.jpg" alt="렘브란트, 《호메로스 흉상을 든 아리스토텔레스》"></div>
-  <div class="movement-work-body">
-    <span class="mini-label">렘브란트</span>
-    <h3>렘브란트, 《호메로스 흉상을 든 아리스토텔레스》</h3>
-    <small>1653 · 메트로폴리탄 미술관</small>
-    <p>네덜란드 바로크는 외적 폭발보다 빛 속에서 드러나는 내면과 역사적 성찰을 중시했다.</p>
-  </div>
-</article>
-    </div>
-  </div>
-</div>
-<script>
-(() => {
-  const sourceImages = [...document.querySelectorAll('main section:not(.movement-enhancement) img')];
-  document.querySelectorAll('.movement-enhancement img[data-art-atlas-reuse-image]').forEach(img => {
-    const source = sourceImages[Number(img.dataset.artAtlasReuseImage)];
-    if (source) img.src = source.getAttribute('src') || '';
-  });
-})();
-</script>
 </section>
 <!-- art-atlas-enhancement:end -->
 

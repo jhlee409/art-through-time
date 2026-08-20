@@ -119,6 +119,9 @@ li{margin:.4rem 0}
 
 
 
+
+
+
 <header class="hero">
 
 
@@ -445,90 +448,81 @@ li{margin:.4rem 0}
 </div></section>
 
 <!-- art-atlas-enhancement:start -->
-
-<style id="art-atlas-movement-enhancement-style">
-.movement-enhancement{padding:58px 0;border-bottom:1px solid var(--line,#2a3037)}
-.movement-enhancement .enhancement-intro{font-size:1.07rem;color:var(--muted,#aeb6bf);max-width:1040px}
-.movement-enhancement .enhancement-panel{border:1px solid var(--line,#2a3037);border-radius:14px;background:rgba(18,22,27,.86);padding:22px;margin:22px 0}
-.movement-enhancement .enhancement-panel h3{margin:.05rem 0 .6rem;font-size:1.18rem}
-.movement-enhancement .enhancement-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.movement-enhancement .movement-work-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:22px}
-.movement-enhancement .movement-work-card{border:1px solid var(--line,#2a3037);border-radius:14px;overflow:hidden;background:linear-gradient(180deg,var(--panel2,#181d23),var(--panel,#12161b));box-shadow:0 12px 28px rgba(0,0,0,.18)}
-.movement-enhancement .movement-work-image{background:#07090b;display:flex;align-items:center;justify-content:center;min-height:260px}
+<style>
+.movement-enhancement{margin:38px auto 0;padding:26px;border:1px solid var(--line,#2a3037);background:linear-gradient(180deg,var(--panel2,#181d23),var(--panel,#12161b));border-radius:18px;box-shadow:0 18px 45px rgba(0,0,0,.24);color:var(--text,#f2efe9)}
+.movement-enhancement h2{margin:0 0 14px;font-size:clamp(1.55rem,2.2vw,2.15rem);color:#f1d18b}
+.movement-enhancement h3{margin:0 0 10px;font-size:1.05rem;color:#f2efe9}
+.movement-enhancement p{line-height:1.82;color:#cfd6dd}
+.movement-enhancement ul{margin:0;padding-left:1.15rem}
+.movement-enhancement li{margin:.45rem 0;line-height:1.72;color:#cfd6dd}
+.movement-enhancement .enhancement-intro{margin:0 0 20px;color:#d6dce2}
+.movement-enhancement .enhancement-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:20px 0 26px}
+.movement-enhancement .enhancement-panel{padding:18px;border:1px solid var(--line,#2a3037);border-radius:12px;background:rgba(10,12,15,.48);color:#cfd6dd}
+.movement-enhancement .movement-work-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:16px}
+.movement-enhancement .movement-work-card{overflow:hidden;border:1px solid var(--line,#2a3037);border-radius:12px;background:linear-gradient(180deg,var(--panel2,#181d23),var(--panel,#12161b));box-shadow:0 12px 28px rgba(0,0,0,.22)}
+.movement-enhancement .movement-work-image{background:#090b0d;display:flex;align-items:center;justify-content:center;min-height:260px}
 .movement-enhancement .movement-work-image img{display:block;width:100%;height:320px;object-fit:contain}
-.movement-enhancement .movement-work-body{padding:16px 18px 18px}
-.movement-enhancement .movement-work-body h3{font-size:1.05rem;margin:.3rem 0 .2rem}
-.movement-enhancement .movement-work-body small{display:block;color:var(--muted,#aeb6bf);margin-bottom:.7rem}
-.movement-enhancement .movement-work-body p{margin:.5rem 0 0;color:#cfd6dd;line-height:1.62}
-.movement-enhancement .mini-label{display:inline-block;border:1px solid rgba(216,170,75,.35);background:rgba(216,170,75,.08);color:#f0cf87;border-radius:999px;padding:3px 8px;font-size:.74rem;font-weight:800}
-@media(max-width:900px){.movement-enhancement .enhancement-grid,.movement-enhancement .movement-work-grid{grid-template-columns:1fr}.movement-enhancement .movement-work-image img{height:auto;max-height:420px}}
+.movement-enhancement .movement-work-body{padding:16px;color:#cfd6dd}
+.movement-enhancement .mini-label{display:inline-flex;margin-bottom:8px;padding:4px 8px;border-radius:999px;background:rgba(216,170,75,.14);border:1px solid #544323;color:#f0ce83;font-size:.82rem;font-weight:700}
+.movement-enhancement .work-meta{margin:.2rem 0 .8rem;color:#9aa5af;font-size:.93rem}
+@media(max-width:900px){.movement-enhancement{padding:18px}.movement-enhancement .enhancement-grid,.movement-enhancement .movement-work-grid{grid-template-columns:1fr}.movement-enhancement .movement-work-image img{height:auto;max-height:420px}}
 </style>
-<section class="movement-enhancement" id="movement-deepening">
-<div class="wrap">
-  <h2>심화 보강 — 신고전주의의 국제 전개</h2>
-  <p class="enhancement-intro">신고전주의는 고대 양식의 복고가 아니라 혁명기 시민성, 도덕적 결단, 이성적 구도, 고고학적 관심이 결합한 근대적 고전주의였다.</p>
+<section class="movement-enhancement">
+  <h2>심화 보강 - 지역 전개와 대표작으로 보는 신고전주의</h2>
+  <p class="enhancement-intro">신고전주의는 로코코의 사적 취향에 대한 반작용이면서, 고고학 발굴, 계몽주의, 시민 윤리, 혁명 정치가 결합한 국제 양식이다. 고대 그리스와 로마를 단순히 모방한 것이 아니라, 직선적 구도와 절제된 색, 명확한 윤곽으로 새로운 공적 도덕과 국가 이미지를 만들었다.</p>
   <div class="enhancement-grid">
     <div class="enhancement-panel">
       <h3>따로 HTML로 나누지 않은 내부 화파</h3>
-      <ul><li>다비드와 프랑스 혁명 계열: 명확한 윤곽, 조각 같은 인체, 시민적 의무를 역사화의 중심에 놓았다.</li><li>로마 국제 신고전주의: 고대 유적 발굴과 그랜드 투어를 통해 유럽 각국 화가들이 로마에서 공통 언어를 배웠다.</li><li>영국·미국·러시아 아카데미 계열: 고전적 초상·역사화·공공기념 이미지가 국가 형성과 교육 제도에 결합했다.</li></ul>
+      <ul>
+        <li>프랑스 혁명기 신고전주의는 다비드를 중심으로 시민적 덕목, 희생, 법, 공화국의 이미지를 만들었다. 고대 로마의 이야기와 현대 정치 사건은 같은 화면 언어로 번역되었고, 그림은 사적인 장식보다 공적 설득의 매체가 되었다.</li>
+        <li>제국 양식은 나폴레옹 시대의 신고전주의다. 로마 황제의 도상, 독수리, 월계관, 붉은 벨벳, 대칭 구도가 정치 권력을 시각화했고, 앵그르는 이 질서를 초상화의 표면과 선으로 극단적으로 정제했다.</li>
+        <li>로마 국제 신고전주의는 유럽 예술가들이 고대 유적과 발굴품을 직접 보며 학습한 현장이다. 빙켈만의 고전미 이론, 그랜드 투어, 로마 아카데미 네트워크가 합쳐져 회화와 조각 모두에 절제와 명료성을 요구했다.</li>
+        <li>조각에서는 카노바가 핵심이다. 흰 대리석, 매끄러운 표면, 감정의 절제, 고대 신화의 선택은 신고전주의가 회화에만 머문 사조가 아니라 신체와 공간의 이상을 다시 세운 운동임을 보여준다.</li>
+        <li>여성 화가의 위치도 중요하다. <a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q213163" target="_blank" rel="noopener" data-artist-id="artist-Q213163" data-uh-original="Élisabeth Louise Vigée Le Brun" data-uh-korean="엘리자베스 루이 비제 르 브룅" data-uh-display-korean="비제 르 브룅" title="엘리자베스 루이 비제 르 브룅 연표로 이동">비제 르 브룅</a>와 앙겔리카 카우프만은 초상과 역사화에서 고전적 절제와 감정의 품위를 결합했고, 남성 영웅 중심 서사 바깥의 신고전주의를 보여준다.</li>
+      </ul>
     </div>
     <div class="enhancement-panel">
       <h3>국가별 발전 방식</h3>
-      <ul><li>프랑스에서는 혁명과 나폴레옹 시대를 지나 시민적 덕목과 국가 선전의 양식이 되었다.</li><li>영국과 미국에서는 공화주의·초상화·건축에서 절제된 고대 어휘가 권위와 교양을 뜻했다.</li><li>러시아에서는 상트페테르부르크의 제국 아카데미와 궁정 건축을 통해 유럽식 고전주의가 제국의 언어가 되었다.</li></ul>
+      <ul>
+        <li>프랑스에서는 혁명과 제국이 신고전주의의 속도를 결정했다. 다비드의 엄격한 구도는 공화국의 희생 윤리를, 앵그르의 제국 초상은 나폴레옹 권력의 의례와 위계를 시각화했다.</li>
+        <li>이탈리아와 로마는 신고전주의의 현장 학습실이었다. 폼페이와 헤르쿨라네움 발굴, 고대 조각 수집, 아카데미 교육은 "고대적인 것"을 유럽 공통의 미술 언어로 만들었다.</li>
+        <li>영국에서는 고고학, 건축, 초상, 역사화가 신고전주의를 받아들였다. 로열 아카데미와 그랜드 투어 문화는 고대의 권위를 교양 있는 상류층의 정체성과 연결했다.</li>
+        <li>독일권에서는 신고전주의가 철학과 미학의 언어로 발전했다. 고대 그리스의 단순함과 고귀함은 정치 선전보다 교육, 도덕, 미적 이상을 논하는 기준이 되었다.</li>
+      </ul>
     </div>
   </div>
-  <div class="enhancement-panel">
-    <h3>대표 화가와 대표작으로 확인하기</h3>
-    <p class="enhancement-intro">본문에 이름이 등장하는 주요 화가는 아래처럼 대표작 한 점과 함께 읽어야 한다. 작품은 해당 사조의 핵심 특징을 실제 화면에서 확인하도록 고른 것이다.</p>
-    <div class="movement-work-grid">
-      <article class="movement-work-card">
-  <div class="movement-work-image"><img src="images/David-Oath-of-the-Horatii-1784-d473275ac167.jpg" alt="자크루이 다비드, 《호라티우스 형제의 맹세》"></div>
-  <div class="movement-work-body">
-    <span class="mini-label">자크루이 다비드</span>
-    <h3>자크루이 다비드, 《호라티우스 형제의 맹세》</h3>
-    <small>1784 · 루브르</small>
-    <p>직선적 구도와 조각 같은 인체가 사적 감정보다 시민적 의무를 앞세운다.</p>
+  <h3>표에는 나오지만 문서 상단에 도판이 없던 대표작</h3>
+  <p class="enhancement-intro">아래 카드는 앞부분에서 이미 보여준 다비드의 세 작품과 프라고나르를 반복하지 않고, 신고전주의가 제국 초상, 여성 초상, 조각, 국제 역사화로 확장되는 방식을 보여준다.</p>
+  <div class="movement-work-grid">
+    <article class="movement-work-card">
+      <div class="movement-work-image"><img src="../thumbnails/artist-Q213163/wikidata-Q23037740.jpg" alt="비제 르 브룅, 자화상"></div>
+      <div class="movement-work-body"><span class="mini-label"><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q213163" target="_blank" rel="noopener" data-artist-id="artist-Q213163" data-uh-original="Élisabeth Louise Vigée Le Brun" data-uh-korean="엘리자베스 루이 비제 르 브룅" data-uh-display-korean="비제 르 브룅" title="엘리자베스 루이 비제 르 브룅 연표로 이동">비제 르 브룅</a></span><h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q213163" target="_blank" rel="noopener" data-artist-id="artist-Q213163" data-uh-original="Élisabeth Louise Vigée Le Brun" data-uh-korean="엘리자베스 루이 비제 르 브룅" data-uh-display-korean="비제 르 브룅" title="엘리자베스 루이 비제 르 브룅 연표로 이동">비제 르 브룅</a>, 《자화상》</h3><p class="work-meta">1790년경, 우피치 미술관</p><p>부드러운 표정과 자연스러운 몸짓 속에서도 윤곽과 자세가 명료하다. 로코코 궁정 초상의 우아함이 신고전주의의 절제와 결합하는 과도기를 보여준다.</p></div>
+    </article>
+    <article class="movement-work-card">
+      <div class="movement-work-image"><img src="images/Ingres-Napoleon-on-Imperial-Throne.jpg" alt="앵그르, 황제의 옥좌에 앉은 나폴레옹"></div>
+      <div class="movement-work-body"><span class="mini-label">앵그르</span><h3>앵그르, 《황제의 옥좌에 앉은 나폴레옹》</h3><p class="work-meta">1806, 파리 군사박물관</p><p>인물은 현실의 정치가라기보다 로마 황제와 성상화가 합쳐진 권위의 기호처럼 보인다. 정면성, 대칭, 선명한 장식은 신고전주의가 제국 권력을 어떻게 시각화했는지 보여준다.</p></div>
+    </article>
+    <article class="movement-work-card">
+      <div class="movement-work-image"><img src="images/Canova-Psyche-Revived-by-Cupids-Kiss.jpg" alt="카노바, 큐피드의 키스로 되살아난 프시케"></div>
+      <div class="movement-work-body"><span class="mini-label">안토니오 카노바</span><h3>카노바, 《큐피드의 키스로 되살아난 프시케》</h3><p class="work-meta">1793, 루브르</p><p>감정적인 순간을 다루지만 표면은 차갑고 매끄럽게 절제되어 있다. 인물의 교차 곡선은 고전적 균형과 감각적 생명력을 동시에 품은 신고전주의 조각의 특징을 보여준다.</p></div>
+    </article>
+    <article class="movement-work-card">
+      <div class="movement-work-image"><img src="images/Kauffman-Cornelia-Mother-of-the-Gracchi.jpg" alt="앙겔리카 카우프만, 그라쿠스 형제의 어머니 코르넬리아"></div>
+      <div class="movement-work-body"><span class="mini-label">앙겔리카 카우프만</span><h3>카우프만, 《그라쿠스 형제의 어머니 코르넬리아》</h3><p class="work-meta">1788, 바르샤바 왕궁</p><p>화려한 보석 대신 자녀를 덕의 상징으로 내세우는 장면이다. 고대 로마의 모범, 도덕적 선택, 차분한 구도가 신고전주의 역사화의 교육적 성격을 잘 보여준다.</p></div>
+    </article>
+    <article class="movement-work-card">
+      <div class="movement-work-image"><img src="images/Reynolds-Mrs-Siddons-as-Tragic-Muse.jpg" alt="조슈아 레이놀즈, 비극의 뮤즈로 분장한 세라 시던스"></div>
+      <div class="movement-work-body"><span class="mini-label">조슈아 레이놀즈</span><h3>레이놀즈, 《비극의 뮤즈로 분장한 세라 시던스》</h3><p class="work-meta">1783-1784년경, 헌팅턴 도서관</p><p>초상화를 단순한 닮음보다 고전적 알레고리와 역사화의 품격으로 끌어올린다. 영국 신고전주의가 로열 아카데미의 그랜드 매너를 통해 교양과 사회적 권위를 표현한 방식이다.</p></div>
+    </article>
+    <article class="movement-work-card">
+      <div class="movement-work-image"><img src="images/Mengs-Parnassus.jpg" alt="안톤 라파엘 멩스, 파르나소스"></div>
+      <div class="movement-work-body"><span class="mini-label">안톤 라파엘 멩스</span><h3>멩스, 《파르나소스》</h3><p class="work-meta">1761년 이후, 에르미타주 미술관</p><p>라파엘로적 균형과 고대 신화의 절제된 인물 배치를 결합했다. 멩스는 빙켈만의 고전미 이론을 회화로 옮기며 독일어권 신고전주의의 규범적 방향을 세웠다.</p></div>
+    </article>
+    <article class="movement-work-card">
+      <div class="movement-work-image"><img src="images/Benjamin-West-Death-of-General-Wolfe.jpg" alt="벤저민 웨스트, 울프 장군의 죽음"></div>
+      <div class="movement-work-body"><span class="mini-label">벤저민 웨스트</span><h3>웨스트, 《울프 장군의 죽음》</h3><p class="work-meta">1770, 캐나다 국립미술관 판본</p><p>고대 영웅이 아니라 당대 군복을 입은 현대 인물을 역사화의 주인공으로 세웠다. 미국 출신 화가가 영국에서 신고전주의 역사화의 형식을 현대 정치와 제국의 기억에 적용한 사례다.</p></div>
+    </article>
   </div>
-</article>
-      <article class="movement-work-card">
-  <div class="movement-work-image"><img src="images/David-The-Death-of-Socrates-ebacbfdd4138.jpg" alt="자크루이 다비드, 《소크라테스의 죽음》"></div>
-  <div class="movement-work-body">
-    <span class="mini-label">자크루이 다비드</span>
-    <h3>자크루이 다비드, 《소크라테스의 죽음》</h3>
-    <small>1787 · 메트로폴리탄 미술관</small>
-    <p>고대 철학자의 죽음을 혁명 전야의 도덕적 결단 이미지로 바꾼다.</p>
-  </div>
-</article>
-      <article class="movement-work-card">
-  <div class="movement-work-image"><img src="images/Death-of-Marat-by-David-a6625a3ca21b.jpg" alt="자크루이 다비드, 《마라의 죽음》"></div>
-  <div class="movement-work-body">
-    <span class="mini-label">자크루이 다비드</span>
-    <h3>자크루이 다비드, 《마라의 죽음》</h3>
-    <small>1793 · 벨기에 왕립미술관</small>
-    <p>동시대 정치 사건을 고대 순교자처럼 단순하고 장엄한 화면으로 조직한다.</p>
-  </div>
-</article>
-      <article class="movement-work-card">
-  <div class="movement-work-image"><img src="../thumbnails/artist-Q213163/wikidata-Q23037740.jpg" alt="비제 르 브룅, 《자화상》"></div>
-  <div class="movement-work-body">
-    <span class="mini-label"><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q213163" target="_blank" rel="noopener" data-artist-id="artist-Q213163" data-uh-original="Élisabeth Louise Vigée Le Brun" data-uh-korean="엘리자베스 루이 비제 르 브룅" data-uh-display-korean="비제 르 브룅" title="엘리자베스 루이 비제 르 브룅 연표로 이동">비제 르 브룅</a></span>
-    <h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q213163" target="_blank" rel="noopener" data-artist-id="artist-Q213163" data-uh-original="Élisabeth Louise Vigée Le Brun" data-uh-korean="엘리자베스 루이 비제 르 브룅" data-uh-display-korean="비제 르 브룅" title="엘리자베스 루이 비제 르 브룅 연표로 이동">비제 르 브룅</a>, 《자화상》</h3>
-    <small>1770년대 · 개인·궁정 초상 전통</small>
-    <p>궁정 초상화에서도 고전적 절제와 우아한 자기표현이 결합되며 신고전주의의 사회적 범위를 넓힌다.</p>
-  </div>
-</article>
-    </div>
-  </div>
-</div>
-<script>
-(() => {
-  const sourceImages = [...document.querySelectorAll('main section:not(.movement-enhancement) img')];
-  document.querySelectorAll('.movement-enhancement img[data-art-atlas-reuse-image]').forEach(img => {
-    const source = sourceImages[Number(img.dataset.artAtlasReuseImage)];
-    if (source) img.src = source.getAttribute('src') || '';
-  });
-})();
-</script>
 </section>
 <!-- art-atlas-enhancement:end -->
 
