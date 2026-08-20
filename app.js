@@ -821,78 +821,6 @@ function primaryMovement(artist) {
   (artist.works || []).forEach(work => { const movement = artworkMovement(work,artist); if (movement) counts.set(movement, (counts.get(movement) || 0) + 1); });
   return [...counts.entries()].sort((a,b) => b[1] - a[1])[0]?.[0] || artworkMovement(null,artist) || '';
 }
-function artistInterpretiveIntro(artist, movementLabel='') {
-  const stored = loc(artist?.profile?.interpretation) || loc(artist?.profile?.summary) || loc(artist?.interpretation) || loc(artist?.summary);
-  if (stored) return stored;
-  const movement = String(movementLabel || primaryMovement(artist) || '').toLocaleLowerCase();
-  const name = artistDisplayName(artist);
-  const examples = (artist.works || []).filter(work => work.representative).slice(0,3).map(work => loc(work.title)).filter(Boolean);
-  const worksPhrase = examples.length
-    ? (language === 'ko' ? ` 대표작으로는 ${examples.join(', ')} 등이 있습니다.` : ` Key works include ${examples.join(', ')}.`)
-    : '';
-  const movementGuides = [
-    {
-      test:/베네치아|venetian/,
-      ko:`${name}는 선명한 윤곽보다 색채와 빛, 질감이 감정을 움직이는 방식을 중시했습니다. 피렌체식 선 중심의 르네상스와 달리 화면 전체의 색조와 붓질로 인물의 육체성, 관능, 드라마를 표현하려 했고, 후대에는 베네치아 회화가 바로크와 근대 색채 회화로 이어지는 중요한 전환점으로 평가됩니다.`,
-      en:`${name} gave unusual weight to color, light, texture, and the emotional force of paint rather than to contour alone. Later artists valued this approach as a decisive Venetian route from Renaissance harmony toward Baroque drama and modern color painting.`
-    },
-    {
-      test:/르네상스|renaissance/,
-      ko:`${name}는 중세적 상징에 머무르기보다 인간의 몸, 공간, 감정을 더 현실적이고 조화롭게 보이게 하려 했습니다. 후대에는 고전적 균형과 자연 관찰을 결합해 서양 회화의 기준을 넓힌 화가로 평가됩니다.`,
-      en:`${name} moved beyond medieval symbolism toward a more convincing image of the body, space, and human feeling. Later viewers have valued this work for expanding the classical and observational language of Western painting.`
-    },
-    {
-      test:/매너리즘|mannerism/,
-      ko:`${name}는 르네상스의 안정된 균형을 그대로 따르기보다 길어진 인체, 긴장된 구도, 비현실적 색채로 불안과 영적 강도를 표현하려 했습니다. 후대에는 고전적 조화 이후에 등장한 의식적 왜곡과 표현성의 가능성을 보여준 화가로 평가됩니다.`,
-      en:`${name} pushed beyond Renaissance balance through elongated bodies, tense composition, and heightened color. Later criticism has seen this as a deliberate expansion of expressive possibility after classical harmony.`
-    },
-    {
-      test:/바로크|baroque/,
-      ko:`${name}는 안정된 이상미보다 빛과 어둠의 충돌, 순간적인 동작, 강한 감정으로 사건이 눈앞에서 벌어지는 듯한 효과를 추구했습니다. 후대에는 회화를 관람자의 현실 감각 속으로 끌어낸 극적 표현의 핵심 화가로 평가됩니다.`,
-      en:`${name} favored dramatic light, movement, and emotional immediacy over static ideal beauty. Later viewers have valued this work for making painted events feel physically and psychologically present.`
-    },
-    {
-      test:/로코코|rococo/,
-      ko:`${name}는 장중한 역사화의 무게보다 우아한 색채, 사적인 감정, 유희적 분위기를 통해 귀족 사회의 감각을 표현하려 했습니다. 후대에는 가벼움 속에서도 섬세한 색채와 사회적 분위기를 포착한 화가로 평가됩니다.`,
-      en:`${name} emphasized elegant color, private feeling, and playful atmosphere rather than monumental historical gravity. Later viewers have valued this art for capturing social mood through refinement and lightness.`
-    },
-    {
-      test:/신고전|neoclassicism|neo-classicism/,
-      ko:`${name}는 장식적 감각보다 고대의 질서, 명확한 윤곽, 도덕적 긴장을 통해 시대의 이상을 표현하려 했습니다. 후대에는 미술을 개인 취향을 넘어 역사와 시민적 가치의 언어로 돌려놓은 화가로 평가됩니다.`,
-      en:`${name} sought ancient order, clear contour, and moral tension rather than decorative pleasure. Later criticism has valued this work for reconnecting painting with history and civic ideals.`
-    },
-    {
-      test:/낭만|romantic/,
-      ko:`${name}는 이성적 질서보다 자연, 기억, 두려움, 숭고함 같은 내면의 경험을 표현하려 했습니다. 후대에는 근대적 주체의 감정과 고독을 회화의 중심 주제로 끌어올린 화가로 평가됩니다.`,
-      en:`${name} placed inner experience—nature, memory, fear, solitude, and the sublime—above rational order. Later viewers have valued this work for making modern subjectivity a central theme of painting.`
-    },
-    {
-      test:/사실주의|realism/,
-      ko:`${name}는 신화나 이상화된 인물보다 당대의 현실, 노동, 사회적 긴장을 있는 그대로 보이게 하려 했습니다. 후대에는 회화가 현실을 비판적으로 바라보는 힘을 가질 수 있음을 보여준 화가로 평가됩니다.`,
-      en:`${name} turned away from myth and idealization toward contemporary life, labor, and social tension. Later criticism has valued this work for giving painting a sharper critical relation to reality.`
-    },
-    {
-      test:/인상주의|impressionism/,
-      ko:`${name}는 사물의 고정된 형태보다 빛, 색, 공기의 순간적 인상을 포착하려 했습니다. 후대에는 보는 행위 자체를 회화의 주제로 만든 근대 회화의 중요한 전환점으로 평가됩니다.`,
-      en:`${name} pursued the fleeting impression of light, color, and atmosphere rather than fixed form. Later viewers have valued this as a major step toward making perception itself the subject of painting.`
-    },
-    {
-      test:/후기인상|post-impression/,
-      ko:`${name}는 인상주의의 순간적 시각 경험을 넘어 색채, 구조, 감정, 상징을 더 주관적으로 밀어붙이려 했습니다. 후대에는 20세기 현대미술로 이어지는 결정적 다리로 평가됩니다.`,
-      en:`${name} pushed beyond Impressionist perception toward more subjective color, structure, emotion, and symbol. Later criticism has valued this work as a bridge toward twentieth-century modern art.`
-    },
-    {
-      test:/입체|cubism/,
-      ko:`${name}는 한 시점에서 본 자연스러운 재현을 깨고, 대상을 여러 시점과 구조로 다시 조립하려 했습니다. 후대에는 회화가 현실을 모방하는 방식 자체를 근본적으로 바꾼 화가로 평가됩니다.`,
-      en:`${name} broke single-point naturalism by rebuilding objects through multiple viewpoints and structures. Later viewers have valued this as a fundamental change in how painting could represent reality.`
-    }
-  ];
-  const guide = movementGuides.find(item => item.test.test(movement));
-  if (guide) return (language === 'ko' ? guide.ko : guide.en) + worksPhrase;
-  return language === 'ko'
-    ? `${name}는 자신이 속한 시대의 관습을 바탕으로 하면서도, 화면 안에서 무엇을 더 강하게 보이게 할 수 있는지를 실험했습니다. 후대의 평가는 주로 그가 기존 화풍을 어떻게 바꾸었는지, 그리고 이후 화가들에게 어떤 시각적 가능성을 열었는지에 집중됩니다.${worksPhrase}`
-    : `${name} worked within inherited conventions while testing what painting could make more vivid. Later evaluations usually focus on how this artist altered existing style and opened visual possibilities for later painters.${worksPhrase}`;
-}
 function representativeWorksForArtist(artist, sourceWorks=artist?.works || []) {
   const visibleKeys = new Set((sourceWorks || []).map(selectionKey).filter(Boolean));
   const selected = selectArtistWorks(artist?.works || [], 60, artist);
@@ -902,18 +830,6 @@ function representativeWorksForArtist(artist, sourceWorks=artist?.works || []) {
     .slice(0,3)
     .map(work => (artist.works || []).find(item => selectionKey(item) === selectionKey(work)) || work)
     .filter(work => work && (!visibleKeys.size || visibleKeys.has(selectionKey(work)) || work.image || work.thumbnail));
-}
-function representativeWorksMarkup(artist, sourceWorks) {
-  const representatives = representativeWorksForArtist(artist, sourceWorks);
-  if (!representatives.length) return '';
-  const label = language === 'ko' ? '대표작 3점' : 'Three representative works';
-  const pending = language === 'ko' ? '이미지 확보 중' : 'Finding image';
-  return `<div class="artist-representative-works" aria-label="${esc(label)}">${representatives.map(work => {
-    const image = artworkPreviewImage(work);
-    const title = loc(work.title) || t('untitled');
-    const year = workYearLabel(work);
-    return `<button class="artist-representative-card${image ? '' : ' image-pending'}" type="button" data-work="${esc(work.id)}">${image ? `<span class="artist-representative-thumb"><img src="${esc(image)}" alt="${esc(title)}" loading="lazy"></span>` : `<span class="artist-representative-thumb artist-representative-empty">${esc(pending)}</span>`}<span class="artist-representative-caption"><strong>${esc(title)}</strong>${year ? `<small>${esc(year)}</small>` : ''}</span></button>`;
-  }).join('')}</div>`;
 }
 function compactMovementName(value='') { return String(value).normalize('NFKC').toLocaleLowerCase().replace(/[^0-9a-z가-힣]+/g,''); }
 function movementDocumentKey(label='') {
@@ -1076,12 +992,8 @@ function renderTimeline() {
     ? `${timelineArtistNameMarkup}${originalName && originalName !== koreanName ? ` <a class="original-artist-name" data-uh-ignore="true" href="https://en.wikipedia.org/w/index.php?search=${encodeURIComponent(originalName)}" data-artist-wiki="${esc(artist.qid || '')}">${esc(originalName)}</a>` : ''}${linkControls}`
     : `${esc(loc(artist.name))}${linkControls}`;
   const slideshowHelp = language === 'ko' ? '전체 화면 슬라이드 쇼 시작 · 5초마다 다음 작품' : 'Start fullscreen slideshow · next artwork every 5 seconds';
-  const artistIntro = artistInterpretiveIntro(artist, artistMovement);
-  const artistIntroLabel = language === 'ko' ? '화풍과 평가' : 'Style and legacy';
-  const representativeMarkup = representativeWorksMarkup(artist, works);
-  timeline.innerHTML = `<p class="eyebrow">${t('timeline')}</p><div class="timeline-title-row"><h1 class="timeline-title">${displayName}</h1><div class="timeline-title-actions"><button class="start-slideshow" type="button" aria-label="${esc(slideshowHelp)}" title="${esc(slideshowHelp)}" data-tooltip="${esc(slideshowHelp)}"><span>▶</span><span>${esc(t('slideshow'))}</span></button>${currentUserIsAdmin ? `<button class="add-artwork-button" type="button" title="${esc(t('addArtwork'))}" aria-label="${esc(t('addArtwork'))}"><span>+</span><span>${esc(t('addArtwork'))}</span></button>` : ''}</div></div>${currentUserIsAdmin ? `<form class="artist-link-entry hidden"><input type="url" inputmode="url" placeholder="https://" aria-label="${esc(linkInputLabel)}" required><button type="submit">${esc(confirmLinkLabel)}</button></form>` : ''}<p class="life">${years(artist)}${nationalityLabel ? ` · ${esc(nationalityLabel)}` : ''}${artistMovement ? ` · ${artistMovementLabel}` : ''}</p><section class="artist-interpretation"><h2>${esc(artistIntroLabel)}</h2><p>${esc(artistIntro)}</p>${representativeMarkup}</section><div class="timeline">${works.length ? [...worksByYear.entries()].map(([year, group]) => `<div class="timeline-row"><span class="year">${year}</span><span class="node"></span><div class="artworks-at-year">${group.map(card).join('')}</div></div>`).join('') : `<p class="empty-timeline">${t('noWork')}</p>`}</div>`;
+  timeline.innerHTML = `<p class="eyebrow">${t('timeline')}</p><div class="timeline-title-row"><h1 class="timeline-title">${displayName}</h1><div class="timeline-title-actions"><button class="start-slideshow" type="button" aria-label="${esc(slideshowHelp)}" title="${esc(slideshowHelp)}" data-tooltip="${esc(slideshowHelp)}"><span>▶</span><span>${esc(t('slideshow'))}</span></button>${currentUserIsAdmin ? `<button class="add-artwork-button" type="button" title="${esc(t('addArtwork'))}" aria-label="${esc(t('addArtwork'))}"><span>+</span><span>${esc(t('addArtwork'))}</span></button>` : ''}</div></div>${currentUserIsAdmin ? `<form class="artist-link-entry hidden"><input type="url" inputmode="url" placeholder="https://" aria-label="${esc(linkInputLabel)}" required><button type="submit">${esc(confirmLinkLabel)}</button></form>` : ''}<p class="life">${years(artist)}${nationalityLabel ? ` · ${esc(nationalityLabel)}` : ''}${artistMovement ? ` · ${artistMovementLabel}` : ''}</p><div class="timeline">${works.length ? [...worksByYear.entries()].map(([year, group]) => `<div class="timeline-row"><span class="year">${year}</span><span class="node"></span><div class="artworks-at-year">${group.map(card).join('')}</div></div>`).join('') : `<p class="empty-timeline">${t('noWork')}</p>`}</div>`;
   timeline.querySelectorAll('.art-card').forEach(button => button.onclick = () => openArtworkDetail(artist.works.find(w => w.id === button.dataset.work), artist));
-  timeline.querySelectorAll('.artist-representative-card').forEach(button => button.onclick = () => openArtworkDetail(artist.works.find(w => w.id === button.dataset.work), artist));
   timeline.querySelector('.add-artwork-button')?.addEventListener('click', () => openAddArtworkDialog(artist));
   timeline.querySelector('.start-slideshow').onclick = () => startSlideshow(artist, works);
   timeline.querySelector('.artist-movement-link')?.addEventListener('click', () => openMovementDocumentInDetail(artistMovementDocument, artistMovement));
