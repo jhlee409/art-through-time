@@ -36,7 +36,62 @@ const manualUHangulByOriginal = {
   carllarsson: ({displayKorean, korean}) => displayKorean || korean || '라르손, 칼',
   // In standard Spanish, the initial v of Velázquez is /b/ rather than the
   // English /v/, and both z letters are /θ/ in the Castilian pronunciation.
-  diegovelazquez: () => '벨라[THㅡ]케[THㅡ]'
+  diegovelazquez: ({displayKorean, korean}) => String(displayKorean || korean || '벨라스케스').replace(/벨라스케스/g, '벨라[THㅡ]케[THㅡ]')
+};
+
+const manualAliasesByOriginal = {
+  leonardodavinci: {
+    ko: ['레오나르도', '다 빈치', '다빈치', '빈치'],
+    en: ['Leonardo', 'da Vinci']
+  },
+  michelangelobuonarroti: {
+    ko: ['미켈란젤로', '부오나로티'],
+    en: ['Michelangelo']
+  },
+  raffaellosanziodaurbino: {
+    ko: ['라파엘로', '라파엘', '산치오', '라파엘로 산치오'],
+    en: ['Raphael', 'Raffaello', 'Raffaello Sanzio']
+  },
+  tizianovecellio: {
+    ko: ['티치아노', '티치아노 베첼리오', '베첼리오'],
+    en: ['Titian', 'Tiziano']
+  },
+  titian: {
+    ko: ['티치아노 베첼리오', '베첼리오'],
+    en: ['Tiziano Vecellio', 'Tiziano']
+  },
+  jmwturner: {
+    ko: ['터너', '조지프 말로드 윌리엄 터너'],
+    en: ['Turner', 'JMW Turner', 'Joseph Mallord William Turner']
+  },
+  vincentvangogh: {
+    ko: ['반 고흐', '고흐'],
+    en: ['Van Gogh', 'Gogh']
+  },
+  pieterbruegeltheelder: {
+    ko: ['브뤼헐', '피터르 브뤼헐'],
+    en: ['Bruegel', 'Pieter Bruegel']
+  },
+  lucascranachtheelder: {
+    ko: ['크라나흐', '루카스 크라나흐'],
+    en: ['Cranach', 'Lucas Cranach']
+  },
+  hansholbeintheyounger: {
+    ko: ['홀바인', '한스 홀바인'],
+    en: ['Holbein', 'Hans Holbein']
+  },
+  henridetoulouselautrec: {
+    ko: ['툴루즈로트레크', '로트레크', '앙리 드 툴루즈로트레크'],
+    en: ['Toulouse-Lautrec', 'Lautrec']
+  },
+  caspardavidfriedrich: {
+    ko: ['프리드리히'],
+    en: ['Friedrich']
+  },
+  jeanaugustedominiqueingres: {
+    ko: ['앵그르'],
+    en: ['Ingres']
+  }
 };
 
 const koreanArtistDisplayOverrides = {
@@ -75,6 +130,75 @@ function slug(value) {
 }
 function normalizeText(value) {
   return String(value || '').toLowerCase().replace(/[^a-z0-9가-힣]/g, '');
+}
+
+function uniqueAliases(values, canonicalValues = []) {
+  const canonical = new Set(canonicalValues.map(normalizeText).filter(Boolean));
+  const seen = new Set();
+  const aliases = [];
+  for (const value of values) {
+    const text = String(value || '').trim().replace(/\s+/g, ' ');
+    const key = normalizeText(text);
+    if (!text || text.length < 2 || !key || canonical.has(key) || seen.has(key)) continue;
+    seen.add(key);
+    aliases.push(text);
+  }
+  return aliases;
+}
+
+function nameWithoutSuffix(words) {
+  const source = [...words];
+  while (source.length >= 2 && /^the$/i.test(source[source.length - 2]) && /^(elder|younger)$/i.test(source[source.length - 1])) source.splice(source.length - 2, 2);
+  return source;
+}
+
+function englishNameAliases(original) {
+  const source = String(original || '').trim();
+  const words = source.match(/[A-Za-zÀ-ÖØ-öø-ÿ'’.-]+/g) || [];
+  const compactWords = nameWithoutSuffix(words);
+  const familyPrefixes = new Set(['van', 'von', 'de', 'del', 'della', 'da', 'di', 'du', 'la', 'le', 'der', 'den', 'ten', 'ter', 'st.', 'saint']);
+  const aliases = [];
+  if (source.normalize('NFD').replace(/[\u0300-\u036f]/g, '') !== source) aliases.push(source.normalize('NFD').replace(/[\u0300-\u036f]/g, ''));
+  if (compactWords.length > 1) {
+    let start = compactWords.length - 1;
+    while (start > 0 && familyPrefixes.has(compactWords[start - 1].toLowerCase())) start--;
+    aliases.push(compactWords.slice(start).join(' '));
+    aliases.push(compactWords[compactWords.length - 1]);
+  }
+  if (/\bthe\s+(Elder|Younger)\b/i.test(source)) aliases.push(source.replace(/\s+the\s+(Elder|Younger)\b/i, ''));
+  return aliases;
+}
+
+function koreanNameAliases(korean, displayKorean) {
+  const aliases = [];
+  for (const value of [korean, displayKorean]) {
+    const source = String(value || '').trim();
+    if (!source) continue;
+    if (source.includes(',')) {
+      const [family, given] = source.split(',').map(part => part.trim()).filter(Boolean);
+      if (family) aliases.push(family);
+      if (family && given) aliases.push(`${given} ${family}`);
+      continue;
+    }
+    const words = source.replace(/,/g, ' ').split(/\s+/).filter(Boolean);
+    if (words.length > 1) {
+      const particles = new Set(['반', '판', '폰', '데', '드', '델', '다', '디', '더', '르', '라', '레', '테르']);
+      let start = words.length - 1;
+      while (start > 0 && particles.has(words[start - 1])) start--;
+      aliases.push(words.slice(start).join(' '));
+      aliases.push(words[words.length - 1]);
+    }
+  }
+  return aliases;
+}
+
+function aliasesForName(original, korean, displayKorean) {
+  const originalKey = normalizeText(latinKey(original));
+  const manual = manualAliasesByOriginal[originalKey] || {};
+  return {
+    ko: uniqueAliases([...koreanNameAliases(korean, displayKorean), ...(manual.ko || [])], [korean, displayKorean]),
+    en: uniqueAliases([...englishNameAliases(original), ...(manual.en || [])], [original])
+  };
 }
 
 function targetCues(original) {
@@ -197,6 +321,7 @@ function createNameRecord({id, original, korean, displayKorean}={}) {
     original,
     korean,
     displayKorean: shown,
+    aliases: aliasesForName(original, korean || shown, shown),
     uhangul: manual ? manual({original, korean, displayKorean: shown}) : displayNotation(korean || shown, canonicalNotation, shown),
     note: 'auto-generated from original and Korean artist names'
   };
@@ -227,4 +352,4 @@ if (require.main === module) {
   console.log(JSON.stringify({records: records.length, file: path.relative(root, mapFile).replace(/\\/g, '/')}, null, 2));
 }
 
-module.exports = {buildArtistMap, writeArtistMap, createNameRecord};
+module.exports = {buildArtistMap, writeArtistMap, createNameRecord, aliasesForName};

@@ -31,6 +31,16 @@ function urls(...values) {
   return [...new Set(flattened.map(value => String(value || '').trim()).filter(value => /^https?:\/\//i.test(value)))];
 }
 
+function textList(value) {
+  return [...new Set((Array.isArray(value) ? value : []).map(item => String(item || '').trim().replace(/\s+/g, ' ')).filter(Boolean))];
+}
+
+function localizedTextList(value) {
+  if (Array.isArray(value)) return {ko:textList(value), en:[]};
+  const object = asObject(value);
+  return {ko:textList(object.ko), en:textList(object.en)};
+}
+
 function localAsset(value) {
   const text = String(value || '');
   return LOCAL_ASSET_PREFIX.test(text) ? text : '';
@@ -92,6 +102,7 @@ function normalizeArtist(artist, options) {
   const normalized = {
     ...value,
     name: localized(value.name),
+    aliases: localizedTextList(value.aliases),
     nationality: localized(value.nationality),
     metadata: recordMetadata(value, timestamp(sourceDate, options.now), options.actor, options.touch, options.now)
   };

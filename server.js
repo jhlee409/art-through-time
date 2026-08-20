@@ -941,7 +941,10 @@ function movementArtistAliasOverrides(artist) {
   return aliases[qid] || [];
 }
 function movementArtistAliases(artist) {
-  const aliases=[artist?.name?.ko,artist?.name?.en,...movementArtistAliasOverrides(artist)];
+  const recordAliases = Array.isArray(artist?.aliases)
+    ? artist.aliases
+    : [...(Array.isArray(artist?.aliases?.ko) ? artist.aliases.ko : []), ...(Array.isArray(artist?.aliases?.en) ? artist.aliases.en : [])];
+  const aliases=[artist?.name?.ko,artist?.name?.en,...recordAliases,...movementArtistAliasOverrides(artist)];
   return [...new Set(aliases.map(compactArtistName).filter(name=>name.length >= 2))];
 }
 async function movementArtistLinkEntries() {

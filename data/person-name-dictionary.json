@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-20T12:40:37.396Z",
+  "generatedAt": "2026-08-20T13:32:15.198Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -8,6 +8,14 @@
       "original": "Adolph Menzel",
       "korean": "아돌프 멘첼",
       "displayKorean": "아돌프 멘첼",
+      "aliases": {
+        "ko": [
+          "멘첼"
+        ],
+        "en": [
+          "Menzel"
+        ]
+      },
       "uhangul": "아돌[Fㅡ] 멘첼",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -21,6 +29,14 @@
       "original": "Adriaen Brouwer",
       "korean": "아드리안 브라우어",
       "displayKorean": "아드리안 브라우어",
+      "aliases": {
+        "ko": [
+          "브라우어"
+        ],
+        "en": [
+          "Brouwer"
+        ]
+      },
       "uhangul": "아드[Rㅣ]안 브[Rㅏ]우어",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -34,6 +50,14 @@
       "original": "Agnes Martin",
       "korean": "애그니스 마틴",
       "displayKorean": "애그니스 마틴",
+      "aliases": {
+        "ko": [
+          "마틴"
+        ],
+        "en": [
+          "Martin"
+        ]
+      },
       "uhangul": "애그니스 마틴",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -47,6 +71,14 @@
       "original": "Agostino Carracci",
       "korean": "아고스티노 카라치",
       "displayKorean": "아고스티노 카라치",
+      "aliases": {
+        "ko": [
+          "카라치"
+        ],
+        "en": [
+          "Carracci"
+        ]
+      },
       "uhangul": "아고스티노 카[Rㅏ]치",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -60,6 +92,12 @@
       "original": "Ai Weiwei",
       "korean": "아이웨이웨이",
       "displayKorean": "아이웨이웨이",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Weiwei"
+        ]
+      },
       "uhangul": "아이웨이웨이",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -73,13 +111,20 @@
       "original": "Albrecht Altdorfer",
       "korean": "알브레히트 알트도르퍼",
       "displayKorean": "알브레히트 알트도르퍼",
+      "aliases": {
+        "ko": [
+          "알트도르퍼"
+        ],
+        "en": [
+          "Altdorfer"
+        ]
+      },
       "uhangul": "알브레[CHㅣ]트 알트도르[Fㅓ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/미술사조/080336f866ce0c573e6c2b7f-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/080336f866ce0c573e6c2b7f-1.html"
+        "data/미술사조/080336f866ce0c573e6c2b7f-1.html"
       ],
       "status": "verified-pair"
     },
@@ -88,6 +133,15 @@
       "original": "Albrecht Dürer",
       "korean": "알브레히트 뒤러",
       "displayKorean": "알브레히트 뒤러",
+      "aliases": {
+        "ko": [
+          "뒤러"
+        ],
+        "en": [
+          "Albrecht Durer",
+          "Dürer"
+        ]
+      },
       "uhangul": "알브레[CHㅣ]트 뒤[Rㅓ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -101,6 +155,12 @@
       "original": "Alexander Deyneka",
       "korean": "데이네카",
       "displayKorean": "데이네카",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Deyneka"
+        ]
+      },
       "uhangul": "데이네카",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -114,6 +174,12 @@
       "original": "Alexander Gerasimov",
       "korean": "게라시모프",
       "displayKorean": "게라시모프",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Gerasimov"
+        ]
+      },
       "uhangul": "게라시모[Vㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -127,6 +193,14 @@
       "original": "Alexander Rodchenko",
       "korean": "알렉산드르 로드첸코",
       "displayKorean": "알렉산드르 로드첸코",
+      "aliases": {
+        "ko": [
+          "로드첸코"
+        ],
+        "en": [
+          "Rodchenko"
+        ]
+      },
       "uhangul": "알렉산드[Rㅡ] [Rㅗ]드첸코",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -140,6 +214,16 @@
       "original": "Alexej von Jawlensky",
       "korean": "알렉세이 폰 야블렌스키",
       "displayKorean": "알렉세이 폰 야블렌스키",
+      "aliases": {
+        "ko": [
+          "폰 야블렌스키",
+          "야블렌스키"
+        ],
+        "en": [
+          "von Jawlensky",
+          "Jawlensky"
+        ]
+      },
       "uhangul": "알렉세이 [Vㅗㄴ] 야[Vㅡㄹ]렌스키",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -153,6 +237,14 @@
       "original": "Alfred Sisley",
       "korean": "알프레드 시슬레",
       "displayKorean": "알프레드 시슬레",
+      "aliases": {
+        "ko": [
+          "시슬레"
+        ],
+        "en": [
+          "Sisley"
+        ]
+      },
       "uhangul": "알프레드 시슬레",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -166,12 +258,21 @@
       "original": "Alof de Wignacourt",
       "korean": "알로프 드 비냐쿠르",
       "displayKorean": "알로프 드 비냐쿠르",
+      "aliases": {
+        "ko": [
+          "드 비냐쿠르",
+          "비냐쿠르"
+        ],
+        "en": [
+          "de Wignacourt",
+          "Wignacourt"
+        ]
+      },
       "uhangul": "알로[Fㅡ] 드 [Vㅣ]냐쿠[Rㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/artists.json",
-        "delivery/Art_through_Time_Viewer/data/artists.json"
+        "data/artists.json"
       ],
       "status": "verified-pair"
     },
@@ -180,6 +281,14 @@
       "original": "Alphonse Mucha",
       "korean": "알폰스 무하",
       "displayKorean": "알폰스 무하",
+      "aliases": {
+        "ko": [
+          "무하"
+        ],
+        "en": [
+          "Mucha"
+        ]
+      },
       "uhangul": "알[Fㅗㄴ]스 무[CHㅏ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -193,6 +302,14 @@
       "original": "Ambrogio Lorenzetti",
       "korean": "암브로조 로렌체티",
       "displayKorean": "암브로조 로렌체티",
+      "aliases": {
+        "ko": [
+          "로렌체티"
+        ],
+        "en": [
+          "Lorenzetti"
+        ]
+      },
       "uhangul": "암브[Rㅗ]조 로[Rㅔㄴ]체티",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -206,6 +323,14 @@
       "original": "Amedeo Modigliani",
       "korean": "아메데오 모딜리아니",
       "displayKorean": "아메데오 모딜리아니",
+      "aliases": {
+        "ko": [
+          "모딜리아니"
+        ],
+        "en": [
+          "Modigliani"
+        ]
+      },
       "uhangul": "아메데오 모딜리아니",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -219,6 +344,15 @@
       "original": "André Breton",
       "korean": "앙드레 브르통",
       "displayKorean": "앙드레 브르통",
+      "aliases": {
+        "ko": [
+          "브르통"
+        ],
+        "en": [
+          "Andre Breton",
+          "Breton"
+        ]
+      },
       "uhangul": "앙드[Rㅔ] 브[Rㅡ]통",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -232,6 +366,13 @@
       "original": "André Derain",
       "korean": "드랭",
       "displayKorean": "드랭",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Andre Derain",
+          "Derain"
+        ]
+      },
       "uhangul": "드[Rㅐㅇ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -245,6 +386,15 @@
       "original": "André Masson",
       "korean": "앙드레 마송",
       "displayKorean": "앙드레 마송",
+      "aliases": {
+        "ko": [
+          "마송"
+        ],
+        "en": [
+          "Andre Masson",
+          "Masson"
+        ]
+      },
       "uhangul": "앙드[Rㅔ] 마송",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -258,6 +408,16 @@
       "original": "Andrea del Sarto",
       "korean": "안드레아 델 사르토",
       "displayKorean": "안드레아 델 사르토",
+      "aliases": {
+        "ko": [
+          "델 사르토",
+          "사르토"
+        ],
+        "en": [
+          "del Sarto",
+          "Sarto"
+        ]
+      },
       "uhangul": "안드[Rㅔ]아 델 사[Rㅡ]토",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -271,6 +431,16 @@
       "original": "Andrea del Verrocchio",
       "korean": "안드레아 델 베로키오",
       "displayKorean": "안드레아 델 베로키오",
+      "aliases": {
+        "ko": [
+          "델 베로키오",
+          "베로키오"
+        ],
+        "en": [
+          "del Verrocchio",
+          "Verrocchio"
+        ]
+      },
       "uhangul": "안드[Rㅔ]아 델 [Vㅔ][Rㅗ]키오",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -284,11 +454,20 @@
       "original": "Andrea Mantegna",
       "korean": "안드레아 만테냐",
       "displayKorean": "안드레아 만테냐",
+      "aliases": {
+        "ko": [
+          "만테냐"
+        ],
+        "en": [
+          "Mantegna"
+        ]
+      },
       "uhangul": "안드[Rㅔ]아 만테냐",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/techniques.json"
       ],
       "status": "verified-pair"
     },
@@ -297,6 +476,14 @@
       "original": "Angelica Kauffman",
       "korean": "안젤리카 카우프만",
       "displayKorean": "안젤리카 카우프만",
+      "aliases": {
+        "ko": [
+          "카우프만"
+        ],
+        "en": [
+          "Kauffman"
+        ]
+      },
       "uhangul": "안젤리카 카우[Fㅡ]만",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -310,6 +497,14 @@
       "original": "Anish Kapoor",
       "korean": "아니시 카푸어",
       "displayKorean": "아니시 카푸어",
+      "aliases": {
+        "ko": [
+          "카푸어"
+        ],
+        "en": [
+          "Kapoor"
+        ]
+      },
       "uhangul": "아니시 카푸어",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -323,6 +518,16 @@
       "original": "Annibale Carracci",
       "korean": "카라치",
       "displayKorean": "카라치",
+      "aliases": {
+        "ko": [
+          "카라치",
+          "안니발레 카라치"
+        ],
+        "en": [
+          "Carracci",
+          "Annibale Carracci"
+        ]
+      },
       "uhangul": "카라치",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -331,7 +536,7 @@
         "data/artists.json",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/37a05b9246dcdbd89a685d55-1.html"
+        "data/미술사조/de537ba74c4bee89423120bc-1.html"
       ],
       "status": "verified-pair"
     },
@@ -340,6 +545,14 @@
       "original": "Anselm Kiefer",
       "korean": "안젤름 키퍼",
       "displayKorean": "안젤름 키퍼",
+      "aliases": {
+        "ko": [
+          "키퍼"
+        ],
+        "en": [
+          "Kiefer"
+        ]
+      },
       "uhangul": "안젤름 키[Fㅓ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -353,6 +566,16 @@
       "original": "Anthony van Dyck",
       "korean": "안토니 반 다이크",
       "displayKorean": "안토니 반 다이크",
+      "aliases": {
+        "ko": [
+          "반 다이크",
+          "다이크"
+        ],
+        "en": [
+          "van Dyck",
+          "Dyck"
+        ]
+      },
       "uhangul": "안토니 [Vㅏㄴ] 다이크",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -366,6 +589,12 @@
       "original": "Antoine Watteau",
       "korean": "와토",
       "displayKorean": "와토",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Watteau"
+        ]
+      },
       "uhangul": "와토",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -379,6 +608,14 @@
       "original": "Anton Raphael Mengs",
       "korean": "안톤 라파엘 멩스",
       "displayKorean": "안톤 라파엘 멩스",
+      "aliases": {
+        "ko": [
+          "멩스"
+        ],
+        "en": [
+          "Mengs"
+        ]
+      },
       "uhangul": "안톤 [Rㅏ][Fㅏ]엘 멩스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -392,6 +629,16 @@
       "original": "Antonello da Messina",
       "korean": "안토넬로 다 메시나",
       "displayKorean": "안토넬로 다 메시나",
+      "aliases": {
+        "ko": [
+          "다 메시나",
+          "메시나"
+        ],
+        "en": [
+          "da Messina",
+          "Messina"
+        ]
+      },
       "uhangul": "안토넬로 다 메시나",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -405,6 +652,14 @@
       "original": "Antonio Canova",
       "korean": "안토니오 카노바",
       "displayKorean": "안토니오 카노바",
+      "aliases": {
+        "ko": [
+          "카노바"
+        ],
+        "en": [
+          "Canova"
+        ]
+      },
       "uhangul": "안토니오 카노[Vㅏ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -418,6 +673,15 @@
       "original": "Arnold Böcklin",
       "korean": "아르놀트 뵈클린",
       "displayKorean": "아르놀트 뵈클린",
+      "aliases": {
+        "ko": [
+          "뵈클린"
+        ],
+        "en": [
+          "Arnold Bocklin",
+          "Böcklin"
+        ]
+      },
       "uhangul": "아[Rㅡ]놀트 뵈클린",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -431,6 +695,14 @@
       "original": "Arshile Gorky",
       "korean": "아쉴 고키",
       "displayKorean": "아쉴 고키",
+      "aliases": {
+        "ko": [
+          "고키"
+        ],
+        "en": [
+          "Gorky"
+        ]
+      },
       "uhangul": "아쉴 고키",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -444,6 +716,14 @@
       "original": "Artemisia Gentileschi",
       "korean": "아르테미시아 젠틸레스키",
       "displayKorean": "아르테미시아 젠틸레스키",
+      "aliases": {
+        "ko": [
+          "젠틸레스키"
+        ],
+        "en": [
+          "Gentileschi"
+        ]
+      },
       "uhangul": "아[Rㅡ]테미시아 젠틸레스키",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -457,6 +737,14 @@
       "original": "Arthur Streeton",
       "korean": "아서 스트리튼",
       "displayKorean": "아서 스트리튼",
+      "aliases": {
+        "ko": [
+          "스트리튼"
+        ],
+        "en": [
+          "Streeton"
+        ]
+      },
       "uhangul": "아[THㅓ] 스트[Rㅣ]튼",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -470,6 +758,14 @@
       "original": "Asam brothers",
       "korean": "아삼 형제",
       "displayKorean": "아삼 형제",
+      "aliases": {
+        "ko": [
+          "형제"
+        ],
+        "en": [
+          "brothers"
+        ]
+      },
       "uhangul": "아삼 형제",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -483,6 +779,14 @@
       "original": "Aubrey Beardsley",
       "korean": "오브리 비어즐리",
       "displayKorean": "오브리 비어즐리",
+      "aliases": {
+        "ko": [
+          "비어즐리"
+        ],
+        "en": [
+          "Beardsley"
+        ]
+      },
       "uhangul": "오브[Rㅣ] 비어즐[Rㅣ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -496,6 +800,14 @@
       "original": "August Macke",
       "korean": "아우구스트 마케",
       "displayKorean": "아우구스트 마케",
+      "aliases": {
+        "ko": [
+          "마케"
+        ],
+        "en": [
+          "Macke"
+        ]
+      },
       "uhangul": "아우구스트 마케",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -509,6 +821,12 @@
       "original": "Balthasar Neumann",
       "korean": "노이만",
       "displayKorean": "노이만",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Neumann"
+        ]
+      },
       "uhangul": "노이만",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -522,6 +840,10 @@
       "original": "Banksy",
       "korean": "뱅크시",
       "displayKorean": "뱅크시",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "뱅크시",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -535,6 +857,14 @@
       "original": "Barbara Kruger",
       "korean": "바버라 크루거",
       "displayKorean": "바버라 크루거",
+      "aliases": {
+        "ko": [
+          "크루거"
+        ],
+        "en": [
+          "Kruger"
+        ]
+      },
       "uhangul": "바버[Rㅏ] 크[Rㅜ]거",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -548,6 +878,14 @@
       "original": "Bartholomeus Spranger",
       "korean": "바르톨로메우스 슈프랑어",
       "displayKorean": "바르톨로메우스 슈프랑어",
+      "aliases": {
+        "ko": [
+          "슈프랑어"
+        ],
+        "en": [
+          "Spranger"
+        ]
+      },
       "uhangul": "바[Rㅡ][THㅗㄹ]로메우스 슈프[Rㅏㅇ]어",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -561,6 +899,13 @@
       "original": "Bartolomé Esteban Murillo",
       "korean": "무리요",
       "displayKorean": "무리요",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Bartolome Esteban Murillo",
+          "Murillo"
+        ]
+      },
       "uhangul": "무[Rㅣ]요",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -574,6 +919,15 @@
       "original": "Béla Czóbel",
       "korean": "벨러 초벨",
       "displayKorean": "벨러 초벨",
+      "aliases": {
+        "ko": [
+          "초벨"
+        ],
+        "en": [
+          "Bela Czobel",
+          "Czóbel"
+        ]
+      },
       "uhangul": "벨러 초벨",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -587,6 +941,14 @@
       "original": "Benjamin West",
       "korean": "벤저민 웨스트",
       "displayKorean": "벤저민 웨스트",
+      "aliases": {
+        "ko": [
+          "웨스트"
+        ],
+        "en": [
+          "West"
+        ]
+      },
       "uhangul": "벤저민 웨스트",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -600,6 +962,14 @@
       "original": "Bertel Thorvaldsen",
       "korean": "베르텔 토르발센",
       "displayKorean": "베르텔 토르발센",
+      "aliases": {
+        "ko": [
+          "토르발센"
+        ],
+        "en": [
+          "Thorvaldsen"
+        ]
+      },
       "uhangul": "베[Rㅡ]텔 [THㅗ][Rㅡ][Vㅏㄹ]센",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -613,6 +983,12 @@
       "original": "Berthe Morisot",
       "korean": "모리조",
       "displayKorean": "모리조",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Morisot"
+        ]
+      },
       "uhangul": "모[Rㅣ]조",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -626,6 +1002,14 @@
       "original": "Bill Viola",
       "korean": "빌 비올라",
       "displayKorean": "빌 비올라",
+      "aliases": {
+        "ko": [
+          "비올라"
+        ],
+        "en": [
+          "Viola"
+        ]
+      },
       "uhangul": "빌 [Vㅣ]올라",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -639,6 +1023,10 @@
       "original": "Bronzino",
       "korean": "브론치노",
       "displayKorean": "브론치노",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "브[Rㅗㄴ]치노",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -652,6 +1040,14 @@
       "original": "Bruce Nauman",
       "korean": "브루스 나우먼",
       "displayKorean": "브루스 나우먼",
+      "aliases": {
+        "ko": [
+          "나우먼"
+        ],
+        "en": [
+          "Nauman"
+        ]
+      },
       "uhangul": "브[Rㅜ]스 나우먼",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -665,6 +1061,12 @@
       "original": "Cai Guo-Qiang",
       "korean": "차이궈창",
       "displayKorean": "차이궈창",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Guo-Qiang"
+        ]
+      },
       "uhangul": "차이궈창",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -678,12 +1080,19 @@
       "original": "Camille Doncieux",
       "korean": "카미유 동시외",
       "displayKorean": "카미유 동시외",
+      "aliases": {
+        "ko": [
+          "동시외"
+        ],
+        "en": [
+          "Doncieux"
+        ]
+      },
       "uhangul": "카미유 동시외",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/artists.json",
-        "delivery/Art_through_Time_Viewer/data/artists.json"
+        "data/artists.json"
       ],
       "status": "verified-pair"
     },
@@ -692,6 +1101,14 @@
       "original": "Camille Pissarro",
       "korean": "피사로",
       "displayKorean": "피사로",
+      "aliases": {
+        "ko": [
+          "피사로"
+        ],
+        "en": [
+          "Pissarro"
+        ]
+      },
       "uhangul": "피사로",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -706,6 +1123,10 @@
       "original": "Canaletto",
       "korean": "카날레토",
       "displayKorean": "카날레토",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "카날레토",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -719,6 +1140,10 @@
       "original": "Caravaggio",
       "korean": "카라바조",
       "displayKorean": "카라바조",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "카[Rㅏ][Vㅏ]조",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -732,6 +1157,14 @@
       "original": "Carl Andre",
       "korean": "칼 안드레",
       "displayKorean": "칼 안드레",
+      "aliases": {
+        "ko": [
+          "안드레"
+        ],
+        "en": [
+          "Andre"
+        ]
+      },
       "uhangul": "칼 안드[Rㅔ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -745,6 +1178,16 @@
       "original": "Carl Larsson",
       "korean": "칼 라르손",
       "displayKorean": "칼 라르손",
+      "aliases": {
+        "ko": [
+          "라르손",
+          "칼 라르손"
+        ],
+        "en": [
+          "Larsson",
+          "Carl Larsson"
+        ]
+      },
       "uhangul": "칼 라르손",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -758,6 +1201,14 @@
       "original": "Carlo Maratta",
       "korean": "카를로 마라타",
       "displayKorean": "카를로 마라타",
+      "aliases": {
+        "ko": [
+          "마라타"
+        ],
+        "en": [
+          "Maratta"
+        ]
+      },
       "uhangul": "카[Rㅡㄹ]로 마[Rㅏ]타",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -771,6 +1222,16 @@
       "original": "Caspar David Friedrich",
       "korean": "카스파르 다비트 프리드리히",
       "displayKorean": "카스파르 다비트 프리드리히",
+      "aliases": {
+        "ko": [
+          "프리드리히",
+          "카스파 다비드 프리드리히"
+        ],
+        "en": [
+          "Friedrich",
+          "Caspar David Friedrich"
+        ]
+      },
       "uhangul": "카스파[Rㅡ] 다[Vㅣ]트 [Fㅡ][Rㅣ]드[Rㅣ][CHㅣ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -779,7 +1240,8 @@
         "data/artists.json",
         "data/techniques.json",
         "data/미술사조/0930062b29f8f38dd88ee1a5-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
+        "data/미술사조/69d074f0099b13691bf428c4-1.html",
+        "data/미술사조/813ce956e2554f3fba756eaa-1.html"
       ],
       "status": "verified-pair"
     },
@@ -788,12 +1250,19 @@
       "original": "Cecilia Gallerani",
       "korean": "체칠리아 갈레라니",
       "displayKorean": "체칠리아 갈레라니",
+      "aliases": {
+        "ko": [
+          "갈레라니"
+        ],
+        "en": [
+          "Gallerani"
+        ]
+      },
       "uhangul": "체칠리아 갈레라니",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/artists.json",
-        "delivery/Art_through_Time_Viewer/data/artists.json"
+        "data/artists.json"
       ],
       "status": "verified-pair"
     },
@@ -802,6 +1271,15 @@
       "original": "Charles Le Brun",
       "korean": "샤를 르브룅",
       "displayKorean": "샤를 르브룅",
+      "aliases": {
+        "ko": [
+          "르브룅"
+        ],
+        "en": [
+          "Le Brun",
+          "Brun"
+        ]
+      },
       "uhangul": "샤[Rㅡㄹ] 르브룅",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -815,6 +1293,14 @@
       "original": "Childe Hassam",
       "korean": "차일드 해섬",
       "displayKorean": "차일드 해섬",
+      "aliases": {
+        "ko": [
+          "해섬"
+        ],
+        "en": [
+          "Hassam"
+        ]
+      },
       "uhangul": "차일드 해섬",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -828,6 +1314,16 @@
       "original": "Cima da Conegliano",
       "korean": "치마 다 코넬리아노",
       "displayKorean": "치마 다 코넬리아노",
+      "aliases": {
+        "ko": [
+          "다 코넬리아노",
+          "코넬리아노"
+        ],
+        "en": [
+          "da Conegliano",
+          "Conegliano"
+        ]
+      },
       "uhangul": "치마 다 코넬리아노",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -841,6 +1337,10 @@
       "original": "Cimabue",
       "korean": "치마부에",
       "displayKorean": "치마부에",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "치마부에",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -854,6 +1354,14 @@
       "original": "Cindy Sherman",
       "korean": "신디 셔먼",
       "displayKorean": "신디 셔먼",
+      "aliases": {
+        "ko": [
+          "셔먼"
+        ],
+        "en": [
+          "Sherman"
+        ]
+      },
       "uhangul": "신디 셔먼",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -867,6 +1375,14 @@
       "original": "Claude Lorrain",
       "korean": "클로드 로랭",
       "displayKorean": "클로드 로랭",
+      "aliases": {
+        "ko": [
+          "로랭"
+        ],
+        "en": [
+          "Lorrain"
+        ]
+      },
       "uhangul": "클로드 로[Rㅐㅇ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -880,6 +1396,16 @@
       "original": "Claude Monet",
       "korean": "모네",
       "displayKorean": "모네",
+      "aliases": {
+        "ko": [
+          "모네",
+          "클로드 모네"
+        ],
+        "en": [
+          "Monet",
+          "Claude Monet"
+        ]
+      },
       "uhangul": "모네",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -889,10 +1415,7 @@
         "data/techniques.json",
         "data/미술사조/236b5b248aa3129573179c3b-1.html",
         "data/미술사조/81bf5950142af1141dfcf738-1.html",
-        "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/236b5b248aa3129573179c3b-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/81bf5950142af1141dfcf738-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html"
+        "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html"
       ],
       "status": "verified-pair"
     },
@@ -901,6 +1424,10 @@
       "original": "Correggio",
       "korean": "코레조",
       "displayKorean": "코레조",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "코[Rㅔ]조",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -914,6 +1441,14 @@
       "original": "Damien Hirst",
       "korean": "데이미언 허스트",
       "displayKorean": "데이미언 허스트",
+      "aliases": {
+        "ko": [
+          "허스트"
+        ],
+        "en": [
+          "Hirst"
+        ]
+      },
       "uhangul": "데이미언 허스트",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -927,6 +1462,14 @@
       "original": "Dan Flavin",
       "korean": "댄 플래빈",
       "displayKorean": "댄 플래빈",
+      "aliases": {
+        "ko": [
+          "플래빈"
+        ],
+        "en": [
+          "Flavin"
+        ]
+      },
       "uhangul": "댄 [Fㅡㄹ]래[Vㅣㄴ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -940,6 +1483,14 @@
       "original": "Dante Gabriel Rossetti",
       "korean": "단테 가브리엘 로세티",
       "displayKorean": "단테 가브리엘 로세티",
+      "aliases": {
+        "ko": [
+          "로세티"
+        ],
+        "en": [
+          "Rossetti"
+        ]
+      },
       "uhangul": "단테 가브[Rㅣ]엘 [Rㅗ]세티",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -953,6 +1504,14 @@
       "original": "David Alfaro Siqueiros",
       "korean": "다비드 알파로 시케이로스",
       "displayKorean": "다비드 알파로 시케이로스",
+      "aliases": {
+        "ko": [
+          "시케이로스"
+        ],
+        "en": [
+          "Siqueiros"
+        ]
+      },
       "uhangul": "다[Vㅣ]드 알파로 시케이[Rㅗ]스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -966,6 +1525,14 @@
       "original": "David Hammons",
       "korean": "데이비드 해먼스",
       "displayKorean": "데이비드 해먼스",
+      "aliases": {
+        "ko": [
+          "해먼스"
+        ],
+        "en": [
+          "Hammons"
+        ]
+      },
       "uhangul": "데이[Vㅣ]드 해먼스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -979,6 +1546,15 @@
       "original": "David Teniers the Younger",
       "korean": "다비드 테니르스",
       "displayKorean": "다비드 테니르스",
+      "aliases": {
+        "ko": [
+          "테니르스"
+        ],
+        "en": [
+          "Teniers",
+          "David Teniers"
+        ]
+      },
       "uhangul": "다[Vㅣ]드 테니[Rㅡ]스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -992,6 +1568,14 @@
       "original": "Diego Rivera",
       "korean": "디에고 리베라",
       "displayKorean": "디에고 리베라",
+      "aliases": {
+        "ko": [
+          "리베라"
+        ],
+        "en": [
+          "Rivera"
+        ]
+      },
       "uhangul": "디에고 [Rㅣ][Vㅔ][Rㅏ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1005,6 +1589,15 @@
       "original": "Diego Velázquez",
       "korean": "벨라스케스",
       "displayKorean": "벨라스케스",
+      "aliases": {
+        "ko": [
+          "벨라스케스"
+        ],
+        "en": [
+          "Diego Velazquez",
+          "Velázquez"
+        ]
+      },
       "uhangul": "벨라[THㅡ]케[THㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1019,6 +1612,10 @@
       "original": "Domenichino",
       "korean": "도메니키노",
       "displayKorean": "도메니키노",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "도메니키노",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1032,6 +1629,14 @@
       "original": "Domenico Ghirlandaio",
       "korean": "도메니코 기를란다요",
       "displayKorean": "도메니코 기를란다요",
+      "aliases": {
+        "ko": [
+          "기를란다요"
+        ],
+        "en": [
+          "Ghirlandaio"
+        ]
+      },
       "uhangul": "도메니코 기[Rㅡㄹ]란다요",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1045,6 +1650,14 @@
       "original": "Domenico Veneziano",
       "korean": "도메니코 베네치아노",
       "displayKorean": "도메니코 베네치아노",
+      "aliases": {
+        "ko": [
+          "베네치아노"
+        ],
+        "en": [
+          "Veneziano"
+        ]
+      },
       "uhangul": "도메니코 [Vㅔ]네치아노",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1058,6 +1671,14 @@
       "original": "Donald Judd",
       "korean": "도널드 저드",
       "displayKorean": "도널드 저드",
+      "aliases": {
+        "ko": [
+          "저드"
+        ],
+        "en": [
+          "Judd"
+        ]
+      },
       "uhangul": "도널드 저드",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1071,6 +1692,14 @@
       "original": "Dorothea Tanning",
       "korean": "도로시아 태닝",
       "displayKorean": "도로시아 태닝",
+      "aliases": {
+        "ko": [
+          "태닝"
+        ],
+        "en": [
+          "Tanning"
+        ]
+      },
       "uhangul": "도[Rㅗ][THㅣ]아 태닝",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1084,6 +1713,10 @@
       "original": "Duccio",
       "korean": "두초",
       "displayKorean": "두초",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "두초",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1097,6 +1730,12 @@
       "original": "Edgar Degas",
       "korean": "드가",
       "displayKorean": "드가",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Degas"
+        ]
+      },
       "uhangul": "드가",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1110,6 +1749,17 @@
       "original": "Édouard Manet",
       "korean": "마네",
       "displayKorean": "마네",
+      "aliases": {
+        "ko": [
+          "마네",
+          "에두아르 마네"
+        ],
+        "en": [
+          "Edouard Manet",
+          "Manet",
+          "Édouard Manet"
+        ]
+      },
       "uhangul": "마네",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1125,6 +1775,15 @@
       "original": "Édouard Vuillard",
       "korean": "에두아르 뷔야르",
       "displayKorean": "에두아르 뷔야르",
+      "aliases": {
+        "ko": [
+          "뷔야르"
+        ],
+        "en": [
+          "Edouard Vuillard",
+          "Vuillard"
+        ]
+      },
       "uhangul": "에두아[Rㅡ] [Vㅟ]야르",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1138,6 +1797,14 @@
       "original": "Edvard Munch",
       "korean": "에드바르 뭉크",
       "displayKorean": "에드바르 뭉크",
+      "aliases": {
+        "ko": [
+          "뭉크"
+        ],
+        "en": [
+          "Munch"
+        ]
+      },
       "uhangul": "에드[Vㅏ][Rㅡ] 뭉크",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1151,6 +1818,14 @@
       "original": "Edward Wadsworth",
       "korean": "에드워드 워즈워스",
       "displayKorean": "에드워드 워즈워스",
+      "aliases": {
+        "ko": [
+          "워즈워스"
+        ],
+        "en": [
+          "Wadsworth"
+        ]
+      },
       "uhangul": "에드워드 워즈워스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1164,6 +1839,14 @@
       "original": "Egon Schiele",
       "korean": "에곤 실레",
       "displayKorean": "에곤 실레",
+      "aliases": {
+        "ko": [
+          "실레"
+        ],
+        "en": [
+          "Schiele"
+        ]
+      },
       "uhangul": "에곤 실레",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1177,6 +1860,14 @@
       "original": "El Anatsui",
       "korean": "엘 아나추이",
       "displayKorean": "엘 아나추이",
+      "aliases": {
+        "ko": [
+          "아나추이"
+        ],
+        "en": [
+          "Anatsui"
+        ]
+      },
       "uhangul": "엘 아나추이",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1190,6 +1881,16 @@
       "original": "El Greco",
       "korean": "엘 그레코",
       "displayKorean": "엘 그레코",
+      "aliases": {
+        "ko": [
+          "그레코",
+          "엘 그레코"
+        ],
+        "en": [
+          "Greco",
+          "El Greco"
+        ]
+      },
       "uhangul": "엘 그[Rㅔ]코",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1197,7 +1898,6 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "tools/apply-first-batch-movement-enhancements.js"
       ],
       "status": "verified-pair"
@@ -1207,6 +1907,12 @@
       "original": "El Lissitzky",
       "korean": "리시츠키",
       "displayKorean": "리시츠키",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Lissitzky"
+        ]
+      },
       "uhangul": "리시츠키",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1220,12 +1926,27 @@
       "original": "Élisabeth Louise Vigée Le Brun",
       "korean": "엘리자베스 루이 비제 르 브룅",
       "displayKorean": "엘리자베스 루이 비제 르 브룅",
+      "aliases": {
+        "ko": [
+          "르 브룅",
+          "브룅",
+          "비제 르 브룅",
+          "엘리자베스 루이 비제 르 브룅"
+        ],
+        "en": [
+          "Elisabeth Louise Vigee Le Brun",
+          "Le Brun",
+          "Brun",
+          "Élisabeth Louise Vigée Le Brun"
+        ]
+      },
       "uhangul": "엘리자베스 루이 [Vㅣ]제 르 브[Rㅚㅇ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/artists.json",
         "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html",
+        "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
         "tools/apply-first-batch-movement-enhancements.js"
       ],
       "status": "verified-pair"
@@ -1235,6 +1956,14 @@
       "original": "Elisabetta Sirani",
       "korean": "엘리자베타 시라니",
       "displayKorean": "엘리자베타 시라니",
+      "aliases": {
+        "ko": [
+          "시라니"
+        ],
+        "en": [
+          "Sirani"
+        ]
+      },
       "uhangul": "엘리자베타 시[Rㅏ]니",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1248,6 +1977,14 @@
       "original": "Emil Filla",
       "korean": "에밀 필라",
       "displayKorean": "에밀 필라",
+      "aliases": {
+        "ko": [
+          "필라"
+        ],
+        "en": [
+          "Filla"
+        ]
+      },
       "uhangul": "에밀 [Fㅣㄹ]라",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1261,6 +1998,14 @@
       "original": "Emil Nolde",
       "korean": "에밀 놀데",
       "displayKorean": "에밀 놀데",
+      "aliases": {
+        "ko": [
+          "놀데"
+        ],
+        "en": [
+          "Nolde"
+        ]
+      },
       "uhangul": "에밀 놀데",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1274,6 +2019,14 @@
       "original": "Emmy Hennings",
       "korean": "에미 헤닝스",
       "displayKorean": "에미 헤닝스",
+      "aliases": {
+        "ko": [
+          "헤닝스"
+        ],
+        "en": [
+          "Hennings"
+        ]
+      },
       "uhangul": "에미 헤닝스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1287,6 +2040,12 @@
       "original": "Erich Heckel",
       "korean": "헤켈",
       "displayKorean": "헤켈",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Heckel"
+        ]
+      },
       "uhangul": "[CHㅔ]켈",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1300,6 +2059,12 @@
       "original": "Ernst Ludwig Kirchner",
       "korean": "키르히너",
       "displayKorean": "키르히너",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Kirchner"
+        ]
+      },
       "uhangul": "키[Rㅡ]히너",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1313,12 +2078,20 @@
       "original": "Eugène Boudin",
       "korean": "외젠 부댕",
       "displayKorean": "외젠 부댕",
+      "aliases": {
+        "ko": [
+          "부댕"
+        ],
+        "en": [
+          "Eugene Boudin",
+          "Boudin"
+        ]
+      },
       "uhangul": "외젠 부댕",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/profiles/claude-monet.json",
-        "delivery/Art_through_Time_Viewer/data/profiles/claude-monet.json"
+        "data/profiles/claude-monet.json"
       ],
       "status": "verified-pair"
     },
@@ -1327,6 +2100,13 @@
       "original": "Eugène Delacroix",
       "korean": "들라크루아",
       "displayKorean": "들라크루아",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Eugene Delacroix",
+          "Delacroix"
+        ]
+      },
       "uhangul": "들라크[Rㅜ]아",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1340,6 +2120,15 @@
       "original": "Eva Gonzalès",
       "korean": "에바 곤잘레스",
       "displayKorean": "에바 곤잘레스",
+      "aliases": {
+        "ko": [
+          "곤잘레스"
+        ],
+        "en": [
+          "Eva Gonzales",
+          "Gonzalès"
+        ]
+      },
       "uhangul": "에[Vㅏ] 곤[Zㅏㄹ]레스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1353,6 +2142,14 @@
       "original": "Eva Hesse",
       "korean": "에바 헤세",
       "displayKorean": "에바 헤세",
+      "aliases": {
+        "ko": [
+          "헤세"
+        ],
+        "en": [
+          "Hesse"
+        ]
+      },
       "uhangul": "에[Vㅏ] 헤세",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1366,6 +2163,14 @@
       "original": "Faith Ringgold",
       "korean": "페이스 링골드",
       "displayKorean": "페이스 링골드",
+      "aliases": {
+        "ko": [
+          "링골드"
+        ],
+        "en": [
+          "Ringgold"
+        ]
+      },
       "uhangul": "[Fㅔ]이[THㅡ] [Rㅣㅇ]골드",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1379,6 +2184,14 @@
       "original": "Fernand Khnopff",
       "korean": "페르낭 크노프",
       "displayKorean": "페르낭 크노프",
+      "aliases": {
+        "ko": [
+          "크노프"
+        ],
+        "en": [
+          "Khnopff"
+        ]
+      },
       "uhangul": "[Fㅔ][Rㅡ]낭 크노프",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1392,6 +2205,14 @@
       "original": "Fernando Botero",
       "korean": "페르난도 보테로",
       "displayKorean": "페르난도 보테로",
+      "aliases": {
+        "ko": [
+          "보테로"
+        ],
+        "en": [
+          "Botero"
+        ]
+      },
       "uhangul": "[Fㅔ][Rㅡ]난도 보테[Rㅗ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1405,6 +2226,14 @@
       "original": "Filippo Lippi",
       "korean": "필리포 리피",
       "displayKorean": "필리포 리피",
+      "aliases": {
+        "ko": [
+          "리피"
+        ],
+        "en": [
+          "Lippi"
+        ]
+      },
       "uhangul": "[Fㅣㄹ]리포 리피",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1418,6 +2247,14 @@
       "original": "Ford Madox Brown",
       "korean": "포드 매덕스 브라운",
       "displayKorean": "포드 매덕스 브라운",
+      "aliases": {
+        "ko": [
+          "브라운"
+        ],
+        "en": [
+          "Brown"
+        ]
+      },
       "uhangul": "[Fㅗ]드 매덕스 브[Rㅏ]운",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1431,6 +2268,14 @@
       "original": "Fra Angelico",
       "korean": "프라 안젤리코",
       "displayKorean": "프라 안젤리코",
+      "aliases": {
+        "ko": [
+          "안젤리코"
+        ],
+        "en": [
+          "Angelico"
+        ]
+      },
       "uhangul": "[Fㅡ][Rㅏ] 안젤리코",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1444,6 +2289,14 @@
       "original": "Francesco Guardi",
       "korean": "프란체스코 과르디",
       "displayKorean": "프란체스코 과르디",
+      "aliases": {
+        "ko": [
+          "과르디"
+        ],
+        "en": [
+          "Guardi"
+        ]
+      },
       "uhangul": "[Fㅡ][Rㅏㄴ]체스코 과[Rㅡ]디",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1457,6 +2310,12 @@
       "original": "Francesco Primaticcio",
       "korean": "프리마티초",
       "displayKorean": "프리마티초",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Primaticcio"
+        ]
+      },
       "uhangul": "[Fㅡ][Rㅣ]마티초",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1470,6 +2329,14 @@
       "original": "Francesco Primaticcio · Giovanni Battista Mantovano",
       "korean": "프란체스코 프리마티초 · 조반니 바티스타 만토바노",
       "displayKorean": "프란체스코 프리마티초 · 조반니 바티스타 만토바노",
+      "aliases": {
+        "ko": [
+          "만토바노"
+        ],
+        "en": [
+          "Mantovano"
+        ]
+      },
       "uhangul": "[Fㅡ][Rㅏㄴ]체스코 프[Rㅣ]마티초 · 조[Vㅏㄴ]니 바티스타 만토바노",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1483,6 +2350,14 @@
       "original": "Francesco Solimena",
       "korean": "프란체스코 솔리메나",
       "displayKorean": "프란체스코 솔리메나",
+      "aliases": {
+        "ko": [
+          "솔리메나"
+        ],
+        "en": [
+          "Solimena"
+        ]
+      },
       "uhangul": "[Fㅡ][Rㅏㄴ]체스코 솔리메나",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1496,6 +2371,12 @@
       "original": "Francis Picabia",
       "korean": "피카비아",
       "displayKorean": "피카비아",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Picabia"
+        ]
+      },
       "uhangul": "[Fㅣ]카비아",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1509,6 +2390,14 @@
       "original": "Francisco de Zurbarán",
       "korean": "수르바란",
       "displayKorean": "수르바란",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Francisco de Zurbaran",
+          "de Zurbarán",
+          "Zurbarán"
+        ]
+      },
       "uhangul": "수[Rㅡ]바[Rㅏㄴ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1522,6 +2411,14 @@
       "original": "Francisco Goya",
       "korean": "프란시스코 고야",
       "displayKorean": "프란시스코 고야",
+      "aliases": {
+        "ko": [
+          "고야"
+        ],
+        "en": [
+          "Goya"
+        ]
+      },
       "uhangul": "[Fㅡ][Rㅏㄴ]시스코 고야",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1535,6 +2432,14 @@
       "original": "Francisco Ribalta",
       "korean": "프란시스코 리발타",
       "displayKorean": "프란시스코 리발타",
+      "aliases": {
+        "ko": [
+          "리발타"
+        ],
+        "en": [
+          "Ribalta"
+        ]
+      },
       "uhangul": "[Fㅡ][Rㅏㄴ]시스코 [Rㅣ]발타",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1548,6 +2453,13 @@
       "original": "François Boucher",
       "korean": "부셰",
       "displayKorean": "부셰",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Francois Boucher",
+          "Boucher"
+        ]
+      },
       "uhangul": "부셰",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1561,6 +2473,15 @@
       "original": "François Clouet",
       "korean": "프랑수아 클루에",
       "displayKorean": "프랑수아 클루에",
+      "aliases": {
+        "ko": [
+          "클루에"
+        ],
+        "en": [
+          "Francois Clouet",
+          "Clouet"
+        ]
+      },
       "uhangul": "[Fㅡ][Rㅏㅇ]수아 클루에",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1574,6 +2495,14 @@
       "original": "Frank Stella",
       "korean": "프랭크 스텔라",
       "displayKorean": "프랭크 스텔라",
+      "aliases": {
+        "ko": [
+          "스텔라"
+        ],
+        "en": [
+          "Stella"
+        ]
+      },
       "uhangul": "[Fㅡ][Rㅐㅇ]크 스텔라",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1587,6 +2516,14 @@
       "original": "Frans Hals",
       "korean": "프란스 할스",
       "displayKorean": "프란스 할스",
+      "aliases": {
+        "ko": [
+          "할스"
+        ],
+        "en": [
+          "Hals"
+        ]
+      },
       "uhangul": "[Fㅡ][Rㅏㄴ]스 할스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1600,6 +2537,14 @@
       "original": "Frans Snyders",
       "korean": "프란스 스네이더르스",
       "displayKorean": "프란스 스네이더르스",
+      "aliases": {
+        "ko": [
+          "스네이더르스"
+        ],
+        "en": [
+          "Snyders"
+        ]
+      },
       "uhangul": "[Fㅡ][Rㅏㄴ]스 스네이더[Rㅡ]스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1613,6 +2558,14 @@
       "original": "Franz Marc",
       "korean": "프란츠 마르크",
       "displayKorean": "프란츠 마르크",
+      "aliases": {
+        "ko": [
+          "마르크"
+        ],
+        "en": [
+          "Marc"
+        ]
+      },
       "uhangul": "[Fㅡ][Rㅏㄴ]츠 마[Rㅡ]크",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1626,6 +2579,16 @@
       "original": "Franz von Stuck",
       "korean": "프란츠 폰 슈투크",
       "displayKorean": "프란츠 폰 슈투크",
+      "aliases": {
+        "ko": [
+          "폰 슈투크",
+          "슈투크"
+        ],
+        "en": [
+          "von Stuck",
+          "Stuck"
+        ]
+      },
       "uhangul": "[Fㅡ][Rㅏㄴ]츠 [Vㅗㄴ] 슈투크",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1639,6 +2602,15 @@
       "original": "Frédéric Bazille",
       "korean": "프레데리크 바지유",
       "displayKorean": "프레데리크 바지유",
+      "aliases": {
+        "ko": [
+          "바지유"
+        ],
+        "en": [
+          "Frederic Bazille",
+          "Bazille"
+        ]
+      },
       "uhangul": "[Fㅡ][Rㅔ]데[Rㅣ]크 바[Zㅣ]유",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1652,6 +2624,14 @@
       "original": "Frederic Edwin Church",
       "korean": "프레더릭 에드윈 처치",
       "displayKorean": "프레더릭 에드윈 처치",
+      "aliases": {
+        "ko": [
+          "처치"
+        ],
+        "en": [
+          "Church"
+        ]
+      },
       "uhangul": "[Fㅡ][Rㅔ]더[Rㅣㄱ] 에드윈 처치",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1665,6 +2645,14 @@
       "original": "Frederic Leighton",
       "korean": "프레더릭 레이턴",
       "displayKorean": "프레더릭 레이턴",
+      "aliases": {
+        "ko": [
+          "레이턴"
+        ],
+        "en": [
+          "Leighton"
+        ]
+      },
       "uhangul": "[Fㅡ][Rㅔ]더[Rㅣㄱ] 레이턴",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1678,6 +2666,16 @@
       "original": "Frida Kahlo",
       "korean": "칼로",
       "displayKorean": "칼로",
+      "aliases": {
+        "ko": [
+          "칼로",
+          "프리다 칼로"
+        ],
+        "en": [
+          "Kahlo",
+          "Frida Kahlo"
+        ]
+      },
       "uhangul": "칼[Rㅗ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1693,6 +2691,14 @@
       "original": "Gabriel Metsu",
       "korean": "가브리엘 메추",
       "displayKorean": "가브리엘 메추",
+      "aliases": {
+        "ko": [
+          "메추"
+        ],
+        "en": [
+          "Metsu"
+        ]
+      },
       "uhangul": "가브[Rㅣ]엘 메추",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1706,6 +2712,15 @@
       "original": "Gabriele Münter",
       "korean": "가브리엘레 뮌터",
       "displayKorean": "가브리엘레 뮌터",
+      "aliases": {
+        "ko": [
+          "뮌터"
+        ],
+        "en": [
+          "Gabriele Munter",
+          "Münter"
+        ]
+      },
       "uhangul": "가브[Rㅣ]엘레 뮌터",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1719,6 +2734,16 @@
       "original": "Gentile da Fabriano",
       "korean": "젠틸레 다 파브리아노",
       "displayKorean": "젠틸레 다 파브리아노",
+      "aliases": {
+        "ko": [
+          "다 파브리아노",
+          "파브리아노"
+        ],
+        "en": [
+          "da Fabriano",
+          "Fabriano"
+        ]
+      },
       "uhangul": "젠틸레 다 [Fㅏ]브[Rㅣ]아노",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1732,6 +2757,14 @@
       "original": "Georg Baselitz",
       "korean": "게오르크 바젤리츠",
       "displayKorean": "게오르크 바젤리츠",
+      "aliases": {
+        "ko": [
+          "바젤리츠"
+        ],
+        "en": [
+          "Baselitz"
+        ]
+      },
       "uhangul": "게오[Rㅡ]크 바젤리츠",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1745,6 +2778,14 @@
       "original": "George Frederic Watts",
       "korean": "조지 프레더릭 와츠",
       "displayKorean": "조지 프레더릭 와츠",
+      "aliases": {
+        "ko": [
+          "와츠"
+        ],
+        "en": [
+          "Watts"
+        ]
+      },
       "uhangul": "조지 [Fㅡ][Rㅔ]더[Rㅣㄱ] 와츠",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1758,6 +2799,14 @@
       "original": "George Grosz",
       "korean": "그로스",
       "displayKorean": "그로스",
+      "aliases": {
+        "ko": [
+          "그로스"
+        ],
+        "en": [
+          "Grosz"
+        ]
+      },
       "uhangul": "그[Rㅗ]스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1771,6 +2820,14 @@
       "original": "George Stubbs",
       "korean": "조지 스텁스",
       "displayKorean": "조지 스텁스",
+      "aliases": {
+        "ko": [
+          "스텁스"
+        ],
+        "en": [
+          "Stubbs"
+        ]
+      },
       "uhangul": "조지 스텁스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1784,6 +2841,12 @@
       "original": "Georges Braque",
       "korean": "브라크",
       "displayKorean": "브라크",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Braque"
+        ]
+      },
       "uhangul": "브[Rㅏ]크",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1797,6 +2860,16 @@
       "original": "Georges de La Tour",
       "korean": "조르주 드 라 투르",
       "displayKorean": "조르주 드 라 투르",
+      "aliases": {
+        "ko": [
+          "드 라 투르",
+          "투르"
+        ],
+        "en": [
+          "de La Tour",
+          "Tour"
+        ]
+      },
       "uhangul": "조[Rㅡ]주 드 라 투[Rㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1810,6 +2883,14 @@
       "original": "Georges Ribemont-Dessaignes",
       "korean": "조르주 리브몽데세뉴",
       "displayKorean": "조르주 리브몽데세뉴",
+      "aliases": {
+        "ko": [
+          "리브몽데세뉴"
+        ],
+        "en": [
+          "Ribemont-Dessaignes"
+        ]
+      },
       "uhangul": "조[Rㅡ]주 리브몽데세뉴",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1823,6 +2904,14 @@
       "original": "Georges Seurat",
       "korean": "쇠라",
       "displayKorean": "쇠라",
+      "aliases": {
+        "ko": [
+          "쇠라"
+        ],
+        "en": [
+          "Seurat"
+        ]
+      },
       "uhangul": "쇠[Rㅏ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1837,6 +2926,16 @@
       "original": "Gerard ter Borch",
       "korean": "헤라르트 테르 보르흐",
       "displayKorean": "헤라르트 테르 보르흐",
+      "aliases": {
+        "ko": [
+          "테르 보르흐",
+          "보르흐"
+        ],
+        "en": [
+          "ter Borch",
+          "Borch"
+        ]
+      },
       "uhangul": "헤[Rㅏ][Rㅡ]트 테[Rㅡ] 보[Rㅡ][CHㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1850,6 +2949,14 @@
       "original": "Gerhard Richter",
       "korean": "게르하르트 리히터",
       "displayKorean": "게르하르트 리히터",
+      "aliases": {
+        "ko": [
+          "리히터"
+        ],
+        "en": [
+          "Richter"
+        ]
+      },
       "uhangul": "게[Rㅡ]하[Rㅡ]트 [Rㅣ][CHㅣ]터",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1863,6 +2970,12 @@
       "original": "Giacomo Balla",
       "korean": "발라",
       "displayKorean": "발라",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Balla"
+        ]
+      },
       "uhangul": "발라",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1876,6 +2989,12 @@
       "original": "Giambattista Tiepolo",
       "korean": "티에폴로",
       "displayKorean": "티에폴로",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Tiepolo"
+        ]
+      },
       "uhangul": "티에폴로",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1889,6 +3008,12 @@
       "original": "Gian Lorenzo Bernini",
       "korean": "베르니니",
       "displayKorean": "베르니니",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Bernini"
+        ]
+      },
       "uhangul": "베르니니",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1902,6 +3027,14 @@
       "original": "Gilbert Stuart",
       "korean": "길버트 스튜어트",
       "displayKorean": "길버트 스튜어트",
+      "aliases": {
+        "ko": [
+          "스튜어트"
+        ],
+        "en": [
+          "Stuart"
+        ]
+      },
       "uhangul": "길버트 스튜어트",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1915,6 +3048,12 @@
       "original": "Gino Severini",
       "korean": "세베리니",
       "displayKorean": "세베리니",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Severini"
+        ]
+      },
       "uhangul": "세베리니",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1928,6 +3067,16 @@
       "original": "Giorgio de Chirico",
       "korean": "조르조 데 키리코",
       "displayKorean": "조르조 데 키리코",
+      "aliases": {
+        "ko": [
+          "데 키리코",
+          "키리코"
+        ],
+        "en": [
+          "de Chirico",
+          "Chirico"
+        ]
+      },
       "uhangul": "조[Rㅡ]조 데 키[Rㅣ]코",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1941,6 +3090,14 @@
       "original": "Giorgio Morandi",
       "korean": "조르조 모란디",
       "displayKorean": "조르조 모란디",
+      "aliases": {
+        "ko": [
+          "모란디"
+        ],
+        "en": [
+          "Morandi"
+        ]
+      },
       "uhangul": "조[Rㅡ]조 모[Rㅏㄴ]디",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1954,6 +3111,14 @@
       "original": "Giorgione",
       "korean": "조르조네",
       "displayKorean": "조르조네",
+      "aliases": {
+        "ko": [
+          "조르조네"
+        ],
+        "en": [
+          "Giorgione"
+        ]
+      },
       "uhangul": "조[Rㅡ]조네",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1972,6 +3137,16 @@
       "original": "Giotto di Bondone",
       "korean": "조토 디 본도네",
       "displayKorean": "조토 디 본도네",
+      "aliases": {
+        "ko": [
+          "디 본도네",
+          "본도네"
+        ],
+        "en": [
+          "di Bondone",
+          "Bondone"
+        ]
+      },
       "uhangul": "조토 디 본도네",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1985,6 +3160,14 @@
       "original": "Giovanni Battista Gaulli",
       "korean": "조반니 바티스타 가울리",
       "displayKorean": "조반니 바티스타 가울리",
+      "aliases": {
+        "ko": [
+          "가울리"
+        ],
+        "en": [
+          "Gaulli"
+        ]
+      },
       "uhangul": "조[Vㅏㄴ]니 바티스타 가울리",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -1998,6 +3181,14 @@
       "original": "Giovanni Battista Piazzetta",
       "korean": "조반니 바티스타 피아체타",
       "displayKorean": "조반니 바티스타 피아체타",
+      "aliases": {
+        "ko": [
+          "피아체타"
+        ],
+        "en": [
+          "Piazzetta"
+        ]
+      },
       "uhangul": "조[Vㅏㄴ]니 바티스타 피아체타",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2011,6 +3202,16 @@
       "original": "Giovanni Bellini",
       "korean": "조반니 벨리니",
       "displayKorean": "조반니 벨리니",
+      "aliases": {
+        "ko": [
+          "벨리니",
+          "조반니 벨리니"
+        ],
+        "en": [
+          "Bellini",
+          "Giovanni Bellini"
+        ]
+      },
       "uhangul": "조[Vㅏㄴ]니 벨리니",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2029,6 +3230,14 @@
       "original": "Giovanni Lanfranco",
       "korean": "조반니 란프랑코",
       "displayKorean": "조반니 란프랑코",
+      "aliases": {
+        "ko": [
+          "란프랑코"
+        ],
+        "en": [
+          "Lanfranco"
+        ]
+      },
       "uhangul": "조[Vㅏㄴ]니 란[Fㅡ][Rㅏㅇ]코",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2042,6 +3251,14 @@
       "original": "Giuseppe Arcimboldo",
       "korean": "주세페 아르침볼도",
       "displayKorean": "주세페 아르침볼도",
+      "aliases": {
+        "ko": [
+          "아르침볼도"
+        ],
+        "en": [
+          "Arcimboldo"
+        ]
+      },
       "uhangul": "주세페 아[Rㅡ]침볼도",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2055,6 +3272,14 @@
       "original": "Guercino · Agostino Tassi",
       "korean": "구에르치노 · 아고스티노 타시",
       "displayKorean": "구에르치노 · 아고스티노 타시",
+      "aliases": {
+        "ko": [
+          "타시"
+        ],
+        "en": [
+          "Tassi"
+        ]
+      },
       "uhangul": "구에[Rㅡ]치노 · 아고스티노 타시",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2068,6 +3293,14 @@
       "original": "Guido Reni",
       "korean": "귀도 레니",
       "displayKorean": "귀도 레니",
+      "aliases": {
+        "ko": [
+          "레니"
+        ],
+        "en": [
+          "Reni"
+        ]
+      },
       "uhangul": "귀도 [Rㅔ]니",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2081,6 +3314,14 @@
       "original": "Gustav Klimt",
       "korean": "구스타프 클림트",
       "displayKorean": "구스타프 클림트",
+      "aliases": {
+        "ko": [
+          "클림트"
+        ],
+        "en": [
+          "Klimt"
+        ]
+      },
       "uhangul": "구스타[Vㅡ] 클림트",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2094,6 +3335,12 @@
       "original": "Gustave Courbet",
       "korean": "쿠르베",
       "displayKorean": "쿠르베",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Courbet"
+        ]
+      },
       "uhangul": "쿠르[Vㅔ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2107,6 +3354,15 @@
       "original": "Gustave Doré",
       "korean": "귀스타브 도레",
       "displayKorean": "귀스타브 도레",
+      "aliases": {
+        "ko": [
+          "도레"
+        ],
+        "en": [
+          "Gustave Dore",
+          "Doré"
+        ]
+      },
       "uhangul": "귀스타[Vㅡ] 도[Rㅔ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2120,6 +3376,14 @@
       "original": "Gustave Moreau",
       "korean": "귀스타브 모로",
       "displayKorean": "귀스타브 모로",
+      "aliases": {
+        "ko": [
+          "모로"
+        ],
+        "en": [
+          "Moreau"
+        ]
+      },
       "uhangul": "귀스타[Vㅡ] 모[Rㅗ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2133,6 +3397,13 @@
       "original": "Hannah Höch",
       "korean": "회흐",
       "displayKorean": "회흐",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Hannah Hoch",
+          "Höch"
+        ]
+      },
       "uhangul": "회흐",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2146,6 +3417,14 @@
       "original": "Hans Arp",
       "korean": "아르프",
       "displayKorean": "아르프",
+      "aliases": {
+        "ko": [
+          "아르프"
+        ],
+        "en": [
+          "Arp"
+        ]
+      },
       "uhangul": "아[Rㅡ]프",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2159,6 +3438,14 @@
       "original": "Hans Baldung",
       "korean": "한스 발둥",
       "displayKorean": "한스 발둥",
+      "aliases": {
+        "ko": [
+          "발둥"
+        ],
+        "en": [
+          "Baldung"
+        ]
+      },
       "uhangul": "한스 발둥",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2172,6 +3459,17 @@
       "original": "Hans Holbein the Younger",
       "korean": "한스 홀바인 2세",
       "displayKorean": "한스 홀바인 2세",
+      "aliases": {
+        "ko": [
+          "2세",
+          "홀바인",
+          "한스 홀바인"
+        ],
+        "en": [
+          "Holbein",
+          "Hans Holbein"
+        ]
+      },
       "uhangul": "한스 홀바인 2세",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2185,6 +3483,14 @@
       "original": "Hans Memling",
       "korean": "한스 멤링",
       "displayKorean": "한스 멤링",
+      "aliases": {
+        "ko": [
+          "멤링"
+        ],
+        "en": [
+          "Memling"
+        ]
+      },
       "uhangul": "한스 멤링",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2198,6 +3504,14 @@
       "original": "Hans Richter",
       "korean": "한스 리히터",
       "displayKorean": "한스 리히터",
+      "aliases": {
+        "ko": [
+          "리히터"
+        ],
+        "en": [
+          "Richter"
+        ]
+      },
       "uhangul": "한스 [Rㅣ][CHㅣ]터",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2211,6 +3525,14 @@
       "original": "Helen Frankenthaler",
       "korean": "헬렌 프랭컨탤러",
       "displayKorean": "헬렌 프랭컨탤러",
+      "aliases": {
+        "ko": [
+          "프랭컨탤러"
+        ],
+        "en": [
+          "Frankenthaler"
+        ]
+      },
       "uhangul": "헬렌 [Fㅡ][Rㅐㅇ]컨[THㅐㄹ]러",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2224,12 +3546,20 @@
       "original": "Helmut Börsch-Supan",
       "korean": "헬무트 뵈르슈수판",
       "displayKorean": "헬무트 뵈르슈수판",
+      "aliases": {
+        "ko": [
+          "뵈르슈수판"
+        ],
+        "en": [
+          "Helmut Borsch-Supan",
+          "Börsch-Supan"
+        ]
+      },
       "uhangul": "헬무트 뵈르슈수판",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/artists.json",
-        "delivery/Art_through_Time_Viewer/data/artists.json"
+        "data/artists.json"
       ],
       "status": "verified-pair"
     },
@@ -2238,6 +3568,16 @@
       "original": "Hendrick ter Brugghen",
       "korean": "헨드릭 테르 브뤼헌",
       "displayKorean": "헨드릭 테르 브뤼헌",
+      "aliases": {
+        "ko": [
+          "테르 브뤼헌",
+          "브뤼헌"
+        ],
+        "en": [
+          "ter Brugghen",
+          "Brugghen"
+        ]
+      },
       "uhangul": "헨드[Rㅣㄱ] 테[Rㅡ] 브[Rㅟ][Xㅓㄴ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2251,6 +3591,20 @@
       "original": "Henri de Toulouse-Lautrec",
       "korean": "툴루즈로트렉",
       "displayKorean": "툴루즈로트렉",
+      "aliases": {
+        "ko": [
+          "툴루즈로트레크",
+          "로트레크",
+          "앙리 드 툴루즈로트레크",
+          "드 툴루즈로트레크"
+        ],
+        "en": [
+          "de Toulouse-Lautrec",
+          "Toulouse-Lautrec",
+          "Lautrec",
+          "Henri de Toulouse-Lautrec"
+        ]
+      },
       "uhangul": "툴[Rㅜ]즈로트렉",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2266,6 +3620,12 @@
       "original": "Henri Matisse",
       "korean": "마티스",
       "displayKorean": "마티스",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Matisse"
+        ]
+      },
       "uhangul": "마티스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2279,6 +3639,14 @@
       "original": "Henri Rousseau",
       "korean": "앙리 루소",
       "displayKorean": "앙리 루소",
+      "aliases": {
+        "ko": [
+          "루소"
+        ],
+        "en": [
+          "Rousseau"
+        ]
+      },
       "uhangul": "앙[Rㅣ] [Rㅜ]소",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2292,6 +3660,14 @@
       "original": "Henri-Edmond Cross",
       "korean": "앙리에드몽 크로스",
       "displayKorean": "앙리에드몽 크로스",
+      "aliases": {
+        "ko": [
+          "크로스"
+        ],
+        "en": [
+          "Cross"
+        ]
+      },
       "uhangul": "앙[Rㅣ]에드몽 크[Rㅗ]스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2305,6 +3681,14 @@
       "original": "Henry Fuseli",
       "korean": "헨리 퓌슬리",
       "displayKorean": "헨리 퓌슬리",
+      "aliases": {
+        "ko": [
+          "퓌슬리"
+        ],
+        "en": [
+          "Fuseli"
+        ]
+      },
       "uhangul": "헨[Rㅣ] [Fㅟ]슬리",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2318,6 +3702,14 @@
       "original": "Hieronymus Bosch",
       "korean": "히에로니무스 보스",
       "displayKorean": "히에로니무스 보스",
+      "aliases": {
+        "ko": [
+          "보스"
+        ],
+        "en": [
+          "Bosch"
+        ]
+      },
       "uhangul": "히에[Rㅗ]니무스 보스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2331,6 +3723,13 @@
       "original": "Honoré Daumier",
       "korean": "도미에",
       "displayKorean": "도미에",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Honore Daumier",
+          "Daumier"
+        ]
+      },
       "uhangul": "도미에",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2344,6 +3743,12 @@
       "original": "Hugo Ball",
       "korean": "후고 발",
       "displayKorean": "후고 발",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Ball"
+        ]
+      },
       "uhangul": "후고 발",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2357,6 +3762,15 @@
       "original": "Hugo van der Goes",
       "korean": "후고 판 데르 후스",
       "displayKorean": "후고 판 데르 후스",
+      "aliases": {
+        "ko": [
+          "후스"
+        ],
+        "en": [
+          "van der Goes",
+          "Goes"
+        ]
+      },
       "uhangul": "후고 [Vㅏㄴ] 데[Rㅡ] 후스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2370,6 +3784,14 @@
       "original": "Hyacinthe Rigaud",
       "korean": "이아생트 리고",
       "displayKorean": "이아생트 리고",
+      "aliases": {
+        "ko": [
+          "리고"
+        ],
+        "en": [
+          "Rigaud"
+        ]
+      },
       "uhangul": "이아생[THㅡ] [Rㅣ]고",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2383,6 +3805,14 @@
       "original": "Ibrahim El-Salahi",
       "korean": "이브라힘 엘살라히",
       "displayKorean": "이브라힘 엘살라히",
+      "aliases": {
+        "ko": [
+          "엘살라히"
+        ],
+        "en": [
+          "El-Salahi"
+        ]
+      },
       "uhangul": "이브[Rㅏ]힘 엘살라히",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2396,6 +3826,14 @@
       "original": "Ilya Repin",
       "korean": "일리야 레핀",
       "displayKorean": "일리야 레핀",
+      "aliases": {
+        "ko": [
+          "레핀"
+        ],
+        "en": [
+          "Repin"
+        ]
+      },
       "uhangul": "일리야 [Rㅔ]핀",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2409,6 +3847,12 @@
       "original": "Isaac Brodsky",
       "korean": "브로드스키",
       "displayKorean": "브로드스키",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Brodsky"
+        ]
+      },
       "uhangul": "브로드스키",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2422,6 +3866,12 @@
       "original": "Isaac Levitan",
       "korean": "레비탄",
       "displayKorean": "레비탄",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Levitan"
+        ]
+      },
       "uhangul": "레[Vㅣ]탄",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2435,6 +3885,14 @@
       "original": "Ivan Kramskoi",
       "korean": "이반 크람스코이",
       "displayKorean": "이반 크람스코이",
+      "aliases": {
+        "ko": [
+          "크람스코이"
+        ],
+        "en": [
+          "Kramskoi"
+        ]
+      },
       "uhangul": "이[Vㅏㄴ] 크[Rㅏㅁ]스코이",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2448,6 +3906,12 @@
       "original": "Ivan Shishkin",
       "korean": "시시킨",
       "displayKorean": "시시킨",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Shishkin"
+        ]
+      },
       "uhangul": "시시킨",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2461,6 +3925,15 @@
       "original": "J. M. W. Turner",
       "korean": "터너",
       "displayKorean": "터너",
+      "aliases": {
+        "ko": [
+          "조지프 말로드 윌리엄 터너"
+        ],
+        "en": [
+          "Turner",
+          "Joseph Mallord William Turner"
+        ]
+      },
       "uhangul": "터너",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2474,6 +3947,16 @@
       "original": "J. M. W. Turner",
       "korean": "J. M. W. 터너",
       "displayKorean": "J. M. W. 터너",
+      "aliases": {
+        "ko": [
+          "터너",
+          "조지프 말로드 윌리엄 터너"
+        ],
+        "en": [
+          "Turner",
+          "Joseph Mallord William Turner"
+        ]
+      },
       "uhangul": "J. M. W. 터너",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2487,6 +3970,14 @@
       "original": "Jacob Jordaens",
       "korean": "야코프 요르단스",
       "displayKorean": "야코프 요르단스",
+      "aliases": {
+        "ko": [
+          "요르단스"
+        ],
+        "en": [
+          "Jordaens"
+        ]
+      },
       "uhangul": "야코프 요[Rㅡ]단스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2500,6 +3991,16 @@
       "original": "Jacob van Ruisdael",
       "korean": "야코프 판 라위스달",
       "displayKorean": "야코프 판 라위스달",
+      "aliases": {
+        "ko": [
+          "판 라위스달",
+          "라위스달"
+        ],
+        "en": [
+          "van Ruisdael",
+          "Ruisdael"
+        ]
+      },
       "uhangul": "야코프 [Vㅏㄴ] [Rㅏ]위스달",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2513,6 +4014,14 @@
       "original": "Jacopo Bassano",
       "korean": "야코포 바사노",
       "displayKorean": "야코포 바사노",
+      "aliases": {
+        "ko": [
+          "바사노"
+        ],
+        "en": [
+          "Bassano"
+        ]
+      },
       "uhangul": "야코포 바사노",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2526,6 +4035,14 @@
       "original": "Jacques-Louis David",
       "korean": "자크루이 다비드",
       "displayKorean": "자크루이 다비드",
+      "aliases": {
+        "ko": [
+          "다비드"
+        ],
+        "en": [
+          "David"
+        ]
+      },
       "uhangul": "자크루이 다[Vㅣ]드",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2539,6 +4056,14 @@
       "original": "James Ensor",
       "korean": "제임스 앙소르",
       "displayKorean": "제임스 앙소르",
+      "aliases": {
+        "ko": [
+          "앙소르"
+        ],
+        "en": [
+          "Ensor"
+        ]
+      },
       "uhangul": "제임스 앙소[Rㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2552,6 +4077,14 @@
       "original": "James McNeill Whistler",
       "korean": "제임스 맥닐 휘슬러",
       "displayKorean": "제임스 맥닐 휘슬러",
+      "aliases": {
+        "ko": [
+          "휘슬러"
+        ],
+        "en": [
+          "Whistler"
+        ]
+      },
       "uhangul": "제임스 맥닐 휘슬러",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2565,6 +4098,14 @@
       "original": "Jan Gossaert",
       "korean": "얀 호사르트",
       "displayKorean": "얀 호사르트",
+      "aliases": {
+        "ko": [
+          "호사르트"
+        ],
+        "en": [
+          "Gossaert"
+        ]
+      },
       "uhangul": "얀 호사[Rㅡ]트",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2578,6 +4119,14 @@
       "original": "Jan Steen",
       "korean": "얀 스테인",
       "displayKorean": "얀 스테인",
+      "aliases": {
+        "ko": [
+          "스테인"
+        ],
+        "en": [
+          "Steen"
+        ]
+      },
       "uhangul": "얀 스테인",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2591,6 +4140,16 @@
       "original": "Jan van Eyck",
       "korean": "얀 반 에이크",
       "displayKorean": "얀 반 에이크",
+      "aliases": {
+        "ko": [
+          "반 에이크",
+          "에이크"
+        ],
+        "en": [
+          "van Eyck",
+          "Eyck"
+        ]
+      },
       "uhangul": "얀 [Vㅏㄴ] 에이크",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2605,6 +4164,14 @@
       "original": "Jannis Kounellis",
       "korean": "야니스 쿠넬리스",
       "displayKorean": "야니스 쿠넬리스",
+      "aliases": {
+        "ko": [
+          "쿠넬리스"
+        ],
+        "en": [
+          "Kounellis"
+        ]
+      },
       "uhangul": "야니스 쿠넬리스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2618,6 +4185,14 @@
       "original": "Jean Arp",
       "korean": "장 아르프",
       "displayKorean": "장 아르프",
+      "aliases": {
+        "ko": [
+          "아르프"
+        ],
+        "en": [
+          "Arp"
+        ]
+      },
       "uhangul": "장 아[Rㅡ]프",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2631,6 +4206,14 @@
       "original": "Jean Clouet",
       "korean": "장 클루에",
       "displayKorean": "장 클루에",
+      "aliases": {
+        "ko": [
+          "클루에"
+        ],
+        "en": [
+          "Clouet"
+        ]
+      },
       "uhangul": "장 클루에",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2644,6 +4227,12 @@
       "original": "Jean-Auguste-Dominique Ingres",
       "korean": "앵그르",
       "displayKorean": "앵그르",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Ingres"
+        ]
+      },
       "uhangul": "앵그[Rㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2657,6 +4246,14 @@
       "original": "Jean-Baptiste Greuze",
       "korean": "장바티스트 그뢰즈",
       "displayKorean": "장바티스트 그뢰즈",
+      "aliases": {
+        "ko": [
+          "그뢰즈"
+        ],
+        "en": [
+          "Greuze"
+        ]
+      },
       "uhangul": "장바티스트 그[Rㅚ][Zㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2670,6 +4267,14 @@
       "original": "Jean-Baptiste-Camille Corot",
       "korean": "장바티스트카미유 코로",
       "displayKorean": "장바티스트카미유 코로",
+      "aliases": {
+        "ko": [
+          "코로"
+        ],
+        "en": [
+          "Corot"
+        ]
+      },
       "uhangul": "장바티스트카미유 코로",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2683,6 +4288,15 @@
       "original": "Jean-Baptiste-Siméon Chardin",
       "korean": "장바티스트 시메옹 샤르댕",
       "displayKorean": "장바티스트 시메옹 샤르댕",
+      "aliases": {
+        "ko": [
+          "샤르댕"
+        ],
+        "en": [
+          "Jean-Baptiste-Simeon Chardin",
+          "Chardin"
+        ]
+      },
       "uhangul": "장바티스트 시메옹 샤[Rㅡ]댕",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2696,6 +4310,15 @@
       "original": "Jean-Étienne Liotard",
       "korean": "장에티엔 리오타르",
       "displayKorean": "장에티엔 리오타르",
+      "aliases": {
+        "ko": [
+          "리오타르"
+        ],
+        "en": [
+          "Jean-Etienne Liotard",
+          "Liotard"
+        ]
+      },
       "uhangul": "장에티엔 리오타[Rㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2709,6 +4332,15 @@
       "original": "Jean-François Millet",
       "korean": "밀레",
       "displayKorean": "밀레",
+      "aliases": {
+        "ko": [
+          "밀레"
+        ],
+        "en": [
+          "Jean-Francois Millet",
+          "Millet"
+        ]
+      },
       "uhangul": "밀[Rㅔ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2723,6 +4355,13 @@
       "original": "Jean-Honoré Fragonard",
       "korean": "프라고나르",
       "displayKorean": "프라고나르",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Jean-Honore Fragonard",
+          "Fragonard"
+        ]
+      },
       "uhangul": "프라고나[Rㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2736,6 +4375,14 @@
       "original": "Jean-Michel Basquiat",
       "korean": "장미셸 바스키아",
       "displayKorean": "장미셸 바스키아",
+      "aliases": {
+        "ko": [
+          "바스키아"
+        ],
+        "en": [
+          "Basquiat"
+        ]
+      },
       "uhangul": "장미셸 바스키아",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2749,12 +4396,19 @@
       "original": "Jeanne-Marguerite Lecadre",
       "korean": "잔마르그리트 르카드르",
       "displayKorean": "잔마르그리트 르카드르",
+      "aliases": {
+        "ko": [
+          "르카드르"
+        ],
+        "en": [
+          "Lecadre"
+        ]
+      },
       "uhangul": "잔마[Rㅡ]그[Rㅣ]트 르카드[Rㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/artists.json",
-        "delivery/Art_through_Time_Viewer/data/artists.json"
+        "data/artists.json"
       ],
       "status": "verified-pair"
     },
@@ -2763,6 +4417,14 @@
       "original": "Jenny Holzer",
       "korean": "제니 홀저",
       "displayKorean": "제니 홀저",
+      "aliases": {
+        "ko": [
+          "홀저"
+        ],
+        "en": [
+          "Holzer"
+        ]
+      },
       "uhangul": "제니 홀[Zㅓ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2776,6 +4438,14 @@
       "original": "Joachim Beuckelaer",
       "korean": "요아힘 뵈켈라르",
       "displayKorean": "요아힘 뵈켈라르",
+      "aliases": {
+        "ko": [
+          "뵈켈라르"
+        ],
+        "en": [
+          "Beuckelaer"
+        ]
+      },
       "uhangul": "요아[CHㅣㅁ] 뵈켈라[Rㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2789,6 +4459,14 @@
       "original": "Joachim Patinir",
       "korean": "요아힘 파티니르",
       "displayKorean": "요아힘 파티니르",
+      "aliases": {
+        "ko": [
+          "파티니르"
+        ],
+        "en": [
+          "Patinir"
+        ]
+      },
       "uhangul": "요아[CHㅣㅁ] 파티니[Rㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2802,6 +4480,15 @@
       "original": "Joan Miró",
       "korean": "호안 미로",
       "displayKorean": "호안 미로",
+      "aliases": {
+        "ko": [
+          "미로"
+        ],
+        "en": [
+          "Joan Miro",
+          "Miró"
+        ]
+      },
       "uhangul": "호안 미[Rㅗ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2815,6 +4502,14 @@
       "original": "Joan Mitchell",
       "korean": "조앤 미첼",
       "displayKorean": "조앤 미첼",
+      "aliases": {
+        "ko": [
+          "미첼"
+        ],
+        "en": [
+          "Mitchell"
+        ]
+      },
       "uhangul": "조앤 미첼",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2828,6 +4523,15 @@
       "original": "Joaquín Torres-García",
       "korean": "호아킨 토레스가르시아",
       "displayKorean": "호아킨 토레스가르시아",
+      "aliases": {
+        "ko": [
+          "토레스가르시아"
+        ],
+        "en": [
+          "Joaquin Torres-Garcia",
+          "Torres-García"
+        ]
+      },
       "uhangul": "호아킨 토[Rㅔ]스가[Rㅡ]시아",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2841,6 +4545,14 @@
       "original": "Johann Joachim Winckelmann",
       "korean": "요한 요아힘 빙켈만",
       "displayKorean": "요한 요아힘 빙켈만",
+      "aliases": {
+        "ko": [
+          "빙켈만"
+        ],
+        "en": [
+          "Winckelmann"
+        ]
+      },
       "uhangul": "요한 요아[CHㅣㅁ] [Vㅣㅇ]켈만",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2854,6 +4566,17 @@
       "original": "Johannes Vermeer",
       "korean": "베르메르",
       "displayKorean": "베르메르",
+      "aliases": {
+        "ko": [
+          "페르메이르",
+          "요하네스 페르메이르",
+          "베르메르"
+        ],
+        "en": [
+          "Vermeer",
+          "Johannes Vermeer"
+        ]
+      },
       "uhangul": "[Vㅔ][Rㅡ]메[Rㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2870,6 +4593,14 @@
       "original": "John Constable",
       "korean": "컨스터블",
       "displayKorean": "컨스터블",
+      "aliases": {
+        "ko": [
+          "컨스터블"
+        ],
+        "en": [
+          "Constable"
+        ]
+      },
       "uhangul": "컨스터블",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2884,6 +4615,14 @@
       "original": "John Everett Millais",
       "korean": "존 에버렛 밀레이",
       "displayKorean": "존 에버렛 밀레이",
+      "aliases": {
+        "ko": [
+          "밀레이"
+        ],
+        "en": [
+          "Millais"
+        ]
+      },
       "uhangul": "존 에[Vㅓ][Rㅔㅅ] 밀레이",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2897,6 +4636,14 @@
       "original": "John Flaxman",
       "korean": "존 플랙스먼",
       "displayKorean": "존 플랙스먼",
+      "aliases": {
+        "ko": [
+          "플랙스먼"
+        ],
+        "en": [
+          "Flaxman"
+        ]
+      },
       "uhangul": "존 [Fㅡㄹ]랙스먼",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2910,6 +4657,12 @@
       "original": "John Heartfield",
       "korean": "하트필드",
       "displayKorean": "하트필드",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Heartfield"
+        ]
+      },
       "uhangul": "하트[Fㅣㄹ]드",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2923,6 +4676,14 @@
       "original": "John Singer Sargent",
       "korean": "존 싱어 사전트",
       "displayKorean": "존 싱어 사전트",
+      "aliases": {
+        "ko": [
+          "사전트"
+        ],
+        "en": [
+          "Sargent"
+        ]
+      },
       "uhangul": "존 싱어 사전트",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2936,6 +4697,14 @@
       "original": "John Singleton Copley",
       "korean": "존 싱글턴 코플리",
       "displayKorean": "존 싱글턴 코플리",
+      "aliases": {
+        "ko": [
+          "코플리"
+        ],
+        "en": [
+          "Copley"
+        ]
+      },
       "uhangul": "존 싱글턴 코플리",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2949,6 +4718,14 @@
       "original": "John Soane",
       "korean": "존 소운",
       "displayKorean": "존 소운",
+      "aliases": {
+        "ko": [
+          "소운"
+        ],
+        "en": [
+          "Soane"
+        ]
+      },
       "uhangul": "존 소운",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2962,6 +4739,14 @@
       "original": "John Trumbull",
       "korean": "존 트럼불",
       "displayKorean": "존 트럼불",
+      "aliases": {
+        "ko": [
+          "트럼불"
+        ],
+        "en": [
+          "Trumbull"
+        ]
+      },
       "uhangul": "존 트[Rㅓㅁ]불",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2975,6 +4760,15 @@
       "original": "José Clemente Orozco",
       "korean": "호세 클레멘테 오로스코",
       "displayKorean": "호세 클레멘테 오로스코",
+      "aliases": {
+        "ko": [
+          "오로스코"
+        ],
+        "en": [
+          "Jose Clemente Orozco",
+          "Orozco"
+        ]
+      },
       "uhangul": "호세 클레멘테 오[Rㅗ][Zㅡ]코",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -2988,6 +4782,17 @@
       "original": "José de Ribera",
       "korean": "호세 데 리베라",
       "displayKorean": "호세 데 리베라",
+      "aliases": {
+        "ko": [
+          "데 리베라",
+          "리베라"
+        ],
+        "en": [
+          "Jose de Ribera",
+          "de Ribera",
+          "Ribera"
+        ]
+      },
       "uhangul": "호세 데 [Rㅣ]베[Rㅏ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3001,6 +4806,14 @@
       "original": "Joseph Beuys",
       "korean": "요제프 보이스",
       "displayKorean": "요제프 보이스",
+      "aliases": {
+        "ko": [
+          "보이스"
+        ],
+        "en": [
+          "Beuys"
+        ]
+      },
       "uhangul": "요제[Fㅡ] 보이스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3014,6 +4827,14 @@
       "original": "Joseph Kosuth",
       "korean": "조지프 코수스",
       "displayKorean": "조지프 코수스",
+      "aliases": {
+        "ko": [
+          "코수스"
+        ],
+        "en": [
+          "Kosuth"
+        ]
+      },
       "uhangul": "조지[Fㅡ] 코수[THㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3027,6 +4848,14 @@
       "original": "Joseph Wright of Derby",
       "korean": "조지프 라이트",
       "displayKorean": "조지프 라이트",
+      "aliases": {
+        "ko": [
+          "라이트"
+        ],
+        "en": [
+          "Derby"
+        ]
+      },
       "uhangul": "조지[Fㅡ] [Rㅏ]이트",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3040,6 +4869,14 @@
       "original": "Joshua Reynolds",
       "korean": "조슈아 레이놀즈",
       "displayKorean": "조슈아 레이놀즈",
+      "aliases": {
+        "ko": [
+          "레이놀즈"
+        ],
+        "en": [
+          "Reynolds"
+        ]
+      },
       "uhangul": "조슈아 [Rㅔ]이놀즈",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3053,6 +4890,17 @@
       "original": "Juan de Zurbarán",
       "korean": "후안 데 수르바란",
       "displayKorean": "후안 데 수르바란",
+      "aliases": {
+        "ko": [
+          "데 수르바란",
+          "수르바란"
+        ],
+        "en": [
+          "Juan de Zurbaran",
+          "de Zurbarán",
+          "Zurbarán"
+        ]
+      },
       "uhangul": "후안 데 [Zㅜ][Rㅡ]바[Rㅏㄴ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3066,6 +4914,14 @@
       "original": "Juan Gris",
       "korean": "후안 그리스",
       "displayKorean": "후안 그리스",
+      "aliases": {
+        "ko": [
+          "그리스"
+        ],
+        "en": [
+          "Gris"
+        ]
+      },
       "uhangul": "후안 그[Rㅣ]스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3079,6 +4935,15 @@
       "original": "Juan Sánchez Cotán",
       "korean": "후안 산체스 코탄",
       "displayKorean": "후안 산체스 코탄",
+      "aliases": {
+        "ko": [
+          "코탄"
+        ],
+        "en": [
+          "Juan Sanchez Cotan",
+          "Cotán"
+        ]
+      },
       "uhangul": "후안 산체[Zㅡ] 코탄",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3092,6 +4957,14 @@
       "original": "Judith Leyster",
       "korean": "유디트 레이스터",
       "displayKorean": "유디트 레이스터",
+      "aliases": {
+        "ko": [
+          "레이스터"
+        ],
+        "en": [
+          "Leyster"
+        ]
+      },
       "uhangul": "유디[THㅡ] 레이스터",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3105,6 +4978,16 @@
       "original": "Jusepe de Ribera",
       "korean": "호세 데 리베라",
       "displayKorean": "호세 데 리베라",
+      "aliases": {
+        "ko": [
+          "데 리베라",
+          "리베라"
+        ],
+        "en": [
+          "de Ribera",
+          "Ribera"
+        ]
+      },
       "uhangul": "호세 데 [Rㅣ]베[Rㅏ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3118,6 +5001,12 @@
       "original": "Kazimir Malevich",
       "korean": "말레비치",
       "displayKorean": "말레비치",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Malevich"
+        ]
+      },
       "uhangul": "말[Rㅔ][Vㅣ]치",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3131,6 +5020,14 @@
       "original": "Keith Haring",
       "korean": "키스 해링",
       "displayKorean": "키스 해링",
+      "aliases": {
+        "ko": [
+          "해링"
+        ],
+        "en": [
+          "Haring"
+        ]
+      },
       "uhangul": "키[THㅡ] 해[Rㅣㅇ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3144,6 +5041,14 @@
       "original": "Kenneth Noland",
       "korean": "케네스 놀런드",
       "displayKorean": "케네스 놀런드",
+      "aliases": {
+        "ko": [
+          "놀런드"
+        ],
+        "en": [
+          "Noland"
+        ]
+      },
       "uhangul": "케네[THㅡ] 놀런드",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3157,6 +5062,14 @@
       "original": "Kerry James Marshall",
       "korean": "케리 제임스 마셜",
       "displayKorean": "케리 제임스 마셜",
+      "aliases": {
+        "ko": [
+          "마셜"
+        ],
+        "en": [
+          "Marshall"
+        ]
+      },
       "uhangul": "케[Rㅣ] 제임스 마셜",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3170,6 +5083,12 @@
       "original": "Kurt Schwitters",
       "korean": "슈비터스",
       "displayKorean": "슈비터스",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Schwitters"
+        ]
+      },
       "uhangul": "슈비터스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3183,6 +5102,14 @@
       "original": "Lawrence Alma-Tadema",
       "korean": "로런스 앨마태디마",
       "displayKorean": "로런스 앨마태디마",
+      "aliases": {
+        "ko": [
+          "앨마태디마"
+        ],
+        "en": [
+          "Alma-Tadema"
+        ]
+      },
       "uhangul": "로[Rㅓㄴ]스 앨마태디마",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3196,6 +5123,14 @@
       "original": "Lawrence Weiner",
       "korean": "로런스 위너",
       "displayKorean": "로런스 위너",
+      "aliases": {
+        "ko": [
+          "위너"
+        ],
+        "en": [
+          "Weiner"
+        ]
+      },
       "uhangul": "로[Rㅓㄴ]스 위너",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3209,6 +5144,14 @@
       "original": "Lee Krasner",
       "korean": "리 크래스너",
       "displayKorean": "리 크래스너",
+      "aliases": {
+        "ko": [
+          "크래스너"
+        ],
+        "en": [
+          "Krasner"
+        ]
+      },
       "uhangul": "리 크[Rㅐ]스너",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3222,6 +5165,20 @@
       "original": "Leonardo da Vinci",
       "korean": "레오나르도",
       "displayKorean": "레오나르도",
+      "aliases": {
+        "ko": [
+          "다 빈치",
+          "빈치",
+          "레오나르도",
+          "레오나르도 다 빈치"
+        ],
+        "en": [
+          "da Vinci",
+          "Vinci",
+          "Leonardo",
+          "Leonardo da Vinci"
+        ]
+      },
       "uhangul": "레오나[Rㅡ]도",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3232,10 +5189,7 @@
         "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
         "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
         "data/미술사조/9e553fb48e9a464402114360-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/0a104587439ae7b4c6b39e27-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/9e553fb48e9a464402114360-1.html"
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3244,6 +5198,14 @@
       "original": "Leonora Carrington",
       "korean": "레오노라 캐링턴",
       "displayKorean": "레오노라 캐링턴",
+      "aliases": {
+        "ko": [
+          "캐링턴"
+        ],
+        "en": [
+          "Carrington"
+        ]
+      },
       "uhangul": "레오노[Rㅏ] 캐[Rㅣㅇ]턴",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3257,6 +5219,16 @@
       "original": "Lorenzo di Credi",
       "korean": "로렌초 디 크레디",
       "displayKorean": "로렌초 디 크레디",
+      "aliases": {
+        "ko": [
+          "디 크레디",
+          "크레디"
+        ],
+        "en": [
+          "di Credi",
+          "Credi"
+        ]
+      },
       "uhangul": "로[Rㅔㄴ]초 디 크[Rㅔ]디",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3270,6 +5242,12 @@
       "original": "Louis Aragon",
       "korean": "아라공",
       "displayKorean": "아라공",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Aragon"
+        ]
+      },
       "uhangul": "아라공",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3283,6 +5261,14 @@
       "original": "Louise Bourgeois",
       "korean": "루이즈 부르주아",
       "displayKorean": "루이즈 부르주아",
+      "aliases": {
+        "ko": [
+          "부르주아"
+        ],
+        "en": [
+          "Bourgeois"
+        ]
+      },
       "uhangul": "루이즈 부[Rㅡ]주아",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3296,6 +5282,14 @@
       "original": "Luca Giordano",
       "korean": "루카 조르다노",
       "displayKorean": "루카 조르다노",
+      "aliases": {
+        "ko": [
+          "조르다노"
+        ],
+        "en": [
+          "Giordano"
+        ]
+      },
       "uhangul": "루카 조[Rㅡ]다노",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3309,6 +5303,15 @@
       "original": "Lucas Cranach the Elder",
       "korean": "루카스 크라나흐",
       "displayKorean": "루카스 크라나흐",
+      "aliases": {
+        "ko": [
+          "크라나흐"
+        ],
+        "en": [
+          "Cranach",
+          "Lucas Cranach"
+        ]
+      },
       "uhangul": "루카스 크[Rㅏ]나[CHㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3322,6 +5325,14 @@
       "original": "Lucio Fontana",
       "korean": "루치오 폰타나",
       "displayKorean": "루치오 폰타나",
+      "aliases": {
+        "ko": [
+          "폰타나"
+        ],
+        "en": [
+          "Fontana"
+        ]
+      },
       "uhangul": "루치오 [Fㅗㄴ]타나",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3335,12 +5346,19 @@
       "original": "Ludovico Sforza",
       "korean": "루도비코 스포르차",
       "displayKorean": "루도비코 스포르차",
+      "aliases": {
+        "ko": [
+          "스포르차"
+        ],
+        "en": [
+          "Sforza"
+        ]
+      },
       "uhangul": "루도[Vㅣ]코 스[Fㅗ][Rㅡ]차",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/artists.json",
-        "delivery/Art_through_Time_Viewer/data/artists.json"
+        "data/artists.json"
       ],
       "status": "verified-pair"
     },
@@ -3349,6 +5367,14 @@
       "original": "Lyonel Feininger",
       "korean": "리오넬 파이닝거",
       "displayKorean": "리오넬 파이닝거",
+      "aliases": {
+        "ko": [
+          "파이닝거"
+        ],
+        "en": [
+          "Feininger"
+        ]
+      },
       "uhangul": "리오넬 [Fㅏ]이닝거",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3362,6 +5388,12 @@
       "original": "Lyubov Popova",
       "korean": "포포바",
       "displayKorean": "포포바",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Popova"
+        ]
+      },
       "uhangul": "포포바",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3375,6 +5407,14 @@
       "original": "Man Ray",
       "korean": "만 레이",
       "displayKorean": "만 레이",
+      "aliases": {
+        "ko": [
+          "레이"
+        ],
+        "en": [
+          "Ray"
+        ]
+      },
       "uhangul": "만 [Rㅔ]이",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3388,6 +5428,14 @@
       "original": "Marcel Duchamp",
       "korean": "뒤샹",
       "displayKorean": "뒤샹",
+      "aliases": {
+        "ko": [
+          "뒤샹"
+        ],
+        "en": [
+          "Duchamp"
+        ]
+      },
       "uhangul": "뒤샹",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3401,6 +5449,16 @@
       "original": "Marianne von Werefkin",
       "korean": "마리안네 폰 베레프킨",
       "displayKorean": "마리안네 폰 베레프킨",
+      "aliases": {
+        "ko": [
+          "폰 베레프킨",
+          "베레프킨"
+        ],
+        "en": [
+          "von Werefkin",
+          "Werefkin"
+        ]
+      },
       "uhangul": "마[Rㅣ]안네 [Vㅗㄴ] [Vㅔ][Rㅔ][Fㅡ]킨",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3414,6 +5472,14 @@
       "original": "Marie Bracquemond",
       "korean": "마리 브라크몽",
       "displayKorean": "마리 브라크몽",
+      "aliases": {
+        "ko": [
+          "브라크몽"
+        ],
+        "en": [
+          "Bracquemond"
+        ]
+      },
       "uhangul": "마[Rㅣ] 브[Rㅏ]크몽",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3427,6 +5493,15 @@
       "original": "Marina Abramović",
       "korean": "마리나 아브라모비치",
       "displayKorean": "마리나 아브라모비치",
+      "aliases": {
+        "ko": [
+          "아브라모비치"
+        ],
+        "en": [
+          "Marina Abramovic",
+          "Abramovi"
+        ]
+      },
       "uhangul": "마[Rㅣ]나 아브[Rㅏ]모[Vㅣ]치",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3440,6 +5515,14 @@
       "original": "Marlene Dumas",
       "korean": "말린 뒤마",
       "displayKorean": "말린 뒤마",
+      "aliases": {
+        "ko": [
+          "뒤마"
+        ],
+        "en": [
+          "Dumas"
+        ]
+      },
       "uhangul": "말[Rㅣㄴ] 뒤마",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3453,6 +5536,14 @@
       "original": "Mary Cassatt",
       "korean": "메리 카사트",
       "displayKorean": "메리 카사트",
+      "aliases": {
+        "ko": [
+          "카사트"
+        ],
+        "en": [
+          "Cassatt"
+        ]
+      },
       "uhangul": "메[Rㅣ] 카사트",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3466,6 +5557,10 @@
       "original": "Masaccio",
       "korean": "마사초",
       "displayKorean": "마사초",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "마사초",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3480,6 +5575,15 @@
       "original": "Matthias Grünewald",
       "korean": "마티아스 그뤼네발트",
       "displayKorean": "마티아스 그뤼네발트",
+      "aliases": {
+        "ko": [
+          "그뤼네발트"
+        ],
+        "en": [
+          "Matthias Grunewald",
+          "Grünewald"
+        ]
+      },
       "uhangul": "마티아[THㅡ] 그[Rㅟ]네[Vㅏㄹ]트",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3493,6 +5597,13 @@
       "original": "Maurice de Vlaminck",
       "korean": "블라맹크",
       "displayKorean": "블라맹크",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "de Vlaminck",
+          "Vlaminck"
+        ]
+      },
       "uhangul": "블라맹크",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3506,6 +5617,14 @@
       "original": "Maurice Denis",
       "korean": "모리스 드니",
       "displayKorean": "모리스 드니",
+      "aliases": {
+        "ko": [
+          "드니"
+        ],
+        "en": [
+          "Denis"
+        ]
+      },
       "uhangul": "모[Rㅣ]스 드니",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3519,6 +5638,14 @@
       "original": "Max Beckmann",
       "korean": "막스 베크만",
       "displayKorean": "막스 베크만",
+      "aliases": {
+        "ko": [
+          "베크만"
+        ],
+        "en": [
+          "Beckmann"
+        ]
+      },
       "uhangul": "막스 베크만",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3532,6 +5659,14 @@
       "original": "Max Ernst",
       "korean": "막스 에른스트",
       "displayKorean": "막스 에른스트",
+      "aliases": {
+        "ko": [
+          "에른스트"
+        ],
+        "en": [
+          "Ernst"
+        ]
+      },
       "uhangul": "막스 에[Rㅡㄴ]스트",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3545,6 +5680,14 @@
       "original": "Max Pechstein",
       "korean": "막스 페히슈타인",
       "displayKorean": "막스 페히슈타인",
+      "aliases": {
+        "ko": [
+          "페히슈타인"
+        ],
+        "en": [
+          "Pechstein"
+        ]
+      },
       "uhangul": "막스 페[CHㅣ]슈타인",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3558,6 +5701,14 @@
       "original": "Meindert Hobbema",
       "korean": "메인더르트 호베마",
       "displayKorean": "메인더르트 호베마",
+      "aliases": {
+        "ko": [
+          "호베마"
+        ],
+        "en": [
+          "Hobbema"
+        ]
+      },
       "uhangul": "메인더[Rㅡ]트 호베마",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3571,6 +5722,15 @@
       "original": "Méret Oppenheim",
       "korean": "메레트 오펜하임",
       "displayKorean": "메레트 오펜하임",
+      "aliases": {
+        "ko": [
+          "오펜하임"
+        ],
+        "en": [
+          "Meret Oppenheim",
+          "Oppenheim"
+        ]
+      },
       "uhangul": "메[Rㅔ]트 오펜하임",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3584,6 +5744,12 @@
       "original": "Michelangelo",
       "korean": "미켈란젤로 부오나로티",
       "displayKorean": "미켈란젤로 부오나로티",
+      "aliases": {
+        "ko": [
+          "부오나로티"
+        ],
+        "en": []
+      },
       "uhangul": "미켈란젤로 부오나로티",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3597,6 +5763,18 @@
       "original": "Michelangelo Buonarroti",
       "korean": "미켈란젤로",
       "displayKorean": "미켈란젤로",
+      "aliases": {
+        "ko": [
+          "부오나로티",
+          "미켈란젤로",
+          "미켈란젤로 부오나로티"
+        ],
+        "en": [
+          "Buonarroti",
+          "Michelangelo",
+          "Michelangelo Buonarroti"
+        ]
+      },
       "uhangul": "미켈란젤로",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3610,11 +5788,6 @@
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "data/미술사조/9e553fb48e9a464402114360-1.html",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/0a104587439ae7b4c6b39e27-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/37a05b9246dcdbd89a685d55-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/9e553fb48e9a464402114360-1.html",
         "tools/apply-first-batch-movement-enhancements.js"
       ],
       "status": "verified-pair"
@@ -3624,6 +5797,18 @@
       "original": "Michelangelo Merisi da Caravaggio",
       "korean": "미켈란젤로 메리시 다 카라바조",
       "displayKorean": "미켈란젤로 메리시 다 카라바조",
+      "aliases": {
+        "ko": [
+          "다 카라바조",
+          "카라바조",
+          "미켈란젤로 메리시 다 카라바조"
+        ],
+        "en": [
+          "da Caravaggio",
+          "Caravaggio",
+          "Michelangelo Merisi da Caravaggio"
+        ]
+      },
       "uhangul": "미켈란젤로 메[Rㅣ]시 다 카[Rㅏ][Vㅏ]조",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3632,11 +5817,7 @@
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "data/미술사조/c0d228e179032941f8d9ebfb-1.html",
-        "data/미술사조/de537ba74c4bee89423120bc-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/37a05b9246dcdbd89a685d55-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/c0d228e179032941f8d9ebfb-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/de537ba74c4bee89423120bc-1.html"
+        "data/미술사조/de537ba74c4bee89423120bc-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3645,6 +5826,14 @@
       "original": "Mikhail Larionov",
       "korean": "미하일 라리오노프",
       "displayKorean": "미하일 라리오노프",
+      "aliases": {
+        "ko": [
+          "라리오노프"
+        ],
+        "en": [
+          "Larionov"
+        ]
+      },
       "uhangul": "미하일 라[Rㅣ]오노[Vㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3658,6 +5847,14 @@
       "original": "Mikhail Vrubel",
       "korean": "미하일 브루벨",
       "displayKorean": "미하일 브루벨",
+      "aliases": {
+        "ko": [
+          "브루벨"
+        ],
+        "en": [
+          "Vrubel"
+        ]
+      },
       "uhangul": "미하일 [Vㅡ][Rㅜ]벨",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3671,6 +5868,14 @@
       "original": "Morris Louis",
       "korean": "모리스 루이스",
       "displayKorean": "모리스 루이스",
+      "aliases": {
+        "ko": [
+          "루이스"
+        ],
+        "en": [
+          "Louis"
+        ]
+      },
       "uhangul": "모[Rㅣ]스 루이스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3684,6 +5889,12 @@
       "original": "Nam June Paik",
       "korean": "백남준",
       "displayKorean": "백남준",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Paik"
+        ]
+      },
       "uhangul": "백남준",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3697,6 +5908,14 @@
       "original": "Natalia Goncharova",
       "korean": "나탈리아 곤차로바",
       "displayKorean": "나탈리아 곤차로바",
+      "aliases": {
+        "ko": [
+          "곤차로바"
+        ],
+        "en": [
+          "Goncharova"
+        ]
+      },
       "uhangul": "나탈리아 곤차[Rㅗ][Vㅏ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3710,6 +5929,14 @@
       "original": "Nicolas Poussin",
       "korean": "니콜라 푸생",
       "displayKorean": "니콜라 푸생",
+      "aliases": {
+        "ko": [
+          "푸생"
+        ],
+        "en": [
+          "Poussin"
+        ]
+      },
       "uhangul": "니콜라 푸생",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3723,12 +5950,19 @@
       "original": "Norbert Wolf",
       "korean": "노르베르트 볼프",
       "displayKorean": "노르베르트 볼프",
+      "aliases": {
+        "ko": [
+          "볼프"
+        ],
+        "en": [
+          "Wolf"
+        ]
+      },
       "uhangul": "노[Rㅡ]베[Rㅡ]트 [Vㅗㄹ][Fㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/artists.json",
-        "delivery/Art_through_Time_Viewer/data/artists.json"
+        "data/artists.json"
       ],
       "status": "verified-pair"
     },
@@ -3737,6 +5971,14 @@
       "original": "Odilon Redon",
       "korean": "오딜롱 르동",
       "displayKorean": "오딜롱 르동",
+      "aliases": {
+        "ko": [
+          "르동"
+        ],
+        "en": [
+          "Redon"
+        ]
+      },
       "uhangul": "오딜롱 [Rㅡ]동",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3750,6 +5992,14 @@
       "original": "Olafur Eliasson",
       "korean": "올라퍼 엘리아슨",
       "displayKorean": "올라퍼 엘리아슨",
+      "aliases": {
+        "ko": [
+          "엘리아슨"
+        ],
+        "en": [
+          "Eliasson"
+        ]
+      },
       "uhangul": "올라[Fㅓ] 엘리아슨",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3763,6 +6013,14 @@
       "original": "On Kawara",
       "korean": "온 가와라",
       "displayKorean": "온 가와라",
+      "aliases": {
+        "ko": [
+          "가와라"
+        ],
+        "en": [
+          "Kawara"
+        ]
+      },
       "uhangul": "온 가와[Rㅏ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3776,6 +6034,14 @@
       "original": "Orazio Gentileschi",
       "korean": "오라치오 젠틸레스키",
       "displayKorean": "오라치오 젠틸레스키",
+      "aliases": {
+        "ko": [
+          "젠틸레스키"
+        ],
+        "en": [
+          "Gentileschi"
+        ]
+      },
       "uhangul": "오[Rㅏ]치오 젠틸레스키",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3789,6 +6055,14 @@
       "original": "Oskar Kokoschka",
       "korean": "오스카 코코슈카",
       "displayKorean": "오스카 코코슈카",
+      "aliases": {
+        "ko": [
+          "코코슈카"
+        ],
+        "en": [
+          "Kokoschka"
+        ]
+      },
       "uhangul": "오스카 코코슈카",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3802,6 +6076,14 @@
       "original": "Otto Dix",
       "korean": "오토 딕스",
       "displayKorean": "오토 딕스",
+      "aliases": {
+        "ko": [
+          "딕스"
+        ],
+        "en": [
+          "Dix"
+        ]
+      },
       "uhangul": "오토 딕스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3815,6 +6097,12 @@
       "original": "Pablo Picasso",
       "korean": "피카소",
       "displayKorean": "피카소",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Picasso"
+        ]
+      },
       "uhangul": "피카소",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3828,6 +6116,14 @@
       "original": "Paolo Uccello",
       "korean": "파올로 우첼로",
       "displayKorean": "파올로 우첼로",
+      "aliases": {
+        "ko": [
+          "우첼로"
+        ],
+        "en": [
+          "Uccello"
+        ]
+      },
       "uhangul": "파올로 우첼로",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3841,6 +6137,14 @@
       "original": "Paolo Veronese",
       "korean": "파올로 베로네세",
       "displayKorean": "파올로 베로네세",
+      "aliases": {
+        "ko": [
+          "베로네세"
+        ],
+        "en": [
+          "Veronese"
+        ]
+      },
       "uhangul": "파올로 [Vㅔ][Rㅗ]네세",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3854,6 +6158,10 @@
       "original": "Parmigianino",
       "korean": "파르미자니노",
       "displayKorean": "파르미자니노",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "파[Rㅡ]미자니노",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3867,6 +6175,13 @@
       "original": "Paul Cézanne",
       "korean": "세잔",
       "displayKorean": "세잔",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Paul Cezanne",
+          "Cézanne"
+        ]
+      },
       "uhangul": "세[Zㅏㄴ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3880,6 +6195,14 @@
       "original": "Paul Delvaux",
       "korean": "폴 델보",
       "displayKorean": "폴 델보",
+      "aliases": {
+        "ko": [
+          "델보"
+        ],
+        "en": [
+          "Delvaux"
+        ]
+      },
       "uhangul": "폴 델[Vㅗ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3893,12 +6216,19 @@
       "original": "Paul Gachet",
       "korean": "폴 가셰",
       "displayKorean": "폴 가셰",
+      "aliases": {
+        "ko": [
+          "가셰"
+        ],
+        "en": [
+          "Gachet"
+        ]
+      },
       "uhangul": "폴 가셰",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/profiles/vincent-van-gogh.json",
-        "delivery/Art_through_Time_Viewer/data/profiles/vincent-van-gogh.json"
+        "data/profiles/vincent-van-gogh.json"
       ],
       "status": "verified-pair"
     },
@@ -3907,6 +6237,12 @@
       "original": "Paul Gauguin",
       "korean": "고갱",
       "displayKorean": "고갱",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Gauguin"
+        ]
+      },
       "uhangul": "고갱",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3920,6 +6256,14 @@
       "original": "Paul Klee",
       "korean": "파울 클레",
       "displayKorean": "파울 클레",
+      "aliases": {
+        "ko": [
+          "클레"
+        ],
+        "en": [
+          "Klee"
+        ]
+      },
       "uhangul": "파울 클레",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3933,6 +6277,15 @@
       "original": "Paul Sérusier",
       "korean": "폴 세뤼지에",
       "displayKorean": "폴 세뤼지에",
+      "aliases": {
+        "ko": [
+          "세뤼지에"
+        ],
+        "en": [
+          "Paul Serusier",
+          "Sérusier"
+        ]
+      },
       "uhangul": "폴 세[Rㅟ]지에",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3946,6 +6299,14 @@
       "original": "Paul Signac",
       "korean": "폴 시냐크",
       "displayKorean": "폴 시냐크",
+      "aliases": {
+        "ko": [
+          "시냐크"
+        ],
+        "en": [
+          "Signac"
+        ]
+      },
       "uhangul": "폴 시냐크",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3960,12 +6321,19 @@
       "original": "Paul-Eugene Lecadre",
       "korean": "폴외젠 르카드르",
       "displayKorean": "폴외젠 르카드르",
+      "aliases": {
+        "ko": [
+          "르카드르"
+        ],
+        "en": [
+          "Lecadre"
+        ]
+      },
       "uhangul": "폴외젠 르카드르",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/artists.json",
-        "delivery/Art_through_Time_Viewer/data/artists.json"
+        "data/artists.json"
       ],
       "status": "verified-pair"
     },
@@ -3974,6 +6342,14 @@
       "original": "Paula Modersohn-Becker",
       "korean": "파울라 모더존베커",
       "displayKorean": "파울라 모더존베커",
+      "aliases": {
+        "ko": [
+          "모더존베커"
+        ],
+        "en": [
+          "Modersohn-Becker"
+        ]
+      },
       "uhangul": "파울라 모더존베커",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -3987,6 +6363,15 @@
       "original": "Pavel Janák",
       "korean": "파벨 야나크",
       "displayKorean": "파벨 야나크",
+      "aliases": {
+        "ko": [
+          "야나크"
+        ],
+        "en": [
+          "Pavel Janak",
+          "Janák"
+        ]
+      },
       "uhangul": "파[Vㅔㄹ] 야나크",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4000,22 +6385,27 @@
       "original": "Peter Paul Rubens",
       "korean": "페테르 파울 루벤스",
       "displayKorean": "페테르 파울 루벤스",
+      "aliases": {
+        "ko": [
+          "루벤스",
+          "페테르 파울 루벤스"
+        ],
+        "en": [
+          "Rubens",
+          "Peter Paul Rubens"
+        ]
+      },
       "uhangul": "페테[Rㅡ] 파울 [Rㅜ]벤스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/artists.json",
-        "data/techniques.json",
         "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
         "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
         "data/미술사조/9e553fb48e9a464402114360-1.html",
         "data/미술사조/c0d228e179032941f8d9ebfb-1.html",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/0a104587439ae7b4c6b39e27-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/37a05b9246dcdbd89a685d55-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/9e553fb48e9a464402114360-1.html",
         "tools/apply-first-batch-movement-enhancements.js"
       ],
       "status": "verified-pair"
@@ -4025,6 +6415,14 @@
       "original": "Philip Wilson Steer",
       "korean": "필립 윌슨 스티어",
       "displayKorean": "필립 윌슨 스티어",
+      "aliases": {
+        "ko": [
+          "스티어"
+        ],
+        "en": [
+          "Steer"
+        ]
+      },
       "uhangul": "[Fㅣㄹ]립 윌슨 스티어",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4038,6 +6436,16 @@
       "original": "Philippe de Champaigne",
       "korean": "필리프 드 샹파뉴",
       "displayKorean": "필리프 드 샹파뉴",
+      "aliases": {
+        "ko": [
+          "드 샹파뉴",
+          "샹파뉴"
+        ],
+        "en": [
+          "de Champaigne",
+          "Champaigne"
+        ]
+      },
       "uhangul": "[Fㅣㄹ]리프 드 샹파뉴",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4051,6 +6459,15 @@
       "original": "Piero della Francesca",
       "korean": "피에로 델라 프란체스카",
       "displayKorean": "피에로 델라 프란체스카",
+      "aliases": {
+        "ko": [
+          "프란체스카"
+        ],
+        "en": [
+          "della Francesca",
+          "Francesca"
+        ]
+      },
       "uhangul": "피에[Rㅗ] 델라 [Fㅡ][Rㅏㄴ]체스카",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4064,6 +6481,14 @@
       "original": "Piero Manzoni",
       "korean": "피에로 만초니",
       "displayKorean": "피에로 만초니",
+      "aliases": {
+        "ko": [
+          "만초니"
+        ],
+        "en": [
+          "Manzoni"
+        ]
+      },
       "uhangul": "피에[Rㅗ] 만초니",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4077,6 +6502,14 @@
       "original": "Pierre Bonnard",
       "korean": "피에르 보나르",
       "displayKorean": "피에르 보나르",
+      "aliases": {
+        "ko": [
+          "보나르"
+        ],
+        "en": [
+          "Bonnard"
+        ]
+      },
       "uhangul": "피에[Rㅡ] 보나[Rㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4090,6 +6523,16 @@
       "original": "Pierre Puvis de Chavannes",
       "korean": "퓌비 드 샤반",
       "displayKorean": "퓌비 드 샤반",
+      "aliases": {
+        "ko": [
+          "드 샤반",
+          "샤반"
+        ],
+        "en": [
+          "de Chavannes",
+          "Chavannes"
+        ]
+      },
       "uhangul": "퓌비 드 샤[Vㅏㄴ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4103,6 +6546,12 @@
       "original": "Pierre-Auguste Renoir",
       "korean": "르누아르",
       "displayKorean": "르누아르",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Renoir"
+        ]
+      },
       "uhangul": "[Rㅡ]누아[Rㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4117,6 +6566,14 @@
       "original": "Pieter Aertsen",
       "korean": "피터르 아르트선",
       "displayKorean": "피터르 아르트선",
+      "aliases": {
+        "ko": [
+          "아르트선"
+        ],
+        "en": [
+          "Aertsen"
+        ]
+      },
       "uhangul": "피터[Rㅡ] 아[Rㅡ]트선",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4130,6 +6587,15 @@
       "original": "Pieter Bruegel the Elder",
       "korean": "브뤼헐",
       "displayKorean": "브뤼헐",
+      "aliases": {
+        "ko": [
+          "피터르 브뤼헐"
+        ],
+        "en": [
+          "Bruegel",
+          "Pieter Bruegel"
+        ]
+      },
       "uhangul": "브[Rㅟ]헐",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4143,6 +6609,18 @@
       "original": "Pieter Brueghel the Elder",
       "korean": "대 피터르 브뤼헐",
       "displayKorean": "대 피터르 브뤼헐",
+      "aliases": {
+        "ko": [
+          "브뤼헐",
+          "피터르 대 브뤼헐",
+          "대 피터르 브뤼헐"
+        ],
+        "en": [
+          "Brueghel",
+          "Pieter Brueghel",
+          "Pieter Brueghel the Elder"
+        ]
+      },
       "uhangul": "대 피터[Rㅡ] 브[Rㅟ][Xㅓㄹ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4157,6 +6635,16 @@
       "original": "Pieter de Hooch",
       "korean": "피터르 더 호흐",
       "displayKorean": "피터르 더 호흐",
+      "aliases": {
+        "ko": [
+          "더 호흐",
+          "호흐"
+        ],
+        "en": [
+          "de Hooch",
+          "Hooch"
+        ]
+      },
       "uhangul": "피터[Rㅡ] 더 호[CHㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4170,6 +6658,16 @@
       "original": "Pietro da Cortona",
       "korean": "피에트로 다 코르토나",
       "displayKorean": "피에트로 다 코르토나",
+      "aliases": {
+        "ko": [
+          "다 코르토나",
+          "코르토나"
+        ],
+        "en": [
+          "da Cortona",
+          "Cortona"
+        ]
+      },
       "uhangul": "피에트[Rㅗ] 다 코[Rㅡ]토나",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4183,6 +6681,14 @@
       "original": "Pietro Lorenzetti",
       "korean": "피에트로 로렌체티",
       "displayKorean": "피에트로 로렌체티",
+      "aliases": {
+        "ko": [
+          "로렌체티"
+        ],
+        "en": [
+          "Lorenzetti"
+        ]
+      },
       "uhangul": "피에트[Rㅗ] 로[Rㅔㄴ]체티",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4196,6 +6702,14 @@
       "original": "Pietro Perugino",
       "korean": "피에트로 페루지노",
       "displayKorean": "피에트로 페루지노",
+      "aliases": {
+        "ko": [
+          "페루지노"
+        ],
+        "en": [
+          "Perugino"
+        ]
+      },
       "uhangul": "피에트[Rㅗ] 페[Rㅜ]지노",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4209,6 +6723,10 @@
       "original": "Pisanello",
       "korean": "피사넬로",
       "displayKorean": "피사넬로",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "피사넬로",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4222,6 +6740,10 @@
       "original": "Pontormo",
       "korean": "폰토르모",
       "displayKorean": "폰토르모",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "폰토[Rㅡ]모",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4235,6 +6757,14 @@
       "original": "Quentin Massys",
       "korean": "퀜틴 마세이스",
       "displayKorean": "퀜틴 마세이스",
+      "aliases": {
+        "ko": [
+          "마세이스"
+        ],
+        "en": [
+          "Massys"
+        ]
+      },
       "uhangul": "퀜틴 마세이스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4248,6 +6778,22 @@
       "original": "Raffaello Sanzio da Urbino",
       "korean": "라파엘로",
       "displayKorean": "라파엘로",
+      "aliases": {
+        "ko": [
+          "라파엘",
+          "산치오",
+          "라파엘로 산치오",
+          "라파엘로"
+        ],
+        "en": [
+          "da Urbino",
+          "Urbino",
+          "Raphael",
+          "Raffaello",
+          "Raffaello Sanzio",
+          "Raffaello Sanzio da Urbino"
+        ]
+      },
       "uhangul": "[Rㅏ][Fㅏ]엘로",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4256,16 +6802,13 @@
         "data/artists.json",
         "data/미술사조/0930062b29f8f38dd88ee1a5-1.html",
         "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
+        "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
+        "data/미술사조/4e7a664301ed396184c3cb5d-1.html",
         "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "data/미술사조/9e553fb48e9a464402114360-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/0a104587439ae7b4c6b39e27-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/37a05b9246dcdbd89a685d55-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/9e553fb48e9a464402114360-1.html"
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
@@ -4274,6 +6817,12 @@
       "original": "Raoul Hausmann",
       "korean": "하우스만",
       "displayKorean": "하우스만",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Hausmann"
+        ]
+      },
       "uhangul": "하우스만",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4287,6 +6836,18 @@
       "original": "Rembrandt Harmenszoon van Rijn",
       "korean": "렘브란트 하르먼손 판 레인",
       "displayKorean": "렘브란트 하르먼손 판 레인",
+      "aliases": {
+        "ko": [
+          "판 레인",
+          "레인",
+          "렘브란트 하르먼손 판 레인"
+        ],
+        "en": [
+          "van Rijn",
+          "Rijn",
+          "Rembrandt Harmenszoon van Rijn"
+        ]
+      },
       "uhangul": "[Rㅔㅁ]브[Rㅏㄴ]트 하[Rㅡ]먼손 [Vㅏㄴ] [Rㅔ]인",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4301,6 +6862,16 @@
       "original": "Rembrandt van Rijn",
       "korean": "렘브란트",
       "displayKorean": "렘브란트",
+      "aliases": {
+        "ko": [
+          "반 레인",
+          "레인"
+        ],
+        "en": [
+          "van Rijn",
+          "Rijn"
+        ]
+      },
       "uhangul": "[Rㅔㅁ]브[Rㅏㄴ]트",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4315,6 +6886,14 @@
       "original": "Remedios Varo",
       "korean": "레메디오스 바로",
       "displayKorean": "레메디오스 바로",
+      "aliases": {
+        "ko": [
+          "바로"
+        ],
+        "en": [
+          "Varo"
+        ]
+      },
       "uhangul": "[Rㅔ]메디오스 [Vㅏ][Rㅗ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4328,6 +6907,15 @@
       "original": "René Magritte",
       "korean": "르네 마그리트",
       "displayKorean": "르네 마그리트",
+      "aliases": {
+        "ko": [
+          "마그리트"
+        ],
+        "en": [
+          "Rene Magritte",
+          "Magritte"
+        ]
+      },
       "uhangul": "[Rㅡ]네 마그[Rㅣ]트",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4341,6 +6929,14 @@
       "original": "Richard Serra",
       "korean": "리처드 세라",
       "displayKorean": "리처드 세라",
+      "aliases": {
+        "ko": [
+          "세라"
+        ],
+        "en": [
+          "Serra"
+        ]
+      },
       "uhangul": "[Rㅣ]처드 세[Rㅏ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4354,6 +6950,14 @@
       "original": "Robert Adam",
       "korean": "로버트 애덤",
       "displayKorean": "로버트 애덤",
+      "aliases": {
+        "ko": [
+          "애덤"
+        ],
+        "en": [
+          "Adam"
+        ]
+      },
       "uhangul": "[Rㅗ]버트 애덤",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4367,6 +6971,14 @@
       "original": "Robert Campin",
       "korean": "로베르 캉팽",
       "displayKorean": "로베르 캉팽",
+      "aliases": {
+        "ko": [
+          "캉팽"
+        ],
+        "en": [
+          "Campin"
+        ]
+      },
       "uhangul": "[Rㅗ]베[Rㅡ] 캉팽",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4380,6 +6992,14 @@
       "original": "Robert Delaunay",
       "korean": "로베르 들로네",
       "displayKorean": "로베르 들로네",
+      "aliases": {
+        "ko": [
+          "들로네"
+        ],
+        "en": [
+          "Delaunay"
+        ]
+      },
       "uhangul": "[Rㅗ]베[Rㅡ] 들로네",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4393,6 +7013,14 @@
       "original": "Robert Motherwell",
       "korean": "로버트 마더웰",
       "displayKorean": "로버트 마더웰",
+      "aliases": {
+        "ko": [
+          "마더웰"
+        ],
+        "en": [
+          "Motherwell"
+        ]
+      },
       "uhangul": "[Rㅗ]버트 마[THㅓ]웰",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4406,6 +7034,14 @@
       "original": "Roger Fry",
       "korean": "로저 프라이",
       "displayKorean": "로저 프라이",
+      "aliases": {
+        "ko": [
+          "프라이"
+        ],
+        "en": [
+          "Fry"
+        ]
+      },
       "uhangul": "[Rㅗ]저 [Fㅡ][Rㅏ]이",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4419,6 +7055,15 @@
       "original": "Rogier van der Weyden",
       "korean": "로히어르 판 데르 베이던",
       "displayKorean": "로히어르 판 데르 베이던",
+      "aliases": {
+        "ko": [
+          "베이던"
+        ],
+        "en": [
+          "van der Weyden",
+          "Weyden"
+        ]
+      },
       "uhangul": "[Rㅗ]히어[Rㅡ] [Vㅏㄴ] 데[Rㅡ] [Vㅔ]이던",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4432,6 +7077,14 @@
       "original": "Rosa Bonheur",
       "korean": "로자 보뇌르",
       "displayKorean": "로자 보뇌르",
+      "aliases": {
+        "ko": [
+          "보뇌르"
+        ],
+        "en": [
+          "Bonheur"
+        ]
+      },
       "uhangul": "[Rㅗ]자 보뇌[Rㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4445,6 +7098,14 @@
       "original": "Rosalba Carriera",
       "korean": "로살바 카리에라",
       "displayKorean": "로살바 카리에라",
+      "aliases": {
+        "ko": [
+          "카리에라"
+        ],
+        "en": [
+          "Carriera"
+        ]
+      },
       "uhangul": "[Rㅗ]살바 카[Rㅣ]에[Rㅏ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4458,6 +7119,14 @@
       "original": "Rosso Fiorentino",
       "korean": "로소 피오렌티노",
       "displayKorean": "로소 피오렌티노",
+      "aliases": {
+        "ko": [
+          "피오렌티노"
+        ],
+        "en": [
+          "Fiorentino"
+        ]
+      },
       "uhangul": "[Rㅗ]소 [Fㅣ]오[Rㅔㄴ]티노",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4471,6 +7140,15 @@
       "original": "Salvador Dalí",
       "korean": "살바도르 달리",
       "displayKorean": "살바도르 달리",
+      "aliases": {
+        "ko": [
+          "달리"
+        ],
+        "en": [
+          "Salvador Dali",
+          "Dalí"
+        ]
+      },
       "uhangul": "살바도르 달리",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4484,6 +7162,14 @@
       "original": "Sam Francis",
       "korean": "샘 프랜시스",
       "displayKorean": "샘 프랜시스",
+      "aliases": {
+        "ko": [
+          "프랜시스"
+        ],
+        "en": [
+          "Francis"
+        ]
+      },
       "uhangul": "샘 [Fㅡ][Rㅐㄴ]시스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4497,6 +7183,14 @@
       "original": "Sandro Botticelli",
       "korean": "산드로 보티첼리",
       "displayKorean": "산드로 보티첼리",
+      "aliases": {
+        "ko": [
+          "보티첼리"
+        ],
+        "en": [
+          "Botticelli"
+        ]
+      },
       "uhangul": "산드[Rㅗ] 보티첼리",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4510,6 +7204,16 @@
       "original": "Sebastiano del Piombo",
       "korean": "세바스티아노 델 피옴보",
       "displayKorean": "세바스티아노 델 피옴보",
+      "aliases": {
+        "ko": [
+          "델 피옴보",
+          "피옴보"
+        ],
+        "en": [
+          "del Piombo",
+          "Piombo"
+        ]
+      },
       "uhangul": "세바스티아노 델 피옴보",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4523,6 +7227,14 @@
       "original": "Sigmar Polke",
       "korean": "지그마르 폴케",
       "displayKorean": "지그마르 폴케",
+      "aliases": {
+        "ko": [
+          "폴케"
+        ],
+        "en": [
+          "Polke"
+        ]
+      },
       "uhangul": "지그마[Rㅡ] 폴케",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4536,6 +7248,14 @@
       "original": "Simon Vouet",
       "korean": "시몽 부에",
       "displayKorean": "시몽 부에",
+      "aliases": {
+        "ko": [
+          "부에"
+        ],
+        "en": [
+          "Vouet"
+        ]
+      },
       "uhangul": "시몽 [Vㅜ]에",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4549,6 +7269,14 @@
       "original": "Simone Martini",
       "korean": "시모네 마르티니",
       "displayKorean": "시모네 마르티니",
+      "aliases": {
+        "ko": [
+          "마르티니"
+        ],
+        "en": [
+          "Martini"
+        ]
+      },
       "uhangul": "시모네 마[Rㅡ]티니",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4562,6 +7290,14 @@
       "original": "Sofonisba Anguissola",
       "korean": "소포니스바 앙귀솔라",
       "displayKorean": "소포니스바 앙귀솔라",
+      "aliases": {
+        "ko": [
+          "앙귀솔라"
+        ],
+        "en": [
+          "Anguissola"
+        ]
+      },
       "uhangul": "소[Fㅗ]니스바 앙귀솔라",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4575,6 +7311,14 @@
       "original": "Sol LeWitt",
       "korean": "솔 르윗",
       "displayKorean": "솔 르윗",
+      "aliases": {
+        "ko": [
+          "르윗"
+        ],
+        "en": [
+          "LeWitt"
+        ]
+      },
       "uhangul": "솔 르윗",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4588,6 +7332,14 @@
       "original": "Sonia Delaunay",
       "korean": "소니아 들로네",
       "displayKorean": "소니아 들로네",
+      "aliases": {
+        "ko": [
+          "들로네"
+        ],
+        "en": [
+          "Delaunay"
+        ]
+      },
       "uhangul": "소니아 들로네",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4601,6 +7353,14 @@
       "original": "Sophie Taeuber-Arp",
       "korean": "소피 토이버아르프",
       "displayKorean": "소피 토이버아르프",
+      "aliases": {
+        "ko": [
+          "토이버아르프"
+        ],
+        "en": [
+          "Taeuber-Arp"
+        ]
+      },
       "uhangul": "소[Fㅣ] 토이버아[Rㅡ]프",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4614,6 +7374,14 @@
       "original": "Takashi Murakami",
       "korean": "무라카미 다카시",
       "displayKorean": "무라카미 다카시",
+      "aliases": {
+        "ko": [
+          "다카시"
+        ],
+        "en": [
+          "Murakami"
+        ]
+      },
       "uhangul": "무라카미 다카시",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4627,6 +7395,14 @@
       "original": "Tarsila do Amaral",
       "korean": "타르실라 두 아마랄",
       "displayKorean": "타르실라 두 아마랄",
+      "aliases": {
+        "ko": [
+          "아마랄"
+        ],
+        "en": [
+          "Amaral"
+        ]
+      },
       "uhangul": "타[Rㅡ]실라 두 아마[Rㅏㄹ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4640,6 +7416,17 @@
       "original": "Théo van Rysselberghe",
       "korean": "테오 판 리셀베르허",
       "displayKorean": "테오 판 리셀베르허",
+      "aliases": {
+        "ko": [
+          "판 리셀베르허",
+          "리셀베르허"
+        ],
+        "en": [
+          "Theo van Rysselberghe",
+          "van Rysselberghe",
+          "Rysselberghe"
+        ]
+      },
       "uhangul": "[THㅔ]오 [Vㅏㄴ] [Rㅣ]셀베르[Xㅓ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4653,6 +7440,15 @@
       "original": "Théodore Chassériau",
       "korean": "테오도르 샤세리오",
       "displayKorean": "테오도르 샤세리오",
+      "aliases": {
+        "ko": [
+          "샤세리오"
+        ],
+        "en": [
+          "Theodore Chasseriau",
+          "Chassériau"
+        ]
+      },
       "uhangul": "[THㅔ]오도[Rㅡ] 샤세[Rㅣ]오",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4666,6 +7462,13 @@
       "original": "Théodore Géricault",
       "korean": "제리코",
       "displayKorean": "제리코",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Theodore Gericault",
+          "Géricault"
+        ]
+      },
       "uhangul": "제[Rㅣ]코",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4679,6 +7482,12 @@
       "original": "Thomas Cole",
       "korean": "토머스 콜",
       "displayKorean": "토머스 콜",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Cole"
+        ]
+      },
       "uhangul": "[THㅗ]머스 콜",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4692,6 +7501,14 @@
       "original": "Thomas Eakins",
       "korean": "토머스 에이킨스",
       "displayKorean": "토머스 에이킨스",
+      "aliases": {
+        "ko": [
+          "에이킨스"
+        ],
+        "en": [
+          "Eakins"
+        ]
+      },
       "uhangul": "[THㅗ]머스 에이킨스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4705,6 +7522,14 @@
       "original": "Thomas Gainsborough",
       "korean": "토머스 게인즈버러",
       "displayKorean": "토머스 게인즈버러",
+      "aliases": {
+        "ko": [
+          "게인즈버러"
+        ],
+        "en": [
+          "Gainsborough"
+        ]
+      },
       "uhangul": "[THㅗ]머스 게인즈버[Rㅓ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4718,6 +7543,14 @@
       "original": "Thomas Jefferson",
       "korean": "토머스 제퍼슨",
       "displayKorean": "토머스 제퍼슨",
+      "aliases": {
+        "ko": [
+          "제퍼슨"
+        ],
+        "en": [
+          "Jefferson"
+        ]
+      },
       "uhangul": "[THㅗ]머스 제[Fㅓ]슨",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4731,6 +7564,10 @@
       "original": "Tintoretto",
       "korean": "틴토레토",
       "displayKorean": "틴토레토",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "틴토[Rㅔ]토",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4744,6 +7581,18 @@
       "original": "Titian",
       "korean": "티치아노",
       "displayKorean": "티치아노",
+      "aliases": {
+        "ko": [
+          "티치아노 베첼리오",
+          "베첼리오",
+          "티치아노"
+        ],
+        "en": [
+          "Tiziano Vecellio",
+          "Tiziano",
+          "Titian"
+        ]
+      },
       "uhangul": "티치아노",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4765,6 +7614,14 @@
       "original": "Tom Roberts",
       "korean": "톰 로버츠",
       "displayKorean": "톰 로버츠",
+      "aliases": {
+        "ko": [
+          "로버츠"
+        ],
+        "en": [
+          "Roberts"
+        ]
+      },
       "uhangul": "톰 [Rㅗ]버츠",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4778,6 +7635,14 @@
       "original": "Tracey Emin",
       "korean": "트레이시 에민",
       "displayKorean": "트레이시 에민",
+      "aliases": {
+        "ko": [
+          "에민"
+        ],
+        "en": [
+          "Emin"
+        ]
+      },
       "uhangul": "트[Rㅔ]이시 에민",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4791,6 +7656,12 @@
       "original": "Tristan Tzara",
       "korean": "차라",
       "displayKorean": "차라",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Tzara"
+        ]
+      },
       "uhangul": "차[Rㅏ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4804,6 +7675,10 @@
       "original": "Ulay",
       "korean": "울라이",
       "displayKorean": "울라이",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "울라이",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4817,6 +7692,12 @@
       "original": "Umberto Boccioni",
       "korean": "보초니",
       "displayKorean": "보초니",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Boccioni"
+        ]
+      },
       "uhangul": "보초니",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4830,6 +7711,12 @@
       "original": "Varvara Stepanova",
       "korean": "스테파노바",
       "displayKorean": "스테파노바",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Stepanova"
+        ]
+      },
       "uhangul": "스테[Vㅏ]노[Vㅏ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4843,6 +7730,14 @@
       "original": "Vasily Perov",
       "korean": "바실리 페로프",
       "displayKorean": "바실리 페로프",
+      "aliases": {
+        "ko": [
+          "페로프"
+        ],
+        "en": [
+          "Perov"
+        ]
+      },
       "uhangul": "[Vㅏ]실리 페[Rㅗ][Vㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4856,6 +7751,16 @@
       "original": "Vassili Vladimirovich Pukiryov",
       "korean": "바실리 푸키레프",
       "displayKorean": "바실리 푸키레프",
+      "aliases": {
+        "ko": [
+          "푸키레프",
+          "바실리 푸키레프"
+        ],
+        "en": [
+          "Pukiryov",
+          "Vassili Vladimirovich Pukiryov"
+        ]
+      },
       "uhangul": "[Vㅏ]실리 [Vㅜ]키레[Vㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4871,6 +7776,14 @@
       "original": "Viktor Borisov-Musatov",
       "korean": "빅토르 보리소프무사토프",
       "displayKorean": "빅토르 보리소프무사토프",
+      "aliases": {
+        "ko": [
+          "보리소프무사토프"
+        ],
+        "en": [
+          "Borisov-Musatov"
+        ]
+      },
       "uhangul": "[Vㅣㄱ]토[Rㅡ] 보[Rㅣ]소[Vㅡ]무사토[Vㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4880,10 +7793,43 @@
       "status": "verified-pair"
     },
     {
+      "id": "name-vilhelmhammershi",
+      "original": "Vilhelm Hammershøi",
+      "korean": "빌헬름 함메르쇠이",
+      "displayKorean": "빌헬름 함메르쇠이",
+      "aliases": {
+        "ko": [
+          "함메르쇠이"
+        ],
+        "en": [
+          "Hammershøi"
+        ]
+      },
+      "uhangul": "[Vㅣㄹ]헬름 함메르쇠이",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/techniques.json"
+      ],
+      "status": "verified-pair"
+    },
+    {
       "id": "Q5582",
       "original": "Vincent van Gogh",
       "korean": "빈센트 반 고흐",
       "displayKorean": "빈센트 반 고흐",
+      "aliases": {
+        "ko": [
+          "반 고흐",
+          "고흐",
+          "빈센트 반 고흐"
+        ],
+        "en": [
+          "van Gogh",
+          "Gogh",
+          "Vincent van Gogh"
+        ]
+      },
       "uhangul": "[Vㅣㄴ]센트 [Vㅏㄴ] 고[Xㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4894,12 +7840,7 @@
         "data/미술사조/4e7a664301ed396184c3cb5d-1.html",
         "data/미술사조/81bf5950142af1141dfcf738-1.html",
         "data/미술사조/be9a35cdca8c52adb73b06c7-1.html",
-        "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/236b5b248aa3129573179c3b-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/4e7a664301ed396184c3cb5d-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/81bf5950142af1141dfcf738-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/be9a35cdca8c52adb73b06c7-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html"
+        "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html"
       ],
       "status": "verified-pair"
     },
@@ -4908,6 +7849,14 @@
       "original": "Vittore Carpaccio",
       "korean": "비토레 카르파초",
       "displayKorean": "비토레 카르파초",
+      "aliases": {
+        "ko": [
+          "카르파초"
+        ],
+        "en": [
+          "Carpaccio"
+        ]
+      },
       "uhangul": "[Vㅣ]토[Rㅔ] 카[Rㅡ]파초",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4921,6 +7870,12 @@
       "original": "Vladimir Tatlin",
       "korean": "타틀린",
       "displayKorean": "타틀린",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Tatlin"
+        ]
+      },
       "uhangul": "타틀린",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4934,6 +7889,14 @@
       "original": "Walter Sickert",
       "korean": "월터 시커트",
       "displayKorean": "월터 시커트",
+      "aliases": {
+        "ko": [
+          "시커트"
+        ],
+        "en": [
+          "Sickert"
+        ]
+      },
       "uhangul": "월터 시커트",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4947,6 +7910,12 @@
       "original": "Wassily Kandinsky",
       "korean": "칸딘스키",
       "displayKorean": "칸딘스키",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Kandinsky"
+        ]
+      },
       "uhangul": "칸딘스키",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4960,6 +7929,12 @@
       "original": "Wifredo Lam",
       "korean": "위프레도 람",
       "displayKorean": "위프레도 람",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Lam"
+        ]
+      },
       "uhangul": "위[Vㅡ][Rㅔ]도 람",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4973,6 +7948,14 @@
       "original": "Willem Kalf",
       "korean": "빌럼 칼프",
       "displayKorean": "빌럼 칼프",
+      "aliases": {
+        "ko": [
+          "칼프"
+        ],
+        "en": [
+          "Kalf"
+        ]
+      },
       "uhangul": "[Vㅣㄹ]럼 칼[Fㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4986,6 +7969,14 @@
       "original": "William Blake",
       "korean": "윌리엄 블레이크",
       "displayKorean": "윌리엄 블레이크",
+      "aliases": {
+        "ko": [
+          "블레이크"
+        ],
+        "en": [
+          "Blake"
+        ]
+      },
       "uhangul": "윌리엄 블레이크",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -4999,6 +7990,14 @@
       "original": "William Hogarth",
       "korean": "윌리엄 호가스",
       "displayKorean": "윌리엄 호가스",
+      "aliases": {
+        "ko": [
+          "호가스"
+        ],
+        "en": [
+          "Hogarth"
+        ]
+      },
       "uhangul": "윌리엄 호가[THㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -5012,6 +8011,14 @@
       "original": "William Holman Hunt",
       "korean": "윌리엄 홀먼 헌트",
       "displayKorean": "윌리엄 홀먼 헌트",
+      "aliases": {
+        "ko": [
+          "헌트"
+        ],
+        "en": [
+          "Hunt"
+        ]
+      },
       "uhangul": "윌리엄 홀먼 헌트",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -5025,6 +8032,14 @@
       "original": "William Kentridge",
       "korean": "윌리엄 켄트리지",
       "displayKorean": "윌리엄 켄트리지",
+      "aliases": {
+        "ko": [
+          "켄트리지"
+        ],
+        "en": [
+          "Kentridge"
+        ]
+      },
       "uhangul": "윌리엄 켄트[Rㅣ]지",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -5038,6 +8053,14 @@
       "original": "William Morris",
       "korean": "윌리엄 모리스",
       "displayKorean": "윌리엄 모리스",
+      "aliases": {
+        "ko": [
+          "모리스"
+        ],
+        "en": [
+          "Morris"
+        ]
+      },
       "uhangul": "윌리엄 모[Rㅣ]스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -5051,6 +8074,14 @@
       "original": "Winslow Homer",
       "korean": "윈슬로 호머",
       "displayKorean": "윈슬로 호머",
+      "aliases": {
+        "ko": [
+          "호머"
+        ],
+        "en": [
+          "Homer"
+        ]
+      },
       "uhangul": "윈슬로 호머",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -5064,13 +8095,20 @@
       "original": "Wolf Huber",
       "korean": "볼프 후버",
       "displayKorean": "볼프 후버",
+      "aliases": {
+        "ko": [
+          "후버"
+        ],
+        "en": [
+          "Huber"
+        ]
+      },
       "uhangul": "[Vㅗㄹ][Fㅡ] 후버",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/미술사조/080336f866ce0c573e6c2b7f-1.html",
-        "delivery/Art_through_Time_Viewer/data/미술사조/080336f866ce0c573e6c2b7f-1.html"
+        "data/미술사조/080336f866ce0c573e6c2b7f-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5079,6 +8117,14 @@
       "original": "Wolf Vostell",
       "korean": "볼프 포스텔",
       "displayKorean": "볼프 포스텔",
+      "aliases": {
+        "ko": [
+          "포스텔"
+        ],
+        "en": [
+          "Vostell"
+        ]
+      },
       "uhangul": "[Vㅗㄹ][Fㅡ] [Vㅗ]스텔",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -5092,6 +8138,14 @@
       "original": "Wyndham Lewis",
       "korean": "윈덤 루이스",
       "displayKorean": "윈덤 루이스",
+      "aliases": {
+        "ko": [
+          "루이스"
+        ],
+        "en": [
+          "Lewis"
+        ]
+      },
       "uhangul": "윈덤 루이스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -5105,6 +8159,14 @@
       "original": "Yayoi Kusama",
       "korean": "쿠사마 야요이",
       "displayKorean": "쿠사마 야요이",
+      "aliases": {
+        "ko": [
+          "야요이"
+        ],
+        "en": [
+          "Kusama"
+        ]
+      },
       "uhangul": "쿠사마 야요이",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -5118,6 +8180,14 @@
       "original": "Yoko Ono",
       "korean": "오노 요코",
       "displayKorean": "오노 요코",
+      "aliases": {
+        "ko": [
+          "요코"
+        ],
+        "en": [
+          "Ono"
+        ]
+      },
       "uhangul": "오노 요코",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -5131,6 +8201,14 @@
       "original": "Yves Tanguy",
       "korean": "이브 탕기",
       "displayKorean": "이브 탕기",
+      "aliases": {
+        "ko": [
+          "탕기"
+        ],
+        "en": [
+          "Tanguy"
+        ]
+      },
       "uhangul": "이[Vㅡ] 탕기",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -5144,6 +8222,12 @@
       "original": "Zhang Xiaogang",
       "korean": "장샤오강",
       "displayKorean": "장샤오강",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Xiaogang"
+        ]
+      },
       "uhangul": "[Zㅏㅇ]샤오강",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -5157,6 +8241,14 @@
       "original": "Zimmermann brothers",
       "korean": "치머만 형제",
       "displayKorean": "치머만 형제",
+      "aliases": {
+        "ko": [
+          "형제"
+        ],
+        "en": [
+          "brothers"
+        ]
+      },
       "uhangul": "치머만 형제",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
@@ -5170,6 +8262,14 @@
       "original": "Aerial Perspective",
       "korean": "대기 원근법",
       "displayKorean": "대기 원근법",
+      "aliases": {
+        "ko": [
+          "원근법"
+        ],
+        "en": [
+          "Perspective"
+        ]
+      },
       "uhangul": "대기 원근법",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
@@ -5183,6 +8283,14 @@
       "original": "Alla prima",
       "korean": "알라 프리마",
       "displayKorean": "알라 프리마",
+      "aliases": {
+        "ko": [
+          "프리마"
+        ],
+        "en": [
+          "prima"
+        ]
+      },
       "uhangul": "알라 프[Rㅣ]마",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
@@ -5196,6 +8304,14 @@
       "original": "Broken color",
       "korean": "분할된 붓질",
       "displayKorean": "분할된 붓질",
+      "aliases": {
+        "ko": [
+          "붓질"
+        ],
+        "en": [
+          "color"
+        ]
+      },
       "uhangul": "분할된 붓질",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
@@ -5209,6 +8325,10 @@
       "original": "Chiaroscuro",
       "korean": "키아로스쿠로",
       "displayKorean": "키아로스쿠로",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "키아[Rㅗ]스쿠[Rㅗ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
@@ -5222,6 +8342,10 @@
       "original": "Colorito",
       "korean": "콜로리토",
       "displayKorean": "콜로리토",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "콜로[Rㅣ]토",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
@@ -5235,6 +8359,10 @@
       "original": "Disegno",
       "korean": "디세뇨",
       "displayKorean": "디세뇨",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "디세뇨",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
@@ -5248,6 +8376,10 @@
       "original": "Divisionism",
       "korean": "분할주의",
       "displayKorean": "분할주의",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "[Vㅜㄴ]할주의",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
@@ -5261,6 +8393,14 @@
       "original": "Dry brush",
       "korean": "드라이 브러시",
       "displayKorean": "드라이 브러시",
+      "aliases": {
+        "ko": [
+          "브러시"
+        ],
+        "en": [
+          "brush"
+        ]
+      },
       "uhangul": "드[Rㅏ]이 브[Rㅓ]시",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
@@ -5274,6 +8414,12 @@
       "original": "En plein air",
       "korean": "야외제작",
       "displayKorean": "야외제작",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "air"
+        ]
+      },
       "uhangul": "야외제작",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
@@ -5287,6 +8433,10 @@
       "original": "Fresco",
       "korean": "프레스코",
       "displayKorean": "프레스코",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "[Fㅡ][Rㅔ]스코",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
@@ -5300,6 +8450,10 @@
       "original": "Glazing",
       "korean": "글레이징",
       "displayKorean": "글레이징",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "글레이[Zㅣㅇ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
@@ -5311,9 +8465,13 @@
     {
       "id": "grisaille",
       "original": "Grisaille",
-      "korean": "그리자유",
-      "displayKorean": "그리자유",
-      "uhangul": "그[Rㅣ]자유",
+      "korean": "그리자이유",
+      "displayKorean": "그리자이유",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
+      "uhangul": "그[Rㅣ]자이유",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
       "sources": [
@@ -5326,6 +8484,10 @@
       "original": "Impasto",
       "korean": "임파스토",
       "displayKorean": "임파스토",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "임파스토",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
@@ -5339,6 +8501,10 @@
       "original": "Imprimatura",
       "korean": "임프리마투라",
       "displayKorean": "임프리마투라",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "임프리마투[Rㅏ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
@@ -5352,6 +8518,12 @@
       "original": "Linear Perspective",
       "korean": "선원근법",
       "displayKorean": "선원근법",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Perspective"
+        ]
+      },
       "uhangul": "선원근법",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
@@ -5365,6 +8537,10 @@
       "original": "Pointillism",
       "korean": "점묘법",
       "displayKorean": "점묘법",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "점묘법",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
@@ -5378,6 +8554,10 @@
       "original": "Quadratura",
       "korean": "콰드라투라",
       "displayKorean": "콰드라투라",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "콰드[Rㅏ]투[Rㅏ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
@@ -5391,6 +8571,12 @@
       "original": "Rückenfigur",
       "korean": "뤼켄피구어",
       "displayKorean": "뤼켄피구어",
+      "aliases": {
+        "ko": [],
+        "en": [
+          "Ruckenfigur"
+        ]
+      },
       "uhangul": "[Rㅟ]켄피구어",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
@@ -5404,6 +8590,10 @@
       "original": "Scumbling",
       "korean": "스컴블링",
       "displayKorean": "스컴블링",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "스컴블링",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
@@ -5417,6 +8607,10 @@
       "original": "Sfumato",
       "korean": "스푸마토",
       "displayKorean": "스푸마토",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "스[Fㅜ]마토",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
@@ -5430,6 +8624,10 @@
       "original": "Stucco",
       "korean": "스투코",
       "displayKorean": "스투코",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "스투코",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
@@ -5443,6 +8641,10 @@
       "original": "Tempera",
       "korean": "템페라",
       "displayKorean": "템페라",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "템페[Rㅏ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
@@ -5456,6 +8658,10 @@
       "original": "Tenebrism",
       "korean": "테네브리즘",
       "displayKorean": "테네브리즘",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "테네브[Rㅣ]즘",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
@@ -5469,6 +8675,10 @@
       "original": "Underpainting",
       "korean": "밑칠",
       "displayKorean": "밑칠",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "밑칠",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
@@ -5482,6 +8692,10 @@
       "original": "Wet-on-wet",
       "korean": "웻 온 웻",
       "displayKorean": "웻 온 웻",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
       "uhangul": "웻 온 웻",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",

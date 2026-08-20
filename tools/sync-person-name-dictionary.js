@@ -174,7 +174,7 @@ const manualPersonOverrides = [
   {id:'arthur-streeton', original:'Arthur Streeton', korean:'아서 스트리튼'}
 ];
 const textExtensions = new Set(['.html', '.htm', '.json', '.js', '.md', '.txt']);
-const skippedDirectories = new Set(['.git', 'node_modules', 'logs', 'backups', 'thumbnails', 'high-resolution', 'images', '.uhangul-backup']);
+const skippedDirectories = new Set(['.git', 'node_modules', 'logs', 'backups', 'thumbnails', 'high-resolution', 'images', 'generated', 'delivery', '.uhangul-backup']);
 const koreanName = '[가-힣]{2,}(?:\\s+[가-힣]{1,}){0,5}';
 const foreignWord = "[A-ZÀ-ÖØ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'’.-]*";
 const foreignJoiner = "(?:de|del|della|da|di|du|van|von|der|den|ten|ter|la|le|st\\.)";
@@ -194,6 +194,28 @@ function idFor(original, korean) {
   return `name-${normalize(original || korean).slice(0, 96) || 'unknown'}`;
 }
 
+function cleanAliasList(value) {
+  return [...new Set((Array.isArray(value) ? value : []).map(item => String(item || '').trim().replace(/\s+/g, ' ')).filter(item => item.length >= 2))];
+}
+
+function normalizeAliases(value = {}) {
+  if (Array.isArray(value)) return {ko:cleanAliasList(value), en:[]};
+  return {
+    ko: cleanAliasList(value.ko),
+    en: cleanAliasList(value.en)
+  };
+}
+
+function mergeAliases(...values) {
+  const merged = {ko:[], en:[]};
+  for (const value of values) {
+    const aliases = normalizeAliases(value);
+    merged.ko.push(...aliases.ko);
+    merged.en.push(...aliases.en);
+  }
+  return normalizeAliases(merged);
+}
+
 function isPersonLike(original, korean, strict = false) {
   if (!original || !korean || original.length > 90 || korean.length > 50) return false;
   if (!/[A-Za-zÀ-ÖØ-öø-ÿ]/.test(original) || !/[가-힣]/.test(korean)) return false;
@@ -210,7 +232,7 @@ function isPersonLike(original, korean, strict = false) {
     && (!strict || (originalWords >= 2 && koreanWords <= originalWords + 1));
 }
 
-function addEntry(entries, original, korean, source, id, strict = false, kind = 'person') {
+function addEntry(entries, original, korean, source, id, strict = false, kind = 'person', aliases = {}) {
   original = String(original || '').trim().replace(/\s+/g, ' ');
   korean = String(korean || '').trim().replace(/\s+/g, ' ');
   if (strict) {
@@ -224,12 +246,14 @@ function addEntry(entries, original, korean, source, id, strict = false, kind = 
   if (kind === 'person' && !isPersonLike(original, korean, strict)) return;
   if (kind === 'technique' && (!original || !korean)) return;
   const key = `${kind}\u001f${normalize(original)}\u001f${normalize(korean)}`;
+  const nextRecord = createNameRecord({ id: id || idFor(original, korean), original, korean });
   const existing = entries.get(key);
   if (existing) {
     if (!existing.sources.includes(source)) existing.sources.push(source);
+    existing.aliases = mergeAliases(existing.aliases, nextRecord.aliases, aliases);
     return;
   }
-  const record = createNameRecord({ id: id || idFor(original, korean), original, korean });
+  const record = {...nextRecord, aliases:mergeAliases(nextRecord.aliases, aliases)};
   entries.set(key, {...record, kind, sources:[source], status:'verified-pair'});
 }
 
@@ -247,7 +271,10 @@ function collectLocalizedNames(value, source, entries, seen = new Set(), propert
 }
 
 function walk(directory, files = []) {
-  for (const item of fs.readdirSync(directory, {withFileTypes:true})) {
+  let items = [];
+  try { items = fs.readdirSync(directory, {withFileTypes:true}); }
+  catch (_) { return files; }
+  for (const item of items) {
     if (item.isDirectory()) {
       if (!skippedDirectories.has(item.name)) walk(path.join(directory, item.name), files);
     } else if (textExtensions.has(path.extname(item.name).toLowerCase())) {
@@ -259,7 +286,9 @@ function walk(directory, files = []) {
 
 function scanFile(file, entries) {
   const source = path.relative(root, file).replace(/\\/g, '/');
-  const content = fs.readFileSync(file, 'utf8');
+  let content = '';
+  try { content = fs.readFileSync(file, 'utf8'); }
+  catch (_) { return; }
   const extension = path.extname(file).toLowerCase();
   if (extension === '.json') {
     try { collectLocalizedNames(JSON.parse(content), source, entries); } catch (_) { /* plain-text scan below */ }
@@ -281,11 +310,11 @@ function syncPersonNameDictionary({artists, additionalFiles = []} = {}) {
   const entries = new Map();
   for (const record of readManualRecords()) {
     if (!isPersonLike(record.original, record.korean)) continue;
-    entries.set(`${record.kind || 'person'}\u001f${normalize(record.original)}\u001f${normalize(record.korean)}`, {...record, sources:Array.isArray(record.sources) ? record.sources : []});
+    entries.set(`${record.kind || 'person'}\u001f${normalize(record.original)}\u001f${normalize(record.korean)}`, {...record, aliases:normalizeAliases(record.aliases), sources:Array.isArray(record.sources) ? record.sources : []});
   }
   const sourceArtists = Array.isArray(artists) ? artists : JSON.parse(fs.readFileSync(artistsFile, 'utf8')).artists || [];
   for (const person of [...manualPersonOverrides, ...curatedPersonOverrides]) addEntry(entries, person.original, person.korean, 'data/미술사조/manual-person-overrides', person.id);
-  for (const artist of sourceArtists) addEntry(entries, artist?.name?.en, artist?.name?.ko, 'data/artists.json', artist?.qid || artist?.id);
+  for (const artist of sourceArtists) addEntry(entries, artist?.name?.en, artist?.name?.ko, 'data/artists.json', artist?.qid || artist?.id, false, 'person', mergeAliases(artist?.aliases, {ko:[artist?.name?.ko], en:[artist?.name?.en]}));
   const techniques = JSON.parse(fs.readFileSync(techniquesFile, 'utf8')).techniques || [];
   for (const technique of techniques) {
     const original = technique?.name?.en;

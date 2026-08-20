@@ -49,7 +49,8 @@ const PASSTHROUGH_ONSETS = Object.freeze({
   H: new Set(["ㅎ"])
 });
 const MANUAL_UHANGUL_BY_ORIGINAL = Object.freeze({
-  carllarsson: value => value.displayKorean || value.korean || "라르손, 칼"
+  carllarsson: value => value.displayKorean || value.korean || "라르손, 칼",
+  diegovelazquez: value => String(value.displayKorean || value.korean || "벨라스케스").replace(/벨라스케스/g, "벨라[THㅡ]케[THㅡ]")
 });
 
 function tokenizeBlock(block) {
@@ -88,9 +89,10 @@ function rebuildRecordIndex() {
     try { rec._encoded = encodeNotation(rec.uhangul); }
     catch(e) { console.error("[uHangul] bad record", rec, e); rec._encoded = rec.korean; }
     byId.set(rec.id,rec);
-    [rec.original,rec.korean].filter(Boolean).forEach(text => byText.set(normalizeText(text),rec));
+    const aliases = Array.isArray(rec.aliases) ? rec.aliases : [...(Array.isArray(rec.aliases?.ko) ? rec.aliases.ko : []), ...(Array.isArray(rec.aliases?.en) ? rec.aliases.en : [])];
+    [rec.original,rec.korean,rec.displayKorean,...aliases].filter(Boolean).forEach(text => byText.set(normalizeText(text),rec));
   }
-  candidates = RECORDS.flatMap(r => [{id:r.id,text:r.original}, {id:r.id,text:r.korean}]).filter(x=>x.text).sort((a,b)=>b.text.length-a.text.length);
+  candidates = RECORDS.flatMap(r => [{id:r.id,text:r.original}, {id:r.id,text:r.korean}, {id:r.id,text:r.displayKorean}]).filter(x=>x.text).sort((a,b)=>b.text.length-a.text.length);
 }
 rebuildRecordIndex();
 

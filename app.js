@@ -326,6 +326,17 @@ function artistDisplayName(artist) {
   const koreanName = artist?.name?.ko || loc(artist?.name) || '';
   return koreanArtistDisplayOverrides[artist?.qid] || koreanFamilyFirst(koreanName, artist?.name?.en || '');
 }
+function textList(value) {
+  return (Array.isArray(value) ? value : []).map(item => String(item || '').trim()).filter(Boolean);
+}
+function artistAliases(artist) {
+  const aliases = artist?.aliases;
+  if (Array.isArray(aliases)) return textList(aliases);
+  return [...textList(aliases?.ko), ...textList(aliases?.en)];
+}
+function artistSearchText(artist) {
+  return [artist?.name?.ko, artist?.name?.en, loc(artist?.name), artistDisplayName(artist), ...artistAliases(artist)].filter(Boolean).join(' ').toLocaleLowerCase();
+}
 function artistLinks(artist) {
   return Array.isArray(artist?.links) ? artist.links.filter(link => {
     try { return ['http:', 'https:'].includes(new URL(link.url || link).protocol); }
@@ -929,7 +940,12 @@ function renderText() {
 function renderList() {
   const sort = $('#sort').value;
   const query = artistSearchQuery.toLocaleLowerCase();
-  const ordered = [...artists].filter(a => !query || [a.name?.ko, a.name?.en, loc(a.name), artistDisplayName(a)].filter(Boolean).join(' ').toLocaleLowerCase().includes(query)).sort((a,b) => sort === 'birth' ? (a.birth || 9999) - (b.birth || 9999) : artistDisplayName(a).localeCompare(artistDisplayName(b), language));
+  const compactQuery = normalized(artistSearchQuery);
+  const ordered = [...artists].filter(a => {
+    if (!query) return true;
+    const searchText = artistSearchText(a);
+    return searchText.includes(query) || (compactQuery && normalized(searchText).includes(compactQuery));
+  }).sort((a,b) => sort === 'birth' ? (a.birth || 9999) - (b.birth || 9999) : artistDisplayName(a).localeCompare(artistDisplayName(b), language));
   list.innerHTML = ordered.length ? ordered.map(a => {
     const country = artistCountryInfo(a), countryLabel = artistCountryLabel(a), movement = primaryMovement(a);
     const displayName = artistListEnglish ? (a.name?.en || artistDisplayName(a)) : artistDisplayName(a);
@@ -939,7 +955,7 @@ function renderList() {
   }).join('') : `<p class="artist-search-empty">${t('noSearchResult')}</p>`;
   list.querySelectorAll('.artist-item').forEach(button => button.onclick = async () => { viewMode = 'timeline'; selectedId = button.dataset.id; persist(); closeDetail(); const artist = artists.find(item => item.id === selectedId); await hydrateThumbnails(artist); renderList(); requestAnimationFrame(() => centerSelectedArtistInList('smooth')); renderTimeline(); await enrichArtist(); });
   list.querySelectorAll('.delete-artist').forEach(button => button.onclick = async () => { if (!currentUserIsAdmin || !confirm(t('confirmDelete'))) return; const deleted = artists.find(artist => artist.id === button.dataset.id); artists = artists.filter(artist => artist.id !== button.dataset.id); if (selectedId === button.dataset.id) selectedId = artists[0]?.id || null; persist(); if (!await saveArtistsNow()) { artists.push(deleted); if (!selectedId) selectedId = deleted.id; alert(language === 'ko' ? '삭제 내용을 저장하지 못해 복원했습니다.' : 'The deletion could not be saved, so it was restored.'); } render(); });
-  $('#artist-names').innerHTML = artists.map(a => `<option value="${esc(artistDisplayName(a))}"></option>`).join('');
+  $('#artist-names').innerHTML = artists.flatMap(a => [artistDisplayName(a), a.name?.ko, a.name?.en, ...artistAliases(a)]).filter(Boolean).filter((value,index,self) => self.indexOf(value) === index).map(value => `<option value="${esc(value)}"></option>`).join('');
 }
 function centerSelectedArtistInList(behavior='auto') {
   if (!selectedId || list.clientHeight <= 0 || list.scrollHeight <= list.clientHeight) return;
