@@ -1,5 +1,5 @@
 {
-  "schema": 18,
+  "schema": 20,
   "artistId": "artist-Q8459",
   "qid": "Q8459",
   "artist": {
@@ -12,9 +12,13 @@
     "nationality": {
       "ko": "베네치아 공화국",
       "en": "Republic of Venice"
+    },
+    "movement": {
+      "ko": "전성기 르네상스",
+      "en": "High Renaissance"
     }
   },
-  "fetchedAt": "2026-08-20T07:25:12.388Z",
+  "fetchedAt": "2026-08-20T13:39:12.318Z",
   "works": [
     {
       "id": "wikidata-Q3752977",
@@ -39,7 +43,9 @@
       },
       "source": "http://www.wikidata.org/entity/Q3752977",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q3842552",
@@ -64,7 +70,9 @@
       },
       "source": "http://www.wikidata.org/entity/Q3842552",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q877191",
@@ -89,82 +97,9 @@
       },
       "source": "http://www.wikidata.org/entity/Q877191",
       "verified": true,
-      "representative": true
-    },
-    {
-      "id": "wikidata-Q2452374",
-      "year": 1500,
-      "popularity": 11,
-      "title": {
-        "ko": "The Judgement of Solomon",
-        "en": "The Judgement of Solomon"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "베네치아 화파",
-        "en": "베네치아 화파"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%2C%20giudizio%20di%20salomone.jpg",
-      "description": {
-        "ko": "painting by Giorgione",
-        "en": "painting by Giorgione"
-      },
-      "source": "http://www.wikidata.org/entity/Q2452374",
-      "verified": true,
-      "representative": true
-    },
-    {
-      "id": "wikidata-Q3937417",
-      "year": 1500,
-      "popularity": 2,
-      "title": {
-        "ko": "Portrait of a Warrior",
-        "en": "Portrait of a Warrior"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "전성기 르네상스",
-        "en": "전성기 르네상스"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgio%20da%20Castelfranco%2C%20gen.%20Giorgione%2C%20Kunsthistorisches%20Museum%20Wien%2C%20Gem%C3%A4ldegalerie%20-%20Krieger%20-%20GG%201526%20-%20Kunsthistorisches%20Museum.jpg",
-      "description": {
-        "ko": "painting by Giorgione",
-        "en": "painting by Giorgione"
-      },
-      "source": "http://www.wikidata.org/entity/Q3937417",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q3944458",
-      "year": 1500,
-      "popularity": 2,
-      "title": {
-        "ko": "Holy Family",
-        "en": "Holy Family"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "베네치아 화파",
-        "en": "베네치아 화파"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Sacra%20Famiglia%20Benson%20%28ca.%201500%29.jpg",
-      "description": {
-        "ko": "painting by Giorgione",
-        "en": "painting by Giorgione"
-      },
-      "source": "http://www.wikidata.org/entity/Q3944458",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q87533881",
@@ -189,7 +124,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q87533881",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q87534049",
@@ -214,7 +150,86 @@
       },
       "source": "http://www.wikidata.org/entity/Q87534049",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q2452374",
+      "year": 1500,
+      "popularity": 11,
+      "title": {
+        "ko": "The Judgement of Solomon",
+        "en": "The Judgement of Solomon"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%2C%20giudizio%20di%20salomone.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q2452374",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3937417",
+      "year": 1500,
+      "popularity": 2,
+      "title": {
+        "ko": "Portrait of a Warrior",
+        "en": "Portrait of a Warrior"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgio%20da%20Castelfranco%2C%20gen.%20Giorgione%2C%20Kunsthistorisches%20Museum%20Wien%2C%20Gem%C3%A4ldegalerie%20-%20Krieger%20-%20GG%201526%20-%20Kunsthistorisches%20Museum.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q3937417",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3944458",
+      "year": 1500,
+      "popularity": 2,
+      "title": {
+        "ko": "Holy Family",
+        "en": "Holy Family"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Sacra%20Famiglia%20Benson%20%28ca.%201500%29.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q3944458",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q20440585",
@@ -239,7 +254,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q20440585",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q20547967",
@@ -264,7 +280,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q20547967",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3937532",
@@ -289,7 +306,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3937532",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3937736",
@@ -314,7 +332,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3937736",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3714154",
@@ -339,7 +358,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3714154",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1720631",
@@ -364,7 +384,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1720631",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3656034",
@@ -389,7 +410,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3656034",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3937389",
@@ -414,7 +436,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3937389",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2537695",
@@ -439,7 +462,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2537695",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3998112",
@@ -464,7 +488,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3998112",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q121547247",
@@ -489,7 +514,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q121547247",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3924389",
@@ -514,7 +540,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3924389",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3098667",
@@ -539,7 +566,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3098667",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3766873",
@@ -564,7 +592,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3766873",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q137594811",
@@ -589,7 +618,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q137594811",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q930137",
@@ -614,7 +644,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q930137",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q595707",
@@ -639,7 +670,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q595707",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q4009159",
@@ -664,7 +696,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q4009159",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3697665",
@@ -689,7 +722,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3697665",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3605531",
@@ -714,7 +748,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3605531",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3605563",
@@ -739,157 +774,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3605563",
       "verified": true,
-      "representative": true
-    },
-    {
-      "id": "wikidata-Q3997388",
-      "year": 1508,
-      "popularity": 6,
-      "title": {
-        "ko": "Il Tramonto (The Sunset)",
-        "en": "Il Tramonto (The Sunset)"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "전성기 르네상스",
-        "en": "전성기 르네상스"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Il%20Tramonto%20%281506-1510%29.jpg",
-      "description": {
-        "ko": "painting by Giorgione",
-        "en": "painting by Giorgione"
-      },
-      "source": "http://www.wikidata.org/entity/Q3997388",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q3656454",
-      "year": 1508,
-      "popularity": 3,
-      "title": {
-        "ko": "Cantore appassionato",
-        "en": "Cantore appassionato"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "전성기 르네상스",
-        "en": "전성기 르네상스"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%2C%20Impassioned%20Singer.jpg",
-      "description": {
-        "ko": "painting by Giorgione",
-        "en": "painting by Giorgione"
-      },
-      "source": "http://www.wikidata.org/entity/Q3656454",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q3879242",
-      "year": 1508,
-      "popularity": 3,
-      "title": {
-        "ko": "Nude",
-        "en": "Nude"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "전성기 르네상스",
-        "en": "전성기 르네상스"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20La%20Nuda%2C%201508%20ca.%2C%201034.jpg",
-      "description": {
-        "ko": "fresco by Giorgione in the Gallerie dell'Accademia, Venice",
-        "en": "fresco by Giorgione in the Gallerie dell'Accademia, Venice"
-      },
-      "source": "http://www.wikidata.org/entity/Q3879242",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q3937411",
-      "year": 1508,
-      "popularity": 2,
-      "title": {
-        "ko": "Portrait of a Man",
-        "en": "Portrait of a Man"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "전성기 르네상스",
-        "en": "전성기 르네상스"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%2C%20Portrait%20of%20a%20Man.jpg",
-      "description": {
-        "ko": "painting by Giorgione",
-        "en": "painting by Giorgione"
-      },
-      "source": "http://www.wikidata.org/entity/Q3937411",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q3977127",
-      "year": 1508,
-      "popularity": 2,
-      "title": {
-        "ko": "Q3977127",
-        "en": "Q3977127"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "전성기 르네상스",
-        "en": "전성기 르네상스"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%2C%20suonatore%20di%20flauto%202.jpg",
-      "description": {
-        "ko": "painting by Giorgione",
-        "en": "painting by Giorgione"
-      },
-      "source": "http://www.wikidata.org/entity/Q3977127",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q3948603",
-      "year": 1508,
-      "popularity": 1,
-      "title": {
-        "ko": "Q3948603",
-        "en": "Q3948603"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "전성기 르네상스",
-        "en": "전성기 르네상스"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%28Venice%29%20Il%20Concerto%20-%20Giorgione.jpg",
-      "description": {
-        "ko": "painting by Giorgione",
-        "en": "painting by Giorgione"
-      },
-      "source": "http://www.wikidata.org/entity/Q3948603",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q27968196",
@@ -914,15 +800,16 @@
       },
       "source": "http://www.wikidata.org/entity/Q27968196",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
-      "id": "wikidata-Q500812",
-      "year": 1509,
-      "popularity": 37,
+      "id": "wikidata-Q3997388",
+      "year": 1508,
+      "popularity": 6,
       "title": {
-        "ko": "잠자는 비너스",
-        "en": "잠자는 비너스"
+        "ko": "Il Tramonto (The Sunset)",
+        "en": "Il Tramonto (The Sunset)"
       },
       "country": {
         "ko": "",
@@ -932,39 +819,145 @@
         "ko": "전성기 르네상스",
         "en": "전성기 르네상스"
       },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Sleeping%20Venus%20-%20Google%20Art%20Project%202.jpg",
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Il%20Tramonto%20%281506-1510%29.jpg",
       "description": {
-        "ko": "조르조네와 티치아노의 그림",
-        "en": "조르조네와 티치아노의 그림"
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
       },
-      "source": "http://www.wikidata.org/entity/Q500812",
+      "source": "http://www.wikidata.org/entity/Q3997388",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
-      "id": "wikidata-Q2872711",
-      "year": 1509,
-      "popularity": 9,
+      "id": "wikidata-Q3656454",
+      "year": 1508,
+      "popularity": 3,
       "title": {
-        "ko": "Self-portrait",
-        "en": "Self-portrait"
+        "ko": "Cantore appassionato",
+        "en": "Cantore appassionato"
       },
       "country": {
         "ko": "",
         "en": ""
       },
       "movement": {
-        "ko": "베네치아 화파",
-        "en": "베네치아 화파"
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
       },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Self%20portrait%2C%20by%20Giorgio%20da%20Castelfranco.jpg",
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%2C%20Impassioned%20Singer.jpg",
       "description": {
         "ko": "painting by Giorgione",
         "en": "painting by Giorgione"
       },
-      "source": "http://www.wikidata.org/entity/Q2872711",
+      "source": "http://www.wikidata.org/entity/Q3656454",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3879242",
+      "year": 1508,
+      "popularity": 3,
+      "title": {
+        "ko": "Nude",
+        "en": "Nude"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20La%20Nuda%2C%201508%20ca.%2C%201034.jpg",
+      "description": {
+        "ko": "fresco by Giorgione in the Gallerie dell'Accademia, Venice",
+        "en": "fresco by Giorgione in the Gallerie dell'Accademia, Venice"
+      },
+      "source": "http://www.wikidata.org/entity/Q3879242",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3937411",
+      "year": 1508,
+      "popularity": 2,
+      "title": {
+        "ko": "Portrait of a Man",
+        "en": "Portrait of a Man"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%2C%20Portrait%20of%20a%20Man.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q3937411",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3977127",
+      "year": 1508,
+      "popularity": 2,
+      "title": {
+        "ko": "Q3977127",
+        "en": "Q3977127"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%2C%20suonatore%20di%20flauto%202.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q3977127",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3948603",
+      "year": 1508,
+      "popularity": 1,
+      "title": {
+        "ko": "Q3948603",
+        "en": "Q3948603"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%28Venice%29%20Il%20Concerto%20-%20Giorgione.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q3948603",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q29916352",
@@ -989,7 +982,60 @@
       },
       "source": "http://www.wikidata.org/entity/Q29916352",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q500812",
+      "year": 1509,
+      "popularity": 37,
+      "title": {
+        "ko": "잠자는 비너스",
+        "en": "잠자는 비너스"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Sleeping%20Venus%20-%20Google%20Art%20Project%202.jpg",
+      "description": {
+        "ko": "조르조네와 티치아노의 그림",
+        "en": "조르조네와 티치아노의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q500812",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q2872711",
+      "year": 1509,
+      "popularity": 9,
+      "title": {
+        "ko": "Self-portrait",
+        "en": "Self-portrait"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "베네치아 화파",
+        "en": "베네치아 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Self%20portrait%2C%20by%20Giorgio%20da%20Castelfranco.jpg",
+      "description": {
+        "ko": "painting by Giorgione",
+        "en": "painting by Giorgione"
+      },
+      "source": "http://www.wikidata.org/entity/Q2872711",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q133503451",
@@ -1014,57 +1060,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q133503451",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q3998923",
-      "year": 1510,
-      "popularity": 5,
-      "title": {
-        "ko": "Detroit Trio",
-        "en": "Detroit Trio"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "전성기 르네상스",
-        "en": "전성기 르네상스"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Titian%20-%20The%20Appeal%20-%2026.107%20-%20Detroit%20Institute%20of%20Arts.jpg",
-      "description": {
-        "ko": "painting attributed to Giorgione, Titian and Sebastiano del Piombo",
-        "en": "painting attributed to Giorgione, Titian and Sebastiano del Piombo"
-      },
-      "source": "http://www.wikidata.org/entity/Q3998923",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q7448169",
-      "year": 1510,
-      "popularity": 4,
-      "title": {
-        "ko": "Self-portrait",
-        "en": "Self-portrait"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "전성기 르네상스",
-        "en": "전성기 르네상스"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Portrait%20of%20Giorgione%2C%20ca.%201508%2C%2086.jpg",
-      "description": {
-        "ko": "painting by Giorgione, Szépművészeti Múzeum, 1510",
-        "en": "painting by Giorgione, Szépművészeti Múzeum, 1510"
-      },
-      "source": "http://www.wikidata.org/entity/Q7448169",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q17335702",
@@ -1089,7 +1086,60 @@
       },
       "source": "http://www.wikidata.org/entity/Q17335702",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3998923",
+      "year": 1510,
+      "popularity": 5,
+      "title": {
+        "ko": "Detroit Trio",
+        "en": "Detroit Trio"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Titian%20-%20The%20Appeal%20-%2026.107%20-%20Detroit%20Institute%20of%20Arts.jpg",
+      "description": {
+        "ko": "painting attributed to Giorgione, Titian and Sebastiano del Piombo",
+        "en": "painting attributed to Giorgione, Titian and Sebastiano del Piombo"
+      },
+      "source": "http://www.wikidata.org/entity/Q3998923",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q7448169",
+      "year": 1510,
+      "popularity": 4,
+      "title": {
+        "ko": "Self-portrait",
+        "en": "Self-portrait"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Portrait%20of%20Giorgione%2C%20ca.%201508%2C%2086.jpg",
+      "description": {
+        "ko": "painting by Giorgione, Szépművészeti Múzeum, 1510",
+        "en": "painting by Giorgione, Szépművészeti Múzeum, 1510"
+      },
+      "source": "http://www.wikidata.org/entity/Q7448169",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "schema": 18,
+  "schema": 20,
   "artistId": "artist-Q5592",
   "qid": "Q5592",
   "artist": {
@@ -12,34 +12,291 @@
     "nationality": {
       "ko": "피렌체 공화국",
       "en": "Republic of Florence"
+    },
+    "movement": {
+      "ko": "전성기 르네상스",
+      "en": "High Renaissance"
     }
   },
-  "fetchedAt": "2026-08-10T22:00:49.099Z",
+  "fetchedAt": "2026-08-20T20:16:13.846Z",
   "works": [
+    {
+      "id": "wikipedia-Q5592-0",
+      "year": null,
+      "title": {
+        "ko": "The Madonna of the Stairs (1490–1492)",
+        "en": "The Madonna of the Stairs (1490–1492)"
+      },
+      "country": {
+        "ko": "피렌체 공화국",
+        "en": "Republic of Florence"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Michelangelo%2C_madonna_della_scala%2C_1491_ca%2C_01.JPG/250px-Michelangelo%2C_madonna_della_scala%2C_1491_ca%2C_01.JPG?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Michelangelo",
+      "verified": true,
+      "popularity": 999,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
+    },
+    {
+      "id": "wikipedia-Q5592-4",
+      "year": null,
+      "title": {
+        "ko": "Angel by Michelangelo, early work (1494–95)",
+        "en": "Angel by Michelangelo, early work (1494–95)"
+      },
+      "country": {
+        "ko": "피렌체 공화국",
+        "en": "Republic of Florence"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Autori_vari%2C_arca_di_san_domenico%2C_angelo_reggicandelabro_di_michelangelo%2C_1494%2C_02.jpg/250px-Autori_vari%2C_arca_di_san_domenico%2C_angelo_reggicandelabro_di_michelangelo%2C_1494%2C_02.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Michelangelo",
+      "verified": true,
+      "popularity": 995,
+      "movementContribution": false
+    },
+    {
+      "id": "wikipedia-Q5592-5",
+      "year": null,
+      "title": {
+        "ko": "Bacchus by Michelangelo, early work (1496–1497)",
+        "en": "Bacchus by Michelangelo, early work (1496–1497)"
+      },
+      "country": {
+        "ko": "피렌체 공화국",
+        "en": "Republic of Florence"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Michelangelo_Bacchus.jpg/120px-Michelangelo_Bacchus.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Michelangelo",
+      "verified": true,
+      "popularity": 994,
+      "movementContribution": false
+    },
+    {
+      "id": "wikipedia-Q5592-8",
+      "year": null,
+      "title": {
+        "ko": "Studies for The Libyan Sibyl",
+        "en": "Studies for The Libyan Sibyl"
+      },
+      "country": {
+        "ko": "피렌체 공화국",
+        "en": "Republic of Florence"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Vatican_Museums-6_%28263%29.jpg/250px-Vatican_Museums-6_%28263%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Michelangelo",
+      "verified": true,
+      "popularity": 991,
+      "movementContribution": false
+    },
+    {
+      "id": "wikipedia-Q5592-11",
+      "year": null,
+      "title": {
+        "ko": "Ignudo",
+        "en": "Ignudo"
+      },
+      "country": {
+        "ko": "피렌체 공화국",
+        "en": "Republic of Florence"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/%27Ignudo%27_by_Michelangelo_JBU33.jpg/250px-%27Ignudo%27_by_Michelangelo_JBU33.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Michelangelo",
+      "verified": true,
+      "popularity": 988,
+      "movementContribution": false
+    },
+    {
+      "id": "wikipedia-Q5592-12",
+      "year": null,
+      "title": {
+        "ko": "Battle of the Centaurs",
+        "en": "Battle of the Centaurs"
+      },
+      "country": {
+        "ko": "피렌체 공화국",
+        "en": "Republic of Florence"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Michelangelo%2C_centauromachia%2C_1492_ca._01_crop.JPG/250px-Michelangelo%2C_centauromachia%2C_1492_ca._01_crop.JPG?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Michelangelo",
+      "verified": true,
+      "popularity": 987,
+      "movementContribution": false
+    },
+    {
+      "id": "wikipedia-Q5592-13",
+      "year": null,
+      "title": {
+        "ko": "Copy of the lost Battle of Cascina by Bastiano da Sangallo",
+        "en": "Copy of the lost Battle of Cascina by Bastiano da Sangallo"
+      },
+      "country": {
+        "ko": "피렌체 공화국",
+        "en": "Republic of Florence"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/La_batalla_de_Cascina_-_Sangallo.jpg/250px-La_batalla_de_Cascina_-_Sangallo.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Michelangelo",
+      "verified": true,
+      "popularity": 986,
+      "movementContribution": false
+    },
+    {
+      "id": "wikipedia-Q5592-14",
+      "year": null,
+      "title": {
+        "ko": "The Last Judgment , detail of the Redeemed (see whole image above)",
+        "en": "The Last Judgment , detail of the Redeemed (see whole image above)"
+      },
+      "country": {
+        "ko": "피렌체 공화국",
+        "en": "Republic of Florence"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Michelangelo%2C_giudizio_universale%2C_dettagli_33.jpg/250px-Michelangelo%2C_giudizio_universale%2C_dettagli_33.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Michelangelo",
+      "verified": true,
+      "popularity": 985,
+      "movementContribution": false
+    },
+    {
+      "id": "wikipedia-Q5592-15",
+      "year": null,
+      "title": {
+        "ko": "The Crucifixion of St. Peter",
+        "en": "The Crucifixion of St. Peter"
+      },
+      "country": {
+        "ko": "피렌체 공화국",
+        "en": "Republic of Florence"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Michelangelo%2C_paolina%2C_martirio_di_san_pietro_01.jpg/250px-Michelangelo%2C_paolina%2C_martirio_di_san_pietro_01.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Michelangelo",
+      "verified": true,
+      "popularity": 984,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q2182509",
+      "year": null,
+      "popularity": 15,
+      "title": {
+        "ko": "Cristo della Minerva",
+        "en": "Cristo della Minerva"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo-Christ.jpg",
+      "description": {
+        "ko": "sculpture by Michelangelo",
+        "en": "sculpture by Michelangelo"
+      },
+      "source": "http://www.wikidata.org/entity/Q2182509",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
     {
       "id": "wikidata-Q2327759",
       "year": 1487,
       "popularity": 23,
       "title": {
         "ko": "성 안토니오의 고통",
-        "en": "The Torment of Saint Anthony"
+        "en": "성 안토니오의 고통"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%20Buonarroti%20-%20The%20Torment%20of%20Saint%20Anthony%20-%20Google%20Art%20Project.jpg",
       "description": {
-        "ko": "??? ??????????????? ??????은/는 미켈란젤로 부오나로티의 1487년경 작품입니다.",
+        "ko": "painting by Michelangelo",
         "en": "painting by Michelangelo"
       },
-      "source": "https://www.wikidata.org/wiki/Q2327759",
+      "source": "http://www.wikidata.org/entity/Q2327759",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2280603",
@@ -50,119 +307,74 @@
         "en": "Head of a Faun"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Calco%20della%20testa%20di%20satiro%20attr.%20al%20buonarroti%20e%20rubato%20dal%20bargello%20nel%201944.JPG",
       "description": {
-        "ko": "Head of a Faun은/는 미켈란젤로 부오나로티의 1489년경 작품입니다.",
+        "ko": "sculpture by Michelangelo",
         "en": "sculpture by Michelangelo"
       },
-      "source": "https://www.wikidata.org/wiki/Q2280603",
+      "source": "http://www.wikidata.org/entity/Q2280603",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
-      "id": "michelangelo-madonna-stairs",
-      "year": 1491,
+      "id": "wikidata-Q2078173",
+      "year": 1490,
+      "popularity": 19,
       "title": {
-        "ko": "계단의 성모",
-        "en": "Madonna of the Stairs"
+        "ko": "Madonna of the Stair",
+        "en": "Madonna of the Stair"
       },
       "country": {
-        "ko": "피렌체 공화국",
-        "en": "Republic of Florence"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "전성기 르네상스",
-        "en": "High Renaissance"
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
       },
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%2C%20madonna%20della%20scala%2C%201491%20ca%2C%2001.JPG",
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%2C%20madonna%20della%20scala%2C%201491%20ca%2C%2001.JPG",
       "description": {
-        "ko": "젊은 미켈란젤로가 얕은 부조로 성모와 아기 예수를 조각한 초기 대표작입니다.",
-        "en": "An early low-relief sculpture of the Madonna and Child, made while Michelangelo was still very young."
+        "ko": "sculpture by Michelangelo",
+        "en": "sculpture by Michelangelo"
       },
-      "source": "https://en.wikipedia.org/wiki/Madonna_of_the_Stairs",
-      "representative": true,
-      "popularity": 980
-    },
-    {
-      "id": "wikidata-Q2454248",
-      "year": 1491,
-      "popularity": 9,
-      "title": {
-        "ko": "Young Archer",
-        "en": "Young Archer"
-      },
-      "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
-      },
-      "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%20%28attr.%29%2C%20giovane%20arciere%2C%201491-92%20ca.%2001.JPG",
-      "description": {
-        "ko": "Young Archer은/는 미켈란젤로 부오나로티의 1491년경 작품입니다.",
-        "en": "sculpture attributed to Michelangelo"
-      },
-      "source": "https://www.wikidata.org/wiki/Q2454248",
+      "source": "http://www.wikidata.org/entity/Q2078173",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
-      "id": "michelangelo-battle-centaurs",
+      "id": "wikidata-Q2313006",
       "year": 1492,
+      "popularity": 19,
       "title": {
-        "ko": "켄타우로스의 전투",
+        "ko": "Battle of the Centaurs",
         "en": "Battle of the Centaurs"
       },
       "country": {
-        "ko": "피렌체 공화국",
-        "en": "Republic of Florence"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "전성기 르네상스",
-        "en": "High Renaissance"
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
       },
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%2C%20centauromachia%2C%201492%20ca.%2001%20crop.JPG",
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%2C%20centauromachia%2C%201492%20ca.%2C%2001.JPG",
       "description": {
-        "ko": "고전 신화를 격렬한 인체 군상으로 다룬 초기 대리석 부조입니다.",
-        "en": "An early marble relief that turns a classical myth into a dense, energetic study of the human body."
+        "ko": "sculpture by Michelangelo",
+        "en": "sculpture by Michelangelo"
       },
-      "source": "https://en.wikipedia.org/wiki/Battle_of_the_Centaurs_(Michelangelo)",
-      "representative": true,
-      "popularity": 970
-    },
-    {
-      "id": "wikidata-Q2626926",
-      "year": 1492,
-      "popularity": 9,
-      "title": {
-        "ko": "Hercules",
-        "en": "Hercules"
-      },
-      "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
-      },
-      "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rubens%2C%20copia%20dell%27ercole%20di%20michelangelo%2C%20louvre.jpg",
-      "description": {
-        "ko": "Hercules은/는 미켈란젤로 부오나로티의 1492년경 작품입니다.",
-        "en": "statue by Michelangelo"
-      },
-      "source": "https://www.wikidata.org/wiki/Q2626926",
+      "source": "http://www.wikidata.org/entity/Q2313006",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1572984",
@@ -173,21 +385,22 @@
         "en": "Crucifix"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Installazione%20florens%202012%20crocifisso%20michelangelo%2002.JPG",
       "description": {
-        "ko": "Crucifix은/는 미켈란젤로 부오나로티의 1493년경 작품입니다.",
+        "ko": "sculpture by Michelangelo",
         "en": "sculpture by Michelangelo"
       },
-      "source": "https://www.wikidata.org/wiki/Q1572984",
+      "source": "http://www.wikidata.org/entity/Q1572984",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2354236",
@@ -198,21 +411,22 @@
         "en": "Angel"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Autori%20vari%2C%20arca%20di%20san%20domenico%2C%20angelo%20reggicandelabro%20di%20michelangelo%2C%201494%2C%2001.jpg",
       "description": {
-        "ko": "Angel은/는 미켈란젤로 부오나로티의 1494년경 작품입니다.",
+        "ko": "marble statue by Michelangelo",
         "en": "marble statue by Michelangelo"
       },
-      "source": "https://www.wikidata.org/wiki/Q2354236",
+      "source": "http://www.wikidata.org/entity/Q2354236",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2429976",
@@ -223,21 +437,22 @@
         "en": "Saint Petronius"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Autori%20vari%2C%20arca%20di%20san%20domenico%2C%20protettori%20di%20bologna%2C%2002%20petronio%20di%20michelangelo%2C%201494%2C%202.jpg",
       "description": {
-        "ko": "Saint Petronius은/는 미켈란젤로 부오나로티의 1494년경 작품입니다.",
+        "ko": "sculpture by Michelangelo",
         "en": "sculpture by Michelangelo"
       },
-      "source": "https://www.wikidata.org/wiki/Q2429976",
+      "source": "http://www.wikidata.org/entity/Q2429976",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1684762",
@@ -248,21 +463,22 @@
         "en": "Manchester Madonna"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "????????? ????????????",
-        "en": "High Renaissance"
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/MICHELANGELO%20-%20Manchester%20Madonna%20adjusted.JPG",
       "description": {
-        "ko": "Manchester Madonna은/는 미켈란젤로 부오나로티의 1494년경 작품입니다.",
+        "ko": "unfinished painting attributed to Michelangelo in the National Gallery, London",
         "en": "unfinished painting attributed to Michelangelo in the National Gallery, London"
       },
-      "source": "https://www.wikidata.org/wiki/Q1684762",
+      "source": "http://www.wikidata.org/entity/Q1684762",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2418609",
@@ -273,119 +489,126 @@
         "en": "Saint Proculus"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Autori%20vari%2C%20arca%20di%20san%20domenico%2C%20protettori%20di%20bologna%2C%2002%20procolo%20di%20michelangelo%2C%201494.jpg",
       "description": {
-        "ko": "Saint Proculus은/는 미켈란젤로 부오나로티의 1494년경 작품입니다.",
+        "ko": "sculpture by Michelangelo",
         "en": "sculpture by Michelangelo"
       },
-      "source": "https://www.wikidata.org/wiki/Q2418609",
+      "source": "http://www.wikidata.org/entity/Q2418609",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
-      "id": "wikidata-Q2417706",
-      "year": 1494,
-      "popularity": 13,
-      "title": {
-        "ko": "Arca di San Domenico",
-        "en": "Arca di San Domenico"
-      },
-      "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
-      },
-      "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Basilique%20San%20Domenico%20de%20Bologne%20-%20S%C3%A9pulcre%20de%20Saint%20Dominique.jpg",
-      "description": {
-        "ko": "Arca di San Domenico은/는 미켈란젤로 부오나로티의 1494년경 작품입니다.",
-        "en": "Funerary structure in Bologna"
-      },
-      "source": "https://www.wikidata.org/wiki/Q2417706",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q581925",
-      "year": 1496,
-      "popularity": 12,
-      "title": {
-        "ko": "Cupid",
-        "en": "Cupid"
-      },
-      "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
-      },
-      "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
-      },
-      "image": "",
-      "description": {
-        "ko": "Cupid은/는 미켈란젤로 부오나로티의 1496년경 작품입니다.",
-        "en": "sculpture by Michelangelo"
-      },
-      "source": "https://www.wikidata.org/wiki/Q581925",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "michelangelo-bacchus",
+      "id": "wikidata-Q1144620",
       "year": 1497,
+      "popularity": 23,
       "title": {
         "ko": "바쿠스",
-        "en": "Bacchus"
+        "en": "바쿠스"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "전성기 르네상스",
-        "en": "High Renaissance"
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
       },
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%20Bacchus.jpg",
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%20Bacchus.jpg",
       "description": {
-        "ko": "술의 신 바쿠스를 비틀거리는 생동감 있는 자세로 표현한 초기 대리석 조각입니다.",
-        "en": "An early marble sculpture presenting Bacchus with an unstable, vividly bodily presence."
+        "ko": "sculpture by Michelangelo",
+        "en": "sculpture by Michelangelo"
       },
-      "source": "https://en.wikipedia.org/wiki/Bacchus_(Michelangelo)",
-      "representative": true,
-      "popularity": 960
+      "source": "http://www.wikidata.org/entity/Q1144620",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
-      "id": "michelangelo-pieta",
+      "id": "wikidata-Q235242",
       "year": 1499,
+      "popularity": 56,
       "title": {
         "ko": "피에타",
-        "en": "Pieta"
+        "en": "피에타"
       },
       "country": {
-        "ko": "교황령",
-        "en": "Papal States"
+        "ko": "",
+        "en": ""
       },
       "movement": {
         "ko": "전성기 르네상스",
-        "en": "High Renaissance"
+        "en": "전성기 르네상스"
       },
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo's%20Pieta%205450%20cropncleaned.jpg",
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Piet%C3%A0%20by%20Michelangelo%20%2848135182552%29.jpg",
       "description": {
-        "ko": "성모 마리아가 죽은 그리스도를 안고 있는 장면을 탁월한 대리석 조각으로 완성한 대표작입니다.",
-        "en": "A marble masterpiece showing the Virgin Mary holding the dead Christ, completed for St. Peter's Basilica."
+        "ko": "미켈란젤로의 조각상",
+        "en": "미켈란젤로의 조각상"
       },
-      "source": "https://en.wikipedia.org/wiki/Piet%C3%A0_(Michelangelo)",
-      "representative": true,
-      "popularity": 10000
+      "source": "http://www.wikidata.org/entity/Q235242",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q179900",
+      "year": 1500,
+      "popularity": 82,
+      "title": {
+        "ko": "데이비드",
+        "en": "데이비드"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%27s%20David%20-%20right%20view%202.jpg",
+      "description": {
+        "ko": "미켈란젤로의 동상",
+        "en": "미켈란젤로의 동상"
+      },
+      "source": "http://www.wikidata.org/entity/Q179900",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q1473546",
+      "year": 1500,
+      "popularity": 31,
+      "title": {
+        "ko": "성가족",
+        "en": "성가족"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tondo%20Doni%202015.png",
+      "description": {
+        "ko": "painting by Michelangelo",
+        "en": "painting by Michelangelo"
+      },
+      "source": "http://www.wikidata.org/entity/Q1473546",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1213160",
@@ -396,95 +619,125 @@
         "en": "The Entombment"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "????????? ????????????",
-        "en": "High Renaissance"
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Entombment%20Michelangelo.jpg",
       "description": {
-        "ko": "The Entombment은/는 미켈란젤로 부오나로티의 1500년경 작품입니다.",
+        "ko": "painting by Michelangelo",
         "en": "painting by Michelangelo"
       },
-      "source": "https://www.wikidata.org/wiki/Q1213160",
+      "source": "http://www.wikidata.org/entity/Q1213160",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
-      "id": "wikidata-Q3613121",
-      "year": 1501,
-      "popularity": 10,
+      "id": "wikipedia-Q5592-1",
+      "year": 1502,
       "title": {
-        "ko": "Piccolomini Altarpiece",
-        "en": "Piccolomini Altarpiece"
-      },
-      "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
-      },
-      "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Duomo%20di%20siena%2C%20altare%20piccolomini.jpg",
-      "description": {
-        "ko": "Piccolomini Altarpiece은/는 미켈란젤로 부오나로티의 1501년경 작품입니다.",
-        "en": "sculpture by Michelangelo"
-      },
-      "source": "https://www.wikidata.org/wiki/Q3613121",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q567833",
-      "year": 1501,
-      "popularity": 33,
-      "title": {
-        "ko": "Madonna of Bruges",
-        "en": "Madonna of Bruges"
-      },
-      "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
-      },
-      "movement": {
-        "ko": "????????? ????????????",
-        "en": "High Renaissance"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Madonna%20Michelangelo%20Bruges%20-%20JPG2%20%28cropped%29.jpg",
-      "description": {
-        "ko": "Madonna of Bruges은/는 미켈란젤로 부오나로티의 1503년경 작품입니다.",
-        "en": "sculpture by Michelangelo"
-      },
-      "source": "https://www.wikidata.org/wiki/Q567833",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "michelangelo-david",
-      "year": 1504,
-      "title": {
-        "ko": "다비드",
-        "en": "David"
+        "ko": "The Taddei Tondo",
+        "en": "The Taddei Tondo"
       },
       "country": {
         "ko": "피렌체 공화국",
         "en": "Republic of Florence"
       },
       "movement": {
-        "ko": "전성기 르네상스",
-        "en": "High Renaissance"
+        "ko": "",
+        "en": ""
       },
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo's%20David%20-%20right%20view%202.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Taddei_Tondo.JPG/250px-Taddei_Tondo.JPG?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
       "description": {
-        "ko": "피렌체 공화국의 시민적 이상과 르네상스 인체 표현을 상징하는 대형 대리석 조각입니다.",
-        "en": "A monumental marble sculpture that became a civic emblem of Florence and a landmark of Renaissance anatomy."
+        "ko": "",
+        "en": ""
       },
-      "source": "https://en.wikipedia.org/wiki/David_(Michelangelo)",
-      "representative": true,
-      "popularity": 10000
+      "source": "https://en.wikipedia.org/wiki/Michelangelo",
+      "verified": true,
+      "popularity": 998,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
+    },
+    {
+      "id": "wikidata-Q567833",
+      "year": 1503,
+      "popularity": 33,
+      "title": {
+        "ko": "Madonna of Bruges",
+        "en": "Madonna of Bruges"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Madonna%20Michelangelo%20Bruges%20-%20JPG2%20%28cropped%29.jpg",
+      "description": {
+        "ko": "sculpture by Michelangelo",
+        "en": "sculpture by Michelangelo"
+      },
+      "source": "http://www.wikidata.org/entity/Q567833",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikipedia-Q5592-2",
+      "year": 1504,
+      "title": {
+        "ko": "Madonna of Bruges",
+        "en": "Madonna of Bruges"
+      },
+      "country": {
+        "ko": "피렌체 공화국",
+        "en": "Republic of Florence"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Madonna_michelangelo1.jpg/250px-Madonna_michelangelo1.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Michelangelo",
+      "verified": true,
+      "popularity": 997,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
+    },
+    {
+      "id": "wikipedia-Q5592-3",
+      "year": 1504,
+      "title": {
+        "ko": "The Doni Tondo (1504–1506)",
+        "en": "The Doni Tondo (1504–1506)"
+      },
+      "country": {
+        "ko": "피렌체 공화국",
+        "en": "Republic of Florence"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Tondo_Doni%2C_por_Miguel_%C3%81ngel.jpg/250px-Tondo_Doni%2C_por_Miguel_%C3%81ngel.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Michelangelo",
+      "verified": true,
+      "popularity": 996,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q785767",
@@ -495,21 +748,22 @@
         "en": "Pitti Tondo"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%2C%20Madonna%20and%20Child%20with%20the%20Young%20St.%20John%20%28Pitti%20Tondo%29%2C%20ca%201505%3B%20Bargello%2C%20Florence%20%281%29.jpg",
       "description": {
-        "ko": "Pitti Tondo은/는 미켈란젤로 부오나로티의 1504년경 작품입니다.",
+        "ko": "sculpture by Michelangelo",
         "en": "sculpture by Michelangelo"
       },
-      "source": "https://www.wikidata.org/wiki/Q785767",
+      "source": "http://www.wikidata.org/entity/Q785767",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2500548",
@@ -520,21 +774,22 @@
         "en": "Taddei Tondo"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "????????? ????????????",
-        "en": "High Renaissance"
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Taddei%20Tondo.JPG",
       "description": {
-        "ko": "Taddei Tondo은/는 미켈란젤로 부오나로티의 1504년경 작품입니다.",
+        "ko": "sculpture by Michelangelo",
         "en": "sculpture by Michelangelo"
       },
-      "source": "https://www.wikidata.org/wiki/Q2500548",
+      "source": "http://www.wikidata.org/entity/Q2500548",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q651551",
@@ -545,21 +800,22 @@
         "en": "Tomb of Pope Julius II"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "????????? ????????????",
-        "en": "High Renaissance"
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/San%20Pietro%20in%20Vincole%20May%202022-5.jpg",
       "description": {
-        "ko": "Tomb of Pope Julius II은/는 미켈란젤로 부오나로티의 1505년경 작품입니다.",
+        "ko": "sculptural and architectural ensemble by Michelangelo",
         "en": "sculptural and architectural ensemble by Michelangelo"
       },
-      "source": "https://www.wikidata.org/wiki/Q651551",
+      "source": "http://www.wikidata.org/entity/Q651551",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2500541",
@@ -570,194 +826,150 @@
         "en": "Saint Matthew"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "????????? ????????????",
-        "en": "High Renaissance"
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%27St%20Matthew%27%20by%20Michelangelo%20-%20JBU%2002.jpg",
       "description": {
-        "ko": "Saint Matthew은/는 미켈란젤로 부오나로티의 1505년경 작품입니다.",
+        "ko": "sculpture by Michelangelo",
         "en": "sculpture by Michelangelo"
       },
-      "source": "https://www.wikidata.org/wiki/Q2500541",
+      "source": "http://www.wikidata.org/entity/Q2500541",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
-      "id": "michelangelo-doni-tondo",
-      "year": 1506,
+      "id": "wikidata-Q844675",
+      "year": 1508,
+      "popularity": 34,
       "title": {
-        "ko": "도니 톤도",
-        "en": "Doni Tondo"
+        "ko": "시스티나 성당 천정",
+        "en": "시스티나 성당 천정"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/CAPPELLA%20SISTINA%20Ceiling.jpg",
+      "description": {
+        "ko": "바티칸시티 시스티나 성당의 그림이 그려진 천정",
+        "en": "바티칸시티 시스티나 성당의 그림이 그려진 천정"
+      },
+      "source": "http://www.wikidata.org/entity/Q844675",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q1989744",
+      "year": 1510,
+      "popularity": 33,
+      "title": {
+        "ko": "모세",
+        "en": "모세"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%27s%20Moses%20%28Rome%29.jpg",
+      "description": {
+        "ko": "sculpture by Michelangelo",
+        "en": "sculpture by Michelangelo"
+      },
+      "source": "http://www.wikidata.org/entity/Q1989744",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikipedia-Q5592-9",
+      "year": 1511,
+      "title": {
+        "ko": "The Libyan Sibyl",
+        "en": "The Libyan Sibyl"
       },
       "country": {
         "ko": "피렌체 공화국",
         "en": "Republic of Florence"
       },
       "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Michelangelo_the_libyan.jpg/250px-Michelangelo_the_libyan.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Michelangelo",
+      "verified": true,
+      "popularity": 990,
+      "movementContribution": false
+    },
+    {
+      "id": "wikipedia-Q5592-10",
+      "year": 1511,
+      "title": {
+        "ko": "The Prophet Jeremiah",
+        "en": "The Prophet Jeremiah"
+      },
+      "country": {
+        "ko": "피렌체 공화국",
+        "en": "Republic of Florence"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Michelangelo_Buonarroti_027.jpg/250px-Michelangelo_Buonarroti_027.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "https://en.wikipedia.org/wiki/Michelangelo",
+      "verified": true,
+      "popularity": 989,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q500242",
+      "year": 1511,
+      "popularity": 61,
+      "title": {
+        "ko": "아담의 창조",
+        "en": "아담의 창조"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
         "ko": "전성기 르네상스",
-        "en": "High Renaissance"
+        "en": "전성기 르네상스"
       },
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tondo%20Doni%2C%20por%20Miguel%20%C3%81ngel.jpg",
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Creation%20of%20Adam%20perspective%20fix.jpg",
       "description": {
-        "ko": "미켈란젤로가 남긴 드문 완성 패널화로, 성가족을 원형 화면에 역동적으로 배치한 작품입니다.",
-        "en": "A rare finished panel painting by Michelangelo, arranging the Holy Family in a dynamic circular composition."
+        "ko": "미켈란젤로의 프레스코화",
+        "en": "미켈란젤로의 프레스코화"
       },
-      "source": "https://en.wikipedia.org/wiki/Doni_Tondo",
-      "representative": true,
-      "popularity": 940
-    },
-    {
-      "id": "michelangelo-sistine-ceiling",
-      "year": 1508,
-      "title": {
-        "ko": "시스티나 성당 천장화",
-        "en": "Sistine Chapel ceiling"
-      },
-      "country": {
-        "ko": "교황령",
-        "en": "Papal States"
-      },
-      "movement": {
-        "ko": "전성기 르네상스",
-        "en": "High Renaissance"
-      },
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sistine%20Chapel%20ceiling%2002.jpg",
-      "description": {
-        "ko": "1508년부터 1512년까지 바티칸 시스티나 성당 천장에 그린 대규모 프레스코 연작입니다.",
-        "en": "The vast fresco cycle painted on the ceiling of the Sistine Chapel between 1508 and 1512."
-      },
-      "source": "https://en.wikipedia.org/wiki/Sistine_Chapel_ceiling",
-      "representative": true,
-      "popularity": 10000
-    },
-    {
-      "id": "wikidata-Q3482971",
-      "year": 1508,
-      "popularity": 10,
-      "title": {
-        "ko": "Delphic Sibyl",
-        "en": "Delphic Sibyl"
-      },
-      "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
-      },
-      "movement": {
-        "ko": "????????? ????????????",
-        "en": "High Renaissance"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%20-%20Delphic%20Sibyl.jpg",
-      "description": {
-        "ko": "Delphic Sibyl은/는 미켈란젤로 부오나로티의 1508년경 작품입니다.",
-        "en": "painting by Michelangelo on the ceiling of the Sistine Chapel"
-      },
-      "source": "https://www.wikidata.org/wiki/Q3482971",
+      "source": "http://www.wikidata.org/entity/Q500242",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q3944655",
-      "year": 1508,
-      "popularity": 9,
-      "title": {
-        "ko": "The Sacrifice of Noah",
-        "en": "The Sacrifice of Noah"
-      },
-      "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
-      },
-      "movement": {
-        "ko": "????????? ????????????",
-        "en": "High Renaissance"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%2C%20Sacrifice%20of%20Noah%2001.jpg",
-      "description": {
-        "ko": "The Sacrifice of Noah은/는 미켈란젤로 부오나로티의 1508년경 작품입니다.",
-        "en": "painting by Michelangelo on the Sistine Chapel ceiling"
-      },
-      "source": "https://www.wikidata.org/wiki/Q3944655",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q3701849",
-      "year": 1508,
-      "popularity": 9,
-      "title": {
-        "ko": "Prophet Daniel",
-        "en": "Prophet Daniel"
-      },
-      "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
-      },
-      "movement": {
-        "ko": "????????? ????????????",
-        "en": "High Renaissance"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%D0%94%D0%B0%D0%BD%D0%B8%D0%B8%D0%BB.jpg",
-      "description": {
-        "ko": "Prophet Daniel은/는 미켈란젤로 부오나로티의 1508년경 작품입니다.",
-        "en": "fresco by Michelangelo, part of the Sistine Chapel ceiling"
-      },
-      "source": "https://www.wikidata.org/wiki/Q3701849",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q3707697",
-      "year": 1508,
-      "popularity": 9,
-      "title": {
-        "ko": "The Deluge",
-        "en": "The Deluge"
-      },
-      "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
-      },
-      "movement": {
-        "ko": "????????? ????????????",
-        "en": "High Renaissance"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/El%20Diluvio.jpg",
-      "description": {
-        "ko": "The Deluge은/는 미켈란젤로 부오나로티의 1508년경 작품입니다.",
-        "en": "fresco by Michelangelo in the Sistine Chapel"
-      },
-      "source": "https://www.wikidata.org/wiki/Q3707697",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q3898510",
-      "year": 1510,
-      "popularity": 10,
-      "title": {
-        "ko": "The Fall and Expulsion from Paradise",
-        "en": "The Fall and Expulsion from Paradise"
-      },
-      "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
-      },
-      "movement": {
-        "ko": "????????? ????????????",
-        "en": "High Renaissance"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%2C%20Fall%20and%20Expulsion%20from%20Garden%20of%20Eden%2000.jpg",
-      "description": {
-        "ko": "The Fall and Expulsion from Paradise은/는 미켈란젤로 부오나로티의 1510년경 작품입니다.",
-        "en": "fresco by Michelangelo in the Sistine Chapel"
-      },
-      "source": "https://www.wikidata.org/wiki/Q3898510",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3696827",
@@ -768,70 +980,47 @@
         "en": "The Creation of the Sun, Moon and Planets"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
-      },
-      "movement": {
-        "ko": "????????? ????????????",
-        "en": "High Renaissance"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%2C%20Creation%20of%20the%20Sun%2C%20Moon%2C%20and%20Plants%2001.jpg",
-      "description": {
-        "ko": "The Creation of the Sun, Moon and Planets은/는 미켈란젤로 부오나로티의 1511년경 작품입니다.",
-        "en": "Fresco by Michelangelo, part of the Sistine Chapel ceiling"
-      },
-      "source": "https://www.wikidata.org/wiki/Q3696827",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "michelangelo-creation-adam",
-      "year": 1512,
-      "title": {
-        "ko": "아담의 창조",
-        "en": "The Creation of Adam"
-      },
-      "country": {
-        "ko": "교황령",
-        "en": "Papal States"
+        "ko": "",
+        "en": ""
       },
       "movement": {
         "ko": "전성기 르네상스",
-        "en": "High Renaissance"
+        "en": "전성기 르네상스"
       },
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%20-%20Creation%20of%20Adam%20(cropped).jpg",
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%2C%20Creation%20of%20the%20Sun%2C%20Moon%2C%20and%20Plants%2001.jpg",
       "description": {
-        "ko": "시스티나 성당 천장화 중 가장 유명한 장면으로, 신과 아담의 손이 맞닿기 직전의 순간을 그렸습니다.",
-        "en": "The most famous scene from the Sistine ceiling, showing the charged instant before God and Adam touch."
+        "ko": "Fresco by Michelangelo, part of the Sistine Chapel ceiling",
+        "en": "Fresco by Michelangelo, part of the Sistine Chapel ceiling"
       },
-      "source": "https://en.wikipedia.org/wiki/The_Creation_of_Adam",
-      "representative": true,
-      "popularity": 10000
+      "source": "http://www.wikidata.org/entity/Q3696827",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
-      "id": "wikidata-Q3955636",
-      "year": 1512,
-      "popularity": 9,
+      "id": "wikipedia-Q5592-6",
+      "year": 1513,
       "title": {
-        "ko": "Separation of Light from Darkness",
-        "en": "Separation of Light from Darkness"
+        "ko": "Dying Slave , Louvre",
+        "en": "Dying Slave , Louvre"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "피렌체 공화국",
+        "en": "Republic of Florence"
       },
       "movement": {
-        "ko": "????????? ????????????",
-        "en": "High Renaissance"
+        "ko": "",
+        "en": ""
       },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dividing%20Light%20from%20Darkness.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/%27Dying_Slave%27_Michelangelo_JBU001.jpg/120px-%27Dying_Slave%27_Michelangelo_JBU001.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
       "description": {
-        "ko": "Separation of Light from Darkness은/는 미켈란젤로 부오나로티의 1512년경 작품입니다.",
-        "en": "fresco by Michelangelo, part of the Sistine Chapel ceiling"
+        "ko": "",
+        "en": ""
       },
-      "source": "https://www.wikidata.org/wiki/Q3955636",
+      "source": "https://en.wikipedia.org/wiki/Michelangelo",
       "verified": true,
-      "representative": false
+      "popularity": 993,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q83862",
@@ -839,24 +1028,25 @@
       "popularity": 23,
       "title": {
         "ko": "죽어가는 노예",
-        "en": "Dying Slave"
+        "en": "죽어가는 노예"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "????????? ????????????",
-        "en": "High Renaissance"
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dying%20slave%20Louvre%20MR%201590%2C%20Louvre.jpg",
       "description": {
-        "ko": "?????????????????? ????????? ?????????",
-        "en": "sculpture by Michelangelo"
+        "ko": "미켈란젤로가 제작한 조각상",
+        "en": "미켈란젤로가 제작한 조각상"
       },
-      "source": "https://www.wikidata.org/wiki/Q83862",
+      "source": "http://www.wikidata.org/entity/Q83862",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3203231",
@@ -864,148 +1054,77 @@
       "popularity": 15,
       "title": {
         "ko": "반항하는 노예",
-        "en": "Rebellious Slave"
+        "en": "반항하는 노예"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
-      },
-      "movement": {
-        "ko": "????????? ????????????",
-        "en": "High Renaissance"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%27Rebellious%20Slave%27%20Michelangelo%20JBU81.jpg",
-      "description": {
-        "ko": "?????????????????? ????????? ?????????",
-        "en": "sculpture by Michelangelo"
-      },
-      "source": "https://www.wikidata.org/wiki/Q3203231",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "michelangelo-moses",
-      "year": 1515,
-      "title": {
-        "ko": "모세",
-        "en": "Moses"
-      },
-      "country": {
-        "ko": "교황령",
-        "en": "Papal States"
+        "ko": "",
+        "en": ""
       },
       "movement": {
         "ko": "전성기 르네상스",
-        "en": "High Renaissance"
+        "en": "전성기 르네상스"
       },
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo's%20Moses.jpg",
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%27Rebellious%20Slave%27%20Michelangelo%20JBU81.jpg",
       "description": {
-        "ko": "율리오 2세 무덤을 위해 제작된 강렬한 대리석 조각으로, 응축된 힘과 심리 표현이 돋보입니다.",
-        "en": "A powerful marble figure for the tomb of Pope Julius II, noted for its compressed force and psychological intensity."
+        "ko": "미켈란젤로가 제작한 조각상",
+        "en": "미켈란젤로가 제작한 조각상"
       },
-      "source": "https://en.wikipedia.org/wiki/Moses_(Michelangelo)",
-      "representative": true,
-      "popularity": 930
-    },
-    {
-      "id": "wikidata-Q660876",
-      "year": 1520,
-      "popularity": 12,
-      "title": {
-        "ko": "New Sacristy",
-        "en": "New Sacristy"
-      },
-      "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
-      },
-      "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fotografi%20di%20San%20Lorenzo%20-%20Hallwylska%20museet%20-%20107390.tif",
-      "description": {
-        "ko": "New Sacristy은/는 미켈란젤로 부오나로티의 1520년경 작품입니다.",
-        "en": "building by Michelangelo in the church of San Lorenzo, Florence"
-      },
-      "source": "https://www.wikidata.org/wiki/Q660876",
+      "source": "http://www.wikidata.org/entity/Q3203231",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q2182509",
-      "year": 1521,
-      "popularity": 15,
-      "title": {
-        "ko": "Cristo della Minerva",
-        "en": "Cristo della Minerva"
-      },
-      "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
-      },
-      "movement": {
-        "ko": "????????? ????????????",
-        "en": "High Renaissance"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo-Christ.jpg",
-      "description": {
-        "ko": "미네르바의 그리스도은/는 미켈란젤로 부오나로티의 1521년경 작품입니다.",
-        "en": "sculpture by Michelangelo"
-      },
-      "source": "https://www.wikidata.org/wiki/Q2182509",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1985071",
       "year": 1521,
       "popularity": 14,
       "title": {
-        "ko": "Medici Madonna",
+        "ko": "메디치 마돈나",
         "en": "Medici Madonna"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "????????? ????????????",
-        "en": "High Renaissance"
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%2C%20Madonna%20and%20Child%2C%201521%3B%20New%20Sacristy%20%28Medici%20Chapel%29%2C%20San%20Lorenzo%2C%20Florence%20%282%29%20%28cropped%29.jpg",
       "description": {
-        "ko": "Medici Madonna은/는 미켈란젤로 부오나로티의 1521년경 작품입니다.",
+        "ko": "sculpture by Michelangelo",
         "en": "sculpture by Michelangelo"
       },
-      "source": "https://www.wikidata.org/wiki/Q1985071",
+      "source": "http://www.wikidata.org/entity/Q1985071",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q596683",
       "year": 1524,
       "popularity": 12,
       "title": {
-        "ko": "Dawn",
+        "ko": "새벽",
         "en": "Dawn"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "????????? ????????????",
-        "en": "High Renaissance"
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tomba%20di%20lorenzo%20de%27%20medici%2C%201531%2C%20aurora%2002.jpg",
       "description": {
-        "ko": "Dawn은/는 미켈란젤로 부오나로티의 1524년경 작품입니다.",
+        "ko": "sculpture by Michelangelo",
         "en": "sculpture by Michelangelo"
       },
-      "source": "https://www.wikidata.org/wiki/Q596683",
+      "source": "http://www.wikidata.org/entity/Q596683",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1984954",
@@ -1016,21 +1135,22 @@
         "en": "Dusk"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "????????? ????????????",
-        "en": "High Renaissance"
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tomba%20di%20lorenzo%20de%27%20medici%2C%201531-32%2C%20crepuscolo%2002.jpg",
       "description": {
-        "ko": "Dusk은/는 미켈란젤로 부오나로티의 1524년경 작품입니다.",
+        "ko": "sculpture by Michelangelo",
         "en": "sculpture by Michelangelo"
       },
-      "source": "https://www.wikidata.org/wiki/Q1984954",
+      "source": "http://www.wikidata.org/entity/Q1984954",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3878834",
@@ -1041,21 +1161,22 @@
         "en": "Night"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "????????? ????????????",
-        "en": "High Renaissance"
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tomba%20di%20giuliano%20de%27%20medici%2C%201524-34%2C%20la%20notte%2001.jpg",
       "description": {
-        "ko": "Night은/는 미켈란젤로 부오나로티의 1526년경 작품입니다.",
+        "ko": "sculpture by Michelangelo",
         "en": "sculpture by Michelangelo"
       },
-      "source": "https://www.wikidata.org/wiki/Q3878834",
+      "source": "http://www.wikidata.org/entity/Q3878834",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1985154",
@@ -1066,46 +1187,47 @@
         "en": "Day"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "????????? ????????????",
-        "en": "High Renaissance"
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tomba%20di%20giuliano%20de%27%20medici%2C%201524-34%2C%20il%20giorno%2006%2C1.jpg",
       "description": {
-        "ko": "Day은/는 미켈란젤로 부오나로티의 1526년경 작품입니다.",
+        "ko": "sculpture by Michelangelo",
         "en": "sculpture by Michelangelo"
       },
-      "source": "https://www.wikidata.org/wiki/Q1985154",
+      "source": "http://www.wikidata.org/entity/Q1985154",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
-      "id": "wikidata-Q3937559",
-      "year": 1526,
-      "popularity": 10,
+      "id": "wikipedia-Q5592-7",
+      "year": 1530,
       "title": {
-        "ko": "Portrait of Giuliano de' Medici, Duke of Nemours",
-        "en": "Portrait of Giuliano de' Medici, Duke of Nemours"
+        "ko": "Atlas Slave (1530–1534)",
+        "en": "Atlas Slave (1530–1534)"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "피렌체 공화국",
+        "en": "Republic of Florence"
       },
       "movement": {
-        "ko": "????????? ????????????",
-        "en": "High Renaissance"
+        "ko": "",
+        "en": ""
       },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Grabmal%20von%20Giuliano%20II.%20de%20Medici%20%28Michelangelo%29%20Cappelle%20Medicee%20Florenz-4.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Michelangelo_-_Atlas.jpg/120px-Michelangelo_-_Atlas.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
       "description": {
-        "ko": "Portrait of Giuliano de' Medici, Duke of Nemours은/는 미켈란젤로 부오나로티의 1526년경 작품입니다.",
-        "en": "sculpture by Michelangelo"
+        "ko": "",
+        "en": ""
       },
-      "source": "https://www.wikidata.org/wiki/Q3937559",
+      "source": "https://en.wikipedia.org/wiki/Michelangelo",
       "verified": true,
-      "representative": false
+      "popularity": 992,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2440879",
@@ -1116,21 +1238,22 @@
         "en": "Crouching Boy"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo-Buonarroti-Crouching%20Boy-3-Hermitage.jpg",
       "description": {
-        "ko": "Crouching Boy은/는 미켈란젤로 부오나로티의 1530년경 작품입니다.",
+        "ko": "sculpture by Michelangelo",
         "en": "sculpture by Michelangelo"
       },
-      "source": "https://www.wikidata.org/wiki/Q2440879",
+      "source": "http://www.wikidata.org/entity/Q2440879",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3829347",
@@ -1141,21 +1264,22 @@
         "en": "Leda and the Swan"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%2C%20studio%20per%20la%20leda%2C%20casa%20buonarroti.jpg",
       "description": {
-        "ko": "Leda and the Swan은/는 미켈란젤로 부오나로티의 1530년경 작품입니다.",
+        "ko": "lost painting by Michelangelo",
         "en": "lost painting by Michelangelo"
       },
-      "source": "https://www.wikidata.org/wiki/Q3829347",
+      "source": "http://www.wikidata.org/entity/Q3829347",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2154351",
@@ -1166,46 +1290,22 @@
         "en": "Apollo"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%2C%20apollino%2001.jpg",
       "description": {
-        "ko": "Apollo은/는 미켈란젤로 부오나로티의 1530년경 작품입니다.",
+        "ko": "unfinished sculpture by Michelangelo",
         "en": "unfinished sculpture by Michelangelo"
       },
-      "source": "https://www.wikidata.org/wiki/Q2154351",
+      "source": "http://www.wikidata.org/entity/Q2154351",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q3057930",
-      "year": 1530,
-      "popularity": 10,
-      "title": {
-        "ko": "Atlas Slave",
-        "en": "Atlas Slave"
-      },
-      "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
-      },
-      "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%20-%20Atlas.jpg",
-      "description": {
-        "ko": "Atlas Slave은/는 미켈란젤로 부오나로티의 1530년경 작품입니다.",
-        "en": "sculpture by Michelangelo"
-      },
-      "source": "https://www.wikidata.org/wiki/Q3057930",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2438217",
@@ -1216,21 +1316,22 @@
         "en": "The Genius of Victory"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo-Genius%20of%20Victory-Palazzo%20vecchio.jpg",
       "description": {
-        "ko": "The Genius of Victory은/는 미켈란젤로 부오나로티의 1532년경 작품입니다.",
+        "ko": "marble sculpture by Michelangelo",
         "en": "marble sculpture by Michelangelo"
       },
-      "source": "https://www.wikidata.org/wiki/Q2438217",
+      "source": "http://www.wikidata.org/entity/Q2438217",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2627551",
@@ -1241,21 +1342,48 @@
         "en": "Brutus"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bruto%20Miguel%20%C3%81ngel%2002%20%28cropped%29.JPG",
       "description": {
-        "ko": "Brutus은/는 미켈란젤로 부오나로티의 1538년경 작품입니다.",
+        "ko": "sculpture by Michelangelo",
         "en": "sculpture by Michelangelo"
       },
-      "source": "https://www.wikidata.org/wiki/Q2627551",
+      "source": "http://www.wikidata.org/entity/Q2627551",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q1886263",
+      "year": 1540,
+      "popularity": 16,
+      "title": {
+        "ko": "The Crucifixion of Saint Peter",
+        "en": "The Crucifixion of Saint Peter"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "전성기 르네상스",
+        "en": "전성기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%2C%20crocifissione%20di%20san%20pietro%2C%201546-50%2C%2002.jpg",
+      "description": {
+        "ko": "fresco by Michelangelo",
+        "en": "fresco by Michelangelo"
+      },
+      "source": "http://www.wikidata.org/entity/Q1886263",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "michelangelo-last-judgment",
@@ -1273,16 +1401,16 @@
         "en": "Mannerism"
       },
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Last%20Judgement%20%28Michelangelo%29.jpg",
+      "thumbnail": "https://commons.wikimedia.org/wiki/Special:FilePath/Last%20Judgement%20%28Michelangelo%29.jpg?width=240",
       "description": {
         "ko": "시스티나 성당 제단벽에 그린 미켈란젤로의 대형 프레스코화입니다.",
-        "en": "The Last Judgment is Michelangelo's monumental fresco on the altar wall of the Sistine Chapel."
+        "en": "Michelangelo's monumental fresco on the altar wall of the Sistine Chapel."
       },
       "source": "https://en.wikipedia.org/wiki/The_Last_Judgment_(Michelangelo)",
+      "verified": true,
       "representative": true,
-      "popularity": 9900,
-      "thumbnail": "https://commons.wikimedia.org/wiki/Special:FilePath/Last%20Judgement%20%28Michelangelo%29.jpg?width=240",
-      "thumbnailValidation": 2,
-      "verified": true
+      "popularity": 10000,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2236899",
@@ -1293,21 +1421,22 @@
         "en": "Battle of Cascina"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/La%20batalla%20de%20Cascina%20-%20Sangallo.jpg",
       "description": {
-        "ko": "Battle of Cascina은/는 미켈란젤로 부오나로티의 1542년경 작품입니다.",
+        "ko": "planned fresco by Michelangelo for the Hall of the Fivehundred",
         "en": "planned fresco by Michelangelo for the Hall of the Fivehundred"
       },
-      "source": "https://www.wikidata.org/wiki/Q2236899",
+      "source": "http://www.wikidata.org/entity/Q2236899",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2432043",
@@ -1318,21 +1447,22 @@
         "en": "The Conversion of Saul"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%20-%20Bekehrung%20des%20heiligen%20Paulus.jpeg",
       "description": {
-        "ko": "The Conversion of Saul은/는 미켈란젤로 부오나로티의 1542년경 작품입니다.",
+        "ko": "fresco by Michelangelo",
         "en": "fresco by Michelangelo"
       },
-      "source": "https://www.wikidata.org/wiki/Q2432043",
+      "source": "http://www.wikidata.org/entity/Q2432043",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2437692",
@@ -1343,70 +1473,22 @@
         "en": "Leah"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo-Leah.jpg",
       "description": {
-        "ko": "Leah은/는 미켈란젤로 부오나로티의 1545년경 작품입니다.",
+        "ko": "sculpture by Michelangelo",
         "en": "sculpture by Michelangelo"
       },
-      "source": "https://www.wikidata.org/wiki/Q2437692",
+      "source": "http://www.wikidata.org/entity/Q2437692",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q2437149",
-      "year": 1545,
-      "popularity": 11,
-      "title": {
-        "ko": "Rachel",
-        "en": "Rachel"
-      },
-      "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
-      },
-      "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/San%20Pietro%20in%20Vincoli%20-%20Roma%2C%20Rachele.jpg",
-      "description": {
-        "ko": "Rachel은/는 미켈란젤로 부오나로티의 1545년경 작품입니다.",
-        "en": "sculpture by Michelangelo"
-      },
-      "source": "https://www.wikidata.org/wiki/Q2437149",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "michelangelo-crucifixion-st-peter",
-      "year": 1550,
-      "title": {
-        "ko": "성 베드로의 십자가형",
-        "en": "The Crucifixion of St. Peter"
-      },
-      "country": {
-        "ko": "교황령",
-        "en": "Papal States"
-      },
-      "movement": {
-        "ko": "매너리즘",
-        "en": "Mannerism"
-      },
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%2C%20paolina%2C%20martirio%20di%20san%20pietro%2001.jpg",
-      "description": {
-        "ko": "바티칸 파올리나 경당을 위한 후기 프레스코로, 미켈란젤로의 마지막 주요 회화 작업 중 하나입니다.",
-        "en": "A late fresco for the Pauline Chapel in the Vatican and one of Michelangelo's final major painting projects."
-      },
-      "source": "https://en.wikipedia.org/wiki/The_Crucifixion_of_St._Peter_(Michelangelo)",
-      "representative": true,
-      "popularity": 900
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2255664",
@@ -1417,21 +1499,22 @@
         "en": "Palestrina Pietà"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%20buonarroti%20%28attr.%20o%20seguace%29%2C%20piet%C3%A0%20di%20palestrina%2C%20forse%201555%20ca.%2C%20da%20S.%20Rosalia%20a%20palestrina%2003.JPG",
       "description": {
-        "ko": "팔레스트리나 피에타은/는 미켈란젤로 부오나로티의 1550년경 작품입니다.",
+        "ko": "sculpture by Michelangelo",
         "en": "sculpture by Michelangelo"
       },
-      "source": "https://www.wikidata.org/wiki/Q2255664",
+      "source": "http://www.wikidata.org/entity/Q2255664",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2709726",
@@ -1442,21 +1525,22 @@
         "en": "Epifania"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%20Epifania.jpg",
       "description": {
-        "ko": "Epifania은/는 미켈란젤로 부오나로티의 1550년경 작품입니다.",
+        "ko": "cartoon by Michelangelo",
         "en": "cartoon by Michelangelo"
       },
-      "source": "https://www.wikidata.org/wiki/Q2709726",
+      "source": "http://www.wikidata.org/entity/Q2709726",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1878666",
@@ -1464,50 +1548,25 @@
       "popularity": 21,
       "title": {
         "ko": "론다니니 피에타",
-        "en": "Rondanini Pietà"
+        "en": "론다니니 피에타"
       },
       "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
+        "ko": "",
+        "en": ""
       },
       "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%20piet%C3%A0%20rondanini.jpg",
       "description": {
-        "ko": "론다니니 피에타은/는 미켈란젤로 부오나로티의 1564년경 작품입니다.",
+        "ko": "sculpture by Michelangelo, 1564",
         "en": "sculpture by Michelangelo, 1564"
       },
-      "source": "https://www.wikidata.org/wiki/Q1878666",
+      "source": "http://www.wikidata.org/entity/Q1878666",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q2342843",
-      "year": 1600,
-      "popularity": 19,
-      "title": {
-        "ko": "The Deposition",
-        "en": "The Deposition"
-      },
-      "country": {
-        "ko": "이탈리아",
-        "en": "Italy"
-      },
-      "movement": {
-        "ko": "???????????? ????????????",
-        "en": "Italian Renaissance"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Florentine%20Piet%C3%A0%2C%20Museo%20dell%27Opera%20del%20Duomo%20-%2048199237196.jpg",
-      "description": {
-        "ko": "The Deposition은/는 미켈란젤로 부오나로티의 1600년경 작품입니다.",
-        "en": "sculpture by Michelangelo"
-      },
-      "source": "https://www.wikidata.org/wiki/Q2342843",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     }
-  ],
-  "curated": true
+  ]
 }

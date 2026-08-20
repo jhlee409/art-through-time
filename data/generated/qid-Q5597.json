@@ -1,5 +1,5 @@
 {
-  "schema": 18,
+  "schema": 20,
   "artistId": "artist-Q5597",
   "qid": "Q5597",
   "artist": {
@@ -12,9 +12,13 @@
     "nationality": {
       "ko": "신성 로마 제국",
       "en": "Holy Roman Empire"
+    },
+    "movement": {
+      "ko": "이탈리아 르네상스",
+      "en": "Italian Renaissance"
     }
   },
-  "fetchedAt": "2026-08-16T03:08:17.761Z",
+  "fetchedAt": "2026-08-20T20:17:41.129Z",
   "works": [
     {
       "id": "wikidata-Q2360329",
@@ -39,7 +43,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2360329",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2343778",
@@ -64,7 +69,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2343778",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q602813",
@@ -89,7 +95,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q602813",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2715152",
@@ -114,7 +121,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2715152",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q677682",
@@ -139,7 +147,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q677682",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2529918",
@@ -164,7 +173,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2529918",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2503581",
@@ -189,32 +199,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2503581",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q1778000",
-      "year": 1500,
-      "popularity": 13,
-      "title": {
-        "ko": "바론치 제단화",
-        "en": "바론치 제단화"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "전성기 르네상스",
-        "en": "전성기 르네상스"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Raffaello%20%28da%29%2C%20copia%20settecentesca%20della%20pala%20baronci%2C%20pinacoteca%20di%20citt%C3%A0%20di%20castello.jpg",
-      "description": {
-        "ko": "파라엘로 산치오의 그림. 지진으로 파괴되어 여러 박물관에 분산 소장됨",
-        "en": "파라엘로 산치오의 그림. 지진으로 파괴되어 여러 박물관에 분산 소장됨"
-      },
-      "source": "http://www.wikidata.org/entity/Q1778000",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2343939",
@@ -239,7 +225,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2343939",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2344357",
@@ -264,7 +251,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2344357",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q598913",
@@ -289,7 +277,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q598913",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2629134",
@@ -314,7 +303,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2629134",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2030685",
@@ -325,21 +315,22 @@
         "en": "The Marriage of the Virgin"
       },
       "country": {
-        "ko": "교황령",
-        "en": "Papal States"
+        "ko": "",
+        "en": ""
       },
       "movement": {
         "ko": "전성기 르네상스",
-        "en": "High Renaissance"
+        "en": "전성기 르네상스"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Raffaello%20-%20Spozalizio%20-%20Web%20Gallery%20of%20Art.jpg",
       "description": {
-        "ko": "라파엘로가 1504년에 그린 패널화로, 성모 마리아와 요셉의 결혼 장면을 다룬 초기 대표작입니다.",
+        "ko": "1504 painting by Raphael",
         "en": "1504 painting by Raphael"
       },
       "source": "http://www.wikidata.org/entity/Q2030685",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q552040",
@@ -364,7 +355,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q552040",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q919294",
@@ -389,7 +381,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q919294",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2627028",
@@ -414,32 +407,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2627028",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q2415259",
-      "year": 1504,
-      "popularity": 14,
-      "title": {
-        "ko": "Saint Michael Vanquishing Satan",
-        "en": "Saint Michael Vanquishing Satan"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "전성기 르네상스",
-        "en": "전성기 르네상스"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saint%20Michel%20et%20le%20Dragon%20-%20Rapha%C3%ABl%20-%20Mus%C3%A9e%20du%20Louvre%20Peintures%20INV%20608%20%3B%20MR%20439.jpg",
-      "description": {
-        "ko": "painting by Raphael known as the \"Little Saint Michael\"",
-        "en": "painting by Raphael known as the \"Little Saint Michael\""
-      },
-      "source": "http://www.wikidata.org/entity/Q2415259",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2344505",
@@ -464,7 +433,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2344505",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q555821",
@@ -489,7 +459,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q555821",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2344396",
@@ -514,7 +485,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2344396",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2452858",
@@ -539,7 +511,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2452858",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2607050",
@@ -564,7 +537,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2607050",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2276546",
@@ -589,7 +563,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2276546",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2713620",
@@ -614,7 +589,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2713620",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2622161",
@@ -639,7 +615,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2622161",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2713671",
@@ -664,7 +641,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2713671",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2035209",
@@ -689,7 +667,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2035209",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1245388",
@@ -714,7 +693,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1245388",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2500226",
@@ -739,7 +719,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2500226",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2165279",
@@ -764,7 +745,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2165279",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q919861",
@@ -789,7 +771,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q919861",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q249449",
@@ -814,7 +797,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q249449",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2535486",
@@ -839,7 +823,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2535486",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q549953",
@@ -864,7 +849,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q549953",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2427320",
@@ -889,7 +875,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2427320",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2344368",
@@ -914,7 +901,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2344368",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q254923",
@@ -939,7 +927,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q254923",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2535563",
@@ -964,7 +953,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2535563",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2275653",
@@ -989,7 +979,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2275653",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2294201",
@@ -1014,7 +1005,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2294201",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2610709",
@@ -1039,7 +1031,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2610709",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q686848",
@@ -1064,7 +1057,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q686848",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q186953",
@@ -1089,7 +1083,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q186953",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q328079",
@@ -1114,7 +1109,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q328079",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2529969",
@@ -1139,7 +1135,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2529969",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q948034",
@@ -1164,7 +1161,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q948034",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q966681",
@@ -1189,7 +1187,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q966681",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2422889",
@@ -1214,7 +1213,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2422889",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2631335",
@@ -1239,32 +1239,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2631335",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q2716974",
-      "year": 1513,
-      "popularity": 14,
-      "title": {
-        "ko": "The Meeting of Leo the Great and Attila",
-        "en": "The Meeting of Leo the Great and Attila"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "전성기 르네상스",
-        "en": "전성기 르네상스"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/0%20Chambre%20de%20Rapha%C3%ABl%20-%20Rencontre%20de%20L%C3%A9on%20le%20Grand%20et%20d%27Attila.JPG",
-      "description": {
-        "ko": "fresco by Raphael",
-        "en": "fresco by Raphael"
-      },
-      "source": "http://www.wikidata.org/entity/Q2716974",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2719737",
@@ -1289,7 +1265,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2719737",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2531790",
@@ -1314,7 +1291,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2531790",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q546977",
@@ -1339,7 +1317,9 @@
       },
       "source": "http://www.wikidata.org/entity/Q546977",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q2528106",
@@ -1364,7 +1344,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2528106",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2664637",
@@ -1389,7 +1370,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2664637",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2420918",
@@ -1414,7 +1396,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2420918",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2467082",
@@ -1439,7 +1422,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2467082",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2344437",
@@ -1464,7 +1448,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2344437",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2610729",
@@ -1489,7 +1474,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2610729",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q153441",
@@ -1514,7 +1500,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q153441",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     }
   ]
 }

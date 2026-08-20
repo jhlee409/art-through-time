@@ -8,7 +8,15 @@ function asObject(value) {
 
 function localized(value) {
   if (value && typeof value === 'object' && !Array.isArray(value)) {
-    return {ko:String(value.ko || ''), en:String(value.en || '')};
+    return {
+      ko:String(value.ko || ''),
+      en:String(value.en || ''),
+      ...(value.original ? {original:String(value.original)} : {}),
+      ...(value.native ? {native:String(value.native)} : {}),
+      ...(value.originalTitle ? {originalTitle:String(value.originalTitle)} : {}),
+      ...(value.nativeTitle ? {nativeTitle:String(value.nativeTitle)} : {}),
+      ...(value.sourceTitle ? {sourceTitle:String(value.sourceTitle)} : {})
+    };
   }
   const text = String(value || '');
   return {ko:text, en:text};

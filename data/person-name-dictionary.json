@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-20T13:32:15.198Z",
+  "generatedAt": "2026-08-20T21:23:29.601Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -5740,21 +5740,33 @@
       "status": "verified-pair"
     },
     {
-      "id": "name-michelangelo",
+      "id": "Q5592",
       "original": "Michelangelo",
       "korean": "미켈란젤로 부오나로티",
       "displayKorean": "미켈란젤로 부오나로티",
       "aliases": {
         "ko": [
-          "부오나로티"
+          "부오나로티",
+          "미켈란젤로",
+          "미켈란젤로 부오나로티"
         ],
-        "en": []
+        "en": [
+          "Buonarroti",
+          "Michelangelo"
+        ]
       },
       "uhangul": "미켈란젤로 부오나로티",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/techniques.json"
+        "data/artists.json",
+        "data/techniques.json",
+        "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
+        "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
+        "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
+        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
+        "data/미술사조/9e553fb48e9a464402114360-1.html",
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5766,13 +5778,11 @@
       "aliases": {
         "ko": [
           "부오나로티",
-          "미켈란젤로",
-          "미켈란젤로 부오나로티"
+          "미켈란젤로"
         ],
         "en": [
           "Buonarroti",
-          "Michelangelo",
-          "Michelangelo Buonarroti"
+          "Michelangelo"
         ]
       },
       "uhangul": "미켈란젤로",
@@ -5780,14 +5790,7 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/techniques.json",
-        "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
-        "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
-        "data/미술사조/9e553fb48e9a464402114360-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
         "tools/apply-first-batch-movement-enhancements.js"
       ],
       "status": "verified-pair"
@@ -6782,33 +6785,21 @@
         "ko": [
           "라파엘",
           "산치오",
-          "라파엘로 산치오",
-          "라파엘로"
+          "라파엘로 산치오"
         ],
         "en": [
           "da Urbino",
           "Urbino",
           "Raphael",
           "Raffaello",
-          "Raffaello Sanzio",
-          "Raffaello Sanzio da Urbino"
+          "Raffaello Sanzio"
         ]
       },
       "uhangul": "[Rㅏ][Fㅏ]엘로",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides",
-        "data/artists.json",
-        "data/미술사조/0930062b29f8f38dd88ee1a5-1.html",
-        "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
-        "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
-        "data/미술사조/4e7a664301ed396184c3cb5d-1.html",
-        "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
-        "data/미술사조/9e553fb48e9a464402114360-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
+        "data/미술사조/manual-person-overrides"
       ],
       "status": "verified-pair"
     },
@@ -6828,6 +6819,43 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "Q5597",
+      "original": "Raphael",
+      "korean": "라파엘로 산치오",
+      "displayKorean": "라파엘로 산치오",
+      "aliases": {
+        "ko": [
+          "산치오",
+          "라파엘로",
+          "라파엘",
+          "라파엘로 산치오"
+        ],
+        "en": [
+          "da Urbino",
+          "Urbino",
+          "Raphael",
+          "Raffaello",
+          "Raffaello Sanzio"
+        ]
+      },
+      "uhangul": "[Rㅏ][Fㅏ]엘로 산치오",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/미술사조/0930062b29f8f38dd88ee1a5-1.html",
+        "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
+        "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html",
+        "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
+        "data/미술사조/4e7a664301ed396184c3cb5d-1.html",
+        "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
+        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
+        "data/미술사조/9e553fb48e9a464402114360-1.html",
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },

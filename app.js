@@ -20,6 +20,7 @@ const favoriteWorksStorageKey = 'art-atlas-favorite-works-v1';
 const accessSessionStorageKey = 'art-atlas-access-session-v1';
 const uHangulModeStorageKey = 'ArtThroughTime.uHangulMode.v3';
 const artistListEnglishStorageKey = 'ArtThroughTime.artistListEnglish.v1';
+const artworkTitleModeStorageKey = 'ArtThroughTime.artworkTitleMode.v1';
 // The app can be opened through the local server or directly as index.html.
 // In the latter case, API calls must explicitly target the local server.
 const apiUrl = endpoint => location.protocol === 'file:' ? `http://localhost:4173${endpoint}` : endpoint;
@@ -28,6 +29,7 @@ const movementAtlasStart = 1400;
 const movementAtlasEnd = 2026;
 const movementCountryEnd = 1950;
 const movementVerticalZoomMax = 30;
+const highResolutionMinimumWidth = 1600;
 const artistImportedWorkLimit = 60;
 const sharedMovementId = 'global-contemporary';
 const artistMovementFallbacks = { Q104884:{ko:'독일 낭만주의',en:'German Romanticism'} };
@@ -35,6 +37,13 @@ const isMovementPopup = startupParams.get('movementPopup') === '1';
 const forceLogin = startupParams.get('login') === '1';
 if (forceLogin) {
   try { sessionStorage.removeItem(accessSessionStorageKey); } catch (_) {}
+}
+function clearLoginRequestFromUrl() {
+  if (!forceLogin || !history.replaceState) return;
+  const url = new URL(location.href);
+  url.searchParams.delete('login');
+  const clean = `${url.pathname}${url.search}${url.hash}`;
+  history.replaceState(null, '', clean || 'index.html');
 }
 const requestedUHangulMode = startupParams.get('uhangul');
 const requestedArtistId = startupParams.get('artist') || startupParams.get('artistId');
@@ -45,6 +54,7 @@ const defaultMovementView = {countries:[...allMovementCountryIds],start:movement
 let language = 'ko';
 let uHangulMode = requestedUHangulMode === 'uhangul' || requestedUHangulMode === 'korean' ? requestedUHangulMode : (sessionStorage.getItem(uHangulModeStorageKey) === 'uhangul' ? 'uhangul' : 'korean');
 let artistListEnglish = sessionStorage.getItem(artistListEnglishStorageKey) === 'true';
+let artworkTitleMode = ['ko','en','original'].includes(sessionStorage.getItem(artworkTitleModeStorageKey)) ? sessionStorage.getItem(artworkTitleModeStorageKey) : 'ko';
 let artists = [];
 let selectedId = localStorage.getItem('art-atlas-selected');
 let requestedArtistMissing = false;
@@ -79,6 +89,8 @@ let favoriteWorkKeys = new Set();
 let movementDocuments = {};
 let artworkHoverPreview;
 let artistSearchQuery = '';
+const highResolutionWidthChecks = new Map();
+const artworkWikipediaLinkChecks = new Map();
 let currentUserEmail = '';
 let currentUserRole = 'viewer';
 let currentUserIsAdmin = false;
@@ -148,6 +160,162 @@ const loc = (value) => {
   if (language === 'ko' && brokenLabel(preferred) && value.en) return koreanLabelFallbacks[value.en] || value.en;
   return preferred;
 };
+const artworkTitleModeOrder = ['ko','en','original'];
+const artworkTitleModeLabels = {ko:'KO',en:'EN',original:'OR'};
+function artworkTitleValue(title, mode) {
+  if (!title || typeof title !== 'object') return mode === 'ko' || mode === 'en' ? String(title || '').trim() : '';
+  const original = title.original || title.native || title.originalTitle || title.nativeTitle || title.sourceTitle || '';
+  const values = {ko:title.ko, en:title.en, original};
+  return String(values[mode] || '').trim();
+}
+function artworkAvailableTitleModes(work) {
+  return artworkTitleModeOrder.filter(mode => artworkTitleValue(work?.title, mode));
+}
+function artworkDisplayTitle(work, preferredMode=artworkTitleMode) {
+  const modes = artworkAvailableTitleModes(work);
+  if (!modes.length) return t('untitled');
+  const start = artworkTitleModeOrder.indexOf(preferredMode);
+  const ordered = start >= 0
+    ? [...artworkTitleModeOrder.slice(start), ...artworkTitleModeOrder.slice(0,start)]
+    : artworkTitleModeOrder;
+  const mode = ordered.find(item => modes.includes(item)) || modes[0];
+  return artworkTitleValue(work.title, mode) || t('untitled');
+}
+function availableArtworkTitleModesForWorks(works=[]) {
+  return artworkTitleModeOrder.filter(mode => works.some(work => artworkTitleValue(work?.title, mode)));
+}
+function nextArtworkTitleMode(works=[]) {
+  const available = availableArtworkTitleModesForWorks(works);
+  if (!available.length) return 'ko';
+  const current = available.includes(artworkTitleMode) ? artworkTitleMode : available[0];
+  return available[(available.indexOf(current) + 1) % available.length];
+}
+function setArtworkTitleMode(mode) {
+  artworkTitleMode = artworkTitleModeOrder.includes(mode) ? mode : 'ko';
+  sessionStorage.setItem(artworkTitleModeStorageKey, artworkTitleMode);
+}
+function artworkTitleAliases(work) {
+  const title = work?.title;
+  if (!title) return [];
+  if (typeof title !== 'object') return [String(title).trim()].filter(Boolean);
+  return [...new Set(artworkTitleModeOrder.map(mode => artworkTitleValue(title, mode)).filter(Boolean))];
+}
+function wikipediaPageInfo(url) {
+  try {
+    const parsed = new URL(url, location.href);
+    if (!/(^|\.)wikipedia\.org$/i.test(parsed.hostname) || !parsed.pathname.startsWith('/wiki/')) return null;
+    const title = decodeURIComponent(parsed.pathname.slice('/wiki/'.length)).replace(/_/g, ' ').trim();
+    if (!title || /^(?:special|file|category|help|wikipedia|template|portal|talk|user|module):/i.test(title)) return null;
+    return {url:parsed.href, title, lang:parsed.hostname.split('.')[0] || 'en'};
+  } catch (_) {
+    return null;
+  }
+}
+function wikipediaUrlFromTitle(languageCode, title) {
+  const lang = languageCode === 'ko' ? 'ko' : 'en';
+  return `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(String(title || '').trim().replace(/ /g, '_'))}`;
+}
+function artworkQid(work) {
+  const id = String(work?.id || '');
+  const source = String(work?.source || '');
+  return id.match(/^(?:wikidata|featured)-(Q\d+)$/)?.[1]
+    || source.match(/wikidata\.org\/(?:entity|wiki)\/(Q\d+)/i)?.[1]
+    || '';
+}
+function artworkWikipediaSources(work) {
+  const linkUrls = (work?.links || []).map(link => typeof link === 'string' ? link : link?.url).filter(Boolean);
+  return [
+    ...(Array.isArray(work?.detail?.sources) ? work.detail.sources : []),
+    work?.source,
+    ...linkUrls
+  ].filter(Boolean);
+}
+function wikipediaSourceMatchesArtwork(info, work) {
+  const pageTitle = normalized(info?.title || '');
+  const aliases = artworkTitleAliases(work).map(normalized).filter(value => value.length >= 2);
+  return Boolean(pageTitle && aliases.some(alias => pageTitle.includes(alias)));
+}
+function explicitArtworkWikipediaUrl(work) {
+  const candidates = artworkWikipediaSources(work)
+    .map(wikipediaPageInfo)
+    .filter(info => info && wikipediaSourceMatchesArtwork(info, work));
+  if (!candidates.length) return '';
+  const preferred = candidates.find(info => info.lang === language) || candidates.find(info => info.lang === 'en') || candidates[0];
+  return preferred.url;
+}
+function wikipediaResultMatchesArtwork(page, work, artist) {
+  const title = page?.title || '';
+  const extract = page?.extract || '';
+  const titleKey = normalized(title);
+  const extractKey = normalized(extract);
+  const aliases = artworkTitleAliases(work).map(normalized).filter(value => value.length >= 2);
+  const artistNames = [artist?.name?.en, artist?.name?.ko, artistDisplayName(artist)]
+    .filter(Boolean)
+    .flatMap(name => {
+      const parts = String(name).split(/\s+/).filter(part => part.length > 2);
+      return [name, parts[parts.length - 1]];
+    })
+    .map(normalized)
+    .filter(value => value.length >= 2);
+  const titleMatches = aliases.some(alias => titleKey.includes(alias));
+  const artistMatches = !artistNames.length || artistNames.some(name => titleKey.includes(name) || extractKey.includes(name));
+  return titleMatches && artistMatches;
+}
+async function wikipediaExactTitleUrl(work, artist) {
+  const languages = language === 'ko' ? ['ko','en'] : ['en','ko'];
+  const aliases = artworkTitleAliases(work);
+  for (const lang of languages) {
+    for (const title of aliases) {
+      try {
+        const endpoint = `https://${lang}.wikipedia.org/w/api.php?${new URLSearchParams({format:'json',origin:'*',action:'query',redirects:'1',titles:title,prop:'info|extracts',inprop:'url',exintro:'1',explaintext:'1'})}`;
+        const data = await fetch(endpoint).then(response => response.ok ? response.json() : null);
+        const page = Object.values(data?.query?.pages || {}).find(item => item && !item.missing);
+        if (page && page.fullurl && wikipediaResultMatchesArtwork(page, work, artist)) return page.fullurl;
+      } catch (_) {}
+    }
+  }
+  return '';
+}
+async function wikipediaSearchTitleUrl(work, artist) {
+  const languages = language === 'ko' ? ['ko','en'] : ['en','ko'];
+  const aliases = artworkTitleAliases(work);
+  const artistName = artist?.name?.en || artist?.name?.ko || '';
+  if (!artistName || !aliases.length) return '';
+  for (const lang of languages) {
+    for (const title of aliases) {
+      try {
+        const endpoint = `https://${lang}.wikipedia.org/w/api.php?${new URLSearchParams({format:'json',origin:'*',action:'query',generator:'search',gsrsearch:`"${title}" "${artistName}"`,gsrnamespace:'0',gsrlimit:'4',prop:'info|extracts',inprop:'url',exintro:'1',explaintext:'1'})}`;
+        const data = await fetch(endpoint).then(response => response.ok ? response.json() : null);
+        const page = Object.values(data?.query?.pages || {}).find(item => item?.fullurl && wikipediaResultMatchesArtwork(item, work, artist));
+        if (page) return page.fullurl;
+      } catch (_) {}
+    }
+  }
+  return '';
+}
+async function resolveArtworkWikipediaUrl(work, artist) {
+  const explicit = explicitArtworkWikipediaUrl(work);
+  if (explicit) return explicit;
+  const qid = artworkQid(work);
+  if (qid) {
+    try {
+      const endpoint = `https://www.wikidata.org/w/api.php?${new URLSearchParams({format:'json',origin:'*',action:'wbgetentities',ids:qid,props:'sitelinks',sitefilter:'kowiki|enwiki'})}`;
+      const data = await fetch(endpoint).then(response => response.ok ? response.json() : null);
+      const sitelinks = data?.entities?.[qid]?.sitelinks || {};
+      const sites = language === 'ko' ? ['kowiki','enwiki'] : ['enwiki','kowiki'];
+      const site = sites.find(item => sitelinks[item]?.title);
+      if (site) return wikipediaUrlFromTitle(site === 'kowiki' ? 'ko' : 'en', sitelinks[site].title);
+    } catch (_) {}
+  }
+  return await wikipediaExactTitleUrl(work, artist) || await wikipediaSearchTitleUrl(work, artist);
+}
+function cachedArtworkWikipediaUrl(work, artist) {
+  const key = `${language}:${work?.id || selectionKey(work)}:${artist?.id || ''}:${artworkTitleAliases(work).join('|')}`;
+  if (!artworkWikipediaLinkChecks.has(key)) {
+    artworkWikipediaLinkChecks.set(key, resolveArtworkWikipediaUrl(work, artist).catch(() => ''));
+  }
+  return artworkWikipediaLinkChecks.get(key);
+}
 function artworkCollectionLabel(work) {
   const values = work?.detail?.facts?.collection || work?.collection || [];
   const entries = Array.isArray(values) ? values : [values];
@@ -416,7 +584,7 @@ function showArtistLinkMenu(event, artist, linkIndex) {
 function closeArtworkLinkMenu() {
   document.querySelector('.artwork-link-menu')?.remove();
 }
-function showArtworkLinkMenu(event, artist, work, linkIndex) {
+function showArtworkLinkMenu(event, artist, work, linkIndex, renderAfterDelete = () => renderArtworkDetail(work, artist, false)) {
   if (!currentUserIsAdmin) return;
   event.preventDefault();
   closeArtworkLinkMenu();
@@ -435,7 +603,7 @@ function showArtworkLinkMenu(event, artist, work, linkIndex) {
       persist();
       alert(saveFailureMessage());
     }
-    renderArtworkDetail(work, artist, false);
+    renderAfterDelete();
   };
   document.body.append(menu);
 }
@@ -462,9 +630,9 @@ function setupSortableLinkButtons(root, options) {
         delete button.dataset.suppressLinkClick;
         return;
       }
-      openSavedLink(options.getLinks()[Number(button.dataset[options.indexAttribute])]);
+      openSavedLink(options.getLinks(button)[Number(button.dataset[options.indexAttribute])]);
     };
-    button.oncontextmenu = event => options.contextMenu(event, Number(button.dataset[options.indexAttribute]));
+    button.oncontextmenu = event => options.contextMenu(event, Number(button.dataset[options.indexAttribute]), button);
   });
   if (!currentUserIsAdmin || buttons.length < 2) return;
   buttons.forEach(button => button.addEventListener('pointerdown', event => {
@@ -514,7 +682,7 @@ function setupSortableLinkButtons(root, options) {
     const cancel = pointerEvent => {
       if (pointerEvent.pointerId !== pointerId) return;
       cleanup();
-      options.render();
+      options.render(button);
     };
     const stop = async pointerEvent => {
       if (pointerEvent.pointerId !== pointerId) return;
@@ -523,28 +691,28 @@ function setupSortableLinkButtons(root, options) {
       button.dataset.suppressLinkClick = 'true';
       setTimeout(() => delete button.dataset.suppressLinkClick, 500);
       if (!dragging) {
-        openSavedLink(options.getLinks()[startIndex]);
+        openSavedLink(options.getLinks(button)[startIndex]);
         return;
       }
       if (endIndex < 0 || endIndex === startIndex) {
-        options.render();
+        options.render(button);
         return;
       }
-      const previousLinks = options.getLinks();
-      options.setLinks(movedLinks(previousLinks, startIndex, endIndex));
+      const previousLinks = options.getLinks(button);
+      options.setLinks(movedLinks(previousLinks, startIndex, endIndex), button);
       controls.classList.add('link-renumber-pending');
       const renumberAfterDelay = new Promise(resolve => setTimeout(resolve, 3000));
       persist();
       if (!await saveArtistsNow()) {
-        options.setLinks(previousLinks);
+        options.setLinks(previousLinks, button);
         persist();
         controls.classList.remove('link-renumber-pending');
         alert(saveFailureMessage());
-        options.render();
+        options.render(button);
         return;
       }
       await renumberAfterDelay;
-      options.render();
+      options.render(button);
     };
     button.setPointerCapture(pointerId);
     document.addEventListener('pointermove', move);
@@ -607,9 +775,11 @@ function enterViewerMode() {
   currentUserIsAdmin = false;
   adminSessionToken = '';
   try { sessionStorage.setItem(accessSessionStorageKey, JSON.stringify({role:'viewer'})); } catch (_) {}
+  clearLoginRequestFromUrl();
 }
 function saveAdminSession(email, token) {
   try { sessionStorage.setItem(accessSessionStorageKey, JSON.stringify({role:'admin',email,token})); } catch (_) {}
+  clearLoginRequestFromUrl();
 }
 async function logoutEverywhere() {
   try { await apiFetch('/api/auth/logout',{method:'POST',cache:'no-store'}); } catch (_) {}
@@ -655,6 +825,7 @@ async function chooseAccessMode() {
       const response=await apiFetch('/api/auth/heartbeat',{method:'POST',cache:'no-store'});
       if (!response.ok) throw new Error('Administrator session expired');
       startAdminSessionHeartbeat();
+      clearLoginRequestFromUrl();
       return;
     } catch (_) {
       try { sessionStorage.removeItem(accessSessionStorageKey); } catch (_) {}
@@ -982,6 +1153,7 @@ function persistFavoriteWorks() {
   queueArtistSave();
 }
 function renderTimeline() {
+  timeline.classList.add('artist-timeline-panel');
   const artist = artists.find(a => a.id === selectedId);
   if (!artist) {
     timeline.innerHTML = requestedArtistMissing
@@ -1011,11 +1183,46 @@ function renderTimeline() {
     // image stay in the data file for later research, but do not render empty cards.
     .filter(work => Boolean(artworkPreviewImage(work)))
     .sort((a,b) => workYearForSort(a) - workYearForSort(b));
+  const availableTitleModes = availableArtworkTitleModesForWorks(works);
+  if (availableTitleModes.length && !availableTitleModes.includes(artworkTitleMode)) setArtworkTitleMode(availableTitleModes[0]);
   const worksByYear = new Map();
   // A timeline row represents the year a work began.  Date ranges that share
   // the same start year therefore stay together on one horizontal row.
   works.forEach(work => { const year = work?.year || '—'; worksByYear.set(year, [...(worksByYear.get(year) || []), work]); });
-  const card = w => { const image = artworkPreviewImage(w), movementContribution = Boolean(w.movementContribution), highRes = Boolean(w.highResImage), highResLabel = language === 'ko' ? '고해상도 파일 있음' : 'High-resolution image available', replaceLabel = language === 'ko' ? '로컬 이미지 교체' : 'Replace with local image', contributionLabel = language === 'ko' ? '화가가 속한 사조의 특성을 잘 보여주는 기여 작품' : 'Work that strongly expresses the artist’s movement contribution', collection = artworkCollectionLabel(w), controls = currentUserIsAdmin ? `<button class="delete-artwork" data-work="${esc(w.id)}" title="${esc(t('delete'))}" aria-label="${esc(t('delete'))}">×</button><button class="replace-local-image" data-work="${esc(w.id)}" title="${esc(replaceLabel)}" aria-label="${esc(replaceLabel)}">↗</button>` : ''; return `<div class="art-card${movementContribution ? ' movement-contribution-artwork' : ''}" data-work="${esc(w.id)}" title="${movementContribution ? esc(contributionLabel) : ''}"><span class="art-thumb">${image ? `<img src="${esc(image)}" alt="${esc(loc(w.title))}" loading="lazy" />` : `<span class="art-thumb-empty">${esc(t('noImage'))}</span>`}${controls}</span><span class="art-meta"><strong class="art-title">${esc(loc(w.title))}${highRes ? ` <span class="high-resolution-badge" title="${esc(highResLabel)}" aria-label="${esc(highResLabel)}">H</span>` : ''}</strong><small class="art-country art-collection" title="${esc(collection)}">${esc(collection)}</small></span></div>`; };
+  const addArtworkLinkLabel = language === 'ko' ? '해설 주소 추가' : 'Add explanation link';
+  const artworkLinkInputLabel = language === 'ko' ? '유튜브 또는 해설 웹페이지 주소를 입력하세요' : 'Enter a YouTube or explanation webpage address';
+  const confirmArtworkLinkLabel = language === 'ko' ? '확인' : 'Add';
+  const card = w => {
+    const image = artworkPreviewImage(w);
+    const movementContribution = Boolean(w.movementContribution);
+    const highRes = Boolean(w.highResImage);
+    const highResLabel = language === 'ko' ? '고해상도 파일 있음' : 'High-resolution image available';
+    const replaceLabel = language === 'ko' ? '로컬 이미지 교체' : 'Replace with local image';
+    const contributionLabel = language === 'ko' ? '화가가 속한 사조의 특성을 잘 보여주는 기여 작품' : 'Work that strongly expresses the artist’s movement contribution';
+    const collection = artworkCollectionLabel(w);
+    const collectionMarkup = collection && collection !== t('unknown') ? `<small class="art-country art-collection" title="${esc(collection)}">${esc(collection)}</small>` : '';
+    const workTitle = artworkDisplayTitle(w);
+    const previewYear = workYearLabel(w) || (language === 'ko' ? '연도 미상' : 'Year unknown');
+    const previewArtist = artistDisplayName(artist);
+    const fallbackImage = image && w.image && image !== thumbnail(w.image) ? thumbnail(w.image) : '';
+    const highResBadge = highRes ? `<button class="high-resolution-badge hidden" type="button" data-highres-src="${esc(w.highResImage)}" data-highres-title="${esc(workTitle)}" title="${esc(highResLabel)}" aria-label="${esc(highResLabel)}">Ⓗ</button>` : '';
+    const wikipediaUrl = explicitArtworkWikipediaUrl(w);
+    const wikipediaLabel = language === 'ko' ? '작품 위키피디아 페이지 열기' : 'Open artwork Wikipedia page';
+    const wikipediaAttrs = wikipediaUrl
+      ? `href="${esc(wikipediaUrl)}" title="${esc(wikipediaLabel)}"`
+      : `href="#" data-wikipedia-pending="true" aria-disabled="true" title=""`;
+    const titleLink = `<a class="art-title artwork-wikipedia-link" ${wikipediaAttrs} data-work="${esc(w.id)}" target="_blank" rel="noopener">${esc(workTitle)}</a>`;
+    const savedArtworkLinks = artworkLinks(w);
+    const artworkLinkButtons = savedArtworkLinks.map((link, index) => `<button class="artwork-link-button thumbnail-artwork-link-button${isYouTubeLink(link) ? ' artwork-link-youtube' : ''}" type="button" data-work="${esc(w.id)}" data-artwork-link-index="${index}" title="${esc(link.url)}" aria-label="${esc(`${index + 1}. ${link.url}`)}">${index + 1}</button>`).join('');
+    const artworkLinkControls = currentUserIsAdmin || savedArtworkLinks.length
+      ? `<span class="artwork-link-controls thumbnail-artwork-link-controls">${currentUserIsAdmin ? `<button class="artwork-link-add thumbnail-artwork-link-add" type="button" data-work="${esc(w.id)}" title="${esc(addArtworkLinkLabel)}" aria-label="${esc(addArtworkLinkLabel)}">+</button>` : ''}${artworkLinkButtons}</span>`
+      : '';
+    const artworkLinkEntry = currentUserIsAdmin ? `<form class="artwork-link-entry thumbnail-artwork-link-entry hidden" data-work="${esc(w.id)}"><input type="url" inputmode="url" placeholder="https://" aria-label="${esc(artworkLinkInputLabel)}" required><button type="submit">${esc(confirmArtworkLinkLabel)}</button></form>` : '';
+    const titleMarkup = `<span class="art-title-row"><span class="art-title-with-links">${titleLink}${artworkLinkControls}</span>${highResBadge}</span>${artworkLinkEntry}`;
+    const footerMarkup = collectionMarkup ? `<span class="art-card-footer">${collectionMarkup}</span>` : '';
+    const controls = currentUserIsAdmin ? `<button class="delete-artwork" data-work="${esc(w.id)}" title="${esc(t('delete'))}" aria-label="${esc(t('delete'))}">×</button><button class="replace-local-image" data-work="${esc(w.id)}" title="${esc(replaceLabel)}" aria-label="${esc(replaceLabel)}">↗</button>` : '';
+    return `<div class="art-card${movementContribution ? ' movement-contribution-artwork' : ''}" data-work="${esc(w.id)}" data-preview-artist="${esc(previewArtist)}" data-preview-title="${esc(workTitle)}" data-preview-year="${esc(previewYear)}" data-preview-collection="${collection && collection !== t('unknown') ? esc(collection) : ''}" title="${movementContribution ? esc(contributionLabel) : ''}"><span class="art-thumb">${image ? `<img src="${esc(image)}" alt="${esc(workTitle)}" loading="lazy"${fallbackImage ? ` data-fallback-src="${esc(fallbackImage)}"` : ''} />` : `<span class="art-thumb-empty">${esc(t('noImage'))}</span>`}${controls}</span><span class="art-meta">${titleMarkup}${footerMarkup}</span></div>`;
+  };
   const koreanName = artist.name?.ko || '', originalName = artist.name?.en || '';
   const savedLinks = artistLinks(artist);
   const addLinkLabel = language === 'ko' ? '주소 추가' : 'Add address';
@@ -1035,9 +1242,14 @@ function renderTimeline() {
     ? `${timelineArtistNameMarkup}${originalName && originalName !== koreanName ? ` <a class="original-artist-name" data-uh-ignore="true" href="https://en.wikipedia.org/w/index.php?search=${encodeURIComponent(originalName)}" data-artist-wiki="${esc(artist.qid || '')}">${esc(originalName)}</a>` : ''}${linkControls}`
     : `${esc(loc(artist.name))}${linkControls}`;
   const slideshowHelp = language === 'ko' ? '전체 화면 슬라이드 쇼 시작 · 5초마다 다음 작품' : 'Start fullscreen slideshow · next artwork every 5 seconds';
-  timeline.innerHTML = `<p class="eyebrow">${t('timeline')}</p><div class="timeline-title-row"><h1 class="timeline-title">${displayName}</h1><div class="timeline-title-actions"><button class="start-slideshow" type="button" aria-label="${esc(slideshowHelp)}" title="${esc(slideshowHelp)}" data-tooltip="${esc(slideshowHelp)}"><span>▶</span><span>${esc(t('slideshow'))}</span></button>${currentUserIsAdmin ? `<button class="add-artwork-button" type="button" title="${esc(t('addArtwork'))}" aria-label="${esc(t('addArtwork'))}"><span>+</span><span>${esc(t('addArtwork'))}</span></button>` : ''}</div></div>${currentUserIsAdmin ? `<form class="artist-link-entry hidden"><input type="url" inputmode="url" placeholder="https://" aria-label="${esc(linkInputLabel)}" required><button type="submit">${esc(confirmLinkLabel)}</button></form>` : ''}<p class="life">${years(artist)}${nationalityLabel ? ` · ${esc(nationalityLabel)}` : ''}${artistMovement ? ` · ${artistMovementLabel}` : ''}</p><div class="timeline">${works.length ? [...worksByYear.entries()].map(([year, group]) => `<div class="timeline-row"><span class="year">${year}</span><span class="node"></span><div class="artworks-at-year">${group.map(card).join('')}</div></div>`).join('') : `<p class="empty-timeline">${t('noWork')}</p>`}</div>`;
-  timeline.querySelectorAll('.art-card').forEach(button => button.onclick = () => openArtworkDetail(artist.works.find(w => w.id === button.dataset.work), artist));
+  const titleModeButton = availableTitleModes.length > 1 ? `<button class="artwork-title-mode-button" type="button" title="${esc(language === 'ko' ? '작품 제목 표기 전환' : 'Switch artwork title language')}" aria-label="${esc(language === 'ko' ? '작품 제목 표기 전환' : 'Switch artwork title language')}">${esc(artworkTitleModeLabels[nextArtworkTitleMode(works)] || 'EN')}</button>` : '';
+  const timelineHeader = `<header class="timeline-sticky-header"><p class="eyebrow">${t('timeline')}</p><div class="timeline-title-row"><h1 class="timeline-title">${displayName}</h1><div class="timeline-title-actions">${titleModeButton}<button class="start-slideshow" type="button" aria-label="${esc(slideshowHelp)}" title="${esc(slideshowHelp)}" data-tooltip="${esc(slideshowHelp)}"><span>▶</span><span>${esc(t('slideshow'))}</span></button>${currentUserIsAdmin ? `<button class="add-artwork-button" type="button" title="${esc(t('addArtwork'))}" aria-label="${esc(t('addArtwork'))}"><span>+</span><span>${esc(t('addArtwork'))}</span></button>` : ''}</div></div>${currentUserIsAdmin ? `<form class="artist-link-entry hidden"><input type="url" inputmode="url" placeholder="https://" aria-label="${esc(linkInputLabel)}" required><button type="submit">${esc(confirmLinkLabel)}</button></form>` : ''}<p class="life">${years(artist)}${nationalityLabel ? ` · ${esc(nationalityLabel)}` : ''}${artistMovement ? ` · ${artistMovementLabel}` : ''}</p></header>`;
+  timeline.innerHTML = `${timelineHeader}<div class="timeline">${works.length ? [...worksByYear.entries()].map(([year, group]) => `<div class="timeline-row"><span class="year">${year}</span><span class="node"></span><div class="artworks-at-year">${group.map(card).join('')}</div></div>`).join('') : `<p class="empty-timeline">${t('noWork')}</p>`}</div>`;
   timeline.querySelector('.add-artwork-button')?.addEventListener('click', () => openAddArtworkDialog(artist));
+  timeline.querySelector('.artwork-title-mode-button')?.addEventListener('click', () => {
+    setArtworkTitleMode(nextArtworkTitleMode(works));
+    renderTimeline();
+  });
   timeline.querySelector('.start-slideshow').onclick = () => startSlideshow(artist, works);
   timeline.querySelector('.artist-movement-link')?.addEventListener('click', () => openMovementDocumentInDetail(artistMovementDocument, artistMovement));
   const linkEntry = timeline.querySelector('.artist-link-entry');
@@ -1075,40 +1287,173 @@ function renderTimeline() {
   });
   timeline.querySelectorAll('.replace-local-image').forEach(button => button.onclick = event => { event.stopPropagation(); const work=artist.works.find(item=>item.id===button.dataset.work); if(!work) return; const input=document.createElement('input'); input.type='file'; input.accept='image/jpeg,image/png,image/webp,image/gif'; input.onchange=async () => { const file=input.files?.[0]; if(!file) return; button.classList.add('searching'); try { await uploadLocalArtworkImage(artist,work,file); renderTimeline(); } catch(error) { alert((language === 'ko' ? '이미지 교체 실패: ' : 'Image replacement failed: ') + error.message); } finally { button.classList.remove('searching'); } }; input.click(); });
   timeline.querySelectorAll('.delete-artwork').forEach(button => button.onclick = async event => { event.stopPropagation(); const work = artist.works.find(item => item.id === button.dataset.work); if (!work || !confirm(t('confirmDeleteWork'))) return; artist.works = (artist.works || []).filter(item => item.id !== work.id); favoriteWorkKeys.delete(favoriteKey(artist, work)); persist(); if (!await saveArtistsNow()) return alert(saveFailureMessage()); closeDetail(); render(); });
+  setupArtworkWikipediaLinks(artist, works);
+  setupThumbnailArtworkLinks(artist, works);
+  setupArtworkImageFallbacks();
+  setupHighResolutionBadges();
   setupArtworkHoverPreview();
   if (currentUserIsAdmin) runThumbnailAgent();
+}
+function setupThumbnailArtworkLinks(artist, works) {
+  const worksById = new Map((works || []).map(work => [String(work.id || ''), work]));
+  const workForButton = button => worksById.get(String(button?.dataset?.work || ''));
+  timeline.querySelectorAll('.thumbnail-artwork-link-add').forEach(button => {
+    button.addEventListener('click', event => {
+      event.preventDefault();
+      const card = button.closest('.art-card');
+      const entry = card?.querySelector('.thumbnail-artwork-link-entry');
+      if (!entry) return;
+      entry.classList.toggle('hidden');
+      if (!entry.classList.contains('hidden')) entry.querySelector('input')?.focus();
+    });
+  });
+  timeline.querySelectorAll('.thumbnail-artwork-link-entry').forEach(entry => {
+    entry.onsubmit = async event => {
+      event.preventDefault();
+      const work = worksById.get(String(entry.dataset.work || ''));
+      const input = entry.querySelector('input');
+      if (!work || !input) return;
+      let url;
+      try {
+        url = new URL(input.value.trim());
+        if (!['http:', 'https:'].includes(url.protocol)) throw new Error('Invalid protocol');
+      } catch (_) {
+        input.setCustomValidity(language === 'ko' ? 'http 또는 https 주소를 입력하세요.' : 'Enter an http or https address.');
+        input.reportValidity();
+        input.setCustomValidity('');
+        return;
+      }
+      const previousLinks = artworkLinks(work);
+      setArtworkLinks(artist, work, [...previousLinks, {url:url.href}]);
+      persist();
+      if (!await saveArtistsNow()) {
+        setArtworkLinks(artist, work, previousLinks);
+        persist();
+        alert(saveFailureMessage());
+      }
+      renderTimeline();
+    };
+  });
+  setupSortableLinkButtons(timeline, {
+    selector:'.thumbnail-artwork-link-button',
+    controlsSelector:'.thumbnail-artwork-link-controls',
+    indexAttribute:'artworkLinkIndex',
+    getLinks:button => artworkLinks(workForButton(button)),
+    setLinks:(links, button) => { const work = workForButton(button); if (work) setArtworkLinks(artist, work, links); },
+    render:renderTimeline,
+    contextMenu:(event, index, button) => {
+      const work = workForButton(button);
+      if (work) showArtworkLinkMenu(event, artist, work, index, renderTimeline);
+    }
+  });
+}
+function setupArtworkImageFallbacks() {
+  timeline.querySelectorAll('.art-thumb img[data-fallback-src]').forEach(image => {
+    image.addEventListener('error', () => {
+      const fallback = image.dataset.fallbackSrc || '';
+      if (!fallback || image.dataset.fallbackApplied === 'true') return;
+      image.dataset.fallbackApplied = 'true';
+      image.src = fallback;
+    });
+  });
+}
+function setupArtworkWikipediaLinks(artist, works) {
+  const worksById = new Map((works || []).map(work => [String(work.id || ''), work]));
+  const unavailableLabel = language === 'ko' ? '작품 위키피디아 페이지가 확인되지 않았습니다.' : 'No artwork Wikipedia page was confirmed.';
+  const wikipediaLabel = language === 'ko' ? '작품 위키피디아 페이지 열기' : 'Open artwork Wikipedia page';
+  timeline.querySelectorAll('.artwork-wikipedia-link[data-wikipedia-pending="true"]').forEach(link => {
+    const work = worksById.get(String(link.dataset.work || ''));
+    if (!work) return;
+    cachedArtworkWikipediaUrl(work, artist).then(url => {
+      if (!link.isConnected) return;
+      if (!url) {
+        const title = document.createElement('strong');
+        title.className = 'art-title';
+        title.textContent = link.textContent;
+        title.title = unavailableLabel;
+        link.replaceWith(title);
+        return;
+      }
+      link.href = url;
+      link.title = wikipediaLabel;
+      link.removeAttribute('data-wikipedia-pending');
+      link.removeAttribute('aria-disabled');
+    });
+  });
+}
+function highResolutionImageWidth(src) {
+  const key = String(src || '');
+  if (!key) return Promise.resolve(0);
+  if (!highResolutionWidthChecks.has(key)) {
+    highResolutionWidthChecks.set(key, new Promise(resolve => {
+      const image = new Image();
+      image.onload = () => resolve(image.naturalWidth || 0);
+      image.onerror = () => resolve(0);
+      image.src = key;
+    }));
+  }
+  return highResolutionWidthChecks.get(key);
+}
+function setupHighResolutionBadges() {
+  const label = language === 'ko'
+    ? `가로 ${highResolutionMinimumWidth}px 이상 고해상도 이미지입니다. 더블클릭하면 새 창에서 엽니다.`
+    : `High-resolution image at least ${highResolutionMinimumWidth}px wide. Double-click to open it in a new window.`;
+  timeline.querySelectorAll('.high-resolution-badge[data-highres-src]').forEach(button => {
+    button.addEventListener('dblclick', event => {
+      event.preventDefault();
+      event.stopPropagation();
+      if (button.classList.contains('hidden')) return;
+      openArtworkImageWindow(button.dataset.highresSrc, button.dataset.highresTitle || t('untitled'));
+    });
+    highResolutionImageWidth(button.dataset.highresSrc).then(width => {
+      if (!button.isConnected) return;
+      if (width < highResolutionMinimumWidth) {
+        const footer = button.closest('.art-card-footer');
+        button.remove();
+        if (footer && !footer.textContent.trim()) footer.remove();
+        return;
+      }
+      button.classList.remove('hidden');
+      button.title = `${label} (${width}px)`;
+      button.setAttribute('aria-label', `${label} (${width}px)`);
+    });
+  });
 }
 function setupArtworkHoverPreview() {
   if (!artworkHoverPreview) {
     artworkHoverPreview = document.createElement('div');
     artworkHoverPreview.className = 'artwork-hover-preview hidden';
-    artworkHoverPreview.innerHTML = '<img alt=""><div class="artwork-hover-caption"><strong></strong><span></span><small></small></div>';
+    artworkHoverPreview.innerHTML = '<img alt=""><div class="artwork-hover-caption"><span class="artwork-hover-main"></span><span class="artwork-hover-collection"></span></div>';
     document.body.append(artworkHoverPreview);
   }
   const previewImage = artworkHoverPreview.querySelector('img');
-  const previewArtist = artworkHoverPreview.querySelector('.artwork-hover-caption strong');
-  const previewTitle = artworkHoverPreview.querySelector('.artwork-hover-caption span');
-  const previewYear = artworkHoverPreview.querySelector('.artwork-hover-caption small');
+  const previewMain = artworkHoverPreview.querySelector('.artwork-hover-main');
+  const previewCollection = artworkHoverPreview.querySelector('.artwork-hover-collection');
   const hide = () => artworkHoverPreview.classList.add('hidden');
   timeline.querySelectorAll('.art-thumb').forEach(thumb => {
     const image = thumb.querySelector('img');
     if (!image) return;
     thumb.addEventListener('mouseenter', () => {
       const rect = thumb.getBoundingClientRect();
-      const captionHeight = 66;
+      const captionHeight = 44;
       const scale = Math.min(6, (window.innerWidth - 30) / rect.width, (window.innerHeight - captionHeight - 20) / rect.height) * .96;
       const previewWidth = rect.width * scale, imageHeight = rect.height * scale, previewHeight = imageHeight + captionHeight, gap = 14;
       const preferRight = rect.right + gap + previewWidth <= window.innerWidth - 10;
       const left = preferRight ? rect.right + gap : Math.max(10, rect.left - gap - previewWidth);
       const top = Math.max(10, Math.min(window.innerHeight - previewHeight - 10, rect.top - (previewHeight - rect.height) / 2));
+      const card = thumb.closest('.art-card');
       const artist = artists.find(item => item.id === selectedId);
-      const work = artist?.works?.find(item => item.id === thumb.closest('.art-card')?.dataset.work);
+      const work = artist?.works?.find(item => item.id === card?.dataset.work);
       previewImage.src = image.currentSrc || image.src;
       previewImage.alt = image.alt;
       previewImage.style.height = `${imageHeight}px`;
-      previewArtist.textContent = artist ? artistDisplayName(artist) : '';
-      previewTitle.textContent = work ? loc(work.title) : image.alt;
-      previewYear.textContent = workYearLabel(work) || (language === 'ko' ? '연도 미상' : 'Year unknown');
+      const artistLabel = card?.dataset.previewArtist || (artist ? artistDisplayName(artist) : '');
+      const titleLabel = card?.dataset.previewTitle || (work ? loc(work.title) : image.alt);
+      const yearLabel = card?.dataset.previewYear || workYearLabel(work) || (language === 'ko' ? '연도 미상' : 'Year unknown');
+      const collectionLabel = card?.dataset.previewCollection || '';
+      previewMain.textContent = [artistLabel, titleLabel, yearLabel].filter(Boolean).join(' · ');
+      previewCollection.textContent = collectionLabel;
+      previewCollection.classList.toggle('hidden', !collectionLabel);
       artworkHoverPreview.style.width = `${previewWidth}px`;
       artworkHoverPreview.style.height = `${previewHeight}px`;
       artworkHoverPreview.style.left = `${left}px`;
@@ -1207,6 +1552,7 @@ function openHistoricalEventEditor() {
   historicalEventDialog.showModal();
 }
 function renderMovementAtlas() {
+  timeline.classList.remove('artist-timeline-panel');
   movementView = normalizeMovementView(movementView);
   const start = movementAtlasStart;
   const end = movementAtlasEnd;
@@ -1577,7 +1923,7 @@ function openFavoritesWindow() {
   if (!popup) return alert(language === 'ko' ? '새 창을 열 수 없습니다. 팝업 차단을 해제해 주세요.' : 'Could not open a new window. Please allow pop-ups.');
   const data = JSON.stringify(favorites).replace(/</g, '\\u003c');
   const title = language === 'ko' ? 'MY FAVORITES · 작품 감상' : 'MY FAVORITES · Gallery';
-  popup.document.write(`<!doctype html><html lang="${language}"><head><meta charset="utf-8"><title>${title}</title><style>html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#0d100d;color:#f7f4ec;font-family:system-ui,sans-serif}#stage{position:relative;width:100%;height:100%;overflow:hidden;touch-action:none;cursor:grab;user-select:none}#stage.dragging{cursor:grabbing}#art{position:absolute;left:50%;top:50%;max-width:none;max-height:none;pointer-events:none;user-select:none}.nav{position:fixed;z-index:2;top:50%;transform:translateY(-50%);width:52px;height:78px;border:0;background:#10140f80;color:white;font-size:42px;line-height:1}.nav:hover{background:#3d493a}.prev{left:0}.next{right:0}#caption{position:fixed;z-index:2;left:24px;bottom:21px;padding:9px 13px;background:#10140fb8;border-radius:5px;font-size:13px}#caption strong,#caption span,#caption small,#caption code{display:block}#caption span{font:600 18px Georgia,serif;margin:3px 0}#caption small{color:#c8cdc2}#caption code{margin-top:4px;color:#d7dccf;font-size:11px}.hint{position:fixed;z-index:2;right:20px;bottom:22px;color:#c8cdc2;font-size:12px;text-align:right;line-height:1.6}</style></head><body><button class="nav prev" aria-label="Previous">‹</button><button class="nav next" aria-label="Next">›</button><div id="stage"><img id="art" alt=""></div><div id="caption"></div><div class="hint">${language === 'ko' ? '휠: 확대/축소 · 왼쪽 드래그: 이동<br>← → 키로 다음 작품' : 'Wheel: zoom · Left-drag: pan<br>Use ← → to navigate'}</div><script>const works=${data},stage=document.querySelector('#stage'),art=document.querySelector('#art'),caption=document.querySelector('#caption');let index=0,zoom=1,x=0,y=0,drag;function clamp(){const mx=Math.max(0,(art.offsetWidth-stage.clientWidth)/2),my=Math.max(0,(art.offsetHeight-stage.clientHeight)/2);x=Math.max(-mx,Math.min(mx,x));y=Math.max(-my,Math.min(my,y));}function draw(){if(!art.naturalWidth)return;const base=Math.min(stage.clientWidth/art.naturalWidth,stage.clientHeight/art.naturalHeight);art.style.width=Math.max(1,art.naturalWidth*base*zoom)+'px';art.style.height=Math.max(1,art.naturalHeight*base*zoom)+'px';clamp();art.style.transform='translate(calc(-50% + '+x+'px),calc(-50% + '+y+'px))';}function show(step=0){index=(index+step+works.length)%works.length;const w=works[index];zoom=1;x=y=0;art.src=w.image;art.alt=w.title;caption.innerHTML='<strong>'+w.artist+'</strong><span>'+w.title+'</span><small>'+w.year+' · '+(index+1)+' / '+works.length+'</small>'+(w.fileName?'<code>'+w.fileName+'</code>':'');}art.addEventListener('load',draw);window.addEventListener('resize',draw);document.querySelector('.prev').onclick=()=>show(-1);document.querySelector('.next').onclick=()=>show(1);window.onkeydown=e=>{if(e.key==='ArrowLeft')show(-1);if(e.key==='ArrowRight')show(1);if(e.key==='Escape')window.close();};stage.addEventListener('pointerdown',e=>{if(e.button!==0)return;drag={id:e.pointerId,x:e.clientX,y:e.clientY,startX:x,startY:y};stage.setPointerCapture(e.pointerId);stage.classList.add('dragging');});stage.addEventListener('pointermove',e=>{if(!drag||e.pointerId!==drag.id)return;x=drag.startX+e.clientX-drag.x;y=drag.startY+e.clientY-drag.y;draw();});const stop=e=>{if(drag&&e.pointerId===drag.id){drag=null;stage.classList.remove('dragging');}};stage.addEventListener('pointerup',stop);stage.addEventListener('pointercancel',stop);stage.addEventListener('wheel',e=>{e.preventDefault();const old=zoom;zoom=Math.max(.5,Math.min(6,zoom*(e.deltaY<0?1.12:1/1.12)));const ratio=zoom/old,r=stage.getBoundingClientRect(),px=e.clientX-r.left-stage.clientWidth/2,py=e.clientY-r.top-stage.clientHeight/2;x=x*ratio+px*(1-ratio);y=y*ratio+py*(1-ratio);draw();},{passive:false});show();document.documentElement.requestFullscreen?.().catch(()=>{});</script></body></html>`);
+  popup.document.write(`<!doctype html><html lang="${language}"><head><meta charset="utf-8"><title>${title}</title><style>html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#0d100d;color:#f7f4ec;font-family:system-ui,sans-serif}#stage{position:relative;width:100%;height:100%;overflow:hidden;touch-action:none;cursor:grab;user-select:none}#stage.dragging{cursor:grabbing}#art{position:absolute;left:50%;top:50%;max-width:none;max-height:none;pointer-events:none;user-select:none}.nav{position:fixed;z-index:2;top:50%;transform:translateY(-50%);width:52px;height:78px;border:0;background:#10140f80;color:white;font-size:42px;line-height:1}.nav:hover{background:#3d493a}.prev{left:0}.next{right:0}#caption{position:fixed;z-index:2;left:24px;bottom:21px;padding:9px 13px;background:#10140fb8;border-radius:5px;font-size:13px}#caption strong,#caption span,#caption small,#caption code{display:block}#caption span{font:600 18px Georgia,serif;margin:3px 0}#caption small{color:#c8cdc2}#caption code{margin-top:4px;color:#d7dccf;font-size:11px}.hint{position:fixed;z-index:2;right:20px;bottom:22px;color:#c8cdc2;font-size:12px;text-align:right;line-height:1.6}</style></head><body><button class="nav prev" aria-label="Previous">‹</button><button class="nav next" aria-label="Next">›</button><div id="stage"><img id="art" alt=""></div><div id="caption"></div><div class="hint">${language === 'ko' ? '휠: 확대/축소 · 왼쪽 드래그: 이동<br>← → 키로 다음 작품' : 'Wheel: zoom · Left-drag: pan<br>Use ← → to navigate'}</div><script>const works=${data},stage=document.querySelector('#stage'),art=document.querySelector('#art'),caption=document.querySelector('#caption');let index=0,zoom=1,x=0,y=0,drag;function clamp(){const mx=Math.max(0,(art.offsetWidth-stage.clientWidth)/2),my=Math.max(0,(art.offsetHeight-stage.clientHeight)/2);x=Math.max(-mx,Math.min(mx,x));y=Math.max(-my,Math.min(my,y));}function draw(){if(!art.naturalWidth)return;const base=Math.min(stage.clientWidth/art.naturalWidth,stage.clientHeight/art.naturalHeight);art.style.width=Math.max(1,art.naturalWidth*base*zoom)+'px';art.style.height=Math.max(1,art.naturalHeight*base*zoom)+'px';clamp();art.style.transform='translate(calc(-50% + '+x+'px),calc(-50% + '+y+'px))';}function show(step=0){index=(index+step+works.length)%works.length;const w=works[index];zoom=1;x=y=0;art.src=w.image;art.alt=w.title;const artistEl=document.createElement('strong'),titleEl=document.createElement('span'),metaEl=document.createElement('small');artistEl.textContent=w.artist;titleEl.textContent=w.title;metaEl.textContent=w.year+' · '+(index+1)+' / '+works.length;const children=[artistEl,titleEl,metaEl];if(w.fileName){const fileEl=document.createElement('code');fileEl.textContent=w.fileName;children.push(fileEl);}caption.replaceChildren(...children);}art.addEventListener('load',draw);window.addEventListener('resize',draw);document.querySelector('.prev').onclick=()=>show(-1);document.querySelector('.next').onclick=()=>show(1);window.onkeydown=e=>{if(e.key==='ArrowLeft')show(-1);if(e.key==='ArrowRight')show(1);if(e.key==='Escape')window.close();};stage.addEventListener('pointerdown',e=>{if(e.button!==0)return;drag={id:e.pointerId,x:e.clientX,y:e.clientY,startX:x,startY:y};stage.setPointerCapture(e.pointerId);stage.classList.add('dragging');});stage.addEventListener('pointermove',e=>{if(!drag||e.pointerId!==drag.id)return;x=drag.startX+e.clientX-drag.x;y=drag.startY+e.clientY-drag.y;draw();});const stop=e=>{if(drag&&e.pointerId===drag.id){drag=null;stage.classList.remove('dragging');}};stage.addEventListener('pointerup',stop);stage.addEventListener('pointercancel',stop);stage.addEventListener('wheel',e=>{e.preventDefault();const old=zoom;zoom=Math.max(.5,Math.min(6,zoom*(e.deltaY<0?1.12:1/1.12)));const ratio=zoom/old,r=stage.getBoundingClientRect(),px=e.clientX-r.left-stage.clientWidth/2,py=e.clientY-r.top-stage.clientHeight/2;x=x*ratio+px*(1-ratio);y=y*ratio+py*(1-ratio);draw();},{passive:false});show();document.documentElement.requestFullscreen?.().catch(()=>{});</script></body></html>`);
   popup.document.close();
   try {
     popup.sessionStorage.setItem(uHangulModeStorageKey, uHangulMode);
