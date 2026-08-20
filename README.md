@@ -12,7 +12,7 @@ node server.js
 
 화가를 처음 선택하면 Wikimedia의 공개 Wikidata 정보를 조회해 작품 제목, 제작 연도, 제작 국가, 화파, 이미지와 설명을 가져옵니다. 결과는 `data/generated/<화가-id>.json`에 저장되어 다음 선택부터는 인터넷을 다시 조회하지 않습니다.
 
-`data/artists.json`이 화가와 작품 목록의 원본 파일입니다. 화면에서 직접 추가한 화가, 작품, 보강된 작품 목록과 화가 이름 옆에 추가한 웹주소 링크는 이 파일에 저장되므로 OneDrive가 이 폴더를 동기화하면 다른 컴퓨터에서도 같은 목록을 읽습니다.
+`data/artists.json`이 화가와 작품 목록의 원본 파일입니다. 화면에서 직접 추가한 화가, 작품, 보강된 작품 목록과 화가 이름 옆에 추가한 웹주소 링크는 이 파일에 저장됩니다. 이 파일은 Git 추적 대상이므로 다른 컴퓨터와 공유하려면 변경을 커밋한 뒤 GitHub에 푸시해야 합니다.
 
 기존 버전이나 다른 컴퓨터의 브라우저 저장소에만 남아 있던 목록은 실행 시 `data/artists.json`에 빠진 화가와 작품만 추가하는 방식으로 병합됩니다. 파일에 이미 있는 내용은 브라우저의 오래된 값으로 덮어쓰지 않습니다.
 
@@ -27,3 +27,20 @@ node server.js
 ## 미술 사조 HTML 작성
 
 사조 설명 HTML을 새로 만들거나 보강할 때는 `data/미술사조/WRITING_GUIDE.md` 기준을 따릅니다. 하위 화파, 대표 화가별 대표작 카드, 국가별 전개 설명을 반드시 포함합니다.
+
+## 작업 폴더와 동기화
+
+Git 작업은 OneDrive 밖의 `Documents/Document_backup/Art_through_Time` 폴더에서 합니다. 이 폴더의 코드, 화가·작품 데이터, 생성 JSON, 미술 사조 HTML은 GitHub로 관리합니다.
+
+다음 경로는 OneDrive 데이터 폴더를 직접 가리키도록 연결되어 있으며 Git에는 올리지 않습니다.
+
+- `data/thumbnails/`
+- `data/high-resolution/`
+- `data/topic-images/`
+- `data/backups/`, `data/.image-staging/`, `logs/`
+- `delivery/`
+- `.env`
+
+따라서 코드·데이터를 변경했으면 `git add`, `git commit`, `git push`를 실행합니다. 이미지, 환경 설정, 로그, 배포 결과물은 위 연결 경로에 저장하면 OneDrive가 자동 동기화하므로 별도로 복사하지 않습니다. 다른 컴퓨터에서는 Git 작업 폴더를 별도로 만들고 같은 OneDrive 경로 연결을 설정해야 합니다.
+
+이번 구성의 상세 이유와 작업 기록은 [`변경사항/변경사항_20260821.md`](변경사항/변경사항_20260821.md)를 참고하세요.

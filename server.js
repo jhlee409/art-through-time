@@ -13,6 +13,13 @@ const { normalizeArtistsPayload, validateArtistsPayload, firebaseExport } = requ
 const { invalidArtworkThumbnail } = require('./thumbnail-validation');
 const { writeArtistMap: writeUHangulArtistMap } = require('./tools/build-uhangul-artist-map');
 const { syncPersonNameDictionary } = require('./tools/sync-person-name-dictionary');
+process.once('uncaughtException', error => {
+  if (error?.code === 'EADDRINUSE') {
+    console.error('Art Atlas is already running on http://localhost:4173');
+    process.exit(1);
+  }
+  throw error;
+});
 const root = __dirname, dataDir = path.join(root, 'data'), generatedDir = path.join(dataDir, 'generated'), highResolutionDir = path.join(dataDir, 'high-resolution'), imageStagingDir = path.join(dataDir, '.image-staging'), artistsFile = path.join(dataDir, 'artists.json'), techniquesFile = path.join(dataDir, 'techniques.json'), topicsFile = path.join(dataDir, 'topics.json'), topicImageDir = path.join(dataDir, 'topic-images'), backupsDir = path.join(dataDir, 'backups'), accessControlFile = path.join(dataDir, 'access-control.json'), migrationAssetManifestFile = path.join(dataDir, 'migration-assets.json'), auditLogFile = path.join(dataDir, 'audit-log.jsonl');
 function loadLocalEnvironment() {
   try {
@@ -1031,17 +1038,27 @@ async function linkMovementDocumentArtists(buffer, linkEntries=null) {
   }).join('');
   return Buffer.from(injectMovementArtistLinkStyle(html),'utf8');
 }
+function movementDocumentNeedsSetup(buffer) {
+  const html=Buffer.isBuffer(buffer) ? buffer.toString('utf8') : String(buffer || '');
+  return !(/<link\b[^>]*data-uhangul-integration/i.test(html)
+    && /<script\b[^>]*data-uhangul-integration/i.test(html)
+    && /data-uhangul-corner-bar/i.test(html)
+    && /data-uhangul-corner-button/i.test(html)
+    && /id=["']art-atlas-artist-link-style["']/i.test(html));
+}
 async function ensureStoredMovementDocumentControls() {
   let entries=[];
   try { entries=await fs.readdir(movementDocumentDir,{withFileTypes:true}); } catch(error) { if(error.code==='ENOENT') return; throw error; }
   const linkEntries=await movementArtistLinkEntries();
+  let changed=false;
   await Promise.all(entries.filter(entry=>entry.isFile() && /^[a-f0-9]{24}-[12]\.html$/i.test(entry.name)).map(async entry=>{
     const file=path.join(movementDocumentDir,entry.name);
     const before=await fs.readFile(file);
+    if (!movementDocumentNeedsSetup(before)) return;
     const after=await linkMovementDocumentArtists(injectUHangulDocumentIntegration(before), linkEntries);
-    if(!before.equals(after)) await fs.writeFile(file,after);
+    if(!before.equals(after)) { await fs.writeFile(file,after); changed=true; }
   }));
-  syncPersonNameDictionary();
+  if (changed) syncPersonNameDictionary();
 }
 const storedMovementDocumentControlsReady=ensureStoredMovementDocumentControls().catch(error=>console.error('Could not add uHangul controls to movement documents:',error.message));
 async function requestBinary(rawUrl, redirects=0) {
@@ -1180,7 +1197,7 @@ http.createServer(async (req,res) => { const url=new URL(req.url,`http://${req.h
   if (req.method==='POST' && url.pathname==='/api/auth/login') { let body=''; req.on('data',chunk=>body+=chunk); req.on('end',async()=>{ try { await accessControlReady; if (!adminPasswordHash) throw new Error('관리자 설정 파일이 없어 보기 전용으로 실행 중입니다.'); const {email,password}=JSON.parse(body || '{}'), normalized=normalizedEmail(email); if (!isAdminEmail(normalized) || !samePassword(password)) throw new Error('이메일 또는 비밀번호가 올바르지 않습니다.'); activeAdminSession(); clearAdminSessions(normalized); const token=createAdminSession(normalized); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:true,email:normalized,role:'admin',token})); } catch(error) { res.writeHead(401,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:false,error:error.message})); } }); return; }
   const session=adminSession(req);
   if (req.method==='POST' && url.pathname==='/api/auth/heartbeat') { if (!session) return sendAdminRequired(res); res.writeHead(204,{'Cache-Control':'no-store'}); return res.end(); }
-  if (req.method==='POST' && url.pathname==='/api/auth/logout') { if (session) { const token=/^Bearer\s+(.+)$/i.exec(String(req.headers.authorization || ''))?.[1]; if (token) adminSessions.delete(token); } res.writeHead(204,{'Cache-Control':'no-store'}); return res.end(); }
+  if (req.method==='POST' && url.pathname==='/api/auth/logout') { if (session) { const token=/^Bearer\s+(.+)$/i.exec(String(req.headers.authorization || ''))?.[1]; if (token) adminSessions.delete(token); } res.writeHead(204,{'Cache-Control':'no-store'}); res.end(); setTimeout(()=>process.exit(0),200); return; }
   if (requiresAdmin(req,url.pathname) && !session) return sendAdminRequired(res);
   if (req.method==='GET' && url.pathname==='/api/movement-documents') { try { const data=await readMovementDocuments(); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); return res.end(JSON.stringify(data)); } catch(error) { res.writeHead(500,{'Content-Type':'application/json; charset=utf-8'}); return res.end(JSON.stringify({documents:{},error:error.message})); } }
   if (req.method==='POST' && url.pathname==='/api/movement-documents/refresh') { let body=''; req.on('data',chunk=>body+=chunk); req.on('end',async()=>{ try { const payload=JSON.parse(body || '{}'), name=movementDocumentName(payload.name), slot=movementDocumentSlot(payload.slot), result=await refreshMovementDocumentLinks(name,slot); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify(result)); } catch(error) { res.writeHead(422,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:false,error:error.message})); } }); return; }
