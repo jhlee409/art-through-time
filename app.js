@@ -27,6 +27,7 @@ const movementAtlasStart = 1400;
 const movementAtlasEnd = 2026;
 const movementCountryEnd = 1950;
 const movementVerticalZoomMax = 30;
+const artistImportedWorkLimit = 60;
 const sharedMovementId = 'global-contemporary';
 const artistMovementFallbacks = { Q104884:{ko:'독일 낭만주의',en:'German Romanticism'} };
 const isMovementPopup = new URLSearchParams(location.search).get('movementPopup') === '1';
@@ -231,7 +232,7 @@ function representativeScore(work, artist={}) {
   const movement = workMovementText(work);
   const artistMovement = `${artist?.movement?.ko || ''} ${artist?.movement?.en || ''}`.toLocaleLowerCase();
   let score = workPopularity(work);
-  if (work?.representative || work?.origin === 'curated') score += 100000;
+  if (work?.origin === 'curated') score += 100000;
   if (work?.image || work?.thumbnail) score += 1200;
   if (work?.verified) score += 600;
   if (/wikidata\.org|commons\.wikimedia\.org|api\.artic\.edu|clevelandart\.org/i.test(source)) score += 420;
@@ -241,19 +242,31 @@ function representativeScore(work, artist={}) {
   if (work?.description?.ko || work?.description?.en) score += 120;
   return score;
 }
+function movementMatchesArtist(work, artist={}) {
+  const movement = workMovementText(work);
+  const artistMovement = `${artist?.movement?.ko || ''} ${artist?.movement?.en || ''}`.toLocaleLowerCase();
+  return Boolean(artistMovement && movement && (movement.includes(artistMovement) || artistMovement.includes(movement)));
+}
+function movementContributionScore(work, artist={}) {
+  let score = representativeScore(work, artist);
+  if (movementMatchesArtist(work, artist)) score += 5000;
+  if (work?.origin === 'curated') score += 1800;
+  if (work?.verified) score += 500;
+  return score;
+}
 const workYearLabel = work => {
   const start = work?.year;
   const end = work?.yearEnd;
   if (!start) return '';
   return end && Number(end) !== Number(start) ? `${start}–${end}` : String(start);
 };
-function selectArtistWorks(works, limit=60, artist={}) {
+function selectArtistWorks(works, limit=artistImportedWorkLimit, artist={}) {
   const byKey = new Map();
   (works || []).forEach(work => {
     const key = selectionKey(work);
     if (!key) return;
     const existing = byKey.get(key);
-    byKey.set(key, existing ? {...work,...existing,representative:Boolean(existing.representative || work.representative),popularity:Math.max(workPopularity(existing),workPopularity(work))} : work);
+    byKey.set(key, existing ? {...work,...existing,popularity:Math.max(workPopularity(existing),workPopularity(work))} : work);
   });
   const unique = [...byKey.values()];
   const manualWorks = unique.filter(isManualWork).sort((a,b) => workYearForSort(a) - workYearForSort(b));
@@ -262,19 +275,15 @@ function selectArtistWorks(works, limit=60, artist={}) {
   const curatedKeys = new Set(curatedWorks.map(selectionKey));
   const generatedWorks = unique.filter(work => !manualKeys.has(selectionKey(work)) && !curatedKeys.has(selectionKey(work))).sort((a,b) => representativeScore(b,artist) - representativeScore(a,artist) || workYearForSort(a) - workYearForSort(b));
   const selected = [...manualWorks,...curatedWorks,...generatedWorks.slice(0,Math.max(0,limit-manualWorks.length-curatedWorks.length))];
-  const representativeKeys = new Set(
-    selected
-      .filter(work => work.representative || work.origin === 'curated')
-      .sort((a,b) => representativeScore(b,artist) - representativeScore(a,artist) || workYearForSort(a) - workYearForSort(b))
+  const aligned = selected.filter(work => movementMatchesArtist(work, artist));
+  const contributionPool = aligned.length ? aligned : selected;
+  const movementContributionKeys = new Set(
+    contributionPool
+      .sort((a,b) => movementContributionScore(b,artist) - movementContributionScore(a,artist) || workYearForSort(a) - workYearForSort(b))
       .slice(0,3)
       .map(selectionKey)
   );
-  selected
-    .filter(work => !representativeKeys.has(selectionKey(work)))
-    .sort((a,b) => representativeScore(b,artist) - representativeScore(a,artist) || workYearForSort(a) - workYearForSort(b))
-    .slice(0,Math.max(0,3-representativeKeys.size))
-    .forEach(work => representativeKeys.add(selectionKey(work)));
-  return selected.map(work => ({...work,representative:representativeKeys.has(selectionKey(work)),representativeReason:representativeKeys.has(selectionKey(work)) ? 'movement-and-artist-character' : undefined})).sort((a,b) => workYearForSort(a) - workYearForSort(b));
+  return selected.map(work => ({...work,movementContribution:movementContributionKeys.has(selectionKey(work)),movementContributionReason:movementContributionKeys.has(selectionKey(work)) ? 'artist-movement-characteristic' : undefined})).sort((a,b) => workYearForSort(a) - workYearForSort(b));
 }
 function koreanFamilyFirst(name, originalName) {
   if (String(name || '').includes(',')) return String(name || '').trim();
@@ -743,7 +752,7 @@ async function loadData() {
   if (!currentUserIsAdmin) localStorage.removeItem(favoriteWorksStorageKey);
   try {
     const curated = await (await fetch('data/featured-works.json')).json();
-    curated.artists.forEach(entry => { const artist = artists.find(item => item.id === entry.id || (entry.qid && item.qid === entry.qid)); if (!artist) return; entry.works.forEach(work => { const existing = (artist.works || []).find(item => item.id === work.id); if (existing) { const preserved = {description:existing.description,detail:existing.detail,thumbnail:existing.thumbnail,thumbnailValidation:existing.thumbnailValidation,highResImage:existing.highResImage,highResOriginal:existing.highResOriginal}; Object.assign(existing, work); if (!loc(work.description)) existing.description = preserved.description; if (preserved.detail) existing.detail = preserved.detail; if (preserved.thumbnail) existing.thumbnail = preserved.thumbnail; if (preserved.thumbnailValidation) existing.thumbnailValidation = preserved.thumbnailValidation; if (preserved.highResImage) existing.highResImage = preserved.highResImage; if (preserved.highResOriginal) existing.highResOriginal = preserved.highResOriginal; } else artist.works.push(work); }); artist.works = selectArtistWorks(artist.works || [], 60, artist); });
+    curated.artists.forEach(entry => { const artist = artists.find(item => item.id === entry.id || (entry.qid && item.qid === entry.qid)); if (!artist) return; entry.works.forEach(work => { const existing = (artist.works || []).find(item => item.id === work.id); if (existing) { const preserved = {description:existing.description,detail:existing.detail,thumbnail:existing.thumbnail,thumbnailValidation:existing.thumbnailValidation,highResImage:existing.highResImage,highResOriginal:existing.highResOriginal}; Object.assign(existing, work); if (!loc(work.description)) existing.description = preserved.description; if (preserved.detail) existing.detail = preserved.detail; if (preserved.thumbnail) existing.thumbnail = preserved.thumbnail; if (preserved.thumbnailValidation) existing.thumbnailValidation = preserved.thumbnailValidation; if (preserved.highResImage) existing.highResImage = preserved.highResImage; if (preserved.highResOriginal) existing.highResOriginal = preserved.highResOriginal; } else artist.works.push(work); }); artist.works = selectArtistWorks(artist.works || [], artistImportedWorkLimit, artist); });
     if (currentUserIsAdmin) await saveArtistsNow();
   } catch (_) { /* The main collection continues to work without the optional curated list. */ }
   await markLegacyManualWorks();
@@ -821,12 +830,12 @@ function primaryMovement(artist) {
   (artist.works || []).forEach(work => { const movement = artworkMovement(work,artist); if (movement) counts.set(movement, (counts.get(movement) || 0) + 1); });
   return [...counts.entries()].sort((a,b) => b[1] - a[1])[0]?.[0] || artworkMovement(null,artist) || '';
 }
-function representativeWorksForArtist(artist, sourceWorks=artist?.works || []) {
+function movementContributionWorksForArtist(artist, sourceWorks=artist?.works || []) {
   const visibleKeys = new Set((sourceWorks || []).map(selectionKey).filter(Boolean));
-  const selected = selectArtistWorks(artist?.works || [], 60, artist);
+  const selected = selectArtistWorks(artist?.works || [], artistImportedWorkLimit, artist);
   return selected
-    .filter(work => work.representative)
-    .sort((a,b) => representativeScore(b,artist) - representativeScore(a,artist) || workYearForSort(a) - workYearForSort(b))
+    .filter(work => work.movementContribution)
+    .sort((a,b) => movementContributionScore(b,artist) - movementContributionScore(a,artist) || workYearForSort(a) - workYearForSort(b))
     .slice(0,3)
     .map(work => (artist.works || []).find(item => selectionKey(item) === selectionKey(work)) || work)
     .filter(work => work && (!visibleKeys.size || visibleKeys.has(selectionKey(work)) || work.image || work.thumbnail));
@@ -948,9 +957,10 @@ function renderTimeline() {
     return;
   }
   hydrateArtistProfile(artist);
+  const displayWorks = selectArtistWorks(artist.works || [], artistImportedWorkLimit, artist);
   // Do not show a source record whose date falls outside the artist's lifetime.
   const uniqueWorks = new Map();
-  (artist.works || []).forEach(work => {
+  displayWorks.forEach(work => {
     const key = `${work.title?.en || work.title?.ko || loc(work.title)}-${work.year || ''}`;
     const existing = uniqueWorks.get(key);
     uniqueWorks.set(key, existing ? {
@@ -959,7 +969,7 @@ function renderTimeline() {
       image: work.image || existing.image,
       thumbnail: work.thumbnail || existing.thumbnail,
       description: existing.description || work.description,
-      representative: Boolean(existing.representative || work.representative)
+      movementContribution: Boolean(existing.movementContribution || work.movementContribution)
     } : work);
   });
   const works = [...uniqueWorks.values()]
@@ -972,7 +982,7 @@ function renderTimeline() {
   // A timeline row represents the year a work began.  Date ranges that share
   // the same start year therefore stay together on one horizontal row.
   works.forEach(work => { const year = work?.year || '—'; worksByYear.set(year, [...(worksByYear.get(year) || []), work]); });
-  const card = w => { const image = artworkPreviewImage(w), manual = isManualWork(w), representative = Boolean(w.representative), highRes = Boolean(w.highResImage), highResLabel = language === 'ko' ? '고해상도 파일 있음' : 'High-resolution image available', replaceLabel = language === 'ko' ? '로컬 이미지 교체' : 'Replace with local image', representativeLabel = language === 'ko' ? '대표 선정 3점' : 'Top three representative works', collection = artworkCollectionLabel(w), controls = currentUserIsAdmin ? `<button class="delete-artwork" data-work="${esc(w.id)}" title="${esc(t('delete'))}" aria-label="${esc(t('delete'))}">×</button><button class="replace-local-image" data-work="${esc(w.id)}" title="${esc(replaceLabel)}" aria-label="${esc(replaceLabel)}">↗</button>` : ''; return `<div class="art-card ${manual ? 'manual-artwork' : ''}${representative ? ' representative-artwork' : ''}" data-work="${esc(w.id)}" title="${representative ? esc(representativeLabel) : ''}"><span class="art-thumb">${image ? `<img src="${esc(image)}" alt="${esc(loc(w.title))}" loading="lazy" />` : `<span class="art-thumb-empty">${esc(t('noImage'))}</span>`}${controls}</span><span class="art-meta"><strong class="art-title">${esc(loc(w.title))}${highRes ? ` <span class="high-resolution-badge" title="${esc(highResLabel)}" aria-label="${esc(highResLabel)}">H</span>` : ''}</strong><small class="art-country art-collection" title="${esc(collection)}">${esc(collection)}</small></span></div>`; };
+  const card = w => { const image = artworkPreviewImage(w), movementContribution = Boolean(w.movementContribution), highRes = Boolean(w.highResImage), highResLabel = language === 'ko' ? '고해상도 파일 있음' : 'High-resolution image available', replaceLabel = language === 'ko' ? '로컬 이미지 교체' : 'Replace with local image', contributionLabel = language === 'ko' ? '화가가 속한 사조의 특성을 잘 보여주는 기여 작품' : 'Work that strongly expresses the artist’s movement contribution', collection = artworkCollectionLabel(w), controls = currentUserIsAdmin ? `<button class="delete-artwork" data-work="${esc(w.id)}" title="${esc(t('delete'))}" aria-label="${esc(t('delete'))}">×</button><button class="replace-local-image" data-work="${esc(w.id)}" title="${esc(replaceLabel)}" aria-label="${esc(replaceLabel)}">↗</button>` : ''; return `<div class="art-card${movementContribution ? ' movement-contribution-artwork' : ''}" data-work="${esc(w.id)}" title="${movementContribution ? esc(contributionLabel) : ''}"><span class="art-thumb">${image ? `<img src="${esc(image)}" alt="${esc(loc(w.title))}" loading="lazy" />` : `<span class="art-thumb-empty">${esc(t('noImage'))}</span>`}${controls}</span><span class="art-meta"><strong class="art-title">${esc(loc(w.title))}${highRes ? ` <span class="high-resolution-badge" title="${esc(highResLabel)}" aria-label="${esc(highResLabel)}">H</span>` : ''}</strong><small class="art-country art-collection" title="${esc(collection)}">${esc(collection)}</small></span></div>`; };
   const koreanName = artist.name?.ko || '', originalName = artist.name?.en || '';
   const savedLinks = artistLinks(artist);
   const addLinkLabel = language === 'ko' ? '주소 추가' : 'Add address';
@@ -1195,7 +1205,7 @@ function renderMovementAtlas() {
     const ticks = []; for (let year = Math.ceil(axisStart / step) * step; year <= axisEnd; year += step) ticks.push(year);
     return `<aside class="atlas-axis" style="height:${axisHeight + 40}px"><span class="atlas-axis-line"></span>${ticks.map(year => `<span class="atlas-tick" style="top:${(year-axisStart)*yearScale}px">${yearLabel(year)}</span>`).join('')}</aside>`;
   };
-  const bar = (item, axisStart, axisEnd) => { const top=Math.max(0,item.start-axisStart)*yearScale, barHeight=Math.max(46,(Math.min(axisEnd,item.end)-Math.max(axisStart,item.start))*yearScale), left=8 + item.lane * 106, years=`${yearLabel(item.start)}–${yearLabel(item.end)}`, movementName=item.name.en || item.name.ko || ''; return `<div class="movement-bar" title="${esc(loc(item.name))} · ${years}" style="top:${top}px;height:${barHeight}px;left:${left}px;width:100px;--movement-color:${esc(item.color)}"><div class="movement-bar-links"><button class="movement-link movement-explanation-link" type="button" data-movement-explanation="${esc(movementName)}" data-movement-label="${esc(loc(item.name))}" aria-label="${esc(loc(item.name))} ${language === 'ko' ? '정리 설명' : 'explanation'}" title="${language === 'ko' ? '정리 설명 열기' : 'Open explanation'}">①</button><button class="movement-link movement-wiki-link" type="button" data-movement-wiki="${esc(movementName)}" aria-label="${esc(loc(item.name))} Wikipedia" title="Wikipedia">②</button></div><span>${esc(loc(item.name))}</span><small>${years}</small></div>`; };
+  const bar = (item, axisStart, axisEnd) => { const top=Math.max(0,item.start-axisStart)*yearScale, barHeight=Math.max(46,(Math.min(axisEnd,item.end)-Math.max(axisStart,item.start))*yearScale), left=8 + item.lane * 106, years=`${yearLabel(item.start)}–${yearLabel(item.end)}`, movementName=item.name.en || item.name.ko || ''; return `<div class="movement-bar" title="${esc(loc(item.name))} · ${years}" style="top:${top}px;height:${barHeight}px;left:${left}px;width:100px;--movement-color:${esc(item.color)}"><div class="movement-bar-links"><button class="movement-link movement-explanation-link" type="button" data-movement-explanation="${esc(movementName)}" data-movement-label="${esc(loc(item.name))}" aria-label="${esc(loc(item.name))} ${language === 'ko' ? '정리 설명' : 'explanation'}" title="${language === 'ko' ? '정리 설명 열기' : 'Open explanation'}">①</button></div><span>${esc(loc(item.name))}</span><small>${years}</small></div>`; };
   const widthFor = country => { const lanes = Math.max(1, ...pack(country.movements.filter(item => item.end >= start && item.start <= countryEnd)).map(item => item.lane + 1)); return lanes * 106 + 16; };
   const chartColumns = `${showHistoricalEvents ? '250px ' : ''}74px ${countries.map(country => `${widthFor(country)}px`).join(' ')}`;
   const column = country => {
@@ -1288,7 +1298,6 @@ function renderMovementAtlas() {
       showMovementDocumentMenu(event, button.dataset.movementExplanation, '1', button.dataset.movementLabel);
     };
   });
-  timeline.querySelectorAll('.movement-wiki-link').forEach(button => button.onclick = event => { event.stopPropagation(); openMovementWikipedia(button.dataset.movementWiki); });
   timeline.querySelectorAll('.atlas-event-label').forEach(button => button.onclick = () => openHistoricalEventWikipedia(button.dataset.eventWiki));
   timeline.querySelector('.atlas-event-editor')?.addEventListener('click', openHistoricalEventEditor);
   timeline.querySelector('.atlas-event-toggle').onclick = () => { movementView.showHistoricalEvents = !showHistoricalEvents; persistMovementView(); renderMovementAtlas(); };
@@ -1636,9 +1645,11 @@ function movementExplanationWindow(url='about:blank') {
   const popupLeft = Math.max(30, window.screen.availWidth - popupWidth - 30);
   return window.open(url, 'artAtlasMovementExplanation', `popup=yes,width=${popupWidth},height=${popupHeight},left=${popupLeft},top=50`);
 }
-function openExplanationUrl(url, popup=null) {
+function openExplanationUrl(url, popup=null, movementName='', movementLabel='') {
   const target = new URL(uHangulModeUrl(url));
   target.searchParams.set('documentVersion', 'uhangul-toolbar-v3');
+  if (movementName) target.searchParams.set('movementWiki', movementName);
+  if (movementLabel) target.searchParams.set('movementLabel', movementLabel);
   const targetUrl = target.href;
   popup = popup && !popup.closed ? popup : movementExplanationWindow(targetUrl);
   if (!popup) {
@@ -1707,8 +1718,8 @@ async function openMovementDocument(name, slot, label) {
   if (url) {
     const popup = movementExplanationWindow();
     writeMovementDocumentLoading(popup, label || name);
-    try { return openExplanationUrl(await refreshMovementDocument(name, slot), popup); }
-    catch (_) { return openExplanationUrl(url, popup); }
+    try { return openExplanationUrl(await refreshMovementDocument(name, slot), popup, name, label || name); }
+    catch (_) { return openExplanationUrl(url, popup, name, label || name); }
   }
   if (slot === '1') return openMovementWikipedia(name);
   alert(language === 'ko' ? `${label || name}의 설명 HTML이 없습니다. 아이콘을 마우스 오른쪽 버튼으로 눌러 추가해 주세요.` : `There is no explanation HTML for ${label || name}. Right-click the icon to add one.`);
@@ -1809,11 +1820,11 @@ async function runThumbnailAgent() {
   const queueWork = work => queueOfflineThumbnail(artist, work, savedArtist => {
     if (selectedId === savedArtist.id) renderTimeline();
   });
-  // Secure the three representative images first; these are the interpretive
-  // entry points shown above the timeline.  The rest are queued afterward.
-  const representativeKeys = new Set(representativeWorksForArtist(artist).map(selectionKey));
-  representativeWorksForArtist(artist).forEach(queueWork);
-  (artist.works || []).filter(work => !representativeKeys.has(selectionKey(work))).forEach(queueWork);
+  // Secure the movement-contribution images first; these are the works that
+  // best express the artist's known movement in the timeline.
+  const contributionKeys = new Set(movementContributionWorksForArtist(artist).map(selectionKey));
+  movementContributionWorksForArtist(artist).forEach(queueWork);
+  (artist.works || []).filter(work => !contributionKeys.has(selectionKey(work))).forEach(queueWork);
   const cards = [...timeline.querySelectorAll('.art-card[data-work]')];
   const workFor = card => artist.works?.find(work => work.id === card.dataset.work);
   if (!('IntersectionObserver' in window)) { cards.slice(0, 8).forEach(card => queueWork(workFor(card))); return; }
@@ -1826,8 +1837,8 @@ async function cacheOfflineThumbnailCatalogue() {
   if (!currentUserIsAdmin) return;
   for (const artist of artists) await hydrateThumbnails(artist);
   artists.forEach(artist => {
-    const representativeKeys = new Set(representativeWorksForArtist(artist).map(selectionKey));
-    const orderedWorks = [...representativeWorksForArtist(artist), ...(artist.works || []).filter(work => !representativeKeys.has(selectionKey(work)))];
+    const contributionKeys = new Set(movementContributionWorksForArtist(artist).map(selectionKey));
+    const orderedWorks = [...movementContributionWorksForArtist(artist), ...(artist.works || []).filter(work => !contributionKeys.has(selectionKey(work)))];
     orderedWorks.forEach(work => queueOfflineThumbnail(artist, work, savedArtist => {
       if (selectedId === savedArtist.id) renderTimeline();
     }));
@@ -1838,15 +1849,15 @@ async function enrichArtist() {
   if (!currentUserIsAdmin) return;
   const artist = artists.find(a => a.id === selectedId);
   const hasWorks = (artist?.works || []).length > 0;
-  if (!artist || (artist.generated?.schema >= 18 && hasWorks) || (sessionStorage.getItem(`art-atlas-tried-18-${artist.id}`) && hasWorks)) return;
-  sessionStorage.setItem(`art-atlas-tried-18-${artist.id}`, '1');
+  if (!artist || (artist.generated?.schema >= 20 && hasWorks) || (sessionStorage.getItem(`art-atlas-tried-20-${artist.id}`) && hasWorks)) return;
+  sessionStorage.setItem(`art-atlas-tried-20-${artist.id}`, '1');
   const original = timeline.innerHTML;
   timeline.innerHTML = `${original}<p class="loading">${language === 'ko' ? 'Wikimedia에서 작품 자료를 불러와 저장하는 중…' : 'Saving artwork data from Wikimedia…'}</p>`;
   try {
     const response = await apiFetch('/api/enrich', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(artist)});
     if (!response.ok) throw new Error('Could not retrieve artwork data');
     const result = await response.json();
-    if (result.works?.length) { const existingWorks = artist.works || [], existingByKey = new Map(existingWorks.map(work => [selectionKey(work), work])), generatedByKey = new Map(existingWorks.filter(isGeneratedWork).map(work => [selectionKey(work), work])), fetchedByKey = new Map(result.works.map(work => [selectionKey(work), {...work,origin:'generated'}])); const isUpdate = Boolean(artist.generated?.file && generatedByKey.size); const generatedWorks = isUpdate ? [...generatedByKey.values()].map(existing => { const fetched = fetchedByKey.get(selectionKey(existing)); return fetched ? {...fetched,description:existing.description || fetched.description,detail:existing.detail || fetched.detail,thumbnail:existing.thumbnail || fetched.thumbnail,thumbnailValidation:existing.thumbnailValidation || fetched.thumbnailValidation,highResImage:existing.highResImage || fetched.highResImage,highResOriginal:existing.highResOriginal || fetched.highResOriginal} : existing; }) : result.works.map(work => { const fetched = {...work,origin:'generated'}, existing = existingByKey.get(selectionKey(work)); return existing && !isManualWork(existing) ? {...fetched,description:existing.description || fetched.description,detail:existing.detail || fetched.detail,thumbnail:existing.thumbnail || fetched.thumbnail,thumbnailValidation:existing.thumbnailValidation || fetched.thumbnailValidation,highResImage:existing.highResImage || fetched.highResImage,highResOriginal:existing.highResOriginal || fetched.highResOriginal} : fetched; }); artist.works = [...existingWorks.filter(work => !isGeneratedWork(work)),...generatedWorks]; if (result.artist?.name?.ko || result.artist?.name?.en) { artist.name = result.artist.name; artist.birth = result.artist.birth || artist.birth; artist.death = result.artist.death || artist.death; artist.nationality = result.artist.nationality || artist.nationality; artist.movement = result.artist.movement || artist.movement; } artist.works = selectArtistWorks(artist.works, 60, artist); artist.generated = {schema:result.schema || 18,file:`data/generated/${artist.id}.json`,fetchedAt:result.fetchedAt}; await normalizeArtistWorksBeforeSave(artist); await hydrateThumbnails(artist); persist(); await saveArtistsNow(); render(); }
+    if (result.works?.length) { const existingWorks = artist.works || [], existingByKey = new Map(existingWorks.map(work => [selectionKey(work), work])), generatedByKey = new Map(existingWorks.filter(isGeneratedWork).map(work => [selectionKey(work), work])), fetchedByKey = new Map(result.works.map(work => [selectionKey(work), {...work,origin:'generated'}])); const isUpdate = Boolean(artist.generated?.file && generatedByKey.size); const generatedWorks = isUpdate ? [...generatedByKey.values()].map(existing => { const fetched = fetchedByKey.get(selectionKey(existing)); return fetched ? {...fetched,description:existing.description || fetched.description,detail:existing.detail || fetched.detail,thumbnail:existing.thumbnail || fetched.thumbnail,thumbnailValidation:existing.thumbnailValidation || fetched.thumbnailValidation,highResImage:existing.highResImage || fetched.highResImage,highResOriginal:existing.highResOriginal || fetched.highResOriginal} : existing; }) : result.works.map(work => { const fetched = {...work,origin:'generated'}, existing = existingByKey.get(selectionKey(work)); return existing && !isManualWork(existing) ? {...fetched,description:existing.description || fetched.description,detail:existing.detail || fetched.detail,thumbnail:existing.thumbnail || fetched.thumbnail,thumbnailValidation:existing.thumbnailValidation || fetched.thumbnailValidation,highResImage:existing.highResImage || fetched.highResImage,highResOriginal:existing.highResOriginal || fetched.highResOriginal} : fetched; }); artist.works = [...existingWorks.filter(work => !isGeneratedWork(work)),...generatedWorks]; if (result.artist?.name?.ko || result.artist?.name?.en) { artist.name = result.artist.name; artist.birth = result.artist.birth || artist.birth; artist.death = result.artist.death || artist.death; artist.nationality = result.artist.nationality || artist.nationality; artist.movement = result.artist.movement || artist.movement; } artist.works = selectArtistWorks(artist.works, artistImportedWorkLimit, artist); artist.generated = {schema:result.schema || 20,file:`data/generated/${artist.id}.json`,fetchedAt:result.fetchedAt}; await normalizeArtistWorksBeforeSave(artist); await hydrateThumbnails(artist); persist(); await saveArtistsNow(); render(); }
     else timeline.innerHTML = original;
   } catch (_) { timeline.innerHTML = original; }
 }
@@ -1897,7 +1908,6 @@ async function addArtworkToSelectedArtist(pageUrl) {
       ...existing,
       ...work,
       origin:'manual',
-      representative:true,
       detail:existing.detail || work.detail,
       thumbnail:existing.thumbnail || work.thumbnail,
       thumbnailValidation:existing.thumbnailValidation || work.thumbnailValidation,
@@ -1916,7 +1926,7 @@ async function addArtworkToSelectedArtist(pageUrl) {
     return existing;
   }
   const added = {...work, origin:'manual'};
-  artist.works = selectArtistWorks([...(artist.works || []), added], 60, artist);
+  artist.works = selectArtistWorks([...(artist.works || []), added], artistImportedWorkLimit, artist);
   const savedWork = artist.works.find(item => item.id === added.id || selectionKey(item) === selectionKey(added));
   await normalizeArtistWorksBeforeSave(artist);
   persist();
@@ -1986,7 +1996,7 @@ async function addLocalArtworkToSelectedArtist(file, title, yearInput) {
   if((artist.works || []).some(item => selectionKey(item) === selectionKey(work))) throw new Error(language === 'ko' ? '같은 제목과 제작 연도의 작품이 이미 등록되어 있습니다.' : 'An artwork with this title and year is already listed.');
   work.thumbnail=await cacheThumbnailFromFile(artist,work,file);
   work.thumbnailValidation=2;
-  artist.works=selectArtistWorks([...(artist.works || []),work],60,artist);
+  artist.works=selectArtistWorks([...(artist.works || []),work],artistImportedWorkLimit,artist);
   await normalizeArtistWorksBeforeSave(artist);
   persist();
   if(!await saveArtistsNow()) {
@@ -2108,7 +2118,7 @@ $('#add-form').addEventListener('submit', async event => {
         else Object.assign(artist,{...imported.artist,works:artist.works || []});
         if (imported.work) { const existing = (artist.works || []).find(work => work.id === imported.work.id); if (existing) existing.origin = 'manual'; else artist.works.push({...imported.work,origin:'manual'}); }
         (imported.works || []).forEach(work => { const existing = (artist.works || []).find(item => selectionKey(item) === selectionKey(work) || item.id === work.id); if (existing) Object.assign(existing,{...work,origin:'manual'}); else artist.works.push({...work,origin:'manual'}); });
-        artist.works = selectArtistWorks(artist.works || [],60,artist);
+        artist.works = selectArtistWorks(artist.works || [],artistImportedWorkLimit,artist);
         selectedId=artist.id;
       } catch (error) {
         let validPageUrl;

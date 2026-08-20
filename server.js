@@ -32,9 +32,11 @@ const adminSessionIdleMs = 90 * 1000;
 const jsonRequestBodyLimit = 12 * 1024 * 1024;
 let accessControl = {schema:1,defaultRole:'viewer',roles:{[adminEmail]:'admin'}};
 const mime = {'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.jpg':'image/jpeg','.jpeg':'image/jpeg','.png':'image/png','.webp':'image/webp','.gif':'image/gif','.svg':'image/svg+xml','.woff2':'font/woff2'};
-const catalogueSchema = 18;
+const catalogueSchema = 20;
 const execFileAsync = promisify(execFile);
+const artistImportedWorkLimit = 60;
 const highResolutionStoredLimit = 30 * 1024 * 1024;
+const sourceImageInputLimit = 500 * 1024 * 1024;
 let nextWikimediaRequestAt = 0;
 let artistsWriteQueue = Promise.resolve();
 let lastArtistsBackupAt = 0;
@@ -184,7 +186,7 @@ function representativeScore(work, artist={}) {
   const movement = workMovementText(work);
   const artistMovement = `${artist?.movement?.ko || ''} ${artist?.movement?.en || ''}`.toLocaleLowerCase();
   let score = workPopularity(work);
-  if (work?.representative || work?.origin === 'curated') score += 100000;
+  if (work?.origin === 'curated') score += 100000;
   if (work?.image || work?.thumbnail) score += 1200;
   if (work?.verified) score += 600;
   if (/wikidata\.org|commons\.wikimedia\.org|api\.artic\.edu|clevelandart\.org/i.test(source)) score += 420;
@@ -194,32 +196,40 @@ function representativeScore(work, artist={}) {
   if (work?.description?.ko || work?.description?.en) score += 120;
   return score;
 }
-function selectArtistWorks(works, limit=60, artist={}) {
+function movementMatchesArtist(work, artist={}) {
+  const movement = workMovementText(work);
+  const artistMovement = `${artist?.movement?.ko || ''} ${artist?.movement?.en || ''}`.toLocaleLowerCase();
+  return Boolean(artistMovement && movement && (movement.includes(artistMovement) || artistMovement.includes(movement)));
+}
+function movementContributionScore(work, artist={}) {
+  let score = representativeScore(work, artist);
+  if (movementMatchesArtist(work, artist)) score += 5000;
+  if (work?.origin === 'curated') score += 1800;
+  if (work?.verified) score += 500;
+  return score;
+}
+function selectArtistWorks(works, limit=artistImportedWorkLimit, artist={}) {
   const byKey = new Map();
   (works || []).forEach(work => {
     const key = selectionKey(work);
     if (!key) return;
     const existing = byKey.get(key);
-    byKey.set(key, existing ? {...work,...existing,representative:Boolean(existing.representative || work.representative),popularity:Math.max(workPopularity(existing),workPopularity(work))} : work);
+    byKey.set(key, existing ? {...work,...existing,popularity:Math.max(workPopularity(existing),workPopularity(work))} : work);
   });
   const unique = [...byKey.values()];
   const manualWorks = unique.filter(isManualWork).sort((a,b) => workYearForSort(a) - workYearForSort(b));
   const manualKeys = new Set(manualWorks.map(selectionKey));
   const generatedWorks = unique.filter(work => !manualKeys.has(selectionKey(work))).sort((a,b) => representativeScore(b,artist) - representativeScore(a,artist) || workYearForSort(a) - workYearForSort(b));
   const selected = [...manualWorks,...generatedWorks.slice(0,Math.max(0,limit-manualWorks.length))];
-  const representativeKeys = new Set(
-    selected
-      .filter(work => work.representative || work.origin === 'curated')
-      .sort((a,b) => representativeScore(b,artist) - representativeScore(a,artist) || workYearForSort(a) - workYearForSort(b))
+  const aligned = selected.filter(work => movementMatchesArtist(work, artist));
+  const contributionPool = aligned.length ? aligned : selected;
+  const movementContributionKeys = new Set(
+    contributionPool
+      .sort((a,b) => movementContributionScore(b,artist) - movementContributionScore(a,artist) || workYearForSort(a) - workYearForSort(b))
       .slice(0,3)
       .map(selectionKey)
   );
-  selected
-    .filter(work => !representativeKeys.has(selectionKey(work)))
-    .sort((a,b) => representativeScore(b,artist) - representativeScore(a,artist) || workYearForSort(a) - workYearForSort(b))
-    .slice(0,Math.max(0,3-representativeKeys.size))
-    .forEach(work => representativeKeys.add(selectionKey(work)));
-  return selected.map(work => ({...work,representative:representativeKeys.has(selectionKey(work)),representativeReason:representativeKeys.has(selectionKey(work)) ? 'movement-and-artist-character' : undefined})).sort((a,b) => workYearForSort(a) - workYearForSort(b));
+  return selected.map(work => ({...work,movementContribution:movementContributionKeys.has(selectionKey(work)),movementContributionReason:movementContributionKeys.has(selectionKey(work)) ? 'artist-movement-characteristic' : undefined})).sort((a,b) => workYearForSort(a) - workYearForSort(b));
 }
 const searchKey = value => String(value || '').toLocaleLowerCase().normalize('NFKD').replace(/[\s\-_'.,()]/g,'');
 function editDistance(left, right) { const a=searchKey(left), b=searchKey(right); const row=Array.from({length:b.length+1},(_,index)=>index); for(let i=1;i<=a.length;i++){let diagonal=row[0];row[0]=i;for(let j=1;j<=b.length;j++){const above=row[j];row[j]=Math.min(row[j]+1,row[j-1]+1,diagonal+(a[i-1]===b[j-1]?0:1));diagonal=above;}} return row[b.length]; }
@@ -360,7 +370,7 @@ function pageWorksFromHtml(html, baseUrl) {
     const nearby=contextTextAround(html,match.index || 0);
     add(image,attrs.alt || attrs.title || nearby,nearby,works.length);
   }
-  return selectArtistWorks(works,40).map(work=>({...work,sourceHost:pageHost}));
+  return selectArtistWorks(works,artistImportedWorkLimit).map(work=>({...work,sourceHost:pageHost}));
 }
 function contentFrameUrl(html='', baseUrl) {
   const frames=[...String(html).matchAll(/<iframe\b[^>]*>/gi)].map(match=>tagAttrs(match[0]));
@@ -468,7 +478,7 @@ async function wikipediaWorksForArtist(qid, artist) {
       if(!image || !caption) return null;
       const year=Number(caption.match(/\b(1[5-9]\d{2}|20\d{2})\b/)?.[1]) || null; const cleanTitle=caption.replace(/\s*\(\d{4}\)\s*$/,'').trim();
       if(!cleanTitle) return null;
-      return {id:`wikipedia-${qid}-${index}`,year,title:{ko:cleanTitle,en:cleanTitle},country:{ko:artist.nationality?.ko || '',en:artist.nationality?.en || ''},movement:{ko:'',en:''},image:`https:${image.startsWith('//') ? image : `//${image.replace(/^https?:\/\//,'')}`}`.replace(/&amp;/g,'&'),description:{ko:'',en:''},source:`https://en.wikipedia.org/wiki/${encodeURIComponent(title.replace(/ /g,'_'))}`,verified:true,representative:true,popularity:999-index};
+      return {id:`wikipedia-${qid}-${index}`,year,title:{ko:cleanTitle,en:cleanTitle},country:{ko:artist.nationality?.ko || '',en:artist.nationality?.en || ''},movement:{ko:'',en:''},image:`https:${image.startsWith('//') ? image : `//${image.replace(/^https?:\/\//,'')}`}`.replace(/&amp;/g,'&'),description:{ko:'',en:''},source:`https://en.wikipedia.org/wiki/${encodeURIComponent(title.replace(/ /g,'_'))}`,verified:true,popularity:999-index};
     }).filter(Boolean);
   } catch (_) { return []; }
 }
@@ -619,8 +629,8 @@ async function getBinary(url, attempt=0, redirects=0) {
         return setTimeout(()=>getBinary(parsed.href,attempt+1,redirects).then(resolve,reject),retryAfter);
       }
       if(res.statusCode!==200) { res.resume(); return reject(new Error(`Image returned ${res.statusCode}`)); }
-      const chunks=[]; let size=0; const limit=35*1024*1024;
-      res.on('data',chunk=>{ size+=chunk.length; if(size>limit) request.destroy(new Error('Image is too large')); else chunks.push(chunk); });
+      const chunks=[]; let size=0;
+      res.on('data',chunk=>{ size+=chunk.length; if(size>sourceImageInputLimit) request.destroy(new Error('Image source is larger than 500 MB')); else chunks.push(chunk); });
       res.on('end',()=>resolve(Buffer.concat(chunks)));
     });
     request.setTimeout(20000,()=>request.destroy(new Error('Image download timed out')));
@@ -649,14 +659,38 @@ function thumbnailLocation(email, artistId) {
   return {folder:path.join(root,'data','thumbnails',artistId), relativePrefix:`data/thumbnails/${artistId}`};
 }
 function thumbnailExtension(value='') { return (String(value).match(/\.(jpe?g|png|webp|gif)(?:\?|$)/i)?.[1] || '').toLowerCase().replace('jpeg','jpg'); }
-async function saveThumbnailBuffer(artist,work,image,extension,verifiedBy,email=adminEmail) { if(invalidArtworkThumbnail(image)) throw new Error('Image is a small interface icon'); if(!['jpg','png','webp','gif'].includes(extension)) throw new Error('Unsupported image file type'); if(image.length > 35 * 1024 * 1024) throw new Error('Image file is too large'); const location=thumbnailLocation(email,artist.id), directory=location.folder, fileName=`${work.id}.${extension}`, relative=`${location.relativePrefix}/${fileName}`; await fs.mkdir(directory,{recursive:true}); await fs.writeFile(path.join(directory,fileName),image); const indexPath=path.join(directory,'index.json'); let index={}; try { index=JSON.parse(await fs.readFile(indexPath,'utf8')); } catch (_) {} index[work.id]={thumbnail:relative,checkedAt:new Date().toISOString(),verifiedBy}; await fs.writeFile(indexPath,JSON.stringify(index,null,2),'utf8'); return relative; }
+async function removeThumbnailFiles(directory, workId) {
+  const safeWorkId=safeUploadId(workId);
+  await Promise.all(['jpg','png','webp','gif'].map(extension => fs.unlink(path.join(directory,`${safeWorkId}.${extension}`)).catch(()=>{})));
+}
+async function reduceImageBufferForStorage(image, extension, fileBase) {
+  if (image.length <= highResolutionStoredLimit) return {image,extension};
+  const staging=path.join(imageStagingDir,`thumbnail-${fileBase}-${Date.now()}-${randomBytes(4).toString('hex')}`);
+  await fs.mkdir(staging,{recursive:true});
+  const input=path.join(staging,`source.${extension || 'jpg'}`);
+  const output=path.join(staging,'display.jpg');
+  try {
+    await fs.writeFile(input,image);
+    await execFileAsync('C:\\ffmpeg\\bin\\ffmpeg.exe',['-y','-i',input,'-vf','scale=min(2400\\,iw):-2','-q:v','5',output],{windowsHide:true,timeout:300000});
+    let reduced=await fs.readFile(output);
+    if(reduced.length > highResolutionStoredLimit) {
+      await execFileAsync('C:\\ffmpeg\\bin\\ffmpeg.exe',['-y','-i',input,'-vf','scale=min(1600\\,iw):-2','-q:v','7',output],{windowsHide:true,timeout:300000});
+      reduced=await fs.readFile(output);
+    }
+    if(reduced.length > highResolutionStoredLimit) throw new Error('Could not reduce the image below 30 MB');
+    return {image:reduced,extension:'jpg',reduced:true};
+  } finally {
+    await fs.rm(staging,{recursive:true,force:true}).catch(()=>{});
+  }
+}
+async function saveThumbnailBuffer(artist,work,image,extension,verifiedBy,email=adminEmail) { if(invalidArtworkThumbnail(image)) throw new Error('Image is a small interface icon'); if(!['jpg','png','webp','gif'].includes(extension)) throw new Error('Unsupported image file type'); if(image.length > sourceImageInputLimit) throw new Error('Image source is larger than 500 MB'); const stored=await reduceImageBufferForStorage(image,extension,safeUploadId(work.id)); image=stored.image; extension=stored.extension; if(invalidArtworkThumbnail(image)) throw new Error('Image is a small interface icon'); const location=thumbnailLocation(email,artist.id), directory=location.folder, fileName=`${work.id}.${extension}`, relative=`${location.relativePrefix}/${fileName}`; await fs.mkdir(directory,{recursive:true}); await removeThumbnailFiles(directory,work.id); await fs.writeFile(path.join(directory,fileName),image); const indexPath=path.join(directory,'index.json'); let index={}; try { index=JSON.parse(await fs.readFile(indexPath,'utf8')); } catch (_) {} index[work.id]={thumbnail:relative,checkedAt:new Date().toISOString(),verifiedBy:stored.reduced ? `${verifiedBy}; reduced below 30 MB and original discarded` : verifiedBy}; await fs.writeFile(indexPath,JSON.stringify(index,null,2),'utf8'); return relative; }
 async function saveThumbnail(artist,work,thumbUrl,verifiedBy,email=adminEmail) { const extension=thumbnailExtension(thumbUrl) || 'jpg', image=await getBinary(thumbUrl); return saveThumbnailBuffer(artist,work,image,extension,verifiedBy,email); }
 async function cacheThumbnail(artist, work, email=adminEmail) { const iconRejected=work.thumbnailInvalidReason === 'thumbnail-is-small-interface-icon'; if(iconRejected) { const fallback=await openverseThumbnail(work,artist).catch(()=> ''); if(fallback) return saveThumbnail(artist,work,fallback,'Openverse fallback after local interface icon rejection',email); } const thumbUrl=await findThumbnailUrl(work,artist); if(!thumbUrl) throw new Error('No verified thumbnail candidate'); const sourceImage=String(work.image || '').replace(/^http:\/\//i,'https://'); const verifiedBy=thumbUrl.includes('openverse.org') ? 'Openverse: title and artist metadata match' : (sourceImage && thumbUrl === sourceImage ? 'Artwork image cached for offline use' : (work.image ? 'Wikidata image statement' : 'Wikipedia article title and artist match')); try { return await saveThumbnail(artist,work,thumbUrl,verifiedBy,email); } catch(error) { const fallback=await openverseThumbnail(work,artist).catch(()=> ''); if(!fallback || fallback===thumbUrl) throw error; return saveThumbnail(artist,work,fallback,'Openverse fallback after image download retry',email); } }
 function wikimediaFilePageThumbnail(pageUrl) { try { const parsed=new URL(pageUrl); if(!/(^|\.)wikipedia\.org$/i.test(parsed.hostname) || !parsed.pathname.startsWith('/wiki/')) return ''; const title=decodeURIComponent(parsed.pathname.slice('/wiki/'.length)).replace(/_/g,' '); const fileName=title.replace(/^(?:file|파일)\s*:/i,'').trim(); return /\.(jpe?g|png|webp|gif)$/i.test(fileName) ? `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(fileName)}?width=640` : ''; } catch (_) { return ''; } }
 async function cacheThumbnailFromPage(artist,work,pageUrl,email=adminEmail) { const parsed=await publicHttpsUrl(pageUrl); const directFile=wikimediaFilePageThumbnail(parsed.href); let source=directFile, verifiedBy=directFile ? 'Wikimedia file page supplied by user' : ''; if(!source) { const html=await getText(parsed.href); const metas=[...html.matchAll(/<meta\b[^>]*>/gi)].map(match=>match[0]); const tag=metas.find(meta=>/\b(?:property|name)=["'](?:og:image|twitter:image)["']/i.test(meta)); const candidate=tag?.match(/\bcontent=["']([^"']+)["']/i)?.[1] || html.match(/<img\b[^>]*\bsrc=["']([^"']+)["']/i)?.[1]; if(!candidate) throw new Error('No image found on the supplied page'); source=new URL(candidate.replace(/&amp;/g,'&'),parsed.href).href; verifiedBy=`User-supplied page: ${parsed.hostname}`; } try { return await saveThumbnail(artist,work,source,verifiedBy,email); } catch(error) { const fallback=await openverseThumbnail(work,artist).catch(()=> ''); if(!fallback || fallback===source) throw error; return saveThumbnail(artist,work,fallback,'Openverse fallback after supplied page download retry',email); } }
 function localImagePath(source) { let value=String(source || '').trim(); if(/^(["']).*\1$/.test(value)) value=value.slice(1,-1).trim(); if(!value) throw new Error('Local image path is required'); if(/^file:/i.test(value)) { let fileUrl=value.replace(/\\/g,'/'); if(/^file:\/\/[a-z]:\//i.test(fileUrl)) fileUrl=fileUrl.replace(/^file:\/\//i,'file:///'); return fileURLToPath(new URL(fileUrl)); } return path.isAbsolute(value) ? path.normalize(value) : path.resolve(root,value); }
-async function cacheThumbnailFromLocalPath(artist,work,source,email=adminEmail) { const file=localImagePath(source), extension=thumbnailExtension(file); if(!extension) throw new Error('Local file must be JPG, PNG, WEBP, or GIF'); const info=await fs.stat(file); if(!info.isFile()) throw new Error('Local image path must point to a file'); if(info.size > 35 * 1024 * 1024) throw new Error('Image file is too large'); const image=await fs.readFile(file); return saveThumbnailBuffer(artist,work,image,extension,`Local image file: ${path.basename(file)}`,email); }
-async function cacheThumbnailFromUpload(artist,work,file,email=adminEmail) { const extension=uploadExtension(file); if(!extension) throw new Error('Image must be JPG, PNG, WEBP, or GIF'); if(!file?.data?.length) throw new Error('Image file is empty'); if(file.data.length > 35 * 1024 * 1024) throw new Error('Image file is too large'); return saveThumbnailBuffer(artist,work,file.data,extension,`Uploaded local image: ${path.basename(file.filename)}`,email); }
+async function cacheThumbnailFromLocalPath(artist,work,source,email=adminEmail) { const file=localImagePath(source), extension=thumbnailExtension(file); if(!extension) throw new Error('Local file must be JPG, PNG, WEBP, or GIF'); const info=await fs.stat(file); if(!info.isFile()) throw new Error('Local image path must point to a file'); if(info.size > sourceImageInputLimit) throw new Error('Image source is larger than 500 MB'); const image=await fs.readFile(file); return saveThumbnailBuffer(artist,work,image,extension,`Local image file: ${path.basename(file)}`,email); }
+async function cacheThumbnailFromUpload(artist,work,file,email=adminEmail) { const extension=uploadExtension(file); if(!extension) throw new Error('Image must be JPG, PNG, WEBP, or GIF'); if(!file?.data?.length) throw new Error('Image file is empty'); if(file.data.length > sourceImageInputLimit) throw new Error('Image source is larger than 500 MB'); return saveThumbnailBuffer(artist,work,file.data,extension,`Uploaded local image: ${path.basename(file.filename)}`,email); }
 async function highResolutionPathExists(relativePath) {
   if (!relativePath) return false;
   try { await fs.access(path.join(root, relativePath)); return true; }
@@ -797,7 +831,7 @@ async function enrich(artist) {
     OPTIONAL { ?work wdt:P495 ?country }
     OPTIONAL { ?work wdt:P135 ?movement }
     SERVICE wikibase:label { bd:serviceParam wikibase:language "ko,en". }
-  } ORDER BY DESC(?sitelinks) LIMIT 80`;
+  } ORDER BY DESC(?sitelinks) LIMIT ${artistImportedWorkLimit}`;
   let results = {results:{bindings:[]}};
   try { results = await getJson(`https://query.wikidata.org/sparql?${new URLSearchParams({query,format:'json'})}`); }
   catch (_) { /* Wikipedia gallery results still keep the artist usable if SPARQL is unavailable. */ }
@@ -806,8 +840,8 @@ async function enrich(artist) {
     .filter(work => !work.year || ((!artist.birth || work.year >= artist.birth) && (!artist.death || work.year <= artist.death)))
     .filter((work,index,self)=>self.findIndex(item=>item.id===work.id)===index);
   // Keep curated masterworks first, then fill to 60 by public-documentation
-  // popularity. Representative labels are normalized for every artist.
-  const works = selectArtistWorks([...(sparseArtistFeaturedWorks[qid] || []),...wikipediaWorks,...verifiedWorks],60,artistProfile);
+  // popularity. Movement-contribution labels are normalized for every artist.
+  const works = selectArtistWorks([...(sparseArtistFeaturedWorks[qid] || []),...wikipediaWorks,...verifiedWorks],artistImportedWorkLimit,artistProfile);
   // Return the verified catalogue immediately. Thumbnail files are intentionally
   // fetched later by the browser only for cards that enter the viewport.
   const output={schema:catalogueSchema,artistId:artist.id,qid,artist:artistProfile,fetchedAt:new Date().toISOString(),works}; await fs.mkdir(generatedDir,{recursive:true}); await fs.writeFile(cacheFile,JSON.stringify(output,null,2),'utf8'); return output;
@@ -940,6 +974,26 @@ function injectMovementArtistLinkStyle(html) {
   if (/id=["']art-atlas-artist-link-style["']/i.test(html)) return html;
   const style=`<style id="art-atlas-artist-link-style">\n${movementArtistLinkStyle}\n</style>`;
   return /<\/head>/i.test(html) ? html.replace(/<\/head>/i,`${style}\n</head>`) : `${style}\n${html}`;
+}
+function injectMovementWikipediaHeading(html, movementName='', movementLabel='') {
+  const wikiName=String(movementName || '').trim();
+  const label=String(movementLabel || movementName || '').trim();
+  if(!wikiName || !label || /data-art-atlas-movement-wiki-ready/i.test(html)) return html;
+  const href=`https://en.wikipedia.org/w/index.php?search=${encodeURIComponent(wikiName)}`;
+  const style='<style id="art-atlas-movement-wiki-title-style" data-art-atlas-movement-wiki-ready>.art-atlas-movement-wiki-title{color:inherit;text-decoration:underline;text-decoration-thickness:.08em;text-underline-offset:.18em}.art-atlas-movement-wiki-title:hover{filter:brightness(.82)}.art-atlas-movement-wiki-button{position:fixed;top:14px;right:16px;z-index:2147483646;display:inline-flex;align-items:center;min-height:34px;padding:8px 12px;border:1px solid #8e9b8b;border-radius:6px;background:#fffdf8;color:#18221e;text-decoration:none;font:700 12px/1 system-ui,sans-serif;box-shadow:0 4px 16px rgba(24,34,30,.16)}.art-atlas-movement-wiki-button:hover{background:#eef4ea}</style>';
+  let output=/<\/head>/i.test(html) ? html.replace(/<\/head>/i,`${style}\n</head>`) : `${style}\n${html}`;
+  const button=`<a class="art-atlas-movement-wiki-button" href="${escapeAttribute(href)}" target="_blank" rel="noopener">위키피디아</a>`;
+  output=/<body\b[^>]*>/i.test(output) ? output.replace(/<body\b[^>]*>/i,match=>`${match}\n${button}`) : `${button}\n${output}`;
+  const link=`<a class="art-atlas-movement-wiki-title" data-art-atlas-movement-wiki-title href="${escapeAttribute(href)}" target="_blank" rel="noopener">${escapeAttribute(label)}</a>`;
+  const headingPattern=/<h([1-3])([^>]*)>([\s\S]*?)<\/h\1>/i;
+  if(headingPattern.test(output)) {
+    return output.replace(headingPattern,(match,level,attrs,content)=>{
+      if(/<a\b/i.test(content)) return match;
+      return `<h${level}${attrs}>${link}</h${level}>`;
+    });
+  }
+  const titleBlock=`<h1 style="margin:24px 28px 8px;font:700 28px/1.25 system-ui,sans-serif">${link}</h1>`;
+  return /<body\b[^>]*>/i.test(output) ? output.replace(/<body\b[^>]*>/i,match=>`${match}\n${titleBlock}`) : `${titleBlock}\n${output}`;
 }
 function stripMovementArtistLinks(html) {
   return String(html || '')
@@ -1138,7 +1192,7 @@ http.createServer(async (req,res) => { const url=new URL(req.url,`http://${req.h
   if (req.method==='POST' && url.pathname==='/api/artwork') { let body=''; req.on('data',c=>body+=c); req.on('end',async()=>{ try { const result=await artworkDetails(JSON.parse(body).qid); res.writeHead(200,{'Content-Type':'application/json'}); res.end(JSON.stringify(result)); } catch(error) { res.writeHead(422,{'Content-Type':'application/json'}); res.end(JSON.stringify({error:error.message})); } }); return; }
   if (req.method==='POST' && url.pathname==='/api/artwork-info') { let body=''; req.on('data',c=>body+=c); req.on('end',async()=>{ try { const {artist,work}=JSON.parse(body); const result=await artworkInfo(artist,work); res.writeHead(200,{'Content-Type':'application/json'}); res.end(JSON.stringify({work:result})); } catch(error) { res.writeHead(502,{'Content-Type':'application/json'}); res.end(JSON.stringify({error:error.message})); } }); return; }
   if (req.method==='POST' && url.pathname==='/api/thumbnail-from-url') { let body=''; req.on('data',c=>body+=c); req.on('end',async()=>{ try { const {artist,work,pageUrl}=JSON.parse(body), source=String(pageUrl || '').trim(); const localSource=/^file:/i.test(source) || !/^[a-z][a-z0-9+.-]*:\/\//i.test(source); const thumbnail=localSource ? await cacheThumbnailFromLocalPath(artist,work,source,adminEmail) : await cacheThumbnailFromPage(artist,work,source,adminEmail); res.writeHead(200,{'Content-Type':'application/json'}); res.end(JSON.stringify({thumbnail,verified:true})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json'}); res.end(JSON.stringify({thumbnail:'',verified:false,error:error.message})); } }); return; }
-  if (req.method==='POST' && url.pathname==='/api/thumbnail-upload') { try { const form=multipartForm(await readRequestBuffer(req,36*1024*1024),req.headers['content-type']), artist=JSON.parse(form.fields.artist || '{}'), work=JSON.parse(form.fields.work || '{}'); if(!artist?.id || !work?.id) throw new Error('Invalid artwork upload'); const thumbnail=await cacheThumbnailFromUpload(artist,work,form.files.image,adminEmail); res.writeHead(200,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({thumbnail,verified:true})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({thumbnail:'',verified:false,error:error.message})); } }
+  if (req.method==='POST' && url.pathname==='/api/thumbnail-upload') { try { const form=multipartForm(await readRequestBuffer(req,sourceImageInputLimit + 1024*1024),req.headers['content-type']), artist=JSON.parse(form.fields.artist || '{}'), work=JSON.parse(form.fields.work || '{}'); if(!artist?.id || !work?.id) throw new Error('Invalid artwork upload'); const thumbnail=await cacheThumbnailFromUpload(artist,work,form.files.image,adminEmail); res.writeHead(200,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({thumbnail,verified:true})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({thumbnail:'',verified:false,error:error.message})); } }
   if (req.method==='POST' && url.pathname==='/api/thumbnail') { let body=''; req.on('data',c=>body+=c); req.on('end',async()=>{ try { const {artist,work}=JSON.parse(body); const thumbnail=await cacheThumbnail(artist,work,adminEmail); res.writeHead(200,{'Content-Type':'application/json'}); res.end(JSON.stringify({thumbnail,verified:Boolean(thumbnail)})); } catch(error) { res.writeHead(502,{'Content-Type':'application/json'}); res.end(JSON.stringify({thumbnail:'',verified:false,error:error.message})); } }); return; }
   if (req.method==='GET' && url.pathname==='/api/search') { try { const query=url.searchParams.get('q')||'', kind=url.searchParams.get('type')||'artist'; const raw=kind==='artist' ? await artistSearchCandidates(query) : (await getJsonFast(api({action:'wbsearchentities',search:query,language:'ko',uselang:'ko',type:'item',limit:'20'}))).search?.map(item=>({id:item.id,label:item.label,description:item.description||''})) || []; const ranked=[...raw].sort((a,b)=>{const score=item=>similarityScore(query,item.label)+(kind==='artwork' ? /(회화|그림|painting|artwork|work of art)/i.test(item.description)?120:0 : /(화가|예술가|painter|visual artist|artist)/i.test(item.description)?120:0); return score(b)-score(a);}); const values=ranked.slice(0,8); res.writeHead(200,{'Content-Type':'application/json'}); return res.end(JSON.stringify(values)); } catch(error) { res.writeHead(502,{'Content-Type':'application/json'}); return res.end(JSON.stringify([])); } }
-  if(req.method==='POST'&&url.pathname==='/api/enrich'){let body='';req.on('data',c=>body+=c);req.on('end',async()=>{try{const result=await enrich(JSON.parse(body));res.writeHead(200,{'Content-Type':'application/json'});res.end(JSON.stringify(result));}catch(error){res.writeHead(502,{'Content-Type':'application/json'});res.end(JSON.stringify({error:error.message}));}});return;} const file=safePath(url.pathname);if(!file){res.writeHead(403);return res.end();}try{let data=await fs.readFile(file);if(/^data[\\/]미술사조[\\/][a-f0-9]{24}-[12]\.html$/i.test(path.relative(root,file))) data=Buffer.from(injectUHangulDocumentIntegration(data),'utf8');res.writeHead(200,{'Content-Type':mime[path.extname(file)]||'application/octet-stream','Cache-Control':'no-store'});res.end(data);}catch(_){res.writeHead(404);res.end('Not found');}}).listen(4173,'127.0.0.1',()=>console.log(`Art Atlas: http://localhost:4173${adminPasswordHash ? '' : ' (read-only: .env not found)'}`));
+  if(req.method==='POST'&&url.pathname==='/api/enrich'){let body='';req.on('data',c=>body+=c);req.on('end',async()=>{try{const result=await enrich(JSON.parse(body));res.writeHead(200,{'Content-Type':'application/json'});res.end(JSON.stringify(result));}catch(error){res.writeHead(502,{'Content-Type':'application/json'});res.end(JSON.stringify({error:error.message}));}});return;} const file=safePath(url.pathname);if(!file){res.writeHead(403);return res.end();}try{let data=await fs.readFile(file);if(/^data[\\/]미술사조[\\/][a-f0-9]{24}-[12]\.html$/i.test(path.relative(root,file))) { let html=injectUHangulDocumentIntegration(data); html=injectMovementWikipediaHeading(html,url.searchParams.get('movementWiki') || '',url.searchParams.get('movementLabel') || ''); data=Buffer.from(html,'utf8'); }res.writeHead(200,{'Content-Type':mime[path.extname(file)]||'application/octet-stream','Cache-Control':'no-store'});res.end(data);}catch(_){res.writeHead(404);res.end('Not found');}}).listen(4173,'127.0.0.1',()=>console.log(`Art Atlas: http://localhost:4173${adminPasswordHash ? '' : ' (read-only: .env not found)'}`));

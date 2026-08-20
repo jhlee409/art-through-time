@@ -1,5 +1,5 @@
 {
-  "schema": 18,
+  "schema": 20,
   "artistId": "artist-Q47551",
   "qid": "Q47551",
   "artist": {
@@ -12,35 +12,14 @@
     "nationality": {
       "ko": "베네치아 공화국",
       "en": "Republic of Venice"
+    },
+    "movement": {
+      "ko": "베네치아 화파",
+      "en": "Venetian school"
     }
   },
-  "fetchedAt": "2026-08-20T02:26:11.396Z",
+  "fetchedAt": "2026-08-20T10:20:35.689Z",
   "works": [
-    {
-      "id": "wikidata-Q3805922",
-      "year": 1504,
-      "popularity": 10,
-      "title": {
-        "ko": "Jacopo Pesaro, Bishop of Paphos, being presented by Pope Alexander VI to Saint Peter",
-        "en": "Jacopo Pesaro, Bishop of Paphos, being presented by Pope Alexander VI to Saint Peter"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "베네치아 화파",
-        "en": "베네치아 화파"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jacopo%20Pesaro%2C%20bisschop%20van%20Paphos%2C%20door%20paus%20Alexander%20VI%20Borgia%20voorgesteld%20aan%20de%20heilige%20Petrus%2C%20Titiaan%2C%20%281503-1510%29%2C%20Koninklijk%20Museum%20voor%20Schone%20Kunsten%20Antwerpen%2C%20357.jpg",
-      "description": {
-        "ko": "painting by Titian",
-        "en": "painting by Titian"
-      },
-      "source": "http://www.wikidata.org/entity/Q3805922",
-      "verified": true,
-      "representative": false
-    },
     {
       "id": "wikidata-Q500812",
       "year": 1509,
@@ -64,7 +43,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q500812",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1633898",
@@ -89,7 +69,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1633898",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3686086",
@@ -114,7 +95,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3686086",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3842778",
@@ -139,7 +121,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3842778",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1238886",
@@ -164,57 +147,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1238886",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q653930",
-      "year": 1511,
-      "popularity": 9,
-      "title": {
-        "ko": "Miracle of the Jealous Husband",
-        "en": "Miracle of the Jealous Husband"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "베네치아 화파",
-        "en": "베네치아 화파"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tizian%20023.jpg",
-      "description": {
-        "ko": "fresco by Titian",
-        "en": "fresco by Titian"
-      },
-      "source": "http://www.wikidata.org/entity/Q653930",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q3936368",
-      "year": 1512,
-      "popularity": 9,
-      "title": {
-        "ko": "Rest on the Flight into Egypt",
-        "en": "Rest on the Flight into Egypt"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "베네치아 화파",
-        "en": "베네치아 화파"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Rest%20on%20the%20Flight%20into%20Egypt%20%28by%20Titian%29%20%E2%80%93%20National%20Gallery.jpg",
-      "description": {
-        "ko": "painting by Titian",
-        "en": "painting by Titian"
-      },
-      "source": "http://www.wikidata.org/entity/Q3936368",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3998115",
@@ -239,7 +173,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3998115",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q794077",
@@ -264,7 +199,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q794077",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q15008032",
@@ -289,7 +225,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q15008032",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3877895",
@@ -314,7 +251,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3877895",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q23922",
@@ -339,7 +277,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q23922",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3495790",
@@ -364,7 +303,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3495790",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q4013804",
@@ -389,7 +329,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q4013804",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3937410",
@@ -414,7 +355,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3937410",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q4008601",
@@ -439,32 +381,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q4008601",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q3853758",
-      "year": 1515,
-      "popularity": 9,
-      "title": {
-        "ko": "Lucretia and her Husband Lucius Tarquinius Collatinus",
-        "en": "Lucretia and her Husband Lucius Tarquinius Collatinus"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "베네치아 화파",
-        "en": "베네치아 화파"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tiziano%20Vecellio%2C%20gen.%20Tizian%2C%20Kunsthistorisches%20Museum%20Wien%20-%20Lukrezia%20und%20ihr%20Gemahl%20Lucius%20Tarquinius%20Collatinus%20-%20GG%2067%20-%20Kunsthistorisches%20Museum.jpg",
-      "description": {
-        "ko": "painting by Titian in the Kunsthistorisches Museum, Vienna",
-        "en": "painting by Titian in the Kunsthistorisches Museum, Vienna"
-      },
-      "source": "http://www.wikidata.org/entity/Q3853758",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2459887",
@@ -489,7 +407,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2459887",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1899740",
@@ -514,7 +433,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1899740",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2046100",
@@ -539,7 +459,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2046100",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3743879",
@@ -564,7 +485,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3743879",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1206860",
@@ -589,7 +511,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1206860",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2466780",
@@ -614,7 +537,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2466780",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1848811",
@@ -639,7 +563,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1848811",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q572697",
@@ -664,7 +589,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q572697",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3632485",
@@ -689,32 +615,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3632485",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q24249",
-      "year": 1530,
-      "popularity": 10,
-      "title": {
-        "ko": "Madonna of the Rabbit",
-        "en": "Madonna of the Rabbit"
-      },
-      "country": {
-        "ko": "베네치아 공화국",
-        "en": "베네치아 공화국"
-      },
-      "movement": {
-        "ko": "베네치아 화파",
-        "en": "베네치아 화파"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/La%20Vierge%20au%20Lapin%20%C3%A0%20la%20Loupe.jpg",
-      "description": {
-        "ko": "painting by Titian",
-        "en": "painting by Titian"
-      },
-      "source": "http://www.wikidata.org/entity/Q24249",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q19798137",
@@ -739,7 +641,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q19798137",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q15974339",
@@ -764,7 +667,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q15974339",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3853901",
@@ -789,32 +693,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3853901",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q3910929",
-      "year": 1536,
-      "popularity": 10,
-      "title": {
-        "ko": "The Presentation of the Virgin at the Temple",
-        "en": "The Presentation of the Virgin at the Temple"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "베네치아 화파",
-        "en": "베네치아 화파"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%22Pr%C3%A9sentation%20de%20la%20Vierge%20au%20Temple%22%20de%20Titien%20%28Accademia%2C%20Venise%29%20%288103563222%29.jpg",
-      "description": {
-        "ko": "painting by Titian",
-        "en": "painting by Titian"
-      },
-      "source": "http://www.wikidata.org/entity/Q3910929",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3784247",
@@ -839,7 +719,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3784247",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q727875",
@@ -864,32 +745,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q727875",
       "verified": true,
-      "representative": true
-    },
-    {
-      "id": "wikidata-Q7401482",
-      "year": 1540,
-      "popularity": 11,
-      "title": {
-        "ko": "Saint John the Baptist",
-        "en": "Saint John the Baptist"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "베네치아 화파",
-        "en": "베네치아 화파"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Accademia%20-%20St%20John%20the%20Baptist%20by%20Titian%20Cat314.jpg",
-      "description": {
-        "ko": "painting by Titian in the Gallerie dell'Accademia, Venice",
-        "en": "painting by Titian in the Gallerie dell'Accademia, Venice"
-      },
-      "source": "http://www.wikidata.org/entity/Q7401482",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q5128805",
@@ -914,7 +771,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q5128805",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q24090",
@@ -939,7 +797,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q24090",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3937643",
@@ -964,7 +823,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3937643",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q180632",
@@ -989,7 +849,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q180632",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1123378",
@@ -1014,7 +875,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1123378",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2609585",
@@ -1039,7 +901,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2609585",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2528145",
@@ -1064,32 +927,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2528145",
       "verified": true,
-      "representative": true
-    },
-    {
-      "id": "wikidata-Q9140602",
-      "year": 1550,
-      "popularity": 11,
-      "title": {
-        "ko": "The Fall of Man",
-        "en": "The Fall of Man"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "베네치아 화파",
-        "en": "베네치아 화파"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tizian%20091.jpg",
-      "description": {
-        "ko": "painting by Titian",
-        "en": "painting by Titian"
-      },
-      "source": "http://www.wikidata.org/entity/Q9140602",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q973260",
@@ -1114,7 +953,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q973260",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q603703",
@@ -1139,32 +979,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q603703",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q34191856",
-      "year": 1554,
-      "popularity": 10,
-      "title": {
-        "ko": "Perseus and Andromeda",
-        "en": "Perseus and Andromeda"
-      },
-      "country": {
-        "ko": "베네치아 공화국",
-        "en": "베네치아 공화국"
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Perseo%20y%20Andr%C3%B3meda%2C%20por%20Tiziano.jpg",
-      "description": {
-        "ko": "painting by Titian",
-        "en": "painting by Titian"
-      },
-      "source": "http://www.wikidata.org/entity/Q34191856",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q7920648",
@@ -1189,7 +1005,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q7920648",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2528177",
@@ -1214,7 +1031,9 @@
       },
       "source": "http://www.wikidata.org/entity/Q2528177",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q4161055",
@@ -1239,32 +1058,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q4161055",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q3705722",
-      "year": 1559,
-      "popularity": 10,
-      "title": {
-        "ko": "The Entombment",
-        "en": "The Entombment"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "베네치아 화파",
-        "en": "베네치아 화파"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Entierro%20de%20Cristo%20%28Tiziano%29.jpg",
-      "description": {
-        "ko": "painting by Titian, Prado P440",
-        "en": "painting by Titian, Prado P440"
-      },
-      "source": "http://www.wikidata.org/entity/Q3705722",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q18002417",
@@ -1289,32 +1084,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q18002417",
       "verified": true,
-      "representative": true
-    },
-    {
-      "id": "wikidata-Q14425553",
-      "year": 1560,
-      "popularity": 11,
-      "title": {
-        "ko": "Danaë",
-        "en": "Danaë"
-      },
-      "country": {
-        "ko": "이탈리아",
-        "en": "이탈리아"
-      },
-      "movement": {
-        "ko": "베네치아 화파",
-        "en": "베네치아 화파"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tizian%20-%20Danae%20receiving%20the%20Golden%20Rain%20-%20Prado.jpg",
-      "description": {
-        "ko": "painting by Titian in the Museo del Prado",
-        "en": "painting by Titian in the Museo del Prado"
-      },
-      "source": "http://www.wikidata.org/entity/Q14425553",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q4448822",
@@ -1339,7 +1110,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q4448822",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2920183",
@@ -1364,7 +1136,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2920183",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q698993",
@@ -1389,7 +1162,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q698993",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2898121",
@@ -1414,32 +1188,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2898121",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q10296499",
-      "year": 1570,
-      "popularity": 11,
-      "title": {
-        "ko": "The Crowning with Thorns",
-        "en": "The Crowning with Thorns"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "베네치아 화파",
-        "en": "베네치아 화파"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Crowning%20with%20Thorns%20by%20Titian%20-%20Alte%20Pinakothek%20-%20Munich%20-%20Germany%202017.jpg",
-      "description": {
-        "ko": "painting by Titian in the Alte Pinakothek, Munich",
-        "en": "painting by Titian in the Alte Pinakothek, Munich"
-      },
-      "source": "http://www.wikidata.org/entity/Q10296499",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1652981",
@@ -1464,7 +1214,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1652981",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3925598",
@@ -1489,7 +1240,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3925598",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2665840",
@@ -1514,7 +1266,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2665840",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     }
   ]
 }
