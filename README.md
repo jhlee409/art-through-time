@@ -2,13 +2,13 @@
 
 로컬 서버를 실행한 뒤 브라우저에서 엽니다.
 
-`start-art-atlas.cmd`를 더블클릭하거나, 아래 명령을 실행합니다.
+`Art_through_Time.cmd`를 더블클릭하거나, 아래 명령을 실행합니다.
 
 ```powershell
 node server.js
 ```
 
-그런 다음 `http://localhost:4173`으로 접속합니다.
+그런 다음 `http://localhost:4173/?movementPopup=1`으로 접속하면 미술 사조 화면이 먼저 열립니다. 화가 목록은 화면의 `화가 목록` 버튼이나 `http://localhost:4173`에서 열 수 있습니다.
 
 화가를 처음 선택하면 Wikimedia의 공개 Wikidata 정보를 조회해 작품 제목, 제작 연도, 제작 국가, 화파, 이미지와 설명을 가져옵니다. 결과는 `data/generated/<화가-id>.json`에 저장되어 다음 선택부터는 인터넷을 다시 조회하지 않습니다.
 

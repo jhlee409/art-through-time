@@ -34,6 +34,7 @@ let accessControl = {schema:1,defaultRole:'viewer',roles:{[adminEmail]:'admin'}}
 const mime = {'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.jpg':'image/jpeg','.jpeg':'image/jpeg','.png':'image/png','.webp':'image/webp','.gif':'image/gif','.svg':'image/svg+xml','.woff2':'font/woff2'};
 const catalogueSchema = 20;
 const execFileAsync = promisify(execFile);
+const ffmpegPath = process.env.ART_ATLAS_FFMPEG || (fsSync.existsSync('C:\\ffmpeg\\bin\\ffmpeg.exe') ? 'C:\\ffmpeg\\bin\\ffmpeg.exe' : 'ffmpeg');
 const artistImportedWorkLimit = 60;
 const highResolutionStoredLimit = 30 * 1024 * 1024;
 const sourceImageInputLimit = 500 * 1024 * 1024;
@@ -671,10 +672,10 @@ async function reduceImageBufferForStorage(image, extension, fileBase) {
   const output=path.join(staging,'display.jpg');
   try {
     await fs.writeFile(input,image);
-    await execFileAsync('C:\\ffmpeg\\bin\\ffmpeg.exe',['-y','-i',input,'-vf','scale=min(2400\\,iw):-2','-q:v','5',output],{windowsHide:true,timeout:300000});
+    await execFileAsync(ffmpegPath,['-y','-i',input,'-vf','scale=min(2400\\,iw):-2','-q:v','5',output],{windowsHide:true,timeout:300000});
     let reduced=await fs.readFile(output);
     if(reduced.length > highResolutionStoredLimit) {
-      await execFileAsync('C:\\ffmpeg\\bin\\ffmpeg.exe',['-y','-i',input,'-vf','scale=min(1600\\,iw):-2','-q:v','7',output],{windowsHide:true,timeout:300000});
+      await execFileAsync(ffmpegPath,['-y','-i',input,'-vf','scale=min(1600\\,iw):-2','-q:v','7',output],{windowsHide:true,timeout:300000});
       reduced=await fs.readFile(output);
     }
     if(reduced.length > highResolutionStoredLimit) throw new Error('Could not reduce the image below 30 MB');
@@ -1078,14 +1079,14 @@ async function makeDisplayImage(input, folder, fileBase) {
   const output=path.join(folder,`${fileBase}.display.jpg`);
   // Very large originals can exceed a browser's decoded-image or GPU texture
   // limit. Create an 8K display master; the uploaded original is discarded.
-  await execFileAsync('C:\\ffmpeg\\bin\\ffmpeg.exe',['-y','-i',input,'-vf','scale=min(8000\\,iw):-2','-q:v','2',output],{windowsHide:true,timeout:300000});
+  await execFileAsync(ffmpegPath,['-y','-i',input,'-vf','scale=min(8000\\,iw):-2','-q:v','2',output],{windowsHide:true,timeout:300000});
   return output;
 }
 async function makeLocalArtworkThumbnail(input, artist, work, email=adminEmail) {
   const location=thumbnailLocation(email,artist.id);
   await fs.mkdir(location.folder,{recursive:true});
   const temporary=path.join(location.folder,`${safeUploadId(work.id)}.local-upload.jpg`);
-  await execFileAsync('C:\\ffmpeg\\bin\\ffmpeg.exe',['-y','-i',input,'-vf','scale=min(720\\,iw):-2','-q:v','5',temporary],{windowsHide:true,timeout:300000});
+  await execFileAsync(ffmpegPath,['-y','-i',input,'-vf','scale=min(720\\,iw):-2','-q:v','5',temporary],{windowsHide:true,timeout:300000});
   try {
     const image=await fs.readFile(temporary);
     return await saveThumbnailBuffer(artist,work,image,'jpg','Local high-resolution image reduced for timeline',email);

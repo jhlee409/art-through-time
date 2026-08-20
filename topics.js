@@ -12,6 +12,17 @@ const adminToken = () => {
     return session?.role === 'admin' && session.token ? session.token : '';
   } catch (_) { return ''; }
 };
+async function logoutTopicPage() {
+  const token = adminToken();
+  try {
+    await fetch('/api/auth/logout', { method: 'POST', headers: token ? { Authorization: `Bearer ${token}` } : {} });
+  } catch (_) {}
+  try {
+    sessionStorage.removeItem(sessionStorageKey);
+    localStorage.setItem('art-atlas-logout-signal', String(Date.now()));
+  } catch (_) {}
+  location.assign('index.html?login=1');
+}
 
 const MOVEMENT_ORDER = { '초기 르네상스': 10, '전성기 르네상스': 20, '매너리즘': 30, '바로크': 40 };
 const fallbackImage = 'data/thumbnails/_placeholder/artwork-placeholder.png';
@@ -112,7 +123,7 @@ $('#detail').onclick = event => { if (event.target.closest('.close-topic-detail'
 $('#topic-search').oninput = renderList;
 $('#sort-asc').onclick = () => { listDirection = 'asc'; renderList(); };
 $('#sort-desc').onclick = () => { listDirection = 'desc'; renderList(); };
-$('#topic-logout').onclick = () => { location = 'index.html?login=1'; };
+$('#topic-logout').onclick = logoutTopicPage;
 
 const topicArtworkDialog = $('#topic-artwork-dialog');
 const topicArtworkForm = $('#topic-artwork-form');
