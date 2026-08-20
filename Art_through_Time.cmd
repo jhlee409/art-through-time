@@ -50,8 +50,8 @@ set "ART_ATLAS_PID="
 for /f "tokens=5" %%a in ('netstat -ano ^| findstr /R /C:":4173 .*LISTENING"') do set ART_ATLAS_PID=%%a
 if defined ART_ATLAS_PID (
   echo Art Through Time is already running on port 4173.
-  echo Opening the existing Art Through Time movement page...
-  start "Art Through Time" http://localhost:4173/?movementPopup=1
+  echo Opening the existing Art Through Time login page...
+  start "Art Through Time" http://localhost:4173/?login=1
   exit /b 0
 )
 start "Art Through Time Server" cmd /k "cd /d ""%~dp0"" && node server.js 1>> logs\art-atlas-server.out.log 2>> logs\art-atlas-server.err.log"
@@ -63,4 +63,4 @@ if %ART_THROUGH_TIME_WAIT% GEQ 10 goto open_art_through_time
 timeout /t 1 /nobreak >nul
 goto wait_for_art_through_time_server
 :open_art_through_time
-start "Art Through Time" http://localhost:4173/?movementPopup=1
+start "Art Through Time" http://localhost:4173/?login=1

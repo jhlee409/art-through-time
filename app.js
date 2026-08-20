@@ -23,6 +23,7 @@ const artistListEnglishStorageKey = 'ArtThroughTime.artistListEnglish.v1';
 // The app can be opened through the local server or directly as index.html.
 // In the latter case, API calls must explicitly target the local server.
 const apiUrl = endpoint => location.protocol === 'file:' ? `http://localhost:4173${endpoint}` : endpoint;
+const startupParams = new URLSearchParams(location.search);
 const movementAtlasStart = 1400;
 const movementAtlasEnd = 2026;
 const movementCountryEnd = 1950;
@@ -30,9 +31,13 @@ const movementVerticalZoomMax = 30;
 const artistImportedWorkLimit = 60;
 const sharedMovementId = 'global-contemporary';
 const artistMovementFallbacks = { Q104884:{ko:'독일 낭만주의',en:'German Romanticism'} };
-const isMovementPopup = new URLSearchParams(location.search).get('movementPopup') === '1';
-const requestedUHangulMode = new URLSearchParams(location.search).get('uhangul');
-const requestedArtistId = new URLSearchParams(location.search).get('artist') || new URLSearchParams(location.search).get('artistId');
+const isMovementPopup = startupParams.get('movementPopup') === '1';
+const forceLogin = startupParams.get('login') === '1';
+if (forceLogin) {
+  try { sessionStorage.removeItem(accessSessionStorageKey); } catch (_) {}
+}
+const requestedUHangulMode = startupParams.get('uhangul');
+const requestedArtistId = startupParams.get('artist') || startupParams.get('artistId');
 if (isMovementPopup) document.body.classList.add('movement-popup');
 const legacyMovementCountryIds = ['france','germany','netherlands','italy','united-kingdom','spain','russia','sweden','denmark','greece','united-states'];
 const allMovementCountryIds = ['france','germany','switzerland','netherlands','italy','united-kingdom','spain','russia','sweden','denmark','greece','united-states'];
