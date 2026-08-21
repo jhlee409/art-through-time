@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-21T11:24:29.245Z",
+  "generatedAt": "2026-08-21T12:24:27.875Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -4251,7 +4251,8 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/techniques.json"
+        "data/techniques.json",
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7241,20 +7242,32 @@
       "displayKorean": "로히어르 판 데르 베이던",
       "aliases": {
         "ko": [
-          "베이던"
+          "베이던",
+          "판 데르 베이던",
+          "로히어르 판 데르 베이던",
+          "판 데르 베이던, 로히어르",
+          "로히어르"
         ],
         "en": [
           "van der Weyden",
-          "Weyden"
+          "Weyden",
+          "Roger de la Pasture",
+          "Rogier van der Weyden",
+          "Rogier de la Pasture"
         ]
       },
       "uhangul": "[Rㅗ]히어[Rㅡ] [Vㅏㄴ] 데[Rㅡ] [Vㅔ]이던",
-      "note": "auto-generated from original and Korean artist names",
+      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "Wikidata"
       ],
-      "status": "verified-pair"
+      "status": "verified-pair",
+      "englishFullName": "Rogier van der Weyden",
+      "wikipediaTitle": "Rogier van der Weyden",
+      "wikidataQid": "Q68631"
     },
     {
       "id": "rosa-bonheur",

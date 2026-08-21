@@ -1,0 +1,544 @@
+{
+  "schema": 20,
+  "artistId": "artist-Q68631",
+  "qid": "Q68631",
+  "artist": {
+    "name": {
+      "ko": "반 데르 베이던, 로히어르",
+      "en": "Rogier van der Weyden"
+    },
+    "birth": 1399,
+    "death": 1464,
+    "nationality": {
+      "ko": "네덜란드",
+      "en": "Netherlands"
+    },
+    "movement": {
+      "ko": "플랑드르파",
+      "en": "Early Netherlandish painting"
+    }
+  },
+  "fetchedAt": "2026-08-21T12:17:10.569Z",
+  "works": [
+    {
+      "id": "rogier-descent-from-cross",
+      "year": 1435,
+      "popularity": 10000,
+      "title": {
+        "ko": "십자가에서 내려짐",
+        "en": "The Descent from the Cross"
+      },
+      "representative": true,
+      "movementContribution": true,
+      "description": {
+        "ko": "마드리드 프라도 미술관의 대표 제단화로, 십자가에서 내려진 그리스도의 몸과 인물들의 애도를 압축적인 감정과 강한 선으로 구성한 로히어르 반 데르 베이던의 핵심 작품입니다.",
+        "en": "A central altarpiece by Rogier van der Weyden in the Museo del Prado, Madrid, known for its compressed emotional drama and powerful linear composition."
+      },
+      "country": {
+        "ko": "네덜란드",
+        "en": "Netherlands"
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "Early Netherlandish painting"
+      },
+      "image": "data/thumbnails/artist-Q68631/rogier-descent-from-cross.jpg",
+      "thumbnail": "data/thumbnails/artist-Q68631/rogier-descent-from-cross.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-21T12:17:10.569Z",
+      "highResImage": "data/thumbnails/artist-Q68631/rogier-descent-from-cross.jpg",
+      "source": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Weyden_Deposition.jpg",
+      "verified": true,
+      "origin": "manual",
+      "metadata": {
+        "createdAt": "2026-08-21T12:17:10.569Z",
+        "updatedAt": "2026-08-21T12:17:10.569Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q68631/rogier-descent-from-cross.jpg",
+          "highResolution": "",
+          "sourceUrl": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Weyden_Deposition.jpg",
+          "sourceUrls": [
+            "local file: C:/Users/jhlee/Pictures/이미지다운로드/Weyden_Deposition.jpg",
+            "https://en.wikipedia.org/wiki/Rogier_van_der_Weyden"
+          ],
+          "license": "",
+          "institution": ""
+        }
+      }
+    },
+    {
+      "id": "rogier-beaune-altarpiece",
+      "year": 1445,
+      "popularity": 9500,
+      "title": {
+        "ko": "본 제단화",
+        "en": "Beaune Altarpiece"
+      },
+      "representative": true,
+      "movementContribution": true,
+      "description": {
+        "ko": "본의 오스피스에 놓인 대형 제단화로, 최후의 심판 장면을 여러 패널에 펼쳐 북유럽 제단화의 장대한 구성과 종교적 감정 표현을 보여줍니다.",
+        "en": "A large altarpiece for the Hospices de Beaune, presenting the Last Judgement across multiple panels with monumental Early Netherlandish drama."
+      },
+      "country": {
+        "ko": "네덜란드",
+        "en": "Netherlands"
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "Early Netherlandish painting"
+      },
+      "image": "data/thumbnails/artist-Q68631/rogier-beaune-altarpiece.png",
+      "thumbnail": "data/thumbnails/artist-Q68631/rogier-beaune-altarpiece.png",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-21T12:17:10.569Z",
+      "highResImage": "data/thumbnails/artist-Q68631/rogier-beaune-altarpiece.png",
+      "source": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Rogier_van_der_Weyden_-_Beaune_Altarpiece_(1443).jpg",
+      "verified": true,
+      "origin": "manual",
+      "metadata": {
+        "createdAt": "2026-08-21T12:17:10.569Z",
+        "updatedAt": "2026-08-21T12:17:10.569Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q68631/rogier-beaune-altarpiece.png",
+          "highResolution": "",
+          "sourceUrl": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Rogier_van_der_Weyden_-_Beaune_Altarpiece_(1443).jpg",
+          "sourceUrls": [
+            "local file: C:/Users/jhlee/Pictures/이미지다운로드/Rogier_van_der_Weyden_-_Beaune_Altarpiece_(1443).jpg",
+            "https://en.wikipedia.org/wiki/Rogier_van_der_Weyden"
+          ],
+          "license": "",
+          "institution": ""
+        }
+      }
+    },
+    {
+      "id": "rogier-seven-sacraments-altarpiece",
+      "year": 1445,
+      "popularity": 9000,
+      "title": {
+        "ko": "칠성사 제단화",
+        "en": "Seven Sacraments Altarpiece"
+      },
+      "representative": true,
+      "movementContribution": true,
+      "description": {
+        "ko": "교회 내부를 무대로 십자가형과 일곱 성사를 함께 배치한 삼면 제단화입니다. 제도화된 예식과 구원의 서사를 하나의 공간 안에 결합합니다.",
+        "en": "A triptych that places the Crucifixion and the seven sacraments within a church interior, joining ritual order and salvation history in one pictorial space."
+      },
+      "country": {
+        "ko": "네덜란드",
+        "en": "Netherlands"
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "Early Netherlandish painting"
+      },
+      "image": "data/thumbnails/artist-Q68631/rogier-seven-sacraments-altarpiece.jpg",
+      "thumbnail": "data/thumbnails/artist-Q68631/rogier-seven-sacraments-altarpiece.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-21T12:17:10.569Z",
+      "highResImage": "data/thumbnails/artist-Q68631/rogier-seven-sacraments-altarpiece.jpg",
+      "source": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Seven_Sacraments_Rogier.jpg",
+      "verified": true,
+      "origin": "manual",
+      "metadata": {
+        "createdAt": "2026-08-21T12:17:10.569Z",
+        "updatedAt": "2026-08-21T12:17:10.569Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q68631/rogier-seven-sacraments-altarpiece.jpg",
+          "highResolution": "",
+          "sourceUrl": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Seven_Sacraments_Rogier.jpg",
+          "sourceUrls": [
+            "local file: C:/Users/jhlee/Pictures/이미지다운로드/Seven_Sacraments_Rogier.jpg",
+            "https://en.wikipedia.org/wiki/Rogier_van_der_Weyden"
+          ],
+          "license": "",
+          "institution": ""
+        }
+      }
+    },
+    {
+      "id": "rogier-braque-triptych",
+      "year": 1452,
+      "popularity": 8200,
+      "title": {
+        "ko": "브라크 삼면화",
+        "en": "Braque Triptych"
+      },
+      "representative": true,
+      "description": {
+        "ko": "루브르 소장 삼면화로, 절제된 인물 배치와 어두운 배경 속에서 성상과 텍스트의 신학적 의미를 정교하게 엮은 작품입니다.",
+        "en": "A Louvre triptych that combines restrained figures, dark grounds, and theological text with Rogier's precise devotional language."
+      },
+      "country": {
+        "ko": "네덜란드",
+        "en": "Netherlands"
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "Early Netherlandish painting"
+      },
+      "image": "data/thumbnails/artist-Q68631/rogier-braque-triptych.jpg",
+      "thumbnail": "data/thumbnails/artist-Q68631/rogier-braque-triptych.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-21T12:17:10.569Z",
+      "highResImage": "data/thumbnails/artist-Q68631/rogier-braque-triptych.jpg",
+      "source": "local file: C:/Users/jhlee/Pictures/이미지다운로드/The_Braque_Triptych_interior.jpg",
+      "verified": true,
+      "movementContribution": false,
+      "origin": "manual",
+      "metadata": {
+        "createdAt": "2026-08-21T12:17:10.569Z",
+        "updatedAt": "2026-08-21T12:17:10.569Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q68631/rogier-braque-triptych.jpg",
+          "highResolution": "",
+          "sourceUrl": "local file: C:/Users/jhlee/Pictures/이미지다운로드/The_Braque_Triptych_interior.jpg",
+          "sourceUrls": [
+            "local file: C:/Users/jhlee/Pictures/이미지다운로드/The_Braque_Triptych_interior.jpg",
+            "https://en.wikipedia.org/wiki/Rogier_van_der_Weyden"
+          ],
+          "license": "",
+          "institution": ""
+        }
+      }
+    },
+    {
+      "id": "rogier-portrait-of-a-lady",
+      "year": 1460,
+      "popularity": 7800,
+      "title": {
+        "ko": "여인의 초상",
+        "en": "Portrait of a Lady"
+      },
+      "representative": true,
+      "description": {
+        "ko": "반신·측면에 가까운 자세, 검은 배경, 단정한 손과 베일을 통해 북유럽 초상화의 절제된 심리성을 보여주는 대표 초상화입니다.",
+        "en": "A refined half-length portrait with dark ground, composed hands, and a restrained psychological presence characteristic of Northern portraiture."
+      },
+      "country": {
+        "ko": "네덜란드",
+        "en": "Netherlands"
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "Early Netherlandish painting"
+      },
+      "image": "data/thumbnails/artist-Q68631/rogier-portrait-of-a-lady.jpg",
+      "thumbnail": "data/thumbnails/artist-Q68631/rogier-portrait-of-a-lady.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-21T12:17:10.569Z",
+      "highResImage": "data/thumbnails/artist-Q68631/rogier-portrait-of-a-lady.jpg",
+      "source": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Rogier_van_der_Weyden_-_Portrait_of_a_Lady_-_Google_Art_Project.jpg",
+      "verified": true,
+      "movementContribution": false,
+      "origin": "manual",
+      "metadata": {
+        "createdAt": "2026-08-21T12:17:10.569Z",
+        "updatedAt": "2026-08-21T12:17:10.569Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q68631/rogier-portrait-of-a-lady.jpg",
+          "highResolution": "",
+          "sourceUrl": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Rogier_van_der_Weyden_-_Portrait_of_a_Lady_-_Google_Art_Project.jpg",
+          "sourceUrls": [
+            "local file: C:/Users/jhlee/Pictures/이미지다운로드/Rogier_van_der_Weyden_-_Portrait_of_a_Lady_-_Google_Art_Project.jpg",
+            "https://en.wikipedia.org/wiki/Rogier_van_der_Weyden"
+          ],
+          "license": "",
+          "institution": ""
+        }
+      }
+    },
+    {
+      "id": "rogier-portrait-young-woman-white-headdress",
+      "year": 1440,
+      "popularity": 6200,
+      "title": {
+        "ko": "흰 머리장식을 한 젊은 여인의 초상",
+        "en": "Portrait of a Young Woman with a White Headdress"
+      },
+      "description": {
+        "ko": "흰 머리장식과 어두운 배경의 대비로 인물의 윤곽과 표정을 선명하게 드러내는 초상화입니다.",
+        "en": "A portrait using the contrast between white headdress and dark ground to clarify silhouette and expression."
+      },
+      "country": {
+        "ko": "네덜란드",
+        "en": "Netherlands"
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "Early Netherlandish painting"
+      },
+      "image": "data/thumbnails/artist-Q68631/rogier-portrait-young-woman-white-headdress.jpg",
+      "thumbnail": "data/thumbnails/artist-Q68631/rogier-portrait-young-woman-white-headdress.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-21T12:17:10.569Z",
+      "highResImage": "data/thumbnails/artist-Q68631/rogier-portrait-young-woman-white-headdress.jpg",
+      "source": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Rogier_van_der_Weyden_(1399_-_1464)_-_Portrait_of_a_Young_Woman_with_a_White_Headdress_-_545D_-_Gemäldegalerie.jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false,
+      "origin": "manual",
+      "metadata": {
+        "createdAt": "2026-08-21T12:17:10.569Z",
+        "updatedAt": "2026-08-21T12:17:10.569Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q68631/rogier-portrait-young-woman-white-headdress.jpg",
+          "highResolution": "",
+          "sourceUrl": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Rogier_van_der_Weyden_(1399_-_1464)_-_Portrait_of_a_Young_Woman_with_a_White_Headdress_-_545D_-_Gemäldegalerie.jpg",
+          "sourceUrls": [
+            "local file: C:/Users/jhlee/Pictures/이미지다운로드/Rogier_van_der_Weyden_(1399_-_1464)_-_Portrait_of_a_Young_Woman_with_a_White_Headdress_-_545D_-_Gemäldegalerie.jpg",
+            "https://en.wikipedia.org/wiki/Rogier_van_der_Weyden"
+          ],
+          "license": "",
+          "institution": ""
+        }
+      }
+    },
+    {
+      "id": "rogier-crucifixion-virgin-st-john",
+      "year": 1460,
+      "popularity": 6100,
+      "title": {
+        "ko": "성모와 성 요한이 애도하는 십자가형",
+        "en": "The Crucifixion, with the Virgin and Saint John the Evangelist Mourning"
+      },
+      "description": {
+        "ko": "십자가형 장면을 단순한 배경과 강한 감정 표현으로 집중시킨 후기 종교화입니다.",
+        "en": "A late devotional Crucifixion concentrating the scene through a spare setting and intense emotional expression."
+      },
+      "country": {
+        "ko": "네덜란드",
+        "en": "Netherlands"
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "Early Netherlandish painting"
+      },
+      "image": "data/thumbnails/artist-Q68631/rogier-crucifixion-virgin-st-john.jpg",
+      "thumbnail": "data/thumbnails/artist-Q68631/rogier-crucifixion-virgin-st-john.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-21T12:17:10.569Z",
+      "highResImage": "data/thumbnails/artist-Q68631/rogier-crucifixion-virgin-st-john.jpg",
+      "source": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Rogier_van_der_Weyden,_Netherlandish_(active_Tournai_and_Brussels)_-_The_Crucifixion,_with_the_Virgin_and_Saint_John_the_Evangelist_Mourning_-_Google_Art_Project.jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false,
+      "origin": "manual",
+      "metadata": {
+        "createdAt": "2026-08-21T12:17:10.569Z",
+        "updatedAt": "2026-08-21T12:17:10.569Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q68631/rogier-crucifixion-virgin-st-john.jpg",
+          "highResolution": "",
+          "sourceUrl": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Rogier_van_der_Weyden,_Netherlandish_(active_Tournai_and_Brussels)_-_The_Crucifixion,_with_the_Virgin_and_Saint_John_the_Evangelist_Mourning_-_Google_Art_Project.jpg",
+          "sourceUrls": [
+            "local file: C:/Users/jhlee/Pictures/이미지다운로드/Rogier_van_der_Weyden,_Netherlandish_(active_Tournai_and_Brussels)_-_The_Crucifixion,_with_the_Virgin_and_Saint_John_the_Evangelist_Mourning_-_Google_Art_Project.jpg",
+            "https://en.wikipedia.org/wiki/Rogier_van_der_Weyden"
+          ],
+          "license": "",
+          "institution": ""
+        }
+      }
+    },
+    {
+      "id": "rogier-crucifixion-triptych",
+      "year": 1445,
+      "popularity": 6000,
+      "title": {
+        "ko": "십자가형 삼면화",
+        "en": "Triptych: The Crucifixion"
+      },
+      "description": {
+        "ko": "삼면화 형식으로 십자가형의 신학적 중심성과 주변 인물의 애도를 함께 구성한 작품입니다.",
+        "en": "A triptych format Crucifixion that joins theological focus with surrounding figures in mourning."
+      },
+      "country": {
+        "ko": "네덜란드",
+        "en": "Netherlands"
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "Early Netherlandish painting"
+      },
+      "image": "data/thumbnails/artist-Q68631/rogier-crucifixion-triptych.jpg",
+      "thumbnail": "data/thumbnails/artist-Q68631/rogier-crucifixion-triptych.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-21T12:17:10.569Z",
+      "highResImage": "data/thumbnails/artist-Q68631/rogier-crucifixion-triptych.jpg",
+      "source": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Rogier_van_der_Weyden_-_Triptych-_The_Crucifixion_-_Google_Art_Project.jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false,
+      "origin": "manual",
+      "metadata": {
+        "createdAt": "2026-08-21T12:17:10.569Z",
+        "updatedAt": "2026-08-21T12:17:10.569Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q68631/rogier-crucifixion-triptych.jpg",
+          "highResolution": "",
+          "sourceUrl": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Rogier_van_der_Weyden_-_Triptych-_The_Crucifixion_-_Google_Art_Project.jpg",
+          "sourceUrls": [
+            "local file: C:/Users/jhlee/Pictures/이미지다운로드/Rogier_van_der_Weyden_-_Triptych-_The_Crucifixion_-_Google_Art_Project.jpg",
+            "https://en.wikipedia.org/wiki/Rogier_van_der_Weyden"
+          ],
+          "license": "",
+          "institution": ""
+        }
+      }
+    },
+    {
+      "id": "rogier-christ-on-cross-mary-st-john",
+      "year": 1460,
+      "popularity": 5600,
+      "title": {
+        "ko": "성모와 성 요한과 함께 있는 십자가 위의 그리스도",
+        "en": "Christ on the Cross with Mary and St John"
+      },
+      "description": {
+        "ko": "십자가 위의 그리스도와 성모, 성 요한을 단순한 구도로 묶어 비탄의 정서를 강조한 작품입니다.",
+        "en": "A Crucifixion composition emphasizing grief through the figures of Christ, Mary, and Saint John."
+      },
+      "country": {
+        "ko": "네덜란드",
+        "en": "Netherlands"
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "Early Netherlandish painting"
+      },
+      "image": "data/thumbnails/artist-Q68631/rogier-christ-on-cross-mary-st-john.jpg",
+      "thumbnail": "data/thumbnails/artist-Q68631/rogier-christ-on-cross-mary-st-john.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-21T12:17:10.569Z",
+      "highResImage": "data/thumbnails/artist-Q68631/rogier-christ-on-cross-mary-st-john.jpg",
+      "source": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Weyden_Christ_on_the_Cross_with_Mary_and_St_John.jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false,
+      "origin": "manual",
+      "metadata": {
+        "createdAt": "2026-08-21T12:17:10.569Z",
+        "updatedAt": "2026-08-21T12:17:10.569Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q68631/rogier-christ-on-cross-mary-st-john.jpg",
+          "highResolution": "",
+          "sourceUrl": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Weyden_Christ_on_the_Cross_with_Mary_and_St_John.jpg",
+          "sourceUrls": [
+            "local file: C:/Users/jhlee/Pictures/이미지다운로드/Weyden_Christ_on_the_Cross_with_Mary_and_St_John.jpg",
+            "https://en.wikipedia.org/wiki/Rogier_van_der_Weyden"
+          ],
+          "license": "",
+          "institution": ""
+        }
+      }
+    },
+    {
+      "id": "rogier-deposition-follower",
+      "year": 1460,
+      "popularity": 3000,
+      "title": {
+        "ko": "십자가에서 내려짐(추종자)",
+        "en": "The Deposition (follower of Rogier van der Weyden)"
+      },
+      "verified": false,
+      "description": {
+        "ko": "로히어르 반 데르 베이던의 영향 아래 제작된 추종자 작품으로 정리한 십자가에서 내려짐 장면입니다.",
+        "en": "A Deposition image catalogued here as a follower work related to Rogier van der Weyden."
+      },
+      "country": {
+        "ko": "네덜란드",
+        "en": "Netherlands"
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "Early Netherlandish painting"
+      },
+      "image": "data/thumbnails/artist-Q68631/rogier-deposition-follower.jpg",
+      "thumbnail": "data/thumbnails/artist-Q68631/rogier-deposition-follower.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-21T12:17:10.569Z",
+      "highResImage": "data/thumbnails/artist-Q68631/rogier-deposition-follower.jpg",
+      "source": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Follower_of_Rogier_van_der_Weyden_(Netherlandish_-_The_Deposition_-_Google_Art_Project.jpg",
+      "representative": false,
+      "movementContribution": false,
+      "origin": "manual",
+      "metadata": {
+        "createdAt": "2026-08-21T12:17:10.569Z",
+        "updatedAt": "2026-08-21T12:17:10.569Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q68631/rogier-deposition-follower.jpg",
+          "highResolution": "",
+          "sourceUrl": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Follower_of_Rogier_van_der_Weyden_(Netherlandish_-_The_Deposition_-_Google_Art_Project.jpg",
+          "sourceUrls": [
+            "local file: C:/Users/jhlee/Pictures/이미지다운로드/Follower_of_Rogier_van_der_Weyden_(Netherlandish_-_The_Deposition_-_Google_Art_Project.jpg",
+            "https://en.wikipedia.org/wiki/Rogier_van_der_Weyden"
+          ],
+          "license": "",
+          "institution": ""
+        }
+      }
+    }
+  ]
+}
