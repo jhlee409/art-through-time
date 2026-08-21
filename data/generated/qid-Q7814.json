@@ -1,0 +1,1223 @@
+{
+  "schema": 20,
+  "artistId": "artist-Q7814",
+  "qid": "Q7814",
+  "artist": {
+    "name": {
+      "ko": "조토 디 본도네",
+      "en": "Giotto"
+    },
+    "birth": 1267,
+    "death": 1337,
+    "nationality": {
+      "ko": "이탈리아",
+      "en": "Italy"
+    },
+    "movement": {
+      "ko": "선르네상스",
+      "en": "Proto-Renaissance"
+    }
+  },
+  "fetchedAt": "2026-08-21T05:20:11.153Z",
+  "works": [
+    {
+      "id": "wikidata-Q3005520",
+      "year": 1290,
+      "popularity": 5,
+      "title": {
+        "ko": "Santa Maria Novella Crucifix by Giotto",
+        "en": "Santa Maria Novella Crucifix by Giotto"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto.%20the-crucifix-1290-1300%20Florence%2C%20Santa%20Maria%20Novella.jpg",
+      "description": {
+        "ko": "painting by Giotto di Bondone in Santa Maria Novella, Florence, Italy",
+        "en": "painting by Giotto di Bondone in Santa Maria Novella, Florence, Italy"
+      },
+      "source": "http://www.wikidata.org/entity/Q3005520",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q952482",
+      "year": 1291,
+      "popularity": 4,
+      "title": {
+        "ko": "Resurrection",
+        "en": "Resurrection"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20%28attr.%29%2C%20resurrezione.jpg",
+      "description": {
+        "ko": "painting attributed to Giotto di Bondone (Assisi)",
+        "en": "painting attributed to Giotto di Bondone (Assisi)"
+      },
+      "source": "http://www.wikidata.org/entity/Q952482",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3044873",
+      "year": 1291,
+      "popularity": 4,
+      "title": {
+        "ko": "Scenes from the New Testament: Lamentation",
+        "en": "Scenes from the New Testament: Lamentation"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20Scenes%20from%20the%20New%20Testament%20-%20Lamentation%20-%20WGA09159.jpg",
+      "description": {
+        "ko": "painting by Giotto di Bondone",
+        "en": "painting by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q3044873",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3276180",
+      "year": 1291,
+      "popularity": 4,
+      "title": {
+        "ko": "Madonna with the laughing Child",
+        "en": "Madonna with the laughing Child"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%2C%20madonna%20col%20bambino%20ridente%2C%20assisi.jpg",
+      "description": {
+        "ko": "painting by Giotto di Bondone",
+        "en": "painting by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q3276180",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3087564",
+      "year": 1292,
+      "popularity": 8,
+      "title": {
+        "ko": "Scenes of the life of Sant Francis",
+        "en": "Scenes of the life of Sant Francis"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Assisis%20Basilica%20superiore.jpg",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "http://www.wikidata.org/entity/Q3087564",
+      "verified": true,
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
+    },
+    {
+      "id": "wikidata-Q3910084",
+      "year": 1295,
+      "popularity": 7,
+      "title": {
+        "ko": "Sermon to the Birds",
+        "en": "Sermon to the Birds"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20Legend%20of%20St%20Francis%20-%2015.%20Sermon%20to%20the%20Birds%20-%20WGA09139.jpg",
+      "description": {
+        "ko": "painting by Giotto di Bondone",
+        "en": "painting by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q3910084",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3910951",
+      "year": 1295,
+      "popularity": 5,
+      "title": {
+        "ko": "Institution of the Crib at Greccio",
+        "en": "Institution of the Crib at Greccio"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20-%20Legend%20of%20St%20Francis%20-%20-13-%20-%20Institution%20of%20the%20Crib%20at%20Greccio.jpg",
+      "description": {
+        "ko": "painting by Giotto di Bondone",
+        "en": "painting by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q3910951",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3947106",
+      "year": 1295,
+      "popularity": 4,
+      "title": {
+        "ko": "Ecstasy of St Francis",
+        "en": "Ecstasy of St Francis"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20Legend%20of%20St%20Francis%20-%2012.%20Ecstasy%20of%20St%20Francis%20-%20WGA09133.jpg",
+      "description": {
+        "ko": "painting by Giotto di Bondone",
+        "en": "painting by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q3947106",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3947110",
+      "year": 1295,
+      "popularity": 4,
+      "title": {
+        "ko": "Stigmatization of St Francis",
+        "en": "Stigmatization of St Francis"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20Legend%20of%20St%20Francis%20-%2019.%20Stigmatization%20of%20St%20Francis%20-%20WGA09145.jpg",
+      "description": {
+        "ko": "fresco from the Upper Basilica of Assisi attributed to Giotto",
+        "en": "fresco from the Upper Basilica of Assisi attributed to Giotto"
+      },
+      "source": "http://www.wikidata.org/entity/Q3947110",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3276171",
+      "year": 1295,
+      "popularity": 4,
+      "title": {
+        "ko": "Madonna and Child of San Giorgio alla Costa",
+        "en": "Madonna and Child of San Giorgio alla Costa"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Madonna%20di%20san%20giorgio%20alla%20costa.jpg",
+      "description": {
+        "ko": "painting by Giotto di Bondone, 1295",
+        "en": "painting by Giotto di Bondone, 1295"
+      },
+      "source": "http://www.wikidata.org/entity/Q3276171",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q23904",
+      "year": 1297,
+      "popularity": 7,
+      "title": {
+        "ko": "St. Francis of Assisi Receiving the Stigmata",
+        "en": "St. Francis of Assisi Receiving the Stigmata"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saint%20Fran%C3%A7ois%20d%27Assise%20recevant%20les%20stigmates%20-%20Giotto%20-%20Mus%C3%A9e%20du%20Louvre%20Peintures%20INV%20309%20%3B%20MR%20253%20-%20detoure%20fond%20blanc.jpg",
+      "description": {
+        "ko": "painting by Giotto di Bondone",
+        "en": "painting by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q23904",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q2016193",
+      "year": 1300,
+      "popularity": 17,
+      "title": {
+        "ko": "Madonna Enthroned",
+        "en": "Madonna Enthroned"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "Gothic painting",
+        "en": "Gothic painting"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Madonna%20di%20Ognissanti%20by%20Giotto.jpg",
+      "description": {
+        "ko": "painting by Giotto di Bondone",
+        "en": "painting by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q2016193",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3907498",
+      "year": 1300,
+      "popularity": 7,
+      "title": {
+        "ko": "Badia Polyptych",
+        "en": "Badia Polyptych"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Galer%C3%ADa%20Uffizi%2C%20Florencia%2C%20Italia%2C%202022-09-18%2C%20DD%2023.jpg",
+      "description": {
+        "ko": "painting by Giotto di Bondone, Uffizi",
+        "en": "painting by Giotto di Bondone, Uffizi"
+      },
+      "source": "http://www.wikidata.org/entity/Q3907498",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q547923",
+      "year": 1300,
+      "popularity": 6,
+      "title": {
+        "ko": "The Raising of Lazarus",
+        "en": "The Raising of Lazarus"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2025%20Scenes%20from%20the%20Life%20of%20Christ%20-%209.%20Raising%20of%20Lazarus%20-%20WGA09204.jpg",
+      "description": {
+        "ko": "painting by Giotto di Bondone",
+        "en": "painting by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q547923",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3967208",
+      "year": 1300,
+      "popularity": 5,
+      "title": {
+        "ko": "Marriage of the Virgin",
+        "en": "Marriage of the Virgin"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Marriage%20of%20the%20Virgin%20-%20Capella%20dei%20Scrovegni%20-%20Padua%202016.jpg",
+      "description": {
+        "ko": "fresco by Giotto di Bondone, Cappella degli Scrovegni, Padua",
+        "en": "fresco by Giotto di Bondone, Cappella degli Scrovegni, Padua"
+      },
+      "source": "http://www.wikidata.org/entity/Q3967208",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3910927",
+      "year": 1300,
+      "popularity": 5,
+      "title": {
+        "ko": "Presentation of the Virgin in the Temple",
+        "en": "Presentation of the Virgin in the Temple"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Presentation%20of%20the%20Virgin%20-%20Capella%20dei%20Scrovegni%20-%20Padua%202016.jpg",
+      "description": {
+        "ko": "painting by Giotto di Bondone",
+        "en": "painting by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q3910927",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q1197593",
+      "year": 1300,
+      "popularity": 5,
+      "title": {
+        "ko": "Joachim's Dream",
+        "en": "Joachim's Dream"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20Joachims%20Dream%20-%20Capella%20degli%20Scrovegni.jpg",
+      "description": {
+        "ko": "fresco by Giotto",
+        "en": "fresco by Giotto"
+      },
+      "source": "http://www.wikidata.org/entity/Q1197593",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3944650",
+      "year": 1300,
+      "popularity": 4,
+      "title": {
+        "ko": "Joachim's Sacrificial Offering",
+        "en": "Joachim's Sacrificial Offering"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%2004.%20Joachim%27s%20Sacrificial%20Offering%20Capella%20degli%20Scrovegni%20%28Padova%29%20jm56720.jpeg",
+      "description": {
+        "ko": "fresco by Giotto di Bondone",
+        "en": "fresco by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q3944650",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3937289",
+      "year": 1300,
+      "popularity": 4,
+      "title": {
+        "ko": "Joachim among the Shepherds",
+        "en": "Joachim among the Shepherds"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%2002.%20Joachim%20among%20the%20Shepherds%20Capella%20degli%20Scrovegni%20%28Padova%29%20jm56710%20%281%29.jpeg",
+      "description": {
+        "ko": "fresco by Giotto di Bondone, Scrovegni Chapel",
+        "en": "fresco by Giotto di Bondone, Scrovegni Chapel"
+      },
+      "source": "http://www.wikidata.org/entity/Q3937289",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3910232",
+      "year": 1300,
+      "popularity": 4,
+      "title": {
+        "ko": "The Suitors Praying",
+        "en": "The Suitors Praying"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2010%20Scenes%20from%20the%20Life%20of%20the%20Virgin%20-%204.The%20Suitors%20Praying%20-%20WGA09182.jpg",
+      "description": {
+        "ko": "fresco by Giotto di Bondone, Cappella degli Scrovegni, Padua",
+        "en": "fresco by Giotto di Bondone, Cappella degli Scrovegni, Padua"
+      },
+      "source": "http://www.wikidata.org/entity/Q3910232",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3618182",
+      "year": 1300,
+      "popularity": 4,
+      "title": {
+        "ko": "The Annunciation",
+        "en": "The Annunciation"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2014%20Annunciation%20-%20The%20Angel%20Gabriel%20Sent%20by%20God%20-%20WGA09190.jpg",
+      "description": {
+        "ko": "double fresco by Giotto di Bondone",
+        "en": "double fresco by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q3618182",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3618200",
+      "year": 1300,
+      "popularity": 4,
+      "title": {
+        "ko": "Annunciation to Saint Anne",
+        "en": "Annunciation to Saint Anne"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20-%2003.%20Annunciation%20to%20St%20Anne%20-%20Cappella%20degli%20Scrovegni%20-%20gallerix%20cropped.jpeg",
+      "description": {
+        "ko": "fresco by Giotto di Bondone",
+        "en": "fresco by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q3618200",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3504778",
+      "year": 1303,
+      "popularity": 9,
+      "title": {
+        "ko": "Kiss of Judas",
+        "en": "Kiss of Judas"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2031%20Scenes%20from%20the%20Life%20of%20Christ%20-%2015.%20The%20Arrest%20of%20Christ%20%28Kiss%20of%20Judas%29%20-%20WGA09216.jpg",
+      "description": {
+        "ko": "fresco by Giotto di Bondone",
+        "en": "fresco by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q3504778",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3975688",
+      "year": 1303,
+      "popularity": 5,
+      "title": {
+        "ko": "Massacre of the Innocents",
+        "en": "Massacre of the Innocents"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2021%20Scenes%20from%20the%20Life%20of%20Christ%20-%205.%20Massacre%20of%20the%20Innocents%20-%20.jpg",
+      "description": {
+        "ko": "painting by Giotto di Bondone",
+        "en": "painting by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q3975688",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3933580",
+      "year": 1303,
+      "popularity": 5,
+      "title": {
+        "ko": "Resurrection",
+        "en": "Resurrection"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2037%20Scenes%20from%20the%20Life%20of%20Christ%20-%2021.%20Resurrection%20%28Noli%20me%20tangere%29%20-%20WGA09224.jpg",
+      "description": {
+        "ko": "painting by Giotto di Bondone",
+        "en": "painting by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q3933580",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3649309",
+      "year": 1303,
+      "popularity": 5,
+      "title": {
+        "ko": "Expulsion of the Money-changers from the Temple",
+        "en": "Expulsion of the Money-changers from the Temple"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2027%20Scenes%20from%20the%20Life%20of%20Christ%20-%2011.%20Expulsion%20of%20the%20Money-changers%20from%20the%20Temple%20-%20WGA09209.jpg",
+      "description": {
+        "ko": "painting by Giotto di Bondone",
+        "en": "painting by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q3649309",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3697612",
+      "year": 1303,
+      "popularity": 5,
+      "title": {
+        "ko": "Flagellation",
+        "en": "Flagellation"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2033%20Scenes%20from%20the%20Life%20of%20Christ%20-%2017.%20Flagellation%20-%20WGA09218.jpg",
+      "description": {
+        "ko": "painting by Giotto di Bondone",
+        "en": "painting by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q3697612",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q4003125",
+      "year": 1303,
+      "popularity": 4,
+      "title": {
+        "ko": "Last Supper",
+        "en": "Last Supper"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Last%20Supper%20%28by%20Giotto%20di%20Bondone%29%20-%20Capella%20degli%20Scrovegni%20%28Padova%29.jpg",
+      "description": {
+        "ko": "painting by Giotto di Bondone, Padova",
+        "en": "painting by Giotto di Bondone, Padova"
+      },
+      "source": "http://www.wikidata.org/entity/Q4003125",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3910923",
+      "year": 1303,
+      "popularity": 4,
+      "title": {
+        "ko": "Presentation at the Temple",
+        "en": "Presentation at the Temple"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2019%20Scenes%20from%20the%20Life%20of%20Christ%20-%203.%20Presentation%20of%20Christ%20at%20the%20Temple%20-%20WGA09197.jpg",
+      "description": {
+        "ko": "fresco by Giotto di Bondone, Cappella degli Scrovegni",
+        "en": "fresco by Giotto di Bondone, Cappella degli Scrovegni"
+      },
+      "source": "http://www.wikidata.org/entity/Q3910923",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3005514",
+      "year": 1304,
+      "popularity": 7,
+      "title": {
+        "ko": "Scrovegni Crucifix by Giotto",
+        "en": "Scrovegni Crucifix by Giotto"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto.%20the-crucifix-%20c.1317%20Padua%2C%20Museo%20Civico.jpg",
+      "description": {
+        "ko": "Crucifix painted by Giotto, Padova, Musei civici di Padova",
+        "en": "Crucifix painted by Giotto, Padova, Musei civici di Padova"
+      },
+      "source": "http://www.wikidata.org/entity/Q3005514",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q2067212",
+      "year": 1305,
+      "popularity": 13,
+      "title": {
+        "ko": "Lamentation",
+        "en": "Lamentation"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Compianto%20sul%20Cristo%20morto.jpg",
+      "description": {
+        "ko": "fresco by Giotto di Bondonne",
+        "en": "fresco by Giotto di Bondonne"
+      },
+      "source": "http://www.wikidata.org/entity/Q2067212",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q549172",
+      "year": 1305,
+      "popularity": 11,
+      "title": {
+        "ko": "Flight into Egypt",
+        "en": "Flight into Egypt"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "고딕 미술",
+        "en": "고딕 미술"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2020%20Scenes%20from%20the%20Life%20of%20Christ%20-%204.%20Flight%20into%20Egypt%20-%20WGA09198.jpg",
+      "description": {
+        "ko": "fresco by Giotto",
+        "en": "fresco by Giotto"
+      },
+      "source": "http://www.wikidata.org/entity/Q549172",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3798718",
+      "year": 1305,
+      "popularity": 6,
+      "title": {
+        "ko": "Entry into Jerusalem",
+        "en": "Entry into Jerusalem"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2026%20Scenes%20from%20the%20Life%20of%20Christ%20-%2010.%20Entry%20into%20Jerusalem%20-%20WGA09206.jpg",
+      "description": {
+        "ko": "painting by Giotto di Bondone",
+        "en": "painting by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q3798718",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q650189",
+      "year": 1305,
+      "popularity": 5,
+      "title": {
+        "ko": "Adoration of the Magi",
+        "en": "Adoration of the Magi"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2018%20Scenes%20from%20the%20Life%20of%20Christ%20-%202.%20Adoration%20of%20the%20Magi%20-%20WGA09195.jpg",
+      "description": {
+        "ko": "fresco by Giotto di Bondone in the Scrovegni Chapel, Padua, Italy",
+        "en": "fresco by Giotto di Bondone in the Scrovegni Chapel, Padua, Italy"
+      },
+      "source": "http://www.wikidata.org/entity/Q650189",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3769209",
+      "year": 1306,
+      "popularity": 6,
+      "title": {
+        "ko": "Last Judgment",
+        "en": "Last Judgment"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/LastJudgmentGiotto.jpg",
+      "description": {
+        "ko": "painting by Giotto di Bondone",
+        "en": "painting by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q3769209",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q734197",
+      "year": 1306,
+      "popularity": 5,
+      "title": {
+        "ko": "Visitation",
+        "en": "Visitation"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2016%20Scenes%20from%20the%20Life%20of%20the%20Virgin%20-%207.%20Visitation%20-%20WGA09192.jpg",
+      "description": {
+        "ko": "painting by Giotto di Bondone",
+        "en": "painting by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q734197",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3997179",
+      "year": 1306,
+      "popularity": 4,
+      "title": {
+        "ko": "Judas' Betrayal",
+        "en": "Judas' Betrayal"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2028%20Scenes%20from%20the%20Life%20of%20Christ%20-%2012.%20Judas%27%20Betrayal%20-%20WGA09213.jpg",
+      "description": {
+        "ko": "painting by Giotto di Bondone",
+        "en": "painting by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q3997179",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3698227",
+      "year": 1315,
+      "popularity": 7,
+      "title": {
+        "ko": "Crucifixion of Strasbourg",
+        "en": "Crucifixion of Strasbourg"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto.%20Crucifiction.%201330s.%20Mus%C3%A9e%20des%20Beaux-Arts%2C%20Strasbourg.jpg",
+      "description": {
+        "ko": "painting by Giotto di Bondone",
+        "en": "painting by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q3698227",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3698217",
+      "year": 1317,
+      "popularity": 5,
+      "title": {
+        "ko": "The Crucifixion of Christ",
+        "en": "The Crucifixion of Christ"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Die%20Kreuzigung%20Christi%20-%20Gem%C3%A4ldegalerie%20Berlin%20-%203817331.jpg",
+      "description": {
+        "ko": "painting by Giotto di Bondone, Gemäldegalerie Berlin",
+        "en": "painting by Giotto di Bondone, Gemäldegalerie Berlin"
+      },
+      "source": "http://www.wikidata.org/entity/Q3698217",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q1133664",
+      "year": 1318,
+      "popularity": 7,
+      "title": {
+        "ko": "Peruzzi Chapel",
+        "en": "Peruzzi Chapel"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Santa%20croce%2C%20cappella%20peruzzi%2000.jpg",
+      "description": {
+        "ko": "chapel",
+        "en": "chapel"
+      },
+      "source": "http://www.wikidata.org/entity/Q1133664",
+      "verified": true,
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
+    },
+    {
+      "id": "wikidata-Q962065",
+      "year": 1318,
+      "popularity": 6,
+      "title": {
+        "ko": "Bardi Chapel",
+        "en": "Bardi Chapel"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Santa%20croce%2C%20cappella%20bardi%2000.jpg",
+      "description": {
+        "ko": "chapel at the Basilica of Santa Croce, Florence, Italy",
+        "en": "chapel at the Basilica of Santa Croce, Florence, Italy"
+      },
+      "source": "http://www.wikidata.org/entity/Q962065",
+      "verified": true,
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
+    },
+    {
+      "id": "wikidata-Q3472935",
+      "year": 1320,
+      "popularity": 7,
+      "title": {
+        "ko": "Saint Stephen",
+        "en": "Saint Stephen"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto.%20saint-stephen-1320-25%20Florence%2C%20Museo%20Horne.jpg",
+      "description": {
+        "ko": "painting by Giotto di Bondone",
+        "en": "painting by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q3472935",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3539575",
+      "year": 1320,
+      "popularity": 6,
+      "title": {
+        "ko": "Stefaneschi Triptych",
+        "en": "Stefaneschi Triptych"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Polittico%20stefaneschi%2C%20retro.jpg",
+      "description": {
+        "ko": "painting by Giotto di Bondone",
+        "en": "painting by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q3539575",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3958341",
+      "year": 1320,
+      "popularity": 5,
+      "title": {
+        "ko": "Seven panels with scenes from the Life of Christ",
+        "en": "Seven panels with scenes from the Life of Christ"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto.%20Last%20Supper%20and%20Crucifixion.%20Alte%20Pinakothek%2C%20Munich.%20c.%201320-25..jpg",
+      "description": {
+        "ko": "series of paintings by Giotto di Bondone",
+        "en": "series of paintings by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q3958341",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3907474",
+      "year": 1320,
+      "popularity": 5,
+      "title": {
+        "ko": "Baroncelli Polyptych",
+        "en": "Baroncelli Polyptych"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Baroncelli%20Polyptych%20c.1334%20Baroncelli%20Chapel%2C%20Santa%20Croce%2C%20Florence%20185x323cm..jpg",
+      "description": {
+        "ko": "painting by Giotto di Bondone",
+        "en": "painting by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q3907474",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q1311080",
+      "year": 1330,
+      "popularity": 8,
+      "title": {
+        "ko": "Navicella",
+        "en": "Navicella"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "선르네상스",
+        "en": "선르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20Tondo%20with%20Angel%20-%20WGA09365.jpg",
+      "description": {
+        "ko": "mosaic by Giotto di Bondone",
+        "en": "mosaic by Giotto di Bondone"
+      },
+      "source": "http://www.wikidata.org/entity/Q1311080",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    }
+  ]
+}

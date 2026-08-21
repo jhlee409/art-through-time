@@ -130,6 +130,8 @@ const copy = {
   en: {collection:'MY ARTISTS',sort:'SORT',nameAsc:'Name',birthAsc:'Birth year',addArtist:'Add artist with artworks',newRecord:'NEW RECORD',addTitle:'Add artist with artworks',addHelp:'Paste a webpage about an artist or artwork to import source material.',addArtwork:'Add artwork',addArtworkTitle:'Add one artwork',artworkPage:'Artwork webpage URL or local image path',artworkTitleInput:'Artwork title (optional)',artworkYearInput:'Year made (optional)',entryType:'Add',artist:'Artist',painting:'Artwork webpage',webpage:'Webpage URL',name:'Name',birthYear:'Birth year (optional)',artistName:'Artist name',madeYear:'Year made',save:'Save',timeline:'WORKS TIMELINE',slideshow:'Slideshow',selectWork:'Select an artwork\nto view its details here.',noWork:'No artworks have been added yet.',noImage:'No image available',untitled:'Untitled',unknown:'Unknown',country:'Country made',movement:'Movement',year:'Year made',source:'Stored source',delete:'Delete this artist and their listed works?',confirmDeleteWork:'Delete this artwork?',manualWorks:'MANUALLY ADDED WORKS',movementAtlas:'Movement comparison',countries:'Countries',selectAllCountries:'Select / clear all',exportChanges:'EXPORT CHANGES',migrationExport:'EXPORT FOR FIREBASE',period:'Period',artistSpan:'Selected artist lifespan',storedInfo:'Stored artwork information',loadingInfo:'Preparing and saving artwork information.',noInfo:'No stored description yet.',favorites:'MY FAVORITES',searchArtists:'Search artists',noSearchResult:'No matching artists.'}
 };
 Object.assign(copy.ko, {
+  fullName:'Full Name (목록·연표·HTML 표기)',
+  artistAliases:'별명·줄임말 (쉼표로 구분)',
   artworkPage:'작품 웹페이지 주소',
   addFromWeb:'웹 주소로 추가',
   localArtwork:'로컬 이미지',
@@ -139,6 +141,8 @@ Object.assign(copy.ko, {
   addFromLocal:'연표에 추가'
 });
 Object.assign(copy.en, {
+  fullName:'Full Name (display name)',
+  artistAliases:'Aliases / short names (comma-separated)',
   artworkPage:'Artwork webpage URL',
   addFromWeb:'Add from webpage',
   localArtwork:'Local image',
@@ -497,6 +501,7 @@ function koreanFamilyFirst(name, originalName) {
   return `${korean.slice(-familyLength).join(' ')}, ${korean.slice(0, -familyLength).join(' ')}`;
 }
 const koreanArtistDisplayOverrides = {
+  Q7814: '디 본도네, 조토',
   Q43270: '브뤼헐, 피터르 대',
   Q213163: '비제 르 브룅, 엘리자베스 루이',
   Q82445: '툴루즈로트레크, 앙리 드',
@@ -507,6 +512,8 @@ const koreanArtistDisplayOverrides = {
 };
 function artistDisplayName(artist) {
   if (language !== 'ko') return loc(artist?.name);
+  const fullName = String(artist?.fullName || '').trim();
+  if (fullName) return fullName;
   const koreanName = artist?.name?.ko || loc(artist?.name) || '';
   return koreanArtistDisplayOverrides[artist?.qid] || koreanFamilyFirst(koreanName, artist?.name?.en || '');
 }
@@ -519,7 +526,7 @@ function artistAliases(artist) {
   return [...textList(aliases?.ko), ...textList(aliases?.en)];
 }
 function artistSearchText(artist) {
-  return [artist?.name?.ko, artist?.name?.en, loc(artist?.name), artistDisplayName(artist), ...artistAliases(artist)].filter(Boolean).join(' ').toLocaleLowerCase();
+  return [artist?.fullName, artist?.name?.ko, artist?.name?.en, loc(artist?.name), artistDisplayName(artist), ...artistAliases(artist)].filter(Boolean).join(' ').toLocaleLowerCase();
 }
 function artistLinks(artist) {
   return Array.isArray(artist?.links) ? artist.links.filter(link => {
@@ -1142,7 +1149,7 @@ function renderList() {
   }).join('') : `<p class="artist-search-empty">${t('noSearchResult')}</p>`;
   list.querySelectorAll('.artist-item').forEach(button => button.onclick = async () => { viewMode = 'timeline'; selectedId = button.dataset.id; persist(); closeDetail(); const artist = artists.find(item => item.id === selectedId); await hydrateThumbnails(artist); renderList(); requestAnimationFrame(() => centerSelectedArtistInList('smooth')); renderTimeline(); await enrichArtist(); });
   list.querySelectorAll('.delete-artist').forEach(button => button.onclick = async () => { if (!currentUserIsAdmin || !confirm(t('confirmDelete'))) return; const deleted = artists.find(artist => artist.id === button.dataset.id); artists = artists.filter(artist => artist.id !== button.dataset.id); if (selectedId === button.dataset.id) selectedId = artists[0]?.id || null; persist(); if (!await saveArtistsNow()) { artists.push(deleted); if (!selectedId) selectedId = deleted.id; alert(language === 'ko' ? '삭제 내용을 저장하지 못해 복원했습니다.' : 'The deletion could not be saved, so it was restored.'); } render(); });
-  $('#artist-names').innerHTML = artists.flatMap(a => [artistDisplayName(a), a.name?.ko, a.name?.en, ...artistAliases(a)]).filter(Boolean).filter((value,index,self) => self.indexOf(value) === index).map(value => `<option value="${esc(value)}"></option>`).join('');
+  $('#artist-names').innerHTML = artists.flatMap(a => [artistDisplayName(a), a.fullName, a.name?.ko, a.name?.en, ...artistAliases(a)]).filter(Boolean).filter((value,index,self) => self.indexOf(value) === index).map(value => `<option value="${esc(value)}"></option>`).join('');
 }
 function centerSelectedArtistInList(behavior='auto') {
   if (!selectedId || list.clientHeight <= 0 || list.scrollHeight <= list.clientHeight) return;
@@ -1236,7 +1243,8 @@ function renderTimeline() {
   const card = w => {
     const image = artworkPreviewImage(w);
     const movementContribution = Boolean(w.movementContribution);
-    const highRes = Boolean(w.highResImage);
+    const highResSource = w.highResImage || w.image || '';
+    const highRes = Boolean(highResSource);
     const featured = isLeonardoTimeline && leonardoFeaturedWorkIds.has(String(w.id || ''));
     const replaceLabel = language === 'ko' ? '로컬 이미지 교체' : 'Replace with local image';
     const contributionLabel = language === 'ko' ? '화가가 속한 사조의 특성을 잘 보여주는 기여 작품' : 'Work that strongly expresses the artist’s movement contribution';
@@ -1251,7 +1259,7 @@ function renderTimeline() {
     const previewYear = workYearLabel(w) || (language === 'ko' ? '연도 미상' : 'Year unknown');
     const previewArtist = artistDisplayName(artist);
     const fallbackImage = image && w.image && image !== thumbnail(w.image) ? thumbnail(w.image) : '';
-    const highResBadge = highRes ? `<span class="high-resolution-badge hidden" data-highres-src="${esc(w.highResImage)}" title="${esc(language === 'ko' ? '고해상도 파일 확인 중' : 'Checking high-resolution file')}">Ⓗ</span>` : '';
+    const highResBadge = highRes ? `<span class="high-resolution-badge hidden" data-highres-src="${esc(highResSource)}" title="${esc(language === 'ko' ? '고해상도 파일 확인 중' : 'Checking high-resolution file')}">Ⓗ</span>` : '';
     const wikipediaUrl = explicitArtworkWikipediaUrl(w);
     const wikipediaLabel = language === 'ko' ? '작품 위키피디아 페이지 열기' : 'Open artwork Wikipedia page';
     const wikipediaAttrs = wikipediaUrl
@@ -1289,7 +1297,8 @@ function renderTimeline() {
     : `${esc(loc(artist.name))}${linkControls}`;
   const slideshowHelp = language === 'ko' ? '전체 화면 슬라이드 쇼 시작 · 5초마다 다음 작품' : 'Start fullscreen slideshow · next artwork every 5 seconds';
   const titleModeButton = availableTitleModes.length > 1 ? `<button class="artwork-title-mode-button" type="button" title="${esc(language === 'ko' ? '작품 제목 표기 전환' : 'Switch artwork title language')}" aria-label="${esc(language === 'ko' ? '작품 제목 표기 전환' : 'Switch artwork title language')}">${esc(artworkTitleModeLabels[nextArtworkTitleMode(works)] || 'EN')}</button>` : '';
-  const headerActions = titleModeButton;
+  const rulesCheckButton = currentUserIsAdmin ? `<button class="rules-check-button" type="button" data-rules-check hidden></button>` : '';
+  const headerActions = `${titleModeButton}${rulesCheckButton}`;
   const timelineHeader = `<header class="timeline-sticky-header"><p class="eyebrow">${t('timeline')}</p><div class="timeline-title-row"><h1 class="timeline-title">${displayName}</h1><div class="timeline-title-actions">${headerActions}</div></div>${currentUserIsAdmin ? `<form class="artist-link-entry hidden"><input type="url" inputmode="url" placeholder="https://" aria-label="${esc(linkInputLabel)}" required><button type="submit">${esc(confirmLinkLabel)}</button></form>` : ''}<p class="life">${years(artist)}${nationalityLabel ? ` · ${esc(nationalityLabel)}` : ''}${artistMovement ? ` · ${artistMovementLabel}` : ''}</p></header>`;
   const standardTimelineMarkup = `<div class="timeline">${works.length ? [...worksByYear.entries()].map(([year, group]) => `<div class="timeline-row"><span class="year">${year}</span><span class="node"></span><div class="artworks-at-year">${group.map(card).join('')}</div></div>`).join('') : `<p class="empty-timeline">${t('noWork')}</p>`}</div>`;
   const leonardoTimelineMarkup = (() => {
@@ -1497,8 +1506,9 @@ function setupHighResolutionBadges(artist, works) {
   timeline.querySelectorAll('.art-card[data-work]').forEach(card => {
     const work = worksById.get(String(card.dataset.work || ''));
     const image = card.querySelector('.art-thumb img');
-    if (!work?.highResImage || !image) return;
-    highResolutionImageWidth(work.highResImage).then(width => {
+    const highResSource = work?.highResImage || work?.image || '';
+    if (!highResSource || !image) return;
+    highResolutionImageWidth(highResSource).then(width => {
       if (!image.isConnected || width < highResolutionMinimumWidth) return;
       image.classList.add('high-resolution-artwork');
       image.title = `${label} (${width}px)`;
@@ -1510,7 +1520,7 @@ function setupHighResolutionBadges(artist, works) {
       image.addEventListener('dblclick', event => {
         event.preventDefault();
         event.stopPropagation();
-        openArtworkImageWindow(work.highResImage, artworkDisplayTitle(work), {artist:artistDisplayName(artist), title:artworkDisplayTitle(work), year:workYearLabel(work)});
+        openArtworkImageWindow(highResSource, artworkDisplayTitle(work), {artist:artistDisplayName(artist), title:artworkDisplayTitle(work), year:workYearLabel(work)});
       });
     });
   });
@@ -1706,6 +1716,7 @@ function renderMovementAtlas() {
   const techniquesLabel = language === 'ko' ? '기법' : 'Techniques';
   const topicsLabel = language === 'ko' ? '주제 - 사조' : 'Topics - movements';
   timeline.innerHTML = `<div class="timeline-title-row movement-title-row"><h1 class="timeline-title">${t('movementAtlas')}</h1><div class="timeline-title-actions movement-title-actions"><button class="atlas-nav-button movement-nav-artists" type="button">${artistListLabel}</button><button class="atlas-nav-button movement-nav-techniques" type="button">${techniquesLabel}</button><button class="atlas-nav-button movement-nav-topics" type="button">${topicsLabel}</button></div></div><div class="atlas-controls"><fieldset><legend>${t('countries')}</legend><div class="atlas-country-options"><div class="atlas-country-option atlas-country-option-all"><label><input class="atlas-country-select-all" type="checkbox" ${allCountriesSelected ? 'checked' : ''}>${t('selectAllCountries')}</label></div>${countryOptions.map(country => `<div class="atlas-country-option"><label><input type="checkbox" value="${esc(country.id)}" ${movementView.countries.includes(country.id) ? 'checked' : ''}>${esc(loc(country.name))}</label></div>`).join('')}</div></fieldset><button class="atlas-event-toggle" type="button">${toggleEventsLabel}</button>${eventEditorButton}<span class="atlas-range">${yearLabel(start)}–${yearLabel(countryEnd)} / ${yearLabel(sharedStart)}–${yearLabel(end)}</span></div><div class="atlas-scroll">${countries.length ? `<div class="atlas-chart" style="grid-template-columns:${chartColumns}">${showHistoricalEvents ? renderAtlasEvents(start, countryEnd, height, yearScale) : ''}${axis(start, countryEnd, height)}${countries.map(column).join('')}</div>` : `<p class="empty-timeline">${language === 'ko' ? '비교할 나라를 하나 이상 선택해 주세요.' : 'Select at least one country to compare.'}</p>`}${sharedBox ? `<div class="atlas-shared-divider"></div>${sharedBox}` : ''}</div>`;
+  if (currentUserIsAdmin) timeline.querySelector('.movement-title-actions')?.insertAdjacentHTML('beforeend','<button class="rules-check-button" type="button" data-rules-check hidden></button>');
   timeline.querySelector('.movement-nav-artists')?.addEventListener('click', openArtistListPage);
   timeline.querySelector('.movement-nav-techniques')?.addEventListener('click', openTechniquesPage);
   timeline.querySelector('.movement-nav-topics')?.addEventListener('click', openTopicsPage);
@@ -2570,6 +2581,8 @@ function changeEntryType() {
   $('#suggestions').classList.add('hidden');
   document.querySelectorAll('.artwork-field').forEach(x => x.classList.add('hidden'));
   document.querySelector('.artist-field').classList.add('hidden');
+  document.querySelector('.artist-full-name-field').classList.toggle('hidden', type !== 'artist');
+  document.querySelector('.artist-aliases-field').classList.toggle('hidden', type !== 'artist');
   $('#entry-name-label').textContent = t('webpage');
   input.placeholder = type === 'artist'
     ? (language === 'ko' ? 'https://... 화가를 설명한 페이지' : 'https://... page about the artist')
@@ -2592,7 +2605,8 @@ function setAddFormBusy(busy, text='') {
 }
 $('#add-form').addEventListener('submit', async event => {
   event.preventDefault();
-  const type = $('#entry-type').value, name = $('#entry-name').value.trim();
+  const type = $('#entry-type').value, name = $('#entry-name').value.trim(), fullName = $('#entry-full-name').value.trim();
+  const aliases = $('#entry-artist-aliases').value.split(',').map(value => value.trim()).filter(Boolean);
   if (!name) return;
   setAddFormBusy(true, language === 'ko' ? '페이지 정보를 가져오는 중입니다.' : 'Importing page information.');
   let skipEnrichAfterSave = false;
@@ -2607,6 +2621,8 @@ $('#add-form').addEventListener('submit', async event => {
         let artist=artists.find(item => (imported.artist.qid && item.qid === imported.artist.qid) || item.id === imported.artist.id || (imported.artist.source && item.source === imported.artist.source));
         if(!artist){ artist=imported.artist; artists.push(artist); }
         else Object.assign(artist,{...imported.artist,works:artist.works || []});
+        if (fullName) artist.fullName = fullName;
+        if (type === 'artist' && aliases.length) artist.aliases = [...new Set([...artistAliases(artist), ...aliases])];
         if (imported.work) { const existing = (artist.works || []).find(work => work.id === imported.work.id); if (existing) existing.origin = 'manual'; else artist.works.push({...imported.work,origin:'manual'}); }
         (imported.works || []).forEach(work => { const existing = (artist.works || []).find(item => selectionKey(item) === selectionKey(work) || item.id === work.id); if (existing) Object.assign(existing,{...work,origin:'manual'}); else artist.works.push({...work,origin:'manual'}); });
         artist.works = selectArtistWorks(artist.works || [],artistImportedWorkLimit,artist);

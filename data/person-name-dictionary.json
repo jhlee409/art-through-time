@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-21T03:36:21.297Z",
+  "generatedAt": "2026-08-21T07:22:16.570Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -529,16 +529,20 @@
         ]
       },
       "uhangul": "카라치",
-      "note": "auto-generated from original and Korean artist names",
+      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
-        "data/미술사조/de537ba74c4bee89423120bc-1.html"
+        "data/미술사조/de537ba74c4bee89423120bc-1.html",
+        "Wikidata"
       ],
-      "status": "verified-pair"
+      "status": "verified-pair",
+      "englishFullName": "Annibale Carracci",
+      "wikipediaTitle": "Annibale Carracci",
+      "wikidataQid": "Q7824"
     },
     {
       "id": "anselm-kiefer",
@@ -1185,16 +1189,21 @@
         ],
         "en": [
           "Larsson",
-          "Carl Larsson"
+          "Carl Larsson",
+          "Carl Olof Larsson"
         ]
       },
       "uhangul": "칼 라르손",
-      "note": "auto-generated from original and Korean artist names",
+      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
-        "data/artists.json"
+        "data/artists.json",
+        "Wikidata"
       ],
-      "status": "verified-pair"
+      "status": "verified-pair",
+      "englishFullName": "Carl Olof Larsson",
+      "wikipediaTitle": "Carl Larsson",
+      "wikidataQid": "Q187310"
     },
     {
       "id": "carlo-marattta",
@@ -1233,7 +1242,7 @@
         ]
       },
       "uhangul": "카스파[Rㅡ] 다[Vㅣ]트 [Fㅡ][Rㅣ]드[Rㅣ][CHㅣ]",
-      "note": "auto-generated from original and Korean artist names",
+      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
@@ -1241,9 +1250,13 @@
         "data/techniques.json",
         "data/미술사조/0930062b29f8f38dd88ee1a5-1.html",
         "data/미술사조/69d074f0099b13691bf428c4-1.html",
-        "data/미술사조/813ce956e2554f3fba756eaa-1.html"
+        "data/미술사조/813ce956e2554f3fba756eaa-1.html",
+        "Wikidata"
       ],
-      "status": "verified-pair"
+      "status": "verified-pair",
+      "englishFullName": "Caspar David Friedrich",
+      "wikipediaTitle": "Caspar David Friedrich",
+      "wikidataQid": "Q104884"
     },
     {
       "id": "name-ceciliagallerani",
@@ -1399,15 +1412,18 @@
       "aliases": {
         "ko": [
           "모네",
-          "클로드 모네"
+          "클로드 모네",
+          "오스카클로드 모네"
         ],
         "en": [
           "Monet",
-          "Claude Monet"
+          "Claude Monet",
+          "Oscar-Claude Monet",
+          "Claude Oscar Monet"
         ]
       },
       "uhangul": "모네",
-      "note": "auto-generated from original and Korean artist names",
+      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
@@ -1415,9 +1431,13 @@
         "data/techniques.json",
         "data/미술사조/236b5b248aa3129573179c3b-1.html",
         "data/미술사조/81bf5950142af1141dfcf738-1.html",
-        "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html"
+        "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html",
+        "Wikidata"
       ],
-      "status": "verified-pair"
+      "status": "verified-pair",
+      "englishFullName": "Oscar-Claude Monet",
+      "wikipediaTitle": "Claude Monet",
+      "wikidataQid": "Q296"
     },
     {
       "id": "name-correggio",
@@ -1761,14 +1781,18 @@
         ]
       },
       "uhangul": "마네",
-      "note": "auto-generated from original and Korean artist names",
+      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/techniques.json"
+        "data/techniques.json",
+        "Wikidata"
       ],
-      "status": "verified-pair"
+      "status": "verified-pair",
+      "englishFullName": "Édouard Manet",
+      "wikipediaTitle": "Édouard Manet",
+      "wikidataQid": "Q40599"
     },
     {
       "id": "edouard-vuillard",
@@ -1884,23 +1908,31 @@
       "aliases": {
         "ko": [
           "그레코",
-          "엘 그레코"
+          "엘 그레코",
+          "도메니코스 테오토코풀로스"
         ],
         "en": [
           "Greco",
-          "El Greco"
+          "El Greco",
+          "Domenikos Theotokopoulos",
+          "Doménikos Theotokópoulos",
+          "Dominico Greco"
         ]
       },
       "uhangul": "엘 그[Rㅔ]코",
-      "note": "auto-generated from original and Korean artist names",
+      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
-        "tools/apply-first-batch-movement-enhancements.js"
+        "tools/apply-first-batch-movement-enhancements.js",
+        "Wikidata"
       ],
-      "status": "verified-pair"
+      "status": "verified-pair",
+      "englishFullName": "Doménikos Theotokópoulos",
+      "wikipediaTitle": "El Greco",
+      "wikidataQid": "Q301"
     },
     {
       "id": "el-lissitzky",
@@ -1937,19 +1969,24 @@
           "Elisabeth Louise Vigee Le Brun",
           "Le Brun",
           "Brun",
-          "Élisabeth Louise Vigée Le Brun"
+          "Élisabeth Louise Vigée Le Brun",
+          "Élisabeth Vigée Le Brun"
         ]
       },
       "uhangul": "엘리자베스 루이 [Vㅣ]제 르 브[Rㅚㅇ]",
-      "note": "auto-generated from original and Korean artist names",
+      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
         "data/artists.json",
         "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
-        "tools/apply-first-batch-movement-enhancements.js"
+        "tools/apply-first-batch-movement-enhancements.js",
+        "Wikidata"
       ],
-      "status": "verified-pair"
+      "status": "verified-pair",
+      "englishFullName": "Élisabeth Louise Vigée Le Brun",
+      "wikipediaTitle": "Élisabeth Louise Vigée Le Brun",
+      "wikidataQid": "Q213163"
     },
     {
       "id": "elisabeth-sirani",
@@ -2669,22 +2706,29 @@
       "aliases": {
         "ko": [
           "칼로",
-          "프리다 칼로"
+          "프리다 칼로",
+          "막달레나 카르멘 프리다 칼로 이 칼데론"
         ],
         "en": [
           "Kahlo",
-          "Frida Kahlo"
+          "Frida Kahlo",
+          "Magdalena Carmen Frida Kahlo y Calderón",
+          "Frieda Kahlo"
         ]
       },
       "uhangul": "칼[Rㅗ]",
-      "note": "auto-generated from original and Korean artist names",
+      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/b6f307845ec9a6f73e9d4e44-1.html"
+        "data/미술사조/b6f307845ec9a6f73e9d4e44-1.html",
+        "Wikidata"
       ],
-      "status": "verified-pair"
+      "status": "verified-pair",
+      "englishFullName": "Magdalena Carmen Frida Kahlo y Calderón",
+      "wikipediaTitle": "Frida Kahlo",
+      "wikidataQid": "Q5588"
     },
     {
       "id": "gabriel-metsu",
@@ -3113,14 +3157,17 @@
       "displayKorean": "조르조네",
       "aliases": {
         "ko": [
-          "조르조네"
+          "조르조네",
+          "조르조 바르바렐리"
         ],
         "en": [
-          "Giorgione"
+          "Giorgione",
+          "Giorgio Barbarelli",
+          "Giorgio Barbarelli da Castelfranco"
         ]
       },
       "uhangul": "조[Rㅡ]조네",
-      "note": "auto-generated from original and Korean artist names",
+      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
@@ -3128,9 +3175,44 @@
         "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
         "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
         "data/미술사조/9e553fb48e9a464402114360-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
+        "Wikidata"
       ],
-      "status": "verified-pair"
+      "status": "verified-pair",
+      "englishFullName": "Giorgio Barbarelli da Castelfranco",
+      "wikipediaTitle": "Giorgione",
+      "wikidataQid": "Q8459"
+    },
+    {
+      "id": "Q7814",
+      "original": "Giotto",
+      "korean": "조토 디 본도네",
+      "displayKorean": "조토 디 본도네",
+      "aliases": {
+        "ko": [
+          "디 본도네",
+          "본도네",
+          "조토 디 본도네",
+          "조토"
+        ],
+        "en": [
+          "Giotto",
+          "Giotto di Bondone",
+          "Ambrogiotto",
+          "Angelotto"
+        ]
+      },
+      "uhangul": "조토 디 본도네",
+      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "Wikidata"
+      ],
+      "status": "verified-pair",
+      "englishFullName": "Giotto di Bondone",
+      "wikipediaTitle": "Giotto",
+      "wikidataQid": "Q7814"
     },
     {
       "id": "name-giottodibondone",
@@ -3213,7 +3295,7 @@
         ]
       },
       "uhangul": "조[Vㅏㄴ]니 벨리니",
-      "note": "auto-generated from original and Korean artist names",
+      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
@@ -3221,9 +3303,13 @@
         "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
         "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
         "data/미술사조/9e553fb48e9a464402114360-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
+        "Wikidata"
       ],
-      "status": "verified-pair"
+      "status": "verified-pair",
+      "englishFullName": "Giovanni Bellini",
+      "wikipediaTitle": "Giovanni Bellini",
+      "wikidataQid": "Q17169"
     },
     {
       "id": "giovanni-lanfranco",
@@ -3596,24 +3682,30 @@
           "툴루즈로트레크",
           "로트레크",
           "앙리 드 툴루즈로트레크",
-          "드 툴루즈로트레크"
+          "드 툴루즈로트레크",
+          "앙리 마리 레몽 드 툴루즈로트레크몽파"
         ],
         "en": [
           "de Toulouse-Lautrec",
           "Toulouse-Lautrec",
           "Lautrec",
-          "Henri de Toulouse-Lautrec"
+          "Henri de Toulouse-Lautrec",
+          "Henri Marie Raymond de Toulouse-Lautrec-Monfa"
         ]
       },
       "uhangul": "툴[Rㅜ]즈로트렉",
-      "note": "auto-generated from original and Korean artist names",
+      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/81bf5950142af1141dfcf738-1.html"
+        "data/미술사조/81bf5950142af1141dfcf738-1.html",
+        "Wikidata"
       ],
-      "status": "verified-pair"
+      "status": "verified-pair",
+      "englishFullName": "Henri Marie Raymond de Toulouse-Lautrec-Monfa",
+      "wikipediaTitle": "Henri de Toulouse-Lautrec",
+      "wikidataQid": "Q82445"
     },
     {
       "id": "henri-matisse",
@@ -4570,23 +4662,30 @@
         "ko": [
           "페르메이르",
           "요하네스 페르메이르",
-          "베르메르"
+          "베르메르",
+          "얀 페르메이르"
         ],
         "en": [
           "Vermeer",
-          "Johannes Vermeer"
+          "Johannes Vermeer",
+          "Jan Vermeer",
+          "Johannes van der Meer"
         ]
       },
       "uhangul": "[Vㅔ][Rㅡ]메[Rㅡ]",
-      "note": "auto-generated from original and Korean artist names",
+      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/techniques.json",
-        "tools/apply-first-batch-movement-enhancements.js"
+        "tools/apply-first-batch-movement-enhancements.js",
+        "Wikidata"
       ],
-      "status": "verified-pair"
+      "status": "verified-pair",
+      "englishFullName": "Johannes Vermeer",
+      "wikipediaTitle": "Johannes Vermeer",
+      "wikidataQid": "Q41264"
     },
     {
       "id": "constable-table",
@@ -5170,17 +5269,20 @@
           "다 빈치",
           "빈치",
           "레오나르도",
-          "레오나르도 다 빈치"
+          "레오나르도 다 빈치",
+          "레오나르도 디 세르 피에로 다 빈치"
         ],
         "en": [
           "da Vinci",
           "Vinci",
           "Leonardo",
-          "Leonardo da Vinci"
+          "Leonardo da Vinci",
+          "Leonardo di ser Piero da Vinci",
+          "Leonardo di Piero da Vinci"
         ]
       },
       "uhangul": "레오나[Rㅡ]도",
-      "note": "auto-generated from original and Korean artist names",
+      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
@@ -5189,9 +5291,13 @@
         "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
         "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
         "data/미술사조/9e553fb48e9a464402114360-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
+        "Wikidata"
       ],
-      "status": "verified-pair"
+      "status": "verified-pair",
+      "englishFullName": "Leonardo di ser Piero da Vinci",
+      "wikipediaTitle": "Leonardo da Vinci",
+      "wikidataQid": "Q762"
     },
     {
       "id": "leonora-carrington",
@@ -5748,15 +5854,18 @@
         "ko": [
           "부오나로티",
           "미켈란젤로",
-          "미켈란젤로 부오나로티"
+          "미켈란젤로 부오나로티",
+          "미켈란젤로 부오나로티 시모니"
         ],
         "en": [
           "Buonarroti",
-          "Michelangelo"
+          "Michelangelo",
+          "Michelangelo Buonarroti",
+          "Michelangelo di Lodovico Buonarroti Simoni"
         ]
       },
       "uhangul": "미켈란젤로 부오나로티",
-      "note": "auto-generated from original and Korean artist names",
+      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
         "data/artists.json",
@@ -5766,9 +5875,13 @@
         "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "data/미술사조/9e553fb48e9a464402114360-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
+        "Wikidata"
       ],
-      "status": "verified-pair"
+      "status": "verified-pair",
+      "englishFullName": "Michelangelo di Lodovico Buonarroti Simoni",
+      "wikipediaTitle": "Michelangelo",
+      "wikidataQid": "Q5592"
     },
     {
       "id": "michelangelo-table",
@@ -5809,20 +5922,25 @@
         "en": [
           "da Caravaggio",
           "Caravaggio",
-          "Michelangelo Merisi da Caravaggio"
+          "Michelangelo Merisi da Caravaggio",
+          "Michelangelo Merisi"
         ]
       },
       "uhangul": "미켈란젤로 메[Rㅣ]시 다 카[Rㅏ][Vㅏ]조",
-      "note": "auto-generated from original and Korean artist names",
+      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
         "data/artists.json",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "data/미술사조/c0d228e179032941f8d9ebfb-1.html",
-        "data/미술사조/de537ba74c4bee89423120bc-1.html"
+        "data/미술사조/de537ba74c4bee89423120bc-1.html",
+        "Wikidata"
       ],
-      "status": "verified-pair"
+      "status": "verified-pair",
+      "englishFullName": "Michelangelo Merisi da Caravaggio",
+      "wikipediaTitle": "Caravaggio",
+      "wikidataQid": "Q42207"
     },
     {
       "id": "mikhail-larionov",
@@ -6395,11 +6513,12 @@
         ],
         "en": [
           "Rubens",
-          "Peter Paul Rubens"
+          "Peter Paul Rubens",
+          "Pieter Paul Rubens"
         ]
       },
       "uhangul": "페테[Rㅡ] 파울 [Rㅜ]벤스",
-      "note": "auto-generated from original and Korean artist names",
+      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
         "data/artists.json",
@@ -6409,9 +6528,13 @@
         "data/미술사조/9e553fb48e9a464402114360-1.html",
         "data/미술사조/c0d228e179032941f8d9ebfb-1.html",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
-        "tools/apply-first-batch-movement-enhancements.js"
+        "tools/apply-first-batch-movement-enhancements.js",
+        "Wikidata"
       ],
-      "status": "verified-pair"
+      "status": "verified-pair",
+      "englishFullName": "Peter Paul Rubens",
+      "wikipediaTitle": "Peter Paul Rubens",
+      "wikidataQid": "Q5599"
     },
     {
       "id": "philip-wilson-steer",
@@ -6616,22 +6739,29 @@
         "ko": [
           "브뤼헐",
           "피터르 대 브뤼헐",
-          "대 피터르 브뤼헐"
+          "대 피터르 브뤼헐",
+          "피터르 브뤼헐 대"
         ],
         "en": [
           "Brueghel",
           "Pieter Brueghel",
-          "Pieter Brueghel the Elder"
+          "Pieter Brueghel the Elder",
+          "Pieter Bruegel the Elder",
+          "Pieter Bruegel"
         ]
       },
       "uhangul": "대 피터[Rㅡ] 브[Rㅟ][Xㅓㄹ]",
-      "note": "auto-generated from original and Korean artist names",
+      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
         "data/artists.json",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
+        "Wikidata"
       ],
-      "status": "verified-pair"
+      "status": "verified-pair",
+      "englishFullName": "Pieter Bruegel the Elder",
+      "wikipediaTitle": "Pieter Bruegel the Elder",
+      "wikidataQid": "Q43270"
     },
     {
       "id": "pieter-de-hooch",
@@ -6832,18 +6962,23 @@
           "산치오",
           "라파엘로",
           "라파엘",
-          "라파엘로 산치오"
+          "라파엘로 산치오",
+          "라파엘로 산티",
+          "라파엘로 다 우르비노"
         ],
         "en": [
           "da Urbino",
           "Urbino",
           "Raphael",
           "Raffaello",
-          "Raffaello Sanzio"
+          "Raffaello Sanzio",
+          "Raffaello Santi",
+          "Raffaello da Urbino",
+          "Raphael Sanzio"
         ]
       },
       "uhangul": "[Rㅏ][Fㅏ]엘로 산치오",
-      "note": "auto-generated from original and Korean artist names",
+      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
         "data/artists.json",
@@ -6855,9 +6990,13 @@
         "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "data/미술사조/9e553fb48e9a464402114360-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
+        "Wikidata"
       ],
-      "status": "verified-pair"
+      "status": "verified-pair",
+      "englishFullName": "Raffaello Sanzio da Urbino",
+      "wikipediaTitle": "Raphael",
+      "wikidataQid": "Q5597"
     },
     {
       "id": "Q5598",
@@ -6868,22 +7007,29 @@
         "ko": [
           "판 레인",
           "레인",
-          "렘브란트 하르먼손 판 레인"
+          "렘브란트 하르먼손 판 레인",
+          "렘브란트"
         ],
         "en": [
           "van Rijn",
           "Rijn",
-          "Rembrandt Harmenszoon van Rijn"
+          "Rembrandt Harmenszoon van Rijn",
+          "Rembrandt",
+          "Rembrandt van Rijn"
         ]
       },
       "uhangul": "[Rㅔㅁ]브[Rㅏㄴ]트 하[Rㅡ]먼손 [Vㅏㄴ] [Rㅔ]인",
-      "note": "auto-generated from original and Korean artist names",
+      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
         "data/artists.json",
-        "tools/apply-first-batch-movement-enhancements.js"
+        "tools/apply-first-batch-movement-enhancements.js",
+        "Wikidata"
       ],
-      "status": "verified-pair"
+      "status": "verified-pair",
+      "englishFullName": "Rembrandt Harmenszoon van Rijn",
+      "wikipediaTitle": "Rembrandt",
+      "wikidataQid": "Q5598"
     },
     {
       "id": "rembrandt-table",
@@ -7622,7 +7768,7 @@
         ]
       },
       "uhangul": "티치아노",
-      "note": "auto-generated from original and Korean artist names",
+      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
@@ -7633,9 +7779,13 @@
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "data/미술사조/9e553fb48e9a464402114360-1.html",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
-        "tools/apply-first-batch-movement-enhancements.js"
+        "tools/apply-first-batch-movement-enhancements.js",
+        "Wikidata"
       ],
-      "status": "verified-pair"
+      "status": "verified-pair",
+      "englishFullName": "Tiziano Vecellio",
+      "wikipediaTitle": "Titian",
+      "wikidataQid": "Q47551"
     },
     {
       "id": "tom-roberts",
@@ -7782,22 +7932,30 @@
       "aliases": {
         "ko": [
           "푸키레프",
-          "바실리 푸키레프"
+          "바실리 푸키레프",
+          "바실리 푸키료프"
         ],
         "en": [
           "Pukiryov",
-          "Vassili Vladimirovich Pukiryov"
+          "Vassili Vladimirovich Pukiryov",
+          "Vasily Vladimirovich Pukiryov",
+          "Vasily Pukirev",
+          "Vassili Pukiryov"
         ]
       },
       "uhangul": "[Vㅏ]실리 [Vㅜ]키레[Vㅡ]",
-      "note": "auto-generated from original and Korean artist names",
+      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
         "data/artists.json",
         "data/미술사조/8d49878ffcd14be08ced07c5-1.html",
-        "data/미술사조/9edf7288e6dd0ee42f7fa1bf-1.html"
+        "data/미술사조/9edf7288e6dd0ee42f7fa1bf-1.html",
+        "Wikidata"
       ],
-      "status": "verified-pair"
+      "status": "verified-pair",
+      "englishFullName": "Vasily Vladimirovich Pukiryov",
+      "wikipediaTitle": "Vasily Pukirev",
+      "wikidataQid": "Q6394591"
     },
     {
       "id": "viktor-borisov-musatov",
@@ -7850,16 +8008,19 @@
         "ko": [
           "반 고흐",
           "고흐",
-          "빈센트 반 고흐"
+          "빈센트 반 고흐",
+          "빈센트 빌럼 반 고흐"
         ],
         "en": [
           "van Gogh",
           "Gogh",
-          "Vincent van Gogh"
+          "Vincent van Gogh",
+          "Vincent Willem van Gogh",
+          "Van Gogh"
         ]
       },
       "uhangul": "[Vㅣㄴ]센트 [Vㅏㄴ] 고[Xㅡ]",
-      "note": "auto-generated from original and Korean artist names",
+      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
         "data/artists.json",
@@ -7868,9 +8029,13 @@
         "data/미술사조/4e7a664301ed396184c3cb5d-1.html",
         "data/미술사조/81bf5950142af1141dfcf738-1.html",
         "data/미술사조/be9a35cdca8c52adb73b06c7-1.html",
-        "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html"
+        "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html",
+        "Wikidata"
       ],
-      "status": "verified-pair"
+      "status": "verified-pair",
+      "englishFullName": "Vincent Willem van Gogh",
+      "wikipediaTitle": "Vincent van Gogh",
+      "wikidataQid": "Q5582"
     },
     {
       "id": "vittore-carpaccio",

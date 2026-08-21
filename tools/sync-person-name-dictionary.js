@@ -11,6 +11,7 @@ const { createNameRecord } = require('./build-uhangul-artist-map');
 
 const root = path.resolve(__dirname, '..');
 const dictionaryFile = path.join(root, 'data', 'person-name-dictionary.json');
+const researchFile = path.join(root, 'data', 'person-name-research.json');
 const artistsFile = path.join(root, 'data', 'artists.json');
 const techniquesFile = path.join(root, 'data', 'techniques.json');
 const curatedPersonOverrides = require('./important-artist-overrides.json');
@@ -306,6 +307,33 @@ function readManualRecords() {
   } catch (_) { return []; }
 }
 
+function readResearchRecords() {
+  try {
+    const payload = JSON.parse(fs.readFileSync(researchFile, 'utf8'));
+    return Array.isArray(payload.records) ? payload.records : [];
+  } catch (_) { return []; }
+}
+
+function researchKey(record) {
+  return `${record.kind || 'person'}\u001f${normalize(record.original)}\u001f${normalize(record.korean)}`;
+}
+
+function applyResearch(records) {
+  const researched = new Map(readResearchRecords()
+    .filter(record => record && record.status === 'matched' && record.original && record.korean)
+    .map(record => [researchKey(record), record]));
+  for (const record of records) {
+    const research = researched.get(researchKey(record));
+    if (!research) continue;
+    record.aliases = mergeAliases(record.aliases, research.aliases);
+    if (research.englishFullName) record.englishFullName = research.englishFullName;
+    if (research.wikipediaTitle) record.wikipediaTitle = research.wikipediaTitle;
+    if (research.wikidataQid) record.wikidataQid = research.wikidataQid;
+    if (!record.sources.includes('Wikidata')) record.sources.push('Wikidata');
+    record.note = 'Name, Wikipedia title, and aliases verified from Wikidata.';
+  }
+}
+
 function syncPersonNameDictionary({artists, additionalFiles = []} = {}) {
   const entries = new Map();
   for (const record of readManualRecords()) {
@@ -327,7 +355,9 @@ function syncPersonNameDictionary({artists, additionalFiles = []} = {}) {
     if (file === dictionaryFile || !fs.existsSync(file)) continue;
     scanFile(file, entries);
   }
-  const records = [...entries.values()].sort((a, b) => a.kind.localeCompare(b.kind) || a.original.localeCompare(b.original, 'en'));
+  const records = [...entries.values()];
+  applyResearch(records);
+  records.sort((a, b) => a.kind.localeCompare(b.kind) || a.original.localeCompare(b.original, 'en'));
   const payload = {schema:2, generatedAt:new Date().toISOString(), description:'Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.', records};
   fs.mkdirSync(path.dirname(dictionaryFile), {recursive:true});
   fs.writeFileSync(dictionaryFile, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');

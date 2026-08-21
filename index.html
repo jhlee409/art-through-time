@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="extras.css" />
+    <link rel="stylesheet" href="rules-check.css" />
   <link rel="stylesheet" href="./uhangul/uhangul-runtime.css" data-uhangul-integration="v0.5.4">
 </head>
   <body class="auth-pending">
@@ -57,7 +58,9 @@
         <p class="eyebrow" data-i18n="newRecord">NEW RECORD</p><h2 data-i18n="addTitle">화가와 그림 일괄 추가</h2>
         <p class="dialog-description" data-i18n="addHelp">이름을 입력한 뒤 자동완성 목록에서 정확한 후보를 선택해 저장하세요.</p>
         <label><span data-i18n="entryType">추가할 항목</span><select id="entry-type"><option value="artist" data-i18n="artist">화가</option><option value="url" data-i18n="painting">그림 웹주소</option></select></label>
-        <label class="entry-name-field"><span id="entry-name-label" data-i18n="name">이름</span><input id="entry-name" required autocomplete="off" /><div id="suggestions" class="suggestions hidden" role="listbox"></div></label><p id="form-message" class="form-message hidden" aria-live="polite"></p>
+        <label class="entry-name-field"><span id="entry-name-label" data-i18n="name">이름</span><input id="entry-name" required autocomplete="off" /><div id="suggestions" class="suggestions hidden" role="listbox"></div></label>
+        <label class="artist-full-name-field hidden"><span data-i18n="fullName">Full Name (목록·연표·HTML 표기)</span><input id="entry-full-name" autocomplete="off" placeholder="예: 디 본도네, 조토" /></label><p id="form-message" class="form-message hidden" aria-live="polite"></p>
+        <label class="artist-aliases-field hidden"><span data-i18n="artistAliases">별명·줄임말 (쉼표로 구분)</span><input id="entry-artist-aliases" autocomplete="off" placeholder="예: 조토, Giotto di Bondone" /></label>
         <label class="artist-field"><span data-i18n="birthYear">출생 연도 (선택)</span><input id="entry-birth" type="number" min="1" max="2100" /></label>
         <label class="artwork-field hidden"><span data-i18n="artistName">화가 이름</span><input id="entry-artist" list="artist-names" autocomplete="off" /><datalist id="artist-names"></datalist></label>
         <label class="artwork-field hidden"><span data-i18n="madeYear">제작 연도</span><input id="entry-year" type="number" min="1" max="2100" /></label>
@@ -91,6 +94,7 @@
       <div id="slideshow-caption" class="slideshow-caption"></div>
     </section>
     <script src="app.js"></script>
+    <script src="rules-check.js"></script>
   <script defer src="./uhangul/uhangul-runtime.js" data-uhangul-integration="v0.5.4"></script>
 </body>
 </html>
