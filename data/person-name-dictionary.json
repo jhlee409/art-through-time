@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-21T10:24:33.845Z",
+  "generatedAt": "2026-08-21T11:06:19.242Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -4236,11 +4236,13 @@
       "aliases": {
         "ko": [
           "반 에이크",
-          "에이크"
+          "에이크",
+          "얀 반 에이크"
         ],
         "en": [
           "van Eyck",
-          "Eyck"
+          "Eyck",
+          "Jan van Eyck"
         ]
       },
       "uhangul": "얀 [Vㅏㄴ] 에이크",
@@ -4248,6 +4250,7 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
+        "data/artists.json",
         "data/techniques.json"
       ],
       "status": "verified-pair"
@@ -5665,15 +5668,21 @@
       "korean": "마사초",
       "displayKorean": "마사초",
       "aliases": {
-        "ko": [],
-        "en": []
+        "ko": [
+          "마사초"
+        ],
+        "en": [
+          "Masaccio"
+        ]
       },
       "uhangul": "마사초",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/techniques.json"
+        "data/artists.json",
+        "data/techniques.json",
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },

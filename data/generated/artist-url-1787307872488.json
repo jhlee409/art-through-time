@@ -1,0 +1,1067 @@
+{
+  "schema": 20,
+  "artistId": "artist-url-1787307872488",
+  "qid": "Q5811",
+  "artist": {
+    "name": {
+      "ko": "마사초",
+      "en": "Masaccio"
+    },
+    "birth": 1401,
+    "death": 1428,
+    "nationality": {
+      "ko": "이탈리아",
+      "en": "Italy"
+    },
+    "movement": {
+      "ko": "이탈리아 르네상스",
+      "en": "Italian Renaissance"
+    }
+  },
+  "fetchedAt": "2026-08-21T10:38:26.966Z",
+  "works": [
+    {
+      "id": "wikidata-Q3889198",
+      "year": null,
+      "popularity": 4,
+      "title": {
+        "ko": "Santa Maria Maggiore Altarpiece",
+        "en": "Santa Maria Maggiore Altarpiece"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Colonna%20Masolino%20Philadelphia%2001.JPG",
+      "description": {
+        "ko": "dismembered altarpiece by Masolino and Masaccio, formerly in the Basilica di Santa Maria Maggiore, Rome",
+        "en": "dismembered altarpiece by Masolino and Masaccio, formerly in the Basilica di Santa Maria Maggiore, Rome"
+      },
+      "source": "http://www.wikidata.org/entity/Q3889198",
+      "verified": true,
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
+    },
+    {
+      "id": "wikidata-Q111244447",
+      "year": null,
+      "popularity": 0,
+      "title": {
+        "ko": "St. Catherine's life",
+        "en": "St. Catherine's life"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Masaccio",
+        "en": "painting by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q111244447",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3948886",
+      "year": null,
+      "popularity": 1,
+      "title": {
+        "ko": "Saint Yves",
+        "en": "Saint Yves"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Tommaso Masaccio",
+        "en": "painting by Tommaso Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q3948886",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q977200",
+      "year": 1420,
+      "popularity": 19,
+      "title": {
+        "ko": "Holy Trinity",
+        "en": "Holy Trinity"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "초기 르네상스",
+        "en": "초기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%20-%20Trinity%20-%20Santa%20Maria%20Novella.jpg",
+      "description": {
+        "ko": "fresco by Masaccio",
+        "en": "fresco by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q977200",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q1759631",
+      "year": 1420,
+      "popularity": 19,
+      "title": {
+        "ko": "Coin in the fish's mouth",
+        "en": "Coin in the fish's mouth"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Tribute%20Money%20by%20Masaccio.jpg",
+      "description": {
+        "ko": "fresco by Masaccio",
+        "en": "fresco by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q1759631",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3999132",
+      "year": 1422,
+      "popularity": 6,
+      "title": {
+        "ko": "San Giovenale Triptych",
+        "en": "San Giovenale Triptych"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20trittico%20di%20san%20giovenale%2C%201422%2C%2001.JPG",
+      "description": {
+        "ko": "painting by Masaccio",
+        "en": "painting by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q3999132",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3999092",
+      "year": 1423,
+      "popularity": 4,
+      "title": {
+        "ko": "Carnesecchi Triptych",
+        "en": "Carnesecchi Triptych"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Masolino%2C%20trittico%20carnesecchi%2C%20opera%20trafugata%20nel%201923.jpg",
+      "description": {
+        "ko": "painting by Masaccio",
+        "en": "painting by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q3999092",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q2736379",
+      "year": 1424,
+      "popularity": 16,
+      "title": {
+        "ko": "Expulsion from the Garden of Eden",
+        "en": "Expulsion from the Garden of Eden"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "초기 르네상스",
+        "en": "초기 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/03%202015%20Basilica%20di%20Santa%20Maria%20del%20Carmine%20%28Firenze%29-Cappella%20Brancacci-Adamo%20Eva%20Cacciata%20Paradiso%20terrestre-Masaccio-%20Photo%20Paolo%20Villa%20FOTO9202bis.JPG",
+      "description": {
+        "ko": "fresco by Masaccio, Brancacci Chapel, Santa Maria del Carmine, Florence",
+        "en": "fresco by Masaccio, Brancacci Chapel, Santa Maria del Carmine, Florence"
+      },
+      "source": "http://www.wikidata.org/entity/Q2736379",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q32381",
+      "year": 1424,
+      "popularity": 9,
+      "title": {
+        "ko": "Virgin and Child with Saint Anne",
+        "en": "Virgin and Child with Saint Anne"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Masolino%2C%20Masaccio%2C%20Virgin%20and%20Child%20with%20Saint%20Anne%2C%20c1424-25%2C%20Uffizi.jpg",
+      "description": {
+        "ko": "painting by Masaccio",
+        "en": "painting by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q32381",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3842651",
+      "year": 1424,
+      "popularity": 1,
+      "title": {
+        "ko": "Madonna dell'Umiltà",
+        "en": "Madonna dell'Umiltà"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20madonna%20dell%27umilt%C3%A0%2C%20washington.jpg",
+      "description": {
+        "ko": "painting by Masaccio",
+        "en": "painting by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q3842651",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q116898418",
+      "year": 1424,
+      "popularity": 0,
+      "title": {
+        "ko": "The agony of Christ in the garden of Gethsemane, St. Jerome as penitent",
+        "en": "The agony of Christ in the garden of Gethsemane, St. Jerome as penitent"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Masaccio (1401-1428)",
+        "en": "painting by Masaccio (1401-1428)"
+      },
+      "source": "http://www.wikidata.org/entity/Q116898418",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3947757",
+      "year": 1424,
+      "popularity": 1,
+      "title": {
+        "ko": "Saint Paul",
+        "en": "Saint Paul"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "",
+      "description": {
+        "ko": "lost fresco by Masaccio",
+        "en": "lost fresco by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q3947757",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q97378130",
+      "year": 1424,
+      "popularity": 0,
+      "title": {
+        "ko": "Frescoes, Brancacci Chapel",
+        "en": "Frescoes, Brancacci Chapel"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "초기 르네상스",
+        "en": "초기 르네상스"
+      },
+      "image": "",
+      "description": {
+        "ko": "visual artwork",
+        "en": "visual artwork"
+      },
+      "source": "http://www.wikidata.org/entity/Q97378130",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3220280",
+      "year": 1425,
+      "popularity": 6,
+      "title": {
+        "ko": "Baptism of the Neophytes",
+        "en": "Baptism of the Neophytes"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Battesimo%20dei%20neofiti%202.jpg",
+      "description": {
+        "ko": "fresco by Masaccio",
+        "en": "fresco by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q3220280",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3947827",
+      "year": 1425,
+      "popularity": 5,
+      "title": {
+        "ko": "St. Peter Healing the Sick with His Shadow",
+        "en": "St. Peter Healing the Sick with His Shadow"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/St.%20Peter%20Healing%20the%20Sick%20with%20His%20Shadow%2000.jpg",
+      "description": {
+        "ko": "painting by Tommaso Masaccio",
+        "en": "painting by Tommaso Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q3947827",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3711791",
+      "year": 1425,
+      "popularity": 4,
+      "title": {
+        "ko": "The Distribution of Alms and Death of Ananias",
+        "en": "The Distribution of Alms and Death of Ananias"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Distribution%20of%20Alms%20and%20Death%20of%20Ananias.jpg",
+      "description": {
+        "ko": "fresco by Masaccio",
+        "en": "fresco by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q3711791",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3899272",
+      "year": 1425,
+      "popularity": 1,
+      "title": {
+        "ko": "Repentance of Saint Peter",
+        "en": "Repentance of Saint Peter"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20sinopia%20del%20pentimento%20di%20san%20pietro%2C%20cappella%20brancacci.jpg",
+      "description": {
+        "ko": "painting by Masaccio",
+        "en": "painting by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q3899272",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3944858",
+      "year": 1425,
+      "popularity": 1,
+      "title": {
+        "ko": "Q3944858",
+        "en": "Q3944858"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "",
+      "description": {
+        "ko": "fresco by Masaccio",
+        "en": "fresco by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q3944858",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q66377761",
+      "year": 1426,
+      "popularity": 0,
+      "title": {
+        "ko": "A Young Man in a scarlet turban",
+        "en": "A Young Man in a scarlet turban"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%20-%20A%20Young%20Man%20in%20a%20Scarlet%20Turban%20-%20P15e26%20-%20Isabella%20Stewart%20Gardner%20Museum.jpg",
+      "description": {
+        "ko": "painting by Masaccio in the Isabelle Stewart Gardener Museum",
+        "en": "painting by Masaccio in the Isabelle Stewart Gardener Museum"
+      },
+      "source": "http://www.wikidata.org/entity/Q66377761",
+      "verified": true,
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
+    },
+    {
+      "id": "wikidata-Q1054459",
+      "year": 1426,
+      "popularity": 9,
+      "title": {
+        "ko": "Crucifixion",
+        "en": "Crucifixion"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%20-%20Crocifissione%20%28Cuspide%20di%20Polittico%20di%20Pisa%29.jpg",
+      "description": {
+        "ko": "painting by Masaccio",
+        "en": "painting by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q1054459",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3395785",
+      "year": 1426,
+      "popularity": 9,
+      "title": {
+        "ko": "Pisa Polyptych",
+        "en": "Pisa Polyptych"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Poliptico%20de%20Pisa%20Masaccio%20reconstruccion.jpg",
+      "description": {
+        "ko": "dismembered altarpiece by Masaccio, originally in the church of Santa Maria del Carmine, Pisa",
+        "en": "dismembered altarpiece by Masaccio, originally in the church of Santa Maria del Carmine, Pisa"
+      },
+      "source": "http://www.wikidata.org/entity/Q3395785",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q369582",
+      "year": 1426,
+      "popularity": 5,
+      "title": {
+        "ko": "Madonna and Child",
+        "en": "Madonna and Child"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio.%20Madonna%20and%20Child.%201426.%20National%20Gallery%2C%20London.jpg",
+      "description": {
+        "ko": "painting by Masaccio",
+        "en": "painting by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q369582",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q2884282",
+      "year": 1426,
+      "popularity": 5,
+      "title": {
+        "ko": "Saint Paul",
+        "en": "Saint Paul"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20san%20paolo%2C%20pisa.jpg",
+      "description": {
+        "ko": "painting by Masaccio",
+        "en": "painting by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q2884282",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3850304",
+      "year": 1426,
+      "popularity": 3,
+      "title": {
+        "ko": "The Decapitation of Saint John the Baptist",
+        "en": "The Decapitation of Saint John the Baptist"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%20martirio%20di%20san%20giovanni%20Battista.jpg",
+      "description": {
+        "ko": "painting by Masaccio",
+        "en": "painting by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q3850304",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3949530",
+      "year": 1426,
+      "popularity": 3,
+      "title": {
+        "ko": "A Bearded Carmelite Saint",
+        "en": "A Bearded Carmelite Saint"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%20%281401%20-%201428%29%20-%20A%20Carmelite%20-%2058D-4%20-%20Gem%C3%A4ldegalerie.jpg",
+      "description": {
+        "ko": "painting by Masaccio",
+        "en": "painting by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q3949530",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3949531",
+      "year": 1426,
+      "popularity": 3,
+      "title": {
+        "ko": "A Beardless Carmelite Saint",
+        "en": "A Beardless Carmelite Saint"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fra%20Filippo%20Lippi%20%28ca.%201406%20-%201469%29%20-%20A%20Carmelite%20-%2058D-3%20-%20Gem%C3%A4ldegalerie.jpg",
+      "description": {
+        "ko": "painting by Masaccio",
+        "en": "painting by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q3949531",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3605535",
+      "year": 1426,
+      "popularity": 2,
+      "title": {
+        "ko": "The Adoration of the Magi",
+        "en": "The Adoration of the Magi"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio.%20Adoration%20of%20the%20Magi.%201426.%20Berlin-Dahlem.jpg",
+      "description": {
+        "ko": "painting by Masaccio",
+        "en": "painting by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q3605535",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3698230",
+      "year": 1426,
+      "popularity": 2,
+      "title": {
+        "ko": "The Crucifixion of Saint Peter",
+        "en": "The Crucifixion of Saint Peter"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20Crucifixion%20of%20St%20Peter%2C%20predella%20of%20the%20altar%20for%20St%20Maria%20del%20Carmine%2C%20Pisa%2C%20c1426%2C%20tempera%2C%20Berlin%2C%20Gem%C3%A4ldegalerie.jpg",
+      "description": {
+        "ko": "painting by Masaccio",
+        "en": "painting by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q3698230",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3842642",
+      "year": 1426,
+      "popularity": 2,
+      "title": {
+        "ko": "Madonna Casini",
+        "en": "Madonna Casini"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20Madonna-del-Solletico.jpg",
+      "description": {
+        "ko": "painting by Masaccio",
+        "en": "painting by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q3842642",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3947289",
+      "year": 1426,
+      "popularity": 2,
+      "title": {
+        "ko": "Saint Jerome",
+        "en": "Saint Jerome"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%20%281401%20-%201428%29%20-%20St.%20Jerome%20-%2058D-1%20-%20Gem%C3%A4ldegalerie.jpg",
+      "description": {
+        "ko": "painting by Masaccio",
+        "en": "painting by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q3947289",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3948660",
+      "year": 1426,
+      "popularity": 2,
+      "title": {
+        "ko": "Saint Augustine",
+        "en": "Saint Augustine"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%20%281401%20-%201428%29%20-%20St.%20August%20-%2058D-2%20-%20Gem%C3%A4ldegalerie.jpg",
+      "description": {
+        "ko": "painting by Masaccio",
+        "en": "painting by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q3948660",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3948700",
+      "year": 1426,
+      "popularity": 2,
+      "title": {
+        "ko": "Saint Andrew",
+        "en": "Saint Andrew"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20polittico%20di%20pisa%2C%20sant%27andrea%2C%20malibu%2C%2051x31%20cm.jpg",
+      "description": {
+        "ko": "painting by Masaccio",
+        "en": "painting by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q3948700",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3974493",
+      "year": 1426,
+      "popularity": 2,
+      "title": {
+        "ko": "Altar predella; Right panel: The parricide of St. Julian - The miracle of St. Nicholas of Bari",
+        "en": "Altar predella; Right panel: The parricide of St. Julian - The miracle of St. Nicholas of Bari"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio.%20Stories%20of%20St%20Julian%20and%20St.%20Nicholas.%201426.%20Berlin-Dahlem.jpg",
+      "description": {
+        "ko": "painting by Masaccio, Gemäldegalerie Berlin",
+        "en": "painting by Masaccio, Gemäldegalerie Berlin"
+      },
+      "source": "http://www.wikidata.org/entity/Q3974493",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q99227759",
+      "year": 1426,
+      "popularity": 1,
+      "title": {
+        "ko": "The Crucifixion of Saint Peter and the Decapitation of Saint John the Baptist",
+        "en": "The Crucifixion of Saint Peter and the Decapitation of Saint John the Baptist"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio.%20Crucifixion%20of%20St.%20Peter%20and%20Beheading%20of%20St.%20John%20the%20Baptist..jpg",
+      "description": {
+        "ko": "two part painting in a single frame by Masaccio",
+        "en": "two part painting in a single frame by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q99227759",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q107436009",
+      "year": 1426,
+      "popularity": 0,
+      "title": {
+        "ko": "Q107436009",
+        "en": "Q107436009"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Masaccio",
+        "en": "painting by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q107436009",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3933568",
+      "year": 1427,
+      "popularity": 4,
+      "title": {
+        "ko": "Raising of the Son of Teophilus and St. Peter Enthroned",
+        "en": "Raising of the Son of Teophilus and St. Peter Enthroned"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Cappella%20brancacci%2C%20Resurrezione%20del%20figlio%20di%20Teofilo%20e%20San%20Pietro%20in%20cattedra%20%28restaurato%29%2C%20Masaccio.jpg",
+      "description": {
+        "ko": "painting by Filippino Lippi and Masaccio, Santa Maria del Carmine, Brancacci Chapel",
+        "en": "painting by Filippino Lippi and Masaccio, Santa Maria del Carmine, Brancacci Chapel"
+      },
+      "source": "http://www.wikidata.org/entity/Q3933568",
+      "verified": true,
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
+    },
+    {
+      "id": "wikidata-Q3949351",
+      "year": 1428,
+      "popularity": 2,
+      "title": {
+        "ko": "Saints Jerome and John the Baptist",
+        "en": "Saints Jerome and John the Baptist"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20pala%20colonna%2C%20santi%20girolamo%20e%20giovanni%20battista.jpg",
+      "description": {
+        "ko": "painting by Masaccio",
+        "en": "painting by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q3949351",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q118630274",
+      "year": 1430,
+      "popularity": 0,
+      "title": {
+        "ko": "The Martyrdom of St Dionysius",
+        "en": "The Martyrdom of St Dionysius"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Masaccio (1401–1428) (follower of), Royal Cornwall Museum",
+        "en": "painting by Masaccio (1401–1428) (follower of), Royal Cornwall Museum"
+      },
+      "source": "http://www.wikidata.org/entity/Q118630274",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3705918",
+      "year": 1500,
+      "popularity": 5,
+      "title": {
+        "ko": "Desco da parto",
+        "en": "Desco da parto"
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "이탈리아"
+      },
+      "movement": {
+        "ko": "이탈리아 르네상스",
+        "en": "이탈리아 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Desco%20da%20parto%20%28Geburtsteller%29%20-%20Gem%C3%A4ldegalerie%20Berlin%20-%202679259.jpg",
+      "description": {
+        "ko": "painting by Masaccio",
+        "en": "painting by Masaccio"
+      },
+      "source": "http://www.wikidata.org/entity/Q3705918",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q123528970",
+      "year": 1788,
+      "popularity": 0,
+      "title": {
+        "ko": "Q123528970",
+        "en": "Q123528970"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "http://www.wikidata.org/entity/Q123528970",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    }
+  ]
+}

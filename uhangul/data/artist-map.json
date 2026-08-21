@@ -384,13 +384,31 @@
   {
     "id": "artist-url-1787307872488",
     "original": "Masaccio",
-    "korean": "Masaccio",
-    "displayKorean": "Masaccio",
+    "korean": "마사초",
+    "displayKorean": "마사초",
     "aliases": {
       "ko": [],
       "en": []
     },
-    "uhangul": "Masaccio",
+    "uhangul": "마사초",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q102272",
+    "original": "Jan van Eyck",
+    "korean": "얀 반 에이크",
+    "displayKorean": "반 에이크, 얀",
+    "aliases": {
+      "ko": [
+        "반 에이크",
+        "에이크"
+      ],
+      "en": [
+        "van Eyck",
+        "Eyck"
+      ]
+    },
+    "uhangul": "[Vㅏㄴ] 에이크, 얀",
     "note": "auto-generated from original and Korean artist names"
   }
 ]

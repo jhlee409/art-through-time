@@ -1,0 +1,1119 @@
+{
+  "schema": 20,
+  "artistId": "artist-Q102272",
+  "qid": "Q102272",
+  "artist": {
+    "name": {
+      "ko": "얀 반 에이크",
+      "en": "Jan van Eyck"
+    },
+    "birth": 1390,
+    "death": 1441,
+    "nationality": {
+      "ko": "Southern Netherlands",
+      "en": "Southern Netherlands"
+    },
+    "movement": {
+      "ko": "플랑드르파",
+      "en": "Early Netherlandish painting"
+    }
+  },
+  "fetchedAt": "2026-08-21T11:02:06.057Z",
+  "works": [
+    {
+      "id": "wikidata-Q2308135",
+      "year": 1420,
+      "popularity": 6,
+      "title": {
+        "ko": "Turin-Milan Hours",
+        "en": "Turin-Milan Hours"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/14th-century%20painters%20-%20Les%20Tr%C3%A8s%20Belles%20Heures%20de%20Notre%20Dame%20de%20Jean%20de%20Berry%20-%20WGA16014.jpg",
+      "description": {
+        "ko": "14-15th-centuries illuminated book",
+        "en": "14-15th-centuries illuminated book"
+      },
+      "source": "http://www.wikidata.org/entity/Q2308135",
+      "verified": true,
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
+    },
+    {
+      "id": "wikidata-Q131705570",
+      "year": 1420,
+      "popularity": 0,
+      "title": {
+        "ko": "Q131705570",
+        "en": "Q131705570"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/14th-century%20painters%20-%20Page%20from%20the%20Tr%C3%A8s%20Belles%20Heures%20de%20Notre%20Dame%20de%20Jean%20de%20Berry%20-%20WGA16016.jpg",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "http://www.wikidata.org/entity/Q131705570",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q11789743",
+      "year": 1423,
+      "popularity": 1,
+      "title": {
+        "ko": "Birth of John the Baptist",
+        "en": "Birth of John the Baptist"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/14th-century%20painters%20-%20Les%20Tr%C3%A8s%20Belles%20Heures%20de%20Notre%20Dame%20de%20Jean%20de%20Berry%20-%20WGA16014.jpg",
+      "description": {
+        "ko": "painting by Jan van Eyck",
+        "en": "painting by Jan van Eyck"
+      },
+      "source": "http://www.wikidata.org/entity/Q11789743",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q7232279",
+      "year": 1428,
+      "popularity": 4,
+      "title": {
+        "ko": "Portrait of Isabella of Portugal",
+        "en": "Portrait of Isabella of Portugal"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20Isabella%20of%20Portugal%20van%20Eyck.jpg",
+      "description": {
+        "ko": "painting by Jan van Eyck",
+        "en": "painting by Jan van Eyck"
+      },
+      "source": "http://www.wikidata.org/entity/Q7232279",
+      "verified": true,
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
+    },
+    {
+      "id": "wikidata-Q1747569",
+      "year": 1430,
+      "popularity": 22,
+      "title": {
+        "ko": "The Madonna in the Church",
+        "en": "The Madonna in the Church"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Madonna%20in%20the%20Church%20-%20WGA7590.jpg",
+      "description": {
+        "ko": "oil painting by Jan van Eyck, Gemäldegalerie Berlin",
+        "en": "oil painting by Jan van Eyck, Gemäldegalerie Berlin"
+      },
+      "source": "http://www.wikidata.org/entity/Q1747569",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3973522",
+      "year": 1430,
+      "popularity": 12,
+      "title": {
+        "ko": "Saint Francis Receiving the Stigmata",
+        "en": "Saint Francis Receiving the Stigmata"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Attributed%20to%20Jan%20van%20Eyck%2C%20Netherlandish%20%28active%20Bruges%29%2C%20c.%201395%20-%201441%20-%20Saint%20Francis%20of%20Assisi%20Receiving%20the%20Stigmata%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "two paintings attributed to Jan van Eyck",
+        "en": "two paintings attributed to Jan van Eyck"
+      },
+      "source": "http://www.wikidata.org/entity/Q3973522",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q9362336",
+      "year": 1430,
+      "popularity": 5,
+      "title": {
+        "ko": "The three Marys at the Tomb",
+        "en": "The three Marys at the Tomb"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hubert%20van%20Eyck%20or%20Jan%20van%20Eyck%20or%20both%20-%20The%20Three%20Marys%20at%20the%20Tomb%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting attributed to Jan van Eyck, Museum Boijmans Van Beuningen",
+        "en": "painting attributed to Jan van Eyck, Museum Boijmans Van Beuningen"
+      },
+      "source": "http://www.wikidata.org/entity/Q9362336",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q122374966",
+      "year": 1430,
+      "popularity": 1,
+      "title": {
+        "ko": "Crucifixion",
+        "en": "Crucifixion"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Crucifixion.jpg",
+      "description": {
+        "ko": "painting by Jan Van Eyck, Metropolitan Museum of Art",
+        "en": "painting by Jan Van Eyck, Metropolitan Museum of Art"
+      },
+      "source": "http://www.wikidata.org/entity/Q122374966",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q107438391",
+      "year": 1430,
+      "popularity": 0,
+      "title": {
+        "ko": "Portrait of a man",
+        "en": "Portrait of a man"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Bildnis%20eines%20Mannes%2C%201420%20-%201440%2C%20523C.jpg",
+      "description": {
+        "ko": "painting by Jan van Eyck",
+        "en": "painting by Jan van Eyck"
+      },
+      "source": "http://www.wikidata.org/entity/Q107438391",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q22329827",
+      "year": 1431,
+      "popularity": 4,
+      "title": {
+        "ko": "Study for Cardinal Niccolò Albergati",
+        "en": "Study for Cardinal Niccolò Albergati"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Portrait%20of%20Cardinal%20Niccol%C3%B2%20Albergati%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "drawing by Jan van Eyck",
+        "en": "drawing by Jan van Eyck"
+      },
+      "source": "http://www.wikidata.org/entity/Q22329827",
+      "verified": true,
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
+    },
+    {
+      "id": "wikidata-Q67123638",
+      "year": 1432,
+      "popularity": 2,
+      "title": {
+        "ko": "Adoration of the Lamb from the Ghent Altarpiece",
+        "en": "Adoration of the Lamb from the Ghent Altarpiece"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hubert%20van%20Eyck%20004.jpg",
+      "description": {
+        "ko": "Altarpiece by Hubert and Jan van Eyck",
+        "en": "Altarpiece by Hubert and Jan van Eyck"
+      },
+      "source": "http://www.wikidata.org/entity/Q67123638",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q112181467",
+      "year": 1432,
+      "popularity": 0,
+      "title": {
+        "ko": "Prophet Zechariah",
+        "en": "Prophet Zechariah"
+      },
+      "country": {
+        "ko": "벨기에",
+        "en": "벨기에"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hubert%20van%20Eyck%20008.jpg",
+      "description": {
+        "ko": "Exterior view of the Ghent altar by Hubert and Jan van Eyck, left exterior wing, upper left lunette",
+        "en": "Exterior view of the Ghent altar by Hubert and Jan van Eyck, left exterior wing, upper left lunette"
+      },
+      "source": "http://www.wikidata.org/entity/Q112181467",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q734834",
+      "year": 1432,
+      "popularity": 39,
+      "title": {
+        "ko": "헨트 제단화",
+        "en": "헨트 제단화"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ghent%20Altarpiece%20by%20Jan%20van%20Eyck%20ALL.jpg",
+      "description": {
+        "ko": "Polyptych by Jan van Eyck and Hubert van Eyck",
+        "en": "Polyptych by Jan van Eyck and Hubert van Eyck"
+      },
+      "source": "http://www.wikidata.org/entity/Q734834",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q1150782",
+      "year": 1432,
+      "popularity": 16,
+      "title": {
+        "ko": "Léal Souvenir",
+        "en": "Léal Souvenir"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Eyck%2C%20Jan%20van%20-%20Portrait%20of%20a%20Young%20Man%20%28Tymotheos%29%20-%20National%20Gallery%2C%20London.jpg",
+      "description": {
+        "ko": "painting by Jan van Eyck, National Gallery",
+        "en": "painting by Jan van Eyck, National Gallery"
+      },
+      "source": "http://www.wikidata.org/entity/Q1150782",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q2157202",
+      "year": 1432,
+      "popularity": 11,
+      "title": {
+        "ko": "The Just Judges",
+        "en": "The Just Judges"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ghent%20Altarpiece%20E%20-%20Just%20Judges%20%28original%20painting%29.jpg",
+      "description": {
+        "ko": "stolen panel of the Ghent Altarpiece by Jan and Hubert van Eyck",
+        "en": "stolen panel of the Ghent Altarpiece by Jan and Hubert van Eyck"
+      },
+      "source": "http://www.wikidata.org/entity/Q2157202",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3605033",
+      "year": 1432,
+      "popularity": 2,
+      "title": {
+        "ko": "Adam",
+        "en": "Adam"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hubert%20van%20Eyck%20015.jpg",
+      "description": {
+        "ko": "painting by Jan and Hubert van Eyck, part of Ghent Altarpiece",
+        "en": "painting by Jan and Hubert van Eyck, part of Ghent Altarpiece"
+      },
+      "source": "http://www.wikidata.org/entity/Q3605033",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q20050620",
+      "year": 1432,
+      "popularity": 1,
+      "title": {
+        "ko": "Eve",
+        "en": "Eve"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ghent%20Altarpiece%20-%20Eve.jpg",
+      "description": {
+        "ko": "painting by Jan and Hubert van Eyck, part of Ghent Altarpiece",
+        "en": "painting by Jan and Hubert van Eyck, part of Ghent Altarpiece"
+      },
+      "source": "http://www.wikidata.org/entity/Q20050620",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q27043840",
+      "year": 1432,
+      "popularity": 1,
+      "title": {
+        "ko": "The Ghent Altarpiece (wings closed)",
+        "en": "The Ghent Altarpiece (wings closed)"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ghent%20Altarpiece%20%28closed%2C%20after%20restoration%29.jpg",
+      "description": {
+        "ko": "paintings by Jan and Hubert van Eyck, St. Bavo Gent",
+        "en": "paintings by Jan and Hubert van Eyck, St. Bavo Gent"
+      },
+      "source": "http://www.wikidata.org/entity/Q27043840",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q28056879",
+      "year": 1432,
+      "popularity": 1,
+      "title": {
+        "ko": "Singing Angels",
+        "en": "Singing Angels"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hubert%20van%20Eyck%20017.jpg",
+      "description": {
+        "ko": "painting by Hubert and Jan van Eyck, upper left part of the Ghent Altarpiece, St. Bavo, Gent",
+        "en": "painting by Hubert and Jan van Eyck, upper left part of the Ghent Altarpiece, St. Bavo, Gent"
+      },
+      "source": "http://www.wikidata.org/entity/Q28056879",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q28057385",
+      "year": 1432,
+      "popularity": 1,
+      "title": {
+        "ko": "Music-making Angels",
+        "en": "Music-making Angels"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ghent%20Altarpiece%20-%20Music-making%20Angels%20%28right%29.jpg",
+      "description": {
+        "ko": "painting by Jan and Hubert van Eyck, part of Ghent Altarpiece",
+        "en": "painting by Jan and Hubert van Eyck, part of Ghent Altarpiece"
+      },
+      "source": "http://www.wikidata.org/entity/Q28057385",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q2392901",
+      "year": 1433,
+      "popularity": 17,
+      "title": {
+        "ko": "Portrait of a Man (Self      Portrait?)",
+        "en": "Portrait of a Man (Self      Portrait?)"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Portrait%20of%20a%20Man%20%28Self%20Portrait%3F%29%201433.jpg",
+      "description": {
+        "ko": "painting by Jan van Eyck",
+        "en": "painting by Jan van Eyck"
+      },
+      "source": "http://www.wikidata.org/entity/Q2392901",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q220859",
+      "year": 1434,
+      "popularity": 43,
+      "title": {
+        "ko": "아르놀피니 부부의 초상",
+        "en": "아르놀피니 부부의 초상"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Van%20Eyck%20-%20Arnolfini%20Portrait.jpg",
+      "description": {
+        "ko": "1434 painting by Jan van Eyck",
+        "en": "1434 painting by Jan van Eyck"
+      },
+      "source": "http://www.wikidata.org/entity/Q220859",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3399413",
+      "year": 1434,
+      "popularity": 9,
+      "title": {
+        "ko": "Portrait of Baudouin de Lannoy",
+        "en": "Portrait of Baudouin de Lannoy"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20%28um%201390-1400%20-%201441%29%20-%20Baudouin%20de%20Lannoy%20-%20525G%20-%20Gem%C3%A4ldegalerie.jpg",
+      "description": {
+        "ko": "painting by Jan van Eyck",
+        "en": "painting by Jan van Eyck"
+      },
+      "source": "http://www.wikidata.org/entity/Q3399413",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q2734881",
+      "year": 1435,
+      "popularity": 17,
+      "title": {
+        "ko": "Annunciation",
+        "en": "Annunciation"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Annunciation%20-%20Jan%20van%20Eyck%20-%201434%20-%20NG%20Wash%20DC.jpg",
+      "description": {
+        "ko": "painting by Jan van Eyck in the National Gallery of Art",
+        "en": "painting by Jan van Eyck in the National Gallery of Art"
+      },
+      "source": "http://www.wikidata.org/entity/Q2734881",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3553389",
+      "year": 1435,
+      "popularity": 14,
+      "title": {
+        "ko": "Portrait of a Man with a Blue Chaperon",
+        "en": "Portrait of a Man with a Blue Chaperon"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Man%20in%20a%20Blue%20Cap%20%28c.1430%29.jpg",
+      "description": {
+        "ko": "painting by Jan van Eyck",
+        "en": "painting by Jan van Eyck"
+      },
+      "source": "http://www.wikidata.org/entity/Q3553389",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q536203",
+      "year": 1435,
+      "popularity": 7,
+      "title": {
+        "ko": "Saint Jerome in His Study",
+        "en": "Saint Jerome in His Study"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Saint%20Jerome%20in%20His%20Study%20DIA.jpg",
+      "description": {
+        "ko": "painting by Jan van Eyck",
+        "en": "painting by Jan van Eyck"
+      },
+      "source": "http://www.wikidata.org/entity/Q536203",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q18683180",
+      "year": 1435,
+      "popularity": 5,
+      "title": {
+        "ko": "Portrait of a Man with Carnation",
+        "en": "Portrait of a Man with Carnation"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20%28successors%29%20-%20Man%20with%20pinks%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by a follower of Jan van Eyck",
+        "en": "painting by a follower of Jan van Eyck"
+      },
+      "source": "http://www.wikidata.org/entity/Q18683180",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q115624243",
+      "year": 1435,
+      "popularity": 0,
+      "title": {
+        "ko": "Portrait of an unknown praying man",
+        "en": "Portrait of an unknown praying man"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "",
+      "description": {
+        "ko": "painting attributed to Jan van Eyck",
+        "en": "painting attributed to Jan van Eyck"
+      },
+      "source": "http://www.wikidata.org/entity/Q115624243",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q2480921",
+      "year": 1436,
+      "popularity": 22,
+      "title": {
+        "ko": "Madonna with Canon Joris van der Paele",
+        "en": "Madonna with Canon Joris van der Paele"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Eyck%2C%20Jan%20van%20-%20Madonna%20with%20Canon%20van%20der%20Paele.jpeg",
+      "description": {
+        "ko": "painting by Jan van Eyck, Groeningemuseum",
+        "en": "painting by Jan van Eyck, Groeningemuseum"
+      },
+      "source": "http://www.wikidata.org/entity/Q2480921",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q19186089",
+      "year": 1436,
+      "popularity": 9,
+      "title": {
+        "ko": "Portrait of Jan de Leeuw",
+        "en": "Portrait of Jan de Leeuw"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Portrait%20of%20the%20Goldsmith%20Jan%20de%20Leeuw.jpg",
+      "description": {
+        "ko": "painting by Jan van Eyck (Kunsthistorisches Museum Vienna)",
+        "en": "painting by Jan van Eyck (Kunsthistorisches Museum Vienna)"
+      },
+      "source": "http://www.wikidata.org/entity/Q19186089",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q474409",
+      "year": 1437,
+      "popularity": 18,
+      "title": {
+        "ko": "Lucca Madonna",
+        "en": "Lucca Madonna"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lucca%20Madonna%20%28SM%20944%29.png",
+      "description": {
+        "ko": "painting by Jan van Eyck",
+        "en": "painting by Jan van Eyck"
+      },
+      "source": "http://www.wikidata.org/entity/Q474409",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q323079",
+      "year": 1437,
+      "popularity": 16,
+      "title": {
+        "ko": "Dresden Triptych",
+        "en": "Dresden Triptych"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gem%C3%A4ldegalerie%20Alte%20Meister%20%28Dresden%29%20Galeriewerk%20Braun%201836a.jpg",
+      "description": {
+        "ko": "painting by Jan van Eyck, Gemäldegalerie Alte Meister Dresden",
+        "en": "painting by Jan van Eyck, Gemäldegalerie Alte Meister Dresden"
+      },
+      "source": "http://www.wikidata.org/entity/Q323079",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q574004",
+      "year": 1437,
+      "popularity": 14,
+      "title": {
+        "ko": "예수 책형 및 최후의 심판",
+        "en": "예수 책형 및 최후의 심판"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Diptych%20-%20WGA07587.jpg",
+      "description": {
+        "ko": "diptych attributed to Jan van Eyck",
+        "en": "diptych attributed to Jan van Eyck"
+      },
+      "source": "http://www.wikidata.org/entity/Q574004",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3464466",
+      "year": 1437,
+      "popularity": 11,
+      "title": {
+        "ko": "Saint Barbara",
+        "en": "Saint Barbara"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Heilige%20Barbara%20van%20Nicomedi%C3%AB%2C%20Jan%20van%20Eyck%2C%201437%2C%20Koninklijk%20Museum%20voor%20Schone%20Kunsten%20Antwerpen%2C%20410.jpg",
+      "description": {
+        "ko": "drawing by Jan van Eyck",
+        "en": "drawing by Jan van Eyck"
+      },
+      "source": "http://www.wikidata.org/entity/Q3464466",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3399498",
+      "year": 1438,
+      "popularity": 13,
+      "title": {
+        "ko": "Portrait of Cardinal Niccolò Albergati",
+        "en": "Portrait of Cardinal Niccolò Albergati"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Kardinal%20Niccol%C3%B2%20Albergati%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Jan van Eyck",
+        "en": "painting by Jan van Eyck"
+      },
+      "source": "http://www.wikidata.org/entity/Q3399498",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3937546",
+      "year": 1438,
+      "popularity": 9,
+      "title": {
+        "ko": "Portrait of Giovanni di Nicolao Arnolfini",
+        "en": "Portrait of Giovanni di Nicolao Arnolfini"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20%28um%201390-1400%20-%201441%29%20-%20Portrait%20of%20a%20man%20%28from%20the%20Arnolfini%20family%5E%29%20Around%201440%20-%20523A%20-%20Gem%C3%A4ldegalerie.jpg",
+      "description": {
+        "ko": "painting by Jan van Eyck",
+        "en": "painting by Jan van Eyck"
+      },
+      "source": "http://www.wikidata.org/entity/Q3937546",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q19898150",
+      "year": 1439,
+      "popularity": 4,
+      "title": {
+        "ko": "Vera Icon",
+        "en": "Vera Icon"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20Vera%20Icon.jpg",
+      "description": {
+        "ko": "lost painting by Jan van Eyck",
+        "en": "lost painting by Jan van Eyck"
+      },
+      "source": "http://www.wikidata.org/entity/Q19898150",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q111821998",
+      "year": 1439,
+      "popularity": 0,
+      "title": {
+        "ko": "Mary with Holy Spirit",
+        "en": "Mary with Holy Spirit"
+      },
+      "country": {
+        "ko": "스페인",
+        "en": "스페인"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20054.jpg",
+      "description": {
+        "ko": "1439 painting by Jan van Eyck",
+        "en": "1439 painting by Jan van Eyck"
+      },
+      "source": "http://www.wikidata.org/entity/Q111821998",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3399452",
+      "year": 1439,
+      "popularity": 11,
+      "title": {
+        "ko": "Portrait of Margareta van Eyck",
+        "en": "Portrait of Margareta van Eyck"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Portrait%20of%20Margaret%20van%20Eyck%20%281439%29.jpg",
+      "description": {
+        "ko": "painting by Jan van Eyck, Groeningemuseum",
+        "en": "painting by Jan van Eyck, Groeningemuseum"
+      },
+      "source": "http://www.wikidata.org/entity/Q3399452",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q838074",
+      "year": 1439,
+      "popularity": 10,
+      "title": {
+        "ko": "Madonna at the Fountain",
+        "en": "Madonna at the Fountain"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Madonna%20bij%20de%20fontein%2C%20Jan%20van%20Eyck%2C%201439%2C%20Koninklijk%20Museum%20voor%20Schone%20Kunsten%20Antwerpen%2C%20411.jpg",
+      "description": {
+        "ko": "painting by Jan van Eyck",
+        "en": "painting by Jan van Eyck"
+      },
+      "source": "http://www.wikidata.org/entity/Q838074",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q2516599",
+      "year": 1440,
+      "popularity": 11,
+      "title": {
+        "ko": "Annunciation",
+        "en": "Annunciation"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%2C%20Around%201390-1441%20-%20The%20Annuciation%20Diptych%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "diptych by Jan van Eyck in the Thyssen-Bornemisza Museum",
+        "en": "diptych by Jan van Eyck in the Thyssen-Bornemisza Museum"
+      },
+      "source": "http://www.wikidata.org/entity/Q2516599",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q137599158",
+      "year": 1441,
+      "popularity": 2,
+      "title": {
+        "ko": "Q137599158",
+        "en": "Q137599158"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mus%C3%A9e%20Ingres-Bourdelle%20-%20Portrait%20d%27un%20moine%20-%20Jan%20Van%20Eyck.jpg",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "http://www.wikidata.org/entity/Q137599158",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    }
+  ]
+}

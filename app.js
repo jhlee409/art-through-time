@@ -74,6 +74,7 @@ if (localStorage.getItem(movementZoomCalibrationKey) !== 'v2') {
 }
 let thumbnailObserver;
 let thumbnailQueue = Promise.resolve();
+let priorityThumbnailQueue = Promise.resolve();
 const thumbnailRequests = new Set();
 const profileRequests = new Set();
 const artworkInfoRequests = new Set();
@@ -1240,11 +1241,13 @@ function renderTimeline() {
   const defaultFeaturedWorks = artist.qid === 'Q762'
     ? works.filter(work => leonardoDefaultFeaturedWorkIds.has(String(work.id || '')))
     : [...works].filter(work => work.representative).sort((a, b) => (b.popularity || 0) - (a.popularity || 0)).slice(0, 5);
+  const defaultFeaturedSelection = defaultFeaturedWorks.length ? defaultFeaturedWorks : works.slice(0, 5);
+  const defaultFeaturedWorkIds = new Set(defaultFeaturedSelection.map(work => String(work.id || '')));
   // Once the administrator has selected works, an empty list deliberately
   // means no highlights.  Until then, use the curator's initial five works.
   const leonardoFeaturedWorkIds = new Set(Array.isArray(artist.featuredWorkIds)
     ? artist.featuredWorkIds.map(String)
-    : (defaultFeaturedWorks.length ? defaultFeaturedWorks : works.slice(0, 5)).map(work => String(work.id || '')));
+    : defaultFeaturedWorkIds);
   const leonardoFeaturedWorks = isLeonardoTimeline
     ? works.filter(work => leonardoFeaturedWorkIds.has(String(work.id || '')))
     : [];
@@ -1363,7 +1366,7 @@ function renderTimeline() {
       if (!workId) return;
       const hadSavedSelection = Object.prototype.hasOwnProperty.call(artist, 'featuredWorkIds');
       const previousSelection = artist.featuredWorkIds;
-      const selected = new Set(Array.isArray(previousSelection) ? previousSelection.map(String) : leonardoDefaultFeaturedWorkIds);
+      const selected = new Set(Array.isArray(previousSelection) ? previousSelection.map(String) : defaultFeaturedWorkIds);
       if (input.checked) selected.add(workId);
       else selected.delete(workId);
       artist.featuredWorkIds = [...selected];
@@ -2163,10 +2166,7 @@ function openMovementWikipedia(name) {
   window.open(url, 'artAtlasMovementWikipedia', `popup=yes,width=${popupWidth},height=${popupHeight},left=${popupLeft},top=50,noopener`);
 }
 function movementExplanationWindow(url='about:blank') {
-  const popupWidth = Math.min(1000, window.screen.availWidth - 60);
-  const popupHeight = Math.min(900, window.screen.availHeight - 100);
-  const popupLeft = Math.max(30, window.screen.availWidth - popupWidth - 30);
-  return window.open(url, 'artAtlasMovementExplanation', `popup=yes,width=${popupWidth},height=${popupHeight},left=${popupLeft},top=50`);
+  return window.open(url, '_blank');
 }
 function openExplanationUrl(url, popup=null, movementName='', movementLabel='') {
   const target = new URL(uHangulModeUrl(url));
@@ -2272,16 +2272,30 @@ function render() { renderText(); renderList(); if (viewMode === 'movements') re
 async function refreshThumbnail(artist, work) {
   try { const response = await apiFetch('/api/thumbnail', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({artist,work})}); const result = await response.json(); if (!result.thumbnail) return false; work.thumbnail = result.thumbnail; work.thumbnailValidation = 2; persist(); return true; } catch (_) { return false; }
 }
-function queueOfflineThumbnail(artist, work, onSaved) {
+function queueOfflineThumbnail(artist, work, onSaved, options={}) {
   if (!artist || !work || (work.thumbnail && work.thumbnailValidation === 2)) return;
   const key = `${artist.id}:${work.id}`;
   if (thumbnailRequests.has(key)) return;
   thumbnailRequests.add(key);
-  thumbnailQueue = thumbnailQueue.then(async () => {
+  const run = async () => {
     if (work.thumbnail && work.thumbnailValidation === 2) return;
     const saved = await refreshThumbnail(artist, work);
     if (saved) onSaved?.(artist, work);
-  });
+  };
+  const queue = options.priority ? priorityThumbnailQueue : thumbnailQueue;
+  const next = queue.then(run).finally(() => thumbnailRequests.delete(key));
+  if (options.priority) priorityThumbnailQueue = next.catch(() => {});
+  else thumbnailQueue = next.catch(() => {});
+}
+function queueArtistOfflineThumbnails(artist, options={}) {
+  if (!currentUserIsAdmin || !artist) return;
+  const onSaved = savedArtist => { if (selectedId === savedArtist.id) renderTimeline(); };
+  const contributionKeys = new Set(movementContributionWorksForArtist(artist).map(selectionKey));
+  const orderedWorks = [
+    ...movementContributionWorksForArtist(artist),
+    ...(artist.works || []).filter(work => !contributionKeys.has(selectionKey(work)))
+  ];
+  orderedWorks.forEach(work => queueOfflineThumbnail(artist, work, onSaved, options));
 }
 async function cacheThumbnailFromInput(artist, work, source) {
   const response=await apiFetch('/api/thumbnail-from-url',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({artist,work,pageUrl:source})});
@@ -2342,7 +2356,7 @@ async function runThumbnailAgent() {
   if (thumbnailObserver) thumbnailObserver.disconnect();
   const queueWork = work => queueOfflineThumbnail(artist, work, savedArtist => {
     if (selectedId === savedArtist.id) renderTimeline();
-  });
+  }, {priority:true});
   // Secure the movement-contribution images first; these are the works that
   // best express the artist's known movement in the timeline.
   const contributionKeys = new Set(movementContributionWorksForArtist(artist).map(selectionKey));
@@ -2359,13 +2373,9 @@ async function runThumbnailAgent() {
 async function cacheOfflineThumbnailCatalogue() {
   if (!currentUserIsAdmin) return;
   for (const artist of artists) await hydrateThumbnails(artist);
-  artists.forEach(artist => {
-    const contributionKeys = new Set(movementContributionWorksForArtist(artist).map(selectionKey));
-    const orderedWorks = [...movementContributionWorksForArtist(artist), ...(artist.works || []).filter(work => !contributionKeys.has(selectionKey(work)))];
-    orderedWorks.forEach(work => queueOfflineThumbnail(artist, work, savedArtist => {
-      if (selectedId === savedArtist.id) renderTimeline();
-    }));
-  });
+  const selectedArtist = artists.find(artist => artist.id === selectedId);
+  queueArtistOfflineThumbnails(selectedArtist, {priority:true});
+  artists.filter(artist => artist.id !== selectedId).forEach(artist => queueArtistOfflineThumbnails(artist));
 }
 
 async function enrichArtist() {
@@ -2380,7 +2390,7 @@ async function enrichArtist() {
     const response = await apiFetch('/api/enrich', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(artist)});
     if (!response.ok) throw new Error('Could not retrieve artwork data');
     const result = await response.json();
-    if (result.works?.length) { const existingWorks = artist.works || [], existingByKey = new Map(existingWorks.map(work => [selectionKey(work), work])), generatedByKey = new Map(existingWorks.filter(isGeneratedWork).map(work => [selectionKey(work), work])), fetchedByKey = new Map(result.works.map(work => [selectionKey(work), {...work,origin:'generated'}])); const isUpdate = Boolean(artist.generated?.file && generatedByKey.size); const generatedWorks = isUpdate ? [...generatedByKey.values()].map(existing => { const fetched = fetchedByKey.get(selectionKey(existing)); return fetched ? {...fetched,description:existing.description || fetched.description,detail:existing.detail || fetched.detail,thumbnail:existing.thumbnail || fetched.thumbnail,thumbnailValidation:existing.thumbnailValidation || fetched.thumbnailValidation,highResImage:existing.highResImage || fetched.highResImage,highResOriginal:existing.highResOriginal || fetched.highResOriginal} : existing; }) : result.works.map(work => { const fetched = {...work,origin:'generated'}, existing = existingByKey.get(selectionKey(work)); return existing && !isManualWork(existing) ? {...fetched,description:existing.description || fetched.description,detail:existing.detail || fetched.detail,thumbnail:existing.thumbnail || fetched.thumbnail,thumbnailValidation:existing.thumbnailValidation || fetched.thumbnailValidation,highResImage:existing.highResImage || fetched.highResImage,highResOriginal:existing.highResOriginal || fetched.highResOriginal} : fetched; }); artist.works = [...existingWorks.filter(work => !isGeneratedWork(work)),...generatedWorks]; if (result.artist?.name?.ko || result.artist?.name?.en) { artist.name = result.artist.name; artist.birth = result.artist.birth || artist.birth; artist.death = result.artist.death || artist.death; artist.nationality = result.artist.nationality || artist.nationality; artist.movement = result.artist.movement || artist.movement; } artist.works = selectArtistWorks(artist.works, artistImportedWorkLimit, artist); artist.generated = {schema:result.schema || 20,file:generatedCatalogueFile({id:artist.id,qid:result.qid || artist.qid}),fetchedAt:result.fetchedAt}; await normalizeArtistWorksBeforeSave(artist); await hydrateThumbnails(artist); persist(); await saveArtistsNow(); render(); }
+    if (result.works?.length) { const existingWorks = artist.works || [], existingByKey = new Map(existingWorks.map(work => [selectionKey(work), work])), generatedByKey = new Map(existingWorks.filter(isGeneratedWork).map(work => [selectionKey(work), work])), fetchedByKey = new Map(result.works.map(work => [selectionKey(work), {...work,origin:'generated'}])); const isUpdate = Boolean(artist.generated?.file && generatedByKey.size); const generatedWorks = isUpdate ? [...generatedByKey.values()].map(existing => { const fetched = fetchedByKey.get(selectionKey(existing)); return fetched ? {...fetched,description:existing.description || fetched.description,detail:existing.detail || fetched.detail,thumbnail:existing.thumbnail || fetched.thumbnail,thumbnailValidation:existing.thumbnailValidation || fetched.thumbnailValidation,highResImage:existing.highResImage || fetched.highResImage,highResOriginal:existing.highResOriginal || fetched.highResOriginal} : existing; }) : result.works.map(work => { const fetched = {...work,origin:'generated'}, existing = existingByKey.get(selectionKey(work)); return existing && !isManualWork(existing) ? {...fetched,description:existing.description || fetched.description,detail:existing.detail || fetched.detail,thumbnail:existing.thumbnail || fetched.thumbnail,thumbnailValidation:existing.thumbnailValidation || fetched.thumbnailValidation,highResImage:existing.highResImage || fetched.highResImage,highResOriginal:existing.highResOriginal || fetched.highResOriginal} : fetched; }); artist.works = [...existingWorks.filter(work => !isGeneratedWork(work)),...generatedWorks]; if (result.artist?.name?.ko || result.artist?.name?.en) { artist.name = result.artist.name; artist.birth = result.artist.birth || artist.birth; artist.death = result.artist.death || artist.death; artist.nationality = result.artist.nationality || artist.nationality; artist.movement = result.artist.movement || artist.movement; } artist.works = selectArtistWorks(artist.works, artistImportedWorkLimit, artist); artist.generated = {schema:result.schema || 20,file:generatedCatalogueFile({id:artist.id,qid:result.qid || artist.qid}),fetchedAt:result.fetchedAt}; await normalizeArtistWorksBeforeSave(artist); await hydrateThumbnails(artist); persist(); await saveArtistsNow(); render(); queueArtistOfflineThumbnails(artist,{priority:true}); }
     else timeline.innerHTML = original;
   } catch (_) { timeline.innerHTML = original; }
 }
@@ -2709,6 +2719,7 @@ $('#add-form').addEventListener('submit', async event => {
     }
     dialog.close();
     render();
+    queueArtistOfflineThumbnails(selectedArtist,{priority:true});
     if (postSaveNotice) alert(postSaveNotice);
     if (!skipEnrichAfterSave) {
       await enrichArtist();
