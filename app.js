@@ -863,12 +863,12 @@ async function chooseAccessMode() {
     enterViewerMode();
     return;
   }
+  let adminUnavailableMessage = '';
   try {
     const response = await fetch(apiUrl('/api/access'), {cache:'no-store'});
     const access = response.ok ? await response.json() : null;
     if (access?.adminConfigured === false) {
-      enterViewerMode();
-      return;
+      adminUnavailableMessage = '관리자 설정 파일(.env)이 없어 지금은 보기 전용으로 실행 중입니다. 건너뛰기를 누르면 자료를 볼 수 있습니다.';
     }
   } catch (_) {
     /* When the local server is unavailable, keep the manual viewer choice. */
@@ -877,15 +877,27 @@ async function chooseAccessMode() {
     const email = $('#auth-email');
     const password = $('#auth-password');
     const message = $('#auth-message');
+    const submit = $('#auth-form .save');
     const showMessage = text => { message.textContent = text; message.classList.remove('hidden'); };
     const finishAsViewer = () => {
       enterViewerMode();
       authDialog.close();
       resolve();
     };
+    if (adminUnavailableMessage) {
+      showMessage(adminUnavailableMessage);
+      submit.disabled = true;
+      email.disabled = true;
+      password.disabled = true;
+    } else {
+      submit.disabled = false;
+      email.disabled = false;
+      password.disabled = false;
+    }
     $('#auth-skip').onclick = finishAsViewer;
     $('#auth-form').onsubmit = async event => {
       event.preventDefault();
+      if (adminUnavailableMessage) return;
       message.classList.add('hidden');
       try {
         const response = await fetch(apiUrl('/api/auth/login'), {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email.value,password:password.value})});
