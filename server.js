@@ -679,22 +679,24 @@ async function removeThumbnailFiles(directory, workId) {
   const safeWorkId=safeUploadId(workId);
   await Promise.all(['jpg','png','webp','gif'].map(extension => fs.unlink(path.join(directory,`${safeWorkId}.${extension}`)).catch(()=>{})));
 }
+async function makePngUnderStorageLimit(input, folder, fileBase, widths) {
+  const output=path.join(folder,`${fileBase}.png`);
+  for (const width of widths) {
+    await execFileAsync(ffmpegPath,['-y','-i',input,'-vf',`scale=min(${width}\\,iw):-2`,'-compression_level','9','-pred','mixed',output],{windowsHide:true,timeout:300000});
+    if ((await fs.stat(output)).size < highResolutionStoredLimit) return output;
+  }
+  throw new Error('Could not create a PNG image smaller than 30 MB');
+}
 async function reduceImageBufferForStorage(image, extension, fileBase) {
-  if (image.length <= highResolutionStoredLimit) return {image,extension};
+  if (image.length < highResolutionStoredLimit) return {image,extension};
   const staging=path.join(imageStagingDir,`thumbnail-${fileBase}-${Date.now()}-${randomBytes(4).toString('hex')}`);
   await fs.mkdir(staging,{recursive:true});
   const input=path.join(staging,`source.${extension || 'jpg'}`);
-  const output=path.join(staging,'display.jpg');
   try {
     await fs.writeFile(input,image);
-    await execFileAsync(ffmpegPath,['-y','-i',input,'-vf','scale=min(2400\\,iw):-2','-q:v','5',output],{windowsHide:true,timeout:300000});
-    let reduced=await fs.readFile(output);
-    if(reduced.length > highResolutionStoredLimit) {
-      await execFileAsync(ffmpegPath,['-y','-i',input,'-vf','scale=min(1600\\,iw):-2','-q:v','7',output],{windowsHide:true,timeout:300000});
-      reduced=await fs.readFile(output);
-    }
-    if(reduced.length > highResolutionStoredLimit) throw new Error('Could not reduce the image below 30 MB');
-    return {image:reduced,extension:'jpg',reduced:true};
+    const output=await makePngUnderStorageLimit(input,staging,'display',[2400,2000,1600,1400,1200,1000,800,640,480]);
+    const reduced=await fs.readFile(output);
+    return {image:reduced,extension:'png',reduced:true};
   } finally {
     await fs.rm(staging,{recursive:true,force:true}).catch(()=>{});
   }
@@ -717,11 +719,11 @@ async function resolvedHighResolutionPath(artistId, workId, relativePath) {
   const safeArtistId = safeUploadId(artistId), safeWorkId = safeUploadId(workId);
   const folder = path.join(highResolutionDir, safeArtistId);
   const oldName = path.basename(relativePath);
-  const baseName = oldName.replace(/\.display\.jpg$/i, '');
+  const baseName = oldName.replace(/\.display\.(?:jpe?g|png)$/i, '');
   const files = await fs.readdir(folder).catch(() => []);
   const match = files.find(name => name === oldName)
-    || files.find(name => name.startsWith(`${baseName}_`) && /\.display\.jpg$/i.test(name))
-    || files.find(name => name.startsWith(`${safeWorkId}_`) && /\.display\.jpg$/i.test(name));
+    || files.find(name => name.startsWith(`${baseName}_`) && /\.display\.(?:jpe?g|png)$/i.test(name))
+    || files.find(name => name.startsWith(`${safeWorkId}_`) && /\.display\.(?:jpe?g|png)$/i.test(name));
   return match ? `data/high-resolution/${safeArtistId}/${match}` : relativePath;
 }
 async function resolveHighResolutionPaths(payload) {
@@ -858,7 +860,7 @@ function safeFileSegment(value) { return String(value || 'artist').normalize('NF
 function highResolutionFileBase(workId, artistName) { return `${safeUploadId(workId)}_${safeFileSegment(artistName)}`; }
 async function removeHighResolutionFiles(folder, workId) {
   const safeWorkId=safeUploadId(workId);
-  const directNames=[...new Set(Object.values(uploadTypes))].flatMap(ext => [`${safeWorkId}.${ext}`,`${safeWorkId}.display.jpg`]);
+  const directNames=[...new Set(Object.values(uploadTypes))].flatMap(ext => [`${safeWorkId}.${ext}`,`${safeWorkId}.display.jpg`,`${safeWorkId}.display.png`]);
   await Promise.all(directNames.map(name => fs.unlink(path.join(folder,name)).catch(()=>{})));
   const entries=await fs.readdir(folder).catch(()=>[]);
   await Promise.all(entries.filter(name => name.startsWith(`${safeWorkId}_`) && /\.(?:jpe?g|png|webp|gif)$/i.test(name)).map(name => fs.unlink(path.join(folder,name)).catch(()=>{})));
@@ -1267,11 +1269,9 @@ async function localizeMovementDocumentImages(buffer) {
 }
 function uploadExtension(file) { const ext=path.extname(String(file?.filename || '')).toLowerCase(); return uploadTypes[file?.contentType] || ({'.jpg':'jpg','.jpeg':'jpg','.jfif':'jpg','.png':'png','.webp':'webp','.gif':'gif'}[ext]); }
 async function makeDisplayImage(input, folder, fileBase) {
-  const output=path.join(folder,`${fileBase}.display.jpg`);
   // Very large originals can exceed a browser's decoded-image or GPU texture
-  // limit. Create an 8K display master; the uploaded original is discarded.
-  await execFileAsync(ffmpegPath,['-y','-i',input,'-vf','scale=min(8000\\,iw):-2','-q:v','2',output],{windowsHide:true,timeout:300000});
-  return output;
+  // limit. Create a PNG display master under 30 MB; the uploaded original is discarded.
+  return makePngUnderStorageLimit(input,folder,`${fileBase}.display`,[8000,6000,4800,3600,3000,2400,2000,1600,1200,1000,800,640]);
 }
 async function makeLocalArtworkThumbnail(input, artist, work, email=adminEmail) {
   const location=thumbnailLocation(email,artist.id);
@@ -1299,8 +1299,8 @@ async function saveLocalArtworkImage(form) {
     const thumbnail=await makeLocalArtworkThumbnail(display,artist,work);
     await fs.mkdir(location.folder,{recursive:true});
     await removeHighResolutionFiles(location.folder,workId);
-    await fs.rename(display,path.join(location.folder,`${fileBase}.display.jpg`));
-    const image=`${location.relativePrefix}/${fileBase}.display.jpg`;
+    await fs.rename(display,path.join(location.folder,`${fileBase}.display.png`));
+    const image=`${location.relativePrefix}/${fileBase}.display.png`;
     return {image,thumbnail};
   } finally { await fs.rm(staging,{recursive:true,force:true}).catch(()=>{}); }
 }
@@ -1318,8 +1318,8 @@ async function saveTopicArtwork(form) {
     await fs.mkdir(topicImageDir,{recursive:true});
     const display=await makeDisplayImage(input,staging,id);
     if((await fs.stat(display)).size>highResolutionStoredLimit) throw new Error('30MB 이하의 표시용 이미지를 만들 수 없습니다');
-    const relative=`data/topic-images/${id}.display.jpg`;
-    await fs.rename(display,path.join(topicImageDir,`${id}.display.jpg`));
+    const relative=`data/topic-images/${id}.display.png`;
+    await fs.rename(display,path.join(topicImageDir,`${id}.display.png`));
     const work={id,title,artist:'',year:startYear===endYear?String(startYear):`${startYear}–${endYear}`,sortYear:startYear,movement:'추가 작품',thumbnail:relative,description:''};
     topic.works=Array.isArray(topic.works)?topic.works:[];
     topic.works.push(work);
@@ -1339,8 +1339,8 @@ async function replaceTopicArtworkImage(form) {
     await fs.mkdir(topicImageDir,{recursive:true});
     const display=await makeDisplayImage(input,staging,imageId);
     if((await fs.stat(display)).size>highResolutionStoredLimit) throw new Error('30MB 이하의 표시용 이미지를 만들 수 없습니다');
-    const relative=`data/topic-images/${imageId}.display.jpg`, previous=String(work.thumbnail || '');
-    await fs.rename(display,path.join(topicImageDir,`${imageId}.display.jpg`));
+    const relative=`data/topic-images/${imageId}.display.png`, previous=String(work.thumbnail || '');
+    await fs.rename(display,path.join(topicImageDir,`${imageId}.display.png`));
     work.thumbnail=relative;
     await fs.writeFile(topicsFile,JSON.stringify(data,null,2)+'\n','utf8');
     if(/^data\/topic-images\/[A-Za-z0-9_-]+\.display\.jpg$/.test(previous)) await fs.unlink(path.join(root,previous)).catch(()=>{});
@@ -1354,7 +1354,7 @@ async function deleteTopicArtwork(body) {
   const thumbnail=String(work.thumbnail || '');
   topic.works=topic.works.filter(item=>item.id!==workId);
   await fs.writeFile(topicsFile,JSON.stringify(data,null,2)+'\n','utf8');
-  if(/^data\/topic-images\/[A-Za-z0-9_-]+(?:\.display)?\.jpg$/.test(thumbnail)) await fs.unlink(path.join(root,thumbnail)).catch(()=>{});
+  if(/^data\/topic-images\/[A-Za-z0-9_-]+(?:\.display)?\.(?:jpe?g|png)$/.test(thumbnail)) await fs.unlink(path.join(root,thumbnail)).catch(()=>{});
   return {topics:data.topics};
 }
 const movementSectionLinkIds = new Set(['gothic-light-structure']);

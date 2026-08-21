@@ -2,6 +2,9 @@ const fs = require('node:fs/promises');
 const path = require('node:path');
 const http = require('node:http');
 const https = require('node:https');
+const os = require('node:os');
+const { execFile } = require('node:child_process');
+const { promisify } = require('node:util');
 const { invalidArtworkThumbnail } = require('../thumbnail-validation');
 
 const root = path.resolve(__dirname, '..');
@@ -10,6 +13,9 @@ const thumbnailsDir = path.join(root, 'data', 'thumbnails');
 const width = Number(process.env.ART_ATLAS_THUMBNAIL_WIDTH || 640);
 const limit = Number(process.env.ART_ATLAS_THUMBNAIL_CACHE_LIMIT || 0);
 const perArtistDownloadLimit = Number(process.env.ART_ATLAS_THUMBNAIL_PER_ARTIST_LIMIT ?? 20);
+const storedImageLimit = 30 * 1024 * 1024;
+const sourceImageInputLimit = 500 * 1024 * 1024;
+const ffmpegPath = process.env.ART_ATLAS_FFMPEG || 'ffmpeg';
 const localizeOnly = process.env.ART_ATLAS_LOCALIZE_ONLY === '1';
 const skipPreviousFailures = process.env.ART_ATLAS_SKIP_FAILURES === '1';
 const retryAttempts = Number(process.env.ART_ATLAS_THUMBNAIL_RETRIES || 1);
@@ -17,6 +23,7 @@ const onlyArtistId = String(process.env.ART_ATLAS_ARTIST_ID || '').trim();
 const refreshExisting = process.env.ART_ATLAS_REFRESH === '1';
 const externalOnly = process.env.ART_ATLAS_EXTERNAL_ONLY === '1';
 const offlineArtworkPlaceholder = 'data/thumbnails/_placeholder/artwork-placeholder.png';
+const execFileAsync = promisify(execFile);
 
 const contentExtensions = {
   'image/jpeg': 'jpg',
@@ -94,7 +101,7 @@ function requestBuffer(rawUrl, redirects = 0) {
       }
       const chunks = [];
       let size = 0;
-      const maxSize = 35 * 1024 * 1024;
+      const maxSize = sourceImageInputLimit;
       response.on('data', chunk => {
         size += chunk.length;
         if (size > maxSize) request.destroy(new Error(`Image is larger than ${maxSize} bytes`));
@@ -149,6 +156,24 @@ async function findExistingThumbnailFile(artistDir, relativePrefix, workId) {
 async function writeIndex(artistDir, index) {
   await fs.mkdir(artistDir, {recursive: true});
   await fs.writeFile(path.join(artistDir, 'index.json'), JSON.stringify(index, null, 2) + '\n', 'utf8');
+}
+
+async function reduceImageForStorage(buffer, extension, workId) {
+  if (buffer.length < storedImageLimit) return {buffer, extension, reduced: false};
+  const staging = await fs.mkdtemp(path.join(os.tmpdir(), 'art-atlas-thumb-'));
+  const input = path.join(staging, `source.${extension || 'jpg'}`);
+  const output = path.join(staging, 'display.png');
+  try {
+    await fs.writeFile(input, buffer);
+    for (const size of [2400, 2000, 1600, 1400, 1200, 1000, 800, 640, 480]) {
+      await execFileAsync(ffmpegPath, ['-y', '-i', input, '-vf', `scale=min(${size}\\,iw):-2`, '-compression_level', '9', '-pred', 'mixed', output], {windowsHide: true, timeout: 300000});
+      const reduced = await fs.readFile(output);
+      if (reduced.length < storedImageLimit) return {buffer: reduced, extension: 'png', reduced: true};
+    }
+    throw new Error(`Could not reduce ${workId} below 30 MB as PNG`);
+  } finally {
+    await fs.rm(staging, {recursive: true, force: true}).catch(() => {});
+  }
 }
 
 async function main() {
@@ -223,20 +248,22 @@ async function main() {
         if (invalidArtworkThumbnail(downloaded.buffer)) {
           throw new Error('Downloaded thumbnail is a small interface icon');
         }
-        const ext = contentExtensions[downloaded.contentType] || extensionFromUrl(downloaded.finalUrl) || extensionFromUrl(source) || 'jpg';
+        const initialExt = contentExtensions[downloaded.contentType] || extensionFromUrl(downloaded.finalUrl) || extensionFromUrl(source) || 'jpg';
+        const stored = await reduceImageForStorage(downloaded.buffer, initialExt, workId);
+        const ext = stored.extension;
         const fileName = `${workId}.${ext}`;
         const relative = `${relativePrefix}/${fileName}`;
         await fs.mkdir(artistDir, {recursive: true});
-        await fs.writeFile(path.join(artistDir, fileName), downloaded.buffer);
+        await fs.writeFile(path.join(artistDir, fileName), stored.buffer);
         index[workId] = {
           thumbnail: relative,
           source,
           downloadUrl,
           finalUrl: downloaded.finalUrl,
-          contentType: downloaded.contentType,
-          bytes: downloaded.buffer.length,
+          contentType: stored.reduced ? 'image/png' : downloaded.contentType,
+          bytes: stored.buffer.length,
           checkedAt: new Date().toISOString(),
-          verifiedBy: 'Artwork image cached for offline use'
+          verifiedBy: stored.reduced ? 'Artwork image cached for offline use; reduced below 30 MB as PNG' : 'Artwork image cached for offline use'
         };
         work.thumbnail = relative;
         work.thumbnailValidation = 2;

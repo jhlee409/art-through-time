@@ -100028,8 +100028,8 @@
       "birth": 1390,
       "death": 1441,
       "nationality": {
-        "ko": "Southern Netherlands",
-        "en": "Southern Netherlands"
+        "ko": "네덜란드",
+        "en": "Netherlands"
       },
       "movement": {
         "ko": "플랑드르파",
@@ -100073,10 +100073,10 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "pending",
-              "localThumbnail": "",
+              "status": "ready",
+              "localThumbnail": "data/thumbnails/artist-Q102272/wikidata-Q2308135.jpg",
               "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q2308135",
+              "sourceUrl": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Eyckbaptism.png",
               "sourceUrls": [
                 "http://www.wikidata.org/entity/Q2308135",
                 "http://commons.wikimedia.org/wiki/Special:FilePath/14th-century%20painters%20-%20Les%20Tr%C3%A8s%20Belles%20Heures%20de%20Notre%20Dame%20de%20Jean%20de%20Berry%20-%20WGA16014.jpg"
@@ -100084,7 +100084,11 @@
               "license": "",
               "institution": ""
             }
-          }
+          },
+          "thumbnail": "data/thumbnails/artist-Q102272/wikidata-Q2308135.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-21T11:54:08.109Z",
+          "highResImage": "data/thumbnails/artist-Q102272/wikidata-Q2308135.jpg"
         },
         {
           "id": "wikidata-Q131705570",
@@ -100614,10 +100618,10 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "pending",
-              "localThumbnail": "",
+              "status": "ready",
+              "localThumbnail": "data/thumbnails/artist-Q102272/wikidata-Q734834.jpg",
               "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q734834",
+              "sourceUrl": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Ghent_Altarpiece_Google_Art_Project.jpg",
               "sourceUrls": [
                 "http://www.wikidata.org/entity/Q734834",
                 "http://commons.wikimedia.org/wiki/Special:FilePath/Ghent%20Altarpiece%20by%20Jan%20van%20Eyck%20ALL.jpg"
@@ -100625,7 +100629,11 @@
               "license": "",
               "institution": ""
             }
-          }
+          },
+          "thumbnail": "data/thumbnails/artist-Q102272/wikidata-Q734834.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-21T11:54:08.109Z",
+          "highResImage": "data/thumbnails/artist-Q102272/wikidata-Q734834.jpg"
         },
         {
           "id": "wikidata-Q1150782",
@@ -100663,10 +100671,10 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "pending",
-              "localThumbnail": "",
+              "status": "ready",
+              "localThumbnail": "data/thumbnails/artist-Q102272/wikidata-Q1150782.jpg",
               "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q1150782",
+              "sourceUrl": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Eyck,_Jan_van_-_Portrait_of_a_Young_Man_(Tymotheos)_-_National_Gallery,_London.jpg",
               "sourceUrls": [
                 "http://www.wikidata.org/entity/Q1150782",
                 "http://commons.wikimedia.org/wiki/Special:FilePath/Eyck%2C%20Jan%20van%20-%20Portrait%20of%20a%20Young%20Man%20%28Tymotheos%29%20-%20National%20Gallery%2C%20London.jpg"
@@ -100674,7 +100682,11 @@
               "license": "",
               "institution": ""
             }
-          }
+          },
+          "thumbnail": "data/thumbnails/artist-Q102272/wikidata-Q1150782.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-21T11:54:08.109Z",
+          "highResImage": "data/thumbnails/artist-Q102272/wikidata-Q1150782.jpg"
         },
         {
           "id": "wikidata-Q2157202",
@@ -101108,10 +101120,10 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "pending",
-              "localThumbnail": "",
+              "status": "ready",
+              "localThumbnail": "data/thumbnails/artist-Q102272/wikidata-Q3399413.jpg",
               "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q3399413",
+              "sourceUrl": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Jan_van_Eyck_-_Portrait_of_Baudouin_de_Lannoy_-_WGA7607.jpg",
               "sourceUrls": [
                 "http://www.wikidata.org/entity/Q3399413",
                 "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20%28um%201390-1400%20-%201441%29%20-%20Baudouin%20de%20Lannoy%20-%20525G%20-%20Gem%C3%A4ldegalerie.jpg"
@@ -101119,7 +101131,11 @@
               "license": "",
               "institution": ""
             }
-          }
+          },
+          "thumbnail": "data/thumbnails/artist-Q102272/wikidata-Q3399413.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-21T11:54:08.109Z",
+          "highResImage": "data/thumbnails/artist-Q102272/wikidata-Q3399413.jpg"
         },
         {
           "id": "wikidata-Q2734881",
@@ -101157,10 +101173,10 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "pending",
-              "localThumbnail": "",
+              "status": "ready",
+              "localThumbnail": "data/thumbnails/artist-Q102272/wikidata-Q2734881.jpg",
               "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q2734881",
+              "sourceUrl": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Annunciation_-_Jan_van_Eyck_-_1434_-_NG_Wash_DC.jpg",
               "sourceUrls": [
                 "http://www.wikidata.org/entity/Q2734881",
                 "http://commons.wikimedia.org/wiki/Special:FilePath/Annunciation%20-%20Jan%20van%20Eyck%20-%201434%20-%20NG%20Wash%20DC.jpg"
@@ -101168,7 +101184,11 @@
               "license": "",
               "institution": ""
             }
-          }
+          },
+          "thumbnail": "data/thumbnails/artist-Q102272/wikidata-Q2734881.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-21T11:54:08.109Z",
+          "highResImage": "data/thumbnails/artist-Q102272/wikidata-Q2734881.jpg"
         },
         {
           "id": "wikidata-Q3553389",
@@ -101352,10 +101372,10 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "pending",
-              "localThumbnail": "",
+              "status": "ready",
+              "localThumbnail": "data/thumbnails/artist-Q102272/wikidata-Q2480921.jpg",
               "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q2480921",
+              "sourceUrl": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Jan_van_Eyck_069.jpg",
               "sourceUrls": [
                 "http://www.wikidata.org/entity/Q2480921",
                 "http://commons.wikimedia.org/wiki/Special:FilePath/Eyck%2C%20Jan%20van%20-%20Madonna%20with%20Canon%20van%20der%20Paele.jpeg"
@@ -101363,7 +101383,11 @@
               "license": "",
               "institution": ""
             }
-          }
+          },
+          "thumbnail": "data/thumbnails/artist-Q102272/wikidata-Q2480921.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-21T11:54:08.109Z",
+          "highResImage": "data/thumbnails/artist-Q102272/wikidata-Q2480921.jpg"
         },
         {
           "id": "wikidata-Q19186089",
@@ -101499,10 +101523,10 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "pending",
-              "localThumbnail": "",
+              "status": "ready",
+              "localThumbnail": "data/thumbnails/artist-Q102272/wikidata-Q323079.jpg",
               "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q323079",
+              "sourceUrl": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Jan_van_Eyck_-_Triptych_of_Mary_and_Child,_St._Michael,_and_the_Catherine_-_Google_Art_Project.jpg",
               "sourceUrls": [
                 "http://www.wikidata.org/entity/Q323079",
                 "http://commons.wikimedia.org/wiki/Special:FilePath/Gem%C3%A4ldegalerie%20Alte%20Meister%20%28Dresden%29%20Galeriewerk%20Braun%201836a.jpg"
@@ -101510,7 +101534,11 @@
               "license": "",
               "institution": ""
             }
-          }
+          },
+          "thumbnail": "data/thumbnails/artist-Q102272/wikidata-Q323079.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-21T11:54:08.109Z",
+          "highResImage": "data/thumbnails/artist-Q102272/wikidata-Q323079.jpg"
         },
         {
           "id": "wikidata-Q574004",
@@ -101744,10 +101772,10 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "pending",
-              "localThumbnail": "",
+              "status": "ready",
+              "localThumbnail": "data/thumbnails/artist-Q102272/wikidata-Q3399452.jpg",
               "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q3399452",
+              "sourceUrl": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Jan_van_Eyck_-_Portrait_of_Margaret_van_Eyck_(1439).jpg",
               "sourceUrls": [
                 "http://www.wikidata.org/entity/Q3399452",
                 "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Portrait%20of%20Margaret%20van%20Eyck%20%281439%29.jpg"
@@ -101755,7 +101783,11 @@
               "license": "",
               "institution": ""
             }
-          }
+          },
+          "thumbnail": "data/thumbnails/artist-Q102272/wikidata-Q3399452.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-21T11:54:08.109Z",
+          "highResImage": "data/thumbnails/artist-Q102272/wikidata-Q3399452.jpg"
         },
         {
           "id": "wikidata-Q838074",
@@ -101842,10 +101874,10 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "pending",
-              "localThumbnail": "",
+              "status": "ready",
+              "localThumbnail": "data/thumbnails/artist-Q102272/wikidata-Q1747569.jpg",
               "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q1747569",
+              "sourceUrl": "local file: C:/Users/jhlee/Pictures/이미지다운로드/Jan_van_Eyck_-_The_Madonna_in_the_Church_-_Google_Art_Project.jpg",
               "sourceUrls": [
                 "http://www.wikidata.org/entity/Q1747569",
                 "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Madonna%20in%20the%20Church%20-%20WGA7590.jpg"
@@ -101853,7 +101885,11 @@
               "license": "",
               "institution": ""
             }
-          }
+          },
+          "thumbnail": "data/thumbnails/artist-Q102272/wikidata-Q1747569.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-21T11:54:08.109Z",
+          "highResImage": "data/thumbnails/artist-Q102272/wikidata-Q1747569.jpg"
         },
         {
           "id": "wikidata-Q3937546",
@@ -102099,9 +102135,60 @@
               "institution": ""
             }
           }
+        },
+        {
+          "id": "local-virgin-with-chancellor-rolin",
+          "year": 1435,
+          "popularity": 9500,
+          "title": {
+            "ko": "롤랭 재상의 성모",
+            "en": "The Virgin with Chancellor Rolin"
+          },
+          "country": {
+            "ko": "네덜란드",
+            "en": "Netherlands"
+          },
+          "movement": {
+            "ko": "플랑드르파",
+            "en": "Early Netherlandish painting"
+          },
+          "image": "data/thumbnails/artist-Q102272/local-virgin-with-chancellor-rolin.jpg",
+          "thumbnail": "data/thumbnails/artist-Q102272/local-virgin-with-chancellor-rolin.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-21T11:54:08.109Z",
+          "highResImage": "data/thumbnails/artist-Q102272/local-virgin-with-chancellor-rolin.jpg",
+          "description": {
+            "ko": "얀 반 에이크의 대표적인 성모자 회화로, 니콜라 롤랭 재상이 성모와 아기 예수 앞에 무릎 꿇은 장면을 정교한 실내와 원경 속에 배치한 작품입니다.",
+            "en": "A major painting by Jan van Eyck showing Chancellor Nicolas Rolin kneeling before the Virgin and Child in a detailed interior and distant landscape."
+          },
+          "source": "local file: C:/Users/jhlee/Pictures/이미지다운로드/The_Virgin_with_Chancellor_Rolin_by_Jan_van_Eyck_(Louvre).webp",
+          "verified": true,
+          "representative": true,
+          "movementContribution": false,
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-21T11:54:08.109Z",
+            "updatedAt": "2026-08-21T11:54:08.109Z",
+            "createdBy": "local image import",
+            "updatedBy": "local image import"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/thumbnails/artist-Q102272/local-virgin-with-chancellor-rolin.jpg",
+              "highResolution": "",
+              "sourceUrl": "local file: C:/Users/jhlee/Pictures/이미지다운로드/The_Virgin_with_Chancellor_Rolin_by_Jan_van_Eyck_(Louvre).webp",
+              "sourceUrls": [
+                "local file: C:/Users/jhlee/Pictures/이미지다운로드/The_Virgin_with_Chancellor_Rolin_by_Jan_van_Eyck_(Louvre).webp"
+              ],
+              "license": "",
+              "institution": "Louvre"
+            }
+          }
         }
       ],
-      "fullName": "Jan van Eyck",
+      "fullName": "얀 반 에이크",
       "generated": {
         "schema": 20,
         "file": "data/generated/qid-Q102272.json",
