@@ -106,3 +106,79 @@ techniqueLogoutButton.type='button'; techniqueLogoutButton.className='technique-
 document.querySelector('.technique-language').after(techniqueLogoutButton);
 techniqueLogoutButton.onclick=async()=>{const saved=JSON.parse(sessionStorage.getItem('art-atlas-access-session-v1')||'null');try{await fetch('/api/auth/logout',{method:'POST',headers:saved?.token?{Authorization:`Bearer ${saved.token}`}:{}});}catch(_){}try{sessionStorage.removeItem('art-atlas-access-session-v1');localStorage.setItem('art-atlas-logout-signal',String(Date.now()));}catch(_){}location.assign('index.html?login=1');};
 loadTechniques().then(data=>{techniques=comparisonPairs(data.techniques||[]);const selected=techniques.find(item=>item.id===localStorage.getItem(techniqueStorageKey))||sortedTechniques()[0];if(selected)renderTechnique(selected);else{renderLanguage();renderEmpty();}}).catch(()=>{renderLanguage();techniqueContent.innerHTML=`<p class="technique-empty">${esc(copy[language].loadError)}</p>`;});
+
+// The technique list is intentionally compact: chronological ascending or
+// descending order only.  Preserve older saved values as the same two modes.
+copy.ko.chronological='오름차순'; copy.ko.korean='내림차순';
+copy.en.chronological='Ascending'; copy.en.korean='Descending';
+function sortedTechniques(){const direction=techniqueSortOrder==='korean'?-1:1;return [...techniques].sort((a,b)=>direction*text(a.name,'ko').localeCompare(text(b.name,'ko'),'ko'));}
+
+// Compact language toggle and type-ahead technique finder for the sidebar.
+const techniqueLanguageToggle=document.querySelector('[data-language="en"]');
+const hiddenKoreanLanguageButton=document.querySelector('[data-language="ko"]');
+hiddenKoreanLanguageButton?.setAttribute('aria-hidden','true');
+const techniqueDisplayMode=document.querySelector('.technique-display-mode');
+const techniqueSearch=document.createElement('div');
+techniqueSearch.className='technique-search';
+techniqueSearch.innerHTML='<input class="technique-search-input" type="search" autocomplete="off" placeholder="기법 검색" aria-label="기법 검색"><div class="technique-search-results hidden" role="listbox"></div>';
+document.querySelector('#technique-sidebar-title')?.after(techniqueSearch);
+const techniqueSearchInput=techniqueSearch.querySelector('.technique-search-input');
+const techniqueSearchResults=techniqueSearch.querySelector('.technique-search-results');
+const normalizedTechniqueSearch=value=>String(value||'').toLocaleLowerCase().replace(/\s+/g,'').trim();
+function applyTechniqueSearchFilter(){
+  const query=normalizedTechniqueSearch(techniqueSearchInput?.value);
+  techniqueList.querySelectorAll('[data-technique]').forEach(button=>{
+    const technique=techniques.find(item=>item.id===button.dataset.technique);
+    const names=[text(technique?.name,'ko'),text(technique?.name,'en')].map(normalizedTechniqueSearch);
+    button.closest('.technique-list-row').hidden=Boolean(query)&&!names.some(name=>name.includes(query));
+  });
+}
+function renderTechniqueSearchResults(){
+  const query=normalizedTechniqueSearch(techniqueSearchInput?.value);
+  applyTechniqueSearchFilter();
+  if(!query){techniqueSearchResults.innerHTML='';techniqueSearchResults.classList.add('hidden');return;}
+  const matches=sortedTechniques().filter(item=>[text(item.name,'ko'),text(item.name,'en')].some(name=>normalizedTechniqueSearch(name).includes(query))).slice(0,8);
+  techniqueSearchResults.innerHTML=matches.map(item=>`<button type="button" role="option" data-technique-search-result="${esc(item.id)}">${esc(text(item.name,techniqueListLanguage))}</button>`).join('')||`<p>${language==='ko'?'일치하는 기법이 없습니다.':'No matching techniques.'}</p>`;
+  techniqueSearchResults.classList.toggle('hidden',!matches.length);
+  techniqueSearchResults.querySelectorAll('[data-technique-search-result]').forEach(button=>button.addEventListener('click',()=>{
+    const technique=techniques.find(item=>item.id===button.dataset.techniqueSearchResult);
+    if(!technique)return;
+    techniqueSearchInput.value=text(technique.name,techniqueListLanguage);
+    techniqueSearchResults.classList.add('hidden');
+    renderTechnique(technique);
+    requestAnimationFrame(applyTechniqueSearchFilter);
+  }));
+}
+techniqueSearchInput?.addEventListener('input',renderTechniqueSearchResults);
+techniqueSearchInput?.addEventListener('keydown',event=>{if(event.key==='Escape'){techniqueSearchInput.value='';renderTechniqueSearchResults();techniqueSearchInput.blur();}});
+techniqueLanguageToggle?.addEventListener('click',()=>{
+  // Capture phase updates the destination before the existing language handler runs.
+  techniqueLanguageToggle.dataset.language=techniqueListLanguage==='ko'?'en':'ko';
+  setTimeout(()=>{techniqueLanguageToggle.dataset.language=techniqueListLanguage==='ko'?'en':'ko';renderTechniqueSearchResults();},0);
+},true);
+
+// The administrator delete target sits at the right edge of each list item.
+techniqueList.addEventListener('click',event=>{
+  const button=event.target.closest?.('.technique-item.has-delete');
+  if(!button)return;
+  const rect=button.getBoundingClientRect();
+  const clickedDelete=event.detail>0&&event.clientX-rect.left>rect.width-38;
+  event.preventDefault();
+  event.stopImmediatePropagation();
+  if(clickedDelete)return showTechniqueDeleteMenu(button,button.dataset.deleteTechnique);
+  const technique=techniques.find(item=>item.id===button.dataset.technique);
+  if(technique)renderTechnique(technique);
+},true);
+let techniqueDeleteMenu;
+function showTechniqueDeleteMenu(trigger,id){
+  techniqueDeleteMenu?.remove();
+  const rect=trigger.getBoundingClientRect();
+  const menu=document.createElement('div');
+  menu.className='technique-delete-menu';
+  menu.innerHTML=`<button type="button">${esc(copy[language].delete)}</button>`;
+  Object.assign(menu.style,{top:`${Math.min(window.innerHeight-42,rect.bottom+4)}px`,left:`${Math.max(8,rect.right-76)}px`});
+  menu.querySelector('button').addEventListener('click',()=>{menu.remove();deleteTechnique(id);});
+  document.body.append(menu);
+  techniqueDeleteMenu=menu;
+  setTimeout(()=>document.addEventListener('pointerdown',event=>{if(!menu.contains(event.target)&&event.target!==trigger){menu.remove();if(techniqueDeleteMenu===menu)techniqueDeleteMenu=null;}},{once:true}),0);
+}

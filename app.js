@@ -181,6 +181,22 @@ function artworkDisplayTitle(work, preferredMode=artworkTitleMode) {
   const mode = ordered.find(item => modes.includes(item)) || modes[0];
   return artworkTitleValue(work.title, mode) || t('untitled');
 }
+function artworkThumbnailTitle(work, artist) {
+  let title = artworkDisplayTitle(work).replace(/\s+/g, ' ').trim();
+  // Imported catalogue labels occasionally append a date, artist, collection,
+  // or descriptive sentence after the actual artwork title.  Keep only the
+  // title on thumbnails; the collection remains in its own metadata line.
+  title = title
+    .replace(/\s*\(\s*(?:c\.?\s*)?\d{3,4}[^)]*\)(?:\s*,.*)?$/i, '')
+    .replace(/\s*,\s*(?:c\.?\s*)?\d{3,4}(?:\s*[–-]\s*\d{2,4})?(?:\s*,.*)?$/i, '')
+    .replace(/\s*,\s*(?:private )?(?:museum|gallery|collection|museum collection|royal museums?).*$/i, '');
+  const artistNames = [artist?.name?.ko, artist?.name?.en].filter(Boolean);
+  for (const name of artistNames) {
+    const escapedName = String(name).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    title = title.replace(new RegExp(`\\s*(?:,|—|–|-)\\s*${escapedName}(?:\\s*,.*)?$`, 'i'), '');
+  }
+  return title.trim() || artworkDisplayTitle(work);
+}
 function availableArtworkTitleModesForWorks(works=[]) {
   return artworkTitleModeOrder.filter(mode => works.some(work => artworkTitleValue(work?.title, mode)));
 }
@@ -1183,6 +1199,31 @@ function renderTimeline() {
     // image stay in the data file for later research, but do not render empty cards.
     .filter(work => Boolean(artworkPreviewImage(work)))
     .sort((a,b) => workYearForSort(a) - workYearForSort(b));
+  // Every artist uses the study-first gallery timeline.  Featured selections
+  // stay on the artist record so each artist can be curated independently.
+  const isLeonardoTimeline = true;
+  const leonardoDefaultFeaturedWorkIds = new Set([
+    'wikidata-Q1217213', // Annunciation
+    'wikidata-Q215486',  // Vitruvian Man
+    'wikidata-Q128910',  // The Last Supper
+    'wikidata-Q12418',   // Mona Lisa
+    'wikidata-Q563727'   // The Virgin and Child with Saint Anne
+  ]);
+  const defaultFeaturedWorks = artist.qid === 'Q762'
+    ? works.filter(work => leonardoDefaultFeaturedWorkIds.has(String(work.id || '')))
+    : [...works].filter(work => work.representative).sort((a, b) => (b.popularity || 0) - (a.popularity || 0)).slice(0, 5);
+  // Once the administrator has selected works, an empty list deliberately
+  // means no highlights.  Until then, use the curator's initial five works.
+  const leonardoFeaturedWorkIds = new Set(Array.isArray(artist.featuredWorkIds)
+    ? artist.featuredWorkIds.map(String)
+    : (defaultFeaturedWorks.length ? defaultFeaturedWorks : works.slice(0, 5)).map(work => String(work.id || '')));
+  const leonardoFeaturedWorks = isLeonardoTimeline
+    ? works.filter(work => leonardoFeaturedWorkIds.has(String(work.id || '')))
+    : [];
+  const leonardoLayoutKey = `art-atlas-timeline-layout-${artist.qid || artist.id}`;
+  const leonardoLayout = isLeonardoTimeline && sessionStorage.getItem(leonardoLayoutKey) === 'chronology'
+    ? 'chronology'
+    : 'gallery';
   const availableTitleModes = availableArtworkTitleModesForWorks(works);
   if (availableTitleModes.length && !availableTitleModes.includes(artworkTitleMode)) setArtworkTitleMode(availableTitleModes[0]);
   const worksByYear = new Map();
@@ -1196,16 +1237,21 @@ function renderTimeline() {
     const image = artworkPreviewImage(w);
     const movementContribution = Boolean(w.movementContribution);
     const highRes = Boolean(w.highResImage);
-    const highResLabel = language === 'ko' ? '고해상도 파일 있음' : 'High-resolution image available';
+    const featured = isLeonardoTimeline && leonardoFeaturedWorkIds.has(String(w.id || ''));
     const replaceLabel = language === 'ko' ? '로컬 이미지 교체' : 'Replace with local image';
     const contributionLabel = language === 'ko' ? '화가가 속한 사조의 특성을 잘 보여주는 기여 작품' : 'Work that strongly expresses the artist’s movement contribution';
     const collection = artworkCollectionLabel(w);
     const collectionMarkup = collection && collection !== t('unknown') ? `<small class="art-country art-collection" title="${esc(collection)}">${esc(collection)}</small>` : '';
-    const workTitle = artworkDisplayTitle(w);
+    const workTitle = artworkThumbnailTitle(w, artist);
+    const featuredToggle = isLeonardoTimeline && currentUserIsAdmin
+      ? `<label class="leonardo-feature-toggle" title="${esc(language === 'ko' ? '대표작에 표시' : 'Show in highlights')}"><input type="checkbox" data-featured-work="${esc(w.id)}"${featured ? ' checked' : ''} aria-label="${esc(language === 'ko' ? `${workTitle} 대표작에 표시` : `Show ${workTitle} in highlights`)}"><span aria-hidden="true"></span></label>`
+      : '';
+    const previewLabel = language === 'ko' ? `${workTitle} 크게 보기` : `Enlarge ${workTitle}`;
+    const previewButton = image ? `<button class="artwork-preview-button" type="button" title="${esc(previewLabel)}" aria-label="${esc(previewLabel)}">⌕</button>` : '';
     const previewYear = workYearLabel(w) || (language === 'ko' ? '연도 미상' : 'Year unknown');
     const previewArtist = artistDisplayName(artist);
     const fallbackImage = image && w.image && image !== thumbnail(w.image) ? thumbnail(w.image) : '';
-    const highResBadge = highRes ? `<button class="high-resolution-badge hidden" type="button" data-highres-src="${esc(w.highResImage)}" data-highres-title="${esc(workTitle)}" title="${esc(highResLabel)}" aria-label="${esc(highResLabel)}">Ⓗ</button>` : '';
+    const highResBadge = highRes ? `<span class="high-resolution-badge hidden" data-highres-src="${esc(w.highResImage)}" title="${esc(language === 'ko' ? '고해상도 파일 확인 중' : 'Checking high-resolution file')}">Ⓗ</span>` : '';
     const wikipediaUrl = explicitArtworkWikipediaUrl(w);
     const wikipediaLabel = language === 'ko' ? '작품 위키피디아 페이지 열기' : 'Open artwork Wikipedia page';
     const wikipediaAttrs = wikipediaUrl
@@ -1221,7 +1267,7 @@ function renderTimeline() {
     const titleMarkup = `<span class="art-title-row"><span class="art-title-with-links">${titleLink}${artworkLinkControls}</span>${highResBadge}</span>${artworkLinkEntry}`;
     const footerMarkup = collectionMarkup ? `<span class="art-card-footer">${collectionMarkup}</span>` : '';
     const controls = currentUserIsAdmin ? `<button class="delete-artwork" data-work="${esc(w.id)}" title="${esc(t('delete'))}" aria-label="${esc(t('delete'))}">×</button><button class="replace-local-image" data-work="${esc(w.id)}" title="${esc(replaceLabel)}" aria-label="${esc(replaceLabel)}">↗</button>` : '';
-    return `<div class="art-card${movementContribution ? ' movement-contribution-artwork' : ''}" data-work="${esc(w.id)}" data-preview-artist="${esc(previewArtist)}" data-preview-title="${esc(workTitle)}" data-preview-year="${esc(previewYear)}" data-preview-collection="${collection && collection !== t('unknown') ? esc(collection) : ''}" title="${movementContribution ? esc(contributionLabel) : ''}"><span class="art-thumb">${image ? `<img src="${esc(image)}" alt="${esc(workTitle)}" loading="lazy"${fallbackImage ? ` data-fallback-src="${esc(fallbackImage)}"` : ''} />` : `<span class="art-thumb-empty">${esc(t('noImage'))}</span>`}${controls}</span><span class="art-meta">${titleMarkup}${footerMarkup}</span></div>`;
+    return `<div class="art-card${movementContribution ? ' movement-contribution-artwork' : ''}" data-work="${esc(w.id)}" data-preview-artist="${esc(previewArtist)}" data-preview-title="${esc(workTitle)}" data-preview-year="${esc(previewYear)}" data-preview-collection="${collection && collection !== t('unknown') ? esc(collection) : ''}" title="${movementContribution ? esc(contributionLabel) : ''}"><span class="art-thumb">${featuredToggle}${image ? `<img src="${esc(image)}" alt="${esc(workTitle)}" loading="lazy"${fallbackImage ? ` data-fallback-src="${esc(fallbackImage)}"` : ''} />` : `<span class="art-thumb-empty">${esc(t('noImage'))}</span>`}${previewButton}${controls}</span><span class="art-meta">${titleMarkup}${footerMarkup}</span></div>`;
   };
   const koreanName = artist.name?.ko || '', originalName = artist.name?.en || '';
   const savedLinks = artistLinks(artist);
@@ -1243,14 +1289,63 @@ function renderTimeline() {
     : `${esc(loc(artist.name))}${linkControls}`;
   const slideshowHelp = language === 'ko' ? '전체 화면 슬라이드 쇼 시작 · 5초마다 다음 작품' : 'Start fullscreen slideshow · next artwork every 5 seconds';
   const titleModeButton = availableTitleModes.length > 1 ? `<button class="artwork-title-mode-button" type="button" title="${esc(language === 'ko' ? '작품 제목 표기 전환' : 'Switch artwork title language')}" aria-label="${esc(language === 'ko' ? '작품 제목 표기 전환' : 'Switch artwork title language')}">${esc(artworkTitleModeLabels[nextArtworkTitleMode(works)] || 'EN')}</button>` : '';
-  const timelineHeader = `<header class="timeline-sticky-header"><p class="eyebrow">${t('timeline')}</p><div class="timeline-title-row"><h1 class="timeline-title">${displayName}</h1><div class="timeline-title-actions">${titleModeButton}<button class="start-slideshow" type="button" aria-label="${esc(slideshowHelp)}" title="${esc(slideshowHelp)}" data-tooltip="${esc(slideshowHelp)}"><span>▶</span><span>${esc(t('slideshow'))}</span></button>${currentUserIsAdmin ? `<button class="add-artwork-button" type="button" title="${esc(t('addArtwork'))}" aria-label="${esc(t('addArtwork'))}"><span>+</span><span>${esc(t('addArtwork'))}</span></button>` : ''}</div></div>${currentUserIsAdmin ? `<form class="artist-link-entry hidden"><input type="url" inputmode="url" placeholder="https://" aria-label="${esc(linkInputLabel)}" required><button type="submit">${esc(confirmLinkLabel)}</button></form>` : ''}<p class="life">${years(artist)}${nationalityLabel ? ` · ${esc(nationalityLabel)}` : ''}${artistMovement ? ` · ${artistMovementLabel}` : ''}</p></header>`;
-  timeline.innerHTML = `${timelineHeader}<div class="timeline">${works.length ? [...worksByYear.entries()].map(([year, group]) => `<div class="timeline-row"><span class="year">${year}</span><span class="node"></span><div class="artworks-at-year">${group.map(card).join('')}</div></div>`).join('') : `<p class="empty-timeline">${t('noWork')}</p>`}</div>`;
+  const headerActions = titleModeButton;
+  const timelineHeader = `<header class="timeline-sticky-header"><p class="eyebrow">${t('timeline')}</p><div class="timeline-title-row"><h1 class="timeline-title">${displayName}</h1><div class="timeline-title-actions">${headerActions}</div></div>${currentUserIsAdmin ? `<form class="artist-link-entry hidden"><input type="url" inputmode="url" placeholder="https://" aria-label="${esc(linkInputLabel)}" required><button type="submit">${esc(confirmLinkLabel)}</button></form>` : ''}<p class="life">${years(artist)}${nationalityLabel ? ` · ${esc(nationalityLabel)}` : ''}${artistMovement ? ` · ${artistMovementLabel}` : ''}</p></header>`;
+  const standardTimelineMarkup = `<div class="timeline">${works.length ? [...worksByYear.entries()].map(([year, group]) => `<div class="timeline-row"><span class="year">${year}</span><span class="node"></span><div class="artworks-at-year">${group.map(card).join('')}</div></div>`).join('') : `<p class="empty-timeline">${t('noWork')}</p>`}</div>`;
+  const leonardoTimelineMarkup = (() => {
+    const galleryLabel = language === 'ko' ? '전체 작품' : 'All works';
+    const chronologyLabel = language === 'ko' ? '시기별 연표' : 'By period';
+    const featuredLabel = language === 'ko' ? '대표작' : 'Highlights';
+    const guide = language === 'ko'
+      ? '대표작을 먼저 감상한 뒤, 모든 작품을 제작 시작 연도순으로 자유롭게 훑어보세요.'
+      : 'Start with key works, then browse every work in chronological order.';
+    const periodGroups = new Map();
+    works.forEach(work => {
+      const year = Number(work.year);
+      const decade = Math.floor(year / 10) * 10;
+      const label = Number.isFinite(year) ? (language === 'ko' ? `${decade}년대` : `${decade}s`) : (language === 'ko' ? '연도 미상' : 'Undated');
+      periodGroups.set(label, [...(periodGroups.get(label) || []), work]);
+    });
+    const gallery = `<div class="leonardo-work-grid">${works.map(card).join('')}</div>`;
+    const chronology = `<div class="leonardo-period-list">${[...periodGroups.entries()].map(([period, group]) => `<section class="leonardo-period"><h2>${esc(period)}</h2><div class="leonardo-work-grid">${group.map(card).join('')}</div></section>`).join('')}</div>`;
+    const slideshowButton = (scope, label) => `<button class="start-slideshow leonardo-section-slideshow" type="button" data-slideshow-scope="${scope}" aria-label="${esc(label)}" title="${esc(label)}"><span>▶</span><span>${esc(t('slideshow'))}</span></button>`;
+    const layoutControls = `<div class="leonardo-layout-controls" role="group" aria-label="${esc(language === 'ko' ? '작품 보기 방식' : 'Artwork view')}"><button class="leonardo-layout-button${leonardoLayout === 'gallery' ? ' active' : ''}" type="button" data-leonardo-layout="gallery">${esc(galleryLabel)}</button><button class="leonardo-layout-button${leonardoLayout === 'chronology' ? ' active' : ''}" type="button" data-leonardo-layout="chronology">${esc(chronologyLabel)}</button></div><p class="leonardo-layout-guide">${esc(guide)}</p>`;
+    const featured = leonardoFeaturedWorks.length ? `<section class="leonardo-featured"><div class="leonardo-section-heading"><p class="eyebrow">${esc(featuredLabel)}</p><div class="leonardo-section-actions">${slideshowButton('featured', language === 'ko' ? '대표작 슬라이드 쇼 시작' : 'Start highlights slideshow')}</div><p>${esc(language === 'ko' ? '우선 크게 살펴볼 작품입니다. Ⓗ 표시는 고해상도 파일이 있음을 뜻하며, 이미지를 더블클릭하면 새 창에서 엽니다.' : 'A small set of works to study first. Ⓗ marks an available high-resolution file; double-click the image to open it.')}</p></div><div class="leonardo-featured-grid">${leonardoFeaturedWorks.map(work => `<div class="leonardo-featured-card">${card(work)}</div>`).join('')}</div></section>` : '';
+    const allWorksAction = `${slideshowButton('all', language === 'ko' ? '전체 작품 슬라이드 쇼 시작' : 'Start all-works slideshow')}${currentUserIsAdmin ? `<button class="add-artwork-button leonardo-section-add-artwork" type="button" title="${esc(t('addArtwork'))}" aria-label="${esc(t('addArtwork'))}"><span>+</span><span>${esc(t('addArtwork'))}</span></button>` : ''}`;
+    return `<div class="leonardo-timeline">${featured}${layoutControls}<section class="leonardo-all-works"><div class="leonardo-section-heading"><p class="eyebrow">${esc(leonardoLayout === 'gallery' ? galleryLabel : chronologyLabel)}</p><div class="leonardo-section-actions">${allWorksAction}</div><p>${esc(language === 'ko' ? `${works.length}점 · 왼쪽 위에서 오른쪽 아래로 갈수록 뒤의 작품입니다.` : `${works.length} works · Earlier works begin at the upper left.`)}</p></div>${leonardoLayout === 'gallery' ? gallery : chronology}</section></div>`;
+  })();
+  timeline.innerHTML = `${timelineHeader}${leonardoTimelineMarkup}`;
   timeline.querySelector('.add-artwork-button')?.addEventListener('click', () => openAddArtworkDialog(artist));
   timeline.querySelector('.artwork-title-mode-button')?.addEventListener('click', () => {
     setArtworkTitleMode(nextArtworkTitleMode(works));
     renderTimeline();
   });
-  timeline.querySelector('.start-slideshow').onclick = () => startSlideshow(artist, works);
+  timeline.querySelectorAll('.start-slideshow').forEach(button => button.onclick = () => startSlideshow(artist, button.dataset.slideshowScope === 'featured' ? leonardoFeaturedWorks : works));
+  timeline.querySelectorAll('.leonardo-layout-button').forEach(button => button.addEventListener('click', () => {
+    sessionStorage.setItem(leonardoLayoutKey, button.dataset.leonardoLayout || 'gallery');
+    renderTimeline();
+  }));
+  timeline.querySelectorAll('.leonardo-feature-toggle input').forEach(input => {
+    input.addEventListener('click', event => event.stopPropagation());
+    input.addEventListener('change', async event => {
+      event.stopPropagation();
+      const workId = String(input.dataset.featuredWork || '');
+      if (!workId) return;
+      const hadSavedSelection = Object.prototype.hasOwnProperty.call(artist, 'featuredWorkIds');
+      const previousSelection = artist.featuredWorkIds;
+      const selected = new Set(Array.isArray(previousSelection) ? previousSelection.map(String) : leonardoDefaultFeaturedWorkIds);
+      if (input.checked) selected.add(workId);
+      else selected.delete(workId);
+      artist.featuredWorkIds = [...selected];
+      persist();
+      if (!await saveArtistsNow()) {
+        if (hadSavedSelection) artist.featuredWorkIds = previousSelection;
+        else delete artist.featuredWorkIds;
+        alert(saveFailureMessage());
+      }
+      renderTimeline();
+    });
+  });
   timeline.querySelector('.artist-movement-link')?.addEventListener('click', () => openMovementDocumentInDetail(artistMovementDocument, artistMovement));
   const linkEntry = timeline.querySelector('.artist-link-entry');
   timeline.querySelector('.artist-link-add')?.addEventListener('click', () => { linkEntry.classList.toggle('hidden'); if (!linkEntry.classList.contains('hidden')) linkEntry.querySelector('input').focus(); });
@@ -1290,7 +1385,7 @@ function renderTimeline() {
   setupArtworkWikipediaLinks(artist, works);
   setupThumbnailArtworkLinks(artist, works);
   setupArtworkImageFallbacks();
-  setupHighResolutionBadges();
+  setupHighResolutionBadges(artist, works);
   setupArtworkHoverPreview();
   if (currentUserIsAdmin) runThumbnailAgent();
 }
@@ -1394,28 +1489,29 @@ function highResolutionImageWidth(src) {
   }
   return highResolutionWidthChecks.get(key);
 }
-function setupHighResolutionBadges() {
+function setupHighResolutionBadges(artist, works) {
   const label = language === 'ko'
-    ? `가로 ${highResolutionMinimumWidth}px 이상 고해상도 이미지입니다. 더블클릭하면 새 창에서 엽니다.`
-    : `High-resolution image at least ${highResolutionMinimumWidth}px wide. Double-click to open it in a new window.`;
-  timeline.querySelectorAll('.high-resolution-badge[data-highres-src]').forEach(button => {
-    button.addEventListener('dblclick', event => {
-      event.preventDefault();
-      event.stopPropagation();
-      if (button.classList.contains('hidden')) return;
-      openArtworkImageWindow(button.dataset.highresSrc, button.dataset.highresTitle || t('untitled'));
-    });
-    highResolutionImageWidth(button.dataset.highresSrc).then(width => {
-      if (!button.isConnected) return;
-      if (width < highResolutionMinimumWidth) {
-        const footer = button.closest('.art-card-footer');
-        button.remove();
-        if (footer && !footer.textContent.trim()) footer.remove();
-        return;
+    ? `가로 ${highResolutionMinimumWidth}px 이상 고해상도 이미지입니다. 이미지를 더블클릭하면 새 창에서 엽니다.`
+    : `High-resolution image at least ${highResolutionMinimumWidth}px wide. Double-click the image to open it in a new window.`;
+  const worksById = new Map((works || []).map(work => [String(work.id || ''), work]));
+  timeline.querySelectorAll('.art-card[data-work]').forEach(card => {
+    const work = worksById.get(String(card.dataset.work || ''));
+    const image = card.querySelector('.art-thumb img');
+    if (!work?.highResImage || !image) return;
+    highResolutionImageWidth(work.highResImage).then(width => {
+      if (!image.isConnected || width < highResolutionMinimumWidth) return;
+      image.classList.add('high-resolution-artwork');
+      image.title = `${label} (${width}px)`;
+      const badge = card.querySelector('.high-resolution-badge[data-highres-src]');
+      if (badge) {
+        badge.classList.remove('hidden');
+        badge.title = `${label} (${width}px)`;
       }
-      button.classList.remove('hidden');
-      button.title = `${label} (${width}px)`;
-      button.setAttribute('aria-label', `${label} (${width}px)`);
+      image.addEventListener('dblclick', event => {
+        event.preventDefault();
+        event.stopPropagation();
+        openArtworkImageWindow(work.highResImage, artworkDisplayTitle(work), {artist:artistDisplayName(artist), title:artworkDisplayTitle(work), year:workYearLabel(work)});
+      });
     });
   });
 }
@@ -1432,8 +1528,10 @@ function setupArtworkHoverPreview() {
   const hide = () => artworkHoverPreview.classList.add('hidden');
   timeline.querySelectorAll('.art-thumb').forEach(thumb => {
     const image = thumb.querySelector('img');
-    if (!image) return;
-    thumb.addEventListener('mouseenter', () => {
+    const button = thumb.querySelector('.artwork-preview-button');
+    if (!image || !button) return;
+    button.addEventListener('mouseenter', () => {
+      const workId = thumb.closest('.art-card')?.dataset.work || '';
       const rect = thumb.getBoundingClientRect();
       const captionHeight = 44;
       const scale = Math.min(6, (window.innerWidth - 30) / rect.width, (window.innerHeight - captionHeight - 20) / rect.height) * .96;
@@ -1458,9 +1556,10 @@ function setupArtworkHoverPreview() {
       artworkHoverPreview.style.height = `${previewHeight}px`;
       artworkHoverPreview.style.left = `${left}px`;
       artworkHoverPreview.style.top = `${top}px`;
+      artworkHoverPreview.dataset.work = workId;
       artworkHoverPreview.classList.remove('hidden');
     });
-    thumb.addEventListener('mouseleave', hide);
+    button.addEventListener('mouseleave', hide);
   });
 }
 const atlasHistoricalEvents = [
@@ -1822,7 +1921,7 @@ function renderArtworkDetail(work, artist, loading=false) {
     render:() => renderArtworkDetail(work, artist, false),
     contextMenu:(event, index) => showArtworkLinkMenu(event, artist, work, index)
   });
-  detail.querySelector('.detail-image-wrap')?.addEventListener('dblclick', () => openArtworkImageWindow(image, loc(work.title)));
+  detail.querySelector('.detail-image-wrap')?.addEventListener('dblclick', () => openArtworkImageWindow(image, loc(work.title), {artist:artistDisplayName(artist), title:artworkDisplayTitle(work), year:workYearLabel(work)}));
   setupZoomPan(detail.querySelector('.detail-image-wrap'), detail.querySelector('.detail-image'));
   setupDetailImageResize();
 }
@@ -1942,7 +2041,7 @@ function openFavoritesWindow() {
   popup.resizeTo(popupWidth, popupHeight);
   popup.focus();
 }
-function openArtworkImageWindow(imageSrc, title) {
+function openArtworkImageWindow(imageSrc, title, caption={}) {
   const width = Math.floor(window.screen.availWidth * 0.8);
   const height = Math.floor(window.screen.availHeight * 0.8);
   const left = Math.max(0, Math.floor((window.screen.availWidth - width) / 2));
@@ -1953,6 +2052,13 @@ function openArtworkImageWindow(imageSrc, title) {
   const imageTitle = JSON.stringify(String(title || '')).replace(/</g, '\\u003c');
   popup.document.write(`<!doctype html><html lang="${language}"><head><meta charset="utf-8"><title>${esc(loc(title) || 'Artwork')}</title><style>html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#10120f;color:#f7f4ec;font-family:system-ui,sans-serif}#toolbar{height:42px;box-sizing:border-box;display:flex;align-items:center;padding:0 16px;background:#242820;font-size:12px;color:#c8cdc2}#stage{height:calc(100% - 42px);position:relative;overflow:hidden;touch-action:none;cursor:grab;user-select:none}#stage.dragging{cursor:grabbing}#artwork{position:absolute;top:50%;left:50%;max-width:none;max-height:none;transform:translate(-50%,-50%);pointer-events:none;user-select:none}</style></head><body><div id="toolbar">${language === 'ko' ? '왼쪽 버튼을 누른 채 드래그: 이동 · 휠 위로: 확대 · 휠 아래로: 축소' : 'Left-drag: pan · Wheel up: zoom in · Wheel down: zoom out'}</div><div id="stage"><img id="artwork" alt=""></div><script>const src=${imageUrl}, title=${imageTitle}, stage=document.querySelector('#stage'), image=document.querySelector('#artwork');document.title=title||'Artwork';image.src=src;image.alt=title;let zoom=1,x=0,y=0,drag=null;const clamp=()=>{const maxX=Math.max(0,(image.offsetWidth-stage.clientWidth)/2),maxY=Math.max(0,(image.offsetHeight-stage.clientHeight)/2);x=Math.max(-maxX,Math.min(maxX,x));y=Math.max(-maxY,Math.min(maxY,y));};const draw=()=>{if(!image.naturalWidth)return;const base=Math.min(stage.clientWidth/image.naturalWidth,stage.clientHeight/image.naturalHeight);image.style.width=Math.max(1,image.naturalWidth*base*zoom)+'px';image.style.height=Math.max(1,image.naturalHeight*base*zoom)+'px';clamp();image.style.transform='translate(calc(-50% + '+x+'px), calc(-50% + '+y+'px))';};image.addEventListener('load',draw);window.addEventListener('resize',draw);stage.addEventListener('pointerdown',event=>{if(event.button!==0)return;drag={id:event.pointerId,x:event.clientX,y:event.clientY,startX:x,startY:y};stage.setPointerCapture(event.pointerId);stage.classList.add('dragging');});stage.addEventListener('pointermove',event=>{if(!drag||event.pointerId!==drag.id)return;x=drag.startX+event.clientX-drag.x;y=drag.startY+event.clientY-drag.y;draw();});const stop=event=>{if(!drag||event.pointerId!==drag.id)return;drag=null;stage.classList.remove('dragging');};stage.addEventListener('pointerup',stop);stage.addEventListener('pointercancel',stop);stage.addEventListener('wheel',event=>{event.preventDefault();const oldZoom=zoom,ratio=event.deltaY<0?1.1:1/1.1;zoom=Math.max(.5,Math.min(6,zoom*ratio));const actualRatio=zoom/oldZoom,rect=stage.getBoundingClientRect(),pointX=event.clientX-rect.left-stage.clientWidth/2,pointY=event.clientY-rect.top-stage.clientHeight/2;x=x*actualRatio+pointX*(1-actualRatio);y=y*actualRatio+pointY*(1-actualRatio);draw();},{passive:false});<\/script></body></html>`);
   popup.document.close();
+  const captionText = [caption.artist, caption.title, caption.year].filter(Boolean).join(' · ');
+  if (captionText) {
+    const captionElement = popup.document.createElement('div');
+    captionElement.textContent = captionText;
+    Object.assign(captionElement.style, {position:'absolute',zIndex:'2',left:'16px',bottom:'16px',maxWidth:'calc(100% - 32px)',padding:'8px 11px',borderRadius:'4px',background:'#050705ba',color:'#f7f4ec',fontSize:'13px',lineHeight:'1.35',pointerEvents:'none'});
+    popup.document.querySelector('#stage')?.append(captionElement);
+  }
   popup.resizeTo(width, height);
   popup.moveTo(left, top);
   popup.focus();
@@ -1990,7 +2096,7 @@ function renderSlideshowSlide() {
   if (!work) return closeSlideshow();
   const image = slideshowImage(work);
   slideshowStage.innerHTML = image ? `<img src="${esc(image)}" alt="${esc(loc(work.title))}">` : `<div class="slideshow-empty">${language === 'ko' ? '이미지를 준비하지 못했습니다.' : 'Image unavailable.'}</div>`;
-  slideshowCaption.innerHTML = `<strong${uHangulArtistAttributes(slideshowArtist,artistDisplayName(slideshowArtist))}>${esc(artistDisplayName(slideshowArtist))}</strong><span>${esc(loc(work.title))}</span><small>${esc(workYearLabel(work) || t('unknown'))}</small>`;
+  slideshowCaption.innerHTML = `<span class="slideshow-caption-line"><span${uHangulArtistAttributes(slideshowArtist,artistDisplayName(slideshowArtist))}>${esc(artistDisplayName(slideshowArtist))}</span><span> · ${esc(loc(work.title))} · ${esc(workYearLabel(work) || t('unknown'))}</span></span>`;
 }
 function startSlideshow(artist, works) {
   if (!works.length) return;

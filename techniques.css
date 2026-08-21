@@ -400,3 +400,46 @@ body {
 .technique-link-entry.hidden { display:none; }
 .technique-link-entry input { width:min(430px,100%); border:1px solid var(--line); border-radius:4px; background:white; padding:8px 10px; color:var(--ink); font-size:12px; outline-color:#aebba8; }
 .technique-link-entry button { border:1px solid var(--ink); border-radius:4px; background:var(--ink); color:white; padding:8px 11px; font-size:12px; white-space:nowrap; }
+
+/* Compact technique navigation: no dates in the list, half-width sidebar. */
+.technique-shell { grid-template-columns: clamp(215px, 18vw, 260px) minmax(0, 1fr); }
+.technique-sidebar { min-width: 215px; max-width: 260px; padding: 26px 14px 20px; }
+.technique-sidebar { grid-template-rows: auto auto auto auto auto minmax(0, 1fr) auto; }
+.technique-list-row .technique-item { grid-template-columns: minmax(0, 1fr); }
+.technique-year { display: none !important; }
+@media (max-width: 760px) {
+  .technique-shell { display: block; }
+  .technique-sidebar { width: 100%; min-width: 0; max-width: none; }
+}
+
+/* One language toggle plus an autocomplete technique finder. */
+.technique-language-button[data-language="ko"] { display: none; }
+.technique-language { align-items: flex-start; }
+.technique-language-button[data-language="en"] { display: grid; width: 30px; height: 30px; place-items: center; border: 1px solid #aebba8; border-radius: 50%; background: #fbfcf9; color: #425043; padding: 0; font: 700 10px/1 'DM Mono', monospace; letter-spacing: .03em; }
+.technique-language-button[data-language="en"]:hover, .technique-language-button[data-language="en"]:focus-visible { border-color: #56715e; background: #e3e7dc; outline: none; }
+.technique-search { position: relative; z-index: 20; margin: 13px 0 10px; }
+.technique-search-input { width: 100%; min-width: 0; border: 1px solid #d7ddd4; border-radius: 4px; background: #fbfcf9; color: #34423a; padding: 8px 9px; font-size: 12px; outline: 0; }
+.technique-search-input:focus { border-color: #8ea18f; box-shadow: 0 0 0 2px #dfe8d9; }
+.technique-search-results { position: absolute; top: calc(100% + 4px); right: 0; left: 0; max-height: 220px; overflow: auto; border: 1px solid #cdd6cc; border-radius: 4px; background: #fbfcf9; box-shadow: 0 8px 18px #18221e24; }
+.technique-search-results.hidden { display: none; }
+.technique-search-results button { display: block; width: 100%; border: 0; border-bottom: 1px solid #e1e6df; background: transparent; color: #28352d; padding: 8px 9px; text-align: left; font-size: 12px; }
+.technique-search-results button:hover, .technique-search-results button:focus-visible { background: #e3eadd; outline: none; }
+.technique-search-results p { margin: 0; padding: 9px; color: #758078; font-size: 11px; }
+
+/* Keep the language icon unframed and bring the search close to its heading. */
+.technique-language { display: flex; justify-content: center; padding: 0; border: 0; border-radius: 0; background: transparent; }
+.technique-search { margin: 13px 0 2px; }
+.technique-sidebar .eyebrow { margin: 4px 0 15px; }
+
+/* Denser hierarchy in the explanation panel. */
+.technique-search { margin: 2px 0 10px; }
+.technique-content { padding-top: 10px; padding-bottom: 70px; }
+#technique-content > header { padding-bottom: 10px; }
+
+/* Administrator delete target at the right edge of a technique item. */
+.technique-item.has-delete { padding-right: 42px; padding-left: 11px; }
+.technique-item.has-delete::before { right: 9px; left: auto; z-index: 3; display: grid; width: 12px; height: 12px; place-items: center; background: transparent; color: #18221e !important; font: 700 24px/12px Arial, sans-serif; content: '×'; }
+.technique-item.has-delete:hover::before { background: transparent; color: #18221e; }
+.technique-delete-menu { position: fixed; z-index: 1000; min-width: 76px; padding: 4px; border: 1px solid #bfc8bd; border-radius: 4px; background: #fbfcf9; box-shadow: 0 6px 16px #18221e2b; }
+.technique-delete-menu button { display: block; width: 100%; border: 0; border-radius: 3px; background: transparent; color: #9d321f; padding: 7px 9px; text-align: left; font-size: 12px; }
+.technique-delete-menu button:hover, .technique-delete-menu button:focus-visible { background: #f8e2da; outline: none; }
