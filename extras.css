@@ -1,4 +1,4 @@
-.artist-row { position: relative; }
+.artist-row { position: relative; display: flex; align-items: center; border-radius: 8px; }
 .admin-export-button { margin-left:auto; border:1px solid #b7beb0; border-radius:4px; background:transparent; color:#425043; padding:5px 7px; font-size:10px; font-weight:700; white-space:nowrap; }
 .admin-export-button:hover { border-color:#8e9b8b; color:var(--ink); }
 .movement-atlas-button { margin: 18px 0 4px; width: 100%; border: 1px solid #c6cfc0; border-radius: 6px; background: transparent; color: #425043; padding: 9px 10px; text-align: left; font-size: 12px; font-weight: 700; }
@@ -29,10 +29,11 @@
 .movement-popup .timeline-panel { height: 100vh; padding: 38px 42px 48px; }
 .atlas-popup-close { float: right; border: 1px solid var(--line); border-radius: 4px; background: #fffdf8; color: var(--ink); padding: 7px 12px; font-size: 12px; }
 .atlas-popup-close:hover { border-color: #8e9b8b; color: var(--ink); }
-.artist-row.active { background: var(--sage); border-radius: 8px; }
+.artist-row.active { background: var(--sage); }
 .artist-row .artist-item.active { background: transparent; }
-.delete-artist { position: absolute; right: 8px; top: 14px; border: 0; background: transparent; color: #8b948c; font-size: 19px; line-height: 1; padding: 3px 6px; }
-.delete-artist:hover { color: var(--orange); }
+.artist-row .artist-item { flex: 1 1 auto; min-width: 0; }
+.delete-artist { flex: none; display: inline-grid; place-items: center; width: 24px; height: 24px; margin: 0 4px 2px 0; border: 0; border-radius: 50%; background: transparent; color: #596057; font: 700 19px/1 var(--sans); padding: 0; }
+.delete-artist:hover, .delete-artist:focus-visible { background: #f1e6dd; color: var(--orange); outline: none; }
 .manual-work-list { margin: -2px 8px 9px 50px; padding: 8px 0 2px; border-top: 1px solid #c6cfc0; }
 .manual-work-list p { margin: 0 0 5px; color: var(--muted); font-size: 9px; font-weight: 700; letter-spacing: .06em; }
 .manual-work { display: flex; align-items: center; gap: 5px; min-width: 0; padding: 3px 0; font-size: 11px; }
