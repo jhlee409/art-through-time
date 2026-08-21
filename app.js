@@ -31,6 +31,7 @@ const movementCountryEnd = 1950;
 const movementVerticalZoomMax = 30;
 const highResolutionMinimumWidth = 1600;
 const artistImportedWorkLimit = 60;
+const artistThumbnailDownloadLimit = 20;
 const sharedMovementId = 'global-contemporary';
 const artistMovementFallbacks = { Q104884:{ko:'독일 낭만주의',en:'German Romanticism'} };
 const isMovementPopup = startupParams.get('movementPopup') === '1';
@@ -461,6 +462,20 @@ function movementContributionScore(work, artist={}) {
   if (work?.origin === 'curated') score += 1800;
   if (work?.verified) score += 500;
   return score;
+}
+function thumbnailDownloadScore(work, artist={}, featuredWorkIds=new Set()) {
+  let score = representativeScore(work, artist);
+  if (work?.representative) score += 100000;
+  if (work?.movementContribution) score += 50000;
+  if (featuredWorkIds.has(String(work?.id || ''))) score += 40000;
+  return score;
+}
+function thumbnailDownloadWorksForArtist(artist, limit=artistThumbnailDownloadLimit) {
+  const works = artist?.works || [];
+  const featuredWorkIds = new Set(Array.isArray(artist?.featuredWorkIds) ? artist.featuredWorkIds.map(String) : []);
+  const selected = [...works]
+    .sort((a,b) => thumbnailDownloadScore(b,artist,featuredWorkIds) - thumbnailDownloadScore(a,artist,featuredWorkIds) || workYearForSort(a) - workYearForSort(b));
+  return limit > 0 ? selected.slice(0,limit) : selected;
 }
 const workYearLabel = work => {
   const start = work?.year;
@@ -2290,12 +2305,7 @@ function queueOfflineThumbnail(artist, work, onSaved, options={}) {
 function queueArtistOfflineThumbnails(artist, options={}) {
   if (!currentUserIsAdmin || !artist) return;
   const onSaved = savedArtist => { if (selectedId === savedArtist.id) renderTimeline(); };
-  const contributionKeys = new Set(movementContributionWorksForArtist(artist).map(selectionKey));
-  const orderedWorks = [
-    ...movementContributionWorksForArtist(artist),
-    ...(artist.works || []).filter(work => !contributionKeys.has(selectionKey(work)))
-  ];
-  orderedWorks.forEach(work => queueOfflineThumbnail(artist, work, onSaved, options));
+  thumbnailDownloadWorksForArtist(artist).forEach(work => queueOfflineThumbnail(artist, work, onSaved, options));
 }
 async function cacheThumbnailFromInput(artist, work, source) {
   const response=await apiFetch('/api/thumbnail-from-url',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({artist,work,pageUrl:source})});
@@ -2354,9 +2364,13 @@ async function runThumbnailAgent() {
   const artist = artists.find(item => item.id === selectedId);
   if (!artist) return;
   if (thumbnailObserver) thumbnailObserver.disconnect();
-  const queueWork = work => queueOfflineThumbnail(artist, work, savedArtist => {
-    if (selectedId === savedArtist.id) renderTimeline();
-  }, {priority:true});
+  const downloadableKeys = new Set(thumbnailDownloadWorksForArtist(artist).map(selectionKey));
+  const queueWork = work => {
+    if (!work || !downloadableKeys.has(selectionKey(work))) return;
+    queueOfflineThumbnail(artist, work, savedArtist => {
+      if (selectedId === savedArtist.id) renderTimeline();
+    }, {priority:true});
+  };
   // Secure the movement-contribution images first; these are the works that
   // best express the artist's known movement in the timeline.
   const contributionKeys = new Set(movementContributionWorksForArtist(artist).map(selectionKey));

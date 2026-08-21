@@ -9,6 +9,7 @@ const artistsFile = path.join(root, 'data', 'artists.json');
 const thumbnailsDir = path.join(root, 'data', 'thumbnails');
 const width = Number(process.env.ART_ATLAS_THUMBNAIL_WIDTH || 640);
 const limit = Number(process.env.ART_ATLAS_THUMBNAIL_CACHE_LIMIT || 0);
+const perArtistDownloadLimit = Number(process.env.ART_ATLAS_THUMBNAIL_PER_ARTIST_LIMIT ?? 20);
 const localizeOnly = process.env.ART_ATLAS_LOCALIZE_ONLY === '1';
 const skipPreviousFailures = process.env.ART_ATLAS_SKIP_FAILURES === '1';
 const retryAttempts = Number(process.env.ART_ATLAS_THUMBNAIL_RETRIES || 1);
@@ -29,6 +30,30 @@ const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 const isExternal = value => /^https?:\/\//i.test(String(value || ''));
 const isLocal = value => value && !isExternal(value);
 const isPlaceholder = value => String(value || '') === offlineArtworkPlaceholder;
+const workPopularity = work => Number.isFinite(Number(work?.popularity)) ? Number(work.popularity) : 0;
+const workYearForSort = work => {
+  const value = String(work?.year ?? '').trim();
+  const year = Number(value);
+  return value && Number.isFinite(year) ? year : Number.POSITIVE_INFINITY;
+};
+
+function thumbnailDownloadScore(work, featuredWorkIds = new Set()) {
+  let score = workPopularity(work);
+  if (work?.representative) score += 100000;
+  if (work?.movementContribution) score += 50000;
+  if (featuredWorkIds.has(String(work?.id || ''))) score += 40000;
+  if (work?.image || work?.thumbnail || work?.offlineThumbnailSource) score += 1200;
+  if (work?.verified) score += 600;
+  if (work?.description?.ko || work?.description?.en) score += 120;
+  return score;
+}
+
+function prioritizedWorksForDownload(artist) {
+  const works = [...(artist.works || [])].filter(work => String(work.id || ''));
+  const featuredWorkIds = new Set(Array.isArray(artist?.featuredWorkIds) ? artist.featuredWorkIds.map(String) : []);
+  works.sort((a,b) => thumbnailDownloadScore(b, featuredWorkIds) - thumbnailDownloadScore(a, featuredWorkIds) || workYearForSort(a) - workYearForSort(b));
+  return perArtistDownloadLimit > 0 ? works.slice(0, perArtistDownloadLimit) : works;
+}
 
 function downloadUrlFor(sourceUrl) {
   const parsed = new URL(sourceUrl.replace(/^http:\/\//i, 'https://'));
@@ -150,6 +175,7 @@ async function main() {
     const indexPath = path.join(artistDir, 'index.json');
     const index = await readJson(indexPath, {});
     let indexChanged = false;
+    const downloadableWorkIds = new Set(prioritizedWorksForDownload(artist).map(work => String(work.id || '')));
 
     for (const work of artist.works || []) {
       const workId = String(work.id || '');
@@ -179,6 +205,7 @@ async function main() {
         localized++;
         continue;
       }
+      if (!downloadableWorkIds.has(workId)) continue;
 
       const source = isExternal(work.offlineThumbnailSource) ? work.offlineThumbnailSource : (isExternal(work.image) ? work.image : (isExternal(work.thumbnail) ? work.thumbnail : ''));
       if (!source) {
