@@ -9,14 +9,16 @@
   const ko = () => document.documentElement.lang !== 'en';
   const buttonText = () => ko() ? '전체 규칙 점검' : 'Check all rules';
   const updateButtons = () => document.querySelectorAll('[data-rules-check]').forEach(button => {
-    button.hidden = !adminToken();
-    if (!button.dataset.running) button.textContent = buttonText();
+    const hidden = !adminToken();
+    if (button.hidden !== hidden) button.hidden = hidden;
+    const label = buttonText();
+    if (!button.dataset.running && button.textContent !== label) button.textContent = label;
   });
   const report = result => {
     const stats = result.stats || {};
     return ko()
-      ? `전체 규칙 점검 완료\n\n화가 ${stats.artists || 0}명 · 작품 ${stats.works || 0}점\n${result.changed ? '최신 규칙을 적용해 저장했습니다.' : '저장 데이터는 이미 최신 규칙과 일치합니다.'}\n이름 사전 ${stats.nameDictionary || 0}개 항목을 다시 생성했습니다.\n\n확인이 필요한 항목: 이미지 없는 작품 ${stats.missingPreview || 0}점, 제목 없는 작품 ${stats.missingTitle || 0}점`
-      : `Rule check complete\n\n${stats.artists || 0} artists · ${stats.works || 0} works\n${result.changed ? 'Applied and saved current rules.' : 'Stored data already matches current rules.'}\nRebuilt ${stats.nameDictionary || 0} name records.\n\nNeeds attention: ${stats.missingPreview || 0} works without an image, ${stats.missingTitle || 0} without a title.`;
+      ? `전체 규칙 점검 완료\n\n화가 ${stats.artists || 0}명 · 작품 ${stats.works || 0}점\n${result.changed ? '최신 규칙을 적용해 저장했습니다.' : '저장 데이터는 이미 최신 규칙과 일치합니다.'}\n이름 사전 ${stats.nameDictionary || 0}개 항목을 다시 생성했습니다.\n\n확인이 필요한 항목: 이미지 없는 작품 ${stats.missingPreview || 0}점, 제목 없는 작품 ${stats.missingTitle || 0}점\n\n보고서: ${result.reportFile || '변경사항/규칙점검_날짜_시간.md'}`
+      : `Rule check complete\n\n${stats.artists || 0} artists · ${stats.works || 0} works\n${result.changed ? 'Applied and saved current rules.' : 'Stored data already matches current rules.'}\nRebuilt ${stats.nameDictionary || 0} name records.\n\nNeeds attention: ${stats.missingPreview || 0} works without an image, ${stats.missingTitle || 0} without a title.\n\nReport: ${result.reportFile || 'changes/rule-check_date_time.md'}`;
   };
   document.addEventListener('click', async event => {
     const button = event.target.closest?.('[data-rules-check]');

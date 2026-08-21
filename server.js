@@ -796,6 +796,22 @@ function writeArtistsFile(payload, actor='') {
   artistsWriteQueue=queued.catch(()=>{});
   return queued;
 }
+function koreanTimestamp(date=new Date()) {
+  const parts=Object.fromEntries(new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(date).filter(part=>part.type!=='literal').map(part=>[part.type,part.value]));
+  return `${parts.year}${parts.month}${parts.day}_${parts.hour}${parts.minute}`;
+}
+function ruleCheckItem(artist,work) {
+  return {artist:artist.fullName || artist.name?.ko || artist.name?.en || artist.id,artistId:artist.id,work:work.title?.ko || work.title?.en || '(제목 없음)',workId:work.id || ''};
+}
+async function writeRuleCheckReport(result) {
+  const reportFolder=path.join(root,'변경사항');
+  const reportFile=path.join(reportFolder,`규칙점검_${koreanTimestamp()}.md`);
+  const rows=items => items.length ? items.map(item=>`- ${item.artist} · ${item.work}${item.workId ? ` (${item.workId})` : ''}`).join('\n') : '- 없음';
+  const text=['# 전체 규칙 점검 보고서','',`- 점검 시각: ${new Date().toLocaleString('ko-KR',{timeZone:'Asia/Seoul'})}`,`- 결과: ${result.changed ? '최신 공통 규칙을 적용하고 저장함' : '저장 데이터가 현재 공통 규칙과 일치함'}`,`- 데이터 버전: ${result.revision}`,'','## 대상','',`- 화가: ${result.stats.artists}명`,`- 작품: ${result.stats.works}점`,`- 이름 사전: ${result.stats.nameDictionary}개 항목 재생성`,`- 미술사조 문서의 화가 링크: 열 때마다 최신 별칭으로 동적 연결`,'','## 자동 적용한 범위','','- 최신 작품 정리·중복 처리 규칙','- 고해상도 이미지 경로 재확인','- 화가 이름 사전 및 uHangul 화가 맵 재생성','','수동 입력 작품, 대표작 선택, 직접 작성한 설명·이미지는 덮어쓰지 않았다. 외부 웹에서 작품을 재수집하거나 삭제하지 않았다.','','## 확인이 필요한 항목','',`### 이미지가 없는 작품 (${result.issues.missingPreview.length}점)`,'',rows(result.issues.missingPreview),'',`### 제목이 없는 작품 (${result.issues.missingTitle.length}점)`,'',rows(result.issues.missingTitle),'','## 다음 조치','','1. 위 목록의 화가 연표에서 작품의 이미지 또는 제목을 보완한다.','2. 다시 전체 규칙 점검을 실행한다.','3. 이 보고서 파일을 다음 작업 세션에 전달하거나, “가장 최근 규칙점검 보고서 확인”이라고 요청한다.',''].join('\\n');
+  await fs.mkdir(reportFolder,{recursive:true});
+  await fs.writeFile(reportFile,text,'utf8');
+  return path.relative(root,reportFile).replace(/\\/g,'/');
+}
 async function checkAndApplyLatestRules(actor='') {
   const payload=await readArtistsFile();
   const before=JSON.stringify(payload.artists || []);
@@ -804,8 +820,12 @@ async function checkAndApplyLatestRules(actor='') {
   const after=JSON.stringify(normalizedPayload.artists || []);
   const artists=normalizedPayload.artists || [];
   const works=artists.flatMap(artist=>artist.works || []);
-  const missingPreview=works.filter(work=>!work.thumbnail && !work.image).length;
-  const missingTitle=works.filter(work=>!work.title?.ko && !work.title?.en).length;
+  const issues={
+    missingPreview:artists.flatMap(artist=>(artist.works || []).filter(work=>!work.thumbnail && !work.image).map(work=>ruleCheckItem(artist,work))),
+    missingTitle:artists.flatMap(artist=>(artist.works || []).filter(work=>!work.title?.ko && !work.title?.en).map(work=>ruleCheckItem(artist,work)))
+  };
+  const missingPreview=issues.missingPreview.length;
+  const missingTitle=issues.missingTitle.length;
   let revision=Number(payload.metadata?.revision) || 0;
   const changed=before !== after;
   if (changed) {
@@ -817,7 +837,9 @@ async function checkAndApplyLatestRules(actor='') {
     await appendAudit({type:'rules.check-and-apply',actor:normalizedEmail(actor) || 'local-admin',revision,changed:false,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle}});
   }
   const nameDictionary=syncPersonNameDictionary({artists}).records;
-  return {ok:true,changed,revision,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle,nameDictionary,movementDocuments:'dynamic-linking'}};
+  const result={ok:true,changed,revision,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle,nameDictionary,movementDocuments:'dynamic-linking'},issues};
+  result.reportFile=await writeRuleCheckReport(result);
+  return result;
 }
 function highResolutionLocation(email, artistId) {
   return {folder:path.join(highResolutionDir,artistId), relativePrefix:`data/high-resolution/${artistId}`};
