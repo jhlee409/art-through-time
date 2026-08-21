@@ -1,5 +1,5 @@
 {
-  "schema": 18,
+  "schema": 20,
   "artistId": "claude-monet",
   "qid": "Q296",
   "artist": {
@@ -12,42 +12,21 @@
     "nationality": {
       "ko": "프랑스",
       "en": "France"
+    },
+    "movement": {
+      "ko": "인상주의",
+      "en": "Impressionism"
     }
   },
-  "fetchedAt": "2026-08-10T13:21:52.312Z",
+  "fetchedAt": "2026-08-21T09:53:45.966Z",
   "works": [
     {
-      "id": "wikidata-Q1167912",
-      "year": 1865,
-      "popularity": 17,
-      "title": {
-        "ko": "풀밭 위의 점심 식사",
-        "en": "Le Déjeuner sur l'herbe"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "인상주의",
-        "en": "인상주의"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20Le%20dejeurner%20sur%20l%27herbe%20%28left%20panel%29.jpg",
-      "description": {
-        "ko": "클로드 모네의 그림",
-        "en": "클로드 모네의 그림"
-      },
-      "source": "http://www.wikidata.org/entity/Q1167912",
-      "verified": true,
-      "representative": true
-    },
-    {
       "id": "wikidata-Q17491886",
-      "year": 1867,
+      "year": 1865,
       "popularity": 9,
       "title": {
         "ko": "옹플뢰르의 눈길을 지나는 마차",
-        "en": "A Cart on the Snowy Road at Honfleur"
+        "en": "옹플뢰르의 눈길을 지나는 마차"
       },
       "country": {
         "ko": "",
@@ -64,7 +43,35 @@
       },
       "source": "http://www.wikidata.org/entity/Q17491886",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
+    },
+    {
+      "id": "wikidata-Q1167912",
+      "year": 1865,
+      "popularity": 17,
+      "title": {
+        "ko": "풀밭 위의 점심 식사",
+        "en": "풀밭 위의 점심 식사"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "인상주의",
+        "en": "인상주의"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20Le%20dejeurner%20sur%20l%27herbe%20%28left%20panel%29.jpg",
+      "description": {
+        "ko": "클로드 모네의 그림",
+        "en": "클로드 모네의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q1167912",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2734892",
@@ -72,7 +79,7 @@
       "popularity": 23,
       "title": {
         "ko": "정원의 여인들",
-        "en": "Women in the Garden"
+        "en": "정원의 여인들"
       },
       "country": {
         "ko": "",
@@ -89,7 +96,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2734892",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q829572",
@@ -97,7 +105,7 @@
       "popularity": 9,
       "title": {
         "ko": "카미유",
-        "en": "Camille"
+        "en": "카미유"
       },
       "country": {
         "ko": "",
@@ -114,7 +122,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q829572",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q432253",
@@ -122,7 +131,7 @@
       "popularity": 23,
       "title": {
         "ko": "생타드레스의 정원",
-        "en": "Garden at Sainte-Adresse"
+        "en": "생타드레스의 정원"
       },
       "country": {
         "ko": "",
@@ -139,7 +148,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q432253",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q681876",
@@ -147,7 +157,7 @@
       "popularity": 18,
       "title": {
         "ko": "정원의 여인",
-        "en": "Woman in the Garden"
+        "en": "정원의 여인"
       },
       "country": {
         "ko": "",
@@ -164,7 +174,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q681876",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q734082",
@@ -172,7 +183,7 @@
       "popularity": 14,
       "title": {
         "ko": "생타드레스의 요트 경주",
-        "en": "Regatta at Sainte-Adresse"
+        "en": "생타드레스의 요트 경주"
       },
       "country": {
         "ko": "",
@@ -189,7 +200,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q734082",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3966658",
@@ -197,7 +209,7 @@
       "popularity": 8,
       "title": {
         "ko": "생타드레스의 해변",
-        "en": "The Beach at Sainte-Adresse"
+        "en": "생타드레스의 해변"
       },
       "country": {
         "ko": "",
@@ -214,57 +226,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3966658",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q4429116",
-      "year": 1868,
-      "popularity": 19,
-      "title": {
-        "ko": "까치",
-        "en": "The Magpie"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "인상주의",
-        "en": "인상주의"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20The%20Magpie%20-%20Google%20Art%20Project.jpg",
-      "description": {
-        "ko": "painting by Claude Monet",
-        "en": "painting by Claude Monet"
-      },
-      "source": "http://www.wikidata.org/entity/Q4429116",
-      "verified": true,
-      "representative": true
-    },
-    {
-      "id": "wikidata-Q50772913",
-      "year": 1868,
-      "popularity": 9,
-      "title": {
-        "ko": "붉은 망토",
-        "en": "The Red Kerchief"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "인상주의",
-        "en": "인상주의"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Red%20Kerchief%2C%20by%20Claude%20Monet%2C%20Cleveland%20Museum%20of%20Art%2C%201958.39.jpg",
-      "description": {
-        "ko": "painting by Claude Monet (French, 1840-1926) (1958.39)",
-        "en": "painting by Claude Monet (French, 1840-1926) (1958.39)"
-      },
-      "source": "http://www.wikidata.org/entity/Q50772913",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q17002537",
@@ -272,7 +235,7 @@
       "popularity": 7,
       "title": {
         "ko": "컵을 지닌 아이",
-        "en": "L'Enfant à la tasse"
+        "en": "컵을 지닌 아이"
       },
       "country": {
         "ko": "",
@@ -289,32 +252,60 @@
       },
       "source": "http://www.wikidata.org/entity/Q17002537",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
-      "id": "wikidata-Q20268615",
+      "id": "wikidata-Q4429116",
       "year": 1868,
-      "popularity": 6,
+      "popularity": 19,
       "title": {
-        "ko": "베네쿠르 센강변에서",
-        "en": "베네쿠르 센강변에서"
+        "ko": "까치",
+        "en": "까치"
       },
       "country": {
         "ko": "",
         "en": ""
       },
       "movement": {
-        "ko": "",
-        "en": ""
+        "ko": "인상주의",
+        "en": "인상주의"
       },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20On%20the%20Bank%20of%20the%20Seine%2C%20Bennecourt%20-%201922.427%20-%20Art%20Institute%20of%20Chicago.jpg",
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20The%20Magpie%20-%20Google%20Art%20Project.jpg",
       "description": {
         "ko": "painting by Claude Monet",
         "en": "painting by Claude Monet"
       },
-      "source": "http://www.wikidata.org/entity/Q20268615",
+      "source": "http://www.wikidata.org/entity/Q4429116",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q50772913",
+      "year": 1868,
+      "popularity": 9,
+      "title": {
+        "ko": "붉은 망토",
+        "en": "붉은 망토"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "인상주의",
+        "en": "인상주의"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Red%20Kerchief%2C%20by%20Claude%20Monet%2C%20Cleveland%20Museum%20of%20Art%2C%201958.39.jpg",
+      "description": {
+        "ko": "painting by Claude Monet (French, 1840-1926) (1958.39)",
+        "en": "painting by Claude Monet (French, 1840-1926) (1958.39)"
+      },
+      "source": "http://www.wikidata.org/entity/Q50772913",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q941549",
@@ -322,7 +313,7 @@
       "popularity": 16,
       "title": {
         "ko": "라 그르누이예르의 수영객들",
-        "en": "La Grenouillère"
+        "en": "라 그르누이예르의 수영객들"
       },
       "country": {
         "ko": "",
@@ -339,7 +330,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q941549",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3146246",
@@ -347,7 +339,7 @@
       "popularity": 7,
       "title": {
         "ko": "검은 바위 호텔",
-        "en": "Hôtel des Roches Noires"
+        "en": "검은 바위 호텔"
       },
       "country": {
         "ko": "",
@@ -364,7 +356,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3146246",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q20180920",
@@ -372,7 +365,7 @@
       "popularity": 9,
       "title": {
         "ko": "아흐테르잔의 집들",
-        "en": "Houses on the Achterzaan"
+        "en": "아흐테르잔의 집들"
       },
       "country": {
         "ko": "",
@@ -389,32 +382,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q20180920",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q50697763",
-      "year": 1871,
-      "popularity": 6,
-      "title": {
-        "ko": "잔담의 풍차",
-        "en": "잔담의 풍차"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Windmill%20and%20Boats%20near%20Zaandam%2C%20Holland%2C%20by%20Claude%20Monet%2C%201871%20-%20Ny%20Carlsberg%20Glyptotek%20-%20Copenhagen%20-%20DSC09437.JPG",
-      "description": {
-        "ko": "painting by Claude Monet",
-        "en": "painting by Claude Monet"
-      },
-      "source": "http://www.wikidata.org/entity/Q50697763",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q328523",
@@ -422,7 +391,7 @@
       "popularity": 52,
       "title": {
         "ko": "인상, 해돋이",
-        "en": "Impression, Sunrise"
+        "en": "인상, 해돋이"
       },
       "country": {
         "ko": "",
@@ -439,7 +408,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q328523",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3454959",
@@ -447,7 +417,7 @@
       "popularity": 14,
       "title": {
         "ko": "아르장퇴유의 보트 경주",
-        "en": "Régates à Argenteuil"
+        "en": "아르장퇴유의 보트 경주"
       },
       "country": {
         "ko": "",
@@ -464,7 +434,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3454959",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q7581196",
@@ -472,7 +443,7 @@
       "popularity": 11,
       "title": {
         "ko": "봄",
-        "en": "Springtime"
+        "en": "봄"
       },
       "country": {
         "ko": "",
@@ -489,32 +460,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q7581196",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q27975121",
-      "year": 1872,
-      "popularity": 6,
-      "title": {
-        "ko": "루앙의 센강",
-        "en": "루앙의 센강"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%27The%20Seine%20at%20Rouen%27%20by%20Claude%20Monet%2C%201872%2C%20Hermitage.JPG",
-      "description": {
-        "ko": "painting by Claude Monet",
-        "en": "painting by Claude Monet"
-      },
-      "source": "http://www.wikidata.org/entity/Q27975121",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3231771",
@@ -522,11 +469,11 @@
       "popularity": 11,
       "title": {
         "ko": "양귀비꽃 (모네)",
-        "en": "The Poppy Field near Argenteuil"
+        "en": "양귀비꽃 (모네)"
       },
       "country": {
         "ko": "프랑스",
-        "en": "France"
+        "en": "프랑스"
       },
       "movement": {
         "ko": "인상주의",
@@ -539,7 +486,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3231771",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q4949676",
@@ -547,7 +495,7 @@
       "popularity": 10,
       "title": {
         "ko": "카퓌신 대로",
-        "en": "Boulevard des Capucines"
+        "en": "카퓌신 대로"
       },
       "country": {
         "ko": "",
@@ -564,7 +512,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q4949676",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q18922918",
@@ -572,7 +521,7 @@
       "popularity": 9,
       "title": {
         "ko": "점심",
-        "en": "The Luncheon"
+        "en": "점심"
       },
       "country": {
         "ko": "",
@@ -589,7 +538,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q18922918",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q10315096",
@@ -597,7 +547,7 @@
       "popularity": 9,
       "title": {
         "ko": "아니에르의 센강",
-        "en": "Landscape. Seine at Asnieres"
+        "en": "아니에르의 센강"
       },
       "country": {
         "ko": "",
@@ -614,82 +564,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q10315096",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q17492292",
-      "year": 1873,
-      "popularity": 6,
-      "title": {
-        "ko": "아르장퇴유의 센강",
-        "en": "아르장퇴유의 센강"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20The%20Seine%20at%20Argenteuil%201873.jpg",
-      "description": {
-        "ko": "painting by Claude Monet",
-        "en": "painting by Claude Monet"
-      },
-      "source": "http://www.wikidata.org/entity/Q17492292",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q3832426",
-      "year": 1873,
-      "popularity": 6,
-      "title": {
-        "ko": "햇빛 속의 라일락 덤불",
-        "en": "햇빛 속의 라일락 덤불"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "인상주의",
-        "en": "인상주의"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lilacs%20in%20the%20Sun%2C%201872.jpg",
-      "description": {
-        "ko": "painting by Claude Monet, 1873",
-        "en": "painting by Claude Monet, 1873"
-      },
-      "source": "http://www.wikidata.org/entity/Q3832426",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q129097749",
-      "year": 1873,
-      "popularity": 6,
-      "title": {
-        "ko": "카퓌신 대로",
-        "en": "카퓌신 대로"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20Boulevard%20des%20Capucines%20-%20Google%20Art%20Project.jpg",
-      "description": {
-        "ko": "클로드 모네의 2가지 그림",
-        "en": "클로드 모네의 2가지 그림"
-      },
-      "source": "http://www.wikidata.org/entity/Q129097749",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1212084",
@@ -697,7 +573,7 @@
       "popularity": 8,
       "title": {
         "ko": "아르장퇴유의 다리",
-        "en": "The Railway Bridge at Argenteuil"
+        "en": "아르장퇴유의 다리"
       },
       "country": {
         "ko": "",
@@ -714,32 +590,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1212084",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q19570879",
-      "year": 1874,
-      "popularity": 6,
-      "title": {
-        "ko": "아르장퇴유 연안의 돛단배",
-        "en": "아르장퇴유 연안의 돛단배"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Monet-ArgenteuilBasinWithASingleSailboat.jpg",
-      "description": {
-        "ko": "painting by Claude Monet",
-        "en": "painting by Claude Monet"
-      },
-      "source": "http://www.wikidata.org/entity/Q19570879",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q7548371",
@@ -747,7 +599,7 @@
       "popularity": 9,
       "title": {
         "ko": "아르장퇴유의 눈",
-        "en": "Snow at Argenteuil"
+        "en": "아르장퇴유의 눈"
       },
       "country": {
         "ko": "",
@@ -764,32 +616,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q7548371",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q10317575",
-      "year": 1875,
-      "popularity": 7,
-      "title": {
-        "ko": "아르장퇴유의 빨간 보트",
-        "en": "Red Boats at Argenteuil"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20%28mus%C3%A9e%20de%20lOrangerie%2C%20Paris%29%20%288231007934%29.jpg",
-      "description": {
-        "ko": "클로드 모네의 그림",
-        "en": "클로드 모네의 그림"
-      },
-      "source": "http://www.wikidata.org/entity/Q10317575",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q10322900",
@@ -797,11 +625,11 @@
       "popularity": 14,
       "title": {
         "ko": "기모노를 입은 카미유",
-        "en": "Madame Monet wearing a kimono"
+        "en": "기모노를 입은 카미유"
       },
       "country": {
         "ko": "프랑스",
-        "en": "France"
+        "en": "프랑스"
       },
       "movement": {
         "ko": "인상주의",
@@ -814,57 +642,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q10322900",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q49985736",
-      "year": 1877,
-      "popularity": 13,
-      "title": {
-        "ko": "생라자르역",
-        "en": "Gare Saint-Lazare (Monet series)"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "인상주의",
-        "en": "인상주의"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/La%20Gare%20Saint-Lazare%20-%20Claude%20Monet.jpg",
-      "description": {
-        "ko": "impressionist paintings of French rail infrastructure",
-        "en": "impressionist paintings of French rail infrastructure"
-      },
-      "source": "http://www.wikidata.org/entity/Q49985736",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q3794121",
-      "year": 1877,
-      "popularity": 7,
-      "title": {
-        "ko": "몽제로의 정원 한구석",
-        "en": "Corner of the Garden at Montgeron"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "인상주의",
-        "en": "인상주의"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Monet%2C%20Claude%20-%20Corner%20of%20the%20Garden%20at%20Montgeron.jpg",
-      "description": {
-        "ko": "클로드 모네의 그림",
-        "en": "클로드 모네의 그림"
-      },
-      "source": "http://www.wikidata.org/entity/Q3794121",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q6082483",
@@ -872,7 +651,7 @@
       "popularity": 7,
       "title": {
         "ko": "유럽교, 생라자르역",
-        "en": "Pont de l'Europe, gare Saint-Lazare"
+        "en": "유럽교, 생라자르역"
       },
       "country": {
         "ko": "",
@@ -889,7 +668,60 @@
       },
       "source": "http://www.wikidata.org/entity/Q6082483",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q49985736",
+      "year": 1877,
+      "popularity": 13,
+      "title": {
+        "ko": "생라자르역",
+        "en": "생라자르역"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "인상주의",
+        "en": "인상주의"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/La%20Gare%20Saint-Lazare%20-%20Claude%20Monet.jpg",
+      "description": {
+        "ko": "impressionist paintings of French rail infrastructure",
+        "en": "impressionist paintings of French rail infrastructure"
+      },
+      "source": "http://www.wikidata.org/entity/Q49985736",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3794121",
+      "year": 1877,
+      "popularity": 7,
+      "title": {
+        "ko": "몽제로의 정원 한구석",
+        "en": "몽제로의 정원 한구석"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "인상주의",
+        "en": "인상주의"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Monet%2C%20Claude%20-%20Corner%20of%20the%20Garden%20at%20Montgeron.jpg",
+      "description": {
+        "ko": "클로드 모네의 그림",
+        "en": "클로드 모네의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q3794121",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q20272169",
@@ -897,7 +729,7 @@
       "popularity": 7,
       "title": {
         "ko": "노르망디발 열차의 도착, 생라자르역",
-        "en": "Arrival of the Normandy Train, Gare Saint-Lazare"
+        "en": "노르망디발 열차의 도착, 생라자르역"
       },
       "country": {
         "ko": "",
@@ -914,32 +746,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q20272169",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q3968022",
-      "year": 1877,
-      "popularity": 6,
-      "title": {
-        "ko": "몽주롱의 연못",
-        "en": "몽주롱의 연못"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "인상주의",
-        "en": "인상주의"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Monet%2C%20Pond-at-Montgeron.jpg",
-      "description": {
-        "ko": "클로드 모네의 그림",
-        "en": "클로드 모네의 그림"
-      },
-      "source": "http://www.wikidata.org/entity/Q3968022",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3212522",
@@ -947,11 +755,11 @@
       "popularity": 8,
       "title": {
         "ko": "몽토르괴유 거리",
-        "en": "La Rue Montorgueil"
+        "en": "몽토르괴유 거리"
       },
       "country": {
         "ko": "프랑스",
-        "en": "France"
+        "en": "프랑스"
       },
       "movement": {
         "ko": "인상주의",
@@ -964,7 +772,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3212522",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2381272",
@@ -972,7 +781,7 @@
       "popularity": 8,
       "title": {
         "ko": "임종을 맞은 카미유",
-        "en": "Camille Monet on her deathbed"
+        "en": "임종을 맞은 카미유"
       },
       "country": {
         "ko": "",
@@ -989,57 +798,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2381272",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q2070487",
-      "year": 1882,
-      "popularity": 11,
-      "title": {
-        "ko": "푸르빌의 해변",
-        "en": "Beach in Pourville"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "인상주의",
-        "en": "인상주의"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Monet%20Claude%2C%20The%20Beach%20at%20Pourville%2C%201882.jpg",
-      "description": {
-        "ko": "painting by Claude Monet",
-        "en": "painting by Claude Monet"
-      },
-      "source": "http://www.wikidata.org/entity/Q2070487",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q3234987",
-      "year": 1882,
-      "popularity": 8,
-      "title": {
-        "ko": "푸아시의 낚시꾼들",
-        "en": "Fishermen in Poissy"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "인상주의",
-        "en": "인상주의"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20Angler%20auf%20der%20Seine%20bei%20Poissy%20-%201288%20-%20%C3%96sterreichische%20Galerie%20Belvedere.jpg",
-      "description": {
-        "ko": "painting by Claude Monet, 1882",
-        "en": "painting by Claude Monet, 1882"
-      },
-      "source": "http://www.wikidata.org/entity/Q3234987",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q27665416",
@@ -1047,7 +807,7 @@
       "popularity": 8,
       "title": {
         "ko": "폴 영감의 초상",
-        "en": "Portrait of Père Paul"
+        "en": "폴 영감의 초상"
       },
       "country": {
         "ko": "",
@@ -1064,15 +824,17 @@
       },
       "source": "http://www.wikidata.org/entity/Q27665416",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
-      "id": "wikidata-Q7723379",
+      "id": "wikidata-Q2070487",
       "year": 1882,
-      "popularity": 7,
+      "popularity": 11,
       "title": {
-        "ko": "푸르빌의 절벽 산책로",
-        "en": "푸르빌의 절벽 산책로"
+        "ko": "푸르빌의 해변",
+        "en": "푸르빌의 해변"
       },
       "country": {
         "ko": "",
@@ -1082,14 +844,41 @@
         "ko": "인상주의",
         "en": "인상주의"
       },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20Cliff%20Walk%20at%20Pourville%20-%20Google%20Art%20Project.jpg",
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Monet%20Claude%2C%20The%20Beach%20at%20Pourville%2C%201882.jpg",
       "description": {
-        "ko": "painting by Claude Monet, Art Institute of Chicago",
-        "en": "painting by Claude Monet, Art Institute of Chicago"
+        "ko": "painting by Claude Monet",
+        "en": "painting by Claude Monet"
       },
-      "source": "http://www.wikidata.org/entity/Q7723379",
+      "source": "http://www.wikidata.org/entity/Q2070487",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3234987",
+      "year": 1882,
+      "popularity": 8,
+      "title": {
+        "ko": "푸아시의 낚시꾼들",
+        "en": "푸아시의 낚시꾼들"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "인상주의",
+        "en": "인상주의"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20Angler%20auf%20der%20Seine%20bei%20Poissy%20-%201288%20-%20%C3%96sterreichische%20Galerie%20Belvedere.jpg",
+      "description": {
+        "ko": "painting by Claude Monet, 1882",
+        "en": "painting by Claude Monet, 1882"
+      },
+      "source": "http://www.wikidata.org/entity/Q3234987",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q7620298",
@@ -1097,7 +886,7 @@
       "popularity": 8,
       "title": {
         "ko": "에트르타의 폭풍우 치는 바다",
-        "en": "Etretat, Rough Seas"
+        "en": "에트르타의 폭풍우 치는 바다"
       },
       "country": {
         "ko": "",
@@ -1114,7 +903,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q7620298",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q19912578",
@@ -1122,7 +912,7 @@
       "popularity": 8,
       "title": {
         "ko": "네르비아의 계곡",
-        "en": "The Valley of the Nervia"
+        "en": "네르비아의 계곡"
       },
       "country": {
         "ko": "",
@@ -1139,7 +929,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q19912578",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2395218",
@@ -1147,7 +938,7 @@
       "popularity": 23,
       "title": {
         "ko": "파라솔을 든 여인 - 모네 부인과 그 아들",
-        "en": "Woman with a Parasol – Madame Monet and Her Son"
+        "en": "파라솔을 든 여인 - 모네 부인과 그 아들"
       },
       "country": {
         "ko": "",
@@ -1164,7 +955,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2395218",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1451508",
@@ -1172,7 +964,7 @@
       "popularity": 8,
       "title": {
         "ko": "왼쪽을 향한 양산을 든 여인",
-        "en": "Woman with a Parasol, facing left"
+        "en": "왼쪽을 향한 양산을 든 여인"
       },
       "country": {
         "ko": "",
@@ -1189,7 +981,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1451508",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3952498",
@@ -1214,7 +1007,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3952498",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q4931530",
@@ -1222,7 +1016,7 @@
       "popularity": 10,
       "title": {
         "ko": "에프트강에서의 뱃놀이",
-        "en": "Boating on the River Epte"
+        "en": "에프트강에서의 뱃놀이"
       },
       "country": {
         "ko": "",
@@ -1239,32 +1033,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q4931530",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q47510174",
-      "year": 1890,
-      "popularity": 7,
-      "title": {
-        "ko": "양귀비가 있는 귀리밭",
-        "en": "양귀비가 있는 귀리밭"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "인상주의",
-        "en": "인상주의"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Monet%2C%20Champ%20d%27avoine%20aux%20coquelicots%20%28%20Mus%C3%A9e%20d%27art%20moderne%20et%20contemporain%2C%20Strasbourg%20%29.JPG",
-      "description": {
-        "ko": "painting by Claude Monet",
-        "en": "painting by Claude Monet"
-      },
-      "source": "http://www.wikidata.org/entity/Q47510174",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q733458",
@@ -1272,7 +1042,7 @@
       "popularity": 13,
       "title": {
         "ko": "포플러 연작",
-        "en": "Poplars"
+        "en": "포플러 연작"
       },
       "country": {
         "ko": "",
@@ -1289,7 +1059,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q733458",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q637414",
@@ -1297,7 +1068,7 @@
       "popularity": 24,
       "title": {
         "ko": "루앙 대성당",
-        "en": "Rouen Cathedral Series"
+        "en": "루앙 대성당"
       },
       "country": {
         "ko": "",
@@ -1314,15 +1085,16 @@
       },
       "source": "http://www.wikidata.org/entity/Q637414",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1189907",
-      "year": 1914,
+      "year": 1899,
       "popularity": 33,
       "title": {
         "ko": "수련",
-        "en": "Water Lilies"
+        "en": "수련"
       },
       "country": {
         "ko": "",
@@ -1339,7 +1111,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1189907",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3794124",
@@ -1347,7 +1120,7 @@
       "popularity": 14,
       "title": {
         "ko": "지베르니의 화가의 정원",
-        "en": "The artist's garden at Giverny"
+        "en": "지베르니의 화가의 정원"
       },
       "country": {
         "ko": "",
@@ -1364,7 +1137,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3794124",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3795196",
@@ -1372,7 +1146,7 @@
       "popularity": 10,
       "title": {
         "ko": "워털루 다리",
-        "en": "Waterloo Bridge series"
+        "en": "워털루 다리"
       },
       "country": {
         "ko": "",
@@ -1389,7 +1163,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3795196",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q5074352",
@@ -1397,7 +1172,7 @@
       "popularity": 8,
       "title": {
         "ko": "채링크로스 다리 (모네)",
-        "en": "Charing Cross Bridge"
+        "en": "채링크로스 다리 (모네)"
       },
       "country": {
         "ko": "",
@@ -1414,32 +1189,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q5074352",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q3947218",
-      "year": 1908,
-      "popularity": 12,
-      "title": {
-        "ko": "황혼의 산조르조마조레",
-        "en": "San Giorgio Maggiore at Dusk"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "인상주의",
-        "en": "인상주의"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%2C%20Saint-Georges%20majeur%20au%20cr%C3%A9puscule.jpg",
-      "description": {
-        "ko": "painting by Claude Monet, National Museum Cardiff",
-        "en": "painting by Claude Monet, National Museum Cardiff"
-      },
-      "source": "http://www.wikidata.org/entity/Q3947218",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q19564337",
@@ -1447,7 +1198,7 @@
       "popularity": 9,
       "title": {
         "ko": "대운하",
-        "en": "The Grand Canal"
+        "en": "대운하"
       },
       "country": {
         "ko": "",
@@ -1464,7 +1215,9 @@
       },
       "source": "http://www.wikidata.org/entity/Q19564337",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q19914267",
@@ -1472,7 +1225,7 @@
       "popularity": 8,
       "title": {
         "ko": "산조르조마조레에서 바라본 두칼레 궁전",
-        "en": "The Doge's Palace Seen from San Giorgio Maggiore"
+        "en": "산조르조마조레에서 바라본 두칼레 궁전"
       },
       "country": {
         "ko": "",
@@ -1489,7 +1242,34 @@
       },
       "source": "http://www.wikidata.org/entity/Q19914267",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3947218",
+      "year": 1908,
+      "popularity": 12,
+      "title": {
+        "ko": "황혼의 산조르조마조레",
+        "en": "황혼의 산조르조마조레"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "인상주의",
+        "en": "인상주의"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%2C%20Saint-Georges%20majeur%20au%20cr%C3%A9puscule.jpg",
+      "description": {
+        "ko": "painting by Claude Monet, National Museum Cardiff",
+        "en": "painting by Claude Monet, National Museum Cardiff"
+      },
+      "source": "http://www.wikidata.org/entity/Q3947218",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1650049",
@@ -1497,7 +1277,7 @@
       "popularity": 8,
       "title": {
         "ko": "수련 연못",
-        "en": "Le Bassin Aux Nymphéas"
+        "en": "수련 연못"
       },
       "country": {
         "ko": "",
@@ -1514,7 +1294,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1650049",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     }
   ]
 }

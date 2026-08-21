@@ -1,5 +1,5 @@
 {
-  "schema": 18,
+  "schema": 20,
   "artistId": "artist-Q43270",
   "qid": "Q43270",
   "artist": {
@@ -12,9 +12,13 @@
     "nationality": {
       "ko": "브라반트 공국",
       "en": "Duchy of Brabant"
+    },
+    "movement": {
+      "ko": "네덜란드 및 플랑드르 르네상스 회화",
+      "en": "Dutch and Flemish Renaissance painting"
     }
   },
-  "fetchedAt": "2026-08-11T00:11:54.092Z",
+  "fetchedAt": "2026-08-21T09:47:30.197Z",
   "works": [
     {
       "id": "wikidata-Q556553",
@@ -39,61 +43,12 @@
       },
       "source": "http://www.wikidata.org/entity/Q556553",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q22814425",
-      "year": 1550,
-      "popularity": 1,
-      "title": {
-        "ko": "The Seven Vices",
-        "en": "The Seven Vices"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "",
-      "description": {
-        "ko": "drawing series by Pieter Bruegel the Elder",
-        "en": "drawing series by Pieter Bruegel the Elder"
-      },
-      "source": "http://www.wikidata.org/entity/Q22814425",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q56394941",
-      "year": 1553,
-      "popularity": 2,
-      "title": {
-        "ko": "Christ and Apostles at the Sea of Galilee",
-        "en": "Christ and Apostles at the Sea of Galilee"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Christus%20und%20die%20Apostel%20am%20See%20Genezareth%20%28Bruegel%201553%29.jpg",
-      "description": {
-        "ko": "painting by Pieter Brueghel the Elder",
-        "en": "painting by Pieter Brueghel the Elder"
-      },
-      "source": "http://www.wikidata.org/entity/Q56394941",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q4009224",
-      "year": 1556,
+      "year": 1554,
       "popularity": 13,
       "title": {
         "ko": "Naval Battle in the Gulf of Naples",
@@ -114,7 +69,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q4009224",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q698510",
@@ -139,7 +95,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q698510",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3605524",
@@ -164,7 +121,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3605524",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q43270-0",
@@ -188,8 +146,9 @@
       },
       "source": "https://en.wikipedia.org/wiki/Pieter_Bruegel_the_Elder",
       "verified": true,
-      "representative": true,
-      "popularity": 999
+      "popularity": 999,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q1434332",
@@ -214,182 +173,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1434332",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q47470067",
-      "year": 1557,
-      "popularity": 4,
-      "title": {
-        "ko": "The Drunkard pushed into the Pigsty",
-        "en": "The Drunkard pushed into the Pigsty"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pieter%20Brueghel%20the%20elder%20-%201568%20-%20The%20Drunkard%20pushed%20into%20the%20pigsty.jpg",
-      "description": {
-        "ko": "painting by Pieter Bruegel I",
-        "en": "painting by Pieter Bruegel I"
-      },
-      "source": "http://www.wikidata.org/entity/Q47470067",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q4258682",
-      "year": 1557,
-      "popularity": 3,
-      "title": {
-        "ko": "Sloth",
-        "en": "Sloth"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sloth%20%28Desidia%29%2C%20from%20the%20series%20The%20Seven%20Deadly%20Sins%20MET%20DP818263.jpg",
-      "description": {
-        "ko": "print by Pieter van der Heyden after Pieter Bruegel (I) from the series 'The Seven Deadly Sins'",
-        "en": "print by Pieter van der Heyden after Pieter Bruegel (I) from the series 'The Seven Deadly Sins'"
-      },
-      "source": "http://www.wikidata.org/entity/Q4258682",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q131357860",
-      "year": 1557,
-      "popularity": 1,
-      "title": {
-        "ko": "Wrath",
-        "en": "Wrath"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pieter%20Brueghel%20Zorn.jpg",
-      "description": {
-        "ko": "drawing by Pieter Bruegel the Elder",
-        "en": "drawing by Pieter Bruegel the Elder"
-      },
-      "source": "http://www.wikidata.org/entity/Q131357860",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q131358283",
-      "year": 1557,
-      "popularity": 1,
-      "title": {
-        "ko": "Pride",
-        "en": "Pride"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pieter%20Bruegel%20the%20Elder%2C%20Superbia%2C%201557%2C%20collection%20Fondation%20Custodia%2C%20inv.%20465.jpg",
-      "description": {
-        "ko": "drawing by Pieter Bruegel the Elder",
-        "en": "drawing by Pieter Bruegel the Elder"
-      },
-      "source": "http://www.wikidata.org/entity/Q131358283",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q131358621",
-      "year": 1557,
-      "popularity": 1,
-      "title": {
-        "ko": "Gluttony",
-        "en": "Gluttony"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pieter%20Bruegel%20the%20Elder%2C%20Gula%2C%201557%2C%20collection%20Fondation%20Custodia%2C%20inv.%20466.jpg",
-      "description": {
-        "ko": "drawing by Pieter Bruegel the Elder",
-        "en": "drawing by Pieter Bruegel the Elder"
-      },
-      "source": "http://www.wikidata.org/entity/Q131358621",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q131359656",
-      "year": 1557,
-      "popularity": 1,
-      "title": {
-        "ko": "Envy",
-        "en": "Envy"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pieter%20Bruegel%20the%20Elder%2C%20Invidia%2C%201557%2C%20private%20collection.jpg",
-      "description": {
-        "ko": "drawing by Pieter Bruegel the Elder",
-        "en": "drawing by Pieter Bruegel the Elder"
-      },
-      "source": "http://www.wikidata.org/entity/Q131359656",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q18686393",
-      "year": 1557,
-      "popularity": 1,
-      "title": {
-        "ko": "Sloth",
-        "en": "Sloth"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pieter%20Bruegel%20the%20Elder%20-%20Desidia%20%28Sloth%29%2C%201557%20-%20Google%20Art%20Project.jpg",
-      "description": {
-        "ko": "drawing by Pieter Bruegel the Elder",
-        "en": "drawing by Pieter Bruegel the Elder"
-      },
-      "source": "http://www.wikidata.org/entity/Q18686393",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3712512",
@@ -414,15 +199,42 @@
       },
       "source": "http://www.wikidata.org/entity/Q3712512",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q689236",
+      "year": 1559,
+      "popularity": 20,
+      "title": {
+        "ko": "The Fight Between Carnival and Lent",
+        "en": "The Fight Between Carnival and Lent"
+      },
+      "country": {
+        "ko": "합스부르크 네덜란드",
+        "en": "합스부르크 네덜란드"
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pieter%20Bruegel%20d.%20%C3%84.%20066.jpg",
+      "description": {
+        "ko": "painting by Pieter Brueghel the Elder",
+        "en": "painting by Pieter Brueghel the Elder"
+      },
+      "source": "http://www.wikidata.org/entity/Q689236",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q533619",
-      "year": 1551,
+      "year": 1559,
       "popularity": 37,
       "title": {
         "ko": "네덜란드 속담",
-        "en": "Netherlandish Proverbs"
+        "en": "네덜란드 속담"
       },
       "country": {
         "ko": "",
@@ -439,57 +251,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q533619",
       "verified": true,
-      "representative": true
-    },
-    {
-      "id": "wikidata-Q689236",
-      "year": 1559,
-      "popularity": 20,
-      "title": {
-        "ko": "The Fight Between Carnival and Lent",
-        "en": "The Fight Between Carnival and Lent"
-      },
-      "country": {
-        "ko": "합스부르크 네덜란드",
-        "en": "Habsburg Netherlands"
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pieter%20Bruegel%20d.%20%C3%84.%20066.jpg",
-      "description": {
-        "ko": "painting by Pieter Brueghel the Elder",
-        "en": "painting by Pieter Brueghel the Elder"
-      },
-      "source": "http://www.wikidata.org/entity/Q689236",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q644856",
-      "year": 1560,
-      "popularity": 31,
-      "title": {
-        "ko": "The Triumph of Death",
-        "en": "The Triumph of Death"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "플랑드르파",
-        "en": "플랑드르파"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Triumph%20of%20Death%20by%20Pieter%20Bruegel%20the%20Elder.jpg",
-      "description": {
-        "ko": "painting by Pieter Bruegel the Elder",
-        "en": "painting by Pieter Bruegel the Elder"
-      },
-      "source": "http://www.wikidata.org/entity/Q644856",
-      "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q697332",
@@ -514,11 +277,38 @@
       },
       "source": "http://www.wikidata.org/entity/Q697332",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q644856",
+      "year": 1560,
+      "popularity": 31,
+      "title": {
+        "ko": "The Triumph of Death",
+        "en": "The Triumph of Death"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Triumph%20of%20Death%20by%20Pieter%20Bruegel%20the%20Elder.jpg",
+      "description": {
+        "ko": "painting by Pieter Bruegel the Elder",
+        "en": "painting by Pieter Bruegel the Elder"
+      },
+      "source": "http://www.wikidata.org/entity/Q644856",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q80869",
-      "year": 1563,
+      "year": 1561,
       "popularity": 20,
       "title": {
         "ko": "Dull Gret",
@@ -539,7 +329,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q80869",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q43270-1",
@@ -563,8 +354,9 @@
       },
       "source": "https://en.wikipedia.org/wiki/Pieter_Bruegel_the_Elder",
       "verified": true,
-      "representative": true,
-      "popularity": 998
+      "popularity": 998,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q594406",
@@ -589,7 +381,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q594406",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3976754",
@@ -614,7 +407,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3976754",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q231953",
@@ -639,7 +433,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q231953",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q43270-2",
@@ -663,8 +458,9 @@
       },
       "source": "https://en.wikipedia.org/wiki/Pieter_Bruegel_the_Elder",
       "verified": true,
-      "representative": true,
-      "popularity": 997
+      "popularity": 997,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q699091",
@@ -672,7 +468,7 @@
       "popularity": 37,
       "title": {
         "ko": "바벨탑",
-        "en": "The Tower of Babel"
+        "en": "바벨탑"
       },
       "country": {
         "ko": "",
@@ -689,11 +485,12 @@
       },
       "source": "http://www.wikidata.org/entity/Q699091",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q4680634",
-      "year": 1564,
+      "year": 1563,
       "popularity": 16,
       "title": {
         "ko": "The Adoration of the Kings",
@@ -714,7 +511,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q4680634",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1803755",
@@ -739,7 +537,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1803755",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1211030",
@@ -764,7 +563,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1211030",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q15293656",
@@ -789,7 +589,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q15293656",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q686107",
@@ -814,7 +615,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q686107",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3863232",
@@ -839,57 +641,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3863232",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q500985",
-      "year": 1565,
-      "popularity": 38,
-      "title": {
-        "ko": "눈 속의 사냥꾼",
-        "en": "The Hunters in the Snow"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "북방 르네상스",
-        "en": "북방 르네상스"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pieter%20Bruegel%20the%20Elder%20-%20Hunters%20in%20the%20Snow%20%28Winter%29%20-%20Google%20Art%20Project.jpg",
-      "description": {
-        "ko": "painting by Pieter Brueghel the Elder, Kunsthistorisches Museum Wien",
-        "en": "painting by Pieter Brueghel the Elder, Kunsthistorisches Museum Wien"
-      },
-      "source": "http://www.wikidata.org/entity/Q500985",
-      "verified": true,
-      "representative": true
-    },
-    {
-      "id": "wikidata-Q776175",
-      "year": 1565,
-      "popularity": 24,
-      "title": {
-        "ko": "추수하는 사람들",
-        "en": "The Harvesters"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "북방 르네상스",
-        "en": "북방 르네상스"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pieter%20Bruegel%20the%20Elder-%20The%20Harvesters%20-%20Google%20Art%20Project.jpg",
-      "description": {
-        "ko": "painting by Pieter Bruegel the Elder",
-        "en": "painting by Pieter Bruegel the Elder"
-      },
-      "source": "http://www.wikidata.org/entity/Q776175",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q698254",
@@ -914,7 +667,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q698254",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1213437",
@@ -939,7 +693,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1213437",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q698219",
@@ -964,7 +719,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q698219",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q873639",
@@ -972,7 +728,7 @@
       "popularity": 17,
       "title": {
         "ko": "새 덫이 있는 겨울 풍경",
-        "en": "Winter Landscape with a Bird Trap"
+        "en": "새 덫이 있는 겨울 풍경"
       },
       "country": {
         "ko": "",
@@ -989,7 +745,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q873639",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1087244",
@@ -1014,7 +771,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1087244",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3855265",
@@ -1039,7 +797,60 @@
       },
       "source": "http://www.wikidata.org/entity/Q3855265",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q500985",
+      "year": 1565,
+      "popularity": 38,
+      "title": {
+        "ko": "눈 속의 사냥꾼",
+        "en": "눈 속의 사냥꾼"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "북방 르네상스",
+        "en": "북방 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pieter%20Bruegel%20the%20Elder%20-%20Hunters%20in%20the%20Snow%20%28Winter%29%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Pieter Brueghel the Elder, Kunsthistorisches Museum Wien",
+        "en": "painting by Pieter Brueghel the Elder, Kunsthistorisches Museum Wien"
+      },
+      "source": "http://www.wikidata.org/entity/Q500985",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q776175",
+      "year": 1565,
+      "popularity": 24,
+      "title": {
+        "ko": "추수하는 사람들",
+        "en": "추수하는 사람들"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "북방 르네상스",
+        "en": "북방 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pieter%20Bruegel%20the%20Elder-%20The%20Harvesters%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Pieter Bruegel the Elder",
+        "en": "painting by Pieter Bruegel the Elder"
+      },
+      "source": "http://www.wikidata.org/entity/Q776175",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q43270-3",
@@ -1063,8 +874,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Pieter_Bruegel_the_Elder",
       "verified": true,
-      "representative": true,
-      "popularity": 996
+      "popularity": 996,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q43270-4",
@@ -1088,33 +899,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Pieter_Bruegel_the_Elder",
       "verified": true,
-      "representative": true,
-      "popularity": 995
-    },
-    {
-      "id": "wikidata-Q1134250",
-      "year": 1566,
-      "popularity": 21,
-      "title": {
-        "ko": "The Massacre of the Innocents",
-        "en": "The Massacre of the Innocents"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "북방 르네상스",
-        "en": "북방 르네상스"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pieter%20Bruegel%20the%20Elder%20-%20Massacre%20of%20the%20Innocents%20-%20Google%20Art%20Project.jpg",
-      "description": {
-        "ko": "painting by Pieter Bruegel the Elder",
-        "en": "painting by Pieter Bruegel the Elder"
-      },
-      "source": "http://www.wikidata.org/entity/Q1134250",
-      "verified": true,
-      "representative": false
+      "popularity": 995,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q375216",
@@ -1139,7 +925,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q375216",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3702434",
@@ -1164,7 +951,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3702434",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1198007",
@@ -1189,7 +977,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1198007",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q257048",
@@ -1214,7 +1003,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q257048",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1887184",
@@ -1239,7 +1029,34 @@
       },
       "source": "http://www.wikidata.org/entity/Q1887184",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q1134250",
+      "year": 1566,
+      "popularity": 21,
+      "title": {
+        "ko": "The Massacre of the Innocents",
+        "en": "The Massacre of the Innocents"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "북방 르네상스",
+        "en": "북방 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pieter%20Bruegel%20the%20Elder%20-%20Massacre%20of%20the%20Innocents%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Pieter Bruegel the Elder",
+        "en": "painting by Pieter Bruegel the Elder"
+      },
+      "source": "http://www.wikidata.org/entity/Q1134250",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q665337",
@@ -1264,57 +1081,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q665337",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q603751",
-      "year": 1567,
-      "popularity": 29,
-      "title": {
-        "ko": "농부의 결혼식",
-        "en": "The Peasant Wedding"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "북방 르네상스",
-        "en": "북방 르네상스"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pieter%20Bruegel%20the%20Elder%20-%20Peasant%20Wedding%20-%20Google%20Art%20Project.jpg",
-      "description": {
-        "ko": "대 피터르 브뤼헐의 그림",
-        "en": "대 피터르 브뤼헐의 그림"
-      },
-      "source": "http://www.wikidata.org/entity/Q603751",
-      "verified": true,
-      "representative": true
-    },
-    {
-      "id": "wikidata-Q1192570",
-      "year": 1568,
-      "popularity": 29,
-      "title": {
-        "ko": "눈먼 자들의 비유",
-        "en": "The Blind Leading the Blind"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "플랑드르파",
-        "en": "플랑드르파"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bruegel%2C%20Pieter%20%28I%29%20-%20Blind%20leading%20the%20blind%20Google%20Art%20Project.jpeg",
-      "description": {
-        "ko": "대 피터르 브뤼헐의 그림",
-        "en": "대 피터르 브뤼헐의 그림"
-      },
-      "source": "http://www.wikidata.org/entity/Q1192570",
-      "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1122842",
@@ -1339,7 +1107,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1122842",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2059447",
@@ -1364,7 +1133,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2059447",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3772184",
@@ -1389,7 +1159,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3772184",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q95562",
@@ -1414,7 +1185,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q95562",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q666982",
@@ -1439,7 +1211,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q666982",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3985190",
@@ -1464,7 +1237,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3985190",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q15295671",
@@ -1489,7 +1263,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q15295671",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q19857193",
@@ -1514,7 +1289,60 @@
       },
       "source": "http://www.wikidata.org/entity/Q19857193",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q603751",
+      "year": 1568,
+      "popularity": 29,
+      "title": {
+        "ko": "농부의 결혼식",
+        "en": "농부의 결혼식"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "북방 르네상스",
+        "en": "북방 르네상스"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pieter%20Bruegel%20the%20Elder%20-%20Peasant%20Wedding%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "대 피터르 브뤼헐의 그림",
+        "en": "대 피터르 브뤼헐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q603751",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q1192570",
+      "year": 1568,
+      "popularity": 29,
+      "title": {
+        "ko": "눈먼 자들의 비유",
+        "en": "눈먼 자들의 비유"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "플랑드르파",
+        "en": "플랑드르파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bruegel%2C%20Pieter%20%28I%29%20-%20Blind%20leading%20the%20blind%20Google%20Art%20Project.jpeg",
+      "description": {
+        "ko": "대 피터르 브뤼헐의 그림",
+        "en": "대 피터르 브뤼헐의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q1192570",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     }
   ]
 }

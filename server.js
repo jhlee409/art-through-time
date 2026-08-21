@@ -418,7 +418,9 @@ async function artistFromUrl(pageUrl) {
     if(!qid) throw new Error('No Wikidata item linked to this page');
     const entity=(await getEntities([qid]))[qid];
     if(entityId(entity,'P170')) return artworkDetails(qid);
-    return {artist:await artistProfileFromQid(qid,pageTitle)};
+    const artist=await artistProfileFromQid(qid,pageTitle);
+    const enriched=await enrich(artist);
+    return {...enriched,artist:{...artist,...enriched.artist},works:enriched.works || []};
   }
   const html=await getText(parsed.href);
   return artistFromGenericWebPage(parsed,html);
@@ -884,8 +886,7 @@ async function enrich(artist) {
   const wikipediaWorks = await wikipediaWorksForArtist(qid,{...artist,nationality:artistProfile.nationality});
   const query = `SELECT ?work ?workLabel ?workDescription ?year ?image ?countryLabel ?movementLabel ?sitelinks WHERE {
     ?work wdt:P170 wd:${qid}; wikibase:sitelinks ?sitelinks.
-    ?work wdt:P571 ?date.
-    BIND(YEAR(?date) AS ?year)
+    OPTIONAL { ?work wdt:P571 ?date. BIND(YEAR(?date) AS ?year) }
     OPTIONAL { ?work wdt:P18 ?image }
     OPTIONAL { ?work wdt:P495 ?country }
     OPTIONAL { ?work wdt:P135 ?movement }
@@ -971,6 +972,82 @@ function movementImageDownloadUrl(sourceUrl) {
 }
 function escapeRegex(value) { return String(value).replace(/[.*+?^${}()|[\]\\]/g,'\\$&'); }
 function escapeAttribute(value) { return String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char])); }
+function normalizeMovementImageReference(value='') {
+  const text=htmlDecode(String(value || '').trim()).replace(/\\/g,'/');
+  if(!text || /^data:/i.test(text)) return text;
+  try {
+    const parsed=/^[a-z][a-z0-9+.-]*:/i.test(text)
+      ? new URL(text)
+      : new URL(text,'http://art-atlas.local/data/미술사조/document.html');
+    if(parsed.protocol === 'http:' || parsed.protocol === 'https:') {
+      parsed.hash='';
+      parsed.search='';
+      return parsed.hostname === 'art-atlas.local'
+        ? decodeURIComponent(parsed.pathname.replace(/^\/+/,''))
+        : decodeURIComponent(parsed.href);
+    }
+  } catch (_) {}
+  return text.replace(/[?#].*$/,'').replace(/^\.\//,'');
+}
+function movementHighResolutionSearchText(...values) {
+  return values.map(value => String(value || '').normalize('NFKC').toLocaleLowerCase('ko-KR').replace(/&[^;\s]+;/g,' ').replace(/[^0-9a-z가-힣]+/g,' ').replace(/\s+/g,' ').trim()).filter(Boolean).join(' ');
+}
+async function movementHighResolutionEntries() {
+  const payload=await readArtistsFile();
+  const entries=[];
+  for (const artist of payload.artists || []) {
+    for (const work of artist.works || []) {
+      const highRes=work.highResOriginal || work.highResImage || '';
+      if(!highRes || !await highResolutionPathExists(highRes)) continue;
+      const titleValues=[work.title?.ko,work.title?.en,work.title?.original,work.title?.native,work.title?.originalTitle,work.title?.nativeTitle,work.title?.sourceTitle].filter(Boolean);
+      const artistValues=[artist.fullName,artist.name?.ko,artist.name?.en].filter(Boolean);
+      const refs=[work.thumbnail,work.image,work.highResImage,work.highResOriginal].map(normalizeMovementImageReference).filter(Boolean);
+      const artistKeys=artistValues.flatMap(value => {
+        const full=movementHighResolutionSearchText(value);
+        return [full,...full.split(' ').filter(part=>part.length >= 2)];
+      }).filter(Boolean);
+      entries.push({
+        highRes:`/${highRes.replace(/\\/g,'/')}`,
+        title:titleValues[0] || titleValues[1] || '',
+        artist:artistValues[0] || artistValues[1] || '',
+        refs,
+        titleKeys:titleValues.map(value=>movementHighResolutionSearchText(value)).filter(value=>value.length >= 3),
+        artistKeys:[...new Set(artistKeys)]
+      });
+    }
+  }
+  return entries;
+}
+function movementHighResolutionEntryForImage(tag, entries) {
+  const attrs=tagAttrs(tag);
+  const src=normalizeMovementImageReference(attrs.src || '');
+  const direct=src && entries.find(entry => entry.refs.includes(src));
+  if(direct) return direct;
+  const alt=movementHighResolutionSearchText(attrs.alt, attrs.title, attrs['aria-label']);
+  if(!alt) return null;
+  return entries.find(entry => {
+    const titleMatch=entry.titleKeys.some(key => alt.includes(key) || (key.length >= 8 && key.includes(alt)));
+    const artistMatch=entry.artistKeys.some(key => alt.includes(key));
+    return titleMatch && artistMatch;
+  }) || null;
+}
+const movementHighResolutionViewer = `<style id="art-atlas-movement-highres-style">img[data-art-atlas-highres]{cursor:zoom-in}</style><script id="art-atlas-movement-highres-viewer">(function(){if(window.__artAtlasMovementHighresViewer)return;window.__artAtlasMovementHighresViewer=true;function esc(text){return String(text||'').replace(/[&<>]/g,function(ch){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[ch];});}function openViewer(src,title){var popup=window.open('','artAtlasMovementHighResolution','popup=yes,width=1180,height=860,noopener');if(!popup)return;var payload=JSON.stringify({src:new URL(src,location.href).href,title:title||''});popup.document.write('<!doctype html><html><head><meta charset="utf-8"><title>'+esc(title||'High-resolution image')+'</title><style>html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#10120f;color:#f7f4ec;font-family:system-ui,sans-serif}#toolbar{height:42px;box-sizing:border-box;display:flex;align-items:center;padding:0 16px;background:#242820;font-size:12px;color:#c8cdc2}#stage{height:calc(100% - 42px);position:relative;overflow:hidden;touch-action:none;cursor:grab;user-select:none}#stage.dragging{cursor:grabbing}#artwork{position:absolute;top:50%;left:50%;max-width:none;max-height:none;transform:translate(-50%,-50%);pointer-events:none;user-select:none}</style></head><body><div id="toolbar">왼쪽 버튼을 누른 채 드래그: 이동 · 휠 위로: 확대 · 휠 아래로: 축소</div><div id="stage"><img id="artwork" alt=""></div><script>const payload='+payload+',stage=document.querySelector("#stage"),image=document.querySelector("#artwork");document.title=payload.title||"High-resolution image";image.src=payload.src;image.alt=payload.title||"";let zoom=1,x=0,y=0,drag=null;const clamp=()=>{const maxX=Math.max(0,(image.offsetWidth-stage.clientWidth)/2),maxY=Math.max(0,(image.offsetHeight-stage.clientHeight)/2);x=Math.max(-maxX,Math.min(maxX,x));y=Math.max(-maxY,Math.min(maxY,y));};const draw=()=>{if(!image.naturalWidth)return;const base=Math.min(stage.clientWidth/image.naturalWidth,stage.clientHeight/image.naturalHeight);image.style.width=Math.max(1,image.naturalWidth*base*zoom)+"px";image.style.height=Math.max(1,image.naturalHeight*base*zoom)+"px";clamp();image.style.transform="translate(calc(-50% + "+x+"px), calc(-50% + "+y+"px))";};image.addEventListener("load",draw);window.addEventListener("resize",draw);stage.addEventListener("pointerdown",event=>{if(event.button!==0)return;drag={id:event.pointerId,x:event.clientX,y:event.clientY,startX:x,startY:y};stage.setPointerCapture(event.pointerId);stage.classList.add("dragging");});stage.addEventListener("pointermove",event=>{if(!drag||event.pointerId!==drag.id)return;x=drag.startX+event.clientX-drag.x;y=drag.startY+event.clientY-drag.y;draw();});const stop=event=>{if(!drag||event.pointerId!==drag.id)return;drag=null;stage.classList.remove("dragging");};stage.addEventListener("pointerup",stop);stage.addEventListener("pointercancel",stop);stage.addEventListener("wheel",event=>{event.preventDefault();const oldZoom=zoom,ratio=event.deltaY<0?1.1:1/1.1;zoom=Math.max(.5,Math.min(6,zoom*ratio));const actualRatio=zoom/oldZoom,rect=stage.getBoundingClientRect(),pointX=event.clientX-rect.left-stage.clientWidth/2,pointY=event.clientY-rect.top-stage.clientHeight/2;x=x*actualRatio+pointX*(1-actualRatio);y=y*actualRatio+pointY*(1-actualRatio);draw();},{passive:false});<\\/script></body></html>');popup.document.close();}document.addEventListener('dblclick',function(event){var image=event.target&&event.target.closest&&event.target.closest('img[data-art-atlas-highres]');if(!image)return;event.preventDefault();event.stopPropagation();openViewer(image.dataset.artAtlasHighres,image.dataset.artAtlasHighresTitle||image.getAttribute('alt')||document.title||'');},true);})();</script>`;
+async function injectMovementHighResolutionViewer(html) {
+  let source=String(html || '');
+  if(/id=["']art-atlas-movement-highres-viewer["']/i.test(source)) return source;
+  const entries=await movementHighResolutionEntries();
+  if(!entries.length) return source;
+  let matched=false;
+  source=source.replace(/<img\b[^>]*>/gi,tag=>{
+    if(/\bdata-art-atlas-highres=/i.test(tag)) return tag;
+    const entry=movementHighResolutionEntryForImage(tag,entries);
+    if(!entry) return tag;
+    matched=true;
+    return tag.replace(/\s*\/?>$/,match=>` data-art-atlas-highres="${escapeAttribute(entry.highRes)}" data-art-atlas-highres-title="${escapeAttribute([entry.artist,entry.title].filter(Boolean).join(' · '))}"${match}`);
+  });
+  if(!matched) return source;
+  return /<\/body>/i.test(source) ? source.replace(/<\/body>/i,`${movementHighResolutionViewer}\n</body>`) : `${source}\n${movementHighResolutionViewer}`;
+}
 function compactArtistName(value) {
   return String(value || '').normalize('NFC').replace(/\s+/g,' ').trim();
 }
@@ -1340,4 +1417,4 @@ http.createServer(async (req,res) => { const url=new URL(req.url,`http://${req.h
   if (req.method==='POST' && url.pathname==='/api/thumbnail-upload') { try { const form=multipartForm(await readRequestBuffer(req,sourceImageInputLimit + 1024*1024),req.headers['content-type']), artist=JSON.parse(form.fields.artist || '{}'), work=JSON.parse(form.fields.work || '{}'); if(!artist?.id || !work?.id) throw new Error('Invalid artwork upload'); const thumbnail=await cacheThumbnailFromUpload(artist,work,form.files.image,adminEmail); res.writeHead(200,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({thumbnail,verified:true})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({thumbnail:'',verified:false,error:error.message})); } }
   if (req.method==='POST' && url.pathname==='/api/thumbnail') { let body=''; req.on('data',c=>body+=c); req.on('end',async()=>{ try { const {artist,work}=JSON.parse(body); const thumbnail=await cacheThumbnail(artist,work,adminEmail); res.writeHead(200,{'Content-Type':'application/json'}); res.end(JSON.stringify({thumbnail,verified:Boolean(thumbnail)})); } catch(error) { res.writeHead(502,{'Content-Type':'application/json'}); res.end(JSON.stringify({thumbnail:'',verified:false,error:error.message})); } }); return; }
   if (req.method==='GET' && url.pathname==='/api/search') { try { const query=url.searchParams.get('q')||'', kind=url.searchParams.get('type')||'artist'; const raw=kind==='artist' ? await artistSearchCandidates(query) : (await getJsonFast(api({action:'wbsearchentities',search:query,language:'ko',uselang:'ko',type:'item',limit:'20'}))).search?.map(item=>({id:item.id,label:item.label,description:item.description||''})) || []; const ranked=[...raw].sort((a,b)=>{const score=item=>similarityScore(query,item.label)+(kind==='artwork' ? /(회화|그림|painting|artwork|work of art)/i.test(item.description)?120:0 : /(화가|예술가|painter|visual artist|artist)/i.test(item.description)?120:0); return score(b)-score(a);}); const values=ranked.slice(0,8); res.writeHead(200,{'Content-Type':'application/json'}); return res.end(JSON.stringify(values)); } catch(error) { res.writeHead(502,{'Content-Type':'application/json'}); return res.end(JSON.stringify([])); } }
-  if(req.method==='POST'&&url.pathname==='/api/enrich'){let body='';req.on('data',c=>body+=c);req.on('end',async()=>{try{const result=await enrich(JSON.parse(body));res.writeHead(200,{'Content-Type':'application/json'});res.end(JSON.stringify(result));}catch(error){res.writeHead(502,{'Content-Type':'application/json'});res.end(JSON.stringify({error:error.message}));}});return;} const file=safePath(url.pathname);if(!file){res.writeHead(403);return res.end();}try{let data=await fs.readFile(file);if(/^data[\\/]미술사조[\\/][a-f0-9]{24}-[12]\.html$/i.test(path.relative(root,file))) { let html=(await linkMovementDocumentArtists(data)).toString('utf8'); html=injectMovementPioneerContext(html); html=injectUHangulDocumentIntegration(html); html=injectMovementWikipediaHeading(html,url.searchParams.get('movementWiki') || '',url.searchParams.get('movementLabel') || ''); data=Buffer.from(html,'utf8'); }res.writeHead(200,{'Content-Type':mime[path.extname(file)]||'application/octet-stream','Cache-Control':'no-store'});res.end(data);}catch(_){res.writeHead(404);res.end('Not found');}}).listen(4173,'127.0.0.1',()=>console.log(`Art Atlas: http://localhost:4173${adminPasswordHash ? '' : ' (read-only: .env not found)'}`));
+  if(req.method==='POST'&&url.pathname==='/api/enrich'){let body='';req.on('data',c=>body+=c);req.on('end',async()=>{try{const result=await enrich(JSON.parse(body));res.writeHead(200,{'Content-Type':'application/json'});res.end(JSON.stringify(result));}catch(error){res.writeHead(502,{'Content-Type':'application/json'});res.end(JSON.stringify({error:error.message}));}});return;} const file=safePath(url.pathname);if(!file){res.writeHead(403);return res.end();}try{let data=await fs.readFile(file);if(/^data[\\/]미술사조[\\/][a-f0-9]{24}-[12]\.html$/i.test(path.relative(root,file))) { let html=(await linkMovementDocumentArtists(data)).toString('utf8'); html=injectMovementPioneerContext(html); html=injectUHangulDocumentIntegration(html); html=injectMovementWikipediaHeading(html,url.searchParams.get('movementWiki') || '',url.searchParams.get('movementLabel') || ''); html=await injectMovementHighResolutionViewer(html); data=Buffer.from(html,'utf8'); }res.writeHead(200,{'Content-Type':mime[path.extname(file)]||'application/octet-stream','Cache-Control':'no-store'});res.end(data);}catch(_){res.writeHead(404);res.end('Not found');}}).listen(4173,'127.0.0.1',()=>console.log(`Art Atlas: http://localhost:4173${adminPasswordHash ? '' : ' (read-only: .env not found)'}`));

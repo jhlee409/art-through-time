@@ -151,6 +151,8 @@ Object.assign(copy.en, {
   localArtworkYear:'Year made (for example, 1500-1505)',
   addFromLocal:'Add to timeline'
 });
+copy.ko.addArtistTooltip = '화가 추가';
+copy.en.addArtistTooltip = 'Add artist';
 const t = (key) => copy[language][key] || key;
 copy.ko.movementAtlas = '미술 사조의 이해';
 copy.en.movementAtlas = 'Understanding Art Movements';
@@ -834,6 +836,10 @@ function startAdminSessionHeartbeat() {
   adminSessionHeartbeat = setInterval(keepAlive,20000);
 }
 async function chooseAccessMode() {
+  if (requestedArtistId && !forceLogin) {
+    enterViewerMode();
+    return;
+  }
   const saved=savedAccessSession();
   if (saved?.role === 'viewer') {
     enterViewerMode();
@@ -1140,7 +1146,10 @@ function renderText() {
   const migrationExportButton = $('#migration-export-button');
   migrationExportButton.classList.toggle('hidden', !currentUserIsAdmin);
   migrationExportButton.textContent = t('migrationExport');
-  $('#add-button').classList.toggle('hidden', !currentUserIsAdmin);
+  const addButton = $('#add-button');
+  addButton.classList.toggle('hidden', !currentUserIsAdmin);
+  addButton.title = t('addArtistTooltip');
+  addButton.setAttribute('aria-label', t('addArtistTooltip'));
   $('#movement-atlas-button').classList.toggle('active', viewMode === 'movements');
 }
 function renderList() {

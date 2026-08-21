@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-21T08:30:40.458Z",
+  "generatedAt": "2026-08-21T10:24:33.845Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -3207,6 +3207,7 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
         "Wikidata"
       ],
       "status": "verified-pair",
