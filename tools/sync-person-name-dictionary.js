@@ -7,7 +7,7 @@
  */
 const fs = require('node:fs');
 const path = require('node:path');
-const { createNameRecord } = require('./build-uhangul-artist-map');
+const { buildArtistMap, createNameRecord } = require('./build-uhangul-artist-map');
 
 const root = path.resolve(__dirname, '..');
 const dictionaryFile = path.join(root, 'data', 'person-name-dictionary.json');
@@ -233,7 +233,7 @@ function isPersonLike(original, korean, strict = false) {
     && (!strict || (originalWords >= 2 && koreanWords <= originalWords + 1));
 }
 
-function addEntry(entries, original, korean, source, id, strict = false, kind = 'person', aliases = {}) {
+function addEntry(entries, original, korean, source, id, strict = false, kind = 'person', aliases = {}, displayKorean = '') {
   original = String(original || '').trim().replace(/\s+/g, ' ');
   korean = String(korean || '').trim().replace(/\s+/g, ' ');
   if (strict) {
@@ -247,11 +247,16 @@ function addEntry(entries, original, korean, source, id, strict = false, kind = 
   if (kind === 'person' && !isPersonLike(original, korean, strict)) return;
   if (kind === 'technique' && (!original || !korean)) return;
   const key = `${kind}\u001f${normalize(original)}\u001f${normalize(korean)}`;
-  const nextRecord = createNameRecord({ id: id || idFor(original, korean), original, korean });
+  const nextRecord = createNameRecord({ id: id || idFor(original, korean), original, korean, displayKorean });
   const existing = entries.get(key);
   if (existing) {
     if (!existing.sources.includes(source)) existing.sources.push(source);
     existing.aliases = mergeAliases(existing.aliases, nextRecord.aliases, aliases);
+    if (displayKorean) {
+      existing.id = id || existing.id;
+      existing.displayKorean = nextRecord.displayKorean;
+      existing.uhangul = nextRecord.uhangul;
+    }
     return;
   }
   const record = {...nextRecord, aliases:mergeAliases(nextRecord.aliases, aliases)};
@@ -342,7 +347,12 @@ function syncPersonNameDictionary({artists, additionalFiles = []} = {}) {
   }
   const sourceArtists = Array.isArray(artists) ? artists : JSON.parse(fs.readFileSync(artistsFile, 'utf8')).artists || [];
   for (const person of [...manualPersonOverrides, ...curatedPersonOverrides]) addEntry(entries, person.original, person.korean, 'data/미술사조/manual-person-overrides', person.id);
-  for (const artist of sourceArtists) addEntry(entries, artist?.name?.en, artist?.name?.ko, 'data/artists.json', artist?.qid || artist?.id, false, 'person', mergeAliases(artist?.aliases, {ko:[artist?.name?.ko], en:[artist?.name?.en]}));
+  const artistDisplayRecords = new Map(buildArtistMap(sourceArtists).map(record => [String(record.id || ''), record]));
+  for (const artist of sourceArtists) {
+    const artistId = artist?.qid || artist?.id;
+    const displayKorean = artistDisplayRecords.get(String(artistId || ''))?.displayKorean || artist?.fullName || '';
+    addEntry(entries, artist?.name?.en, artist?.name?.ko, 'data/artists.json', artistId, false, 'person', mergeAliases(artist?.aliases, {ko:[artist?.name?.ko], en:[artist?.name?.en]}), displayKorean);
+  }
   const techniques = JSON.parse(fs.readFileSync(techniquesFile, 'utf8')).techniques || [];
   for (const technique of techniques) {
     const original = technique?.name?.en;

@@ -34,6 +34,7 @@ const PASSTHROUGH_ONSETS = {
 };
 const manualUHangulByOriginal = {
   carllarsson: ({displayKorean, korean}) => displayKorean || korean || '라르손, 칼',
+  rogiervanderweyden: () => '[Vㅏㄴ] 데르 [Vㅔ]이던, [Rㅗ]히어르',
   // In standard Spanish, the initial v of Velázquez is /b/ rather than the
   // English /v/, and both z letters are /θ/ in the Castilian pronunciation.
   diegovelazquez: ({displayKorean, korean}) => String(displayKorean || korean || '벨라스케스').replace(/벨라스케스/g, '벨라[THㅡ]케[THㅡ]')
@@ -95,6 +96,7 @@ const manualAliasesByOriginal = {
 };
 
 const koreanArtistDisplayOverrides = {
+  Q7814: '디 본도네, 조토',
   Q43270: '브뤼헐, 피터르 대',
   Q213163: '비제 르 브룅, 엘리자베스 루이',
   Q82445: '툴루즈로트레크, 앙리 드',

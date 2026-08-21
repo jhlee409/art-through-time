@@ -1,4 +1,6 @@
 .env
+server.err.log
+server.out.log
 logs/
 delivery/
 data/backups/

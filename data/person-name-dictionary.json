@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-21T12:24:27.875Z",
+  "generatedAt": "2026-08-21T22:32:35.406Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -514,10 +514,10 @@
       "status": "verified-pair"
     },
     {
-      "id": "annibale-carracci-short",
+      "id": "Q7824",
       "original": "Annibale Carracci",
       "korean": "카라치",
-      "displayKorean": "카라치",
+      "displayKorean": "카라치, 안니발레",
       "aliases": {
         "ko": [
           "카라치",
@@ -528,7 +528,7 @@
           "Annibale Carracci"
         ]
       },
-      "uhangul": "카라치",
+      "uhangul": "카[Rㅏ]치, 안니발레",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
@@ -1181,7 +1181,7 @@
       "id": "Q187310",
       "original": "Carl Larsson",
       "korean": "칼 라르손",
-      "displayKorean": "칼 라르손",
+      "displayKorean": "라르손, 칼",
       "aliases": {
         "ko": [
           "라르손",
@@ -1193,7 +1193,7 @@
           "Carl Olof Larsson"
         ]
       },
-      "uhangul": "칼 라르손",
+      "uhangul": "라르손, 칼",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
@@ -1227,10 +1227,10 @@
       "status": "verified-pair"
     },
     {
-      "id": "caspar-david-friedrich-table",
+      "id": "Q104884",
       "original": "Caspar David Friedrich",
       "korean": "카스파르 다비트 프리드리히",
-      "displayKorean": "카스파르 다비트 프리드리히",
+      "displayKorean": "프리드리히, 카스파 다비드",
       "aliases": {
         "ko": [
           "프리드리히",
@@ -1241,7 +1241,7 @@
           "Caspar David Friedrich"
         ]
       },
-      "uhangul": "카스파[Rㅡ] 다[Vㅣ]트 [Fㅡ][Rㅣ]드[Rㅣ][CHㅣ]",
+      "uhangul": "[Fㅡ][Rㅣ]드[Rㅣ][CHㅣ], 카스파 다[Vㅣ]드",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
@@ -1405,10 +1405,10 @@
       "status": "verified-pair"
     },
     {
-      "id": "claude-monet-short",
+      "id": "Q296",
       "original": "Claude Monet",
       "korean": "모네",
-      "displayKorean": "모네",
+      "displayKorean": "모네, 클로드",
       "aliases": {
         "ko": [
           "모네",
@@ -1422,7 +1422,7 @@
           "Claude Oscar Monet"
         ]
       },
-      "uhangul": "모네",
+      "uhangul": "모네, 클로드",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
@@ -1765,10 +1765,10 @@
       "status": "verified-pair"
     },
     {
-      "id": "edouard-manet-short",
+      "id": "Q40599",
       "original": "Édouard Manet",
       "korean": "마네",
-      "displayKorean": "마네",
+      "displayKorean": "마네, 에두아르",
       "aliases": {
         "ko": [
           "마네",
@@ -1780,7 +1780,7 @@
           "Édouard Manet"
         ]
       },
-      "uhangul": "마네",
+      "uhangul": "마네, 에두아[Rㅡ]",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
@@ -1901,7 +1901,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "el-greco",
+      "id": "Q301",
       "original": "El Greco",
       "korean": "엘 그레코",
       "displayKorean": "엘 그레코",
@@ -1957,7 +1957,7 @@
       "id": "Q213163",
       "original": "Élisabeth Louise Vigée Le Brun",
       "korean": "엘리자베스 루이 비제 르 브룅",
-      "displayKorean": "엘리자베스 루이 비제 르 브룅",
+      "displayKorean": "비제 르 브룅, 엘리자베스 루이",
       "aliases": {
         "ko": [
           "르 브룅",
@@ -1973,7 +1973,7 @@
           "Élisabeth Vigée Le Brun"
         ]
       },
-      "uhangul": "엘리자베스 루이 [Vㅣ]제 르 브[Rㅚㅇ]",
+      "uhangul": "[Vㅣ]제 르 브[Rㅚㅇ], 엘리자베스 루이",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
@@ -2699,10 +2699,10 @@
       "status": "verified-pair"
     },
     {
-      "id": "frida-kahlo-short",
+      "id": "Q5588",
       "original": "Frida Kahlo",
       "korean": "칼로",
-      "displayKorean": "칼로",
+      "displayKorean": "칼로, 프리다",
       "aliases": {
         "ko": [
           "칼로",
@@ -2716,7 +2716,7 @@
           "Frieda Kahlo"
         ]
       },
-      "uhangul": "칼[Rㅗ]",
+      "uhangul": "칼로, [Fㅡ][Rㅣ]다",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
@@ -3151,7 +3151,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "giorgione",
+      "id": "Q8459",
       "original": "Giorgione",
       "korean": "조르조네",
       "displayKorean": "조르조네",
@@ -3187,7 +3187,7 @@
       "id": "Q7814",
       "original": "Giotto",
       "korean": "조토 디 본도네",
-      "displayKorean": "조토 디 본도네",
+      "displayKorean": "디 본도네, 조토",
       "aliases": {
         "ko": [
           "디 본도네",
@@ -3202,7 +3202,7 @@
           "Angelotto"
         ]
       },
-      "uhangul": "조토 디 본도네",
+      "uhangul": "디 본도네, 조토",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
@@ -3281,10 +3281,10 @@
       "status": "verified-pair"
     },
     {
-      "id": "giovanni-bellini",
+      "id": "Q17169",
       "original": "Giovanni Bellini",
       "korean": "조반니 벨리니",
-      "displayKorean": "조반니 벨리니",
+      "displayKorean": "벨리니, 조반니",
       "aliases": {
         "ko": [
           "벨리니",
@@ -3295,7 +3295,7 @@
           "Giovanni Bellini"
         ]
       },
-      "uhangul": "조[Vㅏㄴ]니 벨리니",
+      "uhangul": "벨리니, 조[Vㅏㄴ]니",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
@@ -3674,10 +3674,10 @@
       "status": "verified-pair"
     },
     {
-      "id": "henri-de-toulouse-lautrec-table",
+      "id": "Q82445",
       "original": "Henri de Toulouse-Lautrec",
       "korean": "툴루즈로트렉",
-      "displayKorean": "툴루즈로트렉",
+      "displayKorean": "툴루즈로트레크, 앙리 드",
       "aliases": {
         "ko": [
           "툴루즈로트레크",
@@ -3694,7 +3694,7 @@
           "Henri Marie Raymond de Toulouse-Lautrec-Monfa"
         ]
       },
-      "uhangul": "툴[Rㅜ]즈로트렉",
+      "uhangul": "툴루즈로트[Rㅔ]크, 앙[Rㅣ] 드",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
@@ -4229,10 +4229,10 @@
       "status": "verified-pair"
     },
     {
-      "id": "jan-van-eyck-table",
+      "id": "Q102272",
       "original": "Jan van Eyck",
       "korean": "얀 반 에이크",
-      "displayKorean": "얀 반 에이크",
+      "displayKorean": "반 에이크, 얀",
       "aliases": {
         "ko": [
           "반 에이크",
@@ -4245,7 +4245,7 @@
           "Jan van Eyck"
         ]
       },
-      "uhangul": "얀 [Vㅏㄴ] 에이크",
+      "uhangul": "[Vㅏㄴ] 에이크, 얀",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
@@ -4659,10 +4659,10 @@
       "status": "verified-pair"
     },
     {
-      "id": "johannes-vermeer-table",
+      "id": "Q41264",
       "original": "Johannes Vermeer",
       "korean": "베르메르",
-      "displayKorean": "베르메르",
+      "displayKorean": "페르메이르, 요하네스",
       "aliases": {
         "ko": [
           "페르메이르",
@@ -4677,7 +4677,7 @@
           "Johannes van der Meer"
         ]
       },
-      "uhangul": "[Vㅔ][Rㅡ]메[Rㅡ]",
+      "uhangul": "[Vㅔ][Rㅡ]메이[Rㅡ], 요하네스",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
@@ -5265,10 +5265,10 @@
       "status": "verified-pair"
     },
     {
-      "id": "leonardo-table",
+      "id": "Q762",
       "original": "Leonardo da Vinci",
       "korean": "레오나르도",
-      "displayKorean": "레오나르도",
+      "displayKorean": "다 빈치, 레오나르도",
       "aliases": {
         "ko": [
           "다 빈치",
@@ -5286,7 +5286,7 @@
           "Leonardo di Piero da Vinci"
         ]
       },
-      "uhangul": "레오나[Rㅡ]도",
+      "uhangul": "다 [Vㅣㄴ]치, 레오나[Rㅡ]도",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
@@ -5664,7 +5664,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "masaccio-table",
+      "id": "artist-url-1787307872488",
       "original": "Masaccio",
       "korean": "마사초",
       "displayKorean": "마사초",
@@ -5860,7 +5860,7 @@
       "id": "Q5592",
       "original": "Michelangelo",
       "korean": "미켈란젤로 부오나로티",
-      "displayKorean": "미켈란젤로 부오나로티",
+      "displayKorean": "부오나로티, 미켈란젤로",
       "aliases": {
         "ko": [
           "부오나로티",
@@ -5875,7 +5875,7 @@
           "Michelangelo di Lodovico Buonarroti Simoni"
         ]
       },
-      "uhangul": "미켈란젤로 부오나로티",
+      "uhangul": "부오나로티, 미켈란젤로",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
@@ -5923,7 +5923,7 @@
       "id": "Q42207",
       "original": "Michelangelo Merisi da Caravaggio",
       "korean": "미켈란젤로 메리시 다 카라바조",
-      "displayKorean": "미켈란젤로 메리시 다 카라바조",
+      "displayKorean": "다 카라바조, 미켈란젤로 메리시",
       "aliases": {
         "ko": [
           "다 카라바조",
@@ -5937,7 +5937,7 @@
           "Michelangelo Merisi"
         ]
       },
-      "uhangul": "미켈란젤로 메[Rㅣ]시 다 카[Rㅏ][Vㅏ]조",
+      "uhangul": "다 카[Rㅏ][Vㅏ]조, 미켈란젤로 메[Rㅣ]시",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
@@ -6516,7 +6516,7 @@
       "id": "Q5599",
       "original": "Peter Paul Rubens",
       "korean": "페테르 파울 루벤스",
-      "displayKorean": "페테르 파울 루벤스",
+      "displayKorean": "루벤스, 페테르 파울",
       "aliases": {
         "ko": [
           "루벤스",
@@ -6528,7 +6528,7 @@
           "Pieter Paul Rubens"
         ]
       },
-      "uhangul": "페테[Rㅡ] 파울 [Rㅜ]벤스",
+      "uhangul": "[Rㅜ]벤스, 페테[Rㅡ] 파울",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
@@ -6745,7 +6745,7 @@
       "id": "Q43270",
       "original": "Pieter Brueghel the Elder",
       "korean": "대 피터르 브뤼헐",
-      "displayKorean": "대 피터르 브뤼헐",
+      "displayKorean": "브뤼헐, 피터르 대",
       "aliases": {
         "ko": [
           "브뤼헐",
@@ -6761,7 +6761,7 @@
           "Pieter Bruegel"
         ]
       },
-      "uhangul": "대 피터[Rㅡ] 브[Rㅟ][Xㅓㄹ]",
+      "uhangul": "브[Rㅟ][Xㅓㄹ], 피터[Rㅡ] 대",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
@@ -6967,7 +6967,7 @@
       "id": "Q5597",
       "original": "Raphael",
       "korean": "라파엘로 산치오",
-      "displayKorean": "라파엘로 산치오",
+      "displayKorean": "산치오, 라파엘로",
       "aliases": {
         "ko": [
           "산치오",
@@ -6988,7 +6988,7 @@
           "Raphael Sanzio"
         ]
       },
-      "uhangul": "[Rㅏ][Fㅏ]엘로 산치오",
+      "uhangul": "산치오, [Rㅏ][Fㅏ]엘로",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
@@ -7236,16 +7236,16 @@
       "status": "verified-pair"
     },
     {
-      "id": "rogier-van-der-weyden",
+      "id": "Q68631",
       "original": "Rogier van der Weyden",
       "korean": "로히어르 판 데르 베이던",
-      "displayKorean": "로히어르 판 데르 베이던",
+      "displayKorean": "반 데르 베이던, 로히어르",
       "aliases": {
         "ko": [
           "베이던",
-          "판 데르 베이던",
-          "로히어르 판 데르 베이던",
-          "판 데르 베이던, 로히어르",
+          "반 데르 베이던",
+          "로히어르 반 데르 베이던",
+          "반 데르 베이던, 로히어르",
           "로히어르"
         ],
         "en": [
@@ -7256,7 +7256,7 @@
           "Rogier de la Pasture"
         ]
       },
-      "uhangul": "[Rㅗ]히어[Rㅡ] [Vㅏㄴ] 데[Rㅡ] [Vㅔ]이던",
+      "uhangul": "[Vㅏㄴ] 데르 [Vㅔ]이던, [Rㅗ]히어르",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
@@ -7774,7 +7774,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "titian-table",
+      "id": "Q47551",
       "original": "Titian",
       "korean": "티치아노",
       "displayKorean": "티치아노",
@@ -7951,7 +7951,7 @@
       "id": "Q6394591",
       "original": "Vassili Vladimirovich Pukiryov",
       "korean": "바실리 푸키레프",
-      "displayKorean": "바실리 푸키레프",
+      "displayKorean": "푸키레프, 바실리",
       "aliases": {
         "ko": [
           "푸키레프",
@@ -7966,7 +7966,7 @@
           "Vassili Pukiryov"
         ]
       },
-      "uhangul": "[Vㅏ]실리 [Vㅜ]키레[Vㅡ]",
+      "uhangul": "[Vㅜ]키레[Vㅡ], [Vㅏ]실리",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
@@ -8026,7 +8026,7 @@
       "id": "Q5582",
       "original": "Vincent van Gogh",
       "korean": "빈센트 반 고흐",
-      "displayKorean": "빈센트 반 고흐",
+      "displayKorean": "반 고흐, 빈센트",
       "aliases": {
         "ko": [
           "반 고흐",
@@ -8042,7 +8042,7 @@
           "Van Gogh"
         ]
       },
-      "uhangul": "[Vㅣㄴ]센트 [Vㅏㄴ] 고[Xㅡ]",
+      "uhangul": "[Vㅏㄴ] 고[Xㅡ], [Vㅣㄴ]센트",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [

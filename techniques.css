@@ -420,11 +420,6 @@ body {
 .technique-search { position: relative; z-index: 20; margin: 13px 0 10px; }
 .technique-search-input { width: 100%; min-width: 0; border: 1px solid #d7ddd4; border-radius: 4px; background: #fbfcf9; color: #34423a; padding: 8px 9px; font-size: 12px; outline: 0; }
 .technique-search-input:focus { border-color: #8ea18f; box-shadow: 0 0 0 2px #dfe8d9; }
-.technique-search-results { position: absolute; top: calc(100% + 4px); right: 0; left: 0; max-height: 220px; overflow: auto; border: 1px solid #cdd6cc; border-radius: 4px; background: #fbfcf9; box-shadow: 0 8px 18px #18221e24; }
-.technique-search-results.hidden { display: none; }
-.technique-search-results button { display: block; width: 100%; border: 0; border-bottom: 1px solid #e1e6df; background: transparent; color: #28352d; padding: 8px 9px; text-align: left; font-size: 12px; }
-.technique-search-results button:hover, .technique-search-results button:focus-visible { background: #e3eadd; outline: none; }
-.technique-search-results p { margin: 0; padding: 9px; color: #758078; font-size: 11px; }
 
 /* Keep the language icon unframed and bring the search close to its heading. */
 .technique-language { display: flex; justify-content: center; padding: 0; border: 0; border-radius: 0; background: transparent; }
@@ -438,8 +433,43 @@ body {
 
 /* Administrator delete target at the right edge of a technique item. */
 .technique-item.has-delete { padding-right: 42px; padding-left: 11px; }
-.technique-item.has-delete::before { right: 9px; left: auto; z-index: 3; display: grid; width: 12px; height: 12px; place-items: center; background: transparent; color: #18221e !important; font: 700 24px/12px Arial, sans-serif; content: '×'; }
+.technique-item.has-delete::before { right: 9px; left: auto; z-index: 3; display: grid; width: 9px; height: 9px; place-items: center; background: transparent; color: #18221e !important; font: 700 17px/9px Arial, sans-serif; content: '×'; }
 .technique-item.has-delete:hover::before { background: transparent; color: #18221e; }
 .technique-delete-menu { position: fixed; z-index: 1000; min-width: 76px; padding: 4px; border: 1px solid #bfc8bd; border-radius: 4px; background: #fbfcf9; box-shadow: 0 6px 16px #18221e2b; }
 .technique-delete-menu button { display: block; width: 100%; border: 0; border-radius: 3px; background: transparent; color: #9d321f; padding: 7px 9px; text-align: left; font-size: 12px; }
 .technique-delete-menu button:hover, .technique-delete-menu button:focus-visible { background: #f8e2da; outline: none; }
+
+/* Match the main artist sidebar search: filter the list in place, without a suggestion popup. */
+.technique-list-row.search-hidden { display: none !important; }
+.technique-search-empty { margin: 9px 8px; color: var(--muted); font-size: 11px; line-height: 1.45; }
+
+/* 70% of the previous 46px navigation row height. */
+.technique-list-row { height: 32px; }
+.technique-list-row .technique-item { height: 32px; padding: 6px 10px 6px 11px; font-size: 13px; line-height: 1.25; }
+.technique-item.has-delete { padding-right: 28px; padding-left: 11px; }
+
+/* Small right-aligned sort dropdown in the technique sidebar. */
+.technique-sort {
+  justify-content: flex-end;
+  gap: 6px;
+  margin: 0 0 8px;
+  padding: 0;
+  font-size: 0;
+  letter-spacing: 0;
+}
+.technique-sort span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.technique-sort select {
+  width: 82px;
+  min-height: 26px;
+  padding: 4px 22px 4px 8px;
+  border-radius: 4px;
+  font: 600 10px/1 var(--sans);
+  letter-spacing: 0;
+}

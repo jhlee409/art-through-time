@@ -50,6 +50,7 @@ const PASSTHROUGH_ONSETS = Object.freeze({
 });
 const MANUAL_UHANGUL_BY_ORIGINAL = Object.freeze({
   carllarsson: value => value.displayKorean || value.korean || "라르손, 칼",
+  rogiervanderweyden: () => "[Vㅏㄴ] 데르 [Vㅔ]이던, [Rㅗ]히어르",
   diegovelazquez: value => String(value.displayKorean || value.korean || "벨라스케스").replace(/벨라스케스/g, "벨라[THㅡ]케[THㅡ]")
 });
 
@@ -228,6 +229,11 @@ function generatedRecord(original, korean, displayKorean) {
 
 function recordForElement(el) {
   if(el.dataset.uhOriginal || el.dataset.uhKorean || el.dataset.uhDisplayKorean) {
+    const rec = byText.get(normalizeText(el.dataset.uhDisplayKorean)) || byText.get(normalizeText(el.dataset.uhKorean)) || byText.get(normalizeText(el.dataset.uhOriginal));
+    if(rec) {
+      el.dataset.uhId = rec.id;
+      return rec;
+    }
     return generatedRecord(el.dataset.uhOriginal || "",el.dataset.uhKorean || "",el.dataset.uhDisplayKorean || el.dataset.uhKorean || "");
   }
   const explicit=byId.get(el.dataset.uhId);

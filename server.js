@@ -11,7 +11,7 @@ const { URL, fileURLToPath } = require('node:url');
 const { createHash, randomBytes, timingSafeEqual } = require('node:crypto');
 const { normalizeArtistsPayload, validateArtistsPayload, firebaseExport } = require('./data-contract');
 const { invalidArtworkThumbnail } = require('./thumbnail-validation');
-const { writeArtistMap: writeUHangulArtistMap } = require('./tools/build-uhangul-artist-map');
+const { buildArtistMap, writeArtistMap: writeUHangulArtistMap } = require('./tools/build-uhangul-artist-map');
 const { syncPersonNameDictionary } = require('./tools/sync-person-name-dictionary');
 process.once('uncaughtException', error => {
   if (error?.code === 'EADDRINUSE') {
@@ -807,11 +807,187 @@ function koreanTimestamp(date=new Date()) {
 function ruleCheckItem(artist,work) {
   return {artist:artist.fullName || artist.name?.ko || artist.name?.en || artist.id,artistId:artist.id,work:work.title?.ko || work.title?.en || '(제목 없음)',workId:work.id || ''};
 }
+function qidLikeTitle(work) {
+  const titles=[work?.title?.ko,work?.title?.en].map(value=>String(value || '').trim()).filter(Boolean);
+  return titles.length > 0 && titles.every(value=>/^Q\d+$/.test(value));
+}
+const koreanArtistDisplayOverridesForCheck = {
+  Q7814:'디 본도네, 조토',
+  Q43270:'브뤼헐, 피터르 대',
+  Q213163:'비제 르 브룅, 엘리자베스 루이',
+  Q82445:'툴루즈로트레크, 앙리 드',
+  Q301:'엘 그레코',
+  Q5592:'부오나로티, 미켈란젤로',
+  Q5597:'산치오, 라파엘로',
+  Q5598:'렘브란트 하르먼손 판 레인'
+};
+function koreanFamilyFirstForCheck(name, originalName) {
+  if (String(name || '').includes(',')) return String(name || '').trim();
+  const korean=String(name || '').trim().split(/\s+/).filter(Boolean), original=String(originalName || '').trim().split(/\s+/).filter(Boolean);
+  if(korean.length < 2 || original.length < 2) return korean.join(' ');
+  const familyPrefixes=new Set(['van','von','de','del','della','da','di','du','la','le','der','den','ten','ter','st.','saint']);
+  let familyLength=1;
+  for(let index=original.length - 2; index >= 0 && familyPrefixes.has(original[index].toLowerCase()); index--) familyLength++;
+  if(familyLength >= korean.length) return korean.join(' ');
+  return `${korean.slice(-familyLength).join(' ')}, ${korean.slice(0,-familyLength).join(' ')}`;
+}
+function expectedArtistDisplayNameForCheck(artist) {
+  const korean=artist?.name?.ko || '';
+  return koreanArtistDisplayOverridesForCheck[artist?.qid] || koreanFamilyFirstForCheck(korean, artist?.name?.en || '');
+}
+function actualArtistDisplayNameForCheck(artist) {
+  return String(artist?.fullName || '').trim() || expectedArtistDisplayNameForCheck(artist) || artist?.name?.en || artist?.id || '';
+}
+function artistRuleItem(artist, message) {
+  return {artist:actualArtistDisplayNameForCheck(artist),artistId:artist.id,work:message,workId:artist.qid || ''};
+}
+function hasHangul(value) { return /[가-힣]/.test(String(value || '')); }
+function hasLatin(value) { return /[A-Za-z]/.test(String(value || '')); }
+function compactCheckText(value) { return String(value || '').toLowerCase().replace(/[^a-z0-9가-힣]/g,''); }
+function localizedCheckValue(value) {
+  if(value && typeof value === 'object' && !Array.isArray(value)) return String(value.ko || value.en || value.original || value.native || value.sourceTitle || '').trim();
+  return String(value || '').trim();
+}
+const currentCountryByHistoricalCountryForCheck = {
+  'Kingdom of the Netherlands': {ko:'네덜란드', en:'Netherlands',colorKey:'Netherlands'}, '네덜란드 왕국': {ko:'네덜란드', en:'Netherlands',colorKey:'Netherlands'},
+  'Dutch Republic': {ko:'네덜란드', en:'Netherlands',colorKey:'Netherlands'}, '네덜란드 공화국': {ko:'네덜란드', en:'Netherlands',colorKey:'Netherlands'},
+  'Kingdom of Prussia': {ko:'독일', en:'Germany',colorKey:'Germany'}, '프로이센 왕국': {ko:'독일', en:'Germany',colorKey:'Germany'},
+  'Russian Empire': {ko:'러시아', en:'Russia',colorKey:'Russia'}, '러시아 제국': {ko:'러시아', en:'Russia',colorKey:'Russia'},
+  'Papal States': {ko:'이탈리아', en:'Italy',colorKey:'Italy'}, '교황령': {ko:'이탈리아', en:'Italy',colorKey:'Italy'},
+  'Holy Roman Empire': {ko:'이탈리아', en:'Italy',colorKey:'Italy'}, '신성 로마 제국': {ko:'이탈리아', en:'Italy',colorKey:'Italy'},
+  'Republic of Florence': {ko:'이탈리아', en:'Italy',colorKey:'Italy'}, '피렌체 공화국': {ko:'이탈리아', en:'Italy',colorKey:'Italy'},
+  'Duchy of Milan': {ko:'이탈리아', en:'Italy',colorKey:'Italy'}, '밀라노 공국': {ko:'이탈리아', en:'Italy',colorKey:'Italy'},
+  'Duchy of Brabant': {ko:'벨기에', en:'Belgium',colorKey:'Belgium'}, '브라반트 공국': {ko:'벨기에', en:'Belgium',colorKey:'Belgium'},
+  'Habsburg Netherlands': {ko:'벨기에', en:'Belgium',colorKey:'Belgium'}, '합스부르크 네덜란드': {ko:'벨기에', en:'Belgium',colorKey:'Belgium'},
+  'Spanish Netherlands': {ko:'벨기에', en:'Belgium',colorKey:'Belgium'}, '스페인령 네덜란드': {ko:'벨기에', en:'Belgium',colorKey:'Belgium'},
+  'Crown of Castile': {ko:'스페인', en:'Spain',colorKey:'Spain'}, '카스티야 연합왕국': {ko:'스페인', en:'Spain',colorKey:'Spain'}
+};
+function countryInfoForCheck(value) {
+  const original = localizedCheckValue(value);
+  const keys = [original, value?.ko, value?.en].filter(Boolean);
+  const current = keys.map(key => currentCountryByHistoricalCountryForCheck[key]).find(Boolean);
+  const name = current ? localizedCheckValue(current) : original;
+  return {original, name, label:original && name && original !== name ? `${original} (${name})` : name};
+}
+async function artistCountryIconIssues(artists) {
+  const issues=[];
+  const appText=await fs.readFile(path.join(root,'app.js'),'utf8').catch(()=>'');
+  if(appText && !/title="\$\{esc\(countryLabel\)\}"/.test(appText)) issues.push({artist:'화가 목록',artistId:'artist-country-icon-title',work:'국가 아이콘 title에 국가명이 연결되지 않음',workId:'app.js'});
+  if(appText && !/aria-label="\$\{esc\(countryLabel\)\}"/.test(appText)) issues.push({artist:'화가 목록',artistId:'artist-country-icon-aria-label',work:'국가 아이콘 aria-label에 국가명이 연결되지 않음',workId:'app.js'});
+  for(const artist of artists) {
+    const countryValue=artist.birthCountry || artist.nationality;
+    const country=countryInfoForCheck(countryValue);
+    if(!country.original || !country.name || country.label === '?') {
+      issues.push(artistRuleItem(artist,'화가 목록 국가 아이콘에 표시할 국가명 누락'));
+      continue;
+    }
+    if(!hasHangul(country.label) || hasLatin(country.label)) issues.push(artistRuleItem(artist,`국가 아이콘 한국어 국가명 확인: ${country.label}`));
+  }
+  return issues;
+}
+function collectionLabelsForCheck(work) {
+  const values=work?.detail?.facts?.collection || work?.collection || [];
+  const entries=Array.isArray(values) ? values : [values];
+  return entries.map(localizedCheckValue).filter(Boolean);
+}
+function artistNamesForThumbnailCheck(artist) {
+  const aliases=Array.isArray(artist?.aliases) ? artist.aliases : [...(Array.isArray(artist?.aliases?.ko) ? artist.aliases.ko : []), ...(Array.isArray(artist?.aliases?.en) ? artist.aliases.en : [])];
+  return [...new Set([artist?.fullName, artist?.name?.ko, artist?.name?.en, actualArtistDisplayNameForCheck(artist), ...aliases].map(value=>String(value || '').trim()).filter(Boolean))];
+}
+function flexibleNamePatternForCheck(value) {
+  return String(value || '').trim().split(/\s+/).filter(Boolean).map(part=>part.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('[\\s-]+');
+}
+function artworkThumbnailTitleForCheck(work, artist, sourceTitle) {
+  let title=String(sourceTitle || '').replace(/\s+/g,' ').trim();
+  title=title
+    .replace(/^\s*file:\s*/i,'')
+    .replace(/\s*\(\s*(?:c\.?\s*)?\d{3,4}[^)]*\)(?:\s*,.*)?$/i,'')
+    .replace(/\s*,\s*(?:c\.?\s*)?\d{3,4}(?:\s*[–-]\s*\d{2,4})?(?:\s*,.*)?$/i,'')
+    .replace(/\s*,\s*(?:private )?(?:museum|gallery|collection|museum collection|royal museums?).*$/i,'');
+  for(const name of artistNamesForThumbnailCheck(artist)) {
+    const namePattern=flexibleNamePatternForCheck(name);
+    title=title
+      .replace(new RegExp(`^\\s*${namePattern}\\s*(?:,|:|—|–|-)\\s*`,'i'),'')
+      .replace(new RegExp(`\\s+(?:by|after|follower of|circle of|school of)\\s+${namePattern}\\s*$`,'i'),'')
+      .replace(new RegExp(`\\s*\\((?:after|follower of|circle of|school of)\\s+${namePattern}\\)\\s*$`,'i'),'')
+      .replace(new RegExp(`\\s*(?:,|—|–|-)\\s*${namePattern}(?:\\s*,.*)?$`,'i'),'');
+  }
+  for(const collection of collectionLabelsForCheck(work)) {
+    const collectionPattern=flexibleNamePatternForCheck(collection);
+    title=title.replace(new RegExp(`\\s*(?:,|—|–|-)\\s*${collectionPattern}(?:\\s*,.*)?$`,'i'),'');
+  }
+  return title.trim() || String(sourceTitle || '').trim();
+}
+function thumbnailTitleHasExtraForCheck(work, artist, title) {
+  const clean=artworkThumbnailTitleForCheck(work, artist, title);
+  const cleanKey=compactCheckText(clean);
+  if(!cleanKey) return false;
+  for(const name of artistNamesForThumbnailCheck(artist)) {
+    const key=compactCheckText(name);
+    if(key && key.length >= 2 && cleanKey.includes(key)) return true;
+  }
+  for(const collection of collectionLabelsForCheck(work)) {
+    const key=compactCheckText(collection);
+    if(key && key.length >= 2 && cleanKey.includes(key)) return true;
+  }
+  return /\b(?:museum|gallery|collection|musee|museo|nationalmuseum|louvre|metropolitan)\b/i.test(clean);
+}
+function thumbnailTitleExtraItems(artists) {
+  return artists.flatMap(artist=>(artist.works || []).flatMap(work=>{
+    const titles=[work?.title?.ko,work?.title?.en,work?.title?.original,work?.title?.native,work?.title?.sourceTitle].map(value=>String(value || '').trim()).filter(Boolean);
+    return titles.some(title=>thumbnailTitleHasExtraForCheck(work,artist,title)) ? [ruleCheckItem(artist,work)] : [];
+  }));
+}
+const expectedManualUHangulByArtistId = {
+  Q68631:'[Vㅏㄴ] 데르 [Vㅔ]이던, [Rㅗ]히어르'
+};
+async function uHangulRuleIssues(artists) {
+  const issues=[];
+  const fontFile=path.join(root,'uhangul','assets','fonts','uHangul-v0.5.woff2');
+  const runtimeFile=path.join(root,'uhangul','uhangul-runtime.js');
+  const cssFile=path.join(root,'uhangul','uhangul-runtime.css');
+  const exists=file=>fs.access(file).then(()=>true).catch(()=>false);
+  if(!await exists(fontFile)) issues.push({artist:'uHangul',artistId:'uhangul-font',work:'uHangul 폰트 파일 누락',workId:'uhangul/assets/fonts/uHangul-v0.5.woff2'});
+  if(!await exists(runtimeFile)) issues.push({artist:'uHangul',artistId:'uhangul-runtime',work:'uHangul 런타임 파일 누락',workId:'uhangul/uhangul-runtime.js'});
+  if(!await exists(cssFile)) issues.push({artist:'uHangul',artistId:'uhangul-css',work:'uHangul CSS 파일 누락',workId:'uhangul/uhangul-runtime.css'});
+  const runtimeText=await fs.readFile(runtimeFile,'utf8').catch(()=>'');
+  if(runtimeText && !/byText\.get\(normalizeText\(el\.dataset\.uhDisplayKorean\)\)/.test(runtimeText)) issues.push({artist:'uHangul',artistId:'uhangul-runtime-attribute-resolution',work:'화면 data-uh-display-korean 속성이 uHangul 사전을 먼저 찾지 않음',workId:'uhangul/uhangul-runtime.js'});
+  const records=buildArtistMap(artists);
+  const byId=new Map(records.map(record=>[String(record.id || ''), record]));
+  const byText=new Map();
+  for(const record of records) {
+    const aliases=Array.isArray(record.aliases) ? record.aliases : [...(Array.isArray(record.aliases?.ko) ? record.aliases.ko : []), ...(Array.isArray(record.aliases?.en) ? record.aliases.en : [])];
+    [record.original,record.korean,record.displayKorean,...aliases].filter(Boolean).forEach(value=>byText.set(compactCheckText(value),record));
+  }
+  for(const artist of artists) {
+    const key=String(artist.qid || artist.id || '');
+    const record=byId.get(key);
+    if(!record) { issues.push(artistRuleItem(artist,'uHangul 화가 맵 항목 누락')); continue; }
+    if(!record.uhangul) issues.push(artistRuleItem(artist,'uHangul 표기 누락'));
+    const expected=expectedArtistDisplayNameForCheck(artist);
+    if(expected && record.displayKorean !== expected) issues.push(artistRuleItem(artist,`uHangul 표시명 불일치: ${record.displayKorean || '(없음)'} → ${expected}`));
+    const manualExpected=expectedManualUHangulByArtistId[key];
+    if(manualExpected && record.uhangul !== manualExpected) issues.push(artistRuleItem(artist,`uHangul 변환 표식 불일치: ${record.uhangul || '(없음)'} → ${manualExpected}`));
+    const display=actualArtistDisplayNameForCheck(artist);
+    if(display && !byText.get(compactCheckText(display))) issues.push(artistRuleItem(artist,`화면 표시명으로 uHangul 사전 항목을 찾을 수 없음: ${display}`));
+  }
+  return issues;
+}
+async function techniqueTitleLinkButtonIssues() {
+  const issues=[];
+  const techniqueText=await fs.readFile(path.join(root,'techniques.js'),'utf8').catch(()=>'');
+  const serverText=await fs.readFile(path.join(root,'server.js'),'utf8').catch(()=>'');
+  if(techniqueText && !/function setupTechniqueLinkEntry/.test(techniqueText)) issues.push({artist:'미술 기법 및 용어',artistId:'technique-link-entry',work:'기법 제목 옆 + 입력 처리 함수 누락',workId:'techniques.js'});
+  if(techniqueText && !/if\(technique\.comparison\)\{[\s\S]*technique-title-row[\s\S]*\$\{linkAdd\}\$\{linkControls\}[\s\S]*setupTechniqueLinkEntry\(technique\)[\s\S]*setupTechniqueLinkButtons\(techniqueContent,technique\)/.test(techniqueText)) issues.push({artist:'미술 기법 및 용어',artistId:'technique-comparison-link-add',work:'비교 기법 제목 옆 + 자료 버튼 또는 링크 버튼 연결 누락',workId:'techniques.js'});
+  if(serverText && !/comparisonTechniqueIds\.has\(techniqueId\)/.test(serverText)) issues.push({artist:'미술 기법 및 용어',artistId:'technique-comparison-link-save',work:'비교 기법 자료 링크 저장 허용 목록 누락',workId:'server.js'});
+  if(serverText && !/data\.comparisonLinks\[techniqueId\]=nextLinks/.test(serverText)) issues.push({artist:'미술 기법 및 용어',artistId:'technique-comparison-link-storage',work:'비교 기법 자료 링크 저장 경로 누락',workId:'server.js'});
+  return issues;
+}
 async function writeRuleCheckReport(result) {
   const reportFolder=path.join(root,'변경사항');
   const reportFile=path.join(reportFolder,`규칙점검_${koreanTimestamp()}.md`);
   const rows=items => items.length ? items.map(item=>`- ${item.artist} · ${item.work}${item.workId ? ` (${item.workId})` : ''}`).join('\n') : '- 없음';
-  const text=['# 전체 규칙 점검 보고서','',`- 점검 시각: ${new Date().toLocaleString('ko-KR',{timeZone:'Asia/Seoul'})}`,`- 결과: ${result.changed ? '최신 공통 규칙을 적용하고 저장함' : '저장 데이터가 현재 공통 규칙과 일치함'}`,`- 데이터 버전: ${result.revision}`,'','## 대상','',`- 화가: ${result.stats.artists}명`,`- 작품: ${result.stats.works}점`,`- 이름 사전: ${result.stats.nameDictionary}개 항목 재생성`,`- 미술사조 문서의 화가 링크: 열 때마다 최신 별칭으로 동적 연결`,'','## 자동 적용한 범위','','- 최신 작품 정리·중복 처리 규칙','- 고해상도 이미지 경로 재확인','- 화가 이름 사전 및 uHangul 화가 맵 재생성','','수동 입력 작품, 대표작 선택, 직접 작성한 설명·이미지는 덮어쓰지 않았다. 외부 웹에서 작품을 재수집하거나 삭제하지 않았다.','','## 확인이 필요한 항목','',`### 이미지가 없는 작품 (${result.issues.missingPreview.length}점)`,'',rows(result.issues.missingPreview),'',`### 제목이 없는 작품 (${result.issues.missingTitle.length}점)`,'',rows(result.issues.missingTitle),'','## 다음 조치','','1. 위 목록의 화가 연표에서 작품의 이미지 또는 제목을 보완한다.','2. 다시 전체 규칙 점검을 실행한다.','3. 이 보고서 파일을 다음 작업 세션에 전달하거나, “가장 최근 규칙점검 보고서 확인”이라고 요청한다.',''].join('\\n');
+  const text=['# 전체 규칙 점검 보고서','',`- 점검 시각: ${new Date().toLocaleString('ko-KR',{timeZone:'Asia/Seoul'})}`,`- 결과: ${result.changed ? '최신 공통 규칙을 적용하고 저장함' : '저장 데이터가 현재 공통 규칙과 일치함'}`,`- 데이터 버전: ${result.revision}`,'','## 대상','',`- 화가: ${result.stats.artists}명`,`- 작품: ${result.stats.works}점`,`- 이름 사전: ${result.stats.nameDictionary}개 항목 재생성`,`- 미술사조 문서의 화가 링크: 열 때마다 최신 별칭으로 동적 연결`,'','## 자동 적용한 범위','','- 최신 작품 정리·중복 처리 규칙','- 고해상도 이미지 경로 재확인','- 화가 이름 사전 및 uHangul 화가 맵 재생성','- 화가 목록·연표 제목의 한국어 표시명, 성·이름 순서, uHangul 런타임·변환 표식 점검','- 화가 목록 국가 아이콘의 국가명 title·aria-label 연결 및 한국어 국가명 점검','- 기법 설명 오른쪽 페이지 제목 옆 + 자료 버튼 및 비교 기법 저장 경로 점검','- 썸네일 제목의 화가명·소장처 혼입 점검','','수동 입력 작품, 대표작 선택, 직접 작성한 설명·이미지는 덮어쓰지 않았다. 외부 웹에서 작품을 재수집하거나 삭제하지 않았다.','','## 확인이 필요한 항목','',`### 이미지가 없는 작품 (${result.issues.missingPreview.length}점)`,'',rows(result.issues.missingPreview),'',`### 제목이 없는 작품 (${result.issues.missingTitle.length}점)`,'',rows(result.issues.missingTitle),'',`### QID가 제목으로 남은 작품 (${result.issues.qidTitle.length}점)`,'',rows(result.issues.qidTitle),'',`### 화가 목록·연표 표시명이 한국어가 아닌 항목 (${result.issues.artistDisplayKorean.length}점)`,'',rows(result.issues.artistDisplayKorean),'',`### 화가 목록·연표 표시명의 성, 이름 순서 확인 항목 (${result.issues.artistDisplayOrder.length}점)`,'',rows(result.issues.artistDisplayOrder),'',`### 화가 목록 국가 아이콘의 국가명 확인 항목 (${result.issues.artistCountryIcon.length}점)`,'',rows(result.issues.artistCountryIcon),'',`### uHangul 폰트·런타임·화가 맵·변환 표식 확인 항목 (${result.issues.uHangulConnection.length}점)`,'',rows(result.issues.uHangulConnection),'',`### 기법 설명 제목 옆 + 자료 버튼 확인 항목 (${result.issues.techniqueTitleLinkButton.length}점)`,'',rows(result.issues.techniqueTitleLinkButton),'',`### 썸네일 제목에 화가명 또는 소장처가 남은 작품 (${result.issues.thumbnailTitleExtra.length}점)`,'',rows(result.issues.thumbnailTitleExtra),'','## 참고 항목','',`### 공개 이미지 없음으로 표시한 작품 (${result.issues.reviewedNoPublicImage.length}점)`,'',rows(result.issues.reviewedNoPublicImage),'','## 다음 조치','','1. 위 목록의 화가 연표에서 작품의 이미지 또는 제목을 보완한다.','2. 다시 전체 규칙 점검을 실행한다.','3. 이 보고서 파일을 다음 작업 세션에 전달하거나, “가장 최근 규칙점검 보고서 확인”이라고 요청한다.',''].join('\\n');
   await fs.mkdir(reportFolder,{recursive:true});
   await fs.writeFile(reportFile,text,'utf8');
   return path.relative(root,reportFile).replace(/\\/g,'/');
@@ -824,12 +1000,30 @@ async function checkAndApplyLatestRules(actor='') {
   const after=JSON.stringify(normalizedPayload.artists || []);
   const artists=normalizedPayload.artists || [];
   const works=artists.flatMap(artist=>artist.works || []);
+  const uHangulIssues=await uHangulRuleIssues(artists);
+  const countryIconIssues=await artistCountryIconIssues(artists);
+  const techniqueTitleLinkButtonIssuesList=await techniqueTitleLinkButtonIssues();
   const issues={
     missingPreview:artists.flatMap(artist=>(artist.works || []).filter(work=>!work.thumbnail && !work.image).map(work=>ruleCheckItem(artist,work))),
-    missingTitle:artists.flatMap(artist=>(artist.works || []).filter(work=>!work.title?.ko && !work.title?.en).map(work=>ruleCheckItem(artist,work)))
+    missingTitle:artists.flatMap(artist=>(artist.works || []).filter(work=>!work.title?.ko && !work.title?.en).map(work=>ruleCheckItem(artist,work))),
+    qidTitle:artists.flatMap(artist=>(artist.works || []).filter(qidLikeTitle).map(work=>ruleCheckItem(artist,work))),
+    artistDisplayKorean:artists.filter(artist=>!hasHangul(actualArtistDisplayNameForCheck(artist)) || hasLatin(actualArtistDisplayNameForCheck(artist))).map(artist=>artistRuleItem(artist,`목록/연표 표시명 확인: ${actualArtistDisplayNameForCheck(artist) || '(없음)'}`)),
+    artistDisplayOrder:artists.filter(artist=>actualArtistDisplayNameForCheck(artist) !== expectedArtistDisplayNameForCheck(artist)).map(artist=>artistRuleItem(artist,`성, 이름 표시 확인: ${actualArtistDisplayNameForCheck(artist)} → ${expectedArtistDisplayNameForCheck(artist)}`)),
+    artistCountryIcon:countryIconIssues,
+    uHangulConnection:uHangulIssues,
+    techniqueTitleLinkButton:techniqueTitleLinkButtonIssuesList,
+    thumbnailTitleExtra:thumbnailTitleExtraItems(artists),
+    reviewedNoPublicImage:artists.flatMap(artist=>(artist.works || []).filter(work=>work.thumbnailInvalidReason === 'no-public-image-source').map(work=>ruleCheckItem(artist,work)))
   };
   const missingPreview=issues.missingPreview.length;
   const missingTitle=issues.missingTitle.length;
+  const qidTitle=issues.qidTitle.length;
+  const artistDisplayKorean=issues.artistDisplayKorean.length;
+  const artistDisplayOrder=issues.artistDisplayOrder.length;
+  const artistCountryIcon=issues.artistCountryIcon.length;
+  const uHangulConnection=issues.uHangulConnection.length;
+  const techniqueTitleLinkButton=issues.techniqueTitleLinkButton.length;
+  const thumbnailTitleExtra=issues.thumbnailTitleExtra.length;
   let revision=Number(payload.metadata?.revision) || 0;
   const changed=before !== after;
   if (changed) {
@@ -838,10 +1032,10 @@ async function checkAndApplyLatestRules(actor='') {
   } else {
     writeUHangulArtistMap(artists);
     syncPersonNameDictionary({artists});
-    await appendAudit({type:'rules.check-and-apply',actor:normalizedEmail(actor) || 'local-admin',revision,changed:false,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle}});
+    await appendAudit({type:'rules.check-and-apply',actor:normalizedEmail(actor) || 'local-admin',revision,changed:false,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle,qidTitle,artistDisplayKorean,artistDisplayOrder,artistCountryIcon,uHangulConnection,techniqueTitleLinkButton,thumbnailTitleExtra}});
   }
   const nameDictionary=syncPersonNameDictionary({artists}).records;
-  const result={ok:true,changed,revision,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle,nameDictionary,movementDocuments:'dynamic-linking'},issues};
+  const result={ok:true,changed,revision,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle,qidTitle,artistDisplayKorean,artistDisplayOrder,artistCountryIcon,uHangulConnection,techniqueTitleLinkButton,thumbnailTitleExtra,reviewedNoPublicImage:issues.reviewedNoPublicImage.length,nameDictionary,movementDocuments:'dynamic-linking'},issues};
   result.reportFile=await writeRuleCheckReport(result);
   return result;
 }
@@ -917,6 +1111,7 @@ function techniqueLinks(value) {
     return {url:parsed.href};
   });
 }
+const comparisonTechniqueIds = new Set(['disegno-colorito','fresco-oil','tempera-oil','chiaroscuro-sfumato','linear-aerial-perspective','glazing-impasto']);
 function readRequestBuffer(req, limit=500*1024*1024) { return new Promise((resolve,reject) => { const chunks=[]; let size=0; req.on('data',chunk=>{ size+=chunk.length; if(size>limit) { reject(new Error('File is larger than 500 MB')); req.destroy(); return; } chunks.push(chunk); }); req.on('end',()=>resolve(Buffer.concat(chunks))); req.on('error',reject); }); }
 function multipartForm(buffer, contentType) {
   const boundary=/boundary=(?:"([^"]+)"|([^;\s]+))/i.exec(contentType || '')?.[1] || /boundary=(?:"([^"]+)"|([^;\s]+))/i.exec(contentType || '')?.[2];
@@ -1403,8 +1598,8 @@ http.createServer(async (req,res) => { const url=new URL(req.url,`http://${req.h
   if (req.method==='DELETE' && url.pathname==='/api/topic-artwork') { try { const body=JSON.parse((await readRequestBuffer(req,1024*1024)).toString('utf8') || '{}'), result=await deleteTopicArtwork(body); res.writeHead(200,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({ok:true,...result})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({ok:false,error:error.message})); } }
   if (req.method==='GET' && url.pathname==='/api/artists') { try { const data=await readArtistsFile(); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); return res.end(JSON.stringify(data)); } catch(error) { res.writeHead(500,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); return res.end(JSON.stringify({artists:[],error:error.message})); } }
   if (req.method==='GET' && url.pathname==='/api/techniques') { try { const data=JSON.parse(await fs.readFile(techniquesFile,'utf8')); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); return res.end(JSON.stringify(data)); } catch(error) { res.writeHead(500,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); return res.end(JSON.stringify({techniques:[],error:error.message})); } }
-  if (req.method==='PUT' && url.pathname==='/api/techniques') { let body=''; req.on('data',c=>body+=c); req.on('end',async()=>{ try { const {id,links}=JSON.parse(body || '{}'), data=JSON.parse(await fs.readFile(techniquesFile,'utf8')), techniques=Array.isArray(data.techniques) ? data.techniques : [], target=techniques.find(item=>item.id===String(id || '')); if(!target) throw new Error('Technique not found'); target.links=techniqueLinks(links); await fs.writeFile(techniquesFile,JSON.stringify(data,null,2)+'\n','utf8'); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:true,technique:target})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:false,error:error.message})); } }); return; }
-  if (req.method==='DELETE' && url.pathname==='/api/techniques') { let body=''; req.on('data',c=>body+=c); req.on('end',async()=>{ try { const {id}=JSON.parse(body || '{}'), data=JSON.parse(await fs.readFile(techniquesFile,'utf8')), techniques=Array.isArray(data.techniques) ? data.techniques : [], target=String(id || ''); if(!target || !techniques.some(item=>item.id===target)) throw new Error('Technique not found'); data.techniques=techniques.filter(item=>item.id!==target); await fs.writeFile(techniquesFile,JSON.stringify(data,null,2)+'\n','utf8'); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:true,techniques:data.techniques})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:false,error:error.message})); } }); return; }
+  if (req.method==='PUT' && url.pathname==='/api/techniques') { let body=''; req.on('data',c=>body+=c); req.on('end',async()=>{ try { const {id,links}=JSON.parse(body || '{}'), techniqueId=String(id || ''), data=JSON.parse(await fs.readFile(techniquesFile,'utf8')), techniques=Array.isArray(data.techniques) ? data.techniques : [], target=techniques.find(item=>item.id===techniqueId), nextLinks=techniqueLinks(links); if(target) target.links=nextLinks; else { if(!comparisonTechniqueIds.has(techniqueId)) throw new Error('Technique not found'); data.comparisonLinks=data.comparisonLinks && typeof data.comparisonLinks==='object' && !Array.isArray(data.comparisonLinks) ? data.comparisonLinks : {}; data.comparisonLinks[techniqueId]=nextLinks; } await fs.writeFile(techniquesFile,JSON.stringify(data,null,2)+'\n','utf8'); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:true,technique:target || {id:techniqueId,links:nextLinks,comparison:true}})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:false,error:error.message})); } }); return; }
+  if (req.method==='DELETE' && url.pathname==='/api/techniques') { let body=''; req.on('data',c=>body+=c); req.on('end',async()=>{ try { const {id}=JSON.parse(body || '{}'), data=JSON.parse(await fs.readFile(techniquesFile,'utf8')), techniques=Array.isArray(data.techniques) ? data.techniques : [], target=String(id || ''); if(!target) throw new Error('Technique not found'); if(techniques.some(item=>item.id===target)) { data.techniques=techniques.filter(item=>item.id!==target); } else { if(!comparisonTechniqueIds.has(target)) throw new Error('Technique not found'); const hidden=new Set(Array.isArray(data.hiddenComparisonIds) ? data.hiddenComparisonIds : []); hidden.add(target); data.hiddenComparisonIds=[...hidden].sort(); if(data.comparisonLinks && typeof data.comparisonLinks==='object' && !Array.isArray(data.comparisonLinks)) delete data.comparisonLinks[target]; } await fs.writeFile(techniquesFile,JSON.stringify(data,null,2)+'\n','utf8'); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:true,techniques:data.techniques,comparisonLinks:data.comparisonLinks || {},hiddenComparisonIds:data.hiddenComparisonIds || []})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:false,error:error.message})); } }); return; }
   if ((req.method==='PUT' || req.method==='POST') && url.pathname==='/api/artists') { let body=''; req.on('data',c=>body+=c); req.on('end',async()=>{ try { const payload=JSON.parse(body), saved=await writeArtistsFile(payload,session.email); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:true,...saved})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:false,error:error.message})); } }); return; }
   if (req.method==='POST' && url.pathname==='/api/rules/check-and-apply') { try { const result=await checkAndApplyLatestRules(session.email); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); return res.end(JSON.stringify(result)); } catch(error) { res.writeHead(422,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); return res.end(JSON.stringify({ok:false,error:error.message})); } }
   if (req.method==='GET' && url.pathname==='/api/migration-export') { try { const result=await migrationExport(), stamp=new Date().toISOString().slice(0,10); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Content-Disposition':`attachment; filename="art-through-time-firebase-${stamp}.json"`,'Cache-Control':'no-store'}); return res.end(JSON.stringify(result.export,null,2)); } catch(error) { res.writeHead(403,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); return res.end(JSON.stringify({ok:false,error:error.message})); } }
