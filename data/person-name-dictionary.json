@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-21T22:32:35.406Z",
+  "generatedAt": "2026-08-22T01:04:12.327Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -3207,6 +3207,7 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
+        "data/미술사조/9e553fb48e9a464402114360-1.html",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
         "Wikidata"
       ],
@@ -3853,8 +3854,8 @@
     {
       "id": "hugo-van-der-goes",
       "original": "Hugo van der Goes",
-      "korean": "후고 반 데르 후스",
-      "displayKorean": "후고 반 데르 후스",
+      "korean": "후고 판 데르 후스",
+      "displayKorean": "후고 판 데르 후스",
       "aliases": {
         "ko": [
           "후스"
@@ -3932,6 +3933,27 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "name-intaglioprintmaker",
+      "original": "Intaglio printmaker",
+      "korean": "동판화 장인",
+      "displayKorean": "동판화 장인",
+      "aliases": {
+        "ko": [
+          "장인"
+        ],
+        "en": [
+          "printmaker"
+        ]
+      },
+      "uhangul": "동판화 장인",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/techniques.json"
       ],
       "status": "verified-pair"
     },
@@ -4082,11 +4104,11 @@
     {
       "id": "jacob-van-ruisdael",
       "original": "Jacob van Ruisdael",
-      "korean": "야코프 반 라위스달",
-      "displayKorean": "야코프 반 라위스달",
+      "korean": "야코프 판 라위스달",
+      "displayKorean": "야코프 판 라위스달",
       "aliases": {
         "ko": [
-          "반 라위스달",
+          "판 라위스달",
           "라위스달"
         ],
         "en": [
@@ -4252,6 +4274,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/techniques.json",
+        "data/미술사조/9e553fb48e9a464402114360-1.html",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
@@ -5326,6 +5349,23 @@
       "status": "verified-pair"
     },
     {
+      "id": "name-lithographer",
+      "original": "Lithographer",
+      "korean": "석판화가",
+      "displayKorean": "석판화가",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
+      "uhangul": "[THㅓㄱ]판화가",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/techniques.json"
+      ],
+      "status": "verified-pair"
+    },
+    {
       "id": "name-lorenzodicredi",
       "original": "Lorenzo di Credi",
       "korean": "로렌초 디 크레디",
@@ -5683,6 +5723,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/techniques.json",
+        "data/미술사조/9e553fb48e9a464402114360-1.html",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
@@ -7013,11 +7054,12 @@
       "id": "Q5598",
       "original": "Rembrandt Harmenszoon van Rijn",
       "korean": "렘브란트 하르먼손 반 레인",
-      "displayKorean": "렘브란트 하르먼손 반 레인",
+      "displayKorean": "렘브란트 하르먼손 판 레인",
       "aliases": {
         "ko": [
           "반 레인",
           "레인",
+          "판 레인",
           "렘브란트 하르먼손 반 레인",
           "렘브란트"
         ],
@@ -7029,7 +7071,7 @@
           "Rembrandt van Rijn"
         ]
       },
-      "uhangul": "[Rㅔㅁ]브[Rㅏㄴ]트 하[Rㅡ]먼손 [Vㅏㄴ] [Rㅔ]인",
+      "uhangul": "[Rㅔㅁ]브[Rㅏㄴ]트 하[Rㅡ]먼손 판 [Rㅔ]인",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
@@ -7262,6 +7304,8 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
+        "data/미술사조/9e553fb48e9a464402114360-1.html",
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
         "Wikidata"
       ],
       "status": "verified-pair",
@@ -7393,6 +7437,27 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "name-screenprinter",
+      "original": "Screen printer",
+      "korean": "실크스크린 제작자",
+      "displayKorean": "실크스크린 제작자",
+      "aliases": {
+        "ko": [
+          "제작자"
+        ],
+        "en": [
+          "printer"
+        ]
+      },
+      "uhangul": "실크스크[Rㅣㄴ] 제작자",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/techniques.json"
       ],
       "status": "verified-pair"
     },
@@ -7611,11 +7676,11 @@
     {
       "id": "theo-van-rysselberghe",
       "original": "Théo van Rysselberghe",
-      "korean": "테오 반 리셀베르허",
-      "displayKorean": "테오 반 리셀베르허",
+      "korean": "테오 판 리셀베르허",
+      "displayKorean": "테오 판 리셀베르허",
       "aliases": {
         "ko": [
-          "반 리셀베르허",
+          "판 리셀베르허",
           "리셀베르허"
         ],
         "en": [
@@ -8350,6 +8415,27 @@
       "status": "verified-pair"
     },
     {
+      "id": "name-woodblockprinter",
+      "original": "Woodblock printer",
+      "korean": "목판 장인",
+      "displayKorean": "목판 장인",
+      "aliases": {
+        "ko": [
+          "장인"
+        ],
+        "en": [
+          "printer"
+        ]
+      },
+      "uhangul": "목[Vㅏㄴ] 장인",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/techniques.json"
+      ],
+      "status": "verified-pair"
+    },
+    {
       "id": "wyndham-lewis",
       "original": "Wyndham Lewis",
       "korean": "윈덤 루이스",
@@ -8758,6 +8844,23 @@
         "en": []
       },
       "uhangul": "점묘법",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "technique",
+      "sources": [
+        "data/techniques.json"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "printmaking",
+      "original": "Printmaking",
+      "korean": "판화",
+      "displayKorean": "판화",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
+      "uhangul": "판화",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
       "sources": [

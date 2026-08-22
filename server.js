@@ -998,11 +998,76 @@ async function techniqueTitleLinkButtonIssues() {
   if(serverText && !/data\.comparisonLinks\[techniqueId\]=nextLinks/.test(serverText)) issues.push({artist:'미술 기법 및 용어',artistId:'technique-comparison-link-storage',work:'비교 기법 자료 링크 저장 경로 누락',workId:'server.js'});
   return issues;
 }
+async function movementDocumentImageIssues() {
+  const issues=[];
+  const exists=file=>fs.access(file).then(()=>true).catch(()=>false);
+  const entries=await fs.readdir(path.join(root,'data','미술사조'),{withFileTypes:true}).catch(()=>[]);
+  for(const entry of entries) {
+    if(!entry.isFile() || !/\.html?$/i.test(entry.name)) continue;
+    const file=path.join(root,'data','미술사조',entry.name);
+    const html=await fs.readFile(file,'utf8').catch(()=>'');
+    for(const match of html.matchAll(/<img\b[^>]*\bsrc=["']([^"']+)["']/gi)) {
+      const src=String(match[1] || '').trim();
+      if(!src || /^(?:https?:)?\/\//i.test(src) || /^data:/i.test(src)) continue;
+      const clean=src.replace(/[?#].*$/,'').replace(/\\/g,'/');
+      const target=path.resolve(path.dirname(file),clean);
+      const relative=path.relative(root,target).replace(/\\/g,'/');
+      const outside=!relative || relative.startsWith('..') || path.isAbsolute(relative);
+      const missing=outside || !await exists(target);
+      const unstable=/^(?:\.\.\/)?(?:thumbnails|high-resolution)\//.test(clean) || /^data\/(?:thumbnails|high-resolution)\//.test(clean);
+      if(missing || unstable) {
+        const reason=missing ? '이미지 파일 누락' : 'Git에 올리지 않는 이미지 폴더 직접 참조';
+        issues.push({artist:'미술사조 HTML',artistId:entry.name,work:`${reason}: ${src}`,workId:`data/미술사조/${entry.name}`});
+      }
+    }
+  }
+  return issues;
+}
+async function displayDataImageIssues() {
+  const issues=[];
+  const exists=file=>fs.access(file).then(()=>true).catch(()=>false);
+  const displayFiles=['techniques.json','featured-works.json','topics.json'];
+  const imageKeys=new Set(['image','thumbnail']);
+  const walk=async (node,fileName,trail=[]) => {
+    if(!node || typeof node !== 'object') return;
+    if(Array.isArray(node)) {
+      for(let index=0; index<node.length; index++) await walk(node[index],fileName,[...trail,`[${index}]`]);
+      return;
+    }
+    for(const [key,value] of Object.entries(node)) {
+      const nextTrail=[...trail,key];
+      if(imageKeys.has(key) && typeof value === 'string' && value.trim()) {
+        const src=value.trim();
+        const external=/^(?:https?:)?\/\//i.test(src);
+        const clean=src.replace(/[?#].*$/,'').replace(/\\/g,'/');
+        const unstable=/^data\/(?:thumbnails|high-resolution)\//.test(clean) || /^(?:\.\.\/)?(?:thumbnails|high-resolution)\//.test(clean);
+        let missing=false;
+        if(!external && !/^data:/i.test(src)) {
+          const target=path.resolve(root,clean);
+          const relative=path.relative(root,target).replace(/\\/g,'/');
+          const outside=!relative || relative.startsWith('..') || path.isAbsolute(relative);
+          missing=outside || !await exists(target);
+        }
+        if(external || unstable || missing) {
+          const reason=external ? '외부 이미지 URL 직접 참조' : (missing ? '이미지 파일 누락' : '캐시 이미지 폴더 직접 참조');
+          issues.push({artist:'표시 데이터 이미지',artistId:fileName,work:`${reason}: ${nextTrail.join('.')} → ${src}`,workId:`data/${fileName}`});
+        }
+      }
+      await walk(value,fileName,nextTrail);
+    }
+  };
+  for(const fileName of displayFiles) {
+    const file=path.join(dataDir,fileName);
+    const data=await fs.readFile(file,'utf8').then(JSON.parse).catch(()=>null);
+    await walk(data,fileName);
+  }
+  return issues;
+}
 async function writeRuleCheckReport(result) {
   const reportFolder=path.join(root,'변경사항');
   const reportFile=path.join(reportFolder,`규칙점검_${koreanTimestamp()}.md`);
   const rows=items => items.length ? items.map(item=>`- ${item.artist} · ${item.work}${item.workId ? ` (${item.workId})` : ''}`).join('\n') : '- 없음';
-  const text=['# 전체 규칙 점검 보고서','',`- 점검 시각: ${new Date().toLocaleString('ko-KR',{timeZone:'Asia/Seoul'})}`,`- 결과: ${result.changed ? '최신 공통 규칙을 적용하고 저장함' : '저장 데이터가 현재 공통 규칙과 일치함'}`,`- 데이터 버전: ${result.revision}`,'','## 대상','',`- 화가: ${result.stats.artists}명`,`- 작품: ${result.stats.works}점`,`- 이름 사전: ${result.stats.nameDictionary}개 항목 재생성`,`- 미술사조 문서의 화가 링크: 열 때마다 최신 별칭으로 동적 연결`,'','## 자동 적용한 범위','','- 최신 작품 정리·중복 처리 규칙','- 고해상도 이미지 경로 재확인','- 화가 이름 사전 및 uHangul 화가 맵 재생성','- 화가 목록·연표 제목의 한국어 표시명, 성·이름 순서, 네덜란드어 van=반 표기, uHangul 런타임·변환 표식 점검','- 화가 목록 국가 아이콘의 국가명 title·aria-label 연결 및 한국어 국가명 점검','- 기법 설명 오른쪽 페이지 제목 옆 + 자료 버튼 및 비교 기법 저장 경로 점검','- 썸네일 제목의 화가명·소장처 혼입 점검','','수동 입력 작품, 대표작 선택, 직접 작성한 설명·이미지는 덮어쓰지 않았다. 외부 웹에서 작품을 재수집하거나 삭제하지 않았다.','','## 확인이 필요한 항목','',`### 이미지가 없는 작품 (${result.issues.missingPreview.length}점)`,'',rows(result.issues.missingPreview),'',`### 제목이 없는 작품 (${result.issues.missingTitle.length}점)`,'',rows(result.issues.missingTitle),'',`### QID가 제목으로 남은 작품 (${result.issues.qidTitle.length}점)`,'',rows(result.issues.qidTitle),'',`### 화가 목록·연표 표시명이 한국어가 아닌 항목 (${result.issues.artistDisplayKorean.length}점)`,'',rows(result.issues.artistDisplayKorean),'',`### 화가 목록·연표 표시명의 성, 이름 순서 확인 항목 (${result.issues.artistDisplayOrder.length}점)`,'',rows(result.issues.artistDisplayOrder),'',`### 네덜란드어 van 한국어 표기 확인 항목 (${result.issues.artistDutchVanRomanization.length}점)`,'',rows(result.issues.artistDutchVanRomanization),'',`### 화가 목록 국가 아이콘의 국가명 확인 항목 (${result.issues.artistCountryIcon.length}점)`,'',rows(result.issues.artistCountryIcon),'',`### uHangul 폰트·런타임·화가 맵·변환 표식 확인 항목 (${result.issues.uHangulConnection.length}점)`,'',rows(result.issues.uHangulConnection),'',`### 기법 설명 제목 옆 + 자료 버튼 확인 항목 (${result.issues.techniqueTitleLinkButton.length}점)`,'',rows(result.issues.techniqueTitleLinkButton),'',`### 썸네일 제목에 화가명 또는 소장처가 남은 작품 (${result.issues.thumbnailTitleExtra.length}점)`,'',rows(result.issues.thumbnailTitleExtra),'','## 참고 항목','',`### 공개 이미지 없음으로 표시한 작품 (${result.issues.reviewedNoPublicImage.length}점)`,'',rows(result.issues.reviewedNoPublicImage),'','## 다음 조치','','1. 위 목록의 화가 연표에서 작품의 이미지 또는 제목을 보완한다.','2. 다시 전체 규칙 점검을 실행한다.','3. 이 보고서 파일을 다음 작업 세션에 전달하거나, “가장 최근 규칙점검 보고서 확인”이라고 요청한다.',''].join('\\n');
+  const text=['# 전체 규칙 점검 보고서','',`- 점검 시각: ${new Date().toLocaleString('ko-KR',{timeZone:'Asia/Seoul'})}`,`- 결과: ${result.changed ? '최신 공통 규칙을 적용하고 저장함' : '저장 데이터가 현재 공통 규칙과 일치함'}`,`- 데이터 버전: ${result.revision}`,'','## 대상','',`- 화가: ${result.stats.artists}명`,`- 작품: ${result.stats.works}점`,`- 이름 사전: ${result.stats.nameDictionary}개 항목 재생성`,`- 미술사조 문서의 화가 링크: 열 때마다 최신 별칭으로 동적 연결`,'','## 자동 적용한 범위','','- 최신 작품 정리·중복 처리 규칙','- 고해상도 이미지 경로 재확인','- 화가 이름 사전 및 uHangul 화가 맵 재생성','- 화가 목록·연표 제목의 한국어 표시명, 성·이름 순서, 네덜란드어 van=반 표기, uHangul 런타임·변환 표식 점검','- 화가 목록 국가 아이콘의 국가명 title·aria-label 연결 및 한국어 국가명 점검','- 기법 설명 오른쪽 페이지 제목 옆 + 자료 버튼 및 비교 기법 저장 경로 점검','- 미술사조 HTML 이미지 파일 누락 및 Git 비관리 이미지 폴더 직접 참조 점검','- 기법·대표작·주제-사건 표시 데이터의 외부 URL, 캐시 폴더 직접 참조, 이미지 파일 누락 점검','- 썸네일 제목의 화가명·소장처 혼입 점검','','수동 입력 작품, 대표작 선택, 직접 작성한 설명·이미지는 덮어쓰지 않았다. 외부 웹에서 작품을 재수집하거나 삭제하지 않았다.','','## 확인이 필요한 항목','',`### 이미지가 없는 작품 (${result.issues.missingPreview.length}점)`,'',rows(result.issues.missingPreview),'',`### 제목이 없는 작품 (${result.issues.missingTitle.length}점)`,'',rows(result.issues.missingTitle),'',`### QID가 제목으로 남은 작품 (${result.issues.qidTitle.length}점)`,'',rows(result.issues.qidTitle),'',`### 화가 목록·연표 표시명이 한국어가 아닌 항목 (${result.issues.artistDisplayKorean.length}점)`,'',rows(result.issues.artistDisplayKorean),'',`### 화가 목록·연표 표시명의 성, 이름 순서 확인 항목 (${result.issues.artistDisplayOrder.length}점)`,'',rows(result.issues.artistDisplayOrder),'',`### 네덜란드어 van 한국어 표기 확인 항목 (${result.issues.artistDutchVanRomanization.length}점)`,'',rows(result.issues.artistDutchVanRomanization),'',`### 화가 목록 국가 아이콘의 국가명 확인 항목 (${result.issues.artistCountryIcon.length}점)`,'',rows(result.issues.artistCountryIcon),'',`### uHangul 폰트·런타임·화가 맵·변환 표식 확인 항목 (${result.issues.uHangulConnection.length}점)`,'',rows(result.issues.uHangulConnection),'',`### 기법 설명 제목 옆 + 자료 버튼 확인 항목 (${result.issues.techniqueTitleLinkButton.length}점)`,'',rows(result.issues.techniqueTitleLinkButton),'',`### 미술사조 HTML 이미지 경로 확인 항목 (${result.issues.movementDocumentImage.length}점)`,'',rows(result.issues.movementDocumentImage),'',`### 표시 데이터 이미지 경로 확인 항목 (${result.issues.displayDataImage.length}점)`,'',rows(result.issues.displayDataImage),'',`### 썸네일 제목에 화가명 또는 소장처가 남은 작품 (${result.issues.thumbnailTitleExtra.length}점)`,'',rows(result.issues.thumbnailTitleExtra),'','## 참고 항목','',`### 공개 이미지 없음으로 표시한 작품 (${result.issues.reviewedNoPublicImage.length}점)`,'',rows(result.issues.reviewedNoPublicImage),'','## 다음 조치','','1. 위 목록의 화가 연표에서 작품의 이미지 또는 제목을 보완한다.','2. 다시 전체 규칙 점검을 실행한다.','3. 이 보고서 파일을 다음 작업 세션에 전달하거나, “가장 최근 규칙점검 보고서 확인”이라고 요청한다.',''].join('\\n');
   await fs.mkdir(reportFolder,{recursive:true});
   await fs.writeFile(reportFile,text,'utf8');
   return path.relative(root,reportFile).replace(/\\/g,'/');
@@ -1018,6 +1083,8 @@ async function checkAndApplyLatestRules(actor='') {
   const uHangulIssues=await uHangulRuleIssues(artists);
   const countryIconIssues=await artistCountryIconIssues(artists);
   const techniqueTitleLinkButtonIssuesList=await techniqueTitleLinkButtonIssues();
+  const movementDocumentImageIssuesList=await movementDocumentImageIssues();
+  const displayDataImageIssuesList=await displayDataImageIssues();
   const artistDutchVanRomanizationIssues=dutchVanRomanizationIssues(artists);
   const issues={
     missingPreview:artists.flatMap(artist=>(artist.works || []).filter(work=>!work.thumbnail && !work.image).map(work=>ruleCheckItem(artist,work))),
@@ -1029,6 +1096,8 @@ async function checkAndApplyLatestRules(actor='') {
     artistCountryIcon:countryIconIssues,
     uHangulConnection:uHangulIssues,
     techniqueTitleLinkButton:techniqueTitleLinkButtonIssuesList,
+    movementDocumentImage:movementDocumentImageIssuesList,
+    displayDataImage:displayDataImageIssuesList,
     thumbnailTitleExtra:thumbnailTitleExtraItems(artists),
     reviewedNoPublicImage:artists.flatMap(artist=>(artist.works || []).filter(work=>work.thumbnailInvalidReason === 'no-public-image-source').map(work=>ruleCheckItem(artist,work)))
   };
@@ -1041,6 +1110,8 @@ async function checkAndApplyLatestRules(actor='') {
   const artistCountryIcon=issues.artistCountryIcon.length;
   const uHangulConnection=issues.uHangulConnection.length;
   const techniqueTitleLinkButton=issues.techniqueTitleLinkButton.length;
+  const movementDocumentImage=issues.movementDocumentImage.length;
+  const displayDataImage=issues.displayDataImage.length;
   const thumbnailTitleExtra=issues.thumbnailTitleExtra.length;
   let revision=Number(payload.metadata?.revision) || 0;
   const changed=before !== after;
@@ -1050,10 +1121,10 @@ async function checkAndApplyLatestRules(actor='') {
   } else {
     writeUHangulArtistMap(artists);
     syncPersonNameDictionary({artists});
-    await appendAudit({type:'rules.check-and-apply',actor:normalizedEmail(actor) || 'local-admin',revision,changed:false,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle,qidTitle,artistDisplayKorean,artistDisplayOrder,artistDutchVanRomanization,artistCountryIcon,uHangulConnection,techniqueTitleLinkButton,thumbnailTitleExtra}});
+    await appendAudit({type:'rules.check-and-apply',actor:normalizedEmail(actor) || 'local-admin',revision,changed:false,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle,qidTitle,artistDisplayKorean,artistDisplayOrder,artistDutchVanRomanization,artistCountryIcon,uHangulConnection,techniqueTitleLinkButton,movementDocumentImage,displayDataImage,thumbnailTitleExtra}});
   }
   const nameDictionary=syncPersonNameDictionary({artists}).records;
-  const result={ok:true,changed,revision,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle,qidTitle,artistDisplayKorean,artistDisplayOrder,artistDutchVanRomanization,artistCountryIcon,uHangulConnection,techniqueTitleLinkButton,thumbnailTitleExtra,reviewedNoPublicImage:issues.reviewedNoPublicImage.length,nameDictionary,movementDocuments:'dynamic-linking'},issues};
+  const result={ok:true,changed,revision,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle,qidTitle,artistDisplayKorean,artistDisplayOrder,artistDutchVanRomanization,artistCountryIcon,uHangulConnection,techniqueTitleLinkButton,movementDocumentImage,displayDataImage,thumbnailTitleExtra,reviewedNoPublicImage:issues.reviewedNoPublicImage.length,nameDictionary,movementDocuments:'dynamic-linking'},issues};
   result.reportFile=await writeRuleCheckReport(result);
   return result;
 }

@@ -1408,7 +1408,7 @@
             "ko": "《자화상》",
             "en": "Self-Portrait"
           },
-          "image": "data/thumbnails/artist-rembrandt/met-437397.jpg",
+          "image": "data/techniques/impasto/rembrandt-self-portrait-1659.jpg",
           "role": {
             "ko": "젖은 층의 즉흥적 혼합",
             "en": "Improvised wet blending"
@@ -1428,7 +1428,7 @@
             "ko": "《라 그르누이예르》",
             "en": "La Grenouillere"
           },
-          "image": "data/thumbnails/claude-monet/wikidata-Q941549.jpg",
+          "image": "data/techniques/impasto/monet-water-lilies.jpg",
           "role": {
             "ko": "빠르게 변하는 야외 빛",
             "en": "Rapid outdoor light"
@@ -1510,7 +1510,7 @@
             "ko": "《슬픔》",
             "en": "Sorrow"
           },
-          "image": "data/thumbnails/vincent-van-gogh/wikidata-Q13107262.jpg",
+          "image": "data/techniques/scumbling/van-gogh-olive-trees.jpg",
           "role": {
             "ko": "선과 표면의 긴장",
             "en": "Tension between line and surface"
@@ -1572,7 +1572,7 @@
             "ko": "《양귀비》",
             "en": "Poppies"
           },
-          "image": "data/thumbnails/claude-monet/monet-poppies.jpg",
+          "image": "data/techniques/plein-air/monet-poppies.jpg",
           "role": {
             "ko": "인상주의의 순간적 빛",
             "en": "Impressionist momentary light"
@@ -1818,7 +1818,7 @@
             "ko": "《탕기 영감의 초상》",
             "en": "Portrait of Pere Tanguy"
           },
-          "image": "data/thumbnails/vincent-van-gogh/wikidata-Q13528770.JPG",
+          "image": "data/techniques/pointillism/van-gogh-self-portrait.jpg",
           "role": {
             "ko": "후기인상주의적 수용",
             "en": "Post-Impressionist adaptation"
@@ -1970,6 +1970,122 @@
           "note": {
             "ko": "피부, 붉은 천, 푸른 하늘, 어두운 실내가 하나의 따뜻한 빛 속에서 이어집니다. 이처럼 색조의 관계가 형태를 묶고 분위기를 만드는 방식이 콜로리토의 핵심입니다.",
             "en": "Flesh, red cloth, blue sky, and dark interior are joined within one warm light. This way tonal relationships bind form and make atmosphere is central to colorito."
+          }
+        }
+      ]
+    },
+    {
+      "id": "printmaking",
+      "introduced": 800,
+      "name": {
+        "ko": "판화",
+        "en": "Printmaking"
+      },
+      "subtitle": {
+        "ko": "판을 만들고 잉크를 묻혀 종이나 천에 찍어 내는 복수 이미지 기법",
+        "en": "Making repeatable images by inking a matrix and transferring it to paper or fabric"
+      },
+      "definition": {
+        "ko": "판화는 나무, 금속, 돌, 망사 같은 판(matrix)에 이미지를 만들고, 그 판에 잉크를 묻힌 뒤 압력으로 종이나 천에 옮기는 미술 기법입니다. 회화처럼 한 화면을 직접 그리는 것이 아니라, 판의 구조와 인쇄 방식이 선, 면, 색, 질감을 결정합니다. 기본 분류는 철판/볼록판 인쇄, 요판 인쇄, 평판 인쇄, 공판 인쇄로 나눌 수 있습니다.",
+        "en": "Printmaking creates an image on a matrix such as wood, metal, stone, or mesh, inks that matrix, and transfers the image to paper or fabric under pressure. Unlike painting a single surface directly, the structure of the matrix and the printing method determine line, tone, colour, and texture. The main families are relief, intaglio, planographic, and stencil/screen printing."
+      },
+      "explanation": {
+        "ko": "판화에서 중요한 차이는 잉크가 어디에 머무르고 어떻게 종이에 옮겨지는가입니다. 철판 인쇄, 곧 볼록판 인쇄는 남겨 둔 높은 부분에 잉크가 묻어 찍힙니다. 목판화와 리놀륨 판화가 여기에 속하며, 선이 강하고 면의 대비가 분명합니다. 요판 인쇄는 금속판의 파인 홈에 잉크가 남고, 젖은 종이가 압력으로 그 홈의 잉크를 끌어올립니다. 동판화, 에칭, 드라이포인트처럼 섬세한 선과 깊은 흑색에 강합니다. 평판 인쇄는 판의 높낮이가 거의 같고, 기름과 물이 서로 밀어내는 성질을 이용합니다. 석판화와 오프셋 인쇄가 대표적이며, 손으로 그린 듯한 선과 넓은 색면을 만들기 좋습니다. 공판 인쇄는 구멍이 열린 부분으로만 잉크가 통과합니다. 스텐실과 실크스크린은 선명한 색면, 반복, 포스터와 현대 그래픽에 특히 강합니다.",
+        "en": "The key question in printmaking is where the ink sits and how it reaches the receiving surface. Relief printing inks the raised parts left standing on the block; woodcut and linocut belong here and often produce firm lines and strong contrasts. Intaglio printing holds ink in incised grooves in a metal plate, and damp paper pulls that ink out under pressure; engraving, etching, and drypoint are strong in fine line and deep blacks. Planographic printing keeps the surface nearly level and relies on the repulsion of grease and water; lithography and offset printing can preserve drawn lines and broad tonal areas. Stencil or screen printing pushes ink only through open areas, making it effective for clear colour fields, repetition, posters, textiles, and modern graphic images."
+      },
+      "links": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/Category:Relief_printing"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Category:Intaglio_(printmaking)"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Category:Lithography"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Category:Screen_printing"
+        }
+      ],
+      "examples": [
+        {
+          "year": "8세기 이후",
+          "artist": {
+            "ko": "목판 장인",
+            "en": "Woodblock printer"
+          },
+          "title": {
+            "ko": "철판/볼록판 인쇄",
+            "en": "Relief printing"
+          },
+          "image": "data/techniques/printmaking/relief-woodblock.jpg",
+          "role": {
+            "ko": "높은 부분에 잉크가 묻는 방식",
+            "en": "Ink sits on the raised surface"
+          },
+          "note": {
+            "ko": "철판 인쇄는 한자로 凸版, 즉 볼록판 인쇄를 뜻합니다. 깎아 낸 낮은 부분은 찍히지 않고, 남겨 둔 높은 선과 면에 잉크가 묻어 종이에 옮겨집니다. 목판화는 칼자국과 검은 면의 대비가 강해 선명하고 힘 있는 화면을 만들기 좋습니다.",
+            "en": "Relief printing inks the raised parts of the block. Areas cut away do not print, while the lines and planes left standing transfer ink to the paper. Woodcut often produces clear, forceful images through the contrast of carved marks and solid black areas."
+          }
+        },
+        {
+          "year": "15세기 이후",
+          "artist": {
+            "ko": "동판화 장인",
+            "en": "Intaglio printmaker"
+          },
+          "title": {
+            "ko": "요판 인쇄",
+            "en": "Intaglio printing"
+          },
+          "image": "data/techniques/printmaking/intaglio-printmaking.jpg",
+          "role": {
+            "ko": "파인 홈에 잉크가 남는 방식",
+            "en": "Ink sits inside incised grooves"
+          },
+          "note": {
+            "ko": "요판 인쇄는 볼록판과 반대로 파인 선과 홈이 이미지를 만듭니다. 판 전체에 잉크를 문지른 뒤 표면을 닦아 내면 홈 속에만 잉크가 남고, 젖은 종이를 강한 압력으로 눌러 그 잉크를 끌어냅니다. 에칭과 동판화의 가늘고 깊은 선은 이 구조에서 나옵니다.",
+            "en": "Intaglio reverses the logic of relief. Ink is pushed into incised grooves, the surface is wiped clean, and damp paper is pressed hard enough to draw ink out of the cuts. The fine, dark lines of engraving and etching come from this structure."
+          }
+        },
+        {
+          "year": "1796 이후",
+          "artist": {
+            "ko": "석판화가",
+            "en": "Lithographer"
+          },
+          "title": {
+            "ko": "평판 인쇄",
+            "en": "Planographic printing"
+          },
+          "image": "data/techniques/printmaking/lithographic-stone.jpg",
+          "role": {
+            "ko": "기름과 물의 반발을 쓰는 방식",
+            "en": "Grease and water repel on a level surface"
+          },
+          "note": {
+            "ko": "평판 인쇄는 판의 높낮이보다 화학적 성질이 중요합니다. 석판 위에 기름 성분으로 그린 부분은 잉크를 받아들이고, 물을 머금은 나머지 부분은 잉크를 밀어냅니다. 그래서 연필이나 붓으로 그린 듯한 자유로운 선, 부드러운 명암, 넓은 색면을 비교적 자연스럽게 옮길 수 있습니다.",
+            "en": "Planographic printing depends less on height than on chemistry. Greasy drawing areas accept ink, while wet non-image areas repel it. Lithography can therefore carry a drawn line, soft tonal transitions, and broad colour fields with a natural hand-made quality."
+          }
+        },
+        {
+          "year": "20세기 이후",
+          "artist": {
+            "ko": "실크스크린 제작자",
+            "en": "Screen printer"
+          },
+          "title": {
+            "ko": "공판 인쇄",
+            "en": "Stencil / screen printing"
+          },
+          "image": "data/techniques/printmaking/screen-printing-frame.jpg",
+          "role": {
+            "ko": "뚫린 부분으로 잉크를 밀어 넣는 방식",
+            "en": "Ink passes through open areas"
+          },
+          "note": {
+            "ko": "공판 인쇄는 막힌 부분과 뚫린 부분을 나누고, 열린 부분으로만 잉크를 통과시킵니다. 실크스크린에서는 망 위에 스텐실을 만들고 스퀴지로 잉크를 밀어 넣습니다. 색면이 또렷하고 반복 제작이 쉬워 포스터, 직물, 팝아트 이미지에 널리 쓰였습니다.",
+            "en": "Stencil printing divides the matrix into blocked and open areas, allowing ink to pass only through the openings. In screen printing, a stencil is prepared on mesh and ink is pushed through with a squeegee. It is well suited to crisp colour fields, repetition, posters, textiles, and Pop art."
           }
         }
       ]

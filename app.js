@@ -793,9 +793,23 @@ function localArtworkImage(work) {
   if (image === offlineArtworkPlaceholder) return image;
   return work?.thumbnailCacheKey ? `${image}?v=${encodeURIComponent(work.thumbnailCacheKey)}` : image;
 }
+function externalArtworkImage(work, width = 240) {
+  const source = [work?.thumbnail, work?.image, work?.highResImage, work?.highResOriginal].find(isExternalImageSource);
+  return source ? thumbnail(source, width) : '';
+}
+function artworkImageDisplay(work, {detail=false} = {}) {
+  const highRes = work?.highResImage || '';
+  if (detail && highRes && !isExternalImageSource(highRes)) return {src:highRes, urlDependent:false};
+  const local = localArtworkImage(work);
+  if (local && local !== offlineArtworkPlaceholder) return {src:local, urlDependent:false};
+  const external = externalArtworkImage(work, detail ? 1200 : 240);
+  return external ? {src:external, urlDependent:true} : {src:'', urlDependent:false};
+}
+function urlDependencyBadge() {
+  return `<span class="url-dependency-badge" title="${esc(language === 'ko' ? '로컬 파일 없이 외부 URL에 의존하는 이미지입니다. 로컬 이미지 교체 버튼으로 바꿀 수 있습니다.' : 'This image depends on an external URL. Replace it with a local image when possible.')}">${esc(language === 'ko' ? 'URL 의존' : 'URL dependent')}</span>`;
+}
 function artworkPreviewImage(work) {
-  const image = localArtworkImage(work);
-  return image === offlineArtworkPlaceholder ? '' : image;
+  return artworkImageDisplay(work).src;
 }
 
 async function loadArtistFile() {
@@ -1299,7 +1313,8 @@ function renderTimeline() {
   const artworkLinkInputLabel = language === 'ko' ? '유튜브 또는 해설 웹페이지 주소를 입력하세요' : 'Enter a YouTube or explanation webpage address';
   const confirmArtworkLinkLabel = language === 'ko' ? '확인' : 'Add';
   const card = w => {
-    const image = artworkPreviewImage(w);
+    const imageInfo = artworkImageDisplay(w);
+    const image = imageInfo.src;
     const movementContribution = Boolean(w.movementContribution);
     const highResSource = w.highResImage || w.image || '';
     const highRes = Boolean(highResSource);
@@ -1316,7 +1331,8 @@ function renderTimeline() {
     const previewButton = image ? `<button class="artwork-preview-button" type="button" title="${esc(previewLabel)}" aria-label="${esc(previewLabel)}">⌕</button>` : '';
     const previewYear = workYearLabel(w) || (language === 'ko' ? '연도 미상' : 'Year unknown');
     const previewArtist = artistDisplayName(artist);
-    const fallbackImage = image && w.image && image !== thumbnail(w.image) ? thumbnail(w.image) : '';
+    const fallbackImage = image && !imageInfo.urlDependent && w.image && image !== thumbnail(w.image) ? thumbnail(w.image) : '';
+    const urlBadge = imageInfo.urlDependent ? urlDependencyBadge() : '';
     const highResBadge = highRes ? `<span class="high-resolution-badge hidden" data-highres-src="${esc(highResSource)}" title="${esc(language === 'ko' ? '고해상도 파일 확인 중' : 'Checking high-resolution file')}">Ⓗ</span>` : '';
     const wikipediaUrl = explicitArtworkWikipediaUrl(w);
     const wikipediaLabel = language === 'ko' ? '작품 위키피디아 페이지 열기' : 'Open artwork Wikipedia page';
@@ -1333,7 +1349,7 @@ function renderTimeline() {
     const titleMarkup = `<span class="art-title-row"><span class="art-title-with-links">${titleLink}${artworkLinkControls}</span>${highResBadge}</span>${artworkLinkEntry}`;
     const footerMarkup = collectionMarkup ? `<span class="art-card-footer">${collectionMarkup}</span>` : '';
     const controls = currentUserIsAdmin ? `<button class="delete-artwork" data-work="${esc(w.id)}" title="${esc(t('delete'))}" aria-label="${esc(t('delete'))}">×</button><button class="replace-local-image" data-work="${esc(w.id)}" title="${esc(replaceLabel)}" aria-label="${esc(replaceLabel)}">↗</button>` : '';
-    return `<div class="art-card${movementContribution ? ' movement-contribution-artwork' : ''}" data-work="${esc(w.id)}" data-preview-artist="${esc(previewArtist)}" data-preview-title="${esc(workTitle)}" data-preview-year="${esc(previewYear)}" data-preview-collection="${collection && collection !== t('unknown') ? esc(collection) : ''}" title="${movementContribution ? esc(contributionLabel) : ''}"><span class="art-thumb">${featuredToggle}${image ? `<img src="${esc(image)}" alt="${esc(workTitle)}" loading="lazy"${fallbackImage ? ` data-fallback-src="${esc(fallbackImage)}"` : ''} />` : `<span class="art-thumb-empty">${esc(t('noImage'))}</span>`}${previewButton}${controls}</span><span class="art-meta">${titleMarkup}${footerMarkup}</span></div>`;
+    return `<div class="art-card${movementContribution ? ' movement-contribution-artwork' : ''}" data-work="${esc(w.id)}" data-preview-artist="${esc(previewArtist)}" data-preview-title="${esc(workTitle)}" data-preview-year="${esc(previewYear)}" data-preview-collection="${collection && collection !== t('unknown') ? esc(collection) : ''}" title="${movementContribution ? esc(contributionLabel) : ''}"><span class="art-thumb">${featuredToggle}${image ? `<img src="${esc(image)}" alt="${esc(workTitle)}" loading="lazy"${fallbackImage ? ` data-fallback-src="${esc(fallbackImage)}"` : ''} />${urlBadge}` : `<span class="art-thumb-empty">${esc(t('noImage'))}</span>`}${previewButton}${controls}</span><span class="art-meta">${titleMarkup}${footerMarkup}</span></div>`;
   };
   const koreanName = artist.name?.ko || '', originalName = artist.name?.en || '';
   const savedLinks = artistLinks(artist);
@@ -1977,7 +1993,8 @@ function artworkFacts(work, artist) {
   ];
 }
 function renderArtworkDetail(work, artist, loading=false) {
-  const image = work.highResImage || slideshowImage(work);
+  const imageInfo = artworkImageDisplay(work, {detail:true});
+  const image = imageInfo.src;
   const text = storedArtworkText(work);
   const sections = work?.detail?.sections?.[language] || [];
   detail.classList.add('show');
@@ -1999,7 +2016,7 @@ function renderArtworkDetail(work, artist, loading=false) {
   const artworkLinkControls = `<span class="artwork-link-controls">${currentUserIsAdmin ? `<button class="artwork-link-add" type="button" title="${esc(addArtworkLinkLabel)}" aria-label="${esc(addArtworkLinkLabel)}">+</button>` : ''}${artworkLinkButtons}</span>`;
   const artworkTitle = `<div class="detail-title-row"><h2>${esc(loc(work.title) || t('untitled'))}</h2>${artworkLinkControls}</div>`;
   const artworkLinkEntry = currentUserIsAdmin ? `<form class="artwork-link-entry hidden"><input type="url" inputmode="url" placeholder="https://" aria-label="${esc(artworkLinkInputLabel)}" required><button type="submit">${esc(confirmArtworkLinkLabel)}</button></form>` : '';
-  detail.innerHTML = `<div class="detail-panel-resize" role="separator" aria-orientation="vertical" aria-label="${language === 'ko' ? '설명 창 너비 조절' : 'Resize detail panel'}"></div><button class="close-detail" type="button" aria-label="닫기">×</button>${image ? `<div class="detail-image-wrap" title="${esc(imageWindowHint)}"><img class="detail-image" src="${esc(image)}" alt="${esc(loc(work.title))}"></div><div class="detail-image-resize" role="separator" aria-orientation="horizontal" aria-label="${language === 'ko' ? '그림 창 높이 조절' : 'Resize image height'}"></div><div class="detail-image-actions">${currentUserIsAdmin ? `<button class="edit-artwork" type="button" title="${esc(editLabel)}" aria-label="${esc(editLabel)}">✎</button>` : ''}</div>` : `<div class="detail-image-unavailable">${esc(t('noImage'))}</div>`}${artworkTitle}${artworkLinkEntry}<dl class="detail-facts">${artworkFacts(work,artist).map(([label,value]) => `<div><dt>${esc(label)}</dt><dd${label===t('artist') ? uHangulArtistAttributes(artist,value) : ''}>${esc(value)}</dd></div>`).join('')}</dl><div class="detail-content">${body}</div><div class="detail-editor hidden"><textarea aria-label="${esc(editLabel)}">${esc(editedText)}</textarea><div><button class="cancel-artwork-edit" type="button">${esc(cancelLabel)}</button><button class="save-artwork-edit" type="button">${esc(polishSaveLabel)}</button></div></div><p class="source">${esc(savedNote)}</p>`;
+  detail.innerHTML = `<div class="detail-panel-resize" role="separator" aria-orientation="vertical" aria-label="${language === 'ko' ? '설명 창 너비 조절' : 'Resize detail panel'}"></div><button class="close-detail" type="button" aria-label="닫기">×</button>${image ? `<div class="detail-image-wrap" title="${esc(imageWindowHint)}"><img class="detail-image" src="${esc(image)}" alt="${esc(loc(work.title))}">${imageInfo.urlDependent ? urlDependencyBadge() : ''}</div><div class="detail-image-resize" role="separator" aria-orientation="horizontal" aria-label="${language === 'ko' ? '그림 창 높이 조절' : 'Resize image height'}"></div><div class="detail-image-actions">${currentUserIsAdmin ? `<button class="edit-artwork" type="button" title="${esc(editLabel)}" aria-label="${esc(editLabel)}">✎</button>` : ''}</div>` : `<div class="detail-image-unavailable">${esc(t('noImage'))}</div>`}${artworkTitle}${artworkLinkEntry}<dl class="detail-facts">${artworkFacts(work,artist).map(([label,value]) => `<div><dt>${esc(label)}</dt><dd${label===t('artist') ? uHangulArtistAttributes(artist,value) : ''}>${esc(value)}</dd></div>`).join('')}</dl><div class="detail-content">${body}</div><div class="detail-editor hidden"><textarea aria-label="${esc(editLabel)}">${esc(editedText)}</textarea><div><button class="cancel-artwork-edit" type="button">${esc(cancelLabel)}</button><button class="save-artwork-edit" type="button">${esc(polishSaveLabel)}</button></div></div><p class="source">${esc(savedNote)}</p>`;
   detail.querySelector('.close-detail').onclick = closeDetail;
   setupDetailPanelResize();
   detail.querySelector('.edit-artwork')?.addEventListener('click', () => { detail.querySelector('.detail-content').classList.add('hidden'); detail.querySelector('.detail-editor').classList.remove('hidden'); detail.querySelector('.detail-editor textarea').focus(); });
@@ -2206,14 +2223,14 @@ async function openArtworkDetail(work, artist, remember=true) {
   }
 }
 function slideshowImage(work) {
-  const local = localArtworkImage(work);
-  return local === offlineArtworkPlaceholder ? '' : local;
+  return artworkImageDisplay(work).src;
 }
 function renderSlideshowSlide() {
   const work = slideshowWorks[slideshowIndex];
   if (!work) return closeSlideshow();
-  const image = slideshowImage(work);
-  slideshowStage.innerHTML = image ? `<img src="${esc(image)}" alt="${esc(loc(work.title))}">` : `<div class="slideshow-empty">${language === 'ko' ? '이미지를 준비하지 못했습니다.' : 'Image unavailable.'}</div>`;
+  const imageInfo = artworkImageDisplay(work);
+  const image = imageInfo.src;
+  slideshowStage.innerHTML = image ? `<img src="${esc(image)}" alt="${esc(loc(work.title))}">${imageInfo.urlDependent ? urlDependencyBadge() : ''}` : `<div class="slideshow-empty">${language === 'ko' ? '이미지를 준비하지 못했습니다.' : 'Image unavailable.'}</div>`;
   slideshowCaption.innerHTML = `<span class="slideshow-caption-line"><span${uHangulArtistAttributes(slideshowArtist,artistDisplayName(slideshowArtist))}>${esc(artistDisplayName(slideshowArtist))}</span><span> · ${esc(loc(work.title))} · ${esc(workYearLabel(work) || t('unknown'))}</span></span>`;
 }
 function startSlideshow(artist, works) {
