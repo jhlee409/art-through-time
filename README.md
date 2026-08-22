@@ -88,6 +88,7 @@ C:\Users\jhlee\OneDrive - UOU\AI-Programming\Art_through_Time\download
 
 - 화가 목록과 연표 제목의 한국어 표시 여부
 - 성·이름 순서
+- 네덜란드어 `van`의 한국어 표기를 `반`으로 통일했는지
 - uHangul 폰트, 런타임, 화가 맵 연결
 - uHangul 수동 변환 표식 필요 항목
 - 썸네일 제목에 화가명이나 소장처가 남아 있는지

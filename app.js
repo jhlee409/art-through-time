@@ -538,7 +538,7 @@ const koreanArtistDisplayOverrides = {
   Q301: '엘 그레코',
   Q5592: '부오나로티, 미켈란젤로',
   Q5597: '산치오, 라파엘로',
-  Q5598: '렘브란트 하르먼손 판 레인'
+  Q5598: '렘브란트 하르먼손 반 레인'
 };
 function artistDisplayName(artist) {
   if (language !== 'ko') return loc(artist?.name);

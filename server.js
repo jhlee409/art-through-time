@@ -151,7 +151,7 @@ function getJson(url, attempt=0) {
 }
 function getJsonFast(url) { return new Promise((resolve,reject) => { const request=https.get(url,{headers:{'User-Agent':'ArtAtlasLocal/1.0 (interactive search)'}},res=>{const chunks=[];let size=0;res.on('data',chunk=>{size+=chunk.length;if(size>2*1024*1024)request.destroy(new Error('Search response is too large'));else chunks.push(chunk);});res.on('end',()=>{if(res.statusCode!==200)return reject(new Error(`Search returned ${res.statusCode}`));try{resolve(JSON.parse(Buffer.concat(chunks).toString('utf8')));}catch(error){reject(error);}});}); request.setTimeout(12000,()=>request.destroy(new Error('Search request timed out'))); request.on('error',reject); }); }
 const api = params => `https://www.wikidata.org/w/api.php?${new URLSearchParams({format:'json',origin:'*',...params})}`;
-const koreanArtistNameOverrides = {Q6394591:'바실리 푸키레프',Q104884:'카스파 다비드 프리드리히',Q5598:'렘브란트 하르먼손 판 레인'};
+const koreanArtistNameOverrides = {Q6394591:'바실리 푸키레프',Q104884:'카스파 다비드 프리드리히',Q5598:'렘브란트 하르먼손 반 레인'};
 const englishArtistNameOverrides = {Q5598:'Rembrandt Harmenszoon van Rijn'};
 const koreanArtworkTitleOverrides = {Q2030685:'성모의 결혼식',Q2277635:'라자로의 부활',Q3788158:'헷 펠스켄',Q596683:'새벽',Q1985071:'메디치 마돈나',Q1587929:'리젠게비르게의 아침',Q17493547:'독립전쟁 전몰자의 묘지',Q3649324:'숲속의 엽병',Q4310993:'범선 위에서',Q17321856:'정원 정자',Q18602479:'항구의 밤',Q18603131:'이른 아침 안개 속의 배',Q1423223:'바다 위의 달돋이',Q3139782:'달을 바라보는 남자와 여자',Q2517970:'눈 덮인 오두막',Q999836:'저녁 항구의 배들',Q17422064:'거인산맥의 엘데나 수도원 폐허',Q3822640:'드레스덴의 큰 울타리',Q4126323:'거인산맥의 추억',Q232087:'달을 바라보는 두 남자'};
 const sparseArtistFeaturedWorks = {
@@ -819,7 +819,7 @@ const koreanArtistDisplayOverridesForCheck = {
   Q301:'엘 그레코',
   Q5592:'부오나로티, 미켈란젤로',
   Q5597:'산치오, 라파엘로',
-  Q5598:'렘브란트 하르먼손 판 레인'
+  Q5598:'렘브란트 하르먼손 반 레인'
 };
 function koreanFamilyFirstForCheck(name, originalName) {
   if (String(name || '').includes(',')) return String(name || '').trim();
@@ -844,6 +844,21 @@ function artistRuleItem(artist, message) {
 function hasHangul(value) { return /[가-힣]/.test(String(value || '')); }
 function hasLatin(value) { return /[A-Za-z]/.test(String(value || '')); }
 function compactCheckText(value) { return String(value || '').toLowerCase().replace(/[^a-z0-9가-힣]/g,''); }
+function koreanDutchVanText(value) {
+  return /(^|\s)판(?=\s|$)/.test(String(value || ''));
+}
+function dutchVanRomanizationIssues(artists) {
+  const issues=[];
+  for(const artist of artists) {
+    const original=[artist?.name?.en,artist?.originalName,artist?.englishFullName].map(value=>String(value || '')).join(' ');
+    if(!/\bvan\b/i.test(original)) continue;
+    const aliases=Array.isArray(artist?.aliases) ? artist.aliases : [...(Array.isArray(artist?.aliases?.ko) ? artist.aliases.ko : [])];
+    const values=[artist?.name?.ko,artist?.fullName,actualArtistDisplayNameForCheck(artist),...aliases].map(value=>String(value || '').trim()).filter(Boolean);
+    const bad=values.find(koreanDutchVanText);
+    if(bad) issues.push(artistRuleItem(artist,`네덜란드어 van 한국어 표기 확인: ${bad} → 반`));
+  }
+  return issues;
+}
 function localizedCheckValue(value) {
   if(value && typeof value === 'object' && !Array.isArray(value)) return String(value.ko || value.en || value.original || value.native || value.sourceTitle || '').trim();
   return String(value || '').trim();
@@ -987,7 +1002,7 @@ async function writeRuleCheckReport(result) {
   const reportFolder=path.join(root,'변경사항');
   const reportFile=path.join(reportFolder,`규칙점검_${koreanTimestamp()}.md`);
   const rows=items => items.length ? items.map(item=>`- ${item.artist} · ${item.work}${item.workId ? ` (${item.workId})` : ''}`).join('\n') : '- 없음';
-  const text=['# 전체 규칙 점검 보고서','',`- 점검 시각: ${new Date().toLocaleString('ko-KR',{timeZone:'Asia/Seoul'})}`,`- 결과: ${result.changed ? '최신 공통 규칙을 적용하고 저장함' : '저장 데이터가 현재 공통 규칙과 일치함'}`,`- 데이터 버전: ${result.revision}`,'','## 대상','',`- 화가: ${result.stats.artists}명`,`- 작품: ${result.stats.works}점`,`- 이름 사전: ${result.stats.nameDictionary}개 항목 재생성`,`- 미술사조 문서의 화가 링크: 열 때마다 최신 별칭으로 동적 연결`,'','## 자동 적용한 범위','','- 최신 작품 정리·중복 처리 규칙','- 고해상도 이미지 경로 재확인','- 화가 이름 사전 및 uHangul 화가 맵 재생성','- 화가 목록·연표 제목의 한국어 표시명, 성·이름 순서, uHangul 런타임·변환 표식 점검','- 화가 목록 국가 아이콘의 국가명 title·aria-label 연결 및 한국어 국가명 점검','- 기법 설명 오른쪽 페이지 제목 옆 + 자료 버튼 및 비교 기법 저장 경로 점검','- 썸네일 제목의 화가명·소장처 혼입 점검','','수동 입력 작품, 대표작 선택, 직접 작성한 설명·이미지는 덮어쓰지 않았다. 외부 웹에서 작품을 재수집하거나 삭제하지 않았다.','','## 확인이 필요한 항목','',`### 이미지가 없는 작품 (${result.issues.missingPreview.length}점)`,'',rows(result.issues.missingPreview),'',`### 제목이 없는 작품 (${result.issues.missingTitle.length}점)`,'',rows(result.issues.missingTitle),'',`### QID가 제목으로 남은 작품 (${result.issues.qidTitle.length}점)`,'',rows(result.issues.qidTitle),'',`### 화가 목록·연표 표시명이 한국어가 아닌 항목 (${result.issues.artistDisplayKorean.length}점)`,'',rows(result.issues.artistDisplayKorean),'',`### 화가 목록·연표 표시명의 성, 이름 순서 확인 항목 (${result.issues.artistDisplayOrder.length}점)`,'',rows(result.issues.artistDisplayOrder),'',`### 화가 목록 국가 아이콘의 국가명 확인 항목 (${result.issues.artistCountryIcon.length}점)`,'',rows(result.issues.artistCountryIcon),'',`### uHangul 폰트·런타임·화가 맵·변환 표식 확인 항목 (${result.issues.uHangulConnection.length}점)`,'',rows(result.issues.uHangulConnection),'',`### 기법 설명 제목 옆 + 자료 버튼 확인 항목 (${result.issues.techniqueTitleLinkButton.length}점)`,'',rows(result.issues.techniqueTitleLinkButton),'',`### 썸네일 제목에 화가명 또는 소장처가 남은 작품 (${result.issues.thumbnailTitleExtra.length}점)`,'',rows(result.issues.thumbnailTitleExtra),'','## 참고 항목','',`### 공개 이미지 없음으로 표시한 작품 (${result.issues.reviewedNoPublicImage.length}점)`,'',rows(result.issues.reviewedNoPublicImage),'','## 다음 조치','','1. 위 목록의 화가 연표에서 작품의 이미지 또는 제목을 보완한다.','2. 다시 전체 규칙 점검을 실행한다.','3. 이 보고서 파일을 다음 작업 세션에 전달하거나, “가장 최근 규칙점검 보고서 확인”이라고 요청한다.',''].join('\\n');
+  const text=['# 전체 규칙 점검 보고서','',`- 점검 시각: ${new Date().toLocaleString('ko-KR',{timeZone:'Asia/Seoul'})}`,`- 결과: ${result.changed ? '최신 공통 규칙을 적용하고 저장함' : '저장 데이터가 현재 공통 규칙과 일치함'}`,`- 데이터 버전: ${result.revision}`,'','## 대상','',`- 화가: ${result.stats.artists}명`,`- 작품: ${result.stats.works}점`,`- 이름 사전: ${result.stats.nameDictionary}개 항목 재생성`,`- 미술사조 문서의 화가 링크: 열 때마다 최신 별칭으로 동적 연결`,'','## 자동 적용한 범위','','- 최신 작품 정리·중복 처리 규칙','- 고해상도 이미지 경로 재확인','- 화가 이름 사전 및 uHangul 화가 맵 재생성','- 화가 목록·연표 제목의 한국어 표시명, 성·이름 순서, 네덜란드어 van=반 표기, uHangul 런타임·변환 표식 점검','- 화가 목록 국가 아이콘의 국가명 title·aria-label 연결 및 한국어 국가명 점검','- 기법 설명 오른쪽 페이지 제목 옆 + 자료 버튼 및 비교 기법 저장 경로 점검','- 썸네일 제목의 화가명·소장처 혼입 점검','','수동 입력 작품, 대표작 선택, 직접 작성한 설명·이미지는 덮어쓰지 않았다. 외부 웹에서 작품을 재수집하거나 삭제하지 않았다.','','## 확인이 필요한 항목','',`### 이미지가 없는 작품 (${result.issues.missingPreview.length}점)`,'',rows(result.issues.missingPreview),'',`### 제목이 없는 작품 (${result.issues.missingTitle.length}점)`,'',rows(result.issues.missingTitle),'',`### QID가 제목으로 남은 작품 (${result.issues.qidTitle.length}점)`,'',rows(result.issues.qidTitle),'',`### 화가 목록·연표 표시명이 한국어가 아닌 항목 (${result.issues.artistDisplayKorean.length}점)`,'',rows(result.issues.artistDisplayKorean),'',`### 화가 목록·연표 표시명의 성, 이름 순서 확인 항목 (${result.issues.artistDisplayOrder.length}점)`,'',rows(result.issues.artistDisplayOrder),'',`### 네덜란드어 van 한국어 표기 확인 항목 (${result.issues.artistDutchVanRomanization.length}점)`,'',rows(result.issues.artistDutchVanRomanization),'',`### 화가 목록 국가 아이콘의 국가명 확인 항목 (${result.issues.artistCountryIcon.length}점)`,'',rows(result.issues.artistCountryIcon),'',`### uHangul 폰트·런타임·화가 맵·변환 표식 확인 항목 (${result.issues.uHangulConnection.length}점)`,'',rows(result.issues.uHangulConnection),'',`### 기법 설명 제목 옆 + 자료 버튼 확인 항목 (${result.issues.techniqueTitleLinkButton.length}점)`,'',rows(result.issues.techniqueTitleLinkButton),'',`### 썸네일 제목에 화가명 또는 소장처가 남은 작품 (${result.issues.thumbnailTitleExtra.length}점)`,'',rows(result.issues.thumbnailTitleExtra),'','## 참고 항목','',`### 공개 이미지 없음으로 표시한 작품 (${result.issues.reviewedNoPublicImage.length}점)`,'',rows(result.issues.reviewedNoPublicImage),'','## 다음 조치','','1. 위 목록의 화가 연표에서 작품의 이미지 또는 제목을 보완한다.','2. 다시 전체 규칙 점검을 실행한다.','3. 이 보고서 파일을 다음 작업 세션에 전달하거나, “가장 최근 규칙점검 보고서 확인”이라고 요청한다.',''].join('\\n');
   await fs.mkdir(reportFolder,{recursive:true});
   await fs.writeFile(reportFile,text,'utf8');
   return path.relative(root,reportFile).replace(/\\/g,'/');
@@ -1003,12 +1018,14 @@ async function checkAndApplyLatestRules(actor='') {
   const uHangulIssues=await uHangulRuleIssues(artists);
   const countryIconIssues=await artistCountryIconIssues(artists);
   const techniqueTitleLinkButtonIssuesList=await techniqueTitleLinkButtonIssues();
+  const artistDutchVanRomanizationIssues=dutchVanRomanizationIssues(artists);
   const issues={
     missingPreview:artists.flatMap(artist=>(artist.works || []).filter(work=>!work.thumbnail && !work.image).map(work=>ruleCheckItem(artist,work))),
     missingTitle:artists.flatMap(artist=>(artist.works || []).filter(work=>!work.title?.ko && !work.title?.en).map(work=>ruleCheckItem(artist,work))),
     qidTitle:artists.flatMap(artist=>(artist.works || []).filter(qidLikeTitle).map(work=>ruleCheckItem(artist,work))),
     artistDisplayKorean:artists.filter(artist=>!hasHangul(actualArtistDisplayNameForCheck(artist)) || hasLatin(actualArtistDisplayNameForCheck(artist))).map(artist=>artistRuleItem(artist,`목록/연표 표시명 확인: ${actualArtistDisplayNameForCheck(artist) || '(없음)'}`)),
     artistDisplayOrder:artists.filter(artist=>actualArtistDisplayNameForCheck(artist) !== expectedArtistDisplayNameForCheck(artist)).map(artist=>artistRuleItem(artist,`성, 이름 표시 확인: ${actualArtistDisplayNameForCheck(artist)} → ${expectedArtistDisplayNameForCheck(artist)}`)),
+    artistDutchVanRomanization:artistDutchVanRomanizationIssues,
     artistCountryIcon:countryIconIssues,
     uHangulConnection:uHangulIssues,
     techniqueTitleLinkButton:techniqueTitleLinkButtonIssuesList,
@@ -1020,6 +1037,7 @@ async function checkAndApplyLatestRules(actor='') {
   const qidTitle=issues.qidTitle.length;
   const artistDisplayKorean=issues.artistDisplayKorean.length;
   const artistDisplayOrder=issues.artistDisplayOrder.length;
+  const artistDutchVanRomanization=issues.artistDutchVanRomanization.length;
   const artistCountryIcon=issues.artistCountryIcon.length;
   const uHangulConnection=issues.uHangulConnection.length;
   const techniqueTitleLinkButton=issues.techniqueTitleLinkButton.length;
@@ -1032,10 +1050,10 @@ async function checkAndApplyLatestRules(actor='') {
   } else {
     writeUHangulArtistMap(artists);
     syncPersonNameDictionary({artists});
-    await appendAudit({type:'rules.check-and-apply',actor:normalizedEmail(actor) || 'local-admin',revision,changed:false,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle,qidTitle,artistDisplayKorean,artistDisplayOrder,artistCountryIcon,uHangulConnection,techniqueTitleLinkButton,thumbnailTitleExtra}});
+    await appendAudit({type:'rules.check-and-apply',actor:normalizedEmail(actor) || 'local-admin',revision,changed:false,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle,qidTitle,artistDisplayKorean,artistDisplayOrder,artistDutchVanRomanization,artistCountryIcon,uHangulConnection,techniqueTitleLinkButton,thumbnailTitleExtra}});
   }
   const nameDictionary=syncPersonNameDictionary({artists}).records;
-  const result={ok:true,changed,revision,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle,qidTitle,artistDisplayKorean,artistDisplayOrder,artistCountryIcon,uHangulConnection,techniqueTitleLinkButton,thumbnailTitleExtra,reviewedNoPublicImage:issues.reviewedNoPublicImage.length,nameDictionary,movementDocuments:'dynamic-linking'},issues};
+  const result={ok:true,changed,revision,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle,qidTitle,artistDisplayKorean,artistDisplayOrder,artistDutchVanRomanization,artistCountryIcon,uHangulConnection,techniqueTitleLinkButton,thumbnailTitleExtra,reviewedNoPublicImage:issues.reviewedNoPublicImage.length,nameDictionary,movementDocuments:'dynamic-linking'},issues};
   result.reportFile=await writeRuleCheckReport(result);
   return result;
 }
