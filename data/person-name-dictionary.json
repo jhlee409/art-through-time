@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-22T07:57:23.780Z",
+  "generatedAt": "2026-08-22T09:13:43.671Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -6842,7 +6842,8 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json"
+        "data/artists.json",
+        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7266,23 +7267,34 @@
       "status": "verified-pair"
     },
     {
-      "id": "rosso-fiorentino",
+      "id": "Q312617",
       "original": "Rosso Fiorentino",
       "korean": "로소 피오렌티노",
       "displayKorean": "로소 피오렌티노",
       "aliases": {
         "ko": [
-          "피오렌티노"
+          "피오렌티노",
+          "로소",
+          "일 로소",
+          "조반니 바티스타 디 야코포",
+          "로소 피오렌티노, 조반니 바티스타 디 야코포",
+          "로소 피오렌티노"
         ],
         "en": [
-          "Fiorentino"
+          "Fiorentino",
+          "Rosso",
+          "Il Rosso",
+          "Giovanni Battista di Jacopo",
+          "Giovanni Battista di Jacopo di Guasparre Rosso",
+          "Rosso Fiorentino"
         ]
       },
       "uhangul": "[Rㅗ]소 [Fㅣ]오[Rㅔㄴ]티노",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json"
       ],
       "status": "verified-pair"
     },

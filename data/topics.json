@@ -2,43 +2,498 @@
   "topics": [
     {
       "id": "resurrection-of-jesus",
-      "name": { "ko": "예수 - 부활", "en": "Jesus - Resurrection" },
-      "keywords": ["예수", "그리스도", "기독교", "부활", "빈 무덤", "막달라 마리아", "resurrection", "risen christ", "jesus"],
-      "description": { "ko": "부활을 다룬 대표작을 사조의 변화에 따라 살펴봅니다. 제작연도보다 사조의 흐름을 우선하여, 매너리즘의 엘 그레코를 바로크의 카라치보다 앞에 둡니다." },
+      "name": {
+        "ko": "예수 - 부활",
+        "en": "Jesus - Resurrection"
+      },
+      "keywords": [
+        "예수",
+        "그리스도",
+        "기독교",
+        "부활",
+        "빈 무덤",
+        "막달라 마리아",
+        "resurrection",
+        "risen christ",
+        "jesus"
+      ],
+      "description": {
+        "ko": "부활을 다룬 대표작을 사조의 변화에 따라 살펴봅니다. 제작연도보다 사조의 흐름을 우선하여, 매너리즘의 엘 그레코를 바로크의 카라치보다 앞에 둡니다."
+      },
       "works": [
-        { "id": "piero-resurrection", "title": "부활", "artist": "피에로 델라 프란체스카", "year": "1463–1465경", "sortYear": 1463, "movement": "초기 르네상스", "thumbnail": "data/topic-images/piero-resurrection.jpg", "description": "균형 잡힌 원근법과 고요한 인물 표현으로 부활의 질서와 영속성을 보여 주는 초기 르네상스의 대표작입니다." },
-        { "id": "raphael-resurrection", "title": "그리스도의 부활", "artist": "라파엘로 산치오", "year": "1500경", "sortYear": 1500, "movement": "전성기 르네상스", "thumbnail": "data/topic-images/raphael-resurrection.jpg", "description": "조화로운 구도와 명료한 인물 군상이 전성기 르네상스의 이상을 드러냅니다." },
-        { "id": "el-greco-resurrection", "title": "부활", "artist": "엘 그레코", "year": "1597–1600", "sortYear": 1597, "movement": "매너리즘", "thumbnail": "data/topic-images/el-greco-resurrection.jpg", "description": "늘씬하게 왜곡된 인체와 강렬한 빛이 현실보다 영적 긴장을 우선하는 매너리즘의 특성을 보여 줍니다." },
-        { "id": "carracci-resurrection", "title": "그리스도의 부활", "artist": "안니발레 카라치", "year": "1593", "sortYear": 1593, "movement": "바로크", "thumbnail": "data/topic-images/carracci-resurrection.jpg", "description": "자연스러운 인체와 설득력 있는 공간을 회복하려는 카라치의 태도는 매너리즘에 대한 반발과 초기 바로크의 출발을 보여 줍니다." },
-        { "id": "rubens-resurrection", "title": "그리스도의 부활", "artist": "피터 파울 루벤스", "year": "1611–1612", "sortYear": 1611, "movement": "바로크", "thumbnail": "data/topic-images/rubens-resurrection.jpg", "description": "힘찬 대각선 구도와 격렬한 움직임으로 부활의 승리를 극적으로 표현한 바로크의 대표작입니다." },
-        { "id": "rembrandt-noli-me-tangere", "title": "막달라 마리아에게 나타난 부활한 그리스도", "artist": "렘브란트 판 레인", "year": "1638", "sortYear": 1638, "movement": "바로크", "thumbnail": "data/topic-images/rembrandt-christ-mary-magdalen-at-tomb.jpg", "description": "부활 이후 막달라 마리아에게 나타난 그리스도를 친밀한 빛과 인간적인 감정으로 묘사한 바로크 작품입니다." }
+        {
+          "id": "piero-resurrection",
+          "title": "부활",
+          "artist": "피에로 델라 프란체스카",
+          "year": "1463–1465경",
+          "sortYear": 1463,
+          "movement": "초기 르네상스",
+          "thumbnail": "data/topic-images/piero-resurrection.jpg",
+          "description": "균형 잡힌 원근법과 고요한 인물 표현으로 부활의 질서와 영속성을 보여 주는 초기 르네상스의 대표작입니다."
+        },
+        {
+          "id": "raphael-resurrection",
+          "title": "그리스도의 부활",
+          "artist": "라파엘로 산치오",
+          "year": "1500경",
+          "sortYear": 1500,
+          "movement": "전성기 르네상스",
+          "thumbnail": "data/topic-images/raphael-resurrection.jpg",
+          "description": "조화로운 구도와 명료한 인물 군상이 전성기 르네상스의 이상을 드러냅니다."
+        },
+        {
+          "id": "el-greco-resurrection",
+          "title": "부활",
+          "artist": "엘 그레코",
+          "year": "1597–1600",
+          "sortYear": 1597,
+          "movement": "매너리즘",
+          "thumbnail": "data/topic-images/el-greco-resurrection.jpg",
+          "description": "늘씬하게 왜곡된 인체와 강렬한 빛이 현실보다 영적 긴장을 우선하는 매너리즘의 특성을 보여 줍니다."
+        },
+        {
+          "id": "carracci-resurrection",
+          "title": "그리스도의 부활",
+          "artist": "안니발레 카라치",
+          "year": "1593",
+          "sortYear": 1593,
+          "movement": "바로크",
+          "thumbnail": "data/topic-images/carracci-resurrection.jpg",
+          "description": "자연스러운 인체와 설득력 있는 공간을 회복하려는 카라치의 태도는 매너리즘에 대한 반발과 초기 바로크의 출발을 보여 줍니다."
+        },
+        {
+          "id": "rubens-resurrection",
+          "title": "그리스도의 부활",
+          "artist": "피터 파울 루벤스",
+          "year": "1611–1612",
+          "sortYear": 1611,
+          "movement": "바로크",
+          "thumbnail": "data/topic-images/rubens-resurrection.jpg",
+          "description": "힘찬 대각선 구도와 격렬한 움직임으로 부활의 승리를 극적으로 표현한 바로크의 대표작입니다."
+        },
+        {
+          "id": "rembrandt-noli-me-tangere",
+          "title": "막달라 마리아에게 나타난 부활한 그리스도",
+          "artist": "렘브란트 판 레인",
+          "year": "1638",
+          "sortYear": 1638,
+          "movement": "바로크",
+          "thumbnail": "data/topic-images/rembrandt-christ-mary-magdalen-at-tomb.jpg",
+          "description": "부활 이후 막달라 마리아에게 나타난 그리스도를 친밀한 빛과 인간적인 감정으로 묘사한 바로크 작품입니다."
+        }
       ]
     },
     {
       "id": "venus-reclining-nude",
-      "name": { "ko": "비너스 - 누운 여인", "en": "Venus - Reclining Figure" },
-      "keywords": ["비너스", "베누스", "누운 여인", "누드", "조르조네", "티치아노", "마네", "올랭피아", "venus", "reclining nude", "olympia"],
-      "description": { "ko": "조르조네의 ‘드레스덴의 비너스’에서 티치아노·벨라스케스·고야·앵그르를 거쳐 마네의 《올랭피아》로 이어지는 누운 여성 누드의 계보입니다. 제작 연도 순으로 배치해, 이상화된 비너스가 근대의 현실적 인물로 바뀌는 과정을 살펴봅니다." },
+      "name": {
+        "ko": "비너스 - 누운 여인",
+        "en": "Venus - Reclining Figure"
+      },
+      "keywords": [
+        "비너스",
+        "베누스",
+        "누운 여인",
+        "누드",
+        "조르조네",
+        "티치아노",
+        "마네",
+        "올랭피아",
+        "venus",
+        "reclining nude",
+        "olympia"
+      ],
+      "description": {
+        "ko": "조르조네의 ‘드레스덴의 비너스’에서 티치아노·벨라스케스·고야·앵그르를 거쳐 마네의 《올랭피아》로 이어지는 누운 여성 누드의 계보입니다. 제작 연도 순으로 배치해, 이상화된 비너스가 근대의 현실적 인물로 바뀌는 과정을 살펴봅니다."
+      },
       "works": [
-        { "id": "giorgione-sleeping-venus", "sequence": 1, "title": "잠자는 비너스 (드레스덴의 비너스)", "artist": "조르조네", "year": "1508–1510경", "sortYear": 1508, "movement": "전성기 르네상스", "thumbnail": "data/topic-images/giorgione-sleeping-venus.jpg", "description": "드레스덴 알테 마이스터 회화관 소장작으로, 풍경 속에 누운 비너스라는 이후 도상의 중요한 출발점입니다. 완성에 티치아노가 관여했을 가능성이 오래 논의되어 왔습니다." },
-        { "id": "titian-venus-of-urbino", "sequence": 2, "title": "우르비노의 비너스", "artist": "Tiziano Vecellio (티치아노)", "year": "1538", "sortYear": 1538, "movement": "르네상스 · 베네치아 화파", "thumbnail": "data/topic-images/titian-venus-of-urbino.jpg", "description": "실내 침상 위의 비너스로 전환한 작품입니다. 관람자를 향한 시선과 손의 자세가 이후 누운 여성 누드 도상의 핵심이 됩니다." },
-        { "id": "velazquez-rokeby-venus", "sequence": 3, "title": "거울 앞의 비너스 (로크비의 비너스)", "artist": "디에고 벨라스케스", "year": "1647–1651경", "sortYear": 1647, "movement": "바로크", "thumbnail": "data/topic-images/velazquez-rokeby-venus.jpg", "description": "등을 보인 채 거울을 보는 비너스를 통해, 신화적 누드의 관람 구조 자체를 의식하게 만드는 바로크 작품입니다." },
-        { "id": "goya-nude-maja", "sequence": 4, "title": "옷 벗은 마하", "artist": "프란시스코 데 고야", "year": "1797–1800경", "sortYear": 1797, "movement": "낭만주의", "thumbnail": "data/topic-images/goya-nude-maja.jpg", "description": "비너스라는 신화적 이름을 빌리지 않고 동시대 여성을 정면으로 제시해, 전통 도상의 이상화를 흔든 작품입니다." },
-        { "id": "ingres-grand-odalisque", "sequence": 5, "title": "그랑드 오달리스크", "artist": "장 오귀스트 도미니크 앵그르", "year": "1814", "sortYear": 1814, "movement": "신고전주의", "thumbnail": "data/topic-images/ingres-grand-odalisque.jpg", "description": "누운 누드의 전통을 오리엔탈리즘의 상상 속으로 옮기며, 해부학보다 길고 유연한 선의 리듬을 우선한 작품입니다." },
-        { "id": "manet-olympia", "sequence": 6, "title": "올랭피아", "artist": "에두아르 마네", "year": "1863", "sortYear": 1863, "movement": "근대 회화", "thumbnail": "data/topic-images/manet-olympia.jpg", "description": "티치아노의 《우르비노의 비너스》와 고야의 《옷 벗은 마하》를 의식적으로 인용하면서, 이상화된 여신 대신 동시대 파리의 인물을 정면으로 제시했습니다." }
+        {
+          "id": "giorgione-sleeping-venus",
+          "sequence": 1,
+          "title": "잠자는 비너스 (드레스덴의 비너스)",
+          "artist": "조르조네",
+          "year": "1508–1510경",
+          "sortYear": 1508,
+          "movement": "전성기 르네상스",
+          "thumbnail": "data/topic-images/giorgione-sleeping-venus.jpg",
+          "description": "드레스덴 알테 마이스터 회화관 소장작으로, 풍경 속에 누운 비너스라는 이후 도상의 중요한 출발점입니다. 완성에 티치아노가 관여했을 가능성이 오래 논의되어 왔습니다."
+        },
+        {
+          "id": "titian-venus-of-urbino",
+          "sequence": 2,
+          "title": "우르비노의 비너스",
+          "artist": "Tiziano Vecellio (티치아노)",
+          "year": "1538",
+          "sortYear": 1538,
+          "movement": "르네상스 · 베네치아 화파",
+          "thumbnail": "data/topic-images/titian-venus-of-urbino.jpg",
+          "description": "실내 침상 위의 비너스로 전환한 작품입니다. 관람자를 향한 시선과 손의 자세가 이후 누운 여성 누드 도상의 핵심이 됩니다."
+        },
+        {
+          "id": "velazquez-rokeby-venus",
+          "sequence": 3,
+          "title": "거울 앞의 비너스 (로크비의 비너스)",
+          "artist": "디에고 벨라스케스",
+          "year": "1647–1651경",
+          "sortYear": 1647,
+          "movement": "바로크",
+          "thumbnail": "data/topic-images/velazquez-rokeby-venus.jpg",
+          "description": "등을 보인 채 거울을 보는 비너스를 통해, 신화적 누드의 관람 구조 자체를 의식하게 만드는 바로크 작품입니다."
+        },
+        {
+          "id": "goya-nude-maja",
+          "sequence": 4,
+          "title": "옷 벗은 마하",
+          "artist": "프란시스코 데 고야",
+          "year": "1797–1800경",
+          "sortYear": 1797,
+          "movement": "낭만주의",
+          "thumbnail": "data/topic-images/goya-nude-maja.jpg",
+          "description": "비너스라는 신화적 이름을 빌리지 않고 동시대 여성을 정면으로 제시해, 전통 도상의 이상화를 흔든 작품입니다."
+        },
+        {
+          "id": "ingres-grand-odalisque",
+          "sequence": 5,
+          "title": "그랑드 오달리스크",
+          "artist": "장 오귀스트 도미니크 앵그르",
+          "year": "1814",
+          "sortYear": 1814,
+          "movement": "신고전주의",
+          "thumbnail": "data/topic-images/ingres-grand-odalisque.jpg",
+          "description": "누운 누드의 전통을 오리엔탈리즘의 상상 속으로 옮기며, 해부학보다 길고 유연한 선의 리듬을 우선한 작품입니다."
+        },
+        {
+          "id": "manet-olympia",
+          "sequence": 6,
+          "title": "올랭피아",
+          "artist": "에두아르 마네",
+          "year": "1863",
+          "sortYear": 1863,
+          "movement": "근대 회화",
+          "thumbnail": "data/topic-images/manet-olympia.jpg",
+          "description": "티치아노의 《우르비노의 비너스》와 고야의 《옷 벗은 마하》를 의식적으로 인용하면서, 이상화된 여신 대신 동시대 파리의 인물을 정면으로 제시했습니다."
+        }
       ]
     },
     {
       "id": "pastoral-four-figures-variations",
-      "name": { "ko": "전원 - 네 인물의 변주", "en": "Pastoral - Variations on Four Figures" },
-      "keywords": ["전원", "네 인물", "전원 음악회", "풀밭 위의 점심", "목가", "피크닉", "티치아노", "마네", "모네", "세잔", "피카소", "pastoral", "four figures", "luncheon on the grass"],
-      "description": { "ko": "티치아노의 목가적 네 인물에서 출발해 마네·모네·세잔·피카소가 야외 인물군을 어떻게 다시 해석했는지 살펴봅니다. 이상적 전원은 근대 피크닉으로, 다시 색채·형태·인물 관계를 실험하는 회화의 장으로 바뀝니다." },
+      "name": {
+        "ko": "전원 - 네 인물의 변주",
+        "en": "Pastoral - Variations on Four Figures"
+      },
+      "keywords": [
+        "전원",
+        "네 인물",
+        "전원 음악회",
+        "풀밭 위의 점심",
+        "목가",
+        "피크닉",
+        "티치아노",
+        "마네",
+        "모네",
+        "세잔",
+        "피카소",
+        "pastoral",
+        "four figures",
+        "luncheon on the grass"
+      ],
+      "description": {
+        "ko": "티치아노의 목가적 네 인물에서 출발해 마네·모네·세잔·피카소가 야외 인물군을 어떻게 다시 해석했는지 살펴봅니다. 이상적 전원은 근대 피크닉으로, 다시 색채·형태·인물 관계를 실험하는 회화의 장으로 바뀝니다."
+      },
       "works": [
-        { "id": "titian-pastoral-concert", "sequence": 1, "title": "전원 음악회", "artist": "Tiziano Vecellio (티치아노)", "year": "1500–1525", "sortYear": 1500, "movement": "르네상스 · 베네치아 화파", "thumbnail": "data/topic-images/titian-pastoral-concert.jpg", "description": "음악가와 목가적 풍경, 이상화된 여성 인물을 결합한 전원 음악회의 출발점입니다. 현재 루브르는 티치아노 작품으로 분류하지만, 오랫동안 조르조네 귀속으로도 알려졌습니다." },
-        { "id": "manet-luncheon-on-the-grass", "sequence": 2, "title": "풀밭 위의 점심", "artist": "에두아르 마네", "year": "1863", "sortYear": 1863, "movement": "근대 회화", "thumbnail": "data/topic-images/manet-luncheon-on-the-grass.jpg", "description": "티치아노의 《전원 음악회》에서 목가적 주제와 누드·남성 인물의 대비를 가져와 현대 파리의 피크닉으로 바꾼 핵심 작품입니다. 중앙 세 인물의 배치는 라파엘로의 《파리스의 심판》을 옮긴 마르칸토니오 라이몬디의 판화도 참조했습니다." },
-        { "id": "monet-luncheon-on-the-grass", "sequence": 3, "title": "풀밭 위의 점심", "artist": "클로드 모네", "year": "1865–1866", "sortYear": 1865, "movement": "인상주의", "thumbnail": "data/topic-images/monet-luncheon-on-the-grass-pushkin.jpg", "description": "마네의 작품에 대한 경의이자 도전으로 시작한 대형 야외 피크닉입니다. 마네의 도발적 인물 관계를, 자연광과 동시대 복식이 어우러진 인상주의적 야외 장면으로 전환합니다. 전체 구도가 남아 있는 1866년 푸시킨 미술관 소장 소형본을 사용했습니다." },
-        { "id": "cezanne-luncheon-on-the-grass", "sequence": 4, "title": "풀밭 위의 점심", "artist": "폴 세잔", "year": "1876–1877", "sortYear": 1876, "movement": "후기 인상주의", "thumbnail": "data/topic-images/cezanne-luncheon-on-the-grass.jpg", "description": "마네를 떠올리게 하는 제목과 야외 인물군을 사용하면서도, 방향성 있는 붓질과 단순화된 형태로 장면을 재구성합니다. 인물의 서사보다 화면의 구조와 색채가 중요해지는 전환점입니다." },
-        { "id": "picasso-luncheon-after-manet", "sequence": 5, "title": "풀밭 위의 점심 — 마네를 따라", "artist": "파블로 피카소", "year": "1961", "sortYear": 1961, "movement": "현대 미술", "thumbnail": "data/topic-images/picasso-luncheon-after-manet.jpg", "description": "피카소는 마네의 《풀밭 위의 점심》을 바탕으로 대규모 연작을 만들었습니다. 이 작품에서는 인물의 수와 관계, 공간을 자유롭게 바꾸며 ‘원작을 다시 그리는 행위’ 자체를 주제로 삼습니다." }
+        {
+          "id": "titian-pastoral-concert",
+          "sequence": 1,
+          "title": "전원 음악회",
+          "artist": "Tiziano Vecellio (티치아노)",
+          "year": "1500–1525",
+          "sortYear": 1500,
+          "movement": "르네상스 · 베네치아 화파",
+          "thumbnail": "data/topic-images/titian-pastoral-concert.jpg",
+          "description": "음악가와 목가적 풍경, 이상화된 여성 인물을 결합한 전원 음악회의 출발점입니다. 현재 루브르는 티치아노 작품으로 분류하지만, 오랫동안 조르조네 귀속으로도 알려졌습니다."
+        },
+        {
+          "id": "manet-luncheon-on-the-grass",
+          "sequence": 2,
+          "title": "풀밭 위의 점심",
+          "artist": "에두아르 마네",
+          "year": "1863",
+          "sortYear": 1863,
+          "movement": "근대 회화",
+          "thumbnail": "data/topic-images/manet-luncheon-on-the-grass.jpg",
+          "description": "티치아노의 《전원 음악회》에서 목가적 주제와 누드·남성 인물의 대비를 가져와 현대 파리의 피크닉으로 바꾼 핵심 작품입니다. 중앙 세 인물의 배치는 라파엘로의 《파리스의 심판》을 옮긴 마르칸토니오 라이몬디의 판화도 참조했습니다."
+        },
+        {
+          "id": "monet-luncheon-on-the-grass",
+          "sequence": 3,
+          "title": "풀밭 위의 점심",
+          "artist": "클로드 모네",
+          "year": "1865–1866",
+          "sortYear": 1865,
+          "movement": "인상주의",
+          "thumbnail": "data/topic-images/monet-luncheon-on-the-grass-pushkin.jpg",
+          "description": "마네의 작품에 대한 경의이자 도전으로 시작한 대형 야외 피크닉입니다. 마네의 도발적 인물 관계를, 자연광과 동시대 복식이 어우러진 인상주의적 야외 장면으로 전환합니다. 전체 구도가 남아 있는 1866년 푸시킨 미술관 소장 소형본을 사용했습니다."
+        },
+        {
+          "id": "cezanne-luncheon-on-the-grass",
+          "sequence": 4,
+          "title": "풀밭 위의 점심",
+          "artist": "폴 세잔",
+          "year": "1876–1877",
+          "sortYear": 1876,
+          "movement": "후기 인상주의",
+          "thumbnail": "data/topic-images/cezanne-luncheon-on-the-grass.jpg",
+          "description": "마네를 떠올리게 하는 제목과 야외 인물군을 사용하면서도, 방향성 있는 붓질과 단순화된 형태로 장면을 재구성합니다. 인물의 서사보다 화면의 구조와 색채가 중요해지는 전환점입니다."
+        },
+        {
+          "id": "picasso-luncheon-after-manet",
+          "sequence": 5,
+          "title": "풀밭 위의 점심 — 마네를 따라",
+          "artist": "파블로 피카소",
+          "year": "1961",
+          "sortYear": 1961,
+          "movement": "현대 미술",
+          "thumbnail": "data/topic-images/picasso-luncheon-after-manet.jpg",
+          "description": "피카소는 마네의 《풀밭 위의 점심》을 바탕으로 대규모 연작을 만들었습니다. 이 작품에서는 인물의 수와 관계, 공간을 자유롭게 바꾸며 ‘원작을 다시 그리는 행위’ 자체를 주제로 삼습니다."
+        }
+      ]
+    },
+    {
+      "id": "jesus-descent-from-the-cross",
+      "name": {
+        "ko": "예수 - 강하",
+        "en": "Jesus - Descent from the Cross"
+      },
+      "keywords": [
+        "예수",
+        "그리스도",
+        "강하",
+        "십자가에서 내려지는 그리스도",
+        "십자가의 길",
+        "제13처",
+        "deposition",
+        "descent from the cross",
+        "jesus"
+      ],
+      "description": {
+        "ko": "예수가 십자가에서 내려지는 장면을 다룬 이미지들을 모았습니다. 연도와 사조를 확정할 수 없는 이미지는 정보 없이 순서대로 나열했습니다."
+      },
+      "works": [
+        {
+          "id": "jesus-descent-01",
+          "sequence": 1,
+          "title": "십자가에서 내려지는 그리스도",
+          "artist": "두초 디 부오닌세냐",
+          "year": "1308–1311",
+          "sortYear": 1308,
+          "movement": "고딕 · 시에나 화파",
+          "thumbnail": "data/topic-images/jesus-descent-01-image.jpg",
+          "description": "두초의 마에스타 제단화 수난 장면 중 하나로, 중세 말 시에나 회화의 정교한 서사성과 금빛 배경 전통을 보여 줍니다.",
+          "sourceFile": "Duccio,_Passion_of_Christ_21,_Deposition,_1308-11,_tempera_on_panel,_50.5_x_53.5_cm,_Museo_dell'Opera_del_Duomo,_Siena.jpg"
+        },
+        {
+          "id": "jesus-descent-02",
+          "sequence": 2,
+          "title": "십자가에서 내려지는 그리스도",
+          "artist": "프라 안젤리코",
+          "year": "1432–1434경",
+          "sortYear": 1432,
+          "movement": "초기 르네상스",
+          "thumbnail": "data/topic-images/jesus-descent-02-image.jpg",
+          "description": "장식적 색채와 고요한 인물 표현을 통해 수난 장면을 명상적으로 보여 주는 초기 르네상스 작품입니다.",
+          "sourceFile": "십자가에서 내려지는 그리스도(안젤리코).jpg"
+        },
+        {
+          "id": "jesus-descent-saved-rogierdescentfromcross",
+          "title": "십자가에서 내려짐",
+          "artist": "반 데르 베이던, 로히어르",
+          "year": "1435",
+          "sortYear": 1435,
+          "movement": "플랑드르파",
+          "thumbnail": "data/topic-images/jesus-descent-saved-rogierdescentfromcross.jpg",
+          "description": "마드리드 프라도 미술관의 대표 제단화로, 십자가에서 내려진 그리스도의 몸과 인물들의 애도를 압축적인 감정과 강한 선으로 구성한 로히어르 반 데르 베이던의 핵심 작품입니다.",
+          "sourceArtistId": "artist-Q68631",
+          "sourceWorkId": "rogier-descent-from-cross",
+          "sequence": 3
+        },
+        {
+          "id": "jesus-descent-saved-rogierdepositionfollower",
+          "title": "십자가에서 내려짐(추종자)",
+          "artist": "반 데르 베이던, 로히어르",
+          "year": "1460",
+          "sortYear": 1460,
+          "movement": "플랑드르파",
+          "thumbnail": "data/topic-images/jesus-descent-saved-rogierdepositionfollower.jpg",
+          "description": "로히어르 반 데르 베이던의 영향 아래 제작된 추종자 작품으로 정리한 십자가에서 내려짐 장면입니다.",
+          "sourceArtistId": "artist-Q68631",
+          "sourceWorkId": "rogier-deposition-follower",
+          "sequence": 4
+        },
+        {
+          "id": "jesus-descent-03",
+          "sequence": 5,
+          "title": "십자가에서 내려지는 그리스도",
+          "artist": "다니엘 오브 우랑크",
+          "year": "1463",
+          "sortYear": 1463,
+          "movement": "후기 고딕",
+          "thumbnail": "data/topic-images/jesus-descent-03-image.jpg",
+          "description": "1463년 작품으로 알려진 십자가 강하 장면입니다.",
+          "sourceFile": "Descent_from_the_Cross,_Daniel_of_Uranc،_1463.jpg"
+        },
+        {
+          "id": "jesus-descent-04",
+          "sequence": 6,
+          "title": "십자가에서 내려지는 그리스도",
+          "artist": "노브고로드 화파",
+          "year": "15세기 후반",
+          "sortYear": 1475,
+          "movement": "러시아 이콘",
+          "thumbnail": "data/topic-images/jesus-descent-04-image.jpg",
+          "description": "노브고로드 화파의 이콘 전통 안에서 십자가 강하 장면을 도식적이고 상징적으로 구성한 작품입니다.",
+          "sourceFile": "Descent_from_the_Cross,_Novgorod_school_(late_15th_c.,_Tretyakov_gallery).jpg"
+        },
+        {
+          "id": "jesus-descent-05",
+          "sequence": 7,
+          "title": "십자가에서 내려지는 그리스도",
+          "artist": "로소 피오렌티노",
+          "year": "1521",
+          "sortYear": 1521,
+          "movement": "매너리즘",
+          "thumbnail": "data/topic-images/jesus-descent-05-image.jpg",
+          "description": "볼테라의 대표 제단화로, 위태로운 사다리와 긴장된 인물 배치가 르네상스적 안정성을 의도적으로 흔드는 매너리즘 작품입니다.",
+          "sourceFile": "Rosso_Fiorentino_002 (1).jpg"
+        },
+        {
+          "id": "jesus-descent-saved-pontormodepositionfromthecross15251528",
+          "title": "십자가에서 내려지는 그리스도",
+          "artist": "야코포 다 폰토르모",
+          "year": "1528",
+          "sortYear": 1528,
+          "movement": "매너리즘",
+          "thumbnail": "data/topic-images/jesus-descent-saved-pontormodepositionfromthecross15251528.jpg",
+          "description": "산타 펠리치타 카포니 예배당의 제단화로, 떠 있는 듯한 인물, 불안정한 공간, 차갑고 밝은 색채가 매너리즘의 핵심을 압축한 폰토르모의 대표작입니다.",
+          "sourceArtistId": "artist-Q207929",
+          "sourceWorkId": "pontormo-deposition-from-the-cross-1525-1528",
+          "sequence": 8
+        },
+        {
+          "id": "jesus-descent-online-tintoretto-1547",
+          "title": "십자가에서 내려지는 그리스도",
+          "artist": "틴토레토, 야코포",
+          "year": "1547",
+          "sortYear": 1547,
+          "movement": "매너리즘",
+          "thumbnail": "data/topic-images/jesus-descent-online-tintoretto-1547.jpg",
+          "description": "빈 미술사박물관 소장작으로, 비스듬한 인물 배치와 극적인 동세가 매너리즘적 긴장을 보여 주는 십자가 강하 장면입니다.",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Tintoretto_-_Descent_from_the_Cross_GG_1565.jpg",
+          "sourceFile": "Tintoretto - Descent from the Cross GG 1565.jpg",
+          "sequence": 9
+        },
+        {
+          "id": "jesus-descent-online-barocci-1569",
+          "title": "십자가에서 내려지는 그리스도",
+          "artist": "바로치, 페데리코",
+          "year": "1567–1569",
+          "sortYear": 1567,
+          "movement": "매너리즘",
+          "thumbnail": "data/topic-images/jesus-descent-online-barocci-1569.jpg",
+          "description": "페루자 산 로렌초 대성당의 제단화로, 부드러운 색채와 감정적 몸짓을 통해 후기 르네상스와 초기 바로크 사이의 전환을 보여 줍니다.",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Deposizione_dalla_croce_(Barocci)_-_2023.jpg",
+          "sourceFile": "Deposizione dalla croce (Barocci) - 2023.jpg",
+          "sequence": 10
+        },
+        {
+          "id": "jesus-descent-saved-rubensdescentantwerp1612",
+          "title": "십자가에서 내려지는 그리스도",
+          "artist": "페테르 파울 루벤스",
+          "year": "1612",
+          "sortYear": 1612,
+          "movement": "바로크",
+          "thumbnail": "data/topic-images/jesus-descent-saved-rubensdescentantwerp1612.jpg",
+          "description": "앤트워프 성모 대성당을 위해 제작된 루벤스의 삼면화 중앙 패널.",
+          "sourceArtistId": "artist-url-1786879941678",
+          "sourceWorkId": "rubens-descent-antwerp-1612",
+          "sequence": 11
+        },
+        {
+          "id": "jesus-descent-online-tournier-1632",
+          "title": "십자가에서 내려지는 그리스도",
+          "artist": "투르니에, 니콜라",
+          "year": "1632–1635",
+          "sortYear": 1632,
+          "movement": "바로크",
+          "thumbnail": "data/topic-images/jesus-descent-online-tournier-1632.jpg",
+          "description": "툴루즈 오귀스탱 미술관 소장작으로, 어두운 배경과 집중된 인물 군상을 통해 프랑스 카라바조풍 바로크의 극적인 감정을 보여 줍니다.",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Augustins_-_Le_Christ_descendu_de_la_Croix_-_Nicolas_Tournier_2004_1_285.jpg",
+          "sourceFile": "Augustins - Le Christ descendu de la Croix - Nicolas Tournier 2004 1 285.jpg",
+          "sequence": 12
+        },
+        {
+          "id": "jesus-descent-online-rembrandt-1633",
+          "title": "십자가에서 내려지는 그리스도",
+          "artist": "렘브란트 판 레인",
+          "year": "1633",
+          "sortYear": 1633,
+          "movement": "바로크",
+          "thumbnail": "data/topic-images/jesus-descent-online-rembrandt-1633.jpg",
+          "description": "알테 피나코테크 소장작으로, 깊은 명암과 인물들의 조심스러운 움직임을 통해 수난 장면의 인간적 무게를 강조한 렘브란트의 바로크 작품입니다.",
+          "sourcePage": "https://commons.wikimedia.org/wiki/Category:The_Descent_from_the_Cross_(Rembrandt,_Germany)",
+          "sourceFile": "Rembrandt - Deposition from the Cross - WGA19112.jpg",
+          "sequence": 13
+        },
+        {
+          "id": "jesus-descent-online-jouvenet-1697",
+          "title": "십자가에서 내려지는 그리스도",
+          "artist": "주브네, 장",
+          "year": "1697",
+          "sortYear": 1697,
+          "movement": "바로크",
+          "thumbnail": "data/topic-images/jesus-descent-online-jouvenet-1697.jpg",
+          "description": "루브르 소장 대형 제단화로, 상승과 하강이 교차하는 인물 배치와 장대한 동세가 프랑스 바로크의 장엄한 성격을 드러냅니다.",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Jean-Baptiste_Jouvenet_-_Descent_from_the_Cross_-_WGA12030.jpg",
+          "sourceFile": "Jean-Baptiste Jouvenet - Descent from the Cross - WGA12030.jpg",
+          "sequence": 14
+        },
+        {
+          "id": "jesus-descent-online-rottmayr-1712",
+          "title": "십자가에서 내려지는 그리스도",
+          "artist": "로트마이어, 요한 미하엘",
+          "year": "1712경",
+          "sortYear": 1712,
+          "movement": "바로크",
+          "thumbnail": "data/topic-images/jesus-descent-online-rottmayr-1712.jpg",
+          "description": "월터스 미술관 소장 유화 스케치로, 오스트리아 바로크 제단화 제작을 위한 역동적인 구상과 빠른 붓질을 보여 줍니다.",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Johann_Michael_Rottmayr_-_The_Deposition_from_the_Cross_-_Walters_37788.jpg",
+          "sourceFile": "Johann Michael Rottmayr - The Deposition from the Cross - Walters 37788.jpg",
+          "sequence": 15
+        },
+        {
+          "id": "jesus-descent-online-bonington-1820s",
+          "title": "십자가에서 내려지는 그리스도",
+          "artist": "보닝턴, 리처드 파크스",
+          "year": "1820–1830",
+          "sortYear": 1820,
+          "movement": "낭만주의",
+          "thumbnail": "data/topic-images/jesus-descent-online-bonington-1820s.jpg",
+          "description": "바르샤바 국립박물관 소장작으로, 19세기 낭만주의적 명암과 정서가 수난 장면에 더해진 예입니다.",
+          "sourcePage": "https://commons.wikimedia.org/wiki/Category:Paintings_by_Richard_Parkes_Bonington",
+          "sourceFile": "Richard Parkes Bonington - Descent from the Cross - 129260 - National Museum in Warsaw.jpg",
+          "sequence": 16
+        },
+        {
+          "id": "jesus-descent-online-ribot-1870",
+          "title": "십자가에서 내려지는 그리스도",
+          "artist": "리보, 오귀스탱 테오뒬",
+          "year": "1870경",
+          "sortYear": 1870,
+          "movement": "사실주의",
+          "thumbnail": "data/topic-images/jesus-descent-online-ribot-1870.jpg",
+          "description": "페렌스 미술관 소장작으로, 19세기 사실주의 화가 리보가 십자가 강하 장면을 어둡고 물질감 있는 화면으로 해석한 작품입니다.",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Augustin_Th%C3%A9odule_Ribot_(1823-1891)_-_The_Deposition_from_the_Cross_-_KINCM-2005.6112_-_Ferens_Art_Gallery.jpg",
+          "sourceFile": "Augustin Théodule Ribot (1823-1891) - The Deposition from the Cross - KINCM-2005.6112 - Ferens Art Gallery.jpg",
+          "sequence": 17
+        }
       ]
     }
   ]

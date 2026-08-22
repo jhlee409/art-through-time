@@ -29,6 +29,40 @@ const fallbackImage = 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000
 const normalize = value => String(value || '').toLowerCase().replace(/[\s\-–—·,./()]/g, '');
 const imageErrorHandler = `this.onerror=null;this.src='${fallbackImage}';this.classList.add('image-fallback')`;
 const topicImage = work => work?.thumbnail || fallbackImage;
+const workMetaLine = work => [work?.artist, work?.year].map(value => String(value || '').trim()).filter(Boolean).join(' · ');
+
+function openTopicImageWindow(work) {
+  const image = topicImage(work);
+  if (!image || image === fallbackImage) return;
+  const popup = window.open('', 'artAtlasTopicImage', 'popup=yes,width=1180,height=860,scrollbars=yes,resizable=yes');
+  if (!popup) return alert('이미지 창을 열 수 없습니다. 팝업 차단을 해제해 주세요.');
+  const src = JSON.stringify(new URL(image, location.href).href).replace(/</g, '\\u003c');
+  const title = JSON.stringify(String(work.title || '')).replace(/</g, '\\u003c');
+  popup.document.write(`<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>${esc(work.title || 'Image')}</title><style>html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#10120f;color:#f7f4ec;font-family:system-ui,sans-serif}#toolbar{height:42px;box-sizing:border-box;display:flex;align-items:center;padding:0 16px;background:#242820;font-size:12px;color:#c8cdc2}#stage{height:calc(100% - 42px);position:relative;overflow:hidden;touch-action:none;cursor:grab;user-select:none}#stage.dragging{cursor:grabbing}#artwork{position:absolute;top:50%;left:50%;max-width:none;max-height:none;transform:translate(-50%,-50%);pointer-events:none;user-select:none}</style></head><body><div id="toolbar">왼쪽 버튼을 누른 채 드래그: 이동 · 휠 위로: 확대 · 휠 아래로: 축소</div><div id="stage"><img id="artwork" alt=""></div><script>const src=${src},title=${title},stage=document.querySelector('#stage'),image=document.querySelector('#artwork');document.title=title||'Image';image.src=src;image.alt=title;let zoom=1,x=0,y=0,drag=null;const clamp=()=>{const maxX=Math.max(0,(image.offsetWidth-stage.clientWidth)/2),maxY=Math.max(0,(image.offsetHeight-stage.clientHeight)/2);x=Math.max(-maxX,Math.min(maxX,x));y=Math.max(-maxY,Math.min(maxY,y));};const draw=()=>{if(!image.naturalWidth)return;const base=Math.min(stage.clientWidth/image.naturalWidth,stage.clientHeight/image.naturalHeight);image.style.width=Math.max(1,image.naturalWidth*base*zoom)+'px';image.style.height=Math.max(1,image.naturalHeight*base*zoom)+'px';clamp();image.style.transform='translate(calc(-50% + '+x+'px), calc(-50% + '+y+'px))';};image.addEventListener('load',draw);window.addEventListener('resize',draw);stage.addEventListener('pointerdown',event=>{if(event.button!==0)return;drag={id:event.pointerId,x:event.clientX,y:event.clientY,startX:x,startY:y};stage.setPointerCapture(event.pointerId);stage.classList.add('dragging');});stage.addEventListener('pointermove',event=>{if(!drag||event.pointerId!==drag.id)return;x=drag.startX+event.clientX-drag.x;y=drag.startY+event.clientY-drag.y;draw();});const stop=event=>{if(!drag||event.pointerId!==drag.id)return;drag=null;stage.classList.remove('dragging');};stage.addEventListener('pointerup',stop);stage.addEventListener('pointercancel',stop);stage.addEventListener('wheel',event=>{event.preventDefault();const oldZoom=zoom,ratio=event.deltaY<0?1.1:1/1.1;zoom=Math.max(.5,Math.min(6,zoom*ratio));const actualRatio=zoom/oldZoom,rect=stage.getBoundingClientRect(),pointX=event.clientX-rect.left-stage.clientWidth/2,pointY=event.clientY-rect.top-stage.clientHeight/2;x=x*actualRatio+pointX*(1-actualRatio);y=y*actualRatio+pointY*(1-actualRatio);draw();},{passive:false});<\/script></body></html>`);
+  popup.document.close();
+}
+
+function openTopicMosaicWindow(topic) {
+  const works = topicWorks(topic).filter(work => topicImage(work) && topicImage(work) !== fallbackImage);
+  if (!works.length) return alert('모자이크로 볼 이미지가 없습니다.');
+  const frame = document.querySelector('.topic-image-frame')?.getBoundingClientRect();
+  const tileWidth = Math.max(144, Math.round((frame?.width || 315) * 0.72));
+  const tileHeight = Math.max(144, Math.round((frame?.height || 320) * 0.72));
+  const title = text(topic.name) || '모자이크 보기';
+  const storageKey = `art-atlas-topic-mosaic-order-${String(topic.id || title)}`;
+  const items = works.map(work => ({
+    id: String(work.id || ''),
+    src: new URL(topicImage(work), location.href).href,
+    title: String(work.title || ''),
+    artist: String(work.artist || ''),
+    year: String(work.year || '')
+  }));
+  const popup = window.open('', 'artAtlasTopicMosaic', 'popup=yes,width=1280,height=900,scrollbars=yes,resizable=yes');
+  if (!popup) return alert('모자이크 창을 열 수 없습니다. 팝업 차단을 해제해 주세요.');
+  const payload = JSON.stringify({title, tileWidth, tileHeight, storageKey, items}).replace(/</g, '\\u003c');
+  popup.document.write(`<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>${esc(title)} · 모자이크</title><style>:root{--tile-w:${tileWidth}px;--tile-h:${tileHeight}px;--tile-gap:1em}*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#10120f;color:#f7f4ec;font-family:system-ui,'Noto Sans KR',sans-serif}body{overflow:auto}.toolbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:43px;padding:9px 14px;background:#242820;color:#d7ddd4;box-shadow:0 6px 18px #0005}.toolbar-left{display:flex;align-items:center;gap:10px;min-width:0}.toolbar button{min-height:28px;border:1px solid #8e9b8b;border-radius:4px;background:#fffdf8;color:#28352d;padding:6px 10px;font:700 12px/1 system-ui,sans-serif;white-space:nowrap}.toolbar button:hover{background:#dfe8d9}.toolbar strong{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.toolbar span{font-size:12px;color:#bfc8bd}.mosaic{display:grid;grid-template-columns:repeat(auto-fill,var(--tile-w));grid-auto-rows:var(--tile-h);place-content:start;gap:var(--tile-gap);padding:var(--tile-gap);overflow:visible}.tile{position:relative;display:grid;grid-template-rows:minmax(0,1fr) auto;width:var(--tile-w);height:var(--tile-h);margin:0;border:1px solid #10120f;background:#1d211b;cursor:grab;overflow:hidden}.tile.dragging{opacity:.42;cursor:grabbing}.tile img{display:block;width:100%;height:100%;min-height:0;object-fit:contain;background:#242820;pointer-events:none;user-select:none}.caption{display:block;max-height:38px;overflow:hidden;padding:4px 5px;background:rgba(0,0,0,.82);color:#fffdf8;font-size:10px;line-height:1.25;pointer-events:none}.mosaic-hover{position:fixed;z-index:300;display:none;width:calc(var(--tile-w) * 2);height:calc(var(--tile-h) * 2);border:3px solid #fffdf8;background:#0f120f;box-shadow:0 18px 46px #000b;pointer-events:none}.mosaic-hover img{display:block;width:100%;height:100%;object-fit:contain;background:#0f120f}</style></head><body><div class="toolbar"><div class="toolbar-left"><button type="button" class="reset-order">원래위치로</button><strong></strong></div><span>이미지에 커서: 2배 확대 · 드래그: 위치 이동 · 창 크기에 따라 스크롤</span></div><main class="mosaic"></main><div class="mosaic-hover"><img alt=""></div><script>const data=${payload};const originalItems=data.items.map(item=>({...item}));document.title=data.title+' · 모자이크';document.documentElement.style.setProperty('--tile-w',data.tileWidth+'px');document.documentElement.style.setProperty('--tile-h',data.tileHeight+'px');document.querySelector('.toolbar strong').textContent=data.title+' · '+data.items.length+'점';const mosaic=document.querySelector('.mosaic'),hover=document.querySelector('.mosaic-hover'),hoverImage=hover.querySelector('img');let dragged=null;function escText(value){return String(value||'').replace(/[&<>]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[ch]));}function label(item){return [item.artist,item.title,item.year].filter(Boolean).join(' · ');}function saveOrder(){try{localStorage.setItem(data.storageKey,JSON.stringify(data.items.map(item=>item.id)));}catch(_){}}function restoreLastOrder(){try{const order=JSON.parse(localStorage.getItem(data.storageKey)||'[]');if(!Array.isArray(order)||!order.length)return;const byId=new Map(data.items.map(item=>[item.id,item]));const next=order.map(id=>byId.get(id)).filter(Boolean);data.items.forEach(item=>{if(!order.includes(item.id))next.push(item);});if(next.length===data.items.length)data.items=next;}catch(_){}}function previewMove(event){const gap=16;let left=event.clientX+gap,top=event.clientY+gap;hover.style.display='block';const width=hover.offsetWidth,height=hover.offsetHeight;if(left+width>innerWidth-8)left=event.clientX-width-gap;if(top+height>innerHeight-8)top=event.clientY-height-gap;left=Math.max(8,left);top=Math.max(52,top);hover.style.left=left+'px';hover.style.top=top+'px';}function render(){mosaic.innerHTML=data.items.map((item,index)=>'<article class="tile" draggable="true" data-index="'+index+'"><img src="'+escText(item.src)+'" alt="'+escText(item.title)+'"><span class="caption">'+escText(label(item))+'</span></article>').join('');mosaic.querySelectorAll('.tile').forEach(tile=>{tile.addEventListener('dragstart',event=>{dragged=tile;hover.style.display='none';tile.classList.add('dragging');event.dataTransfer.effectAllowed='move';event.dataTransfer.setData('text/plain',tile.dataset.index);});tile.addEventListener('dragend',()=>{tile.classList.remove('dragging');dragged=null;});tile.addEventListener('pointerenter',event=>{const item=data.items[Number(tile.dataset.index)];hoverImage.src=item.src;hoverImage.alt=item.title;previewMove(event);});tile.addEventListener('pointermove',previewMove);tile.addEventListener('pointerleave',()=>{hover.style.display='none';});});}function reorder(from,to){if(from===to||from<0||to<0)return;const item=data.items.splice(from,1)[0];data.items.splice(to,0,item);saveOrder();render();}mosaic.addEventListener('dragover',event=>{if(!dragged)return;event.preventDefault();event.dataTransfer.dropEffect='move';});mosaic.addEventListener('drop',event=>{if(!dragged)return;event.preventDefault();const target=event.target.closest('.tile');if(!target)return;reorder(Number(dragged.dataset.index),Number(target.dataset.index));});document.querySelector('.reset-order').onclick=()=>{data.items=originalItems.map(item=>({...item}));saveOrder();render();};restoreLastOrder();render();</script></body></html>`);
+  popup.document.close();
+}
 
 function topicWorks(topic) {
   return (topic?.works || []).slice().sort((a, b) =>
@@ -41,18 +75,22 @@ function topicWorks(topic) {
 function render() {
   const items = topicWorks(selected);
   $('#topic-add-artwork').hidden = !adminToken();
+  $('#topic-mosaic-view').hidden = !items.some(work => topicImage(work) && topicImage(work) !== fallbackImage);
   $('#title').textContent = text(selected.name);
   $('#hint').textContent = selected.description?.ko || '';
   $('#axis').innerHTML = `<div class="topic-axis">${items.map(work => `
     <section class="topic-row">
       <div class="topic-axis-label"><strong>${esc(work.year)}</strong><span>${esc(work.movement)}</span></div>
       <article class="topic-card">
-        <img src="${esc(topicImage(work))}" alt="${esc(work.title)}" onerror="${esc(imageErrorHandler)}">
-        <div class="topic-zoom-preview" aria-hidden="true"><img src="${esc(topicImage(work))}" alt="" onerror="${esc(imageErrorHandler)}"></div>
+        <div class="topic-image-frame">
+          <img src="${esc(topicImage(work))}" alt="${esc(work.title)}" onerror="${esc(imageErrorHandler)}">
+          <button class="topic-image-action topic-detail-artwork" type="button" data-work-id="${esc(work.id)}" aria-label="${esc(work.title)} 설명 보기" title="설명 보기">i</button>
+          <button class="topic-image-action topic-preview-artwork" type="button" data-preview-work-id="${esc(work.id)}" aria-label="${esc(work.title)} 크게 보기" title="크게 보기">⌕</button>
+          ${adminToken() ? `<button class="topic-image-action topic-delete-artwork" type="button" data-delete-work-id="${esc(work.id)}" aria-label="${esc(work.title)} 삭제" title="그림 삭제">×</button>` : ''}
+          ${adminToken() ? `<button class="topic-image-action topic-replace-image" type="button" data-replace-work-id="${esc(work.id)}" aria-label="${esc(work.title)} 이미지 교체" title="이미지 교체">↗</button>` : ''}
+          <div class="topic-zoom-preview" aria-hidden="true"><img src="${esc(topicImage(work))}" alt="" onerror="${esc(imageErrorHandler)}"></div>
+        </div>
         <strong>${esc(work.title)}</strong><small>${esc(work.artist)}</small>
-        <button type="button" data-work-id="${esc(work.id)}" aria-label="${esc(work.title)} 설명 보기"></button>
-        ${adminToken() ? `<button class="topic-delete-artwork" type="button" data-delete-work-id="${esc(work.id)}" aria-label="${esc(work.title)} 삭제" title="그림 삭제">×</button>` : ''}
-        ${adminToken() ? `<button class="topic-replace-image" type="button" data-replace-work-id="${esc(work.id)}" aria-label="${esc(work.title)} 이미지 교체" title="이미지 교체">＋</button>` : ''}
       </article>
     </section>`).join('')}</div>`;
 }
@@ -66,8 +104,7 @@ function renderList() {
   $('#topics').innerHTML = visible.length
     ? visible.map(topic => `<button class="${topic.id === selected?.id ? 'active' : ''}" data-id="${esc(topic.id)}">${esc(text(topic.name))}</button>`).join('')
     : '<p class="topic-candidates empty">일치하는 주제·사건이 없습니다.</p>';
-  $('#sort-asc').classList.toggle('active', listDirection === 'asc');
-  $('#sort-desc').classList.toggle('active', listDirection === 'desc');
+  $('#topic-sort').value = listDirection;
   if (!selected && visible[0]) { selected = visible[0]; render(); }
 }
 
@@ -89,17 +126,24 @@ $('#axis').onclick = event => {
     topicImageReplacePicker.click();
     return;
   }
+  const previewButton = event.target.closest('[data-preview-work-id]');
+  if (previewButton) {
+    const work = selected?.works?.find(item => item.id === previewButton.dataset.previewWorkId);
+    if (work) openTopicImageWindow(work);
+    return;
+  }
   const button = event.target.closest('[data-work-id]');
   if (!button) return;
   const work = selected.works.find(item => item.id === button.dataset.workId);
+  const meta = workMetaLine(work);
   $('#detail').classList.add('show');
-  $('#detail').innerHTML = `<button class="close-topic-detail" aria-label="닫기">×</button><h2>${esc(work.title)}</h2><p>${esc(work.artist)} · ${esc(work.year)}</p><p><b>${esc(work.movement)}</b></p><p>${esc(work.description)}</p>`;
+  $('#detail').innerHTML = `<button class="close-topic-detail" aria-label="닫기">×</button><h2>${esc(work.title)}</h2>${meta ? `<p>${esc(meta)}</p>` : ''}${work.movement ? `<p><b>${esc(work.movement)}</b></p>` : ''}<p>${esc(work.description)}</p>`;
 };
 $('#detail').onclick = event => { if (event.target.closest('.close-topic-detail')) $('#detail').classList.remove('show'); };
 $('#topic-search').oninput = renderList;
-$('#sort-asc').onclick = () => { listDirection = 'asc'; renderList(); };
-$('#sort-desc').onclick = () => { listDirection = 'desc'; renderList(); };
+$('#topic-sort').onchange = event => { listDirection = event.currentTarget.value === 'desc' ? 'desc' : 'asc'; renderList(); };
 $('#topic-logout').onclick = logoutTopicPage;
+$('#topic-mosaic-view').onclick = () => { if (selected) openTopicMosaicWindow(selected); };
 
 const topicArtworkDialog = $('#topic-artwork-dialog');
 const topicArtworkForm = $('#topic-artwork-form');

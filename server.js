@@ -825,7 +825,8 @@ const koreanArtistDisplayOverridesForCheck = {
   Q301:'엘 그레코',
   Q5592:'부오나로티, 미켈란젤로',
   Q5597:'산치오, 라파엘로',
-  Q5598:'렘브란트 하르먼손 반 레인'
+  Q5598:'렘브란트 하르먼손 반 레인',
+  Q312617:'로소 피오렌티노'
 };
 function koreanFamilyFirstForCheck(name, originalName) {
   if (String(name || '').includes(',')) return String(name || '').trim();
