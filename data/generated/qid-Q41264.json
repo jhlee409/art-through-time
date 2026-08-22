@@ -1,5 +1,5 @@
 {
-  "schema": 18,
+  "schema": 20,
   "artistId": "artist-Q41264",
   "qid": "Q41264",
   "artist": {
@@ -12,9 +12,13 @@
     "nationality": {
       "ko": "네덜란드 공화국",
       "en": "Dutch Republic"
+    },
+    "movement": {
+      "ko": "네덜란드 황금기 회화",
+      "en": "Dutch Golden Age painting"
     }
   },
-  "fetchedAt": "2026-08-12T20:55:04.332Z",
+  "fetchedAt": "2026-08-22T20:55:37.854Z",
   "works": [
     {
       "id": "wikidata-Q927449",
@@ -39,7 +43,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q927449",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1169874",
@@ -64,7 +69,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1169874",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q32234",
@@ -89,12 +95,13 @@
       },
       "source": "http://www.wikidata.org/entity/Q32234",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q94006",
       "year": 1655,
-      "popularity": 15,
+      "popularity": 16,
       "title": {
         "ko": "성녀 프락세디스",
         "en": "성녀 프락세디스"
@@ -104,8 +111,8 @@
         "en": ""
       },
       "movement": {
-        "ko": "매너리즘",
-        "en": "매너리즘"
+        "ko": "네덜란드 황금기 회화",
+        "en": "네덜란드 황금기 회화"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vermeer%20saint%20praxedis.jpg",
       "description": {
@@ -114,7 +121,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q94006",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q63692",
@@ -139,7 +147,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q63692",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q684935",
@@ -164,7 +173,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q684935",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q586035",
@@ -189,7 +199,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q586035",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q700251",
@@ -214,7 +225,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q700251",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q467376",
@@ -239,7 +251,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q467376",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q782639",
@@ -264,7 +277,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q782639",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q167605",
@@ -289,7 +303,9 @@
       },
       "source": "http://www.wikidata.org/entity/Q167605",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q386453",
@@ -314,7 +330,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q386453",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q151143",
@@ -339,7 +356,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q151143",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1219698",
@@ -364,7 +382,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1219698",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q523974",
@@ -389,7 +408,9 @@
       },
       "source": "http://www.wikidata.org/entity/Q523974",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q2336984",
@@ -414,7 +435,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2336984",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q839359",
@@ -439,7 +461,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q839359",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1169395",
@@ -464,7 +487,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1169395",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q544315",
@@ -489,7 +513,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q544315",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q166937",
@@ -514,7 +539,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q166937",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q185372",
@@ -539,7 +565,9 @@
       },
       "source": "http://www.wikidata.org/entity/Q185372",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q969367",
@@ -564,7 +592,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q969367",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q958088",
@@ -589,7 +618,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q958088",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q914984",
@@ -614,7 +644,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q914984",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3739396",
@@ -639,7 +670,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3739396",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q588695",
@@ -664,7 +696,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q588695",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q45130",
@@ -689,7 +722,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q45130",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q735061",
@@ -714,7 +748,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q735061",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1216387",
@@ -739,7 +774,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1216387",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q614047",
@@ -764,7 +800,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q614047",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q467359",
@@ -789,7 +826,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q467359",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q641666",
@@ -814,7 +852,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q641666",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2267440",
@@ -839,7 +878,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2267440",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2624258",
@@ -864,7 +904,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2624258",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q4660880",
@@ -889,7 +930,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q4660880",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q4358442",
@@ -914,7 +956,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q4358442",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     }
   ]
 }

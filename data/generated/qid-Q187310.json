@@ -1,5 +1,5 @@
 {
-  "schema": 18,
+  "schema": 20,
   "artistId": "artist-Q187310",
   "qid": "Q187310",
   "artist": {
@@ -12,9 +12,13 @@
     "nationality": {
       "ko": "스웨덴",
       "en": "Sweden"
+    },
+    "movement": {
+      "ko": "아츠 앤 크래프츠 운동",
+      "en": "Arts and Crafts movement"
     }
   },
-  "fetchedAt": "2026-08-11T13:27:25.773Z",
+  "fetchedAt": "2026-08-22T21:00:06.493Z",
   "works": [
     {
       "id": "wikidata-Q110805667",
@@ -39,32 +43,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q110805667",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q108741509",
-      "year": 1874,
-      "popularity": 0,
-      "title": {
-        "ko": "En dörr på Gripsholm, Gustav Vasas tid",
-        "en": "En dörr på Gripsholm, Gustav Vasas tid"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "",
-      "description": {
-        "ko": "drawing by Carl Larsson",
-        "en": "drawing by Carl Larsson"
-      },
-      "source": "http://www.wikidata.org/entity/Q108741509",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q130538305",
@@ -89,7 +69,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q130538305",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q136698715",
@@ -114,7 +95,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q136698715",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q110805030",
@@ -139,7 +121,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q110805030",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q110788270",
@@ -164,7 +147,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q110788270",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q135218965",
@@ -189,32 +173,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q135218965",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q102251693",
-      "year": 1883,
-      "popularity": 0,
-      "title": {
-        "ko": "A la Campagne",
-        "en": "A la Campagne"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%2C%201883%20-%20%C3%80%20la%20Campagne.jpg",
-      "description": {
-        "ko": "painting by Carl Larsson from 1883",
-        "en": "painting by Carl Larsson from 1883"
-      },
-      "source": "http://www.wikidata.org/entity/Q102251693",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q130730389",
@@ -239,7 +199,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q130730389",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q136698651",
@@ -264,7 +225,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q136698651",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q65194593",
@@ -289,7 +251,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q65194593",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q110787624",
@@ -314,7 +277,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q110787624",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q136698141",
@@ -339,7 +303,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q136698141",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q136698761",
@@ -364,7 +329,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q136698761",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q110763117",
@@ -389,7 +355,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q110763117",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q110763548",
@@ -414,7 +381,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q110763548",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q110800213",
@@ -439,7 +407,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q110800213",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q110800215",
@@ -464,7 +433,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q110800215",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q10656419",
@@ -489,7 +459,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q10656419",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q110787789",
@@ -514,7 +485,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q110787789",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q136702251",
@@ -539,82 +511,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q136702251",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q76290647",
-      "year": 1888,
-      "popularity": 0,
-      "title": {
-        "ko": "Contemporary art",
-        "en": "Contemporary art"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "아카데믹 미술",
-        "en": "아카데믹 미술"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Nutida%20konst%201888.jpg",
-      "description": {
-        "ko": "painting by Carl Larsson in Gothenburg Museum of Art",
-        "en": "painting by Carl Larsson in Gothenburg Museum of Art"
-      },
-      "source": "http://www.wikidata.org/entity/Q76290647",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q76293066",
-      "year": 1889,
-      "popularity": 0,
-      "title": {
-        "ko": "Renaissance",
-        "en": "Renaissance"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "아카데믹 미술",
-        "en": "아카데믹 미술"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Renaissance.jpg",
-      "description": {
-        "ko": "painting by Carl Larsson in Gothenburg Museum of Art",
-        "en": "painting by Carl Larsson in Gothenburg Museum of Art"
-      },
-      "source": "http://www.wikidata.org/entity/Q76293066",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q76293120",
-      "year": 1889,
-      "popularity": 0,
-      "title": {
-        "ko": "Rococo",
-        "en": "Rococo"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "아카데믹 미술",
-        "en": "아카데믹 미술"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Rococo.jpg",
-      "description": {
-        "ko": "painting by Carl Larsson in Gothenburg Museum of Art",
-        "en": "painting by Carl Larsson in Gothenburg Museum of Art"
-      },
-      "source": "http://www.wikidata.org/entity/Q76293120",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q110788282",
@@ -639,7 +537,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q110788282",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q130781496",
@@ -664,32 +563,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q130781496",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q138529729",
-      "year": 1891,
-      "popularity": 0,
-      "title": {
-        "ko": "Porträt des CGW Carleman",
-        "en": "Porträt des CGW Carleman"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Cl%20Gustaf%20Carleman.jpg",
-      "description": {
-        "ko": "painting by Carl Larsson",
-        "en": "painting by Carl Larsson"
-      },
-      "source": "http://www.wikidata.org/entity/Q138529729",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q130870450",
@@ -714,7 +589,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q130870450",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q110788309",
@@ -739,7 +615,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q110788309",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q110762323",
@@ -764,7 +641,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q110762323",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q110787532",
@@ -789,7 +667,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q110787532",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q125998277",
@@ -814,7 +693,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q125998277",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q132147268",
@@ -839,107 +719,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q132147268",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q106368926",
-      "year": 1895,
-      "popularity": 0,
-      "title": {
-        "ko": "The Art of Painting: Ehrenstrahl and Karl XI. Cartoon for the Fresco in the Lower Hall of the NM",
-        "en": "The Art of Painting: Ehrenstrahl and Karl XI. Cartoon for the Fresco in the Lower Hall of the NM"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "",
-      "description": {
-        "ko": "painting by Carl Larsson",
-        "en": "painting by Carl Larsson"
-      },
-      "source": "http://www.wikidata.org/entity/Q106368926",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q106368930",
-      "year": 1895,
-      "popularity": 0,
-      "title": {
-        "ko": "The Art of Architecture: Tessin the Younger and Hårleman. Cartoon for the Fresco in the Lower Hall of the NM",
-        "en": "The Art of Architecture: Tessin the Younger and Hårleman. Cartoon for the Fresco in the Lower Hall of the NM"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "",
-      "description": {
-        "ko": "painting by Carl Larsson",
-        "en": "painting by Carl Larsson"
-      },
-      "source": "http://www.wikidata.org/entity/Q106368930",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q106368934",
-      "year": 1895,
-      "popularity": 0,
-      "title": {
-        "ko": "The Founders of the Art Collections: Lovisa Ulrika and C.G. Tessin Cartoon for the Fresco in the Lower Hall of the NM",
-        "en": "The Founders of the Art Collections: Lovisa Ulrika and C.G. Tessin Cartoon for the Fresco in the Lower Hall of the NM"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "",
-      "description": {
-        "ko": "painting by Carl Larsson",
-        "en": "painting by Carl Larsson"
-      },
-      "source": "http://www.wikidata.org/entity/Q106368934",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q106368938",
-      "year": 1895,
-      "popularity": 0,
-      "title": {
-        "ko": "Cartoon for the Lower Hall of the NM. Patron of the Fine Arts and Founder of the Museum King Gustav III of Sweden Receiving Antique Pieces of Art",
-        "en": "Cartoon for the Lower Hall of the NM. Patron of the Fine Arts and Founder of the Museum King Gustav III of Sweden Receiving Antique Pieces of Art"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Cartoon%20for%20the%20Lower%20Hall%20of%20the%20NM%20-%20Nationalmuseum%20-%2025334.tif",
-      "description": {
-        "ko": "painting by Carl Larsson",
-        "en": "painting by Carl Larsson"
-      },
-      "source": "http://www.wikidata.org/entity/Q106368938",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q110802591",
@@ -964,7 +745,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q110802591",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q111821710",
@@ -976,7 +758,7 @@
       },
       "country": {
         "ko": "스웨덴",
-        "en": "Sweden"
+        "en": "스웨덴"
       },
       "movement": {
         "ko": "",
@@ -989,7 +771,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q111821710",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q136698787",
@@ -1014,7 +797,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q136698787",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q110787777",
@@ -1039,7 +823,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q110787777",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q117462291",
@@ -1064,7 +849,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q117462291",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q110787786",
@@ -1089,7 +875,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q110787786",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q130711084",
@@ -1114,82 +901,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q130711084",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q136706040",
-      "year": 1900,
-      "popularity": 0,
-      "title": {
-        "ko": "Porträt der Inga-Maria Thiel",
-        "en": "Porträt der Inga-Maria Thiel"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "",
-      "description": {
-        "ko": "painting by Carl Larsson",
-        "en": "painting by Carl Larsson"
-      },
-      "source": "http://www.wikidata.org/entity/Q136706040",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q136708665",
-      "year": 1900,
-      "popularity": 0,
-      "title": {
-        "ko": "At the Piano",
-        "en": "At the Piano"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "",
-      "description": {
-        "ko": "painting by Carl Larsson",
-        "en": "painting by Carl Larsson"
-      },
-      "source": "http://www.wikidata.org/entity/Q136708665",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q136708674",
-      "year": 1900,
-      "popularity": 0,
-      "title": {
-        "ko": "Around the Evening Lamp",
-        "en": "Around the Evening Lamp"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "",
-      "description": {
-        "ko": "painting by Carl Larsson",
-        "en": "painting by Carl Larsson"
-      },
-      "source": "http://www.wikidata.org/entity/Q136708674",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q10697904",
@@ -1214,7 +927,60 @@
       },
       "source": "http://www.wikidata.org/entity/Q10697904",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q113908532",
+      "year": 1901,
+      "popularity": 0,
+      "title": {
+        "ko": "Wilhelm and Emelie Josephson 1901",
+        "en": "Wilhelm and Emelie Josephson 1901"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Wilhelm%20och%20Emelie%20Josephson.jpg",
+      "description": {
+        "ko": "watercolor by Carl Larsson",
+        "en": "watercolor by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q113908532",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q111049939",
+      "year": 1902,
+      "popularity": 0,
+      "title": {
+        "ko": "The Chess Game",
+        "en": "The Chess Game"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Schackspelet.jpg",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q111049939",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q136498397",
@@ -1239,7 +1005,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q136498397",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q10541152",
@@ -1264,7 +1031,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q10541152",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q10543635",
@@ -1289,7 +1057,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q10543635",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q10577856",
@@ -1314,7 +1083,60 @@
       },
       "source": "http://www.wikidata.org/entity/Q10577856",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q110787515",
+      "year": 1904,
+      "popularity": 0,
+      "title": {
+        "ko": "Studie till porträtt av konstnärens far i gungstol",
+        "en": "Studie till porträtt av konstnärens far i gungstol"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Studie%20till%20portr%C3%A4tt%20av%20konstn%C3%A4rens%20far%20i%20gungstol%20-%20NMH%20149-1908%20-%20Nationalmuseum.jpg",
+      "description": {
+        "ko": "drawing by Carl Larsson",
+        "en": "drawing by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q110787515",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q136705978",
+      "year": 1905,
+      "popularity": 0,
+      "title": {
+        "ko": "Self-Portrait",
+        "en": "Self-Portrait"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q136705978",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q52157977",
@@ -1339,7 +1161,60 @@
       },
       "source": "http://www.wikidata.org/entity/Q52157977",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q112650462",
+      "year": 1906,
+      "popularity": 0,
+      "title": {
+        "ko": "Bo",
+        "en": "Bo"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bo%20-%20Carl%20Larsson.jpg",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q112650462",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q116974589",
+      "year": 1906,
+      "popularity": 0,
+      "title": {
+        "ko": "The Model and the Mannequins",
+        "en": "The Model and the Mannequins"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Model%20and%20the%20Mannequins%20%28Carl%20Larsson%29%20-%20Gothenburg%20Museum%20of%20Art%20-%20GKM%201235.tif",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "http://www.wikidata.org/entity/Q116974589",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q28052734",
@@ -1364,7 +1239,34 @@
       },
       "source": "http://www.wikidata.org/entity/Q28052734",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q110787503",
+      "year": 1907,
+      "popularity": 0,
+      "title": {
+        "ko": "Studie till målningen \"Nu är det jul igen\"",
+        "en": "Studie till målningen \"Nu är det jul igen\""
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Studie%20till%20m%C3%A5lningen%20%22Nu%20%C3%A4r%20det%20jul%20igen%22%20-%20NMH%20152-1908%20-%20Nationalmuseum.jpg",
+      "description": {
+        "ko": "drawing by Carl Larsson",
+        "en": "drawing by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q110787503",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q20064873",
@@ -1389,7 +1291,9 @@
       },
       "source": "http://www.wikidata.org/entity/Q20064873",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q1800916",
@@ -1414,7 +1318,9 @@
       },
       "source": "http://www.wikidata.org/entity/Q1800916",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q10665407",
@@ -1439,7 +1345,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q10665407",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q17189257",
@@ -1451,7 +1358,7 @@
       },
       "country": {
         "ko": "스웨덴",
-        "en": "Sweden"
+        "en": "스웨덴"
       },
       "movement": {
         "ko": "",
@@ -1464,7 +1371,112 @@
       },
       "source": "http://www.wikidata.org/entity/Q17189257",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q130729857",
+      "year": 1910,
+      "popularity": 0,
+      "title": {
+        "ko": "The Verger",
+        "en": "The Verger"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q130729857",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q123135684",
+      "year": 1911,
+      "popularity": 0,
+      "title": {
+        "ko": "Sewing Girl",
+        "en": "Sewing Girl"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Sewing%20Girl%20-%20LKM.Dep31%20-%20Lillehammer%20Kunstmuseum.jpg",
+      "description": {
+        "ko": "watercolor painting by Carl Larsson (Lillehammer Art Museum, LKM.Dep31)",
+        "en": "watercolor painting by Carl Larsson (Lillehammer Art Museum, LKM.Dep31)"
+      },
+      "source": "http://www.wikidata.org/entity/Q123135684",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q110787152",
+      "year": 1913,
+      "popularity": 0,
+      "title": {
+        "ko": "Midwinter's Sacrifice. Third Sketch",
+        "en": "Midwinter's Sacrifice. Third Sketch"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Midwinter%27s%20Sacrifice.%20Third%20Sketch%20-%20NMH%2064-1921%20-%20Nationalmuseum.jpg",
+      "description": {
+        "ko": "drawing by Carl Larsson",
+        "en": "drawing by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q110787152",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q136705972",
+      "year": 1914,
+      "popularity": 0,
+      "title": {
+        "ko": "Q136705972",
+        "en": "Q136705972"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20Nu.jpg",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q136705972",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q761681",
@@ -1489,7 +1501,35 @@
       },
       "source": "http://www.wikidata.org/entity/Q761681",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
+    },
+    {
+      "id": "wikidata-Q136702254",
+      "year": 1917,
+      "popularity": 0,
+      "title": {
+        "ko": "Girl with ice skates, interior from the school household, Falun",
+        "en": "Girl with ice skates, interior from the school household, Falun"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Girl%20with%20ice%20skates%2C%20interior%20from%20the%20school%20household%2C%20Falun%201917.jpg",
+      "description": {
+        "ko": "painting by Carl Larsson",
+        "en": "painting by Carl Larsson"
+      },
+      "source": "http://www.wikidata.org/entity/Q136702254",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q25407981",
@@ -1514,7 +1554,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q25407981",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     }
   ]
 }

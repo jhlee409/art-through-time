@@ -1,5 +1,5 @@
 {
-  "schema": 18,
+  "schema": 20,
   "artistId": "frida-kahlo",
   "qid": "Q5588",
   "artist": {
@@ -12,10 +12,92 @@
     "nationality": {
       "ko": "멕시코",
       "en": "Mexico"
+    },
+    "movement": {
+      "ko": "초현실주의",
+      "en": "surrealism"
     }
   },
-  "fetchedAt": "2026-08-10T13:22:03.883Z",
+  "fetchedAt": "2026-08-22T21:07:25.214Z",
   "works": [
+    {
+      "id": "wikidata-Q109620518",
+      "year": null,
+      "popularity": 4,
+      "title": {
+        "ko": "Diego and Me",
+        "en": "Diego and Me"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q109620518",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q110103503",
+      "year": null,
+      "popularity": 1,
+      "title": {
+        "ko": "Q110103503",
+        "en": "Q110103503"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "http://www.wikidata.org/entity/Q110103503",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q131841200",
+      "year": null,
+      "popularity": 1,
+      "title": {
+        "ko": "Girl with Death Mask",
+        "en": "Girl with Death Mask"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "http://www.wikidata.org/entity/Q131841200",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
     {
       "id": "wikidata-Q109930455",
       "year": 1928,
@@ -39,7 +121,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q109930455",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q43281370",
@@ -51,7 +134,7 @@
       },
       "country": {
         "ko": "미국",
-        "en": "United States"
+        "en": "미국"
       },
       "movement": {
         "ko": "",
@@ -64,7 +147,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q43281370",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q118190557",
@@ -89,7 +173,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q118190557",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q111207414",
@@ -114,7 +199,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q111207414",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q16488383",
@@ -139,7 +225,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q16488383",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q28339146",
@@ -164,7 +251,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q28339146",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q45895679",
@@ -189,7 +277,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q45895679",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q5941128",
@@ -214,7 +303,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q5941128",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q97164416",
@@ -239,7 +329,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q97164416",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q19884325",
@@ -264,7 +355,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q19884325",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q5712848",
@@ -289,12 +381,14 @@
       },
       "source": "http://www.wikidata.org/entity/Q5712848",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q19898216",
       "year": 1938,
-      "popularity": 7,
+      "popularity": 8,
       "title": {
         "ko": "What the Water Gave Me",
         "en": "What the Water Gave Me"
@@ -314,7 +408,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q19898216",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q18343221",
@@ -339,32 +434,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q18343221",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q3232010",
-      "year": 1939,
-      "popularity": 23,
-      "title": {
-        "ko": "The Two Fridas",
-        "en": "The Two Fridas"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "초현실주의",
-        "en": "초현실주의"
-      },
-      "image": "",
-      "description": {
-        "ko": "painting by Frida Kahlo",
-        "en": "painting by Frida Kahlo"
-      },
-      "source": "http://www.wikidata.org/entity/Q3232010",
-      "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q26000749",
@@ -389,7 +460,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q26000749",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q63341526",
@@ -414,7 +486,34 @@
       },
       "source": "http://www.wikidata.org/entity/Q63341526",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3232010",
+      "year": 1939,
+      "popularity": 23,
+      "title": {
+        "ko": "The Two Fridas",
+        "en": "The Two Fridas"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "초현실주의",
+        "en": "초현실주의"
+      },
+      "image": "",
+      "description": {
+        "ko": "painting by Frida Kahlo",
+        "en": "painting by Frida Kahlo"
+      },
+      "source": "http://www.wikidata.org/entity/Q3232010",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q5880026",
@@ -439,7 +538,9 @@
       },
       "source": "http://www.wikidata.org/entity/Q5880026",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q19897995",
@@ -464,7 +565,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q19897995",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q136892338",
@@ -489,7 +591,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q136892338",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q19884567",
@@ -514,15 +617,16 @@
       },
       "source": "http://www.wikidata.org/entity/Q19884567",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q136891708",
       "year": 1940,
       "popularity": 1,
       "title": {
-        "ko": "Le Reve",
-        "en": "Le Reve"
+        "ko": "Q136891708",
+        "en": "Q136891708"
       },
       "country": {
         "ko": "",
@@ -539,7 +643,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q136891708",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q21056477",
@@ -564,7 +669,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q21056477",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q21010270",
@@ -589,7 +695,9 @@
       },
       "source": "http://www.wikidata.org/entity/Q21010270",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q5943279",
@@ -614,7 +722,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q5943279",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q118901053",
@@ -639,7 +748,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q118901053",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q23663690",
@@ -664,7 +774,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q23663690",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q8471027",
@@ -689,7 +800,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q8471027",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q20879937",
@@ -714,7 +826,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q20879937",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q8773940",
@@ -739,7 +852,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q8773940",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q17629443",
@@ -764,7 +878,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q17629443",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q106811218",
@@ -789,7 +904,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q106811218",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     }
   ]
 }

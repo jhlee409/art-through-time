@@ -1,6 +1,6 @@
 const techniqueList=document.querySelector('#technique-list'), techniqueContent=document.querySelector('#technique-content'), techniqueSort=document.querySelector('#technique-sort');
 const techniqueSidebar=document.querySelector('.technique-sidebar');
-const techniqueStorageKey='art-through-time-last-technique', techniqueListLanguageStorageKey='art-through-time-technique-list-language', uHangulModeStorageKey='ArtThroughTime.uHangulMode.v3', fontStorageKey='art-atlas-font', techniqueSortStorageKey='art-through-time-technique-sort', sessionStorageKey='art-atlas-access-session-v1';
+const techniqueStorageKey='art-through-time-last-technique', techniqueListLanguageStorageKey='art-through-time-technique-list-language', uHangulModeStorageKey='ArtThroughTime.uHangulMode.v3', fontStorageKey='art-atlas-font', techniqueSortStorageKey='art-through-time-technique-sort', techniqueSidebarWidthStorageKey='art-through-time-technique-sidebar-width-v1', sessionStorageKey='art-atlas-access-session-v1';
 const esc=value=>String(value||'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const copy={ko:{title:'미술 기법 및 용어',definition:'정의',development:'발전의 흐름',sort:'정렬',chronological:'시대순',korean:'가나다순',delete:'삭제',deleteConfirm:'“{name}”의 기법·용어 정보와 설명을 삭제할까요?\n이미지 파일은 보관됩니다.',empty:'등록된 기법·용어가 없습니다.',loadError:'기법·용어 자료를 불러오지 못했습니다.'},en:{title:'Art Techniques and Terms',definition:'Definition',development:'Development',sort:'Sort',chronological:'Chronological',korean:'Korean name',delete:'Delete',deleteConfirm:'Delete the information and description for “{name}”?\nImage files will be kept.',empty:'No techniques or terms are listed.',loadError:'Could not load technique and term information.'}};
 const requestedUHangulMode=new URLSearchParams(location.search).get('uhangul');
@@ -66,6 +66,58 @@ function syncTechniqueListScroll(){
   techniqueList.classList.toggle('is-scrollable',techniqueList.scrollHeight>techniqueList.clientHeight+1);
 }
 function scheduleTechniqueListScrollSync(){requestAnimationFrame(syncTechniqueListScroll);}
+function setupTechniqueSidebarResize(){
+  const shell=document.querySelector('.technique-shell');
+  if(!shell||!techniqueSidebar)return;
+  const mobileQuery=window.matchMedia('(max-width: 760px)');
+  const minWidth=215, maxPreferredWidth=520;
+  const maxWidth=()=>Math.max(minWidth,Math.min(maxPreferredWidth,Math.floor(window.innerWidth*.52)));
+  const setWidth=(value,save=false)=>{
+    if(mobileQuery.matches){
+      shell.style.removeProperty('--technique-sidebar-width');
+      return;
+    }
+    const width=Math.round(Math.max(minWidth,Math.min(maxWidth(),Number(value)||minWidth)));
+    shell.style.setProperty('--technique-sidebar-width',`${width}px`);
+    if(save)localStorage.setItem(techniqueSidebarWidthStorageKey,String(width));
+    scheduleTechniqueListScrollSync();
+  };
+  const savedWidth=Number(localStorage.getItem(techniqueSidebarWidthStorageKey));
+  if(savedWidth)setWidth(savedWidth);
+  const handle=document.createElement('div');
+  handle.className='sidebar-resize-handle';
+  handle.setAttribute('role','separator');
+  handle.setAttribute('aria-orientation','vertical');
+  handle.setAttribute('aria-label',language==='ko'?'기법 목록 너비 조절':'Resize technique list');
+  techniqueSidebar.append(handle);
+  handle.addEventListener('pointerdown',event=>{
+    if(event.button!==0||mobileQuery.matches)return;
+    event.preventDefault();
+    document.body.classList.add('sidebar-resizing');
+    let lastWidth=techniqueSidebar.getBoundingClientRect().width;
+    const resize=move=>{
+      const shellRect=shell.getBoundingClientRect();
+      lastWidth=move.clientX-shellRect.left;
+      setWidth(lastWidth);
+    };
+    const stop=()=>{
+      document.removeEventListener('pointermove',resize);
+      document.removeEventListener('pointerup',stop);
+      document.removeEventListener('pointercancel',stop);
+      document.body.classList.remove('sidebar-resizing');
+      setWidth(lastWidth,true);
+    };
+    try{handle.setPointerCapture(event.pointerId);}catch(_){}
+    document.addEventListener('pointermove',resize);
+    document.addEventListener('pointerup',stop);
+    document.addEventListener('pointercancel',stop);
+  });
+  window.addEventListener('resize',()=>{
+    const width=Number(localStorage.getItem(techniqueSidebarWidthStorageKey));
+    if(width)setWidth(width);
+    else if(mobileQuery.matches)shell.style.removeProperty('--technique-sidebar-width');
+  });
+}
 function setupTechniqueLinkEntry(technique) {
   const entry=techniqueContent.querySelector('.technique-link-entry');
   techniqueContent.querySelector('.technique-link-add')?.addEventListener('click',()=>{entry.classList.toggle('hidden');if(!entry.classList.contains('hidden'))entry.querySelector('input').focus();});
@@ -98,6 +150,7 @@ document.querySelectorAll('[data-display-mode]').forEach(button=>button.addEvent
 techniqueSort.addEventListener('change',()=>{techniqueSortOrder=techniqueSort.value==='korean'?'korean':'chronological';localStorage.setItem(techniqueSortStorageKey,techniqueSortOrder);const selected=techniques.find(item=>item.id===localStorage.getItem(techniqueStorageKey))||sortedTechniques()[0];if(selected)renderTechnique(selected);});
 document.querySelectorAll('[data-font]').forEach(button=>button.addEventListener('click',()=>{font=button.dataset.font;localStorage.setItem(fontStorageKey,font);const selected=techniques.find(item=>item.id===localStorage.getItem(techniqueStorageKey));if(selected)renderTechnique(selected);else{renderFont();}}));
 setupSidebarWheelScroll();
+setupTechniqueSidebarResize();
 window.addEventListener('resize',scheduleTechniqueListScrollSync);
 if('ResizeObserver' in window)new ResizeObserver(scheduleTechniqueListScrollSync).observe(techniqueSidebar);
 async function loadTechniques(){

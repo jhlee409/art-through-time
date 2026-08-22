@@ -49,6 +49,16 @@ function localizedTextList(value) {
   return {ko:textList(object.ko), en:textList(object.en)};
 }
 
+const artistNationalityOverrides = {
+  Q7803: {ko:'이탈리아', en:'Italy'},
+  'artist-Q7803': {ko:'이탈리아', en:'Italy'}
+};
+
+function artistNationalityOverride(artist) {
+  const value = asObject(artist);
+  return artistNationalityOverrides[String(value.qid || '')] || artistNationalityOverrides[String(value.id || '')] || null;
+}
+
 function localAsset(value) {
   const text = String(value || '');
   return LOCAL_ASSET_PREFIX.test(text) ? text : '';
@@ -111,7 +121,7 @@ function normalizeArtist(artist, options) {
     ...value,
     name: localized(value.name),
     aliases: localizedTextList(value.aliases),
-    nationality: localized(value.nationality),
+    nationality: localized(artistNationalityOverride(value) || value.nationality),
     metadata: recordMetadata(value, timestamp(sourceDate, options.now), options.actor, options.touch, options.now)
   };
   normalized.works = (Array.isArray(value.works) ? value.works : []).map(work => normalizeWork(work, normalized, options));

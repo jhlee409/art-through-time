@@ -1,5 +1,5 @@
 {
-  "schema": 18,
+  "schema": 20,
   "artistId": "artist-Q6394591",
   "qid": "Q6394591",
   "artist": {
@@ -12,10 +12,40 @@
     "nationality": {
       "ko": "러시아 제국",
       "en": "Russian Empire"
+    },
+    "movement": {
+      "ko": "사실주의",
+      "en": "realism"
     }
   },
-  "fetchedAt": "2026-08-10T13:22:15.828Z",
+  "fetchedAt": "2026-08-22T20:58:03.696Z",
   "works": [
+    {
+      "id": "wikidata-Q136942957",
+      "year": null,
+      "popularity": 0,
+      "title": {
+        "ko": "Q136942957",
+        "en": "Q136942957"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vasily%20Pukirev%2C%20Sofya%20Savrasova%20%28n%C3%A9e%20G%C3%B6rtz%29%2C%20Tretyakov%20Gallery%20%D0%A0-1089.jpg",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "http://www.wikidata.org/entity/Q136942957",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
     {
       "id": "wikipedia-Q6394591-0",
       "year": 1856,
@@ -38,8 +68,9 @@
       },
       "source": "https://en.wikipedia.org/wiki/Vasili_Pukirev",
       "verified": true,
-      "representative": true,
-      "popularity": 999
+      "popularity": 999,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "featured-Q3918079",
@@ -64,7 +95,9 @@
       "source": "https://en.wikipedia.org/wiki/Vasili_Pukirev",
       "verified": true,
       "representative": true,
-      "popularity": 1000
+      "popularity": 1000,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikipedia-Q6394591-1",
@@ -88,8 +121,9 @@
       },
       "source": "https://en.wikipedia.org/wiki/Vasili_Pukirev",
       "verified": true,
-      "representative": true,
-      "popularity": 998
+      "popularity": 998,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikipedia-Q6394591-2",
@@ -113,8 +147,34 @@
       },
       "source": "https://en.wikipedia.org/wiki/Vasili_Pukirev",
       "verified": true,
-      "representative": true,
-      "popularity": 997
+      "popularity": 997,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q113764391",
+      "year": 1865,
+      "popularity": 0,
+      "title": {
+        "ko": "In the artist's studio",
+        "en": "In the artist's studio"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/V%20masterskoj%20hudozhnika%20by%20Vasiliy%20Pukirev.jpg",
+      "description": {
+        "ko": "painting by Vassili Vladimirovich Pukiryov",
+        "en": "painting by Vassili Vladimirovich Pukiryov"
+      },
+      "source": "http://www.wikidata.org/entity/Q113764391",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q6394591-3",
@@ -138,8 +198,34 @@
       },
       "source": "https://en.wikipedia.org/wiki/Vasili_Pukirev",
       "verified": true,
-      "representative": true,
-      "popularity": 996
+      "popularity": 996,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3918079",
+      "year": 1875,
+      "popularity": 11,
+      "title": {
+        "ko": "The Unequal Marriage",
+        "en": "The Unequal Marriage"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pukirev%20ner%20brak.jpg",
+      "description": {
+        "ko": "painting by Vassili Vladimirovich Pukiryov",
+        "en": "painting by Vassili Vladimirovich Pukiryov"
+      },
+      "source": "http://www.wikidata.org/entity/Q3918079",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q6394591-4",
@@ -163,8 +249,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Vasili_Pukirev",
       "verified": true,
-      "representative": true,
-      "popularity": 995
+      "popularity": 995,
+      "movementContribution": false
     }
   ]
 }

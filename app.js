@@ -16,6 +16,7 @@ const movementStorageKey = 'art-atlas-movement-view-v1';
 const movementCountryMigrationKey = 'art-atlas-movement-country-migration-v1';
 const detailImageHeightStorageKey = 'art-atlas-detail-image-height-v1';
 const detailPanelWidthStorageKey = 'art-atlas-detail-panel-width-v1';
+const artistSidebarWidthStorageKey = 'art-atlas-artist-sidebar-width-v1';
 const lastPositionStorageKey = 'art-atlas-last-position-v1';
 const favoriteWorksStorageKey = 'art-atlas-favorite-works-v1';
 const accessSessionStorageKey = 'art-atlas-access-session-v1';
@@ -120,6 +121,65 @@ function setDetailPanelWidth(value) {
   localStorage.setItem(detailPanelWidthStorageKey, String(detailPanelWidth));
 }
 setDetailPanelWidth(detailPanelWidth);
+function setupArtistSidebarResize() {
+  const shell = $('.app-shell');
+  const sidebar = $('.sidebar');
+  if (!shell || !sidebar) return;
+  const mobileQuery = window.matchMedia('(max-width: 590px)');
+  const compactQuery = window.matchMedia('(max-width: 840px)');
+  const minWidth = () => compactQuery.matches ? 245 : 312;
+  const maxWidth = () => Math.max(minWidth(), Math.min(compactQuery.matches ? 430 : 560, Math.floor(window.innerWidth * (compactQuery.matches ? 0.52 : 0.44))));
+  const clearWidth = () => {
+    sidebar.style.removeProperty('width');
+    sidebar.style.removeProperty('max-width');
+  };
+  const setWidth = (value, save = false) => {
+    if (mobileQuery.matches) {
+      clearWidth();
+      return;
+    }
+    const width = Math.round(Math.max(minWidth(), Math.min(maxWidth(), Number(value) || minWidth())));
+    sidebar.style.width = `${width}px`;
+    sidebar.style.maxWidth = `${maxWidth()}px`;
+    if (save) localStorage.setItem(artistSidebarWidthStorageKey, String(width));
+  };
+  const savedWidth = Number(localStorage.getItem(artistSidebarWidthStorageKey));
+  if (savedWidth) setWidth(savedWidth);
+  const handle = document.createElement('div');
+  handle.className = 'sidebar-resize-handle';
+  handle.setAttribute('role', 'separator');
+  handle.setAttribute('aria-orientation', 'vertical');
+  handle.setAttribute('aria-label', language === 'ko' ? '화가 목록 너비 조절' : 'Resize artist list');
+  sidebar.append(handle);
+  handle.addEventListener('pointerdown', event => {
+    if (event.button !== 0 || mobileQuery.matches) return;
+    event.preventDefault();
+    document.body.classList.add('sidebar-resizing');
+    let lastWidth = sidebar.getBoundingClientRect().width;
+    const resize = move => {
+      const shellRect = shell.getBoundingClientRect();
+      lastWidth = move.clientX - shellRect.left;
+      setWidth(lastWidth);
+    };
+    const stop = () => {
+      document.removeEventListener('pointermove', resize);
+      document.removeEventListener('pointerup', stop);
+      document.removeEventListener('pointercancel', stop);
+      document.body.classList.remove('sidebar-resizing');
+      setWidth(lastWidth, true);
+    };
+    try { handle.setPointerCapture(event.pointerId); } catch (_) {}
+    document.addEventListener('pointermove', resize);
+    document.addEventListener('pointerup', stop);
+    document.addEventListener('pointercancel', stop);
+  });
+  window.addEventListener('resize', () => {
+    const width = Number(localStorage.getItem(artistSidebarWidthStorageKey));
+    if (width) setWidth(width);
+    else if (mobileQuery.matches) clearWidth();
+  });
+}
+setupArtistSidebarResize();
 timeline.addEventListener('click', event => {
   const link = event.target.closest?.('.original-artist-name');
   if (!link || !timeline.contains(link)) return;
@@ -372,6 +432,20 @@ const currentCountryByHistoricalCountry = {
   'Spanish Netherlands': {ko:'벨기에', en:'Belgium',colorKey:'Belgium'}, '스페인령 네덜란드': {ko:'벨기에', en:'Belgium',colorKey:'Belgium'},
   'Crown of Castile': {ko:'스페인', en:'Spain',colorKey:'Spain'}, '카스티야 연합왕국': {ko:'스페인', en:'Spain',colorKey:'Spain'}
 };
+const artistNationalityOverrides = {
+  Q7803: {ko:'이탈리아', en:'Italy'},
+  'artist-Q7803': {ko:'이탈리아', en:'Italy'}
+};
+function artistNationality(artist) {
+  return artistNationalityOverrides[String(artist?.qid || '')] || artistNationalityOverrides[String(artist?.id || '')] || artist?.nationality;
+}
+function applyArtistOverrides(artist) {
+  const nationalityOverride = artistNationalityOverrides[String(artist?.qid || '')] || artistNationalityOverrides[String(artist?.id || '')];
+  return nationalityOverride ? {...artist, nationality:{...nationalityOverride}} : artist;
+}
+function artistCountrySource(artist) {
+  return artist?.birthCountry || artistNationality(artist);
+}
 function countryInfo(value) {
   const original = loc(value) || '?';
   const keys = [original, value?.ko, value?.en].filter(Boolean);
@@ -384,10 +458,10 @@ function countryDisplayLabel(value) {
   return country.original === country.name ? country.name : `${country.original} (${country.name})`;
 }
 function artistCountryInfo(artist) {
-  return countryInfo(artist.birthCountry || artist.nationality);
+  return countryInfo(artistCountrySource(artist));
 }
 function artistCountryLabel(artist) {
-  return countryDisplayLabel(artist.birthCountry || artist.nationality);
+  return countryDisplayLabel(artistCountrySource(artist));
 }
 function countryAvatarText(country) {
   if (!country || country.original === country.name) return (country?.name || '?').slice(0, 1);
@@ -836,7 +910,7 @@ async function loadArtistFile() {
   return {artists:[],deletedArtists:[]};
 }
 
-function artistSnapshot() { return JSON.stringify({dataSchema:1,metadata:collectionMetadata,artists,deletedArtists:[],historicalEvents:customHistoricalEvents,favoriteWorks:[...favoriteWorkKeys].sort(),changeMeta:{actor:currentUserEmail,role:currentUserRole}}); }
+function artistSnapshot() { return JSON.stringify({dataSchema:1,metadata:collectionMetadata,artists:artists.map(applyArtistOverrides),deletedArtists:[],historicalEvents:customHistoricalEvents,favoriteWorks:[...favoriteWorkKeys].sort(),changeMeta:{actor:currentUserEmail,role:currentUserRole}}); }
 async function loadCurrentUserRole() {
   favoriteWorkKeys = currentUserIsAdmin ? readLocalFavoriteWorkKeys() : new Set();
   document.body.classList.remove('auth-pending');
@@ -1035,7 +1109,7 @@ async function loadData() {
   const fileFavoriteWorks = currentUserIsAdmin && Array.isArray(fileData.favoriteWorks) ? fileData.favoriteWorks : [];
   const savedFavoriteWorks = currentUserIsAdmin ? fileFavoriteWorks : [];
   favoriteWorkKeys = new Set([...savedFavoriteWorks, ...browserFavoriteWorks]);
-  artists = fileData.artists || [];
+  artists = (fileData.artists || []).map(applyArtistOverrides);
   lastSavedSnapshot = artistSnapshot();
   if (currentUserIsAdmin && !Array.isArray(fileData.favoriteWorks)) lastSavedSnapshot = '';
   localStorage.removeItem(storageKey);
@@ -1063,7 +1137,6 @@ async function loadData() {
   if (!requestedArtistMissing && (!selectedId || !artists.some(a => a.id === selectedId))) selectedId = artists[0]?.id;
   await hydrateThumbnails(artists.find(artist => artist.id === selectedId));
   render();
-  requestAnimationFrame(() => centerSelectedArtistInList());
   restoreLastTimelinePosition();
   persistFavoriteWorks();
 }
@@ -1302,20 +1375,9 @@ function renderList() {
     const historicalCountry = country.original !== country.name;
     return `<div class="artist-row ${a.id === selectedId ? 'active':''}"><button class="artist-item" data-id="${esc(a.id)}"><span class="avatar ${historicalCountry ? 'historical-country' : ''}" style="background:${countryColor(country.colorKey)};color:${countryInk(country.colorKey)}" title="${esc(countryLabel)}" aria-label="${esc(countryLabel)}">${esc(countryAvatarText(country))}</span><span class="artist-text"><span class="artist-name"${nameAttributes}>${esc(displayName)}</span><span class="artist-years">${years(a)}${movement ? ` · ${esc(movement)}` : ''}</span></span></button>${currentUserIsAdmin ? `<button class="delete-artist" data-id="${esc(a.id)}" title="${esc(t('delete'))}" aria-label="${esc(t('delete'))}">×</button>` : ''}</div>`;
   }).join('') : `<p class="artist-search-empty">${t('noSearchResult')}</p>`;
-  list.querySelectorAll('.artist-item').forEach(button => button.onclick = async () => { viewMode = 'timeline'; selectedId = button.dataset.id; persist(); closeDetail(); const artist = artists.find(item => item.id === selectedId); await hydrateThumbnails(artist); renderList(); requestAnimationFrame(() => centerSelectedArtistInList('smooth')); renderTimeline(); await enrichArtist(); });
+  list.querySelectorAll('.artist-item').forEach(button => button.onclick = async () => { viewMode = 'timeline'; selectedId = button.dataset.id; persist(); closeDetail(); const artist = artists.find(item => item.id === selectedId); await hydrateThumbnails(artist); renderList(); renderTimeline(); await enrichArtist(); });
   list.querySelectorAll('.delete-artist').forEach(button => button.onclick = async event => { event.stopPropagation(); if (!currentUserIsAdmin || !confirm(t('confirmDelete'))) return; const deleted = artists.find(artist => artist.id === button.dataset.id); artists = artists.filter(artist => artist.id !== button.dataset.id); if (selectedId === button.dataset.id) selectedId = artists[0]?.id || null; persist(); if (!await saveArtistsNow()) { artists.push(deleted); if (!selectedId) selectedId = deleted.id; alert(language === 'ko' ? '삭제 내용을 저장하지 못해 복원했습니다.' : 'The deletion could not be saved, so it was restored.'); } render(); });
   $('#artist-names').innerHTML = artists.flatMap(a => [artistDisplayName(a), a.fullName, a.name?.ko, a.name?.en, ...artistAliases(a)]).filter(Boolean).filter((value,index,self) => self.indexOf(value) === index).map(value => `<option value="${esc(value)}"></option>`).join('');
-}
-function centerSelectedArtistInList(behavior='auto') {
-  if (!selectedId || list.clientHeight <= 0 || list.scrollHeight <= list.clientHeight) return;
-  const selectedButton = [...list.querySelectorAll('.artist-item')].find(button => button.dataset.id === selectedId);
-  const selectedRow = selectedButton?.closest('.artist-row') || selectedButton;
-  if (!selectedRow) return;
-  const listBounds = list.getBoundingClientRect();
-  const rowBounds = selectedRow.getBoundingClientRect();
-  const idealTop = list.scrollTop + rowBounds.top - listBounds.top + rowBounds.height / 2 - list.clientHeight / 2;
-  const maxTop = list.scrollHeight - list.clientHeight;
-  list.scrollTo({top:Math.max(0, Math.min(maxTop, idealTop)), behavior});
 }
 function favoriteKey(artist, work) { return `${artist?.id || ''}::${work?.id || selectionKey(work)}`; }
 function selectedFavoriteWorks() {
@@ -1456,7 +1518,8 @@ function renderTimeline() {
   const confirmLinkLabel = language === 'ko' ? '확인' : 'Add';
   const linkButtons = savedLinks.map((link, index) => `<button class="artist-link-button${isYouTubeLink(link) ? ' artist-link-youtube' : ''}" type="button" data-link-index="${index}" title="${esc(link.url)}" aria-label="${esc(`${index + 1}. ${link.url}`)}">${index + 1}</button>`).join('');
   const linkControls = `<span class="artist-link-controls">${currentUserIsAdmin ? `<button class="artist-link-add" type="button" title="${esc(addLinkLabel)}" aria-label="${esc(addLinkLabel)}">+</button>` : ''}${linkButtons}</span>`;
-  const nationalityLabel = loc(artist.nationality) ? countryDisplayLabel(artist.nationality) : '';
+  const nationality = artistNationality(artist);
+  const nationalityLabel = loc(nationality) ? countryDisplayLabel(nationality) : '';
   const artistMovement = primaryMovement(artist);
   const artistMovementDocument = movementDocumentKey(artistMovement);
   const artistMovementLabel = artistMovementDocument

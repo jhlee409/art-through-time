@@ -1,5 +1,5 @@
 {
-  "schema": 18,
+  "schema": 20,
   "artistId": "artist-Q40599",
   "qid": "Q40599",
   "artist": {
@@ -12,9 +12,13 @@
     "nationality": {
       "ko": "프랑스",
       "en": "France"
+    },
+    "movement": {
+      "ko": "인상주의",
+      "en": "Impressionism"
     }
   },
-  "fetchedAt": "2026-08-10T13:23:15.997Z",
+  "fetchedAt": "2026-08-22T20:58:10.892Z",
   "works": [
     {
       "id": "wikidata-Q1192090",
@@ -22,7 +26,7 @@
       "popularity": 16,
       "title": {
         "ko": "압생트를 마시는 사람",
-        "en": "The Absinthe Drinker"
+        "en": "압생트를 마시는 사람"
       },
       "country": {
         "ko": "",
@@ -39,57 +43,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1192090",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q2024709",
-      "year": 1860,
-      "popularity": 16,
-      "title": {
-        "ko": "스페인 가수",
-        "en": "The Spanish Singer"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "아카데믹 미술",
-        "en": "아카데믹 미술"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Spanish%20Singer%20MET%20dp130799.jpg",
-      "description": {
-        "ko": "에두아르 마네의 그림",
-        "en": "에두아르 마네의 그림"
-      },
-      "source": "http://www.wikidata.org/entity/Q2024709",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q3088614",
-      "year": 1860,
-      "popularity": 15,
-      "title": {
-        "ko": "놀란 님프",
-        "en": "La Nymphe surprise"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "인상주의",
-        "en": "인상주의"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edouard%20Manet%20Die%20ueberraschte%20Nymphe.jpg",
-      "description": {
-        "ko": "에두아르 마네의 그림",
-        "en": "에두아르 마네의 그림"
-      },
-      "source": "http://www.wikidata.org/entity/Q3088614",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q126467",
@@ -97,7 +52,7 @@
       "popularity": 10,
       "title": {
         "ko": "마네 부모님의 초상",
-        "en": "Portrait of Monsieur and Madame Auguste Manet"
+        "en": "마네 부모님의 초상"
       },
       "country": {
         "ko": "",
@@ -114,7 +69,60 @@
       },
       "source": "http://www.wikidata.org/entity/Q126467",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q2024709",
+      "year": 1860,
+      "popularity": 16,
+      "title": {
+        "ko": "스페인 가수",
+        "en": "스페인 가수"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "아카데믹 미술",
+        "en": "아카데믹 미술"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Spanish%20Singer%20MET%20dp130799.jpg",
+      "description": {
+        "ko": "에두아르 마네의 그림",
+        "en": "에두아르 마네의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q2024709",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3088614",
+      "year": 1860,
+      "popularity": 15,
+      "title": {
+        "ko": "놀란 님프",
+        "en": "놀란 님프"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "인상주의",
+        "en": "인상주의"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edouard%20Manet%20Die%20ueberraschte%20Nymphe.jpg",
+      "description": {
+        "ko": "에두아르 마네의 그림",
+        "en": "에두아르 마네의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q3088614",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1844748",
@@ -122,7 +130,7 @@
       "popularity": 12,
       "title": {
         "ko": "칼을 든 소년",
-        "en": "Boy Carrying a Sword"
+        "en": "칼을 든 소년"
       },
       "country": {
         "ko": "",
@@ -139,32 +147,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1844748",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q1810341",
-      "year": 1861,
-      "popularity": 6,
-      "title": {
-        "ko": "어린 랑주",
-        "en": "Little Lange"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "인상주의",
-        "en": "인상주의"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%C3%89douard%20Manet%20-%20Le%20petit%20Lange.jpg",
-      "description": {
-        "ko": "에두아르 마네의 그림",
-        "en": "에두아르 마네의 그림"
-      },
-      "source": "http://www.wikidata.org/entity/Q1810341",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q210277",
@@ -172,7 +156,7 @@
       "popularity": 25,
       "title": {
         "ko": "튈르리 정원의 음악회",
-        "en": "Music in the Tuileries"
+        "en": "튈르리 정원의 음악회"
       },
       "country": {
         "ko": "",
@@ -189,7 +173,9 @@
       },
       "source": "http://www.wikidata.org/entity/Q210277",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q59815",
@@ -197,7 +183,7 @@
       "popularity": 18,
       "title": {
         "ko": "늙은 음악가",
-        "en": "The Old Musician"
+        "en": "늙은 음악가"
       },
       "country": {
         "ko": "",
@@ -214,32 +200,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q59815",
       "verified": true,
-      "representative": true
-    },
-    {
-      "id": "wikidata-Q72650",
-      "year": 1862,
-      "popularity": 12,
-      "title": {
-        "ko": "에스파다 복장을 한 빅토린 뫼랑",
-        "en": "Mademoiselle V. . . in the Costume of an Espada"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "Q125731576",
-        "en": "Q125731576"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mademoiselle%20V.%20.%20.%20in%20the%20Costume%20of%20an%20Espada%20MET%20DT859.jpg",
-      "description": {
-        "ko": "에두아르 마네의 그림",
-        "en": "에두아르 마네의 그림"
-      },
-      "source": "http://www.wikidata.org/entity/Q72650",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q39226",
@@ -247,7 +209,7 @@
       "popularity": 10,
       "title": {
         "ko": "거리의 가수",
-        "en": "Street Singer"
+        "en": "거리의 가수"
       },
       "country": {
         "ko": "",
@@ -264,7 +226,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q39226",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q44124",
@@ -272,7 +235,7 @@
       "popularity": 10,
       "title": {
         "ko": "롤라 드 발랑스",
-        "en": "Lola de Valence"
+        "en": "롤라 드 발랑스"
       },
       "country": {
         "ko": "",
@@ -289,7 +252,34 @@
       },
       "source": "http://www.wikidata.org/entity/Q44124",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q72650",
+      "year": 1862,
+      "popularity": 12,
+      "title": {
+        "ko": "에스파다 복장을 한 빅토린 뫼랑",
+        "en": "에스파다 복장을 한 빅토린 뫼랑"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "Q125731576",
+        "en": "Q125731576"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mademoiselle%20V.%20.%20.%20in%20the%20Costume%20of%20an%20Espada%20MET%20DT859.jpg",
+      "description": {
+        "ko": "에두아르 마네의 그림",
+        "en": "에두아르 마네의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q72650",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q152509",
@@ -297,11 +287,11 @@
       "popularity": 45,
       "title": {
         "ko": "풀밭 위의 점심 식사",
-        "en": "Luncheon on the Grass"
+        "en": "풀밭 위의 점심 식사"
       },
       "country": {
         "ko": "프랑스",
-        "en": "France"
+        "en": "프랑스"
       },
       "movement": {
         "ko": "사실주의",
@@ -314,7 +304,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q152509",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q737062",
@@ -322,15 +313,15 @@
       "popularity": 42,
       "title": {
         "ko": "올랭피아",
-        "en": "Olympia"
+        "en": "올랭피아"
       },
       "country": {
         "ko": "",
         "en": ""
       },
       "movement": {
-        "ko": "인상주의",
-        "en": "인상주의"
+        "ko": "사실주의",
+        "en": "사실주의"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edouard%20Manet%20-%20Olympia%20-%20Google%20Art%20Project%203.jpg",
       "description": {
@@ -339,7 +330,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q737062",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q113262",
@@ -347,7 +339,7 @@
       "popularity": 8,
       "title": {
         "ko": "마호 복장을 한 청년",
-        "en": "Young man in Mayo costume"
+        "en": "마호 복장을 한 청년"
       },
       "country": {
         "ko": "",
@@ -364,7 +356,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q113262",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3203711",
@@ -372,7 +365,7 @@
       "popularity": 10,
       "title": {
         "ko": "죽은 투우사",
-        "en": "The Dead Toreador"
+        "en": "죽은 투우사"
       },
       "country": {
         "ko": "",
@@ -389,57 +382,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3203711",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q2752079",
-      "year": 1864,
-      "popularity": 7,
-      "title": {
-        "ko": "천사들과 함께 있는 죽은 그리스도",
-        "en": "The Dead Christ with Angels"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "아카데믹 미술",
-        "en": "아카데믹 미술"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%C3%89douard%20Manet%20-%20Le%20Christ%20mort%20et%20les%20anges.jpg",
-      "description": {
-        "ko": "에두아르 마네의 그림",
-        "en": "에두아르 마네의 그림"
-      },
-      "source": "http://www.wikidata.org/entity/Q2752079",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q7744027",
-      "year": 1864,
-      "popularity": 7,
-      "title": {
-        "ko": "불로뉴의 키어사지호",
-        "en": "The Kearsarge at Boulogne"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edouard%20Manet%20-%20Le%20%E2%80%9EKearsarge%E2%80%9C%20%C3%A0%20Boulogne.jpg",
-      "description": {
-        "ko": "에두아르 모네의 그림",
-        "en": "에두아르 모네의 그림"
-      },
-      "source": "http://www.wikidata.org/entity/Q7744027",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3178376",
@@ -447,7 +391,7 @@
       "popularity": 12,
       "title": {
         "ko": "독서",
-        "en": "The Reading"
+        "en": "독서"
       },
       "country": {
         "ko": "",
@@ -464,7 +408,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3178376",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q154653",
@@ -472,7 +417,7 @@
       "popularity": 11,
       "title": {
         "ko": "키어사지호와 앨라배마호의 해전",
-        "en": "The Battle of the Kearsarge and the Alabama"
+        "en": "키어사지호와 앨라배마호의 해전"
       },
       "country": {
         "ko": "",
@@ -489,7 +434,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q154653",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q26250",
@@ -497,7 +443,7 @@
       "popularity": 21,
       "title": {
         "ko": "피리 부는 소년",
-        "en": "The Fif"
+        "en": "피리 부는 소년"
       },
       "country": {
         "ko": "",
@@ -514,15 +460,17 @@
       },
       "source": "http://www.wikidata.org/entity/Q26250",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q942276",
       "year": 1866,
-      "popularity": 8,
+      "popularity": 9,
       "title": {
         "ko": "롱샹의 경마",
-        "en": "The Races at Longchamp"
+        "en": "롱샹의 경마"
       },
       "country": {
         "ko": "",
@@ -539,7 +487,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q942276",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q942523",
@@ -547,7 +496,7 @@
       "popularity": 8,
       "title": {
         "ko": "1866년의 젊은 여인",
-        "en": "Young Lady in 1866"
+        "en": "1866년의 젊은 여인"
       },
       "country": {
         "ko": "",
@@ -564,57 +513,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q942523",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q3224381",
-      "year": 1866,
-      "popularity": 8,
-      "title": {
-        "ko": "인사하는 투우사",
-        "en": "The Matador Saluting"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "아카데믹 미술",
-        "en": "아카데믹 미술"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/A%20Matador%20MET%20DT1933.jpg",
-      "description": {
-        "ko": "에두아르 마네의 그림",
-        "en": "에두아르 마네의 그림"
-      },
-      "source": "http://www.wikidata.org/entity/Q3224381",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q1212269",
-      "year": 1987,
-      "popularity": 21,
-      "title": {
-        "ko": "막시밀리안 황제의 처형",
-        "en": "The Execution of Emperor Maximilian"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "인상주의",
-        "en": "인상주의"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edouard%20Manet%20022.jpg",
-      "description": {
-        "ko": "group of paintings by Édouard Manet",
-        "en": "group of paintings by Édouard Manet"
-      },
-      "source": "http://www.wikidata.org/entity/Q1212269",
-      "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3231193",
@@ -622,7 +522,7 @@
       "popularity": 10,
       "title": {
         "ko": "비눗방울 부는 소년",
-        "en": "Boy blowing bubbles"
+        "en": "비눗방울 부는 소년"
       },
       "country": {
         "ko": "",
@@ -639,7 +539,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3231193",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3505997",
@@ -647,7 +548,7 @@
       "popularity": 9,
       "title": {
         "ko": "피아노를 치는 마네 부인",
-        "en": "Suzanne Manet Playing the Piano"
+        "en": "피아노를 치는 마네 부인"
       },
       "country": {
         "ko": "",
@@ -664,7 +565,34 @@
       },
       "source": "http://www.wikidata.org/entity/Q3505997",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q1212269",
+      "year": 1867,
+      "popularity": 21,
+      "title": {
+        "ko": "막시밀리안 황제의 처형",
+        "en": "막시밀리안 황제의 처형"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "인상주의",
+        "en": "인상주의"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edouard%20Manet%20022.jpg",
+      "description": {
+        "ko": "group of paintings by Édouard Manet",
+        "en": "group of paintings by Édouard Manet"
+      },
+      "source": "http://www.wikidata.org/entity/Q1212269",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q775407",
@@ -672,7 +600,7 @@
       "popularity": 27,
       "title": {
         "ko": "발코니",
-        "en": "The Balcony"
+        "en": "발코니"
       },
       "country": {
         "ko": "",
@@ -689,7 +617,9 @@
       },
       "source": "http://www.wikidata.org/entity/Q775407",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q2529703",
@@ -697,7 +627,7 @@
       "popularity": 17,
       "title": {
         "ko": "에밀 졸라의 초상",
-        "en": "Portrait of Emile Zola"
+        "en": "에밀 졸라의 초상"
       },
       "country": {
         "ko": "",
@@ -714,7 +644,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2529703",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1245431",
@@ -722,7 +653,7 @@
       "popularity": 13,
       "title": {
         "ko": "작업실에서의 점심 식사",
-        "en": "Luncheon in the Studio"
+        "en": "작업실에서의 점심 식사"
       },
       "country": {
         "ko": "",
@@ -739,32 +670,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1245431",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q4373335",
-      "year": 1868,
-      "popularity": 7,
-      "title": {
-        "ko": "배를 깎는 소년",
-        "en": "Young Boy Peeling a Pear"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Young%20Boy%20Peeling%20a%20Pear%20%28%C3%89douard%20Manet%29%20-%20Nationalmuseum%20-%2018501.tif",
-      "description": {
-        "ko": "에두아르 마네의 그림",
-        "en": "에두아르 마네의 그림"
-      },
-      "source": "http://www.wikidata.org/entity/Q4373335",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2974978",
@@ -772,7 +679,7 @@
       "popularity": 9,
       "title": {
         "ko": "달빛 아래 불로뉴 항구",
-        "en": "Clair de lune sur le port de Boulogne"
+        "en": "달빛 아래 불로뉴 항구"
       },
       "country": {
         "ko": "",
@@ -789,7 +696,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2974978",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3222563",
@@ -797,7 +705,7 @@
       "popularity": 8,
       "title": {
         "ko": "포크스턴행 증기선의 출발",
-        "en": "The Folkestone Boat, Boulogne"
+        "en": "포크스턴행 증기선의 출발"
       },
       "country": {
         "ko": "",
@@ -814,57 +722,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3222563",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q2494850",
-      "year": 1869,
-      "popularity": 7,
-      "title": {
-        "ko": "장례식 (마네)",
-        "en": "The Funeral"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Funeral%20MET%20DT1931.jpg",
-      "description": {
-        "ko": "에두아르 마네의 그림",
-        "en": "에두아르 마네의 그림"
-      },
-      "source": "http://www.wikidata.org/entity/Q2494850",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q15917726",
-      "year": 1870,
-      "popularity": 7,
-      "title": {
-        "ko": "여종업원 (마네)",
-        "en": "Waitress serving beer"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Manet%2C%20Edouard%20-%20La%20Serveuse%20de%20Bocks%20%28The%20Waitress%29%2C%201879.jpg",
-      "description": {
-        "ko": "에두아르 마네의 그림",
-        "en": "에두아르 마네의 그림"
-      },
-      "source": "http://www.wikidata.org/entity/Q15917726",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2899286",
@@ -872,7 +731,7 @@
       "popularity": 18,
       "title": {
         "ko": "제비꽃 다발을 든 베르트 모리조",
-        "en": "Berthe Morisot with a Bouquet of Violets"
+        "en": "제비꽃 다발을 든 베르트 모리조"
       },
       "country": {
         "ko": "",
@@ -889,7 +748,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2899286",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1212098",
@@ -897,7 +757,7 @@
       "popularity": 21,
       "title": {
         "ko": "기찻길 (마네)",
-        "en": "The Railway"
+        "en": "기찻길 (마네)"
       },
       "country": {
         "ko": "",
@@ -914,7 +774,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1212098",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1163504",
@@ -922,7 +783,7 @@
       "popularity": 11,
       "title": {
         "ko": "오페라 극장의 가면무도회",
-        "en": "Masked Ball at the Opera"
+        "en": "오페라 극장의 가면무도회"
       },
       "country": {
         "ko": "",
@@ -939,7 +800,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1163504",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q957664",
@@ -947,7 +809,7 @@
       "popularity": 8,
       "title": {
         "ko": "크로케 경기",
-        "en": "The Croquet Game"
+        "en": "크로케 경기"
       },
       "country": {
         "ko": "",
@@ -964,57 +826,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q957664",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q15290965",
-      "year": 1874,
-      "popularity": 12,
-      "title": {
-        "ko": "보트 타기",
-        "en": "Boating"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "인상주의",
-        "en": "인상주의"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edouard%20Manet%20Boating.jpg",
-      "description": {
-        "ko": "에두아르 마네의 그림",
-        "en": "에두아르 마네의 그림"
-      },
-      "source": "http://www.wikidata.org/entity/Q15290965",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q2860945",
-      "year": 1874,
-      "popularity": 10,
-      "title": {
-        "ko": "아르장퇴유 (마네)",
-        "en": "Argenteuil"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "인상주의",
-        "en": "인상주의"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edouard%20Manet%20003.jpg",
-      "description": {
-        "ko": "에두아르 마네의 그림",
-        "en": "에두아르 마네의 그림"
-      },
-      "source": "http://www.wikidata.org/entity/Q2860945",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2977843",
@@ -1022,7 +835,7 @@
       "popularity": 10,
       "title": {
         "ko": "떠다니는 작업실에서 그림 그리는 모네",
-        "en": "Claude Monet painting in his studio boat"
+        "en": "떠다니는 작업실에서 그림 그리는 모네"
       },
       "country": {
         "ko": "",
@@ -1039,32 +852,60 @@
       },
       "source": "http://www.wikidata.org/entity/Q2977843",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
-      "id": "wikidata-Q17495108",
+      "id": "wikidata-Q15290965",
       "year": 1874,
-      "popularity": 7,
+      "popularity": 12,
       "title": {
-        "ko": "부채를 든 베르트 모리조",
-        "en": "Berthe Morisot with a Fan"
+        "ko": "보트 타기",
+        "en": "보트 타기"
       },
       "country": {
         "ko": "",
         "en": ""
       },
       "movement": {
-        "ko": "",
-        "en": ""
+        "ko": "인상주의",
+        "en": "인상주의"
       },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Berthe%20Morisot%20Manet%20Lille%202918.jpg",
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edouard%20Manet%20Boating.jpg",
       "description": {
         "ko": "에두아르 마네의 그림",
         "en": "에두아르 마네의 그림"
       },
-      "source": "http://www.wikidata.org/entity/Q17495108",
+      "source": "http://www.wikidata.org/entity/Q15290965",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q2860945",
+      "year": 1874,
+      "popularity": 10,
+      "title": {
+        "ko": "아르장퇴유 (마네)",
+        "en": "아르장퇴유 (마네)"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "인상주의",
+        "en": "인상주의"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edouard%20Manet%20003.jpg",
+      "description": {
+        "ko": "에두아르 마네의 그림",
+        "en": "에두아르 마네의 그림"
+      },
+      "source": "http://www.wikidata.org/entity/Q2860945",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q18208688",
@@ -1072,7 +913,7 @@
       "popularity": 9,
       "title": {
         "ko": "토르토니에서",
-        "en": "Chez Tortoni"
+        "en": "토르토니에서"
       },
       "country": {
         "ko": "",
@@ -1089,7 +930,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q18208688",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1551926",
@@ -1097,7 +939,7 @@
       "popularity": 8,
       "title": {
         "ko": "스테판 말라르메의 초상",
-        "en": "Portrait of Stéphane Mallarmé"
+        "en": "스테판 말라르메의 초상"
       },
       "country": {
         "ko": "",
@@ -1114,7 +956,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1551926",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q536024",
@@ -1122,7 +965,7 @@
       "popularity": 19,
       "title": {
         "ko": "나나 (마네)",
-        "en": "Nana"
+        "en": "나나 (마네)"
       },
       "country": {
         "ko": "",
@@ -1139,15 +982,16 @@
       },
       "source": "http://www.wikidata.org/entity/Q536024",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3227448",
-      "year": 1879,
+      "year": 1877,
       "popularity": 16,
       "title": {
         "ko": "자살",
-        "en": "Le Suicidé"
+        "en": "자살"
       },
       "country": {
         "ko": "",
@@ -1164,7 +1008,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3227448",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q731639",
@@ -1172,11 +1017,11 @@
       "popularity": 17,
       "title": {
         "ko": "자두 브랜디",
-        "en": "The Plum"
+        "en": "자두 브랜디"
       },
       "country": {
         "ko": "프랑스",
-        "en": "France"
+        "en": "프랑스"
       },
       "movement": {
         "ko": "",
@@ -1189,32 +1034,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q731639",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q481454",
-      "year": 1879,
-      "popularity": 14,
-      "title": {
-        "ko": "온실에서",
-        "en": "In the Conservatory"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "사실주의",
-        "en": "사실주의"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/1879%20Manet%20Im%20Wintergarten%20anagoria.JPG",
-      "description": {
-        "ko": "painting by Édouard Manet in the Alte Nationalgalerie, Berlin",
-        "en": "painting by Édouard Manet in the Alte Nationalgalerie, Berlin"
-      },
-      "source": "http://www.wikidata.org/entity/Q481454",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q7720924",
@@ -1222,7 +1043,7 @@
       "popularity": 9,
       "title": {
         "ko": "카페 콩세르 (마네)",
-        "en": "The Café-Concert"
+        "en": "카페 콩세르 (마네)"
       },
       "country": {
         "ko": "",
@@ -1239,7 +1060,34 @@
       },
       "source": "http://www.wikidata.org/entity/Q7720924",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q481454",
+      "year": 1878,
+      "popularity": 14,
+      "title": {
+        "ko": "온실에서",
+        "en": "온실에서"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "사실주의",
+        "en": "사실주의"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/1879%20Manet%20Im%20Wintergarten%20anagoria.JPG",
+      "description": {
+        "ko": "painting by Édouard Manet in the Alte Nationalgalerie, Berlin",
+        "en": "painting by Édouard Manet in the Alte Nationalgalerie, Berlin"
+      },
+      "source": "http://www.wikidata.org/entity/Q481454",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1632817",
@@ -1247,7 +1095,7 @@
       "popularity": 11,
       "title": {
         "ko": "페르 라튀유 식당에서",
-        "en": "At the Père Lathuille Restaurant"
+        "en": "페르 라튀유 식당에서"
       },
       "country": {
         "ko": "",
@@ -1264,7 +1112,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1632817",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q661803",
@@ -1272,7 +1121,7 @@
       "popularity": 10,
       "title": {
         "ko": "팔레트를 든 자화상 (마네)",
-        "en": "Self-Portrait with Palette"
+        "en": "팔레트를 든 자화상 (마네)"
       },
       "country": {
         "ko": "",
@@ -1289,7 +1138,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q661803",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q15973357",
@@ -1297,7 +1147,7 @@
       "popularity": 10,
       "title": {
         "ko": "아스파라거스 한 가지",
-        "en": "L'Asperge"
+        "en": "아스파라거스 한 가지"
       },
       "country": {
         "ko": "",
@@ -1314,82 +1164,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q15973357",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q18223037",
-      "year": 1880,
-      "popularity": 8,
-      "title": {
-        "ko": "아스파라거스 다발",
-        "en": "A Bundle of Asparagus"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "인상주의",
-        "en": "인상주의"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edouard%20Manet%20Bunch%20of%20Asparagus.jpg",
-      "description": {
-        "ko": "에두아르 마네의 그림",
-        "en": "에두아르 마네의 그림"
-      },
-      "source": "http://www.wikidata.org/entity/Q18223037",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q3205630",
-      "year": 1880,
-      "popularity": 7,
-      "title": {
-        "ko": "로슈포르의 탈출",
-        "en": "Rochefort's Escape"
-      },
-      "country": {
-        "ko": "프랑스",
-        "en": "France"
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/L%27Evasion%20de%20Rochefort%20-%20Edouard%20Manet%20%28Kunsthaus%20Z%C3%BCrich%29.jpg",
-      "description": {
-        "ko": "에두아르 마네의 그림",
-        "en": "에두아르 마네의 그림"
-      },
-      "source": "http://www.wikidata.org/entity/Q3205630",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q26689493",
-      "year": 1880,
-      "popularity": 7,
-      "title": {
-        "ko": "카페 콩세르의 한 구석",
-        "en": "Corner of a Café-Concert"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edouard%20Manet%2C%20Corner%20of%20a%20Caf%C3%A9-Concert%2C%20ca.%201878-80.jpg",
-      "description": {
-        "ko": "에두아르 마네의 그림",
-        "en": "에두아르 마네의 그림"
-      },
-      "source": "http://www.wikidata.org/entity/Q26689493",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q18620351",
@@ -1397,7 +1173,7 @@
       "popularity": 17,
       "title": {
         "ko": "봄",
-        "en": "Spring"
+        "en": "봄"
       },
       "country": {
         "ko": "",
@@ -1414,7 +1190,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q18620351",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q18625546",
@@ -1422,7 +1199,7 @@
       "popularity": 11,
       "title": {
         "ko": "가을",
-        "en": "Autumn"
+        "en": "가을"
       },
       "country": {
         "ko": "",
@@ -1439,7 +1216,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q18625546",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q665028",
@@ -1447,7 +1225,7 @@
       "popularity": 8,
       "title": {
         "ko": "죽은 수리부엉이",
-        "en": "Dead Eagle Owl"
+        "en": "죽은 수리부엉이"
       },
       "country": {
         "ko": "",
@@ -1464,32 +1242,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q665028",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q7759156",
-      "year": 1881,
-      "popularity": 8,
-      "title": {
-        "ko": "토끼",
-        "en": "The Rabbit"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Manet%2C%20Edouard%20-%20The%20Rabbit%20%281881%29.png",
-      "description": {
-        "ko": "에두아르 마네가 1881년에 그린 유화",
-        "en": "에두아르 마네가 1881년에 그린 유화"
-      },
-      "source": "http://www.wikidata.org/entity/Q7759156",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1245354",
@@ -1497,7 +1251,7 @@
       "popularity": 39,
       "title": {
         "ko": "폴리베르제르의 바",
-        "en": "A Bar at the Folies-Bergère"
+        "en": "폴리베르제르의 바"
       },
       "country": {
         "ko": "",
@@ -1514,7 +1268,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1245354",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     }
   ]
 }

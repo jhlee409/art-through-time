@@ -1,5 +1,5 @@
 {
-  "schema": 18,
+  "schema": 20,
   "artistId": "artist-1786371252483",
   "qid": "Q42207",
   "artist": {
@@ -12,17 +12,21 @@
     "nationality": {
       "ko": "밀라노 공국",
       "en": "Duchy of Milan"
+    },
+    "movement": {
+      "ko": "바로크",
+      "en": "Baroque"
     }
   },
-  "fetchedAt": "2026-08-10T14:28:29.862Z",
+  "fetchedAt": "2026-08-22T20:50:06.460Z",
   "works": [
     {
-      "id": "wikidata-Q2395137",
-      "year": 1601,
-      "popularity": 10,
+      "id": "wikidata-Q2642756",
+      "year": null,
+      "popularity": 11,
       "title": {
-        "ko": "Portrait of a Courtesan",
-        "en": "Portrait of a Courtesan"
+        "ko": "John the Baptist",
+        "en": "John the Baptist"
       },
       "country": {
         "ko": "",
@@ -32,14 +36,15 @@
         "ko": "바로크",
         "en": "바로크"
       },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caravaggio%20%28Michelangelo%20Merisi%29%20%281571%20-%201610%29%20-%20Half-length%20portrait%20of%20a%20young%20woman%20-%20356%20-%20Gem%C3%A4ldegalerie.jpg",
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caravaggio-Baptist-Toledo.jpg",
       "description": {
-        "ko": "painting by Caravaggio",
-        "en": "painting by Caravaggio"
+        "ko": "eight paintings by Caravaggio",
+        "en": "eight paintings by Caravaggio"
       },
-      "source": "http://www.wikidata.org/entity/Q2395137",
+      "source": "http://www.wikidata.org/entity/Q2642756",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2574120",
@@ -64,7 +69,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2574120",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2732274",
@@ -89,7 +95,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2732274",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2610675",
@@ -101,7 +108,7 @@
       },
       "country": {
         "ko": "이탈리아",
-        "en": "Italy"
+        "en": "이탈리아"
       },
       "movement": {
         "ko": "Italian Baroque painting",
@@ -114,7 +121,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2610675",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2610936",
@@ -139,7 +147,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2610936",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q585437",
@@ -164,7 +173,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q585437",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2609235",
@@ -189,7 +199,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2609235",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2293936",
@@ -214,7 +225,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2293936",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q655705",
@@ -239,7 +251,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q655705",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2370247",
@@ -264,7 +277,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2370247",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q663133",
@@ -289,7 +303,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q663133",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2293905",
@@ -297,7 +312,7 @@
       "popularity": 29,
       "title": {
         "ko": "메두사",
-        "en": "Medusa"
+        "en": "메두사"
       },
       "country": {
         "ko": "",
@@ -314,7 +329,9 @@
       },
       "source": "http://www.wikidata.org/entity/Q2293905",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q745098",
@@ -339,11 +356,12 @@
       },
       "source": "http://www.wikidata.org/entity/Q745098",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2011510",
-      "year": 1593,
+      "year": 1598,
       "popularity": 26,
       "title": {
         "ko": "Bacchus",
@@ -364,7 +382,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2011510",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2627034",
@@ -389,7 +408,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2627034",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2734111",
@@ -414,7 +434,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2734111",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2734679",
@@ -439,11 +460,12 @@
       },
       "source": "http://www.wikidata.org/entity/Q2734679",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2470123",
-      "year": 1598,
+      "year": 1599,
       "popularity": 29,
       "title": {
         "ko": "Judith Beheading Holofernes",
@@ -464,7 +486,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2470123",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1122537",
@@ -489,7 +512,34 @@
       },
       "source": "http://www.wikidata.org/entity/Q1122537",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q746716",
+      "year": 1600,
+      "popularity": 20,
+      "title": {
+        "ko": "Narcissuss",
+        "en": "Narcissuss"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caravaggio%20-%20Narciso%20%281597-1599%29.jpg",
+      "description": {
+        "ko": "painting by Caravaggio",
+        "en": "painting by Caravaggio"
+      },
+      "source": "http://www.wikidata.org/entity/Q746716",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q685916",
@@ -514,7 +564,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q685916",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2338417",
@@ -522,7 +573,7 @@
       "popularity": 24,
       "title": {
         "ko": "성 마태오의 순교",
-        "en": "The Martyrdom of Saint Matthew"
+        "en": "성 마태오의 순교"
       },
       "country": {
         "ko": "",
@@ -539,11 +590,12 @@
       },
       "source": "http://www.wikidata.org/entity/Q2338417",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1213151",
-      "year": 1602,
+      "year": 1600,
       "popularity": 21,
       "title": {
         "ko": "The Entombment of Christ",
@@ -564,7 +616,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1213151",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2273517",
@@ -589,36 +642,12 @@
       },
       "source": "http://www.wikidata.org/entity/Q2273517",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q746716",
-      "year": 1597,
-      "popularity": 20,
-      "title": {
-        "ko": "Narcissuss",
-        "en": "Narcissuss"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caravaggio%20-%20Narciso%20%281597-1599%29.jpg",
-      "description": {
-        "ko": "painting by Caravaggio",
-        "en": "painting by Caravaggio"
-      },
-      "source": "http://www.wikidata.org/entity/Q746716",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2626595",
-      "year": 1607,
+      "year": 1600,
       "popularity": 18,
       "title": {
         "ko": "The Seven Works of Mercy",
@@ -639,7 +668,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2626595",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2270955",
@@ -651,7 +681,7 @@
       },
       "country": {
         "ko": "이탈리아",
-        "en": "Italy"
+        "en": "이탈리아"
       },
       "movement": {
         "ko": "바로크",
@@ -664,7 +694,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2270955",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2270291",
@@ -672,7 +703,7 @@
       "popularity": 14,
       "title": {
         "ko": "과일 바구니",
-        "en": "Basket of Fruit"
+        "en": "과일 바구니"
       },
       "country": {
         "ko": "",
@@ -689,11 +720,12 @@
       },
       "source": "http://www.wikidata.org/entity/Q2270291",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q626791",
-      "year": 1605,
+      "year": 1600,
       "popularity": 13,
       "title": {
         "ko": "Saint Jerome penitent",
@@ -714,11 +746,12 @@
       },
       "source": "http://www.wikidata.org/entity/Q626791",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1433194",
-      "year": 1609,
+      "year": 1600,
       "popularity": 13,
       "title": {
         "ko": "Nativity with Saint Francis and Saint Lawrence",
@@ -739,7 +772,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1433194",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q318947",
@@ -747,7 +781,7 @@
       "popularity": 29,
       "title": {
         "ko": "엠마오의 만찬",
-        "en": "Supper at Emmaus"
+        "en": "엠마오의 만찬"
       },
       "country": {
         "ko": "",
@@ -764,7 +798,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q318947",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q474024",
@@ -772,7 +807,7 @@
       "popularity": 28,
       "title": {
         "ko": "승리자 아모르",
-        "en": "Amor Vincit Omnia"
+        "en": "승리자 아모르"
       },
       "country": {
         "ko": "",
@@ -789,7 +824,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q474024",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2419166",
@@ -814,7 +850,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2419166",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2337873",
@@ -822,7 +859,7 @@
       "popularity": 23,
       "title": {
         "ko": "성 마태오의 영감",
-        "en": "The Inspiration of Saint Matthew"
+        "en": "성 마태오의 영감"
       },
       "country": {
         "ko": "",
@@ -839,7 +876,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2337873",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1117094",
@@ -864,7 +902,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1117094",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q597114",
@@ -879,8 +918,8 @@
         "en": ""
       },
       "movement": {
-        "ko": "바로크",
-        "en": "바로크"
+        "ko": "Italian Baroque painting",
+        "en": "Italian Baroque painting"
       },
       "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Death%20of%20the%20Virgin-Caravaggio%20%281606%29.jpg",
       "description": {
@@ -889,32 +928,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q597114",
       "verified": true,
-      "representative": true
-    },
-    {
-      "id": "wikidata-Q2284829",
-      "year": 1603,
-      "popularity": 10,
-      "title": {
-        "ko": "Sacrifice of Isaac",
-        "en": "Sacrifice of Isaac"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "Italian Baroque painting",
-        "en": "Italian Baroque painting"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sacrifice%20of%20Isaac-Caravaggio%20%28Uffizi%29.jpg",
-      "description": {
-        "ko": "painting by Caravaggio in the Uffizi",
-        "en": "painting by Caravaggio in the Uffizi"
-      },
-      "source": "http://www.wikidata.org/entity/Q2284829",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2627056",
@@ -922,7 +937,7 @@
       "popularity": 25,
       "title": {
         "ko": "골리앗의 머리를 든 다윗",
-        "en": "David with the Head of Goliath"
+        "en": "골리앗의 머리를 든 다윗"
       },
       "country": {
         "ko": "",
@@ -939,7 +954,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2627056",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2713203",
@@ -964,7 +980,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2713203",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2715302",
@@ -989,7 +1006,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2715302",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2325834",
@@ -1014,7 +1032,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2325834",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1460271",
@@ -1039,7 +1058,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1460271",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2715177",
@@ -1064,7 +1084,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2715177",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2097931",
@@ -1089,7 +1110,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2097931",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q931837",
@@ -1114,32 +1136,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q931837",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q2275353",
-      "year": 1606,
-      "popularity": 10,
-      "title": {
-        "ko": "Saint Francis in Meditation",
-        "en": "Saint Francis in Meditation"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "바로크",
-        "en": "바로크"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caravaggio%20-%20San%20Francesco%20in%20meditazione%20%281606-1607%29.jpg",
-      "description": {
-        "ko": "painting by Caravaggio (Palazzo Barberini)",
-        "en": "painting by Caravaggio (Palazzo Barberini)"
-      },
-      "source": "http://www.wikidata.org/entity/Q2275353",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q698228",
@@ -1164,7 +1162,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q698228",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q510799",
@@ -1189,7 +1188,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q510799",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2721037",
@@ -1214,7 +1214,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2721037",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2264942",
@@ -1239,7 +1240,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2264942",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2318325",
@@ -1264,7 +1266,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2318325",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2727560",
@@ -1272,7 +1275,7 @@
       "popularity": 30,
       "title": {
         "ko": "세례자 요한의 참수",
-        "en": "The Beheading of Saint John the Baptist"
+        "en": "세례자 요한의 참수"
       },
       "country": {
         "ko": "",
@@ -1289,7 +1292,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2727560",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2429754",
@@ -1297,7 +1301,7 @@
       "popularity": 15,
       "title": {
         "ko": "잠자는 큐피드",
-        "en": "Sleeping Cupid"
+        "en": "잠자는 큐피드"
       },
       "country": {
         "ko": "",
@@ -1314,7 +1318,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2429754",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1132479",
@@ -1339,62 +1344,13 @@
       },
       "source": "http://www.wikidata.org/entity/Q1132479",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q969377",
-      "year": 1609,
-      "popularity": 33,
-      "title": {
-        "ko": "성 마태오를 부르심",
-        "en": "The Calling of Saint Matthew"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caravaggio%20%E2%80%94%20The%20Calling%20of%20Saint%20Matthew.jpg",
-      "description": {
-        "ko": "카라바조의 그림(1560)",
-        "en": "카라바조의 그림(1560)"
-      },
-      "source": "http://www.wikidata.org/entity/Q969377",
-      "verified": true,
-      "representative": true
-    },
-    {
-      "id": "wikidata-Q1448728",
-      "year": 1609,
-      "popularity": 15,
-      "title": {
-        "ko": "수태고지",
-        "en": "Annunciation"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "Italian Baroque painting",
-        "en": "Italian Baroque painting"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caravaggio%20-%20The%20Annunciation.JPG",
-      "description": {
-        "ko": "oil painting by Italian painter Caravaggio",
-        "en": "oil painting by Italian painter Caravaggio"
-      },
-      "source": "http://www.wikidata.org/entity/Q1448728",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2277635",
       "year": 1609,
-      "popularity": 14,
+      "popularity": 10000,
       "title": {
         "ko": "라자로의 부활",
         "en": "The Raising of Lazarus"
@@ -1415,7 +1371,62 @@
       "source": "https://en.wikipedia.org/wiki/The_Raising_of_Lazarus_(Caravaggio)",
       "verified": true,
       "representative": true,
-      "thumbnail": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%20Caravaggio%20006.jpg?width=240"
+      "thumbnail": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%20Caravaggio%20006.jpg?width=240",
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
+    },
+    {
+      "id": "wikidata-Q969377",
+      "year": 1609,
+      "popularity": 33,
+      "title": {
+        "ko": "성 마태오를 부르심",
+        "en": "성 마태오를 부르심"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caravaggio%20%E2%80%94%20The%20Calling%20of%20Saint%20Matthew.jpg",
+      "description": {
+        "ko": "카라바조의 그림(1560)",
+        "en": "카라바조의 그림(1560)"
+      },
+      "source": "http://www.wikidata.org/entity/Q969377",
+      "verified": true,
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
+    },
+    {
+      "id": "wikidata-Q1448728",
+      "year": 1609,
+      "popularity": 16,
+      "title": {
+        "ko": "수태고지",
+        "en": "수태고지"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "Italian Baroque painting",
+        "en": "Italian Baroque painting"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caravaggio%20-%20The%20Annunciation.JPG",
+      "description": {
+        "ko": "oil painting by Italian painter Caravaggio",
+        "en": "oil painting by Italian painter Caravaggio"
+      },
+      "source": "http://www.wikidata.org/entity/Q1448728",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2318957",
@@ -1440,7 +1451,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2318957",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2327715",
@@ -1465,7 +1477,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2327715",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1132486",
@@ -1490,32 +1503,34 @@
       },
       "source": "http://www.wikidata.org/entity/Q1132486",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
-      "id": "wikidata-Q102852946",
-      "year": 1700,
-      "popularity": 23,
+      "id": "wikidata-Q2270778",
+      "year": 1610,
+      "popularity": 10,
       "title": {
-        "ko": "The Taking of Christ",
-        "en": "The Taking of Christ"
+        "ko": "성 베드로의 부인",
+        "en": "성 베드로의 부인"
       },
       "country": {
         "ko": "",
         "en": ""
       },
       "movement": {
-        "ko": "Italian Baroque painting",
-        "en": "Italian Baroque painting"
+        "ko": "바로크",
+        "en": "바로크"
       },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caravaggio%20-%20The%20Taking%20of%20Christ%20restored.jpg",
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Denial%20of%20Saint%20Peter-Caravaggio%20%281610%29.jpg",
       "description": {
-        "ko": "painting series by Caravaggio",
-        "en": "painting series by Caravaggio"
+        "ko": "painting by Caravaggio",
+        "en": "painting by Caravaggio"
       },
-      "source": "http://www.wikidata.org/entity/Q102852946",
+      "source": "http://www.wikidata.org/entity/Q2270778",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     }
   ]
 }

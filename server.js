@@ -303,6 +303,44 @@ async function artistProfileFromQid(qid, fallbackName='') {
   const nationalityEntity=related[nationalityQid], movementEntity=related[movementQid];
   return {id:`artist-${qid}`,qid,name:{ko:koreanArtistNameOverrides[qid] || artistEntity?.labels?.ko?.value || fallbackName || entityLabel(artistEntity,'ko'),en:englishArtistNameOverrides[qid] || entityLabel(artistEntity,'en')},birth:entityYear(artistEntity,'P569'),death:entityYear(artistEntity,'P570'),nationality:{ko:entityLabel(nationalityEntity,'ko'),en:entityLabel(nationalityEntity,'en')},movement:{ko:entityLabel(movementEntity,'ko'),en:entityLabel(movementEntity,'en')},works:[]};
 }
+const artistProfileLookupCache = new Map();
+function hasLocalizedText(value) {
+  return Boolean(String(value?.ko || value?.en || value || '').trim());
+}
+async function cachedArtistProfileFromQid(qid, fallbackName='') {
+  const key=String(qid || '');
+  if(!artistProfileLookupCache.has(key)) {
+    artistProfileLookupCache.set(key, artistProfileFromQid(key,fallbackName).catch(error => {
+      artistProfileLookupCache.delete(key);
+      throw error;
+    }));
+  }
+  return artistProfileLookupCache.get(key);
+}
+async function hydrateMissingArtistProfiles(payload) {
+  if(!payload || !Array.isArray(payload.artists)) return payload;
+  for(const artist of payload.artists) {
+    const qid=String(artist?.qid || '');
+    if(!/^Q\d+$/.test(qid)) continue;
+    const needsName=!hasLocalizedText(artist.name);
+    const needsNationality=!hasLocalizedText(artist.nationality);
+    const needsMovement=!hasLocalizedText(artist.movement);
+    const needsBirth=!artist.birth;
+    const needsDeath=!artist.death;
+    if(!needsName && !needsNationality && !needsMovement && !needsBirth && !needsDeath) continue;
+    try {
+      const profile=await cachedArtistProfileFromQid(qid,artist.name?.ko || artist.name?.en || '');
+      if(needsName && hasLocalizedText(profile.name)) artist.name=profile.name;
+      if(needsNationality && hasLocalizedText(profile.nationality)) artist.nationality=profile.nationality;
+      if(needsMovement && hasLocalizedText(profile.movement)) artist.movement=profile.movement;
+      if(needsBirth && profile.birth) artist.birth=profile.birth;
+      if(needsDeath && profile.death) artist.death=profile.death;
+    } catch (_) {
+      /* Saving local edits should not fail just because Wikidata is temporarily unavailable. */
+    }
+  }
+  return payload;
+}
 function simpleHash(value='') { let hash=2166136261; for (const ch of String(value)) { hash^=ch.charCodeAt(0); hash=Math.imul(hash,16777619); } return (hash>>>0).toString(36); }
 function htmlDecode(value='') {
   const named={nbsp:' ',amp:'&',lt:'<',gt:'>',quot:'"',apos:"'"};
@@ -832,6 +870,7 @@ async function writeArtistsFileNow(payload, actor='') {
   let previous={metadata:{}};
   try { previous=JSON.parse(await fs.readFile(artistsFile,'utf8')); } catch(error) { if(error.code !== 'ENOENT') throw error; }
   const previousRevision=Math.max(0,Number(previous?.metadata?.revision) || 0);
+  payload=await hydrateMissingArtistProfiles(payload);
   payload=normalizeArtistsPayload(payload,{actor,touch:true});
   payload.metadata={...payload.metadata,revision:previousRevision+1};
   const validation=validateArtistsPayload(payload);
@@ -1146,7 +1185,7 @@ async function techniqueTitleLinkButtonIssues() {
 }
 async function movementDocumentImageIssues() {
   const issues=[];
-  const exists=file=>fs.access(file).then(()=>true).catch(()=>false);
+  const readable=file=>fs.open(file,'r').then(handle=>handle.close().then(()=>true,()=>true)).catch(()=>false);
   const entries=await fs.readdir(path.join(root,'data','미술사조'),{withFileTypes:true}).catch(()=>[]);
   for(const entry of entries) {
     if(!entry.isFile() || !/\.html?$/i.test(entry.name)) continue;
@@ -1159,10 +1198,10 @@ async function movementDocumentImageIssues() {
       const target=path.resolve(path.dirname(file),clean);
       const relative=path.relative(root,target).replace(/\\/g,'/');
       const outside=!relative || relative.startsWith('..') || path.isAbsolute(relative);
-      const missing=outside || !await exists(target);
+      const missing=outside || !await readable(target);
       const unstable=/^(?:\.\.\/)?(?:thumbnails|high-resolution)\//.test(clean) || /^data\/(?:thumbnails|high-resolution)\//.test(clean);
       if(missing || unstable) {
-        const reason=missing ? '이미지 파일 누락' : 'Git에 올리지 않는 이미지 폴더 직접 참조';
+        const reason=missing ? '이미지 파일 누락 또는 읽기 불가' : 'Git에 올리지 않는 이미지 폴더 직접 참조';
         issues.push({artist:'미술사조 HTML',artistId:entry.name,work:`${reason}: ${src}`,workId:`data/미술사조/${entry.name}`});
       }
     }
@@ -1171,7 +1210,7 @@ async function movementDocumentImageIssues() {
 }
 async function displayDataImageIssues() {
   const issues=[];
-  const exists=file=>fs.access(file).then(()=>true).catch(()=>false);
+  const readable=file=>fs.open(file,'r').then(handle=>handle.close().then(()=>true,()=>true)).catch(()=>false);
   const displayFiles=['techniques.json','featured-works.json','topics.json'];
   const imageKeys=new Set(['image','thumbnail']);
   const walk=async (node,fileName,trail=[]) => {
@@ -1192,10 +1231,10 @@ async function displayDataImageIssues() {
           const target=path.resolve(root,clean);
           const relative=path.relative(root,target).replace(/\\/g,'/');
           const outside=!relative || relative.startsWith('..') || path.isAbsolute(relative);
-          missing=outside || !await exists(target);
+          missing=outside || !await readable(target);
         }
         if(external || unstable || missing) {
-          const reason=external ? '외부 이미지 URL 직접 참조' : (missing ? '이미지 파일 누락' : '캐시 이미지 폴더 직접 참조');
+          const reason=external ? '외부 이미지 URL 직접 참조' : (missing ? '이미지 파일 누락 또는 읽기 불가' : '캐시 이미지 폴더 직접 참조');
           issues.push({artist:'표시 데이터 이미지',artistId:fileName,work:`${reason}: ${nextTrail.join('.')} → ${src}`,workId:`data/${fileName}`});
         }
       }

@@ -1,6 +1,6 @@
 {
-  "schema": 18,
-  "artistId": "artist-Q5599",
+  "schema": 20,
+  "artistId": "artist-url-1786879941678",
   "qid": "Q5599",
   "artist": {
     "name": {
@@ -12,13 +12,17 @@
     "nationality": {
       "ko": "스페인령 네덜란드",
       "en": "Spanish Netherlands"
+    },
+    "movement": {
+      "ko": "플랑드르 바로크 회화",
+      "en": "Flemish Baroque painting"
     }
   },
-  "fetchedAt": "2026-08-11T05:38:09.851Z",
+  "fetchedAt": "2026-08-22T20:51:10.793Z",
   "works": [
     {
       "id": "wikipedia-Q5599-6",
-      "year": 1618,
+      "year": null,
       "title": {
         "ko": "The Rape of the Daughters of Leucippus , Alte Pinakothek",
         "en": "The Rape of the Daughters of Leucippus , Alte Pinakothek"
@@ -38,12 +42,12 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": true,
-      "popularity": 993
+      "popularity": 993,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-33",
-      "year": 1620,
+      "year": null,
       "title": {
         "ko": "King Ixion fooled by Juno , whom he wanted to seduce , Louvre",
         "en": "King Ixion fooled by Juno , whom he wanted to seduce , Louvre"
@@ -63,12 +67,12 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 966
+      "popularity": 966,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-43",
-      "year": 1615,
+      "year": null,
       "title": {
         "ko": "Jan Brueghel the Elder and Peter Paul Rubens, The Garden of Eden with the Fall of Man , Mauritshuis , The Hague",
         "en": "Jan Brueghel the Elder and Peter Paul Rubens, The Garden of Eden with the Fall of Man , Mauritshuis , The Hague"
@@ -88,12 +92,12 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 956
+      "popularity": 956,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-45",
-      "year": 1616,
+      "year": null,
       "title": {
         "ko": "The Holy Trinity , Kunstmuseum Basel",
         "en": "The Holy Trinity , Kunstmuseum Basel"
@@ -113,12 +117,12 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 954
+      "popularity": 954,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-46",
-      "year": 1618,
+      "year": null,
       "title": {
         "ko": "Christ Triumphant over Sin and Death , Musée des Beaux-Arts de Strasbourg",
         "en": "Christ Triumphant over Sin and Death , Musée des Beaux-Arts de Strasbourg"
@@ -138,8 +142,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 953
+      "popularity": 953,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-50",
@@ -163,8 +167,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 949
+      "popularity": 949,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-1",
@@ -188,8 +192,9 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": true,
-      "popularity": 998
+      "popularity": 998,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikipedia-Q5599-2",
@@ -213,15 +218,16 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": true,
-      "popularity": 997
+      "popularity": 997,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikipedia-Q5599-3",
       "year": 1606,
       "title": {
-        "ko": "The Judgement of Paris , c. &#8201;1606 , Museo del Prado",
-        "en": "The Judgement of Paris , c. &#8201;1606 , Museo del Prado"
+        "ko": "The Judgement of Paris , c. 1606 , Museo del Prado",
+        "en": "The Judgement of Paris , c. 1606 , Museo del Prado"
       },
       "country": {
         "ko": "스페인령 네덜란드",
@@ -238,8 +244,9 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": true,
-      "popularity": 996
+      "popularity": 996,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikipedia-Q5599-49",
@@ -263,8 +270,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 950
+      "popularity": 950,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-42",
@@ -288,8 +295,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 957
+      "popularity": 957,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q571416",
@@ -297,7 +304,7 @@
       "popularity": 18,
       "title": {
         "ko": "인동덩굴 그늘에서 루벤스와 이사벨라 브란트",
-        "en": "Rubens and Isabella Brant in the honeysuckle bower"
+        "en": "인동덩굴 그늘에서 루벤스와 이사벨라 브란트"
       },
       "country": {
         "ko": "",
@@ -314,7 +321,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q571416",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2594673",
@@ -339,39 +347,15 @@
       },
       "source": "http://www.wikidata.org/entity/Q2594673",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q2653851",
-      "year": 1609,
-      "popularity": 24,
-      "title": {
-        "ko": "십자가를 세움",
-        "en": "The Elevation of the Cross"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "바로크",
-        "en": "바로크"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Peter%20Paul%20Rubens%20-%20Raising%20of%20the%20Cross%20%28Cathedral%20of%20Antwerp%29.jpg",
-      "description": {
-        "ko": "triptych by Peter Paul Rubens in Cathedral of Our Lady, Antwerp",
-        "en": "triptych by Peter Paul Rubens in Cathedral of Our Lady, Antwerp"
-      },
-      "source": "http://www.wikidata.org/entity/Q2653851",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-22",
       "year": 1611,
       "title": {
-        "ko": "Sleeping Silenus , collaboration with David Rijckaert II , c. &#8201;1611 , Academy of Fine Arts Vienna",
-        "en": "Sleeping Silenus , collaboration with David Rijckaert II , c. &#8201;1611 , Academy of Fine Arts Vienna"
+        "ko": "Sleeping Silenus , collaboration with David Rijckaert II , c. 1611 , Academy of Fine Arts Vienna",
+        "en": "Sleeping Silenus , collaboration with David Rijckaert II , c. 1611 , Academy of Fine Arts Vienna"
       },
       "country": {
         "ko": "스페인령 네덜란드",
@@ -388,8 +372,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 977
+      "popularity": 977,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2667782",
@@ -414,7 +398,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2667782",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1247103",
@@ -439,7 +424,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1247103",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-23",
@@ -463,8 +449,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 976
+      "popularity": 976,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-47",
@@ -488,8 +474,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 952
+      "popularity": 952,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-4",
@@ -513,8 +499,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": true,
-      "popularity": 995
+      "popularity": 995,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-24",
@@ -538,15 +524,15 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 975
+      "popularity": 975,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-44",
       "year": 1613,
       "title": {
-        "ko": "Lot and His Daughters , c. &#8201;1613–14",
-        "en": "Lot and His Daughters , c. &#8201;1613–14"
+        "ko": "Lot and His Daughters , c. 1613–14",
+        "en": "Lot and His Daughters , c. 1613–14"
       },
       "country": {
         "ko": "스페인령 네덜란드",
@@ -563,8 +549,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 955
+      "popularity": 955,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-8",
@@ -588,8 +574,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": true,
-      "popularity": 991
+      "popularity": 991,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-15",
@@ -613,8 +599,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 984
+      "popularity": 984,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3940915",
@@ -639,14 +625,41 @@
       },
       "source": "http://www.wikidata.org/entity/Q3940915",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3898507",
+      "year": 1615,
+      "popularity": 13,
+      "title": {
+        "ko": "에덴 동산과 인간의 타락",
+        "en": "에덴 동산과 인간의 타락"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20Brueghel%20de%20Oude%20en%20Peter%20Paul%20Rubens%20-%20Het%20aards%20paradijs%20met%20de%20zondeval%20van%20Adam%20en%20Eva.jpg",
+      "description": {
+        "ko": "painting by Peter Paul Rubens and Jan Brueghel the Elder",
+        "en": "painting by Peter Paul Rubens and Jan Brueghel the Elder"
+      },
+      "source": "http://www.wikidata.org/entity/Q3898507",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-5",
       "year": 1617,
       "title": {
-        "ko": "Diana Returning from the Hunt , c. &#8201;1617 , oil on canvas, Hessisches Landesmuseum Darmstadt , collaboration with Snyders",
-        "en": "Diana Returning from the Hunt , c. &#8201;1617 , oil on canvas, Hessisches Landesmuseum Darmstadt , collaboration with Snyders"
+        "ko": "Diana Returning from the Hunt , c. 1617 , oil on canvas, Hessisches Landesmuseum Darmstadt , collaboration with Snyders",
+        "en": "Diana Returning from the Hunt , c. 1617 , oil on canvas, Hessisches Landesmuseum Darmstadt , collaboration with Snyders"
       },
       "country": {
         "ko": "스페인령 네덜란드",
@@ -663,15 +676,15 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": true,
-      "popularity": 994
+      "popularity": 994,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-11",
       "year": 1617,
       "title": {
-        "ko": "Portrait of George Villiers, 1st Duke of Buckingham , c. &#8201;1617–1628 , Pollok House",
-        "en": "Portrait of George Villiers, 1st Duke of Buckingham , c. &#8201;1617–1628 , Pollok House"
+        "ko": "Portrait of George Villiers, 1st Duke of Buckingham , c. 1617–1628 , Pollok House",
+        "en": "Portrait of George Villiers, 1st Duke of Buckingham , c. 1617–1628 , Pollok House"
       },
       "country": {
         "ko": "스페인령 네덜란드",
@@ -688,8 +701,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": true,
-      "popularity": 988
+      "popularity": 988,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-16",
@@ -713,15 +726,15 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 983
+      "popularity": 983,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-51",
       "year": 1617,
       "title": {
-        "ko": "Man in Korean Costume , c. &#8201;1617 , black chalk with touches of red chalk, J. Paul Getty Museum",
-        "en": "Man in Korean Costume , c. &#8201;1617 , black chalk with touches of red chalk, J. Paul Getty Museum"
+        "ko": "Man in Korean Costume , c. 1617 , black chalk with touches of red chalk, J. Paul Getty Museum",
+        "en": "Man in Korean Costume , c. 1617 , black chalk with touches of red chalk, J. Paul Getty Museum"
       },
       "country": {
         "ko": "스페인령 네덜란드",
@@ -738,8 +751,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 948
+      "popularity": 948,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-17",
@@ -763,8 +776,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 982
+      "popularity": 982,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-25",
@@ -788,58 +801,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 974
-    },
-    {
-      "id": "wikidata-Q644936",
-      "year": 1618,
-      "popularity": 21,
-      "title": {
-        "ko": "레우키포스 딸들의 납치",
-        "en": "The Rape of the Daughters of Leucippus"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "바로크",
-        "en": "바로크"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Peter%20Paul%20Rubens%20-%20The%20Rape%20of%20the%20Daughters%20of%20Leucippus.jpg",
-      "description": {
-        "ko": "painting by Peter Paul Rubens and Jan Wildens, Alte Pinakothek",
-        "en": "painting by Peter Paul Rubens and Jan Wildens, Alte Pinakothek"
-      },
-      "source": "http://www.wikidata.org/entity/Q644936",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q647202",
-      "year": 1618,
-      "popularity": 15,
-      "title": {
-        "ko": "Head of Medusa",
-        "en": "Head of Medusa"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "Flemish Baroque painting",
-        "en": "Flemish Baroque painting"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rubens%20Medusa.jpeg",
-      "description": {
-        "ko": "painting by Peter Paul Rubens in Vienna, Kunsthistorisches Museum Wien",
-        "en": "painting by Peter Paul Rubens in Vienna, Kunsthistorisches Museum Wien"
-      },
-      "source": "http://www.wikidata.org/entity/Q647202",
-      "verified": true,
-      "representative": false
+      "popularity": 974,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-13",
@@ -863,8 +826,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": true,
-      "popularity": 986
+      "popularity": 986,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-52",
@@ -888,15 +851,15 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 947
+      "popularity": 947,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-26",
       "year": 1622,
       "title": {
-        "ko": "Perseus and Andromeda , c. &#8201;1622 , Hermitage Museum , Saint Petersburg",
-        "en": "Perseus and Andromeda , c. &#8201;1622 , Hermitage Museum , Saint Petersburg"
+        "ko": "Perseus and Andromeda , c. 1622 , Hermitage Museum , Saint Petersburg",
+        "en": "Perseus and Andromeda , c. 1622 , Hermitage Museum , Saint Petersburg"
       },
       "country": {
         "ko": "스페인령 네덜란드",
@@ -913,15 +876,41 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
+      "popularity": 973,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q2558141",
+      "year": 1622,
+      "popularity": 13,
+      "title": {
+        "ko": "Marie de' Medici cycle",
+        "en": "Marie de' Medici cycle"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Richelieu%20wing%20-%20Louvre.jpg",
+      "description": {
+        "ko": "series of twenty-four paintings by Peter Paul Rubens commissioned by Marie de' Medici",
+        "en": "series of twenty-four paintings by Peter Paul Rubens commissioned by Marie de' Medici"
+      },
+      "source": "http://www.wikidata.org/entity/Q2558141",
+      "verified": true,
       "representative": false,
-      "popularity": 973
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-53",
       "year": 1623,
       "title": {
-        "ko": "Possibly Rubens's daughter Clara Serena , c. &#8201;1623 , Albertina",
-        "en": "Possibly Rubens's daughter Clara Serena , c. &#8201;1623 , Albertina"
+        "ko": "Possibly Rubens's daughter Clara Serena , c. 1623 , Albertina",
+        "en": "Possibly Rubens's daughter Clara Serena , c. 1623 , Albertina"
       },
       "country": {
         "ko": "스페인령 네덜란드",
@@ -938,15 +927,15 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 946
+      "popularity": 946,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-10",
       "year": 1627,
       "title": {
-        "ko": "Portrait of Ambrogio Spinola , c. &#8201;1627 , National Gallery Prague",
-        "en": "Portrait of Ambrogio Spinola , c. &#8201;1627 , National Gallery Prague"
+        "ko": "Portrait of Ambrogio Spinola , c. 1627 , National Gallery Prague",
+        "en": "Portrait of Ambrogio Spinola , c. 1627 , National Gallery Prague"
       },
       "country": {
         "ko": "스페인령 네덜란드",
@@ -963,15 +952,15 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": true,
-      "popularity": 989
+      "popularity": 989,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-9",
       "year": 1628,
       "title": {
-        "ko": "Portrait of King Philip IV of Spain , c. &#8201;1628 –29",
-        "en": "Portrait of King Philip IV of Spain , c. &#8201;1628 –29"
+        "ko": "Portrait of King Philip IV of Spain , c. 1628 –29",
+        "en": "Portrait of King Philip IV of Spain , c. 1628 –29"
       },
       "country": {
         "ko": "스페인령 네덜란드",
@@ -988,8 +977,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": true,
-      "popularity": 990
+      "popularity": 990,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-27",
@@ -1013,8 +1002,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 972
+      "popularity": 972,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3605057",
@@ -1022,7 +1011,7 @@
       "popularity": 15,
       "title": {
         "ko": "아담과 하와",
-        "en": "The Fall of Man"
+        "en": "아담과 하와"
       },
       "country": {
         "ko": "",
@@ -1039,7 +1028,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3605057",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-29",
@@ -1063,15 +1053,15 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 970
+      "popularity": 970,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-54",
       "year": 1629,
       "title": {
-        "ko": "Young Woman with Folded Hands , c. &#8201;1629–30 , red and black chalk, heightened with white, Museum Boijmans Van Beuningen",
-        "en": "Young Woman with Folded Hands , c. &#8201;1629–30 , red and black chalk, heightened with white, Museum Boijmans Van Beuningen"
+        "ko": "Young Woman with Folded Hands , c. 1629–30 , red and black chalk, heightened with white, Museum Boijmans Van Beuningen",
+        "en": "Young Woman with Folded Hands , c. 1629–30 , red and black chalk, heightened with white, Museum Boijmans Van Beuningen"
       },
       "country": {
         "ko": "스페인령 네덜란드",
@@ -1088,15 +1078,15 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 945
+      "popularity": 945,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-36",
       "year": 1630,
       "title": {
-        "ko": "Helena Fourment in Wedding Dress , c. &#8201;1630 , Alte Pinakothek",
-        "en": "Helena Fourment in Wedding Dress , c. &#8201;1630 , Alte Pinakothek"
+        "ko": "Helena Fourment in Wedding Dress , c. 1630 , Alte Pinakothek",
+        "en": "Helena Fourment in Wedding Dress , c. 1630 , Alte Pinakothek"
       },
       "country": {
         "ko": "스페인령 네덜란드",
@@ -1113,8 +1103,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 963
+      "popularity": 963,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2268524",
@@ -1122,7 +1112,7 @@
       "popularity": 18,
       "title": {
         "ko": "삼미신",
-        "en": "The Three Graces"
+        "en": "삼미신"
       },
       "country": {
         "ko": "",
@@ -1139,14 +1129,15 @@
       },
       "source": "http://www.wikidata.org/entity/Q2268524",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-12",
       "year": 1634,
       "title": {
-        "ko": "The Portrait of Nicolaas Rubens , c. &#8201;1634–1636 , Mimara Museum",
-        "en": "The Portrait of Nicolaas Rubens , c. &#8201;1634–1636 , Mimara Museum"
+        "ko": "The Portrait of Nicolaas Rubens , c. 1634–1636 , Mimara Museum",
+        "en": "The Portrait of Nicolaas Rubens , c. 1634–1636 , Mimara Museum"
       },
       "country": {
         "ko": "스페인령 네덜란드",
@@ -1163,8 +1154,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": true,
-      "popularity": 987
+      "popularity": 987,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-18",
@@ -1188,15 +1179,15 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 981
+      "popularity": 981,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-19",
       "year": 1635,
       "title": {
-        "ko": "A View of Het Steen in the Early Morning , c. &#8201;1635–1638 , National Gallery London",
-        "en": "A View of Het Steen in the Early Morning , c. &#8201;1635–1638 , National Gallery London"
+        "ko": "A View of Het Steen in the Early Morning , c. 1635–1638 , National Gallery London",
+        "en": "A View of Het Steen in the Early Morning , c. 1635–1638 , National Gallery London"
       },
       "country": {
         "ko": "스페인령 네덜란드",
@@ -1213,8 +1204,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 980
+      "popularity": 980,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-30",
@@ -1238,8 +1229,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 969
+      "popularity": 969,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-32",
@@ -1263,8 +1254,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 967
+      "popularity": 967,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-38",
@@ -1288,8 +1279,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 961
+      "popularity": 961,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-20",
@@ -1313,8 +1304,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 979
+      "popularity": 979,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-37",
@@ -1338,8 +1329,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 962
+      "popularity": 962,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-40",
@@ -1363,8 +1354,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 959
+      "popularity": 959,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q2273452",
@@ -1389,7 +1380,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q2273452",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-39",
@@ -1413,15 +1405,41 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
+      "popularity": 960,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q3885854",
+      "year": 1637,
+      "popularity": 13,
+      "title": {
+        "ko": "The Origin of the Milky Way",
+        "en": "The Origin of the Milky Way"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Peter%20Paul%20Rubens%20-%20The%20Birth%20of%20the%20Milky%20Way%2C%201636-1637.jpg",
+      "description": {
+        "ko": "painting by Peter Paul Rubens",
+        "en": "painting by Peter Paul Rubens"
+      },
+      "source": "http://www.wikidata.org/entity/Q3885854",
+      "verified": true,
       "representative": false,
-      "popularity": 960
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3788158",
       "year": 1638,
       "popularity": 15,
       "title": {
-        "ko": "Helena Fourment in a Fur Robe",
+        "ko": "헷 펠스켄",
         "en": "Helena Fourment in a Fur Robe"
       },
       "country": {
@@ -1439,7 +1457,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3788158",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-28",
@@ -1463,15 +1482,15 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 971
+      "popularity": 971,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-31",
       "year": 1639,
       "title": {
-        "ko": "Diana and her Nymphs surprised by the Fauns , c. &#8201;1639–40 , Museo del Prado",
-        "en": "Diana and her Nymphs surprised by the Fauns , c. &#8201;1639–40 , Museo del Prado"
+        "ko": "Diana and her Nymphs surprised by the Fauns , c. 1639–40 , Museo del Prado",
+        "en": "Diana and her Nymphs surprised by the Fauns , c. 1639–40 , Museo del Prado"
       },
       "country": {
         "ko": "스페인령 네덜란드",
@@ -1488,8 +1507,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 968
+      "popularity": 968,
+      "movementContribution": false
     },
     {
       "id": "wikipedia-Q5599-35",
@@ -1513,8 +1532,8 @@
       },
       "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
       "verified": true,
-      "representative": false,
-      "popularity": 964
+      "popularity": 964,
+      "movementContribution": false
     }
   ]
 }

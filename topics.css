@@ -24,7 +24,7 @@ body {
 
 .topics-shell {
   display: grid;
-  grid-template-columns: clamp(215px, 18vw, 260px) minmax(0, 1fr);
+  grid-template-columns: var(--topic-sidebar-width, clamp(215px, 18vw, 260px)) minmax(0, 1fr);
   height: 100vh;
   min-height: 0;
   overflow: hidden;
@@ -37,13 +37,49 @@ body {
   grid-template-rows: auto auto auto auto minmax(0, 1fr) auto;
   width: 100%;
   min-width: 215px;
-  max-width: 260px;
+  max-width: none;
   height: 100vh;
   min-height: 0;
   overflow: hidden;
   padding: 26px 14px 20px;
   border-right: 1px solid #d7ddd4;
   background: #f4f6f1;
+}
+
+.sidebar-resize-handle {
+  position: absolute;
+  z-index: 40;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 12px;
+  cursor: ew-resize;
+  touch-action: none;
+}
+
+.sidebar-resize-handle::after {
+  position: absolute;
+  top: 50%;
+  right: 3px;
+  width: 2px;
+  height: 58px;
+  border-radius: 999px;
+  background: var(--orange);
+  content: '';
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: opacity .15s;
+}
+
+.sidebar-resize-handle:hover::after,
+.sidebar-resize-handle:active::after,
+.sidebar-resizing .sidebar-resize-handle::after {
+  opacity: .72;
+}
+
+.sidebar-resizing {
+  cursor: ew-resize;
+  user-select: none;
 }
 
 .topic-brand {
@@ -435,6 +471,7 @@ body {
     min-height: 0;
     padding: 22px 20px 18px;
   }
+  .sidebar-resize-handle { display: none; }
   #topics { max-height: 248px; }
   .topics-shell main {
     height: auto;

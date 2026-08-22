@@ -1,5 +1,5 @@
 {
-  "schema": 18,
+  "schema": 20,
   "artistId": "artist-Q213163",
   "qid": "Q213163",
   "artist": {
@@ -12,35 +12,14 @@
     "nationality": {
       "ko": "프랑스",
       "en": "France"
+    },
+    "movement": {
+      "ko": "로코코",
+      "en": "Rococo"
     }
   },
-  "fetchedAt": "2026-08-11T04:59:50.625Z",
+  "fetchedAt": "2026-08-22T20:56:08.063Z",
   "works": [
-    {
-      "id": "wikidata-Q23037740",
-      "year": 1771,
-      "popularity": 1,
-      "title": {
-        "ko": "Self-portrait",
-        "en": "Self-portrait"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Elisabeth%20Vig%C3%A9e-Lebrun%20-%20Portrait%20de%20jeune%20fille.jpg",
-      "description": {
-        "ko": "pastel by Élisabeth Vigée Le Brun",
-        "en": "pastel by Élisabeth Vigée Le Brun"
-      },
-      "source": "http://www.wikidata.org/entity/Q23037740",
-      "verified": true,
-      "representative": false
-    },
     {
       "id": "wikidata-Q135659123",
       "year": 1774,
@@ -51,7 +30,7 @@
       },
       "country": {
         "ko": "프랑스",
-        "en": "France"
+        "en": "프랑스"
       },
       "movement": {
         "ko": "",
@@ -64,7 +43,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q135659123",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q97653557",
@@ -89,7 +69,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q97653557",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q68372796",
@@ -114,7 +95,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q68372796",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q19273465",
@@ -139,7 +121,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q19273465",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q27981371",
@@ -164,15 +147,16 @@
       },
       "source": "http://www.wikidata.org/entity/Q27981371",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q114744029",
       "year": 1779,
       "popularity": 1,
       "title": {
-        "ko": "Portrait de Madame du Cluzel",
-        "en": "Portrait de Madame du Cluzel"
+        "ko": "Q114744029",
+        "en": "Q114744029"
       },
       "country": {
         "ko": "",
@@ -189,7 +173,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q114744029",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q19006513",
@@ -214,7 +199,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q19006513",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q135917141",
@@ -239,87 +225,13 @@
       },
       "source": "http://www.wikidata.org/entity/Q135917141",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q20810265",
-      "year": 1781,
-      "popularity": 1,
-      "title": {
-        "ko": "Portrait of Madame Du Barry",
-        "en": "Portrait of Madame Du Barry"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%C3%89lisabeth%20Vig%C3%A9e-Lebrun%20-%20Portrait%20of%20Madame%20Du%20Barry.jpg",
-      "description": {
-        "ko": "painting by Louise-Elisabeth Vigée-Lebrun (1781 portrait of Mme du Barry)",
-        "en": "painting by Louise-Elisabeth Vigée-Lebrun (1781 portrait of Mme du Barry)"
-      },
-      "source": "http://www.wikidata.org/entity/Q20810265",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q23037735",
-      "year": 1781,
-      "popularity": 1,
-      "title": {
-        "ko": "Self-portrait",
-        "en": "Self-portrait"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Elisabeth%20Louise%20Vig%C3%A9e%20Le%20Brun%20-%20Self-Portrait%20-%20Google%20Art%20Project.jpg",
-      "description": {
-        "ko": "painting by Élisabeth Vigée Le Brun, Kimbell Art Museum",
-        "en": "painting by Élisabeth Vigée Le Brun, Kimbell Art Museum"
-      },
-      "source": "http://www.wikidata.org/entity/Q23037735",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q105731234",
-      "year": 1781,
-      "popularity": 1,
-      "title": {
-        "ko": "Juno Borrowing the Belt of Venus",
-        "en": "Juno Borrowing the Belt of Venus"
-      },
-      "country": {
-        "ko": "프랑스",
-        "en": "France"
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Elisabeth%20Louise%20Vig%C3%A9e-Le%20Brun%20-%20Juno%20Borrowing%20the%20Belt%20of%20Venus%2C%201781.jpg",
-      "description": {
-        "ko": "painting by Élisabeth Vigée-Lebrun",
-        "en": "painting by Élisabeth Vigée-Lebrun"
-      },
-      "source": "http://www.wikidata.org/entity/Q105731234",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q18719540",
       "year": 1782,
-      "popularity": 8,
+      "popularity": 9,
       "title": {
         "ko": "Self Portrait in a Straw Hat",
         "en": "Self Portrait in a Straw Hat"
@@ -339,7 +251,9 @@
       },
       "source": "http://www.wikidata.org/entity/Q18719540",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q21001124",
@@ -364,7 +278,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q21001124",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3937618",
@@ -389,7 +304,9 @@
       },
       "source": "http://www.wikidata.org/entity/Q3937618",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q19905205",
@@ -414,7 +331,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q19905205",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q107053326",
@@ -439,7 +357,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q107053326",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q65097412",
@@ -464,7 +383,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q65097412",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q28016074",
@@ -489,7 +409,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q28016074",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q115247688",
@@ -514,57 +435,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q115247688",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q59339702",
-      "year": 1784,
-      "popularity": 1,
-      "title": {
-        "ko": "Portrait of Madame Royale and Louis Joseph, Dauphin of France",
-        "en": "Portrait of Madame Royale and Louis Joseph, Dauphin of France"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Marie%20Antoinette%20Children.jpg",
-      "description": {
-        "ko": "painting by Louise Élisabeth Vigée Le Brun",
-        "en": "painting by Louise Élisabeth Vigée Le Brun"
-      },
-      "source": "http://www.wikidata.org/entity/Q59339702",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q62272805",
-      "year": 1784,
-      "popularity": 1,
-      "title": {
-        "ko": "Portrait of Joseph Hyacinthe François de Paule de Rigaud, Comte de Vaudreuil",
-        "en": "Portrait of Joseph Hyacinthe François de Paule de Rigaud, Comte de Vaudreuil"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Comte%20de%20Vaudreuil2.jpg",
-      "description": {
-        "ko": "painting by Elisabeth Louise Vigée-LeBrun",
-        "en": "painting by Elisabeth Louise Vigée-LeBrun"
-      },
-      "source": "http://www.wikidata.org/entity/Q62272805",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q15723876",
@@ -576,7 +448,7 @@
       },
       "country": {
         "ko": "프랑스",
-        "en": "France"
+        "en": "프랑스"
       },
       "movement": {
         "ko": "",
@@ -589,7 +461,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q15723876",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q104773738",
@@ -614,32 +487,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q104773738",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q107124863",
-      "year": 1789,
-      "popularity": 1,
-      "title": {
-        "ko": "Portrait of Luísa Todi by Élisabeth Louise Vigée-Lebrun",
-        "en": "Portrait of Luísa Todi by Élisabeth Louise Vigée-Lebrun"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Madame%20Lebrun%20-%20Lu%C3%ADsa%20Todi.png",
-      "description": {
-        "ko": "",
-        "en": ""
-      },
-      "source": "http://www.wikidata.org/entity/Q107124863",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q19005175",
@@ -664,7 +513,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q19005175",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q19005132",
@@ -689,15 +539,16 @@
       },
       "source": "http://www.wikidata.org/entity/Q19005132",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q96634683",
       "year": 1786,
       "popularity": 1,
       "title": {
-        "ko": "Ritratto di Maria Antonietta a mezzo busto",
-        "en": "Ritratto di Maria Antonietta a mezzo busto"
+        "ko": "Q96634683",
+        "en": "Q96634683"
       },
       "country": {
         "ko": "",
@@ -714,7 +565,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q96634683",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3937621",
@@ -739,32 +591,9 @@
       },
       "source": "http://www.wikidata.org/entity/Q3937621",
       "verified": true,
-      "representative": true
-    },
-    {
-      "id": "wikidata-Q9557962",
-      "year": 1787,
-      "popularity": 2,
-      "title": {
-        "ko": "The Marquise de Pezay, and the Marquise de Rougé with Her Sons Alexis and Adrien",
-        "en": "The Marquise de Pezay, and the Marquise de Rougé with Her Sons Alexis and Adrien"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Elisabeth-Louise%20Vig%C3%A9e%20Le%20Brun%20-%20The%20Marquise%20de%20Pezay%2C%20and%20the%20Marquise%20de%20Roug%C3%A9%20with%20Her%20Sons%20Alexis%20and%20Adrien%20-%20Google%20Art%20Project.jpg",
-      "description": {
-        "ko": "painting by Elisabeth Louise Vigee Le Brun",
-        "en": "painting by Elisabeth Louise Vigee Le Brun"
-      },
-      "source": "http://www.wikidata.org/entity/Q9557962",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q71828444",
@@ -789,7 +618,34 @@
       },
       "source": "http://www.wikidata.org/entity/Q71828444",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q9557962",
+      "year": 1787,
+      "popularity": 2,
+      "title": {
+        "ko": "The Marquise de Pezay, and the Marquise de Rougé with Her Sons Alexis and Adrien",
+        "en": "The Marquise de Pezay, and the Marquise de Rougé with Her Sons Alexis and Adrien"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Elisabeth-Louise%20Vig%C3%A9e%20Le%20Brun%20-%20The%20Marquise%20de%20Pezay%2C%20and%20the%20Marquise%20de%20Roug%C3%A9%20with%20Her%20Sons%20Alexis%20and%20Adrien%20-%20Google%20Art%20Project.jpg",
+      "description": {
+        "ko": "painting by Elisabeth Louise Vigee Le Brun",
+        "en": "painting by Elisabeth Louise Vigee Le Brun"
+      },
+      "source": "http://www.wikidata.org/entity/Q9557962",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q18719530",
@@ -814,7 +670,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q18719530",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q19273481",
@@ -839,7 +696,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q19273481",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q61041226",
@@ -864,7 +722,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q61041226",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q19273424",
@@ -889,7 +748,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q19273424",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q19912372",
@@ -914,7 +774,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q19912372",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q23653935",
@@ -939,7 +800,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q23653935",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q61473576",
@@ -964,7 +826,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q61473576",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q19005301",
@@ -989,7 +852,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q19005301",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q135917349",
@@ -1014,7 +878,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q135917349",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q18923677",
@@ -1039,32 +904,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q18923677",
       "verified": true,
-      "representative": true
-    },
-    {
-      "id": "wikidata-Q19361572",
-      "year": 1790,
-      "popularity": 6,
-      "title": {
-        "ko": "Self-portrait of Élisabeth Louise Vigée Le Brun",
-        "en": "Self-portrait of Élisabeth Louise Vigée Le Brun"
-      },
-      "country": {
-        "ko": "교황령",
-        "en": "Papal States"
-      },
-      "movement": {
-        "ko": "Rococo painting",
-        "en": "Rococo painting"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Self-portrait%20%28by%20Elisabeth%20Vig%C3%A9e-Lebrun%29%20%E2%80%93%20Galleria%20degli%20Uffizi%2C%20Florence.jpg",
-      "description": {
-        "ko": "painting by Elisabeth Vigée-Le Brun",
-        "en": "painting by Elisabeth Vigée-Le Brun"
-      },
-      "source": "http://www.wikidata.org/entity/Q19361572",
-      "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q41433015",
@@ -1089,7 +930,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q41433015",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q88966144",
@@ -1114,7 +956,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q88966144",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q71828579",
@@ -1139,7 +982,34 @@
       },
       "source": "http://www.wikidata.org/entity/Q71828579",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q19361572",
+      "year": 1790,
+      "popularity": 6,
+      "title": {
+        "ko": "Self-portrait of Élisabeth Louise Vigée Le Brun",
+        "en": "Self-portrait of Élisabeth Louise Vigée Le Brun"
+      },
+      "country": {
+        "ko": "교황령",
+        "en": "교황령"
+      },
+      "movement": {
+        "ko": "Rococo painting",
+        "en": "Rococo painting"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Self-portrait%20%28by%20Elisabeth%20Vig%C3%A9e-Lebrun%29%20%E2%80%93%20Galleria%20degli%20Uffizi%2C%20Florence.jpg",
+      "description": {
+        "ko": "painting by Elisabeth Vigée-Le Brun",
+        "en": "painting by Elisabeth Vigée-Le Brun"
+      },
+      "source": "http://www.wikidata.org/entity/Q19361572",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q130384609",
@@ -1164,7 +1034,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q130384609",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q19868575",
@@ -1189,7 +1060,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q19868575",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q105632611",
@@ -1214,7 +1086,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q105632611",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q21731529",
@@ -1239,7 +1112,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q21731529",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q83507891",
@@ -1264,7 +1138,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q83507891",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q125339798",
@@ -1289,32 +1164,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q125339798",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q20891241",
-      "year": 1793,
-      "popularity": 1,
-      "title": {
-        "ko": "Portrait of Countess Maria Theresia Bucquoi, ne Parr (1746-1818)",
-        "en": "Portrait of Countess Maria Theresia Bucquoi, ne Parr (1746-1818)"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Marie%20Louise%20Elisabeth%20Vig%C3%A9e-Le%20Brun%20-%20Portrait%20de%20la%20comtesse%20Maria%20Theresia%20Bucquoi.jpg",
-      "description": {
-        "ko": "painting by Élisabeth Louise Vigée-LeBrun",
-        "en": "painting by Élisabeth Louise Vigée-LeBrun"
-      },
-      "source": "http://www.wikidata.org/entity/Q20891241",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q19005202",
@@ -1339,32 +1190,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q19005202",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q52241959",
-      "year": 1797,
-      "popularity": 2,
-      "title": {
-        "ko": "Portrait of Stanislaus Augustus Poniatowski, king of Poland",
-        "en": "Portrait of Stanislaus Augustus Poniatowski, king of Poland"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vigee%20Stanislaw%20Augustus.jpg",
-      "description": {
-        "ko": "painting by Louise Élisabeth Vigée Le Brun",
-        "en": "painting by Louise Élisabeth Vigée Le Brun"
-      },
-      "source": "http://www.wikidata.org/entity/Q52241959",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q67185140",
@@ -1389,7 +1216,60 @@
       },
       "source": "http://www.wikidata.org/entity/Q67185140",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q52241959",
+      "year": 1797,
+      "popularity": 2,
+      "title": {
+        "ko": "Portrait of Stanislaus Augustus Poniatowski, king of Poland",
+        "en": "Portrait of Stanislaus Augustus Poniatowski, king of Poland"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vigee%20Stanislaw%20Augustus.jpg",
+      "description": {
+        "ko": "painting by Louise Élisabeth Vigée Le Brun",
+        "en": "painting by Louise Élisabeth Vigée Le Brun"
+      },
+      "source": "http://www.wikidata.org/entity/Q52241959",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q95253033",
+      "year": 1797,
+      "popularity": 1,
+      "title": {
+        "ko": "Portrait of Princess Anna Alexandrovna Galitzin",
+        "en": "Portrait of Princess Anna Alexandrovna Galitzin"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%C3%89lisabeth%20Vig%C3%A9e-Lebrun%20-%20Princess%20Anna%20Alexandrovna%20Galitzin%20%28c.%201797%29.jpg",
+      "description": {
+        "ko": "painting by Elisabeth Louise Vigée Le Brun",
+        "en": "painting by Elisabeth Louise Vigée Le Brun"
+      },
+      "source": "http://www.wikidata.org/entity/Q95253033",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q73295245",
@@ -1414,7 +1294,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q73295245",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q81759330",
@@ -1439,7 +1320,86 @@
       },
       "source": "http://www.wikidata.org/entity/Q81759330",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q140616725",
+      "year": 1800,
+      "popularity": 1,
+      "title": {
+        "ko": "Q140616725",
+        "en": "Q140616725"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vig%C3%A9e%20Le%20Brun%20-%20Aniela%20Radziwi%C5%82%C5%82%C3%B3wna.jpg",
+      "description": {
+        "ko": "",
+        "en": ""
+      },
+      "source": "http://www.wikidata.org/entity/Q140616725",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q122974579",
+      "year": 1802,
+      "popularity": 1,
+      "title": {
+        "ko": "Luise von Mecklenburg-Strelitz, Queen of Prussia",
+        "en": "Luise von Mecklenburg-Strelitz, Queen of Prussia"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%C3%89lisabeth%20Louise%20Vig%C3%A9e%20Le%20Brun%20-%20Luise%20von%20Mecklenburg-Strelitz%2C%20Queen%20of%20Prussia%201802.jpg",
+      "description": {
+        "ko": "painting by Élisabeth Louise Vigée Le Brun",
+        "en": "painting by Élisabeth Louise Vigée Le Brun"
+      },
+      "source": "http://www.wikidata.org/entity/Q122974579",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q65178165",
+      "year": 1807,
+      "popularity": 1,
+      "title": {
+        "ko": "Caroline Murat with her daughter Letizia",
+        "en": "Caroline Murat with her daughter Letizia"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/CarolinaBonaparte.jpg",
+      "description": {
+        "ko": "painting by Élisabeth Louise Vigée Le Brun",
+        "en": "painting by Élisabeth Louise Vigée Le Brun"
+      },
+      "source": "http://www.wikidata.org/entity/Q65178165",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q62571116",
@@ -1464,7 +1424,34 @@
       },
       "source": "http://www.wikidata.org/entity/Q62571116",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q104745256",
+      "year": 1823,
+      "popularity": 1,
+      "title": {
+        "ko": "Portrait of Stanislaus Augustus Poniatowski (1732–1798) Dressed as Henry IV",
+        "en": "Portrait of Stanislaus Augustus Poniatowski (1732–1798) Dressed as Henry IV"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "",
+        "en": ""
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%C3%89lisabeth%20Vig%C3%A9e-Lebrun%20-%20Portret%20Stanis%C5%82awa%20Augusta%20Poniatowskiego%20w%20stroju%20%C3%A0%20la%20Henryk%20IV.jpg",
+      "description": {
+        "ko": "painting by Elisabeth Louise Vigée-Lebrun",
+        "en": "painting by Elisabeth Louise Vigée-Lebrun"
+      },
+      "source": "http://www.wikidata.org/entity/Q104745256",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q55619837",
@@ -1489,15 +1476,16 @@
       },
       "source": "http://www.wikidata.org/entity/Q55619837",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q131468737",
       "year": 1830,
       "popularity": 2,
       "title": {
-        "ko": "Portrait de la comtesse de Baussancourt",
-        "en": "Portrait de la comtesse de Baussancourt"
+        "ko": "Q131468737",
+        "en": "Q131468737"
       },
       "country": {
         "ko": "",
@@ -1514,7 +1502,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q131468737",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     }
   ]
 }

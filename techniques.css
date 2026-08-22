@@ -402,14 +402,19 @@ body {
 .technique-link-entry button { border:1px solid var(--ink); border-radius:4px; background:var(--ink); color:white; padding:8px 11px; font-size:12px; white-space:nowrap; }
 
 /* Compact technique navigation: no dates in the list, half-width sidebar. */
-.technique-shell { grid-template-columns: clamp(215px, 18vw, 260px) minmax(0, 1fr); }
-.technique-sidebar { min-width: 215px; max-width: 260px; padding: 26px 14px 20px; }
+.technique-shell { grid-template-columns: var(--technique-sidebar-width, clamp(215px, 18vw, 260px)) minmax(0, 1fr); }
+.technique-sidebar { min-width: 215px; max-width: none; padding: 26px 14px 20px; }
 .technique-sidebar { grid-template-rows: auto auto auto auto auto minmax(0, 1fr) auto; }
+.sidebar-resize-handle { position: absolute; z-index: 40; top: 0; right: 0; bottom: 0; width: 12px; cursor: ew-resize; touch-action: none; }
+.sidebar-resize-handle::after { position: absolute; top: 50%; right: 3px; width: 2px; height: 58px; border-radius: 999px; background: var(--orange); content: ''; opacity: 0; transform: translateY(-50%); transition: opacity .15s; }
+.sidebar-resize-handle:hover::after, .sidebar-resize-handle:active::after, .sidebar-resizing .sidebar-resize-handle::after { opacity: .72; }
+.sidebar-resizing { cursor: ew-resize; user-select: none; }
 .technique-list-row .technique-item { grid-template-columns: minmax(0, 1fr); }
 .technique-year { display: none !important; }
 @media (max-width: 760px) {
   .technique-shell { display: block; }
   .technique-sidebar { width: 100%; min-width: 0; max-width: none; }
+  .sidebar-resize-handle { display: none; }
 }
 
 /* One language toggle plus an autocomplete technique finder. */

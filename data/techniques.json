@@ -1975,6 +1975,73 @@
       ]
     },
     {
+      "id": "figura-serpentinata",
+      "introduced": 1520,
+      "name": {
+        "ko": "피구라 세르펜티나",
+        "en": "Figura serpentinata"
+      },
+      "subtitle": {
+        "ko": "몸을 나선형으로 비틀어 긴장과 우아함을 만드는 매너리즘 인체 표현",
+        "en": "A Mannerist figure pose twisted into a spiral of tension and elegance"
+      },
+      "definition": {
+        "ko": "피구라 세르펜티나는 인체를 곧게 세우거나 자연스럽게 균형 잡는 대신, 머리·어깨·허리·다리의 방향을 서로 어긋나게 돌려 나선형으로 보이게 하는 인체 표현입니다. 매너리즘에서는 이런 비틀림과 길어진 비례가 안정된 고전적 균형보다 세련된 긴장, 인공적인 우아함, 불안정한 움직임을 강조합니다.",
+        "en": "Figura serpentinata is a figure type in which the body is turned into a spiral rather than held in a stable, natural balance. Head, shoulders, torso, hips, and legs twist in different directions, so Mannerist artists could stress refined tension, artificial grace, and unstable movement over classical equilibrium."
+      },
+      "explanation": {
+        "ko": "이 용어는 이탈리아어로 뱀처럼 휘어진 형상이라는 뜻입니다. 고전적 콘트라포스토가 한쪽 다리에 체중을 싣는 비교적 자연스러운 균형이라면, 피구라 세르펜티나는 그 균형을 더 과장해 몸 전체가 위로 말려 올라가거나 여러 방향으로 비틀리는 듯 보이게 합니다. 16세기 매너리즘 회화와 조각에서 길어진 목과 팔다리, 좁고 불안정한 공간, 우아하지만 비현실적인 자세와 자주 결합합니다. 파르미자니노의 길어진 인물, 폰토르모의 떠 있는 듯한 군상, 후기 미켈란젤로와 잠볼로냐의 소용돌이치는 조각 구성이 이 감각을 이해하는 데 좋은 기준이 됩니다.",
+        "en": "The Italian term means a serpent-like figure. Compared with classical contrapposto, which distributes weight in a relatively natural balance, figura serpentinata exaggerates the turn until the whole body seems to coil upward or twist in several directions at once. In 16th-century Mannerist painting and sculpture it often appears with elongated necks and limbs, compressed or unstable space, and elegant but deliberately artificial poses. Parmigianino, Pontormo, late Michelangelo, and Giambologna are useful points of reference."
+      },
+      "links": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Figura_serpentinata"
+        }
+      ],
+      "examples": [
+        {
+          "year": "1581-1583",
+          "artist": {
+            "ko": "잠볼로냐",
+            "en": "Giambologna"
+          },
+          "title": {
+            "ko": "《사비니 여인들의 납치》",
+            "en": "The Rape of the Sabine Women"
+          },
+          "image": "data/techniques/figura-serpentinata/giambologna-rape-of-the-sabine-women.jpg",
+          "role": {
+            "ko": "피구라 세르펜티나의 대표적 조각 예",
+            "en": "Canonical sculptural example of figura serpentinata"
+          },
+          "note": {
+            "ko": "세 인물이 하나의 대리석 덩어리 안에서 서로 다른 방향으로 회전하며 위로 말려 올라갑니다. 정면 하나로 끝나는 구성이 아니라, 관람자가 둘레를 돌며 몸의 나선형 움직임을 따라가게 만드는 피구라 세르펜티나의 전형적인 사례입니다.",
+            "en": "Three figures rotate in different directions within a single marble group, rising in a spiral. Rather than resolving into one fixed front view, the sculpture invites the viewer to move around it and follow the coiling motion of the bodies, making it a canonical example of figura serpentinata."
+          }
+        },
+        {
+          "year": "1525-1528",
+          "artist": {
+            "ko": "야코포 다 폰토르모",
+            "en": "Pontormo"
+          },
+          "title": {
+            "ko": "《십자가에서 내려지는 그리스도》",
+            "en": "The Deposition from the Cross"
+          },
+          "image": "data/techniques/figura-serpentinata/pontormo-deposition-from-the-cross-1525-1528.png",
+          "role": {
+            "ko": "매너리즘의 떠 있는 듯한 인체 비틀림",
+            "en": "Mannerist floating and twisting bodies"
+          },
+          "note": {
+            "ko": "산타 펠리치타 카포니 예배당의 제단화로, 무게 중심이 불안정한 인물들이 서로 얽히며 화면을 위로 끌어올립니다. 자연스러운 균형보다 길어진 몸, 돌아간 어깨와 허리, 떠 있는 듯한 자세가 피구라 세르펜티나의 매너리즘적 긴장을 잘 보여줍니다.",
+            "en": "In the Capponi Chapel altarpiece, figures with unstable centres of gravity interlock and lift the composition upward. Elongated bodies, turned shoulders and torsos, and floating poses show the Mannerist tension of figura serpentinata."
+          }
+        }
+      ]
+    },
+    {
       "id": "printmaking",
       "introduced": 800,
       "name": {

@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-22T12:53:23.036Z",
+  "generatedAt": "2026-08-22T21:54:04.593Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -1037,7 +1037,8 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json"
+        "data/artists.json",
+        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1121,19 +1122,27 @@
       "status": "verified-pair"
     },
     {
-      "id": "name-caravaggio",
+      "id": "Q42207",
       "original": "Caravaggio",
       "korean": "카라바조",
       "displayKorean": "카라바조",
       "aliases": {
-        "ko": [],
-        "en": []
+        "ko": [
+          "다 카라바조",
+          "카라바조"
+        ],
+        "en": [
+          "da Caravaggio",
+          "Caravaggio"
+        ]
       },
       "uhangul": "카[Rㅏ][Vㅏ]조",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/techniques.json"
+        "data/artists.json",
+        "data/techniques.json",
+        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3012,6 +3021,23 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "name-giambologna",
+      "original": "Giambologna",
+      "korean": "잠볼로냐",
+      "displayKorean": "잠볼로냐",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
+      "uhangul": "잠볼로냐",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/techniques.json"
       ],
       "status": "verified-pair"
     },
@@ -5912,30 +5938,26 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q42207",
+      "id": "name-michelangelomerisidacaravaggio",
       "original": "Michelangelo Merisi da Caravaggio",
       "korean": "미켈란젤로 메리시 다 카라바조",
-      "displayKorean": "다 카라바조, 미켈란젤로 메리시",
+      "displayKorean": "미켈란젤로 메리시 다 카라바조",
       "aliases": {
         "ko": [
           "다 카라바조",
-          "카라바조",
-          "미켈란젤로 메리시 다 카라바조"
+          "카라바조"
         ],
         "en": [
           "da Caravaggio",
           "Caravaggio",
-          "Michelangelo Merisi da Caravaggio",
           "Michelangelo Merisi"
         ]
       },
-      "uhangul": "다 카[Rㅏ][Vㅏ]조, 미켈란젤로 메[Rㅣ]시",
+      "uhangul": "미켈란젤로 메[Rㅣ]시 다 카[Rㅏ][Vㅏ]조",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
-        "data/artists.json",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "data/미술사조/c0d228e179032941f8d9ebfb-1.html",
         "data/미술사조/de537ba74c4bee89423120bc-1.html",
         "Wikidata"
@@ -6872,6 +6894,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
+        "data/techniques.json",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
       ],
       "status": "verified-pair"
@@ -8684,6 +8707,27 @@
         ]
       },
       "uhangul": "야외제작",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "technique",
+      "sources": [
+        "data/techniques.json"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "figura-serpentinata",
+      "original": "Figura serpentinata",
+      "korean": "피구라 세르펜티나",
+      "displayKorean": "피구라 세르펜티나",
+      "aliases": {
+        "ko": [
+          "세르펜티나"
+        ],
+        "en": [
+          "serpentinata"
+        ]
+      },
+      "uhangul": "[Fㅣ]구[Rㅏ] 세[Rㅡ]펜티나",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
       "sources": [

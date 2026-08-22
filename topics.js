@@ -6,12 +6,67 @@ let topics = [];
 let selected = null;
 let listDirection = 'asc';
 const sessionStorageKey = 'art-atlas-access-session-v1';
+const topicSidebarWidthStorageKey = 'art-through-time-topic-sidebar-width-v1';
 const adminToken = () => {
   try {
     const session = JSON.parse(sessionStorage.getItem(sessionStorageKey) || 'null');
     return session?.role === 'admin' && session.token ? session.token : '';
   } catch (_) { return ''; }
 };
+function setupTopicSidebarResize() {
+  const shell = $('.topics-shell');
+  const sidebar = $('.topic-sidebar');
+  if (!shell || !sidebar) return;
+  const mobileQuery = window.matchMedia('(max-width: 800px)');
+  const minWidth = 215;
+  const maxPreferredWidth = 520;
+  const maxWidth = () => Math.max(minWidth, Math.min(maxPreferredWidth, Math.floor(window.innerWidth * 0.52)));
+  const setWidth = (value, save = false) => {
+    if (mobileQuery.matches) {
+      shell.style.removeProperty('--topic-sidebar-width');
+      return;
+    }
+    const width = Math.round(Math.max(minWidth, Math.min(maxWidth(), Number(value) || minWidth)));
+    shell.style.setProperty('--topic-sidebar-width', `${width}px`);
+    if (save) localStorage.setItem(topicSidebarWidthStorageKey, String(width));
+  };
+  const savedWidth = Number(localStorage.getItem(topicSidebarWidthStorageKey));
+  if (savedWidth) setWidth(savedWidth);
+  const handle = document.createElement('div');
+  handle.className = 'sidebar-resize-handle';
+  handle.setAttribute('role', 'separator');
+  handle.setAttribute('aria-orientation', 'vertical');
+  handle.setAttribute('aria-label', '주제 목록 너비 조절');
+  sidebar.append(handle);
+  handle.addEventListener('pointerdown', event => {
+    if (event.button !== 0 || mobileQuery.matches) return;
+    event.preventDefault();
+    document.body.classList.add('sidebar-resizing');
+    let lastWidth = sidebar.getBoundingClientRect().width;
+    const resize = move => {
+      const shellRect = shell.getBoundingClientRect();
+      lastWidth = move.clientX - shellRect.left;
+      setWidth(lastWidth);
+    };
+    const stop = () => {
+      document.removeEventListener('pointermove', resize);
+      document.removeEventListener('pointerup', stop);
+      document.removeEventListener('pointercancel', stop);
+      document.body.classList.remove('sidebar-resizing');
+      setWidth(lastWidth, true);
+    };
+    try { handle.setPointerCapture(event.pointerId); } catch (_) {}
+    document.addEventListener('pointermove', resize);
+    document.addEventListener('pointerup', stop);
+    document.addEventListener('pointercancel', stop);
+  });
+  window.addEventListener('resize', () => {
+    const width = Number(localStorage.getItem(topicSidebarWidthStorageKey));
+    if (width) setWidth(width);
+    else if (mobileQuery.matches) shell.style.removeProperty('--topic-sidebar-width');
+  });
+}
+setupTopicSidebarResize();
 async function logoutTopicPage() {
   const token = adminToken();
   try {

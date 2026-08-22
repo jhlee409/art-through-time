@@ -1,5 +1,5 @@
 {
-  "schema": 18,
+  "schema": 20,
   "artistId": "artist-Q7824",
   "qid": "Q7824",
   "artist": {
@@ -12,9 +12,13 @@
     "nationality": {
       "ko": "교황령",
       "en": "Papal States"
+    },
+    "movement": {
+      "ko": "바로크",
+      "en": "Baroque"
     }
   },
-  "fetchedAt": "2026-08-18T01:06:12.661Z",
+  "fetchedAt": "2026-08-22T20:48:59.725Z",
   "works": [
     {
       "id": "wikidata-Q1232131",
@@ -39,32 +43,9 @@
       },
       "source": "http://www.wikidata.org/entity/Q1232131",
       "verified": true,
-      "representative": true
-    },
-    {
-      "id": "wikidata-Q1221070",
-      "year": 1580,
-      "popularity": 12,
-      "title": {
-        "ko": "Butcher's Shop",
-        "en": "Butcher's Shop"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "볼로냐 화파",
-        "en": "볼로냐 화파"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20Butcher%27s%20Shop%20-%20WGA04409.jpg",
-      "description": {
-        "ko": "group of paintings by Annibale Carracci",
-        "en": "group of paintings by Annibale Carracci"
-      },
-      "source": "http://www.wikidata.org/entity/Q1221070",
-      "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q18222731",
@@ -89,7 +70,34 @@
       },
       "source": "http://www.wikidata.org/entity/Q18222731",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
+    },
+    {
+      "id": "wikidata-Q1221070",
+      "year": 1580,
+      "popularity": 12,
+      "title": {
+        "ko": "Butcher's Shop",
+        "en": "Butcher's Shop"
+      },
+      "country": {
+        "ko": "",
+        "en": ""
+      },
+      "movement": {
+        "ko": "볼로냐 화파",
+        "en": "볼로냐 화파"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20Butcher%27s%20Shop%20-%20WGA04409.jpg",
+      "description": {
+        "ko": "group of paintings by Annibale Carracci",
+        "en": "group of paintings by Annibale Carracci"
+      },
+      "source": "http://www.wikidata.org/entity/Q1221070",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1091213",
@@ -114,7 +122,9 @@
       },
       "source": "http://www.wikidata.org/entity/Q1091213",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q60477093",
@@ -139,7 +149,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q60477093",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q26767069",
@@ -164,32 +175,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q26767069",
       "verified": true,
-      "representative": true
-    },
-    {
-      "id": "wikidata-Q97704181",
-      "year": 1583,
-      "popularity": 2,
-      "title": {
-        "ko": "The Laughing Youth",
-        "en": "The Laughing Youth"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20The%20Laughing%20Youth%20-%20WGA04418.jpg",
-      "description": {
-        "ko": "painting by Annibale Carracci",
-        "en": "painting by Annibale Carracci"
-      },
-      "source": "http://www.wikidata.org/entity/Q97704181",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q18170299",
@@ -214,7 +201,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q18170299",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q12060616",
@@ -239,7 +227,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q12060616",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q19966591",
@@ -264,7 +253,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q19966591",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q24933612",
@@ -289,32 +279,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q24933612",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q21234110",
-      "year": 1585,
-      "popularity": 2,
-      "title": {
-        "ko": "Q21234110",
-        "en": "Q21234110"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Spazzacamino%20Annibale%20Carracci.jpg",
-      "description": {
-        "ko": "",
-        "en": ""
-      },
-      "source": "http://www.wikidata.org/entity/Q21234110",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q5454994",
@@ -339,7 +305,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q5454994",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q4810381",
@@ -364,32 +331,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q4810381",
       "verified": true,
-      "representative": true
-    },
-    {
-      "id": "wikidata-Q97704183",
-      "year": 1587,
-      "popularity": 1,
-      "title": {
-        "ko": "The Mystic Marriage of St Catherine",
-        "en": "The Mystic Marriage of St Catherine"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20The%20Mystic%20Marriage%20of%20St%20Catherine%20-%20WGA4423.jpg",
-      "description": {
-        "ko": "painting by Annibale Carracci",
-        "en": "painting by Annibale Carracci"
-      },
-      "source": "http://www.wikidata.org/entity/Q97704183",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q18420689",
@@ -414,7 +357,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q18420689",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q26767075",
@@ -439,7 +383,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q26767075",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q17629102",
@@ -464,7 +409,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q17629102",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q18590147",
@@ -489,7 +435,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q18590147",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q19966609",
@@ -514,7 +461,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q19966609",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q20176833",
@@ -539,7 +487,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q20176833",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q52337780",
@@ -564,32 +513,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q52337780",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q126127672",
-      "year": 1590,
-      "popularity": 2,
-      "title": {
-        "ko": "Madonna in Glory with Saints",
-        "en": "Madonna in Glory with Saints"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20Madonna%20e%20Santi%20-%20Pinacoteca%20Nazionale%20Bologna.jpg",
-      "description": {
-        "ko": "painting by Annibale Carracci",
-        "en": "painting by Annibale Carracci"
-      },
-      "source": "http://www.wikidata.org/entity/Q126127672",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q4245125",
@@ -614,7 +539,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q4245125",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q18572292",
@@ -639,7 +565,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q18572292",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q935815",
@@ -664,7 +591,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q935815",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q28668013",
@@ -689,7 +617,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q28668013",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q28668136",
@@ -714,7 +643,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q28668136",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q19966583",
@@ -739,57 +669,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q19966583",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q21121883",
-      "year": 1593,
-      "popularity": 2,
-      "title": {
-        "ko": "Self-Portrait",
-        "en": "Self-Portrait"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20Autoritratto%20col%20cappello%20a%20quattr%27acque.jpg",
-      "description": {
-        "ko": "painting by Annibale Carracci",
-        "en": "painting by Annibale Carracci"
-      },
-      "source": "http://www.wikidata.org/entity/Q21121883",
-      "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q50323648",
-      "year": 1593,
-      "popularity": 1,
-      "title": {
-        "ko": "Portrait of the lute player Giulio Mascheroni",
-        "en": "Portrait of the lute player Giulio Mascheroni"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20a%20Lute%20Player%20by%20Annibale%20Carracci%20-%20Staatliche%20Kunstsammlung%20Dresden.jpg",
-      "description": {
-        "ko": "painting by Annibale Carracci",
-        "en": "painting by Annibale Carracci"
-      },
-      "source": "http://www.wikidata.org/entity/Q50323648",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q7721087",
@@ -814,7 +695,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q7721087",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q18613324",
@@ -839,7 +721,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q18613324",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q283665",
@@ -864,7 +747,9 @@
       },
       "source": "http://www.wikidata.org/entity/Q283665",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": true,
+      "movementContributionReason": "artist-movement-characteristic"
     },
     {
       "id": "wikidata-Q19966565",
@@ -889,32 +774,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q19966565",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q7749083",
-      "year": 1597,
-      "popularity": 11,
-      "title": {
-        "ko": "The Loves of the Gods",
-        "en": "The Loves of the Gods"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "바로크",
-        "en": "바로크"
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Volta%20della%20Galleria%20Farnese%20dopo%20il%20restauro%20del%202015.jpg",
-      "description": {
-        "ko": "fresco by Annibale Carracci",
-        "en": "fresco by Annibale Carracci"
-      },
-      "source": "http://www.wikidata.org/entity/Q7749083",
-      "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q18223127",
@@ -939,32 +800,34 @@
       },
       "source": "http://www.wikidata.org/entity/Q18223127",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
-      "id": "wikidata-Q22337539",
+      "id": "wikidata-Q7749083",
       "year": 1597,
-      "popularity": 2,
+      "popularity": 11,
       "title": {
-        "ko": "The Death of Saint Francis",
-        "en": "The Death of Saint Francis"
+        "ko": "The Loves of the Gods",
+        "en": "The Loves of the Gods"
       },
       "country": {
         "ko": "",
         "en": ""
       },
       "movement": {
-        "ko": "",
-        "en": ""
+        "ko": "바로크",
+        "en": "바로크"
       },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Morte%20di%20San%20Francesco%20-%20Annibale%20Carracci.jpg",
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Volta%20della%20Galleria%20Farnese%20dopo%20il%20restauro%20del%202015.jpg",
       "description": {
-        "ko": "Lost painting by Annibale Carracci",
-        "en": "Lost painting by Annibale Carracci"
+        "ko": "fresco by Annibale Carracci",
+        "en": "fresco by Annibale Carracci"
       },
-      "source": "http://www.wikidata.org/entity/Q22337539",
+      "source": "http://www.wikidata.org/entity/Q7749083",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q19966612",
@@ -989,7 +852,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q19966612",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q21121936",
@@ -1014,7 +878,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q21121936",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q28031091",
@@ -1039,7 +904,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q28031091",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q17652120",
@@ -1064,7 +930,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q17652120",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q57983818",
@@ -1089,7 +956,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q57983818",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1227679",
@@ -1114,7 +982,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1227679",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q16268699",
@@ -1139,32 +1008,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q16268699",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q16912528",
-      "year": 1601,
-      "popularity": 2,
-      "title": {
-        "ko": "Saint Gregory at Prayer",
-        "en": "Saint Gregory at Prayer"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%2C%20San%20Gregorio%20in%20preghiera%20%28Opera%20perduta%29.png",
-      "description": {
-        "ko": "painting by Annibale Carracci",
-        "en": "painting by Annibale Carracci"
-      },
-      "source": "http://www.wikidata.org/entity/Q16912528",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q16268861",
@@ -1189,7 +1034,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q16268861",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q18224327",
@@ -1214,7 +1060,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q18224327",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q17651291",
@@ -1239,7 +1086,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q17651291",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q18572448",
@@ -1264,7 +1112,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q18572448",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q19966598",
@@ -1289,32 +1138,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q19966598",
       "verified": true,
-      "representative": false
-    },
-    {
-      "id": "wikidata-Q97704145",
-      "year": 1603,
-      "popularity": 2,
-      "title": {
-        "ko": "Portable Altarpiece with Pietà and Saints",
-        "en": "Portable Altarpiece with Pietà and Saints"
-      },
-      "country": {
-        "ko": "",
-        "en": ""
-      },
-      "movement": {
-        "ko": "",
-        "en": ""
-      },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Palazzo%20Barberini%20%28Rome%29%20Annibale%20Caracci%20Hausaltar.jpg",
-      "description": {
-        "ko": "painting by Annibale Carracci",
-        "en": "painting by Annibale Carracci"
-      },
-      "source": "http://www.wikidata.org/entity/Q97704145",
-      "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q1115595",
@@ -1339,7 +1164,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q1115595",
       "verified": true,
-      "representative": true
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q21722833",
@@ -1364,7 +1190,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q21722833",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q21727777",
@@ -1389,7 +1216,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q21727777",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q3815283",
@@ -1414,7 +1242,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q3815283",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q17651293",
@@ -1439,7 +1268,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q17651293",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q17628493",
@@ -1464,7 +1294,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q17628493",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q18572400",
@@ -1489,7 +1320,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q18572400",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     },
     {
       "id": "wikidata-Q16268730",
@@ -1514,7 +1346,8 @@
       },
       "source": "http://www.wikidata.org/entity/Q16268730",
       "verified": true,
-      "representative": false
+      "representative": false,
+      "movementContribution": false
     }
   ]
 }

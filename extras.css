@@ -504,8 +504,41 @@
   width: fit-content;
   min-width: 312px;
   max-width: min(400px, 34vw);
+  position: relative;
 }
 .main-area { width: auto; flex: 1 1 0; min-width: 0; }
+.sidebar-resize-handle {
+  position: absolute;
+  z-index: 40;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 12px;
+  cursor: ew-resize;
+  touch-action: none;
+}
+.sidebar-resize-handle::after {
+  position: absolute;
+  top: 50%;
+  right: 3px;
+  width: 2px;
+  height: 58px;
+  border-radius: 999px;
+  background: var(--orange);
+  content: '';
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: opacity .15s;
+}
+.sidebar-resize-handle:hover::after,
+.sidebar-resize-handle:active::after,
+.sidebar-resizing .sidebar-resize-handle::after {
+  opacity: .72;
+}
+.sidebar-resizing {
+  cursor: ew-resize;
+  user-select: none;
+}
 
 /* Compact fixed sidebar controls so the artist list receives the remaining height. */
 .sidebar-section-tools {
@@ -571,6 +604,7 @@
 
 @media (max-width: 590px) {
   .sidebar, .main-area { width: 100%; }
+  .sidebar-resize-handle { display: none; }
   .timeline-sticky-header {
     margin-right: -25px;
     margin-left: -25px;
