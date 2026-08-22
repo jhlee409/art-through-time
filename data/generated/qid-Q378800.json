@@ -1,0 +1,396 @@
+{
+  "schema": 20,
+  "artistId": "artist-Q378800",
+  "qid": "Q378800",
+  "artist": {
+    "name": {
+      "ko": "장 클루에",
+      "en": "Jean Clouet"
+    },
+    "birth": 1485,
+    "death": 1541,
+    "nationality": {
+      "ko": "프랑스",
+      "en": "France"
+    },
+    "movement": {
+      "ko": "프랑스 르네상스",
+      "en": "French Renaissance"
+    }
+  },
+  "fetchedAt": "2026-08-22T06:24:01.081Z",
+  "works": [
+    {
+      "id": "clouet-portrait-francis-i-1525-1550",
+      "year": 1530,
+      "popularity": 10000,
+      "title": {
+        "ko": "프랑수아 1세의 초상",
+        "en": "Portrait of Francis I"
+      },
+      "description": {
+        "ko": "프랑스 르네상스 궁정 초상의 대표적 이미지로, 프랑수아 1세의 권위와 세련된 복식을 정면성 강한 반신상으로 보여줍니다.",
+        "en": "A major French Renaissance court portrait, presenting Francis I through a frontal bust, richly described dress, and royal authority."
+      },
+      "country": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "movement": {
+        "ko": "프랑스 르네상스",
+        "en": "French Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "루브르 박물관",
+          "en": "Musée du Louvre"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q378800/clouet-portrait-francis-i-1525-1550.jpg",
+      "thumbnail": "data/thumbnails/artist-Q378800/clouet-portrait-francis-i-1525-1550.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T06:24:01.081Z",
+      "highResImage": "data/thumbnails/artist-Q378800/clouet-portrait-francis-i-1525-1550.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q378800/clouet-portrait-francis-i-1525-1550.jpg",
+      "source": "https://en.wikipedia.org/wiki/Jean_Clouet; https://collections.louvre.fr/ark:/53355/cl010062204; local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\François_Ier_Louvre.jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "프랑스 르네상스 궁정 초상의 대표적 이미지로, 프랑수아 1세의 권위와 세련된 복식을 정면성 강한 반신상으로 보여줍니다.",
+          "en": "A major French Renaissance court portrait, presenting Francis I through a frontal bust, richly described dress, and royal authority."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Jean_Clouet",
+          "https://collections.louvre.fr/ark:/53355/cl010062204",
+          "local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\François_Ier_Louvre.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "장 클루에",
+            "en": "Jean Clouet"
+          },
+          "year": 1530,
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "프랑스 르네상스",
+            "en": "French Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "루브르 박물관",
+              "en": "Musée du Louvre"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T06:24:01.081Z",
+        "updatedAt": "2026-08-22T06:24:01.081Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q378800/clouet-portrait-francis-i-1525-1550.jpg",
+          "highResolution": "data/thumbnails/artist-Q378800/clouet-portrait-francis-i-1525-1550.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Jean_Clouet",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Jean_Clouet",
+            "https://collections.louvre.fr/ark:/53355/cl010062204"
+          ],
+          "license": "",
+          "institution": "Musée du Louvre"
+        }
+      }
+    },
+    {
+      "id": "clouet-portrait-of-a-banker-1522",
+      "year": 1522,
+      "popularity": 9000,
+      "title": {
+        "ko": "은행가의 초상",
+        "en": "Portrait of a Banker"
+      },
+      "description": {
+        "ko": "깃펜과 금화를 든 인물을 통해 직업적 정체성과 개인 초상을 결합한 작품으로, 클루에의 섬세한 얼굴 묘사가 두드러집니다.",
+        "en": "A portrait that combines occupational identity with individual likeness, showing Clouet’s refined modeling of the sitter’s face."
+      },
+      "country": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "movement": {
+        "ko": "프랑스 르네상스",
+        "en": "French Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "세인트루이스 미술관",
+          "en": "Saint Louis Art Museum"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q378800/clouet-portrait-of-a-banker-1522.jpg",
+      "thumbnail": "data/thumbnails/artist-Q378800/clouet-portrait-of-a-banker-1522.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T06:24:01.081Z",
+      "highResImage": "data/thumbnails/artist-Q378800/clouet-portrait-of-a-banker-1522.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q378800/clouet-portrait-of-a-banker-1522.jpg",
+      "source": "https://en.wikipedia.org/wiki/Jean_Clouet; https://www.slam.org/collection/objects/32056/; local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\다운로드.jpeg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "깃펜과 금화를 든 인물을 통해 직업적 정체성과 개인 초상을 결합한 작품으로, 클루에의 섬세한 얼굴 묘사가 두드러집니다.",
+          "en": "A portrait that combines occupational identity with individual likeness, showing Clouet’s refined modeling of the sitter’s face."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Jean_Clouet",
+          "https://www.slam.org/collection/objects/32056/",
+          "local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\다운로드.jpeg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "장 클루에",
+            "en": "Jean Clouet"
+          },
+          "year": 1522,
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "프랑스 르네상스",
+            "en": "French Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "세인트루이스 미술관",
+              "en": "Saint Louis Art Museum"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T06:24:01.081Z",
+        "updatedAt": "2026-08-22T06:24:01.081Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q378800/clouet-portrait-of-a-banker-1522.jpg",
+          "highResolution": "data/thumbnails/artist-Q378800/clouet-portrait-of-a-banker-1522.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Jean_Clouet",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Jean_Clouet",
+            "https://www.slam.org/collection/objects/32056/"
+          ],
+          "license": "",
+          "institution": "Saint Louis Art Museum"
+        }
+      }
+    },
+    {
+      "id": "clouet-dauphin-francois-1520-1525",
+      "year": 1522,
+      "popularity": 8500,
+      "title": {
+        "ko": "도팽 프랑수아의 초상",
+        "en": "The Dauphin François, Son of François I"
+      },
+      "description": {
+        "ko": "어린 왕세자의 위엄과 취약함을 작은 패널 안에 세밀하게 담아낸 궁정 초상으로, 초기 프랑스 르네상스 초상화의 정교함을 보여줍니다.",
+        "en": "A small court portrait that captures the young dauphin’s rank and vulnerability with the precision of early French Renaissance portraiture."
+      },
+      "country": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "movement": {
+        "ko": "프랑스 르네상스",
+        "en": "French Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "안트베르펜 왕립미술관",
+          "en": "Royal Museum of Fine Arts Antwerp"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q378800/clouet-dauphin-francois-1520-1525.jpg",
+      "thumbnail": "data/thumbnails/artist-Q378800/clouet-dauphin-francois-1520-1525.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T06:24:01.081Z",
+      "highResImage": "data/thumbnails/artist-Q378800/clouet-dauphin-francois-1520-1525.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q378800/clouet-dauphin-francois-1520-1525.jpg",
+      "source": "https://en.wikipedia.org/wiki/Jean_Clouet; https://vlaamsekunstcollectie.be/en/collection/33; local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\다운로드 (1).jpeg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "어린 왕세자의 위엄과 취약함을 작은 패널 안에 세밀하게 담아낸 궁정 초상으로, 초기 프랑스 르네상스 초상화의 정교함을 보여줍니다.",
+          "en": "A small court portrait that captures the young dauphin’s rank and vulnerability with the precision of early French Renaissance portraiture."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Jean_Clouet",
+          "https://vlaamsekunstcollectie.be/en/collection/33",
+          "local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\다운로드 (1).jpeg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "장 클루에",
+            "en": "Jean Clouet"
+          },
+          "year": 1522,
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "프랑스 르네상스",
+            "en": "French Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "안트베르펜 왕립미술관",
+              "en": "Royal Museum of Fine Arts Antwerp"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T06:24:01.081Z",
+        "updatedAt": "2026-08-22T06:24:01.081Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q378800/clouet-dauphin-francois-1520-1525.jpg",
+          "highResolution": "data/thumbnails/artist-Q378800/clouet-dauphin-francois-1520-1525.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Jean_Clouet",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Jean_Clouet",
+            "https://vlaamsekunstcollectie.be/en/collection/33"
+          ],
+          "license": "",
+          "institution": "Royal Museum of Fine Arts Antwerp"
+        }
+      }
+    },
+    {
+      "id": "clouet-school-portrait-claude-of-france-ca-1520",
+      "year": 1520,
+      "popularity": 7600,
+      "title": {
+        "ko": "클로드 드 프랑스의 초상",
+        "en": "Portrait of Claude of France"
+      },
+      "description": {
+        "ko": "장 클루에 화파로 전하는 초상 이미지로, 붉은 배경과 앵무새, 섬세한 머리 장식이 왕실 여성 초상의 장식성과 궁정 취향을 보여줍니다.",
+        "en": "A portrait associated with the school of Jean Clouet, combining a red ground, parrot, and delicate adornment in the language of court portraiture."
+      },
+      "country": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "movement": {
+        "ko": "프랑스 르네상스",
+        "en": "French Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "미상",
+          "en": "Unknown collection"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q378800/clouet-school-portrait-claude-of-france-ca-1520.jpg",
+      "thumbnail": "data/thumbnails/artist-Q378800/clouet-school-portrait-claude-of-france-ca-1520.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T06:24:01.081Z",
+      "highResImage": "data/thumbnails/artist-Q378800/clouet-school-portrait-claude-of-france-ca-1520.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q378800/clouet-school-portrait-claude-of-france-ca-1520.jpg",
+      "source": "https://en.wikipedia.org/wiki/Jean_Clouet; https://commons.wikimedia.org/wiki/File:Claude_de_France_(1499-1524).png; local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\temp_1684073529295.-705179661.jpeg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "장 클루에 화파로 전하는 초상 이미지로, 붉은 배경과 앵무새, 섬세한 머리 장식이 왕실 여성 초상의 장식성과 궁정 취향을 보여줍니다.",
+          "en": "A portrait associated with the school of Jean Clouet, combining a red ground, parrot, and delicate adornment in the language of court portraiture."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Jean_Clouet",
+          "https://commons.wikimedia.org/wiki/File:Claude_de_France_(1499-1524).png",
+          "local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\temp_1684073529295.-705179661.jpeg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "장 클루에",
+            "en": "Jean Clouet"
+          },
+          "year": 1520,
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "프랑스 르네상스",
+            "en": "French Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "미상",
+              "en": "Unknown collection"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T06:24:01.081Z",
+        "updatedAt": "2026-08-22T06:24:01.081Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q378800/clouet-school-portrait-claude-of-france-ca-1520.jpg",
+          "highResolution": "data/thumbnails/artist-Q378800/clouet-school-portrait-claude-of-france-ca-1520.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Jean_Clouet",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Jean_Clouet",
+            "https://commons.wikimedia.org/wiki/File:Claude_de_France_(1499-1524).png"
+          ],
+          "license": "",
+          "institution": "Unknown collection"
+        }
+      }
+    }
+  ]
+}

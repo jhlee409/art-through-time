@@ -290,19 +290,18 @@
     "id": "Q5598",
     "original": "Rembrandt Harmenszoon van Rijn",
     "korean": "렘브란트 하르먼손 반 레인",
-    "displayKorean": "렘브란트 하르먼손 판 레인",
+    "displayKorean": "렘브란트 하르먼손 반 레인",
     "aliases": {
       "ko": [
         "반 레인",
-        "레인",
-        "판 레인"
+        "레인"
       ],
       "en": [
         "van Rijn",
         "Rijn"
       ]
     },
-    "uhangul": "[Rㅔㅁ]브[Rㅏㄴ]트 하[Rㅡ]먼손 판 [Rㅔ]인",
+    "uhangul": "[Rㅔㅁ]브[Rㅏㄴ]트 하[Rㅡ]먼손 [Vㅏㄴ] [Rㅔ]인",
     "note": "auto-generated from original and Korean artist names"
   },
   {
@@ -383,7 +382,7 @@
     "note": "auto-generated from original and Korean artist names"
   },
   {
-    "id": "artist-url-1787307872488",
+    "id": "Q5811",
     "original": "Masaccio",
     "korean": "마사초",
     "displayKorean": "마사초",
@@ -479,6 +478,89 @@
       ]
     },
     "uhangul": "홀바인, 한스",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q153746",
+    "original": "Albrecht Altdorfer",
+    "korean": "알브레히트 알트도르퍼",
+    "displayKorean": "알트도르퍼, 알브레히트",
+    "aliases": {
+      "ko": [
+        "알트도르퍼"
+      ],
+      "en": [
+        "Altdorfer"
+      ]
+    },
+    "uhangul": "알트도르[Fㅓ], 알브레[CHㅣ]트",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q610556",
+    "original": "Wolf Huber",
+    "korean": "볼프 후버",
+    "displayKorean": "후버, 볼프",
+    "aliases": {
+      "ko": [
+        "후버"
+      ],
+      "en": [
+        "Huber"
+      ]
+    },
+    "uhangul": "후버, [Vㅗㄹ][Fㅡ]",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q378800",
+    "original": "Jean Clouet",
+    "korean": "장 클루에",
+    "displayKorean": "클루에, 장",
+    "aliases": {
+      "ko": [
+        "클루에"
+      ],
+      "en": [
+        "Clouet"
+      ]
+    },
+    "uhangul": "클루에, 장",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q336747",
+    "original": "François Clouet",
+    "korean": "프랑수아 클루에",
+    "displayKorean": "클루에, 프랑수아",
+    "aliases": {
+      "ko": [
+        "클루에"
+      ],
+      "en": [
+        "Francois Clouet",
+        "Clouet"
+      ]
+    },
+    "uhangul": "클루에, [Fㅡ][Rㅏㅇ]수아",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q207929",
+    "original": "Jacopo da Pontormo",
+    "korean": "야코포 다 폰토르모",
+    "displayKorean": "다 폰토르모, 야코포",
+    "aliases": {
+      "ko": [
+        "다 폰토르모",
+        "폰토르모"
+      ],
+      "en": [
+        "da Pontormo",
+        "Pontormo"
+      ]
+    },
+    "uhangul": "다 폰토[Rㅡ]모, 야코포",
     "note": "auto-generated from original and Korean artist names"
   }
 ]

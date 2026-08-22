@@ -1,0 +1,210 @@
+{
+  "schema": 20,
+  "artistId": "artist-Q610556",
+  "qid": "Q610556",
+  "artist": {
+    "name": {
+      "ko": "볼프 후버",
+      "en": "Wolf Huber"
+    },
+    "birth": 1485,
+    "death": 1553,
+    "nationality": {
+      "ko": "독일",
+      "en": "Germany"
+    },
+    "movement": {
+      "ko": "독일 르네상스",
+      "en": "German Renaissance"
+    }
+  },
+  "fetchedAt": "2026-08-22T06:07:53.265Z",
+  "works": [
+    {
+      "id": "huber-lamentation-of-christ-1524",
+      "year": 1524,
+      "popularity": 9000,
+      "title": {
+        "ko": "그리스도의 애도",
+        "en": "Lamentation of Christ"
+      },
+      "description": {
+        "ko": "숲과 산악 풍경 속에 그리스도의 죽음을 애도하는 인물들을 배치한 작품으로, 도나우 화파 특유의 종교 장면과 자연 풍경의 결합을 보여줍니다.",
+        "en": "A religious scene set into a wooded mountain landscape, showing the Danube School’s fusion of sacred narrative and expressive nature."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "루브르 박물관",
+          "en": "Musée du Louvre"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q610556/huber-lamentation-of-christ-1524.jpg",
+      "thumbnail": "data/thumbnails/artist-Q610556/huber-lamentation-of-christ-1524.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T06:07:53.265Z",
+      "highResImage": "data/thumbnails/artist-Q610556/huber-lamentation-of-christ-1524.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q610556/huber-lamentation-of-christ-1524.jpg",
+      "source": "https://en.wikipedia.org/wiki/Wolf_Huber; https://collections.louvre.fr/en/ark:/53355/cl010065641; local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\lamentat.jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "숲과 산악 풍경 속에 그리스도의 죽음을 애도하는 인물들을 배치한 작품으로, 도나우 화파 특유의 종교 장면과 자연 풍경의 결합을 보여줍니다.",
+          "en": "A religious scene set into a wooded mountain landscape, showing the Danube School’s fusion of sacred narrative and expressive nature."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Wolf_Huber",
+          "https://collections.louvre.fr/en/ark:/53355/cl010065641",
+          "local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\lamentat.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "볼프 후버",
+            "en": "Wolf Huber"
+          },
+          "year": 1524,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "루브르 박물관",
+              "en": "Musée du Louvre"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T06:07:53.265Z",
+        "updatedAt": "2026-08-22T06:07:53.265Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q610556/huber-lamentation-of-christ-1524.jpg",
+          "highResolution": "data/thumbnails/artist-Q610556/huber-lamentation-of-christ-1524.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Wolf_Huber",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Wolf_Huber",
+            "https://collections.louvre.fr/en/ark:/53355/cl010065641"
+          ],
+          "license": "",
+          "institution": "Musée du Louvre"
+        }
+      }
+    },
+    {
+      "id": "huber-allegory-of-salvation-after-1543",
+      "year": 1543,
+      "popularity": 8000,
+      "title": {
+        "ko": "구원의 알레고리",
+        "en": "Allegory of Salvation"
+      },
+      "description": {
+        "ko": "십자가와 구원 주제를 알레고리 형식으로 풀어낸 후기 작품으로, 종교적 상징과 장식적 구성이 두드러집니다.",
+        "en": "A later allegorical treatment of crucifixion and salvation themes, marked by religious symbolism and decorative composition."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "빈 미술사박물관",
+          "en": "Kunsthistorisches Museum"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q610556/huber-allegory-of-salvation-after-1543.jpg",
+      "thumbnail": "data/thumbnails/artist-Q610556/huber-allegory-of-salvation-after-1543.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T06:07:53.265Z",
+      "highResImage": "data/thumbnails/artist-Q610556/huber-allegory-of-salvation-after-1543.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q610556/huber-allegory-of-salvation-after-1543.jpg",
+      "source": "https://en.wikipedia.org/wiki/Wolf_Huber; https://commons.wikimedia.org/wiki/File:Allegory_of_Salvation_by_Wolf_Huber_(cca_1543).jpg; local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Allegory_of_Salvation_by_Wolf_Huber_(cca_1543).jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "십자가와 구원 주제를 알레고리 형식으로 풀어낸 후기 작품으로, 종교적 상징과 장식적 구성이 두드러집니다.",
+          "en": "A later allegorical treatment of crucifixion and salvation themes, marked by religious symbolism and decorative composition."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Wolf_Huber",
+          "https://commons.wikimedia.org/wiki/File:Allegory_of_Salvation_by_Wolf_Huber_(cca_1543).jpg",
+          "local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Allegory_of_Salvation_by_Wolf_Huber_(cca_1543).jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "볼프 후버",
+            "en": "Wolf Huber"
+          },
+          "year": 1543,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "빈 미술사박물관",
+              "en": "Kunsthistorisches Museum"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T06:07:53.265Z",
+        "updatedAt": "2026-08-22T06:07:53.265Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q610556/huber-allegory-of-salvation-after-1543.jpg",
+          "highResolution": "data/thumbnails/artist-Q610556/huber-allegory-of-salvation-after-1543.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Wolf_Huber",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Wolf_Huber",
+            "https://commons.wikimedia.org/wiki/File:Allegory_of_Salvation_by_Wolf_Huber_(cca_1543).jpg"
+          ],
+          "license": "",
+          "institution": "Kunsthistorisches Museum"
+        }
+      }
+    }
+  ]
+}

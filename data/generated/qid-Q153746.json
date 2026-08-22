@@ -1,0 +1,486 @@
+{
+  "schema": 20,
+  "artistId": "artist-Q153746",
+  "qid": "Q153746",
+  "artist": {
+    "name": {
+      "ko": "알브레히트 알트도르퍼",
+      "en": "Albrecht Altdorfer"
+    },
+    "birth": 1480,
+    "death": 1538,
+    "nationality": {
+      "ko": "독일",
+      "en": "Germany"
+    },
+    "movement": {
+      "ko": "독일 르네상스",
+      "en": "German Renaissance"
+    }
+  },
+  "fetchedAt": "2026-08-22T05:52:15.671Z",
+  "works": [
+    {
+      "id": "altdorfer-battle-alexander-issus-1529",
+      "year": 1529,
+      "popularity": 10000,
+      "title": {
+        "ko": "알렉산드로스 대왕의 이수스 전투",
+        "en": "The Battle of Alexander at Issus"
+      },
+      "description": {
+        "ko": "알렉산드로스와 다리우스의 전투를 장대한 하늘과 지형 속에 펼친 역사화로, 알트도르퍼의 풍경 중심 화면과 극적인 색채가 가장 압축적으로 드러나는 대표작입니다.",
+        "en": "A sweeping history painting that sets Alexander and Darius within a vast sky and landscape, concentrating Altdorfer’s dramatic color and landscape-centered vision."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "알테 피나코테크",
+          "en": "Alte Pinakothek"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q153746/altdorfer-battle-alexander-issus-1529-google-art-project.jpg",
+      "thumbnail": "data/thumbnails/artist-Q153746/altdorfer-battle-alexander-issus-1529-google-art-project.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T05:52:15.671Z",
+      "highResImage": "data/thumbnails/artist-Q153746/altdorfer-battle-alexander-issus-1529.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q153746/altdorfer-battle-alexander-issus-1529.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht_Altdorfer_-_Schlacht_bei_Issus_(Alte_Pinakothek,_München)_-_Google_Art_Project.jpg; local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht_Altdorfer,_The_Battle_of_Alexander_at_Issus.jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "알렉산드로스와 다리우스의 전투를 장대한 하늘과 지형 속에 펼친 역사화로, 알트도르퍼의 풍경 중심 화면과 극적인 색채가 가장 압축적으로 드러나는 대표작입니다.",
+          "en": "A sweeping history painting that sets Alexander and Darius within a vast sky and landscape, concentrating Altdorfer’s dramatic color and landscape-centered vision."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Albrecht_Altdorfer",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht_Altdorfer_-_Schlacht_bei_Issus_(Alte_Pinakothek,_München)_-_Google_Art_Project.jpg",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht_Altdorfer,_The_Battle_of_Alexander_at_Issus.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "알브레히트 알트도르퍼",
+            "en": "Albrecht Altdorfer"
+          },
+          "year": 1529,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "알테 피나코테크",
+              "en": "Alte Pinakothek"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T05:52:15.671Z",
+        "updatedAt": "2026-08-22T05:52:15.671Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q153746/altdorfer-battle-alexander-issus-1529-google-art-project.jpg",
+          "highResolution": "data/thumbnails/artist-Q153746/altdorfer-battle-alexander-issus-1529-google-art-project.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Albrecht_Altdorfer",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Albrecht_Altdorfer",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht_Altdorfer_-_Schlacht_bei_Issus_(Alte_Pinakothek,_München)_-_Google_Art_Project.jpg",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht_Altdorfer,_The_Battle_of_Alexander_at_Issus.jpg"
+          ],
+          "license": "",
+          "institution": "Alte Pinakothek"
+        }
+      }
+    },
+    {
+      "id": "altdorfer-saint-george-in-the-forest-1510",
+      "year": 1510,
+      "popularity": 9000,
+      "title": {
+        "ko": "숲속의 성 게오르기우스와 용",
+        "en": "Saint George in the Forest"
+      },
+      "description": {
+        "ko": "작은 성 게오르기우스가 울창한 숲에 거의 삼켜진 듯 보이는 작품으로, 도나우파의 자연 중심 감각과 북유럽 르네상스의 세밀한 숲 표현을 보여줍니다.",
+        "en": "A tiny Saint George is nearly absorbed by dense woodland, showing the Danube School’s nature-centered vision and the Northern Renaissance love of forest detail."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "알테 피나코테크",
+          "en": "Alte Pinakothek"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q153746/altdorfer-saint-george-in-the-forest-1510.jpg",
+      "thumbnail": "data/thumbnails/artist-Q153746/altdorfer-saint-george-in-the-forest-1510.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T05:52:15.671Z",
+      "highResImage": "data/thumbnails/artist-Q153746/altdorfer-saint-george-in-the-forest-1510.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q153746/altdorfer-saint-george-in-the-forest-1510.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht_Altdorfer_Laubwald_mit_dem_Heiligen_Georg_1510.jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "작은 성 게오르기우스가 울창한 숲에 거의 삼켜진 듯 보이는 작품으로, 도나우파의 자연 중심 감각과 북유럽 르네상스의 세밀한 숲 표현을 보여줍니다.",
+          "en": "A tiny Saint George is nearly absorbed by dense woodland, showing the Danube School’s nature-centered vision and the Northern Renaissance love of forest detail."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Albrecht_Altdorfer",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht_Altdorfer_Laubwald_mit_dem_Heiligen_Georg_1510.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "알브레히트 알트도르퍼",
+            "en": "Albrecht Altdorfer"
+          },
+          "year": 1510,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "알테 피나코테크",
+              "en": "Alte Pinakothek"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T05:52:15.671Z",
+        "updatedAt": "2026-08-22T05:52:15.671Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q153746/altdorfer-saint-george-in-the-forest-1510.jpg",
+          "highResolution": "data/thumbnails/artist-Q153746/altdorfer-saint-george-in-the-forest-1510.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Albrecht_Altdorfer",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Albrecht_Altdorfer",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht_Altdorfer_Laubwald_mit_dem_Heiligen_Georg_1510.jpg"
+          ],
+          "license": "",
+          "institution": "Alte Pinakothek"
+        }
+      }
+    },
+    {
+      "id": "altdorfer-christ-taking-leave-1515-1520",
+      "year": 1518,
+      "popularity": 8200,
+      "title": {
+        "ko": "어머니에게 작별을 고하는 그리스도",
+        "en": "Christ taking Leave of his Mother"
+      },
+      "description": {
+        "ko": "수난을 앞둔 그리스도와 성모의 이별을 거대한 나무와 붉은 저녁빛 속에 배치한 작품으로, 종교적 감정과 풍경의 정서가 결합되어 있습니다.",
+        "en": "Christ’s farewell to his mother is placed under a huge tree and red evening light, joining devotional emotion with the expressive mood of landscape."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "내셔널 갤러리, 런던",
+          "en": "National Gallery, London"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q153746/altdorfer-christ-taking-leave-of-his-mother-1515-1520.jpg",
+      "thumbnail": "data/thumbnails/artist-Q153746/altdorfer-christ-taking-leave-of-his-mother-1515-1520.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T05:52:15.671Z",
+      "highResImage": "data/thumbnails/artist-Q153746/altdorfer-christ-taking-leave-of-his-mother-1515-1520.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q153746/altdorfer-christ-taking-leave-of-his-mother-1515-1520.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht_Altdorfer,_Christ_Taking_Leave_of_His_Mother_(probably_1520).jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "수난을 앞둔 그리스도와 성모의 이별을 거대한 나무와 붉은 저녁빛 속에 배치한 작품으로, 종교적 감정과 풍경의 정서가 결합되어 있습니다.",
+          "en": "Christ’s farewell to his mother is placed under a huge tree and red evening light, joining devotional emotion with the expressive mood of landscape."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Albrecht_Altdorfer",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht_Altdorfer,_Christ_Taking_Leave_of_His_Mother_(probably_1520).jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "알브레히트 알트도르퍼",
+            "en": "Albrecht Altdorfer"
+          },
+          "year": 1518,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "내셔널 갤러리, 런던",
+              "en": "National Gallery, London"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T05:52:15.671Z",
+        "updatedAt": "2026-08-22T05:52:15.671Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q153746/altdorfer-christ-taking-leave-of-his-mother-1515-1520.jpg",
+          "highResolution": "data/thumbnails/artist-Q153746/altdorfer-christ-taking-leave-of-his-mother-1515-1520.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Albrecht_Altdorfer",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Albrecht_Altdorfer",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht_Altdorfer,_Christ_Taking_Leave_of_His_Mother_(probably_1520).jpg"
+          ],
+          "license": "",
+          "institution": "National Gallery, London"
+        }
+      }
+    },
+    {
+      "id": "altdorfer-resurrection-of-christ-1518",
+      "year": 1518,
+      "popularity": 7600,
+      "title": {
+        "ko": "그리스도의 부활",
+        "en": "Resurrection of Christ"
+      },
+      "description": {
+        "ko": "성 플로리안 제단화의 프레델라 장면으로, 어두운 동굴 너머의 열린 풍경과 빛을 통해 부활의 순간을 극적으로 표현합니다.",
+        "en": "A predella scene from the Saint Sebastian Altar, dramatizing the Resurrection through light, grotto-like darkness, and an open landscape beyond."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "빈 미술사 박물관",
+          "en": "Kunsthistorisches Museum, Vienna"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q153746/altdorfer-resurrection-of-christ-1518.jpg",
+      "thumbnail": "data/thumbnails/artist-Q153746/altdorfer-resurrection-of-christ-1518.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T05:52:15.671Z",
+      "highResImage": "data/thumbnails/artist-Q153746/altdorfer-resurrection-of-christ-1518.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q153746/altdorfer-resurrection-of-christ-1518.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht_Altdorfer_029.jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "성 플로리안 제단화의 프레델라 장면으로, 어두운 동굴 너머의 열린 풍경과 빛을 통해 부활의 순간을 극적으로 표현합니다.",
+          "en": "A predella scene from the Saint Sebastian Altar, dramatizing the Resurrection through light, grotto-like darkness, and an open landscape beyond."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Albrecht_Altdorfer",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht_Altdorfer_029.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "알브레히트 알트도르퍼",
+            "en": "Albrecht Altdorfer"
+          },
+          "year": 1518,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "빈 미술사 박물관",
+              "en": "Kunsthistorisches Museum, Vienna"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T05:52:15.671Z",
+        "updatedAt": "2026-08-22T05:52:15.671Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q153746/altdorfer-resurrection-of-christ-1518.jpg",
+          "highResolution": "data/thumbnails/artist-Q153746/altdorfer-resurrection-of-christ-1518.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Albrecht_Altdorfer",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Albrecht_Altdorfer",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht_Altdorfer_029.jpg"
+          ],
+          "license": "",
+          "institution": "Kunsthistorisches Museum, Vienna"
+        }
+      }
+    },
+    {
+      "id": "altdorfer-martyrdom-saint-sebastian-1509-1516",
+      "year": 1512,
+      "popularity": 7000,
+      "title": {
+        "ko": "성 세바스티아누스의 순교",
+        "en": "Martyrdom of Saint Sebastian"
+      },
+      "description": {
+        "ko": "성 플로리안 수도원 제단화의 장면으로, 순교 서사를 복잡한 공간과 인물 배치 속에 구성한 알트도르퍼의 초기 종교화입니다.",
+        "en": "A scene from the St. Florian altarpiece, arranging the martyrdom narrative through dense space and figure grouping in Altdorfer’s early religious work."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "성 플로리안 수도원",
+          "en": "St. Florian Monastery"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q153746/altdorfer-martyrdom-saint-sebastian-1509-1516.jpg",
+      "thumbnail": "data/thumbnails/artist-Q153746/altdorfer-martyrdom-saint-sebastian-1509-1516.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T05:52:15.671Z",
+      "highResImage": "data/thumbnails/artist-Q153746/altdorfer-martyrdom-saint-sebastian-1509-1516.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q153746/altdorfer-martyrdom-saint-sebastian-1509-1516.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht_Altdorfer_032.jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "성 플로리안 수도원 제단화의 장면으로, 순교 서사를 복잡한 공간과 인물 배치 속에 구성한 알트도르퍼의 초기 종교화입니다.",
+          "en": "A scene from the St. Florian altarpiece, arranging the martyrdom narrative through dense space and figure grouping in Altdorfer’s early religious work."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Albrecht_Altdorfer",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht_Altdorfer_032.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "알브레히트 알트도르퍼",
+            "en": "Albrecht Altdorfer"
+          },
+          "year": 1512,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "성 플로리안 수도원",
+              "en": "St. Florian Monastery"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T05:52:15.671Z",
+        "updatedAt": "2026-08-22T05:52:15.671Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q153746/altdorfer-martyrdom-saint-sebastian-1509-1516.jpg",
+          "highResolution": "data/thumbnails/artist-Q153746/altdorfer-martyrdom-saint-sebastian-1509-1516.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Albrecht_Altdorfer",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Albrecht_Altdorfer",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht_Altdorfer_032.jpg"
+          ],
+          "license": "",
+          "institution": "St. Florian Monastery"
+        }
+      }
+    }
+  ]
+}

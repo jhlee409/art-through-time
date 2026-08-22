@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-22T05:17:10.408Z",
+  "generatedAt": "2026-08-22T07:30:03.129Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -107,23 +107,28 @@
       "status": "verified-pair"
     },
     {
-      "id": "albrecht-altdorfer",
+      "id": "Q153746",
       "original": "Albrecht Altdorfer",
       "korean": "알브레히트 알트도르퍼",
-      "displayKorean": "알브레히트 알트도르퍼",
+      "displayKorean": "알트도르퍼, 알브레히트",
       "aliases": {
         "ko": [
-          "알트도르퍼"
+          "알트도르퍼",
+          "알브레히트 알트도르퍼"
         ],
         "en": [
-          "Altdorfer"
+          "Altdorfer",
+          "Altdorfer, Albrecht",
+          "Albrecht Altdorffer",
+          "Albrecht Altdorfer"
         ]
       },
-      "uhangul": "알브레[CHㅣ]트 알트도르[Fㅓ]",
+      "uhangul": "알트도르[Fㅓ], 알브레[CHㅣ]트",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
+        "data/artists.json",
         "data/미술사조/080336f866ce0c573e6c2b7f-1.html"
       ],
       "status": "verified-pair"
@@ -151,7 +156,8 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json"
+        "data/artists.json",
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
@@ -255,29 +261,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides"
-      ],
-      "status": "verified-pair"
-    },
-    {
-      "id": "name-alofdewignacourt",
-      "original": "Alof de Wignacourt",
-      "korean": "알로프 드 비냐쿠르",
-      "displayKorean": "알로프 드 비냐쿠르",
-      "aliases": {
-        "ko": [
-          "드 비냐쿠르",
-          "비냐쿠르"
-        ],
-        "en": [
-          "de Wignacourt",
-          "Wignacourt"
-        ]
-      },
-      "uhangul": "알로[Fㅡ] 드 [Vㅣ]냐쿠[Rㅡ]",
-      "note": "auto-generated from original and Korean artist names",
-      "kind": "person",
-      "sources": [
-        "data/artists.json"
       ],
       "status": "verified-pair"
     },
@@ -1085,27 +1068,6 @@
       "status": "verified-pair"
     },
     {
-      "id": "name-camilledoncieux",
-      "original": "Camille Doncieux",
-      "korean": "카미유 동시외",
-      "displayKorean": "카미유 동시외",
-      "aliases": {
-        "ko": [
-          "동시외"
-        ],
-        "en": [
-          "Doncieux"
-        ]
-      },
-      "uhangul": "카미유 동시외",
-      "note": "auto-generated from original and Korean artist names",
-      "kind": "person",
-      "sources": [
-        "data/artists.json"
-      ],
-      "status": "verified-pair"
-    },
-    {
       "id": "camille-pissarro",
       "original": "Camille Pissarro",
       "korean": "피사로",
@@ -1262,27 +1224,6 @@
       "englishFullName": "Caspar David Friedrich",
       "wikipediaTitle": "Caspar David Friedrich",
       "wikidataQid": "Q104884"
-    },
-    {
-      "id": "name-ceciliagallerani",
-      "original": "Cecilia Gallerani",
-      "korean": "체칠리아 갈레라니",
-      "displayKorean": "체칠리아 갈레라니",
-      "aliases": {
-        "ko": [
-          "갈레라니"
-        ],
-        "en": [
-          "Gallerani"
-        ]
-      },
-      "uhangul": "체칠리아 갈레라니",
-      "note": "auto-generated from original and Korean artist names",
-      "kind": "person",
-      "sources": [
-        "data/artists.json"
-      ],
-      "status": "verified-pair"
     },
     {
       "id": "charles-le-brun",
@@ -2511,24 +2452,32 @@
       "status": "verified-pair"
     },
     {
-      "id": "francois-clouet",
+      "id": "Q336747",
       "original": "François Clouet",
       "korean": "프랑수아 클루에",
-      "displayKorean": "프랑수아 클루에",
+      "displayKorean": "클루에, 프랑수아",
       "aliases": {
         "ko": [
-          "클루에"
+          "클루에",
+          "프랑수아 클루에",
+          "프랑수와 클루에",
+          "클루에, 프랑수아",
+          "클루에, 프랑수와"
         ],
         "en": [
           "Francois Clouet",
-          "Clouet"
+          "Clouet",
+          "François Clouet",
+          "Janet Clouet",
+          "Jehannet Clouet"
         ]
       },
-      "uhangul": "[Fㅡ][Rㅏㅇ]수아 클루에",
+      "uhangul": "클루에, [Fㅡ][Rㅏㅇ]수아",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json"
       ],
       "status": "verified-pair"
     },
@@ -3596,7 +3545,8 @@
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/artists.json"
+        "data/artists.json",
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3660,28 +3610,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides"
-      ],
-      "status": "verified-pair"
-    },
-    {
-      "id": "name-helmutborschsupan",
-      "original": "Helmut Börsch-Supan",
-      "korean": "헬무트 뵈르슈수판",
-      "displayKorean": "헬무트 뵈르슈수판",
-      "aliases": {
-        "ko": [
-          "뵈르슈수판"
-        ],
-        "en": [
-          "Helmut Borsch-Supan",
-          "Börsch-Supan"
-        ]
-      },
-      "uhangul": "헬무트 뵈르슈수판",
-      "note": "auto-generated from original and Korean artist names",
-      "kind": "person",
-      "sources": [
-        "data/artists.json"
       ],
       "status": "verified-pair"
     },
@@ -3888,8 +3816,8 @@
     {
       "id": "hugo-van-der-goes",
       "original": "Hugo van der Goes",
-      "korean": "후고 판 데르 후스",
-      "displayKorean": "후고 판 데르 후스",
+      "korean": "후고 반 데르 후스",
+      "displayKorean": "후고 반 데르 후스",
       "aliases": {
         "ko": [
           "후스"
@@ -4138,11 +4066,11 @@
     {
       "id": "jacob-van-ruisdael",
       "original": "Jacob van Ruisdael",
-      "korean": "야코프 판 라위스달",
-      "displayKorean": "야코프 판 라위스달",
+      "korean": "야코프 반 라위스달",
+      "displayKorean": "야코프 반 라위스달",
       "aliases": {
         "ko": [
-          "판 라위스달",
+          "반 라위스달",
           "라위스달"
         ],
         "en": [
@@ -4176,6 +4104,37 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "Q207929",
+      "original": "Jacopo da Pontormo",
+      "korean": "야코포 다 폰토르모",
+      "displayKorean": "다 폰토르모, 야코포",
+      "aliases": {
+        "ko": [
+          "다 폰토르모",
+          "폰토르모",
+          "야코포 폰토르모",
+          "폰토르모, 야코포 다",
+          "카루치, 야코포",
+          "야코포 다 폰토르모"
+        ],
+        "en": [
+          "da Pontormo",
+          "Pontormo",
+          "Jacopo da Pontormo",
+          "Jacopo Pontormo",
+          "Jacopo Carucci",
+          "Jacopo Carrucci"
+        ]
+      },
+      "uhangul": "다 폰토[Rㅡ]모, 야코포",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json"
       ],
       "status": "verified-pair"
     },
@@ -4356,23 +4315,31 @@
       "status": "verified-pair"
     },
     {
-      "id": "jean-clouet",
+      "id": "Q378800",
       "original": "Jean Clouet",
       "korean": "장 클루에",
-      "displayKorean": "장 클루에",
+      "displayKorean": "클루에, 장",
       "aliases": {
         "ko": [
-          "클루에"
+          "클루에",
+          "장 클루에",
+          "클루에, 장",
+          "자네 클루에"
         ],
         "en": [
-          "Clouet"
+          "Clouet",
+          "Janet Clouet",
+          "Jehannot Clouet",
+          "Jeannet Clouet",
+          "Jean Clouet"
         ]
       },
-      "uhangul": "장 클루에",
+      "uhangul": "클루에, 장",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json"
       ],
       "status": "verified-pair"
     },
@@ -4542,27 +4509,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides"
-      ],
-      "status": "verified-pair"
-    },
-    {
-      "id": "name-jeannemargueritelecadre",
-      "original": "Jeanne-Marguerite Lecadre",
-      "korean": "잔마르그리트 르카드르",
-      "displayKorean": "잔마르그리트 르카드르",
-      "aliases": {
-        "ko": [
-          "르카드르"
-        ],
-        "en": [
-          "Lecadre"
-        ]
-      },
-      "uhangul": "잔마[Rㅡ]그[Rㅣ]트 르카드[Rㅡ]",
-      "note": "auto-generated from original and Korean artist names",
-      "kind": "person",
-      "sources": [
-        "data/artists.json"
       ],
       "status": "verified-pair"
     },
@@ -5352,6 +5298,7 @@
         "data/techniques.json",
         "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
         "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
+        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "data/미술사조/9e553fb48e9a464402114360-1.html",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
         "Wikidata"
@@ -5508,7 +5455,8 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json"
+        "data/artists.json",
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5530,27 +5478,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides"
-      ],
-      "status": "verified-pair"
-    },
-    {
-      "id": "name-ludovicosforza",
-      "original": "Ludovico Sforza",
-      "korean": "루도비코 스포르차",
-      "displayKorean": "루도비코 스포르차",
-      "aliases": {
-        "ko": [
-          "스포르차"
-        ],
-        "en": [
-          "Sforza"
-        ]
-      },
-      "uhangul": "루도[Vㅣ]코 스[Fㅗ][Rㅡ]차",
-      "note": "auto-generated from original and Korean artist names",
-      "kind": "person",
-      "sources": [
-        "data/artists.json"
       ],
       "status": "verified-pair"
     },
@@ -5745,7 +5672,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "artist-url-1787307872488",
+      "id": "Q5811",
       "original": "Masaccio",
       "korean": "마사초",
       "displayKorean": "마사초",
@@ -6160,27 +6087,6 @@
       "status": "verified-pair"
     },
     {
-      "id": "name-norbertwolf",
-      "original": "Norbert Wolf",
-      "korean": "노르베르트 볼프",
-      "displayKorean": "노르베르트 볼프",
-      "aliases": {
-        "ko": [
-          "볼프"
-        ],
-        "en": [
-          "Wolf"
-        ]
-      },
-      "uhangul": "노[Rㅡ]베[Rㅡ]트 [Vㅗㄹ][Fㅡ]",
-      "note": "auto-generated from original and Korean artist names",
-      "kind": "person",
-      "sources": [
-        "data/artists.json"
-      ],
-      "status": "verified-pair"
-    },
-    {
       "id": "odilon-redon",
       "original": "Odilon Redon",
       "korean": "오딜롱 르동",
@@ -6527,27 +6433,6 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/techniques.json"
-      ],
-      "status": "verified-pair"
-    },
-    {
-      "id": "name-pauleugenelecadre",
-      "original": "Paul-Eugene Lecadre",
-      "korean": "폴외젠 르카드르",
-      "displayKorean": "폴외젠 르카드르",
-      "aliases": {
-        "ko": [
-          "르카드르"
-        ],
-        "en": [
-          "Lecadre"
-        ]
-      },
-      "uhangul": "폴외젠 르카드르",
-      "note": "auto-generated from original and Korean artist names",
-      "kind": "person",
-      "sources": [
-        "data/artists.json"
       ],
       "status": "verified-pair"
     },
@@ -7095,12 +6980,11 @@
       "id": "Q5598",
       "original": "Rembrandt Harmenszoon van Rijn",
       "korean": "렘브란트 하르먼손 반 레인",
-      "displayKorean": "렘브란트 하르먼손 판 레인",
+      "displayKorean": "렘브란트 하르먼손 반 레인",
       "aliases": {
         "ko": [
           "반 레인",
           "레인",
-          "판 레인",
           "렘브란트 하르먼손 반 레인",
           "렘브란트"
         ],
@@ -7112,7 +6996,7 @@
           "Rembrandt van Rijn"
         ]
       },
-      "uhangul": "[Rㅔㅁ]브[Rㅏㄴ]트 하[Rㅡ]먼손 판 [Rㅔ]인",
+      "uhangul": "[Rㅔㅁ]브[Rㅏㄴ]트 하[Rㅡ]먼손 [Vㅏㄴ] [Rㅔ]인",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
@@ -7321,7 +7205,7 @@
     {
       "id": "Q68631",
       "original": "Rogier van der Weyden",
-      "korean": "로히어르 판 데르 베이던",
+      "korean": "로히어르 반 데르 베이던",
       "displayKorean": "반 데르 베이던, 로히어르",
       "aliases": {
         "ko": [
@@ -7719,11 +7603,11 @@
     {
       "id": "theo-van-rysselberghe",
       "original": "Théo van Rysselberghe",
-      "korean": "테오 판 리셀베르허",
-      "displayKorean": "테오 판 리셀베르허",
+      "korean": "테오 반 리셀베르허",
+      "displayKorean": "테오 반 리셀베르허",
       "aliases": {
         "ko": [
-          "판 리셀베르허",
+          "반 리셀베르허",
           "리셀베르허"
         ],
         "en": [
@@ -8415,23 +8299,32 @@
       "status": "verified-pair"
     },
     {
-      "id": "wolf-huber",
+      "id": "Q610556",
       "original": "Wolf Huber",
       "korean": "볼프 후버",
-      "displayKorean": "볼프 후버",
+      "displayKorean": "후버, 볼프",
       "aliases": {
         "ko": [
-          "후버"
+          "후버",
+          "볼프 후버",
+          "후버, 볼프",
+          "후버, 한스",
+          "한스 후버"
         ],
         "en": [
-          "Huber"
+          "Huber",
+          "Wolfgang Huber",
+          "Master WH",
+          "Monogrammist WH",
+          "Wolf Huber"
         ]
       },
-      "uhangul": "[Vㅗㄹ][Fㅡ] 후버",
+      "uhangul": "후버, [Vㅗㄹ][Fㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
+        "data/artists.json",
         "data/미술사조/080336f866ce0c573e6c2b7f-1.html"
       ],
       "status": "verified-pair"

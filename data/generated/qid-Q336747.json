@@ -1,0 +1,542 @@
+{
+  "schema": 20,
+  "artistId": "artist-Q336747",
+  "qid": "Q336747",
+  "artist": {
+    "name": {
+      "ko": "프랑수아 클루에",
+      "en": "François Clouet"
+    },
+    "birth": 1510,
+    "death": 1572,
+    "nationality": {
+      "ko": "프랑스",
+      "en": "France"
+    },
+    "movement": {
+      "ko": "프랑스 르네상스",
+      "en": "French Renaissance"
+    },
+    "father": {
+      "id": "artist-Q378800",
+      "qid": "Q378800",
+      "name": {
+        "ko": "장 클루에",
+        "en": "Jean Clouet"
+      }
+    }
+  },
+  "fetchedAt": "2026-08-22T06:41:44.547Z",
+  "works": [
+    {
+      "id": "francois-clouet-a-lady-in-her-bath-1571",
+      "year": 1571,
+      "popularity": 10000,
+      "title": {
+        "ko": "목욕하는 여인",
+        "en": "A Lady in Her Bath"
+      },
+      "description": {
+        "ko": "궁정 초상의 정교한 표면 묘사와 퐁텐블로파적 관능성을 결합한 작품으로, 프랑수아 클루에의 대표작 가운데 하나입니다.",
+        "en": "A major work combining courtly precision with Fontainebleau-style sensuality, and one of François Clouet’s best-known paintings."
+      },
+      "country": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "movement": {
+        "ko": "프랑스 르네상스",
+        "en": "French Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "내셔널 갤러리 오브 아트, 워싱턴",
+          "en": "National Gallery of Art, Washington"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q336747/francois-clouet-a-lady-in-her-bath-1571.jpg",
+      "thumbnail": "data/thumbnails/artist-Q336747/francois-clouet-a-lady-in-her-bath-1571.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T06:41:44.547Z",
+      "highResImage": "data/thumbnails/artist-Q336747/francois-clouet-a-lady-in-her-bath-1571.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q336747/francois-clouet-a-lady-in-her-bath-1571.jpg",
+      "source": "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Clouet; https://www.nga.gov/artworks/46112-lady-her-bath; local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\François_Clouet_-_A_Lady_in_Her_Bath_-_Google_Art_Project.jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "attributionNote": "",
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "궁정 초상의 정교한 표면 묘사와 퐁텐블로파적 관능성을 결합한 작품으로, 프랑수아 클루에의 대표작 가운데 하나입니다.",
+          "en": "A major work combining courtly precision with Fontainebleau-style sensuality, and one of François Clouet’s best-known paintings."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Clouet",
+          "https://www.nga.gov/artworks/46112-lady-her-bath",
+          "local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\François_Clouet_-_A_Lady_in_Her_Bath_-_Google_Art_Project.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "프랑수아 클루에",
+            "en": "François Clouet"
+          },
+          "year": 1571,
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "프랑스 르네상스",
+            "en": "French Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "내셔널 갤러리 오브 아트, 워싱턴",
+              "en": "National Gallery of Art, Washington"
+            }
+          ],
+          "father": {
+            "id": "artist-Q378800",
+            "qid": "Q378800",
+            "name": {
+              "ko": "장 클루에",
+              "en": "Jean Clouet"
+            }
+          }
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T06:41:44.547Z",
+        "updatedAt": "2026-08-22T06:41:44.547Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q336747/francois-clouet-a-lady-in-her-bath-1571.jpg",
+          "highResolution": "data/thumbnails/artist-Q336747/francois-clouet-a-lady-in-her-bath-1571.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Clouet",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Clouet",
+            "https://www.nga.gov/artworks/46112-lady-her-bath"
+          ],
+          "license": "",
+          "institution": "National Gallery of Art, Washington"
+        }
+      }
+    },
+    {
+      "id": "francois-clouet-elisabeth-of-austria-1571",
+      "year": 1571,
+      "popularity": 9500,
+      "title": {
+        "ko": "오스트리아의 엘리자베트의 초상",
+        "en": "Elisabeth of Austria"
+      },
+      "description": {
+        "ko": "샤를 9세의 왕비를 검은 배경과 정교한 보석 장식 속에 세운 궁정 초상으로, 발루아 왕실 초상의 차갑고 세밀한 품격을 보여줍니다.",
+        "en": "A court portrait of Charles IX’s queen, set against a dark ground and meticulous jewels, showing the cool refinement of Valois portraiture."
+      },
+      "country": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "movement": {
+        "ko": "프랑스 르네상스",
+        "en": "French Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "루브르 박물관",
+          "en": "Musée du Louvre"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q336747/francois-clouet-elisabeth-of-austria-1571.jpg",
+      "thumbnail": "data/thumbnails/artist-Q336747/francois-clouet-elisabeth-of-austria-1571.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T06:41:44.547Z",
+      "highResImage": "data/thumbnails/artist-Q336747/francois-clouet-elisabeth-of-austria-1571.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q336747/francois-clouet-elisabeth-of-austria-1571.jpg",
+      "source": "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Clouet; https://collections.louvre.fr/en/ark:/53355/cl010062176; local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\François_Clouet_-_Elisabeth_of_Austria_(ca._1571)_-_Google_Art_Project.jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "attributionNote": "",
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "샤를 9세의 왕비를 검은 배경과 정교한 보석 장식 속에 세운 궁정 초상으로, 발루아 왕실 초상의 차갑고 세밀한 품격을 보여줍니다.",
+          "en": "A court portrait of Charles IX’s queen, set against a dark ground and meticulous jewels, showing the cool refinement of Valois portraiture."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Clouet",
+          "https://collections.louvre.fr/en/ark:/53355/cl010062176",
+          "local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\François_Clouet_-_Elisabeth_of_Austria_(ca._1571)_-_Google_Art_Project.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "프랑수아 클루에",
+            "en": "François Clouet"
+          },
+          "year": 1571,
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "프랑스 르네상스",
+            "en": "French Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "루브르 박물관",
+              "en": "Musée du Louvre"
+            }
+          ],
+          "father": {
+            "id": "artist-Q378800",
+            "qid": "Q378800",
+            "name": {
+              "ko": "장 클루에",
+              "en": "Jean Clouet"
+            }
+          }
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T06:41:44.547Z",
+        "updatedAt": "2026-08-22T06:41:44.547Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q336747/francois-clouet-elisabeth-of-austria-1571.jpg",
+          "highResolution": "data/thumbnails/artist-Q336747/francois-clouet-elisabeth-of-austria-1571.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Clouet",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Clouet",
+            "https://collections.louvre.fr/en/ark:/53355/cl010062176"
+          ],
+          "license": "",
+          "institution": "Musée du Louvre"
+        }
+      }
+    },
+    {
+      "id": "francois-clouet-portrait-charles-ix-ca-1560",
+      "year": 1560,
+      "popularity": 9000,
+      "title": {
+        "ko": "샤를 9세의 초상",
+        "en": "Portrait of Charles IX"
+      },
+      "description": {
+        "ko": "어린 프랑스 왕 샤를 9세를 전신에 가까운 형식으로 묘사한 초상으로, 왕권의 상징성과 궁정 초상의 사실적 얼굴 묘사가 결합되어 있습니다.",
+        "en": "A portrait of the young Charles IX that joins royal symbolism with the detailed facial observation of French court portraiture."
+      },
+      "country": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "movement": {
+        "ko": "프랑스 르네상스",
+        "en": "French Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "아쟁 미술관",
+          "en": "Musée des Beaux-Arts d'Agen"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q336747/francois-clouet-portrait-charles-ix-ca-1560.jpg",
+      "thumbnail": "data/thumbnails/artist-Q336747/francois-clouet-portrait-charles-ix-ca-1560.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T06:41:44.547Z",
+      "highResImage": "data/thumbnails/artist-Q336747/francois-clouet-portrait-charles-ix-ca-1560.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q336747/francois-clouet-portrait-charles-ix-ca-1560.jpg",
+      "source": "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Clouet; https://commons.wikimedia.org/wiki/File:(Agen)_Portrait_de_Charles_IX_-_François_Clouet_-_Musée_des_Beaux-Arts_d'Agen.jpg; local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\(Agen)_Portrait_de_Charles_IX_-_François_Clouet_-_Musée_des_Beaux-Arts_d'Agen.jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "attributionNote": "원본 파일이 67MB라 화면 표시용으로 축소 저장했다.",
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "어린 프랑스 왕 샤를 9세를 전신에 가까운 형식으로 묘사한 초상으로, 왕권의 상징성과 궁정 초상의 사실적 얼굴 묘사가 결합되어 있습니다.",
+          "en": "A portrait of the young Charles IX that joins royal symbolism with the detailed facial observation of French court portraiture."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Clouet",
+          "https://commons.wikimedia.org/wiki/File:(Agen)_Portrait_de_Charles_IX_-_François_Clouet_-_Musée_des_Beaux-Arts_d'Agen.jpg",
+          "local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\(Agen)_Portrait_de_Charles_IX_-_François_Clouet_-_Musée_des_Beaux-Arts_d'Agen.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "프랑수아 클루에",
+            "en": "François Clouet"
+          },
+          "year": 1560,
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "프랑스 르네상스",
+            "en": "French Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "아쟁 미술관",
+              "en": "Musée des Beaux-Arts d'Agen"
+            }
+          ],
+          "father": {
+            "id": "artist-Q378800",
+            "qid": "Q378800",
+            "name": {
+              "ko": "장 클루에",
+              "en": "Jean Clouet"
+            }
+          }
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T06:41:44.547Z",
+        "updatedAt": "2026-08-22T06:41:44.547Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q336747/francois-clouet-portrait-charles-ix-ca-1560.jpg",
+          "highResolution": "data/thumbnails/artist-Q336747/francois-clouet-portrait-charles-ix-ca-1560.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Clouet",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Clouet",
+            "https://commons.wikimedia.org/wiki/File:(Agen)_Portrait_de_Charles_IX_-_François_Clouet_-_Musée_des_Beaux-Arts_d'Agen.jpg"
+          ],
+          "license": "",
+          "institution": "Musée des Beaux-Arts d'Agen"
+        }
+      }
+    },
+    {
+      "id": "francois-clouet-le-billet-doux-ca-1570",
+      "year": 1570,
+      "popularity": 8200,
+      "title": {
+        "ko": "사랑의 편지",
+        "en": "Le Billet Doux"
+      },
+      "description": {
+        "ko": "사랑의 편지를 든 여성 인물을 통해 궁정적 세련미와 친밀한 서사를 함께 드러내는 후기 초상풍 작품입니다.",
+        "en": "A late portrait-like work that combines courtly elegance with an intimate narrative of a love letter."
+      },
+      "country": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "movement": {
+        "ko": "프랑스 르네상스",
+        "en": "French Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "티센보르네미사 미술관",
+          "en": "Museo Nacional Thyssen-Bornemisza"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q336747/francois-clouet-le-billet-doux-ca-1570.jpg",
+      "thumbnail": "data/thumbnails/artist-Q336747/francois-clouet-le-billet-doux-ca-1570.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T06:41:44.547Z",
+      "highResImage": "data/thumbnails/artist-Q336747/francois-clouet-le-billet-doux-ca-1570.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q336747/francois-clouet-le-billet-doux-ca-1570.jpg",
+      "source": "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Clouet; https://www.museothyssen.org/en/collection/artists/clouet-francois/le-billet-doux; local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\François_Clouet_-_Billet_doux_(ca.1570).jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": true,
+      "attributionNote": "",
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "사랑의 편지를 든 여성 인물을 통해 궁정적 세련미와 친밀한 서사를 함께 드러내는 후기 초상풍 작품입니다.",
+          "en": "A late portrait-like work that combines courtly elegance with an intimate narrative of a love letter."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Clouet",
+          "https://www.museothyssen.org/en/collection/artists/clouet-francois/le-billet-doux",
+          "local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\François_Clouet_-_Billet_doux_(ca.1570).jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "프랑수아 클루에",
+            "en": "François Clouet"
+          },
+          "year": 1570,
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "프랑스 르네상스",
+            "en": "French Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "티센보르네미사 미술관",
+              "en": "Museo Nacional Thyssen-Bornemisza"
+            }
+          ],
+          "father": {
+            "id": "artist-Q378800",
+            "qid": "Q378800",
+            "name": {
+              "ko": "장 클루에",
+              "en": "Jean Clouet"
+            }
+          }
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T06:41:44.547Z",
+        "updatedAt": "2026-08-22T06:41:44.547Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q336747/francois-clouet-le-billet-doux-ca-1570.jpg",
+          "highResolution": "data/thumbnails/artist-Q336747/francois-clouet-le-billet-doux-ca-1570.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Clouet",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Clouet",
+            "https://www.museothyssen.org/en/collection/artists/clouet-francois/le-billet-doux"
+          ],
+          "license": "",
+          "institution": "Museo Nacional Thyssen-Bornemisza"
+        }
+      }
+    },
+    {
+      "id": "francois-clouet-equestrian-portrait-francis-i-ca-1540",
+      "year": 1540,
+      "popularity": 8000,
+      "title": {
+        "ko": "프랑수아 1세의 기마 초상",
+        "en": "Equestrian Portrait of Francis I, King of France"
+      },
+      "description": {
+        "ko": "장 클루에의 루브르 반신 초상과 구분되는 우피치 소장 기마 초상으로, 프랑수아 클루에의 이름으로 전하는 왕권 이미지입니다.",
+        "en": "An Uffizi equestrian portrait traditionally associated with François Clouet, distinct from Jean Clouet’s half-length Louvre portrait of Francis I."
+      },
+      "country": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "movement": {
+        "ko": "프랑스 르네상스",
+        "en": "French Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "우피치 미술관",
+          "en": "Uffizi Gallery"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q336747/francois-clouet-equestrian-portrait-francis-i-ca-1540.jpg",
+      "thumbnail": "data/thumbnails/artist-Q336747/francois-clouet-equestrian-portrait-francis-i-ca-1540.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T06:41:44.547Z",
+      "highResImage": "data/thumbnails/artist-Q336747/francois-clouet-equestrian-portrait-francis-i-ca-1540.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q336747/francois-clouet-equestrian-portrait-francis-i-ca-1540.jpg",
+      "source": "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Clouet; https://commons.wikimedia.org/wiki/File:François_Clouet_-_Portrait_of_Francis_I,_King_of_France_-_WGA5075.jpg; local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\François_Clouet_-_Portrait_of_Francis_I,_King_of_France_-_WGA5075.jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": true,
+      "attributionNote": "장 클루에의 프랑수아 1세 반신 초상과 혼동하지 않도록 기마 초상으로 별도 표기했다.",
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "장 클루에의 루브르 반신 초상과 구분되는 우피치 소장 기마 초상으로, 프랑수아 클루에의 이름으로 전하는 왕권 이미지입니다.",
+          "en": "An Uffizi equestrian portrait traditionally associated with François Clouet, distinct from Jean Clouet’s half-length Louvre portrait of Francis I."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Clouet",
+          "https://commons.wikimedia.org/wiki/File:François_Clouet_-_Portrait_of_Francis_I,_King_of_France_-_WGA5075.jpg",
+          "local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\François_Clouet_-_Portrait_of_Francis_I,_King_of_France_-_WGA5075.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "프랑수아 클루에",
+            "en": "François Clouet"
+          },
+          "year": 1540,
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "프랑스 르네상스",
+            "en": "French Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "우피치 미술관",
+              "en": "Uffizi Gallery"
+            }
+          ],
+          "father": {
+            "id": "artist-Q378800",
+            "qid": "Q378800",
+            "name": {
+              "ko": "장 클루에",
+              "en": "Jean Clouet"
+            }
+          }
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T06:41:44.547Z",
+        "updatedAt": "2026-08-22T06:41:44.547Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q336747/francois-clouet-equestrian-portrait-francis-i-ca-1540.jpg",
+          "highResolution": "data/thumbnails/artist-Q336747/francois-clouet-equestrian-portrait-francis-i-ca-1540.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Clouet",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Clouet",
+            "https://commons.wikimedia.org/wiki/File:François_Clouet_-_Portrait_of_Francis_I,_King_of_France_-_WGA5075.jpg"
+          ],
+          "license": "",
+          "institution": "Uffizi Gallery"
+        }
+      }
+    }
+  ]
+}

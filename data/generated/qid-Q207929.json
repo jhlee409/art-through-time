@@ -1,0 +1,859 @@
+{
+  "schema": 20,
+  "artistId": "artist-Q207929",
+  "qid": "Q207929",
+  "artist": {
+    "name": {
+      "ko": "야코포 다 폰토르모",
+      "en": "Jacopo da Pontormo"
+    },
+    "birth": 1494,
+    "death": 1557,
+    "nationality": {
+      "ko": "피렌체 공화국",
+      "en": "Republic of Florence"
+    },
+    "movement": {
+      "ko": "매너리즘",
+      "en": "Mannerism"
+    },
+    "aliases": {
+      "ko": [
+        "폰토르모",
+        "다 폰토르모",
+        "야코포 폰토르모",
+        "폰토르모, 야코포 다",
+        "카루치, 야코포"
+      ],
+      "en": [
+        "Pontormo",
+        "Jacopo da Pontormo",
+        "Jacopo Pontormo",
+        "Jacopo Carucci",
+        "Jacopo Carrucci"
+      ]
+    }
+  },
+  "fetchedAt": "2026-08-22T07:29:41.611Z",
+  "works": [
+    {
+      "id": "pontormo-visitation-1514-1516",
+      "year": 1516,
+      "popularity": 8200,
+      "title": {
+        "ko": "방문",
+        "en": "Visitation"
+      },
+      "description": {
+        "ko": "초기 피렌체 르네상스 질서를 유지하면서도 인물의 움직임과 색채가 점차 매너리즘으로 기울기 시작한 초기 프레스코입니다.",
+        "en": "An early fresco that still holds Florentine Renaissance order while its movement and color begin to lean toward Mannerism."
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "Italy"
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "Mannerism"
+      },
+      "collection": [
+        {
+          "ko": "산티시마 안눈치아타, 피렌체",
+          "en": "Santissima Annunziata, Florence"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q207929/pontormo-visitation-1514-1516.jpg",
+      "thumbnail": "data/thumbnails/artist-Q207929/pontormo-visitation-1514-1516.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T07:29:41.611Z",
+      "highResImage": "data/thumbnails/artist-Q207929/pontormo-visitation-1514-1516.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q207929/pontormo-visitation-1514-1516.jpg",
+      "source": "https://en.wikipedia.org/wiki/Pontormo; local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Pontormo,_Visitation,_1516,_SS_Annunziata,_Chiostrino_dei_Voti,_Florence.jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "초기 피렌체 르네상스 질서를 유지하면서도 인물의 움직임과 색채가 점차 매너리즘으로 기울기 시작한 초기 프레스코입니다.",
+          "en": "An early fresco that still holds Florentine Renaissance order while its movement and color begin to lean toward Mannerism."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Pontormo",
+          "local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Pontormo,_Visitation,_1516,_SS_Annunziata,_Chiostrino_dei_Voti,_Florence.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "야코포 다 폰토르모",
+            "en": "Jacopo da Pontormo"
+          },
+          "year": 1516,
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "매너리즘",
+            "en": "Mannerism"
+          },
+          "collection": [
+            {
+              "ko": "산티시마 안눈치아타, 피렌체",
+              "en": "Santissima Annunziata, Florence"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T07:29:41.611Z",
+        "updatedAt": "2026-08-22T07:29:41.611Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q207929/pontormo-visitation-1514-1516.jpg",
+          "highResolution": "data/thumbnails/artist-Q207929/pontormo-visitation-1514-1516.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Pontormo",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Pontormo"
+          ],
+          "license": "",
+          "institution": "Santissima Annunziata, Florence"
+        }
+      }
+    },
+    {
+      "id": "pontormo-joseph-in-egypt-1515-1518",
+      "year": 1518,
+      "popularity": 8600,
+      "title": {
+        "ko": "이집트의 요셉",
+        "en": "Joseph in Egypt"
+      },
+      "description": {
+        "ko": "분산된 서사, 높아진 시점, 복잡한 인물 배치가 전성기 르네상스의 안정된 공간을 벗어나는 폰토르모의 초기 실험을 보여줍니다.",
+        "en": "Its dispersed narrative, high viewpoint, and complex figure groups show Pontormo moving beyond stable High Renaissance space."
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "Italy"
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "Mannerism"
+      },
+      "collection": [
+        {
+          "ko": "내셔널 갤러리, 런던",
+          "en": "National Gallery, London"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q207929/pontormo-joseph-in-egypt-1515-1518.jpg",
+      "thumbnail": "data/thumbnails/artist-Q207929/pontormo-joseph-in-egypt-1515-1518.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T07:29:41.611Z",
+      "highResImage": "data/thumbnails/artist-Q207929/pontormo-joseph-in-egypt-1515-1518.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q207929/pontormo-joseph-in-egypt-1515-1518.jpg",
+      "source": "https://en.wikipedia.org/wiki/Pontormo; local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Jacopo_Pontormo_066.jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "분산된 서사, 높아진 시점, 복잡한 인물 배치가 전성기 르네상스의 안정된 공간을 벗어나는 폰토르모의 초기 실험을 보여줍니다.",
+          "en": "Its dispersed narrative, high viewpoint, and complex figure groups show Pontormo moving beyond stable High Renaissance space."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Pontormo",
+          "local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Jacopo_Pontormo_066.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "야코포 다 폰토르모",
+            "en": "Jacopo da Pontormo"
+          },
+          "year": 1518,
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "매너리즘",
+            "en": "Mannerism"
+          },
+          "collection": [
+            {
+              "ko": "내셔널 갤러리, 런던",
+              "en": "National Gallery, London"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T07:29:41.611Z",
+        "updatedAt": "2026-08-22T07:29:41.611Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q207929/pontormo-joseph-in-egypt-1515-1518.jpg",
+          "highResolution": "data/thumbnails/artist-Q207929/pontormo-joseph-in-egypt-1515-1518.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Pontormo",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Pontormo"
+          ],
+          "license": "",
+          "institution": "National Gallery, London"
+        }
+      }
+    },
+    {
+      "id": "pontormo-vertumnus-and-pomona-1520-1521",
+      "year": 1521,
+      "popularity": 7600,
+      "title": {
+        "ko": "베르툼누스와 포모나",
+        "en": "Vertumnus and Pomona"
+      },
+      "description": {
+        "ko": "포조 아 카이아노의 메디치 별장에 그린 루네트 프레스코로, 고전 신화를 목가적 장면과 결합한 폰토르모의 궁정적 실험입니다.",
+        "en": "A lunette fresco for the Medici villa at Poggio a Caiano, joining classical myth with an unusual pastoral mode."
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "Italy"
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "Mannerism"
+      },
+      "collection": [
+        {
+          "ko": "메디치 별장, 포조 아 카이아노",
+          "en": "Medici Villa at Poggio a Caiano"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q207929/pontormo-vertumnus-and-pomona-1520-1521.jpg",
+      "thumbnail": "data/thumbnails/artist-Q207929/pontormo-vertumnus-and-pomona-1520-1521.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T07:29:41.611Z",
+      "highResImage": "data/thumbnails/artist-Q207929/pontormo-vertumnus-and-pomona-1520-1521.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q207929/pontormo-vertumnus-and-pomona-1520-1521.jpg",
+      "source": "https://en.wikipedia.org/wiki/Pontormo; local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Pontormo, Jacopa da 1541.jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "포조 아 카이아노의 메디치 별장에 그린 루네트 프레스코로, 고전 신화를 목가적 장면과 결합한 폰토르모의 궁정적 실험입니다.",
+          "en": "A lunette fresco for the Medici villa at Poggio a Caiano, joining classical myth with an unusual pastoral mode."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Pontormo",
+          "local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Pontormo, Jacopa da 1541.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "야코포 다 폰토르모",
+            "en": "Jacopo da Pontormo"
+          },
+          "year": 1521,
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "매너리즘",
+            "en": "Mannerism"
+          },
+          "collection": [
+            {
+              "ko": "메디치 별장, 포조 아 카이아노",
+              "en": "Medici Villa at Poggio a Caiano"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T07:29:41.611Z",
+        "updatedAt": "2026-08-22T07:29:41.611Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q207929/pontormo-vertumnus-and-pomona-1520-1521.jpg",
+          "highResolution": "data/thumbnails/artist-Q207929/pontormo-vertumnus-and-pomona-1520-1521.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Pontormo",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Pontormo"
+          ],
+          "license": "",
+          "institution": "Medici Villa at Poggio a Caiano"
+        }
+      }
+    },
+    {
+      "id": "pontormo-supper-at-emmaus-1525",
+      "year": 1525,
+      "popularity": 8800,
+      "title": {
+        "ko": "엠마오의 저녁 식사",
+        "en": "Supper at Emmaus"
+      },
+      "description": {
+        "ko": "수도원적 긴장과 뒤러 판화의 영향이 결합된 작품으로, 절제된 공간 속 정면성 강한 인물들이 폰토르모의 예민한 종교성을 보여줍니다.",
+        "en": "A work shaped by monastic tension and Duerer’s prints, with frontal figures in a restrained space."
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "Italy"
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "Mannerism"
+      },
+      "collection": [
+        {
+          "ko": "우피치 미술관",
+          "en": "Uffizi Gallery"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q207929/pontormo-supper-at-emmaus-1525.jpg",
+      "thumbnail": "data/thumbnails/artist-Q207929/pontormo-supper-at-emmaus-1525.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T07:29:41.611Z",
+      "highResImage": "data/thumbnails/artist-Q207929/pontormo-supper-at-emmaus-1525.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q207929/pontormo-supper-at-emmaus-1525.jpg",
+      "source": "https://en.wikipedia.org/wiki/Pontormo; local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Pontormo,_Supper_at_Emmaus,_1525,_Uffizi.jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "수도원적 긴장과 뒤러 판화의 영향이 결합된 작품으로, 절제된 공간 속 정면성 강한 인물들이 폰토르모의 예민한 종교성을 보여줍니다.",
+          "en": "A work shaped by monastic tension and Duerer’s prints, with frontal figures in a restrained space."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Pontormo",
+          "local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Pontormo,_Supper_at_Emmaus,_1525,_Uffizi.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "야코포 다 폰토르모",
+            "en": "Jacopo da Pontormo"
+          },
+          "year": 1525,
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "매너리즘",
+            "en": "Mannerism"
+          },
+          "collection": [
+            {
+              "ko": "우피치 미술관",
+              "en": "Uffizi Gallery"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T07:29:41.611Z",
+        "updatedAt": "2026-08-22T07:29:41.611Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q207929/pontormo-supper-at-emmaus-1525.jpg",
+          "highResolution": "data/thumbnails/artist-Q207929/pontormo-supper-at-emmaus-1525.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Pontormo",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Pontormo"
+          ],
+          "license": "",
+          "institution": "Uffizi Gallery"
+        }
+      }
+    },
+    {
+      "id": "pontormo-deposition-from-the-cross-1525-1528",
+      "year": 1528,
+      "popularity": 10000,
+      "title": {
+        "ko": "십자가에서 내려지는 그리스도",
+        "en": "The Deposition from the Cross"
+      },
+      "description": {
+        "ko": "산타 펠리치타 카포니 예배당의 제단화로, 떠 있는 듯한 인물, 불안정한 공간, 차갑고 밝은 색채가 매너리즘의 핵심을 압축한 폰토르모의 대표작입니다.",
+        "en": "The Capponi Chapel altarpiece, whose floating figures, unstable space, and brilliant cool colors concentrate Pontormo’s Mannerism."
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "Italy"
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "Mannerism"
+      },
+      "collection": [
+        {
+          "ko": "산타 펠리치타 카포니 예배당, 피렌체",
+          "en": "Capponi Chapel, Santa Felicita, Florence"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q207929/pontormo-deposition-from-the-cross-1525-1528.jpg",
+      "thumbnail": "data/thumbnails/artist-Q207929/pontormo-deposition-from-the-cross-1525-1528.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T07:29:41.611Z",
+      "highResImage": "data/thumbnails/artist-Q207929/pontormo-deposition-from-the-cross-1525-1528.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q207929/pontormo-deposition-from-the-cross-1525-1528.jpg",
+      "source": "https://en.wikipedia.org/wiki/Pontormo; local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Jacopo_Pontormo_-_Kreuzabnahme_Christi.jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "산타 펠리치타 카포니 예배당의 제단화로, 떠 있는 듯한 인물, 불안정한 공간, 차갑고 밝은 색채가 매너리즘의 핵심을 압축한 폰토르모의 대표작입니다.",
+          "en": "The Capponi Chapel altarpiece, whose floating figures, unstable space, and brilliant cool colors concentrate Pontormo’s Mannerism."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Pontormo",
+          "local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Jacopo_Pontormo_-_Kreuzabnahme_Christi.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "야코포 다 폰토르모",
+            "en": "Jacopo da Pontormo"
+          },
+          "year": 1528,
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "매너리즘",
+            "en": "Mannerism"
+          },
+          "collection": [
+            {
+              "ko": "산타 펠리치타 카포니 예배당, 피렌체",
+              "en": "Capponi Chapel, Santa Felicita, Florence"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T07:29:41.611Z",
+        "updatedAt": "2026-08-22T07:29:41.611Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q207929/pontormo-deposition-from-the-cross-1525-1528.jpg",
+          "highResolution": "data/thumbnails/artist-Q207929/pontormo-deposition-from-the-cross-1525-1528.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Pontormo",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Pontormo"
+          ],
+          "license": "",
+          "institution": "Capponi Chapel, Santa Felicita, Florence"
+        }
+      }
+    },
+    {
+      "id": "pontormo-annunciation-1527-1528",
+      "year": 1528,
+      "popularity": 7900,
+      "title": {
+        "ko": "수태고지",
+        "en": "Annunciation"
+      },
+      "description": {
+        "ko": "카포니 예배당 벽면의 프레스코로, 단순화된 배경 속 천사와 성모의 비현실적 색채와 흔들리는 자세가 매너리즘적 긴장을 만듭니다.",
+        "en": "A Capponi Chapel fresco whose simplified ground, unstable posture, and unreal color create Mannerist tension."
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "Italy"
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "Mannerism"
+      },
+      "collection": [
+        {
+          "ko": "산타 펠리치타 카포니 예배당, 피렌체",
+          "en": "Capponi Chapel, Santa Felicita, Florence"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q207929/pontormo-annunciation-1527-1528.jpg",
+      "thumbnail": "data/thumbnails/artist-Q207929/pontormo-annunciation-1527-1528.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T07:29:41.611Z",
+      "highResImage": "data/thumbnails/artist-Q207929/pontormo-annunciation-1527-1528.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q207929/pontormo-annunciation-1527-1528.jpg",
+      "source": "https://en.wikipedia.org/wiki/Pontormo; local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Pontormoannunciation.jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "카포니 예배당 벽면의 프레스코로, 단순화된 배경 속 천사와 성모의 비현실적 색채와 흔들리는 자세가 매너리즘적 긴장을 만듭니다.",
+          "en": "A Capponi Chapel fresco whose simplified ground, unstable posture, and unreal color create Mannerist tension."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Pontormo",
+          "local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Pontormoannunciation.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "야코포 다 폰토르모",
+            "en": "Jacopo da Pontormo"
+          },
+          "year": 1528,
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "매너리즘",
+            "en": "Mannerism"
+          },
+          "collection": [
+            {
+              "ko": "산타 펠리치타 카포니 예배당, 피렌체",
+              "en": "Capponi Chapel, Santa Felicita, Florence"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T07:29:41.611Z",
+        "updatedAt": "2026-08-22T07:29:41.611Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q207929/pontormo-annunciation-1527-1528.jpg",
+          "highResolution": "data/thumbnails/artist-Q207929/pontormo-annunciation-1527-1528.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Pontormo",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Pontormo"
+          ],
+          "license": "",
+          "institution": "Capponi Chapel, Santa Felicita, Florence"
+        }
+      }
+    },
+    {
+      "id": "pontormo-visitation-carmignano-1528-1529",
+      "year": 1529,
+      "popularity": 9200,
+      "title": {
+        "ko": "방문",
+        "en": "Visitation"
+      },
+      "description": {
+        "ko": "카르미냐노의 성 미카엘 성당 작품으로, 가까이 밀려오는 인물군과 떠 있는 듯한 몸, 강렬한 색채가 폰토르모의 성숙한 매너리즘을 잘 보여줍니다.",
+        "en": "The Carmignano Visitation, with close figures, floating bodies, and intense color, is a key mature Mannerist work."
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "Italy"
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "Mannerism"
+      },
+      "collection": [
+        {
+          "ko": "산 미켈레 에 산 프란체스코, 카르미냐노",
+          "en": "San Michele e San Francesco, Carmignano"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q207929/pontormo-visitation-carmignano-1528-1529.jpg",
+      "thumbnail": "data/thumbnails/artist-Q207929/pontormo-visitation-carmignano-1528-1529.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T07:29:41.611Z",
+      "highResImage": "data/thumbnails/artist-Q207929/pontormo-visitation-carmignano-1528-1529.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q207929/pontormo-visitation-carmignano-1528-1529.jpg",
+      "source": "https://en.wikipedia.org/wiki/Pontormo; local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Pontormo-visitation-after-restorationRGB.jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "카르미냐노의 성 미카엘 성당 작품으로, 가까이 밀려오는 인물군과 떠 있는 듯한 몸, 강렬한 색채가 폰토르모의 성숙한 매너리즘을 잘 보여줍니다.",
+          "en": "The Carmignano Visitation, with close figures, floating bodies, and intense color, is a key mature Mannerist work."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Pontormo",
+          "local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Pontormo-visitation-after-restorationRGB.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "야코포 다 폰토르모",
+            "en": "Jacopo da Pontormo"
+          },
+          "year": 1529,
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "매너리즘",
+            "en": "Mannerism"
+          },
+          "collection": [
+            {
+              "ko": "산 미켈레 에 산 프란체스코, 카르미냐노",
+              "en": "San Michele e San Francesco, Carmignano"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T07:29:41.611Z",
+        "updatedAt": "2026-08-22T07:29:41.611Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q207929/pontormo-visitation-carmignano-1528-1529.jpg",
+          "highResolution": "data/thumbnails/artist-Q207929/pontormo-visitation-carmignano-1528-1529.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Pontormo",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Pontormo"
+          ],
+          "license": "",
+          "institution": "San Michele e San Francesco, Carmignano"
+        }
+      }
+    },
+    {
+      "id": "pontormo-madonna-and-child-young-john-1534",
+      "year": 1534,
+      "popularity": 7800,
+      "title": {
+        "ko": "아기 세례자 요한과 함께 있는 성모자",
+        "en": "Madonna and Child with Young John the Baptist"
+      },
+      "description": {
+        "ko": "부드러운 종교 주제 안에서도 늘어진 몸과 긴장된 시선, 인공적인 색조가 폰토르모 후기 양식의 예민함을 보여줍니다.",
+        "en": "Even in a tender devotional subject, elongated bodies, tense gazes, and artificial color show Pontormo’s later sensitivity."
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "Italy"
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "Mannerism"
+      },
+      "collection": [
+        {
+          "ko": "우피치 미술관",
+          "en": "Uffizi Gallery"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q207929/pontormo-madonna-and-child-young-john-1534.jpg",
+      "thumbnail": "data/thumbnails/artist-Q207929/pontormo-madonna-and-child-young-john-1534.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T07:29:41.611Z",
+      "highResImage": "data/thumbnails/artist-Q207929/pontormo-madonna-and-child-young-john-1534.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q207929/pontormo-madonna-and-child-young-john-1534.jpg",
+      "source": "https://en.wikipedia.org/wiki/Pontormo; local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Pontormo,_Madonna_and_Child_with_Young_John_the_Baptist,_1534,_Uffizi.jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "부드러운 종교 주제 안에서도 늘어진 몸과 긴장된 시선, 인공적인 색조가 폰토르모 후기 양식의 예민함을 보여줍니다.",
+          "en": "Even in a tender devotional subject, elongated bodies, tense gazes, and artificial color show Pontormo’s later sensitivity."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Pontormo",
+          "local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Pontormo,_Madonna_and_Child_with_Young_John_the_Baptist,_1534,_Uffizi.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "야코포 다 폰토르모",
+            "en": "Jacopo da Pontormo"
+          },
+          "year": 1534,
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "매너리즘",
+            "en": "Mannerism"
+          },
+          "collection": [
+            {
+              "ko": "우피치 미술관",
+              "en": "Uffizi Gallery"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T07:29:41.611Z",
+        "updatedAt": "2026-08-22T07:29:41.611Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q207929/pontormo-madonna-and-child-young-john-1534.jpg",
+          "highResolution": "data/thumbnails/artist-Q207929/pontormo-madonna-and-child-young-john-1534.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Pontormo",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Pontormo"
+          ],
+          "license": "",
+          "institution": "Uffizi Gallery"
+        }
+      }
+    },
+    {
+      "id": "pontormo-portrait-maria-salviati-1543-1545",
+      "year": 1545,
+      "popularity": 8000,
+      "title": {
+        "ko": "마리아 살비아티와 줄리아 데 메디치의 초상",
+        "en": "Portrait of Maria Salviati de' Medici with Giulia de' Medici"
+      },
+      "description": {
+        "ko": "메디치 가문의 여성을 엄격하고 차분한 초상 형식으로 그린 작품으로, 폰토르모의 궁정 초상과 브론치노로 이어지는 차가운 세련미를 보여줍니다.",
+        "en": "A restrained Medici portrait that points toward the cool refinement of court portraiture and Bronzino."
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "Italy"
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "Mannerism"
+      },
+      "collection": [
+        {
+          "ko": "월터스 미술관",
+          "en": "Walters Art Museum"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q207929/pontormo-portrait-maria-salviati-1543-1545.jpg",
+      "thumbnail": "data/thumbnails/artist-Q207929/pontormo-portrait-maria-salviati-1543-1545.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T07:29:41.611Z",
+      "highResImage": "data/thumbnails/artist-Q207929/pontormo-portrait-maria-salviati-1543-1545.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q207929/pontormo-portrait-maria-salviati-1543-1545.jpg",
+      "source": "https://en.wikipedia.org/wiki/Pontormo; local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Pontormo_-_Portrait_of_Maria_Salviati_de'_Medici_with_Giulia_de'_Medici_-_Walters_37596.jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "메디치 가문의 여성을 엄격하고 차분한 초상 형식으로 그린 작품으로, 폰토르모의 궁정 초상과 브론치노로 이어지는 차가운 세련미를 보여줍니다.",
+          "en": "A restrained Medici portrait that points toward the cool refinement of court portraiture and Bronzino."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Pontormo",
+          "local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Pontormo_-_Portrait_of_Maria_Salviati_de'_Medici_with_Giulia_de'_Medici_-_Walters_37596.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "야코포 다 폰토르모",
+            "en": "Jacopo da Pontormo"
+          },
+          "year": 1545,
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "매너리즘",
+            "en": "Mannerism"
+          },
+          "collection": [
+            {
+              "ko": "월터스 미술관",
+              "en": "Walters Art Museum"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T07:29:41.611Z",
+        "updatedAt": "2026-08-22T07:29:41.611Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q207929/pontormo-portrait-maria-salviati-1543-1545.jpg",
+          "highResolution": "data/thumbnails/artist-Q207929/pontormo-portrait-maria-salviati-1543-1545.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Pontormo",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Pontormo"
+          ],
+          "license": "",
+          "institution": "Walters Art Museum"
+        }
+      }
+    }
+  ]
+}

@@ -81,6 +81,8 @@ fs.readdirSync(generatedDir).filter(name => name.endsWith('.json')).forEach(name
     birth: generated.artist?.birth || null,
     death: generated.artist?.death || null,
     nationality: generated.artist?.nationality || {ko:'', en:''},
+    movement: generated.artist?.movement || null,
+    aliases: generated.artist?.aliases || null,
     works: generated.works || [],
     generated: {schema:generated.schema, file:`data/generated/${name}`, fetchedAt:generated.fetchedAt}
   };
@@ -101,6 +103,8 @@ preferredByQid.forEach(candidate => {
     existing.birth = existing.birth || candidate.birth;
     existing.death = existing.death || candidate.death;
     existing.nationality = existing.nationality || candidate.nationality;
+    existing.movement = existing.movement || candidate.movement;
+    existing.aliases = existing.aliases || candidate.aliases;
     existing.generated = candidate.generated;
     existing.works = mergeWorks((existing.works || []).filter(work => !isGeneratedWork(work)), candidate.works);
     hydrateThumbnails(existing);
