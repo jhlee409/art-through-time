@@ -224,8 +224,14 @@ function movementContributionScore(work, artist={}) {
 }
 function selectArtistWorks(works, limit=artistImportedWorkLimit, artist={}) {
   const byKey = new Map();
+  const idCounts = new Map();
   (works || []).forEach(work => {
-    const key = selectionKey(work);
+    const id = String(work?.id || '');
+    if (id) idCounts.set(id, (idCounts.get(id) || 0) + 1);
+  });
+  (works || []).forEach(work => {
+    const id = String(work?.id || '');
+    const key = id && idCounts.get(id) > 1 ? `id:${id}` : selectionKey(work);
     if (!key) return;
     const existing = byKey.get(key);
     byKey.set(key, existing ? {...work,...existing,popularity:Math.max(workPopularity(existing),workPopularity(work))} : work);
@@ -953,6 +959,47 @@ function thumbnailTitleExtraItems(artists) {
     return titles.some(title=>thumbnailTitleHasExtraForCheck(work,artist,title)) ? [ruleCheckItem(artist,work)] : [];
   }));
 }
+function movementFilterEntryForCheck(artist) {
+  const movement=artist?.movement;
+  const label=localizedCheckValue(movement);
+  const id=compactCheckText(movement?.en || movement?.ko || label);
+  return id && label ? {id,label} : null;
+}
+async function artistMovementFilterIssues(artists) {
+  const issues=[];
+  const appText=await fs.readFile(path.join(root,'app.js'),'utf8').catch(()=>'');
+  if(appText && !/const artistMovement = loc\(artist\?\.movement\) \|\| loc\(artistMovementFallbacks\[artist\?\.qid\]\);[\s\S]*?if \(artistMovement\) return artistMovement;/.test(appText)) {
+    issues.push({artist:'화가 목록',artistId:'artist-movement-primary',work:'목록 표시 대표 사조가 artist.movement를 우선하지 않음',workId:'app.js'});
+  }
+  if(appText && /\(artist\?\.works \|\| \[\]\)\.forEach\(work => entries\.push\(movementEntry\(work\?\.movement\)\)\)/.test(appText)) {
+    issues.push({artist:'화가 목록',artistId:'artist-movement-work-tags',work:'사조 필터가 작품별 사조를 무조건 수집함',workId:'app.js'});
+  }
+  if(appText && !/self\.findIndex\(item => compactMovementName\(item\.label\) === compactMovementName\(option\.label\)\) === index/.test(appText)) {
+    issues.push({artist:'화가 목록',artistId:'artist-movement-option-dedupe',work:'사조 드롭다운 라벨 중복 제거 확인 코드 누락',workId:'app.js'});
+  }
+  const entries=[];
+  for(const artist of artists) {
+    const entry=movementFilterEntryForCheck(artist);
+    if(!entry) {
+      issues.push(artistRuleItem(artist,'화가 대표 사조 누락: 사조 필터가 작품별 사조에 의존할 수 있음'));
+      continue;
+    }
+    if(!hasHangul(entry.label)) issues.push(artistRuleItem(artist,`화가 대표 사조 한국어 표기 확인: ${entry.label}`));
+    entries.push({...entry,artist});
+  }
+  const labelByKey=new Map();
+  for(const entry of entries) {
+    const key=compactCheckText(entry.label);
+    if(!key) continue;
+    const existing=labelByKey.get(key);
+    if(existing && existing.id !== entry.id) {
+      issues.push({artist:'화가 목록',artistId:'artist-movement-option-duplicate',work:`사조 드롭다운 중복 라벨 가능성: ${existing.label} / ${entry.label}`,workId:'data/artists.json'});
+    } else labelByKey.set(key,entry);
+  }
+  const mannerismArtists=entries.filter(entry=>entry.id === compactCheckText('Mannerism') || entry.id === compactCheckText('매너리즘')).map(entry=>entry.artist.qid || entry.artist.id);
+  if(mannerismArtists.includes('Q5592')) issues.push({artist:'화가 목록',artistId:'artist-movement-mannerism-match',work:'매너리즘 필터에 미켈란젤로가 포함될 위험 있음',workId:'data/artists.json'});
+  return issues;
+}
 const expectedManualUHangulByArtistId = {
   Q68631:'[Vㅏㄴ] 데르 [Vㅔ]이던, [Rㅗ]히어르'
 };
@@ -1099,6 +1146,9 @@ async function writeRuleCheckReport(result) {
   const rows=items => items.length ? items.map(item=>`- ${item.artist} · ${item.work}${item.workId ? ` (${item.workId})` : ''}`).join('\n') : '- 없음';
   let text=['# 전체 규칙 점검 보고서','',`- 점검 시각: ${new Date().toLocaleString('ko-KR',{timeZone:'Asia/Seoul'})}`,`- 결과: ${result.changed ? '최신 공통 규칙을 적용하고 저장함' : '저장 데이터가 현재 공통 규칙과 일치함'}`,`- 데이터 버전: ${result.revision}`,'','## 대상','',`- 화가: ${result.stats.artists}명`,`- 작품: ${result.stats.works}점`,`- 이름 사전: ${result.stats.nameDictionary}개 항목 재생성`,`- 미술사조 문서의 화가 링크: 열 때마다 최신 별칭으로 동적 연결`,'','## 자동 적용한 범위','','- 최신 작품 정리·중복 처리 규칙','- 고해상도 이미지 경로 재확인','- 화가 이름 사전 및 uHangul 화가 맵 재생성','- 화가 목록·연표 제목의 한국어 표시명, 성·이름 순서, 네덜란드어 van=반 표기, uHangul 런타임·변환 표식 점검','- 화가 목록 국가 아이콘의 국가명 title·aria-label 연결 및 한국어 국가명 점검','- 기법 설명 오른쪽 페이지 제목 옆 + 자료 버튼 및 비교 기법 저장 경로 점검','- 미술사조 HTML 이미지 파일 누락 및 Git 비관리 이미지 폴더 직접 참조 점검','- 기법·대표작·주제-사건 표시 데이터의 외부 URL, 캐시 폴더 직접 참조, 이미지 파일 누락 점검','- 썸네일 제목의 화가명·소장처 혼입 점검','','수동 입력 작품, 대표작 선택, 직접 작성한 설명·이미지는 덮어쓰지 않았다. 외부 웹에서 작품을 재수집하거나 삭제하지 않았다.','','## 확인이 필요한 항목','',`### 이미지가 없는 작품 (${result.issues.missingPreview.length}점)`,'',rows(result.issues.missingPreview),'',`### 제목이 없는 작품 (${result.issues.missingTitle.length}점)`,'',rows(result.issues.missingTitle),'',`### QID가 제목으로 남은 작품 (${result.issues.qidTitle.length}점)`,'',rows(result.issues.qidTitle),'',`### 화가 목록·연표 표시명이 한국어가 아닌 항목 (${result.issues.artistDisplayKorean.length}점)`,'',rows(result.issues.artistDisplayKorean),'',`### 화가 목록·연표 표시명의 성, 이름 순서 확인 항목 (${result.issues.artistDisplayOrder.length}점)`,'',rows(result.issues.artistDisplayOrder),'',`### 네덜란드어 van 한국어 표기 확인 항목 (${result.issues.artistDutchVanRomanization.length}점)`,'',rows(result.issues.artistDutchVanRomanization),'',`### 화가 목록 국가 아이콘의 국가명 확인 항목 (${result.issues.artistCountryIcon.length}점)`,'',rows(result.issues.artistCountryIcon),'',`### uHangul 폰트·런타임·화가 맵·변환 표식 확인 항목 (${result.issues.uHangulConnection.length}점)`,'',rows(result.issues.uHangulConnection),'',`### 기법 설명 제목 옆 + 자료 버튼 확인 항목 (${result.issues.techniqueTitleLinkButton.length}점)`,'',rows(result.issues.techniqueTitleLinkButton),'',`### 미술사조 HTML 이미지 경로 확인 항목 (${result.issues.movementDocumentImage.length}점)`,'',rows(result.issues.movementDocumentImage),'',`### 표시 데이터 이미지 경로 확인 항목 (${result.issues.displayDataImage.length}점)`,'',rows(result.issues.displayDataImage),'',`### 썸네일 제목에 화가명 또는 소장처가 남은 작품 (${result.issues.thumbnailTitleExtra.length}점)`,'',rows(result.issues.thumbnailTitleExtra),'','## 참고 항목','',`### 공개 이미지 없음으로 표시한 작품 (${result.issues.reviewedNoPublicImage.length}점)`,'',rows(result.issues.reviewedNoPublicImage),'','## 다음 조치','','1. 위 목록의 화가 연표에서 작품의 이미지 또는 제목을 보완한다.','2. 다시 전체 규칙 점검을 실행한다.','3. 이 보고서 파일을 다음 작업 세션에 전달하거나, “가장 최근 규칙점검 보고서 확인”이라고 요청한다.',''].join('\\n');
   text=text.replace('- 미술사조 HTML 이미지 파일 누락 및 Git 비관리 이미지 폴더 직접 참조 점검\\n- 기법·대표작·주제-사건 표시 데이터의 외부 URL, 캐시 폴더 직접 참조, 이미지 파일 누락 점검','- 미술사조 HTML 이미지 파일 누락 및 Git 비관리 이미지 폴더 직접 참조 점검\\n- 미술사조 선구자 공통 문구의 index.json 기준 매핑 및 정적 문구 불일치 점검\\n- 기법·대표작·주제-사건 표시 데이터의 외부 URL, 캐시 폴더 직접 참조, 이미지 파일 누락 점검');
+  text=text.replace('- 화가 목록 국가 아이콘의 국가명 title·aria-label 연결 및 한국어 국가명 점검\\n- 기법 설명 오른쪽 페이지 제목 옆 + 자료 버튼 및 비교 기법 저장 경로 점검','- 화가 목록 국가 아이콘의 국가명 title·aria-label 연결 및 한국어 국가명 점검\\n- 화가 목록 사조 드롭다운 중복, 대표 사조 누락, 작품별 사조 오매칭 방지 점검\\n- 기법 설명 오른쪽 페이지 제목 옆 + 자료 버튼 및 비교 기법 저장 경로 점검');
+  text=text.replace(/(### uHangul 폰트·런타임·화가 맵·변환 표식 확인 항목 \(\d+점\))/,
+    `### 화가 목록 사조 필터 확인 항목 (${result.issues.artistMovementFilter.length}점)\\n\\n${rows(result.issues.artistMovementFilter)}\\n\\n$1`);
   text=text.replace(/(### 표시 데이터 이미지 경로 확인 항목 \(\d+점\))/,
     `### 미술사조 선구자 공통 문구 확인 항목 (${result.issues.movementPioneerContext.length}점)\\n\\n${rows(result.issues.movementPioneerContext)}\\n\\n$1`);
   await fs.mkdir(reportFolder,{recursive:true});
@@ -1115,6 +1165,7 @@ async function checkAndApplyLatestRules(actor='') {
   const works=artists.flatMap(artist=>artist.works || []);
   const uHangulIssues=await uHangulRuleIssues(artists);
   const countryIconIssues=await artistCountryIconIssues(artists);
+  const artistMovementFilterIssuesList=await artistMovementFilterIssues(artists);
   const techniqueTitleLinkButtonIssuesList=await techniqueTitleLinkButtonIssues();
   const movementDocumentImageIssuesList=await movementDocumentImageIssues();
   const movementPioneerContextIssuesList=await movementPioneerContextIssues();
@@ -1128,6 +1179,7 @@ async function checkAndApplyLatestRules(actor='') {
     artistDisplayOrder:artists.filter(artist=>actualArtistDisplayNameForCheck(artist) !== expectedArtistDisplayNameForCheck(artist)).map(artist=>artistRuleItem(artist,`성, 이름 표시 확인: ${actualArtistDisplayNameForCheck(artist)} → ${expectedArtistDisplayNameForCheck(artist)}`)),
     artistDutchVanRomanization:artistDutchVanRomanizationIssues,
     artistCountryIcon:countryIconIssues,
+    artistMovementFilter:artistMovementFilterIssuesList,
     uHangulConnection:uHangulIssues,
     techniqueTitleLinkButton:techniqueTitleLinkButtonIssuesList,
     movementDocumentImage:movementDocumentImageIssuesList,
@@ -1143,6 +1195,7 @@ async function checkAndApplyLatestRules(actor='') {
   const artistDisplayOrder=issues.artistDisplayOrder.length;
   const artistDutchVanRomanization=issues.artistDutchVanRomanization.length;
   const artistCountryIcon=issues.artistCountryIcon.length;
+  const artistMovementFilter=issues.artistMovementFilter.length;
   const uHangulConnection=issues.uHangulConnection.length;
   const techniqueTitleLinkButton=issues.techniqueTitleLinkButton.length;
   const movementDocumentImage=issues.movementDocumentImage.length;
@@ -1157,10 +1210,10 @@ async function checkAndApplyLatestRules(actor='') {
   } else {
     writeUHangulArtistMap(artists);
     syncPersonNameDictionary({artists});
-    await appendAudit({type:'rules.check-and-apply',actor:normalizedEmail(actor) || 'local-admin',revision,changed:false,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle,qidTitle,artistDisplayKorean,artistDisplayOrder,artistDutchVanRomanization,artistCountryIcon,uHangulConnection,techniqueTitleLinkButton,movementDocumentImage,movementPioneerContext,displayDataImage,thumbnailTitleExtra}});
+    await appendAudit({type:'rules.check-and-apply',actor:normalizedEmail(actor) || 'local-admin',revision,changed:false,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle,qidTitle,artistDisplayKorean,artistDisplayOrder,artistDutchVanRomanization,artistCountryIcon,artistMovementFilter,uHangulConnection,techniqueTitleLinkButton,movementDocumentImage,movementPioneerContext,displayDataImage,thumbnailTitleExtra}});
   }
   const nameDictionary=syncPersonNameDictionary({artists}).records;
-  const result={ok:true,changed,revision,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle,qidTitle,artistDisplayKorean,artistDisplayOrder,artistDutchVanRomanization,artistCountryIcon,uHangulConnection,techniqueTitleLinkButton,movementDocumentImage,movementPioneerContext,displayDataImage,thumbnailTitleExtra,reviewedNoPublicImage:issues.reviewedNoPublicImage.length,nameDictionary,movementDocuments:'dynamic-linking'},issues};
+  const result={ok:true,changed,revision,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle,qidTitle,artistDisplayKorean,artistDisplayOrder,artistDutchVanRomanization,artistCountryIcon,artistMovementFilter,uHangulConnection,techniqueTitleLinkButton,movementDocumentImage,movementPioneerContext,displayDataImage,thumbnailTitleExtra,reviewedNoPublicImage:issues.reviewedNoPublicImage.length,nameDictionary,movementDocuments:'dynamic-linking'},issues};
   result.reportFile=await writeRuleCheckReport(result);
   return result;
 }

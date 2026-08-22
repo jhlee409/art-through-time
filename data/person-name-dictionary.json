@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-22T07:30:03.129Z",
+  "generatedAt": "2026-08-22T07:57:23.780Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -4108,37 +4108,6 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q207929",
-      "original": "Jacopo da Pontormo",
-      "korean": "야코포 다 폰토르모",
-      "displayKorean": "다 폰토르모, 야코포",
-      "aliases": {
-        "ko": [
-          "다 폰토르모",
-          "폰토르모",
-          "야코포 폰토르모",
-          "폰토르모, 야코포 다",
-          "카루치, 야코포",
-          "야코포 다 폰토르모"
-        ],
-        "en": [
-          "da Pontormo",
-          "Pontormo",
-          "Jacopo da Pontormo",
-          "Jacopo Pontormo",
-          "Jacopo Carucci",
-          "Jacopo Carrucci"
-        ]
-      },
-      "uhangul": "다 폰토[Rㅡ]모, 야코포",
-      "note": "auto-generated from original and Korean artist names",
-      "kind": "person",
-      "sources": [
-        "data/artists.json"
-      ],
-      "status": "verified-pair"
-    },
-    {
       "id": "jacques-louis-david",
       "original": "Jacques-Louis David",
       "korean": "자크루이 다비드",
@@ -6847,19 +6816,33 @@
       "status": "verified-pair"
     },
     {
-      "id": "pontormo",
+      "id": "Q207929",
       "original": "Pontormo",
       "korean": "폰토르모",
-      "displayKorean": "폰토르모",
+      "displayKorean": "야코포 다 폰토르모",
       "aliases": {
-        "ko": [],
-        "en": []
+        "ko": [
+          "다 폰토르모",
+          "폰토르모",
+          "야코포 폰토르모",
+          "폰토르모, 야코포 다",
+          "카루치, 야코포",
+          "야코포 다 폰토르모"
+        ],
+        "en": [
+          "Pontormo",
+          "Jacopo da Pontormo",
+          "Jacopo Pontormo",
+          "Jacopo Carucci",
+          "Jacopo Carrucci"
+        ]
       },
-      "uhangul": "폰토[Rㅡ]모",
+      "uhangul": "야코포 다 폰토[Rㅡ]모",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json"
       ],
       "status": "verified-pair"
     },

@@ -498,8 +498,14 @@ const workYearLabel = work => {
 };
 function selectArtistWorks(works, limit=artistImportedWorkLimit, artist={}) {
   const byKey = new Map();
+  const idCounts = new Map();
   (works || []).forEach(work => {
-    const key = selectionKey(work);
+    const id = String(work?.id || '');
+    if (id) idCounts.set(id, (idCounts.get(id) || 0) + 1);
+  });
+  (works || []).forEach(work => {
+    const id = String(work?.id || '');
+    const key = id && idCounts.get(id) > 1 ? `id:${id}` : selectionKey(work);
     if (!key) return;
     const existing = byKey.get(key);
     byKey.set(key, existing ? {...work,...existing,popularity:Math.max(workPopularity(existing),workPopularity(work))} : work);
@@ -1109,9 +1115,11 @@ function years(artist) { return artist.birth ? `${artist.birth} — ${artist.dea
 function artworkMovement(work, artist) { return loc(work?.movement) || loc(artistMovementFallbacks[artist?.qid]); }
 function primaryMovement(artist) {
   if (artist?.qid === 'Q47551') return language === 'ko' ? '르네상스 · 베네치아 화파' : 'Renaissance · Venetian School';
+  const artistMovement = loc(artist?.movement) || loc(artistMovementFallbacks[artist?.qid]);
+  if (artistMovement) return artistMovement;
   const counts = new Map();
   (artist.works || []).forEach(work => { const movement = artworkMovement(work,artist); if (movement) counts.set(movement, (counts.get(movement) || 0) + 1); });
-  return [...counts.entries()].sort((a,b) => b[1] - a[1])[0]?.[0] || artworkMovement(null,artist) || '';
+  return [...counts.entries()].sort((a,b) => b[1] - a[1])[0]?.[0] || '';
 }
 function movementContributionWorksForArtist(artist, sourceWorks=artist?.works || []) {
   const visibleKeys = new Set((sourceWorks || []).map(selectionKey).filter(Boolean));
@@ -1153,7 +1161,7 @@ function movementEntry(value) {
 }
 function artistMovementEntries(artist) {
   const entries = [movementEntry(artist?.movement), movementEntry(artistMovementFallbacks[artist?.qid])];
-  (artist?.works || []).forEach(work => entries.push(movementEntry(work?.movement)));
+  if (!entries.some(Boolean)) entries.push(movementEntry(primaryMovement(artist)));
   const seen = new Set();
   return entries.filter(entry => entry && !seen.has(entry.id) && seen.add(entry.id));
 }
@@ -1173,6 +1181,7 @@ function artistMovementFilterOptions() {
   const groupKeys = new Set(artistMovementFilterGroups.flatMap(group => [...group.keys]));
   const directOptions = [...direct.values()]
     .filter(option => option.label && !groups.some(group => compactMovementName(group.label) === compactMovementName(option.label)))
+    .filter((option,index,self) => self.findIndex(item => compactMovementName(item.label) === compactMovementName(option.label)) === index)
     .sort((a,b) => a.label.localeCompare(b.label, language));
   const relatedRenaissanceOptions = directOptions.filter(option => groupKeys.has(option.id));
   const otherOptions = directOptions.filter(option => !groupKeys.has(option.id));

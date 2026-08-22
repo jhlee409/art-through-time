@@ -22,8 +22,14 @@ const workPopularity = work => Number.isFinite(Number(work.popularity)) ? Number
 
 function selectArtistWorks(works, limit = 60) {
   const byKey = new Map();
+  const idCounts = new Map();
   (works || []).forEach(work => {
-    const key = workKey(work);
+    const id = String(work?.id || '');
+    if (id) idCounts.set(id, (idCounts.get(id) || 0) + 1);
+  });
+  (works || []).forEach(work => {
+    const id = String(work?.id || '');
+    const key = id && idCounts.get(id) > 1 ? `id:${id}` : workKey(work);
     if (!key) return;
     const existing = byKey.get(key);
     byKey.set(key, existing ? {...work, ...existing, representative:Boolean(existing.representative || work.representative), popularity:Math.max(workPopularity(existing), workPopularity(work))} : work);
@@ -44,7 +50,16 @@ function mergeWorks(existingWorks = [], incomingWorks = []) {
   incomingWorks.forEach(work => {
     const key = workKey(work);
     if (!key) return;
-    if (byId.has(key)) byId.set(key, {...byId.get(key), ...work});
+    if (byId.has(key)) {
+      const existing = byId.get(key);
+      byId.set(key, {
+        ...existing,
+        ...work,
+        representative: typeof existing.representative === 'boolean' ? existing.representative : Boolean(existing.representative || work.representative),
+        movementContribution: typeof existing.movementContribution === 'boolean' ? existing.movementContribution : Boolean(existing.movementContribution || work.movementContribution),
+        popularity: Math.max(workPopularity(existing), workPopularity(work))
+      });
+    }
     else byId.set(key, work);
   });
   return selectArtistWorks([...byId.values()]);
