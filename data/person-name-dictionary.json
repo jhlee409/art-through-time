@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-22T12:07:38.533Z",
+  "generatedAt": "2026-08-22T12:53:23.036Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -1011,19 +1011,33 @@
       "status": "verified-pair"
     },
     {
-      "id": "bronzino",
+      "id": "Q7803",
       "original": "Bronzino",
       "korean": "브론치노",
       "displayKorean": "브론치노",
       "aliases": {
-        "ko": [],
-        "en": []
+        "ko": [
+          "아뇰로 브론치노",
+          "아뇰로 디 코시모",
+          "일 브론치노",
+          "브론치노, 아뇰로",
+          "브론치노"
+        ],
+        "en": [
+          "Agnolo Bronzino",
+          "Agnolo di Cosimo",
+          "Agnolo di Cosimo di Mariano",
+          "Il Bronzino",
+          "Angelo Bronzino",
+          "Bronzino"
+        ]
       },
       "uhangul": "브[Rㅗㄴ]치노",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json"
       ],
       "status": "verified-pair"
     },
