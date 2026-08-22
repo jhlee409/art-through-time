@@ -13,7 +13,7 @@ const thumbnailsDir = path.join(root, 'data', 'thumbnails');
 const width = Number(process.env.ART_ATLAS_THUMBNAIL_WIDTH || 640);
 const limit = Number(process.env.ART_ATLAS_THUMBNAIL_CACHE_LIMIT || 0);
 const perArtistDownloadLimit = Number(process.env.ART_ATLAS_THUMBNAIL_PER_ARTIST_LIMIT ?? 20);
-const storedImageLimit = 30 * 1024 * 1024;
+const storedImageLimit = 10 * 1024 * 1024;
 const sourceImageInputLimit = 500 * 1024 * 1024;
 const ffmpegPath = process.env.ART_ATLAS_FFMPEG || 'ffmpeg';
 const localizeOnly = process.env.ART_ATLAS_LOCALIZE_ONLY === '1';
@@ -166,11 +166,11 @@ async function reduceImageForStorage(buffer, extension, workId) {
   try {
     await fs.writeFile(input, buffer);
     for (const size of [2400, 2000, 1600, 1400, 1200, 1000, 800, 640, 480]) {
-      await execFileAsync(ffmpegPath, ['-y', '-i', input, '-vf', `scale=min(${size}\\,iw):-2`, '-compression_level', '9', '-pred', 'mixed', output], {windowsHide: true, timeout: 300000});
+      await execFileAsync(ffmpegPath, ['-y', '-i', input, '-vf', `scale=min(${size}\\,iw):-2`, '-frames:v', '1', '-update', '1', '-compression_level', '9', '-pred', 'mixed', output], {windowsHide: true, timeout: 300000});
       const reduced = await fs.readFile(output);
       if (reduced.length < storedImageLimit) return {buffer: reduced, extension: 'png', reduced: true};
     }
-    throw new Error(`Could not reduce ${workId} below 30 MB as PNG`);
+    throw new Error(`Could not reduce ${workId} below 10 MB as PNG`);
   } finally {
     await fs.rm(staging, {recursive: true, force: true}).catch(() => {});
   }
@@ -263,7 +263,7 @@ async function main() {
           contentType: stored.reduced ? 'image/png' : downloaded.contentType,
           bytes: stored.buffer.length,
           checkedAt: new Date().toISOString(),
-          verifiedBy: stored.reduced ? 'Artwork image cached for offline use; reduced below 30 MB as PNG' : 'Artwork image cached for offline use'
+          verifiedBy: stored.reduced ? 'Artwork image cached for offline use; reduced below 10 MB as PNG' : 'Artwork image cached for offline use'
         };
         work.thumbnail = relative;
         work.thumbnailValidation = 2;

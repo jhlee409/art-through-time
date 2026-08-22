@@ -43,7 +43,7 @@ const catalogueSchema = 20;
 const execFileAsync = promisify(execFile);
 const ffmpegPath = process.env.ART_ATLAS_FFMPEG || (fsSync.existsSync('C:\\ffmpeg\\bin\\ffmpeg.exe') ? 'C:\\ffmpeg\\bin\\ffmpeg.exe' : 'ffmpeg');
 const artistImportedWorkLimit = 60;
-const highResolutionStoredLimit = 30 * 1024 * 1024;
+const highResolutionStoredLimit = 10 * 1024 * 1024;
 const sourceImageInputLimit = 500 * 1024 * 1024;
 let nextWikimediaRequestAt = 0;
 let artistsWriteQueue = Promise.resolve();
@@ -688,10 +688,10 @@ async function removeThumbnailFiles(directory, workId) {
 async function makePngUnderStorageLimit(input, folder, fileBase, widths) {
   const output=path.join(folder,`${fileBase}.png`);
   for (const width of widths) {
-    await execFileAsync(ffmpegPath,['-y','-i',input,'-vf',`scale=min(${width}\\,iw):-2`,'-compression_level','9','-pred','mixed',output],{windowsHide:true,timeout:300000});
+    await execFileAsync(ffmpegPath,['-y','-i',input,'-vf',`scale=min(${width}\\,iw):-2`,'-frames:v','1','-update','1','-compression_level','9','-pred','mixed',output],{windowsHide:true,timeout:300000});
     if ((await fs.stat(output)).size < highResolutionStoredLimit) return output;
   }
-  throw new Error('Could not create a PNG image smaller than 30 MB');
+  throw new Error('Could not create a PNG image smaller than 10 MB');
 }
 async function reduceImageBufferForStorage(image, extension, fileBase) {
   if (image.length < highResolutionStoredLimit) return {image,extension};
@@ -707,7 +707,54 @@ async function reduceImageBufferForStorage(image, extension, fileBase) {
     await fs.rm(staging,{recursive:true,force:true}).catch(()=>{});
   }
 }
-async function saveThumbnailBuffer(artist,work,image,extension,verifiedBy,email=adminEmail) { if(invalidArtworkThumbnail(image)) throw new Error('Image is a small interface icon'); if(!['jpg','png','webp','gif'].includes(extension)) throw new Error('Unsupported image file type'); if(image.length > sourceImageInputLimit) throw new Error('Image source is larger than 500 MB'); const stored=await reduceImageBufferForStorage(image,extension,safeUploadId(work.id)); image=stored.image; extension=stored.extension; if(invalidArtworkThumbnail(image)) throw new Error('Image is a small interface icon'); const location=thumbnailLocation(email,artist.id), directory=location.folder, fileName=`${work.id}.${extension}`, relative=`${location.relativePrefix}/${fileName}`; await fs.mkdir(directory,{recursive:true}); await removeThumbnailFiles(directory,work.id); await fs.writeFile(path.join(directory,fileName),image); const indexPath=path.join(directory,'index.json'); let index={}; try { index=JSON.parse(await fs.readFile(indexPath,'utf8')); } catch (_) {} index[work.id]={thumbnail:relative,checkedAt:new Date().toISOString(),verifiedBy:stored.reduced ? `${verifiedBy}; reduced below 30 MB and original discarded` : verifiedBy}; await fs.writeFile(indexPath,JSON.stringify(index,null,2),'utf8'); return relative; }
+function localThumbnailIndexTarget(relativePath) {
+  const clean=String(relativePath || '').trim().replace(/[?#].*$/,'').replace(/\\/g,'/');
+  if(!/^data\/thumbnails\//.test(clean) || clean === offlineArtworkPlaceholder) return null;
+  const target=path.resolve(root,clean);
+  const relative=path.relative(root,target).replace(/\\/g,'/');
+  return relative && !relative.startsWith('..') && !path.isAbsolute(relative) ? target : null;
+}
+async function thumbnailIndexImageHash(item) {
+  if(item?.imageHash) return String(item.imageHash);
+  const target=localThumbnailIndexTarget(item?.thumbnail);
+  if(!target) return '';
+  try {
+    return createHash('sha256').update(await fs.readFile(target)).digest('hex');
+  } catch (_) {
+    return '';
+  }
+}
+async function assertUniqueThumbnailImage(index, work, imageHash) {
+  const workId=String(work?.id || '');
+  for(const [otherId,item] of Object.entries(index || {})) {
+    if(String(otherId) === workId) continue;
+    const otherHash=await thumbnailIndexImageHash(item);
+    if(otherHash && otherHash === imageHash) {
+      throw new Error(`The downloaded thumbnail is identical to another artwork thumbnail (${otherId}); rejected to prevent repeated wrong images`);
+    }
+  }
+}
+async function saveThumbnailBuffer(artist,work,image,extension,verifiedBy,email=adminEmail) {
+  if(invalidArtworkThumbnail(image)) throw new Error('Image is a small interface icon');
+  if(!['jpg','png','webp','gif'].includes(extension)) throw new Error('Unsupported image file type');
+  if(image.length > sourceImageInputLimit) throw new Error('Image source is larger than 500 MB');
+  const stored=await reduceImageBufferForStorage(image,extension,safeUploadId(work.id));
+  image=stored.image;
+  extension=stored.extension;
+  if(invalidArtworkThumbnail(image)) throw new Error('Image is a small interface icon');
+  const location=thumbnailLocation(email,artist.id), directory=location.folder, fileName=`${work.id}.${extension}`, relative=`${location.relativePrefix}/${fileName}`;
+  await fs.mkdir(directory,{recursive:true});
+  const indexPath=path.join(directory,'index.json');
+  let index={};
+  try { index=JSON.parse(await fs.readFile(indexPath,'utf8')); } catch (_) {}
+  const imageHash=createHash('sha256').update(image).digest('hex');
+  await assertUniqueThumbnailImage(index,work,imageHash);
+  await removeThumbnailFiles(directory,work.id);
+  await fs.writeFile(path.join(directory,fileName),image);
+  index[work.id]={thumbnail:relative,checkedAt:new Date().toISOString(),verifiedBy:stored.reduced ? `${verifiedBy}; reduced below 10 MB and original discarded` : verifiedBy,imageHash};
+  await fs.writeFile(indexPath,JSON.stringify(index,null,2),'utf8');
+  return relative;
+}
 async function saveThumbnail(artist,work,thumbUrl,verifiedBy,email=adminEmail) { const extension=thumbnailExtension(thumbUrl) || 'jpg', image=await getBinary(thumbUrl); return saveThumbnailBuffer(artist,work,image,extension,verifiedBy,email); }
 async function cacheThumbnail(artist, work, email=adminEmail) { const iconRejected=work.thumbnailInvalidReason === 'thumbnail-is-small-interface-icon'; if(iconRejected) { const fallback=await openverseThumbnail(work,artist).catch(()=> ''); if(fallback) return saveThumbnail(artist,work,fallback,'Openverse fallback after local interface icon rejection',email); } const thumbUrl=await findThumbnailUrl(work,artist); if(!thumbUrl) throw new Error('No verified thumbnail candidate'); const sourceImage=String(work.image || '').replace(/^http:\/\//i,'https://'); const verifiedBy=thumbUrl.includes('openverse.org') ? 'Openverse: title and artist metadata match' : (sourceImage && thumbUrl === sourceImage ? 'Artwork image cached for offline use' : (work.image ? 'Wikidata image statement' : 'Wikipedia article title and artist match')); try { return await saveThumbnail(artist,work,thumbUrl,verifiedBy,email); } catch(error) { const fallback=await openverseThumbnail(work,artist).catch(()=> ''); if(!fallback || fallback===thumbUrl) throw error; return saveThumbnail(artist,work,fallback,'Openverse fallback after image download retry',email); } }
 function wikimediaFilePageThumbnail(pageUrl) { try { const parsed=new URL(pageUrl); if(!/(^|\.)wikipedia\.org$/i.test(parsed.hostname) || !parsed.pathname.startsWith('/wiki/')) return ''; const title=decodeURIComponent(parsed.pathname.slice('/wiki/'.length)).replace(/_/g,' '); const fileName=title.replace(/^(?:file|파일)\s*:/i,'').trim(); return /\.(jpe?g|png|webp|gif)$/i.test(fileName) ? `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(fileName)}?width=640` : ''; } catch (_) { return ''; } }
@@ -944,10 +991,6 @@ function thumbnailTitleHasExtraForCheck(work, artist, title) {
   const clean=artworkThumbnailTitleForCheck(work, artist, title);
   const cleanKey=compactCheckText(clean);
   if(!cleanKey) return false;
-  for(const name of artistNamesForThumbnailCheck(artist)) {
-    const key=compactCheckText(name);
-    if(key && key.length >= 2 && cleanKey.includes(key)) return true;
-  }
   for(const collection of collectionLabelsForCheck(work)) {
     const key=compactCheckText(collection);
     if(key && key.length >= 2 && cleanKey.includes(key)) return true;
@@ -959,6 +1002,61 @@ function thumbnailTitleExtraItems(artists) {
     const titles=[work?.title?.ko,work?.title?.en,work?.title?.original,work?.title?.native,work?.title?.sourceTitle].map(value=>String(value || '').trim()).filter(Boolean);
     return titles.some(title=>thumbnailTitleHasExtraForCheck(work,artist,title)) ? [ruleCheckItem(artist,work)] : [];
   }));
+}
+function localImageFileForDuplicateCheck(value) {
+  const src=String(value || '').trim().replace(/[?#].*$/,'').replace(/\\/g,'/');
+  if(!/^data\/(?:thumbnails|high-resolution)\//.test(src) || src === offlineArtworkPlaceholder) return null;
+  const target=path.resolve(root,src);
+  const relative=path.relative(root,target).replace(/\\/g,'/');
+  if(!relative || relative.startsWith('..') || path.isAbsolute(relative)) return null;
+  return {src,target};
+}
+async function localImageHashForDuplicateCheck(target) {
+  try {
+    const buffer=await fs.readFile(target);
+    return createHash('sha256').update(buffer).digest('hex');
+  } catch (_) {
+    return '';
+  }
+}
+async function duplicateArtworkImageIssues(artists) {
+  const issues=[];
+  const hashCache=new Map();
+  for(const artist of artists) {
+    const byHash=new Map();
+    for(const work of artist.works || []) {
+      const imageRefs=[['thumbnail',work.thumbnail],['highResImage',work.highResImage]];
+      for(const [field,value] of imageRefs) {
+        const file=localImageFileForDuplicateCheck(value);
+        if(!file) continue;
+        let hash=hashCache.get(file.target);
+        if(hash === undefined) {
+          hash=await localImageHashForDuplicateCheck(file.target);
+          hashCache.set(file.target,hash);
+        }
+        if(!hash) continue;
+        const workId=String(work.id || '');
+        const bucket=byHash.get(hash) || {files:new Set(),works:new Map(),fields:new Set()};
+        bucket.files.add(file.src);
+        bucket.fields.add(field);
+        if(!bucket.works.has(workId)) bucket.works.set(workId,work);
+        byHash.set(hash,bucket);
+      }
+    }
+    for(const [hash,bucket] of byHash) {
+      const duplicatedWorks=[...bucket.works.values()];
+      if(duplicatedWorks.length < 2) continue;
+      const titles=duplicatedWorks.slice(0,8).map(work=>localizedCheckValue(work.title) || work.id).join(', ');
+      const more=duplicatedWorks.length > 8 ? ` 외 ${duplicatedWorks.length - 8}점` : '';
+      issues.push({
+        artist:actualArtistDisplayNameForCheck(artist) || localizedCheckValue(artist.name) || artist.id,
+        artistId:artist.qid || artist.id || '',
+        work:`같은 이미지 파일 내용이 ${duplicatedWorks.length}개 작품에 반복 연결됨: ${titles}${more}`,
+        workId:`${[...bucket.fields].join('+')} · ${[...bucket.files].slice(0,3).join(', ')} · sha256:${hash.slice(0,12)}`
+      });
+    }
+  }
+  return issues;
 }
 function movementFilterEntryForCheck(artist) {
   const movement=artist?.movement;
@@ -1111,6 +1209,29 @@ async function displayDataImageIssues() {
   }
   return issues;
 }
+async function oversizedLocalImageIssues() {
+  const issues=[];
+  const imagePattern=/\.(?:jpe?g|png|webp|gif)$/i;
+  const walk=async folder => {
+    const entries=await fs.readdir(folder,{withFileTypes:true}).catch(()=>[]);
+    for(const entry of entries) {
+      const file=path.join(folder,entry.name);
+      if(entry.isDirectory()) {
+        if(entry.name === 'backups') continue;
+        await walk(file);
+        continue;
+      }
+      if(!entry.isFile() || !imagePattern.test(entry.name)) continue;
+      const stat=await fs.stat(file).catch(()=>null);
+      if(!stat || stat.size <= highResolutionStoredLimit) continue;
+      const relative=path.relative(root,file).replace(/\\/g,'/');
+      const mb=(stat.size / 1024 / 1024).toFixed(2);
+      issues.push({artist:'로컬 이미지',artistId:'image-size-limit',work:`10MB 초과 파일: ${mb}MB`,workId:relative});
+    }
+  };
+  await walk(dataDir);
+  return issues;
+}
 function htmlPlainText(value) {
   return String(value || '').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();
 }
@@ -1145,13 +1266,17 @@ async function writeRuleCheckReport(result) {
   const reportFolder=path.join(root,'변경사항');
   const reportFile=path.join(reportFolder,`규칙점검_${koreanTimestamp()}.md`);
   const rows=items => items.length ? items.map(item=>`- ${item.artist} · ${item.work}${item.workId ? ` (${item.workId})` : ''}`).join('\n') : '- 없음';
-  let text=['# 전체 규칙 점검 보고서','',`- 점검 시각: ${new Date().toLocaleString('ko-KR',{timeZone:'Asia/Seoul'})}`,`- 결과: ${result.changed ? '최신 공통 규칙을 적용하고 저장함' : '저장 데이터가 현재 공통 규칙과 일치함'}`,`- 데이터 버전: ${result.revision}`,'','## 대상','',`- 화가: ${result.stats.artists}명`,`- 작품: ${result.stats.works}점`,`- 이름 사전: ${result.stats.nameDictionary}개 항목 재생성`,`- 미술사조 문서의 화가 링크: 열 때마다 최신 별칭으로 동적 연결`,'','## 자동 적용한 범위','','- 최신 작품 정리·중복 처리 규칙','- 고해상도 이미지 경로 재확인','- 화가 이름 사전 및 uHangul 화가 맵 재생성','- 화가 목록·연표 제목의 한국어 표시명, 성·이름 순서, 네덜란드어 van=반 표기, uHangul 런타임·변환 표식 점검','- 화가 목록 국가 아이콘의 국가명 title·aria-label 연결 및 한국어 국가명 점검','- 기법 설명 오른쪽 페이지 제목 옆 + 자료 버튼 및 비교 기법 저장 경로 점검','- 미술사조 HTML 이미지 파일 누락 및 Git 비관리 이미지 폴더 직접 참조 점검','- 기법·대표작·주제-사건 표시 데이터의 외부 URL, 캐시 폴더 직접 참조, 이미지 파일 누락 점검','- 썸네일 제목의 화가명·소장처 혼입 점검','','수동 입력 작품, 대표작 선택, 직접 작성한 설명·이미지는 덮어쓰지 않았다. 외부 웹에서 작품을 재수집하거나 삭제하지 않았다.','','## 확인이 필요한 항목','',`### 이미지가 없는 작품 (${result.issues.missingPreview.length}점)`,'',rows(result.issues.missingPreview),'',`### 제목이 없는 작품 (${result.issues.missingTitle.length}점)`,'',rows(result.issues.missingTitle),'',`### QID가 제목으로 남은 작품 (${result.issues.qidTitle.length}점)`,'',rows(result.issues.qidTitle),'',`### 화가 목록·연표 표시명이 한국어가 아닌 항목 (${result.issues.artistDisplayKorean.length}점)`,'',rows(result.issues.artistDisplayKorean),'',`### 화가 목록·연표 표시명의 성, 이름 순서 확인 항목 (${result.issues.artistDisplayOrder.length}점)`,'',rows(result.issues.artistDisplayOrder),'',`### 네덜란드어 van 한국어 표기 확인 항목 (${result.issues.artistDutchVanRomanization.length}점)`,'',rows(result.issues.artistDutchVanRomanization),'',`### 화가 목록 국가 아이콘의 국가명 확인 항목 (${result.issues.artistCountryIcon.length}점)`,'',rows(result.issues.artistCountryIcon),'',`### uHangul 폰트·런타임·화가 맵·변환 표식 확인 항목 (${result.issues.uHangulConnection.length}점)`,'',rows(result.issues.uHangulConnection),'',`### 기법 설명 제목 옆 + 자료 버튼 확인 항목 (${result.issues.techniqueTitleLinkButton.length}점)`,'',rows(result.issues.techniqueTitleLinkButton),'',`### 미술사조 HTML 이미지 경로 확인 항목 (${result.issues.movementDocumentImage.length}점)`,'',rows(result.issues.movementDocumentImage),'',`### 표시 데이터 이미지 경로 확인 항목 (${result.issues.displayDataImage.length}점)`,'',rows(result.issues.displayDataImage),'',`### 썸네일 제목에 화가명 또는 소장처가 남은 작품 (${result.issues.thumbnailTitleExtra.length}점)`,'',rows(result.issues.thumbnailTitleExtra),'','## 참고 항목','',`### 공개 이미지 없음으로 표시한 작품 (${result.issues.reviewedNoPublicImage.length}점)`,'',rows(result.issues.reviewedNoPublicImage),'','## 다음 조치','','1. 위 목록의 화가 연표에서 작품의 이미지 또는 제목을 보완한다.','2. 다시 전체 규칙 점검을 실행한다.','3. 이 보고서 파일을 다음 작업 세션에 전달하거나, “가장 최근 규칙점검 보고서 확인”이라고 요청한다.',''].join('\\n');
+  let text=['# 전체 규칙 점검 보고서','',`- 점검 시각: ${new Date().toLocaleString('ko-KR',{timeZone:'Asia/Seoul'})}`,`- 결과: ${result.changed ? '최신 공통 규칙을 적용하고 저장함' : '저장 데이터가 현재 공통 규칙과 일치함'}`,`- 데이터 버전: ${result.revision}`,'','## 대상','',`- 화가: ${result.stats.artists}명`,`- 작품: ${result.stats.works}점`,`- 이름 사전: ${result.stats.nameDictionary}개 항목 재생성`,`- 미술사조 문서의 화가 링크: 열 때마다 최신 별칭으로 동적 연결`,'','## 자동 적용한 범위','','- 최신 작품 정리·중복 처리 규칙','- 고해상도 이미지 경로 재확인','- 화가 이름 사전 및 uHangul 화가 맵 재생성','- 화가 목록·연표 제목의 한국어 표시명, 성·이름 순서, 네덜란드어 van=반 표기, uHangul 런타임·변환 표식 점검','- 화가 목록 국가 아이콘의 국가명 title·aria-label 연결 및 한국어 국가명 점검','- 기법 설명 오른쪽 페이지 제목 옆 + 자료 버튼 및 비교 기법 저장 경로 점검','- 미술사조 HTML 이미지 파일 누락 및 Git 비관리 이미지 폴더 직접 참조 점검','- 기법·대표작·주제-사건 표시 데이터의 외부 URL, 캐시 폴더 직접 참조, 이미지 파일 누락 점검','- 썸네일 제목의 소장처 정보 혼입 점검','- 화가별 로컬 썸네일·고해상도 이미지의 파일 내용 중복 점검','','수동 입력 작품, 대표작 선택, 직접 작성한 설명·이미지는 덮어쓰지 않았다. 외부 웹에서 작품을 재수집하거나 삭제하지 않았다.','','## 확인이 필요한 항목','',`### 이미지가 없는 작품 (${result.issues.missingPreview.length}점)`,'',rows(result.issues.missingPreview),'',`### 제목이 없는 작품 (${result.issues.missingTitle.length}점)`,'',rows(result.issues.missingTitle),'',`### QID가 제목으로 남은 작품 (${result.issues.qidTitle.length}점)`,'',rows(result.issues.qidTitle),'',`### 화가 목록·연표 표시명이 한국어가 아닌 항목 (${result.issues.artistDisplayKorean.length}점)`,'',rows(result.issues.artistDisplayKorean),'',`### 화가 목록·연표 표시명의 성, 이름 순서 확인 항목 (${result.issues.artistDisplayOrder.length}점)`,'',rows(result.issues.artistDisplayOrder),'',`### 네덜란드어 van 한국어 표기 확인 항목 (${result.issues.artistDutchVanRomanization.length}점)`,'',rows(result.issues.artistDutchVanRomanization),'',`### 화가 목록 국가 아이콘의 국가명 확인 항목 (${result.issues.artistCountryIcon.length}점)`,'',rows(result.issues.artistCountryIcon),'',`### uHangul 폰트·런타임·화가 맵·변환 표식 확인 항목 (${result.issues.uHangulConnection.length}점)`,'',rows(result.issues.uHangulConnection),'',`### 기법 설명 제목 옆 + 자료 버튼 확인 항목 (${result.issues.techniqueTitleLinkButton.length}점)`,'',rows(result.issues.techniqueTitleLinkButton),'',`### 미술사조 HTML 이미지 경로 확인 항목 (${result.issues.movementDocumentImage.length}점)`,'',rows(result.issues.movementDocumentImage),'',`### 표시 데이터 이미지 경로 확인 항목 (${result.issues.displayDataImage.length}점)`,'',rows(result.issues.displayDataImage),'',`### 썸네일 제목에 소장처 정보가 남은 작품 (${result.issues.thumbnailTitleExtra.length}점)`,'',rows(result.issues.thumbnailTitleExtra),'',`### 같은 이미지 파일 내용이 반복 연결된 작품 (${result.issues.duplicateArtworkImage.length}건)`,'',rows(result.issues.duplicateArtworkImage),'','## 참고 항목','',`### 공개 이미지 없음으로 표시한 작품 (${result.issues.reviewedNoPublicImage.length}점)`,'',rows(result.issues.reviewedNoPublicImage),'','## 다음 조치','','1. 위 목록의 화가 연표에서 작품의 이미지 또는 제목을 보완한다.','2. 다시 전체 규칙 점검을 실행한다.','3. 이 보고서 파일을 다음 작업 세션에 전달하거나, “가장 최근 규칙점검 보고서 확인”이라고 요청한다.',''].join('\\n');
   text=text.replace('- 미술사조 HTML 이미지 파일 누락 및 Git 비관리 이미지 폴더 직접 참조 점검\\n- 기법·대표작·주제-사건 표시 데이터의 외부 URL, 캐시 폴더 직접 참조, 이미지 파일 누락 점검','- 미술사조 HTML 이미지 파일 누락 및 Git 비관리 이미지 폴더 직접 참조 점검\\n- 미술사조 선구자 공통 문구의 index.json 기준 매핑 및 정적 문구 불일치 점검\\n- 기법·대표작·주제-사건 표시 데이터의 외부 URL, 캐시 폴더 직접 참조, 이미지 파일 누락 점검');
   text=text.replace('- 화가 목록 국가 아이콘의 국가명 title·aria-label 연결 및 한국어 국가명 점검\\n- 기법 설명 오른쪽 페이지 제목 옆 + 자료 버튼 및 비교 기법 저장 경로 점검','- 화가 목록 국가 아이콘의 국가명 title·aria-label 연결 및 한국어 국가명 점검\\n- 화가 목록 사조 드롭다운 중복, 대표 사조 누락, 작품별 사조 오매칭 방지 점검\\n- 기법 설명 오른쪽 페이지 제목 옆 + 자료 버튼 및 비교 기법 저장 경로 점검');
   text=text.replace(/(### uHangul 폰트·런타임·화가 맵·변환 표식 확인 항목 \(\d+점\))/,
     `### 화가 목록 사조 필터 확인 항목 (${result.issues.artistMovementFilter.length}점)\\n\\n${rows(result.issues.artistMovementFilter)}\\n\\n$1`);
   text=text.replace(/(### 표시 데이터 이미지 경로 확인 항목 \(\d+점\))/,
     `### 미술사조 선구자 공통 문구 확인 항목 (${result.issues.movementPioneerContext.length}점)\\n\\n${rows(result.issues.movementPioneerContext)}\\n\\n$1`);
+  text=text.replace('- 썸네일 제목의 소장처 정보 혼입 점검\\n- 화가별 로컬 썸네일·고해상도 이미지의 파일 내용 중복 점검',
+    '- 썸네일 제목의 소장처 정보 혼입 점검\\n- 로컬 이미지 10MB 초과 파일 점검\\n- 화가별 로컬 썸네일·고해상도 이미지의 파일 내용 중복 점검');
+  text=text.replace(/(### 같은 이미지 파일 내용이 반복 연결된 작품 \(\d+건\))/,
+    `### 10MB 초과 로컬 이미지 파일 (${result.issues.oversizedLocalImage.length}건)\\n\\n${rows(result.issues.oversizedLocalImage)}\\n\\n$1`);
   await fs.mkdir(reportFolder,{recursive:true});
   await fs.writeFile(reportFile,text,'utf8');
   return path.relative(root,reportFile).replace(/\\/g,'/');
@@ -1171,6 +1296,8 @@ async function checkAndApplyLatestRules(actor='') {
   const movementDocumentImageIssuesList=await movementDocumentImageIssues();
   const movementPioneerContextIssuesList=await movementPioneerContextIssues();
   const displayDataImageIssuesList=await displayDataImageIssues();
+  const oversizedLocalImageIssuesList=await oversizedLocalImageIssues();
+  const duplicateArtworkImageIssuesList=await duplicateArtworkImageIssues(artists);
   const artistDutchVanRomanizationIssues=dutchVanRomanizationIssues(artists);
   const issues={
     missingPreview:artists.flatMap(artist=>(artist.works || []).filter(work=>!work.thumbnail && !work.image).map(work=>ruleCheckItem(artist,work))),
@@ -1186,7 +1313,9 @@ async function checkAndApplyLatestRules(actor='') {
     movementDocumentImage:movementDocumentImageIssuesList,
     movementPioneerContext:movementPioneerContextIssuesList,
     displayDataImage:displayDataImageIssuesList,
+    oversizedLocalImage:oversizedLocalImageIssuesList,
     thumbnailTitleExtra:thumbnailTitleExtraItems(artists),
+    duplicateArtworkImage:duplicateArtworkImageIssuesList,
     reviewedNoPublicImage:artists.flatMap(artist=>(artist.works || []).filter(work=>work.thumbnailInvalidReason === 'no-public-image-source').map(work=>ruleCheckItem(artist,work)))
   };
   const missingPreview=issues.missingPreview.length;
@@ -1202,7 +1331,9 @@ async function checkAndApplyLatestRules(actor='') {
   const movementDocumentImage=issues.movementDocumentImage.length;
   const movementPioneerContext=issues.movementPioneerContext.length;
   const displayDataImage=issues.displayDataImage.length;
+  const oversizedLocalImage=issues.oversizedLocalImage.length;
   const thumbnailTitleExtra=issues.thumbnailTitleExtra.length;
+  const duplicateArtworkImage=issues.duplicateArtworkImage.length;
   let revision=Number(payload.metadata?.revision) || 0;
   const changed=before !== after;
   if (changed) {
@@ -1211,10 +1342,10 @@ async function checkAndApplyLatestRules(actor='') {
   } else {
     writeUHangulArtistMap(artists);
     syncPersonNameDictionary({artists});
-    await appendAudit({type:'rules.check-and-apply',actor:normalizedEmail(actor) || 'local-admin',revision,changed:false,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle,qidTitle,artistDisplayKorean,artistDisplayOrder,artistDutchVanRomanization,artistCountryIcon,artistMovementFilter,uHangulConnection,techniqueTitleLinkButton,movementDocumentImage,movementPioneerContext,displayDataImage,thumbnailTitleExtra}});
+    await appendAudit({type:'rules.check-and-apply',actor:normalizedEmail(actor) || 'local-admin',revision,changed:false,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle,qidTitle,artistDisplayKorean,artistDisplayOrder,artistDutchVanRomanization,artistCountryIcon,artistMovementFilter,uHangulConnection,techniqueTitleLinkButton,movementDocumentImage,movementPioneerContext,displayDataImage,oversizedLocalImage,thumbnailTitleExtra,duplicateArtworkImage}});
   }
   const nameDictionary=syncPersonNameDictionary({artists}).records;
-  const result={ok:true,changed,revision,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle,qidTitle,artistDisplayKorean,artistDisplayOrder,artistDutchVanRomanization,artistCountryIcon,artistMovementFilter,uHangulConnection,techniqueTitleLinkButton,movementDocumentImage,movementPioneerContext,displayDataImage,thumbnailTitleExtra,reviewedNoPublicImage:issues.reviewedNoPublicImage.length,nameDictionary,movementDocuments:'dynamic-linking'},issues};
+  const result={ok:true,changed,revision,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle,qidTitle,artistDisplayKorean,artistDisplayOrder,artistDutchVanRomanization,artistCountryIcon,artistMovementFilter,uHangulConnection,techniqueTitleLinkButton,movementDocumentImage,movementPioneerContext,displayDataImage,oversizedLocalImage,thumbnailTitleExtra,duplicateArtworkImage,reviewedNoPublicImage:issues.reviewedNoPublicImage.length,nameDictionary,movementDocuments:'dynamic-linking'},issues};
   result.reportFile=await writeRuleCheckReport(result);
   return result;
 }
@@ -1700,7 +1831,7 @@ async function localizeMovementDocumentImages(buffer) {
 function uploadExtension(file) { const ext=path.extname(String(file?.filename || '')).toLowerCase(); return uploadTypes[file?.contentType] || ({'.jpg':'jpg','.jpeg':'jpg','.jfif':'jpg','.png':'png','.webp':'webp','.gif':'gif'}[ext]); }
 async function makeDisplayImage(input, folder, fileBase) {
   // Very large originals can exceed a browser's decoded-image or GPU texture
-  // limit. Create a PNG display master under 30 MB; the uploaded original is discarded.
+  // limit. Create a PNG display master under 10 MB; the uploaded original is discarded.
   return makePngUnderStorageLimit(input,folder,`${fileBase}.display`,[8000,6000,4800,3600,3000,2400,2000,1600,1200,1000,800,640]);
 }
 async function makeLocalArtworkThumbnail(input, artist, work, email=adminEmail) {
@@ -1725,7 +1856,7 @@ async function saveLocalArtworkImage(form) {
   await fs.writeFile(input,file.data);
   try {
     const display=await makeDisplayImage(input,staging,fileBase);
-    if((await fs.stat(display)).size>highResolutionStoredLimit) throw new Error('Could not create a display image smaller than 30 MB');
+    if((await fs.stat(display)).size>highResolutionStoredLimit) throw new Error('Could not create a display image smaller than 10 MB');
     const thumbnail=await makeLocalArtworkThumbnail(display,artist,work);
     await fs.mkdir(location.folder,{recursive:true});
     await removeHighResolutionFiles(location.folder,workId);
@@ -1747,7 +1878,7 @@ async function saveTopicArtwork(form) {
   try {
     await fs.mkdir(topicImageDir,{recursive:true});
     const display=await makeDisplayImage(input,staging,id);
-    if((await fs.stat(display)).size>highResolutionStoredLimit) throw new Error('30MB 이하의 표시용 이미지를 만들 수 없습니다');
+    if((await fs.stat(display)).size>highResolutionStoredLimit) throw new Error('10MB 이하의 표시용 이미지를 만들 수 없습니다');
     const relative=`data/topic-images/${id}.display.png`;
     await fs.rename(display,path.join(topicImageDir,`${id}.display.png`));
     const work={id,title,artist:'',year:startYear===endYear?String(startYear):`${startYear}–${endYear}`,sortYear:startYear,movement:'추가 작품',thumbnail:relative,description:''};
@@ -1768,7 +1899,7 @@ async function replaceTopicArtworkImage(form) {
   try {
     await fs.mkdir(topicImageDir,{recursive:true});
     const display=await makeDisplayImage(input,staging,imageId);
-    if((await fs.stat(display)).size>highResolutionStoredLimit) throw new Error('30MB 이하의 표시용 이미지를 만들 수 없습니다');
+    if((await fs.stat(display)).size>highResolutionStoredLimit) throw new Error('10MB 이하의 표시용 이미지를 만들 수 없습니다');
     const relative=`data/topic-images/${imageId}.display.png`, previous=String(work.thumbnail || '');
     await fs.rename(display,path.join(topicImageDir,`${imageId}.display.png`));
     work.thumbnail=relative;

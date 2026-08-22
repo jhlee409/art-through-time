@@ -81,6 +81,8 @@ C:\Users\jhlee\OneDrive - UOU\AI-Programming\Art_through_Time\download
 
 이미지 파일명은 작품 제목을 알아볼 수 있게 저장하면 매칭이 쉬워집니다. 제목이 불명확한 파일은 Codex가 확인한 뒤 연결합니다.
 
+이미지는 업로드, 캐시, 고해상도 표시 저장 단계에서 10MB 이하 PNG로 축소 저장합니다. 변환이 끝난 대용량 원본은 보관하지 않습니다.
+
 새 화가 추가 후에는 관리자 화면의 `전체 규칙 점검`을 실행합니다.
 
 ## 전체 규칙 점검
@@ -94,9 +96,10 @@ C:\Users\jhlee\OneDrive - UOU\AI-Programming\Art_through_Time\download
 - 네덜란드어 `van`의 한국어 표기를 `반`으로 통일했는지
 - uHangul 폰트, 런타임, 화가 맵 연결
 - uHangul 수동 변환 표식 필요 항목
-- 썸네일 제목에 화가명이나 소장처가 남아 있는지
+- 썸네일 제목에 소장처 정보가 남아 있는지
 - 국가 아이콘의 국가명 `title`, `aria-label` 연결
 - 이미지 누락, 제목 누락, QID 제목 잔류
+- 로컬 이미지 파일이 10MB를 넘는지
 - 미술사조 HTML 이미지 파일 누락 및 Git에 올리지 않는 이미지 폴더 직접 참조
 - 기법·대표작·주제-사건 표시 데이터의 외부 이미지 URL, 캐시 폴더 직접 참조, 이미지 파일 누락
 - 공개 이미지 없음 placeholder 처리
