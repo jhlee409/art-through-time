@@ -1,0 +1,496 @@
+{
+  "schema": 20,
+  "artistId": "artist-Q9348",
+  "qid": "Q9348",
+  "artist": {
+    "name": {
+      "ko": "파르미자니노",
+      "en": "Parmigianino"
+    },
+    "birth": 1503,
+    "death": 1540,
+    "nationality": {
+      "ko": "이탈리아",
+      "en": "Italian"
+    },
+    "movement": {
+      "ko": "매너리즘",
+      "en": "Mannerism"
+    },
+    "aliases": {
+      "ko": [
+        "프란체스코 마촐라",
+        "지롤라모 프란체스코 마리아 마촐라",
+        "마촐라, 프란체스코",
+        "일 파르미자니노"
+      ],
+      "en": [
+        "Francesco Mazzola",
+        "Girolamo Francesco Maria Mazzola",
+        "Francesco Mazzuoli",
+        "Il Parmigianino",
+        "Parmigiano"
+      ]
+    }
+  },
+  "fetchedAt": "2026-08-22T11:29:21.817Z",
+  "works": [
+    {
+      "id": "parmigianino-saint-barbara-1522",
+      "year": 1522,
+      "popularity": 7600,
+      "title": {
+        "ko": "성녀 바르바라",
+        "en": "Saint Barbara"
+      },
+      "description": {
+        "ko": "프라도 미술관 소장작으로, 젊은 파르미자니노의 길어진 인물 비례와 매끈한 표면, 우아하게 비튼 자세가 초기 매너리즘의 세련미를 보여줍니다.",
+        "en": "A Prado panel whose elongated proportions, polished surface, and elegant contrapposto show Parmigianino’s early Mannerist refinement."
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "Italy"
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "Mannerism"
+      },
+      "collection": [
+        {
+          "ko": "프라도 미술관",
+          "en": "Museo del Prado"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q9348/parmigianino-saint-barbara-1522.jpg",
+      "thumbnail": "data/thumbnails/artist-Q9348/parmigianino-saint-barbara-1522.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T11:29:21.817Z",
+      "highResImage": "data/thumbnails/artist-Q9348/parmigianino-saint-barbara-1522.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q9348/parmigianino-saint-barbara-1522.jpg",
+      "source": "https://en.wikipedia.org/wiki/Parmigianino; local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Parmigianino_-_Saint_Barbara.jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "프라도 미술관 소장작으로, 젊은 파르미자니노의 길어진 인물 비례와 매끈한 표면, 우아하게 비튼 자세가 초기 매너리즘의 세련미를 보여줍니다.",
+          "en": "A Prado panel whose elongated proportions, polished surface, and elegant contrapposto show Parmigianino’s early Mannerist refinement."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Parmigianino",
+          "local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Parmigianino_-_Saint_Barbara.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "파르미자니노",
+            "en": "Parmigianino"
+          },
+          "year": 1522,
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "매너리즘",
+            "en": "Mannerism"
+          },
+          "collection": [
+            {
+              "ko": "프라도 미술관",
+              "en": "Museo del Prado"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T11:29:21.817Z",
+        "updatedAt": "2026-08-22T11:29:21.817Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q9348/parmigianino-saint-barbara-1522.jpg",
+          "highResolution": "data/thumbnails/artist-Q9348/parmigianino-saint-barbara-1522.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Parmigianino",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Parmigianino"
+          ],
+          "license": "",
+          "institution": "Museo del Prado"
+        }
+      }
+    },
+    {
+      "id": "parmigianino-self-portrait-convex-mirror-1524",
+      "year": 1524,
+      "popularity": 9800,
+      "title": {
+        "ko": "볼록 거울 속 자화상",
+        "en": "Self-portrait in a Convex Mirror"
+      },
+      "description": {
+        "ko": "볼록 거울의 왜곡을 작은 원형 패널에 옮긴 대표작으로, 손과 얼굴의 비례 변형을 통해 파르미자니노의 기교와 매너리즘적 인공성을 압축합니다.",
+        "en": "A small round panel that transfers convex-mirror distortion into paint, condensing Parmigianino’s virtuosity and Mannerist artifice."
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "Italy"
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "Mannerism"
+      },
+      "collection": [
+        {
+          "ko": "빈 미술사박물관",
+          "en": "Kunsthistorisches Museum, Vienna"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q9348/parmigianino-self-portrait-convex-mirror-1524.jpg",
+      "thumbnail": "data/thumbnails/artist-Q9348/parmigianino-self-portrait-convex-mirror-1524.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T11:29:21.817Z",
+      "highResImage": "data/thumbnails/artist-Q9348/parmigianino-self-portrait-convex-mirror-1524.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q9348/parmigianino-self-portrait-convex-mirror-1524.jpg",
+      "source": "https://en.wikipedia.org/wiki/Parmigianino; local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Parmigianino_Selfportrait.jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "볼록 거울의 왜곡을 작은 원형 패널에 옮긴 대표작으로, 손과 얼굴의 비례 변형을 통해 파르미자니노의 기교와 매너리즘적 인공성을 압축합니다.",
+          "en": "A small round panel that transfers convex-mirror distortion into paint, condensing Parmigianino’s virtuosity and Mannerist artifice."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Parmigianino",
+          "local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Parmigianino_Selfportrait.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "파르미자니노",
+            "en": "Parmigianino"
+          },
+          "year": 1524,
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "매너리즘",
+            "en": "Mannerism"
+          },
+          "collection": [
+            {
+              "ko": "빈 미술사박물관",
+              "en": "Kunsthistorisches Museum, Vienna"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T11:29:21.817Z",
+        "updatedAt": "2026-08-22T11:29:21.817Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q9348/parmigianino-self-portrait-convex-mirror-1524.jpg",
+          "highResolution": "data/thumbnails/artist-Q9348/parmigianino-self-portrait-convex-mirror-1524.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Parmigianino",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Parmigianino"
+          ],
+          "license": "",
+          "institution": "Kunsthistorisches Museum, Vienna"
+        }
+      }
+    },
+    {
+      "id": "parmigianino-vision-of-saint-jerome-1526-1527",
+      "year": 1527,
+      "popularity": 9600,
+      "title": {
+        "ko": "성 히에로니무스의 환시",
+        "en": "Vision of Saint Jerome"
+      },
+      "description": {
+        "ko": "로마에서 주문받은 대형 제단화로, 길어진 성모자와 잠든 성 히에로니무스, 세례자 요한의 상승하는 몸짓이 전성기 르네상스의 안정성을 매너리즘적 환상으로 바꿉니다.",
+        "en": "A Roman altarpiece in which the elongated Madonna and Child, sleeping Jerome, and rising Saint John transform High Renaissance order into Mannerist vision."
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "Italy"
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "Mannerism"
+      },
+      "collection": [
+        {
+          "ko": "내셔널 갤러리, 런던",
+          "en": "National Gallery, London"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q9348/parmigianino-vision-of-saint-jerome-1526-1527.jpg",
+      "thumbnail": "data/thumbnails/artist-Q9348/parmigianino-vision-of-saint-jerome-1526-1527.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T11:29:21.817Z",
+      "highResImage": "data/thumbnails/artist-Q9348/parmigianino-vision-of-saint-jerome-1526-1527.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q9348/parmigianino-vision-of-saint-jerome-1526-1527.jpg",
+      "source": "https://en.wikipedia.org/wiki/Parmigianino; local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Parmigianino_-_The_Madonna_and_Child_with_Saints_(The_Vision_of_St_Jerome).jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "로마에서 주문받은 대형 제단화로, 길어진 성모자와 잠든 성 히에로니무스, 세례자 요한의 상승하는 몸짓이 전성기 르네상스의 안정성을 매너리즘적 환상으로 바꿉니다.",
+          "en": "A Roman altarpiece in which the elongated Madonna and Child, sleeping Jerome, and rising Saint John transform High Renaissance order into Mannerist vision."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Parmigianino",
+          "local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Parmigianino_-_The_Madonna_and_Child_with_Saints_(The_Vision_of_St_Jerome).jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "파르미자니노",
+            "en": "Parmigianino"
+          },
+          "year": 1527,
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "매너리즘",
+            "en": "Mannerism"
+          },
+          "collection": [
+            {
+              "ko": "내셔널 갤러리, 런던",
+              "en": "National Gallery, London"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T11:29:21.817Z",
+        "updatedAt": "2026-08-22T11:29:21.817Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q9348/parmigianino-vision-of-saint-jerome-1526-1527.jpg",
+          "highResolution": "data/thumbnails/artist-Q9348/parmigianino-vision-of-saint-jerome-1526-1527.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Parmigianino",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Parmigianino"
+          ],
+          "license": "",
+          "institution": "National Gallery, London"
+        }
+      }
+    },
+    {
+      "id": "parmigianino-lovers-1527-1530",
+      "year": 1527,
+      "yearEnd": 1530,
+      "popularity": 7300,
+      "title": {
+        "ko": "연인들",
+        "en": "Lovers"
+      },
+      "description": {
+        "ko": "볼로냐 시기 판화 실험과 연결되는 작품으로, 가늘고 민첩한 선과 장식적인 인물 자세가 파르미자니노가 이탈리아 판화에 남긴 영향을 보여줍니다.",
+        "en": "A print linked to Parmigianino’s Bologna experiments, showing the agile line and decorative figure language that made him important for Italian printmaking."
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "Italy"
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "Mannerism"
+      },
+      "collection": [
+        {
+          "ko": "암스테르담 국립미술관",
+          "en": "Rijksmuseum"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q9348/parmigianino-lovers-1527-1530.jpg",
+      "thumbnail": "data/thumbnails/artist-Q9348/parmigianino-lovers-1527-1530.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T11:29:21.817Z",
+      "highResImage": "data/thumbnails/artist-Q9348/parmigianino-lovers-1527-1530.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q9348/parmigianino-lovers-1527-1530.jpg",
+      "source": "https://en.wikipedia.org/wiki/Parmigianino; local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Liefdespaar,_RP-P-OB-12.233.jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "볼로냐 시기 판화 실험과 연결되는 작품으로, 가늘고 민첩한 선과 장식적인 인물 자세가 파르미자니노가 이탈리아 판화에 남긴 영향을 보여줍니다.",
+          "en": "A print linked to Parmigianino’s Bologna experiments, showing the agile line and decorative figure language that made him important for Italian printmaking."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Parmigianino",
+          "local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Liefdespaar,_RP-P-OB-12.233.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "파르미자니노",
+            "en": "Parmigianino"
+          },
+          "year": 1527,
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "매너리즘",
+            "en": "Mannerism"
+          },
+          "collection": [
+            {
+              "ko": "암스테르담 국립미술관",
+              "en": "Rijksmuseum"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T11:29:21.817Z",
+        "updatedAt": "2026-08-22T11:29:21.817Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q9348/parmigianino-lovers-1527-1530.jpg",
+          "highResolution": "data/thumbnails/artist-Q9348/parmigianino-lovers-1527-1530.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Parmigianino",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Parmigianino"
+          ],
+          "license": "",
+          "institution": "Rijksmuseum"
+        }
+      }
+    },
+    {
+      "id": "parmigianino-madonna-long-neck-1534-1540",
+      "year": 1534,
+      "yearEnd": 1540,
+      "popularity": 10000,
+      "title": {
+        "ko": "긴 목의 성모",
+        "en": "Madonna with the Long Neck"
+      },
+      "description": {
+        "ko": "우피치 미술관 소장 미완성 제단화로, 길게 늘어난 성모의 목과 몸, 비현실적으로 압축된 공간, 차갑고 우아한 인물들이 매너리즘의 대표적 형식 실험을 보여줍니다.",
+        "en": "An unfinished Uffizi altarpiece whose elongated Madonna, compressed unreal space, and cool elegance make it an icon of Mannerist form."
+      },
+      "country": {
+        "ko": "이탈리아",
+        "en": "Italy"
+      },
+      "movement": {
+        "ko": "매너리즘",
+        "en": "Mannerism"
+      },
+      "collection": [
+        {
+          "ko": "우피치 미술관",
+          "en": "Uffizi Gallery"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q9348/parmigianino-madonna-long-neck-1534-1540.jpg",
+      "thumbnail": "data/thumbnails/artist-Q9348/parmigianino-madonna-long-neck-1534-1540.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T11:29:21.817Z",
+      "highResImage": "data/thumbnails/artist-Q9348/parmigianino-madonna-long-neck-1534-1540.jpg",
+      "highResOriginal": "data/thumbnails/artist-Q9348/parmigianino-madonna-long-neck-1534-1540.jpg",
+      "source": "https://en.wikipedia.org/wiki/Parmigianino; local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Parmigianino_-_Madonna_and_Child_with_Angels,_known_as_the_Madonna_with_the_Long_Neck.jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "우피치 미술관 소장 미완성 제단화로, 길게 늘어난 성모의 목과 몸, 비현실적으로 압축된 공간, 차갑고 우아한 인물들이 매너리즘의 대표적 형식 실험을 보여줍니다.",
+          "en": "An unfinished Uffizi altarpiece whose elongated Madonna, compressed unreal space, and cool elegance make it an icon of Mannerist form."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Parmigianino",
+          "local file: C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download\\Parmigianino_-_Madonna_and_Child_with_Angels,_known_as_the_Madonna_with_the_Long_Neck.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "파르미자니노",
+            "en": "Parmigianino"
+          },
+          "year": 1534,
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "매너리즘",
+            "en": "Mannerism"
+          },
+          "collection": [
+            {
+              "ko": "우피치 미술관",
+              "en": "Uffizi Gallery"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T11:29:21.817Z",
+        "updatedAt": "2026-08-22T11:29:21.817Z",
+        "createdBy": "local image import",
+        "updatedBy": "local image import"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q9348/parmigianino-madonna-long-neck-1534-1540.jpg",
+          "highResolution": "data/thumbnails/artist-Q9348/parmigianino-madonna-long-neck-1534-1540.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Parmigianino",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Parmigianino"
+          ],
+          "license": "",
+          "institution": "Uffizi Gallery"
+        }
+      }
+    }
+  ]
+}

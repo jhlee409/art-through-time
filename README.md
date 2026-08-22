@@ -61,9 +61,11 @@ http://localhost:4173/?login=1
 ### 주제-사건
 
 - 주제·사건 목록은 왼쪽 사이드바에서 검색하고 선택합니다.
-- 이미지는 로컬 `data/topic-images/` 경로를 사용합니다.
+- 주제-사건 화면에 올린 이미지는 외부 URL을 직접 참조하지 않고, 모두 로컬 `data/topic-images/` 폴더에 따로 저장한 뒤 그 경로를 사용합니다.
 - 오른쪽 위 `그림 추가` 버튼은 여러 이미지 파일 선택을 지원합니다.
 - 여러 파일을 선택하면 제목은 파일명에서 자동 입력하고, 입력한 시작·끝 연도를 공통으로 적용해 순서대로 저장합니다.
+- 인터넷 검색으로 주제 이미지를 추가할 때도 먼저 이미지를 내려받아 `data/topic-images/`에 저장하고, `data/topics.json`에는 로컬 파일 경로와 출처 페이지 정보를 함께 남깁니다.
+- Wikimedia 원본 파일 요청이 제한될 때는 표준 썸네일 경로(`thumb.php`, 예: 960px)를 사용해 내려받고, 실제 이미지 가로 폭이 500px 이상인지 확인한 뒤 등록합니다.
 
 ## 새 화가 추가 방식
 
@@ -116,6 +118,7 @@ C:\Users\jhlee\OneDrive - UOU\AI-Programming\Art_through_Time\download
 - HTML, 기법·용어, 대표작, 주제-사건처럼 화면에 직접 표시하는 이미지는 가능한 한 로컬 파일 경로를 사용합니다.
 - 미술사조 HTML에서 쓰는 이미지는 `data/미술사조/images/`에 두고, HTML 안에서는 `images/파일명.jpg` 형식으로 참조합니다.
 - 기법·용어 이미지는 `data/techniques/`, 주제-사건 이미지는 `data/topic-images/`, 화가 작품 썸네일은 `data/thumbnails/`, 고해상도 이미지는 `data/high-resolution/`을 사용합니다.
+- 주제-사건 이미지는 참조 URL만 남기는 방식이 아니라 `data/topic-images/`에 복사 또는 다운로드해 보관합니다. `data/topics.json`의 `thumbnail`은 이 로컬 파일을 가리켜야 하며, 원본 출처는 필요하면 `sourcePage`, `sourceFile`로 따로 남깁니다.
 - 사조 HTML과 표시 데이터에서는 외부 이미지 URL, `data/thumbnails/`, `data/high-resolution/` 직접 참조를 피합니다. 필요한 이미지는 해당 화면의 안정 폴더로 복사한 뒤 연결합니다.
 - 화가 작품 데이터의 원본 `image` URL은 수집 출처로 남을 수 있습니다. 다만 로컬 썸네일이 없고 외부 URL만으로 표시되는 작품은 화면에 `URL 의존` 배지가 나타납니다.
 - `URL 의존` 배지가 보이는 작품은 인터넷에서 이미지를 직접 내려받은 뒤 관리자 모드의 `로컬 이미지 교체` 버튼으로 교체합니다.

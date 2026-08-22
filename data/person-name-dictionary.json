@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-22T09:13:43.671Z",
+  "generatedAt": "2026-08-22T11:43:56.491Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -6243,19 +6243,33 @@
       "status": "verified-pair"
     },
     {
-      "id": "parmigianino",
+      "id": "Q9348",
       "original": "Parmigianino",
       "korean": "파르미자니노",
       "displayKorean": "파르미자니노",
       "aliases": {
-        "ko": [],
-        "en": []
+        "ko": [
+          "프란체스코 마촐라",
+          "지롤라모 프란체스코 마리아 마촐라",
+          "마촐라, 프란체스코",
+          "일 파르미자니노",
+          "파르미자니노"
+        ],
+        "en": [
+          "Francesco Mazzola",
+          "Girolamo Francesco Maria Mazzola",
+          "Francesco Mazzuoli",
+          "Il Parmigianino",
+          "Parmigiano",
+          "Parmigianino"
+        ]
       },
       "uhangul": "파[Rㅡ]미자니노",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json"
       ],
       "status": "verified-pair"
     },
@@ -7294,7 +7308,8 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json"
+        "data/artists.json",
+        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
       ],
       "status": "verified-pair"
     },

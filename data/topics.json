@@ -353,8 +353,47 @@
           "sourceFile": "Descent_from_the_Cross,_Novgorod_school_(late_15th_c.,_Tretyakov_gallery).jpg"
         },
         {
+          "id": "jesus-descent-renaissance-filippino-lippi-1504",
+          "title": "십자가에서 내려지는 그리스도",
+          "artist": "리피, 필리피노",
+          "year": "1504경",
+          "sortYear": 1504,
+          "movement": "르네상스",
+          "thumbnail": "data/topic-images/jesus-descent-renaissance-filippino-lippi-1504.jpg",
+          "description": "안눈치아타 다폭 제단화의 일부로, 십자가에서 내려지는 그리스도를 긴장된 인물 군상과 고전적 질서 안에 배치한 르네상스 작품입니다.",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Filippino_Lippi_-_Deposition_from_the_Cross_-_WGA13102.jpg",
+          "sourceFile": "Filippino Lippi - Deposition from the Cross - WGA13102.jpg",
+          "sequence": 7
+        },
+        {
+          "id": "jesus-descent-renaissance-raphael-1507",
+          "title": "그리스도의 강하",
+          "artist": "산치오, 라파엘로",
+          "year": "1507",
+          "sortYear": 1507,
+          "movement": "전성기 르네상스",
+          "thumbnail": "data/topic-images/jesus-descent-renaissance-raphael-1507.jpg",
+          "description": "바글리오니 제단화의 중앙 패널로, 라파엘로가 르네상스적 균형과 인물의 감정 표현을 결합해 그리스도의 강하와 매장으로 이어지는 장면을 구성한 작품입니다.",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Raffaello,_deposizione_borghese,_1507.jpg",
+          "sourceFile": "Raffaello, deposizione borghese, 1507.jpg",
+          "sequence": 8
+        },
+        {
+          "id": "jesus-descent-renaissance-lorenzo-lotto-1512",
+          "title": "십자가에서 내려지는 그리스도",
+          "artist": "로토, 로렌초",
+          "year": "1512",
+          "sortYear": 1512,
+          "movement": "르네상스 · 베네치아 화파",
+          "thumbnail": "data/topic-images/jesus-descent-renaissance-lorenzo-lotto-1512.jpg",
+          "description": "예시 시립미술관의 로렌초 로토 작품으로, 십자가 강하와 매장으로 이어지는 장면을 강한 색채와 압축된 인물 배치로 보여 주는 르네상스 회화입니다.",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Lorenzo_lotto,_deposizione_di_jesi,_1512,_03.jpg",
+          "sourceFile": "Lorenzo lotto, deposizione di jesi, 1512, 03.jpg",
+          "sequence": 9
+        },
+        {
           "id": "jesus-descent-05",
-          "sequence": 7,
+          "sequence": 10,
           "title": "십자가에서 내려지는 그리스도",
           "artist": "로소 피오렌티노",
           "year": "1521",
@@ -375,7 +414,20 @@
           "description": "산타 펠리치타 카포니 예배당의 제단화로, 떠 있는 듯한 인물, 불안정한 공간, 차갑고 밝은 색채가 매너리즘의 핵심을 압축한 폰토르모의 대표작입니다.",
           "sourceArtistId": "artist-Q207929",
           "sourceWorkId": "pontormo-deposition-from-the-cross-1525-1528",
-          "sequence": 8
+          "sequence": 11
+        },
+        {
+          "id": "jesus-descent-download-daniele-da-volterra-1545",
+          "title": "십자가에서 내려지는 그리스도",
+          "artist": "다 볼테라, 다니엘레",
+          "year": "1545경",
+          "sortYear": 1545,
+          "movement": "매너리즘",
+          "thumbnail": "data/topic-images/jesus-descent-download-daniele-da-volterra-1545.jpg",
+          "description": "로마 트리니타 데이 몬티의 오르시니 예배당을 위해 제작된 다니엘레 다 볼테라의 대표적 십자가 강하 장면입니다. 미켈란젤로적 인체와 복잡한 하강 동선이 매너리즘의 긴장을 보여 줍니다.",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Descentfromthecross.jpg",
+          "sourceFile": "(c. 1545),Daniele da Volterra - Trinità dei Monti, .jpg",
+          "sequence": 12
         },
         {
           "id": "jesus-descent-online-tintoretto-1547",
@@ -388,7 +440,7 @@
           "description": "빈 미술사박물관 소장작으로, 비스듬한 인물 배치와 극적인 동세가 매너리즘적 긴장을 보여 주는 십자가 강하 장면입니다.",
           "sourcePage": "https://commons.wikimedia.org/wiki/File:Tintoretto_-_Descent_from_the_Cross_GG_1565.jpg",
           "sourceFile": "Tintoretto - Descent from the Cross GG 1565.jpg",
-          "sequence": 9
+          "sequence": 13
         },
         {
           "id": "jesus-descent-online-barocci-1569",
@@ -401,20 +453,48 @@
           "description": "페루자 산 로렌초 대성당의 제단화로, 부드러운 색채와 감정적 몸짓을 통해 후기 르네상스와 초기 바로크 사이의 전환을 보여 줍니다.",
           "sourcePage": "https://commons.wikimedia.org/wiki/File:Deposizione_dalla_croce_(Barocci)_-_2023.jpg",
           "sourceFile": "Deposizione dalla croce (Barocci) - 2023.jpg",
-          "sequence": 10
+          "sequence": 14
         },
         {
           "id": "jesus-descent-saved-rubensdescentantwerp1612",
           "title": "십자가에서 내려지는 그리스도",
-          "artist": "페테르 파울 루벤스",
-          "year": "1612",
+          "artist": "루벤스, 페테르 파울",
+          "year": "1612–1614",
           "sortYear": 1612,
           "movement": "바로크",
-          "thumbnail": "data/topic-images/jesus-descent-saved-rubensdescentantwerp1612.jpg",
-          "description": "앤트워프 성모 대성당을 위해 제작된 루벤스의 삼면화 중앙 패널.",
+          "thumbnail": "data/topic-images/jesus-descent-download-rubens-antwerp-1612-1614.jpg",
+          "description": "앤트워프 성모 대성당을 위해 제작된 루벤스 삼면화의 중앙 패널입니다. 흰 수의와 대각선 구도를 통해 그리스도의 몸을 극적으로 끌어내리는 바로크적 장면 구성이 두드러집니다.",
           "sourceArtistId": "artist-url-1786879941678",
           "sourceWorkId": "rubens-descent-antwerp-1612",
-          "sequence": 11
+          "sequence": 15,
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_The_Descent_from_the_Cross_(Antwerp_Cathedral).,_c._1613.jpg",
+          "sourceFile": "Peter_Paul_Rubens_-_The_Descent_from_the_Cross_(Antwerp_Cathedral).,_c._1613.jpg"
+        },
+        {
+          "id": "jesus-descent-download-rubens-lille-1617",
+          "title": "십자가에서 내려지는 그리스도",
+          "artist": "루벤스, 페테르 파울",
+          "year": "1617",
+          "sortYear": 1617,
+          "movement": "바로크",
+          "thumbnail": "data/topic-images/jesus-descent-download-rubens-lille-1617.jpg",
+          "description": "프랑스 릴 미술관 소장작으로, 커다란 캔버스에 인물들의 중량감과 장대한 움직임을 결합한 루벤스의 1617년 십자가 강하 장면입니다.",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_Descent_from_the_cross_(1617).jpg",
+          "sourceFile": "Peter_Paul_Rubens_-_Descent_from_the_cross_(1617).jpg",
+          "sequence": 16
+        },
+        {
+          "id": "jesus-descent-download-rubens-hermitage-1617-1618",
+          "title": "십자가에서 내려지는 그리스도",
+          "artist": "루벤스, 페테르 파울",
+          "year": "1617–1618경",
+          "sortYear": 1617,
+          "movement": "바로크",
+          "thumbnail": "data/topic-images/jesus-descent-download-rubens-hermitage-1617-1618.jpg",
+          "description": "상트페테르부르크 에르미타주 미술관 소장작으로 알려진 루벤스의 십자가 강하 장면입니다. 어두운 배경 속에서 인물과 천의 밝은 면을 집중시키는 바로크적 명암이 특징입니다.",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Descente_de_croix_rubens.jpg",
+          "sourceFile": "Descente_de_croix_rubens.jpg",
+          "sequence": 17
         },
         {
           "id": "jesus-descent-online-tournier-1632",
@@ -427,7 +507,7 @@
           "description": "툴루즈 오귀스탱 미술관 소장작으로, 어두운 배경과 집중된 인물 군상을 통해 프랑스 카라바조풍 바로크의 극적인 감정을 보여 줍니다.",
           "sourcePage": "https://commons.wikimedia.org/wiki/File:Augustins_-_Le_Christ_descendu_de_la_Croix_-_Nicolas_Tournier_2004_1_285.jpg",
           "sourceFile": "Augustins - Le Christ descendu de la Croix - Nicolas Tournier 2004 1 285.jpg",
-          "sequence": 12
+          "sequence": 18
         },
         {
           "id": "jesus-descent-online-rembrandt-1633",
@@ -440,7 +520,7 @@
           "description": "알테 피나코테크 소장작으로, 깊은 명암과 인물들의 조심스러운 움직임을 통해 수난 장면의 인간적 무게를 강조한 렘브란트의 바로크 작품입니다.",
           "sourcePage": "https://commons.wikimedia.org/wiki/Category:The_Descent_from_the_Cross_(Rembrandt,_Germany)",
           "sourceFile": "Rembrandt - Deposition from the Cross - WGA19112.jpg",
-          "sequence": 13
+          "sequence": 19
         },
         {
           "id": "jesus-descent-online-jouvenet-1697",
@@ -453,7 +533,7 @@
           "description": "루브르 소장 대형 제단화로, 상승과 하강이 교차하는 인물 배치와 장대한 동세가 프랑스 바로크의 장엄한 성격을 드러냅니다.",
           "sourcePage": "https://commons.wikimedia.org/wiki/File:Jean-Baptiste_Jouvenet_-_Descent_from_the_Cross_-_WGA12030.jpg",
           "sourceFile": "Jean-Baptiste Jouvenet - Descent from the Cross - WGA12030.jpg",
-          "sequence": 14
+          "sequence": 20
         },
         {
           "id": "jesus-descent-online-rottmayr-1712",
@@ -466,7 +546,7 @@
           "description": "월터스 미술관 소장 유화 스케치로, 오스트리아 바로크 제단화 제작을 위한 역동적인 구상과 빠른 붓질을 보여 줍니다.",
           "sourcePage": "https://commons.wikimedia.org/wiki/File:Johann_Michael_Rottmayr_-_The_Deposition_from_the_Cross_-_Walters_37788.jpg",
           "sourceFile": "Johann Michael Rottmayr - The Deposition from the Cross - Walters 37788.jpg",
-          "sequence": 15
+          "sequence": 21
         },
         {
           "id": "jesus-descent-online-bonington-1820s",
@@ -479,7 +559,7 @@
           "description": "바르샤바 국립박물관 소장작으로, 19세기 낭만주의적 명암과 정서가 수난 장면에 더해진 예입니다.",
           "sourcePage": "https://commons.wikimedia.org/wiki/Category:Paintings_by_Richard_Parkes_Bonington",
           "sourceFile": "Richard Parkes Bonington - Descent from the Cross - 129260 - National Museum in Warsaw.jpg",
-          "sequence": 16
+          "sequence": 22
         },
         {
           "id": "jesus-descent-online-ribot-1870",
@@ -492,7 +572,7 @@
           "description": "페렌스 미술관 소장작으로, 19세기 사실주의 화가 리보가 십자가 강하 장면을 어둡고 물질감 있는 화면으로 해석한 작품입니다.",
           "sourcePage": "https://commons.wikimedia.org/wiki/File:Augustin_Th%C3%A9odule_Ribot_(1823-1891)_-_The_Deposition_from_the_Cross_-_KINCM-2005.6112_-_Ferens_Art_Gallery.jpg",
           "sourceFile": "Augustin Théodule Ribot (1823-1891) - The Deposition from the Cross - KINCM-2005.6112 - Ferens Art Gallery.jpg",
-          "sequence": 17
+          "sequence": 23
         }
       ]
     }
