@@ -91,6 +91,7 @@ let favoriteWorkKeys = new Set();
 let movementDocuments = {};
 let artworkHoverPreview;
 let artistSearchQuery = '';
+let artistMovementFilter = '';
 const highResolutionWidthChecks = new Map();
 const artworkWikipediaLinkChecks = new Map();
 let currentUserEmail = '';
@@ -128,8 +129,8 @@ timeline.addEventListener('click', event => {
 });
 
 const copy = {
-  ko: {collection:'나의 화가 목록',sort:'정렬',nameAsc:'이름순',birthAsc:'생년순',addArtist:'화가와 그림 일괄 추가',newRecord:'NEW RECORD',addTitle:'화가와 그림 일괄 추가',addHelp:'화가 설명 페이지나 그림 페이지의 웹주소를 입력해 저장하세요.',addArtwork:'그림 추가',addArtworkTitle:'그림 1점 추가',artworkPage:'작품 웹페이지 주소 또는 로컬 이미지 경로',artworkTitleInput:'작품 제목 (선택)',artworkYearInput:'제작 연도 (선택)',entryType:'추가할 항목',artist:'화가',painting:'그림 웹주소',webpage:'웹페이지 주소',name:'이름',birthYear:'Birth year (optional)',artistName:'화가 이름',madeYear:'제작 연도',save:'저장하기',timeline:'작품 연표',slideshow:'슬라이드 쇼',selectWork:'작품을 선택하면\n이곳에서 자세히 볼 수 있어요.',noWork:'아직 등록한 작품이 없습니다.',noImage:'이미지 없음',untitled:'제목 없는 작품',unknown:'정보 없음',country:'제작 국가',movement:'화파',year:'제작 연도',source:'저장된 출처',delete:'삭제',confirmDelete:'이 화가와 등록한 작품을 목록에서 삭제할까요?',confirmDeleteWork:'이 작품을 삭제할까요?',manualWorks:'직접 추가한 작품',movementAtlas:'미술 사조로 보기',countries:'비교할 나라',selectAllCountries:'전체 선택 / 해제',exportChanges:'변경사항_압축',migrationExport:'FIREBASE 내보내기',period:'기간',artistSpan:'선택 화가의 활동 기간',storedInfo:'저장된 작품 정보',loadingInfo:'작품 정보를 정리해 저장하는 중입니다.',noInfo:'저장된 설명이 아직 없습니다.',favorites:'MY FAVORITES',searchArtists:'화가 이름 검색',noSearchResult:'일치하는 화가가 없습니다.'},
-  en: {collection:'MY ARTISTS',sort:'SORT',nameAsc:'Name',birthAsc:'Birth year',addArtist:'Add artist with artworks',newRecord:'NEW RECORD',addTitle:'Add artist with artworks',addHelp:'Paste a webpage about an artist or artwork to import source material.',addArtwork:'Add artwork',addArtworkTitle:'Add one artwork',artworkPage:'Artwork webpage URL or local image path',artworkTitleInput:'Artwork title (optional)',artworkYearInput:'Year made (optional)',entryType:'Add',artist:'Artist',painting:'Artwork webpage',webpage:'Webpage URL',name:'Name',birthYear:'Birth year (optional)',artistName:'Artist name',madeYear:'Year made',save:'Save',timeline:'WORKS TIMELINE',slideshow:'Slideshow',selectWork:'Select an artwork\nto view its details here.',noWork:'No artworks have been added yet.',noImage:'No image available',untitled:'Untitled',unknown:'Unknown',country:'Country made',movement:'Movement',year:'Year made',source:'Stored source',delete:'Delete this artist and their listed works?',confirmDeleteWork:'Delete this artwork?',manualWorks:'MANUALLY ADDED WORKS',movementAtlas:'Movement comparison',countries:'Countries',selectAllCountries:'Select / clear all',exportChanges:'EXPORT CHANGES',migrationExport:'EXPORT FOR FIREBASE',period:'Period',artistSpan:'Selected artist lifespan',storedInfo:'Stored artwork information',loadingInfo:'Preparing and saving artwork information.',noInfo:'No stored description yet.',favorites:'MY FAVORITES',searchArtists:'Search artists',noSearchResult:'No matching artists.'}
+  ko: {collection:'나의 화가 목록',sort:'정렬',nameAsc:'이름순',birthAsc:'생년순',addArtist:'화가와 그림 일괄 추가',newRecord:'NEW RECORD',addTitle:'화가와 그림 일괄 추가',addHelp:'화가 설명 페이지나 그림 페이지의 웹주소를 입력해 저장하세요.',addArtwork:'그림 추가',addArtworkTitle:'그림 1점 추가',artworkPage:'작품 웹페이지 주소 또는 로컬 이미지 경로',artworkTitleInput:'작품 제목 (선택)',artworkYearInput:'제작 연도 (선택)',entryType:'추가할 항목',artist:'화가',painting:'그림 웹주소',webpage:'웹페이지 주소',name:'이름',birthYear:'Birth year (optional)',artistName:'화가 이름',madeYear:'제작 연도',save:'저장하기',timeline:'작품 연표',slideshow:'슬라이드 쇼',selectWork:'작품을 선택하면\n이곳에서 자세히 볼 수 있어요.',noWork:'아직 등록한 작품이 없습니다.',noImage:'이미지 없음',untitled:'제목 없는 작품',unknown:'정보 없음',country:'제작 국가',movement:'화파',year:'제작 연도',source:'저장된 출처',delete:'삭제',confirmDelete:'이 화가와 등록한 작품을 목록에서 삭제할까요?',confirmDeleteWork:'이 작품을 삭제할까요?',manualWorks:'직접 추가한 작품',movementAtlas:'미술 사조로 보기',countries:'비교할 나라',selectAllCountries:'전체 선택 / 해제',exportChanges:'변경사항_압축',migrationExport:'FIREBASE 내보내기',period:'기간',artistSpan:'선택 화가의 활동 기간',storedInfo:'저장된 작품 정보',loadingInfo:'작품 정보를 정리해 저장하는 중입니다.',noInfo:'저장된 설명이 아직 없습니다.',favorites:'MY FAVORITES',searchArtists:'화가 이름 검색',movementFilter:'사조 선택',allMovements:'전체 사조',clearMovementFilter:'사조 필터 해제',noSearchResult:'일치하는 화가가 없습니다.'},
+  en: {collection:'MY ARTISTS',sort:'SORT',nameAsc:'Name',birthAsc:'Birth year',addArtist:'Add artist with artworks',newRecord:'NEW RECORD',addTitle:'Add artist with artworks',addHelp:'Paste a webpage about an artist or artwork to import source material.',addArtwork:'Add artwork',addArtworkTitle:'Add one artwork',artworkPage:'Artwork webpage URL or local image path',artworkTitleInput:'Artwork title (optional)',artworkYearInput:'Year made (optional)',entryType:'Add',artist:'Artist',painting:'Artwork webpage',webpage:'Webpage URL',name:'Name',birthYear:'Birth year (optional)',artistName:'Artist name',madeYear:'Year made',save:'Save',timeline:'WORKS TIMELINE',slideshow:'Slideshow',selectWork:'Select an artwork\nto view its details here.',noWork:'No artworks have been added yet.',noImage:'No image available',untitled:'Untitled',unknown:'Unknown',country:'Country made',movement:'Movement',year:'Year made',source:'Stored source',delete:'Delete this artist and their listed works?',confirmDeleteWork:'Delete this artwork?',manualWorks:'MANUALLY ADDED WORKS',movementAtlas:'Movement comparison',countries:'Countries',selectAllCountries:'Select / clear all',exportChanges:'EXPORT CHANGES',migrationExport:'EXPORT FOR FIREBASE',period:'Period',artistSpan:'Selected artist lifespan',storedInfo:'Stored artwork information',loadingInfo:'Preparing and saving artwork information.',noInfo:'No stored description yet.',favorites:'MY FAVORITES',searchArtists:'Search artists',movementFilter:'Movement filter',allMovements:'All movements',clearMovementFilter:'Clear movement filter',noSearchResult:'No matching artists.'}
 };
 Object.assign(copy.ko, {
   fullName:'Full Name (목록·연표·HTML 표기)',
@@ -1123,6 +1124,75 @@ function movementContributionWorksForArtist(artist, sourceWorks=artist?.works ||
     .filter(work => work && (!visibleKeys.size || visibleKeys.has(selectionKey(work)) || work.image || work.thumbnail));
 }
 function compactMovementName(value='') { return String(value).normalize('NFKC').toLocaleLowerCase().replace(/[^0-9a-z가-힣]+/g,''); }
+const artistMovementFilterGroups = [
+  {
+    id: 'group:renaissance',
+    label: {ko:'르네상스', en:'Renaissance'},
+    includes: ['Renaissance','Italian Renaissance','High Renaissance','Northern Renaissance','German Renaissance','Early Netherlandish painting','Netherlandish and Flemish Renaissance painting','Venetian School','Venetian Renaissance','Proto-Renaissance','르네상스','이탈리아 르네상스','전성기 르네상스','북유럽 르네상스','북방 르네상스','독일 르네상스','플랑드르파','네덜란드 및 플랑드르 르네상스 회화','베네치아 화파','선르네상스']
+  },
+  {
+    id: 'group:northern-renaissance',
+    label: {ko:'북유럽 르네상스', en:'Northern Renaissance'},
+    includes: ['Northern Renaissance','German Renaissance','Early Netherlandish painting','Netherlandish and Flemish Renaissance painting','북유럽 르네상스','북방 르네상스','독일 르네상스','플랑드르파','네덜란드 및 플랑드르 르네상스 회화']
+  },
+  {
+    id: 'group:italian-renaissance',
+    label: {ko:'이탈리아 르네상스', en:'Italian Renaissance'},
+    includes: ['Italian Renaissance','High Renaissance','Venetian School','Venetian Renaissance','Proto-Renaissance','이탈리아 르네상스','전성기 르네상스','베네치아 화파','선르네상스']
+  }
+].map(group => ({...group, keys:new Set(group.includes.map(compactMovementName))}));
+function movementEntry(value) {
+  if (!value) return null;
+  if (typeof value === 'string') {
+    const label = value.trim();
+    return label ? {id:compactMovementName(label), label} : null;
+  }
+  const label = loc(value);
+  const id = compactMovementName(value.en || value.ko || label);
+  return id && label ? {id, label} : null;
+}
+function artistMovementEntries(artist) {
+  const entries = [movementEntry(artist?.movement), movementEntry(artistMovementFallbacks[artist?.qid])];
+  (artist?.works || []).forEach(work => entries.push(movementEntry(work?.movement)));
+  const seen = new Set();
+  return entries.filter(entry => entry && !seen.has(entry.id) && seen.add(entry.id));
+}
+function artistMatchesMovementFilter(artist) {
+  if (!artistMovementFilter) return true;
+  const entries = artistMovementEntries(artist);
+  const group = artistMovementFilterGroups.find(item => item.id === artistMovementFilter);
+  if (group) return entries.some(entry => group.keys.has(entry.id));
+  return entries.some(entry => entry.id === artistMovementFilter);
+}
+function artistMovementFilterOptions() {
+  const groups = artistMovementFilterGroups.map(group => ({id:group.id, label:loc(group.label), group:true}));
+  const direct = new Map();
+  (artists || []).forEach(artist => artistMovementEntries(artist).forEach(entry => {
+    if (!direct.has(entry.id)) direct.set(entry.id, {id:entry.id, label:entry.label});
+  }));
+  const groupKeys = new Set(artistMovementFilterGroups.flatMap(group => [...group.keys]));
+  const directOptions = [...direct.values()]
+    .filter(option => option.label && !groups.some(group => compactMovementName(group.label) === compactMovementName(option.label)))
+    .sort((a,b) => a.label.localeCompare(b.label, language));
+  const relatedRenaissanceOptions = directOptions.filter(option => groupKeys.has(option.id));
+  const otherOptions = directOptions.filter(option => !groupKeys.has(option.id));
+  return [...groups, ...relatedRenaissanceOptions, ...otherOptions];
+}
+function renderArtistMovementFilter() {
+  const select = $('#artist-movement-filter');
+  if (!select) return;
+  const options = artistMovementFilterOptions();
+  if (artistMovementFilter && !options.some(option => option.id === artistMovementFilter)) artistMovementFilter = '';
+  select.innerHTML = `<option value="">${esc(t('allMovements'))}</option>${options.map(option => `<option value="${esc(option.id)}">${option.group ? '— ' : ''}${esc(option.label)}</option>`).join('')}`;
+  select.value = artistMovementFilter;
+  select.setAttribute('aria-label', t('movementFilter'));
+  const clear = $('#artist-movement-filter-clear');
+  if (clear) {
+    clear.hidden = !artistMovementFilter;
+    clear.title = t('clearMovementFilter');
+    clear.setAttribute('aria-label', t('clearMovementFilter'));
+  }
+}
 function movementDocumentKey(label='') {
   const compact = compactMovementName(label);
   if (!compact) return '';
@@ -1202,14 +1272,19 @@ function renderText() {
   $('#movement-atlas-button').classList.toggle('active', viewMode === 'movements');
 }
 function renderList() {
+  renderArtistMovementFilter();
+  const artistCount = $('#artist-count');
+  if (artistCount) artistCount.textContent = language === 'ko' ? `총 ${artists.length}명` : `${artists.length} artists`;
   const sort = $('#sort').value;
+  const effectiveSort = artistMovementFilter ? 'birth' : sort;
   const query = artistSearchQuery.toLocaleLowerCase();
   const compactQuery = normalized(artistSearchQuery);
   const ordered = [...artists].filter(a => {
+    if (!artistMatchesMovementFilter(a)) return false;
     if (!query) return true;
     const searchText = artistSearchText(a);
     return searchText.includes(query) || (compactQuery && normalized(searchText).includes(compactQuery));
-  }).sort((a,b) => sort === 'birth' ? (a.birth || 9999) - (b.birth || 9999) : artistDisplayName(a).localeCompare(artistDisplayName(b), language));
+  }).sort((a,b) => effectiveSort === 'birth' ? (a.birth || 9999) - (b.birth || 9999) : artistDisplayName(a).localeCompare(artistDisplayName(b), language));
   list.innerHTML = ordered.length ? ordered.map(a => {
     const country = artistCountryInfo(a), countryLabel = artistCountryLabel(a), movement = primaryMovement(a);
     const displayName = artistListEnglish ? (a.name?.en || artistDisplayName(a)) : artistDisplayName(a);
@@ -1293,11 +1368,24 @@ function renderTimeline() {
   const defaultFeaturedWorkIds = new Set(defaultFeaturedSelection.map(work => String(work.id || '')));
   // Once the administrator has selected works, an empty list deliberately
   // means no highlights.  Until then, use the curator's initial five works.
-  const leonardoFeaturedWorkIds = new Set(Array.isArray(artist.featuredWorkIds)
-    ? artist.featuredWorkIds.map(String)
-    : defaultFeaturedWorkIds);
+  const savedFeaturedWorkIdOrder = Array.isArray(artist.featuredWorkIds)
+    ? artist.featuredWorkIds.map(String).filter(Boolean)
+    : null;
+  const leonardoFeaturedWorkIdOrder = savedFeaturedWorkIdOrder || [...defaultFeaturedWorkIds];
+  const leonardoFeaturedWorkIds = new Set(leonardoFeaturedWorkIdOrder);
+  const worksById = new Map(works.map(work => [String(work.id || ''), work]));
+  const orderedFeaturedWorks = leonardoFeaturedWorkIdOrder
+    .map(id => worksById.get(id))
+    .filter(Boolean);
+  const orderedFeaturedWorkIds = new Set(orderedFeaturedWorks.map(work => String(work.id || '')));
   const leonardoFeaturedWorks = isLeonardoTimeline
-    ? works.filter(work => leonardoFeaturedWorkIds.has(String(work.id || '')))
+    ? [
+        ...orderedFeaturedWorks,
+        ...works.filter(work => {
+          const id = String(work.id || '');
+          return leonardoFeaturedWorkIds.has(id) && !orderedFeaturedWorkIds.has(id);
+        })
+      ]
     : [];
   const leonardoLayoutKey = `art-atlas-timeline-layout-${artist.qid || artist.id}`;
   const leonardoLayout = isLeonardoTimeline && sessionStorage.getItem(leonardoLayoutKey) === 'chronology'
@@ -1393,7 +1481,8 @@ function renderTimeline() {
     const chronology = `<div class="leonardo-period-list">${[...periodGroups.entries()].map(([period, group]) => `<section class="leonardo-period"><h2>${esc(period)}</h2><div class="leonardo-work-grid">${group.map(card).join('')}</div></section>`).join('')}</div>`;
     const slideshowButton = (scope, label) => `<button class="start-slideshow leonardo-section-slideshow" type="button" data-slideshow-scope="${scope}" aria-label="${esc(label)}" title="${esc(label)}"><span>▶</span><span>${esc(t('slideshow'))}</span></button>`;
     const layoutControls = `<div class="leonardo-layout-controls" role="group" aria-label="${esc(language === 'ko' ? '작품 보기 방식' : 'Artwork view')}"><button class="leonardo-layout-button${leonardoLayout === 'gallery' ? ' active' : ''}" type="button" data-leonardo-layout="gallery">${esc(galleryLabel)}</button><button class="leonardo-layout-button${leonardoLayout === 'chronology' ? ' active' : ''}" type="button" data-leonardo-layout="chronology">${esc(chronologyLabel)}</button></div><p class="leonardo-layout-guide">${esc(guide)}</p>`;
-    const featured = leonardoFeaturedWorks.length ? `<section class="leonardo-featured"><div class="leonardo-section-heading"><p class="eyebrow">${esc(featuredLabel)}</p><div class="leonardo-section-actions">${slideshowButton('featured', language === 'ko' ? '대표작 슬라이드 쇼 시작' : 'Start highlights slideshow')}</div><p>${esc(language === 'ko' ? '우선 크게 살펴볼 작품입니다. Ⓗ 표시는 고해상도 파일이 있음을 뜻하며, 이미지를 더블클릭하면 새 창에서 엽니다.' : 'A small set of works to study first. Ⓗ marks an available high-resolution file; double-click the image to open it.')}</p></div><div class="leonardo-featured-grid">${leonardoFeaturedWorks.map(work => `<div class="leonardo-featured-card">${card(work)}</div>`).join('')}</div></section>` : '';
+    const canDragFeaturedWorks = currentUserIsAdmin && leonardoFeaturedWorks.length > 1;
+    const featured = leonardoFeaturedWorks.length ? `<section class="leonardo-featured"><div class="leonardo-section-heading"><p class="eyebrow">${esc(featuredLabel)}</p><div class="leonardo-section-actions">${slideshowButton('featured', language === 'ko' ? '대표작 슬라이드 쇼 시작' : 'Start highlights slideshow')}</div><p>${esc(language === 'ko' ? '우선 크게 살펴볼 작품입니다. Ⓗ 표시는 고해상도 파일이 있음을 뜻하며, 이미지를 더블클릭하면 새 창에서 엽니다.' : 'A small set of works to study first. Ⓗ marks an available high-resolution file; double-click the image to open it.')}</p></div><div class="leonardo-featured-grid">${leonardoFeaturedWorks.map(work => `<div class="leonardo-featured-card" data-featured-work="${esc(work.id)}"${canDragFeaturedWorks ? ' draggable="true"' : ''}>${card(work)}</div>`).join('')}</div></section>` : '';
     const allWorksAction = `${slideshowButton('all', language === 'ko' ? '전체 작품 슬라이드 쇼 시작' : 'Start all-works slideshow')}${currentUserIsAdmin ? `<button class="add-artwork-button leonardo-section-add-artwork" type="button" title="${esc(t('addArtwork'))}" aria-label="${esc(t('addArtwork'))}"><span>+</span><span>${esc(t('addArtwork'))}</span></button>` : ''}`;
     return `<div class="leonardo-timeline">${featured}${layoutControls}<section class="leonardo-all-works"><div class="leonardo-section-heading"><p class="eyebrow">${esc(leonardoLayout === 'gallery' ? galleryLabel : chronologyLabel)}</p><div class="leonardo-section-actions">${allWorksAction}</div><p>${esc(language === 'ko' ? `${works.length}점 · 왼쪽 위에서 오른쪽 아래로 갈수록 뒤의 작품입니다.` : `${works.length} works · Earlier works begin at the upper left.`)}</p></div>${leonardoLayout === 'gallery' ? gallery : chronology}</section></div>`;
   })();
@@ -1429,6 +1518,62 @@ function renderTimeline() {
       renderTimeline();
     });
   });
+  const featuredGrid = timeline.querySelector('.leonardo-featured-grid');
+  if (featuredGrid && currentUserIsAdmin) {
+    const featuredCards = [...featuredGrid.querySelectorAll('.leonardo-featured-card')];
+    const featuredOrder = () => [...featuredGrid.querySelectorAll('.leonardo-featured-card')]
+      .map(item => String(item.dataset.featuredWork || ''))
+      .filter(Boolean);
+    const dropTargetForFeaturedWork = (x, y) => {
+      const siblings = [...featuredGrid.querySelectorAll('.leonardo-featured-card:not(.featured-work-dragging)')];
+      return siblings.find(item => {
+        const box = item.getBoundingClientRect();
+        return y < box.top + box.height / 2 || (y <= box.bottom && x < box.left + box.width / 2);
+      }) || null;
+    };
+    let draggedFeaturedCard = null;
+    let dragStartOrder = '';
+    featuredCards.forEach(cardElement => {
+      if (featuredCards.length < 2) return;
+      cardElement.addEventListener('dragstart', event => {
+        if (event.target.closest('button, input, label, a, form')) {
+          event.preventDefault();
+          return;
+        }
+        draggedFeaturedCard = cardElement;
+        dragStartOrder = featuredOrder().join('\u001f');
+        cardElement.classList.add('featured-work-dragging');
+        featuredGrid.classList.add('featured-work-grid-dragging');
+        event.dataTransfer.effectAllowed = 'move';
+        event.dataTransfer.setData('text/plain', String(cardElement.dataset.featuredWork || ''));
+      });
+      cardElement.addEventListener('dragend', async () => {
+        const dragged = draggedFeaturedCard;
+        draggedFeaturedCard = null;
+        featuredGrid.classList.remove('featured-work-grid-dragging');
+        if (dragged) dragged.classList.remove('featured-work-dragging');
+        const nextOrder = featuredOrder();
+        if (!nextOrder.length || dragStartOrder === nextOrder.join('\u001f')) return;
+        const hadSavedSelection = Object.prototype.hasOwnProperty.call(artist, 'featuredWorkIds');
+        const previousSelection = artist.featuredWorkIds;
+        artist.featuredWorkIds = nextOrder;
+        persist();
+        if (!await saveArtistsNow()) {
+          if (hadSavedSelection) artist.featuredWorkIds = previousSelection;
+          else delete artist.featuredWorkIds;
+          alert(saveFailureMessage());
+        }
+        renderTimeline();
+      });
+    });
+    featuredGrid.addEventListener('dragover', event => {
+      if (!draggedFeaturedCard) return;
+      event.preventDefault();
+      const before = dropTargetForFeaturedWork(event.clientX, event.clientY);
+      if (before && before !== draggedFeaturedCard) featuredGrid.insertBefore(draggedFeaturedCard, before);
+      else if (!before) featuredGrid.appendChild(draggedFeaturedCard);
+    });
+  }
   timeline.querySelector('.artist-movement-link')?.addEventListener('click', () => openMovementDocumentInDetail(artistMovementDocument, artistMovement));
   const linkEntry = timeline.querySelector('.artist-link-entry');
   timeline.querySelector('.artist-link-add')?.addEventListener('click', () => { linkEntry.classList.toggle('hidden'); if (!linkEntry.classList.contains('hidden')) linkEntry.querySelector('input').focus(); });
@@ -2664,6 +2809,8 @@ async function addLocalArtworksToSelectedArtist(files, title, yearInput) {
 
 $('#sort').onchange = renderList;
 $('#artist-search').oninput = event => { artistSearchQuery = event.currentTarget.value.trim(); renderList(); };
+$('#artist-movement-filter').onchange = event => { artistMovementFilter = event.currentTarget.value; renderList(); };
+$('#artist-movement-filter-clear').onclick = () => { artistMovementFilter = ''; renderList(); };
 $('#movement-atlas-button').onclick = openMovementAtlas;
 $('#techniques-button').onclick = openTechniquesPage;
 $('#topics-button').onclick = openTopicsPage;

@@ -25,14 +25,16 @@
           <button id="techniques-button" class="movement-atlas-button techniques-button" type="button" title="미술 기법 및 용어" aria-label="미술 기법 및 용어">기법·용어</button>
           <button id="topics-button" class="movement-atlas-button techniques-button" type="button" title="주제와 사건" aria-label="주제와 사건">주제-사건</button>
         </div>
-        <label class="artist-search"><span class="sr-only" data-i18n="searchArtists">화가 검색</span><input id="artist-search" type="search" autocomplete="off" data-i18n-placeholder="searchArtists" placeholder="화가 이름 검색" /></label>
+        <div class="artist-filter-row">
+          <label class="artist-search"><span class="sr-only" data-i18n="searchArtists">화가 검색</span><input id="artist-search" type="search" autocomplete="off" data-i18n-placeholder="searchArtists" placeholder="화가 이름 검색" /></label>
+          <label class="artist-movement-filter"><span class="sr-only" data-i18n="movementFilter">사조 선택</span><select id="artist-movement-filter" aria-label="사조 선택"></select><button id="artist-movement-filter-clear" type="button" title="사조 필터 해제" aria-label="사조 필터 해제" hidden>×</button></label>
+        </div>
         <div class="sidebar-heading">
-          <p data-i18n="collection">나의 화가 목록</p>
+          <p><span data-i18n="collection">나의 화가 목록</span><span id="artist-count" class="artist-count">총 0명</span></p>
           <label class="sort-select"><span data-i18n="sort">정렬</span><select id="sort"><option value="name" data-i18n="nameAsc">이름순</option><option value="birth" data-i18n="birthAsc" selected>생년순</option></select></label>
         </div>
         <nav id="artist-list" class="artist-list" aria-label="화가 목록"></nav>
-        <div class="language"><button id="artist-list-en-button" class="language-button" type="button" aria-pressed="false">EN</button><button id="migration-export-button" class="admin-export-button hidden" type="button">FIREBASE 내보내기</button></div>
-        <button id="logout-button" class="logout-button" type="button">로그아웃</button>
+        <div class="language"><button id="artist-list-en-button" class="language-button" type="button" aria-pressed="false">EN</button><button id="logout-button" class="logout-button" type="button">로그아웃</button><button id="migration-export-button" class="admin-export-button hidden" type="button">FIREBASE 내보내기</button></div>
       </aside>
       <main class="main-area">
         <section id="timeline-panel" class="timeline-panel"></section>

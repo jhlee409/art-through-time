@@ -1,13 +1,21 @@
 .artist-row { position: relative; display: flex; align-items: center; border-radius: 8px; }
 .admin-export-button { margin-left:auto; border:1px solid #b7beb0; border-radius:4px; background:transparent; color:#425043; padding:5px 7px; font-size:10px; font-weight:700; white-space:nowrap; }
 .admin-export-button:hover { border-color:#8e9b8b; color:var(--ink); }
+.artist-count { display: inline-block; margin-left: 6px; color: #8a938b; font: 600 10px/1 var(--sans); letter-spacing: 0; white-space: nowrap; }
 .movement-atlas-button { margin: 18px 0 4px; width: 100%; border: 1px solid #c6cfc0; border-radius: 6px; background: transparent; color: #425043; padding: 9px 10px; text-align: left; font-size: 12px; font-weight: 700; }
 .sidebar-section-tools { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin: 18px 0 4px; }
 .sidebar-section-tools .movement-atlas-button { width: 100%; margin: 0; padding: 9px 4px; text-align: center; white-space: nowrap; }
 .techniques-button { margin-top: 0; }
 .movement-atlas-button:hover, .movement-atlas-button.active { background: var(--sage); border-color: #aebba8; color: var(--ink); }
+.artist-filter-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 6px; align-items: center; margin: 10px 0 4px; }
 .artist-search { display: block; margin: 10px 0 4px; }
 .artist-search input { width: 100%; border: 1px solid #c6cfc0; border-radius: 6px; background: #fffdf8; color: var(--ink); padding: 9px 10px; font-size: 12px; outline-color: #aebba8; }
+.artist-filter-row .artist-search { min-width: 0; margin: 0; }
+.artist-movement-filter { position: relative; display: block; min-width: 0; margin: 0; }
+.artist-movement-filter select { width: 100%; min-width: 0; border: 1px solid #c6cfc0; border-radius: 6px; background: #fffdf8; color: var(--ink); padding: 9px 28px 9px 10px; font-size: 12px; outline-color: #aebba8; }
+.artist-movement-filter select:focus { border-color: #aebba8; }
+.artist-movement-filter button { position: absolute; right: 22px; top: 50%; transform: translateY(-50%); display: grid; width: 17px; height: 17px; place-items: center; border: 0; border-radius: 50%; background: #e8ded3; color: #7b4b38; font: 700 13px/1 var(--sans); padding: 0; }
+.artist-movement-filter button:hover, .artist-movement-filter button:focus-visible { background: #d8c4b5; color: #8e2f1f; outline: none; }
 .artist-search-empty { margin: 14px 8px; color: var(--muted); font-size: 12px; line-height: 1.5; }
 
 /* Improve contrast for the artwork timeline's year axis. */
@@ -251,6 +259,11 @@
 .leonardo-work-grid, .leonardo-featured-grid { display: grid; gap: 13px; align-items: start; }
 .leonardo-work-grid { grid-template-columns: repeat(auto-fill, var(--art-thumbnail-size)); }
 .leonardo-featured-grid { grid-template-columns: repeat(auto-fill, calc(var(--art-thumbnail-size) * 2)); }
+.leonardo-featured-card { min-width: 0; }
+.leonardo-featured-card[draggable="true"] { cursor: grab; }
+.leonardo-featured-card[draggable="true"]:active { cursor: grabbing; }
+.leonardo-featured-card.featured-work-dragging { opacity: .48; }
+.leonardo-featured-grid.featured-work-grid-dragging .leonardo-featured-card:not(.featured-work-dragging) { transition: transform .12s ease, opacity .12s ease; }
 .leonardo-work-grid .art-card, .leonardo-featured-grid .art-card { max-width: none; min-width: 0; }
 .leonardo-work-grid .art-card { width: var(--art-thumbnail-size); }
 .leonardo-featured-grid .art-card { width: calc(var(--art-thumbnail-size) * 2); }
@@ -512,8 +525,12 @@
   font-size: 11px;
 }
 .sidebar-heading { margin: 22px 2px 8px; }
+.sidebar .artist-filter-row { margin: 6px 0 2px; }
 .sidebar .artist-search { margin: 6px 0 2px; }
+.sidebar .artist-filter-row .artist-search { margin: 0; }
 .sidebar .artist-search input { padding: 7px 9px; border-radius: 5px; }
+.sidebar .artist-movement-filter select { padding: 7px 26px 7px 8px; border-radius: 5px; font-size: 11px; }
+.sidebar .artist-movement-filter button { right: 20px; }
 .sidebar .add-button {
   align-self: flex-start;
   width: 32px;
@@ -528,6 +545,8 @@
 .sidebar .language { padding-top: 8px; }
 .sidebar .language-button { min-height: 25px; padding: 4px 8px; }
 .sidebar .logout-button { min-height: 28px; margin-top: 4px; }
+.sidebar .language .logout-button { width: auto; min-height: 25px; margin: 0; padding: 4px 8px; border: 1px solid #b7beb0; border-radius: 4px; background: transparent; color: var(--muted); box-shadow: none; font-size: 11px; }
+.sidebar .language .logout-button:hover, .sidebar .language .logout-button:focus-visible { border-color: #8e9b8b; background: #e2e7dd; color: var(--ink); outline: none; }
 .sidebar .display-mode { margin: 9px 0 5px; padding: 3px; }
 .sidebar .display-mode-button { min-height: 25px; }
 

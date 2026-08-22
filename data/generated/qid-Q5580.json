@@ -1,0 +1,752 @@
+{
+  "schema": 20,
+  "artistId": "artist-Q5580",
+  "qid": "Q5580",
+  "artist": {
+    "name": {
+      "ko": "알브레히트 뒤러",
+      "en": "Albrecht Dürer"
+    },
+    "birth": 1471,
+    "death": 1528,
+    "nationality": {
+      "ko": "독일",
+      "en": "Germany"
+    },
+    "movement": {
+      "ko": "북유럽 르네상스",
+      "en": "Northern Renaissance"
+    }
+  },
+  "fetchedAt": "2026-08-22T02:54:46.266Z",
+  "works": [
+    {
+      "id": "durer-self-portrait-1500",
+      "year": 1500,
+      "popularity": 10000,
+      "title": {
+        "ko": "모피 옷을 입은 자화상",
+        "en": "Self-Portrait at Twenty-Eight"
+      },
+      "description": {
+        "ko": "정면을 응시하는 구도와 세밀한 질감 표현으로 화가의 지적 위상과 자의식을 드러낸 뒤러의 대표 자화상입니다.",
+        "en": "A frontal self-portrait that presents Durer as an intellectual artist through controlled composition and finely rendered textures."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "북유럽 르네상스",
+        "en": "Northern Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "알테 피나코테크",
+          "en": "Alte Pinakothek"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q5580/durer-self-portrait-1500.jpg",
+      "thumbnail": "data/thumbnails/artist-Q5580/durer-self-portrait-1500.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T02:54:46.266Z",
+      "highResImage": "data/thumbnails/artist-Q5580/durer-self-portrait-1500.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Dürer_Alte_Pinakothek.jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "정면을 응시하는 구도와 세밀한 질감 표현으로 화가의 지적 위상과 자의식을 드러낸 뒤러의 대표 자화상입니다.",
+          "en": "A frontal self-portrait that presents Durer as an intellectual artist through controlled composition and finely rendered textures."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Dürer_Alte_Pinakothek.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "알브레히트 뒤러",
+            "en": "Albrecht Dürer"
+          },
+          "year": 1500,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "북유럽 르네상스",
+            "en": "Northern Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "알테 피나코테크",
+              "en": "Alte Pinakothek"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T02:54:46.266Z",
+        "updatedAt": "2026-08-22T02:54:46.266Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q5580/durer-self-portrait-1500.jpg",
+          "highResolution": "data/thumbnails/artist-Q5580/durer-self-portrait-1500.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Dürer_Alte_Pinakothek.jpg"
+          ],
+          "license": "",
+          "institution": "Alte Pinakothek"
+        }
+      }
+    },
+    {
+      "id": "durer-self-portrait-1498",
+      "year": 1498,
+      "popularity": 9000,
+      "title": {
+        "ko": "자화상",
+        "en": "Self-Portrait"
+      },
+      "description": {
+        "ko": "젊은 뒤러가 여행과 궁정적 세련미를 의식하며 자신의 사회적 지위를 적극적으로 표현한 자화상입니다.",
+        "en": "A youthful self-portrait in which Durer presents social status, travel experience, and courtly refinement."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "북유럽 르네상스",
+        "en": "Northern Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "프라도 미술관",
+          "en": "Museo del Prado"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q5580/durer-self-portrait-1498.jpg",
+      "thumbnail": "data/thumbnails/artist-Q5580/durer-self-portrait-1498.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T02:54:46.266Z",
+      "highResImage": "data/thumbnails/artist-Q5580/durer-self-portrait-1498.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht-self.jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": false,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "젊은 뒤러가 여행과 궁정적 세련미를 의식하며 자신의 사회적 지위를 적극적으로 표현한 자화상입니다.",
+          "en": "A youthful self-portrait in which Durer presents social status, travel experience, and courtly refinement."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht-self.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "알브레히트 뒤러",
+            "en": "Albrecht Dürer"
+          },
+          "year": 1498,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "북유럽 르네상스",
+            "en": "Northern Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "프라도 미술관",
+              "en": "Museo del Prado"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T02:54:46.266Z",
+        "updatedAt": "2026-08-22T02:54:46.266Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q5580/durer-self-portrait-1498.jpg",
+          "highResolution": "data/thumbnails/artist-Q5580/durer-self-portrait-1498.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht-self.jpg"
+          ],
+          "license": "",
+          "institution": "Museo del Prado"
+        }
+      }
+    },
+    {
+      "id": "durer-adoration-of-the-magi",
+      "year": 1504,
+      "popularity": 8600,
+      "title": {
+        "ko": "동방박사의 경배",
+        "en": "Adoration of the Magi"
+      },
+      "description": {
+        "ko": "북유럽의 세밀한 묘사와 이탈리아 르네상스식 공간 구성을 결합한 종교화로, 뒤러의 국제적 감각을 보여줍니다.",
+        "en": "A religious painting joining Northern detail with Italian Renaissance spatial order, showing Durer’s international visual language."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "북유럽 르네상스",
+        "en": "Northern Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "우피치 미술관",
+          "en": "Uffizi Gallery"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q5580/durer-adoration-of-the-magi.jpg",
+      "thumbnail": "data/thumbnails/artist-Q5580/durer-adoration-of-the-magi.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T02:54:46.266Z",
+      "highResImage": "data/thumbnails/artist-Q5580/durer-adoration-of-the-magi.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht_Dürer_-_Adorazione_dei_Magi_-_Google_Art_Project.jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "북유럽의 세밀한 묘사와 이탈리아 르네상스식 공간 구성을 결합한 종교화로, 뒤러의 국제적 감각을 보여줍니다.",
+          "en": "A religious painting joining Northern detail with Italian Renaissance spatial order, showing Durer’s international visual language."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht_Dürer_-_Adorazione_dei_Magi_-_Google_Art_Project.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "알브레히트 뒤러",
+            "en": "Albrecht Dürer"
+          },
+          "year": 1504,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "북유럽 르네상스",
+            "en": "Northern Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "우피치 미술관",
+              "en": "Uffizi Gallery"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T02:54:46.266Z",
+        "updatedAt": "2026-08-22T02:54:46.266Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q5580/durer-adoration-of-the-magi.jpg",
+          "highResolution": "data/thumbnails/artist-Q5580/durer-adoration-of-the-magi.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht_Dürer_-_Adorazione_dei_Magi_-_Google_Art_Project.jpg"
+          ],
+          "license": "",
+          "institution": "Uffizi Gallery"
+        }
+      }
+    },
+    {
+      "id": "durer-praying-hands",
+      "year": 1508,
+      "popularity": 8400,
+      "title": {
+        "ko": "기도하는 손",
+        "en": "Praying Hands"
+      },
+      "description": {
+        "ko": "두 손의 형태와 주름, 빛의 차이를 세밀하게 관찰한 소묘로, 뒤러의 드로잉 능력을 잘 보여주는 작품입니다.",
+        "en": "A study of clasped hands that demonstrates Durer’s precision in drawing anatomy, folds, and subtle light."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "북유럽 르네상스",
+        "en": "Northern Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "알베르티나",
+          "en": "Albertina"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q5580/durer-praying-hands.jpg",
+      "thumbnail": "data/thumbnails/artist-Q5580/durer-praying-hands.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T02:54:46.266Z",
+      "highResImage": "data/thumbnails/artist-Q5580/durer-praying-hands.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht_Dürer_-_Praying_Hands,_1508_-_Google_Art_Project.jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": false,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "두 손의 형태와 주름, 빛의 차이를 세밀하게 관찰한 소묘로, 뒤러의 드로잉 능력을 잘 보여주는 작품입니다.",
+          "en": "A study of clasped hands that demonstrates Durer’s precision in drawing anatomy, folds, and subtle light."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht_Dürer_-_Praying_Hands,_1508_-_Google_Art_Project.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "알브레히트 뒤러",
+            "en": "Albrecht Dürer"
+          },
+          "year": 1508,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "북유럽 르네상스",
+            "en": "Northern Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "알베르티나",
+              "en": "Albertina"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T02:54:46.266Z",
+        "updatedAt": "2026-08-22T02:54:46.266Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q5580/durer-praying-hands.jpg",
+          "highResolution": "data/thumbnails/artist-Q5580/durer-praying-hands.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Albrecht_Dürer_-_Praying_Hands,_1508_-_Google_Art_Project.jpg"
+          ],
+          "license": "",
+          "institution": "Albertina"
+        }
+      }
+    },
+    {
+      "id": "durer-four-horsemen",
+      "year": 1498,
+      "popularity": 8200,
+      "title": {
+        "ko": "묵시록의 네 기사",
+        "en": "The Four Horsemen of the Apocalypse"
+      },
+      "description": {
+        "ko": "요한계시록의 장면을 강렬한 선과 속도감으로 표현한 목판화로, 뒤러가 판화의 위상을 끌어올린 대표 사례입니다.",
+        "en": "A dynamic woodcut from the Apocalypse series, central to Durer’s elevation of printmaking as a major artistic medium."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "북유럽 르네상스",
+        "en": "Northern Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "목판화 연작",
+          "en": "Woodcut series"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q5580/durer-four-horsemen.jpg",
+      "thumbnail": "data/thumbnails/artist-Q5580/durer-four-horsemen.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T02:54:46.266Z",
+      "highResImage": "data/thumbnails/artist-Q5580/durer-four-horsemen.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Durer_Revelation_Four_Riders.jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "요한계시록의 장면을 강렬한 선과 속도감으로 표현한 목판화로, 뒤러가 판화의 위상을 끌어올린 대표 사례입니다.",
+          "en": "A dynamic woodcut from the Apocalypse series, central to Durer’s elevation of printmaking as a major artistic medium."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Durer_Revelation_Four_Riders.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "알브레히트 뒤러",
+            "en": "Albrecht Dürer"
+          },
+          "year": 1498,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "북유럽 르네상스",
+            "en": "Northern Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "목판화 연작",
+              "en": "Woodcut series"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T02:54:46.266Z",
+        "updatedAt": "2026-08-22T02:54:46.266Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q5580/durer-four-horsemen.jpg",
+          "highResolution": "data/thumbnails/artist-Q5580/durer-four-horsemen.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Durer_Revelation_Four_Riders.jpg"
+          ],
+          "license": "",
+          "institution": "Woodcut series"
+        }
+      }
+    },
+    {
+      "id": "durer-knight-death-devil",
+      "year": 1513,
+      "popularity": 8100,
+      "title": {
+        "ko": "기사, 죽음, 악마",
+        "en": "Knight, Death and the Devil"
+      },
+      "description": {
+        "ko": "정교한 선묘와 상징적 인물 배치로 도덕적 결의를 시각화한 동판화이며, 뒤러의 3대 동판화 중 하나로 꼽힙니다.",
+        "en": "An engraving known for precise linework and symbolic figures, often counted among Durer’s three master engravings."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "북유럽 르네상스",
+        "en": "Northern Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "동판화",
+          "en": "Engraving"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q5580/durer-knight-death-and-the-devil.jpg",
+      "thumbnail": "data/thumbnails/artist-Q5580/durer-knight-death-and-the-devil.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T02:54:46.266Z",
+      "highResImage": "data/thumbnails/artist-Q5580/durer-knight-death-and-the-devil.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Knight-Death-and-the-Devil.jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "정교한 선묘와 상징적 인물 배치로 도덕적 결의를 시각화한 동판화이며, 뒤러의 3대 동판화 중 하나로 꼽힙니다.",
+          "en": "An engraving known for precise linework and symbolic figures, often counted among Durer’s three master engravings."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Knight-Death-and-the-Devil.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "알브레히트 뒤러",
+            "en": "Albrecht Dürer"
+          },
+          "year": 1513,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "북유럽 르네상스",
+            "en": "Northern Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "동판화",
+              "en": "Engraving"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T02:54:46.266Z",
+        "updatedAt": "2026-08-22T02:54:46.266Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q5580/durer-knight-death-and-the-devil.jpg",
+          "highResolution": "data/thumbnails/artist-Q5580/durer-knight-death-and-the-devil.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Knight-Death-and-the-Devil.jpg"
+          ],
+          "license": "",
+          "institution": "Engraving"
+        }
+      }
+    },
+    {
+      "id": "durer-hieronymus-holzschuher",
+      "year": 1526,
+      "popularity": 7200,
+      "title": {
+        "ko": "히에로니무스 홀츠슈어의 초상",
+        "en": "Portrait of Hieronymus Holzschuher"
+      },
+      "description": {
+        "ko": "뉘른베르크 유력 인물의 개성과 위엄을 직접적인 시선과 섬세한 얼굴 묘사로 포착한 만년의 초상화입니다.",
+        "en": "A late portrait capturing the dignity and individuality of a leading Nuremberg figure through direct gaze and detailed facial modeling."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "북유럽 르네상스",
+        "en": "Northern Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "베를린 회화관",
+          "en": "Gemäldegalerie, Berlin"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q5580/durer-hieronymus-holzschuher.jpg",
+      "thumbnail": "data/thumbnails/artist-Q5580/durer-hieronymus-holzschuher.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T02:54:46.266Z",
+      "highResImage": "data/thumbnails/artist-Q5580/durer-hieronymus-holzschuher.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Dürer_-_Hieronymus_Holzschuher_(1469-1529)_mit_Deckel,_1526,_557E.jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "뉘른베르크 유력 인물의 개성과 위엄을 직접적인 시선과 섬세한 얼굴 묘사로 포착한 만년의 초상화입니다.",
+          "en": "A late portrait capturing the dignity and individuality of a leading Nuremberg figure through direct gaze and detailed facial modeling."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Dürer_-_Hieronymus_Holzschuher_(1469-1529)_mit_Deckel,_1526,_557E.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "알브레히트 뒤러",
+            "en": "Albrecht Dürer"
+          },
+          "year": 1526,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "북유럽 르네상스",
+            "en": "Northern Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "베를린 회화관",
+              "en": "Gemäldegalerie, Berlin"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T02:54:46.266Z",
+        "updatedAt": "2026-08-22T02:54:46.266Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q5580/durer-hieronymus-holzschuher.jpg",
+          "highResolution": "data/thumbnails/artist-Q5580/durer-hieronymus-holzschuher.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Dürer_-_Hieronymus_Holzschuher_(1469-1529)_mit_Deckel,_1526,_557E.jpg"
+          ],
+          "license": "",
+          "institution": "Gemäldegalerie, Berlin"
+        }
+      }
+    },
+    {
+      "id": "durer-adoration-of-the-trinity",
+      "year": 1511,
+      "popularity": 7000,
+      "title": {
+        "ko": "삼위일체의 경배(란다우어 제단화)",
+        "en": "Adoration of the Trinity (Landauer Altarpiece)"
+      },
+      "description": {
+        "ko": "천상과 지상의 인물들을 질서 있게 배치해 구원의 공동체를 보여주는 제단화로, 뒤러의 회화적 구성력을 확인할 수 있습니다.",
+        "en": "An altarpiece arranging heavenly and earthly figures into an ordered vision of salvation, showing Durer’s compositional command."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "북유럽 르네상스",
+        "en": "Northern Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "미술사 박물관",
+          "en": "Kunsthistorisches Museum"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q5580/durer-adoration-of-the-trinity.jpg",
+      "thumbnail": "data/thumbnails/artist-Q5580/durer-adoration-of-the-trinity.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T02:54:46.266Z",
+      "highResImage": "data/thumbnails/artist-Q5580/durer-adoration-of-the-trinity.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/thumb_20200705183244_003_adoration_of_the_trinity_landauer_altar.jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "천상과 지상의 인물들을 질서 있게 배치해 구원의 공동체를 보여주는 제단화로, 뒤러의 회화적 구성력을 확인할 수 있습니다.",
+          "en": "An altarpiece arranging heavenly and earthly figures into an ordered vision of salvation, showing Durer’s compositional command."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/thumb_20200705183244_003_adoration_of_the_trinity_landauer_altar.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "알브레히트 뒤러",
+            "en": "Albrecht Dürer"
+          },
+          "year": 1511,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "북유럽 르네상스",
+            "en": "Northern Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "미술사 박물관",
+              "en": "Kunsthistorisches Museum"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T02:54:46.266Z",
+        "updatedAt": "2026-08-22T02:54:46.266Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q5580/durer-adoration-of-the-trinity.jpg",
+          "highResolution": "data/thumbnails/artist-Q5580/durer-adoration-of-the-trinity.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/thumb_20200705183244_003_adoration_of_the_trinity_landauer_altar.jpg"
+          ],
+          "license": "",
+          "institution": "Kunsthistorisches Museum"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,661 @@
+{
+  "schema": 20,
+  "artistId": "artist-Q48319",
+  "qid": "Q48319",
+  "artist": {
+    "name": {
+      "ko": "한스 홀바인",
+      "en": "Hans Holbein the Younger"
+    },
+    "birth": 1497,
+    "death": 1543,
+    "nationality": {
+      "ko": "독일",
+      "en": "Germany"
+    },
+    "movement": {
+      "ko": "북유럽 르네상스",
+      "en": "Northern Renaissance"
+    }
+  },
+  "fetchedAt": "2026-08-22T04:55:59.424Z",
+  "works": [
+    {
+      "id": "holbein-darmstadt-madonna",
+      "year": 1526,
+      "popularity": 8800,
+      "title": {
+        "ko": "다름슈타트 마돈나(마이어 마돈나)",
+        "en": "Darmstadt Madonna (Meyer Madonna)"
+      },
+      "description": {
+        "ko": "후원자 가족과 성모자를 함께 배치한 제단화로, 홀바인의 정교한 초상 감각과 종교화 구성이 결합된 대표작입니다.",
+        "en": "An altarpiece joining donor portraiture with the Madonna and Child, showing Holbein’s precision and religious composition."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "북유럽 르네상스",
+        "en": "Northern Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "뷔르트 컬렉션",
+          "en": "Würth Collection"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q48319/holbein-darmstadt-madonna.jpg",
+      "thumbnail": "data/thumbnails/artist-Q48319/holbein-darmstadt-madonna.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:55:59.424Z",
+      "highResImage": "data/thumbnails/artist-Q48319/holbein-darmstadt-madonna.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Darmstadtmadonna.jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "후원자 가족과 성모자를 함께 배치한 제단화로, 홀바인의 정교한 초상 감각과 종교화 구성이 결합된 대표작입니다.",
+          "en": "An altarpiece joining donor portraiture with the Madonna and Child, showing Holbein’s precision and religious composition."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Hans_Holbein_the_Younger",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Darmstadtmadonna.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "한스 홀바인",
+            "en": "Hans Holbein the Younger"
+          },
+          "year": 1526,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "북유럽 르네상스",
+            "en": "Northern Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "뷔르트 컬렉션",
+              "en": "Würth Collection"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:55:59.424Z",
+        "updatedAt": "2026-08-22T04:55:59.424Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q48319/holbein-darmstadt-madonna.jpg",
+          "highResolution": "data/thumbnails/artist-Q48319/holbein-darmstadt-madonna.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Hans_Holbein_the_Younger",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Hans_Holbein_the_Younger",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Darmstadtmadonna.jpg"
+          ],
+          "license": "",
+          "institution": "Würth Collection"
+        }
+      }
+    },
+    {
+      "id": "holbein-solothurn-madonna",
+      "year": 1522,
+      "popularity": 7200,
+      "title": {
+        "ko": "졸로투른 마돈나",
+        "en": "Solothurn Madonna"
+      },
+      "description": {
+        "ko": "성모자와 성인들을 엄격한 건축적 구도 안에 배치한 초기 종교화로, 바젤 시기의 홀바인 양식을 보여줍니다.",
+        "en": "An early religious painting placing the Madonna and saints within a strict architectural composition."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "북유럽 르네상스",
+        "en": "Northern Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "졸로투른 미술관",
+          "en": "Kunstmuseum Solothurn"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q48319/holbein-solothurn-madonna.jpg",
+      "thumbnail": "data/thumbnails/artist-Q48319/holbein-solothurn-madonna.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:55:59.424Z",
+      "highResImage": "data/thumbnails/artist-Q48319/holbein-solothurn-madonna.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Hans_Holbein_d._J._010.jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "성모자와 성인들을 엄격한 건축적 구도 안에 배치한 초기 종교화로, 바젤 시기의 홀바인 양식을 보여줍니다.",
+          "en": "An early religious painting placing the Madonna and saints within a strict architectural composition."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Hans_Holbein_the_Younger",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Hans_Holbein_d._J._010.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "한스 홀바인",
+            "en": "Hans Holbein the Younger"
+          },
+          "year": 1522,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "북유럽 르네상스",
+            "en": "Northern Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "졸로투른 미술관",
+              "en": "Kunstmuseum Solothurn"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:55:59.424Z",
+        "updatedAt": "2026-08-22T04:55:59.424Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q48319/holbein-solothurn-madonna.jpg",
+          "highResolution": "data/thumbnails/artist-Q48319/holbein-solothurn-madonna.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Hans_Holbein_the_Younger",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Hans_Holbein_the_Younger",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Hans_Holbein_d._J._010.jpg"
+          ],
+          "license": "",
+          "institution": "Kunstmuseum Solothurn"
+        }
+      }
+    },
+    {
+      "id": "holbein-georg-gisze-1532",
+      "year": 1532,
+      "popularity": 9200,
+      "title": {
+        "ko": "상인 게오르크 기제의 초상",
+        "en": "Portrait of Georg Gisze"
+      },
+      "description": {
+        "ko": "런던 한자 상인의 사무 공간과 물건들을 세밀하게 묘사해 인물의 정체성과 직업 세계를 함께 드러낸 초상화입니다.",
+        "en": "A portrait of a Hanseatic merchant in London, using carefully described objects and setting to define identity and profession."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "북유럽 르네상스",
+        "en": "Northern Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "베를린 회화관",
+          "en": "Gemäldegalerie, Berlin"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q48319/holbein-georg-gisze-1532.jpg",
+      "thumbnail": "data/thumbnails/artist-Q48319/holbein-georg-gisze-1532.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:55:59.424Z",
+      "highResImage": "data/thumbnails/artist-Q48319/holbein-georg-gisze-1532.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Hans_Holbein_der_Jüngere_-_Der_Kaufmann_Georg_Gisze_-_Google_Art_Project.jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "런던 한자 상인의 사무 공간과 물건들을 세밀하게 묘사해 인물의 정체성과 직업 세계를 함께 드러낸 초상화입니다.",
+          "en": "A portrait of a Hanseatic merchant in London, using carefully described objects and setting to define identity and profession."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Hans_Holbein_the_Younger",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Hans_Holbein_der_Jüngere_-_Der_Kaufmann_Georg_Gisze_-_Google_Art_Project.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "한스 홀바인",
+            "en": "Hans Holbein the Younger"
+          },
+          "year": 1532,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "북유럽 르네상스",
+            "en": "Northern Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "베를린 회화관",
+              "en": "Gemäldegalerie, Berlin"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:55:59.424Z",
+        "updatedAt": "2026-08-22T04:55:59.424Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q48319/holbein-georg-gisze-1532.jpg",
+          "highResolution": "data/thumbnails/artist-Q48319/holbein-georg-gisze-1532.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Hans_Holbein_the_Younger",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Hans_Holbein_the_Younger",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Hans_Holbein_der_Jüngere_-_Der_Kaufmann_Georg_Gisze_-_Google_Art_Project.jpg"
+          ],
+          "license": "",
+          "institution": "Gemäldegalerie, Berlin"
+        }
+      }
+    },
+    {
+      "id": "holbein-ambassadors-1533",
+      "year": 1533,
+      "popularity": 10000,
+      "title": {
+        "ko": "대사들",
+        "en": "The Ambassadors"
+      },
+      "description": {
+        "ko": "두 인물과 과학·음악·종교적 사물, 왜상 해골을 함께 배치해 르네상스 지식과 죽음의 상징을 복합적으로 보여주는 홀바인의 대표작입니다.",
+        "en": "Holbein’s landmark double portrait, combining sitters, scientific and musical instruments, religious allusions, and an anamorphic skull."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "북유럽 르네상스",
+        "en": "Northern Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "내셔널 갤러리, 런던",
+          "en": "National Gallery, London"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q48319/holbein-ambassadors-1533.jpg",
+      "thumbnail": "data/thumbnails/artist-Q48319/holbein-ambassadors-1533.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:55:59.424Z",
+      "highResImage": "data/thumbnails/artist-Q48319/holbein-ambassadors-1533.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Hans_Holbein_the_Younger_-_The_Ambassadors_-_Google_Art_Project.jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "두 인물과 과학·음악·종교적 사물, 왜상 해골을 함께 배치해 르네상스 지식과 죽음의 상징을 복합적으로 보여주는 홀바인의 대표작입니다.",
+          "en": "Holbein’s landmark double portrait, combining sitters, scientific and musical instruments, religious allusions, and an anamorphic skull."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Hans_Holbein_the_Younger",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Hans_Holbein_the_Younger_-_The_Ambassadors_-_Google_Art_Project.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "한스 홀바인",
+            "en": "Hans Holbein the Younger"
+          },
+          "year": 1533,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "북유럽 르네상스",
+            "en": "Northern Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "내셔널 갤러리, 런던",
+              "en": "National Gallery, London"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:55:59.424Z",
+        "updatedAt": "2026-08-22T04:55:59.424Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q48319/holbein-ambassadors-1533.jpg",
+          "highResolution": "data/thumbnails/artist-Q48319/holbein-ambassadors-1533.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Hans_Holbein_the_Younger",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Hans_Holbein_the_Younger",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Hans_Holbein_the_Younger_-_The_Ambassadors_-_Google_Art_Project.jpg"
+          ],
+          "license": "",
+          "institution": "National Gallery, London"
+        }
+      }
+    },
+    {
+      "id": "holbein-self-portrait",
+      "year": 1542,
+      "popularity": 7600,
+      "title": {
+        "ko": "자화상",
+        "en": "Self-Portrait"
+      },
+      "description": {
+        "ko": "말년의 홀바인을 보여주는 자화상으로, 바젤 시민으로서의 자기 인식을 함께 담은 이미지입니다.",
+        "en": "A late self-portrait associated with Holbein’s self-identification as a citizen of Basel."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "북유럽 르네상스",
+        "en": "Northern Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "우피치 미술관",
+          "en": "Uffizi Gallery"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q48319/holbein-self-portrait.jpg",
+      "thumbnail": "data/thumbnails/artist-Q48319/holbein-self-portrait.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:55:59.424Z",
+      "highResImage": "data/thumbnails/artist-Q48319/holbein-self-portrait.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Hans_Holbein_the_Younger,_self-portrait.jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "말년의 홀바인을 보여주는 자화상으로, 바젤 시민으로서의 자기 인식을 함께 담은 이미지입니다.",
+          "en": "A late self-portrait associated with Holbein’s self-identification as a citizen of Basel."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Hans_Holbein_the_Younger",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Hans_Holbein_the_Younger,_self-portrait.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "한스 홀바인",
+            "en": "Hans Holbein the Younger"
+          },
+          "year": 1542,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "북유럽 르네상스",
+            "en": "Northern Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "우피치 미술관",
+              "en": "Uffizi Gallery"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:55:59.424Z",
+        "updatedAt": "2026-08-22T04:55:59.424Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q48319/holbein-self-portrait.jpg",
+          "highResolution": "data/thumbnails/artist-Q48319/holbein-self-portrait.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Hans_Holbein_the_Younger",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Hans_Holbein_the_Younger",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Hans_Holbein_the_Younger,_self-portrait.jpg"
+          ],
+          "license": "",
+          "institution": "Uffizi Gallery"
+        }
+      }
+    },
+    {
+      "id": "holbein-dead-christ-tomb",
+      "year": 1521,
+      "popularity": 8600,
+      "title": {
+        "ko": "무덤 속 죽은 그리스도의 몸",
+        "en": "The Body of the Dead Christ in the Tomb"
+      },
+      "description": {
+        "ko": "죽은 그리스도의 육체를 냉정하고 사실적으로 묘사한 종교화로, 홀바인의 관찰력과 북유럽적 리얼리즘이 강하게 드러납니다.",
+        "en": "A starkly realistic religious painting of Christ’s dead body, emphasizing Holbein’s observation and Northern realism."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "북유럽 르네상스",
+        "en": "Northern Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "바젤 미술관",
+          "en": "Kunstmuseum Basel"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q48319/holbein-dead-christ-tomb.jpeg",
+      "thumbnail": "data/thumbnails/artist-Q48319/holbein-dead-christ-tomb.jpeg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:55:59.424Z",
+      "highResImage": "data/thumbnails/artist-Q48319/holbein-dead-christ-tomb.jpeg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Hans_Holbein-_The_Body_of_the_Dead_Christ_in_the_Tomb.jpeg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "죽은 그리스도의 육체를 냉정하고 사실적으로 묘사한 종교화로, 홀바인의 관찰력과 북유럽적 리얼리즘이 강하게 드러납니다.",
+          "en": "A starkly realistic religious painting of Christ’s dead body, emphasizing Holbein’s observation and Northern realism."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Hans_Holbein_the_Younger",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Hans_Holbein-_The_Body_of_the_Dead_Christ_in_the_Tomb.jpeg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "한스 홀바인",
+            "en": "Hans Holbein the Younger"
+          },
+          "year": 1521,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "북유럽 르네상스",
+            "en": "Northern Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "바젤 미술관",
+              "en": "Kunstmuseum Basel"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:55:59.424Z",
+        "updatedAt": "2026-08-22T04:55:59.424Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q48319/holbein-dead-christ-tomb.jpeg",
+          "highResolution": "data/thumbnails/artist-Q48319/holbein-dead-christ-tomb.jpeg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Hans_Holbein_the_Younger",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Hans_Holbein_the_Younger",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Hans_Holbein-_The_Body_of_the_Dead_Christ_in_the_Tomb.jpeg"
+          ],
+          "license": "",
+          "institution": "Kunstmuseum Basel"
+        }
+      }
+    },
+    {
+      "id": "holbein-erasmus-1523",
+      "year": 1523,
+      "popularity": 8400,
+      "title": {
+        "ko": "에라스뮈스의 초상",
+        "en": "Portrait of Erasmus of Rotterdam"
+      },
+      "description": {
+        "ko": "인문주의자 에라스뮈스를 지적 집중과 절제된 품격으로 표현한 초상화로, 홀바인이 국제적 명성을 얻는 데 중요한 작품입니다.",
+        "en": "A portrait of Erasmus that helped establish Holbein’s international reputation through intellectual focus and controlled elegance."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "북유럽 르네상스",
+        "en": "Northern Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "내셔널 갤러리, 런던",
+          "en": "National Gallery, London"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q48319/holbein-erasmus-1523.jpg",
+      "thumbnail": "data/thumbnails/artist-Q48319/holbein-erasmus-1523.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:55:59.424Z",
+      "highResImage": "data/thumbnails/artist-Q48319/holbein-erasmus-1523.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Holbein-erasmus.jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "인문주의자 에라스뮈스를 지적 집중과 절제된 품격으로 표현한 초상화로, 홀바인이 국제적 명성을 얻는 데 중요한 작품입니다.",
+          "en": "A portrait of Erasmus that helped establish Holbein’s international reputation through intellectual focus and controlled elegance."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Hans_Holbein_the_Younger",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Holbein-erasmus.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "한스 홀바인",
+            "en": "Hans Holbein the Younger"
+          },
+          "year": 1523,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "북유럽 르네상스",
+            "en": "Northern Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "내셔널 갤러리, 런던",
+              "en": "National Gallery, London"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:55:59.424Z",
+        "updatedAt": "2026-08-22T04:55:59.424Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q48319/holbein-erasmus-1523.jpg",
+          "highResolution": "data/thumbnails/artist-Q48319/holbein-erasmus-1523.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Hans_Holbein_the_Younger",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Hans_Holbein_the_Younger",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Holbein-erasmus.jpg"
+          ],
+          "license": "",
+          "institution": "National Gallery, London"
+        }
+      }
+    }
+  ]
+}

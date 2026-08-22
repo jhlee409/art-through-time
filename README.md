@@ -119,6 +119,8 @@ C:\Users\jhlee\OneDrive - UOU\AI-Programming\Art_through_Time\download
 - 사조 HTML과 표시 데이터에서는 외부 이미지 URL, `data/thumbnails/`, `data/high-resolution/` 직접 참조를 피합니다. 필요한 이미지는 해당 화면의 안정 폴더로 복사한 뒤 연결합니다.
 - 화가 작품 데이터의 원본 `image` URL은 수집 출처로 남을 수 있습니다. 다만 로컬 썸네일이 없고 외부 URL만으로 표시되는 작품은 화면에 `URL 의존` 배지가 나타납니다.
 - `URL 의존` 배지가 보이는 작품은 인터넷에서 이미지를 직접 내려받은 뒤 관리자 모드의 `로컬 이미지 교체` 버튼으로 교체합니다.
+- 외부 URL 이미지를 자동 로컬화할 때는 `tools/localize-external-artist-images.js`를 사용할 수 있습니다. 성공한 작품만 `data/thumbnails/` 로컬 경로로 바뀌며, 실패한 작품은 기존 외부 URL을 유지해 화면에 `URL 의존` 배지가 계속 표시됩니다.
+- Wikimedia 요청 제한이 걸리면 자동 로컬화는 오래 걸릴 수 있으므로 무리해서 반복 실행하지 않습니다. 실패 목록은 `data/external-image-localization-report.json`에서 확인하고, 필요한 작품만 수동으로 내려받아 교체합니다.
 
 ## 데이터와 저장 위치
 

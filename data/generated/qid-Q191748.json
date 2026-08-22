@@ -1,0 +1,2026 @@
+{
+  "schema": 20,
+  "artistId": "artist-Q191748",
+  "qid": "Q191748",
+  "artist": {
+    "name": {
+      "ko": "루카스 크라나흐",
+      "en": "Lucas Cranach the Elder"
+    },
+    "birth": 1472,
+    "death": 1553,
+    "nationality": {
+      "ko": "독일",
+      "en": "Germany"
+    },
+    "movement": {
+      "ko": "독일 르네상스",
+      "en": "German Renaissance"
+    }
+  },
+  "fetchedAt": "2026-08-22T04:38:02.166Z",
+  "works": [
+    {
+      "id": "cranach-law-and-grace-1529",
+      "year": 1529,
+      "popularity": 10000,
+      "title": {
+        "ko": "율법과 은총의 알레고리",
+        "en": "Allegory of Law and Grace"
+      },
+      "description": {
+        "ko": "종교개혁의 핵심 교리를 좌우 대비 구조로 설명한 대표작으로, 크라나흐가 루터교 시각 언어를 만드는 데 기여한 작품입니다.",
+        "en": "A major Reformation image that explains Lutheran doctrine through a left-right contrast of law and grace."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "루터교 종교화",
+          "en": "Lutheran religious painting"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q191748/cranach-law-and-grace-1529.jpeg",
+      "thumbnail": "data/thumbnails/artist-Q191748/cranach-law-and-grace-1529.jpeg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:38:02.166Z",
+      "highResImage": "data/thumbnails/artist-Q191748/cranach-law-and-grace-1529.jpeg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/1529_Cranach_Allegorie_auf_Gesetz_und_Gnade_anagoria.jpeg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "종교개혁의 핵심 교리를 좌우 대비 구조로 설명한 대표작으로, 크라나흐가 루터교 시각 언어를 만드는 데 기여한 작품입니다.",
+          "en": "A major Reformation image that explains Lutheran doctrine through a left-right contrast of law and grace."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/1529_Cranach_Allegorie_auf_Gesetz_und_Gnade_anagoria.jpeg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "루카스 크라나흐",
+            "en": "Lucas Cranach the Elder"
+          },
+          "year": 1529,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "루터교 종교화",
+              "en": "Lutheran religious painting"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:38:02.166Z",
+        "updatedAt": "2026-08-22T04:38:02.166Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q191748/cranach-law-and-grace-1529.jpeg",
+          "highResolution": "data/thumbnails/artist-Q191748/cranach-law-and-grace-1529.jpeg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/1529_Cranach_Allegorie_auf_Gesetz_und_Gnade_anagoria.jpeg"
+          ],
+          "license": "",
+          "institution": "Lutheran religious painting"
+        }
+      }
+    },
+    {
+      "id": "cranach-martin-luther-1528",
+      "year": 1528,
+      "popularity": 9400,
+      "title": {
+        "ko": "마르틴 루터의 초상(1528)",
+        "en": "Portrait of Martin Luther, 1528"
+      },
+      "description": {
+        "ko": "루터를 단정한 학자이자 종교개혁 지도자로 제시한 초상화로, 크라나흐 공방이 형성한 루터 이미지의 핵심 사례입니다.",
+        "en": "A portrait presenting Luther as a disciplined scholar and Reformation leader, central to Cranach’s visual image of Luther."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "종교개혁 초상화",
+          "en": "Reformation portrait"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q191748/cranach-martin-luther-1528.jpg",
+      "thumbnail": "data/thumbnails/artist-Q191748/cranach-martin-luther-1528.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:38:02.166Z",
+      "highResImage": "data/thumbnails/artist-Q191748/cranach-martin-luther-1528.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Cranach_d.Ä._Martin_Luther_1528.jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "루터를 단정한 학자이자 종교개혁 지도자로 제시한 초상화로, 크라나흐 공방이 형성한 루터 이미지의 핵심 사례입니다.",
+          "en": "A portrait presenting Luther as a disciplined scholar and Reformation leader, central to Cranach’s visual image of Luther."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Cranach_d.Ä._Martin_Luther_1528.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "루카스 크라나흐",
+            "en": "Lucas Cranach the Elder"
+          },
+          "year": 1528,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "종교개혁 초상화",
+              "en": "Reformation portrait"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:38:02.166Z",
+        "updatedAt": "2026-08-22T04:38:02.166Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q191748/cranach-martin-luther-1528.jpg",
+          "highResolution": "data/thumbnails/artist-Q191748/cranach-martin-luther-1528.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Cranach_d.Ä._Martin_Luther_1528.jpg"
+          ],
+          "license": "",
+          "institution": "Reformation portrait"
+        }
+      }
+    },
+    {
+      "id": "cranach-madonna-under-fir-tree",
+      "year": 1510,
+      "popularity": 8700,
+      "title": {
+        "ko": "전나무 아래의 성모",
+        "en": "Madonna under the Fir Tree"
+      },
+      "description": {
+        "ko": "부드러운 성모자 표현과 북유럽식 풍경 감각을 결합한 초기 종교화입니다.",
+        "en": "An early religious painting combining a tender Madonna and Child with a Northern landscape sensibility."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "종교화",
+          "en": "Religious painting"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q191748/cranach-madonna-under-fir-tree.jpg",
+      "thumbnail": "data/thumbnails/artist-Q191748/cranach-madonna-under-fir-tree.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:38:02.166Z",
+      "highResImage": "data/thumbnails/artist-Q191748/cranach-madonna-under-fir-tree.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Cranach_Madonna_under_the_fir_tree.jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": false,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "부드러운 성모자 표현과 북유럽식 풍경 감각을 결합한 초기 종교화입니다.",
+          "en": "An early religious painting combining a tender Madonna and Child with a Northern landscape sensibility."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Cranach_Madonna_under_the_fir_tree.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "루카스 크라나흐",
+            "en": "Lucas Cranach the Elder"
+          },
+          "year": 1510,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "종교화",
+              "en": "Religious painting"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:38:02.166Z",
+        "updatedAt": "2026-08-22T04:38:02.166Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q191748/cranach-madonna-under-fir-tree.jpg",
+          "highResolution": "data/thumbnails/artist-Q191748/cranach-madonna-under-fir-tree.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Cranach_Madonna_under_the_fir_tree.jpg"
+          ],
+          "license": "",
+          "institution": "Religious painting"
+        }
+      }
+    },
+    {
+      "id": "cranach-duke-heinrich-katharina-1514",
+      "year": 1514,
+      "popularity": 7900,
+      "title": {
+        "ko": "하인리히 경건공과 카타리나 공작부인의 이중 초상",
+        "en": "Double Portrait of Duke Heinrich the Pious and Duchess Katharina of Mecklenburg"
+      },
+      "description": {
+        "ko": "작센 궁정의 위계와 복식, 부부 초상의 의례적 성격을 정교하게 보여주는 이중 초상화입니다.",
+        "en": "A double portrait that records courtly rank, costume, and the ceremonial character of dynastic portraiture."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "궁정 초상화",
+          "en": "Court portrait"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q191748/cranach-duke-heinrich-katharina-1514.jpg",
+      "thumbnail": "data/thumbnails/artist-Q191748/cranach-duke-heinrich-katharina-1514.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:38:02.166Z",
+      "highResImage": "data/thumbnails/artist-Q191748/cranach-duke-heinrich-katharina-1514.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Cranach,_Lucas_d._Ä._-_Doppelbildnis_Herzog_Heinrichs_des_Frommen_und_Gemahlin_Herzogin_Katharina_von_Mecklenburg_-_1514.jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "작센 궁정의 위계와 복식, 부부 초상의 의례적 성격을 정교하게 보여주는 이중 초상화입니다.",
+          "en": "A double portrait that records courtly rank, costume, and the ceremonial character of dynastic portraiture."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Cranach,_Lucas_d._Ä._-_Doppelbildnis_Herzog_Heinrichs_des_Frommen_und_Gemahlin_Herzogin_Katharina_von_Mecklenburg_-_1514.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "루카스 크라나흐",
+            "en": "Lucas Cranach the Elder"
+          },
+          "year": 1514,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "궁정 초상화",
+              "en": "Court portrait"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:38:02.166Z",
+        "updatedAt": "2026-08-22T04:38:02.166Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q191748/cranach-duke-heinrich-katharina-1514.jpg",
+          "highResolution": "data/thumbnails/artist-Q191748/cranach-duke-heinrich-katharina-1514.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Cranach,_Lucas_d._Ä._-_Doppelbildnis_Herzog_Heinrichs_des_Frommen_und_Gemahlin_Herzogin_Katharina_von_Mecklenburg_-_1514.jpg"
+          ],
+          "license": "",
+          "institution": "Court portrait"
+        }
+      }
+    },
+    {
+      "id": "cranach-mariahilf-madonna",
+      "year": 1537,
+      "popularity": 7400,
+      "title": {
+        "ko": "마리아힐프 성모",
+        "en": "Madonna and Child (Mariahilf)"
+      },
+      "description": {
+        "ko": "성모자 도상을 친밀하고 반복 가능한 예배 이미지로 정리한 크라나흐 계열의 대표적 성모상입니다.",
+        "en": "A Madonna and Child image associated with Cranach’s widely repeated devotional type."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "인스브루크",
+          "en": "Innsbruck"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q191748/cranach-mariahilf-madonna.jpg",
+      "thumbnail": "data/thumbnails/artist-Q191748/cranach-mariahilf-madonna.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:38:02.166Z",
+      "highResImage": "data/thumbnails/artist-Q191748/cranach-mariahilf-madonna.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Gnadenbild_Mariahilf,_Innsbruck.jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "성모자 도상을 친밀하고 반복 가능한 예배 이미지로 정리한 크라나흐 계열의 대표적 성모상입니다.",
+          "en": "A Madonna and Child image associated with Cranach’s widely repeated devotional type."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Gnadenbild_Mariahilf,_Innsbruck.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "루카스 크라나흐",
+            "en": "Lucas Cranach the Elder"
+          },
+          "year": 1537,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "인스브루크",
+              "en": "Innsbruck"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:38:02.166Z",
+        "updatedAt": "2026-08-22T04:38:02.166Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q191748/cranach-mariahilf-madonna.jpg",
+          "highResolution": "data/thumbnails/artist-Q191748/cranach-mariahilf-madonna.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Gnadenbild_Mariahilf,_Innsbruck.jpg"
+          ],
+          "license": "",
+          "institution": "Innsbruck"
+        }
+      }
+    },
+    {
+      "id": "cranach-weimar-altarpiece",
+      "year": 1555,
+      "popularity": 7000,
+      "title": {
+        "ko": "바이마르 제단화",
+        "en": "Weimar Altarpiece"
+      },
+      "description": {
+        "ko": "크라나흐 가문과 공방의 종교개혁 제단화 전통을 보여주는 작품입니다. 완성 과정에는 아들 루카스 크라나흐와 공방의 참여 가능성이 있습니다.",
+        "en": "An altarpiece showing the Cranach family workshop’s Reformation imagery; its completion is associated with the younger Cranach and the workshop."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "헤르더 교회, 바이마르",
+          "en": "Herder Church, Weimar"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q191748/cranach-weimar-altarpiece.jpg",
+      "thumbnail": "data/thumbnails/artist-Q191748/cranach-weimar-altarpiece.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:38:02.166Z",
+      "highResImage": "data/thumbnails/artist-Q191748/cranach-weimar-altarpiece.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Herderkirche_Weimar_Cranach_Altarpiece.jpg",
+      "verified": false,
+      "representative": false,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "크라나흐 가문과 공방의 종교개혁 제단화 전통을 보여주는 작품입니다. 완성 과정에는 아들 루카스 크라나흐와 공방의 참여 가능성이 있습니다.",
+          "en": "An altarpiece showing the Cranach family workshop’s Reformation imagery; its completion is associated with the younger Cranach and the workshop."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Herderkirche_Weimar_Cranach_Altarpiece.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "루카스 크라나흐",
+            "en": "Lucas Cranach the Elder"
+          },
+          "year": 1555,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "헤르더 교회, 바이마르",
+              "en": "Herder Church, Weimar"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:38:02.166Z",
+        "updatedAt": "2026-08-22T04:38:02.166Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q191748/cranach-weimar-altarpiece.jpg",
+          "highResolution": "data/thumbnails/artist-Q191748/cranach-weimar-altarpiece.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Herderkirche_Weimar_Cranach_Altarpiece.jpg"
+          ],
+          "license": "",
+          "institution": "Herder Church, Weimar"
+        }
+      }
+    },
+    {
+      "id": "cranach-judgement-of-paris-1528",
+      "year": 1528,
+      "popularity": 8300,
+      "title": {
+        "ko": "파리스의 심판",
+        "en": "The Judgement of Paris"
+      },
+      "description": {
+        "ko": "고전 신화를 북유럽 르네상스식 누드와 장식적 선으로 재해석한 크라나흐의 대표적 신화화입니다.",
+        "en": "A mythological painting that translates classical subject matter into Cranach’s Northern Renaissance line and nude type."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "신화화",
+          "en": "Mythological painting"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q191748/cranach-judgement-of-paris-1528.jpg",
+      "thumbnail": "data/thumbnails/artist-Q191748/cranach-judgement-of-paris-1528.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:38:02.166Z",
+      "highResImage": "data/thumbnails/artist-Q191748/cranach-judgement-of-paris-1528.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Judgement_of_Paris_by_Lucas_Cranach_the_Elder_(1528).jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "고전 신화를 북유럽 르네상스식 누드와 장식적 선으로 재해석한 크라나흐의 대표적 신화화입니다.",
+          "en": "A mythological painting that translates classical subject matter into Cranach’s Northern Renaissance line and nude type."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Judgement_of_Paris_by_Lucas_Cranach_the_Elder_(1528).jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "루카스 크라나흐",
+            "en": "Lucas Cranach the Elder"
+          },
+          "year": 1528,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "신화화",
+              "en": "Mythological painting"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:38:02.166Z",
+        "updatedAt": "2026-08-22T04:38:02.166Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q191748/cranach-judgement-of-paris-1528.jpg",
+          "highResolution": "data/thumbnails/artist-Q191748/cranach-judgement-of-paris-1528.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Judgement_of_Paris_by_Lucas_Cranach_the_Elder_(1528).jpg"
+          ],
+          "license": "",
+          "institution": "Mythological painting"
+        }
+      }
+    },
+    {
+      "id": "cranach-fountain-of-youth",
+      "year": 1546,
+      "popularity": 8900,
+      "title": {
+        "ko": "젊음의 샘",
+        "en": "The Fountain of Youth"
+      },
+      "description": {
+        "ko": "노년과 젊음, 욕망과 풍자를 넓은 화면에 결합한 후기 대표작으로, 크라나흐의 세속 주제 감각을 보여줍니다.",
+        "en": "A late major work joining aging, youth, desire, and satire in a broad pictorial field."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "베를린 회화관",
+          "en": "Gemäldegalerie, Berlin"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q191748/cranach-fountain-of-youth.jpg",
+      "thumbnail": "data/thumbnails/artist-Q191748/cranach-fountain-of-youth.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:38:02.166Z",
+      "highResImage": "data/thumbnails/artist-Q191748/cranach-fountain-of-youth.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_-_Der_Jungbrunnen_(Gemäldegalerie_Berlin).jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "노년과 젊음, 욕망과 풍자를 넓은 화면에 결합한 후기 대표작으로, 크라나흐의 세속 주제 감각을 보여줍니다.",
+          "en": "A late major work joining aging, youth, desire, and satire in a broad pictorial field."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_-_Der_Jungbrunnen_(Gemäldegalerie_Berlin).jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "루카스 크라나흐",
+            "en": "Lucas Cranach the Elder"
+          },
+          "year": 1546,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "베를린 회화관",
+              "en": "Gemäldegalerie, Berlin"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:38:02.166Z",
+        "updatedAt": "2026-08-22T04:38:02.166Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q191748/cranach-fountain-of-youth.jpg",
+          "highResolution": "data/thumbnails/artist-Q191748/cranach-fountain-of-youth.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_-_Der_Jungbrunnen_(Gemäldegalerie_Berlin).jpg"
+          ],
+          "license": "",
+          "institution": "Gemäldegalerie, Berlin"
+        }
+      }
+    },
+    {
+      "id": "cranach-martin-luther-1543",
+      "year": 1543,
+      "popularity": 7600,
+      "title": {
+        "ko": "마르틴 루터의 초상(1543)",
+        "en": "Portrait of Martin Luther, 1543"
+      },
+      "description": {
+        "ko": "말년의 루터 이미지를 안정된 권위와 친숙한 인상으로 정리한 종교개혁 초상화입니다.",
+        "en": "A later image of Luther that presents the reformer with settled authority and familiarity."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "카셀",
+          "en": "Kassel"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q191748/cranach-martin-luther-1543.jpg",
+      "thumbnail": "data/thumbnails/artist-Q191748/cranach-martin-luther-1543.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:38:02.166Z",
+      "highResImage": "data/thumbnails/artist-Q191748/cranach-martin-luther-1543.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_(I)_-_Bildnis_Martin_Luthers_1543_(Kassel).jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "말년의 루터 이미지를 안정된 권위와 친숙한 인상으로 정리한 종교개혁 초상화입니다.",
+          "en": "A later image of Luther that presents the reformer with settled authority and familiarity."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_(I)_-_Bildnis_Martin_Luthers_1543_(Kassel).jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "루카스 크라나흐",
+            "en": "Lucas Cranach the Elder"
+          },
+          "year": 1543,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "카셀",
+              "en": "Kassel"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:38:02.166Z",
+        "updatedAt": "2026-08-22T04:38:02.166Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q191748/cranach-martin-luther-1543.jpg",
+          "highResolution": "data/thumbnails/artist-Q191748/cranach-martin-luther-1543.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_(I)_-_Bildnis_Martin_Luthers_1543_(Kassel).jpg"
+          ],
+          "license": "",
+          "institution": "Kassel"
+        }
+      }
+    },
+    {
+      "id": "cranach-portrait-of-cranach-1550",
+      "year": 1550,
+      "popularity": 6800,
+      "title": {
+        "ko": "루카스 크라나흐의 초상",
+        "en": "Portrait of Lucas Cranach the Elder"
+      },
+      "description": {
+        "ko": "루카스 크라나흐의 말년 모습을 보여주는 초상 자료입니다. 위키피디아 대표 초상처럼 아들 또는 공방과 관련된 작품일 수 있어 참고 이미지로 표시했습니다.",
+        "en": "A portrait reference for Cranach’s late appearance; it may be connected with the younger Cranach or the workshop rather than the elder himself."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "작가 초상 자료",
+          "en": "Artist portrait reference"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q191748/cranach-portrait-of-cranach-1550.jpg",
+      "thumbnail": "data/thumbnails/artist-Q191748/cranach-portrait-of-cranach-1550.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:38:02.166Z",
+      "highResImage": "data/thumbnails/artist-Q191748/cranach-portrait-of-cranach-1550.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_d._Ä._063.jpg",
+      "verified": false,
+      "representative": false,
+      "movementContribution": false,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "루카스 크라나흐의 말년 모습을 보여주는 초상 자료입니다. 위키피디아 대표 초상처럼 아들 또는 공방과 관련된 작품일 수 있어 참고 이미지로 표시했습니다.",
+          "en": "A portrait reference for Cranach’s late appearance; it may be connected with the younger Cranach or the workshop rather than the elder himself."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_d._Ä._063.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "루카스 크라나흐",
+            "en": "Lucas Cranach the Elder"
+          },
+          "year": 1550,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "작가 초상 자료",
+              "en": "Artist portrait reference"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:38:02.166Z",
+        "updatedAt": "2026-08-22T04:38:02.166Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q191748/cranach-portrait-of-cranach-1550.jpg",
+          "highResolution": "data/thumbnails/artist-Q191748/cranach-portrait-of-cranach-1550.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_d._Ä._063.jpg"
+          ],
+          "license": "",
+          "institution": "Artist portrait reference"
+        }
+      }
+    },
+    {
+      "id": "cranach-golden-age-1530",
+      "year": 1530,
+      "popularity": 7300,
+      "title": {
+        "ko": "황금시대",
+        "en": "The Golden Age"
+      },
+      "description": {
+        "ko": "평화와 풍요의 이상향을 고전적 누드와 목가적 풍경으로 구성한 신화·알레고리 계열 작품입니다.",
+        "en": "A mythological and allegorical scene of peace and abundance set in an idyllic landscape."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "오슬로 국립미술관",
+          "en": "National Museum, Oslo"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q191748/cranach-golden-age-1530.jpg",
+      "thumbnail": "data/thumbnails/artist-Q191748/cranach-golden-age-1530.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:38:02.166Z",
+      "highResImage": "data/thumbnails/artist-Q191748/cranach-golden-age-1530.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_d.Ä._-_Das_Goldene_Zeitalter_(Nasjonalgalleriet,_Oslo).jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "평화와 풍요의 이상향을 고전적 누드와 목가적 풍경으로 구성한 신화·알레고리 계열 작품입니다.",
+          "en": "A mythological and allegorical scene of peace and abundance set in an idyllic landscape."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_d.Ä._-_Das_Goldene_Zeitalter_(Nasjonalgalleriet,_Oslo).jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "루카스 크라나흐",
+            "en": "Lucas Cranach the Elder"
+          },
+          "year": 1530,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "오슬로 국립미술관",
+              "en": "National Museum, Oslo"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:38:02.166Z",
+        "updatedAt": "2026-08-22T04:38:02.166Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q191748/cranach-golden-age-1530.jpg",
+          "highResolution": "data/thumbnails/artist-Q191748/cranach-golden-age-1530.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_d.Ä._-_Das_Goldene_Zeitalter_(Nasjonalgalleriet,_Oslo).jpg"
+          ],
+          "license": "",
+          "institution": "National Museum, Oslo"
+        }
+      }
+    },
+    {
+      "id": "cranach-martyrdom-saint-barbara",
+      "year": 1510,
+      "popularity": 6500,
+      "title": {
+        "ko": "성 바르바라의 순교",
+        "en": "The Martyrdom of Saint Barbara"
+      },
+      "description": {
+        "ko": "성녀 순교 장면을 선명한 서사와 강한 윤곽으로 구성한 초기 종교화 계열 작품입니다.",
+        "en": "An early religious subject organized through clear narrative and strong contour."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "종교화",
+          "en": "Religious painting"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q191748/cranach-martyrdom-saint-barbara.jpg",
+      "thumbnail": "data/thumbnails/artist-Q191748/cranach-martyrdom-saint-barbara.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:38:02.166Z",
+      "highResImage": "data/thumbnails/artist-Q191748/cranach-martyrdom-saint-barbara.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_d.Ä._-_Das_Martyrium_der_Heiligen_Barbara.jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "성녀 순교 장면을 선명한 서사와 강한 윤곽으로 구성한 초기 종교화 계열 작품입니다.",
+          "en": "An early religious subject organized through clear narrative and strong contour."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_d.Ä._-_Das_Martyrium_der_Heiligen_Barbara.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "루카스 크라나흐",
+            "en": "Lucas Cranach the Elder"
+          },
+          "year": 1510,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "종교화",
+              "en": "Religious painting"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:38:02.166Z",
+        "updatedAt": "2026-08-22T04:38:02.166Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q191748/cranach-martyrdom-saint-barbara.jpg",
+          "highResolution": "data/thumbnails/artist-Q191748/cranach-martyrdom-saint-barbara.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_d.Ä._-_Das_Martyrium_der_Heiligen_Barbara.jpg"
+          ],
+          "license": "",
+          "institution": "Religious painting"
+        }
+      }
+    },
+    {
+      "id": "cranach-three-graces-1531",
+      "year": 1531,
+      "popularity": 8200,
+      "title": {
+        "ko": "삼미신",
+        "en": "The Three Graces"
+      },
+      "description": {
+        "ko": "가늘고 장식적인 인체 비례와 투명한 장신구 표현으로 유명한 크라나흐식 여성 누드의 대표작입니다.",
+        "en": "A famous example of Cranach’s slender, decorative nude type and delicate ornamental detail."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "루브르 박물관",
+          "en": "Musée du Louvre"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q191748/cranach-three-graces-1531.jpg",
+      "thumbnail": "data/thumbnails/artist-Q191748/cranach-three-graces-1531.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:38:02.166Z",
+      "highResImage": "data/thumbnails/artist-Q191748/cranach-three-graces-1531.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_d.Ä._-_Drei_Grazien,_1531_(Musée_du_Louvre).jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "가늘고 장식적인 인체 비례와 투명한 장신구 표현으로 유명한 크라나흐식 여성 누드의 대표작입니다.",
+          "en": "A famous example of Cranach’s slender, decorative nude type and delicate ornamental detail."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_d.Ä._-_Drei_Grazien,_1531_(Musée_du_Louvre).jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "루카스 크라나흐",
+            "en": "Lucas Cranach the Elder"
+          },
+          "year": 1531,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "루브르 박물관",
+              "en": "Musée du Louvre"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:38:02.166Z",
+        "updatedAt": "2026-08-22T04:38:02.166Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q191748/cranach-three-graces-1531.jpg",
+          "highResolution": "data/thumbnails/artist-Q191748/cranach-three-graces-1531.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_d.Ä._-_Drei_Grazien,_1531_(Musée_du_Louvre).jpg"
+          ],
+          "license": "",
+          "institution": "Musée du Louvre"
+        }
+      }
+    },
+    {
+      "id": "cranach-prince-johann-anhalt",
+      "year": 1532,
+      "popularity": 6100,
+      "title": {
+        "ko": "안할트의 요한 공의 초상",
+        "en": "Portrait of Prince Johann of Anhalt"
+      },
+      "description": {
+        "ko": "궁정 인물의 신분과 개성을 간결한 구도와 복식 표현으로 드러낸 초상화입니다.",
+        "en": "A court portrait presenting rank and personality through concise composition and costume detail."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "그루네발트 사냥궁",
+          "en": "Jagdschloss Grunewald"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q191748/cranach-prince-johann-anhalt.jpg",
+      "thumbnail": "data/thumbnails/artist-Q191748/cranach-prince-johann-anhalt.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:38:02.166Z",
+      "highResImage": "data/thumbnails/artist-Q191748/cranach-prince-johann-anhalt.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_d.Ä._-_Fürst_Johann_von_Anhalt_(Jagdschloss_Grunewald).jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "궁정 인물의 신분과 개성을 간결한 구도와 복식 표현으로 드러낸 초상화입니다.",
+          "en": "A court portrait presenting rank and personality through concise composition and costume detail."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_d.Ä._-_Fürst_Johann_von_Anhalt_(Jagdschloss_Grunewald).jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "루카스 크라나흐",
+            "en": "Lucas Cranach the Elder"
+          },
+          "year": 1532,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "그루네발트 사냥궁",
+              "en": "Jagdschloss Grunewald"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:38:02.166Z",
+        "updatedAt": "2026-08-22T04:38:02.166Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q191748/cranach-prince-johann-anhalt.jpg",
+          "highResolution": "data/thumbnails/artist-Q191748/cranach-prince-johann-anhalt.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_d.Ä._-_Fürst_Johann_von_Anhalt_(Jagdschloss_Grunewald).jpg"
+          ],
+          "license": "",
+          "institution": "Jagdschloss Grunewald"
+        }
+      }
+    },
+    {
+      "id": "cranach-hunt-hartenfels",
+      "year": 1540,
+      "popularity": 7100,
+      "title": {
+        "ko": "하르텐펠스 성 근처의 궁정 사냥",
+        "en": "Court Hunt near Hartenfels Castle"
+      },
+      "description": {
+        "ko": "작센 궁정의 사냥 문화를 넓은 풍경 속에 배치한 작품으로, 궁정 화가로서의 역할을 보여줍니다.",
+        "en": "A broad courtly hunting scene that shows Cranach’s role as painter to the Saxon court."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "궁정 풍속화",
+          "en": "Courtly hunting scene"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q191748/cranach-hunt-hartenfels.jpg",
+      "thumbnail": "data/thumbnails/artist-Q191748/cranach-hunt-hartenfels.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:38:02.166Z",
+      "highResImage": "data/thumbnails/artist-Q191748/cranach-hunt-hartenfels.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_d.Ä._-_Hofjagd_bei_Schloss_Hartenfels.jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "작센 궁정의 사냥 문화를 넓은 풍경 속에 배치한 작품으로, 궁정 화가로서의 역할을 보여줍니다.",
+          "en": "A broad courtly hunting scene that shows Cranach’s role as painter to the Saxon court."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_d.Ä._-_Hofjagd_bei_Schloss_Hartenfels.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "루카스 크라나흐",
+            "en": "Lucas Cranach the Elder"
+          },
+          "year": 1540,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "궁정 풍속화",
+              "en": "Courtly hunting scene"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:38:02.166Z",
+        "updatedAt": "2026-08-22T04:38:02.166Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q191748/cranach-hunt-hartenfels.jpg",
+          "highResolution": "data/thumbnails/artist-Q191748/cranach-hunt-hartenfels.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_d.Ä._-_Hofjagd_bei_Schloss_Hartenfels.jpg"
+          ],
+          "license": "",
+          "institution": "Courtly hunting scene"
+        }
+      }
+    },
+    {
+      "id": "cranach-johannes-anna-cuspinian",
+      "year": 1502,
+      "popularity": 6900,
+      "title": {
+        "ko": "요하네스와 안나 쿠스피니안의 초상",
+        "en": "Portraits of Johannes and Anna Cuspinian"
+      },
+      "description": {
+        "ko": "인문주의자 부부의 초상을 풍경과 결합한 초기 작품으로, 크라나흐의 빈 시기 초상 감각을 보여줍니다.",
+        "en": "An early paired portrait of a humanist couple, combining likeness and landscape."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "오스카 라인하르트 컬렉션",
+          "en": "Sammlung Oskar Reinhart"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q191748/cranach-johannes-anna-cuspinian.jpg",
+      "thumbnail": "data/thumbnails/artist-Q191748/cranach-johannes-anna-cuspinian.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:38:02.166Z",
+      "highResImage": "data/thumbnails/artist-Q191748/cranach-johannes-anna-cuspinian.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_d.Ä._-_Johannes_und_Anna_Cuspinian_(Sammlung_Oskar_Reinhart).jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "인문주의자 부부의 초상을 풍경과 결합한 초기 작품으로, 크라나흐의 빈 시기 초상 감각을 보여줍니다.",
+          "en": "An early paired portrait of a humanist couple, combining likeness and landscape."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_d.Ä._-_Johannes_und_Anna_Cuspinian_(Sammlung_Oskar_Reinhart).jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "루카스 크라나흐",
+            "en": "Lucas Cranach the Elder"
+          },
+          "year": 1502,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "오스카 라인하르트 컬렉션",
+              "en": "Sammlung Oskar Reinhart"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:38:02.166Z",
+        "updatedAt": "2026-08-22T04:38:02.166Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q191748/cranach-johannes-anna-cuspinian.jpg",
+          "highResolution": "data/thumbnails/artist-Q191748/cranach-johannes-anna-cuspinian.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_d.Ä._-_Johannes_und_Anna_Cuspinian_(Sammlung_Oskar_Reinhart).jpg"
+          ],
+          "license": "",
+          "institution": "Sammlung Oskar Reinhart"
+        }
+      }
+    },
+    {
+      "id": "cranach-lamentation-1503",
+      "year": 1503,
+      "popularity": 6600,
+      "title": {
+        "ko": "십자가 아래의 애도",
+        "en": "Lamentation beneath the Cross"
+      },
+      "description": {
+        "ko": "십자가 아래의 비탄을 산악 풍경과 강한 감정 표현 속에 배치한 초기 종교화입니다.",
+        "en": "An early religious painting placing grief beneath the Cross within a dramatic landscape."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "알테 피나코테크",
+          "en": "Alte Pinakothek"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q191748/cranach-lamentation-1503.jpg",
+      "thumbnail": "data/thumbnails/artist-Q191748/cranach-lamentation-1503.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:38:02.166Z",
+      "highResImage": "data/thumbnails/artist-Q191748/cranach-lamentation-1503.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_d.Ä._-_Klage_unter_dem_Kreuz,_1503_(Alte_Pinakothek).jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "십자가 아래의 비탄을 산악 풍경과 강한 감정 표현 속에 배치한 초기 종교화입니다.",
+          "en": "An early religious painting placing grief beneath the Cross within a dramatic landscape."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_d.Ä._-_Klage_unter_dem_Kreuz,_1503_(Alte_Pinakothek).jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "루카스 크라나흐",
+            "en": "Lucas Cranach the Elder"
+          },
+          "year": 1503,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "알테 피나코테크",
+              "en": "Alte Pinakothek"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:38:02.166Z",
+        "updatedAt": "2026-08-22T04:38:02.166Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q191748/cranach-lamentation-1503.jpg",
+          "highResolution": "data/thumbnails/artist-Q191748/cranach-lamentation-1503.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_d.Ä._-_Klage_unter_dem_Kreuz,_1503_(Alte_Pinakothek).jpg"
+          ],
+          "license": "",
+          "institution": "Alte Pinakothek"
+        }
+      }
+    },
+    {
+      "id": "cranach-apollo-diana-1530",
+      "year": 1530,
+      "popularity": 8000,
+      "title": {
+        "ko": "숲속의 아폴로와 디아나",
+        "en": "Apollo and Diana in a Wooded Landscape"
+      },
+      "description": {
+        "ko": "신화 인물을 숲 풍경 속에 배치해 고전 주제와 북유럽 자연 묘사를 결합한 작품입니다.",
+        "en": "A mythological scene joining classical figures with a wooded Northern landscape."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "신화화",
+          "en": "Mythological painting"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q191748/cranach-apollo-diana-1530.jpg",
+      "thumbnail": "data/thumbnails/artist-Q191748/cranach-apollo-diana-1530.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:38:02.166Z",
+      "highResImage": "data/thumbnails/artist-Q191748/cranach-apollo-diana-1530.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_the_Elder_-_Apoll_und_Diana_in_waldiger_Landschaft_-_Google_Art_Project.jpg",
+      "verified": true,
+      "representative": true,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "신화 인물을 숲 풍경 속에 배치해 고전 주제와 북유럽 자연 묘사를 결합한 작품입니다.",
+          "en": "A mythological scene joining classical figures with a wooded Northern landscape."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_the_Elder_-_Apoll_und_Diana_in_waldiger_Landschaft_-_Google_Art_Project.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "루카스 크라나흐",
+            "en": "Lucas Cranach the Elder"
+          },
+          "year": 1530,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "신화화",
+              "en": "Mythological painting"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:38:02.166Z",
+        "updatedAt": "2026-08-22T04:38:02.166Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q191748/cranach-apollo-diana-1530.jpg",
+          "highResolution": "data/thumbnails/artist-Q191748/cranach-apollo-diana-1530.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Lucas_Cranach_the_Elder_-_Apoll_und_Diana_in_waldiger_Landschaft_-_Google_Art_Project.jpg"
+          ],
+          "license": "",
+          "institution": "Mythological painting"
+        }
+      }
+    },
+    {
+      "id": "cranach-religious-image-skokloster",
+      "year": 1530,
+      "popularity": 5200,
+      "title": {
+        "ko": "종교화(스코클로스테르 성 소장)",
+        "en": "Religious Image, Skokloster Castle"
+      },
+      "description": {
+        "ko": "파일명이 일반적인 종교화로만 확인되는 크라나흐 관련 이미지입니다. TIF 원본은 브라우저 표시를 위해 JPEG로 변환했습니다.",
+        "en": "A Cranach-related religious image identified from the local filename; the TIF source was converted to JPEG for browser display."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "스코클로스테르 성",
+          "en": "Skokloster Castle"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q191748/cranach-religious-image-skokloster.jpg",
+      "thumbnail": "data/thumbnails/artist-Q191748/cranach-religious-image-skokloster.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:38:02.166Z",
+      "highResImage": "data/thumbnails/artist-Q191748/cranach-religious-image-skokloster.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Måleri,_religiös_bild._Cranach_-_Skoklosters_slott_-_88957.tif",
+      "verified": false,
+      "representative": false,
+      "movementContribution": false,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "파일명이 일반적인 종교화로만 확인되는 크라나흐 관련 이미지입니다. TIF 원본은 브라우저 표시를 위해 JPEG로 변환했습니다.",
+          "en": "A Cranach-related religious image identified from the local filename; the TIF source was converted to JPEG for browser display."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Måleri,_religiös_bild._Cranach_-_Skoklosters_slott_-_88957.tif"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "루카스 크라나흐",
+            "en": "Lucas Cranach the Elder"
+          },
+          "year": 1530,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "스코클로스테르 성",
+              "en": "Skokloster Castle"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:38:02.166Z",
+        "updatedAt": "2026-08-22T04:38:02.166Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q191748/cranach-religious-image-skokloster.jpg",
+          "highResolution": "data/thumbnails/artist-Q191748/cranach-religious-image-skokloster.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Måleri,_religiös_bild._Cranach_-_Skoklosters_slott_-_88957.tif"
+          ],
+          "license": "",
+          "institution": "Skokloster Castle"
+        }
+      }
+    },
+    {
+      "id": "cranach-martin-luther-met",
+      "year": 1532,
+      "popularity": 6700,
+      "title": {
+        "ko": "마르틴 루터의 초상(MET)",
+        "en": "Portrait of Martin Luther (MET)"
+      },
+      "description": {
+        "ko": "메트로폴리탄 미술관 소장 루터 초상으로, 크라나흐가 반복 제작한 종교개혁 지도자 이미지의 한 예입니다.",
+        "en": "A Metropolitan Museum of Art Luther portrait representing Cranach’s repeated Reformation portrait type."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "메트로폴리탄 미술관",
+          "en": "The Metropolitan Museum of Art"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q191748/cranach-martin-luther-met.jpg",
+      "thumbnail": "data/thumbnails/artist-Q191748/cranach-martin-luther-met.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:38:02.166Z",
+      "highResImage": "data/thumbnails/artist-Q191748/cranach-martin-luther-met.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Martin_Luther_(1483–1546)_MET_DP159769.jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "메트로폴리탄 미술관 소장 루터 초상으로, 크라나흐가 반복 제작한 종교개혁 지도자 이미지의 한 예입니다.",
+          "en": "A Metropolitan Museum of Art Luther portrait representing Cranach’s repeated Reformation portrait type."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Martin_Luther_(1483–1546)_MET_DP159769.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "루카스 크라나흐",
+            "en": "Lucas Cranach the Elder"
+          },
+          "year": 1532,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "메트로폴리탄 미술관",
+              "en": "The Metropolitan Museum of Art"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:38:02.166Z",
+        "updatedAt": "2026-08-22T04:38:02.166Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q191748/cranach-martin-luther-met.jpg",
+          "highResolution": "data/thumbnails/artist-Q191748/cranach-martin-luther-met.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Martin_Luther_(1483–1546)_MET_DP159769.jpg"
+          ],
+          "license": "",
+          "institution": "The Metropolitan Museum of Art"
+        }
+      }
+    },
+    {
+      "id": "cranach-martin-luther-restoration",
+      "year": 1529,
+      "popularity": 6000,
+      "title": {
+        "ko": "마르틴 루터의 초상(복원 이미지)",
+        "en": "Portrait of Martin Luther (restored image)"
+      },
+      "description": {
+        "ko": "복원 이미지 파일로 정리된 루터 초상입니다. 같은 인물 도상을 비교 학습할 수 있도록 별도 작품으로 연결했습니다.",
+        "en": "A restored image of a Luther portrait, included for comparison within Cranach’s repeated portrait type."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "종교개혁 초상화",
+          "en": "Reformation portrait"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q191748/cranach-martin-luther-restoration.jpg",
+      "thumbnail": "data/thumbnails/artist-Q191748/cranach-martin-luther-restoration.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:38:02.166Z",
+      "highResImage": "data/thumbnails/artist-Q191748/cranach-martin-luther-restoration.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Martin_Luther_by_Cranach-restoration.jpg",
+      "verified": true,
+      "representative": false,
+      "movementContribution": false,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "복원 이미지 파일로 정리된 루터 초상입니다. 같은 인물 도상을 비교 학습할 수 있도록 별도 작품으로 연결했습니다.",
+          "en": "A restored image of a Luther portrait, included for comparison within Cranach’s repeated portrait type."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Martin_Luther_by_Cranach-restoration.jpg"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "루카스 크라나흐",
+            "en": "Lucas Cranach the Elder"
+          },
+          "year": 1529,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "종교개혁 초상화",
+              "en": "Reformation portrait"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:38:02.166Z",
+        "updatedAt": "2026-08-22T04:38:02.166Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q191748/cranach-martin-luther-restoration.jpg",
+          "highResolution": "data/thumbnails/artist-Q191748/cranach-martin-luther-restoration.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/Martin_Luther_by_Cranach-restoration.jpg"
+          ],
+          "license": "",
+          "institution": "Reformation portrait"
+        }
+      }
+    },
+    {
+      "id": "cranach-holy-kinship-torgau",
+      "year": 1509,
+      "popularity": 7200,
+      "title": {
+        "ko": "성가족 친족(토르가우 제단화)",
+        "en": "The Holy Kinship (Torgau Altarpiece)"
+      },
+      "description": {
+        "ko": "성가족의 친족 관계를 여러 인물로 펼친 제단화입니다. 매우 큰 PNG 원본은 브라우저 표시 속도를 위해 JPEG로 변환했습니다.",
+        "en": "An altarpiece showing the extended Holy Kinship; the very large PNG source was converted to JPEG for browser performance."
+      },
+      "country": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "collection": [
+        {
+          "ko": "슈테델 미술관",
+          "en": "Städel Museum"
+        }
+      ],
+      "image": "data/thumbnails/artist-Q191748/cranach-holy-kinship-torgau.jpg",
+      "thumbnail": "data/thumbnails/artist-Q191748/cranach-holy-kinship-torgau.jpg",
+      "thumbnailValidation": 2,
+      "thumbnailCacheKey": "2026-08-22T04:38:02.166Z",
+      "highResImage": "data/thumbnails/artist-Q191748/cranach-holy-kinship-torgau.jpg",
+      "source": "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/The_Holy_Kinship_(so-called__Torgau_Altarpiece_)_(SM_1398).png",
+      "verified": true,
+      "representative": false,
+      "movementContribution": true,
+      "origin": "manual",
+      "detail": {
+        "schema": 2,
+        "cachedFromExistingData": true,
+        "summary": {
+          "ko": "성가족의 친족 관계를 여러 인물로 펼친 제단화입니다. 매우 큰 PNG 원본은 브라우저 표시 속도를 위해 JPEG로 변환했습니다.",
+          "en": "An altarpiece showing the extended Holy Kinship; the very large PNG source was converted to JPEG for browser performance."
+        },
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/The_Holy_Kinship_(so-called__Torgau_Altarpiece_)_(SM_1398).png"
+        ],
+        "facts": {
+          "artist": {
+            "ko": "루카스 크라나흐",
+            "en": "Lucas Cranach the Elder"
+          },
+          "year": 1509,
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "독일 르네상스",
+            "en": "German Renaissance"
+          },
+          "collection": [
+            {
+              "ko": "슈테델 미술관",
+              "en": "Städel Museum"
+            }
+          ]
+        }
+      },
+      "metadata": {
+        "createdAt": "2026-08-22T04:38:02.166Z",
+        "updatedAt": "2026-08-22T04:38:02.166Z",
+        "createdBy": "local image import",
+        "updatedBy": "codex"
+      },
+      "migration": {
+        "schema": 1,
+        "image": {
+          "status": "ready",
+          "localThumbnail": "data/thumbnails/artist-Q191748/cranach-holy-kinship-torgau.jpg",
+          "highResolution": "data/thumbnails/artist-Q191748/cranach-holy-kinship-torgau.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+          "sourceUrls": [
+            "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder",
+            "local file: C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download/The_Holy_Kinship_(so-called__Torgau_Altarpiece_)_(SM_1398).png"
+          ],
+          "license": "",
+          "institution": "Städel Museum"
+        }
+      }
+    }
+  ]
+}
