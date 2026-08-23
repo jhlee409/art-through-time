@@ -37,7 +37,11 @@ const manualUHangulByOriginal = {
   rogiervanderweyden: () => '[Vㅏㄴ] 데르 [Vㅔ]이던, [Rㅗ]히어르',
   // In standard Spanish, the initial v of Velázquez is /b/ rather than the
   // English /v/, and both z letters are /θ/ in the Castilian pronunciation.
-  diegovelazquez: ({displayKorean, korean}) => String(displayKorean || korean || '벨라스케스').replace(/벨라스케스/g, '벨라[THㅡ]케[THㅡ]')
+  diegovelazquez: ({displayKorean, korean}) => String(displayKorean || korean || '벨라스케스').replace(/벨라스케스/g, '벨라[THㅡ]케[THㅡ]'),
+  // Spanish z is not English /z/.  Keep the ordinary Korean spelling
+  // 수르바란, but mark the initial Zur- with TH rather than Z in uHangul.
+  franciscodezurbaran: () => '데 [THㅜ][Rㅡ]바[Rㅏㄴ], [Fㅡ][Rㅏㄴ]시스코',
+  juandezurbaran: () => '후안 데 [THㅜ][Rㅡ]바[Rㅏㄴ]'
 };
 
 const manualAliasesByOriginal = {
