@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-23T12:41:58.060Z",
+  "generatedAt": "2026-08-23T13:51:03.613Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -940,22 +940,30 @@
       "status": "verified-pair"
     },
     {
-      "id": "bartolome-esteban-murillo",
+      "id": "Q192062",
       "original": "Bartolomé Esteban Murillo",
       "korean": "무리요",
-      "displayKorean": "무리요",
+      "displayKorean": "무리요, 바르톨로메 에스테반",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "무리요",
+          "바르톨로메 무리요",
+          "바르톨로메 에스테반 무리요"
+        ],
         "en": [
           "Bartolome Esteban Murillo",
-          "Murillo"
+          "Murillo",
+          "Bartolome Murillo",
+          "Bartolomé Esteban Murillo"
         ]
       },
-      "uhangul": "무[Rㅣ]요",
+      "uhangul": "무[Rㅣ]요, 바[Rㅡ]톨로메 에스테반",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2521,7 +2529,7 @@
           "Francisco de Zurbaran Salazar"
         ]
       },
-      "uhangul": "데 [THㅜ][Rㅡ]바[Rㅏㄴ], [Fㅡ][Rㅏㄴ]시스코",
+      "uhangul": "데 [Zㅜ][Rㅡ]바[Rㅏㄴ], [Fㅡ][Rㅏㄴ]시스코",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
@@ -5224,7 +5232,7 @@
           "Zurbarán"
         ]
       },
-      "uhangul": "후안 데 [THㅜ][Rㅡ]바[Rㅏㄴ]",
+      "uhangul": "후안 데 [Zㅜ][Rㅡ]바[Rㅏㄴ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
@@ -6277,23 +6285,30 @@
       "status": "verified-pair"
     },
     {
-      "id": "nicolas-poussin",
+      "id": "Q41554",
       "original": "Nicolas Poussin",
       "korean": "니콜라 푸생",
-      "displayKorean": "니콜라 푸생",
+      "displayKorean": "푸생, 니콜라",
       "aliases": {
         "ko": [
-          "푸생"
+          "푸생",
+          "푸셍",
+          "니콜라 푸생",
+          "니콜라 푸셍"
         ],
         "en": [
-          "Poussin"
+          "Poussin",
+          "Nicolas Poussin",
+          "Nicholas Poussin"
         ]
       },
-      "uhangul": "니콜라 푸생",
+      "uhangul": "푸생, 니콜라",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
