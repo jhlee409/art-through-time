@@ -732,6 +732,9 @@ function localImageFileForDuplicateCheck(value) {
   if(!relative || relative.startsWith('..') || path.isAbsolute(relative)) return null;
   return {src,target};
 }
+function hasLocalArtworkPreviewForCheck(work) {
+  return Boolean(localImageFileForDuplicateCheck(work?.thumbnail) || localImageFileForDuplicateCheck(work?.highResImage));
+}
 async function localImageHashForDuplicateCheck(target) {
   try {
     const buffer=await fs.readFile(target);
@@ -1068,7 +1071,7 @@ async function checkAndApplyLatestRules(actor='') {
   const duplicateArtworkImageIssuesList=await duplicateArtworkImageIssues(artists);
   const artistDutchVanRomanizationIssues=dutchVanRomanizationIssues(artists);
   const issues={
-    missingPreview:artists.flatMap(artist=>(artist.works || []).filter(work=>!work.thumbnail && !work.image).map(work=>ruleCheckItem(artist,work))),
+    missingPreview:artists.flatMap(artist=>(artist.works || []).filter(work=>!hasLocalArtworkPreviewForCheck(work)).map(work=>ruleCheckItem(artist,work))),
     missingTitle:artists.flatMap(artist=>(artist.works || []).filter(work=>!work.title?.ko && !work.title?.en).map(work=>ruleCheckItem(artist,work))),
     qidTitle:artists.flatMap(artist=>(artist.works || []).filter(qidLikeTitle).map(work=>ruleCheckItem(artist,work))),
     artistDisplayKorean:artists.filter(artist=>!hasHangul(actualArtistDisplayNameForCheck(artist)) || hasLatin(actualArtistDisplayNameForCheck(artist))).map(artist=>artistRuleItem(artist,`목록/연표 표시명 확인: ${actualArtistDisplayNameForCheck(artist) || '(없음)'}`)),

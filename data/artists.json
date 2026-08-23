@@ -2318,7 +2318,11 @@
         "wikidata-Q12418",
         "wikidata-Q563727",
         "manual-local-1787290551889"
-      ]
+      ],
+      "artistSummary": {
+        "ko": [],
+        "en": []
+      }
     },
     {
       "id": "artist-Q102272",
@@ -4063,7 +4067,11 @@
       },
       "featuredWorkIds": [
         "wikidata-Q220859"
-      ]
+      ],
+      "artistSummary": {
+        "ko": [],
+        "en": []
+      }
     },
     {
       "id": "artist-Q68631",
@@ -4577,7 +4585,11 @@
           },
           "url": "https://en.wikipedia.org/wiki/Rogier_van_der_Weyden"
         }
-      ]
+      ],
+      "artistSummary": {
+        "ko": [],
+        "en": []
+      }
     },
     {
       "id": "artist-url-1787307872488",
@@ -4601,7 +4613,7 @@
       "works": [
         {
           "id": "wikidata-Q3889198",
-          "year": null,
+          "year": 1428,
           "popularity": 4,
           "title": {
             "ko": "Santa Maria Maggiore Altarpiece",
@@ -4649,7 +4661,7 @@
         },
         {
           "id": "wikidata-Q3948886",
-          "year": null,
+          "year": 1426,
           "popularity": 1,
           "title": {
             "ko": "Saint Yves",
@@ -4695,7 +4707,7 @@
         },
         {
           "id": "wikidata-Q111244447",
-          "year": null,
+          "year": 1426,
           "popularity": 0,
           "title": {
             "ko": "St. Catherine's life",
@@ -6418,7 +6430,7 @@
         },
         {
           "id": "wikidata-Q3705918",
-          "year": 1500,
+          "year": 1427,
           "popularity": 5,
           "title": {
             "ko": "Desco da parto",
@@ -6465,7 +6477,7 @@
         },
         {
           "id": "wikidata-Q123528970",
-          "year": 1788,
+          "year": 1425,
           "popularity": 0,
           "title": {
             "ko": "Un disciple (recto) ; Personnage drape (verso)",
@@ -6533,7 +6545,11 @@
       "profileResolved": true,
       "featuredWorkIds": [
         "wikidata-Q977200"
-      ]
+      ],
+      "artistSummary": {
+        "ko": [],
+        "en": []
+      }
     },
     {
       "id": "artist-Q17169",
@@ -9063,6 +9079,10 @@
       "movement": {
         "ko": "르네상스",
         "en": "Renaissance"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -11623,7 +11643,11 @@
         "wikidata-Q128910",
         "wikidata-Q12418",
         "wikidata-Q563727"
-      ]
+      ],
+      "artistSummary": {
+        "ko": [],
+        "en": []
+      }
     },
     {
       "id": "artist-Q5580",
@@ -12406,7 +12430,11 @@
           },
           "url": "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer"
         }
-      ]
+      ],
+      "artistSummary": {
+        "ko": [],
+        "en": []
+      }
     },
     {
       "id": "artist-Q191748",
@@ -14451,7 +14479,11 @@
           },
           "url": "https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder"
         }
-      ]
+      ],
+      "artistSummary": {
+        "ko": [],
+        "en": []
+      }
     },
     {
       "id": "artist-Q5592",
@@ -14469,7 +14501,7 @@
       "works": [
         {
           "id": "wikipedia-Q5592-0",
-          "year": null,
+          "year": 1491,
           "title": {
             "ko": "The Madonna of the Stairs (1490–1492)",
             "en": "The Madonna of the Stairs (1490–1492)"
@@ -14520,7 +14552,7 @@
         },
         {
           "id": "wikipedia-Q5592-4",
-          "year": null,
+          "year": 1495,
           "title": {
             "ko": "Angel by Michelangelo, early work (1494–95)",
             "en": "Angel by Michelangelo, early work (1494–95)"
@@ -14570,7 +14602,7 @@
         },
         {
           "id": "wikipedia-Q5592-5",
-          "year": null,
+          "year": 1497,
           "title": {
             "ko": "Bacchus by Michelangelo, early work (1496–1497)",
             "en": "Bacchus by Michelangelo, early work (1496–1497)"
@@ -14620,7 +14652,7 @@
         },
         {
           "id": "wikipedia-Q5592-8",
-          "year": null,
+          "year": 1511,
           "title": {
             "ko": "Studies for The Libyan Sibyl",
             "en": "Studies for The Libyan Sibyl"
@@ -14670,7 +14702,7 @@
         },
         {
           "id": "wikipedia-Q5592-11",
-          "year": null,
+          "year": 1509,
           "title": {
             "ko": "Ignudo",
             "en": "Ignudo"
@@ -14717,7 +14749,7 @@
         },
         {
           "id": "wikipedia-Q5592-12",
-          "year": null,
+          "year": 1492,
           "title": {
             "ko": "Battle of the Centaurs",
             "en": "Battle of the Centaurs"
@@ -14764,7 +14796,7 @@
         },
         {
           "id": "wikipedia-Q5592-13",
-          "year": null,
+          "year": 1542,
           "title": {
             "ko": "Copy of the lost Battle of Cascina by Bastiano da Sangallo",
             "en": "Copy of the lost Battle of Cascina by Bastiano da Sangallo"
@@ -14811,7 +14843,7 @@
         },
         {
           "id": "wikipedia-Q5592-14",
-          "year": null,
+          "year": 1541,
           "title": {
             "ko": "The Last Judgment , detail of the Redeemed (see whole image above)",
             "en": "The Last Judgment , detail of the Redeemed (see whole image above)"
@@ -14858,7 +14890,7 @@
         },
         {
           "id": "wikipedia-Q5592-15",
-          "year": null,
+          "year": 1550,
           "title": {
             "ko": "The Crucifixion of St. Peter",
             "en": "The Crucifixion of St. Peter"
@@ -14905,7 +14937,7 @@
         },
         {
           "id": "wikidata-Q2182509",
-          "year": null,
+          "year": 1521,
           "popularity": 15,
           "title": {
             "ko": "Cristo della Minerva",
@@ -17171,6 +17203,10 @@
       "movement": {
         "ko": "전성기 르네상스",
         "en": "High Renaissance"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -19261,6 +19297,10 @@
       "movement": {
         "ko": "전성기 르네상스",
         "en": "High Renaissance"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -19773,7 +19813,11 @@
           "url": "https://en.wikipedia.org/wiki/Albrecht_Altdorfer"
         }
       ],
-      "profileResolved": true
+      "profileResolved": true,
+      "artistSummary": {
+        "ko": [],
+        "en": []
+      }
     },
     {
       "id": "artist-Q378800",
@@ -20207,7 +20251,11 @@
         "createdBy": "local image import",
         "updatedBy": "jhlee409@gmail.com"
       },
-      "profileResolved": true
+      "profileResolved": true,
+      "artistSummary": {
+        "ko": [],
+        "en": []
+      }
     },
     {
       "id": "artist-Q5597",
@@ -23162,7 +23210,11 @@
         "wikidata-Q563727",
         "wikidata-Q2343778",
         "wikidata-Q186953"
-      ]
+      ],
+      "artistSummary": {
+        "ko": [],
+        "en": []
+      }
     },
     {
       "id": "artist-Q610556",
@@ -23408,7 +23460,11 @@
         "createdBy": "local image import",
         "updatedBy": "jhlee409@gmail.com"
       },
-      "profileResolved": true
+      "profileResolved": true,
+      "artistSummary": {
+        "ko": [],
+        "en": []
+      }
     },
     {
       "id": "artist-Q47551",
@@ -26471,7 +26527,11 @@
         "wikidata-Q12418",
         "wikidata-Q563727",
         "wikidata-Q1899740"
-      ]
+      ],
+      "artistSummary": {
+        "ko": [],
+        "en": []
+      }
     },
     {
       "id": "artist-Q312617",
@@ -27450,6 +27510,10 @@
         "updatedAt": "2026-08-23T12:12:28.901Z",
         "createdBy": "jhlee409@gmail.com",
         "updatedBy": "jhlee409@gmail.com"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -28329,6 +28393,10 @@
         "updatedAt": "2026-08-23T12:12:28.901Z",
         "createdBy": "jhlee409@gmail.com",
         "updatedBy": "jhlee409@gmail.com"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -29023,7 +29091,11 @@
           },
           "url": "https://en.wikipedia.org/wiki/Hans_Holbein_the_Younger"
         }
-      ]
+      ],
+      "artistSummary": {
+        "ko": [],
+        "en": []
+      }
     },
     {
       "id": "artist-Q7803",
@@ -29168,7 +29240,11 @@
         "createdBy": "jhlee409@gmail.com",
         "updatedBy": "jhlee409@gmail.com"
       },
-      "profileResolved": true
+      "profileResolved": true,
+      "artistSummary": {
+        "ko": [],
+        "en": []
+      }
     },
     {
       "id": "artist-Q9348",
@@ -29681,6 +29757,10 @@
         "updatedAt": "2026-08-23T12:12:28.901Z",
         "createdBy": "jhlee409@gmail.com",
         "updatedBy": "jhlee409@gmail.com"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -29697,7 +29777,7 @@
         "en": "Italy"
       },
       "movement": {
-        "ko": "매���������리즘",
+        "ko": "매너리즘",
         "en": "Mannerism"
       },
       "aliases": {
@@ -29962,6 +30042,10 @@
         "updatedAt": "2026-08-23T12:12:28.901Z",
         "createdBy": "local image import",
         "updatedBy": "jhlee409@gmail.com"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -30545,7 +30629,11 @@
         "createdBy": "local image import",
         "updatedBy": "jhlee409@gmail.com"
       },
-      "profileResolved": true
+      "profileResolved": true,
+      "artistSummary": {
+        "ko": [],
+        "en": []
+      }
     },
     {
       "id": "artist-Q9319",
@@ -31863,6 +31951,10 @@
         "updatedAt": "2026-08-23T12:12:28.901Z",
         "createdBy": "local artist import",
         "updatedBy": "jhlee409@gmail.com"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -34308,6 +34400,10 @@
       "movement": {
         "ko": "네덜란드 및 플랑드르 르네상스 회화",
         "en": "Dutch and Flemish Renaissance painting"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -34885,6 +34981,10 @@
         "updatedAt": "2026-08-23T12:12:28.901Z",
         "createdBy": "local artist import",
         "updatedBy": "jhlee409@gmail.com"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -36059,6 +36159,10 @@
         "updatedAt": "2026-08-23T12:12:28.901Z",
         "createdBy": "local artist import",
         "updatedBy": "jhlee409@gmail.com"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -38763,7 +38867,11 @@
         "wikidata-Q883994",
         "wikidata-Q2714617",
         "wikidata-Q1220013"
-      ]
+      ],
+      "artistSummary": {
+        "ko": [],
+        "en": []
+      }
     },
     {
       "id": "artist-Q447682",
@@ -39222,6 +39330,10 @@
         "updatedAt": "2026-08-23T12:12:28.901Z",
         "createdBy": "local artist import",
         "updatedBy": "jhlee409@gmail.com"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -40054,6 +40166,10 @@
         "updatedAt": "2026-08-23T12:12:28.901Z",
         "createdBy": "local artist import",
         "updatedBy": "jhlee409@gmail.com"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -41089,7 +41205,7 @@
         },
         {
           "id": "wikidata-Q126127672",
-          "year": 1550,
+          "year": 1590,
           "popularity": 2,
           "title": {
             "ko": "Madonna in Glory with Saints",
@@ -43048,6 +43164,10 @@
       "movement": {
         "ko": "바로크",
         "en": "Baroque"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -43705,6 +43825,10 @@
         "updatedAt": "2026-08-23T12:12:28.901Z",
         "createdBy": "local artist import",
         "updatedBy": "jhlee409@gmail.com"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -44369,6 +44493,10 @@
         "updatedAt": "2026-08-23T12:12:28.901Z",
         "createdBy": "local artist import",
         "updatedBy": "jhlee409@gmail.com"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -44398,7 +44526,7 @@
             "en": ""
           },
           "movement": {
-            "ko": "Italian Baroque painting",
+            "ko": "이탈리아 바로크 회화",
             "en": "Italian Baroque painting"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%20Merisi%20da%20Caravaggio%20%28Milan%201571-Port%27%20Ercole%201610%29%20-%20Boy%20Peeling%20Fruit%20-%20RCIN%20402612%20-%20Royal%20Collection.jpg",
@@ -44502,7 +44630,7 @@
             "en": "Italy"
           },
           "movement": {
-            "ko": "Italian Baroque painting",
+            "ko": "이탈리아 바로크 회화",
             "en": "Italian Baroque painting"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Fortune%20Teller-Caravaggio%20%28Louvre%29.jpg",
@@ -44554,7 +44682,7 @@
             "en": ""
           },
           "movement": {
-            "ko": "Italian Baroque painting",
+            "ko": "이탈리아 바로크 회화",
             "en": "Italian Baroque painting"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Boy%20with%20a%20Basket%20of%20Fruit-Caravaggio%20%281593%29.jpg",
@@ -44606,7 +44734,7 @@
             "en": ""
           },
           "movement": {
-            "ko": "Italian Baroque painting",
+            "ko": "이탈리아 바로크 회화",
             "en": "Italian Baroque painting"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caravaggio%20-%20Boy%20Bitten%20by%20a%20Lizard.jpg",
@@ -44658,7 +44786,7 @@
             "en": ""
           },
           "movement": {
-            "ko": "Italian Baroque painting",
+            "ko": "이탈리아 바로크 회화",
             "en": "Italian Baroque painting"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saint%20Francis%20of%20Assisi%20in%20Ecstasy-Caravaggio%20%28c.1595%29.jpg",
@@ -44710,7 +44838,7 @@
             "en": ""
           },
           "movement": {
-            "ko": "Italian Baroque painting",
+            "ko": "이탈리아 바로크 회화",
             "en": "Italian Baroque painting"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Young%20Sick%20Bacchus-Caravaggio%20%281593%29.jpg",
@@ -45023,7 +45151,7 @@
             "en": ""
           },
           "movement": {
-            "ko": "Italian Baroque painting",
+            "ko": "이탈리아 바로크 회화",
             "en": "Italian Baroque painting"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Baco%2C%20por%20Caravaggio.jpg",
@@ -45387,7 +45515,7 @@
             "en": ""
           },
           "movement": {
-            "ko": "Italian Baroque painting",
+            "ko": "이탈리아 바로크 회화",
             "en": "Italian Baroque painting"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Crucifixion%20of%20Saint%20Peter-Caravaggio%20%28c.1600%29.jpg",
@@ -45543,7 +45671,7 @@
             "en": ""
           },
           "movement": {
-            "ko": "Italian Baroque painting",
+            "ko": "이탈리아 바로크 회화",
             "en": "Italian Baroque painting"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Entombment%20of%20Christ-Caravaggio%20%28c.1602-3%29.jpg",
@@ -45699,7 +45827,7 @@
             "en": ""
           },
           "movement": {
-            "ko": "Italian Baroque painting",
+            "ko": "이탈리아 바로크 회화",
             "en": "Italian Baroque painting"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caravaggio%20-%20Natura%20morta%20con%20frutta%20%28collezione%20dell%E2%80%99Ambrosiana%29.jpg",
@@ -45907,7 +46035,7 @@
             "en": ""
           },
           "movement": {
-            "ko": "Italian Baroque painting",
+            "ko": "이탈리아 바로크 회화",
             "en": "Italian Baroque painting"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caravaggio%20-%20Cupid%20as%20Victor%20-%20Google%20Art%20Project.jpg",
@@ -45959,7 +46087,7 @@
             "en": ""
           },
           "movement": {
-            "ko": "Italian Baroque painting",
+            "ko": "이탈리아 바로크 회화",
             "en": "Italian Baroque painting"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caravaggio%20incredulity.jpg",
@@ -46167,7 +46295,7 @@
             "en": ""
           },
           "movement": {
-            "ko": "Italian Baroque painting",
+            "ko": "이탈리아 바로크 회화",
             "en": "Italian Baroque painting"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Death%20of%20the%20Virgin-Caravaggio%20%281606%29.jpg",
@@ -46219,7 +46347,7 @@
             "en": ""
           },
           "movement": {
-            "ko": "Italian Baroque painting",
+            "ko": "이탈리아 바로크 회화",
             "en": "Italian Baroque painting"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sacrifice%20of%20Isaac-Caravaggio%20%28Uffizi%29.jpg",
@@ -46271,7 +46399,7 @@
             "en": ""
           },
           "movement": {
-            "ko": "Italian Baroque painting",
+            "ko": "이탈리아 바로크 회화",
             "en": "Italian Baroque painting"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/David%20with%20the%20Head%20of%20Goliath-Caravaggio%20%281610%29.jpg",
@@ -46375,7 +46503,7 @@
             "en": ""
           },
           "movement": {
-            "ko": "Italian Baroque painting",
+            "ko": "이탈리아 바로크 회화",
             "en": "Italian Baroque painting"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Madonna%20and%20Child%20with%20St.%20Anne-Caravaggio%20%28c.%201605-6%29.jpg",
@@ -46479,7 +46607,7 @@
             "en": ""
           },
           "movement": {
-            "ko": "Italian Baroque painting",
+            "ko": "이탈리아 바로크 회화",
             "en": "Italian Baroque painting"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pope%20Paul%20V.jpg",
@@ -46531,7 +46659,7 @@
             "en": ""
           },
           "movement": {
-            "ko": "Italian Baroque painting",
+            "ko": "이탈리아 바로크 회화",
             "en": "Italian Baroque painting"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caravaggio%20-%20Saint%20Jerome%20-%20Galleria%20Borghese.jpg",
@@ -46583,7 +46711,7 @@
             "en": ""
           },
           "movement": {
-            "ko": "Italian Baroque painting",
+            "ko": "이탈리아 바로크 회화",
             "en": "Italian Baroque painting"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caravaggio%20%E2%80%94%20Supper%20at%20Emmaus.jpg",
@@ -46895,7 +47023,7 @@
             "en": ""
           },
           "movement": {
-            "ko": "Italian Baroque painting",
+            "ko": "이탈리아 바로크 회화",
             "en": "Italian Baroque painting"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Flagellation%20of%20Christ-Caravaggio%20%281607%29.jpg",
@@ -47051,7 +47179,7 @@
             "en": ""
           },
           "movement": {
-            "ko": "Italian Baroque painting",
+            "ko": "이탈리아 바로크 회화",
             "en": "Italian Baroque painting"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sleeping%20Cupid-Caravaggio%20%281608%29.jpg",
@@ -47261,7 +47389,7 @@
             "en": ""
           },
           "movement": {
-            "ko": "Italian Baroque painting",
+            "ko": "이탈리아 바로크 회화",
             "en": "Italian Baroque painting"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caravaggio%20-%20The%20Annunciation.JPG",
@@ -47458,7 +47586,7 @@
         },
         {
           "id": "wikidata-Q102852946",
-          "year": 1700,
+          "year": 1602,
           "popularity": 23,
           "title": {
             "ko": "The Taking of Christ",
@@ -47469,7 +47597,7 @@
             "en": ""
           },
           "movement": {
-            "ko": "Italian Baroque painting",
+            "ko": "이탈리아 바로크 회화",
             "en": "Italian Baroque painting"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caravaggio%20-%20The%20Taking%20of%20Christ%20restored.jpg",
@@ -47539,6 +47667,10 @@
       "movement": {
         "ko": "바로크",
         "en": "Baroque"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -50552,7 +50684,11 @@
       "featuredWorkIds": [
         "rubens-descent-antwerp-1612",
         "wikipedia-Q5599-6"
-      ]
+      ],
+      "artistSummary": {
+        "ko": [],
+        "en": []
+      }
     },
     {
       "id": "artist-Q167654",
@@ -51357,6 +51493,10 @@
         "updatedAt": "2026-08-23T12:12:28.901Z",
         "createdBy": "jhlee409@gmail.com",
         "updatedBy": "jhlee409@gmail.com"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -51917,6 +52057,10 @@
         "updatedAt": "2026-08-23T12:12:28.901Z",
         "createdBy": "local artist import",
         "updatedBy": "jhlee409@gmail.com"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -53122,6 +53266,10 @@
         "updatedAt": "2026-08-23T12:12:28.901Z",
         "createdBy": "local download import",
         "updatedBy": "jhlee409@gmail.com"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -54419,6 +54567,10 @@
         "updatedAt": "2026-08-23T12:12:28.901Z",
         "createdBy": "local artist import",
         "updatedBy": "jhlee409@gmail.com"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -57071,7 +57223,11 @@
         "rijksmuseum-SK-C-5",
         "mauritshuis-146-anatomy-tulp",
         "rijksmuseum-SK-C-6-syndics"
-      ]
+      ],
+      "artistSummary": {
+        "ko": [],
+        "en": []
+      }
     },
     {
       "id": "artist-Q41264",
@@ -58996,7 +59152,11 @@
         "wikidata-Q185372",
         "wikidata-Q167605",
         "wikidata-Q151143"
-      ]
+      ],
+      "artistSummary": {
+        "ko": [],
+        "en": []
+      }
     },
     {
       "id": "artist-Q213163",
@@ -62160,6 +62320,10 @@
       "movement": {
         "ko": "로코코",
         "en": "Rococo"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -65328,6 +65492,10 @@
       "movement": {
         "ko": "독일 낭만주의",
         "en": "German Romanticism"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -65716,6 +65884,10 @@
       "movement": {
         "ko": "사실주의",
         "en": "realism"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -67036,7 +67208,7 @@
         },
         {
           "id": "wikidata-Q1212269",
-          "year": 1987,
+          "year": 1867,
           "popularity": 21,
           "title": {
             "ko": "막시밀리안 황제의 처형",
@@ -68880,6 +69052,10 @@
       "movement": {
         "ko": "인상주의",
         "en": "Impressionism"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -72496,6 +72672,10 @@
       "movement": {
         "ko": "인상주의",
         "en": "Impressionism"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -75661,6 +75841,10 @@
       "movement": {
         "ko": "후기인상주의",
         "en": "Post-impressionism"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
       }
     },
     {
@@ -77331,7 +77515,11 @@
       "featuredWorkIds": [
         "wikidata-Q10697904",
         "wikidata-Q10541152"
-      ]
+      ],
+      "artistSummary": {
+        "ko": [],
+        "en": []
+      }
     },
     {
       "id": "artist-Q82445",
@@ -77349,7 +77537,7 @@
       "works": [
         {
           "id": "wikidata-Q19883438",
-          "year": null,
+          "year": 1891,
           "popularity": 5,
           "title": {
             "ko": "La Goulue at the Moulin Rouge",
@@ -79832,7 +80020,11 @@
         "wikidata-Q3607521",
         "wikidata-Q3633443",
         "wikidata-Q17429571"
-      ]
+      ],
+      "artistSummary": {
+        "ko": [],
+        "en": []
+      }
     },
     {
       "id": "frida-kahlo",
@@ -81570,7 +81762,11 @@
         "wikidata-Q118190557",
         "wikidata-Q21010270",
         "wikidata-Q5880026"
-      ]
+      ],
+      "artistSummary": {
+        "ko": [],
+        "en": []
+      }
     }
   ],
   "deletedArtists": [],
