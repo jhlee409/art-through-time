@@ -1290,11 +1290,12 @@ function movementArtistAliasOverrides(artist) {
     Q43270:['피터르 브뤼헐','브뤼헐','Pieter Bruegel','Pieter Brueghel','Bruegel','Brueghel'],
     Q213163:['비제 르 브룅','비제르브룅','Vigée Le Brun','Vigee Le Brun'],
     Q5599:['루벤스','Rubens'],
+    Q5598:['렘브란트','Rembrandt'],
     Q47551:['티치아노','티치아노 베첼리오','Tiziano','Tiziano Vecellio','Titian'],
     Q187310:['라르손','Larsson'],
     Q82445:['툴루즈로트레크','툴루즈 로트레크','Toulouse-Lautrec','Toulouse Lautrec'],
     Q301:['엘 그레코','엘그레코','El Greco'],
-    Q41264:['페르메이르','Vermeer'],
+    Q41264:['페르메이르','베르메르','Vermeer'],
     Q5597:['라파엘로','Raphael']
   };
   return aliases[qid] || [];
@@ -1337,6 +1338,7 @@ const serverArtistMovementDisplayRules = [
   serverMovementSpec({ko:'노르딕 르네상스',en:'Nordic Renaissance'}, ['Nordic Renaissance','노르딕 르네상스'], {parent:{ko:'르네상스',en:'Renaissance'}}),
   serverMovementSpec({ko:'플랑드르 바로크 회화',en:'Flemish Baroque painting'}, ['Flemish Baroque painting','플랑드르 바로크 회화'], {parent:{ko:'바로크',en:'Baroque'}}),
   serverMovementSpec({ko:'이탈리아 바로크 회화',en:'Italian Baroque painting'}, ['Italian Baroque painting','이탈리아 바로크 회화'], {parent:{ko:'바로크',en:'Baroque'}}),
+  serverMovementSpec({ko:'네덜란드 황금기 회화',en:'Dutch Golden Age painting'}, ['Dutch Golden Age painting','Dutch Baroque','네덜란드 황금기 회화','네덜란드 바로크'], {parent:{ko:'바로크',en:'Baroque'}}),
   serverMovementSpec({ko:'바로크',en:'Baroque'}, ['Baroque art','바로크']),
   serverMovementSpec({ko:'피렌체·로마 매너리즘',en:'Florentine-Roman Mannerism'}, ['Florentine-Roman Mannerism','Florentine Mannerism','Roman Mannerism','피렌체-로마 매너리즘','피렌체·로마 매너리즘'], {parent:{ko:'매너리즘',en:'Mannerism'}}),
   serverMovementSpec({ko:'파르마·에밀리아 매너리즘',en:'Parma and Emilian Mannerism'}, ['Parma and Emilian Mannerism','Parma Mannerism','Emilian Mannerism','파르마와 에밀리아 계열','파르마·에밀리아 매너리즘'], {parent:{ko:'매너리즘',en:'Mannerism'}}),

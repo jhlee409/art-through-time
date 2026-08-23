@@ -31,12 +31,13 @@ function aliasOverrides(artist) {
     Q43270:['피터르 브뤼헐', '브뤼헐', 'Pieter Bruegel', 'Pieter Brueghel', 'Bruegel', 'Brueghel'],
     Q213163:['비제 르 브룅', '비제르브룅', 'Vigée Le Brun', 'Vigee Le Brun'],
     Q5599:['루벤스', 'Rubens'],
+    Q5598:['렘브란트', 'Rembrandt'],
     Q47551:['티치아노', '티치아노 베첼리오', 'Tiziano', 'Tiziano Vecellio', 'Titian'],
     Q9440:['베로네세', '파올로 베로네세', 'Paolo Veronese', 'Veronese'],
     Q187310:['라르손', 'Larsson'],
     Q82445:['툴루즈로트레크', '툴루즈 로트레크', 'Toulouse-Lautrec', 'Toulouse Lautrec'],
     Q301:['엘 그레코', '엘그레코', 'El Greco'],
-    Q41264:['페르메이르', 'Vermeer'],
+    Q41264:['페르메이르', '베르메르', 'Vermeer'],
     Q5597:['라파엘로', 'Raphael']
   };
   return aliases[artist?.qid] || [];

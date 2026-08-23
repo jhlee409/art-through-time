@@ -225,6 +225,42 @@ const loc = (value) => {
   if (language === 'ko' && brokenLabel(preferred) && value.en) return koreanLabelFallbacks[value.en] || value.en;
   return preferred;
 };
+function localizedLines(value, limit=6) {
+  const text = Array.isArray(value)
+    ? value
+    : Array.isArray(value?.[language])
+      ? value[language]
+      : Array.isArray(value?.ko)
+        ? value.ko
+        : Array.isArray(value?.en)
+          ? value.en
+          : String(loc(value) || '').split(/\n+/);
+  return text.map(line => String(line || '').trim()).filter(Boolean).slice(0, limit);
+}
+function cleanSummaryLine(line) {
+  return String(line || '').replace(/^\s*(?:[-*•]\s*)?/, '').trim();
+}
+function setArtistSummaryLines(artist, lines) {
+  const cleaned = (Array.isArray(lines) ? lines : String(lines || '').split(/\n+/))
+    .map(cleanSummaryLine)
+    .filter(Boolean)
+    .slice(0, 6);
+  const current = artist.artistSummary && typeof artist.artistSummary === 'object' && !Array.isArray(artist.artistSummary)
+    ? artist.artistSummary
+    : {};
+  if (!cleaned.length) {
+    const next = {...current};
+    delete next[language];
+    if (Object.keys(next).length) artist.artistSummary = next;
+    else delete artist.artistSummary;
+    return;
+  }
+  artist.artistSummary = {...current, [language]:cleaned};
+}
+function artistSummaryEditorText(lines) {
+  const items = localizedLines(lines, 6);
+  return items.length ? items.map(line => `- ${line}`).join('\n') : '- ';
+}
 const artworkTitleModeOrder = ['ko','en','original'];
 const artworkTitleModeLabels = {ko:'KO',en:'EN',original:'OR'};
 function artworkTitleValue(title, mode) {
@@ -915,15 +951,7 @@ function startAdminSessionHeartbeat() {
   adminSessionHeartbeat = setInterval(keepAlive,20000);
 }
 async function chooseAccessMode() {
-  if (requestedArtistId && !forceLogin) {
-    enterViewerMode();
-    return;
-  }
   const saved=savedAccessSession();
-  if (saved?.role === 'viewer') {
-    enterViewerMode();
-    return;
-  }
   if (saved?.role === 'admin' && saved.token) {
     currentUserEmail=String(saved.email || '');
     currentUserRole='admin';
@@ -943,6 +971,14 @@ async function chooseAccessMode() {
       adminSessionToken='';
       if (isMovementPopup) return;
     }
+  }
+  if (requestedArtistId && !forceLogin) {
+    enterViewerMode();
+    return;
+  }
+  if (saved?.role === 'viewer') {
+    enterViewerMode();
+    return;
   }
   if (isMovementPopup) {
     enterViewerMode();
@@ -1195,7 +1231,14 @@ const artistMovementFilterHierarchy = [
       movementFilterSpec({ko:'프라하 궁정 매너리즘', en:'Prague Court Mannerism'}, ['Prague Court Mannerism','Habsburg Court Mannerism','Rudolfine Mannerism','프라하 궁정 매너리즘','프라하·합스부르크 궁정','루돌프 2세 궁정 매너리즘'])
     ]
   }),
-  movementFilterSpec({ko:'바로크', en:'Baroque'}, ['Baroque art','Italian Baroque painting','Flemish Baroque painting','Spanish Baroque','Dutch Baroque','바로크','이탈리아 바로크 회화','플랑드르 바로크 회화','스페인 바로크','네덜란드 바로크'], {id:'baroque'}),
+  movementFilterSpec({ko:'바로크', en:'Baroque'}, ['Baroque art','Italian Baroque painting','Flemish Baroque painting','Spanish Baroque','Dutch Baroque','Dutch Golden Age painting','바로크','이탈리아 바로크 회화','플랑드르 바로크 회화','스페인 바로크','네덜란드 바로크','네덜란드 황금기 회화'], {
+    id:'baroque',
+    children: [
+      movementFilterSpec({ko:'이탈리아 바로크 회화', en:'Italian Baroque painting'}, ['Italian Baroque painting','이탈리아 바로크 회화']),
+      movementFilterSpec({ko:'플랑드르 바로크 회화', en:'Flemish Baroque painting'}, ['Flemish Baroque painting','플랑드르 바로크 회화']),
+      movementFilterSpec({ko:'네덜란드 황금기 회화', en:'Dutch Golden Age painting'}, ['Dutch Golden Age painting','Dutch Baroque','네덜란드 황금기 회화','네덜란드 바로크'])
+    ]
+  }),
   movementFilterSpec({ko:'낭만주의', en:'Romanticism'}, ['German Romanticism','Romanticism','낭만주의','독일 낭만주의'], {id:'romanticism'})
 ];
 const artistMovementFilterGroups = artistMovementFilterHierarchy.map(group => ({...group, keys:new Set([...(group.keys || []), ...(group.children || []).flatMap(child => [...child.keys])])}));
@@ -1216,6 +1259,7 @@ const artistMovementDisplayRules = [
   movementFilterSpec({ko:'노르딕 르네상스', en:'Nordic Renaissance'}, ['Nordic Renaissance','북유럽 르네상스','노르딕 르네상스'], {parent:{ko:'르네상스', en:'Renaissance'}, documentLabel:{ko:'노르딕 르네상스', en:'Nordic Renaissance'}}),
   movementFilterSpec({ko:'플랑드르 바로크 회화', en:'Flemish Baroque painting'}, ['Flemish Baroque painting','플랑드르 바로크 회화'], {parent:{ko:'바로크', en:'Baroque'}, documentLabel:{ko:'바로크', en:'Baroque'}}),
   movementFilterSpec({ko:'이탈리아 바로크 회화', en:'Italian Baroque painting'}, ['Italian Baroque painting','이탈리아 바로크 회화'], {parent:{ko:'바로크', en:'Baroque'}, documentLabel:{ko:'바로크', en:'Baroque'}}),
+  movementFilterSpec({ko:'네덜란드 황금기 회화', en:'Dutch Golden Age painting'}, ['Dutch Golden Age painting','Dutch Baroque','네덜란드 황금기 회화','네덜란드 바로크'], {parent:{ko:'바로크', en:'Baroque'}, documentLabel:{ko:'바로크', en:'Baroque'}}),
   movementFilterSpec({ko:'바로크', en:'Baroque'}, ['Baroque art','바로크']),
   movementFilterSpec({ko:'피렌체·로마 매너리즘', en:'Florentine-Roman Mannerism'}, ['Florentine-Roman Mannerism','Florentine Mannerism','Roman Mannerism','피렌체-로마 매너리즘','피렌체·로마 매너리즘'], {parent:{ko:'매너리즘', en:'Mannerism'}, documentLabel:{ko:'매너리즘', en:'Mannerism'}}),
   movementFilterSpec({ko:'파르마·에밀리아 매너리즘', en:'Parma and Emilian Mannerism'}, ['Parma and Emilian Mannerism','Parma Mannerism','Emilian Mannerism','파르마와 에밀리아 계열','파르마·에밀리아 매너리즘'], {parent:{ko:'매너리즘', en:'Mannerism'}, documentLabel:{ko:'매너리즘', en:'Mannerism'}}),
@@ -1402,6 +1446,10 @@ function movementDocumentKey(label='') {
     '베네치아르네상스':'Renaissance',
     '플랑드르바로크회화':'Baroque',
     '이탈리아바로크회화':'Baroque',
+    '네덜란드황금기회화':'Baroque',
+    'dutchgoldenagepainting':'Baroque',
+    '네덜란드바로크':'Baroque',
+    'dutchbaroque':'Baroque',
     '독일낭만주의':'Romanticism',
     'highrenaissance':'Renaissance',
     'rococopainting':'Rococo'
@@ -1493,6 +1541,55 @@ function renderList() {
   list.querySelectorAll('.artist-item').forEach(button => button.onclick = async () => { viewMode = 'timeline'; selectedId = button.dataset.id; persist(); closeDetail(); const artist = artists.find(item => item.id === selectedId); await hydrateThumbnails(artist); renderList(); renderTimeline(); await enrichArtist(); });
   list.querySelectorAll('.delete-artist').forEach(button => button.onclick = async event => { event.stopPropagation(); if (!currentUserIsAdmin || !confirm(t('confirmDelete'))) return; const deleted = artists.find(artist => artist.id === button.dataset.id); artists = artists.filter(artist => artist.id !== button.dataset.id); if (selectedId === button.dataset.id) selectedId = artists[0]?.id || null; persist(); if (!await saveArtistsNow()) { artists.push(deleted); if (!selectedId) selectedId = deleted.id; alert(language === 'ko' ? '삭제 내용을 저장하지 못해 복원했습니다.' : 'The deletion could not be saved, so it was restored.'); } render(); });
   $('#artist-names').innerHTML = artists.flatMap(a => [artistDisplayName(a), a.fullName, a.name?.ko, a.name?.en, ...artistAliases(a)]).filter(Boolean).filter((value,index,self) => self.indexOf(value) === index).map(value => `<option value="${esc(value)}"></option>`).join('');
+}
+function setupArtistSummaryEditor(artist) {
+  const box = timeline.querySelector('.artist-summary-box');
+  if (!box || !currentUserIsAdmin) return;
+  const read = box.querySelector('.artist-summary-read');
+  const editor = box.querySelector('.artist-summary-editor');
+  const textarea = editor?.querySelector('textarea');
+  const editButton = box.querySelector('.artist-summary-edit-button');
+  const cancelButton = box.querySelector('.artist-summary-cancel');
+  if (!read || !editor || !textarea || !editButton || !cancelButton) return;
+  const showEditor = show => {
+    read.classList.toggle('hidden', show);
+    editor.classList.toggle('hidden', !show);
+    editButton.classList.toggle('hidden', show);
+    if (show) textarea.focus();
+  };
+  editButton.addEventListener('click', () => showEditor(true));
+  cancelButton.addEventListener('click', () => {
+    textarea.value = artistSummaryEditorText(artist.artistSummary);
+    showEditor(false);
+  });
+  textarea.addEventListener('keydown', event => {
+    if (event.key !== 'Enter' || event.shiftKey || event.ctrlKey || event.altKey || event.metaKey) return;
+    event.preventDefault();
+    const start = textarea.selectionStart || 0;
+    const end = textarea.selectionEnd || start;
+    const before = textarea.value.slice(0, start);
+    const after = textarea.value.slice(end);
+    const selectedText = textarea.value.slice(start, end);
+    const lineCountAfterInsert = String(`${before}\n- ${after}`).split(/\n/).map(cleanSummaryLine).filter(Boolean).length;
+    if (!selectedText && lineCountAfterInsert > 6) return;
+    const insertion = '\n- ';
+    textarea.value = `${before}${insertion}${after}`;
+    const nextPosition = before.length + insertion.length;
+    textarea.setSelectionRange(nextPosition, nextPosition);
+  });
+  editor.addEventListener('submit', async event => {
+    event.preventDefault();
+    const previousSummary = artist.artistSummary ? JSON.parse(JSON.stringify(artist.artistSummary)) : undefined;
+    setArtistSummaryLines(artist, textarea.value);
+    persist();
+    if (!await saveArtistsNow()) {
+      if (previousSummary === undefined) delete artist.artistSummary;
+      else artist.artistSummary = previousSummary;
+      persist();
+      alert(saveFailureMessage());
+    }
+    renderTimeline();
+  });
 }
 function favoriteKey(artist, work) { return `${artist?.id || ''}::${work?.id || selectionKey(work)}`; }
 function selectedFavoriteWorks() {
@@ -1672,11 +1769,25 @@ function renderTimeline() {
     const slideshowButton = (scope, label) => `<button class="start-slideshow leonardo-section-slideshow" type="button" data-slideshow-scope="${scope}" aria-label="${esc(label)}" title="${esc(label)}"><span>▶</span><span>${esc(t('slideshow'))}</span></button>`;
     const layoutControls = `<div class="leonardo-layout-controls" role="group" aria-label="${esc(language === 'ko' ? '작품 보기 방식' : 'Artwork view')}"><button class="leonardo-layout-button${leonardoLayout === 'gallery' ? ' active' : ''}" type="button" data-leonardo-layout="gallery">${esc(galleryLabel)}</button><button class="leonardo-layout-button${leonardoLayout === 'chronology' ? ' active' : ''}" type="button" data-leonardo-layout="chronology">${esc(chronologyLabel)}</button></div><p class="leonardo-layout-guide">${esc(guide)}</p>`;
     const canDragFeaturedWorks = currentUserIsAdmin && leonardoFeaturedWorks.length > 1;
+    const summaryLines = localizedLines(artist.artistSummary, 6);
+    const summaryTitle = language === 'ko' ? '화가 해설' : 'Artist Notes';
+    const summaryEditLabel = language === 'ko' ? '편집' : 'Edit';
+    const summarySaveLabel = language === 'ko' ? '저장' : 'Save';
+    const summaryCancelLabel = language === 'ko' ? '취소' : 'Cancel';
+    const summaryHelp = language === 'ko' ? '최대 6개 항목까지 입력할 수 있습니다. Enter를 누르면 새 불릿이 생기고, 빈 항목은 저장할 때 제거됩니다.' : 'Up to 6 items. Press Enter to add a new bullet; blank items are removed when saved.';
+    const summaryPlaceholder = language === 'ko'
+      ? '화가가 무엇을 그렸고, 어떤 기법과 영향을 받았으며, 어떻게 평가되는지 적어 주세요.'
+      : 'Describe subjects, techniques, influences, reception, and later impact.';
+    const summaryBody = summaryLines.length
+      ? `<ul class="artist-summary-lines">${summaryLines.map(line => `<li>${esc(line)}</li>`).join('')}</ul>`
+      : `<p class="artist-summary-empty">${esc(language === 'ko' ? '아직 화가 해설이 없습니다.' : 'No artist notes yet.')}</p>`;
+    const summaryBox = `<section class="artist-summary-box"><div class="artist-summary-heading"><p class="eyebrow">${esc(summaryTitle)}</p>${currentUserIsAdmin ? `<button class="artist-summary-edit-button" type="button">${esc(summaryEditLabel)}</button>` : ''}</div><div class="artist-summary-read">${summaryBody}</div>${currentUserIsAdmin ? `<form class="artist-summary-editor hidden"><textarea maxlength="900" rows="6" aria-label="${esc(summaryTitle)}" placeholder="${esc(summaryPlaceholder)}">${esc(artistSummaryEditorText(summaryLines))}</textarea><p>${esc(summaryHelp)}</p><div><button type="button" class="artist-summary-cancel">${esc(summaryCancelLabel)}</button><button type="submit">${esc(summarySaveLabel)}</button></div></form>` : ''}</section>`;
     const featured = leonardoFeaturedWorks.length ? `<section class="leonardo-featured"><div class="leonardo-section-heading"><p class="eyebrow">${esc(featuredLabel)}</p><div class="leonardo-section-actions">${slideshowButton('featured', language === 'ko' ? '대표작 슬라이드 쇼 시작' : 'Start highlights slideshow')}</div><p>${esc(language === 'ko' ? '우선 크게 살펴볼 작품입니다. Ⓗ 표시는 고해상도 파일이 있음을 뜻하며, 이미지를 더블클릭하면 새 창에서 엽니다.' : 'A small set of works to study first. Ⓗ marks an available high-resolution file; double-click the image to open it.')}</p></div><div class="leonardo-featured-grid">${leonardoFeaturedWorks.map(work => `<div class="leonardo-featured-card" data-featured-work="${esc(work.id)}"${canDragFeaturedWorks ? ' draggable="true"' : ''}>${card(work)}</div>`).join('')}</div></section>` : '';
     const allWorksAction = `${slideshowButton('all', language === 'ko' ? '전체 작품 슬라이드 쇼 시작' : 'Start all-works slideshow')}${currentUserIsAdmin ? `<button class="add-artwork-button leonardo-section-add-artwork" type="button" title="${esc(t('addArtwork'))}" aria-label="${esc(t('addArtwork'))}"><span>+</span><span>${esc(t('addArtwork'))}</span></button>` : ''}`;
-    return `<div class="leonardo-timeline">${featured}${layoutControls}<section class="leonardo-all-works"><div class="leonardo-section-heading"><p class="eyebrow">${esc(leonardoLayout === 'gallery' ? galleryLabel : chronologyLabel)}</p><div class="leonardo-section-actions">${allWorksAction}</div><p>${esc(language === 'ko' ? `${works.length}점 · 왼쪽 위에서 오른쪽 아래로 갈수록 뒤의 작품입니다.` : `${works.length} works · Earlier works begin at the upper left.`)}</p></div>${leonardoLayout === 'gallery' ? gallery : chronology}</section></div>`;
+    return `<div class="leonardo-timeline">${summaryBox}${featured}${layoutControls}<section class="leonardo-all-works"><div class="leonardo-section-heading"><p class="eyebrow">${esc(leonardoLayout === 'gallery' ? galleryLabel : chronologyLabel)}</p><div class="leonardo-section-actions">${allWorksAction}</div><p>${esc(language === 'ko' ? `${works.length}점 · 왼쪽 위에서 오른쪽 아래로 갈수록 뒤의 작품입니다.` : `${works.length} works · Earlier works begin at the upper left.`)}</p></div>${leonardoLayout === 'gallery' ? gallery : chronology}</section></div>`;
   })();
   timeline.innerHTML = `${timelineHeader}${leonardoTimelineMarkup}`;
+  setupArtistSummaryEditor(artist);
   timeline.querySelector('.add-artwork-button')?.addEventListener('click', () => openAddArtworkDialog(artist));
   timeline.querySelector('.artwork-title-mode-button')?.addEventListener('click', () => {
     setArtworkTitleMode(nextArtworkTitleMode(works));
@@ -2997,7 +3108,7 @@ $('#add-form').addEventListener('submit', async event => {
     if (!resolved) { const message = $('#form-message'); message.textContent = language === 'ko' ? '자동완성 목록에서 화가 후보를 선택해 주세요.' : 'Select an artist from the suggestion list.'; message.classList.remove('hidden'); return; }
     const savedName = resolved.label;
     const id = `artist-${Date.now()}`;
-    const artist = {id, name:{ko:savedName,en:savedName}, qid:resolved.qid, birth:Number($('#entry-birth').value) || null, death:null, nationality:{ko:'',en:''}, works:[]};
+    const artist = {id, name:{ko:savedName,en:savedName}, qid:resolved.qid, birth:Number($('#entry-birth').value) || null, death:null, nationality:{ko:'',en:''}, artistSummary:{ko:[],en:[]}, works:[]};
     if (fullName) artist.fullName = fullName;
     if (aliases.length) artist.aliases = aliases;
     artists.push(artist); selectedId = id;

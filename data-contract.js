@@ -49,6 +49,14 @@ function localizedTextList(value) {
   return {ko:textList(object.ko), en:textList(object.en)};
 }
 
+function localizedSummaryList(value) {
+  const summary = localizedTextList(value);
+  return {
+    ko:summary.ko.slice(0, 6),
+    en:summary.en.slice(0, 6)
+  };
+}
+
 const artistNationalityOverrides = {
   Q7803: {ko:'이탈리아', en:'Italy'},
   'artist-Q7803': {ko:'이탈리아', en:'Italy'}
@@ -121,6 +129,7 @@ function normalizeArtist(artist, options) {
     ...value,
     name: localized(value.name),
     aliases: localizedTextList(value.aliases),
+    artistSummary: localizedSummaryList(value.artistSummary),
     nationality: localized(artistNationalityOverride(value) || value.nationality),
     metadata: recordMetadata(value, timestamp(sourceDate, options.now), options.actor, options.touch, options.now)
   };

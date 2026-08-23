@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-23T08:32:46.447Z",
+  "generatedAt": "2026-08-23T12:12:29.455Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -615,7 +615,8 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json"
+        "data/artists.json",
+        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1662,25 +1663,33 @@
       "status": "verified-pair"
     },
     {
-      "id": "diego-velazquez-table",
+      "id": "Q297",
       "original": "Diego Velázquez",
       "korean": "벨라스케스",
-      "displayKorean": "벨라스케스",
+      "displayKorean": "벨라스케스, 디에고",
       "aliases": {
         "ko": [
-          "벨라스케스"
+          "벨라스케스",
+          "디에고 벨라스케스",
+          "디에고 로드리게스 데 실바 이 벨라스케스"
         ],
         "en": [
           "Diego Velazquez",
-          "Velázquez"
+          "Velázquez",
+          "Velazquez",
+          "Diego Velázquez",
+          "Diego Rodríguez de Silva y Velázquez"
         ]
       },
-      "uhangul": "벨라[THㅡ]케[THㅡ]",
+      "uhangul": "벨라[THㅡ]케[THㅡ], 디에고",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/techniques.json"
+        "data/artists.json",
+        "data/techniques.json",
+        "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1844,6 +1853,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/techniques.json",
+        "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
         "Wikidata"
       ],
       "status": "verified-pair",
@@ -2488,23 +2498,35 @@
       "status": "verified-pair"
     },
     {
-      "id": "francisco-zurbaran",
+      "id": "Q209615",
       "original": "Francisco de Zurbarán",
       "korean": "수르바란",
-      "displayKorean": "수르바란",
+      "displayKorean": "데 수르바란, 프란시스코",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "데 수르바란",
+          "수르바란",
+          "프란시스코 수르바란",
+          "프란시스코 데 수르바란"
+        ],
         "en": [
           "Francisco de Zurbaran",
           "de Zurbarán",
-          "Zurbarán"
+          "Zurbarán",
+          "de Zurbaran",
+          "Zurbaran",
+          "Francisco Zurbaran",
+          "Francisco de Zurbarán",
+          "Francisco de Zurbaran Salazar"
         ]
       },
-      "uhangul": "수[Rㅡ]바[Rㅏㄴ]",
+      "uhangul": "데 [Zㅜ][Rㅡ]바[Rㅏㄴ], [Fㅡ][Rㅏㄴ]시스코",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2623,23 +2645,29 @@
       "status": "verified-pair"
     },
     {
-      "id": "name-franshals",
+      "id": "Q167654",
       "original": "Frans Hals",
       "korean": "프란스 할스",
-      "displayKorean": "프란스 할스",
+      "displayKorean": "할스, 프란스",
       "aliases": {
         "ko": [
-          "할스"
+          "할스",
+          "프란스 할스"
         ],
         "en": [
-          "Hals"
+          "Hals",
+          "Frans Hals the Elder",
+          "Frans Franchoisz Hals",
+          "Frans Hals"
         ]
       },
-      "uhangul": "[Fㅡ][Rㅏㄴ]스 할스",
+      "uhangul": "할스, [Fㅡ][Rㅏㄴ]스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/techniques.json"
+        "data/artists.json",
+        "data/techniques.json",
+        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
@@ -4318,7 +4346,8 @@
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/artists.json"
+        "data/artists.json",
+        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
       ],
       "status": "verified-pair"
     },
@@ -4872,6 +4901,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/techniques.json",
+        "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
         "tools/apply-first-batch-movement-enhancements.js",
         "Wikidata"
       ],
@@ -6462,6 +6492,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
+        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
@@ -7247,6 +7278,7 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
+        "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
         "tools/apply-first-batch-movement-enhancements.js",
         "Wikidata"
       ],
@@ -8020,8 +8052,7 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/techniques.json",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
+        "data/techniques.json"
       ],
       "status": "verified-pair"
     },
