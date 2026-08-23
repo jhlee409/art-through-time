@@ -1,52 +1,590 @@
 [
   {
-    "id": "Q5582",
-    "original": "Vincent van Gogh",
-    "korean": "빈센트 반 고흐",
-    "displayKorean": "반 고흐, 빈센트",
+    "id": "Q7814",
+    "original": "Giotto",
+    "korean": "조토 디 본도네",
+    "displayKorean": "디 본도네, 조토",
     "aliases": {
       "ko": [
-        "반 고흐",
-        "고흐"
+        "디 본도네",
+        "본도네"
       ],
-      "en": [
-        "van Gogh",
-        "Gogh"
-      ]
+      "en": []
     },
-    "uhangul": "[Vㅏㄴ] 고[Xㅡ], [Vㅣㄴ]센트",
+    "uhangul": "디 본도네, 조토",
     "note": "auto-generated from original and Korean artist names"
   },
   {
-    "id": "Q296",
-    "original": "Claude Monet",
-    "korean": "클로드 모네",
-    "displayKorean": "모네, 클로드",
+    "id": "Q102272",
+    "original": "Jan van Eyck",
+    "korean": "얀 반 에이크",
+    "displayKorean": "반 에이크, 얀",
     "aliases": {
       "ko": [
-        "모네"
+        "반 에이크",
+        "에이크"
       ],
       "en": [
-        "Monet"
+        "van Eyck",
+        "Eyck"
       ]
     },
-    "uhangul": "모네, 클로드",
+    "uhangul": "[Vㅏㄴ] 에이크, 얀",
     "note": "auto-generated from original and Korean artist names"
   },
   {
-    "id": "Q5588",
-    "original": "Frida Kahlo",
-    "korean": "프리다 칼로",
-    "displayKorean": "칼로, 프리다",
+    "id": "Q68631",
+    "original": "Rogier van der Weyden",
+    "korean": "반 데르 베이던, 로히어르",
+    "displayKorean": "반 데르 베이던, 로히어르",
     "aliases": {
       "ko": [
-        "칼로"
+        "반 데르 베이던",
+        "로히어르 반 데르 베이던"
       ],
       "en": [
-        "Kahlo"
+        "van der Weyden",
+        "Weyden"
       ]
     },
-    "uhangul": "칼로, [Fㅡ][Rㅣ]다",
+    "uhangul": "[Vㅏㄴ] 데르 [Vㅔ]이던, [Rㅗ]히어르",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q5811",
+    "original": "Masaccio",
+    "korean": "마사초",
+    "displayKorean": "마사초",
+    "aliases": {
+      "ko": [],
+      "en": []
+    },
+    "uhangul": "마사초",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q17169",
+    "original": "Giovanni Bellini",
+    "korean": "조반니 벨리니",
+    "displayKorean": "벨리니, 조반니",
+    "aliases": {
+      "ko": [
+        "벨리니"
+      ],
+      "en": [
+        "Bellini"
+      ]
+    },
+    "uhangul": "벨리니, 조[Vㅏㄴ]니",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q762",
+    "original": "Leonardo da Vinci",
+    "korean": "레오나르도 다 빈치",
+    "displayKorean": "다 빈치, 레오나르도",
+    "aliases": {
+      "ko": [
+        "다 빈치",
+        "빈치",
+        "레오나르도"
+      ],
+      "en": [
+        "da Vinci",
+        "Vinci",
+        "Leonardo"
+      ]
+    },
+    "uhangul": "다 [Vㅣㄴ]치, 레오나[Rㅡ]도",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q5580",
+    "original": "Albrecht Dürer",
+    "korean": "알브레히트 뒤러",
+    "displayKorean": "뒤러, 알브레히트",
+    "aliases": {
+      "ko": [
+        "뒤러"
+      ],
+      "en": [
+        "Albrecht Durer",
+        "Dürer"
+      ]
+    },
+    "uhangul": "뒤[Rㅓ], 알브레[CHㅣ]트",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q191748",
+    "original": "Lucas Cranach the Elder",
+    "korean": "루카스 크라나흐",
+    "displayKorean": "크라나흐, 루카스",
+    "aliases": {
+      "ko": [
+        "크라나흐"
+      ],
+      "en": [
+        "Cranach",
+        "Lucas Cranach"
+      ]
+    },
+    "uhangul": "크[Rㅏ]나[CHㅡ], 루카스",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q5592",
+    "original": "Michelangelo",
+    "korean": "미켈란젤로 부오나로티",
+    "displayKorean": "부오나로티, 미켈란젤로",
+    "aliases": {
+      "ko": [
+        "부오나로티"
+      ],
+      "en": []
+    },
+    "uhangul": "부오나로티, 미켈란젤로",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q8459",
+    "original": "Giorgione",
+    "korean": "조르조네",
+    "displayKorean": "조르조네",
+    "aliases": {
+      "ko": [],
+      "en": []
+    },
+    "uhangul": "조[Rㅡ]조네",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q153746",
+    "original": "Albrecht Altdorfer",
+    "korean": "알브레히트 알트도르퍼",
+    "displayKorean": "알트도르퍼, 알브레히트",
+    "aliases": {
+      "ko": [
+        "알트도르퍼"
+      ],
+      "en": [
+        "Altdorfer"
+      ]
+    },
+    "uhangul": "알트도르[Fㅓ], 알브레[CHㅣ]트",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q378800",
+    "original": "Jean Clouet",
+    "korean": "장 클루에",
+    "displayKorean": "클루에, 장",
+    "aliases": {
+      "ko": [
+        "클루에"
+      ],
+      "en": [
+        "Clouet"
+      ]
+    },
+    "uhangul": "클루에, 장",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q5597",
+    "original": "Raphael",
+    "korean": "라파엘로 산치오",
+    "displayKorean": "산치오, 라파엘로",
+    "aliases": {
+      "ko": [
+        "산치오"
+      ],
+      "en": []
+    },
+    "uhangul": "산치오, [Rㅏ][Fㅏ]엘로",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q610556",
+    "original": "Wolf Huber",
+    "korean": "볼프 후버",
+    "displayKorean": "후버, 볼프",
+    "aliases": {
+      "ko": [
+        "후버"
+      ],
+      "en": [
+        "Huber"
+      ]
+    },
+    "uhangul": "후버, [Vㅗㄹ][Fㅡ]",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q47551",
+    "original": "Titian",
+    "korean": "티치아노",
+    "displayKorean": "티치아노",
+    "aliases": {
+      "ko": [
+        "티치아노 베첼리오",
+        "베첼리오"
+      ],
+      "en": [
+        "Tiziano Vecellio",
+        "Tiziano"
+      ]
+    },
+    "uhangul": "티치아노",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q312617",
+    "original": "Rosso Fiorentino",
+    "korean": "로소 피오렌티노",
+    "displayKorean": "로소 피오렌티노",
+    "aliases": {
+      "ko": [
+        "피오렌티노"
+      ],
+      "en": [
+        "Fiorentino"
+      ]
+    },
+    "uhangul": "[Rㅗ]소 [Fㅣ]오[Rㅔㄴ]티노",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q207929",
+    "original": "Pontormo",
+    "korean": "야코포 다 폰토르모",
+    "displayKorean": "야코포 다 폰토르모",
+    "aliases": {
+      "ko": [
+        "다 폰토르모",
+        "폰토르모"
+      ],
+      "en": []
+    },
+    "uhangul": "야코포 다 폰토[Rㅡ]모",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q48319",
+    "original": "Hans Holbein the Younger",
+    "korean": "한스 홀바인",
+    "displayKorean": "홀바인, 한스",
+    "aliases": {
+      "ko": [
+        "홀바인"
+      ],
+      "en": [
+        "Holbein",
+        "Hans Holbein"
+      ]
+    },
+    "uhangul": "홀바인, 한스",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q7803",
+    "original": "Bronzino",
+    "korean": "브론치노",
+    "displayKorean": "브론치노",
+    "aliases": {
+      "ko": [],
+      "en": []
+    },
+    "uhangul": "브[Rㅗㄴ]치노",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q9348",
+    "original": "Parmigianino",
+    "korean": "파르미자니노",
+    "displayKorean": "파르미자니노",
+    "aliases": {
+      "ko": [],
+      "en": []
+    },
+    "uhangul": "파[Rㅡ]미자니노",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q333366",
+    "original": "Francesco Primaticcio",
+    "korean": "프란체스코 프리마티초",
+    "displayKorean": "프리마티초, 프란체스코",
+    "aliases": {
+      "ko": [
+        "프리마티초"
+      ],
+      "en": [
+        "Primaticcio"
+      ]
+    },
+    "uhangul": "프[Rㅣ]마티초, [Fㅡ][Rㅏㄴ]체스코",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q336747",
+    "original": "François Clouet",
+    "korean": "프랑수아 클루에",
+    "displayKorean": "클루에, 프랑수아",
+    "aliases": {
+      "ko": [
+        "클루에"
+      ],
+      "en": [
+        "Francois Clouet",
+        "Clouet"
+      ]
+    },
+    "uhangul": "클루에, [Fㅡ][Rㅏㅇ]수아",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q9319",
+    "original": "Jacopo Tintoretto",
+    "korean": "틴토레토",
+    "displayKorean": "틴토레토",
+    "aliases": {
+      "ko": [],
+      "en": [
+        "Tintoretto"
+      ]
+    },
+    "uhangul": "틴토[Rㅔ]토",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q43270",
+    "original": "Pieter Brueghel the Elder",
+    "korean": "대 피터르 브뤼헐",
+    "displayKorean": "브뤼헐, 피터르 대",
+    "aliases": {
+      "ko": [
+        "브뤼헐",
+        "피터르 대 브뤼헐"
+      ],
+      "en": [
+        "Brueghel",
+        "Pieter Brueghel"
+      ]
+    },
+    "uhangul": "브[Rㅟ][Xㅓㄹ], 피터[Rㅡ] 대",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q7751",
+    "original": "Giuseppe Arcimboldo",
+    "korean": "주세페 아르침볼도",
+    "displayKorean": "아르침볼도, 주세페",
+    "aliases": {
+      "ko": [
+        "아르침볼도"
+      ],
+      "en": [
+        "Arcimboldo"
+      ]
+    },
+    "uhangul": "아[Rㅡ]침볼도, 주세페",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q301",
+    "original": "El Greco",
+    "korean": "엘 그레코",
+    "displayKorean": "엘 그레코",
+    "aliases": {
+      "ko": [
+        "그레코"
+      ],
+      "en": [
+        "Greco"
+      ]
+    },
+    "uhangul": "엘 그[Rㅔ]코",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q447682",
+    "original": "Bartholomeus Spranger",
+    "korean": "바르톨로메우스 슈프랑거",
+    "displayKorean": "슈프랑거, 바르톨로메우스",
+    "aliases": {
+      "ko": [
+        "슈프랑거"
+      ],
+      "en": [
+        "Spranger"
+      ]
+    },
+    "uhangul": "슈프[Rㅏㅇ]거, 바[Rㅡ][THㅗㄹ]로메우스",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q165367",
+    "original": "Hendrick Goltzius",
+    "korean": "헨드릭 골치우스",
+    "displayKorean": "골치우스, 헨드릭",
+    "aliases": {
+      "ko": [
+        "골치우스"
+      ],
+      "en": [
+        "Goltzius"
+      ]
+    },
+    "uhangul": "골치우[Zㅡ], 헨드[Rㅣㄱ]",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q7824",
+    "original": "Annibale Carracci",
+    "korean": "안니발레 카라치",
+    "displayKorean": "카라치, 안니발레",
+    "aliases": {
+      "ko": [
+        "카라치"
+      ],
+      "en": [
+        "Carracci"
+      ]
+    },
+    "uhangul": "카[Rㅏ]치, 안니발레",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q442484",
+    "original": "Cornelis van Haarlem",
+    "korean": "코르넬리스 반 하를렘",
+    "displayKorean": "반 하를렘, 코르넬리스",
+    "aliases": {
+      "ko": [
+        "반 하를렘",
+        "하를렘"
+      ],
+      "en": [
+        "van Haarlem",
+        "Haarlem"
+      ]
+    },
+    "uhangul": "[Vㅏㄴ] 하[Rㅡㄹ]렘, 코[Rㅡ]넬리스",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q329811",
+    "original": "Abraham Bloemaert",
+    "korean": "아브라함 블로에마르트",
+    "displayKorean": "블로에마르트, 아브라함",
+    "aliases": {
+      "ko": [
+        "블로에마르트"
+      ],
+      "en": [
+        "Bloemaert"
+      ]
+    },
+    "uhangul": "블로에마[Rㅡ]트, 아브[Rㅏ]함",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q42207",
+    "original": "Caravaggio",
+    "korean": "카라바조",
+    "displayKorean": "카라바조",
+    "aliases": {
+      "ko": [],
+      "en": []
+    },
+    "uhangul": "카[Rㅏ][Vㅏ]조",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q5599",
+    "original": "Peter Paul Rubens",
+    "korean": "페테르 파울 루벤스",
+    "displayKorean": "루벤스, 페테르 파울",
+    "aliases": {
+      "ko": [
+        "루벤스"
+      ],
+      "en": [
+        "Rubens"
+      ]
+    },
+    "uhangul": "[Rㅜ]벤스, 페테[Rㅡ] 파울",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q160538",
+    "original": "Gian Lorenzo Bernini",
+    "korean": "잔 로렌초 베르니니",
+    "displayKorean": "베르니니, 잔 로렌초",
+    "aliases": {
+      "ko": [
+        "베르니니"
+      ],
+      "en": [
+        "Bernini"
+      ]
+    },
+    "uhangul": "베[Rㅡ]니니, 잔 로[Rㅔㄴ]초",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q5598",
+    "original": "Rembrandt Harmenszoon van Rijn",
+    "korean": "렘브란트 하르먼손 반 레인",
+    "displayKorean": "렘브란트 하르먼손 반 레인",
+    "aliases": {
+      "ko": [
+        "반 레인",
+        "레인"
+      ],
+      "en": [
+        "van Rijn",
+        "Rijn"
+      ]
+    },
+    "uhangul": "[Rㅔㅁ]브[Rㅏㄴ]트 하[Rㅡ]먼손 [Vㅏㄴ] [Rㅔ]인",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q41264",
+    "original": "Johannes Vermeer",
+    "korean": "요하네스 페르메이르",
+    "displayKorean": "페르메이르, 요하네스",
+    "aliases": {
+      "ko": [
+        "페르메이르"
+      ],
+      "en": [
+        "Vermeer"
+      ]
+    },
+    "uhangul": "[Vㅔ][Rㅡ]메이[Rㅡ], 요하네스",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q213163",
+    "original": "Élisabeth Louise Vigée Le Brun",
+    "korean": "엘리자베스 루이 비제 르 브룅",
+    "displayKorean": "비제 르 브룅, 엘리자베스 루이",
+    "aliases": {
+      "ko": [
+        "르 브룅",
+        "브룅",
+        "비제 르 브룅"
+      ],
+      "en": [
+        "Elisabeth Louise Vigee Le Brun",
+        "Le Brun",
+        "Brun"
+      ]
+    },
+    "uhangul": "[Vㅣ]제 르 브[Rㅚㅇ], 엘리자베스 루이",
     "note": "auto-generated from original and Korean artist names"
   },
   {
@@ -99,87 +637,37 @@
     "note": "auto-generated from original and Korean artist names"
   },
   {
-    "id": "Q762",
-    "original": "Leonardo da Vinci",
-    "korean": "레오나르도 다 빈치",
-    "displayKorean": "다 빈치, 레오나르도",
+    "id": "Q296",
+    "original": "Claude Monet",
+    "korean": "클로드 모네",
+    "displayKorean": "모네, 클로드",
     "aliases": {
       "ko": [
-        "다 빈치",
-        "빈치",
-        "레오나르도"
+        "모네"
       ],
       "en": [
-        "da Vinci",
-        "Vinci",
-        "Leonardo"
+        "Monet"
       ]
     },
-    "uhangul": "다 [Vㅣㄴ]치, 레오나[Rㅡ]도",
+    "uhangul": "모네, 클로드",
     "note": "auto-generated from original and Korean artist names"
   },
   {
-    "id": "Q42207",
-    "original": "Caravaggio",
-    "korean": "카라바조",
-    "displayKorean": "카라바조",
-    "aliases": {
-      "ko": [],
-      "en": []
-    },
-    "uhangul": "카[Rㅏ][Vㅏ]조",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q5592",
-    "original": "Michelangelo",
-    "korean": "미켈란젤로 부오나로티",
-    "displayKorean": "부오나로티, 미켈란젤로",
+    "id": "Q5582",
+    "original": "Vincent van Gogh",
+    "korean": "빈센트 반 고흐",
+    "displayKorean": "반 고흐, 빈센트",
     "aliases": {
       "ko": [
-        "부오나로티"
-      ],
-      "en": []
-    },
-    "uhangul": "부오나로티, 미켈란젤로",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q43270",
-    "original": "Pieter Brueghel the Elder",
-    "korean": "대 피터르 브뤼헐",
-    "displayKorean": "브뤼헐, 피터르 대",
-    "aliases": {
-      "ko": [
-        "브뤼헐",
-        "피터르 대 브뤼헐"
+        "반 고흐",
+        "고흐"
       ],
       "en": [
-        "Brueghel",
-        "Pieter Brueghel"
+        "van Gogh",
+        "Gogh"
       ]
     },
-    "uhangul": "브[Rㅟ][Xㅓㄹ], 피터[Rㅡ] 대",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q213163",
-    "original": "Élisabeth Louise Vigée Le Brun",
-    "korean": "엘리자베스 루이 비제 르 브룅",
-    "displayKorean": "비제 르 브룅, 엘리자베스 루이",
-    "aliases": {
-      "ko": [
-        "르 브룅",
-        "브룅",
-        "비제 르 브룅"
-      ],
-      "en": [
-        "Elisabeth Louise Vigee Le Brun",
-        "Le Brun",
-        "Brun"
-      ]
-    },
-    "uhangul": "[Vㅣ]제 르 브[Rㅚㅇ], 엘리자베스 루이",
+    "uhangul": "[Vㅏㄴ] 고[Xㅡ], [Vㅣㄴ]센트",
     "note": "auto-generated from original and Korean artist names"
   },
   {
@@ -219,489 +707,19 @@
     "note": "auto-generated from original and Korean artist names"
   },
   {
-    "id": "Q301",
-    "original": "El Greco",
-    "korean": "엘 그레코",
-    "displayKorean": "엘 그레코",
+    "id": "Q5588",
+    "original": "Frida Kahlo",
+    "korean": "프리다 칼로",
+    "displayKorean": "칼로, 프리다",
     "aliases": {
       "ko": [
-        "그레코"
+        "칼로"
       ],
       "en": [
-        "Greco"
+        "Kahlo"
       ]
     },
-    "uhangul": "엘 그[Rㅔ]코",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q41264",
-    "original": "Johannes Vermeer",
-    "korean": "요하네스 페르메이르",
-    "displayKorean": "페르메이르, 요하네스",
-    "aliases": {
-      "ko": [
-        "페르메이르"
-      ],
-      "en": [
-        "Vermeer"
-      ]
-    },
-    "uhangul": "[Vㅔ][Rㅡ]메이[Rㅡ], 요하네스",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q5597",
-    "original": "Raphael",
-    "korean": "라파엘로 산치오",
-    "displayKorean": "산치오, 라파엘로",
-    "aliases": {
-      "ko": [
-        "산치오"
-      ],
-      "en": []
-    },
-    "uhangul": "산치오, [Rㅏ][Fㅏ]엘로",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q5599",
-    "original": "Peter Paul Rubens",
-    "korean": "페테르 파울 루벤스",
-    "displayKorean": "루벤스, 페테르 파울",
-    "aliases": {
-      "ko": [
-        "루벤스"
-      ],
-      "en": [
-        "Rubens"
-      ]
-    },
-    "uhangul": "[Rㅜ]벤스, 페테[Rㅡ] 파울",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q5598",
-    "original": "Rembrandt Harmenszoon van Rijn",
-    "korean": "렘브란트 하르먼손 반 레인",
-    "displayKorean": "렘브란트 하르먼손 반 레인",
-    "aliases": {
-      "ko": [
-        "반 레인",
-        "레인"
-      ],
-      "en": [
-        "van Rijn",
-        "Rijn"
-      ]
-    },
-    "uhangul": "[Rㅔㅁ]브[Rㅏㄴ]트 하[Rㅡ]먼손 [Vㅏㄴ] [Rㅔ]인",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q7824",
-    "original": "Annibale Carracci",
-    "korean": "안니발레 카라치",
-    "displayKorean": "카라치, 안니발레",
-    "aliases": {
-      "ko": [
-        "카라치"
-      ],
-      "en": [
-        "Carracci"
-      ]
-    },
-    "uhangul": "카[Rㅏ]치, 안니발레",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q47551",
-    "original": "Titian",
-    "korean": "티치아노",
-    "displayKorean": "티치아노",
-    "aliases": {
-      "ko": [
-        "티치아노 베첼리오",
-        "베첼리오"
-      ],
-      "en": [
-        "Tiziano Vecellio",
-        "Tiziano"
-      ]
-    },
-    "uhangul": "티치아노",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q17169",
-    "original": "Giovanni Bellini",
-    "korean": "조반니 벨리니",
-    "displayKorean": "벨리니, 조반니",
-    "aliases": {
-      "ko": [
-        "벨리니"
-      ],
-      "en": [
-        "Bellini"
-      ]
-    },
-    "uhangul": "벨리니, 조[Vㅏㄴ]니",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q8459",
-    "original": "Giorgione",
-    "korean": "조르조네",
-    "displayKorean": "조르조네",
-    "aliases": {
-      "ko": [],
-      "en": []
-    },
-    "uhangul": "조[Rㅡ]조네",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q7814",
-    "original": "Giotto",
-    "korean": "조토 디 본도네",
-    "displayKorean": "디 본도네, 조토",
-    "aliases": {
-      "ko": [
-        "디 본도네",
-        "본도네"
-      ],
-      "en": []
-    },
-    "uhangul": "디 본도네, 조토",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q5811",
-    "original": "Masaccio",
-    "korean": "마사초",
-    "displayKorean": "마사초",
-    "aliases": {
-      "ko": [],
-      "en": []
-    },
-    "uhangul": "마사초",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q102272",
-    "original": "Jan van Eyck",
-    "korean": "얀 반 에이크",
-    "displayKorean": "반 에이크, 얀",
-    "aliases": {
-      "ko": [
-        "반 에이크",
-        "에이크"
-      ],
-      "en": [
-        "van Eyck",
-        "Eyck"
-      ]
-    },
-    "uhangul": "[Vㅏㄴ] 에이크, 얀",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q68631",
-    "original": "Rogier van der Weyden",
-    "korean": "반 데르 베이던, 로히어르",
-    "displayKorean": "반 데르 베이던, 로히어르",
-    "aliases": {
-      "ko": [
-        "반 데르 베이던",
-        "로히어르 반 데르 베이던"
-      ],
-      "en": [
-        "van der Weyden",
-        "Weyden"
-      ]
-    },
-    "uhangul": "[Vㅏㄴ] 데르 [Vㅔ]이던, [Rㅗ]히어르",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q5580",
-    "original": "Albrecht Dürer",
-    "korean": "알브레히트 뒤러",
-    "displayKorean": "뒤러, 알브레히트",
-    "aliases": {
-      "ko": [
-        "뒤러"
-      ],
-      "en": [
-        "Albrecht Durer",
-        "Dürer"
-      ]
-    },
-    "uhangul": "뒤[Rㅓ], 알브레[CHㅣ]트",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q191748",
-    "original": "Lucas Cranach the Elder",
-    "korean": "루카스 크라나흐",
-    "displayKorean": "크라나흐, 루카스",
-    "aliases": {
-      "ko": [
-        "크라나흐"
-      ],
-      "en": [
-        "Cranach",
-        "Lucas Cranach"
-      ]
-    },
-    "uhangul": "크[Rㅏ]나[CHㅡ], 루카스",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q48319",
-    "original": "Hans Holbein the Younger",
-    "korean": "한스 홀바인",
-    "displayKorean": "홀바인, 한스",
-    "aliases": {
-      "ko": [
-        "홀바인"
-      ],
-      "en": [
-        "Holbein",
-        "Hans Holbein"
-      ]
-    },
-    "uhangul": "홀바인, 한스",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q153746",
-    "original": "Albrecht Altdorfer",
-    "korean": "알브레히트 알트도르퍼",
-    "displayKorean": "알트도르퍼, 알브레히트",
-    "aliases": {
-      "ko": [
-        "알트도르퍼"
-      ],
-      "en": [
-        "Altdorfer"
-      ]
-    },
-    "uhangul": "알트도르[Fㅓ], 알브레[CHㅣ]트",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q610556",
-    "original": "Wolf Huber",
-    "korean": "볼프 후버",
-    "displayKorean": "후버, 볼프",
-    "aliases": {
-      "ko": [
-        "후버"
-      ],
-      "en": [
-        "Huber"
-      ]
-    },
-    "uhangul": "후버, [Vㅗㄹ][Fㅡ]",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q378800",
-    "original": "Jean Clouet",
-    "korean": "장 클루에",
-    "displayKorean": "클루에, 장",
-    "aliases": {
-      "ko": [
-        "클루에"
-      ],
-      "en": [
-        "Clouet"
-      ]
-    },
-    "uhangul": "클루에, 장",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q336747",
-    "original": "François Clouet",
-    "korean": "프랑수아 클루에",
-    "displayKorean": "클루에, 프랑수아",
-    "aliases": {
-      "ko": [
-        "클루에"
-      ],
-      "en": [
-        "Francois Clouet",
-        "Clouet"
-      ]
-    },
-    "uhangul": "클루에, [Fㅡ][Rㅏㅇ]수아",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q207929",
-    "original": "Pontormo",
-    "korean": "야코포 다 폰토르모",
-    "displayKorean": "야코포 다 폰토르모",
-    "aliases": {
-      "ko": [
-        "다 폰토르모",
-        "폰토르모"
-      ],
-      "en": []
-    },
-    "uhangul": "야코포 다 폰토[Rㅡ]모",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q312617",
-    "original": "Rosso Fiorentino",
-    "korean": "로소 피오렌티노",
-    "displayKorean": "로소 피오렌티노",
-    "aliases": {
-      "ko": [
-        "피오렌티노"
-      ],
-      "en": [
-        "Fiorentino"
-      ]
-    },
-    "uhangul": "[Rㅗ]소 [Fㅣ]오[Rㅔㄴ]티노",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q9348",
-    "original": "Parmigianino",
-    "korean": "파르미자니노",
-    "displayKorean": "파르미자니노",
-    "aliases": {
-      "ko": [],
-      "en": []
-    },
-    "uhangul": "파[Rㅡ]미자니노",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q7803",
-    "original": "Bronzino",
-    "korean": "브론치노",
-    "displayKorean": "브론치노",
-    "aliases": {
-      "ko": [],
-      "en": []
-    },
-    "uhangul": "브[Rㅗㄴ]치노",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q333366",
-    "original": "Francesco Primaticcio",
-    "korean": "프란체스코 프리마티초",
-    "displayKorean": "프리마티초, 프란체스코",
-    "aliases": {
-      "ko": [
-        "프리마티초"
-      ],
-      "en": [
-        "Primaticcio"
-      ]
-    },
-    "uhangul": "프[Rㅣ]마티초, [Fㅡ][Rㅏㄴ]체스코",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q447682",
-    "original": "Bartholomeus Spranger",
-    "korean": "바르톨로메우스 슈프랑거",
-    "displayKorean": "슈프랑거, 바르톨로메우스",
-    "aliases": {
-      "ko": [
-        "슈프랑거"
-      ],
-      "en": [
-        "Spranger"
-      ]
-    },
-    "uhangul": "슈프[Rㅏㅇ]거, 바[Rㅡ][THㅗㄹ]로메우스",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q7751",
-    "original": "Giuseppe Arcimboldo",
-    "korean": "주세페 아르침볼도",
-    "displayKorean": "아르침볼도, 주세페",
-    "aliases": {
-      "ko": [
-        "아르침볼도"
-      ],
-      "en": [
-        "Arcimboldo"
-      ]
-    },
-    "uhangul": "아[Rㅡ]침볼도, 주세페",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q442484",
-    "original": "Cornelis van Haarlem",
-    "korean": "코르넬리스 반 하를렘",
-    "displayKorean": "반 하를렘, 코르넬리스",
-    "aliases": {
-      "ko": [
-        "반 하를렘",
-        "하를렘"
-      ],
-      "en": [
-        "van Haarlem",
-        "Haarlem"
-      ]
-    },
-    "uhangul": "[Vㅏㄴ] 하[Rㅡㄹ]렘, 코[Rㅡ]넬리스",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q165367",
-    "original": "Hendrick Goltzius",
-    "korean": "헨드릭 골치우스",
-    "displayKorean": "골치우스, 헨드릭",
-    "aliases": {
-      "ko": [
-        "골치우스"
-      ],
-      "en": [
-        "Goltzius"
-      ]
-    },
-    "uhangul": "골치우[Zㅡ], 헨드[Rㅣㄱ]",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q329811",
-    "original": "Abraham Bloemaert",
-    "korean": "아브라함 블로에마르트",
-    "displayKorean": "블로에마르트, 아브라함",
-    "aliases": {
-      "ko": [
-        "블로에마르트"
-      ],
-      "en": [
-        "Bloemaert"
-      ]
-    },
-    "uhangul": "블로에마[Rㅡ]트, 아브[Rㅏ]함",
-    "note": "auto-generated from original and Korean artist names"
-  },
-  {
-    "id": "Q9319",
-    "original": "Tintoretto",
-    "korean": "틴토레토",
-    "displayKorean": "틴토레토",
-    "aliases": {
-      "ko": [],
-      "en": []
-    },
-    "uhangul": "틴토[Rㅔ]토",
+    "uhangul": "칼로, [Fㅡ][Rㅣ]다",
     "note": "auto-generated from original and Korean artist names"
   }
 ]

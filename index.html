@@ -58,7 +58,7 @@
         <button id="close-add-dialog" class="close" type="button" aria-label="닫기">×</button>
         <p class="eyebrow" data-i18n="newRecord">NEW RECORD</p><h2 data-i18n="addTitle">화가와 그림 일괄 추가</h2>
         <p class="dialog-description" data-i18n="addHelp">이름을 입력한 뒤 자동완성 목록에서 정확한 후보를 선택해 저장하세요.</p>
-        <label><span data-i18n="entryType">추가할 항목</span><select id="entry-type"><option value="artist" data-i18n="artist">화가</option><option value="url" data-i18n="painting">그림 웹주소</option></select></label>
+        <input id="entry-type" type="hidden" value="artist" />
         <label class="entry-name-field"><span id="entry-name-label" data-i18n="name">이름</span><input id="entry-name" required autocomplete="off" /><div id="suggestions" class="suggestions hidden" role="listbox"></div></label>
         <label class="artist-full-name-field hidden"><span data-i18n="fullName">Full Name (목록·연표·HTML 표기)</span><input id="entry-full-name" autocomplete="off" placeholder="예: 디 본도네, 조토" /></label><p id="form-message" class="form-message hidden" aria-live="polite"></p>
         <label class="artist-aliases-field hidden"><span data-i18n="artistAliases">별명·줄임말 (쉼표로 구분)</span><input id="entry-artist-aliases" autocomplete="off" placeholder="예: 조토, Giotto di Bondone" /></label>
@@ -72,10 +72,6 @@
       <form id="add-artwork-form">
         <button id="close-add-artwork-dialog" class="close" type="button" aria-label="닫기">×</button>
         <p class="eyebrow" data-i18n="newRecord">NEW RECORD</p><h2 data-i18n="addArtworkTitle">그림 1점 추가</h2>
-        <section class="artwork-source-section">
-          <label><span data-i18n="artworkPage">작품 웹페이지 주소</span><input id="artwork-page-url" type="url" inputmode="url" placeholder="https://" /></label>
-          <button class="artwork-source-save" type="submit" name="artwork-source" value="web" formnovalidate data-i18n="addFromWeb">웹 주소로 추가</button>
-        </section>
         <section class="artwork-source-section local-artwork-source">
           <p class="artwork-source-heading" data-i18n="localArtwork">로컬 이미지</p>
           <label><span data-i18n="chooseLocalImage">파일 선택</span><input id="local-artwork-file" type="file" accept="image/jpeg,image/png,image/webp,image/gif,.jpg,.jpeg,.png,.webp,.gif" multiple /></label>

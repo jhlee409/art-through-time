@@ -65,14 +65,13 @@ http://localhost:4173/?login=1
 - 주제-사건 화면에 올린 이미지는 외부 URL을 직접 참조하지 않고, 모두 로컬 `data/topic-images/` 폴더에 따로 저장한 뒤 그 경로를 사용합니다.
 - 오른쪽 위 `그림 추가` 버튼은 여러 이미지 파일 선택을 지원합니다.
 - 여러 파일을 선택하면 제목은 파일명에서 자동 입력하고, 입력한 시작·끝 연도를 공통으로 적용해 순서대로 저장합니다.
-- 인터넷 검색으로 주제 이미지를 추가할 때도 먼저 이미지를 내려받아 `data/topic-images/`에 저장하고, `data/topics.json`에는 로컬 파일 경로와 출처 페이지 정보를 함께 남깁니다.
-- Wikimedia 원본 파일 요청이 제한될 때는 표준 썸네일 경로(`thumb.php`, 예: 960px)를 사용해 내려받고, 실제 이미지 가로 폭이 500px 이상인지 확인한 뒤 등록합니다.
+- 주제 이미지는 외부 웹에서 자동 검색하거나 자동 다운로드하지 않습니다. 필요한 이미지는 사용자가 준비한 로컬 파일을 선택해 `data/topic-images/`에 저장합니다.
 
 ## 새 화가 추가 방식
 
 왼쪽 아래 새 화가 추가 `+` 버튼은 더 이상 사용하지 않습니다. 외부 이미지 자동 수집이 Wikimedia·브라우저·서버 요청 제한에 자주 걸리기 때문입니다.
 
-새 화가를 추가할 때는 먼저 작품 이미지를 아래 폴더에 내려받습니다.
+새 화가를 추가할 때는 사용자가 먼저 작품 이미지를 아래 폴더에 내려받습니다. 이후 작업 요청에서는 다운로드 폴더를 다시 언급하지 않아도 됩니다.
 
 앞으로 이 프로젝트에서 “다운로드 폴더”라고 하면 다음 프로젝트 폴더를 기준으로 말합니다. 실제 이미지 파일은 보통 그 아래 `download` 폴더에서 찾습니다.
 
@@ -84,11 +83,15 @@ C:\Users\jhlee\OneDrive - UOU\AI-Programming\Art_through_Time
 C:\Users\jhlee\OneDrive - UOU\AI-Programming\Art_through_Time\download
 ```
 
-그다음 Codex에 화가의 위키피디아 페이지 주소를 주고 추가를 요청합니다. Codex는 위키피디아에서 생몰년, 설명, 작품명 같은 텍스트 정보를 추출하고, 작품 이미지는 위 `download` 폴더의 로컬 파일을 사용해 앱 데이터에 연결합니다.
+그다음 Codex에는 화가의 이름, 국적, 사조만 제시하고 추가를 요청합니다. 위키피디아 주소를 따로 입력하지 않아도 됩니다.
+
+Codex는 새 화가 추가 요청을 받으면 자동으로 위 `download` 폴더를 뒤져 작품 이미지 후보를 찾고, 위키피디아에서 원어명, 생몰년, 국가, 간단한 설명, 작품명 같은 텍스트 정보를 검색해 보충합니다. 또한 화가의 위키피디아 주소를 자동으로 찾아 원어 이름 또는 출처 링크에 연결합니다.
+
+새 화가 추가 작업에서 Codex는 위키피디아, Wikimedia, 웹 검색, 외부 이미지 URL을 사용해 작품 이미지를 자동 검색하거나 자동 다운로드하지 않습니다. 작품 이미지는 사용자가 먼저 `download` 폴더에 넣어 둔 파일 중에서만 고릅니다.
 
 이미지 파일명은 작품 제목을 알아볼 수 있게 저장하면 매칭이 쉬워집니다. 제목이 불명확한 파일은 Codex가 확인한 뒤 연결합니다.
 
-이미지는 업로드, 캐시, 고해상도 표시 저장 단계에서 10MB 이하 PNG로 축소 저장합니다. 변환이 끝난 대용량 원본은 보관하지 않습니다.
+이미지는 로컬 파일 저장과 고해상도 표시 저장 단계에서 10MB 이하 PNG로 축소 저장합니다. 변환이 끝난 대용량 원본은 보관하지 않습니다.
 
 새 화가 추가 후에는 관리자 화면의 `전체 규칙 점검`을 실행합니다.
 
@@ -130,12 +133,10 @@ C:\Users\jhlee\OneDrive - UOU\AI-Programming\Art_through_Time\download
 - HTML, 기법·용어, 대표작, 주제-사건처럼 화면에 직접 표시하는 이미지는 가능한 한 로컬 파일 경로를 사용합니다.
 - 미술사조 HTML에서 쓰는 이미지는 `data/미술사조/images/`에 두고, HTML 안에서는 `images/파일명.jpg` 형식으로 참조합니다.
 - 기법·용어 이미지는 `data/techniques/`, 주제-사건 이미지는 `data/topic-images/`, 화가 작품 썸네일은 `data/thumbnails/`, 고해상도 이미지는 `data/high-resolution/`을 사용합니다.
-- 주제-사건 이미지는 참조 URL만 남기는 방식이 아니라 `data/topic-images/`에 복사 또는 다운로드해 보관합니다. `data/topics.json`의 `thumbnail`은 이 로컬 파일을 가리켜야 하며, 원본 출처는 필요하면 `sourcePage`, `sourceFile`로 따로 남깁니다.
+- 주제-사건 이미지는 참조 URL만 남기는 방식이 아니라 `data/topic-images/`에 복사해 보관합니다. `data/topics.json`의 `thumbnail`은 이 로컬 파일을 가리켜야 하며, 원본 출처는 필요하면 `sourcePage`, `sourceFile`로 따로 남깁니다.
 - 사조 HTML과 표시 데이터에서는 외부 이미지 URL, `data/thumbnails/`, `data/high-resolution/` 직접 참조를 피합니다. 필요한 이미지는 해당 화면의 안정 폴더로 복사한 뒤 연결합니다.
-- 화가 작품 데이터의 원본 `image` URL은 수집 출처로 남을 수 있습니다. 다만 로컬 썸네일이 없고 외부 URL만으로 표시되는 작품은 화면에 `URL 의존` 배지가 나타납니다.
-- `URL 의존` 배지가 보이는 작품은 인터넷에서 이미지를 직접 내려받은 뒤 관리자 모드의 `로컬 이미지 교체` 버튼으로 교체합니다.
-- 외부 URL 이미지를 자동 로컬화할 때는 `tools/localize-external-artist-images.js`를 사용할 수 있습니다. 성공한 작품만 `data/thumbnails/` 로컬 경로로 바뀌며, 실패한 작품은 기존 외부 URL을 유지해 화면에 `URL 의존` 배지가 계속 표시됩니다.
-- Wikimedia 요청 제한이 걸리면 자동 로컬화는 오래 걸릴 수 있으므로 무리해서 반복 실행하지 않습니다. 실패 목록은 `data/external-image-localization-report.json`에서 확인하고, 필요한 작품만 수동으로 내려받아 교체합니다.
+- 화가 작품 데이터에 과거 원본 `image` URL이 남아 있어도 화면 표시용 이미지로 사용하지 않습니다. 로컬 썸네일이나 로컬 고해상도 파일이 없으면 이미지를 표시하지 않습니다.
+- 외부 URL, Wikipedia, Wikimedia, Openverse 등에서 이미지를 검색해 URL을 찾거나 내려받아 저장하는 자동화 코드는 삭제했습니다. 위키피디아/Wikidata 조회는 원어명, 생몰년, 국적, 설명, 출처 링크 같은 텍스트 정보 보충에만 사용합니다.
 
 ## 데이터와 저장 위치
 
@@ -146,7 +147,7 @@ C:\Users\jhlee\OneDrive - UOU\AI-Programming\Art_through_Time\download
 - `data/techniques.json`: 기법·용어 데이터
 - `data/person-name-dictionary.json`: 인명 사전
 - `uhangul/data/artist-map.json`: uHangul 화가 맵
-- `data/generated/`: Wikidata/Wikimedia 조회 결과 캐시
+- `data/generated/`: 과거 자동 조회 캐시 보관 폴더. 새 화가 추가나 화면 표시에서는 사용하지 않습니다.
 - `data/미술사조/`: 미술 사조 설명 HTML
 
 Git에 올리지 않는 로컬/OneDrive 연동 폴더:

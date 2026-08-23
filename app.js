@@ -36,7 +36,6 @@ const movementDensityMinimum = 1;
 const movementDensityMaximum = 4;
 const highResolutionMinimumWidth = 1600;
 const artistImportedWorkLimit = 60;
-const artistThumbnailDownloadLimit = 20;
 const sharedMovementId = 'global-contemporary';
 const artistMovementFallbacks = { Q104884:{ko:'독일 낭만주의',en:'German Romanticism'} };
 const isMovementPopup = startupParams.get('movementPopup') === '1';
@@ -75,9 +74,6 @@ if (localStorage.getItem(movementCountryMigrationKey) !== 'v1') {
   localStorage.setItem(movementCountryMigrationKey, 'v1');
 }
 let thumbnailObserver;
-let thumbnailQueue = Promise.resolve();
-let priorityThumbnailQueue = Promise.resolve();
-const thumbnailRequests = new Set();
 const profileRequests = new Set();
 const artworkInfoRequests = new Set();
 let saveTimer;
@@ -191,14 +187,13 @@ timeline.addEventListener('click', event => {
 });
 
 const copy = {
-  ko: {collection:'나의 화가 목록',sort:'정렬',nameAsc:'이름순',birthAsc:'생년순',addArtist:'화가와 그림 일괄 추가',newRecord:'NEW RECORD',addTitle:'화가와 그림 일괄 추가',addHelp:'화가 설명 페이지나 그림 페이지의 웹주소를 입력해 저장하세요.',addArtwork:'그림 추가',addArtworkTitle:'그림 1점 추가',artworkPage:'작품 웹페이지 주소 또는 로컬 이미지 경로',artworkTitleInput:'작품 제목 (선택)',artworkYearInput:'제작 연도 (선택)',entryType:'추가할 항목',artist:'화가',painting:'그림 웹주소',webpage:'웹페이지 주소',name:'이름',birthYear:'Birth year (optional)',artistName:'화가 이름',madeYear:'제작 연도',save:'저장하기',timeline:'작품 연표',slideshow:'슬라이드 쇼',selectWork:'작품을 선택하면\n이곳에서 자세히 볼 수 있어요.',noWork:'아직 등록한 작품이 없습니다.',noImage:'이미지 없음',untitled:'제목 없는 작품',unknown:'정보 없음',country:'제작 국가',movement:'화파',year:'제작 연도',source:'저장된 출처',delete:'삭제',confirmDelete:'이 화가와 등록한 작품을 목록에서 삭제할까요?',confirmDeleteWork:'이 작품을 삭제할까요?',manualWorks:'직접 추가한 작품',movementAtlas:'미술 사조로 보기',countries:'비교할 나라',selectAllCountries:'전체 선택 / 해제',exportChanges:'변경사항_압축',migrationExport:'FIREBASE 내보내기',period:'기간',artistSpan:'선택 화가의 활동 기간',storedInfo:'저장된 작품 정보',loadingInfo:'작품 정보를 정리해 저장하는 중입니다.',noInfo:'저장된 설명이 아직 없습니다.',favorites:'MY FAVORITES',searchArtists:'화가 이름 검색',movementFilter:'사조 선택',allMovements:'전체 사조',clearMovementFilter:'사조 필터 해제',noSearchResult:'일치하는 화가가 없습니다.'},
-  en: {collection:'MY ARTISTS',sort:'SORT',nameAsc:'Name',birthAsc:'Birth year',addArtist:'Add artist with artworks',newRecord:'NEW RECORD',addTitle:'Add artist with artworks',addHelp:'Paste a webpage about an artist or artwork to import source material.',addArtwork:'Add artwork',addArtworkTitle:'Add one artwork',artworkPage:'Artwork webpage URL or local image path',artworkTitleInput:'Artwork title (optional)',artworkYearInput:'Year made (optional)',entryType:'Add',artist:'Artist',painting:'Artwork webpage',webpage:'Webpage URL',name:'Name',birthYear:'Birth year (optional)',artistName:'Artist name',madeYear:'Year made',save:'Save',timeline:'WORKS TIMELINE',slideshow:'Slideshow',selectWork:'Select an artwork\nto view its details here.',noWork:'No artworks have been added yet.',noImage:'No image available',untitled:'Untitled',unknown:'Unknown',country:'Country made',movement:'Movement',year:'Year made',source:'Stored source',delete:'Delete this artist and their listed works?',confirmDeleteWork:'Delete this artwork?',manualWorks:'MANUALLY ADDED WORKS',movementAtlas:'Movement comparison',countries:'Countries',selectAllCountries:'Select / clear all',exportChanges:'EXPORT CHANGES',migrationExport:'EXPORT FOR FIREBASE',period:'Period',artistSpan:'Selected artist lifespan',storedInfo:'Stored artwork information',loadingInfo:'Preparing and saving artwork information.',noInfo:'No stored description yet.',favorites:'MY FAVORITES',searchArtists:'Search artists',movementFilter:'Movement filter',allMovements:'All movements',clearMovementFilter:'Clear movement filter',noSearchResult:'No matching artists.'}
+  ko: {collection:'나의 화가 목록',sort:'정렬',nameAsc:'이름순',birthAsc:'생년순',addArtist:'화가 추가',newRecord:'NEW RECORD',addTitle:'화가 추가',addHelp:'이름을 입력한 뒤 자동완성 목록에서 정확한 후보를 선택해 저장하세요.',addArtwork:'그림 추가',addArtworkTitle:'그림 1점 추가',artworkPage:'로컬 이미지 파일',artworkTitleInput:'작품 제목 (선택)',artworkYearInput:'제작 연도 (선택)',entryType:'추가할 항목',artist:'화가',painting:'그림',webpage:'웹페이지 주소',name:'이름',birthYear:'Birth year (optional)',artistName:'화가 이름',madeYear:'제작 연도',save:'저장하기',timeline:'작품 연표',slideshow:'슬라이드 쇼',selectWork:'작품을 선택하면\n이곳에서 자세히 볼 수 있어요.',noWork:'아직 등록한 작품이 없습니다.',noImage:'이미지 없음',untitled:'제목 없는 작품',unknown:'정보 없음',country:'제작 국가',movement:'화파',year:'제작 연도',source:'저장된 출처',delete:'삭제',confirmDelete:'이 화가와 등록한 작품을 목록에서 삭제할까요?',confirmDeleteWork:'이 작품을 삭제할까요?',manualWorks:'직접 추가한 작품',movementAtlas:'미술 사조로 보기',countries:'비교할 나라',selectAllCountries:'전체 선택 / 해제',exportChanges:'변경사항_압축',migrationExport:'FIREBASE 내보내기',period:'기간',artistSpan:'선택 화가의 활동 기간',storedInfo:'저장된 작품 정보',loadingInfo:'작품 정보를 정리해 저장하는 중입니다.',noInfo:'저장된 설명이 아직 없습니다.',favorites:'MY FAVORITES',searchArtists:'화가 이름 검색',movementFilter:'사조 선택',allMovements:'전체 사조',clearMovementFilter:'사조 필터 해제',noSearchResult:'일치하는 화가가 없습니다.'},
+  en: {collection:'MY ARTISTS',sort:'SORT',nameAsc:'Name',birthAsc:'Birth year',addArtist:'Add artist',newRecord:'NEW RECORD',addTitle:'Add artist',addHelp:'Enter a name, then choose the correct artist from suggestions.',addArtwork:'Add artwork',addArtworkTitle:'Add one artwork',artworkPage:'Local image file',artworkTitleInput:'Artwork title (optional)',artworkYearInput:'Year made (optional)',entryType:'Add',artist:'Artist',painting:'Artwork',webpage:'Webpage URL',name:'Name',birthYear:'Birth year (optional)',artistName:'Artist name',madeYear:'Year made',save:'Save',timeline:'WORKS TIMELINE',slideshow:'Slideshow',selectWork:'Select an artwork\nto view its details here.',noWork:'No artworks have been added yet.',noImage:'No image available',untitled:'Untitled',unknown:'Unknown',country:'Country made',movement:'Movement',year:'Year made',source:'Stored source',delete:'Delete this artist and their listed works?',confirmDeleteWork:'Delete this artwork?',manualWorks:'MANUALLY ADDED WORKS',movementAtlas:'Movement comparison',countries:'Countries',selectAllCountries:'Select / clear all',exportChanges:'EXPORT CHANGES',migrationExport:'EXPORT FOR FIREBASE',period:'Period',artistSpan:'Selected artist lifespan',storedInfo:'Stored artwork information',loadingInfo:'Preparing and saving artwork information.',noInfo:'No stored description yet.',favorites:'MY FAVORITES',searchArtists:'Search artists',movementFilter:'Movement filter',allMovements:'All movements',clearMovementFilter:'Clear movement filter',noSearchResult:'No matching artists.'}
 };
 Object.assign(copy.ko, {
   fullName:'Full Name (목록·연표·HTML 표기)',
   artistAliases:'별명·줄임말 (쉼표로 구분)',
-  artworkPage:'작품 웹페이지 주소',
-  addFromWeb:'웹 주소로 추가',
+  artworkPage:'로컬 이미지 파일',
   localArtwork:'로컬 이미지',
   chooseLocalImage:'파일 선택',
   localArtworkTitle:'작품 제목',
@@ -208,8 +203,7 @@ Object.assign(copy.ko, {
 Object.assign(copy.en, {
   fullName:'Full Name (display name)',
   artistAliases:'Aliases / short names (comma-separated)',
-  artworkPage:'Artwork webpage URL',
-  addFromWeb:'Add from webpage',
+  artworkPage:'Local image file',
   localArtwork:'Local image',
   chooseLocalImage:'Choose image file',
   localArtworkTitle:'Artwork title',
@@ -554,20 +548,6 @@ function movementContributionScore(work, artist={}) {
   if (work?.verified) score += 500;
   return score;
 }
-function thumbnailDownloadScore(work, artist={}, featuredWorkIds=new Set()) {
-  let score = representativeScore(work, artist);
-  if (work?.representative) score += 100000;
-  if (work?.movementContribution) score += 50000;
-  if (featuredWorkIds.has(String(work?.id || ''))) score += 40000;
-  return score;
-}
-function thumbnailDownloadWorksForArtist(artist, limit=artistThumbnailDownloadLimit) {
-  const works = artist?.works || [];
-  const featuredWorkIds = new Set(Array.isArray(artist?.featuredWorkIds) ? artist.featuredWorkIds.map(String) : []);
-  const selected = [...works]
-    .sort((a,b) => thumbnailDownloadScore(b,artist,featuredWorkIds) - thumbnailDownloadScore(a,artist,featuredWorkIds) || workYearForSort(a) - workYearForSort(b));
-  return limit > 0 ? selected.slice(0,limit) : selected;
-}
 const workYearLabel = work => {
   const start = work?.year;
   const end = work?.yearEnd;
@@ -650,6 +630,15 @@ function artistLinks(artist) {
     catch (_) { return false; }
   }).map(link => typeof link === 'string' ? {url:link} : link) : [];
 }
+function artistWikipediaUrl(artist, originalName = '') {
+  const direct = typeof artist?.links?.wikipedia === 'string' ? artist.links.wikipedia : '';
+  try {
+    if (direct && ['http:', 'https:'].includes(new URL(direct).protocol)) return direct;
+  } catch (_) {}
+  const saved = artistLinks(artist).find(link => /(^|\.)wikipedia\.org$/i.test(new URL(link.url).hostname));
+  if (saved?.url) return saved.url;
+  return `https://en.wikipedia.org/w/index.php?search=${encodeURIComponent(originalName || artist?.name?.en || artist?.name?.ko || '')}`;
+}
 function artworkLinks(work) {
   return Array.isArray(work?.links) ? work.links.filter(link => {
     try { return ['http:', 'https:'].includes(new URL(link.url || link).protocol); }
@@ -660,32 +649,6 @@ function setArtworkLinks(artist, work, links) {
   const copies = (artist.works || []).filter(item => selectionKey(item) === selectionKey(work));
   copies.forEach(item => { item.links = links.map(link => ({...link})); });
   work.links = links.map(link => ({...link}));
-}
-function readableNameFromPageUrl(pageUrl) {
-  try {
-    const parsed = new URL(pageUrl);
-    const lastSegment = parsed.pathname.split('/').filter(Boolean).pop() || parsed.hostname;
-    return decodeURIComponent(lastSegment).replace(/_/g, ' ').replace(/\.[a-z0-9]{2,5}$/i, '').trim() || parsed.hostname;
-  } catch (_) {
-    return pageUrl.replace(/^https?:\/\//i, '').replace(/^www\./i, '').split(/[/?#]/)[0] || pageUrl;
-  }
-}
-function isNetworkImportError(error) {
-  return /EACCES|ENOTFOUND|ECONNRESET|ETIMEDOUT|network|fetch|timeout|failed/i.test(error?.message || '');
-}
-function offlineArtistFromPageUrl(pageUrl) {
-  const label = readableNameFromPageUrl(pageUrl);
-  return {
-    id:`artist-url-${Date.now()}`,
-    name:{ko:label,en:label},
-    birth:null,
-    death:null,
-    nationality:{ko:'',en:''},
-    source:pageUrl,
-    links:[{url:pageUrl,label:'source'}],
-    works:[],
-    generated:{schema:18,fetchedAt:new Date().toISOString(),source:pageUrl,importStatus:'offline-placeholder'}
-  };
 }
 function isYouTubeLink(link) {
   try { return /(^|\.)youtube\.com$|(^|\.)youtu\.be$|(^|\.)youtube-nocookie\.com$/i.test(new URL(link?.url || link).hostname); }
@@ -859,18 +822,7 @@ function setupSortableLinkButtons(root, options) {
     document.addEventListener('pointercancel', cancel);
   }));
 }
-// Keep the card dimensions, but request a lightweight Wikimedia thumbnail.
-function thumbnail(url, width = 240) {
-  if (!url) return url;
-  // Wikimedia gallery URLs may already be thumbnail URLs.
-  if (url.includes('/thumb/')) return url;
-  if (url.includes('commons.wikimedia.org/wiki/Special:FilePath/')) return `${url}${url.includes('?') ? '&' : '?'}width=${width}`;
-  const match = url.match(/^(https:\/\/upload\.wikimedia\.org\/wikipedia\/[^/]+)\/(.+)\/([^/]+)$/);
-  if (!match) return url;
-  const [, repository, directories, fileName] = match;
-  try { return `${repository}/thumb/${directories}/${fileName}/${width}px-${fileName}`; }
-  catch (_) { return url; }
-}
+function thumbnail(url, width = 240) { return ''; }
 function isExternalImageSource(value) { return /^https?:\/\//i.test(String(value || '')); }
 const offlineArtworkPlaceholder = 'data/thumbnails/_placeholder/artwork-placeholder.png';
 function localArtworkImage(work) {
@@ -880,8 +832,7 @@ function localArtworkImage(work) {
   return work?.thumbnailCacheKey ? `${image}?v=${encodeURIComponent(work.thumbnailCacheKey)}` : image;
 }
 function externalArtworkImage(work, width = 240) {
-  const source = [work?.thumbnail, work?.image, work?.highResImage, work?.highResOriginal].find(isExternalImageSource);
-  return source ? thumbnail(source, width) : '';
+  return '';
 }
 function artworkImageDisplay(work, {detail=false} = {}) {
   const highRes = work?.highResImage || '';
@@ -1091,12 +1042,7 @@ function saveFailureMessage() {
     : `Administrator save failed: ${reason}`;
 }
 async function normalizeArtistWorksBeforeSave(artist) {
-  if (!artist?.works?.some(work => /^wikidata-Q\d+$/.test(work.id || ''))) return;
-  try {
-    const response = await apiFetch('/api/normalize-artist-works', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({artist})});
-    const result = await response.json();
-    if (response.ok && result.artist) Object.assign(artist, result.artist);
-  } catch (_) { /* Preserve the imported record when the official source is temporarily unavailable. */ }
+  return artist;
 }
 
 function queueArtistSave() {
@@ -1644,7 +1590,7 @@ function renderTimeline() {
     const imageInfo = artworkImageDisplay(w);
     const image = imageInfo.src;
     const movementContribution = Boolean(w.movementContribution);
-    const highResSource = w.highResImage || w.image || '';
+    const highResSource = w.highResImage && !isExternalImageSource(w.highResImage) ? w.highResImage : '';
     const highRes = Boolean(highResSource);
     const featured = isLeonardoTimeline && leonardoFeaturedWorkIds.has(String(w.id || ''));
     const replaceLabel = language === 'ko' ? '로컬 이미지 교체' : 'Replace with local image';
@@ -1659,7 +1605,7 @@ function renderTimeline() {
     const previewButton = image ? `<button class="artwork-preview-button" type="button" title="${esc(previewLabel)}" aria-label="${esc(previewLabel)}">⌕</button>` : '';
     const previewYear = workYearLabel(w) || (language === 'ko' ? '연도 미상' : 'Year unknown');
     const previewArtist = artistDisplayName(artist);
-    const fallbackImage = image && !imageInfo.urlDependent && w.image && image !== thumbnail(w.image) ? thumbnail(w.image) : '';
+    const fallbackImage = '';
     const urlBadge = imageInfo.urlDependent ? urlDependencyBadge() : '';
     const highResBadge = highRes ? `<span class="high-resolution-badge hidden" data-highres-src="${esc(highResSource)}" title="${esc(language === 'ko' ? '고해상도 파일 확인 중' : 'Checking high-resolution file')}">Ⓗ</span>` : '';
     const wikipediaUrl = explicitArtworkWikipediaUrl(w);
@@ -1696,8 +1642,9 @@ function renderTimeline() {
     : `<span class="artist-movement-label">${esc(artistMovement)}</span>`;
   const timelineArtistName = artistDisplayName(artist);
   const timelineArtistNameMarkup = `<span class="timeline-artist-name"${uHangulArtistAttributes(artist, timelineArtistName)}>${esc(timelineArtistName)}</span>`;
+  const originalArtistWikipediaUrl = artistWikipediaUrl(artist, originalName);
   const displayName = language === 'ko' && koreanName
-    ? `${timelineArtistNameMarkup}${originalName && originalName !== koreanName ? ` <a class="original-artist-name" data-uh-ignore="true" href="https://en.wikipedia.org/w/index.php?search=${encodeURIComponent(originalName)}" data-artist-wiki="${esc(artist.qid || '')}">${esc(originalName)}</a>` : ''}${linkControls}`
+    ? `${timelineArtistNameMarkup}${originalName && originalName !== koreanName ? ` <a class="original-artist-name" data-uh-ignore="true" href="${esc(originalArtistWikipediaUrl)}" data-artist-wiki="${esc(artist.qid || '')}">${esc(originalName)}</a>` : ''}${linkControls}`
     : `${esc(loc(artist.name))}${linkControls}`;
   const slideshowHelp = language === 'ko' ? '전체 화면 슬라이드 쇼 시작 · 5초마다 다음 작품' : 'Start fullscreen slideshow · next artwork every 5 seconds';
   const titleModeButton = availableTitleModes.length > 1 ? `<button class="artwork-title-mode-button" type="button" title="${esc(language === 'ko' ? '작품 제목 표기 전환' : 'Switch artwork title language')}" aria-label="${esc(language === 'ko' ? '작품 제목 표기 전환' : 'Switch artwork title language')}">${esc(artworkTitleModeLabels[nextArtworkTitleMode(works)] || 'EN')}</button>` : '';
@@ -1967,7 +1914,7 @@ function setupHighResolutionBadges(artist, works) {
   timeline.querySelectorAll('.art-card[data-work]').forEach(card => {
     const work = worksById.get(String(card.dataset.work || ''));
     const image = card.querySelector('.art-thumb img');
-    const highResSource = work?.highResImage || work?.image || '';
+    const highResSource = work?.highResImage && !isExternalImageSource(work.highResImage) ? work.highResImage : '';
     if (!highResSource || !image) return;
     highResolutionImageWidth(highResSource).then(width => {
       if (!image.isConnected || width < highResolutionMinimumWidth) return;
@@ -2530,11 +2477,14 @@ function setupZoomPan(stage, image) {
   stage.addEventListener('lostpointercapture', stop);
 }
 function openFavoritesWindow() {
-  const favorites = selectedFavoriteWorks().map(({artist, work}) => ({
-    artist: loc(artist.name), title: loc(work.title) || t('untitled'), year: workYearLabel(work) || t('unknown'),
-    image: work.highResImage || slideshowImage(work),
-    fileName: (work.highResImage || slideshowImage(work) || '').split('/').pop().split('?')[0]
-  })).filter(item => item.image);
+  const favorites = selectedFavoriteWorks().map(({artist, work}) => {
+    const image = artworkImageDisplay(work, {detail:true}).src;
+    return {
+      artist: loc(artist.name), title: loc(work.title) || t('untitled'), year: workYearLabel(work) || t('unknown'),
+      image,
+      fileName: (image || '').split('/').pop().split('?')[0]
+    };
+  }).filter(item => item.image);
   if (!favorites.length) return alert(language === 'ko' ? '먼저 작품 썸네일 오른쪽 위의 동그란 선택 버튼을 눌러 그림을 고르세요.' : 'Select artworks with the round button at the top-right of each thumbnail first.');
   const popupWidth = Math.floor(window.screen.availWidth * 0.7);
   const popupHeight = Math.floor(window.screen.availHeight * 0.7);
@@ -2756,38 +2706,6 @@ function openHistoricalEventWikipedia(name) {
 function closeDetail() { detail.classList.remove('show'); $('.main-area').classList.remove('detail-open'); detail.innerHTML = placeholder(); setupDetailPanelResize(); }
 function render() { renderText(); renderList(); if (viewMode === 'movements') renderMovementAtlas(); else renderTimeline(); closeDetail(); }
 
-async function refreshThumbnail(artist, work) {
-  try { const response = await apiFetch('/api/thumbnail', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({artist,work})}); const result = await response.json(); if (!result.thumbnail) return false; work.thumbnail = result.thumbnail; work.thumbnailValidation = 2; persist(); return true; } catch (_) { return false; }
-}
-function queueOfflineThumbnail(artist, work, onSaved, options={}) {
-  if (!artist || !work || (work.thumbnail && work.thumbnailValidation === 2)) return;
-  const key = `${artist.id}:${work.id}`;
-  if (thumbnailRequests.has(key)) return;
-  thumbnailRequests.add(key);
-  const run = async () => {
-    if (work.thumbnail && work.thumbnailValidation === 2) return;
-    const saved = await refreshThumbnail(artist, work);
-    if (saved) onSaved?.(artist, work);
-  };
-  const queue = options.priority ? priorityThumbnailQueue : thumbnailQueue;
-  const next = queue.then(run).finally(() => thumbnailRequests.delete(key));
-  if (options.priority) priorityThumbnailQueue = next.catch(() => {});
-  else thumbnailQueue = next.catch(() => {});
-}
-function queueArtistOfflineThumbnails(artist, options={}) {
-  if (!currentUserIsAdmin || !artist) return;
-  const onSaved = savedArtist => { if (selectedId === savedArtist.id) renderTimeline(); };
-  thumbnailDownloadWorksForArtist(artist).forEach(work => queueOfflineThumbnail(artist, work, onSaved, options));
-}
-async function cacheThumbnailFromInput(artist, work, source) {
-  const response=await apiFetch('/api/thumbnail-from-url',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({artist,work,pageUrl:source})});
-  const result=await response.json().catch(()=>({}));
-  if(!response.ok || !result.thumbnail) throw new Error(result.error || 'Could not import the image');
-  return result.thumbnail;
-}
-async function importThumbnailFromPage(artist, work, pageUrl) {
-  try { work.thumbnail=await cacheThumbnailFromInput(artist,work,pageUrl); work.thumbnailValidation=2; persist(); await saveArtistsNow(); return true; } catch (_) { return false; }
-}
 async function uploadLocalArtworkImage(artist, work, file) {
   if (!currentUserIsAdmin || !file) throw new Error(language === 'ko' ? '관리자 권한과 이미지 파일이 필요합니다.' : 'Administrator access and an image file are required.');
   const form=new FormData();
@@ -2824,61 +2742,16 @@ async function hydrateThumbnails(artist) {
         work.thumbnail = index[work.id].thumbnail;
         work.thumbnailCacheKey = index[work.id].checkedAt || '';
         work.thumbnailValidation = work.thumbnail === offlineArtworkPlaceholder ? 0 : 2;
-      } else if (work.image && !localArtworkImage(work)) {
-        work.thumbnail = thumbnail(work.image);
       }
     });
     persist();
   } catch (_) { /* No local thumbnail index exists for this artist yet. */ }
 }
 async function runThumbnailAgent() {
-  if (!currentUserIsAdmin) return;
-  const artist = artists.find(item => item.id === selectedId);
-  if (!artist) return;
   if (thumbnailObserver) thumbnailObserver.disconnect();
-  const downloadableKeys = new Set(thumbnailDownloadWorksForArtist(artist).map(selectionKey));
-  const queueWork = work => {
-    if (!work || !downloadableKeys.has(selectionKey(work))) return;
-    queueOfflineThumbnail(artist, work, savedArtist => {
-      if (selectedId === savedArtist.id) renderTimeline();
-    }, {priority:true});
-  };
-  // Secure the movement-contribution images first; these are the works that
-  // best express the artist's known movement in the timeline.
-  const contributionKeys = new Set(movementContributionWorksForArtist(artist).map(selectionKey));
-  movementContributionWorksForArtist(artist).forEach(queueWork);
-  (artist.works || []).filter(work => !contributionKeys.has(selectionKey(work))).forEach(queueWork);
-  const cards = [...timeline.querySelectorAll('.art-card[data-work]')];
-  const workFor = card => artist.works?.find(work => work.id === card.dataset.work);
-  if (!('IntersectionObserver' in window)) { cards.slice(0, 8).forEach(card => queueWork(workFor(card))); return; }
-  thumbnailObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => { if (entry.isIntersecting) { queueWork(workFor(entry.target)); thumbnailObserver.unobserve(entry.target); } });
-  }, {root:timeline, rootMargin:'120px 0px'});
-  cards.forEach(card => thumbnailObserver.observe(card));
 }
-async function cacheOfflineThumbnailCatalogue() {
-  if (!currentUserIsAdmin) return;
-  for (const artist of artists) await hydrateThumbnails(artist);
-  const selectedArtist = artists.find(artist => artist.id === selectedId);
-  queueArtistOfflineThumbnails(selectedArtist, {priority:true});
-  artists.filter(artist => artist.id !== selectedId).forEach(artist => queueArtistOfflineThumbnails(artist));
-}
-
 async function enrichArtist() {
-  if (!currentUserIsAdmin) return;
-  const artist = artists.find(a => a.id === selectedId);
-  const hasWorks = (artist?.works || []).length > 0;
-  if (!artist || (artist.generated?.schema >= 20 && hasWorks) || (sessionStorage.getItem(`art-atlas-tried-20-${artist.id}`) && hasWorks)) return;
-  sessionStorage.setItem(`art-atlas-tried-20-${artist.id}`, '1');
-  const original = timeline.innerHTML;
-  timeline.innerHTML = `${original}<p class="loading">${language === 'ko' ? 'Wikimedia에서 작품 자료를 불러와 저장하는 중…' : 'Saving artwork data from Wikimedia…'}</p>`;
-  try {
-    const response = await apiFetch('/api/enrich', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(artist)});
-    if (!response.ok) throw new Error('Could not retrieve artwork data');
-    const result = await response.json();
-    if (result.works?.length) { const existingWorks = artist.works || [], existingByKey = new Map(existingWorks.map(work => [selectionKey(work), work])), generatedByKey = new Map(existingWorks.filter(isGeneratedWork).map(work => [selectionKey(work), work])), fetchedByKey = new Map(result.works.map(work => [selectionKey(work), {...work,origin:'generated'}])); const isUpdate = Boolean(artist.generated?.file && generatedByKey.size); const generatedWorks = isUpdate ? [...generatedByKey.values()].map(existing => { const fetched = fetchedByKey.get(selectionKey(existing)); return fetched ? {...fetched,description:existing.description || fetched.description,detail:existing.detail || fetched.detail,thumbnail:existing.thumbnail || fetched.thumbnail,thumbnailValidation:existing.thumbnailValidation || fetched.thumbnailValidation,highResImage:existing.highResImage || fetched.highResImage,highResOriginal:existing.highResOriginal || fetched.highResOriginal} : existing; }) : result.works.map(work => { const fetched = {...work,origin:'generated'}, existing = existingByKey.get(selectionKey(work)); return existing && !isManualWork(existing) ? {...fetched,description:existing.description || fetched.description,detail:existing.detail || fetched.detail,thumbnail:existing.thumbnail || fetched.thumbnail,thumbnailValidation:existing.thumbnailValidation || fetched.thumbnailValidation,highResImage:existing.highResImage || fetched.highResImage,highResOriginal:existing.highResOriginal || fetched.highResOriginal} : fetched; }); artist.works = [...existingWorks.filter(work => !isGeneratedWork(work)),...generatedWorks]; if (result.artist?.name?.ko || result.artist?.name?.en) { artist.name = result.artist.name; artist.birth = result.artist.birth || artist.birth; artist.death = result.artist.death || artist.death; artist.nationality = result.artist.nationality || artist.nationality; artist.movement = result.artist.movement || artist.movement; } artist.works = selectArtistWorks(artist.works, artistImportedWorkLimit, artist); artist.generated = {schema:result.schema || 20,file:generatedCatalogueFile({id:artist.id,qid:result.qid || artist.qid}),fetchedAt:result.fetchedAt}; await normalizeArtistWorksBeforeSave(artist); await hydrateThumbnails(artist); persist(); await saveArtistsNow(); render(); queueArtistOfflineThumbnails(artist,{priority:true}); }
-    else timeline.innerHTML = original;
-  } catch (_) { timeline.innerHTML = original; }
+  return;
 }
 
 function setArtworkDialogBusy(busy, message='') {
@@ -2905,58 +2778,6 @@ function openAddArtworkDialog(artist) {
   setArtworkDialogBusy(false);
   timelineArtworkPicker.value='';
   timelineArtworkPicker.click();
-}
-
-async function addArtworkToSelectedArtist(pageUrl) {
-  const artist = artists.find(item => item.id === artworkDialog.dataset.artistId);
-  if (!artist) throw new Error('Selected artist is no longer available');
-  const response = await apiFetch('/api/artist-from-url', {
-    method:'POST',
-    headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({pageUrl})
-  });
-  const imported = await response.json();
-  if (!response.ok || imported.error) throw new Error(imported.error || 'Artwork unavailable');
-  const candidates = [imported.work, ...(imported.works || [])].filter(Boolean);
-  const work = candidates.find(item => item.id || selectionKey(item));
-  if (!work) throw new Error(language === 'ko' ? '주소에서 작품 정보를 찾지 못했습니다.' : 'No artwork information was found at that address.');
-  const existing = (artist.works || []).find(item => item.id === work.id || selectionKey(item) === selectionKey(work));
-  if (existing) {
-    const previous = {...existing};
-    Object.assign(existing, {
-      ...existing,
-      ...work,
-      origin:'manual',
-      detail:existing.detail || work.detail,
-      thumbnail:existing.thumbnail || work.thumbnail,
-      thumbnailValidation:existing.thumbnailValidation || work.thumbnailValidation,
-      highResImage:existing.highResImage || work.highResImage,
-      highResOriginal:existing.highResOriginal || work.highResOriginal
-    });
-    await normalizeArtistWorksBeforeSave(artist);
-    persist();
-    if (!await saveArtistsNow()) {
-      Object.assign(existing, previous);
-      throw new Error(language === 'ko' ? '저장 파일을 업데이트하지 못했습니다.' : 'Could not update the saved collection.');
-    }
-    queueOfflineThumbnail(artist, existing, savedArtist => {
-      if (selectedId === savedArtist.id) renderTimeline();
-    });
-    return existing;
-  }
-  const added = {...work, origin:'manual'};
-  artist.works = selectArtistWorks([...(artist.works || []), added], artistImportedWorkLimit, artist);
-  const savedWork = artist.works.find(item => item.id === added.id || selectionKey(item) === selectionKey(added));
-  await normalizeArtistWorksBeforeSave(artist);
-  persist();
-  if (!await saveArtistsNow()) {
-    artist.works = (artist.works || []).filter(item => item.id !== added.id);
-    throw new Error(language === 'ko' ? '저장 파일을 업데이트하지 못했습니다.' : 'Could not update the saved collection.');
-  }
-  queueOfflineThumbnail(artist, savedWork, savedArtist => {
-    if (selectedId === savedArtist.id) renderTimeline();
-  });
-  return savedWork;
 }
 
 function cleanedArtworkInput(value='') {
@@ -3015,7 +2836,7 @@ async function cacheThumbnailFromFile(artist, work, file) {
   form.append('artist',JSON.stringify({id:artist.id}));
   form.append('work',JSON.stringify(work));
   form.append('image',file,file.name);
-  const response=await apiFetch('/api/thumbnail-upload',{method:'POST',body:form});
+  const response=await apiFetch('/api/local-thumbnail-image',{method:'POST',body:form});
   const result=await response.json().catch(()=>({}));
   if(!response.ok || !result.thumbnail) throw new Error(result.error || 'Could not upload the image');
   return result.thumbnail;
@@ -3090,25 +2911,14 @@ timelineArtworkPicker.addEventListener('change', event => {
 });
 $('#add-artwork-form').addEventListener('submit', async event => {
   event.preventDefault();
-  const source=event.submitter?.value || (pendingLocalArtworkFiles.length || $('#local-artwork-file').files?.length ? 'local' : 'web');
-  const localImage=source === 'local';
   const files=pendingLocalArtworkFiles.length ? pendingLocalArtworkFiles : [...($('#local-artwork-file').files || [])];
-  let pageUrl='';
-  if (!localImage) {
-    const rawUrl=cleanedArtworkInput($('#artwork-page-url').value);
-    try {
-      const parsed = new URL(/^https?:\/\//i.test(rawUrl) ? rawUrl : `https://${rawUrl}`);
-      if (!['http:', 'https:'].includes(parsed.protocol)) throw new Error('Invalid protocol');
-      pageUrl = parsed.href;
-    } catch (_) {
-      setArtworkDialogBusy(false, language === 'ko' ? 'HTTPS 웹페이지 주소를 입력하세요.' : 'Enter an HTTPS webpage URL.');
-      return;
-    }
+  if (!files.length) {
+    setArtworkDialogBusy(false, language === 'ko' ? '로컬 이미지 파일만 추가할 수 있습니다.' : 'Only local image files can be added.');
+    return;
   }
-  setArtworkDialogBusy(true, localImage ? (files.length > 1 ? (language === 'ko' ? `이미지를 저장하는 중입니다… 1/${files.length}` : `Saving images… 1/${files.length}`) : (language === 'ko' ? '이미지를 저장하는 중입니다.' : 'Saving image.')) : (language === 'ko' ? '작품 정보를 가져오는 중입니다.' : 'Importing artwork information.'));
+  setArtworkDialogBusy(true, files.length > 1 ? (language === 'ko' ? `이미지를 저장하는 중입니다… 1/${files.length}` : `Saving images… 1/${files.length}`) : (language === 'ko' ? '이미지를 저장하는 중입니다.' : 'Saving image.'));
   try {
-    if (localImage) await addLocalArtworksToSelectedArtist(files, $('#local-artwork-title-input').value.trim(), $('#local-artwork-year-input').value);
-    else await addArtworkToSelectedArtist(pageUrl);
+    await addLocalArtworksToSelectedArtist(files, $('#local-artwork-title-input').value.trim(), $('#local-artwork-year-input').value);
     pendingLocalArtworkFiles=[];
     artworkDialog.close();
     render();
@@ -3174,75 +2984,22 @@ $('#add-form').addEventListener('submit', async event => {
   const type = $('#entry-type').value, name = $('#entry-name').value.trim(), fullName = $('#entry-full-name').value.trim();
   const aliases = $('#entry-artist-aliases').value.split(',').map(value => value.trim()).filter(Boolean);
   if (!name) return;
-  setAddFormBusy(true, language === 'ko' ? '페이지 정보를 가져오는 중입니다.' : 'Importing page information.');
-  let skipEnrichAfterSave = false;
-  let postSaveNotice = '';
+  setAddFormBusy(true, language === 'ko' ? '화가 항목을 저장하는 중입니다.' : 'Saving artist.');
   try {
-    if (type === 'url' || type === 'artist') {
-      const pageUrl = /^https?:\/\//i.test(name) ? name : 'https://' + name;
-      try {
-        const response=await apiFetch('/api/artist-from-url',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({pageUrl})});
-        const imported=await response.json();
-        if(!response.ok || imported.error) throw new Error(imported.error || 'Page unavailable');
-        let artist=artists.find(item => (imported.artist.qid && item.qid === imported.artist.qid) || item.id === imported.artist.id || (imported.artist.source && item.source === imported.artist.source));
-        if(!artist){ artist=imported.artist; artists.push(artist); }
-        else Object.assign(artist,{...imported.artist,works:artist.works || []});
-        if (fullName) artist.fullName = fullName;
-        if (type === 'artist' && aliases.length) artist.aliases = [...new Set([...artistAliases(artist), ...aliases])];
-        if (imported.work) { const existing = (artist.works || []).find(work => work.id === imported.work.id); if (existing) existing.origin = 'manual'; else artist.works.push({...imported.work,origin:'manual'}); }
-        (imported.works || []).forEach(work => { const existing = (artist.works || []).find(item => selectionKey(item) === selectionKey(work) || item.id === work.id); if (existing) Object.assign(existing,{...work,origin:'manual'}); else artist.works.push({...work,origin:'manual'}); });
-        artist.works = selectArtistWorks(artist.works || [],artistImportedWorkLimit,artist);
-        selectedId=artist.id;
-      } catch (error) {
-        let validPageUrl;
-        try {
-          validPageUrl = new URL(pageUrl);
-          if (!['http:', 'https:'].includes(validPageUrl.protocol)) throw new Error('Invalid protocol');
-        } catch (_) {
-          const message=$('#form-message');
-          message.textContent=language === 'ko' ? 'http 또는 https로 시작하는 웹페이지 주소를 입력해 주세요.' : 'Enter a webpage URL beginning with http or https.';
-          message.classList.remove('hidden');
-          return;
-        }
-        let artist = artists.find(item => item.source === pageUrl || artistLinks(item).some(link => link.url === pageUrl));
-        if (!artist) {
-          artist = offlineArtistFromPageUrl(pageUrl);
-          artists.push(artist);
-        } else {
-          artist.links = artistLinks(artist).some(link => link.url === pageUrl) ? artistLinks(artist) : [...artistLinks(artist), {url:pageUrl,label:'source'}];
-          artist.source = artist.source || pageUrl;
-        }
-        selectedId = artist.id;
-        skipEnrichAfterSave = true;
-        const networkBlocked = isNetworkImportError(error);
-        postSaveNotice = language === 'ko'
-          ? (networkBlocked
-            ? '서버가 지금 외부 웹페이지를 읽지 못해 작품 자동 가져오기는 건너뛰고, 입력한 주소를 출처로 가진 기본 화가 항목으로 저장했습니다.'
-            : '이 페이지에서 작품 자료를 자동으로 찾지 못했지만, 입력한 주소를 출처로 가진 기본 화가 항목으로 저장했습니다.')
-          : (networkBlocked
-            ? 'The server could not read the external page right now, so the app saved a basic artist entry with the URL as its source.'
-            : 'The app could not find artwork data on this page, but saved a basic artist entry with the URL as its source.');
-      }
-    } else if (type === 'artist') {
-      const resolved = await resolveArtist($('#entry-name'));
-      if (!resolved) { const message = $('#form-message'); message.textContent = language === 'ko' ? '자동완성 목록에서 화가 후보를 선택해 주세요.' : 'Select an artist from the suggestion list.'; message.classList.remove('hidden'); return; }
-      const savedName = resolved.label;
-      const id = `artist-${Date.now()}`;
-      const artist = {id, name:{ko:savedName,en:savedName}, qid:resolved.qid, birth:Number($('#entry-birth').value) || null, death:null, nationality:{ko:'',en:''}, works:[]};
-      artists.push(artist); selectedId = id;
-    } else {
-      const qid = $('#entry-name').dataset.qid;
-      if (!qid) { const message=$('#form-message'); message.textContent=language === 'ko' ? '목록에서 작품 후보를 선택해 주세요.' : 'Select an artwork from the suggestion list.'; message.classList.remove('hidden'); return; }
-      try {
-        const response=await apiFetch('/api/artwork',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({qid})});
-        if(!response.ok) throw new Error('Artwork unavailable');
-        const imported=await response.json(); let artist=artists.find(item=>item.qid===imported.artist.qid);
-        if(!artist){ artist=imported.artist; artists.push(artist); }
-        const existing = (artist.works || []).find(work => work.id === imported.work.id);
-        if (existing) existing.origin = 'manual'; else artist.works.push({...imported.work,origin:'manual'});
-        selectedId=artist.id;
-      } catch (_) { const message=$('#form-message'); message.textContent=language === 'ko' ? '작품 정보를 가져오지 못했습니다. 다른 후보를 선택해 주세요.' : 'Could not import this artwork. Choose another suggestion.'; message.classList.remove('hidden'); return; }
+    if (type !== 'artist') {
+      const message=$('#form-message');
+      message.textContent=language === 'ko' ? '웹 URL 또는 외부 작품 QID 가져오기는 제거되었습니다. 화가 항목은 로컬 이미지 파일로만 보강하세요.' : 'Web URL and external artwork QID import have been removed. Add images from local files only.';
+      message.classList.remove('hidden');
+      return;
     }
+    const resolved = await resolveArtist($('#entry-name'));
+    if (!resolved) { const message = $('#form-message'); message.textContent = language === 'ko' ? '자동완성 목록에서 화가 후보를 선택해 주세요.' : 'Select an artist from the suggestion list.'; message.classList.remove('hidden'); return; }
+    const savedName = resolved.label;
+    const id = `artist-${Date.now()}`;
+    const artist = {id, name:{ko:savedName,en:savedName}, qid:resolved.qid, birth:Number($('#entry-birth').value) || null, death:null, nationality:{ko:'',en:''}, works:[]};
+    if (fullName) artist.fullName = fullName;
+    if (aliases.length) artist.aliases = aliases;
+    artists.push(artist); selectedId = id;
     const selectedArtist=artists.find(artist=>artist.id===selectedId);
     await normalizeArtistWorksBeforeSave(selectedArtist);
     persist();
@@ -3254,13 +3011,6 @@ $('#add-form').addEventListener('submit', async event => {
     }
     dialog.close();
     render();
-    queueArtistOfflineThumbnails(selectedArtist,{priority:true});
-    if (postSaveNotice) alert(postSaveNotice);
-    if (!skipEnrichAfterSave) {
-      await enrichArtist();
-      await normalizeArtistWorksBeforeSave(selectedArtist);
-      await saveArtistsNow();
-    }
   } finally {
     setAddFormBusy(false);
   }
@@ -3310,7 +3060,6 @@ async function startApp() {
   await enrichArtist();
   restoreLastTimelinePosition();
   if (currentUserIsAdmin) {
-    await cacheOfflineThumbnailCatalogue();
     runThumbnailAgent();
   }
 }

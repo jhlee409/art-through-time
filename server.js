@@ -1,13 +1,12 @@
-/* Art Atlas local server: fetches Wikimedia metadata once, then stores it locally. */
+/* Art Atlas local server: stores local collection data and local image files. */
 const http = require('node:http');
 const https = require('node:https');
 const fsSync = require('node:fs');
 const fs = require('node:fs/promises');
-const dns = require('node:dns/promises');
 const path = require('node:path');
 const { execFile } = require('node:child_process');
 const { promisify } = require('node:util');
-const { URL, fileURLToPath } = require('node:url');
+const { URL } = require('node:url');
 const { createHash, randomBytes, timingSafeEqual } = require('node:crypto');
 const { normalizeArtistsPayload, validateArtistsPayload, firebaseExport } = require('./data-contract');
 const { invalidArtworkThumbnail } = require('./thumbnail-validation');
@@ -20,7 +19,7 @@ process.once('uncaughtException', error => {
   }
   throw error;
 });
-const root = __dirname, dataDir = path.join(root, 'data'), generatedDir = path.join(dataDir, 'generated'), highResolutionDir = path.join(dataDir, 'high-resolution'), imageStagingDir = path.join(dataDir, '.image-staging'), artistsFile = path.join(dataDir, 'artists.json'), techniquesFile = path.join(dataDir, 'techniques.json'), topicsFile = path.join(dataDir, 'topics.json'), topicImageDir = path.join(dataDir, 'topic-images'), movementSectionLinksFile = path.join(dataDir, 'movement-section-links.json'), backupsDir = path.join(dataDir, 'backups'), accessControlFile = path.join(dataDir, 'access-control.json'), migrationAssetManifestFile = path.join(dataDir, 'migration-assets.json'), auditLogFile = path.join(dataDir, 'audit-log.jsonl');
+const root = __dirname, dataDir = path.join(root, 'data'), highResolutionDir = path.join(dataDir, 'high-resolution'), imageStagingDir = path.join(dataDir, '.image-staging'), artistsFile = path.join(dataDir, 'artists.json'), techniquesFile = path.join(dataDir, 'techniques.json'), topicsFile = path.join(dataDir, 'topics.json'), topicImageDir = path.join(dataDir, 'topic-images'), movementSectionLinksFile = path.join(dataDir, 'movement-section-links.json'), backupsDir = path.join(dataDir, 'backups'), accessControlFile = path.join(dataDir, 'access-control.json'), migrationAssetManifestFile = path.join(dataDir, 'migration-assets.json'), auditLogFile = path.join(dataDir, 'audit-log.jsonl');
 function loadLocalEnvironment() {
   try {
     for (const line of fsSync.readFileSync(path.join(root,'.env'),'utf8').split(/\r?\n/)) {
@@ -39,7 +38,6 @@ const adminSessionIdleMs = 90 * 1000;
 const jsonRequestBodyLimit = 12 * 1024 * 1024;
 let accessControl = {schema:1,defaultRole:'viewer',roles:{[adminEmail]:'admin'}};
 const mime = {'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.jpg':'image/jpeg','.jpeg':'image/jpeg','.png':'image/png','.webp':'image/webp','.gif':'image/gif','.svg':'image/svg+xml','.woff2':'font/woff2'};
-const catalogueSchema = 20;
 const execFileAsync = promisify(execFile);
 const ffmpegPath = process.env.ART_ATLAS_FFMPEG || (fsSync.existsSync('C:\\ffmpeg\\bin\\ffmpeg.exe') ? 'C:\\ffmpeg\\bin\\ffmpeg.exe' : 'ffmpeg');
 const artistImportedWorkLimit = 60;
@@ -48,7 +46,6 @@ const sourceImageInputLimit = 500 * 1024 * 1024;
 let nextWikimediaRequestAt = 0;
 let artistsWriteQueue = Promise.resolve();
 let lastArtistsBackupAt = 0;
-const externalHostValidation = new Map();
 function normalizedEmail(value='') { return String(value || '').trim().toLowerCase(); }
 function samePassword(value='') {
   if (!adminPasswordHash) return false;
@@ -89,12 +86,12 @@ function adminSession(req) {
 function sendAdminRequired(res) { res.writeHead(401,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:false,error:'Administrator authentication is required'})); }
 function requiresAdmin(req, pathname) {
   if (pathname === '/api/migration-export') return true;
-  return req.method !== 'GET' && ['/api/artists','/api/techniques','/api/movement-documents','/api/movement-documents/refresh','/api/movement-section-links','/api/local-artwork-image','/api/topic-artworks','/api/topic-artwork-image','/api/topic-artwork','/api/artist-from-url','/api/normalize-artist-works','/api/rules/check-and-apply','/api/artwork','/api/artwork-info','/api/thumbnail-from-url','/api/thumbnail-upload','/api/thumbnail','/api/enrich'].includes(pathname);
+  return req.method !== 'GET' && ['/api/artists','/api/techniques','/api/movement-documents','/api/movement-documents/refresh','/api/movement-section-links','/api/local-artwork-image','/api/topic-artworks','/api/topic-artwork-image','/api/topic-artwork','/api/normalize-artist-works','/api/rules/check-and-apply','/api/artwork-info','/api/local-thumbnail-image'].includes(pathname);
 }
 function isJsonRequest(req, pathname) {
   if (req.method === 'GET' || req.method === 'OPTIONS') return false;
   if (pathname === '/api/movement-documents') return req.method === 'DELETE';
-  return ['/api/auth/login','/api/artists','/api/techniques','/api/movement-documents/refresh','/api/movement-section-links','/api/artist-from-url','/api/normalize-artist-works','/api/rules/check-and-apply','/api/artwork','/api/artwork-info','/api/thumbnail-from-url','/api/thumbnail','/api/enrich'].includes(pathname);
+  return ['/api/auth/login','/api/artists','/api/techniques','/api/movement-documents/refresh','/api/movement-section-links','/api/normalize-artist-works','/api/rules/check-and-apply','/api/artwork-info'].includes(pathname);
 }
 function enforceJsonRequestLimit(req, res, pathname) {
   if (!isJsonRequest(req, pathname)) return true;
@@ -154,12 +151,6 @@ const api = params => `https://www.wikidata.org/w/api.php?${new URLSearchParams(
 const koreanArtistNameOverrides = {Q6394591:'바실리 푸키레프',Q104884:'카스파 다비드 프리드리히',Q5598:'렘브란트 하르먼손 반 레인'};
 const englishArtistNameOverrides = {Q5598:'Rembrandt Harmenszoon van Rijn'};
 const koreanArtworkTitleOverrides = {Q2030685:'성모의 결혼식',Q2277635:'라자로의 부활',Q3788158:'헷 펠스켄',Q596683:'새벽',Q1985071:'메디치 마돈나',Q1587929:'리젠게비르게의 아침',Q17493547:'독립전쟁 전몰자의 묘지',Q3649324:'숲속의 엽병',Q4310993:'범선 위에서',Q17321856:'정원 정자',Q18602479:'항구의 밤',Q18603131:'이른 아침 안개 속의 배',Q1423223:'바다 위의 달돋이',Q3139782:'달을 바라보는 남자와 여자',Q2517970:'눈 덮인 오두막',Q999836:'저녁 항구의 배들',Q17422064:'거인산맥의 엘데나 수도원 폐허',Q3822640:'드레스덴의 큰 울타리',Q4126323:'거인산맥의 추억',Q232087:'달을 바라보는 두 남자'};
-const sparseArtistFeaturedWorks = {
-  Q6394591:[{id:'featured-Q3918079',year:1862,title:{ko:'불평등한 결혼',en:'The Unequal Marriage'},country:{ko:'러시아 제국',en:'Russian Empire'},movement:{ko:'사실주의',en:'Realism'},image:'https://commons.wikimedia.org/wiki/Special:FilePath/Vasily_Pukirev_-_%D0%9D%D0%B5%D1%80%D0%B0%D0%B2%D0%BD%D1%8B%D0%B9_%D0%B1%D1%80%D0%B0%D0%BA_-_Google_Art_Project.jpg',description:{ko:'',en:''},source:'https://en.wikipedia.org/wiki/Vasili_Pukirev',verified:true,representative:true,popularity:1000}],
-  Q762:[{id:'wikidata-Q128910',year:1495,title:{ko:'최후의 만찬',en:'The Last Supper'},country:{ko:'밀라노 공국',en:'Duchy of Milan'},movement:{ko:'전성기 르네상스',en:'High Renaissance'},image:'https://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20Vinci%20%281452-1519%29%20-%20The%20Last%20Supper%20%281495-1498%29.jpg',description:{ko:'밀라노 산타 마리아 델레 그라치에 수도원 식당 벽에 그린 레오나르도의 대표 벽화입니다.',en:"Leonardo's landmark mural for the refectory of Santa Maria delle Grazie in Milan."},source:'https://en.wikipedia.org/wiki/The_Last_Supper_(Leonardo)',verified:true,representative:true,popularity:10000}],
-  Q5592:[{id:'michelangelo-last-judgment',year:1541,title:{ko:'최후의 심판',en:'The Last Judgment'},country:{ko:'교황령',en:'Papal States'},movement:{ko:'매너리즘',en:'Mannerism'},image:'https://commons.wikimedia.org/wiki/Special:FilePath/Last%20Judgement%20%28Michelangelo%29.jpg',thumbnail:'https://commons.wikimedia.org/wiki/Special:FilePath/Last%20Judgement%20%28Michelangelo%29.jpg?width=240',description:{ko:'시스티나 성당 제단벽에 그린 미켈란젤로의 대형 프레스코화입니다.',en:"Michelangelo's monumental fresco on the altar wall of the Sistine Chapel."},source:'https://en.wikipedia.org/wiki/The_Last_Judgment_(Michelangelo)',verified:true,representative:true,popularity:10000}],
-  Q42207:[{id:'wikidata-Q2277635',year:1609,title:{ko:'라자로의 부활',en:'The Raising of Lazarus'},country:{ko:'이탈리아',en:'Italy'},movement:{ko:'바로크',en:'Baroque'},image:'http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%20Caravaggio%20006.jpg',thumbnail:'http://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%20Caravaggio%20006.jpg?width=240',description:{ko:'카라바조가 1609년경 메시나에서 제작한 대형 종교화입니다.',en:'Caravaggio painted this large religious work around 1609 in Messina.'},source:'https://en.wikipedia.org/wiki/The_Raising_of_Lazarus_(Caravaggio)',verified:true,representative:true,popularity:10000}]
-};
 // Only show entries described by Wikidata as painters or visual artists.  A name
 // match alone is not enough: it often finds a surname, a philosopher, or a city.
 async function artistSearchCandidates(query) {
@@ -177,9 +168,6 @@ async function artistSearchCandidates(query) {
     .filter((item,index,self) => self.findIndex(other => other.id === item.id) === index);
   return raw.filter(item => /painter|visual artist|화가|예술가/i.test(item.description));
 }
-const commonsApi = params => `https://commons.wikimedia.org/w/api.php?${new URLSearchParams({format:'json',origin:'*',...params})}`;
-const wikipediaApi = params => `https://en.wikipedia.org/w/api.php?${new URLSearchParams({format:'json',origin:'*',...params})}`;
-const openverseApi = params => `https://api.openverse.org/v1/images?${new URLSearchParams(params)}`;
 const normalized = value => String(value || '').toLowerCase().replace(/[^a-z0-9]/g,'');
 const selectionKey = work => {
   const qid = String(work.id || '').match(/^wikidata-Q\d+/)?.[0];
@@ -267,35 +255,6 @@ async function normalizeArtistWorks(artist) {
   works.forEach(work=>{ const qid=String(work.id||'').replace(/^wikidata-/,''), entity=entities[qid]; if(!entity) { unverified++; return; } const title={ko:koreanArtworkTitleOverrides[qid] || entityLabel(entity,'ko'),en:entityLabel(entity,'en')}, made=entityYear(entity,'P571'), country=countries[entityId(entity,'P495')]; if(title.ko&&title.en) work.title=title; if(made) work.year=made; if(country) work.country={ko:entityLabel(country,'ko'),en:entityLabel(country,'en')}; work.metadataVerifiedAt=new Date().toISOString(); verified++; });
   return {artist,verified,unverified};
 }
-async function artworkDetails(qid) {
-  const initial=await getEntities([qid]); const artwork=initial[qid]; const artistQid=entityId(artwork,'P170'); if(!artwork || !artistQid) throw new Error('Artwork creator is not available');
-  const countryQid=entityId(artwork,'P495'), movementQid=entityId(artwork,'P135');
-  const more=await getEntities([artistQid,countryQid,movementQid].filter(Boolean)); const artistEntity=more[artistQid];
-  const nationalityQid=entityId(artistEntity,'P27'); if(nationalityQid) Object.assign(more,await getEntities([nationalityQid]));
-  const file=claimValue(artwork,'P18'); const name={ko:koreanArtistNameOverrides[artistQid] || entityLabel(artistEntity,'ko'),en:englishArtistNameOverrides[artistQid] || entityLabel(artistEntity,'en')};
-  return {artist:{id:`artist-${artistQid}`,qid:artistQid,name,birth:entityYear(artistEntity,'P569'),death:entityYear(artistEntity,'P570'),nationality:{ko:entityLabel(more[nationalityQid],'ko'),en:entityLabel(more[nationalityQid],'en')},works:[]},work:{id:`wikidata-${qid}`,title:{ko:koreanArtworkTitleOverrides[qid] || entityLabel(artwork,'ko'),en:entityLabel(artwork,'en')},year:entityYear(artwork,'P571'),country:{ko:entityLabel(more[countryQid],'ko'),en:entityLabel(more[countryQid],'en')},movement:{ko:entityLabel(more[movementQid],'ko'),en:entityLabel(more[movementQid],'en')},image:file ? `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}` : '',description:{ko:'',en:''},source:`https://www.wikidata.org/wiki/${qid}`}};
-}
-function privateNetworkAddress(address='') {
-  const value=String(address || '').toLowerCase().replace(/^\[|\]$/g,'');
-  if (value === '::1' || value === '::' || /^fe[89ab][0-9a-f]:/i.test(value) || /^f[cd][0-9a-f]{2}:/i.test(value)) return true;
-  const mapped=value.match(/^::ffff:(\d+\.\d+\.\d+\.\d+)$/i)?.[1] || value;
-  const ipv4=mapped.match(/^(\d+)\.(\d+)\.(\d+)\.(\d+)$/);
-  if (!ipv4) return false;
-  const [first,second]=ipv4.slice(1).map(Number);
-  return first === 0 || first === 10 || first === 127 || (first === 169 && second === 254) || (first === 172 && second >= 16 && second <= 31) || (first === 192 && second === 168) || (first === 100 && second >= 64 && second <= 127);
-}
-async function publicHttpsUrl(rawUrl) {
-  const parsed=new URL(rawUrl);
-  const host=parsed.hostname.toLowerCase();
-  if(parsed.protocol !== 'https:' || host === 'localhost' || host.endsWith('.localhost') || privateNetworkAddress(host)) throw new Error('Only public HTTPS pages are allowed');
-  const cached=externalHostValidation.get(host);
-  if (cached && cached.expiresAt > Date.now()) { if (!cached.public) throw new Error('The page resolves to a private network address'); return parsed; }
-  const addresses=await dns.lookup(host,{all:true,verbatim:true});
-  const isPublic=addresses.length > 0 && addresses.every(item => !privateNetworkAddress(item.address));
-  externalHostValidation.set(host,{public:isPublic,expiresAt:Date.now()+15*60*1000});
-  if (!isPublic) throw new Error('The page resolves to a private network address');
-  return parsed;
-}
 async function artistProfileFromQid(qid, fallbackName='') {
   const artistEntity=(await getEntities([qid]))[qid]; if(!artistEntity) throw new Error('Artist not found');
   const nationalityQid=entityId(artistEntity,'P27'), movementQid=entityId(artistEntity,'P135');
@@ -341,7 +300,6 @@ async function hydrateMissingArtistProfiles(payload) {
   }
   return payload;
 }
-function simpleHash(value='') { let hash=2166136261; for (const ch of String(value)) { hash^=ch.charCodeAt(0); hash=Math.imul(hash,16777619); } return (hash>>>0).toString(36); }
 function htmlDecode(value='') {
   const named={nbsp:' ',amp:'&',lt:'<',gt:'>',quot:'"',apos:"'"};
   return String(value || '').replace(/&(#x?[0-9a-f]+|[a-z]+);/gi,(match,entity)=>{
@@ -354,194 +312,7 @@ function tagAttrs(tag='') {
   for (const match of String(tag).matchAll(/([:\w-]+)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/g)) attrs[match[1].toLowerCase()]=htmlDecode(match[2] || match[3] || match[4] || '').trim();
   return attrs;
 }
-function firstSrcFromSet(value='') { return String(value || '').split(',').map(item=>item.trim().split(/\s+/)[0]).find(Boolean) || ''; }
-function cleanPageTitle(value='') {
-  return textFromHtml(value).slice(0,160)
-    .replace(/\s*[|｜–—]\s*.*$/,'')
-    .replace(/\s+-\s+(?:네이버 블로그|블로그|티스토리|Daum.*|NAVER.*|Google.*)$/i,'')
-    .trim();
-}
-function cleanArtistNameFromTitle(value='') {
-  const text=cleanPageTitle(value);
-  const korean=text.match(/(?:화가|작가|서양화가|동양화가)\s*[:：]?\s*([가-힣]{2,8})(?:의|과|와|,|\s|$)/);
-  if(korean) return korean[1];
-  const english=text.match(/(?:artist|painter)\s*[:：]?\s*([A-Z][A-Za-z.'-]+(?:\s+[A-Z][A-Za-z.'-]+){0,4})/i);
-  if(english) return english[1].trim();
-  return text
-    .replace(/^(?:화가|작가|서양화가|동양화가|artist|painter)\s*[:：]?\s*/i,'')
-    .replace(/\s*(?:의\s*)?(?:생애|일생|작품세계|작품\s*세계|대표작|작품|그림|화풍|전시|소개|연보|미술).*$/i,'')
-    .trim() || text || '웹페이지 화가';
-}
-function pageTitleCandidates(html='') {
-  const metas=[...String(html).matchAll(/<meta\b[^>]*>/gi)].map(match=>tagAttrs(match[0]));
-  return [
-    ...metas.filter(attrs=>/^(og:title|twitter:title|title)$/i.test(attrs.property || attrs.name || '')).map(attrs=>attrs.content),
-    ...[...String(html).matchAll(/<h1\b[^>]*>([\s\S]*?)<\/h1>/gi)].map(match=>match[1]),
-    String(html).match(/<title\b[^>]*>([\s\S]*?)<\/title>/i)?.[1]
-  ].filter(Boolean);
-}
-function imageFromAttrs(attrs, baseUrl) {
-  const source=attrs.src || attrs['data-src'] || attrs['data-original'] || attrs['data-lazy-src'] || firstSrcFromSet(attrs.srcset || attrs['data-srcset']);
-  if(!source || /^data:/i.test(source) || /\.svg(?:\?|$)/i.test(source)) return '';
-  try {
-    const url=new URL(source.replace(/&amp;/g,'&'),baseUrl);
-    if(!/^https?:$/.test(url.protocol)) return '';
-    return url.href;
-  } catch (_) { return ''; }
-}
-function cleanWorkTitle(value='', fallback='') {
-  const text=shortText(textFromHtml(value),140)
-    .replace(/^(?:작품명|제목|title)\s*[:：]\s*/i,'')
-    .replace(/\s*(?:이미지|사진|출처|copyright|all rights reserved).*$/i,'')
-    .replace(/\s+/g,' ')
-    .trim();
-  const sentence=(text.match(/^(.{2,90}?)(?:[.!?。]|$)/)?.[1] || text).trim();
-  return sentence && sentence.length <= 90 ? sentence : fallback;
-}
-function extractYear(text='') { return Number(String(text).match(/\b(1[4-9]\d{2}|20\d{2})\b/)?.[1]) || null; }
-function contextTextAround(html, index, radius=900) {
-  const start=Math.max(0,index-radius), end=Math.min(html.length,index+radius);
-  return shortText(textFromHtml(html.slice(start,end)),700);
-}
-function pageWorksFromHtml(html, baseUrl) {
-  const works=[], seen=new Set(), pageHost=new URL(baseUrl).hostname;
-  const add = (image, titleText, descriptionText, index) => {
-    if(!image || seen.has(image)) return;
-    seen.add(image);
-    const title=cleanWorkTitle(titleText, `자료 이미지 ${works.length + 1}`);
-    const description=shortText(descriptionText || titleText || '',760);
-    if(title === `자료 이미지 ${works.length + 1}` && description.length < 20) return;
-    const hasKorean=/[가-힣]/.test(`${title} ${description}`);
-    const summary=hasKorean ? {ko:description,en:''} : {ko:'',en:description};
-    works.push({id:`webpage-${simpleHash(image)}`,year:extractYear(`${title} ${description}`),title:{ko:title,en:title},country:{ko:'',en:''},movement:{ko:'',en:''},image,thumbnail:image,description:summary,detail:{schema:2,fetchedAt:new Date().toISOString(),summary,sections:hasKorean ? {ko:[{title:'웹페이지 설명',body:description}],en:[]} : {ko:[],en:[{title:'Webpage description',body:description}]},sources:[baseUrl],facts:{}},source:baseUrl,verified:false,representative:index < 12,popularity:500-index});
-  };
-  for (const match of String(html).matchAll(/<figure\b[^>]*>([\s\S]*?)<\/figure>/gi)) {
-    const block=match[0], img=block.match(/<img\b[^>]*>/i)?.[0], attrs=tagAttrs(img || ''), image=imageFromAttrs(attrs,baseUrl);
-    const caption=block.match(/<figcaption\b[^>]*>([\s\S]*?)<\/figcaption>/i)?.[1] || attrs.alt || attrs.title || '';
-    add(image,caption,shortText([caption,contextTextAround(html,match.index || 0,500)].filter(Boolean).join(' '),760),works.length);
-  }
-  for (const match of String(html).matchAll(/<img\b[^>]*>/gi)) {
-    const attrs=tagAttrs(match[0]), width=Number(attrs.width || 0), height=Number(attrs.height || 0);
-    if((width && width < 100) || (height && height < 100)) continue;
-    const image=imageFromAttrs(attrs,baseUrl);
-    if(!image || /(?:logo|icon|avatar|profile|banner|button|sprite)/i.test(image)) continue;
-    const nearby=contextTextAround(html,match.index || 0);
-    add(image,attrs.alt || attrs.title || nearby,nearby,works.length);
-  }
-  return selectArtistWorks(works,artistImportedWorkLimit).map(work=>({...work,sourceHost:pageHost}));
-}
-function contentFrameUrl(html='', baseUrl) {
-  const frames=[...String(html).matchAll(/<iframe\b[^>]*>/gi)].map(match=>tagAttrs(match[0]));
-  const frame=frames.find(attrs=>/mainframe|postview|article|content|blog/i.test(`${attrs.id || ''} ${attrs.name || ''} ${attrs.src || ''}`)) || frames[0];
-  if(!frame?.src) return '';
-  try {
-    const url=new URL(frame.src.replace(/&amp;/g,'&'),baseUrl);
-    return url.protocol === 'https:' ? url.href : '';
-  } catch (_) { return ''; }
-}
-async function artistFromGenericWebPage(parsed, html) {
-  let sourceUrl=parsed.href, sourceHtml=html, works=pageWorksFromHtml(sourceHtml,sourceUrl);
-  if(!works.length) {
-    const frame=contentFrameUrl(html,parsed.href);
-    if(frame) { sourceUrl=frame; sourceHtml=await getText(frame); works=pageWorksFromHtml(sourceHtml,sourceUrl); }
-  }
-  const title=[...pageTitleCandidates(sourceHtml),...pageTitleCandidates(html)].map(cleanArtistNameFromTitle).find(Boolean) || cleanArtistNameFromTitle(parsed.pathname.split('/').filter(Boolean).pop() || '');
-  if(!works.length) throw new Error('No artwork images found on this page');
-  const artist={id:`artist-web-${simpleHash(parsed.href)}`,name:{ko:title,en:title},birth:null,death:null,nationality:{ko:'',en:''},source:parsed.href,works,generated:{schema:catalogueSchema,fetchedAt:new Date().toISOString(),source:parsed.href,contentSource:sourceUrl,fromWebpage:true}};
-  return {artist,works};
-}
-async function artistFromUrl(pageUrl) {
-  const parsed=await publicHttpsUrl(pageUrl);
-  if (parsed.hostname.endsWith('wikipedia.org') && (parsed.pathname.startsWith('/wiki/') || parsed.pathname === '/w/index.php')) {
-    const pageTitle=parsed.pathname.startsWith('/wiki/')
-      ? decodeURIComponent(parsed.pathname.slice('/wiki/'.length)).replace(/_/g,' ')
-      : (parsed.searchParams.get('title') || '').replace(/_/g,' ');
-    if(!pageTitle) throw new Error('Wikipedia page title is missing');
-    const wiki=`https://${parsed.hostname}/w/api.php?${new URLSearchParams({format:'json',origin:'*',action:'query',redirects:'1',titles:pageTitle,prop:'pageprops'})}`;
-    const page=Object.values((await getJson(wiki)).query?.pages || {})[0]; const qid=page?.pageprops?.wikibase_item;
-    if(!qid) throw new Error('No Wikidata item linked to this page');
-    const entity=(await getEntities([qid]))[qid];
-    if(entityId(entity,'P170')) return artworkDetails(qid);
-    const artist=await artistProfileFromQid(qid,pageTitle);
-    const enriched=await enrich(artist);
-    return {...enriched,artist:{...artist,...enriched.artist},works:enriched.works || []};
-  }
-  const html=await getText(parsed.href);
-  return artistFromGenericWebPage(parsed,html);
-}
-async function openverseThumbnail(work, artist) {
-  try {
-    const result=await getJson(openverseApi({q:`${work.title.en || work.title.ko} ${artist.name.en || artist.name.ko}`,page_size:'12',mature:'false'}));
-    const titleKey=normalized(work.title.en || work.title.ko);
-    const titleWords=[...new Set(String(work.title.en || work.title.ko || '').toLowerCase().match(/[a-z0-9]{3,}/g) || [])].filter(word=>!['the','and','with','from','for','into','over'].includes(word));
-    const artistKey=normalized((artist.name.en || artist.name.ko).split(' ').pop());
-    const candidates=(result.results || []).map(item => {
-      const haystack=normalized(`${item.title} ${item.creator} ${item.tags?.map(tag=>tag.name).join(' ')}`);
-      const candidateWords=new Set(String(`${item.title} ${item.tags?.map(tag=>tag.name).join(' ')}`).toLowerCase().match(/[a-z0-9]{3,}/g) || []);
-      const sharedWords=titleWords.filter(word=>candidateWords.has(word)).length;
-      const titleMatch=titleKey.length > 5 && (haystack.includes(titleKey) || titleKey.includes(normalized(item.title)) || sharedWords >= Math.min(2,titleWords.length));
-      const artistMatch=artistKey.length > 2 && haystack.includes(artistKey);
-      return {...item,score:(titleMatch ? 2 : 0) + (artistMatch ? 2 : 0)};
-    }).filter(item=>item.thumbnail && item.score >= 4).sort((a,b)=>b.score-a.score);
-    return candidates[0]?.thumbnail || '';
-  } catch (_) { return ''; }
-}
-const artInstituteApi = params => `https://api.artic.edu/api/v1/artworks/search?${new URLSearchParams(params)}`;
-const clevelandMuseumApi = params => `https://openaccess-api.clevelandart.org/api/artworks/?${new URLSearchParams(params)}`;
-const metMuseumApi = path => `https://collectionapi.metmuseum.org/public/collection/v1/${path}`;
-function museumArtworkMatches(work, artist, title, creator='') {
-  const titleKey=normalized(work.title.en || work.title.ko), candidateTitle=normalized(title);
-  const artistKey=normalized((artist.name.en || artist.name.ko || '').split(' ').pop()), candidateCreator=normalized(creator);
-  return titleKey.length > 5 && artistKey.length > 2
-    && (candidateTitle.includes(titleKey) || titleKey.includes(candidateTitle))
-    && candidateCreator.includes(artistKey);
-}
-async function artInstituteThumbnail(work, artist) {
-  const result=await getJson(artInstituteApi({q:`${work.title.en || work.title.ko} ${artist.name.en || artist.name.ko}`,limit:'10',fields:'id,title,artist_display,image_id,is_public_domain'}));
-  const match=(result.data || []).find(item => item.is_public_domain && item.image_id && museumArtworkMatches(work,artist,item.title,item.artist_display));
-  return match ? `https://www.artic.edu/iiif/2/${encodeURIComponent(match.image_id)}/full/843,/0/default.jpg` : '';
-}
-async function clevelandMuseumThumbnail(work, artist) {
-  const result=await getJson(clevelandMuseumApi({q:`${work.title.en || work.title.ko} ${artist.name.en || artist.name.ko}`,has_image:'1',cc0:'1',limit:'10'}));
-  const match=(result.data || []).find(item => {
-    const creator=(item.creators || []).map(person => person.description || person.name || '').join(' ');
-    return item.share_license_status === 'CC0' && museumArtworkMatches(work,artist,item.title,creator);
-  });
-  return match?.images?.web?.url || '';
-}
-async function metMuseumThumbnail(work, artist) {
-  const search=await getJson(metMuseumApi(`search?${new URLSearchParams({q:work.title.en || work.title.ko,title:'true'})}`));
-  for (const id of (search.objectIDs || []).slice(0,8)) {
-    const item=await getJson(metMuseumApi(`objects/${id}`));
-    if (item.isPublicDomain && item.primaryImageSmall && museumArtworkMatches(work,artist,item.title,item.artistDisplayName)) return item.primaryImageSmall;
-  }
-  return '';
-}
-async function publicMuseumThumbnail(work, artist) {
-  for (const find of [artInstituteThumbnail,clevelandMuseumThumbnail,metMuseumThumbnail]) {
-    try { const image=await find(work,artist); if(image) return image; } catch (_) { /* Try the next open-collection source. */ }
-  }
-  return '';
-}
-async function mapLimit(items, limit, mapper) { const output = new Array(items.length); let next = 0; await Promise.all(Array.from({length:Math.min(limit,items.length)}, async () => { while (next < items.length) { const index = next++; output[index] = await mapper(items[index], index); } })); return output; }
-function fileNameFromUrl(url='') { try { return decodeURIComponent(url.split('/').pop().split('?')[0]); } catch (_) { return ''; } }
 const textFromHtml = html => htmlDecode(String(html || '').replace(/<script\b[\s\S]*?<\/script>/gi,' ').replace(/<style\b[\s\S]*?<\/style>/gi,' ').replace(/<noscript\b[\s\S]*?<\/noscript>/gi,' ').replace(/<[^>]+>/g,' ')).replace(/\s+/g,' ').trim();
-async function wikipediaWorksForArtist(qid, artist) {
-  try {
-    const entity=await getJson(api({action:'wbgetentities',ids:qid,props:'sitelinks'}));
-    const title=entity.entities?.[qid]?.sitelinks?.enwiki?.title; if(!title) return [];
-    const parsed=await getJson(wikipediaApi({action:'parse',page:title,prop:'text'})); const html=parsed.parse?.text?.['*'] || '';
-    const heading=html.match(/<h2\b[^>]*\bid=["']Works["'][^>]*>[\s\S]*?<\/h2>/i); if(!heading || heading.index === undefined) return [];
-    const section=html.slice(heading.index + heading[0].length).split(/<h2\b/i)[0];
-    return [...section.matchAll(/<li[^>]*>([\s\S]*?)<\/li>/gi)].map((match,index) => {
-      const item=match[1], image=item.match(/<img[^>]+src=["']([^"']+)/i)?.[1], caption=textFromHtml(item.match(/class=["'][^"']*gallerytext[^"']*["'][^>]*>([\s\S]*?)<\/div>/i)?.[1] || item.match(/alt=["']([^"']+)/i)?.[1]);
-      if(!image || !caption) return null;
-      const year=Number(caption.match(/\b(1[5-9]\d{2}|20\d{2})\b/)?.[1]) || null; const cleanTitle=caption.replace(/\s*\(\d{4}\)\s*$/,'').trim();
-      if(!cleanTitle) return null;
-      return {id:`wikipedia-${qid}-${index}`,year,title:{ko:cleanTitle,en:cleanTitle},country:{ko:artist.nationality?.ko || '',en:artist.nationality?.en || ''},movement:{ko:'',en:''},image:`https:${image.startsWith('//') ? image : `//${image.replace(/^https?:\/\//,'')}`}`.replace(/&amp;/g,'&'),description:{ko:'',en:''},source:`https://en.wikipedia.org/wiki/${encodeURIComponent(title.replace(/ /g,'_'))}`,verified:true,popularity:999-index};
-    }).filter(Boolean);
-  } catch (_) { return []; }
-}
 async function wikipediaTitleForWork(work) {
   const fromSource=work.source?.match(/en\.wikipedia\.org\/wiki\/([^?#]+)/)?.[1];
   if (fromSource) return fromSource;
@@ -632,89 +403,6 @@ async function artworkInfo(artist, work) {
   };
   return {...work,description:{ko,en},detail:{schema:2,fetchedAt:new Date().toISOString(),summary:{ko,en},sections,sources,facts:{artist:artist.name,year:work.year || null,country:work.country || {},movement:work.movement || {}}}};
 }
-async function findThumbnailUrl(work, artist) {
-  const sourceTitle = await wikipediaTitleForWork(work);
-  const imageFile=fileNameFromUrl(work.image);
-  const directWorkImage = String(work.image || '').replace(/^http:\/\//i,'https://');
-  if (/^https:\/\/upload\.wikimedia\.org\/wikipedia\/commons\/thumb\//i.test(directWorkImage)) return directWorkImage;
-  // P18 is an image statement on this exact artwork: it is stronger evidence
-  // than the first image found in an article or a loose Commons text search.
-  if (imageFile) {
-    const commons=await getJson(commonsApi({action:'query',titles:`File:${imageFile}`,prop:'imageinfo',iiprop:'url',iiurlwidth:'1200'}));
-    const direct=Object.values(commons.query?.pages||{}).map(page=>page.imageinfo?.[0]?.thumburl||page.imageinfo?.[0]?.url).find(Boolean);
-    if (direct) return direct;
-  }
-  const sourceIsArtistGallery = artist?.qid && String(work.id || '').startsWith(`wikipedia-${artist.qid}-`);
-  if (sourceTitle && !sourceIsArtistGallery) {
-    try {
-      const page=await getJson(wikipediaApi({action:'query',titles:decodeURIComponent(sourceTitle).replace(/_/g,' '),prop:'pageimages',pithumbsize:'1200'}));
-      const articleThumb=Object.values(page.query?.pages||{}).map(item=>item.thumbnail?.source).find(Boolean);
-      if (articleThumb) return articleThumb;
-    } catch (_) { /* Continue with verified search fallbacks. */ }
-  }
-  const fileTitle=normalized(work.title.en || work.title.ko), artistFamily=normalized((artist.name.en || artist.name.ko || '').split(' ').pop());
-  if (fileTitle.length > 5 && artistFamily.length > 2) {
-    const commons=await getJson(commonsApi({action:'query',generator:'search',gsrsearch:`${work.title.en} ${artist.name.en || artist.name.ko}`,gsrnamespace:'6',gsrlimit:'8',prop:'imageinfo',iiprop:'url',iiurlwidth:'1200'}));
-    const exactFile=Object.values(commons.query?.pages||{}).find(page => { const key=normalized(page.title); return key.includes(fileTitle) && key.includes(artistFamily); });
-    const commonThumb=exactFile?.imageinfo?.[0]?.thumburl || exactFile?.imageinfo?.[0]?.url;
-    if (commonThumb) return commonThumb;
-  }
-  const encyclopedia=await getJson(wikipediaApi({action:'query',generator:'search',gsrsearch:`${work.title.en} ${artist.name.en || artist.name.ko}`,gsrnamespace:'0',gsrlimit:'5',prop:'pageimages|extracts',pithumbsize:'1200',exintro:'1',explaintext:'1'}));
-  const artistName=(artist.name.en || artist.name.ko || '').toLowerCase();
-  const title=(work.title.en || work.title.ko || '').toLowerCase().replace(/[^a-z0-9]/g,'');
-  const valid=Object.values(encyclopedia.query?.pages||{}).find(page => {
-    const pageTitle=(page.title || '').toLowerCase().replace(/[^a-z0-9]/g,'');
-    const exactTitle=pageTitle === title;
-    const artistInSummary=page.extract?.toLowerCase().includes(artistName);
-    return page.thumbnail?.source && (exactTitle || artistInSummary && (pageTitle.includes(title) || title.includes(pageTitle)));
-  });
-  if (valid?.thumbnail?.source) return valid.thumbnail.source;
-  // Do not take an arbitrary article image here: it can be an exhibition view
-  // or a framed reproduction rather than the artwork itself.
-  return (await publicMuseumThumbnail(work,artist)) || openverseThumbnail(work,artist);
-}
-async function getBinary(url, attempt=0, redirects=0) {
-  const source=String(url || '').replace(/^http:/i,'https:');
-  const parsed=await publicHttpsUrl(source);
-  return new Promise((resolve,reject) => {
-    const request=https.get(parsed,{headers:{'User-Agent':'ArtAtlasLocal/1.0 (educational project)'}},res => {
-      if(res.statusCode>=300 && res.statusCode<400 && res.headers.location) {
-        res.resume();
-        if (redirects >= 5) return reject(new Error('Too many image redirects'));
-        return getBinary(new URL(res.headers.location,parsed).href,attempt,redirects+1).then(resolve,reject);
-      }
-      if(res.statusCode===429 && attempt<3) {
-        res.resume();
-        const retryAfter=Math.min(15000,Math.max(1000,Number(res.headers['retry-after'] || 0)*1000 || (attempt+1)*2500));
-        return setTimeout(()=>getBinary(parsed.href,attempt+1,redirects).then(resolve,reject),retryAfter);
-      }
-      if(res.statusCode!==200) { res.resume(); return reject(new Error(`Image returned ${res.statusCode}`)); }
-      const chunks=[]; let size=0;
-      res.on('data',chunk=>{ size+=chunk.length; if(size>sourceImageInputLimit) request.destroy(new Error('Image source is larger than 500 MB')); else chunks.push(chunk); });
-      res.on('end',()=>resolve(Buffer.concat(chunks)));
-    });
-    request.setTimeout(20000,()=>request.destroy(new Error('Image download timed out')));
-    request.on('error',reject);
-  });
-}
-async function getText(url, redirects=0) {
-  const parsed=await publicHttpsUrl(url);
-  return new Promise((resolve,reject) => {
-    const request=https.get(parsed,{headers:{'User-Agent':'ArtAtlasLocal/1.0 (educational project)'}},res => {
-      if(res.statusCode>=300 && res.statusCode<400 && res.headers.location) {
-        res.resume();
-        if (redirects >= 5) return reject(new Error('Too many page redirects'));
-        return getText(new URL(res.headers.location,parsed).href,redirects+1).then(resolve,reject);
-      }
-      if(res.statusCode!==200) { res.resume(); return reject(new Error(`Page returned ${res.statusCode}`)); }
-      const chunks=[]; let size=0; const limit=3*1024*1024;
-      res.on('data',chunk=>{ size+=chunk.length; if(size>limit) request.destroy(new Error('Page is too large')); else chunks.push(chunk); });
-      res.on('end',()=>resolve(Buffer.concat(chunks).toString('utf8')));
-    });
-    request.setTimeout(15000,()=>request.destroy(new Error('Page request timed out')));
-    request.on('error',reject);
-  });
-}
 function thumbnailLocation(email, artistId) {
   return {folder:path.join(root,'data','thumbnails',artistId), relativePrefix:`data/thumbnails/${artistId}`};
 }
@@ -768,7 +456,7 @@ async function assertUniqueThumbnailImage(index, work, imageHash) {
     if(String(otherId) === workId) continue;
     const otherHash=await thumbnailIndexImageHash(item);
     if(otherHash && otherHash === imageHash) {
-      throw new Error(`The downloaded thumbnail is identical to another artwork thumbnail (${otherId}); rejected to prevent repeated wrong images`);
+      throw new Error(`The thumbnail is identical to another artwork thumbnail (${otherId}); rejected to prevent repeated wrong images`);
     }
   }
 }
@@ -793,13 +481,7 @@ async function saveThumbnailBuffer(artist,work,image,extension,verifiedBy,email=
   await fs.writeFile(indexPath,JSON.stringify(index,null,2),'utf8');
   return relative;
 }
-async function saveThumbnail(artist,work,thumbUrl,verifiedBy,email=adminEmail) { const extension=thumbnailExtension(thumbUrl) || 'jpg', image=await getBinary(thumbUrl); return saveThumbnailBuffer(artist,work,image,extension,verifiedBy,email); }
-async function cacheThumbnail(artist, work, email=adminEmail) { const iconRejected=work.thumbnailInvalidReason === 'thumbnail-is-small-interface-icon'; if(iconRejected) { const fallback=await openverseThumbnail(work,artist).catch(()=> ''); if(fallback) return saveThumbnail(artist,work,fallback,'Openverse fallback after local interface icon rejection',email); } const thumbUrl=await findThumbnailUrl(work,artist); if(!thumbUrl) throw new Error('No verified thumbnail candidate'); const sourceImage=String(work.image || '').replace(/^http:\/\//i,'https://'); const verifiedBy=thumbUrl.includes('openverse.org') ? 'Openverse: title and artist metadata match' : (sourceImage && thumbUrl === sourceImage ? 'Artwork image cached for offline use' : (work.image ? 'Wikidata image statement' : 'Wikipedia article title and artist match')); try { return await saveThumbnail(artist,work,thumbUrl,verifiedBy,email); } catch(error) { const fallback=await openverseThumbnail(work,artist).catch(()=> ''); if(!fallback || fallback===thumbUrl) throw error; return saveThumbnail(artist,work,fallback,'Openverse fallback after image download retry',email); } }
-function wikimediaFilePageThumbnail(pageUrl) { try { const parsed=new URL(pageUrl); if(!/(^|\.)wikipedia\.org$/i.test(parsed.hostname) || !parsed.pathname.startsWith('/wiki/')) return ''; const title=decodeURIComponent(parsed.pathname.slice('/wiki/'.length)).replace(/_/g,' '); const fileName=title.replace(/^(?:file|파일)\s*:/i,'').trim(); return /\.(jpe?g|png|webp|gif)$/i.test(fileName) ? `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(fileName)}?width=640` : ''; } catch (_) { return ''; } }
-async function cacheThumbnailFromPage(artist,work,pageUrl,email=adminEmail) { const parsed=await publicHttpsUrl(pageUrl); const directFile=wikimediaFilePageThumbnail(parsed.href); let source=directFile, verifiedBy=directFile ? 'Wikimedia file page supplied by user' : ''; if(!source) { const html=await getText(parsed.href); const metas=[...html.matchAll(/<meta\b[^>]*>/gi)].map(match=>match[0]); const tag=metas.find(meta=>/\b(?:property|name)=["'](?:og:image|twitter:image)["']/i.test(meta)); const candidate=tag?.match(/\bcontent=["']([^"']+)["']/i)?.[1] || html.match(/<img\b[^>]*\bsrc=["']([^"']+)["']/i)?.[1]; if(!candidate) throw new Error('No image found on the supplied page'); source=new URL(candidate.replace(/&amp;/g,'&'),parsed.href).href; verifiedBy=`User-supplied page: ${parsed.hostname}`; } try { return await saveThumbnail(artist,work,source,verifiedBy,email); } catch(error) { const fallback=await openverseThumbnail(work,artist).catch(()=> ''); if(!fallback || fallback===source) throw error; return saveThumbnail(artist,work,fallback,'Openverse fallback after supplied page download retry',email); } }
-function localImagePath(source) { let value=String(source || '').trim(); if(/^(["']).*\1$/.test(value)) value=value.slice(1,-1).trim(); if(!value) throw new Error('Local image path is required'); if(/^file:/i.test(value)) { let fileUrl=value.replace(/\\/g,'/'); if(/^file:\/\/[a-z]:\//i.test(fileUrl)) fileUrl=fileUrl.replace(/^file:\/\//i,'file:///'); return fileURLToPath(new URL(fileUrl)); } return path.isAbsolute(value) ? path.normalize(value) : path.resolve(root,value); }
-async function cacheThumbnailFromLocalPath(artist,work,source,email=adminEmail) { const file=localImagePath(source), extension=thumbnailExtension(file); if(!extension) throw new Error('Local file must be JPG, PNG, WEBP, or GIF'); const info=await fs.stat(file); if(!info.isFile()) throw new Error('Local image path must point to a file'); if(info.size > sourceImageInputLimit) throw new Error('Image source is larger than 500 MB'); const image=await fs.readFile(file); return saveThumbnailBuffer(artist,work,image,extension,`Local image file: ${path.basename(file)}`,email); }
-async function cacheThumbnailFromUpload(artist,work,file,email=adminEmail) { const extension=uploadExtension(file); if(!extension) throw new Error('Image must be JPG, PNG, WEBP, or GIF'); if(!file?.data?.length) throw new Error('Image file is empty'); if(file.data.length > sourceImageInputLimit) throw new Error('Image source is larger than 500 MB'); return saveThumbnailBuffer(artist,work,file.data,extension,`Uploaded local image: ${path.basename(file.filename)}`,email); }
+async function saveThumbnailFromLocalUpload(artist,work,file,email=adminEmail) { const extension=uploadExtension(file); if(!extension) throw new Error('Image must be JPG, PNG, WEBP, or GIF'); if(!file?.data?.length) throw new Error('Image file is empty'); if(file.data.length > sourceImageInputLimit) throw new Error('Image source is larger than 500 MB'); return saveThumbnailBuffer(artist,work,file.data,extension,`Uploaded local image: ${path.basename(file.filename)}`,email); }
 async function highResolutionPathExists(relativePath) {
   if (!relativePath) return false;
   try { await fs.access(path.join(root, relativePath)); return true; }
@@ -1467,39 +1149,6 @@ async function migrationExport() {
   const control=await readAccessControl();
   return {export:firebaseExport(artists,movements,control,assets),validation};
 }
-async function enrich(artist) {
-  const cacheFile = path.join(generatedDir, `${artist.qid ? `qid-${artist.qid}` : artist.id}.json`);
-  try { const cached = JSON.parse(await fs.readFile(cacheFile, 'utf8')); if (cached.schema === catalogueSchema) return cached; } catch (_) { /* cache miss */ }
-  const search = artist.qid ? null : await getJson(api({action:'wbsearchentities',search:artist.name.en || artist.name.ko,language:'en',type:'item',limit:'1'}));
-  const qid = artist.qid || search.search?.[0]?.id; if (!qid) throw new Error('Artist not found in Wikidata.');
-  const artistEntity = (await getEntities([qid]))[qid];
-  const nationalityQid = entityId(artistEntity,'P27'), movementQid = entityId(artistEntity,'P135');
-  const relatedEntities = await getEntities([nationalityQid,movementQid].filter(Boolean));
-  const nationalityEntity = relatedEntities[nationalityQid], movementEntity = relatedEntities[movementQid];
-  const artistProfile = {name:{ko:koreanArtistNameOverrides[qid] || artistEntity?.labels?.ko?.value || artist.name?.ko || entityLabel(artistEntity,'ko'),en:englishArtistNameOverrides[qid] || entityLabel(artistEntity,'en')},birth:entityYear(artistEntity,'P569'),death:entityYear(artistEntity,'P570'),nationality:{ko:entityLabel(nationalityEntity,'ko'),en:entityLabel(nationalityEntity,'en')},movement:{ko:entityLabel(movementEntity,'ko'),en:entityLabel(movementEntity,'en')}};
-  const wikipediaWorks = await wikipediaWorksForArtist(qid,{...artist,nationality:artistProfile.nationality});
-  const query = `SELECT ?work ?workLabel ?workDescription ?year ?image ?countryLabel ?movementLabel ?sitelinks WHERE {
-    ?work wdt:P170 wd:${qid}; wikibase:sitelinks ?sitelinks.
-    OPTIONAL { ?work wdt:P571 ?date. BIND(YEAR(?date) AS ?year) }
-    OPTIONAL { ?work wdt:P18 ?image }
-    OPTIONAL { ?work wdt:P495 ?country }
-    OPTIONAL { ?work wdt:P135 ?movement }
-    SERVICE wikibase:label { bd:serviceParam wikibase:language "ko,en". }
-  } ORDER BY DESC(?sitelinks) LIMIT ${artistImportedWorkLimit}`;
-  let results = {results:{bindings:[]}};
-  try { results = await getJson(`https://query.wikidata.org/sparql?${new URLSearchParams({query,format:'json'})}`); }
-  catch (_) { /* Wikipedia gallery results still keep the artist usable if SPARQL is unavailable. */ }
-  const normalize = (row,index,representative=false) => { const workQid=row.work?.value?.split('/').pop() || ''; return {id:`wikidata-${workQid || index}`,year:Number(row.year?.value || row.date?.value?.slice(0,4))||null,popularity:Number(row.sitelinks?.value || 0),title:{ko:koreanArtworkTitleOverrides[workQid] || row.workLabel?.value||`Untitled ${index+1}`,en:row.workLabel?.value||`Untitled ${index+1}`},country:{ko:row.countryLabel?.value||'',en:row.countryLabel?.value||''},movement:{ko:row.movementLabel?.value||'',en:row.movementLabel?.value||''},image:row.image?.value||'',description:{ko:row.workDescription?.value||'',en:row.workDescription?.value||''},source:row.sourceUrl?.value||row.work?.value||'',verified:!representative,representative}; };
-  const verifiedWorks = (results.results?.bindings || []).map((row,index) => normalize(row,index))
-    .filter(work => !work.year || ((!artist.birth || work.year >= artist.birth) && (!artist.death || work.year <= artist.death)))
-    .filter((work,index,self)=>self.findIndex(item=>item.id===work.id)===index);
-  // Keep curated masterworks first, then fill to 60 by public-documentation
-  // popularity. Movement-contribution labels are normalized for every artist.
-  const works = selectArtistWorks([...(sparseArtistFeaturedWorks[qid] || []),...wikipediaWorks,...verifiedWorks],artistImportedWorkLimit,artistProfile);
-  // Return the verified catalogue immediately. Thumbnail files are intentionally
-  // fetched later by the browser only for cards that enter the viewport.
-  const output={schema:catalogueSchema,artistId:artist.id,qid,artist:artistProfile,fetchedAt:new Date().toISOString(),works}; await fs.mkdir(generatedDir,{recursive:true}); await fs.writeFile(cacheFile,JSON.stringify(output,null,2),'utf8'); return output;
-}
 function safePath(urlPath) { const name=urlPath==='/'?'index.html':decodeURIComponent(urlPath).replace(/^\/+/, ''); if(name.startsWith('.') || ['server.js','data/access-control.json'].includes(name) || name.startsWith('data/backups/') || name.startsWith('data/audit') || name.startsWith('.git/')) return null; const output=path.resolve(root,name), relative=path.relative(root,output); return relative && !relative.startsWith('..') && !path.isAbsolute(relative) ? output : (name==='index.html' ? output : null); }
 function techniqueLinks(value) {
   if (!Array.isArray(value) || value.length > 40) throw new Error('Invalid technique links');
@@ -1529,10 +1178,6 @@ function safeUploadId(value) { if(!/^[A-Za-z0-9_-]{1,140}$/.test(String(value ||
 const uploadTypes={'image/jpeg':'jpg','image/jpg':'jpg','image/pjpeg':'jpg','image/png':'png','image/webp':'webp','image/gif':'gif'};
 const movementDocumentDir = path.join(dataDir, '미술사조');
 const movementDocumentIndex = path.join(movementDocumentDir, 'index.json');
-const movementImageDir = path.join(movementDocumentDir, 'images');
-const movementImageManifestPath = path.join(movementImageDir, 'index.json');
-const movementImageSrcPattern = /(<img\b[^>]*\bsrc=["'])([^"']+)(["'][^>]*>)/gi;
-const imageContentExtensions = {'image/jpeg':'jpg','image/jpg':'jpg','image/png':'png','image/webp':'webp','image/gif':'gif','image/svg+xml':'svg'};
 function movementDocumentName(value) { if(!String(value || '').trim() || String(value).length > 180) throw new Error('Invalid movement name'); return String(value).trim(); }
 function movementDocumentSlot(value) { if(!['1','2'].includes(String(value))) throw new Error('Invalid document slot'); return String(value); }
 async function readMovementDocuments() { try { const data=JSON.parse(await fs.readFile(movementDocumentIndex,'utf8')); return data && typeof data.documents==='object' ? data : {documents:{}}; } catch(error) { if(error.code==='ENOENT') return {documents:{}}; throw error; } }
@@ -1547,23 +1192,6 @@ async function refreshMovementDocumentLinks(name, slot) {
   const changed=!before.equals(after);
   if(changed) await fs.writeFile(file,after);
   return {ok:true,url:relative,changed};
-}
-async function readMovementImageManifest() { try { const data=JSON.parse(await fs.readFile(movementImageManifestPath,'utf8')); return data && typeof data.images==='object' ? data : {schema:1,cachedAt:null,images:{},failures:[]}; } catch(error) { if(error.code==='ENOENT') return {schema:1,cachedAt:null,images:{},failures:[]}; throw error; } }
-async function writeMovementImageManifest(data) { await fs.mkdir(movementImageDir,{recursive:true}); data.cachedAt=new Date().toISOString(); await fs.writeFile(movementImageManifestPath,JSON.stringify(data,null,2)+'\n','utf8'); }
-function movementImageSlug(value) {
-  return String(value || 'image').replace(/\?.*$/,'').replace(/%20/g,' ').replace(/%2C/gi,',').replace(/%28/gi,'(').replace(/%29/gi,')').split('/').pop()
-    .replace(/\.[a-z0-9]{2,5}$/i,'').normalize('NFKD').replace(/[^a-zA-Z0-9가-힣]+/g,'-').replace(/^-+|-+$/g,'').slice(0,70) || 'image';
-}
-function movementImageExtension(url, contentType='') {
-  const ext=imageContentExtensions[String(contentType).split(';')[0].trim().toLowerCase()];
-  if(ext) return ext;
-  try { return new URL(url).pathname.match(/\.([a-z0-9]{2,5})$/i)?.[1]?.toLowerCase().replace('jpeg','jpg') || 'jpg'; }
-  catch (_) { return 'jpg'; }
-}
-function movementImageDownloadUrl(sourceUrl) {
-  const parsed=new URL(sourceUrl);
-  if ((/(^|\.)wikimedia\.org$/i.test(parsed.hostname) || /(^|\.)wikipedia\.org$/i.test(parsed.hostname)) && /\/wiki\/Special:FilePath\//i.test(parsed.pathname)) parsed.searchParams.set('width','640');
-  return parsed.href;
 }
 function escapeRegex(value) { return String(value).replace(/[.*+?^${}()|[\]\\]/g,'\\$&'); }
 function escapeAttribute(value) { return String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char])); }
@@ -2004,45 +1632,6 @@ async function ensureStoredMovementDocumentControls() {
   if (changed) syncPersonNameDictionary();
 }
 const storedMovementDocumentControlsReady=ensureStoredMovementDocumentControls().catch(error=>console.error('Could not add uHangul controls to movement documents:',error.message));
-async function requestBinary(rawUrl, redirects=0) {
-  const parsed=await publicHttpsUrl(String(rawUrl || '').replace(/^http:/i,'https:'));
-  return new Promise((resolve,reject) => {
-    const request=https.get(parsed,{headers:{'User-Agent':'ArtAtlasLocal/1.0 (local image cache)'}},res=>{
-      if(res.statusCode>=300 && res.statusCode<400 && res.headers.location) { res.resume(); if(redirects>5) return reject(new Error('Too many redirects')); return resolve(requestBinary(new URL(res.headers.location,parsed).href,redirects+1)); }
-      if(res.statusCode!==200) { res.resume(); return reject(new Error(`HTTP ${res.statusCode}`)); }
-      const chunks=[]; let size=0; const limit=25*1024*1024;
-      res.on('data',chunk=>{ size+=chunk.length; if(size>limit) request.destroy(new Error('Image is larger than 25 MB')); else chunks.push(chunk); });
-      res.on('end',()=>resolve({buffer:Buffer.concat(chunks),contentType:String(res.headers['content-type'] || '').split(';')[0].trim().toLowerCase(),finalUrl:res.responseUrl || rawUrl}));
-    });
-    request.setTimeout(60000,()=>request.destroy(new Error('Image download timed out')));
-    request.on('error',reject);
-  });
-}
-async function localMovementImage(sourceUrl, manifest) {
-  manifest.images = manifest.images || {};
-  const existing=manifest.images[sourceUrl]?.local;
-  if(existing && await fs.access(path.join(movementDocumentDir,existing)).then(()=>true).catch(()=>false)) return existing;
-  const downloadUrl=movementImageDownloadUrl(sourceUrl);
-  const downloaded=await requestBinary(downloadUrl);
-  const ext=movementImageExtension(downloaded.finalUrl || downloadUrl, downloaded.contentType);
-  const local=`images/${movementImageSlug(sourceUrl)}-${createHash('sha256').update(sourceUrl,'utf8').digest('hex').slice(0,12)}.${ext}`;
-  await fs.mkdir(movementImageDir,{recursive:true});
-  await fs.writeFile(path.join(movementDocumentDir,local),downloaded.buffer);
-  manifest.images[sourceUrl]={local,source:sourceUrl,downloadUrl,finalUrl:downloaded.finalUrl,contentType:downloaded.contentType,bytes:downloaded.buffer.length,cachedAt:new Date().toISOString()};
-  return local;
-}
-async function localizeMovementDocumentImages(buffer) {
-  let html=buffer.toString('utf8');
-  const sources=[...new Set([...html.matchAll(movementImageSrcPattern)].map(match=>match[2]).filter(src=>/^https?:\/\//i.test(src)))];
-  if(!sources.length) return Buffer.from(html,'utf8');
-  const manifest=await readMovementImageManifest();
-  const replacements=new Map();
-  for(const source of sources) replacements.set(source,await localMovementImage(source,manifest));
-  manifest.failures=(manifest.failures || []).filter(item=>!replacements.has(item.url));
-  await writeMovementImageManifest(manifest);
-  html=html.replace(movementImageSrcPattern,(full,before,src,after)=>replacements.has(src) ? `${before}${replacements.get(src)}${after}` : full);
-  return Buffer.from(html,'utf8');
-}
 function uploadExtension(file) { const ext=path.extname(String(file?.filename || '')).toLowerCase(); return uploadTypes[file?.contentType] || ({'.jpg':'jpg','.jpeg':'jpg','.jfif':'jpg','.png':'png','.webp':'webp','.gif':'gif'}[ext]); }
 async function makeDisplayImage(input, folder, fileBase) {
   // Very large originals can exceed a browser's decoded-image or GPU texture
@@ -2171,7 +1760,7 @@ http.createServer(async (req,res) => { const url=new URL(req.url,`http://${req.h
   if (req.method==='PUT' && url.pathname==='/api/movement-section-links') { let body=''; req.on('data',chunk=>body+=chunk); req.on('end',async()=>{ try { const payload=JSON.parse(body || '{}'), data=await saveMovementSectionLinks(String(payload.sectionId || ''),payload.links); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:true,sections:data.sections})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json; charset=utf-8'}); res.end(JSON.stringify({ok:false,error:error.message})); } }); return; }
   if (req.method==='GET' && url.pathname==='/api/movement-documents') { try { const data=await readMovementDocuments(); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); return res.end(JSON.stringify(data)); } catch(error) { res.writeHead(500,{'Content-Type':'application/json; charset=utf-8'}); return res.end(JSON.stringify({documents:{},error:error.message})); } }
   if (req.method==='POST' && url.pathname==='/api/movement-documents/refresh') { let body=''; req.on('data',chunk=>body+=chunk); req.on('end',async()=>{ try { const payload=JSON.parse(body || '{}'), name=movementDocumentName(payload.name), slot=movementDocumentSlot(payload.slot), result=await refreshMovementDocumentLinks(name,slot); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify(result)); } catch(error) { res.writeHead(422,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:false,error:error.message})); } }); return; }
-  if (req.method==='POST' && url.pathname==='/api/movement-documents') { try { const form=multipartForm(await readRequestBuffer(req,30*1024*1024),req.headers['content-type']), name=movementDocumentName(form.fields.name), slot=movementDocumentSlot(form.fields.slot), file=form.files.document, ext=path.extname(String(file?.filename || '')).toLowerCase(); if(!file || !['.html','.htm'].includes(ext) || !/^(text\/html|application\/xhtml\+xml|)$/.test(file.contentType)) throw new Error('Upload an HTML file'); if(!file.data.length) throw new Error('The HTML file is empty'); const data=await readMovementDocuments(), relative=movementDocumentRelative(name,slot), previous=data.documents?.[name]?.[slot], localHtml=await localizeMovementDocumentImages(file.data), linkedHtml=await linkMovementDocumentArtists(injectUHangulDocumentIntegration(localHtml)); await fs.mkdir(movementDocumentDir,{recursive:true}); const savedFile=path.join(root,relative); await fs.writeFile(savedFile,linkedHtml); if(previous && previous!==relative) await removeMovementDocument(previous); data.documents[name]={...(data.documents[name]||{}),[slot]:relative}; await writeMovementDocuments(data); syncPersonNameDictionary({additionalFiles:[savedFile]}); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8'}); return res.end(JSON.stringify({ok:true,url:relative})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json; charset=utf-8'}); return res.end(JSON.stringify({ok:false,error:error.message})); } }
+  if (req.method==='POST' && url.pathname==='/api/movement-documents') { try { const form=multipartForm(await readRequestBuffer(req,30*1024*1024),req.headers['content-type']), name=movementDocumentName(form.fields.name), slot=movementDocumentSlot(form.fields.slot), file=form.files.document, ext=path.extname(String(file?.filename || '')).toLowerCase(); if(!file || !['.html','.htm'].includes(ext) || !/^(text\/html|application\/xhtml\+xml|)$/.test(file.contentType)) throw new Error('Upload an HTML file'); if(!file.data.length) throw new Error('The HTML file is empty'); const data=await readMovementDocuments(), relative=movementDocumentRelative(name,slot), previous=data.documents?.[name]?.[slot], linkedHtml=await linkMovementDocumentArtists(injectUHangulDocumentIntegration(file.data)); await fs.mkdir(movementDocumentDir,{recursive:true}); const savedFile=path.join(root,relative); await fs.writeFile(savedFile,linkedHtml); if(previous && previous!==relative) await removeMovementDocument(previous); data.documents[name]={...(data.documents[name]||{}),[slot]:relative}; await writeMovementDocuments(data); syncPersonNameDictionary({additionalFiles:[savedFile]}); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8'}); return res.end(JSON.stringify({ok:true,url:relative})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json; charset=utf-8'}); return res.end(JSON.stringify({ok:false,error:error.message})); } }
   if (req.method==='DELETE' && url.pathname==='/api/movement-documents') { let body=''; req.on('data',chunk=>body+=chunk); req.on('end',async()=>{ try { const {name,slot}=JSON.parse(body), safeName=movementDocumentName(name), safeSlot=movementDocumentSlot(slot), data=await readMovementDocuments(), relative=data.documents?.[safeName]?.[safeSlot]; if(relative) await removeMovementDocument(relative); if(data.documents?.[safeName]) { delete data.documents[safeName][safeSlot]; if(!Object.keys(data.documents[safeName]).length) delete data.documents[safeName]; } await writeMovementDocuments(data); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8'}); res.end(JSON.stringify({ok:true})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json; charset=utf-8'}); res.end(JSON.stringify({ok:false,error:error.message})); } }); return; }
   if (req.method==='POST' && url.pathname==='/api/local-artwork-image') { try { const form=multipartForm(await readRequestBuffer(req,500*1024*1024),req.headers['content-type']), result=await saveLocalArtworkImage(form); res.writeHead(200,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({ok:true,...result})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({ok:false,error:error.message})); } }
   if (req.method==='POST' && url.pathname==='/api/topic-artworks') { try { const form=multipartForm(await readRequestBuffer(req,500*1024*1024),req.headers['content-type']), result=await saveTopicArtwork(form); res.writeHead(200,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({ok:true,...result})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({ok:false,error:error.message})); } }
@@ -2184,13 +1773,9 @@ http.createServer(async (req,res) => { const url=new URL(req.url,`http://${req.h
   if ((req.method==='PUT' || req.method==='POST') && url.pathname==='/api/artists') { let body=''; req.on('data',c=>body+=c); req.on('end',async()=>{ try { const payload=JSON.parse(body), saved=await writeArtistsFile(payload,session.email); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:true,...saved})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:false,error:error.message})); } }); return; }
   if (req.method==='POST' && url.pathname==='/api/rules/check-and-apply') { try { const result=await checkAndApplyLatestRules(session.email); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); return res.end(JSON.stringify(result)); } catch(error) { res.writeHead(422,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); return res.end(JSON.stringify({ok:false,error:error.message})); } }
   if (req.method==='GET' && url.pathname==='/api/migration-export') { try { const result=await migrationExport(), stamp=new Date().toISOString().slice(0,10); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Content-Disposition':`attachment; filename="art-through-time-firebase-${stamp}.json"`,'Cache-Control':'no-store'}); return res.end(JSON.stringify(result.export,null,2)); } catch(error) { res.writeHead(403,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); return res.end(JSON.stringify({ok:false,error:error.message})); } }
-  if (req.method==='POST' && url.pathname==='/api/artist-from-url') { let body=''; req.on('data',c=>body+=c); req.on('end',async()=>{ try { const result=await artistFromUrl(JSON.parse(body).pageUrl); res.writeHead(200,{'Content-Type':'application/json'}); res.end(JSON.stringify(result)); } catch(error) { res.writeHead(422,{'Content-Type':'application/json'}); res.end(JSON.stringify({error:error.message})); } }); return; }
   if (req.method==='POST' && url.pathname==='/api/normalize-artist-works') { let body=''; req.on('data',c=>body+=c); req.on('end',async()=>{ try { const result=await normalizeArtistWorks(JSON.parse(body).artist); res.writeHead(200,{'Content-Type':'application/json'}); res.end(JSON.stringify(result)); } catch(error) { res.writeHead(422,{'Content-Type':'application/json'}); res.end(JSON.stringify({error:error.message})); } }); return; }
   if (req.method==='GET' && url.pathname==='/api/artist-profile') { try { const qid=url.searchParams.get('qid'); if(!/^Q\d+$/.test(qid || '')) throw new Error('Invalid artist'); const artistEntity=(await getEntities([qid]))[qid]; const nationalityQid=entityId(artistEntity,'P27'); const nationalityEntity=nationalityQid ? (await getEntities([nationalityQid]))[nationalityQid] : null; res.writeHead(200,{'Content-Type':'application/json'}); return res.end(JSON.stringify({name:{ko:koreanArtistNameOverrides[qid] || entityLabel(artistEntity,'ko'),en:englishArtistNameOverrides[qid] || entityLabel(artistEntity,'en')},birth:entityYear(artistEntity,'P569'),death:entityYear(artistEntity,'P570'),nationality:{ko:entityLabel(nationalityEntity,'ko'),en:entityLabel(nationalityEntity,'en')}})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json'}); return res.end(JSON.stringify({error:error.message})); } }
-  if (req.method==='POST' && url.pathname==='/api/artwork') { let body=''; req.on('data',c=>body+=c); req.on('end',async()=>{ try { const result=await artworkDetails(JSON.parse(body).qid); res.writeHead(200,{'Content-Type':'application/json'}); res.end(JSON.stringify(result)); } catch(error) { res.writeHead(422,{'Content-Type':'application/json'}); res.end(JSON.stringify({error:error.message})); } }); return; }
   if (req.method==='POST' && url.pathname==='/api/artwork-info') { let body=''; req.on('data',c=>body+=c); req.on('end',async()=>{ try { const {artist,work}=JSON.parse(body); const result=await artworkInfo(artist,work); res.writeHead(200,{'Content-Type':'application/json'}); res.end(JSON.stringify({work:result})); } catch(error) { res.writeHead(502,{'Content-Type':'application/json'}); res.end(JSON.stringify({error:error.message})); } }); return; }
-  if (req.method==='POST' && url.pathname==='/api/thumbnail-from-url') { let body=''; req.on('data',c=>body+=c); req.on('end',async()=>{ try { const {artist,work,pageUrl}=JSON.parse(body), source=String(pageUrl || '').trim(); const localSource=/^file:/i.test(source) || !/^[a-z][a-z0-9+.-]*:\/\//i.test(source); const thumbnail=localSource ? await cacheThumbnailFromLocalPath(artist,work,source,adminEmail) : await cacheThumbnailFromPage(artist,work,source,adminEmail); res.writeHead(200,{'Content-Type':'application/json'}); res.end(JSON.stringify({thumbnail,verified:true})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json'}); res.end(JSON.stringify({thumbnail:'',verified:false,error:error.message})); } }); return; }
-  if (req.method==='POST' && url.pathname==='/api/thumbnail-upload') { try { const form=multipartForm(await readRequestBuffer(req,sourceImageInputLimit + 1024*1024),req.headers['content-type']), artist=JSON.parse(form.fields.artist || '{}'), work=JSON.parse(form.fields.work || '{}'); if(!artist?.id || !work?.id) throw new Error('Invalid artwork upload'); const thumbnail=await cacheThumbnailFromUpload(artist,work,form.files.image,adminEmail); res.writeHead(200,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({thumbnail,verified:true})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({thumbnail:'',verified:false,error:error.message})); } }
-  if (req.method==='POST' && url.pathname==='/api/thumbnail') { let body=''; req.on('data',c=>body+=c); req.on('end',async()=>{ try { const {artist,work}=JSON.parse(body); const thumbnail=await cacheThumbnail(artist,work,adminEmail); res.writeHead(200,{'Content-Type':'application/json'}); res.end(JSON.stringify({thumbnail,verified:Boolean(thumbnail)})); } catch(error) { res.writeHead(502,{'Content-Type':'application/json'}); res.end(JSON.stringify({thumbnail:'',verified:false,error:error.message})); } }); return; }
+  if (req.method==='POST' && url.pathname==='/api/local-thumbnail-image') { try { const form=multipartForm(await readRequestBuffer(req,sourceImageInputLimit + 1024*1024),req.headers['content-type']), artist=JSON.parse(form.fields.artist || '{}'), work=JSON.parse(form.fields.work || '{}'); if(!artist?.id || !work?.id) throw new Error('Invalid artwork upload'); const thumbnail=await saveThumbnailFromLocalUpload(artist,work,form.files.image,adminEmail); res.writeHead(200,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({thumbnail,verified:true})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({thumbnail:'',verified:false,error:error.message})); } }
   if (req.method==='GET' && url.pathname==='/api/search') { try { const query=url.searchParams.get('q')||'', kind=url.searchParams.get('type')||'artist'; const raw=kind==='artist' ? await artistSearchCandidates(query) : (await getJsonFast(api({action:'wbsearchentities',search:query,language:'ko',uselang:'ko',type:'item',limit:'20'}))).search?.map(item=>({id:item.id,label:item.label,description:item.description||''})) || []; const ranked=[...raw].sort((a,b)=>{const score=item=>similarityScore(query,item.label)+(kind==='artwork' ? /(회화|그림|painting|artwork|work of art)/i.test(item.description)?120:0 : /(화가|예술가|painter|visual artist|artist)/i.test(item.description)?120:0); return score(b)-score(a);}); const values=ranked.slice(0,8); res.writeHead(200,{'Content-Type':'application/json'}); return res.end(JSON.stringify(values)); } catch(error) { res.writeHead(502,{'Content-Type':'application/json'}); return res.end(JSON.stringify([])); } }
-  if(req.method==='POST'&&url.pathname==='/api/enrich'){let body='';req.on('data',c=>body+=c);req.on('end',async()=>{try{const result=await enrich(JSON.parse(body));res.writeHead(200,{'Content-Type':'application/json'});res.end(JSON.stringify(result));}catch(error){res.writeHead(502,{'Content-Type':'application/json'});res.end(JSON.stringify({error:error.message}));}});return;} const file=safePath(url.pathname);if(!file){res.writeHead(403);return res.end();}try{let data=await fs.readFile(file);const relativeFile=path.relative(root,file).replace(/\\/g,'/');if(/^data[\\/]미술사조[\\/][a-f0-9]{24}-[12]\.html$/i.test(path.relative(root,file))) { let html=(await linkMovementDocumentArtists(data)).toString('utf8'); html=await injectMovementArtworkMovementLabels(html); html=injectMovementPioneerContext(html,await movementDocumentPioneerContextKey(relativeFile)); html=injectUHangulDocumentIntegration(html); html=injectMovementWikipediaHeading(html,url.searchParams.get('movementWiki') || '',url.searchParams.get('movementLabel') || ''); html=await injectMovementHighResolutionViewer(html); data=Buffer.from(html,'utf8'); }res.writeHead(200,{'Content-Type':mime[path.extname(file)]||'application/octet-stream','Cache-Control':'no-store'});res.end(data);}catch(error){console.error('Static file error:',error?.stack || error?.message || error);res.writeHead(404);res.end('Not found');}}).listen(4173,'127.0.0.1',()=>console.log(`Art Atlas: http://localhost:4173${adminPasswordHash ? '' : ' (read-only: .env not found)'}`));
+  const file=safePath(url.pathname);if(!file){res.writeHead(403);return res.end();}try{let data=await fs.readFile(file);const relativeFile=path.relative(root,file).replace(/\\/g,'/');if(/^data[\\/]미술사조[\\/][a-f0-9]{24}-[12]\.html$/i.test(path.relative(root,file))) { let html=(await linkMovementDocumentArtists(data)).toString('utf8'); html=await injectMovementArtworkMovementLabels(html); html=injectMovementPioneerContext(html,await movementDocumentPioneerContextKey(relativeFile)); html=injectUHangulDocumentIntegration(html); html=injectMovementWikipediaHeading(html,url.searchParams.get('movementWiki') || '',url.searchParams.get('movementLabel') || ''); html=await injectMovementHighResolutionViewer(html); data=Buffer.from(html,'utf8'); }res.writeHead(200,{'Content-Type':mime[path.extname(file)]||'application/octet-stream','Cache-Control':'no-store'});res.end(data);}catch(error){console.error('Static file error:',error?.stack || error?.message || error);res.writeHead(404);res.end('Not found');}}).listen(4173,'127.0.0.1',()=>console.log(`Art Atlas: http://localhost:4173${adminPasswordHash ? '' : ' (read-only: .env not found)'}`));

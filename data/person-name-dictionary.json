@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-23T01:46:16.530Z",
+  "generatedAt": "2026-08-23T06:58:48.942Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -3124,21 +3124,32 @@
       "status": "verified-pair"
     },
     {
-      "id": "gian-lorenzo-bernini",
+      "id": "Q160538",
       "original": "Gian Lorenzo Bernini",
       "korean": "베르니니",
-      "displayKorean": "베르니니",
+      "displayKorean": "베르니니, 잔 로렌초",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "베르니니",
+          "잔로렌초 베르니니",
+          "조반니 로렌초 베르니니",
+          "베르니니, 잔 로렌초",
+          "잔 로렌초 베르니니"
+        ],
         "en": [
-          "Bernini"
+          "Bernini",
+          "Gianlorenzo Bernini",
+          "Giovanni Lorenzo Bernini",
+          "Giovan Lorenzo Bernini",
+          "Gian Lorenzo Bernini"
         ]
       },
-      "uhangul": "베르니니",
+      "uhangul": "베[Rㅡ]니니, 잔 로[Rㅔㄴ]초",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json"
       ],
       "status": "verified-pair"
     },
@@ -4263,6 +4274,35 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "Q9319",
+      "original": "Jacopo Tintoretto",
+      "korean": "틴토레토",
+      "displayKorean": "틴토레토",
+      "aliases": {
+        "ko": [
+          "야코포 틴토레토",
+          "야코포 로부스티",
+          "야코포 코민",
+          "일 푸리오소",
+          "틴토레토"
+        ],
+        "en": [
+          "Tintoretto",
+          "Jacopo Tintoretto",
+          "Jacopo Robusti",
+          "Jacopo Comin",
+          "Il Furioso"
+        ]
+      },
+      "uhangul": "틴토[Rㅔ]토",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json"
       ],
       "status": "verified-pair"
     },
@@ -7937,32 +7977,20 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q9319",
+      "id": "tintoretto",
       "original": "Tintoretto",
       "korean": "틴토레토",
       "displayKorean": "틴토레토",
       "aliases": {
-        "ko": [
-          "야코포 틴토레토",
-          "야코포 로부스티",
-          "야코포 코민",
-          "일 푸리오소",
-          "틴토레토"
-        ],
-        "en": [
-          "Jacopo Tintoretto",
-          "Jacopo Robusti",
-          "Jacopo Comin",
-          "Il Furioso",
-          "Tintoretto"
-        ]
+        "ko": [],
+        "en": []
       },
       "uhangul": "틴토[Rㅔ]토",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
+        "data/techniques.json",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
       ],
       "status": "verified-pair"
@@ -9003,6 +9031,23 @@
         "en": []
       },
       "uhangul": "점묘법",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "technique",
+      "sources": [
+        "data/techniques.json"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "prestezza",
+      "original": "Prestezza",
+      "korean": "프레스테차",
+      "displayKorean": "프레스테차",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
+      "uhangul": "프[Rㅔ]스테차",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
       "sources": [
