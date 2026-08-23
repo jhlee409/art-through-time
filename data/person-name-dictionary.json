@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-23T06:58:48.942Z",
+  "generatedAt": "2026-08-23T08:32:46.447Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -158,7 +158,8 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/080336f866ce0c573e6c2b7f-1.html"
+        "data/미술사조/080336f866ce0c573e6c2b7f-1.html",
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
@@ -583,25 +584,38 @@
       "status": "verified-pair"
     },
     {
-      "id": "anthony-van-dyck",
+      "id": "Q150679",
       "original": "Anthony van Dyck",
       "korean": "안토니 반 다이크",
-      "displayKorean": "안토니 반 다이크",
+      "displayKorean": "반 다이크, 안토니",
       "aliases": {
         "ko": [
           "반 다이크",
-          "다이크"
+          "다이크",
+          "안토니 판 다이크",
+          "안톤 반 다이크",
+          "안토니스 반 다이크",
+          "반 다이크, 안토니",
+          "안토니 반 다이크"
         ],
         "en": [
           "van Dyck",
-          "Dyck"
+          "Dyck",
+          "Sir Anthony van Dyck",
+          "Anthony Vandyke",
+          "Antoon van Dyck",
+          "Anthonis van Dyck",
+          "Anton van Dyck",
+          "Vandyke",
+          "Anthony van Dyck"
         ]
       },
-      "uhangul": "안토니 [Vㅏㄴ] 다이크",
+      "uhangul": "[Vㅏㄴ] 다이크, 안토니",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json"
       ],
       "status": "verified-pair"
     },
@@ -2582,7 +2596,8 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json"
+        "data/artists.json",
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3149,7 +3164,8 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json"
+        "data/artists.json",
+        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
@@ -4507,7 +4523,8 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json"
+        "data/artists.json",
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
@@ -6416,23 +6433,36 @@
       "status": "verified-pair"
     },
     {
-      "id": "paolo-veronese",
+      "id": "Q9440",
       "original": "Paolo Veronese",
       "korean": "파올로 베로네세",
-      "displayKorean": "파올로 베로네세",
+      "displayKorean": "베로네세, 파올로",
       "aliases": {
         "ko": [
-          "베로네세"
+          "베로네세",
+          "파올로 칼리아리",
+          "파올로 칼리아리 베로네세",
+          "일 베로네세",
+          "베로네세, 파올로",
+          "파올로 베로네세"
         ],
         "en": [
-          "Veronese"
+          "Veronese",
+          "Paolo Caliari",
+          "Paolo Cagliari",
+          "Paolo Caliari Veronese",
+          "Il Veronese",
+          "Paul Veronese",
+          "Paolo Veronese"
         ]
       },
-      "uhangul": "파올로 [Vㅔ][Rㅗ]네세",
+      "uhangul": "[Vㅔ][Rㅗ]네세, 파올로",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8555,7 +8585,8 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/080336f866ce0c573e6c2b7f-1.html"
+        "data/미술사조/080336f866ce0c573e6c2b7f-1.html",
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },

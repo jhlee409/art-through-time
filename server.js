@@ -1349,7 +1349,7 @@ const serverArtistMovementDisplayRules = [
   serverMovementSpec({ko:'후기 인상주의',en:'Post-Impressionism'}, ['Post-Impressionism','Post-impressionism','후기 인상주의','후기인상주의'])
 ];
 const serverArtistMovementClassificationOverrides = {
-  Q17169:{ko:'베네치아 화파',en:'Venetian School'}, Q8459:{ko:'베네치아 화파',en:'Venetian School'}, Q47551:{ko:'베네치아 화파',en:'Venetian School'}, Q9319:{ko:'베네치아 화파',en:'Venetian School'},
+  Q17169:{ko:'베네치아 화파',en:'Venetian School'}, Q8459:{ko:'베네치아 화파',en:'Venetian School'}, Q47551:{ko:'베네치아 화파',en:'Venetian School'}, Q9319:{ko:'베네치아 화파',en:'Venetian School'}, Q9440:{ko:'베네치아 화파',en:'Venetian School'},
   Q153746:{ko:'도나우파',en:'Danube School'}, Q610556:{ko:'도나우파',en:'Danube School'},
   Q207929:{ko:'피렌체·로마 매너리즘',en:'Florentine-Roman Mannerism'}, Q312617:{ko:'피렌체·로마 매너리즘',en:'Florentine-Roman Mannerism'}, Q9348:{ko:'파르마·에밀리아 매너리즘',en:'Parma and Emilian Mannerism'}, Q7803:{ko:'피렌체·로마 매너리즘',en:'Florentine-Roman Mannerism'}, Q333366:{ko:'퐁텐블로파',en:'School of Fontainebleau'}, Q301:{ko:'스페인 매너리즘',en:'Spanish Mannerism'}, Q165367:{ko:'네덜란드 매너리즘',en:'Dutch Mannerism'}, Q442484:{ko:'네덜란드 매너리즘',en:'Dutch Mannerism'}, Q329811:{ko:'네덜란드 매너리즘',en:'Dutch Mannerism'}, Q447682:{ko:'프라하 궁정 매너리즘',en:'Prague Court Mannerism'}, Q7751:{ko:'프라하 궁정 매너리즘',en:'Prague Court Mannerism'}
 };

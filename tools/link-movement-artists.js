@@ -32,6 +32,7 @@ function aliasOverrides(artist) {
     Q213163:['비제 르 브룅', '비제르브룅', 'Vigée Le Brun', 'Vigee Le Brun'],
     Q5599:['루벤스', 'Rubens'],
     Q47551:['티치아노', '티치아노 베첼리오', 'Tiziano', 'Tiziano Vecellio', 'Titian'],
+    Q9440:['베로네세', '파올로 베로네세', 'Paolo Veronese', 'Veronese'],
     Q187310:['라르손', 'Larsson'],
     Q82445:['툴루즈로트레크', '툴루즈 로트레크', 'Toulouse-Lautrec', 'Toulouse Lautrec'],
     Q301:['엘 그레코', '엘그레코', 'El Greco'],

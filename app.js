@@ -1232,6 +1232,7 @@ const artistMovementClassificationOverrides = {
   Q8459:{ko:'베네치아 화파', en:'Venetian School'},
   Q47551:{ko:'베네치아 화파', en:'Venetian School'},
   Q9319:{ko:'베네치아 화파', en:'Venetian School'},
+  Q9440:{ko:'베네치아 화파', en:'Venetian School'},
   Q153746:{ko:'도나우파', en:'Danube School'},
   Q610556:{ko:'도나우파', en:'Danube School'},
   Q207929:{ko:'피렌체·로마 매너리즘', en:'Florentine-Roman Mannerism'},
