@@ -430,6 +430,8 @@ const currentCountryByHistoricalCountry = {
   'Duchy of Brabant': {ko:'벨기에', en:'Belgium',colorKey:'Belgium'}, '브라반트 공국': {ko:'벨기에', en:'Belgium',colorKey:'Belgium'},
   'Habsburg Netherlands': {ko:'벨기에', en:'Belgium',colorKey:'Belgium'}, '합스부르크 네덜란드': {ko:'벨기에', en:'Belgium',colorKey:'Belgium'},
   'Spanish Netherlands': {ko:'벨기에', en:'Belgium',colorKey:'Belgium'}, '스페인령 네덜란드': {ko:'벨기에', en:'Belgium',colorKey:'Belgium'},
+  'Flanders': {ko:'벨기에', en:'Belgium',colorKey:'Belgium'}, '플랑드르': {ko:'벨기에', en:'Belgium',colorKey:'Belgium'},
+  'Flemish': {ko:'벨기에', en:'Belgium',colorKey:'Belgium'}, '플랑드르(벨기에)': {ko:'벨기에', en:'Belgium',colorKey:'Belgium'},
   'Crown of Castile': {ko:'스페인', en:'Spain',colorKey:'Spain'}, '카스티야 연합왕국': {ko:'스페인', en:'Spain',colorKey:'Spain'}
 };
 const artistNationalityOverrides = {

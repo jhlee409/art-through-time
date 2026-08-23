@@ -14,8 +14,8 @@
       "en": "Crown of Castile"
     },
     "movement": {
-      "ko": "스페인 르네상스",
-      "en": "Spanish Renaissance"
+      "ko": "매너리즘",
+      "en": "Mannerism"
     }
   },
   "fetchedAt": "2026-08-22T11:15:06.752Z",
@@ -1400,6 +1400,17 @@
       "verified": true,
       "representative": false,
       "movementContribution": false
+    }
+  ],
+  "correctedAt": "2026-08-22T23:03:13.505Z",
+  "corrections": [
+    {
+      "field": "artist.movement",
+      "value": {
+        "ko": "매너리즘",
+        "en": "Mannerism"
+      },
+      "reason": "El Greco is more accurately classified by style as Mannerism; Spanish Renaissance remains contextual rather than primary."
     }
   ]
 }

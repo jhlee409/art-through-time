@@ -73,6 +73,12 @@ http://localhost:4173/?login=1
 
 새 화가를 추가할 때는 먼저 작품 이미지를 아래 폴더에 내려받습니다.
 
+앞으로 이 프로젝트에서 “다운로드 폴더”라고 하면 다음 프로젝트 폴더를 기준으로 말합니다. 실제 이미지 파일은 보통 그 아래 `download` 폴더에서 찾습니다.
+
+```text
+C:\Users\jhlee\OneDrive - UOU\AI-Programming\Art_through_Time
+```
+
 ```text
 C:\Users\jhlee\OneDrive - UOU\AI-Programming\Art_through_Time\download
 ```

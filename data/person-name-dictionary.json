@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-22T21:54:04.593Z",
+  "generatedAt": "2026-08-22T23:33:52.115Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -866,23 +866,32 @@
       "status": "verified-pair"
     },
     {
-      "id": "bartholomeus-spranger",
+      "id": "Q447682",
       "original": "Bartholomeus Spranger",
       "korean": "바르톨로메우스 슈프랑어",
-      "displayKorean": "바르톨로메우스 슈프랑어",
+      "displayKorean": "슈프랑거, 바르톨로메우스",
       "aliases": {
         "ko": [
-          "슈프랑어"
+          "슈프랑어",
+          "슈프랑거",
+          "바르톨로메우스 슈프라거",
+          "슈프라거",
+          "바르톨로메우스 슈프랑거"
         ],
         "en": [
-          "Spranger"
+          "Spranger",
+          "Bartholomaeus Spranger",
+          "Bartholomäus Spranger",
+          "Bartholomeus Spranger"
         ]
       },
-      "uhangul": "바[Rㅡ][THㅗㄹ]로메우스 슈프[Rㅏㅇ]어",
+      "uhangul": "슈프[Rㅏㅇ]거, 바[Rㅡ][THㅗㄹ]로메우스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2312,21 +2321,28 @@
       "status": "verified-pair"
     },
     {
-      "id": "francesco-primaticcio",
+      "id": "Q333366",
       "original": "Francesco Primaticcio",
       "korean": "프리마티초",
-      "displayKorean": "프리마티초",
+      "displayKorean": "프리마티초, 프란체스코",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "프리마티초",
+          "프란체스코 프리마티치오",
+          "프란체스코 프리마티초"
+        ],
         "en": [
-          "Primaticcio"
+          "Primaticcio",
+          "Francesco Primaticcio",
+          "Il Primaticcio"
         ]
       },
-      "uhangul": "[Fㅡ][Rㅣ]마티초",
+      "uhangul": "프[Rㅣ]마티초, [Fㅡ][Rㅏㄴ]체스코",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json"
       ],
       "status": "verified-pair"
     },
@@ -7013,6 +7029,27 @@
       "wikidataQid": "Q5597"
     },
     {
+      "id": "name-reamenzies",
+      "original": "Rea Menzies",
+      "korean": "레아 멘지스",
+      "displayKorean": "레아 멘지스",
+      "aliases": {
+        "ko": [
+          "멘지스"
+        ],
+        "en": [
+          "Menzies"
+        ]
+      },
+      "uhangul": "[Rㅔ]아 멘[Zㅣ]스",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/techniques.json"
+      ],
+      "status": "verified-pair"
+    },
+    {
       "id": "Q5598",
       "original": "Rembrandt Harmenszoon van Rijn",
       "korean": "렘브란트 하르먼손 반 레인",
@@ -8953,6 +8990,23 @@
         "en": []
       },
       "uhangul": "스투코",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "technique",
+      "sources": [
+        "data/techniques.json"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "tapestry",
+      "original": "Tapestry",
+      "korean": "테피스트리",
+      "displayKorean": "테피스트리",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
+      "uhangul": "테피스트[Rㅣ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
       "sources": [

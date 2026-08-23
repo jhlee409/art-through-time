@@ -2042,6 +2042,76 @@
       ]
     },
     {
+      "id": "tapestry",
+      "introduced": -1500,
+      "name": {
+        "ko": "테피스트리",
+        "en": "Tapestry"
+      },
+      "subtitle": {
+        "ko": "날실과 씨실로 이미지를 짜는 직물 회화",
+        "en": "Pictorial weaving built from warp and weft"
+      },
+      "definition": {
+        "ko": "테피스트리는 세로로 걸린 날실(warp) 사이로 색이 있는 씨실(weft)을 통과시켜 그림과 무늬를 만드는 직조 기법입니다. 천 위에 그림을 그리거나 수를 놓는 것이 아니라, 직물의 구조 자체가 이미지가 됩니다. 씨실은 필요한 색 면마다 끊어 넣을 수 있어 인물, 풍경, 문장, 장식 테두리를 넓은 벽면 규모로 만들 수 있습니다.",
+        "en": "Tapestry is a weaving technique in which coloured weft threads pass through vertical warp threads to form images and patterns. The image is not painted or embroidered onto cloth; the structure of the textile itself becomes the picture. Because the weft can be worked in separate coloured areas, tapestry can build figures, landscapes, heraldic motifs, and ornamental borders on a large wall scale."
+      },
+      "explanation": {
+        "ko": "테피스트리는 고대 직물 전통에서 출발했지만, 서유럽 미술사에서는 중세 말부터 르네상스와 바로크 궁정 문화에서 특히 중요한 장르가 되었습니다. 돌벽을 덮어 공간을 따뜻하게 만들고, 동시에 권력, 신화, 성서 이야기, 사냥, 계절, 문장을 보여 주는 이동 가능한 벽화 역할을 했습니다. 회화와 달리 붓질의 흔적보다 실의 방향, 밀도, 색 면의 맞물림이 화면을 만듭니다. 대형 테피스트리는 화가의 밑그림이나 카르통(cartoon)을 바탕으로 전문 직조공들이 오랜 시간 협업해 제작했기 때문에, 회화적 구상과 공예적 노동이 결합한 매체입니다. 완성품은 벽에 걸릴 때 방 전체의 색과 표면을 바꾸며, 가까이 보면 수많은 실의 교차로 이미지가 이루어진다는 점에서 회화와 다른 물질감을 가집니다.",
+        "en": "Tapestry grows from ancient textile traditions, but in Western art history it became especially important in late medieval, Renaissance, and Baroque court culture. It covered stone walls for warmth while also acting as a movable mural that displayed power, myth, biblical narrative, hunting, seasons, or heraldry. Unlike painting, its image is shaped less by brushwork than by thread direction, density, and interlocking fields of colour. Large tapestries were often woven by specialist workshops from a painter's design or cartoon, joining pictorial invention with highly skilled collaborative labour. When hung, a finished tapestry transforms the colour and surface of an entire room, while close viewing reveals the image as a crossing of countless threads."
+      },
+      "links": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/Category:Tapestry_weaving"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Category:Tapestries"
+        }
+      ],
+      "examples": [
+        {
+          "year": "현대 작업 장면",
+          "artist": {
+            "ko": "레아 멘지스",
+            "en": "Rea Menzies"
+          },
+          "title": {
+            "ko": "작업실의 테피스트리 직조",
+            "en": "Tapestry weaving in the studio"
+          },
+          "image": "data/techniques/tapestry/weaving-in-studio.jpg",
+          "role": {
+            "ko": "날실 위에 씨실로 이미지를 만드는 과정",
+            "en": "Building an image with weft over warp"
+          },
+          "note": {
+            "ko": "베틀에 걸린 촘촘한 날실 위로 색실과 보빈이 매달려 있고, 화면 일부가 아래에서부터 조금씩 짜여 올라갑니다. 밑그림을 따라 색 면을 채우지만, 최종 이미지는 물감이 아니라 실의 교차와 밀도로 만들어진다는 점을 잘 보여줍니다.",
+            "en": "Dense warp threads are stretched on the loom, with coloured yarns and bobbins hanging as the image grows gradually from below. The weaver follows a design, but the final image is made by crossing and packing threads rather than by applying paint."
+          }
+        },
+        {
+          "year": "18세기",
+          "artist": {
+            "ko": "크룸 코트 태피스트리 공방",
+            "en": "Croome Court tapestry workshop"
+          },
+          "title": {
+            "ko": "크룸 코트의 테피스트리 룸",
+            "en": "Tapestry Room from Croome Court"
+          },
+          "image": "data/techniques/tapestry/tapestry-room-croome-court.jpg",
+          "role": {
+            "ko": "벽면을 덮는 완성 테피스트리",
+            "en": "Finished tapestry as wall covering"
+          },
+          "note": {
+            "ko": "완성된 테피스트리는 독립된 그림 한 점을 넘어 방 전체의 벽면, 가구, 장식 색채를 함께 조직합니다. 넓은 분홍색 바탕과 꽃 장식, 중앙의 회화적 장면은 테피스트리가 실내 공간을 감싸는 직물 회화였음을 보여줍니다.",
+            "en": "The completed tapestry works beyond a single framed image, organising wall surface, furniture, and decorative colour across the room. Its large pink ground, floral borders, and central pictorial scene show tapestry as woven painting for an interior."
+          }
+        }
+      ]
+    },
+    {
       "id": "printmaking",
       "introduced": 800,
       "name": {
