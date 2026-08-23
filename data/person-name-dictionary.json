@@ -1,8 +1,37 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-22T23:33:52.115Z",
+  "generatedAt": "2026-08-23T01:46:16.530Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
+    {
+      "id": "Q329811",
+      "original": "Abraham Bloemaert",
+      "korean": "아브라함 블로에마르트",
+      "displayKorean": "블로에마르트, 아브라함",
+      "aliases": {
+        "ko": [
+          "블로에마르트",
+          "아브라함 블루마르트",
+          "블루마르트",
+          "아브라함 블로에마르트"
+        ],
+        "en": [
+          "Bloemaert",
+          "Abraham Bloemart",
+          "Abraham Blomaert",
+          "Abraham Bloemaart",
+          "Abraham Bloemaert"
+        ]
+      },
+      "uhangul": "블로에마[Rㅡ]트, 아브[Rㅏ]함",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
+      ],
+      "status": "verified-pair"
+    },
     {
       "id": "adolph-menzel",
       "original": "Adolph Menzel",
@@ -1151,6 +1180,7 @@
       "sources": [
         "data/artists.json",
         "data/techniques.json",
+        "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
       ],
       "status": "verified-pair"
@@ -1416,6 +1446,41 @@
       "englishFullName": "Oscar-Claude Monet",
       "wikipediaTitle": "Claude Monet",
       "wikidataQid": "Q296"
+    },
+    {
+      "id": "Q442484",
+      "original": "Cornelis van Haarlem",
+      "korean": "코르넬리스 반 하를렘",
+      "displayKorean": "반 하를렘, 코르넬리스",
+      "aliases": {
+        "ko": [
+          "반 하를렘",
+          "하를렘",
+          "코르넬리스 코르넬리스 판 하를럼",
+          "코르넬리스 판 하를럼",
+          "코르넬리스 반 하를럼",
+          "코르넬리스 코르넬리스존 반 하를렘",
+          "코르넬리스 반 하를렘"
+        ],
+        "en": [
+          "van Haarlem",
+          "Haarlem",
+          "Cornelis Cornelisz. van Haarlem",
+          "Cornelis Corneliszoon van Haarlem",
+          "Cornelis Cornelisz van Haarlem",
+          "Cornelis Van Haarlem",
+          "Cornelis van Haerlem",
+          "Cornelis van Haarlem"
+        ]
+      },
+      "uhangul": "[Vㅏㄴ] 하[Rㅡㄹ]렘, 코[Rㅡ]넬리스",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
+      ],
+      "status": "verified-pair"
     },
     {
       "id": "name-correggio",
@@ -2342,7 +2407,8 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json"
+        "data/artists.json",
+        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3345,23 +3411,31 @@
       "status": "verified-pair"
     },
     {
-      "id": "giuseppe-arcimboldo",
+      "id": "Q7751",
       "original": "Giuseppe Arcimboldo",
       "korean": "주세페 아르침볼도",
-      "displayKorean": "주세페 아르침볼도",
+      "displayKorean": "아르침볼도, 주세페",
       "aliases": {
         "ko": [
-          "아르침볼도"
+          "아르침볼도",
+          "주세페 아르침볼디",
+          "주세페 아르침볼도"
         ],
         "en": [
-          "Arcimboldo"
+          "Arcimboldo",
+          "Giuseppe Arcimboldi",
+          "Giuseppe Archimboldo",
+          "Arcimboldi",
+          "Giuseppe Arcimboldo"
         ]
       },
-      "uhangul": "주세페 아[Rㅡ]침볼도",
+      "uhangul": "아[Rㅡ]침볼도, 주세페",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3666,6 +3740,35 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "Q165367",
+      "original": "Hendrick Goltzius",
+      "korean": "헨드릭 골치우스",
+      "displayKorean": "골치우스, 헨드릭",
+      "aliases": {
+        "ko": [
+          "골치우스",
+          "헨드리크 골치우스",
+          "헨드릭 골치우스"
+        ],
+        "en": [
+          "Goltzius",
+          "Hendrik Goltzius",
+          "Hendrick Goltz",
+          "Hendrick Goltius",
+          "Hendricus Goltzius",
+          "Hendrick Goltzius"
+        ]
+      },
+      "uhangul": "골치우[Zㅡ], 헨드[Rㅣㄱ]",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5973,7 +6076,6 @@
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
         "data/미술사조/c0d228e179032941f8d9ebfb-1.html",
         "data/미술사조/de537ba74c4bee89423120bc-1.html",
         "Wikidata"
@@ -6322,6 +6424,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
+        "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
       ],
       "status": "verified-pair"
@@ -7834,19 +7937,33 @@
       "status": "verified-pair"
     },
     {
-      "id": "tintoretto",
+      "id": "Q9319",
       "original": "Tintoretto",
       "korean": "틴토레토",
       "displayKorean": "틴토레토",
       "aliases": {
-        "ko": [],
-        "en": []
+        "ko": [
+          "야코포 틴토레토",
+          "야코포 로부스티",
+          "야코포 코민",
+          "일 푸리오소",
+          "틴토레토"
+        ],
+        "en": [
+          "Jacopo Tintoretto",
+          "Jacopo Robusti",
+          "Jacopo Comin",
+          "Il Furioso",
+          "Tintoretto"
+        ]
       },
       "uhangul": "틴토[Rㅔ]토",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
       ],
       "status": "verified-pair"
     },

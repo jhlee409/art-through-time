@@ -1138,6 +1138,52 @@ async function artistMovementFilterIssues(artists) {
   if(mannerismArtists.includes('Q5592')) issues.push({artist:'화가 목록',artistId:'artist-movement-mannerism-match',work:'매너리즘 필터에 미켈란젤로가 포함될 위험 있음',workId:'data/artists.json'});
   return issues;
 }
+function sourceBlock(text='', startMarker='', endMarker='') {
+  const start=String(text || '').indexOf(startMarker);
+  if(start < 0) return '';
+  const rest=String(text).slice(start);
+  const end=endMarker ? rest.indexOf(endMarker) : -1;
+  return end >= 0 ? rest.slice(0,end) : rest;
+}
+function movementRuleLabelsFromBlock(block='') {
+  return [...String(block || '').matchAll(/\{ko:'([^']+)',\s*en:'([^']+)'/g)].map(match=>match[1]);
+}
+function movementOverrideIdsFromBlock(block='') {
+  return new Set([...String(block || '').matchAll(/\b(Q\d+)\s*:/g)].map(match=>match[1]));
+}
+async function movementClassificationSyncIssues() {
+  const issues=[];
+  const appText=await fs.readFile(path.join(root,'app.js'),'utf8').catch(()=>'');
+  const serverText=await fs.readFile(path.join(root,'server.js'),'utf8').catch(()=>'');
+  const appRules=sourceBlock(appText,'const artistMovementDisplayRules = [','const artistMovementClassificationOverrides');
+  const serverRules=sourceBlock(serverText,'const serverArtistMovementDisplayRules = [','const serverArtistMovementClassificationOverrides');
+  const appLabels=movementRuleLabelsFromBlock(appRules);
+  const serverLabels=new Set(movementRuleLabelsFromBlock(serverRules));
+  if(!appRules) issues.push({artist:'사조 분류 기준',artistId:'movement-display-rules-app',work:'화가 목록·연표용 하부 사조 표시 규칙을 찾지 못함',workId:'app.js'});
+  if(!serverRules) issues.push({artist:'사조 분류 기준',artistId:'movement-display-rules-server',work:'사조 설명 문서 카드용 하부 사조 표시 규칙을 찾지 못함',workId:'server.js'});
+  for(const label of appLabels) {
+    if(!serverLabels.has(label)) issues.push({artist:'사조 분류 기준',artistId:'movement-display-rule-sync',work:`화가 목록·연표에는 있으나 사조 설명 카드 표시 규칙에는 없는 하부 사조: ${label}`,workId:'app.js/server.js'});
+  }
+  const appOverrideBlock=sourceBlock(appText,'const artistMovementClassificationOverrides = {','function movementEntry');
+  const serverOverrideBlock=sourceBlock(serverText,'const serverArtistMovementClassificationOverrides = {','const serverArtistMovementFallbacks');
+  const appOverrideIds=movementOverrideIdsFromBlock(appOverrideBlock);
+  const serverOverrideIds=movementOverrideIdsFromBlock(serverOverrideBlock);
+  if(!appOverrideBlock) issues.push({artist:'사조 분류 기준',artistId:'movement-overrides-app',work:'화가 목록·연표용 화가별 하부 사조 override를 찾지 못함',workId:'app.js'});
+  if(!serverOverrideBlock) issues.push({artist:'사조 분류 기준',artistId:'movement-overrides-server',work:'사조 설명 문서 카드용 화가별 하부 사조 override를 찾지 못함',workId:'server.js'});
+  for(const qid of appOverrideIds) {
+    if(!serverOverrideIds.has(qid)) issues.push({artist:'사조 분류 기준',artistId:'movement-overrides-sync',work:`화가 목록·연표 override에는 있으나 사조 설명 카드 override에는 없는 화가 QID: ${qid}`,workId:'app.js/server.js'});
+  }
+  if(serverText && !/injectMovementArtworkMovementLabels\(html\)/.test(serverText)) {
+    issues.push({artist:'사조 설명 문서',artistId:'movement-document-artist-movement-labels',work:'사조 설명 문서 이미지 카드에 화가 사조를 주입하는 단계가 누락됨',workId:'server.js'});
+  }
+  if(appText && !/artistMovementDisplayInfo\(a\)\.parentLabel/.test(appText)) {
+    issues.push({artist:'화가 목록',artistId:'movement-list-parent-label',work:'왼쪽 화가 목록이 대분류 사조만 표시하는 기준에서 벗어날 위험 있음',workId:'app.js'});
+  }
+  if(appText && !/const artistMovementInfo = artistMovementDisplayInfo\(artist\);[\s\S]*artistMovementInfo\.label/.test(appText)) {
+    issues.push({artist:'화가 연표',artistId:'movement-timeline-detail-label',work:'화가 연표 상단 사조 표시가 하부 사조 - 상부 사조 기준을 쓰는지 확인 필요',workId:'app.js'});
+  }
+  return issues;
+}
 const expectedManualUHangulByArtistId = {
   Q68631:'[Vㅏㄴ] 데르 [Vㅔ]이던, [Rㅗ]히어르'
 };
@@ -1307,9 +1353,9 @@ async function writeRuleCheckReport(result) {
   const rows=items => items.length ? items.map(item=>`- ${item.artist} · ${item.work}${item.workId ? ` (${item.workId})` : ''}`).join('\n') : '- 없음';
   let text=['# 전체 규칙 점검 보고서','',`- 점검 시각: ${new Date().toLocaleString('ko-KR',{timeZone:'Asia/Seoul'})}`,`- 결과: ${result.changed ? '최신 공통 규칙을 적용하고 저장함' : '저장 데이터가 현재 공통 규칙과 일치함'}`,`- 데이터 버전: ${result.revision}`,'','## 대상','',`- 화가: ${result.stats.artists}명`,`- 작품: ${result.stats.works}점`,`- 이름 사전: ${result.stats.nameDictionary}개 항목 재생성`,`- 미술사조 문서의 화가 링크: 열 때마다 최신 별칭으로 동적 연결`,'','## 자동 적용한 범위','','- 최신 작품 정리·중복 처리 규칙','- 고해상도 이미지 경로 재확인','- 화가 이름 사전 및 uHangul 화가 맵 재생성','- 화가 목록·연표 제목의 한국어 표시명, 성·이름 순서, 네덜란드어 van=반 표기, uHangul 런타임·변환 표식 점검','- 화가 목록 국가 아이콘의 국가명 title·aria-label 연결 및 한국어 국가명 점검','- 기법 설명 오른쪽 페이지 제목 옆 + 자료 버튼 및 비교 기법 저장 경로 점검','- 미술사조 HTML 이미지 파일 누락 및 Git 비관리 이미지 폴더 직접 참조 점검','- 기법·대표작·주제-사건 표시 데이터의 외부 URL, 캐시 폴더 직접 참조, 이미지 파일 누락 점검','- 썸네일 제목의 소장처 정보 혼입 점검','- 화가별 로컬 썸네일·고해상도 이미지의 파일 내용 중복 점검','','수동 입력 작품, 대표작 선택, 직접 작성한 설명·이미지는 덮어쓰지 않았다. 외부 웹에서 작품을 재수집하거나 삭제하지 않았다.','','## 확인이 필요한 항목','',`### 이미지가 없는 작품 (${result.issues.missingPreview.length}점)`,'',rows(result.issues.missingPreview),'',`### 제목이 없는 작품 (${result.issues.missingTitle.length}점)`,'',rows(result.issues.missingTitle),'',`### QID가 제목으로 남은 작품 (${result.issues.qidTitle.length}점)`,'',rows(result.issues.qidTitle),'',`### 화가 목록·연표 표시명이 한국어가 아닌 항목 (${result.issues.artistDisplayKorean.length}점)`,'',rows(result.issues.artistDisplayKorean),'',`### 화가 목록·연표 표시명의 성, 이름 순서 확인 항목 (${result.issues.artistDisplayOrder.length}점)`,'',rows(result.issues.artistDisplayOrder),'',`### 네덜란드어 van 한국어 표기 확인 항목 (${result.issues.artistDutchVanRomanization.length}점)`,'',rows(result.issues.artistDutchVanRomanization),'',`### 화가 목록 국가 아이콘의 국가명 확인 항목 (${result.issues.artistCountryIcon.length}점)`,'',rows(result.issues.artistCountryIcon),'',`### uHangul 폰트·런타임·화가 맵·변환 표식 확인 항목 (${result.issues.uHangulConnection.length}점)`,'',rows(result.issues.uHangulConnection),'',`### 기법 설명 제목 옆 + 자료 버튼 확인 항목 (${result.issues.techniqueTitleLinkButton.length}점)`,'',rows(result.issues.techniqueTitleLinkButton),'',`### 미술사조 HTML 이미지 경로 확인 항목 (${result.issues.movementDocumentImage.length}점)`,'',rows(result.issues.movementDocumentImage),'',`### 표시 데이터 이미지 경로 확인 항목 (${result.issues.displayDataImage.length}점)`,'',rows(result.issues.displayDataImage),'',`### 썸네일 제목에 소장처 정보가 남은 작품 (${result.issues.thumbnailTitleExtra.length}점)`,'',rows(result.issues.thumbnailTitleExtra),'',`### 같은 이미지 파일 내용이 반복 연결된 작품 (${result.issues.duplicateArtworkImage.length}건)`,'',rows(result.issues.duplicateArtworkImage),'','## 참고 항목','',`### 공개 이미지 없음으로 표시한 작품 (${result.issues.reviewedNoPublicImage.length}점)`,'',rows(result.issues.reviewedNoPublicImage),'','## 다음 조치','','1. 위 목록의 화가 연표에서 작품의 이미지 또는 제목을 보완한다.','2. 다시 전체 규칙 점검을 실행한다.','3. 이 보고서 파일을 다음 작업 세션에 전달하거나, “가장 최근 규칙점검 보고서 확인”이라고 요청한다.',''].join('\\n');
   text=text.replace('- 미술사조 HTML 이미지 파일 누락 및 Git 비관리 이미지 폴더 직접 참조 점검\\n- 기법·대표작·주제-사건 표시 데이터의 외부 URL, 캐시 폴더 직접 참조, 이미지 파일 누락 점검','- 미술사조 HTML 이미지 파일 누락 및 Git 비관리 이미지 폴더 직접 참조 점검\\n- 미술사조 선구자 공통 문구의 index.json 기준 매핑 및 정적 문구 불일치 점검\\n- 기법·대표작·주제-사건 표시 데이터의 외부 URL, 캐시 폴더 직접 참조, 이미지 파일 누락 점검');
-  text=text.replace('- 화가 목록 국가 아이콘의 국가명 title·aria-label 연결 및 한국어 국가명 점검\\n- 기법 설명 오른쪽 페이지 제목 옆 + 자료 버튼 및 비교 기법 저장 경로 점검','- 화가 목록 국가 아이콘의 국가명 title·aria-label 연결 및 한국어 국가명 점검\\n- 화가 목록 사조 드롭다운 중복, 대표 사조 누락, 작품별 사조 오매칭 방지 점검\\n- 기법 설명 오른쪽 페이지 제목 옆 + 자료 버튼 및 비교 기법 저장 경로 점검');
+  text=text.replace('- 화가 목록 국가 아이콘의 국가명 title·aria-label 연결 및 한국어 국가명 점검\\n- 기법 설명 오른쪽 페이지 제목 옆 + 자료 버튼 및 비교 기법 저장 경로 점검','- 화가 목록 국가 아이콘의 국가명 title·aria-label 연결 및 한국어 국가명 점검\\n- 화가 목록 사조 드롭다운 중복, 대표 사조 누락, 작품별 사조 오매칭 방지 점검\\n- 사조 설명 문서의 하부 사조 변경 기준이 화가 목록, 화가 연표, 사조 설명 이미지 카드의 화가 사조 표시와 동기화되는지 점검\\n- 기법 설명 오른쪽 페이지 제목 옆 + 자료 버튼 및 비교 기법 저장 경로 점검');
   text=text.replace(/(### uHangul 폰트·런타임·화가 맵·변환 표식 확인 항목 \(\d+점\))/,
-    `### 화가 목록 사조 필터 확인 항목 (${result.issues.artistMovementFilter.length}점)\\n\\n${rows(result.issues.artistMovementFilter)}\\n\\n$1`);
+    `### 화가 목록 사조 필터 확인 항목 (${result.issues.artistMovementFilter.length}점)\\n\\n${rows(result.issues.artistMovementFilter)}\\n\\n### 사조 분류 동기화 확인 항목 (${result.issues.movementClassificationSync.length}점)\\n\\n${rows(result.issues.movementClassificationSync)}\\n\\n$1`);
   text=text.replace(/(### 표시 데이터 이미지 경로 확인 항목 \(\d+점\))/,
     `### 미술사조 선구자 공통 문구 확인 항목 (${result.issues.movementPioneerContext.length}점)\\n\\n${rows(result.issues.movementPioneerContext)}\\n\\n$1`);
   text=text.replace('- 썸네일 제목의 소장처 정보 혼입 점검\\n- 화가별 로컬 썸네일·고해상도 이미지의 파일 내용 중복 점검',
@@ -1331,6 +1377,7 @@ async function checkAndApplyLatestRules(actor='') {
   const uHangulIssues=await uHangulRuleIssues(artists);
   const countryIconIssues=await artistCountryIconIssues(artists);
   const artistMovementFilterIssuesList=await artistMovementFilterIssues(artists);
+  const movementClassificationSyncIssuesList=await movementClassificationSyncIssues();
   const techniqueTitleLinkButtonIssuesList=await techniqueTitleLinkButtonIssues();
   const movementDocumentImageIssuesList=await movementDocumentImageIssues();
   const movementPioneerContextIssuesList=await movementPioneerContextIssues();
@@ -1347,6 +1394,7 @@ async function checkAndApplyLatestRules(actor='') {
     artistDutchVanRomanization:artistDutchVanRomanizationIssues,
     artistCountryIcon:countryIconIssues,
     artistMovementFilter:artistMovementFilterIssuesList,
+    movementClassificationSync:movementClassificationSyncIssuesList,
     uHangulConnection:uHangulIssues,
     techniqueTitleLinkButton:techniqueTitleLinkButtonIssuesList,
     movementDocumentImage:movementDocumentImageIssuesList,
@@ -1365,6 +1413,7 @@ async function checkAndApplyLatestRules(actor='') {
   const artistDutchVanRomanization=issues.artistDutchVanRomanization.length;
   const artistCountryIcon=issues.artistCountryIcon.length;
   const artistMovementFilter=issues.artistMovementFilter.length;
+  const movementClassificationSync=issues.movementClassificationSync.length;
   const uHangulConnection=issues.uHangulConnection.length;
   const techniqueTitleLinkButton=issues.techniqueTitleLinkButton.length;
   const movementDocumentImage=issues.movementDocumentImage.length;
@@ -1381,10 +1430,10 @@ async function checkAndApplyLatestRules(actor='') {
   } else {
     writeUHangulArtistMap(artists);
     syncPersonNameDictionary({artists});
-    await appendAudit({type:'rules.check-and-apply',actor:normalizedEmail(actor) || 'local-admin',revision,changed:false,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle,qidTitle,artistDisplayKorean,artistDisplayOrder,artistDutchVanRomanization,artistCountryIcon,artistMovementFilter,uHangulConnection,techniqueTitleLinkButton,movementDocumentImage,movementPioneerContext,displayDataImage,oversizedLocalImage,thumbnailTitleExtra,duplicateArtworkImage}});
+    await appendAudit({type:'rules.check-and-apply',actor:normalizedEmail(actor) || 'local-admin',revision,changed:false,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle,qidTitle,artistDisplayKorean,artistDisplayOrder,artistDutchVanRomanization,artistCountryIcon,artistMovementFilter,movementClassificationSync,uHangulConnection,techniqueTitleLinkButton,movementDocumentImage,movementPioneerContext,displayDataImage,oversizedLocalImage,thumbnailTitleExtra,duplicateArtworkImage}});
   }
   const nameDictionary=syncPersonNameDictionary({artists}).records;
-  const result={ok:true,changed,revision,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle,qidTitle,artistDisplayKorean,artistDisplayOrder,artistDutchVanRomanization,artistCountryIcon,artistMovementFilter,uHangulConnection,techniqueTitleLinkButton,movementDocumentImage,movementPioneerContext,displayDataImage,oversizedLocalImage,thumbnailTitleExtra,duplicateArtworkImage,reviewedNoPublicImage:issues.reviewedNoPublicImage.length,nameDictionary,movementDocuments:'dynamic-linking'},issues};
+  const result={ok:true,changed,revision,stats:{artists:artists.length,works:works.length,missingPreview,missingTitle,qidTitle,artistDisplayKorean,artistDisplayOrder,artistDutchVanRomanization,artistCountryIcon,artistMovementFilter,movementClassificationSync,uHangulConnection,techniqueTitleLinkButton,movementDocumentImage,movementPioneerContext,displayDataImage,oversizedLocalImage,thumbnailTitleExtra,duplicateArtworkImage,reviewedNoPublicImage:issues.reviewedNoPublicImage.length,nameDictionary,movementDocuments:'dynamic-linking'},issues};
   result.reportFile=await writeRuleCheckReport(result);
   return result;
 }
@@ -1636,6 +1685,133 @@ async function movementArtistLinkEntries() {
     for(const alias of movementArtistAliases(artist)) entries.push({alias,id:artist.id,name:artist.fullName || artist.name?.ko || artist.name?.en || alias,korean:artist.fullName || artist.name?.ko || '',original:artist.name?.en || ''});
   }
   return entries.sort((a,b)=>b.alias.length-a.alias.length || a.alias.localeCompare(b.alias,'ko'));
+}
+function compactMovementName(value='') {
+  return String(value || '').normalize('NFKC').toLocaleLowerCase('ko-KR').replace(/[^0-9a-z가-힣]+/g,'');
+}
+function movementNameKo(value) {
+  if(!value) return '';
+  if(typeof value === 'string') return value.trim();
+  return String(value.ko || value.en || '').trim();
+}
+function serverMovementSpec(label, includes=[], extra={}) {
+  return {...extra,label,keys:new Set([label?.ko,label?.en,...includes].filter(Boolean).map(compactMovementName))};
+}
+const serverArtistMovementDisplayRules = [
+  serverMovementSpec({ko:'이탈리아 르네상스',en:'Italian Renaissance'}, ['Italian Renaissance','High Renaissance','Proto-Renaissance','이탈리아 르네상스','전성기 르네상스','선르네상스'], {parent:{ko:'르네상스',en:'Renaissance'}}),
+  serverMovementSpec({ko:'베네치아 화파',en:'Venetian School'}, ['Venetian School','Venetian school','Venetian Renaissance','베네치아 화파','베네치아 르네상스'], {parent:{ko:'르네상스',en:'Renaissance'}}),
+  serverMovementSpec({ko:'북유럽 르네상스',en:'Northern Renaissance'}, ['Northern Renaissance','북유럽 르네상스','북방 르네상스'], {parent:{ko:'르네상스',en:'Renaissance'}}),
+  serverMovementSpec({ko:'독일 르네상스',en:'German Renaissance'}, ['German Renaissance','독일 르네상스'], {parent:{ko:'르네상스',en:'Renaissance'}}),
+  serverMovementSpec({ko:'도나우파',en:'Danube School'}, ['Danube School','도나우파'], {parent:{ko:'르네상스',en:'Renaissance'}}),
+  serverMovementSpec({ko:'네덜란드·플랑드르 르네상스',en:'Netherlandish and Flemish Renaissance'}, ['Early Netherlandish painting','Dutch and Flemish Renaissance painting','Netherlandish and Flemish Renaissance painting','초기 네덜란드 회화','플랑드르파','네덜란드 및 플랑드르 르네상스 회화','네덜란드·플랑드르 르네상스'], {parent:{ko:'르네상스',en:'Renaissance'}}),
+  serverMovementSpec({ko:'프랑스 르네상스',en:'French Renaissance'}, ['French Renaissance','프랑스 르네상스'], {parent:{ko:'르네상스',en:'Renaissance'}}),
+  serverMovementSpec({ko:'덴마크 르네상스',en:'Danish Renaissance'}, ['Danish Renaissance','덴마크 르네상스'], {parent:{ko:'르네상스',en:'Renaissance'}}),
+  serverMovementSpec({ko:'노르딕 르네상스',en:'Nordic Renaissance'}, ['Nordic Renaissance','노르딕 르네상스'], {parent:{ko:'르네상스',en:'Renaissance'}}),
+  serverMovementSpec({ko:'플랑드르 바로크 회화',en:'Flemish Baroque painting'}, ['Flemish Baroque painting','플랑드르 바로크 회화'], {parent:{ko:'바로크',en:'Baroque'}}),
+  serverMovementSpec({ko:'이탈리아 바로크 회화',en:'Italian Baroque painting'}, ['Italian Baroque painting','이탈리아 바로크 회화'], {parent:{ko:'바로크',en:'Baroque'}}),
+  serverMovementSpec({ko:'바로크',en:'Baroque'}, ['Baroque art','바로크']),
+  serverMovementSpec({ko:'피렌체·로마 매너리즘',en:'Florentine-Roman Mannerism'}, ['Florentine-Roman Mannerism','Florentine Mannerism','Roman Mannerism','피렌체-로마 매너리즘','피렌체·로마 매너리즘'], {parent:{ko:'매너리즘',en:'Mannerism'}}),
+  serverMovementSpec({ko:'파르마·에밀리아 매너리즘',en:'Parma and Emilian Mannerism'}, ['Parma and Emilian Mannerism','Parma Mannerism','Emilian Mannerism','파르마와 에밀리아 계열','파르마·에밀리아 매너리즘'], {parent:{ko:'매너리즘',en:'Mannerism'}}),
+  serverMovementSpec({ko:'퐁텐블로파',en:'School of Fontainebleau'}, ['School of Fontainebleau','Fontainebleau School','퐁텐블로파'], {parent:{ko:'매너리즘',en:'Mannerism'}}),
+  serverMovementSpec({ko:'스페인 매너리즘',en:'Spanish Mannerism'}, ['Spanish Mannerism','스페인 매너리즘'], {parent:{ko:'매너리즘',en:'Mannerism'}}),
+  serverMovementSpec({ko:'네덜란드 매너리즘',en:'Dutch Mannerism'}, ['Dutch Mannerism','Haarlem Mannerism','Netherlandish Mannerism','네덜란드 매너리즘','하를럼 매너리즘'], {parent:{ko:'매너리즘',en:'Mannerism'}}),
+  serverMovementSpec({ko:'프라하 궁정 매너리즘',en:'Prague Court Mannerism'}, ['Prague Court Mannerism','Habsburg Court Mannerism','Rudolfine Mannerism','프라하 궁정 매너리즘','프라하·합스부르크 궁정','루돌프 2세 궁정 매너리즘'], {parent:{ko:'매너리즘',en:'Mannerism'}}),
+  serverMovementSpec({ko:'독일 낭만주의',en:'German Romanticism'}, ['German Romanticism','독일 낭만주의'], {parent:{ko:'낭만주의',en:'Romanticism'}}),
+  serverMovementSpec({ko:'낭만주의',en:'Romanticism'}, ['Romanticism','낭만주의']),
+  serverMovementSpec({ko:'후기 인상주의',en:'Post-Impressionism'}, ['Post-Impressionism','Post-impressionism','후기 인상주의','후기인상주의'])
+];
+const serverArtistMovementClassificationOverrides = {
+  Q17169:{ko:'베네치아 화파',en:'Venetian School'}, Q8459:{ko:'베네치아 화파',en:'Venetian School'}, Q47551:{ko:'베네치아 화파',en:'Venetian School'}, Q9319:{ko:'베네치아 화파',en:'Venetian School'},
+  Q153746:{ko:'도나우파',en:'Danube School'}, Q610556:{ko:'도나우파',en:'Danube School'},
+  Q207929:{ko:'피렌체·로마 매너리즘',en:'Florentine-Roman Mannerism'}, Q312617:{ko:'피렌체·로마 매너리즘',en:'Florentine-Roman Mannerism'}, Q9348:{ko:'파르마·에밀리아 매너리즘',en:'Parma and Emilian Mannerism'}, Q7803:{ko:'피렌체·로마 매너리즘',en:'Florentine-Roman Mannerism'}, Q333366:{ko:'퐁텐블로파',en:'School of Fontainebleau'}, Q301:{ko:'스페인 매너리즘',en:'Spanish Mannerism'}, Q165367:{ko:'네덜란드 매너리즘',en:'Dutch Mannerism'}, Q442484:{ko:'네덜란드 매너리즘',en:'Dutch Mannerism'}, Q329811:{ko:'네덜란드 매너리즘',en:'Dutch Mannerism'}, Q447682:{ko:'프라하 궁정 매너리즘',en:'Prague Court Mannerism'}, Q7751:{ko:'프라하 궁정 매너리즘',en:'Prague Court Mannerism'}
+};
+const serverArtistMovementFallbacks = {Q104884:{ko:'독일 낭만주의',en:'German Romanticism'}};
+function serverArtistPrimaryMovement(artist) {
+  const direct=movementNameKo(serverArtistMovementClassificationOverrides[artist?.qid] || serverArtistMovementClassificationOverrides[artist?.id] || artist?.movement || serverArtistMovementFallbacks[artist?.qid]);
+  if(direct) return direct;
+  const counts=new Map();
+  for(const work of artist?.works || []) {
+    const movement=movementNameKo(work?.movement);
+    if(movement) counts.set(movement,(counts.get(movement) || 0) + 1);
+  }
+  return [...counts.entries()].sort((a,b)=>b[1]-a[1])[0]?.[0] || '';
+}
+function serverArtistMovementDisplayLabel(artist) {
+  const movement=serverArtistPrimaryMovement(artist);
+  if(!movement) return '';
+  const key=compactMovementName(movement);
+  const rule=serverArtistMovementDisplayRules.find(item=>item.keys.has(key));
+  if(!rule) return movement;
+  const label=movementNameKo(rule.label) || movement;
+  const parent=movementNameKo(rule.parent);
+  return parent && compactMovementName(label) !== compactMovementName(parent) ? `${label} - ${parent}` : label;
+}
+function stripMovementArtworkMovementLabels(html) {
+  return String(html || '')
+    .replace(/\n?<style\b[^>]*id=["']art-atlas-work-movement-style["'][^>]*>[\s\S]*?<\/style>\n?/gi,'\n')
+    .replace(/\s*<p\b(?=[^>]*\bclass=["'][^"']*\bart-atlas-work-movement\b)[\s\S]*?<\/p>\s*/gi,'');
+}
+function movementCardArtist(card, artists, aliasEntries) {
+  const id=String(card.match(/\bdata-artist-id=["']([^"']+)["']/i)?.[1] || '').trim();
+  if(id) {
+    const direct=artists.find(artist=>artist.id === id);
+    if(direct) return direct;
+  }
+  const text=htmlDecode(String(card || '').replace(/<[^>]+>/g,' ')).normalize('NFC').toLocaleLowerCase('ko-KR');
+  const entry=aliasEntries.find(item=>text.includes(item.alias.normalize('NFC').toLocaleLowerCase('ko-KR')));
+  return entry ? artists.find(artist=>artist.id === entry.id) : null;
+}
+function normalizedMovementMiniLabelText(value='') {
+  return String(value || '').normalize('NFKC').toLocaleLowerCase('ko-KR').replace(/[^0-9a-z가-힣]+/g,'').trim();
+}
+function redundantArtistMiniLabelPattern(artist) {
+  const labels=new Set([artist?.fullName,artist?.name?.ko,artist?.name?.en,...movementArtistAliasOverrides(artist)].filter(Boolean).map(normalizedMovementMiniLabelText).filter(Boolean));
+  return labels;
+}
+function stripRedundantArtistMiniLabel(body, artist) {
+  const labels=redundantArtistMiniLabelPattern(artist);
+  if(!labels.size) return body;
+  const match=body.match(/^\s*<span\b(?=[^>]*\bclass=["'][^"']*\bmini-label\b)[^>]*>[\s\S]*?<\/span>\s*/i);
+  if(!match) return body;
+  const labelText=normalizedMovementMiniLabelText(textFromHtml(match[0]));
+  return labels.has(labelText) ? body.slice(match[0].length) : body;
+}
+function injectMovementLabelIntoCard(card, label, artist) {
+  if(!/<img\b/i.test(card) || /art-atlas-work-movement/i.test(card)) return card;
+  const movementBlock=`<p class="art-atlas-work-movement"><strong>화가 사조</strong> ${escapeAttribute(label)}</p>`;
+  const divPattern=/<div\b[^>]*>/gi;
+  let match;
+  while((match=divPattern.exec(card))) {
+    const className=tagAttrs(match[0]).class || '';
+    if(!/(^|\s)(movement-work-body|caption)(\s|$)/.test(className)) continue;
+    const bodyStart=match.index + match[0].length;
+    const bodyEnd=card.indexOf('</div>', bodyStart);
+    if(bodyEnd < 0) return card;
+    const before=card.slice(0,bodyStart), body=stripRedundantArtistMiniLabel(card.slice(bodyStart,bodyEnd),artist), after=card.slice(bodyEnd);
+    if(/<\/small>/i.test(body)) return `${before}${body.replace(/<\/small>/i,`</small>\n${movementBlock}`)}${after}`;
+    if(/<\/h[1-6]>/i.test(body)) return `${before}${body.replace(/<\/h[1-6]>/i,heading=>`${heading}\n${movementBlock}`)}${after}`;
+    return `${before}${movementBlock}\n${body}${after}`;
+  }
+  return card;
+}
+async function injectMovementArtworkMovementLabels(html) {
+  const source=stripMovementArtworkMovementLabels(html);
+  const data=await readArtistsFile();
+  const artists=data.artists || [];
+  if(!artists.length) return source;
+  const aliasEntries=(await movementArtistLinkEntries()).sort((a,b)=>b.alias.length-a.alias.length);
+  let changed=false;
+  const output=source.replace(/<article\b(?=[^>]*\bclass=["'][^"']*\b(?:movement-work-card|card)\b[^"']*["'])[\s\S]*?<\/article>/gi,card=>{
+    const artist=movementCardArtist(card,artists,aliasEntries);
+    const movement=artist && serverArtistMovementDisplayLabel(artist);
+    if(!movement) return card;
+    const next=injectMovementLabelIntoCard(card,movement,artist);
+    if(next !== card) changed=true;
+    return next;
+  });
+  if(!changed) return source;
+  const style='<style id="art-atlas-work-movement-style">.art-atlas-work-movement{margin:.48rem 0 .12rem!important;color:#f0cf87!important;font:800 .82rem/1.45 system-ui,-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif!important}.art-atlas-work-movement strong{display:inline-block;margin-right:.45rem;padding:.16rem .5rem;border:1px solid rgba(240,207,135,.42)!important;border-radius:999px;background:rgba(216,170,75,.12)!important;color:#ffe4a6!important;font-size:.76rem!important}</style>';
+  return /<\/head>/i.test(output) ? output.replace(/<\/head>/i,`${style}\n</head>`) : `${style}\n${output}`;
 }
 const movementArtistLinkStyle = `.art-atlas-artist-link{font-weight:900;color:#191007!important;background:linear-gradient(180deg,rgba(255,232,151,.98),rgba(255,198,86,.9));border-bottom:2px solid #a96f12;border-radius:.22em;padding:0 .16em;text-decoration:none!important;box-decoration-break:clone;-webkit-box-decoration-break:clone}.art-atlas-artist-link:hover{filter:brightness(1.08);box-shadow:0 0 0 2px rgba(255,214,102,.24)}`;
 const uHangulDocumentIntegration = `<link rel="stylesheet" href="../../uhangul/uhangul-runtime.css" data-uhangul-integration="v0.4">\n<script defer src="../../uhangul/uhangul-runtime.js" data-uhangul-integration="v0.4"></script>`;
@@ -2017,4 +2193,4 @@ http.createServer(async (req,res) => { const url=new URL(req.url,`http://${req.h
   if (req.method==='POST' && url.pathname==='/api/thumbnail-upload') { try { const form=multipartForm(await readRequestBuffer(req,sourceImageInputLimit + 1024*1024),req.headers['content-type']), artist=JSON.parse(form.fields.artist || '{}'), work=JSON.parse(form.fields.work || '{}'); if(!artist?.id || !work?.id) throw new Error('Invalid artwork upload'); const thumbnail=await cacheThumbnailFromUpload(artist,work,form.files.image,adminEmail); res.writeHead(200,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({thumbnail,verified:true})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({thumbnail:'',verified:false,error:error.message})); } }
   if (req.method==='POST' && url.pathname==='/api/thumbnail') { let body=''; req.on('data',c=>body+=c); req.on('end',async()=>{ try { const {artist,work}=JSON.parse(body); const thumbnail=await cacheThumbnail(artist,work,adminEmail); res.writeHead(200,{'Content-Type':'application/json'}); res.end(JSON.stringify({thumbnail,verified:Boolean(thumbnail)})); } catch(error) { res.writeHead(502,{'Content-Type':'application/json'}); res.end(JSON.stringify({thumbnail:'',verified:false,error:error.message})); } }); return; }
   if (req.method==='GET' && url.pathname==='/api/search') { try { const query=url.searchParams.get('q')||'', kind=url.searchParams.get('type')||'artist'; const raw=kind==='artist' ? await artistSearchCandidates(query) : (await getJsonFast(api({action:'wbsearchentities',search:query,language:'ko',uselang:'ko',type:'item',limit:'20'}))).search?.map(item=>({id:item.id,label:item.label,description:item.description||''})) || []; const ranked=[...raw].sort((a,b)=>{const score=item=>similarityScore(query,item.label)+(kind==='artwork' ? /(회화|그림|painting|artwork|work of art)/i.test(item.description)?120:0 : /(화가|예술가|painter|visual artist|artist)/i.test(item.description)?120:0); return score(b)-score(a);}); const values=ranked.slice(0,8); res.writeHead(200,{'Content-Type':'application/json'}); return res.end(JSON.stringify(values)); } catch(error) { res.writeHead(502,{'Content-Type':'application/json'}); return res.end(JSON.stringify([])); } }
-  if(req.method==='POST'&&url.pathname==='/api/enrich'){let body='';req.on('data',c=>body+=c);req.on('end',async()=>{try{const result=await enrich(JSON.parse(body));res.writeHead(200,{'Content-Type':'application/json'});res.end(JSON.stringify(result));}catch(error){res.writeHead(502,{'Content-Type':'application/json'});res.end(JSON.stringify({error:error.message}));}});return;} const file=safePath(url.pathname);if(!file){res.writeHead(403);return res.end();}try{let data=await fs.readFile(file);const relativeFile=path.relative(root,file).replace(/\\/g,'/');if(/^data[\\/]미술사조[\\/][a-f0-9]{24}-[12]\.html$/i.test(path.relative(root,file))) { let html=(await linkMovementDocumentArtists(data)).toString('utf8'); html=injectMovementPioneerContext(html,await movementDocumentPioneerContextKey(relativeFile)); html=injectUHangulDocumentIntegration(html); html=injectMovementWikipediaHeading(html,url.searchParams.get('movementWiki') || '',url.searchParams.get('movementLabel') || ''); html=await injectMovementHighResolutionViewer(html); data=Buffer.from(html,'utf8'); }res.writeHead(200,{'Content-Type':mime[path.extname(file)]||'application/octet-stream','Cache-Control':'no-store'});res.end(data);}catch(_){res.writeHead(404);res.end('Not found');}}).listen(4173,'127.0.0.1',()=>console.log(`Art Atlas: http://localhost:4173${adminPasswordHash ? '' : ' (read-only: .env not found)'}`));
+  if(req.method==='POST'&&url.pathname==='/api/enrich'){let body='';req.on('data',c=>body+=c);req.on('end',async()=>{try{const result=await enrich(JSON.parse(body));res.writeHead(200,{'Content-Type':'application/json'});res.end(JSON.stringify(result));}catch(error){res.writeHead(502,{'Content-Type':'application/json'});res.end(JSON.stringify({error:error.message}));}});return;} const file=safePath(url.pathname);if(!file){res.writeHead(403);return res.end();}try{let data=await fs.readFile(file);const relativeFile=path.relative(root,file).replace(/\\/g,'/');if(/^data[\\/]미술사조[\\/][a-f0-9]{24}-[12]\.html$/i.test(path.relative(root,file))) { let html=(await linkMovementDocumentArtists(data)).toString('utf8'); html=await injectMovementArtworkMovementLabels(html); html=injectMovementPioneerContext(html,await movementDocumentPioneerContextKey(relativeFile)); html=injectUHangulDocumentIntegration(html); html=injectMovementWikipediaHeading(html,url.searchParams.get('movementWiki') || '',url.searchParams.get('movementLabel') || ''); html=await injectMovementHighResolutionViewer(html); data=Buffer.from(html,'utf8'); }res.writeHead(200,{'Content-Type':mime[path.extname(file)]||'application/octet-stream','Cache-Control':'no-store'});res.end(data);}catch(error){console.error('Static file error:',error?.stack || error?.message || error);res.writeHead(404);res.end('Not found');}}).listen(4173,'127.0.0.1',()=>console.log(`Art Atlas: http://localhost:4173${adminPasswordHash ? '' : ' (read-only: .env not found)'}`));

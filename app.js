@@ -93,6 +93,8 @@ let movementDocuments = {};
 let artworkHoverPreview;
 let artistSearchQuery = '';
 let artistMovementFilter = '';
+let artistMovementFilterMenuOpen = false;
+const expandedArtistMovementGroups = new Set();
 const highResolutionWidthChecks = new Map();
 const artworkWikipediaLinkChecks = new Map();
 let currentUserEmail = '';
@@ -1208,23 +1210,96 @@ function movementContributionWorksForArtist(artist, sourceWorks=artist?.works ||
     .filter(work => work && (!visibleKeys.size || visibleKeys.has(selectionKey(work)) || work.image || work.thumbnail));
 }
 function compactMovementName(value='') { return String(value).normalize('NFKC').toLocaleLowerCase().replace(/[^0-9a-z가-힣]+/g,''); }
-const artistMovementFilterGroups = [
-  {
+function movementFilterSpec(label, includes=[], extra={}) {
+  const keys = new Set([label?.ko, label?.en, ...includes].filter(Boolean).map(compactMovementName));
+  return {
+    ...extra,
+    id: extra.id || compactMovementName(label?.en || label?.ko || ''),
+    label,
+    includes,
+    keys
+  };
+}
+const artistMovementFilterHierarchy = [
+  movementFilterSpec({ko:'르네상스', en:'Renaissance'}, [
+    'Italian Renaissance','High Renaissance','Northern Renaissance','German Renaissance','Early Netherlandish painting','Dutch and Flemish Renaissance painting','Netherlandish and Flemish Renaissance painting','French Renaissance','Danish Renaissance','Nordic Renaissance','Venetian School','Venetian school','Venetian Renaissance','Proto-Renaissance',
+    '이탈리아 르네상스','전성기 르네상스','북유럽 르네상스','북방 르네상스','독일 르네상스','초기 네덜란드 회화','플랑드르파','네덜란드 및 플랑드르 르네상스 회화','프랑스 르네상스','덴마크 르네상스','북유럽 르네상스','베네치아 화파','베네치아 르네상스','선르네상스'
+  ], {
     id: 'group:renaissance',
-    label: {ko:'르네상스', en:'Renaissance'},
-    includes: ['Renaissance','Italian Renaissance','High Renaissance','Northern Renaissance','German Renaissance','Early Netherlandish painting','Netherlandish and Flemish Renaissance painting','Venetian School','Venetian Renaissance','Proto-Renaissance','르네상스','이탈리아 르네상스','전성기 르네상스','북유럽 르네상스','북방 르네상스','독일 르네상스','플랑드르파','네덜란드 및 플랑드르 르네상스 회화','베네치아 화파','선르네상스']
-  },
-  {
-    id: 'group:northern-renaissance',
-    label: {ko:'북유럽 르네상스', en:'Northern Renaissance'},
-    includes: ['Northern Renaissance','German Renaissance','Early Netherlandish painting','Netherlandish and Flemish Renaissance painting','북유럽 르네상스','북방 르네상스','독일 르네상스','플랑드르파','네덜란드 및 플랑드르 르네상스 회화']
-  },
-  {
-    id: 'group:italian-renaissance',
-    label: {ko:'이탈리아 르네상스', en:'Italian Renaissance'},
-    includes: ['Italian Renaissance','High Renaissance','Venetian School','Venetian Renaissance','Proto-Renaissance','이탈리아 르네상스','전성기 르네상스','베네치아 화파','선르네상스']
-  }
-].map(group => ({...group, keys:new Set(group.includes.map(compactMovementName))}));
+    children: [
+      movementFilterSpec({ko:'이탈리아 르네상스', en:'Italian Renaissance'}, ['Italian Renaissance','High Renaissance','Proto-Renaissance','이탈리아 르네상스','전성기 르네상스','선르네상스']),
+      movementFilterSpec({ko:'베네치아 화파', en:'Venetian School'}, ['Venetian School','Venetian school','Venetian Renaissance','베네치아 화파','베네치아 르네상스']),
+      movementFilterSpec({ko:'북유럽 르네상스', en:'Northern Renaissance'}, ['Northern Renaissance','북유럽 르네상스','북방 르네상스']),
+      movementFilterSpec({ko:'독일 르네상스', en:'German Renaissance'}, ['German Renaissance','독일 르네상스']),
+      movementFilterSpec({ko:'도나우파', en:'Danube School'}, ['Danube School','도나우파']),
+      movementFilterSpec({ko:'네덜란드·플랑드르 르네상스', en:'Netherlandish and Flemish Renaissance'}, ['Early Netherlandish painting','Dutch and Flemish Renaissance painting','Netherlandish and Flemish Renaissance painting','초기 네덜란드 회화','플랑드르파','네덜란드 및 플랑드르 르네상스 회화','네덜란드·플랑드르 르네상스']),
+      movementFilterSpec({ko:'프랑스 르네상스', en:'French Renaissance'}, ['French Renaissance','프랑스 르네상스']),
+      movementFilterSpec({ko:'덴마크 르네상스', en:'Danish Renaissance'}, ['Danish Renaissance','덴마크 르네상스']),
+      movementFilterSpec({ko:'노르딕 르네상스', en:'Nordic Renaissance'}, ['Nordic Renaissance','북유럽 르네상스','노르딕 르네상스'])
+    ]
+  }),
+  movementFilterSpec({ko:'매너리즘', en:'Mannerism'}, ['Mannerism','매너리즘'], {
+    id:'mannerism',
+    children: [
+      movementFilterSpec({ko:'피렌체·로마 매너리즘', en:'Florentine-Roman Mannerism'}, ['Florentine-Roman Mannerism','Florentine Mannerism','Roman Mannerism','피렌체-로마 매너리즘','피렌체·로마 매너리즘']),
+      movementFilterSpec({ko:'파르마·에밀리아 매너리즘', en:'Parma and Emilian Mannerism'}, ['Parma and Emilian Mannerism','Parma Mannerism','Emilian Mannerism','파르마와 에밀리아 계열','파르마·에밀리아 매너리즘']),
+      movementFilterSpec({ko:'퐁텐블로파', en:'School of Fontainebleau'}, ['School of Fontainebleau','Fontainebleau School','퐁텐블로파']),
+      movementFilterSpec({ko:'스페인 매너리즘', en:'Spanish Mannerism'}, ['Spanish Mannerism','스페인 매너리즘']),
+      movementFilterSpec({ko:'네덜란드 매너리즘', en:'Dutch Mannerism'}, ['Dutch Mannerism','Haarlem Mannerism','Netherlandish Mannerism','네덜란드 매너리즘','하를럼 매너리즘']),
+      movementFilterSpec({ko:'프라하 궁정 매너리즘', en:'Prague Court Mannerism'}, ['Prague Court Mannerism','Habsburg Court Mannerism','Rudolfine Mannerism','프라하 궁정 매너리즘','프라하·합스부르크 궁정','루돌프 2세 궁정 매너리즘'])
+    ]
+  }),
+  movementFilterSpec({ko:'바로크', en:'Baroque'}, ['Baroque art','Italian Baroque painting','Flemish Baroque painting','Spanish Baroque','Dutch Baroque','바로크','이탈리아 바로크 회화','플랑드르 바로크 회화','스페인 바로크','네덜란드 바로크'], {id:'baroque'}),
+  movementFilterSpec({ko:'낭만주의', en:'Romanticism'}, ['German Romanticism','Romanticism','낭만주의','독일 낭만주의'], {id:'romanticism'})
+];
+const artistMovementFilterGroups = artistMovementFilterHierarchy.map(group => ({...group, keys:new Set([...(group.keys || []), ...(group.children || []).flatMap(child => [...child.keys])])}));
+const artistMovementFilterOrder = [
+  'Mannerism','Baroque','Rococo','Neoclassicism','Romanticism','Realism','Impressionism','Post-Impressionism','Fauvism','Cubism','Dada','Surrealism',
+  'Biedermeier','Symbolism','Expressionism','New Objectivity','Bauhaus','Danube School','Dutch Golden Age painting','Arts and Crafts movement'
+].map((name, index) => [compactMovementName(name), index]);
+const artistMovementFilterOrderIndex = new Map(artistMovementFilterOrder);
+const artistMovementDisplayRules = [
+  movementFilterSpec({ko:'이탈리아 르네상스', en:'Italian Renaissance'}, ['Italian Renaissance','High Renaissance','Proto-Renaissance','이탈리아 르네상스','전성기 르네상스','선르네상스'], {parent:{ko:'르네상스', en:'Renaissance'}, documentLabel:{ko:'르네상스', en:'Renaissance'}}),
+  movementFilterSpec({ko:'베네치아 화파', en:'Venetian School'}, ['Venetian School','Venetian school','Venetian Renaissance','베네치아 화파','베네치아 르네상스'], {parent:{ko:'르네상스', en:'Renaissance'}, documentLabel:{ko:'르네상스', en:'Renaissance'}}),
+  movementFilterSpec({ko:'북유럽 르네상스', en:'Northern Renaissance'}, ['Northern Renaissance','북유럽 르네상스','북방 르네상스'], {parent:{ko:'르네상스', en:'Renaissance'}, documentLabel:{ko:'북유럽 르네상스', en:'Northern Renaissance'}}),
+  movementFilterSpec({ko:'독일 르네상스', en:'German Renaissance'}, ['German Renaissance','독일 르네상스'], {parent:{ko:'르네상스', en:'Renaissance'}, documentLabel:{ko:'북유럽 르네상스', en:'Northern Renaissance'}}),
+  movementFilterSpec({ko:'도나우파', en:'Danube School'}, ['Danube School','도나우파'], {parent:{ko:'르네상스', en:'Renaissance'}, documentLabel:{ko:'도나우파', en:'Danube School'}}),
+  movementFilterSpec({ko:'네덜란드·플랑드르 르네상스', en:'Netherlandish and Flemish Renaissance'}, ['Early Netherlandish painting','Dutch and Flemish Renaissance painting','Netherlandish and Flemish Renaissance painting','초기 네덜란드 회화','플랑드르파','네덜란드 및 플랑드르 르네상스 회화','네덜란드·플랑드르 르네상스'], {parent:{ko:'르네상스', en:'Renaissance'}, documentLabel:{ko:'북유럽 르네상스', en:'Northern Renaissance'}}),
+  movementFilterSpec({ko:'프랑스 르네상스', en:'French Renaissance'}, ['French Renaissance','프랑스 르네상스'], {parent:{ko:'르네상스', en:'Renaissance'}, documentLabel:{ko:'르네상스', en:'Renaissance'}}),
+  movementFilterSpec({ko:'덴마크 르네상스', en:'Danish Renaissance'}, ['Danish Renaissance','덴마크 르네상스'], {parent:{ko:'르네상스', en:'Renaissance'}, documentLabel:{ko:'덴마크 르네상스', en:'Danish Renaissance'}}),
+  movementFilterSpec({ko:'노르딕 르네상스', en:'Nordic Renaissance'}, ['Nordic Renaissance','북유럽 르네상스','노르딕 르네상스'], {parent:{ko:'르네상스', en:'Renaissance'}, documentLabel:{ko:'노르딕 르네상스', en:'Nordic Renaissance'}}),
+  movementFilterSpec({ko:'플랑드르 바로크 회화', en:'Flemish Baroque painting'}, ['Flemish Baroque painting','플랑드르 바로크 회화'], {parent:{ko:'바로크', en:'Baroque'}, documentLabel:{ko:'바로크', en:'Baroque'}}),
+  movementFilterSpec({ko:'이탈리아 바로크 회화', en:'Italian Baroque painting'}, ['Italian Baroque painting','이탈리아 바로크 회화'], {parent:{ko:'바로크', en:'Baroque'}, documentLabel:{ko:'바로크', en:'Baroque'}}),
+  movementFilterSpec({ko:'바로크', en:'Baroque'}, ['Baroque art','바로크']),
+  movementFilterSpec({ko:'피렌체·로마 매너리즘', en:'Florentine-Roman Mannerism'}, ['Florentine-Roman Mannerism','Florentine Mannerism','Roman Mannerism','피렌체-로마 매너리즘','피렌체·로마 매너리즘'], {parent:{ko:'매너리즘', en:'Mannerism'}, documentLabel:{ko:'매너리즘', en:'Mannerism'}}),
+  movementFilterSpec({ko:'파르마·에밀리아 매너리즘', en:'Parma and Emilian Mannerism'}, ['Parma and Emilian Mannerism','Parma Mannerism','Emilian Mannerism','파르마와 에밀리아 계열','파르마·에밀리아 매너리즘'], {parent:{ko:'매너리즘', en:'Mannerism'}, documentLabel:{ko:'매너리즘', en:'Mannerism'}}),
+  movementFilterSpec({ko:'퐁텐블로파', en:'School of Fontainebleau'}, ['School of Fontainebleau','Fontainebleau School','퐁텐블로파'], {parent:{ko:'매너리즘', en:'Mannerism'}, documentLabel:{ko:'매너리즘', en:'Mannerism'}}),
+  movementFilterSpec({ko:'스페인 매너리즘', en:'Spanish Mannerism'}, ['Spanish Mannerism','스페인 매너리즘'], {parent:{ko:'매너리즘', en:'Mannerism'}, documentLabel:{ko:'매너리즘', en:'Mannerism'}}),
+  movementFilterSpec({ko:'네덜란드 매너리즘', en:'Dutch Mannerism'}, ['Dutch Mannerism','Haarlem Mannerism','Netherlandish Mannerism','네덜란드 매너리즘','하를럼 매너리즘'], {parent:{ko:'매너리즘', en:'Mannerism'}, documentLabel:{ko:'매너리즘', en:'Mannerism'}}),
+  movementFilterSpec({ko:'프라하 궁정 매너리즘', en:'Prague Court Mannerism'}, ['Prague Court Mannerism','Habsburg Court Mannerism','Rudolfine Mannerism','프라하 궁정 매너리즘','프라하·합스부르크 궁정','루돌프 2세 궁정 매너리즘'], {parent:{ko:'매너리즘', en:'Mannerism'}, documentLabel:{ko:'매너리즘', en:'Mannerism'}}),
+  movementFilterSpec({ko:'독일 낭만주의', en:'German Romanticism'}, ['German Romanticism','독일 낭만주의'], {parent:{ko:'낭만주의', en:'Romanticism'}, documentLabel:{ko:'낭만주의', en:'Romanticism'}}),
+  movementFilterSpec({ko:'낭만주의', en:'Romanticism'}, ['Romanticism','낭만주의']),
+  movementFilterSpec({ko:'후기 인상주의', en:'Post-Impressionism'}, ['Post-Impressionism','Post-impressionism','후기 인상주의','후기인상주의'])
+];
+const artistMovementClassificationOverrides = {
+  Q17169:{ko:'베네치아 화파', en:'Venetian School'},
+  Q8459:{ko:'베네치아 화파', en:'Venetian School'},
+  Q47551:{ko:'베네치아 화파', en:'Venetian School'},
+  Q9319:{ko:'베네치아 화파', en:'Venetian School'},
+  Q153746:{ko:'도나우파', en:'Danube School'},
+  Q610556:{ko:'도나우파', en:'Danube School'},
+  Q207929:{ko:'피렌체·로마 매너리즘', en:'Florentine-Roman Mannerism'},
+  Q312617:{ko:'피렌체·로마 매너리즘', en:'Florentine-Roman Mannerism'},
+  Q9348:{ko:'파르마·에밀리아 매너리즘', en:'Parma and Emilian Mannerism'},
+  Q7803:{ko:'피렌체·로마 매너리즘', en:'Florentine-Roman Mannerism'},
+  Q333366:{ko:'퐁텐블로파', en:'School of Fontainebleau'},
+  Q301:{ko:'스페인 매너리즘', en:'Spanish Mannerism'},
+  Q165367:{ko:'네덜란드 매너리즘', en:'Dutch Mannerism'},
+  Q442484:{ko:'네덜란드 매너리즘', en:'Dutch Mannerism'},
+  Q329811:{ko:'네덜란드 매너리즘', en:'Dutch Mannerism'},
+  Q447682:{ko:'프라하 궁정 매너리즘', en:'Prague Court Mannerism'},
+  Q7751:{ko:'프라하 궁정 매너리즘', en:'Prague Court Mannerism'}
+};
 function movementEntry(value) {
   if (!value) return null;
   if (typeof value === 'string') {
@@ -1236,10 +1311,21 @@ function movementEntry(value) {
   return id && label ? {id, label} : null;
 }
 function artistMovementEntries(artist) {
-  const entries = [movementEntry(artist?.movement), movementEntry(artistMovementFallbacks[artist?.qid])];
+  const override = artistMovementClassificationOverrides[artist?.qid] || artistMovementClassificationOverrides[artist?.id];
+  const entries = [movementEntry(override), movementEntry(artist?.movement), movementEntry(artistMovementFallbacks[artist?.qid])];
   if (!entries.some(Boolean)) entries.push(movementEntry(primaryMovement(artist)));
   const seen = new Set();
   return entries.filter(entry => entry && !seen.has(entry.id) && seen.add(entry.id));
+}
+function artistMovementDisplayInfo(artist) {
+  const entry = artistMovementEntries(artist)[0] || movementEntry(primaryMovement(artist));
+  if (!entry) return {label:'', documentLabel:''};
+  const rule = artistMovementDisplayRules.find(item => item.keys.has(entry.id));
+  if (!rule) return {label:entry.label, parentLabel:entry.label, documentLabel:entry.label};
+  const label = loc(rule.label) || entry.label;
+  const parent = loc(rule.parent);
+  const display = parent && compactMovementName(label) !== compactMovementName(parent) ? `${label} - ${parent}` : label;
+  return {label:display, parentLabel:parent || label, documentLabel:loc(rule.documentLabel) || label};
 }
 function artistMatchesMovementFilter(artist) {
   if (!artistMovementFilter) return true;
@@ -1249,28 +1335,102 @@ function artistMatchesMovementFilter(artist) {
   return entries.some(entry => entry.id === artistMovementFilter);
 }
 function artistMovementFilterOptions() {
-  const groups = artistMovementFilterGroups.map(group => ({id:group.id, label:loc(group.label), group:true}));
   const direct = new Map();
   (artists || []).forEach(artist => artistMovementEntries(artist).forEach(entry => {
     if (!direct.has(entry.id)) direct.set(entry.id, {id:entry.id, label:entry.label});
   }));
-  const groupKeys = new Set(artistMovementFilterGroups.flatMap(group => [...group.keys]));
+  const consumed = new Set();
+  const options = [];
+  artistMovementFilterHierarchy.forEach(group => {
+    const groupKeys = new Set([...(group.keys || []), ...(group.children || []).flatMap(child => [...child.keys])]);
+    if (![...groupKeys].some(key => direct.has(key))) return;
+    options.push({id:group.id, label:loc(group.label), group:true});
+    groupKeys.forEach(key => consumed.add(key));
+    (group.children || []).forEach(child => {
+      const directChild = [...child.keys].map(key => direct.get(key)).find(Boolean);
+      if (directChild) options.push({id:child.id, label:loc(child.label) || directChild.label, child:true});
+    });
+  });
   const directOptions = [...direct.values()]
-    .filter(option => option.label && !groups.some(group => compactMovementName(group.label) === compactMovementName(option.label)))
+    .filter(option => option.label && !consumed.has(option.id))
     .filter((option,index,self) => self.findIndex(item => compactMovementName(item.label) === compactMovementName(option.label)) === index)
-    .sort((a,b) => a.label.localeCompare(b.label, language));
-  const relatedRenaissanceOptions = directOptions.filter(option => groupKeys.has(option.id));
-  const otherOptions = directOptions.filter(option => !groupKeys.has(option.id));
-  return [...groups, ...relatedRenaissanceOptions, ...otherOptions];
+    .sort((a,b) => (artistMovementFilterOrderIndex.get(a.id) ?? 9999) - (artistMovementFilterOrderIndex.get(b.id) ?? 9999) || a.label.localeCompare(b.label, language));
+  return [...options, ...directOptions];
+}
+function groupedArtistMovementFilterOptions(options) {
+  const groups = [];
+  for (let index = 0; index < options.length; index += 1) {
+    const option = options[index];
+    if (option.group) {
+      const children = [];
+      while (options[index + 1]?.child) {
+        children.push(options[index + 1]);
+        index += 1;
+      }
+      groups.push({...option, children});
+    } else if (!option.child) {
+      groups.push(option);
+    }
+  }
+  return groups;
+}
+function movementFilterLabelForValue(groups, value) {
+  if (!value) return t('allMovements');
+  for (const group of groups) {
+    if (group.id === value) return group.label;
+    const child = (group.children || []).find(item => item.id === value);
+    if (child) return child.label;
+  }
+  return t('allMovements');
+}
+function selectArtistMovementFilter(value='') {
+  artistMovementFilter = value;
+  artistMovementFilterMenuOpen = false;
+  renderList();
 }
 function renderArtistMovementFilter() {
-  const select = $('#artist-movement-filter');
-  if (!select) return;
+  const trigger = $('#artist-movement-filter-trigger');
+  const menu = $('#artist-movement-filter-menu');
+  if (!trigger || !menu) return;
   const options = artistMovementFilterOptions();
   if (artistMovementFilter && !options.some(option => option.id === artistMovementFilter)) artistMovementFilter = '';
-  select.innerHTML = `<option value="">${esc(t('allMovements'))}</option>${options.map(option => `<option value="${esc(option.id)}">${option.group ? '— ' : ''}${esc(option.label)}</option>`).join('')}`;
-  select.value = artistMovementFilter;
-  select.setAttribute('aria-label', t('movementFilter'));
+  const groups = groupedArtistMovementFilterOptions(options);
+  groups.forEach(group => {
+    if ((group.children || []).some(child => child.id === artistMovementFilter)) expandedArtistMovementGroups.add(group.id);
+  });
+  trigger.textContent = movementFilterLabelForValue(groups, artistMovementFilter);
+  trigger.title = t('movementFilter');
+  trigger.setAttribute('aria-label', t('movementFilter'));
+  trigger.setAttribute('aria-expanded', String(artistMovementFilterMenuOpen));
+  menu.classList.toggle('hidden', !artistMovementFilterMenuOpen);
+  const itemButton = (option, className='') => `<button type="button" class="artist-movement-filter-option ${className}${artistMovementFilter === option.id ? ' active' : ''}" role="option" aria-selected="${artistMovementFilter === option.id}" data-movement-filter-value="${esc(option.id)}">${esc(option.label)}</button>`;
+  const groupMarkup = group => {
+    const children = group.children || [];
+    if (!children.length) return itemButton(group);
+    const collapsible = children.length > 1;
+    const expanded = !collapsible || expandedArtistMovementGroups.has(group.id);
+    const toggleLabel = expanded
+      ? (language === 'ko' ? `${group.label} 하위 사조 접기` : `Collapse ${group.label}`)
+      : (language === 'ko' ? `${group.label} 하위 사조 펼치기` : `Expand ${group.label}`);
+    return `<div class="artist-movement-filter-group${expanded ? ' expanded' : ''}" data-movement-filter-group="${esc(group.id)}"><div class="artist-movement-filter-group-row">${itemButton(group, 'artist-movement-filter-parent')}${collapsible ? `<button type="button" class="artist-movement-filter-toggle" data-movement-filter-toggle="${esc(group.id)}" aria-expanded="${expanded}" aria-label="${esc(toggleLabel)}">${expanded ? '▴' : '▾'}</button>` : ''}</div>${expanded ? `<div class="artist-movement-filter-children">${children.map(child => itemButton(child, 'artist-movement-filter-child')).join('')}</div>` : ''}</div>`;
+  };
+  menu.innerHTML = `<button type="button" class="artist-movement-filter-option artist-movement-filter-all${!artistMovementFilter ? ' active' : ''}" role="option" aria-selected="${!artistMovementFilter}" data-movement-filter-value="">${esc(t('allMovements'))}</button>${groups.map(groupMarkup).join('')}`;
+  menu.querySelectorAll('[data-movement-filter-value]').forEach(button => {
+    button.onclick = event => {
+      event.stopPropagation();
+      selectArtistMovementFilter(button.dataset.movementFilterValue || '');
+    };
+  });
+  menu.querySelectorAll('[data-movement-filter-toggle]').forEach(button => {
+    button.onclick = event => {
+      event.stopPropagation();
+      const groupId = button.dataset.movementFilterToggle;
+      if (expandedArtistMovementGroups.has(groupId)) expandedArtistMovementGroups.delete(groupId);
+      else expandedArtistMovementGroups.add(groupId);
+      artistMovementFilterMenuOpen = true;
+      renderArtistMovementFilter();
+    };
+  });
   const clear = $('#artist-movement-filter-clear');
   if (clear) {
     clear.hidden = !artistMovementFilter;
@@ -1290,6 +1450,12 @@ function movementDocumentKey(label='') {
     '후기인상주의':'Post-Impressionism',
     '이탈리아르네상스':'Renaissance',
     '전성기르네상스':'Renaissance',
+    '선르네상스':'Renaissance',
+    '베네치아화파':'Renaissance',
+    '베네치아르네상스':'Renaissance',
+    '플랑드르바로크회화':'Baroque',
+    '이탈리아바로크회화':'Baroque',
+    '독일낭만주의':'Romanticism',
     'highrenaissance':'Renaissance',
     'rococopainting':'Rococo'
   };
@@ -1371,7 +1537,7 @@ function renderList() {
     return searchText.includes(query) || (compactQuery && normalized(searchText).includes(compactQuery));
   }).sort((a,b) => effectiveSort === 'birth' ? (a.birth || 9999) - (b.birth || 9999) : artistDisplayName(a).localeCompare(artistDisplayName(b), language));
   list.innerHTML = ordered.length ? ordered.map(a => {
-    const country = artistCountryInfo(a), countryLabel = artistCountryLabel(a), movement = primaryMovement(a);
+    const country = artistCountryInfo(a), countryLabel = artistCountryLabel(a), movement = artistMovementDisplayInfo(a).parentLabel;
     const displayName = artistListEnglish ? (a.name?.en || artistDisplayName(a)) : artistDisplayName(a);
     const nameAttributes = artistListEnglish ? ' data-uh-ignore="true"' : uHangulArtistAttributes(a, displayName);
     const historicalCountry = country.original !== country.name;
@@ -1522,8 +1688,9 @@ function renderTimeline() {
   const linkControls = `<span class="artist-link-controls">${currentUserIsAdmin ? `<button class="artist-link-add" type="button" title="${esc(addLinkLabel)}" aria-label="${esc(addLinkLabel)}">+</button>` : ''}${linkButtons}</span>`;
   const nationality = artistNationality(artist);
   const nationalityLabel = loc(nationality) ? countryDisplayLabel(nationality) : '';
-  const artistMovement = primaryMovement(artist);
-  const artistMovementDocument = movementDocumentKey(artistMovement);
+  const artistMovementInfo = artistMovementDisplayInfo(artist);
+  const artistMovement = artistMovementInfo.label;
+  const artistMovementDocument = movementDocumentKey(artistMovementInfo.documentLabel || artistMovement);
   const artistMovementLabel = artistMovementDocument
     ? `<button class="artist-movement-link" type="button" data-movement-document="${esc(artistMovementDocument)}">${esc(artistMovement)}</button>`
     : `<span class="artist-movement-label">${esc(artistMovement)}</span>`;
@@ -2884,8 +3051,19 @@ async function addLocalArtworksToSelectedArtist(files, title, yearInput) {
 
 $('#sort').onchange = renderList;
 $('#artist-search').oninput = event => { artistSearchQuery = event.currentTarget.value.trim(); renderList(); };
-$('#artist-movement-filter').onchange = event => { artistMovementFilter = event.currentTarget.value; renderList(); };
-$('#artist-movement-filter-clear').onclick = () => { artistMovementFilter = ''; renderList(); };
+$('#artist-movement-filter-trigger').onclick = event => { event.stopPropagation(); artistMovementFilterMenuOpen = !artistMovementFilterMenuOpen; renderArtistMovementFilter(); };
+$('#artist-movement-filter-clear').onclick = event => { event.stopPropagation(); selectArtistMovementFilter(''); };
+document.addEventListener('click', event => {
+  if (!artistMovementFilterMenuOpen || event.target.closest('.artist-movement-filter')) return;
+  artistMovementFilterMenuOpen = false;
+  renderArtistMovementFilter();
+});
+document.addEventListener('keydown', event => {
+  if (event.key !== 'Escape' || !artistMovementFilterMenuOpen) return;
+  artistMovementFilterMenuOpen = false;
+  renderArtistMovementFilter();
+  $('#artist-movement-filter-trigger')?.focus();
+});
 $('#movement-atlas-button').onclick = openMovementAtlas;
 $('#techniques-button').onclick = openTechniquesPage;
 $('#topics-button').onclick = openTopicsPage;

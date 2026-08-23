@@ -12,10 +12,21 @@
 .artist-search input { width: 100%; border: 1px solid #c6cfc0; border-radius: 6px; background: #fffdf8; color: var(--ink); padding: 9px 10px; font-size: 12px; outline-color: #aebba8; }
 .artist-filter-row .artist-search { min-width: 0; margin: 0; }
 .artist-movement-filter { position: relative; display: block; min-width: 0; margin: 0; }
-.artist-movement-filter select { width: 100%; min-width: 0; border: 1px solid #c6cfc0; border-radius: 6px; background: #fffdf8; color: var(--ink); padding: 9px 28px 9px 10px; font-size: 12px; outline-color: #aebba8; }
-.artist-movement-filter select:focus { border-color: #aebba8; }
-.artist-movement-filter button { position: absolute; right: 22px; top: 50%; transform: translateY(-50%); display: grid; width: 17px; height: 17px; place-items: center; border: 0; border-radius: 50%; background: #e8ded3; color: #7b4b38; font: 700 13px/1 var(--sans); padding: 0; }
-.artist-movement-filter button:hover, .artist-movement-filter button:focus-visible { background: #d8c4b5; color: #8e2f1f; outline: none; }
+.artist-movement-filter-trigger { position: relative; width: 100%; min-width: 0; border: 1px solid #c6cfc0; border-radius: 6px; background: #fffdf8; color: var(--ink); padding: 9px 78px 9px 10px; font-size: 12px; line-height: 1.2; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.artist-movement-filter-trigger::after { content: '▾'; position: absolute; right: 8px; top: 50%; transform: translateY(-50%); color: var(--muted); font-size: 25px; pointer-events: none; }
+.artist-movement-filter-trigger:focus-visible { border-color: #aebba8; outline: 2px solid rgba(174,187,168,.45); outline-offset: 1px; }
+.artist-movement-filter-menu { position: absolute; z-index: 12; top: calc(100% + 5px); right: 0; width: 160%; max-height: min(420px, 58vh); overflow: auto; border: 1px solid #c6cfc0; border-radius: 8px; background: #fffdf8; box-shadow: 0 12px 34px rgba(24,34,30,.18); padding: 6px; }
+.artist-movement-filter-option { display: block; width: 100%; border: 0; border-radius: 5px; background: transparent; color: var(--ink); padding: 7px 8px; text-align: left; font-size: 12px; line-height: 1.25; }
+.artist-movement-filter-option:hover, .artist-movement-filter-option:focus-visible, .artist-movement-filter-option.active { background: var(--sage); outline: none; }
+.artist-movement-filter-group { margin-top: 2px; }
+.artist-movement-filter-group-row { display: grid; grid-template-columns: minmax(0, 1fr) 28px; gap: 2px; align-items: center; }
+.artist-movement-filter-parent { font-weight: 700; }
+.artist-movement-filter-toggle { width: 28px; height: 28px; border: 0; border-radius: 5px; background: #edf1e8; color: #4c5d4f; font: 700 14px/1 var(--sans); }
+.artist-movement-filter-toggle:hover, .artist-movement-filter-toggle:focus-visible { background: #dce7d5; outline: none; }
+.artist-movement-filter-children { margin: 1px 0 5px 8px; padding-left: 8px; border-left: 1px solid #d8decf; }
+.artist-movement-filter-child { color: #485549; }
+#artist-movement-filter-clear { position: absolute; right: 44px; top: 50%; transform: translateY(-50%); display: grid; width: 17px; height: 17px; place-items: center; border: 0; border-radius: 50%; background: #e8ded3; color: #7b4b38; font: 700 13px/1 var(--sans); padding: 0; }
+#artist-movement-filter-clear:hover, #artist-movement-filter-clear:focus-visible { background: #d8c4b5; color: #8e2f1f; outline: none; }
 .artist-search-empty { margin: 14px 8px; color: var(--muted); font-size: 12px; line-height: 1.5; }
 
 /* Improve contrast for the artwork timeline's year axis. */
@@ -562,8 +573,9 @@
 .sidebar .artist-search { margin: 6px 0 2px; }
 .sidebar .artist-filter-row .artist-search { margin: 0; }
 .sidebar .artist-search input { padding: 7px 9px; border-radius: 5px; }
-.sidebar .artist-movement-filter select { padding: 7px 26px 7px 8px; border-radius: 5px; font-size: 11px; }
-.sidebar .artist-movement-filter button { right: 20px; }
+.sidebar .artist-movement-filter-trigger { padding: 7px 76px 7px 8px; border-radius: 5px; font-size: 11px; }
+.sidebar .artist-movement-filter-menu { width: 160%; }
+.sidebar #artist-movement-filter-clear { right: 42px; }
 .sidebar .add-button {
   align-self: flex-start;
   width: 32px;

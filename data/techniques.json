@@ -2042,6 +2042,59 @@
       ]
     },
     {
+      "id": "prestezza",
+      "introduced": 1548,
+      "name": {
+        "ko": "프레스테차",
+        "en": "Prestezza"
+      },
+      "subtitle": {
+        "ko": "빠른 실행과 즉흥적 붓질로 화면의 에너지를 드러내는 방식",
+        "en": "Rapid execution and painterly immediacy"
+      },
+      "definition": {
+        "ko": "프레스테차(Prestezza)는 16세기 베네치아 회화, 특히 틴토레토와 관련해 말하는 빠른 실행과 즉흥적 붓질의 미학입니다. 그림을 천천히 매끈하게 마감하기보다, 빠르게 움직인 붓질, 열린 표면, 강한 명암과 사선 구도로 장면이 지금 막 벌어지는 듯한 긴장감을 만듭니다.",
+        "en": "Prestezza is the aesthetic of rapid execution and immediacy associated especially with Tintoretto in sixteenth-century Venetian painting. Rather than slowly polishing every passage, it lets swift brushwork, open surfaces, strong chiaroscuro, and diagonal composition make a scene feel urgently in motion."
+      },
+      "explanation": {
+        "ko": "프레스테차는 알라 프리마처럼 한 번에 완성한다는 물리적 절차만을 뜻하지 않습니다. 더 정확히는 빠르게 그린 흔적이 화면의 효과로 남는 방식, 즉 속도 자체가 표현력이 되는 태도입니다. 틴토레토는 미켈란젤로식 강한 인체와 베네치아식 색채를 결합하면서, 붓질을 완전히 숨기지 않고 사건의 에너지로 보이게 했습니다. 그래서 동시대 비평가들은 그의 빠른 기법을 찬탄하기도 하고, 때로는 미완성처럼 보인다고 비판하기도 했습니다. 프레스테차는 매너리즘의 인공적 긴장과 베네치아 회화의 색채·붓질이 만나는 지점에서 이해하면 좋습니다.",
+        "en": "Prestezza does not simply mean the physical procedure of finishing a painting in one sitting, as alla prima might. More precisely, it names a mode in which the trace of speed remains visible as expressive force. Tintoretto joined Michelangelesque force of figure with Venetian colour, allowing brushwork to energise the event rather than disappear under a polished surface. Contemporary critics could admire this rapidity while also attacking it as unfinished. Prestezza is best understood where Mannerist tension meets the Venetian handling of colour and paint."
+      },
+      "links": [
+        {
+          "url": "https://www.nga.gov/artists/1929-jacopo-tintoretto"
+        },
+        {
+          "url": "https://smarthistory.org/tintoretto-the-miracle-of-the-slave/"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Miracle_of_the_Slave_by_Tintoretto_-_Accademia_-_Venice_2016.jpg"
+        }
+      ],
+      "examples": [
+        {
+          "year": "1548",
+          "artist": {
+            "ko": "틴토레토",
+            "en": "Tintoretto"
+          },
+          "title": {
+            "ko": "《노예의 기적》",
+            "en": "The Miracle of the Slave"
+          },
+          "image": "data/techniques/prestezza/tintoretto-miracle-of-the-slave.jpg",
+          "role": {
+            "ko": "프레스테차를 이해하기 좋은 대표작",
+            "en": "Representative example of prestezza"
+          },
+          "note": {
+            "ko": "성 마르코가 공중에서 급강하하고, 아래 인물들은 서로 다른 방향으로 휘말리듯 반응합니다. 강한 사선, 극적인 명암, 빠르게 살아 있는 붓질이 매끈한 완성보다 사건의 속도와 충격을 앞세우며, 틴토레토식 프레스테차의 장점을 잘 보여줍니다.",
+            "en": "Saint Mark plunges from above while the figures below react in different directions. Diagonals, dramatic light and shadow, and visibly animated brushwork privilege speed and impact over polished finish, making the painting a strong example of Tintoretto's prestezza."
+          }
+        }
+      ]
+    },
+    {
       "id": "tapestry",
       "introduced": -1500,
       "name": {
