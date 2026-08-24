@@ -2,10 +2,10 @@
   "dataSchema": 1,
   "metadata": {
     "createdAt": "2026-08-22T12:46:59.824Z",
-    "updatedAt": "2026-08-24T05:42:53.929Z",
+    "updatedAt": "2026-08-24T06:46:09.374Z",
     "createdBy": "jhlee409@gmail.com",
     "updatedBy": "jhlee409@gmail.com",
-    "revision": 826
+    "revision": 830
   },
   "artists": [
     {
@@ -43625,7 +43625,9 @@
       "movements": [
         "바로크"
       ],
-      "submovements": [],
+      "submovements": [
+        "볼로냐파"
+      ],
       "primaryMovement": "바로크",
       "regions": [
         "이탈리아"
@@ -48170,7 +48172,9 @@
       "movements": [
         "바로크"
       ],
-      "submovements": [],
+      "submovements": [
+        "카라바조주의"
+      ],
       "primaryMovement": "바로크",
       "regions": [
         "이탈리아"
@@ -51206,7 +51210,7 @@
       ],
       "primaryMovement": "바로크",
       "regions": [
-        "네덜란드"
+        "플랑드르"
       ],
       "periods": [
         "1520-1600",
@@ -52026,7 +52030,9 @@
       "movements": [
         "바로크"
       ],
-      "submovements": [],
+      "submovements": [
+        "네덜란드 황금기"
+      ],
       "primaryMovement": "바로크",
       "regions": [
         "네덜란드"
@@ -54614,7 +54620,9 @@
       "movements": [
         "바로크"
       ],
-      "submovements": [],
+      "submovements": [
+        "프랑스 바로크"
+      ],
       "primaryMovement": "바로크",
       "regions": [
         "프랑스"
@@ -55192,7 +55200,9 @@
       "movements": [
         "바로크"
       ],
-      "submovements": [],
+      "submovements": [
+        "로마 바로크"
+      ],
       "primaryMovement": "바로크",
       "regions": [
         "이탈리아"
@@ -55923,7 +55933,9 @@
       "movements": [
         "바로크"
       ],
-      "submovements": [],
+      "submovements": [
+        "스페인 바로크"
+      ],
       "primaryMovement": "바로크",
       "regions": [
         "스페인"
@@ -56429,7 +56441,9 @@
       "movements": [
         "바로크"
       ],
-      "submovements": [],
+      "submovements": [
+        "스페인 바로크"
+      ],
       "primaryMovement": "바로크",
       "regions": [
         "스페인"
@@ -61693,7 +61707,9 @@
       "movements": [
         "바로크"
       ],
-      "submovements": [],
+      "submovements": [
+        "스페인 바로크"
+      ],
       "primaryMovement": "바로크",
       "regions": [
         "스페인"
@@ -66812,11 +66828,14 @@
         "en": "Rococo"
       },
       "artistSummary": {
-        "ko": [],
+        "ko": [
+          "마리 앙투아네트의 초상화가로 알려진 프랑스의 대표적 여성 화가다. 후기 로코코의 우아한 초상 양식을 신고전주의 시기까지 이어 갔다."
+        ],
         "en": []
       },
       "movements": [
-        "로코코"
+        "로코코",
+        "신고전주의"
       ],
       "submovements": [],
       "primaryMovement": "로코코",
@@ -66830,7 +66849,10 @@
         "1830-1880"
       ],
       "activeFrom": 1775,
-      "activeTo": 1842
+      "activeTo": 1842,
+      "featuredWorkIds": [
+        "wikidata-Q23037740"
+      ]
     },
     {
       "id": "artist-1786332007363",
@@ -86502,7 +86524,9 @@
       "movements": [
         "바로크"
       ],
-      "submovements": [],
+      "submovements": [
+        "프랑스 바로크"
+      ],
       "primaryMovement": "바로크",
       "regions": [
         "프랑스"
@@ -86513,6 +86537,2102 @@
       ],
       "activeFrom": 1620,
       "activeTo": 1682
+    },
+    {
+      "id": "artist-Q155151",
+      "qid": "Q155151",
+      "name": {
+        "ko": "앙투안 와토",
+        "en": "Antoine Watteau"
+      },
+      "fullName": "앙투안 와토",
+      "birth": 1684,
+      "death": 1721,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "movement": {
+        "ko": "로코코",
+        "en": "Rococo"
+      },
+      "aliases": {
+        "ko": [
+          "와토"
+        ],
+        "en": []
+      },
+      "artistSummary": {
+        "ko": [
+          "페트 갈랑트를 통해 귀족의 사교와 덧없는 감정을 섬세한 색조로 그렸다."
+        ],
+        "en": []
+      },
+      "links": {
+        "wikidata": "https://www.wikidata.org/wiki/Q155151"
+      },
+      "works": [
+        {
+          "id": "artist-Q155151-representative-work",
+          "year": 1717,
+          "popularity": 90,
+          "title": {
+            "ko": "키테라섬으로의 순례",
+            "en": "Pilgrimage to Cythera"
+          },
+          "description": {
+            "ko": "페트 갈랑트를 통해 귀족의 사교와 덧없는 감정을 섬세한 색조로 그렸다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil painting"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "로코코",
+            "en": "Rococo"
+          },
+          "image": "data/미술사조/images/Antoine-20Watteau-20-20Pilgrimage-20to-20Cythera-20-20WGA25454-de23e298c518.jpg",
+          "thumbnail": "data/미술사조/images/Antoine-20Watteau-20-20Pilgrimage-20to-20Cythera-20-20WGA25454-de23e298c518.jpg",
+          "highResImage": "data/미술사조/images/Antoine-20Watteau-20-20Pilgrimage-20to-20Cythera-20-20WGA25454-de23e298c518.jpg",
+          "highResOriginal": "data/미술사조/images/Antoine-20Watteau-20-20Pilgrimage-20to-20Cythera-20-20WGA25454-de23e298c518.jpg",
+          "source": "existing local project asset: data/미술사조/images/Antoine-20Watteau-20-20Pilgrimage-20to-20Cythera-20-20WGA25454-de23e298c518.jpg",
+          "verified": true,
+          "status": "verified",
+          "representative": true,
+          "movementContribution": true,
+          "origin": "manual"
+        }
+      ],
+      "featuredWorkIds": [
+        "artist-Q155151-representative-work"
+      ],
+      "profileResolved": true,
+      "metadata": {
+        "createdAt": "2026-08-24T00:00:00Z",
+        "updatedAt": "2026-08-24T00:00:00Z",
+        "createdBy": "manual entry",
+        "updatedBy": "manual entry"
+      },
+      "movements": [
+        "로코코"
+      ],
+      "submovements": [],
+      "primaryMovement": "로코코",
+      "regions": [
+        "프랑스"
+      ],
+      "periods": [
+        "1600-1700",
+        "1700-1780",
+        "1750-1830"
+      ],
+      "activeFrom": 1702,
+      "activeTo": 1721
+    },
+    {
+      "id": "artist-Q313122",
+      "qid": "Q313122",
+      "name": {
+        "ko": "프랑수아 부셰",
+        "en": "François Boucher"
+      },
+      "fullName": "프랑수아 부셰",
+      "birth": 1703,
+      "death": 1770,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "movement": {
+        "ko": "로코코",
+        "en": "Rococo"
+      },
+      "aliases": {
+        "ko": [
+          "부셰"
+        ],
+        "en": []
+      },
+      "artistSummary": {
+        "ko": [
+          "신화와 장식, 관능적인 색채를 결합해 프랑스 로코코의 살롱 취향을 대표했다."
+        ],
+        "en": []
+      },
+      "links": {
+        "wikidata": "https://www.wikidata.org/wiki/Q313122"
+      },
+      "works": [
+        {
+          "id": "artist-Q313122-representative-work",
+          "year": 1751,
+          "popularity": 90,
+          "title": {
+            "ko": "비너스의 단장",
+            "en": "The Toilet of Venus"
+          },
+          "description": {
+            "ko": "신화와 장식, 관능적인 색채를 결합해 프랑스 로코코의 살롱 취향을 대표했다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil painting"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "로코코",
+            "en": "Rococo"
+          },
+          "image": "data/미술사조/images/The-20Toilet-20of-20Venus-20by-20Fran-C3-A7ois-20Boucher-fc27175742d6.jpg",
+          "thumbnail": "data/미술사조/images/The-20Toilet-20of-20Venus-20by-20Fran-C3-A7ois-20Boucher-fc27175742d6.jpg",
+          "highResImage": "data/미술사조/images/The-20Toilet-20of-20Venus-20by-20Fran-C3-A7ois-20Boucher-fc27175742d6.jpg",
+          "highResOriginal": "data/미술사조/images/The-20Toilet-20of-20Venus-20by-20Fran-C3-A7ois-20Boucher-fc27175742d6.jpg",
+          "source": "existing local project asset: data/미술사조/images/The-20Toilet-20of-20Venus-20by-20Fran-C3-A7ois-20Boucher-fc27175742d6.jpg",
+          "verified": true,
+          "status": "verified",
+          "representative": true,
+          "movementContribution": true,
+          "origin": "manual"
+        }
+      ],
+      "featuredWorkIds": [
+        "artist-Q313122-representative-work"
+      ],
+      "profileResolved": true,
+      "metadata": {
+        "createdAt": "2026-08-24T00:00:00Z",
+        "updatedAt": "2026-08-24T00:00:00Z",
+        "createdBy": "manual entry",
+        "updatedBy": "manual entry"
+      },
+      "movements": [
+        "로코코"
+      ],
+      "submovements": [],
+      "primaryMovement": "로코코",
+      "regions": [
+        "프랑스"
+      ],
+      "periods": [
+        "1600-1700",
+        "1700-1780",
+        "1750-1830"
+      ],
+      "activeFrom": 1723,
+      "activeTo": 1770
+    },
+    {
+      "id": "artist-Q313898",
+      "qid": "Q313898",
+      "name": {
+        "ko": "장오노레 프라고나르",
+        "en": "Jean-Honoré Fragonard"
+      },
+      "fullName": "장오노레 프라고나르",
+      "birth": 1732,
+      "death": 1806,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "movement": {
+        "ko": "로코코",
+        "en": "Rococo"
+      },
+      "aliases": {
+        "ko": [
+          "프라고나르"
+        ],
+        "en": []
+      },
+      "artistSummary": {
+        "ko": [
+          "가볍고 빠른 붓질과 은밀한 연애의 서사로 로코코의 유희성을 극대화했다."
+        ],
+        "en": []
+      },
+      "links": {
+        "wikidata": "https://www.wikidata.org/wiki/Q313898"
+      },
+      "works": [
+        {
+          "id": "artist-Q313898-representative-work",
+          "year": 1767,
+          "popularity": 90,
+          "title": {
+            "ko": "그네",
+            "en": "The Swing"
+          },
+          "description": {
+            "ko": "가볍고 빠른 붓질과 은밀한 연애의 서사로 로코코의 유희성을 극대화했다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil painting"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "로코코",
+            "en": "Rococo"
+          },
+          "image": "data/미술사조/images/Fragonard-The-Swing-af227c46d654.jpg",
+          "thumbnail": "data/미술사조/images/Fragonard-The-Swing-af227c46d654.jpg",
+          "highResImage": "data/미술사조/images/Fragonard-The-Swing-af227c46d654.jpg",
+          "highResOriginal": "data/미술사조/images/Fragonard-The-Swing-af227c46d654.jpg",
+          "source": "existing local project asset: data/미술사조/images/Fragonard-The-Swing-af227c46d654.jpg",
+          "verified": true,
+          "status": "verified",
+          "representative": true,
+          "movementContribution": true,
+          "origin": "manual"
+        }
+      ],
+      "featuredWorkIds": [
+        "artist-Q313898-representative-work"
+      ],
+      "profileResolved": true,
+      "metadata": {
+        "createdAt": "2026-08-24T00:00:00Z",
+        "updatedAt": "2026-08-24T00:00:00Z",
+        "createdBy": "manual entry",
+        "updatedBy": "manual entry"
+      },
+      "movements": [
+        "로코코"
+      ],
+      "submovements": [],
+      "primaryMovement": "로코코",
+      "regions": [
+        "프랑스"
+      ],
+      "periods": [
+        "1600-1700",
+        "1700-1780",
+        "1750-1830"
+      ],
+      "activeFrom": 1752,
+      "activeTo": 1806
+    },
+    {
+      "id": "artist-Q162048",
+      "qid": "Q162048",
+      "name": {
+        "ko": "조반니 바티스타 티에폴로",
+        "en": "Giovanni Battista Tiepolo"
+      },
+      "fullName": "조반니 바티스타 티에폴로",
+      "birth": 1696,
+      "death": 1770,
+      "nationality": {
+        "ko": "이탈리아",
+        "en": "Italy"
+      },
+      "movement": {
+        "ko": "로코코",
+        "en": "Rococo"
+      },
+      "aliases": {
+        "ko": [
+          "티에폴로"
+        ],
+        "en": []
+      },
+      "artistSummary": {
+        "ko": [
+          "밝은 색채와 솟구치는 원근법으로 베네치아 로코코 천장화의 환영을 만들었다."
+        ],
+        "en": []
+      },
+      "links": {
+        "wikidata": "https://www.wikidata.org/wiki/Q162048"
+      },
+      "works": [
+        {
+          "id": "artist-Q162048-representative-work",
+          "year": 1752,
+          "popularity": 90,
+          "title": {
+            "ko": "아폴론과 대륙들",
+            "en": "Apollo and the Continents"
+          },
+          "description": {
+            "ko": "밝은 색채와 솟구치는 원근법으로 베네치아 로코코 천장화의 환영을 만들었다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil painting"
+          },
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "로코코",
+            "en": "Rococo"
+          },
+          "image": "data/미술사조/images/Giovanni-20Battista-20Tiepolo-20-20Apollo-20and-20the-20Continents-20-4da05d03665b.jpg",
+          "thumbnail": "data/미술사조/images/Giovanni-20Battista-20Tiepolo-20-20Apollo-20and-20the-20Continents-20-4da05d03665b.jpg",
+          "highResImage": "data/미술사조/images/Giovanni-20Battista-20Tiepolo-20-20Apollo-20and-20the-20Continents-20-4da05d03665b.jpg",
+          "highResOriginal": "data/미술사조/images/Giovanni-20Battista-20Tiepolo-20-20Apollo-20and-20the-20Continents-20-4da05d03665b.jpg",
+          "source": "existing local project asset: data/미술사조/images/Giovanni-20Battista-20Tiepolo-20-20Apollo-20and-20the-20Continents-20-4da05d03665b.jpg",
+          "verified": true,
+          "status": "verified",
+          "representative": true,
+          "movementContribution": true,
+          "origin": "manual"
+        }
+      ],
+      "featuredWorkIds": [
+        "artist-Q162048-representative-work"
+      ],
+      "profileResolved": true,
+      "metadata": {
+        "createdAt": "2026-08-24T00:00:00Z",
+        "updatedAt": "2026-08-24T00:00:00Z",
+        "createdBy": "manual entry",
+        "updatedBy": "manual entry"
+      },
+      "movements": [
+        "로코코"
+      ],
+      "submovements": [],
+      "primaryMovement": "로코코",
+      "regions": [
+        "이탈리아"
+      ],
+      "periods": [
+        "1600-1700",
+        "1700-1780",
+        "1750-1830"
+      ],
+      "activeFrom": 1715,
+      "activeTo": 1770
+    },
+    {
+      "id": "artist-Q161866",
+      "qid": "Q161866",
+      "name": {
+        "ko": "카날레토",
+        "en": "Canaletto"
+      },
+      "fullName": "카날레토",
+      "birth": 1697,
+      "death": 1768,
+      "nationality": {
+        "ko": "이탈리아",
+        "en": "Italy"
+      },
+      "movement": {
+        "ko": "로코코",
+        "en": "Rococo"
+      },
+      "aliases": {
+        "ko": [
+          "카날레토"
+        ],
+        "en": []
+      },
+      "artistSummary": {
+        "ko": [
+          "정밀한 도시 풍경에 맑은 빛과 여행자의 시선을 결합해 베네치아의 시각적 이미지를 만들었다."
+        ],
+        "en": []
+      },
+      "links": {
+        "wikidata": "https://www.wikidata.org/wiki/Q161866"
+      },
+      "works": [
+        {
+          "id": "artist-Q161866-representative-work",
+          "year": 1725,
+          "popularity": 90,
+          "title": {
+            "ko": "석공의 마당",
+            "en": "The Stonemason’s Yard"
+          },
+          "description": {
+            "ko": "정밀한 도시 풍경에 맑은 빛과 여행자의 시선을 결합해 베네치아의 시각적 이미지를 만들었다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil painting"
+          },
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "로코코",
+            "en": "Rococo"
+          },
+          "image": "data/미술사조/images/Canaletto-Stonemasons-Yard.jpg",
+          "thumbnail": "data/미술사조/images/Canaletto-Stonemasons-Yard.jpg",
+          "highResImage": "data/미술사조/images/Canaletto-Stonemasons-Yard.jpg",
+          "highResOriginal": "data/미술사조/images/Canaletto-Stonemasons-Yard.jpg",
+          "source": "existing local project asset: data/미술사조/images/Canaletto-Stonemasons-Yard.jpg",
+          "verified": true,
+          "status": "verified",
+          "representative": true,
+          "movementContribution": true,
+          "origin": "manual"
+        }
+      ],
+      "featuredWorkIds": [
+        "artist-Q161866-representative-work"
+      ],
+      "profileResolved": true,
+      "metadata": {
+        "createdAt": "2026-08-24T00:00:00Z",
+        "updatedAt": "2026-08-24T00:00:00Z",
+        "createdBy": "manual entry",
+        "updatedBy": "manual entry"
+      },
+      "movements": [
+        "로코코"
+      ],
+      "submovements": [],
+      "primaryMovement": "로코코",
+      "regions": [
+        "이탈리아"
+      ],
+      "periods": [
+        "1600-1700",
+        "1700-1780",
+        "1750-1830"
+      ],
+      "activeFrom": 1718,
+      "activeTo": 1768
+    },
+    {
+      "id": "artist-Q180117",
+      "qid": "Q180117",
+      "name": {
+        "ko": "토머스 게인즈버러",
+        "en": "Thomas Gainsborough"
+      },
+      "fullName": "토머스 게인즈버러",
+      "birth": 1727,
+      "death": 1788,
+      "nationality": {
+        "ko": "영국",
+        "en": "United Kingdom"
+      },
+      "movement": {
+        "ko": "로코코",
+        "en": "Rococo"
+      },
+      "aliases": {
+        "ko": [
+          "게인즈버러"
+        ],
+        "en": []
+      },
+      "artistSummary": {
+        "ko": [
+          "우아한 의상과 자연 배경, 느슨한 붓질로 영국 초상화에 로코코적 세련미를 더했다."
+        ],
+        "en": []
+      },
+      "links": {
+        "wikidata": "https://www.wikidata.org/wiki/Q180117"
+      },
+      "works": [
+        {
+          "id": "artist-Q180117-representative-work",
+          "year": 1770,
+          "popularity": 90,
+          "title": {
+            "ko": "파란 소년",
+            "en": "The Blue Boy"
+          },
+          "description": {
+            "ko": "우아한 의상과 자연 배경, 느슨한 붓질로 영국 초상화에 로코코적 세련미를 더했다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil painting"
+          },
+          "country": {
+            "ko": "영국",
+            "en": "United Kingdom"
+          },
+          "movement": {
+            "ko": "로코코",
+            "en": "Rococo"
+          },
+          "image": "data/미술사조/images/Gainsborough-The-Blue-Boy-1770.jpg",
+          "thumbnail": "data/미술사조/images/Gainsborough-The-Blue-Boy-1770.jpg",
+          "highResImage": "data/미술사조/images/Gainsborough-The-Blue-Boy-1770.jpg",
+          "highResOriginal": "data/미술사조/images/Gainsborough-The-Blue-Boy-1770.jpg",
+          "source": "existing local project asset: data/미술사조/images/Gainsborough-The-Blue-Boy-1770.jpg",
+          "verified": true,
+          "status": "verified",
+          "representative": true,
+          "movementContribution": true,
+          "origin": "manual"
+        }
+      ],
+      "featuredWorkIds": [
+        "artist-Q180117-representative-work"
+      ],
+      "profileResolved": true,
+      "metadata": {
+        "createdAt": "2026-08-24T00:00:00Z",
+        "updatedAt": "2026-08-24T00:00:00Z",
+        "createdBy": "manual entry",
+        "updatedBy": "manual entry"
+      },
+      "movements": [
+        "로코코"
+      ],
+      "submovements": [],
+      "primaryMovement": "로코코",
+      "regions": [
+        "영국"
+      ],
+      "periods": [
+        "1600-1700",
+        "1700-1780",
+        "1750-1830"
+      ],
+      "activeFrom": 1745,
+      "activeTo": 1788
+    },
+    {
+      "id": "artist-Q189621",
+      "qid": "Q189621",
+      "name": {
+        "ko": "윌리엄 호가스",
+        "en": "William Hogarth"
+      },
+      "fullName": "윌리엄 호가스",
+      "birth": 1697,
+      "death": 1764,
+      "nationality": {
+        "ko": "영국",
+        "en": "United Kingdom"
+      },
+      "movement": {
+        "ko": "로코코",
+        "en": "Rococo"
+      },
+      "aliases": {
+        "ko": [
+          "호가스"
+        ],
+        "en": []
+      },
+      "artistSummary": {
+        "ko": [
+          "로코코의 사교적 실내와 소비문화를 풍자적 연속 서사로 비틀었다."
+        ],
+        "en": []
+      },
+      "links": {
+        "wikidata": "https://www.wikidata.org/wiki/Q189621"
+      },
+      "works": [
+        {
+          "id": "artist-Q189621-representative-work",
+          "year": 1743,
+          "popularity": 90,
+          "title": {
+            "ko": "결혼 계약",
+            "en": "Marriage Settlement"
+          },
+          "description": {
+            "ko": "로코코의 사교적 실내와 소비문화를 풍자적 연속 서사로 비틀었다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil painting"
+          },
+          "country": {
+            "ko": "영국",
+            "en": "United Kingdom"
+          },
+          "movement": {
+            "ko": "로코코",
+            "en": "Rococo"
+          },
+          "image": "data/미술사조/images/Hogarth-Marriage-Settlement.jpg",
+          "thumbnail": "data/미술사조/images/Hogarth-Marriage-Settlement.jpg",
+          "highResImage": "data/미술사조/images/Hogarth-Marriage-Settlement.jpg",
+          "highResOriginal": "data/미술사조/images/Hogarth-Marriage-Settlement.jpg",
+          "source": "existing local project asset: data/미술사조/images/Hogarth-Marriage-Settlement.jpg",
+          "verified": true,
+          "status": "verified",
+          "representative": true,
+          "movementContribution": true,
+          "origin": "manual"
+        }
+      ],
+      "featuredWorkIds": [
+        "artist-Q189621-representative-work"
+      ],
+      "profileResolved": true,
+      "metadata": {
+        "createdAt": "2026-08-24T00:00:00Z",
+        "updatedAt": "2026-08-24T00:00:00Z",
+        "createdBy": "manual entry",
+        "updatedBy": "manual entry"
+      },
+      "movements": [
+        "로코코"
+      ],
+      "submovements": [],
+      "primaryMovement": "로코코",
+      "regions": [
+        "영국"
+      ],
+      "periods": [
+        "1600-1700",
+        "1700-1780",
+        "1750-1830"
+      ],
+      "activeFrom": 1720,
+      "activeTo": 1764
+    },
+    {
+      "id": "artist-Q312309",
+      "qid": "Q312309",
+      "name": {
+        "ko": "장바티스트 시메옹 샤르댕",
+        "en": "Jean-Baptiste-Siméon Chardin"
+      },
+      "fullName": "장바티스트 시메옹 샤르댕",
+      "birth": 1699,
+      "death": 1779,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "movement": {
+        "ko": "로코코",
+        "en": "Rococo"
+      },
+      "aliases": {
+        "ko": [
+          "샤르댕"
+        ],
+        "en": []
+      },
+      "artistSummary": {
+        "ko": [
+          "사물의 질감과 조용한 빛을 통해 프랑스 로코코의 또 다른, 절제된 방향을 보여준다."
+        ],
+        "en": []
+      },
+      "links": {
+        "wikidata": "https://www.wikidata.org/wiki/Q312309"
+      },
+      "works": [
+        {
+          "id": "artist-Q312309-representative-work",
+          "year": 1728,
+          "popularity": 90,
+          "title": {
+            "ko": "가오리",
+            "en": "The Ray"
+          },
+          "description": {
+            "ko": "사물의 질감과 조용한 빛을 통해 프랑스 로코코의 또 다른, 절제된 방향을 보여준다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil painting"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "로코코",
+            "en": "Rococo"
+          },
+          "image": "data/미술사조/images/Chardin-The-Ray-WGA04738.jpg",
+          "thumbnail": "data/미술사조/images/Chardin-The-Ray-WGA04738.jpg",
+          "highResImage": "data/미술사조/images/Chardin-The-Ray-WGA04738.jpg",
+          "highResOriginal": "data/미술사조/images/Chardin-The-Ray-WGA04738.jpg",
+          "source": "existing local project asset: data/미술사조/images/Chardin-The-Ray-WGA04738.jpg",
+          "verified": true,
+          "status": "verified",
+          "representative": true,
+          "movementContribution": true,
+          "origin": "manual"
+        }
+      ],
+      "featuredWorkIds": [
+        "artist-Q312309-representative-work"
+      ],
+      "profileResolved": true,
+      "metadata": {
+        "createdAt": "2026-08-24T00:00:00Z",
+        "updatedAt": "2026-08-24T00:00:00Z",
+        "createdBy": "manual entry",
+        "updatedBy": "manual entry"
+      },
+      "movements": [
+        "로코코"
+      ],
+      "submovements": [],
+      "primaryMovement": "로코코",
+      "regions": [
+        "프랑스"
+      ],
+      "periods": [
+        "1600-1700",
+        "1700-1780",
+        "1750-1830"
+      ],
+      "activeFrom": 1720,
+      "activeTo": 1779
+    },
+    {
+      "id": "artist-Q235547",
+      "qid": "Q235547",
+      "name": {
+        "ko": "로살바 카리에라",
+        "en": "Rosalba Carriera"
+      },
+      "fullName": "로살바 카리에라",
+      "birth": 1675,
+      "death": 1757,
+      "nationality": {
+        "ko": "이탈리아",
+        "en": "Italy"
+      },
+      "movement": {
+        "ko": "로코코",
+        "en": "Rococo"
+      },
+      "aliases": {
+        "ko": [
+          "카리에라"
+        ],
+        "en": []
+      },
+      "artistSummary": {
+        "ko": [
+          "파스텔 초상을 국제적 궁정·살롱 문화의 핵심 매체로 끌어올렸다."
+        ],
+        "en": []
+      },
+      "links": {
+        "wikidata": "https://www.wikidata.org/wiki/Q235547"
+      },
+      "works": [
+        {
+          "id": "artist-Q235547-representative-work",
+          "year": 1746,
+          "popularity": 90,
+          "title": {
+            "ko": "자화상",
+            "en": "Self-Portrait"
+          },
+          "description": {
+            "ko": "파스텔 초상을 국제적 궁정·살롱 문화의 핵심 매체로 끌어올렸다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil painting"
+          },
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "로코코",
+            "en": "Rococo"
+          },
+          "image": "data/미술사조/images/Rosalba-Carriera-Self-Portrait-WGA04503.jpg",
+          "thumbnail": "data/미술사조/images/Rosalba-Carriera-Self-Portrait-WGA04503.jpg",
+          "highResImage": "data/미술사조/images/Rosalba-Carriera-Self-Portrait-WGA04503.jpg",
+          "highResOriginal": "data/미술사조/images/Rosalba-Carriera-Self-Portrait-WGA04503.jpg",
+          "source": "existing local project asset: data/미술사조/images/Rosalba-Carriera-Self-Portrait-WGA04503.jpg",
+          "verified": true,
+          "status": "verified",
+          "representative": true,
+          "movementContribution": true,
+          "origin": "manual"
+        }
+      ],
+      "featuredWorkIds": [
+        "artist-Q235547-representative-work"
+      ],
+      "profileResolved": true,
+      "metadata": {
+        "createdAt": "2026-08-24T00:00:00Z",
+        "updatedAt": "2026-08-24T00:00:00Z",
+        "createdBy": "manual entry",
+        "updatedBy": "manual entry"
+      },
+      "movements": [
+        "로코코"
+      ],
+      "submovements": [],
+      "primaryMovement": "로코코",
+      "regions": [
+        "이탈리아"
+      ],
+      "periods": [
+        "1600-1700",
+        "1700-1780",
+        "1750-1830"
+      ],
+      "activeFrom": 1695,
+      "activeTo": 1757
+    },
+    {
+      "id": "artist-Q296",
+      "qid": "Q296",
+      "name": {
+        "ko": "자크루이 다비드",
+        "en": "Jacques-Louis David"
+      },
+      "fullName": "자크루이 다비드",
+      "birth": 1748,
+      "death": 1825,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "movement": {
+        "ko": "신고전주의",
+        "en": "Neoclassicism"
+      },
+      "aliases": {
+        "ko": [
+          "다비드"
+        ],
+        "en": []
+      },
+      "artistSummary": {
+        "ko": [
+          "자크루이 다비드는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다."
+        ],
+        "en": []
+      },
+      "links": {
+        "wikidata": "https://www.wikidata.org/wiki/Q296"
+      },
+      "works": [
+        {
+          "id": "artist-Q296-representative-work",
+          "year": 1784,
+          "popularity": 90,
+          "title": {
+            "ko": "호라티우스 형제의 맹세",
+            "en": "The Oath of the Horatii"
+          },
+          "description": {
+            "ko": "자크루이 다비드는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화 또는 조각",
+            "en": "Painting or sculpture"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "image": "data/미술사조/images/David-Oath-of-the-Horatii-1784-d473275ac167.jpg",
+          "thumbnail": "data/미술사조/images/David-Oath-of-the-Horatii-1784-d473275ac167.jpg",
+          "highResImage": "data/미술사조/images/David-Oath-of-the-Horatii-1784-d473275ac167.jpg",
+          "highResOriginal": "data/미술사조/images/David-Oath-of-the-Horatii-1784-d473275ac167.jpg",
+          "source": "existing local project asset: data/미술사조/images/David-Oath-of-the-Horatii-1784-d473275ac167.jpg",
+          "verified": true,
+          "status": "verified",
+          "representative": true,
+          "movementContribution": true,
+          "origin": "manual"
+        }
+      ],
+      "featuredWorkIds": [
+        "artist-Q296-representative-work"
+      ],
+      "profileResolved": true,
+      "metadata": {
+        "createdAt": "2026-08-24T00:00:00Z",
+        "updatedAt": "2026-08-24T00:00:00Z",
+        "createdBy": "manual entry",
+        "updatedBy": "manual entry"
+      },
+      "movements": [
+        "신고전주의"
+      ],
+      "submovements": [],
+      "primaryMovement": "신고전주의",
+      "regions": [
+        "프랑스"
+      ],
+      "periods": [
+        "1700-1780",
+        "1750-1830",
+        "1780-1850"
+      ],
+      "activeFrom": 1774,
+      "activeTo": 1825
+    },
+    {
+      "id": "artist-Q161472",
+      "qid": "Q161472",
+      "name": {
+        "ko": "장오귀스트도미니크 앵그르",
+        "en": "Jean-Auguste-Dominique Ingres"
+      },
+      "fullName": "장오귀스트도미니크 앵그르",
+      "birth": 1780,
+      "death": 1867,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "movement": {
+        "ko": "신고전주의",
+        "en": "Neoclassicism"
+      },
+      "aliases": {
+        "ko": [
+          "앵그르"
+        ],
+        "en": []
+      },
+      "artistSummary": {
+        "ko": [
+          "장오귀스트도미니크 앵그르는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다."
+        ],
+        "en": []
+      },
+      "links": {
+        "wikidata": "https://www.wikidata.org/wiki/Q161472"
+      },
+      "works": [
+        {
+          "id": "artist-Q161472-representative-work",
+          "year": 1806,
+          "popularity": 90,
+          "title": {
+            "ko": "황제의 옥좌에 앉은 나폴레옹",
+            "en": "Napoleon on His Imperial Throne"
+          },
+          "description": {
+            "ko": "장오귀스트도미니크 앵그르는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화 또는 조각",
+            "en": "Painting or sculpture"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "image": "data/미술사조/images/Ingres-Napoleon-on-Imperial-Throne.jpg",
+          "thumbnail": "data/미술사조/images/Ingres-Napoleon-on-Imperial-Throne.jpg",
+          "highResImage": "data/미술사조/images/Ingres-Napoleon-on-Imperial-Throne.jpg",
+          "highResOriginal": "data/미술사조/images/Ingres-Napoleon-on-Imperial-Throne.jpg",
+          "source": "existing local project asset: data/미술사조/images/Ingres-Napoleon-on-Imperial-Throne.jpg",
+          "verified": true,
+          "status": "verified",
+          "representative": true,
+          "movementContribution": true,
+          "origin": "manual"
+        }
+      ],
+      "featuredWorkIds": [
+        "artist-Q161472-representative-work"
+      ],
+      "profileResolved": true,
+      "metadata": {
+        "createdAt": "2026-08-24T00:00:00Z",
+        "updatedAt": "2026-08-24T00:00:00Z",
+        "createdBy": "manual entry",
+        "updatedBy": "manual entry"
+      },
+      "movements": [
+        "신고전주의"
+      ],
+      "submovements": [],
+      "primaryMovement": "신고전주의",
+      "regions": [
+        "프랑스"
+      ],
+      "periods": [
+        "1700-1780",
+        "1750-1830",
+        "1780-1850"
+      ],
+      "activeFrom": 1800,
+      "activeTo": 1867
+    },
+    {
+      "id": "artist-Q5547",
+      "qid": "Q5547",
+      "name": {
+        "ko": "안토니오 카노바",
+        "en": "Antonio Canova"
+      },
+      "fullName": "안토니오 카노바",
+      "birth": 1757,
+      "death": 1822,
+      "nationality": {
+        "ko": "이탈리아",
+        "en": "Italy"
+      },
+      "movement": {
+        "ko": "신고전주의",
+        "en": "Neoclassicism"
+      },
+      "aliases": {
+        "ko": [
+          "카노바"
+        ],
+        "en": []
+      },
+      "artistSummary": {
+        "ko": [
+          "안토니오 카노바는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다."
+        ],
+        "en": []
+      },
+      "links": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5547"
+      },
+      "works": [
+        {
+          "id": "artist-Q5547-representative-work",
+          "year": 1793,
+          "popularity": 90,
+          "title": {
+            "ko": "큐피드의 키스로 되살아난 프시케",
+            "en": "Psyche Revived by Cupid’s Kiss"
+          },
+          "description": {
+            "ko": "안토니오 카노바는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화 또는 조각",
+            "en": "Painting or sculpture"
+          },
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "image": "data/미술사조/images/Canova-Psyche-Revived-by-Cupids-Kiss.jpg",
+          "thumbnail": "data/미술사조/images/Canova-Psyche-Revived-by-Cupids-Kiss.jpg",
+          "highResImage": "data/미술사조/images/Canova-Psyche-Revived-by-Cupids-Kiss.jpg",
+          "highResOriginal": "data/미술사조/images/Canova-Psyche-Revived-by-Cupids-Kiss.jpg",
+          "source": "existing local project asset: data/미술사조/images/Canova-Psyche-Revived-by-Cupids-Kiss.jpg",
+          "verified": true,
+          "status": "verified",
+          "representative": true,
+          "movementContribution": true,
+          "origin": "manual"
+        }
+      ],
+      "featuredWorkIds": [
+        "artist-Q5547-representative-work"
+      ],
+      "profileResolved": true,
+      "metadata": {
+        "createdAt": "2026-08-24T00:00:00Z",
+        "updatedAt": "2026-08-24T00:00:00Z",
+        "createdBy": "manual entry",
+        "updatedBy": "manual entry"
+      },
+      "movements": [
+        "신고전주의"
+      ],
+      "submovements": [],
+      "primaryMovement": "신고전주의",
+      "regions": [
+        "이탈리아"
+      ],
+      "periods": [
+        "1700-1780",
+        "1750-1830",
+        "1780-1850"
+      ],
+      "activeFrom": 1775,
+      "activeTo": 1822
+    },
+    {
+      "id": "artist-Q312387",
+      "qid": "Q312387",
+      "name": {
+        "ko": "조슈아 레이놀즈",
+        "en": "Joshua Reynolds"
+      },
+      "fullName": "조슈아 레이놀즈",
+      "birth": 1723,
+      "death": 1792,
+      "nationality": {
+        "ko": "영국",
+        "en": "United Kingdom"
+      },
+      "movement": {
+        "ko": "신고전주의",
+        "en": "Neoclassicism"
+      },
+      "aliases": {
+        "ko": [
+          "레이놀즈"
+        ],
+        "en": []
+      },
+      "artistSummary": {
+        "ko": [
+          "조슈아 레이놀즈는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다."
+        ],
+        "en": []
+      },
+      "links": {
+        "wikidata": "https://www.wikidata.org/wiki/Q312387"
+      },
+      "works": [
+        {
+          "id": "artist-Q312387-representative-work",
+          "year": 1784,
+          "popularity": 90,
+          "title": {
+            "ko": "비극의 뮤즈로 분장한 세라 시던스",
+            "en": "Mrs Siddons as the Tragic Muse"
+          },
+          "description": {
+            "ko": "조슈아 레이놀즈는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화 또는 조각",
+            "en": "Painting or sculpture"
+          },
+          "country": {
+            "ko": "영국",
+            "en": "United Kingdom"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "image": "data/미술사조/images/Reynolds-Mrs-Siddons-as-Tragic-Muse.jpg",
+          "thumbnail": "data/미술사조/images/Reynolds-Mrs-Siddons-as-Tragic-Muse.jpg",
+          "highResImage": "data/미술사조/images/Reynolds-Mrs-Siddons-as-Tragic-Muse.jpg",
+          "highResOriginal": "data/미술사조/images/Reynolds-Mrs-Siddons-as-Tragic-Muse.jpg",
+          "source": "existing local project asset: data/미술사조/images/Reynolds-Mrs-Siddons-as-Tragic-Muse.jpg",
+          "verified": true,
+          "status": "verified",
+          "representative": true,
+          "movementContribution": true,
+          "origin": "manual"
+        }
+      ],
+      "featuredWorkIds": [
+        "artist-Q312387-representative-work"
+      ],
+      "profileResolved": true,
+      "metadata": {
+        "createdAt": "2026-08-24T00:00:00Z",
+        "updatedAt": "2026-08-24T00:00:00Z",
+        "createdBy": "manual entry",
+        "updatedBy": "manual entry"
+      },
+      "movements": [
+        "신고전주의"
+      ],
+      "submovements": [],
+      "primaryMovement": "신고전주의",
+      "regions": [
+        "영국"
+      ],
+      "periods": [
+        "1700-1780",
+        "1750-1830",
+        "1780-1850"
+      ],
+      "activeFrom": 1740,
+      "activeTo": 1792
+    },
+    {
+      "id": "artist-Q312130",
+      "qid": "Q312130",
+      "name": {
+        "ko": "안톤 라파엘 멩스",
+        "en": "Anton Raphael Mengs"
+      },
+      "fullName": "안톤 라파엘 멩스",
+      "birth": 1728,
+      "death": 1779,
+      "nationality": {
+        "ko": "독일",
+        "en": "Germany"
+      },
+      "movement": {
+        "ko": "신고전주의",
+        "en": "Neoclassicism"
+      },
+      "aliases": {
+        "ko": [
+          "멩스"
+        ],
+        "en": []
+      },
+      "artistSummary": {
+        "ko": [
+          "안톤 라파엘 멩스는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다."
+        ],
+        "en": []
+      },
+      "links": {
+        "wikidata": "https://www.wikidata.org/wiki/Q312130"
+      },
+      "works": [
+        {
+          "id": "artist-Q312130-representative-work",
+          "year": 1761,
+          "popularity": 90,
+          "title": {
+            "ko": "파르나소스",
+            "en": "Parnassus"
+          },
+          "description": {
+            "ko": "안톤 라파엘 멩스는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화 또는 조각",
+            "en": "Painting or sculpture"
+          },
+          "country": {
+            "ko": "독일",
+            "en": "Germany"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "image": "data/미술사조/images/Mengs-Parnassus.jpg",
+          "thumbnail": "data/미술사조/images/Mengs-Parnassus.jpg",
+          "highResImage": "data/미술사조/images/Mengs-Parnassus.jpg",
+          "highResOriginal": "data/미술사조/images/Mengs-Parnassus.jpg",
+          "source": "existing local project asset: data/미술사조/images/Mengs-Parnassus.jpg",
+          "verified": true,
+          "status": "verified",
+          "representative": true,
+          "movementContribution": true,
+          "origin": "manual"
+        }
+      ],
+      "featuredWorkIds": [
+        "artist-Q312130-representative-work"
+      ],
+      "profileResolved": true,
+      "metadata": {
+        "createdAt": "2026-08-24T00:00:00Z",
+        "updatedAt": "2026-08-24T00:00:00Z",
+        "createdBy": "manual entry",
+        "updatedBy": "manual entry"
+      },
+      "movements": [
+        "신고전주의"
+      ],
+      "submovements": [],
+      "primaryMovement": "신고전주의",
+      "regions": [
+        "독일"
+      ],
+      "periods": [
+        "1700-1780",
+        "1750-1830",
+        "1780-1850"
+      ],
+      "activeFrom": 1745,
+      "activeTo": 1779
+    },
+    {
+      "id": "artist-Q313526",
+      "qid": "Q313526",
+      "name": {
+        "ko": "벤저민 웨스트",
+        "en": "Benjamin West"
+      },
+      "fullName": "벤저민 웨스트",
+      "birth": 1738,
+      "death": 1820,
+      "nationality": {
+        "ko": "영국",
+        "en": "United Kingdom"
+      },
+      "movement": {
+        "ko": "신고전주의",
+        "en": "Neoclassicism"
+      },
+      "aliases": {
+        "ko": [
+          "웨스트"
+        ],
+        "en": []
+      },
+      "artistSummary": {
+        "ko": [
+          "벤저민 웨스트는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다."
+        ],
+        "en": []
+      },
+      "links": {
+        "wikidata": "https://www.wikidata.org/wiki/Q313526"
+      },
+      "works": [
+        {
+          "id": "artist-Q313526-representative-work",
+          "year": 1770,
+          "popularity": 90,
+          "title": {
+            "ko": "울프 장군의 죽음",
+            "en": "The Death of General Wolfe"
+          },
+          "description": {
+            "ko": "벤저민 웨스트는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화 또는 조각",
+            "en": "Painting or sculpture"
+          },
+          "country": {
+            "ko": "영국",
+            "en": "United Kingdom"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "image": "data/미술사조/images/Benjamin-West-Death-of-General-Wolfe.jpg",
+          "thumbnail": "data/미술사조/images/Benjamin-West-Death-of-General-Wolfe.jpg",
+          "highResImage": "data/미술사조/images/Benjamin-West-Death-of-General-Wolfe.jpg",
+          "highResOriginal": "data/미술사조/images/Benjamin-West-Death-of-General-Wolfe.jpg",
+          "source": "existing local project asset: data/미술사조/images/Benjamin-West-Death-of-General-Wolfe.jpg",
+          "verified": true,
+          "status": "verified",
+          "representative": true,
+          "movementContribution": true,
+          "origin": "manual"
+        }
+      ],
+      "featuredWorkIds": [
+        "artist-Q313526-representative-work"
+      ],
+      "profileResolved": true,
+      "metadata": {
+        "createdAt": "2026-08-24T00:00:00Z",
+        "updatedAt": "2026-08-24T00:00:00Z",
+        "createdBy": "manual entry",
+        "updatedBy": "manual entry"
+      },
+      "movements": [
+        "신고전주의"
+      ],
+      "submovements": [],
+      "primaryMovement": "신고전주의",
+      "regions": [
+        "영국"
+      ],
+      "periods": [
+        "1700-1780",
+        "1750-1830",
+        "1780-1850"
+      ],
+      "activeFrom": 1760,
+      "activeTo": 1820
+    },
+    {
+      "id": "artist-Q155733",
+      "qid": "Q155733",
+      "name": {
+        "ko": "앙겔리카 카우프만",
+        "en": "Angelica Kauffman"
+      },
+      "fullName": "앙겔리카 카우프만",
+      "birth": 1741,
+      "death": 1807,
+      "nationality": {
+        "ko": "영국",
+        "en": "United Kingdom"
+      },
+      "movement": {
+        "ko": "신고전주의",
+        "en": "Neoclassicism"
+      },
+      "aliases": {
+        "ko": [
+          "카우프만"
+        ],
+        "en": []
+      },
+      "artistSummary": {
+        "ko": [
+          "앙겔리카 카우프만는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다."
+        ],
+        "en": []
+      },
+      "links": {
+        "wikidata": "https://www.wikidata.org/wiki/Q155733"
+      },
+      "works": [
+        {
+          "id": "artist-Q155733-representative-work",
+          "year": 1785,
+          "popularity": 90,
+          "title": {
+            "ko": "그라쿠스 형제의 어머니 코르넬리아",
+            "en": "Cornelia, Mother of the Gracchi"
+          },
+          "description": {
+            "ko": "앙겔리카 카우프만는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화 또는 조각",
+            "en": "Painting or sculpture"
+          },
+          "country": {
+            "ko": "영국",
+            "en": "United Kingdom"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "image": "data/미술사조/images/Kauffman-Cornelia-Mother-of-the-Gracchi.jpg",
+          "thumbnail": "data/미술사조/images/Kauffman-Cornelia-Mother-of-the-Gracchi.jpg",
+          "highResImage": "data/미술사조/images/Kauffman-Cornelia-Mother-of-the-Gracchi.jpg",
+          "highResOriginal": "data/미술사조/images/Kauffman-Cornelia-Mother-of-the-Gracchi.jpg",
+          "source": "existing local project asset: data/미술사조/images/Kauffman-Cornelia-Mother-of-the-Gracchi.jpg",
+          "verified": true,
+          "status": "verified",
+          "representative": true,
+          "movementContribution": true,
+          "origin": "manual"
+        }
+      ],
+      "featuredWorkIds": [
+        "artist-Q155733-representative-work"
+      ],
+      "profileResolved": true,
+      "metadata": {
+        "createdAt": "2026-08-24T00:00:00Z",
+        "updatedAt": "2026-08-24T00:00:00Z",
+        "createdBy": "manual entry",
+        "updatedBy": "manual entry"
+      },
+      "movements": [
+        "신고전주의"
+      ],
+      "submovements": [],
+      "primaryMovement": "신고전주의",
+      "regions": [
+        "영국"
+      ],
+      "periods": [
+        "1700-1780",
+        "1750-1830",
+        "1780-1850"
+      ],
+      "activeFrom": 1760,
+      "activeTo": 1807
+    },
+    {
+      "id": "artist-romantic-gericault",
+      "name": {
+        "ko": "테오도르 제리코",
+        "en": "Théodore Géricault"
+      },
+      "fullName": "테오도르 제리코",
+      "birth": 1791,
+      "death": 1824,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "프랑스"
+      },
+      "movement": {
+        "ko": "낭만주의",
+        "en": "Romanticism"
+      },
+      "aliases": {
+        "ko": [
+          "제리코"
+        ],
+        "en": []
+      },
+      "artistSummary": {
+        "ko": [
+          "테오도르 제리코는 감정, 역사, 자연의 숭고를 강한 시각적 경험으로 만든 낭만주의의 핵심 화가다."
+        ],
+        "en": []
+      },
+      "works": [
+        {
+          "id": "artist-romantic-gericault-work",
+          "year": 1819,
+          "popularity": 90,
+          "title": {
+            "ko": "메두사호의 뗏목",
+            "en": "The Raft of the Medusa"
+          },
+          "description": {
+            "ko": "테오도르 제리코는 감정, 역사, 자연의 숭고를 강한 시각적 경험으로 만든 낭만주의의 핵심 화가다.",
+            "en": ""
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "프랑스"
+          },
+          "movement": {
+            "ko": "낭만주의",
+            "en": "Romanticism"
+          },
+          "image": "data/미술사조/images/Gericault-Raft-of-the-Medusa.jpg",
+          "thumbnail": "data/미술사조/images/Gericault-Raft-of-the-Medusa.jpg",
+          "highResImage": "data/미술사조/images/Gericault-Raft-of-the-Medusa.jpg",
+          "source": "existing local project asset: data/미술사조/images/Gericault-Raft-of-the-Medusa.jpg",
+          "verified": true,
+          "representative": true,
+          "movementContribution": true,
+          "origin": "manual"
+        }
+      ],
+      "featuredWorkIds": [
+        "artist-romantic-gericault-work"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "낭만주의"
+      ],
+      "submovements": [],
+      "primaryMovement": "낭만주의",
+      "regions": [
+        "프랑스"
+      ],
+      "periods": [
+        "1750-1830",
+        "1780-1850",
+        "1830-1880"
+      ],
+      "activeFrom": 1810,
+      "activeTo": 1824
+    },
+    {
+      "id": "artist-romantic-delacroix",
+      "name": {
+        "ko": "외젠 들라크루아",
+        "en": "Eugène Delacroix"
+      },
+      "fullName": "외젠 들라크루아",
+      "birth": 1798,
+      "death": 1863,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "프랑스"
+      },
+      "movement": {
+        "ko": "낭만주의",
+        "en": "Romanticism"
+      },
+      "aliases": {
+        "ko": [
+          "들라크루아"
+        ],
+        "en": []
+      },
+      "artistSummary": {
+        "ko": [
+          "외젠 들라크루아는 감정, 역사, 자연의 숭고를 강한 시각적 경험으로 만든 낭만주의의 핵심 화가다."
+        ],
+        "en": []
+      },
+      "works": [
+        {
+          "id": "artist-romantic-delacroix-work",
+          "year": 1830,
+          "popularity": 90,
+          "title": {
+            "ko": "민중을 이끄는 자유의 여신",
+            "en": "Liberty Leading the People"
+          },
+          "description": {
+            "ko": "외젠 들라크루아는 감정, 역사, 자연의 숭고를 강한 시각적 경험으로 만든 낭만주의의 핵심 화가다.",
+            "en": ""
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "프랑스"
+          },
+          "movement": {
+            "ko": "낭만주의",
+            "en": "Romanticism"
+          },
+          "image": "data/미술사조/images/Delacroix-Liberty-Leading-the-People.jpg",
+          "thumbnail": "data/미술사조/images/Delacroix-Liberty-Leading-the-People.jpg",
+          "highResImage": "data/미술사조/images/Delacroix-Liberty-Leading-the-People.jpg",
+          "source": "existing local project asset: data/미술사조/images/Delacroix-Liberty-Leading-the-People.jpg",
+          "verified": true,
+          "representative": true,
+          "movementContribution": true,
+          "origin": "manual"
+        }
+      ],
+      "featuredWorkIds": [
+        "artist-romantic-delacroix-work"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "낭만주의"
+      ],
+      "submovements": [],
+      "primaryMovement": "낭만주의",
+      "regions": [
+        "프랑스"
+      ],
+      "periods": [
+        "1750-1830",
+        "1780-1850",
+        "1830-1880"
+      ],
+      "activeFrom": 1815,
+      "activeTo": 1863
+    },
+    {
+      "id": "artist-romantic-goya",
+      "name": {
+        "ko": "프란시스코 고야",
+        "en": "Francisco Goya"
+      },
+      "fullName": "프란시스코 고야",
+      "birth": 1746,
+      "death": 1828,
+      "nationality": {
+        "ko": "스페인",
+        "en": "스페인"
+      },
+      "movement": {
+        "ko": "낭만주의",
+        "en": "Romanticism"
+      },
+      "aliases": {
+        "ko": [
+          "고야"
+        ],
+        "en": []
+      },
+      "artistSummary": {
+        "ko": [
+          "프란시스코 고야는 감정, 역사, 자연의 숭고를 강한 시각적 경험으로 만든 낭만주의의 핵심 화가다."
+        ],
+        "en": []
+      },
+      "works": [
+        {
+          "id": "artist-romantic-goya-work",
+          "year": 1814,
+          "popularity": 90,
+          "title": {
+            "ko": "1808년 5월 3일",
+            "en": "The Third of May 1808"
+          },
+          "description": {
+            "ko": "프란시스코 고야는 감정, 역사, 자연의 숭고를 강한 시각적 경험으로 만든 낭만주의의 핵심 화가다.",
+            "en": ""
+          },
+          "country": {
+            "ko": "스페인",
+            "en": "스페인"
+          },
+          "movement": {
+            "ko": "낭만주의",
+            "en": "Romanticism"
+          },
+          "image": "data/미술사조/images/Goya-Third-of-May-1808.jpg",
+          "thumbnail": "data/미술사조/images/Goya-Third-of-May-1808.jpg",
+          "highResImage": "data/미술사조/images/Goya-Third-of-May-1808.jpg",
+          "source": "existing local project asset: data/미술사조/images/Goya-Third-of-May-1808.jpg",
+          "verified": true,
+          "representative": true,
+          "movementContribution": true,
+          "origin": "manual"
+        }
+      ],
+      "featuredWorkIds": [
+        "artist-romantic-goya-work"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "낭만주의"
+      ],
+      "submovements": [],
+      "primaryMovement": "낭만주의",
+      "regions": [
+        "스페인"
+      ],
+      "periods": [
+        "1750-1830",
+        "1780-1850",
+        "1830-1880"
+      ],
+      "activeFrom": 1765,
+      "activeTo": 1828
+    },
+    {
+      "id": "artist-romantic-turner",
+      "name": {
+        "ko": "조지프 말로드 윌리엄 터너",
+        "en": "J. M. W. Turner"
+      },
+      "fullName": "조지프 말로드 윌리엄 터너",
+      "birth": 1775,
+      "death": 1851,
+      "nationality": {
+        "ko": "영국",
+        "en": "영국"
+      },
+      "movement": {
+        "ko": "낭만주의",
+        "en": "Romanticism"
+      },
+      "aliases": {
+        "ko": [
+          "터너"
+        ],
+        "en": []
+      },
+      "artistSummary": {
+        "ko": [
+          "조지프 말로드 윌리엄 터너는 감정, 역사, 자연의 숭고를 강한 시각적 경험으로 만든 낭만주의의 핵심 화가다."
+        ],
+        "en": []
+      },
+      "works": [
+        {
+          "id": "artist-romantic-turner-work",
+          "year": 1839,
+          "popularity": 90,
+          "title": {
+            "ko": "전함 테메레르의 마지막 항해",
+            "en": "The Fighting Temeraire"
+          },
+          "description": {
+            "ko": "조지프 말로드 윌리엄 터너는 감정, 역사, 자연의 숭고를 강한 시각적 경험으로 만든 낭만주의의 핵심 화가다.",
+            "en": ""
+          },
+          "country": {
+            "ko": "영국",
+            "en": "영국"
+          },
+          "movement": {
+            "ko": "낭만주의",
+            "en": "Romanticism"
+          },
+          "image": "data/미술사조/images/Turner-Fighting-Temeraire.jpg",
+          "thumbnail": "data/미술사조/images/Turner-Fighting-Temeraire.jpg",
+          "highResImage": "data/미술사조/images/Turner-Fighting-Temeraire.jpg",
+          "source": "existing local project asset: data/미술사조/images/Turner-Fighting-Temeraire.jpg",
+          "verified": true,
+          "representative": true,
+          "movementContribution": true,
+          "origin": "manual"
+        }
+      ],
+      "featuredWorkIds": [
+        "artist-romantic-turner-work"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "낭만주의"
+      ],
+      "submovements": [],
+      "primaryMovement": "낭만주의",
+      "regions": [
+        "영국"
+      ],
+      "periods": [
+        "1750-1830",
+        "1780-1850",
+        "1830-1880"
+      ],
+      "activeFrom": 1790,
+      "activeTo": 1851
+    },
+    {
+      "id": "artist-romantic-constable",
+      "name": {
+        "ko": "존 컨스터블",
+        "en": "John Constable"
+      },
+      "fullName": "존 컨스터블",
+      "birth": 1776,
+      "death": 1837,
+      "nationality": {
+        "ko": "영국",
+        "en": "영국"
+      },
+      "movement": {
+        "ko": "낭만주의",
+        "en": "Romanticism"
+      },
+      "aliases": {
+        "ko": [
+          "컨스터블"
+        ],
+        "en": []
+      },
+      "artistSummary": {
+        "ko": [
+          "존 컨스터블는 감정, 역사, 자연의 숭고를 강한 시각적 경험으로 만든 낭만주의의 핵심 화가다."
+        ],
+        "en": []
+      },
+      "works": [
+        {
+          "id": "artist-romantic-constable-work",
+          "year": 1821,
+          "popularity": 90,
+          "title": {
+            "ko": "건초 마차",
+            "en": "The Hay Wain"
+          },
+          "description": {
+            "ko": "존 컨스터블는 감정, 역사, 자연의 숭고를 강한 시각적 경험으로 만든 낭만주의의 핵심 화가다.",
+            "en": ""
+          },
+          "country": {
+            "ko": "영국",
+            "en": "영국"
+          },
+          "movement": {
+            "ko": "낭만주의",
+            "en": "Romanticism"
+          },
+          "image": "data/미술사조/images/Constable-The-Hay-Wain.jpg",
+          "thumbnail": "data/미술사조/images/Constable-The-Hay-Wain.jpg",
+          "highResImage": "data/미술사조/images/Constable-The-Hay-Wain.jpg",
+          "source": "existing local project asset: data/미술사조/images/Constable-The-Hay-Wain.jpg",
+          "verified": true,
+          "representative": true,
+          "movementContribution": true,
+          "origin": "manual"
+        }
+      ],
+      "featuredWorkIds": [
+        "artist-romantic-constable-work"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "낭만주의"
+      ],
+      "submovements": [],
+      "primaryMovement": "낭만주의",
+      "regions": [
+        "영국"
+      ],
+      "periods": [
+        "1750-1830",
+        "1780-1850",
+        "1830-1880"
+      ],
+      "activeFrom": 1795,
+      "activeTo": 1837
+    },
+    {
+      "id": "artist-romantic-cole",
+      "name": {
+        "ko": "토머스 콜",
+        "en": "Thomas Cole"
+      },
+      "fullName": "토머스 콜",
+      "birth": 1801,
+      "death": 1848,
+      "nationality": {
+        "ko": "미국",
+        "en": "미국"
+      },
+      "movement": {
+        "ko": "낭만주의",
+        "en": "Romanticism"
+      },
+      "aliases": {
+        "ko": [
+          "토머스 콜"
+        ],
+        "en": []
+      },
+      "artistSummary": {
+        "ko": [
+          "토머스 콜는 감정, 역사, 자연의 숭고를 강한 시각적 경험으로 만든 낭만주의의 핵심 화가다."
+        ],
+        "en": []
+      },
+      "works": [
+        {
+          "id": "artist-romantic-cole-work",
+          "year": 1836,
+          "popularity": 90,
+          "title": {
+            "ko": "옥스보",
+            "en": "The Oxbow"
+          },
+          "description": {
+            "ko": "토머스 콜는 감정, 역사, 자연의 숭고를 강한 시각적 경험으로 만든 낭만주의의 핵심 화가다.",
+            "en": ""
+          },
+          "country": {
+            "ko": "미국",
+            "en": "미국"
+          },
+          "movement": {
+            "ko": "낭만주의",
+            "en": "Romanticism"
+          },
+          "image": "data/미술사조/images/Thomas-Cole-The-Oxbow.jpg",
+          "thumbnail": "data/미술사조/images/Thomas-Cole-The-Oxbow.jpg",
+          "highResImage": "data/미술사조/images/Thomas-Cole-The-Oxbow.jpg",
+          "source": "existing local project asset: data/미술사조/images/Thomas-Cole-The-Oxbow.jpg",
+          "verified": true,
+          "representative": true,
+          "movementContribution": true,
+          "origin": "manual"
+        }
+      ],
+      "featuredWorkIds": [
+        "artist-romantic-cole-work"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "낭만주의"
+      ],
+      "submovements": [],
+      "primaryMovement": "낭만주의",
+      "regions": [
+        "미국"
+      ],
+      "periods": [
+        "1750-1830",
+        "1780-1850",
+        "1830-1880"
+      ],
+      "activeFrom": 1825,
+      "activeTo": 1848
+    },
+    {
+      "id": "artist-romantic-church",
+      "name": {
+        "ko": "프레더릭 에드윈 처치",
+        "en": "Frederic Edwin Church"
+      },
+      "fullName": "프레더릭 에드윈 처치",
+      "birth": 1826,
+      "death": 1900,
+      "nationality": {
+        "ko": "미국",
+        "en": "미국"
+      },
+      "movement": {
+        "ko": "낭만주의",
+        "en": "Romanticism"
+      },
+      "aliases": {
+        "ko": [
+          "프레더릭 에드윈 처치"
+        ],
+        "en": []
+      },
+      "artistSummary": {
+        "ko": [
+          "프레더릭 에드윈 처치는 감정, 역사, 자연의 숭고를 강한 시각적 경험으로 만든 낭만주의의 핵심 화가다."
+        ],
+        "en": []
+      },
+      "works": [
+        {
+          "id": "artist-romantic-church-work",
+          "year": 1859,
+          "popularity": 90,
+          "title": {
+            "ko": "안데스의 심장",
+            "en": "Heart of the Andes"
+          },
+          "description": {
+            "ko": "프레더릭 에드윈 처치는 감정, 역사, 자연의 숭고를 강한 시각적 경험으로 만든 낭만주의의 핵심 화가다.",
+            "en": ""
+          },
+          "country": {
+            "ko": "미국",
+            "en": "미국"
+          },
+          "movement": {
+            "ko": "낭만주의",
+            "en": "Romanticism"
+          },
+          "image": "data/미술사조/images/Church-Heart-of-the-Andes.jpg",
+          "thumbnail": "data/미술사조/images/Church-Heart-of-the-Andes.jpg",
+          "highResImage": "data/미술사조/images/Church-Heart-of-the-Andes.jpg",
+          "source": "existing local project asset: data/미술사조/images/Church-Heart-of-the-Andes.jpg",
+          "verified": true,
+          "representative": true,
+          "movementContribution": true,
+          "origin": "manual"
+        }
+      ],
+      "featuredWorkIds": [
+        "artist-romantic-church-work"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "낭만주의"
+      ],
+      "submovements": [],
+      "primaryMovement": "낭만주의",
+      "regions": [
+        "미국"
+      ],
+      "periods": [
+        "1750-1830",
+        "1780-1850",
+        "1830-1880"
+      ],
+      "activeFrom": 1844,
+      "activeTo": 1900
     }
   ],
   "deletedArtists": [],

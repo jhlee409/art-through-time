@@ -14,6 +14,17 @@ const regionMap = new Map([['이탈리아','이탈리아'],['프랑스','프랑�
 const activityRegionOverrides = {
   Q5597:['이탈리아'], Q301:['이탈리아','스페인'], Q42207:['이탈리아'], Q104884:['독일'], Q6394591:['러시아']
 };
+const exactActivityRegionOverrides = {
+  // 루벤스의 주된 제작·후원 중심은 앤트워프의 플랑드르였다.
+  Q5599:['플랑드르']
+};
+const submovementOverrides = {
+  Q7824:['볼로냐파'], Q42207:['카라바조주의'], Q160538:['로마 바로크'],
+  Q5599:['플랑드르 바로크'], Q150679:['플랑드르 바로크'],
+  Q167654:['네덜란드 황금기'], Q5598:['네덜란드 황금기'], Q41264:['네덜란드 황금기'],
+  Q209615:['스페인 바로크'], Q297:['스페인 바로크'], Q192062:['스페인 바로크'],
+  Q41554:['프랑스 바로크'], Q9340:['프랑스 바로크']
+};
 function unique(values) { return [...new Set(values.filter(Boolean))]; }
 for (const artist of data.artists) {
   const legacy = artist.movement?.ko || artist.movement?.en || '';
@@ -24,6 +35,8 @@ for (const artist of data.artists) {
   const nationality = artist.nationality?.ko || artist.nationality?.en || '';
   const inferredRegion = regionMap.get(nationality) || (/피렌체|베네치아|교황령|이탈리아/.test(nationality) ? '이탈리아' : (/네덜란드/.test(nationality) ? '네덜란드' : (/플랑드르|브라반트/.test(nationality) ? '플랑드르' : '')));
   artist.regions = unique([...(artist.regions || []), ...(activityRegionOverrides[artist.qid] || []), inferredRegion]);
+  if (exactActivityRegionOverrides[artist.qid]) artist.regions = exactActivityRegionOverrides[artist.qid];
+  if (submovementOverrides[artist.qid]) artist.submovements = submovementOverrides[artist.qid];
   const start = Number(artist.birth);
   const end = Number(artist.death || artist.birth);
   artist.periods = taxonomy.periods.filter(period => Number.isFinite(start) && Number.isFinite(end) && start <= period.end && end >= period.start).map(period => period.id);
