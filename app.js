@@ -91,6 +91,14 @@ let artistSearchQuery = '';
 let artistMovementFilter = '';
 let artistMovementFilterMenuOpen = false;
 const expandedArtistMovementGroups = new Set();
+let artTaxonomy = {periods:[], movements:[]};
+const artistFacetFilters = {
+  periods:new Set(startupParams.getAll('period')),
+  regions:new Set(startupParams.getAll('region')),
+  movements:new Set(startupParams.getAll('movement')),
+  submovements:new Set(startupParams.getAll('submovement'))
+};
+const expandedArtistFacetGroups = new Set(['periods','regions','movements','submovements']);
 const highResolutionWidthChecks = new Map();
 const artworkWikipediaLinkChecks = new Map();
 let currentUserEmail = '';
@@ -469,6 +477,10 @@ const artistNationalityOverrides = {
   Q7803: {ko:'이탈리아', en:'Italy'},
   'artist-Q7803': {ko:'이탈리아', en:'Italy'}
 };
+const artistBirthCountryOverrides = {
+  Q301: {ko:'그리스', en:'Greece'},
+  'artist-Q301': {ko:'그리스', en:'Greece'}
+};
 function artistNationality(artist) {
   return artistNationalityOverrides[String(artist?.qid || '')] || artistNationalityOverrides[String(artist?.id || '')] || artist?.nationality;
 }
@@ -477,7 +489,7 @@ function applyArtistOverrides(artist) {
   return nationalityOverride ? {...artist, nationality:{...nationalityOverride}} : artist;
 }
 function artistCountrySource(artist) {
-  return artist?.birthCountry || artistNationality(artist);
+  return artistBirthCountryOverrides[String(artist?.qid || '')] || artistBirthCountryOverrides[String(artist?.id || '')] || artist?.birthCountry || artistNationality(artist);
 }
 function countryInfo(value) {
   const original = loc(value) || '?';
@@ -491,10 +503,11 @@ function countryDisplayLabel(value) {
   return country.original === country.name ? country.name : `${country.original} (${country.name})`;
 }
 function artistCountryInfo(artist) {
-  return countryInfo(artistCountrySource(artist));
+  const country = countryInfo(artistCountrySource(artist));
+  return {...country, original:country.name};
 }
 function artistCountryLabel(artist) {
-  return countryDisplayLabel(artistCountrySource(artist));
+  return countryInfo(artistCountrySource(artist)).name;
 }
 function countryAvatarText(country) {
   if (!country || country.original === country.name) return (country?.name || '?').slice(0, 1);
@@ -1106,6 +1119,7 @@ async function loadData() {
   } catch (_) { /* The main collection continues to work without the optional curated list. */ }
   await markLegacyManualWorks();
   if (currentUserIsAdmin) await saveArtistsNow();
+  try { artTaxonomy = await (await fetch('data/art-taxonomy.json')).json(); } catch (_) { artTaxonomy = {periods:[], movements:[]}; }
   try { movementCountries = (await (await fetch('data/art-movements.json')).json()).countries || []; } catch (_) { movementCountries = []; }
   try { movementDocuments = (await (await fetch(apiUrl('/api/movement-documents'))).json()).documents || {}; } catch (_) { movementDocuments = {}; }
   const requestedArtist = requestedArtistId ? artists.find(a => a.id === requestedArtistId) : null;
@@ -1210,10 +1224,21 @@ const artistMovementFilterHierarchy = [
     children: [
       movementFilterSpec({ko:'이탈리아 르네상스', en:'Italian Renaissance'}, ['Italian Renaissance','High Renaissance','Proto-Renaissance','이탈리아 르네상스','전성기 르네상스','선르네상스']),
       movementFilterSpec({ko:'베네치아 화파', en:'Venetian School'}, ['Venetian School','Venetian school','Venetian Renaissance','베네치아 화파','베네치아 르네상스']),
-      movementFilterSpec({ko:'북유럽 르네상스', en:'Northern Renaissance'}, ['Northern Renaissance','북유럽 르네상스','북방 르네상스']),
-      movementFilterSpec({ko:'독일 르네상스 전체', en:'German Renaissance (All)'}, ['German Renaissance','독일 르네상스','Danube School','도나우파']),
-      movementFilterSpec({ko:'도나우파', en:'Danube School'}, ['Danube School','도나우파']),
-      movementFilterSpec({ko:'네덜란드·플랑드르 르네상스', en:'Netherlandish and Flemish Renaissance'}, ['Early Netherlandish painting','Dutch and Flemish Renaissance painting','Netherlandish and Flemish Renaissance painting','초기 네덜란드 회화','플랑드르파','네덜란드 및 플랑드르 르네상스 회화','네덜란드·플랑드르 르네상스']),
+      movementFilterSpec({ko:'북유럽 르네상스', en:'Northern Renaissance'}, ['Northern Renaissance','북유럽 르네상스','북방 르네상스','German Renaissance','독일 르네상스','Danube School','도나우파','Early Netherlandish painting','Dutch and Flemish Renaissance painting','Netherlandish and Flemish Renaissance painting','초기 네덜란드 회화','플랑드르파','플랑드르 르네상스','Flemish Renaissance','네덜란드 및 플랑드르 르네상스 회화','네덜란드·플랑드르 르네상스'], {
+        children: [
+          movementFilterSpec({ko:'독일 르네상스', en:'German Renaissance'}, ['German Renaissance','독일 르네상스','Danube School','도나우파'], {
+            children: [
+              movementFilterSpec({ko:'도나우파', en:'Danube School'}, ['Danube School','도나우파'])
+            ]
+          }),
+          movementFilterSpec({ko:'저지대 르네상스', en:'Low Countries Renaissance'}, ['Early Netherlandish painting','Dutch and Flemish Renaissance painting','Netherlandish and Flemish Renaissance painting','초기 네덜란드 회화','플랑드르파','플랑드르 르네상스','Flemish Renaissance','네덜란드 및 플랑드르 르네상스 회화','네덜란드·플랑드르 르네상스'], {
+            children: [
+              movementFilterSpec({ko:'초기 네덜란드 회화', en:'Early Netherlandish painting'}, ['Early Netherlandish painting','초기 네덜란드 회화','플랑드르파']),
+              movementFilterSpec({ko:'플랑드르 르네상스', en:'Flemish Renaissance'}, ['Flemish Renaissance','Dutch and Flemish Renaissance painting','Netherlandish and Flemish Renaissance painting','플랑드르 르네상스','네덜란드 및 플랑드르 르네상스 회화'])
+            ]
+          })
+        ]
+      }),
       movementFilterSpec({ko:'프랑스 르네상스', en:'French Renaissance'}, ['French Renaissance','프랑스 르네상스']),
       movementFilterSpec({ko:'덴마크 르네상스', en:'Danish Renaissance'}, ['Danish Renaissance','덴마크 르네상스']),
       movementFilterSpec({ko:'노르딕 르네상스', en:'Nordic Renaissance'}, ['Nordic Renaissance','북유럽 르네상스','노르딕 르네상스'])
@@ -1240,7 +1265,22 @@ const artistMovementFilterHierarchy = [
   }),
   movementFilterSpec({ko:'낭만주의', en:'Romanticism'}, ['German Romanticism','Romanticism','낭만주의','독일 낭만주의'], {id:'romanticism'})
 ];
-const artistMovementFilterGroups = artistMovementFilterHierarchy.map(group => ({...group, keys:new Set([...(group.keys || []), ...(group.children || []).flatMap(child => [...child.keys])])}));
+function movementFilterTreeKeys(node) {
+  return new Set([...(node?.keys || []), ...(node?.children || []).flatMap(child => [...movementFilterTreeKeys(child)])]);
+}
+function findMovementFilterNode(nodes, id) {
+  for (const node of nodes || []) {
+    if (node.id === id) return node;
+    const found = findMovementFilterNode(node.children, id);
+    if (found) return found;
+  }
+  return null;
+}
+function filterMovementTreeForArtists(node, direct) {
+  const children = (node.children || []).map(child => filterMovementTreeForArtists(child, direct)).filter(Boolean);
+  return [...(node.keys || [])].some(key => direct.has(key)) || children.length ? {...node, children} : null;
+}
+const artistMovementFilterGroups = artistMovementFilterHierarchy.map(group => ({...group, keys:movementFilterTreeKeys(group)}));
 const artistMovementFilterOrder = [
   'Mannerism','Baroque','Rococo','Neoclassicism','Romanticism','Realism','Impressionism','Post-Impressionism','Fauvism','Cubism','Dada','Surrealism',
   'Biedermeier','Symbolism','Expressionism','New Objectivity','Bauhaus','Danube School','Dutch Golden Age painting','Arts and Crafts movement'
@@ -1276,6 +1316,12 @@ const artistMovementClassificationOverrides = {
   Q47551:{ko:'베네치아 화파', en:'Venetian School'},
   Q9319:{ko:'베네치아 화파', en:'Venetian School'},
   Q9440:{ko:'베네치아 화파', en:'Venetian School'},
+  Q102272:{ko:'초기 네덜란드 회화', en:'Early Netherlandish painting'},
+  Q68631:{ko:'초기 네덜란드 회화', en:'Early Netherlandish painting'},
+  Q43270:{ko:'플랑드르 르네상스', en:'Flemish Renaissance'},
+  Q5580:{ko:'독일 르네상스', en:'German Renaissance'},
+  Q48319:{ko:'독일 르네상스', en:'German Renaissance'},
+  Q191748:{ko:'독일 르네상스', en:'German Renaissance'},
   Q153746:{ko:'도나우파', en:'Danube School'},
   Q610556:{ko:'도나우파', en:'Danube School'},
   Q207929:{ko:'피렌체·로마 매너리즘', en:'Florentine-Roman Mannerism'},
@@ -1320,10 +1366,8 @@ function artistMovementDisplayInfo(artist) {
 function artistMatchesMovementFilter(artist) {
   if (!artistMovementFilter) return true;
   const entries = artistMovementEntries(artist);
-  const group = artistMovementFilterGroups.find(item => item.id === artistMovementFilter);
-  if (group) return entries.some(entry => group.keys.has(entry.id));
-  const child = artistMovementFilterHierarchy.flatMap(item => item.children || []).find(item => item.id === artistMovementFilter);
-  if (child) return entries.some(entry => child.keys.has(entry.id));
+  const node = findMovementFilterNode(artistMovementFilterHierarchy, artistMovementFilter);
+  if (node) return entries.some(entry => movementFilterTreeKeys(node).has(entry.id));
   return entries.some(entry => entry.id === artistMovementFilter);
 }
 function artistMovementFilterOptions() {
@@ -1331,49 +1375,17 @@ function artistMovementFilterOptions() {
   (artists || []).forEach(artist => artistMovementEntries(artist).forEach(entry => {
     if (!direct.has(entry.id)) direct.set(entry.id, {id:entry.id, label:entry.label});
   }));
-  const consumed = new Set();
-  const options = [];
-  artistMovementFilterHierarchy.forEach(group => {
-    const groupKeys = new Set([...(group.keys || []), ...(group.children || []).flatMap(child => [...child.keys])]);
-    if (![...groupKeys].some(key => direct.has(key))) return;
-    options.push({id:group.id, label:loc(group.label), group:true});
-    groupKeys.forEach(key => consumed.add(key));
-    (group.children || []).forEach(child => {
-      const directChild = [...child.keys].map(key => direct.get(key)).find(Boolean);
-      if (directChild) options.push({id:child.id, label:loc(child.label) || directChild.label, child:true});
-    });
-  });
+  const hierarchy = artistMovementFilterHierarchy.map(group => filterMovementTreeForArtists(group, direct)).filter(Boolean);
+  const consumed = new Set(hierarchy.flatMap(group => [...movementFilterTreeKeys(group)]));
   const directOptions = [...direct.values()]
     .filter(option => option.label && !consumed.has(option.id))
     .filter((option,index,self) => self.findIndex(item => compactMovementName(item.label) === compactMovementName(option.label)) === index)
     .sort((a,b) => (artistMovementFilterOrderIndex.get(a.id) ?? 9999) - (artistMovementFilterOrderIndex.get(b.id) ?? 9999) || a.label.localeCompare(b.label, language));
-  return [...options, ...directOptions];
-}
-function groupedArtistMovementFilterOptions(options) {
-  const groups = [];
-  for (let index = 0; index < options.length; index += 1) {
-    const option = options[index];
-    if (option.group) {
-      const children = [];
-      while (options[index + 1]?.child) {
-        children.push(options[index + 1]);
-        index += 1;
-      }
-      groups.push({...option, children});
-    } else if (!option.child) {
-      groups.push(option);
-    }
-  }
-  return groups;
+  return [...hierarchy, ...directOptions];
 }
 function movementFilterLabelForValue(groups, value) {
   if (!value) return t('allMovements');
-  for (const group of groups) {
-    if (group.id === value) return group.label;
-    const child = (group.children || []).find(item => item.id === value);
-    if (child) return child.label;
-  }
-  return t('allMovements');
+  return loc(findMovementFilterNode(groups, value)?.label) || t('allMovements');
 }
 function selectArtistMovementFilter(value='') {
   artistMovementFilter = value;
@@ -1384,27 +1396,30 @@ function renderArtistMovementFilter() {
   const trigger = $('#artist-movement-filter-trigger');
   const menu = $('#artist-movement-filter-menu');
   if (!trigger || !menu) return;
-  const options = artistMovementFilterOptions();
-  if (artistMovementFilter && !options.some(option => option.id === artistMovementFilter)) artistMovementFilter = '';
-  const groups = groupedArtistMovementFilterOptions(options);
-  groups.forEach(group => {
-    if ((group.children || []).some(child => child.id === artistMovementFilter)) expandedArtistMovementGroups.add(group.id);
+  const groups = artistMovementFilterOptions();
+  if (artistMovementFilter && !findMovementFilterNode(groups, artistMovementFilter)) artistMovementFilter = '';
+  const expandSelectedAncestors = nodes => (nodes || []).some(node => {
+    if (node.id === artistMovementFilter) return true;
+    const containsSelection = expandSelectedAncestors(node.children);
+    if (containsSelection) expandedArtistMovementGroups.add(node.id);
+    return containsSelection;
   });
+  expandSelectedAncestors(groups);
   trigger.textContent = movementFilterLabelForValue(groups, artistMovementFilter);
   trigger.title = t('movementFilter');
   trigger.setAttribute('aria-label', t('movementFilter'));
   trigger.setAttribute('aria-expanded', String(artistMovementFilterMenuOpen));
   menu.classList.toggle('hidden', !artistMovementFilterMenuOpen);
   const itemButton = (option, className='') => `<button type="button" class="artist-movement-filter-option ${className}${artistMovementFilter === option.id ? ' active' : ''}" role="option" aria-selected="${artistMovementFilter === option.id}" data-movement-filter-value="${esc(option.id)}">${esc(option.label)}</button>`;
-  const groupMarkup = group => {
+  const groupMarkup = (group, depth=0) => {
     const children = group.children || [];
-    if (!children.length) return itemButton(group);
+    if (!children.length) return itemButton(group, depth ? `artist-movement-filter-child depth-${depth}` : '');
     const collapsible = children.length > 1;
     const expanded = !collapsible || expandedArtistMovementGroups.has(group.id);
     const toggleLabel = expanded
       ? (language === 'ko' ? `${group.label} 하위 사조 접기` : `Collapse ${group.label}`)
       : (language === 'ko' ? `${group.label} 하위 사조 펼치기` : `Expand ${group.label}`);
-    return `<div class="artist-movement-filter-group${expanded ? ' expanded' : ''}" data-movement-filter-group="${esc(group.id)}"><div class="artist-movement-filter-group-row">${itemButton(group, 'artist-movement-filter-parent')}${collapsible ? `<button type="button" class="artist-movement-filter-toggle" data-movement-filter-toggle="${esc(group.id)}" aria-expanded="${expanded}" aria-label="${esc(toggleLabel)}">${expanded ? '▴' : '▾'}</button>` : ''}</div>${expanded ? `<div class="artist-movement-filter-children">${children.map(child => itemButton(child, 'artist-movement-filter-child')).join('')}</div>` : ''}</div>`;
+    return `<div class="artist-movement-filter-group depth-${depth}${expanded ? ' expanded' : ''}" data-movement-filter-group="${esc(group.id)}"><div class="artist-movement-filter-group-row">${itemButton(group, depth ? 'artist-movement-filter-parent artist-movement-filter-child' : 'artist-movement-filter-parent')}${collapsible ? `<button type="button" class="artist-movement-filter-toggle" data-movement-filter-toggle="${esc(group.id)}" aria-expanded="${expanded}" aria-label="${esc(toggleLabel)}">${expanded ? '▴' : '▾'}</button>` : ''}</div>${expanded ? `<div class="artist-movement-filter-children">${children.map(child => groupMarkup(child, depth + 1)).join('')}</div>` : ''}</div>`;
   };
   menu.innerHTML = `<button type="button" class="artist-movement-filter-option artist-movement-filter-all${!artistMovementFilter ? ' active' : ''}" role="option" aria-selected="${!artistMovementFilter}" data-movement-filter-value="">${esc(t('allMovements'))}</button>${groups.map(groupMarkup).join('')}`;
   menu.querySelectorAll('[data-movement-filter-value]').forEach(button => {
@@ -1518,16 +1533,58 @@ function renderText() {
   }
   $('#movement-atlas-button').classList.toggle('active', viewMode === 'movements');
 }
+function artistFacetValues(artist, key) { return Array.isArray(artist?.[key]) ? artist[key] : []; }
+function artistMatchesFacetFilters(artist) {
+  return Object.entries(artistFacetFilters).every(([key, selected]) => !selected.size || artistFacetValues(artist, key).some(value => selected.has(value)));
+}
+function syncArtistFacetUrl() {
+  const url = new URL(location.href);
+  ['period','region','movement','submovement'].forEach(key => url.searchParams.delete(key));
+  [['period','periods'],['region','regions'],['movement','movements'],['submovement','submovements']].forEach(([param,key]) => artistFacetFilters[key].forEach(value => url.searchParams.append(param,value)));
+  history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`);
+}
+function facetOptions(key) {
+  if (key === 'periods') return (artTaxonomy.periods || []).map(item => ({id:item.id,label:item.name}));
+  if (key === 'movements') return (artTaxonomy.movements || []).map(item => ({id:item.name,label:item.name}));
+  if (key === 'submovements') {
+    const selectedMovements = artistFacetFilters.movements;
+    const source = selectedMovements.size ? (artTaxonomy.movements || []).filter(item => selectedMovements.has(item.name)) : (artTaxonomy.movements || []);
+    return [...new Set(source.flatMap(item => item.submovements || []))].map(name => ({id:name,label:name}));
+  }
+  return [...new Set(artists.flatMap(artist => artistFacetValues(artist,'regions')))].sort((a,b) => a.localeCompare(b,'ko')).map(name => ({id:name,label:name}));
+}
+function facetCount(key, value) {
+  return artists.filter(artist => Object.entries(artistFacetFilters).every(([otherKey, selected]) => otherKey === key || !selected.size || artistFacetValues(artist, otherKey).some(item => selected.has(item))) && artistFacetValues(artist,key).includes(value)).length;
+}
+function renderArtistFacetFilters() {
+  const root = $('#artist-facet-filters');
+  if (!root) return;
+  const labels = {periods:'연대',regions:'활동 지역',movements:'사조',submovements:'세부사조·학파'};
+  const active = Object.entries(artistFacetFilters).flatMap(([key,values]) => [...values].map(value => ({key,value,label:facetOptions(key).find(item => item.id === value)?.label || value})));
+  const group = key => {
+    const expanded = expandedArtistFacetGroups.has(key);
+    const hasContext = Object.entries(artistFacetFilters).some(([otherKey, values]) => otherKey !== key && values.size);
+    const options = facetOptions(key).filter(option => !hasContext || artistFacetFilters[key].has(option.id) || facetCount(key, option.id) > 0);
+    return `<section class="artist-facet-group"><button type="button" class="artist-facet-heading" data-facet-toggle="${key}" aria-expanded="${expanded}"><span>${labels[key]}</span><span>${expanded ? '▴' : '▾'}</span></button>${expanded ? `<div class="artist-facet-options">${options.map(option => `<label><input type="checkbox" data-facet-key="${key}" value="${esc(option.id)}"${artistFacetFilters[key].has(option.id) ? ' checked' : ''}><span>${esc(option.label)}</span><small>${facetCount(key,option.id)}</small></label>`).join('') || '<p>선택 가능한 항목이 없습니다.</p>'}</div>` : ''}</section>`;
+  };
+  root.innerHTML = `<div class="artist-facet-title-row"><div class="artist-facet-title">화가 찾기</div><div class="artist-facet-all-actions" role="group" aria-label="필터 전체 펼치기 및 접기"><button type="button" data-facet-expand-all title="전체 펼치기" aria-label="전체 펼치기">▾</button><button type="button" data-facet-collapse-all title="전체 접기" aria-label="전체 접기">▴</button></div></div><p class="artist-facet-guide">주 활동 지역부터 고르면 사조·학파·시대 범위가 해당 조건에 맞춰 좁혀집니다.</p>${active.length ? `<div class="artist-facet-chips">${active.map(item => `<button type="button" data-facet-remove="${item.key}" data-facet-value="${esc(item.value)}">${esc(item.label)} ×</button>`).join('')}</div>` : ''}<button type="button" class="artist-facet-clear"${active.length ? '' : ' hidden'}>모든 필터 초기화</button>${['regions','movements','submovements','periods'].map(group).join('')}`;
+  root.querySelector('[data-facet-expand-all]')?.addEventListener('click', () => { ['regions','movements','submovements','periods'].forEach(key => expandedArtistFacetGroups.add(key)); renderArtistFacetFilters(); });
+  root.querySelector('[data-facet-collapse-all]')?.addEventListener('click', () => { expandedArtistFacetGroups.clear(); renderArtistFacetFilters(); });
+  root.querySelectorAll('[data-facet-toggle]').forEach(button => button.onclick = () => { const key=button.dataset.facetToggle; expandedArtistFacetGroups.has(key) ? expandedArtistFacetGroups.delete(key) : expandedArtistFacetGroups.add(key); renderArtistFacetFilters(); });
+  root.querySelectorAll('[data-facet-key]').forEach(input => input.onchange = () => { const key=input.dataset.facetKey; input.checked ? artistFacetFilters[key].add(input.value) : artistFacetFilters[key].delete(input.value); if (key === 'movements') { const valid = new Set(facetOptions('submovements').map(item => item.id)); artistFacetFilters.submovements = new Set([...artistFacetFilters.submovements].filter(value => valid.has(value))); } syncArtistFacetUrl(); renderList(); });
+  root.querySelectorAll('[data-facet-remove]').forEach(button => button.onclick = () => { artistFacetFilters[button.dataset.facetRemove].delete(button.dataset.facetValue); syncArtistFacetUrl(); renderList(); });
+  root.querySelector('.artist-facet-clear')?.addEventListener('click', () => { Object.values(artistFacetFilters).forEach(values => values.clear()); syncArtistFacetUrl(); renderList(); });
+}
 function renderList() {
-  renderArtistMovementFilter();
+  renderArtistFacetFilters();
   const artistCount = $('#artist-count');
   if (artistCount) artistCount.textContent = language === 'ko' ? `총 ${artists.length}명` : `${artists.length} artists`;
   const sort = $('#sort').value;
-  const effectiveSort = artistMovementFilter ? 'birth' : sort;
+  const effectiveSort = Object.values(artistFacetFilters).some(values => values.size) ? 'birth' : sort;
   const query = artistSearchQuery.toLocaleLowerCase();
   const compactQuery = normalized(artistSearchQuery);
   const ordered = [...artists].filter(a => {
-    if (!artistMatchesMovementFilter(a)) return false;
+    if (!artistMatchesFacetFilters(a)) return false;
     if (!query) return true;
     const searchText = artistSearchText(a);
     return searchText.includes(query) || (compactQuery && normalized(searchText).includes(compactQuery));
@@ -3066,19 +3123,6 @@ async function addLocalArtworksToSelectedArtist(files, title, yearInput) {
 
 $('#sort').onchange = renderList;
 $('#artist-search').oninput = event => { artistSearchQuery = event.currentTarget.value.trim(); renderList(); };
-$('#artist-movement-filter-trigger').onclick = event => { event.stopPropagation(); artistMovementFilterMenuOpen = !artistMovementFilterMenuOpen; renderArtistMovementFilter(); };
-$('#artist-movement-filter-clear').onclick = event => { event.stopPropagation(); selectArtistMovementFilter(''); };
-document.addEventListener('click', event => {
-  if (!artistMovementFilterMenuOpen || event.target.closest('.artist-movement-filter')) return;
-  artistMovementFilterMenuOpen = false;
-  renderArtistMovementFilter();
-});
-document.addEventListener('keydown', event => {
-  if (event.key !== 'Escape' || !artistMovementFilterMenuOpen) return;
-  artistMovementFilterMenuOpen = false;
-  renderArtistMovementFilter();
-  $('#artist-movement-filter-trigger')?.focus();
-});
 $('#movement-atlas-button').onclick = openMovementAtlas;
 $('#techniques-button').onclick = openTechniquesPage;
 $('#topics-button').onclick = openTopicsPage;

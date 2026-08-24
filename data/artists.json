@@ -2,10 +2,10 @@
   "dataSchema": 1,
   "metadata": {
     "createdAt": "2026-08-22T12:46:59.824Z",
-    "updatedAt": "2026-08-23T23:55:20.834Z",
+    "updatedAt": "2026-08-24T05:42:53.929Z",
     "createdBy": "jhlee409@gmail.com",
     "updatedBy": "jhlee409@gmail.com",
-    "revision": 819
+    "revision": 826
   },
   "artists": [
     {
@@ -2322,7 +2322,20 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "선르네상스"
+      ],
+      "submovements": [],
+      "primaryMovement": "선르네상스",
+      "regions": [
+        "이탈리아"
+      ],
+      "periods": [
+        "1250-1400"
+      ],
+      "activeFrom": 1287,
+      "activeTo": 1337
     },
     {
       "id": "artist-Q102272",
@@ -2338,7 +2351,7 @@
         "en": "Netherlands"
       },
       "movement": {
-        "ko": "플랑드르파",
+        "ko": "초기 네덜란드 회화",
         "en": "Early Netherlandish painting"
       },
       "works": [
@@ -4071,7 +4084,23 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "북방 르네상스"
+      ],
+      "submovements": [
+        "초기 네덜란드 회화"
+      ],
+      "primaryMovement": "북방 르네상스",
+      "regions": [
+        "네덜란드"
+      ],
+      "periods": [
+        "1250-1400",
+        "1400-1490"
+      ],
+      "activeFrom": 1410,
+      "activeTo": 1441
     },
     {
       "id": "artist-Q68631",
@@ -4088,7 +4117,7 @@
         "en": "Netherlands"
       },
       "movement": {
-        "ko": "플랑드르파",
+        "ko": "초기 네덜란드 회화",
         "en": "Early Netherlandish painting"
       },
       "works": [
@@ -4589,7 +4618,23 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "북방 르네상스"
+      ],
+      "submovements": [
+        "초기 네덜란드 회화"
+      ],
+      "primaryMovement": "북방 르네상스",
+      "regions": [
+        "네덜란드"
+      ],
+      "periods": [
+        "1250-1400",
+        "1400-1490"
+      ],
+      "activeFrom": 1419,
+      "activeTo": 1464
     },
     {
       "id": "artist-url-1787307872488",
@@ -6549,7 +6594,22 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "르네상스"
+      ],
+      "submovements": [
+        "초기 르네상스"
+      ],
+      "primaryMovement": "르네상스",
+      "regions": [
+        "이탈리아"
+      ],
+      "periods": [
+        "1400-1490"
+      ],
+      "activeFrom": 1421,
+      "activeTo": 1428
     },
     {
       "id": "artist-Q17169",
@@ -9083,7 +9143,21 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "르네상스"
+      ],
+      "submovements": [],
+      "primaryMovement": "르네상스",
+      "regions": [
+        "이탈리아"
+      ],
+      "periods": [
+        "1400-1490",
+        "1490-1530"
+      ],
+      "activeFrom": 1450,
+      "activeTo": 1516
     },
     {
       "id": "artist-1786369007570",
@@ -11647,7 +11721,23 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "르네상스"
+      ],
+      "submovements": [
+        "전성기 르네상스"
+      ],
+      "primaryMovement": "르네상스",
+      "regions": [
+        "이탈리아"
+      ],
+      "periods": [
+        "1400-1490",
+        "1490-1530"
+      ],
+      "activeFrom": 1472,
+      "activeTo": 1519
     },
     {
       "id": "artist-Q5580",
@@ -11664,8 +11754,8 @@
         "en": "Germany"
       },
       "movement": {
-        "ko": "북유럽 르네상스",
-        "en": "Northern Renaissance"
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
       },
       "profile": {
         "ko": "알브레히트 뒤러는 뉘른베르크 출신의 독일 화가, 판화가, 미술 이론가입니다. 회화와 목판화, 동판화에서 북유럽 르네상스의 정밀한 관찰과 이탈리아 르네상스의 비례·공간 감각을 결합했으며, 판화를 국제적인 예술 매체로 확장한 인물입니다.",
@@ -12434,7 +12524,24 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "북방 르네상스"
+      ],
+      "submovements": [
+        "독일 르네상스"
+      ],
+      "primaryMovement": "북방 르네상스",
+      "regions": [
+        "독일"
+      ],
+      "periods": [
+        "1400-1490",
+        "1490-1530",
+        "1520-1600"
+      ],
+      "activeFrom": 1491,
+      "activeTo": 1528
     },
     {
       "id": "artist-Q191748",
@@ -14483,7 +14590,24 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "북방 르네상스"
+      ],
+      "submovements": [
+        "독일 르네상스"
+      ],
+      "primaryMovement": "북방 르네상스",
+      "regions": [
+        "독일"
+      ],
+      "periods": [
+        "1400-1490",
+        "1490-1530",
+        "1520-1600"
+      ],
+      "activeFrom": 1492,
+      "activeTo": 1553
     },
     {
       "id": "artist-Q5592",
@@ -17216,7 +17340,24 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "르네상스"
+      ],
+      "submovements": [
+        "전성기 르네상스"
+      ],
+      "primaryMovement": "르네상스",
+      "regions": [
+        "이탈리아"
+      ],
+      "periods": [
+        "1400-1490",
+        "1490-1530",
+        "1520-1600"
+      ],
+      "activeFrom": 1495,
+      "activeTo": 1564
     },
     {
       "id": "artist-Q8459",
@@ -19310,7 +19451,23 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "르네상스"
+      ],
+      "submovements": [
+        "전성기 르네상스"
+      ],
+      "primaryMovement": "르네상스",
+      "regions": [
+        "이탈리아"
+      ],
+      "periods": [
+        "1400-1490",
+        "1490-1530"
+      ],
+      "activeFrom": 1498,
+      "activeTo": 1510
     },
     {
       "id": "artist-Q153746",
@@ -19326,8 +19483,8 @@
         "en": "Germany"
       },
       "movement": {
-        "ko": "독일 르네상스",
-        "en": "German Renaissance"
+        "ko": "도나우파",
+        "en": "Danube School"
       },
       "works": [
         {
@@ -19826,7 +19983,24 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "북방 르네상스"
+      ],
+      "submovements": [
+        "도나우파"
+      ],
+      "primaryMovement": "북방 르네상스",
+      "regions": [
+        "독일"
+      ],
+      "periods": [
+        "1400-1490",
+        "1490-1530",
+        "1520-1600"
+      ],
+      "activeFrom": 1500,
+      "activeTo": 1538
     },
     {
       "id": "artist-Q378800",
@@ -20264,7 +20438,22 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "르네상스"
+      ],
+      "submovements": [],
+      "primaryMovement": "르네상스",
+      "regions": [
+        "프랑스"
+      ],
+      "periods": [
+        "1400-1490",
+        "1490-1530",
+        "1520-1600"
+      ],
+      "activeFrom": 1500,
+      "activeTo": 1541
     },
     {
       "id": "artist-Q5597",
@@ -23223,7 +23412,24 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "르네상스"
+      ],
+      "submovements": [
+        "초기 르네상스"
+      ],
+      "primaryMovement": "르네상스",
+      "regions": [
+        "이탈리아"
+      ],
+      "periods": [
+        "1400-1490",
+        "1490-1530",
+        "1520-1600"
+      ],
+      "activeFrom": 1503,
+      "activeTo": 1520
     },
     {
       "id": "artist-Q610556",
@@ -23239,8 +23445,8 @@
         "en": "Germany"
       },
       "movement": {
-        "ko": "독일 르네상스",
-        "en": "German Renaissance"
+        "ko": "도나우파",
+        "en": "Danube School"
       },
       "works": [
         {
@@ -23473,7 +23679,24 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "북방 르네상스"
+      ],
+      "submovements": [
+        "도나우파"
+      ],
+      "primaryMovement": "북방 르네상스",
+      "regions": [
+        "독일"
+      ],
+      "periods": [
+        "1400-1490",
+        "1490-1530",
+        "1520-1600"
+      ],
+      "activeFrom": 1505,
+      "activeTo": 1553
     },
     {
       "id": "artist-Q47551",
@@ -26541,7 +26764,24 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "르네상스"
+      ],
+      "submovements": [
+        "베네치아파"
+      ],
+      "primaryMovement": "르네상스",
+      "regions": [
+        "이탈리아"
+      ],
+      "periods": [
+        "1400-1490",
+        "1490-1530",
+        "1520-1600"
+      ],
+      "activeFrom": 1508,
+      "activeTo": 1576
     },
     {
       "id": "artist-Q312617",
@@ -27524,7 +27764,21 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "매너리즘"
+      ],
+      "submovements": [],
+      "primaryMovement": "매너리즘",
+      "regions": [
+        "이탈리아"
+      ],
+      "periods": [
+        "1490-1530",
+        "1520-1600"
+      ],
+      "activeFrom": 1514,
+      "activeTo": 1540
     },
     {
       "id": "artist-Q207929",
@@ -28407,7 +28661,21 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "매너리즘"
+      ],
+      "submovements": [],
+      "primaryMovement": "매너리즘",
+      "regions": [
+        "이탈리아"
+      ],
+      "periods": [
+        "1490-1530",
+        "1520-1600"
+      ],
+      "activeFrom": 1514,
+      "activeTo": 1556
     },
     {
       "id": "artist-Q48319",
@@ -28424,8 +28692,8 @@
         "en": "Germany"
       },
       "movement": {
-        "ko": "북유럽 르네상스",
-        "en": "Northern Renaissance"
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
       },
       "profile": {
         "ko": "한스 홀바인은 아우크스부르크에서 태어나 바젤과 런던을 중심으로 활동한 독일 화가이자 판화가입니다. 그는 북유럽 르네상스 양식 안에서 정밀한 초상, 종교화, 풍자와 책 디자인을 제작했으며, 헨리 8세 궁정과 인문주의자들의 세계를 예리하고 상징적인 초상화로 기록했습니다.",
@@ -29105,7 +29373,23 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "북방 르네상스"
+      ],
+      "submovements": [
+        "독일 르네상스"
+      ],
+      "primaryMovement": "북방 르네상스",
+      "regions": [
+        "독일"
+      ],
+      "periods": [
+        "1490-1530",
+        "1520-1600"
+      ],
+      "activeFrom": 1517,
+      "activeTo": 1543
     },
     {
       "id": "artist-Q7803",
@@ -29254,7 +29538,21 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "매너리즘"
+      ],
+      "submovements": [],
+      "primaryMovement": "매너리즘",
+      "regions": [
+        "이탈리아"
+      ],
+      "periods": [
+        "1490-1530",
+        "1520-1600"
+      ],
+      "activeFrom": 1523,
+      "activeTo": 1572
     },
     {
       "id": "artist-Q9348",
@@ -29771,7 +30069,21 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "매너리즘"
+      ],
+      "submovements": [],
+      "primaryMovement": "매너리즘",
+      "regions": [
+        "이탈리아"
+      ],
+      "periods": [
+        "1490-1530",
+        "1520-1600"
+      ],
+      "activeFrom": 1523,
+      "activeTo": 1540
     },
     {
       "id": "artist-Q333366",
@@ -30056,7 +30368,21 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "매너리즘"
+      ],
+      "submovements": [],
+      "primaryMovement": "매너리즘",
+      "regions": [
+        "이탈리아"
+      ],
+      "periods": [
+        "1490-1530",
+        "1520-1600"
+      ],
+      "activeFrom": 1524,
+      "activeTo": 1570
     },
     {
       "id": "artist-Q336747",
@@ -30643,7 +30969,21 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "르네상스"
+      ],
+      "submovements": [],
+      "primaryMovement": "르네상스",
+      "regions": [
+        "프랑스"
+      ],
+      "periods": [
+        "1490-1530",
+        "1520-1600"
+      ],
+      "activeFrom": 1530,
+      "activeTo": 1572
     },
     {
       "id": "artist-Q9319",
@@ -31965,7 +32305,21 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "매너리즘"
+      ],
+      "submovements": [],
+      "primaryMovement": "매너리즘",
+      "regions": [
+        "이탈리아"
+      ],
+      "periods": [
+        "1490-1530",
+        "1520-1600"
+      ],
+      "activeFrom": 1538,
+      "activeTo": 1594
     },
     {
       "id": "artist-Q43270",
@@ -34408,13 +34762,29 @@
         ]
       },
       "movement": {
-        "ko": "네덜란드 및 플랑드르 르네상스 회화",
-        "en": "Dutch and Flemish Renaissance painting"
+        "ko": "플랑드르 르네상스",
+        "en": "Flemish Renaissance"
       },
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "북방 르네상스"
+      ],
+      "submovements": [
+        "플랑드르 르네상스"
+      ],
+      "primaryMovement": "북방 르네상스",
+      "regions": [
+        "플랑드르"
+      ],
+      "periods": [
+        "1490-1530",
+        "1520-1600"
+      ],
+      "activeFrom": 1545,
+      "activeTo": 1569
     },
     {
       "id": "artist-Q7751",
@@ -34995,7 +35365,21 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "매너리즘"
+      ],
+      "submovements": [],
+      "primaryMovement": "매너리즘",
+      "regions": [
+        "이탈리아"
+      ],
+      "periods": [
+        "1490-1530",
+        "1520-1600"
+      ],
+      "activeFrom": 1547,
+      "activeTo": 1593
     },
     {
       "id": "artist-Q9440",
@@ -36173,7 +36557,23 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "르네상스"
+      ],
+      "submovements": [
+        "베네치아파"
+      ],
+      "primaryMovement": "르네상스",
+      "regions": [
+        "이탈리아"
+      ],
+      "periods": [
+        "1490-1530",
+        "1520-1600"
+      ],
+      "activeFrom": 1548,
+      "activeTo": 1588
     },
     {
       "id": "artist-Q301",
@@ -38881,7 +39281,22 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "매너리즘"
+      ],
+      "submovements": [],
+      "primaryMovement": "매너리즘",
+      "regions": [
+        "이탈리아",
+        "스페인"
+      ],
+      "periods": [
+        "1520-1600",
+        "1600-1700"
+      ],
+      "activeFrom": 1561,
+      "activeTo": 1614
     },
     {
       "id": "artist-Q447682",
@@ -39344,7 +39759,21 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "매너리즘"
+      ],
+      "submovements": [],
+      "primaryMovement": "매너리즘",
+      "regions": [
+        "플랑드르"
+      ],
+      "periods": [
+        "1520-1600",
+        "1600-1700"
+      ],
+      "activeFrom": 1566,
+      "activeTo": 1611
     },
     {
       "id": "artist-Q165367",
@@ -40180,7 +40609,21 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "매너리즘"
+      ],
+      "submovements": [],
+      "primaryMovement": "매너리즘",
+      "regions": [
+        "네덜란드"
+      ],
+      "periods": [
+        "1520-1600",
+        "1600-1700"
+      ],
+      "activeFrom": 1578,
+      "activeTo": 1617
     },
     {
       "id": "artist-Q7824",
@@ -43178,7 +43621,21 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "바로크"
+      ],
+      "submovements": [],
+      "primaryMovement": "바로크",
+      "regions": [
+        "이탈리아"
+      ],
+      "periods": [
+        "1520-1600",
+        "1600-1700"
+      ],
+      "activeFrom": 1580,
+      "activeTo": 1609
     },
     {
       "id": "artist-Q442484",
@@ -43839,7 +44296,21 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "매너리즘"
+      ],
+      "submovements": [],
+      "primaryMovement": "매너리즘",
+      "regions": [
+        "네덜란드"
+      ],
+      "periods": [
+        "1520-1600",
+        "1600-1700"
+      ],
+      "activeFrom": 1582,
+      "activeTo": 1638
     },
     {
       "id": "artist-Q329811",
@@ -44507,7 +44978,21 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "매너리즘"
+      ],
+      "submovements": [],
+      "primaryMovement": "매너리즘",
+      "regions": [
+        "네덜란드"
+      ],
+      "periods": [
+        "1520-1600",
+        "1600-1700"
+      ],
+      "activeFrom": 1586,
+      "activeTo": 1651
     },
     {
       "id": "artist-1786371252483",
@@ -47681,7 +48166,21 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "바로크"
+      ],
+      "submovements": [],
+      "primaryMovement": "바로크",
+      "regions": [
+        "이탈리아"
+      ],
+      "periods": [
+        "1520-1600",
+        "1600-1700"
+      ],
+      "activeFrom": 1591,
+      "activeTo": 1610
     },
     {
       "id": "artist-url-1786879941678",
@@ -50698,7 +51197,23 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "바로크"
+      ],
+      "submovements": [
+        "플랑드르 바로크"
+      ],
+      "primaryMovement": "바로크",
+      "regions": [
+        "네덜란드"
+      ],
+      "periods": [
+        "1520-1600",
+        "1600-1700"
+      ],
+      "activeFrom": 1597,
+      "activeTo": 1640
     },
     {
       "id": "artist-Q167654",
@@ -51507,7 +52022,21 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "바로크"
+      ],
+      "submovements": [],
+      "primaryMovement": "바로크",
+      "regions": [
+        "네덜란드"
+      ],
+      "periods": [
+        "1520-1600",
+        "1600-1700"
+      ],
+      "activeFrom": 1602,
+      "activeTo": 1666
     },
     {
       "id": "artist-Q41554",
@@ -54081,7 +54610,21 @@
         "updatedAt": "2026-08-23T23:55:20.834Z",
         "createdBy": "local download import",
         "updatedBy": "jhlee409@gmail.com"
-      }
+      },
+      "movements": [
+        "바로크"
+      ],
+      "submovements": [],
+      "primaryMovement": "바로크",
+      "regions": [
+        "프랑스"
+      ],
+      "periods": [
+        "1520-1600",
+        "1600-1700"
+      ],
+      "activeFrom": 1614,
+      "activeTo": 1665
     },
     {
       "id": "artist-Q160538",
@@ -54645,7 +55188,21 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "바로크"
+      ],
+      "submovements": [],
+      "primaryMovement": "바로크",
+      "regions": [
+        "이탈리아"
+      ],
+      "periods": [
+        "1520-1600",
+        "1600-1700"
+      ],
+      "activeFrom": 1618,
+      "activeTo": 1680
     },
     {
       "id": "artist-Q209615",
@@ -55362,7 +55919,21 @@
         "updatedAt": "2026-08-23T23:55:20.834Z",
         "createdBy": "local download import",
         "updatedBy": "jhlee409@gmail.com"
-      }
+      },
+      "movements": [
+        "바로크"
+      ],
+      "submovements": [],
+      "primaryMovement": "바로크",
+      "regions": [
+        "스페인"
+      ],
+      "periods": [
+        "1520-1600",
+        "1600-1700"
+      ],
+      "activeFrom": 1618,
+      "activeTo": 1664
     },
     {
       "id": "artist-Q297",
@@ -55854,7 +56425,21 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "바로크"
+      ],
+      "submovements": [],
+      "primaryMovement": "바로크",
+      "regions": [
+        "스페인"
+      ],
+      "periods": [
+        "1520-1600",
+        "1600-1700"
+      ],
+      "activeFrom": 1619,
+      "activeTo": 1660
     },
     {
       "id": "artist-Q150679",
@@ -57155,7 +57740,23 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "바로크"
+      ],
+      "submovements": [
+        "플랑드르 바로크"
+      ],
+      "primaryMovement": "바로크",
+      "regions": [
+        "플랑드르"
+      ],
+      "periods": [
+        "1520-1600",
+        "1600-1700"
+      ],
+      "activeFrom": 1619,
+      "activeTo": 1641
     },
     {
       "id": "artist-rembrandt",
@@ -59811,7 +60412,22 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "바로크"
+      ],
+      "submovements": [
+        "네덜란드 황금기"
+      ],
+      "primaryMovement": "바로크",
+      "regions": [
+        "네덜란드"
+      ],
+      "periods": [
+        "1600-1700"
+      ],
+      "activeFrom": 1626,
+      "activeTo": 1669
     },
     {
       "id": "artist-Q192062",
@@ -61073,7 +61689,20 @@
         "updatedAt": "2026-08-23T23:55:20.834Z",
         "createdBy": "local download import",
         "updatedBy": "jhlee409@gmail.com"
-      }
+      },
+      "movements": [
+        "바로크"
+      ],
+      "submovements": [],
+      "primaryMovement": "바로크",
+      "regions": [
+        "스페인"
+      ],
+      "periods": [
+        "1600-1700"
+      ],
+      "activeFrom": 1637,
+      "activeTo": 1682
     },
     {
       "id": "artist-Q41264",
@@ -63002,7 +63631,22 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "바로크"
+      ],
+      "submovements": [
+        "네덜란드 황금기"
+      ],
+      "primaryMovement": "바로크",
+      "regions": [
+        "네덜란드"
+      ],
+      "periods": [
+        "1600-1700"
+      ],
+      "activeFrom": 1652,
+      "activeTo": 1675
     },
     {
       "id": "artist-Q213163",
@@ -66170,7 +66814,23 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "로코코"
+      ],
+      "submovements": [],
+      "primaryMovement": "로코코",
+      "regions": [
+        "프랑스"
+      ],
+      "periods": [
+        "1700-1780",
+        "1750-1830",
+        "1780-1850",
+        "1830-1880"
+      ],
+      "activeFrom": 1775,
+      "activeTo": 1842
     },
     {
       "id": "artist-1786332007363",
@@ -69342,7 +70002,23 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "낭만주의"
+      ],
+      "submovements": [],
+      "primaryMovement": "낭만주의",
+      "regions": [
+        "독일"
+      ],
+      "periods": [
+        "1700-1780",
+        "1750-1830",
+        "1780-1850",
+        "1830-1880"
+      ],
+      "activeFrom": 1794,
+      "activeTo": 1840
     },
     {
       "id": "artist-Q6394591",
@@ -69734,7 +70410,23 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "사실주의"
+      ],
+      "submovements": [],
+      "primaryMovement": "사실주의",
+      "regions": [
+        "러시아"
+      ],
+      "periods": [
+        "1780-1850",
+        "1830-1880",
+        "1850-1900",
+        "1880-1910"
+      ],
+      "activeFrom": 1852,
+      "activeTo": 1890
     },
     {
       "id": "artist-Q40599",
@@ -72902,7 +73594,23 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "인상주의"
+      ],
+      "submovements": [],
+      "primaryMovement": "인상주의",
+      "regions": [
+        "프랑스"
+      ],
+      "periods": [
+        "1780-1850",
+        "1830-1880",
+        "1850-1900",
+        "1880-1910"
+      ],
+      "activeFrom": 1852,
+      "activeTo": 1883
     },
     {
       "id": "claude-monet",
@@ -76522,7 +77230,26 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "인상주의"
+      ],
+      "submovements": [],
+      "primaryMovement": "인상주의",
+      "regions": [
+        "프랑스"
+      ],
+      "periods": [
+        "1780-1850",
+        "1830-1880",
+        "1850-1900",
+        "1880-1910",
+        "1900-1920",
+        "1910-1930",
+        "1920-1945"
+      ],
+      "activeFrom": 1860,
+      "activeTo": 1926
     },
     {
       "id": "vincent-van-gogh",
@@ -79691,7 +80418,22 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "후기인상주의"
+      ],
+      "submovements": [],
+      "primaryMovement": "후기인상주의",
+      "regions": [
+        "네덜란드"
+      ],
+      "periods": [
+        "1830-1880",
+        "1850-1900",
+        "1880-1910"
+      ],
+      "activeFrom": 1873,
+      "activeTo": 1890
     },
     {
       "id": "artist-Q187310",
@@ -81365,7 +82107,24 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "아츠 앤 크래프츠 운동"
+      ],
+      "submovements": [],
+      "primaryMovement": "아츠 앤 크래프츠 운동",
+      "regions": [
+        "스웨덴"
+      ],
+      "periods": [
+        "1830-1880",
+        "1850-1900",
+        "1880-1910",
+        "1900-1920",
+        "1910-1930"
+      ],
+      "activeFrom": 1873,
+      "activeTo": 1919
     },
     {
       "id": "artist-Q82445",
@@ -83870,7 +84629,23 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "후기인상주의"
+      ],
+      "submovements": [],
+      "primaryMovement": "후기인상주의",
+      "regions": [
+        "프랑스"
+      ],
+      "periods": [
+        "1830-1880",
+        "1850-1900",
+        "1880-1910",
+        "1900-1920"
+      ],
+      "activeFrom": 1884,
+      "activeTo": 1901
     },
     {
       "id": "frida-kahlo",
@@ -85612,7 +86387,132 @@
       "artistSummary": {
         "ko": [],
         "en": []
-      }
+      },
+      "movements": [
+        "초현실주의"
+      ],
+      "submovements": [],
+      "primaryMovement": "초현실주의",
+      "regions": [
+        "멕시코"
+      ],
+      "periods": [
+        "1880-1910",
+        "1900-1920",
+        "1910-1930",
+        "1920-1945",
+        "1940-1965",
+        "1950-1970"
+      ],
+      "activeFrom": 1927,
+      "activeTo": 1954
+    },
+    {
+      "id": "artist-Q9340",
+      "qid": "Q9340",
+      "name": {
+        "ko": "클로드 로랭",
+        "en": "Claude Lorrain"
+      },
+      "fullName": "클로드 로랭",
+      "birth": 1600,
+      "death": 1682,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "movement": {
+        "ko": "바로크",
+        "en": "Baroque"
+      },
+      "aliases": {
+        "ko": [
+          "로랭"
+        ],
+        "en": [
+          "Lorrain"
+        ]
+      },
+      "artistSummary": {
+        "ko": [
+          "네덜란드 황금시대 화가들을 제외하면 풍경화에 집중한 초기 주요 화가 중 한 명이다. 그의 풍경화는 성경이나 고전 신화의 장면을 묘사하는 작은 인물들을 더해, 더욱 권위 있는 역사화의 영역으로 발전했다.",
+          "이전에는 드물었던 태양과 쏟아지는 햇빛을 많은 그림에 도입한 점에서 혁신적이었다. 《시바 여왕의 출항》에서 보듯, 태양 자체를 화면의 광원으로 포함시키는 데 특히 선구적이었다.",
+          "거의 모든 그림에 목동 한 명만이라도 인물이 등장하지만, 인물 묘사는 그의 강점이 아니었다. 클로드 자신도 이를 잘 알고 있었다.",
+          "존 컨스터블은 클로드를 ‘세상이 본 가장 완벽한 풍경화가’라고 평가하며, 그의 풍경에 대해 ‘모든 것이 사랑스럽고, 모든 것이 온화하고, 모든 것이 편안하고 고요하며, 마음의 고요한 햇살과 같다’고 썼다."
+        ],
+        "en": []
+      },
+      "links": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Claude_Lorrain",
+        "wikidata": "https://www.wikidata.org/wiki/Q9340"
+      },
+      "works": [
+        {
+          "id": "claude-lorrain-embarkation-of-the-queen-of-sheba-1648",
+          "year": 1648,
+          "popularity": 95,
+          "title": {
+            "ko": "시바 여왕의 출항",
+            "en": "Seaport with the Embarkation of the Queen of Sheba"
+          },
+          "description": {
+            "ko": "성서 서사를 항구의 건축과 새벽빛 속에 배치해, 태양 자체를 광원으로 삼은 클로드 로랭의 대표적 풍경화입니다.",
+            "en": "A landmark landscape that places a biblical narrative within harbour architecture and dawn light, with the sun itself acting as the source of illumination."
+          },
+          "medium": {
+            "ko": "캔버스에 유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "바로크",
+            "en": "Baroque"
+          },
+          "collection": [
+            {
+              "ko": "내셔널 갤러리, 런던",
+              "en": "National Gallery, London"
+            }
+          ],
+          "image": "data/techniques/aerial-perspective/claude-lorrain-seaport.jpg",
+          "thumbnail": "data/techniques/aerial-perspective/claude-lorrain-seaport.jpg",
+          "highResImage": "data/techniques/aerial-perspective/claude-lorrain-seaport.jpg",
+          "highResOriginal": "data/techniques/aerial-perspective/claude-lorrain-seaport.jpg",
+          "source": "existing local project asset: data/techniques/aerial-perspective/claude-lorrain-seaport.jpg",
+          "verified": true,
+          "status": "verified",
+          "representative": true,
+          "movementContribution": true,
+          "origin": "manual"
+        }
+      ],
+      "featuredWorkIds": [
+        "claude-lorrain-embarkation-of-the-queen-of-sheba-1648"
+      ],
+      "profileResolved": true,
+      "metadata": {
+        "createdAt": "2026-08-24T00:00:00.000Z",
+        "updatedAt": "2026-08-24T00:00:00.000Z",
+        "createdBy": "manual entry",
+        "updatedBy": "manual entry"
+      },
+      "movements": [
+        "바로크"
+      ],
+      "submovements": [],
+      "primaryMovement": "바로크",
+      "regions": [
+        "프랑스"
+      ],
+      "periods": [
+        "1520-1600",
+        "1600-1700"
+      ],
+      "activeFrom": 1620,
+      "activeTo": 1682
     }
   ],
   "deletedArtists": [],
