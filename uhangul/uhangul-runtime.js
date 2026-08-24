@@ -91,7 +91,13 @@ function rebuildRecordIndex() {
     catch(e) { console.error("[uHangul] bad record", rec, e); rec._encoded = rec.korean; }
     byId.set(rec.id,rec);
     const aliases = Array.isArray(rec.aliases) ? rec.aliases : [...(Array.isArray(rec.aliases?.ko) ? rec.aliases.ko : []), ...(Array.isArray(rec.aliases?.en) ? rec.aliases.en : [])];
-    [rec.original,rec.korean,rec.displayKorean,...aliases].filter(Boolean).forEach(text => byText.set(normalizeText(text),rec));
+    [rec.original,rec.korean,rec.displayKorean,...aliases].filter(Boolean).forEach(text => {
+      const key=normalizeText(text), existing=byText.get(key);
+      // A research-only long-name record can share aliases with the canonical
+      // Wikidata artist record (for example, Caravaggio). Keep the canonical
+      // QID record so document links retain their intended short display name.
+      if(!existing || !/^Q\d+$/.test(String(existing.id || '')) || /^Q\d+$/.test(String(rec.id || ''))) byText.set(key,rec);
+    });
   }
   candidates = RECORDS.flatMap(r => [{id:r.id,text:r.original}, {id:r.id,text:r.korean}, {id:r.id,text:r.displayKorean}]).filter(x=>x.text).sort((a,b)=>b.text.length-a.text.length);
 }

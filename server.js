@@ -90,7 +90,7 @@ function requiresAdmin(req, pathname) {
 }
 function isJsonRequest(req, pathname) {
   if (req.method === 'GET' || req.method === 'OPTIONS') return false;
-  if (pathname === '/api/movement-documents') return req.method === 'DELETE';
+  if (pathname === '/api/movement-documents') return ['DELETE','PUT'].includes(req.method);
   return ['/api/auth/login','/api/artists','/api/techniques','/api/movement-documents/refresh','/api/movement-section-links','/api/normalize-artist-works','/api/rules/check-and-apply','/api/artwork-info'].includes(pathname);
 }
 function enforceJsonRequestLimit(req, res, pathname) {
@@ -1186,12 +1186,23 @@ function movementDocumentSlot(value) { if(!['1','2'].includes(String(value))) th
 async function readMovementDocuments() { try { const data=JSON.parse(await fs.readFile(movementDocumentIndex,'utf8')); return data && typeof data.documents==='object' ? data : {documents:{}}; } catch(error) { if(error.code==='ENOENT') return {documents:{}}; throw error; } }
 async function writeMovementDocuments(data) { await fs.mkdir(movementDocumentDir,{recursive:true}); await fs.writeFile(movementDocumentIndex,JSON.stringify(data,null,2)+'\n','utf8'); }
 function movementDocumentRelative(name, slot) { return `data/미술사조/${createHash('sha256').update(`${name}:${slot}`,'utf8').digest('hex').slice(0,24)}-${slot}.html`; }
+async function saveMovementDocumentHtml(name, slot, html) {
+  const safeName=movementDocumentName(name), safeSlot=movementDocumentSlot(slot), source=String(html || '');
+  if(!source.trim()) throw new Error('The HTML document is empty');
+  if(Buffer.byteLength(source,'utf8') > jsonRequestBodyLimit) throw new Error('The HTML document exceeds the 12 MB limit');
+  const data=await readMovementDocuments(), relative=data.documents?.[safeName]?.[safeSlot];
+  if(!relative || !/^data\/미술사조\/[a-f0-9]{24}-[12]\.html$/.test(relative)) throw new Error('There is no saved movement document');
+  const savedFile=path.join(root,relative), linkedHtml=await linkMovementDocumentArtists(normalizeMovementCardPresentation(injectUHangulDocumentIntegration(source)));
+  await fs.writeFile(savedFile,linkedHtml);
+  syncPersonNameDictionary({additionalFiles:[savedFile]});
+  return {ok:true,url:relative};
+}
 async function removeMovementDocument(relative) { if(!/^data\/미술사조\/[a-f0-9]{24}-[12]\.html$/.test(String(relative || ''))) return; await fs.unlink(path.join(root,relative)).catch(error => { if(error.code!=='ENOENT') throw error; }); }
 async function refreshMovementDocumentLinks(name, slot) {
   const data=await readMovementDocuments(), relative=data.documents?.[name]?.[slot];
   if(!relative) throw new Error('There is no saved movement document');
   if(!/^data\/미술사조\/[a-f0-9]{24}-[12]\.html$/.test(String(relative || ''))) throw new Error('Invalid movement document path');
-  const file=path.join(root,relative), before=await fs.readFile(file), after=await linkMovementDocumentArtists(injectUHangulDocumentIntegration(before));
+  const file=path.join(root,relative), before=await fs.readFile(file), after=await linkMovementDocumentArtists(normalizeMovementCardPresentation(injectUHangulDocumentIntegration(before)));
   const changed=!before.equals(after);
   if(changed) await fs.writeFile(file,after);
   return {ok:true,url:relative,changed};
@@ -1258,21 +1269,43 @@ function movementHighResolutionEntryForImage(tag, entries) {
   }) || null;
 }
 const movementHighResolutionViewer = `<style id="art-atlas-movement-highres-style">img[data-art-atlas-highres]{cursor:zoom-in}</style><script id="art-atlas-movement-highres-viewer">(function(){if(window.__artAtlasMovementHighresViewer)return;window.__artAtlasMovementHighresViewer=true;function esc(text){return String(text||'').replace(/[&<>]/g,function(ch){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[ch];});}function openViewer(src,title){var popup=window.open('','artAtlasMovementHighResolution','popup=yes,width=1180,height=860,noopener');if(!popup)return;var payload=JSON.stringify({src:new URL(src,location.href).href,title:title||''});popup.document.write('<!doctype html><html><head><meta charset="utf-8"><title>'+esc(title||'High-resolution image')+'</title><style>html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#10120f;color:#f7f4ec;font-family:system-ui,sans-serif}#toolbar{height:42px;box-sizing:border-box;display:flex;align-items:center;padding:0 16px;background:#242820;font-size:12px;color:#c8cdc2}#stage{height:calc(100% - 42px);position:relative;overflow:hidden;touch-action:none;cursor:grab;user-select:none}#stage.dragging{cursor:grabbing}#artwork{position:absolute;top:50%;left:50%;max-width:none;max-height:none;transform:translate(-50%,-50%);pointer-events:none;user-select:none}</style></head><body><div id="toolbar">왼쪽 버튼을 누른 채 드래그: 이동 · 휠 위로: 확대 · 휠 아래로: 축소</div><div id="stage"><img id="artwork" alt=""></div><script>const payload='+payload+',stage=document.querySelector("#stage"),image=document.querySelector("#artwork");document.title=payload.title||"High-resolution image";image.src=payload.src;image.alt=payload.title||"";let zoom=1,x=0,y=0,drag=null;const clamp=()=>{const maxX=Math.max(0,(image.offsetWidth-stage.clientWidth)/2),maxY=Math.max(0,(image.offsetHeight-stage.clientHeight)/2);x=Math.max(-maxX,Math.min(maxX,x));y=Math.max(-maxY,Math.min(maxY,y));};const draw=()=>{if(!image.naturalWidth)return;const base=Math.min(stage.clientWidth/image.naturalWidth,stage.clientHeight/image.naturalHeight);image.style.width=Math.max(1,image.naturalWidth*base*zoom)+"px";image.style.height=Math.max(1,image.naturalHeight*base*zoom)+"px";clamp();image.style.transform="translate(calc(-50% + "+x+"px), calc(-50% + "+y+"px))";};image.addEventListener("load",draw);window.addEventListener("resize",draw);stage.addEventListener("pointerdown",event=>{if(event.button!==0)return;drag={id:event.pointerId,x:event.clientX,y:event.clientY,startX:x,startY:y};stage.setPointerCapture(event.pointerId);stage.classList.add("dragging");});stage.addEventListener("pointermove",event=>{if(!drag||event.pointerId!==drag.id)return;x=drag.startX+event.clientX-drag.x;y=drag.startY+event.clientY-drag.y;draw();});const stop=event=>{if(!drag||event.pointerId!==drag.id)return;drag=null;stage.classList.remove("dragging");};stage.addEventListener("pointerup",stop);stage.addEventListener("pointercancel",stop);stage.addEventListener("wheel",event=>{event.preventDefault();const oldZoom=zoom,ratio=event.deltaY<0?1.1:1/1.1;zoom=Math.max(.5,Math.min(6,zoom*ratio));const actualRatio=zoom/oldZoom,rect=stage.getBoundingClientRect(),pointX=event.clientX-rect.left-stage.clientWidth/2,pointY=event.clientY-rect.top-stage.clientHeight/2;x=x*actualRatio+pointX*(1-actualRatio);y=y*actualRatio+pointY*(1-actualRatio);draw();},{passive:false});<\\/script></body></html>');popup.document.close();}document.addEventListener('dblclick',function(event){var image=event.target&&event.target.closest&&event.target.closest('img[data-art-atlas-highres]');if(!image)return;event.preventDefault();event.stopPropagation();openViewer(image.dataset.artAtlasHighres,image.dataset.artAtlasHighresTitle||image.getAttribute('alt')||document.title||'');},true);})();</script>`;
+const movementCardDoubleClickZoom = `<style id="art-atlas-movement-card-zoom-style">.art-atlas-movement-card-zoom{position:fixed;inset:0;z-index:2147483647;display:flex;align-items:flex-start;justify-content:center;overflow:auto;padding:6vh 4vw;background:rgba(5,7,10,.9);cursor:zoom-out}.art-atlas-movement-card-zoom img{display:block;flex:none;max-width:none;height:auto;box-shadow:0 18px 55px rgba(0,0,0,.55)}</style><script id="art-atlas-movement-card-zoom-viewer">(function(){if(window.__artAtlasMovementCardZoom)return;window.__artAtlasMovementCardZoom=true;var overlayId='art-atlas-movement-card-zoom';function close(){var overlay=document.getElementById(overlayId);if(overlay)overlay.remove();}document.addEventListener('dblclick',function(event){var open=document.getElementById(overlayId);if(open){if(event.target&&event.target.closest&&event.target.closest('#'+overlayId)){event.preventDefault();event.stopPropagation();close();}return;}var image=event.target&&event.target.closest&&event.target.closest('article.movement-work-card .movement-work-image img,article.card .movement-work-image img');if(!image)return;event.preventDefault();event.stopPropagation();var rect=image.getBoundingClientRect(),overlay=document.createElement('div'),zoomed=document.createElement('img');overlay.id=overlayId;overlay.className=overlayId;overlay.title='두 번 클릭하여 닫기';zoomed.src=image.currentSrc||image.src;zoomed.alt=image.alt||'';zoomed.style.width=Math.max(1,Math.round(rect.width*1.2))+'px';overlay.appendChild(zoomed);document.body.appendChild(overlay);},true);})();</script>`;
+function movementCardDocumentName(html) {
+  const heading=String(html || '').match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || '';
+  const text=heading.split(/<br\s*\/?>/i)[0].replace(/<[^>]+>/g,' ').replace(/&nbsp;/gi,' ').replace(/\s+/g,' ').trim();
+  return text.split(/\s*(?:—|:)\s*/)[0].trim();
+}
+function normalizeMovementCardPresentation(html) {
+  let source=stripMovementArtworkMovementLabels(html)
+    .replace(/\s*<style\b[^>]*id=["']art-atlas-movement-card-presentation-style["'][^>]*>[\s\S]*?<\/style>\s*/gi,'\n');
+  const movement=movementCardDocumentName(source);
+  if(!movement || !/<article\b(?=[^>]*\bclass=["'][^"']*\b(?:movement-work-card|card)\b[^"']*["'])/i.test(source)) return source;
+  source=source.replace(/<article\b(?=[^>]*\bclass=["'][^"']*\b(?:movement-work-card|card)\b[^"']*["'])[\s\S]*?<\/article>/gi,card=>card.replace(/(<div\b(?=[^>]*\bclass=["'][^"']*\b(?:movement-work-body|caption)\b[^"']*["'])[^>]*>)([\s\S]*?)(<\/div>)/i,(_,open,body,close)=>{
+    const withoutLabel=body.replace(/^\s*<span\b(?=[^>]*\bclass=["'][^"']*\bmini-label\b)[^>]*>[\s\S]*?<\/span>\s*/i,'');
+    const titled=withoutLabel.replace(/(<h3\b[^>]*>)([\s\S]*?)(<\/h3>)/i,(_,headingOpen,title,headingClose)=>{
+      const cleanTitle=title.replace(/\s*<span\b(?=[^>]*\bclass=["'][^"']*\bmovement-card-title-tag\b)[^>]*>[\s\S]*?<\/span>\s*/gi,'');
+      return `${headingOpen}${cleanTitle}<span class="movement-card-title-tag"> · ${escapeAttribute(movement)}</span>${headingClose}`;
+    });
+    return `${open}${titled}${close}`;
+  }));
+  const style='<style id="art-atlas-movement-card-presentation-style">.movement-card-title-tag{color:#9aa5af;font-size:.78em;font-weight:600;white-space:nowrap}</style>';
+  return /<\/head>/i.test(source) ? source.replace(/<\/head>/i,`${style}\n</head>`) : `${style}\n${source}`;
+}
 async function injectMovementHighResolutionViewer(html) {
   let source=String(html || '');
-  if(/id=["']art-atlas-movement-highres-viewer["']/i.test(source)) return source;
+  source=source
+    .replace(/\s*<style\b[^>]*id=["']art-atlas-movement-highres-style["'][^>]*>[\s\S]*?<\/style>\s*/gi,'\n')
+    .replace(/\s*<script\b[^>]*id=["']art-atlas-movement-highres-viewer["'][^>]*>[\s\S]*?<\/script>\s*/gi,'\n')
+    .replace(/\s*<style\b[^>]*id=["']art-atlas-movement-card-zoom-style["'][^>]*>[\s\S]*?<\/style>\s*/gi,'\n')
+    .replace(/\s*<script\b[^>]*id=["']art-atlas-movement-card-zoom-viewer["'][^>]*>[\s\S]*?<\/script>\s*/gi,'\n');
   const entries=await movementHighResolutionEntries();
-  if(!entries.length) return source;
-  let matched=false;
   source=source.replace(/<img\b[^>]*>/gi,tag=>{
     if(/\bdata-art-atlas-highres=/i.test(tag)) return tag;
-    const entry=movementHighResolutionEntryForImage(tag,entries);
+    const entry=entries.length && movementHighResolutionEntryForImage(tag,entries);
     if(!entry) return tag;
-    matched=true;
     return tag.replace(/\s*\/?>$/,match=>` data-art-atlas-highres="${escapeAttribute(entry.highRes)}" data-art-atlas-highres-title="${escapeAttribute([entry.artist,entry.title].filter(Boolean).join(' · '))}"${match}`);
   });
-  if(!matched) return source;
-  return /<\/body>/i.test(source) ? source.replace(/<\/body>/i,`${movementHighResolutionViewer}\n</body>`) : `${source}\n${movementHighResolutionViewer}`;
+  return /<\/body>/i.test(source) ? source.replace(/<\/body>/i,`${movementCardDoubleClickZoom}\n</body>`) : `${source}\n${movementCardDoubleClickZoom}`;
 }
 function compactArtistName(value) {
   return String(value || '').normalize('NFC').replace(/\s+/g,' ').trim();
@@ -1290,6 +1323,7 @@ function movementArtistAliasOverrides(artist) {
     Q7814:['조토','조토 디 본도네','Giotto di Bondone','Giotto'],
     Q42207:['카라바조','Caravaggio'],
     Q5592:['미켈란젤로','Michelangelo'],
+    Q68631:['로히어르 반 데르 베이던','반 데르 베이던','로히어르','베이던','Rogier van der Weyden'],
     Q43270:['피터르 브뤼헐','브뤼헐','Pieter Bruegel','Pieter Brueghel','Bruegel','Brueghel'],
     Q213163:['비제 르 브룅','비제르브룅','Vigée Le Brun','Vigee Le Brun'],
     Q5599:['루벤스','Rubens'],
@@ -1428,23 +1462,10 @@ function injectMovementLabelIntoCard(card, label, artist) {
   return card;
 }
 async function injectMovementArtworkMovementLabels(html) {
-  const source=stripMovementArtworkMovementLabels(html);
-  const data=await readArtistsFile();
-  const artists=data.artists || [];
-  if(!artists.length) return source;
-  const aliasEntries=(await movementArtistLinkEntries()).sort((a,b)=>b.alias.length-a.alias.length);
-  let changed=false;
-  const output=source.replace(/<article\b(?=[^>]*\bclass=["'][^"']*\b(?:movement-work-card|card)\b[^"']*["'])[\s\S]*?<\/article>/gi,card=>{
-    const artist=movementCardArtist(card,artists,aliasEntries);
-    const movement=artist && serverArtistMovementDisplayLabel(artist);
-    if(!movement) return card;
-    const next=injectMovementLabelIntoCard(card,movement,artist);
-    if(next !== card) changed=true;
-    return next;
-  });
-  if(!changed) return source;
-  const style='<style id="art-atlas-work-movement-style">.art-atlas-work-movement{margin:.48rem 0 .12rem!important;color:#f0cf87!important;font:800 .82rem/1.45 system-ui,-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif!important}.art-atlas-work-movement strong{display:inline-block;margin-right:.45rem;padding:.16rem .5rem;border:1px solid rgba(240,207,135,.42)!important;border-radius:999px;background:rgba(216,170,75,.12)!important;color:#ffe4a6!important;font-size:.76rem!important}</style>';
-  return /<\/head>/i.test(output) ? output.replace(/<\/head>/i,`${style}\n</head>`) : `${style}\n${output}`;
+  // The movement is now kept in the image-card title itself.  Old documents
+  // may still contain the former separate “화가 사조” paragraph, so strip it
+  // whenever a movement document is served instead of injecting it again.
+  return stripMovementArtworkMovementLabels(html);
 }
 const movementArtistLinkStyle = `.art-atlas-artist-link{font-weight:900;color:#191007!important;background:linear-gradient(180deg,rgba(255,232,151,.98),rgba(255,198,86,.9));border-bottom:2px solid #a96f12;border-radius:.22em;padding:0 .16em;text-decoration:none!important;box-decoration-break:clone;-webkit-box-decoration-break:clone}.art-atlas-artist-link:hover{filter:brightness(1.08);box-shadow:0 0 0 2px rgba(255,214,102,.24)}`;
 const uHangulDocumentIntegration = `<link rel="stylesheet" href="../../uhangul/uhangul-runtime.css" data-uhangul-integration="v0.4">\n<script defer src="../../uhangul/uhangul-runtime.js" data-uhangul-integration="v0.4"></script>`;
@@ -1765,7 +1786,8 @@ http.createServer(async (req,res) => { const url=new URL(req.url,`http://${req.h
   if (req.method==='PUT' && url.pathname==='/api/movement-section-links') { let body=''; req.on('data',chunk=>body+=chunk); req.on('end',async()=>{ try { const payload=JSON.parse(body || '{}'), data=await saveMovementSectionLinks(String(payload.sectionId || ''),payload.links); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:true,sections:data.sections})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json; charset=utf-8'}); res.end(JSON.stringify({ok:false,error:error.message})); } }); return; }
   if (req.method==='GET' && url.pathname==='/api/movement-documents') { try { const data=await readMovementDocuments(); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); return res.end(JSON.stringify(data)); } catch(error) { res.writeHead(500,{'Content-Type':'application/json; charset=utf-8'}); return res.end(JSON.stringify({documents:{},error:error.message})); } }
   if (req.method==='POST' && url.pathname==='/api/movement-documents/refresh') { let body=''; req.on('data',chunk=>body+=chunk); req.on('end',async()=>{ try { const payload=JSON.parse(body || '{}'), name=movementDocumentName(payload.name), slot=movementDocumentSlot(payload.slot), result=await refreshMovementDocumentLinks(name,slot); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify(result)); } catch(error) { res.writeHead(422,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:false,error:error.message})); } }); return; }
-  if (req.method==='POST' && url.pathname==='/api/movement-documents') { try { const form=multipartForm(await readRequestBuffer(req,30*1024*1024),req.headers['content-type']), name=movementDocumentName(form.fields.name), slot=movementDocumentSlot(form.fields.slot), file=form.files.document, ext=path.extname(String(file?.filename || '')).toLowerCase(); if(!file || !['.html','.htm'].includes(ext) || !/^(text\/html|application\/xhtml\+xml|)$/.test(file.contentType)) throw new Error('Upload an HTML file'); if(!file.data.length) throw new Error('The HTML file is empty'); const data=await readMovementDocuments(), relative=movementDocumentRelative(name,slot), previous=data.documents?.[name]?.[slot], linkedHtml=await linkMovementDocumentArtists(injectUHangulDocumentIntegration(file.data)); await fs.mkdir(movementDocumentDir,{recursive:true}); const savedFile=path.join(root,relative); await fs.writeFile(savedFile,linkedHtml); if(previous && previous!==relative) await removeMovementDocument(previous); data.documents[name]={...(data.documents[name]||{}),[slot]:relative}; await writeMovementDocuments(data); syncPersonNameDictionary({additionalFiles:[savedFile]}); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8'}); return res.end(JSON.stringify({ok:true,url:relative})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json; charset=utf-8'}); return res.end(JSON.stringify({ok:false,error:error.message})); } }
+  if (req.method==='POST' && url.pathname==='/api/movement-documents') { try { const form=multipartForm(await readRequestBuffer(req,30*1024*1024),req.headers['content-type']), name=movementDocumentName(form.fields.name), slot=movementDocumentSlot(form.fields.slot), file=form.files.document, ext=path.extname(String(file?.filename || '')).toLowerCase(); if(!file || !['.html','.htm'].includes(ext) || !/^(text\/html|application\/xhtml\+xml|)$/.test(file.contentType)) throw new Error('Upload an HTML file'); if(!file.data.length) throw new Error('The HTML file is empty'); const data=await readMovementDocuments(), relative=movementDocumentRelative(name,slot), previous=data.documents?.[name]?.[slot], linkedHtml=await linkMovementDocumentArtists(normalizeMovementCardPresentation(injectUHangulDocumentIntegration(file.data))); await fs.mkdir(movementDocumentDir,{recursive:true}); const savedFile=path.join(root,relative); await fs.writeFile(savedFile,linkedHtml); if(previous && previous!==relative) await removeMovementDocument(previous); data.documents[name]={...(data.documents[name]||{}),[slot]:relative}; await writeMovementDocuments(data); syncPersonNameDictionary({additionalFiles:[savedFile]}); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8'}); return res.end(JSON.stringify({ok:true,url:relative})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json; charset=utf-8'}); return res.end(JSON.stringify({ok:false,error:error.message})); } }
+  if (req.method==='PUT' && url.pathname==='/api/movement-documents') { let body=''; req.on('data',chunk=>body+=chunk); req.on('end',async()=>{ try { const payload=JSON.parse(body || '{}'), result=await saveMovementDocumentHtml(payload.name,payload.slot,payload.html); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify(result)); } catch(error) { res.writeHead(422,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:false,error:error.message})); } }); return; }
   if (req.method==='DELETE' && url.pathname==='/api/movement-documents') { let body=''; req.on('data',chunk=>body+=chunk); req.on('end',async()=>{ try { const {name,slot}=JSON.parse(body), safeName=movementDocumentName(name), safeSlot=movementDocumentSlot(slot), data=await readMovementDocuments(), relative=data.documents?.[safeName]?.[safeSlot]; if(relative) await removeMovementDocument(relative); if(data.documents?.[safeName]) { delete data.documents[safeName][safeSlot]; if(!Object.keys(data.documents[safeName]).length) delete data.documents[safeName]; } await writeMovementDocuments(data); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8'}); res.end(JSON.stringify({ok:true})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json; charset=utf-8'}); res.end(JSON.stringify({ok:false,error:error.message})); } }); return; }
   if (req.method==='POST' && url.pathname==='/api/local-artwork-image') { try { const form=multipartForm(await readRequestBuffer(req,500*1024*1024),req.headers['content-type']), result=await saveLocalArtworkImage(form); res.writeHead(200,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({ok:true,...result})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({ok:false,error:error.message})); } }
   if (req.method==='POST' && url.pathname==='/api/topic-artworks') { try { const form=multipartForm(await readRequestBuffer(req,500*1024*1024),req.headers['content-type']), result=await saveTopicArtwork(form); res.writeHead(200,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({ok:true,...result})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({ok:false,error:error.message})); } }
@@ -1783,4 +1805,4 @@ http.createServer(async (req,res) => { const url=new URL(req.url,`http://${req.h
   if (req.method==='POST' && url.pathname==='/api/artwork-info') { let body=''; req.on('data',c=>body+=c); req.on('end',async()=>{ try { const {artist,work}=JSON.parse(body); const result=await artworkInfo(artist,work); res.writeHead(200,{'Content-Type':'application/json'}); res.end(JSON.stringify({work:result})); } catch(error) { res.writeHead(502,{'Content-Type':'application/json'}); res.end(JSON.stringify({error:error.message})); } }); return; }
   if (req.method==='POST' && url.pathname==='/api/local-thumbnail-image') { try { const form=multipartForm(await readRequestBuffer(req,sourceImageInputLimit + 1024*1024),req.headers['content-type']), artist=JSON.parse(form.fields.artist || '{}'), work=JSON.parse(form.fields.work || '{}'); if(!artist?.id || !work?.id) throw new Error('Invalid artwork upload'); const thumbnail=await saveThumbnailFromLocalUpload(artist,work,form.files.image,adminEmail); res.writeHead(200,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({thumbnail,verified:true})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({thumbnail:'',verified:false,error:error.message})); } }
   if (req.method==='GET' && url.pathname==='/api/search') { try { const query=url.searchParams.get('q')||'', kind=url.searchParams.get('type')||'artist'; const raw=kind==='artist' ? await artistSearchCandidates(query) : (await getJsonFast(api({action:'wbsearchentities',search:query,language:'ko',uselang:'ko',type:'item',limit:'20'}))).search?.map(item=>({id:item.id,label:item.label,description:item.description||''})) || []; const ranked=[...raw].sort((a,b)=>{const score=item=>similarityScore(query,item.label)+(kind==='artwork' ? /(회화|그림|painting|artwork|work of art)/i.test(item.description)?120:0 : /(화가|예술가|painter|visual artist|artist)/i.test(item.description)?120:0); return score(b)-score(a);}); const values=ranked.slice(0,8); res.writeHead(200,{'Content-Type':'application/json'}); return res.end(JSON.stringify(values)); } catch(error) { res.writeHead(502,{'Content-Type':'application/json'}); return res.end(JSON.stringify([])); } }
-  const file=safePath(url.pathname);if(!file){res.writeHead(403);return res.end();}try{let data=await fs.readFile(file);const relativeFile=path.relative(root,file).replace(/\\/g,'/');if(/^data[\\/]미술사조[\\/][a-f0-9]{24}-[12]\.html$/i.test(path.relative(root,file))) { let html=(await linkMovementDocumentArtists(data)).toString('utf8'); html=await injectMovementArtworkMovementLabels(html); html=injectMovementPioneerContext(html,await movementDocumentPioneerContextKey(relativeFile)); html=injectUHangulDocumentIntegration(html); html=injectMovementWikipediaHeading(html,url.searchParams.get('movementWiki') || '',url.searchParams.get('movementLabel') || ''); html=await injectMovementHighResolutionViewer(html); data=Buffer.from(html,'utf8'); }res.writeHead(200,{'Content-Type':mime[path.extname(file)]||'application/octet-stream','Cache-Control':'no-store'});res.end(data);}catch(error){console.error('Static file error:',error?.stack || error?.message || error);res.writeHead(404);res.end('Not found');}}).listen(4173,'127.0.0.1',()=>console.log(`Art Atlas: http://localhost:4173${adminPasswordHash ? '' : ' (read-only: .env not found)'}`));
+  const file=safePath(url.pathname);if(!file){res.writeHead(403);return res.end();}try{let data=await fs.readFile(file);const relativeFile=path.relative(root,file).replace(/\\/g,'/');if(/^data[\\/]미술사조[\\/][a-f0-9]{24}-[12]\.html$/i.test(path.relative(root,file))) { let html=(await linkMovementDocumentArtists(data)).toString('utf8'); html=await injectMovementArtworkMovementLabels(html); html=normalizeMovementCardPresentation(html); html=injectMovementPioneerContext(html,await movementDocumentPioneerContextKey(relativeFile)); html=injectUHangulDocumentIntegration(html); html=injectMovementWikipediaHeading(html,url.searchParams.get('movementWiki') || '',url.searchParams.get('movementLabel') || ''); html=await injectMovementHighResolutionViewer(html); data=Buffer.from(html,'utf8'); }res.writeHead(200,{'Content-Type':mime[path.extname(file)]||'application/octet-stream','Cache-Control':'no-store'});res.end(data);}catch(error){console.error('Static file error:',error?.stack || error?.message || error);res.writeHead(404);res.end('Not found');}}).listen(4173,'127.0.0.1',()=>console.log(`Art Atlas: http://localhost:4173${adminPasswordHash ? '' : ' (read-only: .env not found)'}`));

@@ -122,9 +122,21 @@ ${style}
       </ul>
     </div>
   </div>
-  <h3>표에는 나오지만 문서 상단에 도판이 없던 대표작</h3>
-  <p class="enhancement-intro">아래 카드는 앞부분에서 이미 제시한 카라바조, 아르테미시아, 안니발레 카라치를 반복하지 않고 바로크가 각 지역에서 어떻게 달라졌는지를 보여준다.</p>
+  <h3>사조의 주요 화가를 모두 보는 대표작</h3>
+  <p class="enhancement-intro">문서 앞부분에서 먼저 다룬 카라바조, 아르테미시아, 안니발레 카라치도 이 대표작 모음에 함께 넣었다. 두 이탈리아 출발점과 카라바조주의의 확산을 각 지역 바로크와 한 흐름으로 비교할 수 있다.</p>
   <div class="movement-work-grid">
+    <article class="movement-work-card">
+      <div class="movement-work-image"><img src="images/Caravaggio-27s-The-Calling-of-St-Matthew-2068cdb551fc.jpg" alt="카라바조, 성 마태오의 소명"></div>
+      <div class="movement-work-body"><span class="mini-label">카라바조</span><h3>카라바조, 《성 마태오의 소명》</h3><p class="work-meta">1599-1600, 로마 산 루이지 데이 프란체지 성당</p><p>평범한 로마인의 어두운 실내에 한 줄기 빛이 들어오며 성스러운 사건이 현재의 현실이 된다. 강한 명암, 가까운 시점, 행동이 막 시작되는 순간이 카라바조식 바로크의 출발점이다.</p></div>
+    </article>
+    <article class="movement-work-card">
+      <div class="movement-work-image"><img src="images/Artemisia-Gentileschi-Judith-Beheading-Holofernes-WGA8563-822bc56fc2a3.jpg" alt="아르테미시아 젠틸레스키, 홀로페르네스의 목을 베는 유디트"></div>
+      <div class="movement-work-body"><span class="mini-label">아르테미시아 젠틸레스키</span><h3>아르테미시아, 《홀로페르네스의 목을 베는 유디트》</h3><p class="work-meta">1612-1613년경, 나폴리 카포디몬테 미술관</p><p>카라바조의 근접 구도와 극적인 명암을 계승하면서도, 유디트와 하녀의 육체적 힘과 결단을 더욱 직접적으로 밀어붙인다. 카라바조주의가 여성 화가의 강한 서사와 결합한 대표 사례다.</p></div>
+    </article>
+    <article class="movement-work-card">
+      <div class="movement-work-image"><img src="images/The-20Triumph-20of-20Bacchus-20and-20Ariadne-20-20Annibale-20Carracci-fd287b491bf5.jpg" alt="안니발레 카라치, 바쿠스와 아리아드네의 승리"></div>
+      <div class="movement-work-body"><span class="mini-label">안니발레 카라치</span><h3>카라치, 《바쿠스와 아리아드네의 승리》</h3><p class="work-meta">1597년경-1600년대 초, 로마 파르네세 궁전</p><p>자연 관찰을 바탕으로 하되 고대 조각과 르네상스의 균형을 결합해, 화면을 고전적 리듬과 안정된 서사로 조직한다. 카라바조와 다른 바로크의 두 번째 출발점을 명확히 보여 준다.</p></div>
+    </article>
     <article class="movement-work-card">
       <div class="movement-work-image"><img src="../thumbnails/artist-url-1786879941678/rubens-descent-antwerp-1612.jpg" alt="루벤스, 십자가에서 내려짐"></div>
       <div class="movement-work-body"><span class="mini-label">${a.rubens}</span><h3>${a.rubens}, 《십자가에서 내려짐》</h3><p class="work-meta">1612-1614, 안트베르펜 성모 대성당</p><p>인물들이 십자가에서 사선으로 쏟아져 내려오며 화면 전체가 하나의 몸짓이 된다. 풍부한 색채와 육체적 무게, 집단적 감정이 플랑드르 바로크의 핵심을 압축한다.</p></div>

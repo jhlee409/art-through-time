@@ -142,6 +142,7 @@ section{padding:58px 0;border-bottom:1px solid var(--line)}.grid2{display:grid;g
 <div class="note">대표 이미지 3점은 공개영역 파일을 HTML 내부에 직접 내장했다.</div></div></section>
 <!-- art-atlas-enhancement:start -->
 
+
 <style id="art-atlas-movement-enhancement-style">
 .movement-enhancement{padding:58px 0;border-bottom:1px solid var(--line,#2a3037)}
 .movement-enhancement .enhancement-intro{font-size:1.07rem;color:var(--muted,#aeb6bf);max-width:1040px}
@@ -173,14 +174,14 @@ section{padding:58px 0;border-bottom:1px solid var(--line)}.grid2{display:grid;g
       <ul><li>독일 바이마르 공화국에서는 패전, 인플레이션, 도시 소비문화, 정치 극단화가 주요 배경이었다.</li><li>오스트리아와 체코 등 독일어권 주변에서도 냉정한 초상, 도시 이미지, 사회 비판적 리얼리즘이 나타났다.</li><li>이 흐름은 나치 집권 이후 억압되었지만 전후 사실주의와 사진적 태도에 긴 영향을 남겼다.</li></ul>
     </div>
   </div>
-  <div class="enhancement-panel">
+
     <h3>대표 화가와 대표작으로 확인하기</h3>
     <p class="enhancement-intro">본문에 이름이 등장하는 주요 화가는 아래처럼 대표작 한 점과 함께 읽어야 한다. 작품은 해당 사조의 핵심 특징을 실제 화면에서 확인하도록 고른 것이다.</p>
     <div class="movement-work-grid">
       <article class="movement-work-card">
   <div class="movement-work-image"><img data-art-atlas-reuse-image="0" alt="오토 딕스, 《전쟁 불구자들》"></div>
   <div class="movement-work-body">
-    <h3>오토 딕스, 《전쟁 불구자들》</h3>
+    <h3>오토 딕스, 《전쟁 불구자들》<span class="movement-card-title-tag"> · 신즉물주의</span></h3>
     <small>1920년대 · 베리스무스</small>
     <p>전쟁의 영웅담 대신 망가진 신체와 사회의 냉혹함을 직면시킨다.</p>
   </div>
@@ -188,7 +189,7 @@ section{padding:58px 0;border-bottom:1px solid var(--line)}.grid2{display:grid;g
       <article class="movement-work-card">
   <div class="movement-work-image"><img data-art-atlas-reuse-image="1" alt="게오르게 그로스, 《사회의 기둥들》"></div>
   <div class="movement-work-body">
-    <h3>게오르게 그로스, 《사회의 기둥들》</h3>
+    <h3>게오르게 그로스, 《사회의 기둥들》<span class="movement-card-title-tag"> · 신즉물주의</span></h3>
     <small>1926 · 정치 풍자</small>
     <p>정치·언론·군부의 얼굴을 날카로운 캐리커처로 해부한다.</p>
   </div>
@@ -196,13 +197,13 @@ section{padding:58px 0;border-bottom:1px solid var(--line)}.grid2{display:grid;g
       <article class="movement-work-card">
   <div class="movement-work-image"><img data-art-atlas-reuse-image="2" alt="크리스티안 샤트, 《자화상》"></div>
   <div class="movement-work-body">
-    <h3>크리스티안 샤트, 《자화상》</h3>
+    <h3>크리스티안 샤트, 《자화상》<span class="movement-card-title-tag"> · 신즉물주의</span></h3>
     <small>1927 · 마술적 사실주의</small>
     <p>매끈하고 차가운 표면이 인물의 심리적 거리감과 도시적 냉소를 만든다.</p>
   </div>
 </article>
     </div>
-  </div>
+
 </div>
 <script>
 (() => {
@@ -214,6 +215,27 @@ section{padding:58px 0;border-bottom:1px solid var(--line)}.grid2{display:grid;g
 })();
 </script>
 </section>
+
+
+
+
+
+<!-- art-atlas-expanded-document-width:start -->
+<style id="art-atlas-expanded-document-width">
+.wrap{width:min(1560px,92vw)}
+</style>
+<!-- art-atlas-expanded-document-width:end -->
+<!-- art-atlas-full-width-work-grid:start -->
+<style id="art-atlas-full-width-work-grid">
+.movement-enhancement .movement-work-grid,.movement-enhancement .movement-work-grid.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:16px}
+.movement-enhancement .movement-work-card{overflow:hidden;border:1px solid var(--line,#2a3037);border-radius:12px;background:linear-gradient(180deg,var(--panel2,#181d23),var(--panel,#12161b));box-shadow:0 12px 28px rgba(0,0,0,.22)}
+.movement-enhancement .movement-work-image{background:#090b0d;display:flex;align-items:center;justify-content:center;min-height:260px}
+.movement-enhancement .movement-work-image img{display:block;width:100%;height:320px;object-fit:contain}
+.movement-enhancement .movement-work-body{padding:16px;color:#cfd6dd}
+.movement-enhancement .wrap .movement-work-grid{width:100vw;max-width:none;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}
+@media(max-width:900px){.movement-enhancement .movement-work-grid,.movement-enhancement .movement-work-grid.three{grid-template-columns:1fr}.movement-enhancement .movement-work-image img{height:auto;max-height:420px}}
+</style>
+<!-- art-atlas-full-width-work-grid:end -->
 <!-- art-atlas-enhancement:end -->
 
 </main><footer><div class="wrap">신즉물주의 — 바이마르 독일의 냉정한 현실</div></footer>

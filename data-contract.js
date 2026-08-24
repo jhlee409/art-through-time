@@ -52,8 +52,8 @@ function localizedTextList(value) {
 function localizedSummaryList(value) {
   const summary = localizedTextList(value);
   return {
-    ko:summary.ko.slice(0, 6),
-    en:summary.en.slice(0, 6)
+    ko:summary.ko,
+    en:summary.en
   };
 }
 

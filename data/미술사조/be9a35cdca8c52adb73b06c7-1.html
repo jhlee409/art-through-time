@@ -143,6 +143,7 @@ section{padding:58px 0;border-bottom:1px solid var(--line)}.grid2{display:grid;g
 <div class="note">대표 이미지 3점은 공개영역 파일을 HTML 내부에 직접 내장했다. 외부 인터넷 연결 없이 표시된다.</div></div></section>
 <!-- art-atlas-enhancement:start -->
 
+
 <style id="art-atlas-movement-enhancement-style">
 .movement-enhancement{padding:58px 0;border-bottom:1px solid var(--line,#2a3037)}
 .movement-enhancement .enhancement-intro{font-size:1.07rem;color:var(--muted,#aeb6bf);max-width:1040px}
@@ -174,14 +175,14 @@ section{padding:58px 0;border-bottom:1px solid var(--line)}.grid2{display:grid;g
       <ul><li>독일에서는 산업 도시, 제국 사회, 전쟁 전후의 불안이 거친 선과 색으로 나타났다.</li><li>오스트리아 빈에서는 정신분석과 세기말 문화 속에서 인물의 내면 긴장이 강해졌다.</li><li>프랑스 야수주의와 러시아 추상 실험은 색채와 형태 해방이라는 점에서 표현주의와 교차했다.</li></ul>
     </div>
   </div>
-  <div class="enhancement-panel">
+
     <h3>대표 화가와 대표작으로 확인하기</h3>
     <p class="enhancement-intro">본문에 이름이 등장하는 주요 화가는 아래처럼 대표작 한 점과 함께 읽어야 한다. 작품은 해당 사조의 핵심 특징을 실제 화면에서 확인하도록 고른 것이다.</p>
     <div class="movement-work-grid">
       <article class="movement-work-card">
   <div class="movement-work-image"><img data-art-atlas-reuse-image="0" alt="에른스트 루트비히 키르히너, 《베를린 거리》"></div>
   <div class="movement-work-body">
-    <h3>에른스트 루트비히 키르히너, 《베를린 거리》</h3>
+    <h3>에른스트 루트비히 키르히너, 《베를린 거리》<span class="movement-card-title-tag"> · 표현주의</span></h3>
     <small>1913 · 다리파 이후 도시 표현</small>
     <p>날카로운 인체와 산성적인 색이 근대 도시의 속도와 소외를 드러낸다.</p>
   </div>
@@ -189,7 +190,7 @@ section{padding:58px 0;border-bottom:1px solid var(--line)}.grid2{display:grid;g
       <article class="movement-work-card">
   <div class="movement-work-image"><img data-art-atlas-reuse-image="1" alt="바실리 칸딘스키, 《구성》"></div>
   <div class="movement-work-body">
-    <h3>바실리 칸딘스키, 《구성》</h3>
+    <h3>바실리 칸딘스키, 《구성》<span class="movement-card-title-tag"> · 표현주의</span></h3>
     <small>1910년대 · 청기사파</small>
     <p>대상을 해체하고 색과 선의 리듬으로 정신적 경험을 표현한다.</p>
   </div>
@@ -197,13 +198,13 @@ section{padding:58px 0;border-bottom:1px solid var(--line)}.grid2{display:grid;g
       <article class="movement-work-card">
   <div class="movement-work-image"><img data-art-atlas-reuse-image="2" alt="프란츠 마르크, 《푸른 말》"></div>
   <div class="movement-work-body">
-    <h3>프란츠 마르크, 《푸른 말》</h3>
+    <h3>프란츠 마르크, 《푸른 말》<span class="movement-card-title-tag"> · 표현주의</span></h3>
     <small>1911 · 청기사파</small>
     <p>동물과 색을 자연의 영적 순수성으로 연결하여 사실적 색채를 넘어선다.</p>
   </div>
 </article>
     </div>
-  </div>
+
 </div>
 <script>
 (() => {
@@ -215,6 +216,27 @@ section{padding:58px 0;border-bottom:1px solid var(--line)}.grid2{display:grid;g
 })();
 </script>
 </section>
+
+
+
+
+
+<!-- art-atlas-expanded-document-width:start -->
+<style id="art-atlas-expanded-document-width">
+.wrap{width:min(1560px,92vw)}
+</style>
+<!-- art-atlas-expanded-document-width:end -->
+<!-- art-atlas-full-width-work-grid:start -->
+<style id="art-atlas-full-width-work-grid">
+.movement-enhancement .movement-work-grid,.movement-enhancement .movement-work-grid.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:16px}
+.movement-enhancement .movement-work-card{overflow:hidden;border:1px solid var(--line,#2a3037);border-radius:12px;background:linear-gradient(180deg,var(--panel2,#181d23),var(--panel,#12161b));box-shadow:0 12px 28px rgba(0,0,0,.22)}
+.movement-enhancement .movement-work-image{background:#090b0d;display:flex;align-items:center;justify-content:center;min-height:260px}
+.movement-enhancement .movement-work-image img{display:block;width:100%;height:320px;object-fit:contain}
+.movement-enhancement .movement-work-body{padding:16px;color:#cfd6dd}
+.movement-enhancement .wrap .movement-work-grid{width:100vw;max-width:none;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}
+@media(max-width:900px){.movement-enhancement .movement-work-grid,.movement-enhancement .movement-work-grid.three{grid-template-columns:1fr}.movement-enhancement .movement-work-image img{height:auto;max-height:420px}}
+</style>
+<!-- art-atlas-full-width-work-grid:end -->
 <!-- art-atlas-enhancement:end -->
 
 </main><footer><div class="wrap">표현주의 — 보이는 세계보다 느끼는 세계</div></footer>

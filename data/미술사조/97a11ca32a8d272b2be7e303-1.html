@@ -279,6 +279,7 @@ td:first-child{font-weight:750;color:#eef1f4;width:18%}tr:last-child td{border-b
 
 <!-- art-atlas-enhancement:start -->
 
+
 <style id="art-atlas-movement-enhancement-style">
 .movement-enhancement{padding:58px 0;border-bottom:1px solid var(--line,#2a3037)}
 .movement-enhancement .enhancement-intro{font-size:1.07rem;color:var(--muted,#aeb6bf);max-width:1040px}
@@ -310,14 +311,14 @@ td:first-child{font-weight:750;color:#eef1f4;width:18%}tr:last-child td{border-b
       <ul><li>러시아에서는 시인 블록·벨리 같은 문학 상징주의와 미술이 긴밀히 연결되었다.</li><li>모스크바와 상트페테르부르크의 살롱, 잡지, 극장 문화가 회화와 무대미술을 묶었다.</li><li>파리와 디아길레프의 발레 뤼스는 러시아 상징주의·장식미술을 국제 무대로 내보냈다.</li></ul>
     </div>
   </div>
-  <div class="enhancement-panel">
+
     <h3>대표 화가와 대표작으로 확인하기</h3>
     <p class="enhancement-intro">본문에 이름이 등장하는 주요 화가는 아래처럼 대표작 한 점과 함께 읽어야 한다. 작품은 해당 사조의 핵심 특징을 실제 화면에서 확인하도록 고른 것이다.</p>
     <div class="movement-work-grid">
       <article class="movement-work-card">
   <div class="movement-work-image"><img data-art-atlas-reuse-image="0" alt="미하일 브루벨, 《앉아 있는 악마》"></div>
   <div class="movement-work-body">
-    <h3>미하일 브루벨, 《앉아 있는 악마》</h3>
+    <h3>미하일 브루벨, 《앉아 있는 악마》<span class="movement-card-title-tag"> · 러시아 상징주의</span></h3>
     <small>1890 · 트레티야코프 미술관</small>
     <p>분절된 보석 같은 색면과 고독한 자세가 러시아 상징주의의 신화적 내면을 보여준다.</p>
   </div>
@@ -325,7 +326,7 @@ td:first-child{font-weight:750;color:#eef1f4;width:18%}tr:last-child td{border-b
       <article class="movement-work-card">
   <div class="movement-work-image"><img data-art-atlas-reuse-image="1" alt="빅토르 보리스프무사토프, 《태피스트리》"></div>
   <div class="movement-work-body">
-    <h3>빅토르 보리스프무사토프, 《태피스트리》</h3>
+    <h3>빅토르 보리스프무사토프, 《태피스트리》<span class="movement-card-title-tag"> · 러시아 상징주의</span></h3>
     <small>1901 · 블루 로즈 전조</small>
     <p>인물이 시간 밖의 꿈처럼 놓이며 음악적이고 회상적인 분위기를 만든다.</p>
   </div>
@@ -333,13 +334,13 @@ td:first-child{font-weight:750;color:#eef1f4;width:18%}tr:last-child td{border-b
       <article class="movement-work-card">
   <div class="movement-work-image"><img data-art-atlas-reuse-image="2" alt="레옹 박스트, 《발레 뤼스 무대·의상 디자인》"></div>
   <div class="movement-work-body">
-    <h3>레옹 박스트, 《발레 뤼스 무대·의상 디자인》</h3>
+    <h3>레옹 박스트, 《발레 뤼스 무대·의상 디자인》<span class="movement-card-title-tag"> · 러시아 상징주의</span></h3>
     <small>1900년대 · 미르 이스쿠스트바</small>
     <p>상징주의의 색과 장식성이 회화를 넘어 무대공간으로 확장된다.</p>
   </div>
 </article>
     </div>
-  </div>
+
 </div>
 <script>
 (() => {
@@ -351,6 +352,27 @@ td:first-child{font-weight:750;color:#eef1f4;width:18%}tr:last-child td{border-b
 })();
 </script>
 </section>
+
+
+
+
+
+<!-- art-atlas-expanded-document-width:start -->
+<style id="art-atlas-expanded-document-width">
+.wrap{width:min(1560px,92vw)}
+</style>
+<!-- art-atlas-expanded-document-width:end -->
+<!-- art-atlas-full-width-work-grid:start -->
+<style id="art-atlas-full-width-work-grid">
+.movement-enhancement .movement-work-grid,.movement-enhancement .movement-work-grid.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:16px}
+.movement-enhancement .movement-work-card{overflow:hidden;border:1px solid var(--line,#2a3037);border-radius:12px;background:linear-gradient(180deg,var(--panel2,#181d23),var(--panel,#12161b));box-shadow:0 12px 28px rgba(0,0,0,.22)}
+.movement-enhancement .movement-work-image{background:#090b0d;display:flex;align-items:center;justify-content:center;min-height:260px}
+.movement-enhancement .movement-work-image img{display:block;width:100%;height:320px;object-fit:contain}
+.movement-enhancement .movement-work-body{padding:16px;color:#cfd6dd}
+.movement-enhancement .wrap .movement-work-grid{width:100vw;max-width:none;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}
+@media(max-width:900px){.movement-enhancement .movement-work-grid,.movement-enhancement .movement-work-grid.three{grid-template-columns:1fr}.movement-enhancement .movement-work-image img{height:auto;max-height:420px}}
+</style>
+<!-- art-atlas-full-width-work-grid:end -->
 <!-- art-atlas-enhancement:end -->
 
 </main>

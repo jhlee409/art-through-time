@@ -145,6 +145,7 @@ footer{padding:36px 0 60px;color:#7f8993;font-size:.86rem}ul{padding-left:1.25re
 <div class="note">대표 이미지 2점은 공개영역 작품을 HTML 내부에 직접 내장했다. 인터넷 연결 없이 표시된다.</div></div></section>
 <!-- art-atlas-enhancement:start -->
 
+
 <style id="art-atlas-movement-enhancement-style">
 .movement-enhancement{padding:58px 0;border-bottom:1px solid var(--line,#2a3037)}
 .movement-enhancement .enhancement-intro{font-size:1.07rem;color:var(--muted,#aeb6bf);max-width:1040px}
@@ -176,14 +177,14 @@ footer{padding:36px 0 60px;color:#7f8993;font-size:.86rem}ul{padding-left:1.25re
       <ul><li>러시아와 초기 소련에서는 혁명 이후 새 생활을 조직하는 조형 언어로 구성주의가 부상했다.</li><li>독일 바우하우스와 네덜란드 데 스테일은 구성주의의 기하학과 기능주의와 교류했다.</li><li>정치가 중앙집권화되면서 구성주의의 실험성은 1930년대 사회주의 사실주의에 의해 제약되었다.</li></ul>
     </div>
   </div>
-  <div class="enhancement-panel">
+
     <h3>대표 화가와 대표작으로 확인하기</h3>
     <p class="enhancement-intro">본문에 이름이 등장하는 주요 화가는 아래처럼 대표작 한 점과 함께 읽어야 한다. 작품은 해당 사조의 핵심 특징을 실제 화면에서 확인하도록 고른 것이다.</p>
     <div class="movement-work-grid">
       <article class="movement-work-card">
   <div class="movement-work-image"><img data-art-atlas-reuse-image="0" alt="블라디미르 타틀린, 《제3인터내셔널 기념탑 모형》"></div>
   <div class="movement-work-body">
-    <h3>블라디미르 타틀린, 《제3인터내셔널 기념탑 모형》</h3>
+    <h3>블라디미르 타틀린, 《제3인터내셔널 기념탑 모형》<span class="movement-card-title-tag"> · 구성주의</span></h3>
     <small>1919–1920 · 혁명 기념 건축</small>
     <p>기념물은 조각이 아니라 통신, 회의, 정치 운동을 담는 역동적 구조로 상상된다.</p>
   </div>
@@ -191,7 +192,7 @@ footer{padding:36px 0 60px;color:#7f8993;font-size:.86rem}ul{padding-left:1.25re
       <article class="movement-work-card">
   <div class="movement-work-image"><img data-art-atlas-reuse-image="1" alt="알렉산드르 로드첸코, 《책 광고·포토몽타주》"></div>
   <div class="movement-work-body">
-    <h3>알렉산드르 로드첸코, 《책 광고·포토몽타주》</h3>
+    <h3>알렉산드르 로드첸코, 《책 광고·포토몽타주》<span class="movement-card-title-tag"> · 구성주의</span></h3>
     <small>1920년대 · 그래픽 구성주의</small>
     <p>대각선, 사진, 활자가 결합해 새 사회의 속도와 선전을 전달한다.</p>
   </div>
@@ -199,13 +200,13 @@ footer{padding:36px 0 60px;color:#7f8993;font-size:.86rem}ul{padding-left:1.25re
       <article class="movement-work-card">
   <div class="movement-work-image"><img data-art-atlas-reuse-image="0" alt="류보프 포포바, 《공간-힘 구성》"></div>
   <div class="movement-work-body">
-    <h3>류보프 포포바, 《공간-힘 구성》</h3>
+    <h3>류보프 포포바, 《공간-힘 구성》<span class="movement-card-title-tag"> · 구성주의</span></h3>
     <small>1920년대 · 생산주의 전환</small>
     <p>회화적 색면과 구조가 무대, 직물, 디자인으로 옮겨갈 수 있는 설계 언어가 된다.</p>
   </div>
 </article>
     </div>
-  </div>
+
 </div>
 <script>
 (() => {
@@ -217,6 +218,27 @@ footer{padding:36px 0 60px;color:#7f8993;font-size:.86rem}ul{padding-left:1.25re
 })();
 </script>
 </section>
+
+
+
+
+
+<!-- art-atlas-expanded-document-width:start -->
+<style id="art-atlas-expanded-document-width">
+.wrap{width:min(1560px,92vw)}
+</style>
+<!-- art-atlas-expanded-document-width:end -->
+<!-- art-atlas-full-width-work-grid:start -->
+<style id="art-atlas-full-width-work-grid">
+.movement-enhancement .movement-work-grid,.movement-enhancement .movement-work-grid.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:16px}
+.movement-enhancement .movement-work-card{overflow:hidden;border:1px solid var(--line,#2a3037);border-radius:12px;background:linear-gradient(180deg,var(--panel2,#181d23),var(--panel,#12161b));box-shadow:0 12px 28px rgba(0,0,0,.22)}
+.movement-enhancement .movement-work-image{background:#090b0d;display:flex;align-items:center;justify-content:center;min-height:260px}
+.movement-enhancement .movement-work-image img{display:block;width:100%;height:320px;object-fit:contain}
+.movement-enhancement .movement-work-body{padding:16px;color:#cfd6dd}
+.movement-enhancement .wrap .movement-work-grid{width:100vw;max-width:none;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}
+@media(max-width:900px){.movement-enhancement .movement-work-grid,.movement-enhancement .movement-work-grid.three{grid-template-columns:1fr}.movement-enhancement .movement-work-image img{height:auto;max-height:420px}}
+</style>
+<!-- art-atlas-full-width-work-grid:end -->
 <!-- art-atlas-enhancement:end -->
 
 </main><footer><div class="wrap">구성주의 — 예술을 새로운 생활과 생산 속으로</div></footer>

@@ -140,6 +140,7 @@ section{padding:58px 0;border-bottom:1px solid var(--line)}.grid2{display:grid;g
 </ul></div></div></section>
 <!-- art-atlas-enhancement:start -->
 
+
 <style id="art-atlas-movement-enhancement-style">
 .movement-enhancement{padding:58px 0;border-bottom:1px solid var(--line,#2a3037)}
 .movement-enhancement .enhancement-intro{font-size:1.07rem;color:var(--muted,#aeb6bf);max-width:1040px}
@@ -171,14 +172,14 @@ section{padding:58px 0;border-bottom:1px solid var(--line)}.grid2{display:grid;g
       <ul><li>모스크바에서는 전통 성당 구조가 서유럽 장식과 결합해 과도기적 양식을 만들었다.</li><li>상트페테르부르크는 새 수도로서 러시아를 유럽 제국으로 보이게 하는 바로크 실험장이 되었다.</li><li>우크라이나 코사크 바로크와 폴란드·리투아니아 경유 양식도 러시아 장식 언어에 영향을 주었다.</li></ul>
     </div>
   </div>
-  <div class="enhancement-panel">
+
     <h3>대표 화가와 대표작으로 확인하기</h3>
     <p class="enhancement-intro">본문에 이름이 등장하는 주요 화가는 아래처럼 대표작 한 점과 함께 읽어야 한다. 작품은 해당 사조의 핵심 특징을 실제 화면에서 확인하도록 고른 것이다.</p>
     <div class="movement-work-grid">
       <article class="movement-work-card">
   <div class="movement-work-image"><img data-art-atlas-reuse-image="0" alt="바르톨로메오 라스트렐리, 《겨울 궁전》"></div>
   <div class="movement-work-body">
-    <h3>바르톨로메오 라스트렐리, 《겨울 궁전》</h3>
+    <h3>바르톨로메오 라스트렐리, 《겨울 궁전》<span class="movement-card-title-tag"> · 러시아 바로크</span></h3>
     <small>1754–1762 · 상트페테르부르크</small>
     <p>건축 전체가 제국 권위와 궁정 장식을 한꺼번에 보여주는 러시아 바로크의 상징이다.</p>
   </div>
@@ -186,7 +187,7 @@ section{padding:58px 0;border-bottom:1px solid var(--line)}.grid2{display:grid;g
       <article class="movement-work-card">
   <div class="movement-work-image"><img data-art-atlas-reuse-image="1" alt="이반 니키틴, 《표트르 대제 초상》"></div>
   <div class="movement-work-body">
-    <h3>이반 니키틴, 《표트르 대제 초상》</h3>
+    <h3>이반 니키틴, 《표트르 대제 초상》<span class="movement-card-title-tag"> · 러시아 바로크</span></h3>
     <small>18세기 초 · 세속 초상</small>
     <p>이콘의 전통적 얼굴에서 벗어나 개인과 국가 권력을 서유럽식 초상으로 제시한다.</p>
   </div>
@@ -194,13 +195,13 @@ section{padding:58px 0;border-bottom:1px solid var(--line)}.grid2{display:grid;g
       <article class="movement-work-card">
   <div class="movement-work-image"><img data-art-atlas-reuse-image="2" alt="이반 아르구노프, 《러시아 의상을 입은 미지의 여인》"></div>
   <div class="movement-work-body">
-    <h3>이반 아르구노프, 《러시아 의상을 입은 미지의 여인》</h3>
+    <h3>이반 아르구노프, 《러시아 의상을 입은 미지의 여인》<span class="movement-card-title-tag"> · 러시아 바로크</span></h3>
     <small>1784 · 후기 궁정 초상</small>
     <p>바로크·로코코·신고전주의로 이어지는 러시아 세속 회화의 전환을 보여준다.</p>
   </div>
 </article>
     </div>
-  </div>
+
 </div>
 <script>
 (() => {
@@ -212,6 +213,27 @@ section{padding:58px 0;border-bottom:1px solid var(--line)}.grid2{display:grid;g
 })();
 </script>
 </section>
+
+
+
+
+
+<!-- art-atlas-expanded-document-width:start -->
+<style id="art-atlas-expanded-document-width">
+.wrap{width:min(1560px,92vw)}
+</style>
+<!-- art-atlas-expanded-document-width:end -->
+<!-- art-atlas-full-width-work-grid:start -->
+<style id="art-atlas-full-width-work-grid">
+.movement-enhancement .movement-work-grid,.movement-enhancement .movement-work-grid.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:16px}
+.movement-enhancement .movement-work-card{overflow:hidden;border:1px solid var(--line,#2a3037);border-radius:12px;background:linear-gradient(180deg,var(--panel2,#181d23),var(--panel,#12161b));box-shadow:0 12px 28px rgba(0,0,0,.22)}
+.movement-enhancement .movement-work-image{background:#090b0d;display:flex;align-items:center;justify-content:center;min-height:260px}
+.movement-enhancement .movement-work-image img{display:block;width:100%;height:320px;object-fit:contain}
+.movement-enhancement .movement-work-body{padding:16px;color:#cfd6dd}
+.movement-enhancement .wrap .movement-work-grid{width:100vw;max-width:none;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}
+@media(max-width:900px){.movement-enhancement .movement-work-grid,.movement-enhancement .movement-work-grid.three{grid-template-columns:1fr}.movement-enhancement .movement-work-image img{height:auto;max-height:420px}}
+</style>
+<!-- art-atlas-full-width-work-grid:end -->
 <!-- art-atlas-enhancement:end -->
 
 </main><footer><div class="wrap">러시아 바로크 — 모스크바의 성당에서 제국의 궁전으로</div></footer>

@@ -153,6 +153,7 @@ footer{padding:36px 0 60px;color:#7f8993;font-size:.86rem}ul{padding-left:1.25re
 <div class="note">대표 이미지 3점은 HTML 내부에 직접 내장되어 인터넷 연결 없이 표시된다.</div></div></section>
 <!-- art-atlas-enhancement:start -->
 
+
 <style id="art-atlas-movement-enhancement-style">
 .movement-enhancement{padding:58px 0;border-bottom:1px solid var(--line,#2a3037)}
 .movement-enhancement .enhancement-intro{font-size:1.07rem;color:var(--muted,#aeb6bf);max-width:1040px}
@@ -184,14 +185,14 @@ footer{padding:36px 0 60px;color:#7f8993;font-size:.86rem}ul{padding-left:1.25re
       <ul><li>러시아 제국 말기에는 모스크바·상트페테르부르크의 전시 그룹과 민속문화 수집이 실험의 기반이 되었다.</li><li>1917년 혁명 이후에는 예술이 새 사회를 설계하는 도구가 될 수 있다는 기대가 커졌다.</li><li>소련 체제가 안정되면서 1930년대에는 실험적 아방가르드가 사회주의 사실주의에 밀려 억압되었다.</li></ul>
     </div>
   </div>
-  <div class="enhancement-panel">
+
     <h3>대표 화가와 대표작으로 확인하기</h3>
     <p class="enhancement-intro">본문에 이름이 등장하는 주요 화가는 아래처럼 대표작 한 점과 함께 읽어야 한다. 작품은 해당 사조의 핵심 특징을 실제 화면에서 확인하도록 고른 것이다.</p>
     <div class="movement-work-grid">
       <article class="movement-work-card">
   <div class="movement-work-image"><img data-art-atlas-reuse-image="0" alt="나탈리야 곤차로바, 《자전거 타는 사람》"></div>
   <div class="movement-work-body">
-    <h3>나탈리야 곤차로바, 《자전거 타는 사람》</h3>
+    <h3>나탈리야 곤차로바, 《자전거 타는 사람》<span class="movement-card-title-tag"> · 러시아 아방가르드</span></h3>
     <small>1913 · 네오프리미티비즘·미래주의</small>
     <p>도시 속도와 민속적 평면성이 결합해 러시아식 현대성을 만든다.</p>
   </div>
@@ -199,7 +200,7 @@ footer{padding:36px 0 60px;color:#7f8993;font-size:.86rem}ul{padding-left:1.25re
       <article class="movement-work-card">
   <div class="movement-work-image"><img data-art-atlas-reuse-image="1" alt="카지미르 말레비치, 《검은 사각형》"></div>
   <div class="movement-work-body">
-    <h3>카지미르 말레비치, 《검은 사각형》</h3>
+    <h3>카지미르 말레비치, 《검은 사각형》<span class="movement-card-title-tag"> · 러시아 아방가르드</span></h3>
     <small>1915 · 절대주의</small>
     <p>대상 재현을 포기하고 검은 평면 자체를 새로운 회화의 출발점으로 제시한다.</p>
   </div>
@@ -207,13 +208,13 @@ footer{padding:36px 0 60px;color:#7f8993;font-size:.86rem}ul{padding-left:1.25re
       <article class="movement-work-card">
   <div class="movement-work-image"><img data-art-atlas-reuse-image="2" alt="블라디미르 타틀린, 《제3인터내셔널 기념탑 모형》"></div>
   <div class="movement-work-body">
-    <h3>블라디미르 타틀린, 《제3인터내셔널 기념탑 모형》</h3>
+    <h3>블라디미르 타틀린, 《제3인터내셔널 기념탑 모형》<span class="movement-card-title-tag"> · 러시아 아방가르드</span></h3>
     <small>1919–1920 · 구성주의</small>
     <p>회화가 조형, 건축, 정치적 미래의 설계로 이동하는 순간을 보여준다.</p>
   </div>
 </article>
     </div>
-  </div>
+
 </div>
 <script>
 (() => {
@@ -225,6 +226,27 @@ footer{padding:36px 0 60px;color:#7f8993;font-size:.86rem}ul{padding-left:1.25re
 })();
 </script>
 </section>
+
+
+
+
+
+<!-- art-atlas-expanded-document-width:start -->
+<style id="art-atlas-expanded-document-width">
+.wrap{width:min(1560px,92vw)}
+</style>
+<!-- art-atlas-expanded-document-width:end -->
+<!-- art-atlas-full-width-work-grid:start -->
+<style id="art-atlas-full-width-work-grid">
+.movement-enhancement .movement-work-grid,.movement-enhancement .movement-work-grid.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:16px}
+.movement-enhancement .movement-work-card{overflow:hidden;border:1px solid var(--line,#2a3037);border-radius:12px;background:linear-gradient(180deg,var(--panel2,#181d23),var(--panel,#12161b));box-shadow:0 12px 28px rgba(0,0,0,.22)}
+.movement-enhancement .movement-work-image{background:#090b0d;display:flex;align-items:center;justify-content:center;min-height:260px}
+.movement-enhancement .movement-work-image img{display:block;width:100%;height:320px;object-fit:contain}
+.movement-enhancement .movement-work-body{padding:16px;color:#cfd6dd}
+.movement-enhancement .wrap .movement-work-grid{width:100vw;max-width:none;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}
+@media(max-width:900px){.movement-enhancement .movement-work-grid,.movement-enhancement .movement-work-grid.three{grid-template-columns:1fr}.movement-enhancement .movement-work-image img{height:auto;max-height:420px}}
+</style>
+<!-- art-atlas-full-width-work-grid:end -->
 <!-- art-atlas-enhancement:end -->
 
 </main><footer><div class="wrap">러시아 아방가르드 — 여러 혁신이 동시에 폭발한 시대</div></footer>

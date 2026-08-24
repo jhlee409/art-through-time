@@ -25,7 +25,6 @@ const commonCss = `
 .movement-enhancement .movement-work-body h3{font-size:1.05rem;margin:.3rem 0 .2rem}
 .movement-enhancement .movement-work-body small{display:block;color:var(--muted,#aeb6bf);margin-bottom:.7rem}
 .movement-enhancement .movement-work-body p{margin:.5rem 0 0;color:#cfd6dd;line-height:1.62}
-.movement-enhancement .mini-label{display:inline-block;border:1px solid rgba(216,170,75,.35);background:rgba(216,170,75,.08);color:#f0cf87;border-radius:999px;padding:3px 8px;font-size:.74rem;font-weight:800}
 @media(max-width:900px){.movement-enhancement .enhancement-grid,.movement-enhancement .movement-work-grid{grid-template-columns:1fr}.movement-enhancement .movement-work-image img{height:auto;max-height:420px}}
 </style>`;
 
@@ -646,7 +645,6 @@ function workCard(work) {
   return `<article class="movement-work-card">
   <div class="movement-work-image">${image}</div>
   <div class="movement-work-body">
-    <span class="mini-label">${esc(work.artist)}</span>
     <h3>${esc(work.artist)}, ${esc(work.title)}</h3>
     <small>${esc(work.date)}</small>
     <p>${work.note}</p>
@@ -673,7 +671,7 @@ ${commonCss}
   </div>
   <div class="enhancement-panel">
     <h3>대표 화가와 대표작으로 확인하기</h3>
-    <p class="enhancement-intro">본문에 이름이 등장하지만 문서 앞부분에서 아직 도판으로 확인하지 못한 주요 화가는 아래처럼 대표작 한 점과 함께 읽어야 한다. 이미 제시한 작품 이미지는 마지막 카드에서 반복하지 않는다.</p>
+    <p class="enhancement-intro">본문과 표에서 다룬 주요 화가는 모두 대표작 이미지와 함께 비교한다. 문서 앞부분에서 먼저 제시한 작품도 대표작 모음에 다시 보여 주어 사조의 핵심 화가와 작품을 한 흐름으로 읽을 수 있게 한다.</p>
     <div class="movement-work-grid">
       ${entry.works.map(workCard).join('\n      ')}
     </div>

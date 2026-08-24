@@ -148,6 +148,7 @@ section{padding:58px 0;border-bottom:1px solid var(--line)}.grid2{display:grid;g
 <div class="note">대표 이미지 4점은 공개영역 또는 자유이용 가능한 이미지를 HTML 내부에 직접 내장했다. 인터넷 연결 없이 표시된다.</div></div></section>
 <!-- art-atlas-enhancement:start -->
 
+
 <style id="art-atlas-movement-enhancement-style">
 .movement-enhancement{padding:58px 0;border-bottom:1px solid var(--line,#2a3037)}
 .movement-enhancement .enhancement-intro{font-size:1.07rem;color:var(--muted,#aeb6bf);max-width:1040px}
@@ -179,14 +180,14 @@ section{padding:58px 0;border-bottom:1px solid var(--line)}.grid2{display:grid;g
       <ul><li>독일에서는 공예학교와 미술학교 통합이라는 교육 개혁에서 출발해 바이마르 공화국의 사회적 실험과 연결되었다.</li><li>스위스·네덜란드·소련의 디자인 실험과 교류하며 국제 모더니즘의 공통 언어를 만들었다.</li><li>미국에서는 모홀리나기와 그로피우스 등을 통해 뉴 바우하우스, 하버드 디자인 교육으로 이어졌다.</li></ul>
     </div>
   </div>
-  <div class="enhancement-panel">
+
     <h3>대표 화가와 대표작으로 확인하기</h3>
     <p class="enhancement-intro">본문에 이름이 등장하는 주요 화가는 아래처럼 대표작 한 점과 함께 읽어야 한다. 작품은 해당 사조의 핵심 특징을 실제 화면에서 확인하도록 고른 것이다.</p>
     <div class="movement-work-grid">
       <article class="movement-work-card">
   <div class="movement-work-image"><img data-art-atlas-reuse-image="0" alt="바실리 칸딘스키, 《노랑-빨강-파랑》"></div>
   <div class="movement-work-body">
-    <h3>바실리 칸딘스키, 《노랑-빨강-파랑》</h3>
+    <h3>바실리 칸딘스키, 《노랑-빨강-파랑》<span class="movement-card-title-tag"> · 바우하우스</span></h3>
     <small>1925 · 바우하우스 색채 이론</small>
     <p>색과 형태를 감각적 장식이 아니라 교육 가능한 조형 언어로 다룬다.</p>
   </div>
@@ -194,7 +195,7 @@ section{padding:58px 0;border-bottom:1px solid var(--line)}.grid2{display:grid;g
       <article class="movement-work-card">
   <div class="movement-work-image"><img data-art-atlas-reuse-image="1" alt="파울 클레, 《트위터링 머신》"></div>
   <div class="movement-work-body">
-    <h3>파울 클레, 《트위터링 머신》</h3>
+    <h3>파울 클레, 《트위터링 머신》<span class="movement-card-title-tag"> · 바우하우스</span></h3>
     <small>1922 · 바우하우스 교수진</small>
     <p>기계와 생명, 선과 리듬을 결합해 바우하우스의 실험적 상상력을 보여준다.</p>
   </div>
@@ -202,7 +203,7 @@ section{padding:58px 0;border-bottom:1px solid var(--line)}.grid2{display:grid;g
       <article class="movement-work-card">
   <div class="movement-work-image"><img data-art-atlas-reuse-image="2" alt="라슬로 모홀리나기, 《전화 그림》"></div>
   <div class="movement-work-body">
-    <h3>라슬로 모홀리나기, 《전화 그림》</h3>
+    <h3>라슬로 모홀리나기, 《전화 그림》<span class="movement-card-title-tag"> · 바우하우스</span></h3>
     <small>1923 · 산업 생산 실험</small>
     <p>작가의 손맛보다 설계, 매체, 재생산 가능성을 예술의 핵심으로 삼는다.</p>
   </div>
@@ -210,13 +211,13 @@ section{padding:58px 0;border-bottom:1px solid var(--line)}.grid2{display:grid;g
       <article class="movement-work-card">
   <div class="movement-work-image"><img data-art-atlas-reuse-image="3" alt="마르셀 브로이어, 《바실리 의자》"></div>
   <div class="movement-work-body">
-    <h3>마르셀 브로이어, 《바실리 의자》</h3>
+    <h3>마르셀 브로이어, 《바실리 의자》<span class="movement-card-title-tag"> · 바우하우스</span></h3>
     <small>1925–1926 · 가구 디자인</small>
     <p>강철관과 기능적 구조가 바우하우스의 생활 개혁 의지를 물건으로 드러낸다.</p>
   </div>
 </article>
     </div>
-  </div>
+
 </div>
 <script>
 (() => {
@@ -228,6 +229,27 @@ section{padding:58px 0;border-bottom:1px solid var(--line)}.grid2{display:grid;g
 })();
 </script>
 </section>
+
+
+
+
+
+<!-- art-atlas-expanded-document-width:start -->
+<style id="art-atlas-expanded-document-width">
+.wrap{width:min(1560px,92vw)}
+</style>
+<!-- art-atlas-expanded-document-width:end -->
+<!-- art-atlas-full-width-work-grid:start -->
+<style id="art-atlas-full-width-work-grid">
+.movement-enhancement .movement-work-grid,.movement-enhancement .movement-work-grid.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:16px}
+.movement-enhancement .movement-work-card{overflow:hidden;border:1px solid var(--line,#2a3037);border-radius:12px;background:linear-gradient(180deg,var(--panel2,#181d23),var(--panel,#12161b));box-shadow:0 12px 28px rgba(0,0,0,.22)}
+.movement-enhancement .movement-work-image{background:#090b0d;display:flex;align-items:center;justify-content:center;min-height:260px}
+.movement-enhancement .movement-work-image img{display:block;width:100%;height:320px;object-fit:contain}
+.movement-enhancement .movement-work-body{padding:16px;color:#cfd6dd}
+.movement-enhancement .wrap .movement-work-grid{width:100vw;max-width:none;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}
+@media(max-width:900px){.movement-enhancement .movement-work-grid,.movement-enhancement .movement-work-grid.three{grid-template-columns:1fr}.movement-enhancement .movement-work-image img{height:auto;max-height:420px}}
+</style>
+<!-- art-atlas-full-width-work-grid:end -->
 <!-- art-atlas-enhancement:end -->
 
 </main><footer><div class="wrap">바우하우스 — 예술·공예·기술을 하나의 설계 체계로</div></footer>

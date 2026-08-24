@@ -337,6 +337,7 @@ ul{padding-left:1.25rem}li{margin:.4rem 0}
 
 <!-- art-atlas-enhancement:start -->
 
+
 <style id="art-atlas-movement-enhancement-style">
 .movement-enhancement{padding:58px 0;border-bottom:1px solid var(--line,#2a3037)}
 .movement-enhancement .enhancement-intro{font-size:1.07rem;color:var(--muted,#aeb6bf);max-width:1040px}
@@ -368,14 +369,14 @@ ul{padding-left:1.25rem}li{margin:.4rem 0}
       <ul><li>소련에서는 1932년 이후 예술단체 재편과 작가동맹을 통해 공식 기준이 제도화되었다.</li><li>동유럽과 중국, 북한 등 사회주의권에서는 각국의 민족적 소재와 국가 서사에 맞게 변형되었다.</li><li>전후에는 선전적 낙관성과 실제 사회 현실 사이의 간극이 중요한 해석 문제가 되었다.</li></ul>
     </div>
   </div>
-  <div class="enhancement-panel">
+
     <h3>대표 화가와 대표작으로 확인하기</h3>
     <p class="enhancement-intro">본문에 이름이 등장하는 주요 화가는 아래처럼 대표작 한 점과 함께 읽어야 한다. 작품은 해당 사조의 핵심 특징을 실제 화면에서 확인하도록 고른 것이다.</p>
     <div class="movement-work-grid">
       <article class="movement-work-card">
   <div class="movement-work-image"><img data-art-atlas-reuse-image="0" alt="이사크 브로드스키, 《스몰니의 레닌》"></div>
   <div class="movement-work-body">
-    <h3>이사크 브로드스키, 《스몰니의 레닌》</h3>
+    <h3>이사크 브로드스키, 《스몰니의 레닌》<span class="movement-card-title-tag"> · 사회주의적 사실주의</span></h3>
     <small>1930 · 지도자 이미지</small>
     <p>지도자를 역사적 현장 속의 명확하고 이해하기 쉬운 인물로 제시한다.</p>
   </div>
@@ -383,7 +384,7 @@ ul{padding-left:1.25rem}li{margin:.4rem 0}
       <article class="movement-work-card">
   <div class="movement-work-image"><img data-art-atlas-reuse-image="1" alt="알렉산드르 데이네카, 《페트로그라드 방어》"></div>
   <div class="movement-work-body">
-    <h3>알렉산드르 데이네카, 《페트로그라드 방어》</h3>
+    <h3>알렉산드르 데이네카, 《페트로그라드 방어》<span class="movement-card-title-tag"> · 사회주의적 사실주의</span></h3>
     <small>1928 · 혁명과 전쟁</small>
     <p>반복되는 인물 리듬과 단순화된 형태가 집단적 의지와 역사적 방향성을 강조한다.</p>
   </div>
@@ -391,13 +392,13 @@ ul{padding-left:1.25rem}li{margin:.4rem 0}
       <article class="movement-work-card">
   <div class="movement-work-image"><img data-art-atlas-reuse-image="2" alt="알렉산드르 게라시모프, 《스탈린과 보로실로프》"></div>
   <div class="movement-work-body">
-    <h3>알렉산드르 게라시모프, 《스탈린과 보로실로프》</h3>
+    <h3>알렉산드르 게라시모프, 《스탈린과 보로실로프》<span class="movement-card-title-tag"> · 사회주의적 사실주의</span></h3>
     <small>1938 · 스탈린기 공식 이미지</small>
     <p>정치 권력은 밝고 안정된 미래를 보장하는 지도자의 산책 장면으로 시각화된다.</p>
   </div>
 </article>
     </div>
-  </div>
+
 </div>
 <script>
 (() => {
@@ -409,6 +410,27 @@ ul{padding-left:1.25rem}li{margin:.4rem 0}
 })();
 </script>
 </section>
+
+
+
+
+
+<!-- art-atlas-expanded-document-width:start -->
+<style id="art-atlas-expanded-document-width">
+.wrap{width:min(1560px,92vw)}
+</style>
+<!-- art-atlas-expanded-document-width:end -->
+<!-- art-atlas-full-width-work-grid:start -->
+<style id="art-atlas-full-width-work-grid">
+.movement-enhancement .movement-work-grid,.movement-enhancement .movement-work-grid.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:16px}
+.movement-enhancement .movement-work-card{overflow:hidden;border:1px solid var(--line,#2a3037);border-radius:12px;background:linear-gradient(180deg,var(--panel2,#181d23),var(--panel,#12161b));box-shadow:0 12px 28px rgba(0,0,0,.22)}
+.movement-enhancement .movement-work-image{background:#090b0d;display:flex;align-items:center;justify-content:center;min-height:260px}
+.movement-enhancement .movement-work-image img{display:block;width:100%;height:320px;object-fit:contain}
+.movement-enhancement .movement-work-body{padding:16px;color:#cfd6dd}
+.movement-enhancement .wrap .movement-work-grid{width:100vw;max-width:none;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}
+@media(max-width:900px){.movement-enhancement .movement-work-grid,.movement-enhancement .movement-work-grid.three{grid-template-columns:1fr}.movement-enhancement .movement-work-image img{height:auto;max-height:420px}}
+</style>
+<!-- art-atlas-full-width-work-grid:end -->
 <!-- art-atlas-enhancement:end -->
 
 </main>

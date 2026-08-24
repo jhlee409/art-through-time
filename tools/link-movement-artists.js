@@ -28,6 +28,7 @@ function aliasOverrides(artist) {
     Q762:['레오나르도', '다 빈치', 'Leonardo'],
     Q42207:['카라바조', 'Caravaggio'],
     Q5592:['미켈란젤로', 'Michelangelo'],
+    Q68631:['로히어르 반 데르 베이던', '반 데르 베이던', '로히어르', '베이던', 'Rogier van der Weyden'],
     Q43270:['피터르 브뤼헐', '브뤼헐', 'Pieter Bruegel', 'Pieter Brueghel', 'Bruegel', 'Brueghel'],
     Q213163:['비제 르 브룅', '비제르브룅', 'Vigée Le Brun', 'Vigee Le Brun'],
     Q5599:['루벤스', 'Rubens'],
