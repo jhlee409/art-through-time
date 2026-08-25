@@ -15,8 +15,8 @@ let RECORDS = [{"id":"frank-stella","original":"Frank Stella","language":"en-US"
 const EXCLUDED = new Set(["SCRIPT","STYLE","TEXTAREA","INPUT","SELECT","OPTION","CODE","PRE","SVG","CANVAS"]);
 const STORAGE_KEY = "ArtThroughTime.uHangulMode.v7";
 const requestedMode = new URLSearchParams(location.search).get("uhangul");
-const savedMode = ["original","uhangul","korean"].includes(requestedMode) ? requestedMode : sessionStorage.getItem(STORAGE_KEY);
-let currentMode = ["original","uhangul"].includes(savedMode) ? savedMode : "korean";
+const initialMode = ["original","uhangul","korean"].includes(requestedMode) ? requestedMode : "korean";
+let currentMode = ["original","uhangul"].includes(initialMode) ? initialMode : "korean";
 const byId = new Map();
 const normalizeText = text => String(text || "").toLowerCase().replace(/[^a-z0-9가-힣]/g, "");
 const byText = new Map();

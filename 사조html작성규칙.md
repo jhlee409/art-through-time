@@ -26,6 +26,7 @@
 
 - 사람 이름과 기법명은 기존 데이터 속성 및 공통 런타임 규칙을 따른다.
 - uHangul은 v0.7 통합 표기만 넣는다.
+- `한 · u · 표` 표기 선택기의 기본값은 항상 `한`(한국어)으로 둔다. URL의 `uhangul` 값처럼 사용자가 명시적으로 넘긴 선택만 초기 표시값으로 존중한다.
 
 ## 사조 막대와 설명 문서 열기
 
@@ -70,6 +71,7 @@
 - 이 표기는 출생국이나 작품 소장처가 아니라, 화가가 해당 사조를 전개한 주요 활동 지역을 보여 주기 위한 것이다.
 - 화가 데이터에 활동 지역이 아직 없으면 임의로 추정하지 않고 `확인 필요`로 표기해 후속 데이터 보강 대상으로 남긴다.
 - 카드 제목에서는 `movement-card-title-tag` 뒤에 `movement-card-activity-region`을 둔다.
+- 카드 제목의 화가명은 한 사람 이름이 중간에서 줄바꿈되어 두 사람처럼 보이지 않도록 묶는다. 링크 화가명은 `.art-atlas-artist-link{white-space:nowrap}`를 포함하고, 링크가 아닌 카드 첫머리 화가명은 `<span class="movement-card-artist-name">화가명</span>`로 감싼다. 작품명 이후의 사조·지역 태그는 기존처럼 `white-space:nowrap`를 유지한다.
 
 ~~~css
 .movement-enhancement .movement-work-image--missing{

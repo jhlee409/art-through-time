@@ -7,6 +7,9 @@
         "ko": "프레스코",
         "en": "Fresco"
       },
+      "tags": [
+        "제작 기법"
+      ],
       "subtitle": {
         "ko": "젖은 회벽에 안료를 스며들게 하는 벽화",
         "en": "Wall painting bound into wet plaster"
@@ -89,6 +92,9 @@
         "ko": "템페라",
         "en": "Tempera"
       },
+      "tags": [
+        "제작 기법"
+      ],
       "subtitle": {
         "ko": "달걀 같은 결합재로 빠르게 마르는 선명한 회화",
         "en": "Fast-drying paint bound with egg or similar emulsions"
@@ -110,6 +116,9 @@
         "ko": "선원근법",
         "en": "Linear Perspective"
       },
+      "tags": [
+        "공간·원근"
+      ],
       "subtitle": {
         "ko": "소실점과 수학으로 만드는 깊이",
         "en": "Depth built with vanishing points and geometry"
@@ -192,6 +201,10 @@
         "ko": "글레이징",
         "en": "Glazing"
       },
+      "tags": [
+        "제작 기법",
+        "빛·색채"
+      ],
       "subtitle": {
         "ko": "투명한 색층을 겹쳐 깊은 빛을 만드는 방식",
         "en": "Transparent colour layers that deepen light"
@@ -274,6 +287,10 @@
         "ko": "스푸마토",
         "en": "Sfumato"
       },
+      "tags": [
+        "제작 기법",
+        "빛·색채"
+      ],
       "subtitle": {
         "ko": "윤곽을 연기처럼 흐려 부드러운 생동감을 만드는 기법",
         "en": "Smoky transitions that soften contour"
@@ -356,6 +373,9 @@
         "ko": "임파스토",
         "en": "Impasto"
       },
+      "tags": [
+        "제작 기법"
+      ],
       "subtitle": {
         "ko": "두껍게 쌓은 물감이 빛과 질감을 드러내는 기법",
         "en": "Thick paint that catches light and texture"
@@ -443,6 +463,9 @@
         "ko": "키아로스쿠로",
         "en": "Chiaroscuro"
       },
+      "tags": [
+        "빛·색채"
+      ],
       "subtitle": {
         "ko": "빛과 어둠으로 형태를 빚는 명암법",
         "en": "Light and dark used to model form"
@@ -525,6 +548,9 @@
         "ko": "테네브리즘",
         "en": "Tenebrism"
       },
+      "tags": [
+        "빛·색채"
+      ],
       "subtitle": {
         "ko": "짙은 어둠 속에서 사건을 폭발시키는 빛",
         "en": "Light staged against engulfing darkness"
@@ -607,6 +633,10 @@
         "ko": "스컴블링",
         "en": "Scumbling"
       },
+      "tags": [
+        "제작 기법",
+        "빛·색채"
+      ],
       "subtitle": {
         "ko": "마른 밑색 위에 밝고 얇은 불투명층을 문질러 얹는 기법",
         "en": "Light dry paint dragged over a darker underlayer"
@@ -689,6 +719,9 @@
         "ko": "알라 프리마",
         "en": "Alla prima"
       },
+      "tags": [
+        "제작 기법"
+      ],
       "subtitle": {
         "ko": "마르기 전에 한 번의 흐름으로 완성하는 직접화법",
         "en": "Direct painting completed wet into wet"
@@ -771,6 +804,9 @@
         "ko": "뤼켄피구어",
         "en": "Rückenfigur"
       },
+      "tags": [
+        "구도·인체"
+      ],
       "subtitle": {
         "ko": "등을 보인 인물로 관람자의 시선을 이끄는 구도",
         "en": "A back-turned figure that guides the viewer's gaze"
@@ -853,6 +889,9 @@
         "ko": "스투코",
         "en": "Stucco"
       },
+      "tags": [
+        "매체·공예"
+      ],
       "subtitle": {
         "ko": "회반죽을 빚고 새겨 만든 입체 장식",
         "en": "Modelled and carved plaster decoration"
@@ -935,6 +974,9 @@
         "ko": "Quadratura",
         "en": "Quadratura"
       },
+      "tags": [
+        "공간·원근"
+      ],
       "subtitle": {
         "ko": "가짜 건축과 천장 환영",
         "en": "Illusory architecture and ceiling painting"
@@ -1017,6 +1059,10 @@
         "ko": "대기 원근법",
         "en": "Aerial Perspective"
       },
+      "tags": [
+        "공간·원근",
+        "빛·색채"
+      ],
       "subtitle": {
         "ko": "공기와 빛으로 만드는 깊이",
         "en": "Depth made with air and light"
@@ -1099,6 +1145,9 @@
         "ko": "그리자이유",
         "en": "Grisaille"
       },
+      "tags": [
+        "빛·색채"
+      ],
       "subtitle": {
         "ko": "회색 단색으로 조각 같은 명암과 형태를 세우는 기법",
         "en": "Form and light built in monochrome grey"
@@ -1201,6 +1250,9 @@
         "ko": "밑칠",
         "en": "Underpainting"
       },
+      "tags": [
+        "제작 기법"
+      ],
       "subtitle": {
         "ko": "본채색 전에 명암과 구조를 잡는 층",
         "en": "The structural layer before full colour"
@@ -1283,6 +1335,9 @@
         "ko": "임프리마투라",
         "en": "Imprimatura"
       },
+      "tags": [
+        "제작 기법"
+      ],
       "subtitle": {
         "ko": "흰 바탕을 잠재우는 첫 색조",
         "en": "The first tone that quiets a white ground"
@@ -1365,6 +1420,9 @@
         "ko": "웻 온 웻",
         "en": "Wet-on-wet"
       },
+      "tags": [
+        "제작 기법"
+      ],
       "subtitle": {
         "ko": "마르기 전의 색이 화면에서 직접 만나는 방식",
         "en": "Colours meet directly before the paint dries"
@@ -1447,6 +1505,9 @@
         "ko": "드라이 브러시",
         "en": "Dry brush"
       },
+      "tags": [
+        "제작 기법"
+      ],
       "subtitle": {
         "ko": "마른 붓끝으로 남기는 끊어진 질감",
         "en": "Broken texture left by a nearly dry brush"
@@ -1529,6 +1590,9 @@
         "ko": "야외제작",
         "en": "En plein air"
       },
+      "tags": [
+        "제작 기법"
+      ],
       "subtitle": {
         "ko": "현장에서 빛과 색을 직접 관찰해 그리기",
         "en": "Painting light and colour directly on site"
@@ -1611,6 +1675,9 @@
         "ko": "분할된 붓질",
         "en": "Broken color"
       },
+      "tags": [
+        "빛·색채"
+      ],
       "subtitle": {
         "ko": "완전히 섞지 않은 색을 짧은 터치로 병치하기",
         "en": "Short adjacent strokes of incompletely mixed colour"
@@ -1693,6 +1760,9 @@
         "ko": "점묘법",
         "en": "Pointillism"
       },
+      "tags": [
+        "빛·색채"
+      ],
       "subtitle": {
         "ko": "작은 색점들이 눈에서 섞이는 회화",
         "en": "Small colour dots mixed by the eye"
@@ -1775,6 +1845,9 @@
         "ko": "분할주의",
         "en": "Divisionism"
       },
+      "tags": [
+        "빛·색채"
+      ],
       "subtitle": {
         "ko": "색을 섞지 않고 순색 성분으로 나누어 놓기",
         "en": "Separating colour into adjacent pure components"
@@ -1857,6 +1930,9 @@
         "ko": "디세뇨",
         "en": "Disegno"
       },
+      "tags": [
+        "구도·인체"
+      ],
       "subtitle": {
         "ko": "선, 구조, 구성을 회화의 출발점으로 삼는 이탈리아 르네상스의 관념",
         "en": "The Renaissance priority of drawing, structure, and design"
@@ -1919,6 +1995,9 @@
         "ko": "콜로리토",
         "en": "Colorito"
       },
+      "tags": [
+        "빛·색채"
+      ],
       "subtitle": {
         "ko": "색, 빛, 톤의 관계로 형태와 정서를 만드는 베네치아 회화의 관념",
         "en": "The Venetian priority of form and feeling made through colour, light, and tone"
@@ -1981,6 +2060,9 @@
         "ko": "피구라 세르펜티나",
         "en": "Figura serpentinata"
       },
+      "tags": [
+        "구도·인체"
+      ],
       "subtitle": {
         "ko": "몸을 나선형으로 비틀어 긴장과 우아함을 만드는 매너리즘 인체 표현",
         "en": "A Mannerist figure pose twisted into a spiral of tension and elegance"
@@ -2048,6 +2130,9 @@
         "ko": "프레스테차",
         "en": "Prestezza"
       },
+      "tags": [
+        "제작 기법"
+      ],
       "subtitle": {
         "ko": "빠른 실행과 즉흥적 붓질로 화면의 에너지를 드러내는 방식",
         "en": "Rapid execution and painterly immediacy"
@@ -2095,12 +2180,246 @@
       ]
     },
     {
+      "id": "fete-galante",
+      "introduced": 1717,
+      "name": {
+        "ko": "페트 갈랑트",
+        "en": "Fête galante"
+      },
+      "tags": [
+        "장르·주제"
+      ],
+      "subtitle": {
+        "ko": "우아한 야외 연애와 사교를 그린 로코코적 장면",
+        "en": "Rococo scenes of elegant outdoor courtship and sociability"
+      },
+      "definition": {
+        "ko": "페트 갈랑트(Fête galante)는 18세기 프랑스 로코코 미술에서 우아하게 차려입은 남녀가 공원, 정원, 숲 같은 야외에서 음악, 대화, 연애, 놀이를 즐기는 장면을 가리키는 용어입니다. 역사화처럼 큰 사건을 설명하기보다, 사랑과 사교의 분위기, 섬세한 몸짓, 빛과 색의 감각을 중심으로 화면을 만듭니다.",
+        "en": "Fête galante is a term for eighteenth-century French Rococo scenes in which elegantly dressed men and women enjoy music, conversation, flirtation, and leisure in parks, gardens, or wooded settings. Rather than narrating a major event like history painting, it builds the picture around courtship, sociability, delicate gesture, light, and colour."
+      },
+      "explanation": {
+        "ko": "이 용어는 앙투안 와토의 작품을 기존 아카데미 장르 분류 안에 넣기 어려웠기 때문에 중요합니다. 와토가 1717년 아카데미에 제출한 《키테라섬의 순례》는 신화적 사랑의 섬을 암시하지만, 화면의 핵심은 영웅적 사건이 아니라 망설임, 유혹, 우아한 움직임, 덧없는 분위기입니다. 그래서 페트 갈랑트는 단순한 풍속화보다 귀족적이고 연극적이며, 역사화보다 가볍고 감각적인 장르로 이해할 수 있습니다. 부셰, 프라고나르 같은 로코코 화가들의 정원 장면과 연애 장면을 읽을 때도 이 용어가 도움이 됩니다.",
+        "en": "The term matters because Antoine Watteau's paintings did not fit comfortably into the existing academic hierarchy of genres. Pilgrimage to Cythera, submitted to the French Academy in 1717, alludes to the mythic island of love, yet its centre is not heroic action but hesitation, seduction, graceful movement, and fleeting mood. Fête galante is therefore more aristocratic and theatrical than ordinary genre painting, and lighter and more sensuous than history painting. It is also useful for reading Rococo garden and courtship scenes by painters such as Boucher and Fragonard."
+      },
+      "links": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/Category:F%C3%AAtes_galantes"
+        }
+      ],
+      "examples": [
+        {
+          "year": "1717",
+          "artist": {
+            "ko": "앙투안 와토",
+            "en": "Antoine Watteau"
+          },
+          "title": {
+            "ko": "《키테라섬의 순례》",
+            "en": "Pilgrimage to Cythera"
+          },
+          "image": "data/미술사조/images/Antoine-20Watteau-20-20Pilgrimage-20to-20Cythera-20-20WGA25454-de23e298c518.jpg",
+          "role": {
+            "ko": "페트 갈랑트의 기준이 된 작품",
+            "en": "A defining fête galante"
+          },
+          "note": {
+            "ko": "연인들은 사랑의 섬을 떠나는지 도착하는지 모호한 순간에 놓여 있습니다. 정확한 서사보다 몸짓, 시선, 옷감, 부드러운 풍경이 앞서며, 와토가 만든 우아하고 덧없는 사교 장면의 성격을 잘 보여줍니다.",
+            "en": "The lovers remain suspended between arrival and departure from the island of love. Gesture, glance, fabric, and soft landscape matter more than a fixed narrative, showing the elegant and fleeting sociability that defines Watteau's fête galante."
+          }
+        }
+      ]
+    },
+    {
+      "id": "vanitas",
+      "introduced": 1600,
+      "name": {
+        "ko": "바니타스",
+        "en": "Vanitas"
+      },
+      "tags": [
+        "장르·주제"
+      ],
+      "subtitle": {
+        "ko": "삶의 덧없음과 죽음을 암시하는 정물·상징 이미지",
+        "en": "Still-life and symbolic imagery on transience and mortality"
+      },
+      "definition": {
+        "ko": "바니타스(Vanitas)는 인간의 삶, 부, 지식, 쾌락, 아름다움이 결국 덧없다는 사실을 상징물로 보여 주는 주제입니다. 해골, 꺼진 초, 시든 꽃, 모래시계, 비눗방울, 악기, 책, 보석 같은 사물이 자주 등장하며, 특히 17세기 네덜란드와 플랑드르 정물화에서 중요한 유형으로 발전했습니다.",
+        "en": "Vanitas is a subject that uses symbolic objects to show the transience of human life, wealth, knowledge, pleasure, and beauty. Skulls, extinguished candles, wilting flowers, hourglasses, bubbles, musical instruments, books, and jewels often appear, and the theme became especially important in seventeenth-century Dutch and Flemish still life."
+      },
+      "explanation": {
+        "ko": "바니타스는 단순히 죽음을 무섭게 그리는 방식이 아닙니다. 아름답고 값비싼 사물을 정교하게 보여 주면서도, 그것들이 사라질 것이라는 사실을 동시에 읽게 만드는 이중 구조가 핵심입니다. 그래서 화면은 감각적 즐거움과 도덕적 경고를 함께 품습니다. 해골이나 모래시계가 직접 보이지 않더라도, 시드는 꽃, 썩기 쉬운 과일, 금방 사라지는 빛처럼 시간성을 강조하는 요소가 있으면 바니타스적 의미가 생길 수 있습니다.",
+        "en": "Vanitas is not simply a frightening image of death. Its central structure is double: it presents beautiful and costly things with great care while also asking the viewer to recognise that they will pass away. The picture therefore contains both sensual pleasure and moral warning. Even when a skull or hourglass is absent, motifs such as fading flowers, perishable fruit, or unstable light can create a vanitas meaning by stressing time and transience."
+      },
+      "links": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/Category:Vanitas"
+        }
+      ],
+      "examples": [
+        {
+          "year": "1533",
+          "artist": {
+            "ko": "한스 홀바인",
+            "en": "Hans Holbein the Younger"
+          },
+          "title": {
+            "ko": "《대사들》",
+            "en": "The Ambassadors"
+          },
+          "image": "data/미술사조/images/Hans-Holbein-the-Younger-The-Ambassadors-Google-Art-Project-7d9a2de194ef.jpg",
+          "role": {
+            "ko": "바니타스 상징의 확장 사례",
+            "en": "Extended example of vanitas symbolism"
+          },
+          "note": {
+            "ko": "두 인물 사이에는 지식, 권력, 세계 탐험을 암시하는 물건들이 놓여 있지만, 화면 아래의 왜상 해골은 그 모든 성취가 죽음 앞에서 덧없다는 사실을 끼워 넣습니다. 정물 바니타스보다 이른 작품이지만, 바니타스적 사고를 읽기 좋은 사례입니다.",
+            "en": "Objects of knowledge, power, and exploration sit between the two figures, while the anamorphic skull at the bottom inserts the reminder that such achievements are fleeting before death. Although earlier than classic still-life vanitas, it is a strong case for reading vanitas symbolism."
+          }
+        }
+      ]
+    },
+    {
+      "id": "tronie",
+      "introduced": 1630,
+      "name": {
+        "ko": "트로니",
+        "en": "Tronie"
+      },
+      "tags": [
+        "장르·주제"
+      ],
+      "subtitle": {
+        "ko": "특정 초상보다 표정·복장·인상 연구에 가까운 얼굴 그림",
+        "en": "A head study focused on expression, costume, or character rather than identity"
+      },
+      "definition": {
+        "ko": "트로니(Tronie)는 17세기 네덜란드와 플랑드르 회화에서 특정 인물의 공식 초상이라기보다 얼굴, 표정, 빛, 의상, 성격 유형을 연구하듯 그린 머리 또는 반신상입니다. 실제 모델을 바탕으로 할 수는 있지만, 핵심은 '누구인가'보다 '어떤 인상과 효과를 만드는가'에 있습니다.",
+        "en": "A tronie is a head or bust-length study in seventeenth-century Dutch and Flemish painting that focuses less on official portrait identity than on face, expression, light, costume, and character type. It may be based on a real model, but the main question is not who the sitter is but what impression and pictorial effect the image creates."
+      },
+      "explanation": {
+        "ko": "트로니를 초상화와 구분하면 베르메르, 렘브란트, 프란스 할스 계열의 얼굴 그림을 더 정확히 읽을 수 있습니다. 초상화는 대개 주문자의 신분, 이름, 사회적 지위를 드러내지만, 트로니는 이국적 모자, 극적인 조명, 놀람·웃음·사색 같은 표정, 특정 연령이나 성격 유형을 실험합니다. 그래서 트로니는 인물의 전기보다 회화적 효과와 관람자의 시선에 더 가깝습니다.",
+        "en": "Distinguishing tronie from portrait helps clarify many head studies by Vermeer, Rembrandt, Frans Hals, and their circles. A portrait usually displays a patron's identity, name, and social status, while a tronie experiments with exotic costume, dramatic lighting, surprise, laughter, thoughtfulness, age, or character type. For that reason, a tronie belongs more to pictorial effect and the viewer's encounter than to the sitter's biography."
+      },
+      "links": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/Category:Tronies"
+        }
+      ],
+      "examples": [
+        {
+          "year": "1665경",
+          "artist": {
+            "ko": "요하네스 베르메르",
+            "en": "Johannes Vermeer"
+          },
+          "title": {
+            "ko": "《진주 귀걸이를 한 소녀》",
+            "en": "Girl with a Pearl Earring"
+          },
+          "image": "data/미술사조/images/Vermeer-Girl-with-a-Pearl-Earring.jpg",
+          "role": {
+            "ko": "트로니로 읽히는 대표적 얼굴 그림",
+            "en": "A celebrated tronie"
+          },
+          "note": {
+            "ko": "소녀의 이름이나 사회적 지위를 설명하기보다, 고개를 돌린 순간의 시선, 푸른 터번, 어둠 속에서 떠오르는 얼굴과 진주의 빛이 핵심입니다. 그래서 이 작품은 특정 인물 초상보다 표정과 빛의 효과를 실험한 트로니로 자주 설명됩니다.",
+            "en": "The painting does not primarily explain the girl's name or social rank. Its force lies in the turned glance, blue turban, face emerging from darkness, and shine of the pearl, which is why it is often discussed as a tronie rather than a conventional portrait."
+          }
+        }
+      ]
+    },
+    {
+      "id": "capriccio",
+      "introduced": 1700,
+      "name": {
+        "ko": "카프리치오",
+        "en": "Capriccio"
+      },
+      "tags": [
+        "공간·원근",
+        "장르·주제"
+      ],
+      "subtitle": {
+        "ko": "실제와 상상을 섞은 건축·유적 환상 장면",
+        "en": "Architectural fantasy combining real and imagined elements"
+      },
+      "definition": {
+        "ko": "카프리치오(Capriccio)는 실제 건축물, 고대 유적, 풍경 요소를 자유롭게 조합해 존재하지 않는 장면을 만든 회화 유형입니다. 현실의 정확한 기록보다 상상력, 변주, 분위기, 건축적 장관을 중시하며, 17-18세기 이탈리아 풍경화와 판화에서 특히 중요합니다.",
+        "en": "Capriccio is a type of painting or print that freely combines real buildings, ancient ruins, and landscape elements into a scene that does not actually exist. It values invention, variation, mood, and architectural spectacle more than exact topographical record, and it became especially important in seventeenth- and eighteenth-century Italian landscape painting and printmaking."
+      },
+      "explanation": {
+        "ko": "카프리치오는 베두타와 자주 함께 다뤄지지만 방향이 다릅니다. 베두타가 도시나 장소를 비교적 알아볼 수 있게 기록한다면, 카프리치오는 로마 유적, 기둥, 아치, 계단, 항구, 상상 속 건물을 재배치해 '있을 법하지만 실제로는 없는' 장면을 만듭니다. 그래서 여행, 고대 취향, 무대 장치, 건축 판타지가 만나는 용어입니다. 피라네시의 환상적 감옥 판화나 파니니·과르디 계열의 유적 풍경을 설명할 때 특히 유용합니다.",
+        "en": "Capriccio is often discussed alongside veduta, but its direction is different. A veduta records a city or place so that it remains recognisable, while a capriccio rearranges Roman ruins, columns, arches, stairs, harbours, and imaginary buildings into a scene that feels plausible but is not real. The term is useful where travel, antiquarian taste, stage design, and architectural fantasy meet, especially in works by Piranesi, Panini, Guardi, and related artists."
+      },
+      "links": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/Category:Capricci_(art)"
+        }
+      ],
+      "examples": []
+    },
+    {
+      "id": "veduta",
+      "introduced": 1700,
+      "name": {
+        "ko": "베두타",
+        "en": "Veduta"
+      },
+      "tags": [
+        "공간·원근",
+        "장르·주제"
+      ],
+      "subtitle": {
+        "ko": "도시와 명소를 알아볼 수 있게 그린 전망화",
+        "en": "A recognisable city or site view"
+      },
+      "definition": {
+        "ko": "베두타(Veduta)는 이탈리아어로 '전망' 또는 '경관'을 뜻하며, 도시, 광장, 운하, 건축물, 명소를 비교적 정확하고 알아볼 수 있게 그린 풍경화 유형입니다. 특히 18세기 베네치아에서 여행자와 수집가를 위한 도시 이미지로 크게 발전했습니다.",
+        "en": "Veduta, Italian for view, is a type of landscape painting that depicts a city, square, canal, building, or notable site in a relatively accurate and recognisable way. It developed especially strongly in eighteenth-century Venice as an image of the city for travellers and collectors."
+      },
+      "explanation": {
+        "ko": "베두타는 단순한 풍경화보다 장소의 식별성이 중요합니다. 관람자는 화면을 보며 '어디인가'를 알아볼 수 있어야 하고, 건축의 배치, 거리감, 빛, 일상의 움직임이 그 장소의 기억을 만듭니다. 다만 완전한 지도나 사진 같은 기록은 아닙니다. 카날레토 같은 화가는 원근과 세부를 정교하게 다루면서도 화면의 균형을 위해 시점과 공간을 조정했습니다. 그래서 베두타는 기록성과 회화적 구성 사이에 있는 도시 이미지로 이해하면 좋습니다.",
+        "en": "Veduta depends on recognisability of place more than ordinary landscape does. The viewer should be able to identify where the scene is, while the arrangement of architecture, depth, light, and everyday activity creates a memory of that site. It is not, however, a neutral map or photograph. Painters such as Canaletto handled perspective and detail carefully while still adjusting viewpoint and space for pictorial balance. Veduta is therefore best understood as an urban image between record and composition."
+      },
+      "links": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/Category:Vedute"
+        }
+      ],
+      "examples": [
+        {
+          "year": "1720년대",
+          "artist": {
+            "ko": "카날레토",
+            "en": "Canaletto"
+          },
+          "title": {
+            "ko": "《석공의 마당》",
+            "en": "The Stonemason's Yard"
+          },
+          "image": "data/미술사조/images/Canaletto-Stonemasons-Yard.jpg",
+          "role": {
+            "ko": "베네치아 베두타의 대표 사례",
+            "en": "Representative Venetian veduta"
+          },
+          "note": {
+            "ko": "운하, 건물, 광장 가장자리, 일상의 노동이 함께 보이며 베네치아의 구체적 장소감을 만듭니다. 이상화된 궁정 장면보다 도시의 실제 공간과 빛, 생활의 세부가 앞서는 점에서 베두타를 이해하기 좋습니다.",
+            "en": "Canal, buildings, the edge of a square, and everyday labour combine to create a concrete sense of Venetian place. The work is useful for understanding veduta because urban space, light, and lived detail matter more than an idealised courtly scene."
+          }
+        }
+      ]
+    },
+    {
       "id": "tapestry",
       "introduced": -1500,
       "name": {
         "ko": "테피스트리",
         "en": "Tapestry"
       },
+      "tags": [
+        "매체·공예"
+      ],
       "subtitle": {
         "ko": "날실과 씨실로 이미지를 짜는 직물 회화",
         "en": "Pictorial weaving built from warp and weft"
@@ -2171,6 +2490,9 @@
         "ko": "판화",
         "en": "Printmaking"
       },
+      "tags": [
+        "매체·공예"
+      ],
       "subtitle": {
         "ko": "판을 만들고 잉크를 묻혀 종이나 천에 찍어 내는 복수 이미지 기법",
         "en": "Making repeatable images by inking a matrix and transferring it to paper or fabric"

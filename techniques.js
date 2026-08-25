@@ -1,10 +1,21 @@
 const techniqueList=document.querySelector('#technique-list'), techniqueContent=document.querySelector('#technique-content'), techniqueSort=document.querySelector('#technique-sort');
 const techniqueSidebar=document.querySelector('.technique-sidebar');
-const techniqueStorageKey='art-through-time-last-technique', uHangulModeStorageKey='ArtThroughTime.uHangulMode.v7', fontStorageKey='art-atlas-font', techniqueSortStorageKey='art-through-time-technique-sort', techniqueSidebarWidthStorageKey='art-through-time-technique-sidebar-width-v1', sessionStorageKey='art-atlas-access-session-v1';
+const techniqueStorageKey='art-through-time-last-technique', uHangulModeStorageKey='ArtThroughTime.uHangulMode.v7', fontStorageKey='art-atlas-font', techniqueSortStorageKey='art-through-time-technique-sort', techniqueFilterStorageKey='art-through-time-technique-filter-v1', techniqueSidebarWidthStorageKey='art-through-time-technique-sidebar-width-v1', sessionStorageKey='art-atlas-access-session-v1';
 const esc=value=>String(value||'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const copy={ko:{title:'미술 기법 및 용어',definition:'정의',development:'발전의 흐름',sort:'정렬',chronological:'시대순',korean:'가나다순',delete:'삭제',deleteConfirm:'“{name}”의 기법·용어 정보와 설명을 삭제할까요?\n이미지 파일은 보관됩니다.',empty:'등록된 기법·용어가 없습니다.',loadError:'기법·용어 자료를 불러오지 못했습니다.'},en:{title:'Art Techniques and Terms',definition:'Definition',development:'Development',sort:'Sort',chronological:'Chronological',korean:'Korean name',delete:'Delete',deleteConfirm:'Delete the information and description for “{name}”?\nImage files will be kept.',empty:'No techniques or terms are listed.',loadError:'Could not load technique and term information.'}};
 const requestedUHangulMode=new URLSearchParams(location.search).get('uhangul');
-let language='ko', uHangulMode=['original','uhangul','korean'].includes(requestedUHangulMode)?requestedUHangulMode:(['original','uhangul','korean'].includes(sessionStorage.getItem(uHangulModeStorageKey))?sessionStorage.getItem(uHangulModeStorageKey):'korean'), font=localStorage.getItem(fontStorageKey)||'uhangul', techniqueSortOrder=localStorage.getItem(techniqueSortStorageKey)==='korean'?'korean':'chronological', techniques=[], techniqueSourceItems=[], techniqueComparisonLinks={}, hiddenComparisonIds=[];
+const initialUHangulMode=['original','uhangul','korean'].includes(requestedUHangulMode)?requestedUHangulMode:'korean';
+let language='ko', uHangulMode=initialUHangulMode, font=localStorage.getItem(fontStorageKey)||'uhangul', techniqueSortOrder=localStorage.getItem(techniqueSortStorageKey)==='korean'?'korean':'chronological', activeTechniqueFilter=localStorage.getItem(techniqueFilterStorageKey)||'all', techniques=[], techniqueSourceItems=[], techniqueComparisonLinks={}, hiddenComparisonIds=[];
+const techniqueFilterOptions=[
+  {id:'all',ko:'전체',en:'All'},
+  {id:'제작 기법',ko:'제작 기법',en:'Making'},
+  {id:'빛·색채',ko:'빛·색채',en:'Light & colour'},
+  {id:'공간·원근',ko:'공간·원근',en:'Space'},
+  {id:'구도·인체',ko:'구도·인체',en:'Composition'},
+  {id:'매체·공예',ko:'매체·공예',en:'Media'},
+  {id:'장르·주제',ko:'장르·주제',en:'Genre'}
+];
+if(!techniqueFilterOptions.some(option=>option.id===activeTechniqueFilter))activeTechniqueFilter='all';
 const text=(value,locale=language)=>value?.[locale]||value?.ko||value?.en||'';
 const artistDisplay=value=>text(value,'en')==='Titian'||text(value,'ko')==='티치아노'
   ?(language==='ko'?'Tiziano Vecellio (티치아노) · 베네치아 르네상스':'Tiziano Vecellio (Titian) · Venetian Renaissance')
@@ -16,12 +27,12 @@ function comparisonPairs(items, comparisonLinks={}, hiddenIds=[]){
     ['disegno-colorito','디세뇨 - 콜로리토','Disegno - Colorito','disegno','colorito'],
     ['fresco-oil','프레스코 - 유화','Fresco - Oil painting','fresco','oil-painting'],
     ['tempera-oil','템페라 - 유화','Tempera - Oil painting','tempera','oil-painting'],
-    ['chiaroscuro-sfumato','명암법 - 스푸마토','Chiaroscuro - Sfumato','chiaroscuro','sfumato'],
+    ['chiaroscuro-sfumato','키아로스쿠로 - 스푸마토','Chiaroscuro - Sfumato','chiaroscuro','sfumato'],
     ['linear-aerial-perspective','선원근법 - 공기원근법','Linear perspective - Aerial perspective','linear-perspective','aerial-perspective'],
     ['glazing-impasto','글레이징 - 임파스토','Glazing - Impasto','glazing','impasto']
   ];
   const hidden=new Set(Array.isArray(hiddenIds)?hiddenIds:[]);
-  const pairItems=pairs.map(([id,ko,en,leftId,rightId])=>{const left=leftId==='oil-painting'?oil:byId(leftId),right=rightId==='oil-painting'?oil:byId(rightId);return {id,introduced:Math.min(left?.introduced||9999,right?.introduced||9999),name:{ko,en},comparison:true,left,right,links:Array.isArray(comparisonLinks[id])?comparisonLinks[id]:[]};}).filter(pair=>pair.left&&pair.right&&!hidden.has(pair.id));
+  const pairItems=pairs.map(([id,ko,en,leftId,rightId])=>{const left=leftId==='oil-painting'?oil:byId(leftId),right=rightId==='oil-painting'?oil:byId(rightId),tags=[...new Set([...(left?.tags||[]),...(right?.tags||[])])];return {id,introduced:Math.min(left?.introduced||9999,right?.introduced||9999),name:{ko,en},tags,comparison:true,left,right,links:Array.isArray(comparisonLinks[id])?comparisonLinks[id]:[]};}).filter(pair=>pair.left&&pair.right&&!hidden.has(pair.id));
   const pairedIds=new Set(pairs.flatMap(([, , ,leftId,rightId])=>[leftId,rightId]).filter(id=>id!=='oil-painting'));
   return [...pairItems,...items.filter(item=>!pairedIds.has(item.id))];
 }
@@ -29,7 +40,15 @@ function adminToken(){try{const session=JSON.parse(sessionStorage.getItem(sessio
 const uHangulAttributes=(value,display='')=>{const original=text(value,'en'),korean=text(value,'ko'),shown=display||korean;if(!original&&!korean&&!shown)return '';return ` data-uh-original="${esc(original)}" data-uh-korean="${esc(korean)}" data-uh-display-korean="${esc(shown)}"`;};
 function setUHangulMode(mode){uHangulMode=['original','uhangul'].includes(mode)?mode:'korean';sessionStorage.setItem(uHangulModeStorageKey,uHangulMode);window.dispatchEvent(new CustomEvent('uhangulmodechange',{detail:{mode:uHangulMode}}));}
 function sortedTechniques(){return [...techniques].sort((a,b)=>techniqueSortOrder==='korean'?text(a.name,'ko').localeCompare(text(b.name,'ko'),'ko'):Number(a.introduced)-Number(b.introduced)||text(a.name,'ko').localeCompare(text(b.name,'ko'),'ko'));}
-function renderLanguage(){document.documentElement.lang=language;document.title=`${copy[language].title} · Art Through Time`;document.querySelector('#technique-sidebar-title').textContent=copy[language].title;document.querySelector('#technique-sort-label').textContent=copy[language].sort;techniqueSort.querySelector('[value="chronological"]').textContent=copy[language].chronological;techniqueSort.querySelector('[value="korean"]').textContent=copy[language].korean;techniqueSort.value=techniqueSortOrder;document.querySelectorAll('[data-display-mode]').forEach(button=>{const active=button.dataset.displayMode===uHangulMode;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));});window.dispatchEvent(new CustomEvent('uhangulmodechange',{detail:{mode:uHangulMode}}));}
+function renderTechniqueSort(){
+  if(!techniqueSort)return;
+  const label=copy[language][techniqueSortOrder]||copy[language].chronological;
+  techniqueSort.textContent=techniqueSortOrder==='korean'?'▼':'▲';
+  techniqueSort.title=label;
+  techniqueSort.setAttribute('aria-label',`${copy[language].sort}: ${label}`);
+  techniqueSort.dataset.sortOrder=techniqueSortOrder;
+}
+function renderLanguage(){document.documentElement.lang=language;document.title=`${copy[language].title} · Art Through Time`;document.querySelector('#technique-sidebar-title').textContent=copy[language].title;document.querySelector('#technique-sort-label').textContent=copy[language].sort;renderTechniqueSort();renderTechniqueFilters();document.querySelectorAll('[data-display-mode]').forEach(button=>{const active=button.dataset.displayMode===uHangulMode;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));});window.dispatchEvent(new CustomEvent('uhangulmodechange',{detail:{mode:uHangulMode}}));}
 function renderFont(){document.querySelectorAll('[data-font]').forEach(button=>button.classList.toggle('active',button.dataset.font===font));}
 async function deleteTechnique(id){const technique=techniques.find(item=>item.id===id),token=adminToken();if(!technique||!token)return;const message=copy[language].deleteConfirm.replace('{name}',text(technique.name));if(!confirm(message))return;const response=await fetch('/api/techniques',{method:'DELETE',headers:{'Content-Type':'application/json','Authorization':`Bearer ${token}`},body:JSON.stringify({id})}),result=await response.json().catch(()=>({}));if(!response.ok||!result.ok)return alert(result.error||'Could not delete technique');techniqueSourceItems=Array.isArray(result.techniques)?result.techniques:techniqueSourceItems.filter(item=>item.id!==id);techniqueComparisonLinks=result.comparisonLinks&&typeof result.comparisonLinks==='object'?result.comparisonLinks:techniqueComparisonLinks;hiddenComparisonIds=Array.isArray(result.hiddenComparisonIds)?result.hiddenComparisonIds:hiddenComparisonIds;techniques=comparisonPairs(techniqueSourceItems,techniqueComparisonLinks,hiddenComparisonIds);const next=techniques.find(item=>item.id===localStorage.getItem(techniqueStorageKey))||sortedTechniques()[0];if(next)renderTechnique(next);else{renderLanguage();renderEmpty();}}
 const techniqueLinks=technique=>Array.isArray(technique?.links)?technique.links.filter(link=>typeof link?.url==='string'&&link.url):[];
@@ -141,14 +160,16 @@ function renderTechnique(technique){
     scheduleTechniqueListScrollSync();
     return;
   }
-  techniqueContent.innerHTML=`<header><p class="eyebrow">TECHNIQUE · ${esc(technique.introduced)}</p><div class="technique-title-row"><h1${uHangulAttributes(technique.name)}>${esc(text(technique.name))}</h1>${linkAdd}${linkControls}</div><p class="subtitle">${esc(text(technique.subtitle))}</p>${linkEntry}</header><section class="definition"><h2>${esc(copy[language].definition)}</h2><p>${esc(text(technique.definition))}</p><p>${esc(text(technique.explanation))}</p></section><section class="development"><h2>${esc(copy[language].development)}</h2>${technique.examples.map(example=>`<article class="technique-example"><div class="example-image"><img src="${esc(example.image)}" alt="${esc(`${text(example.artist)} ${text(example.title)}`)}"></div><div class="example-note"><p class="example-year">${esc(example.year)} · ${esc(text(example.role))}</p><h3>${esc(text(example.title))}</h3><p class="artist ${font === 'uhangul' ? 'uhangul-font' : ''}"${uHangulAttributes(example.artist)}>${esc(artistDisplay(example.artist))}</p><p>${esc(text(example.note))}</p></div></article>`).join('')}</section>`;
+  const examples=Array.isArray(technique.examples)?technique.examples:[];
+  const development=examples.length?`<section class="development"><h2>${esc(copy[language].development)}</h2>${examples.map(example=>`<article class="technique-example"><div class="example-image"><img src="${esc(example.image)}" alt="${esc(`${text(example.artist)} ${text(example.title)}`)}"></div><div class="example-note"><p class="example-year">${esc(example.year)} · ${esc(text(example.role))}</p><h3>${esc(text(example.title))}</h3><p class="artist ${font === 'uhangul' ? 'uhangul-font' : ''}"${uHangulAttributes(example.artist)}>${esc(artistDisplay(example.artist))}</p><p>${esc(text(example.note))}</p></div></article>`).join('')}</section>`:'';
+  techniqueContent.innerHTML=`<header><p class="eyebrow">TECHNIQUE · ${esc(technique.introduced)}</p><div class="technique-title-row"><h1${uHangulAttributes(technique.name)}>${esc(text(technique.name))}</h1>${linkAdd}${linkControls}</div><p class="subtitle">${esc(text(technique.subtitle))}</p>${linkEntry}</header><section class="definition"><h2>${esc(copy[language].definition)}</h2><p>${esc(text(technique.definition))}</p><p>${esc(text(technique.explanation))}</p></section>${development}`;
   renderLanguage();
   setupTechniqueLinkEntry(technique);
   setupTechniqueLinkButtons(techniqueContent,technique);
   scheduleTechniqueListScrollSync();
 }
 document.addEventListener('click',event=>{const button=event.target.closest('[data-display-mode]');if(!button)return;setUHangulMode(button.dataset.displayMode);const selected=techniques.find(item=>item.id===localStorage.getItem(techniqueStorageKey));if(selected)renderTechnique(selected);else renderLanguage();});
-techniqueSort.addEventListener('change',()=>{techniqueSortOrder=techniqueSort.value==='korean'?'korean':'chronological';localStorage.setItem(techniqueSortStorageKey,techniqueSortOrder);const selected=techniques.find(item=>item.id===localStorage.getItem(techniqueStorageKey))||sortedTechniques()[0];if(selected)renderTechnique(selected);});
+techniqueSort.addEventListener('click',()=>{techniqueSortOrder=techniqueSortOrder==='korean'?'chronological':'korean';localStorage.setItem(techniqueSortStorageKey,techniqueSortOrder);const selected=techniques.find(item=>item.id===localStorage.getItem(techniqueStorageKey))||sortedTechniques()[0];if(selected)renderTechnique(selected);else renderTechniqueSort();});
 document.querySelectorAll('[data-font]').forEach(button=>button.addEventListener('click',()=>{font=button.dataset.font;localStorage.setItem(fontStorageKey,font);const selected=techniques.find(item=>item.id===localStorage.getItem(techniqueStorageKey));if(selected)renderTechnique(selected);else{renderFont();}}));
 setupSidebarWheelScroll();
 setupTechniqueSidebarResize();
@@ -180,35 +201,71 @@ techniqueSearch.className='technique-search';
 techniqueSearch.innerHTML='<input class="technique-search-input" type="search" autocomplete="off" placeholder="기법·용어 검색" aria-label="기법·용어 검색">';
 document.querySelector('#technique-sidebar-title')?.after(techniqueSearch);
 const techniqueSearchInput=techniqueSearch.querySelector('.technique-search-input');
+const techniqueFilters=document.createElement('div');
+techniqueFilters.className='technique-filter-chips';
+techniqueFilters.setAttribute('role','group');
+techniqueFilters.setAttribute('aria-label','기법·용어 분류 필터');
+techniqueSearch.after(techniqueFilters);
 const normalizedTechniqueSearch=value=>String(value||'').toLocaleLowerCase().replace(/[\s\-–—·,./()]/g,'').trim();
+function techniqueTags(technique){
+  if(!technique)return [];
+  if(Array.isArray(technique.tags))return technique.tags;
+  if(technique.comparison)return [...new Set([...(techniqueTags(technique.left)),...(techniqueTags(technique.right))])];
+  return [];
+}
 function techniqueMatchesSearch(technique, query) {
   if(!query) return true;
-  const values=[technique?.name?.ko,technique?.name?.en,technique?.subtitle?.ko,technique?.subtitle?.en].map(normalizedTechniqueSearch);
+  const values=[technique?.name?.ko,technique?.name?.en,technique?.subtitle?.ko,technique?.subtitle?.en,...techniqueTags(technique)].map(normalizedTechniqueSearch);
   return values.some(value=>value.includes(query));
+}
+function techniqueMatchesFilter(technique){
+  return activeTechniqueFilter==='all'||techniqueTags(technique).includes(activeTechniqueFilter);
+}
+function visibleTechniques(){
+  const query=normalizedTechniqueSearch(techniqueSearchInput?.value);
+  return sortedTechniques().filter(technique=>techniqueMatchesSearch(technique,query)&&techniqueMatchesFilter(technique));
+}
+function renderTechniqueFilters(){
+  if(!techniqueFilters)return;
+  techniqueFilters.innerHTML=techniqueFilterOptions.map(option=>`<button class="technique-filter-chip ${option.id===activeTechniqueFilter?'active':''}" type="button" data-technique-filter="${esc(option.id)}" aria-pressed="${option.id===activeTechniqueFilter?'true':'false'}">${esc(option[language]||option.ko)}</button>`).join('');
 }
 function applyTechniqueSearchFilter(){
   const query=normalizedTechniqueSearch(techniqueSearchInput?.value);
   let visibleCount=0;
   techniqueList.querySelectorAll('[data-technique]').forEach(button=>{
     const technique=techniques.find(item=>item.id===button.dataset.technique);
-    const visible=techniqueMatchesSearch(technique,query);
+    const visible=techniqueMatchesSearch(technique,query)&&techniqueMatchesFilter(technique);
     button.closest('.technique-list-row')?.classList.toggle('search-hidden',!visible);
     if(visible)visibleCount+=1;
   });
   techniqueList.querySelector('.technique-search-empty')?.remove();
-  if(query&&!visibleCount)techniqueList.insertAdjacentHTML('beforeend',`<p class="technique-search-empty">${language==='ko'?'일치하는 기법·용어가 없습니다.':'No matching techniques or terms.'}</p>`);
+  if((query||activeTechniqueFilter!=='all')&&!visibleCount)techniqueList.insertAdjacentHTML('beforeend',`<p class="technique-search-empty">${language==='ko'?'일치하는 기법·용어가 없습니다.':'No matching techniques or terms.'}</p>`);
   scheduleTechniqueListScrollSync();
 }
 function renderTechniqueSearchResults(){
   applyTechniqueSearchFilter();
 }
+techniqueFilters.addEventListener('click',event=>{
+  const button=event.target.closest('[data-technique-filter]');
+  if(!button)return;
+  activeTechniqueFilter=button.dataset.techniqueFilter;
+  localStorage.setItem(techniqueFilterStorageKey,activeTechniqueFilter);
+  renderTechniqueFilters();
+  const current=techniques.find(item=>item.id===localStorage.getItem(techniqueStorageKey));
+  if(current&&techniqueMatchesFilter(current)&&techniqueMatchesSearch(current,normalizedTechniqueSearch(techniqueSearchInput?.value))){
+    applyTechniqueSearchFilter();
+    return;
+  }
+  const next=visibleTechniques()[0];
+  if(next)renderTechnique(next);
+  else applyTechniqueSearchFilter();
+});
 techniqueSearchInput?.addEventListener('input',renderTechniqueSearchResults);
 techniqueSearchInput?.addEventListener('keydown',event=>{
   if(event.key==='Escape'){techniqueSearchInput.value='';renderTechniqueSearchResults();techniqueSearchInput.blur();return;}
   if(event.key==='Enter'){
     event.preventDefault();
-    const query=normalizedTechniqueSearch(techniqueSearchInput.value);
-    const match=sortedTechniques().find(item=>techniqueMatchesSearch(item,query));
+    const match=visibleTechniques()[0];
     if(match)renderTechnique(match);
   }
 });

@@ -9,7 +9,8 @@ const sessionStorageKey = 'art-atlas-access-session-v1';
 const topicSidebarWidthStorageKey = 'art-through-time-topic-sidebar-width-v1';
 const uHangulModeStorageKey = 'ArtThroughTime.uHangulMode.v7';
 const requestedUHangulMode = new URLSearchParams(location.search).get('uhangul');
-let uHangulMode = ['original','uhangul','korean'].includes(requestedUHangulMode) ? requestedUHangulMode : (['original','uhangul','korean'].includes(sessionStorage.getItem(uHangulModeStorageKey)) ? sessionStorage.getItem(uHangulModeStorageKey) : 'korean');
+const initialUHangulMode = ['original','uhangul','korean'].includes(requestedUHangulMode) ? requestedUHangulMode : 'korean';
+let uHangulMode = initialUHangulMode;
 function renderDisplayMode(){document.querySelectorAll('[data-display-mode]').forEach(button=>{const active=button.dataset.displayMode===uHangulMode;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));});window.dispatchEvent(new CustomEvent('uhangulmodechange',{detail:{mode:uHangulMode}}));}
 document.addEventListener('click',event=>{const button=event.target.closest('[data-display-mode]');if(!button)return;uHangulMode=['original','uhangul'].includes(button.dataset.displayMode)?button.dataset.displayMode:'korean';sessionStorage.setItem(uHangulModeStorageKey,uHangulMode);renderDisplayMode();});
 const adminToken = () => {

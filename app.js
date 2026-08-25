@@ -50,13 +50,14 @@ function clearLoginRequestFromUrl() {
   history.replaceState(null, '', clean || 'index.html');
 }
 const requestedUHangulMode = startupParams.get('uhangul');
+const initialUHangulMode = ['uhangul','korean','original'].includes(requestedUHangulMode) ? requestedUHangulMode : 'korean';
 const requestedArtistId = startupParams.get('artist') || startupParams.get('artistId');
 if (isMovementPopup) document.body.classList.add('movement-popup');
 const legacyMovementCountryIds = ['france','germany','netherlands','italy','united-kingdom','spain','russia','sweden','denmark','greece','united-states'];
 const allMovementCountryIds = ['france','germany','switzerland','netherlands','italy','united-kingdom','spain','russia','sweden','denmark','greece','united-states'];
 const defaultMovementView = {countries:[...allMovementCountryIds],start:movementAtlasStart,end:movementAtlasEnd,showHistoricalEvents:true,density:1};
 let language = 'ko';
-let uHangulMode = ['uhangul','korean','original'].includes(requestedUHangulMode) ? requestedUHangulMode : (['uhangul','korean','original'].includes(sessionStorage.getItem(uHangulModeStorageKey)) ? sessionStorage.getItem(uHangulModeStorageKey) : 'korean');
+let uHangulMode = initialUHangulMode;
 let artists = [];
 let selectedId = localStorage.getItem('art-atlas-selected');
 let requestedArtistMissing = false;
