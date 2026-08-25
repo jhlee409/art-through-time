@@ -20,12 +20,12 @@
 - 스타일시트와 런타임을 모두 아래 형식으로 사용한다.
 
 ~~~html
-<link rel="stylesheet" href="../../uhangul/uhangul-runtime.css?v=0.6-draft" data-uhangul-integration="v0.6-draft">
-<script defer src="../../uhangul/uhangul-runtime.js?v=0.6-draft" data-uhangul-integration="v0.6-draft"></script>
+<link rel="stylesheet" href="../../uhangul/uhangul-runtime.css?v=0.7" data-uhangul-integration="v0.7">
+<script defer src="../../uhangul/uhangul-runtime.js?v=0.7" data-uhangul-integration="v0.7"></script>
 ~~~
 
 - 사람 이름과 기법명은 기존 데이터 속성 및 공통 런타임 규칙을 따른다.
-- 이전 버전(v0.3~v0.5) 통합 표기를 넣지 않는다.
+- uHangul은 v0.7 통합 표기만 넣는다.
 
 ## 사조 막대와 설명 문서 열기
 
@@ -111,7 +111,7 @@
 
 ## 완료 전 검증
 
-1. v0.6-draft 통합 표기가 스타일시트와 런타임에 각각 하나씩 있다.
+1. v0.7 통합 표기가 스타일시트와 런타임에 각각 하나씩 있다.
 2. id="countries", href="#countries", id="movement-deepening"이 모두 있다.
 3. 국가별 전개 표의 화가·제작자가 카드에 모두 대응한다.
 4. 외부 이미지 URL을 새로 추가하지 않았다.

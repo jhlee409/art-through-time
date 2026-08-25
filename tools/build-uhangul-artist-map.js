@@ -12,6 +12,7 @@ const TARGET_ONSETS = {
   F: new Set(['ㅍ']),
   V: new Set(['ㅂ', 'ㅍ']),
   Z: new Set(['ㅈ', 'ㅅ', 'ㅆ']),
+  R: new Set(['ㄹ']),
   TH: new Set(['ㅅ', 'ㅌ', 'ㄷ']),
   X: new Set(['ㅎ'])
 };
@@ -213,6 +214,7 @@ function targetCues(original, {spanish = false} = {}) {
     if (ch === 'f') cues.push('F');
     else if (ch === 'v' || ch === 'w') cues.push('V');
     else if (ch === 'z' && !spanish) cues.push('Z');
+    else if (ch === 'r') cues.push('R');
     else if (ch === 'x' || (ch === 'g' && text[i + 1] === 'h')) cues.push('X');
     i += ch === 'g' && text[i + 1] === 'h' ? 2 : 1;
   }
@@ -230,6 +232,7 @@ function consonantEvents(original, {spanish = false} = {}) {
     if (ch === 'f') events.push({token: 'F', target: true, allowed: TARGET_ONSETS.F});
     else if (ch === 'v' || ch === 'w') events.push({token: 'V', target: true, allowed: TARGET_ONSETS.V});
     else if (ch === 'z' && !spanish) events.push({token: 'Z', target: true, allowed: TARGET_ONSETS.Z});
+    else if (ch === 'r') events.push({token: 'R', target: true, allowed: TARGET_ONSETS.R});
     else if (ch === 'x') events.push({token: 'X', target: true, allowed: TARGET_ONSETS.X});
     else if (ch === 'l') events.push({target: false, allowed: PASSTHROUGH_ONSETS.L});
     else if (PASSTHROUGH_ONSETS[ch.toUpperCase()]) events.push({target: false, allowed: PASSTHROUGH_ONSETS[ch.toUpperCase()]});
@@ -316,7 +319,7 @@ function createNameRecord({id, original, korean, displayKorean, language = 'und'
   const manual = manualUHangulByOriginal[normalizeText(latinKey(original))];
   return {
     id: id || slug(original || shown),
-    uhangulVersion: '0.6-draft',
+    uhangulVersion: '0.7',
     original,
     language,
     korean,

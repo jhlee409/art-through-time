@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="topics.css">
   <link rel="stylesheet" href="rules-check.css">
-  <link rel="stylesheet" href="./uhangul/uhangul-runtime.css?v=0.6-draft" data-uhangul-integration="v0.6-draft">
+  <link rel="stylesheet" href="./uhangul/uhangul-runtime.css?v=0.7" data-uhangul-integration="v0.7">
   <style>.topic-title-row{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}.topic-title-row #hint{margin-bottom:0}.topic-title-row>div:last-child{display:flex;gap:6px;align-items:flex-start}.topic-title-row button{flex:none;margin-top:4px;border:1px solid #aebba8;border-radius:6px;background:#f9f7f1;padding:8px 11px;color:#425043;font-weight:700}.topic-title-row .rules-check-button,.topic-title-row #topic-add-artwork,.topic-title-row #topic-mosaic-view{display:inline-flex;align-items:center;justify-content:center;min-height:31px;border:1px solid #8e9b8b;border-radius:4px;background:#fffdf8;padding:7px 10px;color:#334334;font:700 11px/1 var(--sans,'Noto Sans KR',sans-serif);white-space:nowrap}.topic-title-row button:hover{background:#dfe8d9}.topic-display-mode{display:flex;gap:4px;margin:12px 0 8px}.topic-display-mode button{display:grid;width:28px;height:28px;min-height:28px;place-items:center;margin:0;padding:0;border:1px solid #aebba8;border-radius:50%;background:#fffdf8;color:#425043;font:700 10px/1 var(--sans,'Noto Sans KR',sans-serif)}.topic-display-mode button.active{border-color:#425043;background:#425043;color:#fffdf8}.topic-year-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}.topic-form-error{min-height:1.25em;color:#a43d27;font-size:12px}.topic-artwork-dialog[open]{z-index:100}@media(max-width:600px){.topic-title-row{display:block}.topic-title-row>div:last-child{display:flex;margin-top:14px}.topic-title-row button{margin-top:0}}</style>
 </head>
 <body>
@@ -29,6 +29,6 @@
   <dialog id="topic-artwork-dialog"><form id="topic-artwork-form" method="dialog"><button class="close" type="button" data-close-topic-dialog aria-label="닫기">×</button><h2>그림 추가</h2><p id="topic-artwork-file-name" class="dialog-description"></p><label>제목<input id="topic-artwork-title" name="title" required></label><div class="topic-year-fields"><label>시작 연도<input id="topic-artwork-start" name="startYear" type="number" min="1" required></label><label>끝 연도<input id="topic-artwork-end" name="endYear" type="number" min="1" required></label></div><p id="topic-artwork-error" class="topic-form-error" aria-live="polite"></p><button class="save" type="submit">저장</button></form></dialog>
   <script src="topics.js"></script>
   <script src="rules-check.js?v=20260821-3"></script>
-  <script defer src="./uhangul/uhangul-runtime.js?v=0.6-draft" data-uhangul-integration="v0.6-draft"></script>
+  <script defer src="./uhangul/uhangul-runtime.js?v=0.7" data-uhangul-integration="v0.7"></script>
 </body>
 </html>

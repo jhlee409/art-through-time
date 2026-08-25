@@ -1,0 +1,15 @@
+{
+  "version": "0.7",
+  "status": "final",
+  "spua": {"base": "U+FB000"},
+  "principles": {"onsetOnly": true, "noNewFinals": true, "languageAware": true},
+  "glyphs": [
+    {"id": "F", "phoneme": "/f/", "glyph": "ᅗ", "templateOnset": "ㅍ"},
+    {"id": "V", "phoneme": "/v/", "glyph": "ᄫ", "templateOnset": "ㅂ"},
+    {"id": "Z", "phoneme": "/z/", "glyph": "ᅀ", "templateOnset": "ㅅ"},
+    {"id": "R", "phoneme": "/ɹ/", "glyph": "ᄛ", "templateOnset": "ㄹ"},
+    {"id": "X", "phoneme": "/x/", "glyph": "ᅘ", "templateOnset": "ㅎ"},
+    {"id": "TH", "phoneme": "/θ/", "glyph": "θ", "templateOnset": "ㅅ", "ipaException": true}
+  ],
+  "rules": {"dh": "ㄷ", "germanIch": "ㅎ"}
+}

@@ -1,19 +1,20 @@
-/* uHangul v0.6-draft core — ONSET ONLY
+/* uHangul v0.7 core — ONSET ONLY
  * One completed extended syllable = one SPUA-A code point.
  * No new consonant may occur in final position.
  */
-export const VERSION = "0.6-draft";
-export const SPUA_BASE = 0xFA000;
-// Confirmed entries in uhangul/spec/uhangul-v0.6-draft.json only.
-// R variants stay deliberately outside the active PUA mapping until confirmed.
-export const NEW = Object.freeze(["F","V","Z","TH","X"]);
+export const VERSION = "0.7";
+export const SPUA_BASE = 0xFB000;
+export const NEW = Object.freeze(["F","V","Z","R","X","TH"]);
 export const VOWELS = Object.freeze(Array.from("ㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣ"));
 export const FINALS = Object.freeze(["", ...Array.from("ㄱㄲㄳㄴㄵㄶㄷㄹㄺㄻㄼㄽㄾㄿㅀㅁㅂㅄㅅㅆㅇㅈㅊㅋㅌㅍㅎ")]);
 
 function tokenizeBlock(block) {
   const tokens = [];
   for (let i = 0; i < block.length;) {
-    if (block.startsWith("TH", i)) { tokens.push("TH"); i += 2; continue; }
+    const token = NEW.filter(value => value.length > 1)
+      .sort((a, b) => b.length - a.length)
+      .find(value => block.startsWith(value, i));
+    if (token) { tokens.push(token); i += token.length; continue; }
     tokens.push(block[i++]);
   }
   return tokens;
@@ -22,7 +23,7 @@ function tokenizeBlock(block) {
 export function blockToCodePoint(block) {
   const t = tokenizeBlock(String(block).trim());
   if (t.length < 2 || t.length > 3) {
-    throw new Error(`uHangul v0.6-draft block must be onset+vowel(+existing final): [${block}]`);
+    throw new Error(`uHangul v0.7 block must be onset+vowel(+existing final): [${block}]`);
   }
 
   const [onset, vowel, final = ""] = t;
@@ -31,11 +32,11 @@ export function blockToCodePoint(block) {
   const fi = FINALS.indexOf(final);
 
   if (oi < 0) {
-    throw new Error(`uHangul v0.6-draft requires a confirmed NEW consonant in ONSET position: [${block}]`);
+    throw new Error(`uHangul v0.7 requires a NEW consonant in ONSET position: [${block}]`);
   }
   if (vi < 0) throw new Error(`Invalid vowel in [${block}]`);
   if (final && NEW.includes(final)) {
-    throw new Error(`New consonants are onset-only in v0.6-draft; invalid final in [${block}]`);
+    throw new Error(`New consonants are onset-only in v0.7; invalid final in [${block}]`);
   }
   if (fi < 0) throw new Error(`Invalid existing Hangul final in [${block}]`);
 

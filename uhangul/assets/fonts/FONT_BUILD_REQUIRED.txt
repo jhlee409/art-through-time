@@ -1,14 +1,14 @@
-uHangul v0.6-draft font is built locally from the single source of truth:
-uhangul/spec/uhangul-v0.6-draft.json.
+uHangul v0.7 font is built locally from the single source of truth:
+uhangul/spec/uhangul-v0.7.json.
 
-Run the installer with source font paths, for example:
+Run the builder with a TrueType source font, for example:
 
-python uhangul/font/build_uhangul_v06_draft.py "C:\Fonts\UnDotum.ttf" "uhangul/assets/fonts/uHangul-v0.6-draft.woff2" --fallback "C:\Fonts\UnBatang.ttf"
+python uhangul/font/build_uhangul_v07.py "C:\Fonts\UnDotum.ttf" "uhangul/assets/fonts/uHangul-v0.7.ttf" --fallback "C:\Fonts\UnBatang.ttf"
 
 or from PowerShell:
 
-python uhangul/font/validate_uhangul_v06_draft.py `
-  "uhangul/assets/fonts/uHangul-v0.6-draft.woff2"
+python uhangul/font/validate_uhangul_v07.py `
+  "uhangul/assets/fonts/uHangul-v0.7.ttf"
 
-TH /θ/ is the sole IPA exception. It uses the Greek glyph θ in the onset
-component; all new consonants remain onset-only.
+The final onset set is F, V, Z, R, X, and TH. TH /θ/ is the sole IPA
+exception; all new consonants remain onset-only.

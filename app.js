@@ -20,7 +20,7 @@ const artistSidebarWidthStorageKey = 'art-atlas-artist-sidebar-width-v1';
 const lastPositionStorageKey = 'art-atlas-last-position-v1';
 const favoriteWorksStorageKey = 'art-atlas-favorite-works-v1';
 const accessSessionStorageKey = 'art-atlas-access-session-v1';
-const uHangulModeStorageKey = 'ArtThroughTime.uHangulMode.v3';
+const uHangulModeStorageKey = 'ArtThroughTime.uHangulMode.v7';
 const artistListEnglishStorageKey = 'ArtThroughTime.artistListEnglish.v1';
 // The app can be opened through the local server or directly as index.html.
 // In the latter case, API calls must explicitly target the local server.
@@ -2645,11 +2645,11 @@ function openFavoritesWindow() {
     const runtimeStyle = popup.document.createElement('link');
     runtimeStyle.rel = 'stylesheet';
     runtimeStyle.href = new URL('uhangul/uhangul-runtime.css', location.href).href;
-    runtimeStyle.dataset.uhangulIntegration = 'v0.6-draft';
+    runtimeStyle.dataset.uhangulIntegration = 'v0.7';
     const runtimeScript = popup.document.createElement('script');
     runtimeScript.defer = true;
-    runtimeScript.src = new URL('uhangul/uhangul-runtime.js?v=0.6-draft', location.href).href;
-    runtimeScript.dataset.uhangulIntegration = 'v0.6-draft';
+    runtimeScript.src = new URL('uhangul/uhangul-runtime.js?v=0.7', location.href).href;
+    runtimeScript.dataset.uhangulIntegration = 'v0.7';
     popup.document.head.append(runtimeStyle, runtimeScript);
   } catch (_) { /* The popup still works if its document cannot be extended. */ }
   popup.document.exitFullscreen?.();
