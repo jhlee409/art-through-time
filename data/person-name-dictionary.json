@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-25T11:44:46.182Z",
+  "generatedAt": "2026-08-25T12:07:58.819Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -4517,14 +4517,11 @@
       "uhangulVersion": "0.7",
       "original": "Hyacinthe Rigaud",
       "language": "und",
-      "korean": "이아생트 리고",
+      "korean": "야생트 리고",
       "displayKorean": "리고, 야생트",
       "aliases": {
         "ko": [
           "리고",
-          "이아생트 리고",
-          "히아생트 리고",
-          "아생트 리고",
           "야생트 리고"
         ],
         "en": [
@@ -4534,7 +4531,7 @@
           "Hyacinthe Rigaud y Ros"
         ]
       },
-      "uhangul": "[Rㅣ]고, 야생[THㅡ]",
+      "uhangul": "리고, 야생트",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [

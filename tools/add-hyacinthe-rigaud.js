@@ -81,7 +81,7 @@ data.artists.push({
   birthCountry: { ko: '스페인 제국령 카탈루냐(페르피냥)', en: 'Perpignan, Spanish Empire' },
   movement: { ko: '바로크', en: 'Baroque' },
   aliases: {
-    ko: ['이아생트 리고', '히아생트 리고', '아생트 리고', '야생트 리고'],
+    ko: ['리고'],
     en: ['Hyacinthe Rigaud', 'Hyacinthe Rigault', 'Hyacinthe Rigaud y Ros']
   },
   artistSummary: {

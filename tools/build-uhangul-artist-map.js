@@ -34,6 +34,9 @@ const PASSTHROUGH_ONSETS = {
 const manualUHangulByOriginal = {
   carllarsson: ({displayKorean, korean}) => displayKorean || korean || '라르손, 칼',
   rogiervanderweyden: () => '[Vㅏㄴ] 데르 [Vㅔ]이던, 로히어르',
+  // French Hyacinthe is pronounced /ja.sɛ̃t/; the written "th" is /t/, not
+  // English /θ/, so do not apply the TH extension here.
+  hyacintherigaud: ({displayKorean, korean}) => displayKorean || korean || '야생트 리고',
   // Spanish z is represented with the ordinary Korean ㅅ onset, never with
   // the Z or TH extension. Velázquez also keeps Spanish v as the ordinary
   // Korean spelling rather than an English /v/ extension.
