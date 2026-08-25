@@ -6,7 +6,7 @@ const {execFileSync} = require('node:child_process');
 
 const root = path.resolve(__dirname, '..');
 const artistsFile = path.join(root, 'data', 'artists.json');
-const downloadDir = 'C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download';
+const downloadDir = path.join(root, '다운로드용');
 const artistId = 'artist-Q150679';
 const qid = 'Q150679';
 const wiki = 'https://en.wikipedia.org/wiki/Anthony_van_Dyck';

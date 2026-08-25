@@ -3,7 +3,7 @@ const path = require('node:path');
 const crypto = require('node:crypto');
 
 const root = path.resolve(__dirname, '..');
-const downloadDir = 'C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download';
+const downloadDir = path.join(root, '다운로드용');
 const topicsFile = path.join(root, 'data', 'topics.json');
 const topicImageDir = path.join(root, 'data', 'topic-images');
 const topicId = 'jesus-descent-from-the-cross';

@@ -1,14 +1,7 @@
 {
   "schema": 1,
-  "policy": "local-only; search known download folders first; leave unmatched works pending upload",
+  "policy": "local-only; use only the project's 다운로드용 directory; leave unmatched works pending upload",
   "projectRelativeDirectories": [
-    "download"
-  ],
-  "oneDriveRelativeDirectories": [
-    "AI-Programming/Art_through_Time/download"
-  ],
-  "legacyDirectories": [
-    "C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download",
-    "C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download"
+    "다운로드용"
   ]
 }

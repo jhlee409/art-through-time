@@ -2,7 +2,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const root = path.resolve(__dirname, '..');
-const downloadDir = 'C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download';
+const downloadDir = path.join(root, '다운로드용');
 const artistId = 'artist-Q9348';
 const qid = 'Q9348';
 const fetchedAt = new Date().toISOString();

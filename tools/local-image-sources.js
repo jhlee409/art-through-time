@@ -16,24 +16,10 @@ function uniqueExistingDirectories(values) {
   });
 }
 
-function oneDriveRoots() {
-  const roots = [process.env.OneDrive, process.env.OneDriveCommercial, process.env.OneDriveConsumer];
-  const profile = process.env.USERPROFILE;
-  if (profile) {
-    try {
-      for (const entry of fs.readdirSync(profile, {withFileTypes:true})) {
-        if (entry.isDirectory() && /^OneDrive(?:\s|$)/i.test(entry.name)) roots.push(path.join(profile, entry.name));
-      }
-    } catch (_) {}
-  }
-  return uniqueExistingDirectories(roots.filter(Boolean));
-}
-
 function downloadDirectories() {
   const config = readConfig();
   const project = (config.projectRelativeDirectories || []).map(value => path.join(root, value));
-  const oneDrive = oneDriveRoots().flatMap(base => (config.oneDriveRelativeDirectories || []).map(value => path.join(base, value)));
-  return uniqueExistingDirectories([...project, ...oneDrive, ...(config.legacyDirectories || [])]);
+  return uniqueExistingDirectories(project);
 }
 
 function normalize(value) {

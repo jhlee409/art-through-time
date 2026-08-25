@@ -4,7 +4,7 @@ const crypto = require('node:crypto');
 
 const root = path.resolve(__dirname, '..');
 const artistsFile = path.join(root, 'data', 'artists.json');
-const downloadDir = 'C:\\Users\\jhlee\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\download';
+const downloadDir = path.join(root, '다운로드용');
 const artistId = 'artist-Q192062';
 const qid = 'Q192062';
 const thumbnailDir = path.join(root, 'data', 'thumbnails', artistId);
