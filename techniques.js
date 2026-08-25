@@ -17,9 +17,36 @@ const techniqueFilterOptions=[
 ];
 if(!techniqueFilterOptions.some(option=>option.id===activeTechniqueFilter))activeTechniqueFilter='all';
 const text=(value,locale=language)=>value?.[locale]||value?.ko||value?.en||'';
-const artistDisplay=value=>text(value,'en')==='Titian'||text(value,'ko')==='티치아노'
-  ?(language==='ko'?'Tiziano Vecellio (티치아노) · 베네치아 르네상스':'Tiziano Vecellio (Titian) · Venetian Renaissance')
-  :text(value);
+const normalizedArtistName=value=>String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9가-힣]/g,'');
+const artistListNameOverrides={
+  leonardodavinci:'다 빈치',
+  giottodibondone:'조토',
+  giotto:'조토',
+  albrechtdurer:'뒤러',
+  michelangelo:'미켈란젤로',
+  michelangelobuonarroti:'미켈란젤로',
+  titian:'티치아노',
+  tintoretto:'틴토레토',
+  caravaggio:'카라바조',
+  diegovelazquez:'벨라스케스',
+  rembrandtvanrijn:'렘브란트',
+  johannesvermeer:'베르메르',
+  jmwturner:'터너',
+  vincentvangogh:'반 고흐',
+  caspardavidfriedrich:'프리드리히',
+  antoinewatteau:'바토',
+  claudeorrain:'로랭',
+  claudelorrain:'로랭',
+  claudemonet:'모네'
+};
+const artistNameParticles=new Set(['반','판','폰','데','드','델','다','디','더','르','라','레','테르']);
+function koreanNameFirst(name){const source=String(name||'').trim();if(!source.includes(','))return source;const [family,given]=source.split(',').map(part=>part.trim()).filter(Boolean);return [given,family].filter(Boolean).join(' ')||source;}
+function familyFirstKorean(name,originalName){const source=koreanNameFirst(name);if(String(source||'').includes(','))return source;const korean=String(source||'').trim().split(/\s+/),original=String(originalName||'').trim().split(/\s+/);if(korean.length<2||original.length<2)return korean.join(' ');const prefixes=new Set(['van','von','de','del','della','da','di','du','la','le','der','den','ten','ter','st.','saint']);let familyLength=1;for(let index=original.length-2;index>=0&&prefixes.has(original[index].toLowerCase());index--)familyLength++;if(familyLength>=korean.length)return korean.join(' ');return `${korean.slice(-familyLength).join(' ')}, ${korean.slice(0,-familyLength).join(' ')}`;}
+function mapArtistParts(value,mapper){const ko=text(value,'ko'),en=text(value,'en');if(!/[·;]/.test(ko)||!/[·;]/.test(en))return mapper(ko,en);const koParts=ko.split(/\s*[·;]\s*/),enParts=en.split(/\s*[·;]\s*/);if(koParts.length!==enParts.length)return mapper(ko,en);return koParts.map((part,index)=>mapper(part,enParts[index])).join(' · ');}
+function artistStandardKoreanName(value){return koreanNameFirst(text(value,'ko'));}
+function artistUHangulDisplay(value){return mapArtistParts(value,(ko,en)=>familyFirstKorean(ko,en));}
+function artistListKoreanName(value){return mapArtistParts(value,(ko,en)=>{const override=artistListNameOverrides[normalizedArtistName(en)]||artistListNameOverrides[normalizedArtistName(ko)];if(override)return override;const source=koreanNameFirst(ko);const words=source.replace(/,/g,' ').split(/\s+/).filter(Boolean);if(words.length<=1)return source;let start=words.length-1;while(start>0&&artistNameParticles.has(words[start-1]))start--;return words.slice(start).join(' ');});}
+const artistDisplay=value=>language==='ko'?artistListKoreanName(value):text(value);
 function comparisonPairs(items, comparisonLinks={}, hiddenIds=[]){
   const byId=id=>items.find(item=>item.id===id);
   const oil={...byId('glazing'),id:'oil-painting',introduced:1400,name:{ko:'유화',en:'Oil painting'},subtitle:{ko:'기름을 매체로 쓰는 느린 건조의 회화',en:'Slow-drying paint with oil as its binder'},definition:{ko:'유화는 안료를 건성유에 섞어 사용하는 회화 매체입니다. 건조가 느려 수정과 섬세한 색의 층을 만들기 좋고, 캔버스·목판·금속 등 다양한 바탕에 사용할 수 있습니다.',en:'Oil painting uses pigment mixed with a drying oil. Its slow drying time permits reworking and finely layered colour on canvas, panel, and other supports.'},explanation:{ko:'프레스코와 달리 작업 시간이 비교적 길고, 투명한 층·불투명한 층·두꺼운 붓질을 모두 활용할 수 있습니다. 글레이징과 임파스토는 유화에서 특히 중요한 표현 방법입니다.',en:'Unlike fresco, it allows longer working time and can use transparent layers, opaque layers, or thick brushwork. Glazing and impasto are especially important oil-painting methods.'}};
@@ -37,7 +64,7 @@ function comparisonPairs(items, comparisonLinks={}, hiddenIds=[]){
   return [...pairItems,...items.filter(item=>!pairedIds.has(item.id))];
 }
 function adminToken(){try{const session=JSON.parse(sessionStorage.getItem(sessionStorageKey)||'null');return session?.role==='admin'&&session.token?session.token:'';}catch(_){return '';}}
-const uHangulAttributes=(value,display='')=>{const original=text(value,'en'),korean=text(value,'ko'),shown=display||korean;if(!original&&!korean&&!shown)return '';return ` data-uh-original="${esc(original)}" data-uh-korean="${esc(korean)}" data-uh-display-korean="${esc(shown)}"`;};
+const uHangulAttributes=(value,display='',listDisplay='')=>{const original=text(value,'en'),korean=artistStandardKoreanName(value),shown=display||korean,listed=listDisplay||'';if(!original&&!korean&&!shown&&!listed)return '';return ` data-uh-original="${esc(original)}" data-uh-korean="${esc(korean)}" data-uh-display-korean="${esc(shown)}"${listed?` data-uh-list-korean="${esc(listed)}"`:''}`;};
 function setUHangulMode(mode){uHangulMode=['original','uhangul'].includes(mode)?mode:'korean';sessionStorage.setItem(uHangulModeStorageKey,uHangulMode);window.dispatchEvent(new CustomEvent('uhangulmodechange',{detail:{mode:uHangulMode}}));}
 function sortedTechniques(){return [...techniques].sort((a,b)=>techniqueSortOrder==='korean'?text(a.name,'ko').localeCompare(text(b.name,'ko'),'ko'):Number(a.introduced)-Number(b.introduced)||text(a.name,'ko').localeCompare(text(b.name,'ko'),'ko'));}
 function renderTechniqueSort(){
@@ -152,7 +179,7 @@ function renderTechnique(technique){
   requestAnimationFrame(applyTechniqueSearchFilter);
   const savedLinks=techniqueLinks(technique),addLinkLabel=language==='ko'?'자료 추가':'Add resource',linkInputLabel=language==='ko'?'자료 URL을 입력하세요':'Enter a resource URL',confirmLinkLabel=language==='ko'?'확인':'Add',linkButtons=savedLinks.map((link,index)=>`<button class="technique-link-button" type="button" data-technique-link-index="${index}" title="${esc(link.url)}" aria-label="${esc(`${index+1}. ${link.url}`)}">${index+1}</button>`).join(''),linkAdd=token?`<button class="technique-link-add" type="button" title="${esc(addLinkLabel)}" aria-label="${esc(addLinkLabel)}">+</button>`:'',linkControls=`<span class="technique-link-controls">${linkButtons}</span>`,linkEntry=token?`<form class="technique-link-entry hidden"><input type="url" inputmode="url" placeholder="https://" aria-label="${esc(linkInputLabel)}" required><button type="submit">${esc(confirmLinkLabel)}</button></form>`:'';
   if(technique.comparison){
-    const side=item=>`<article class="technique-comparison-side"><header><p class="eyebrow">${esc(item.introduced)}</p><h2${uHangulAttributes(item.name)}>${esc(text(item.name))}</h2><p class="subtitle">${esc(text(item.subtitle))}</p></header><section><h3>${esc(copy[language].definition)}</h3><p>${esc(text(item.definition))}</p><p>${esc(text(item.explanation))}</p></section>${item.examples?.[0]?`<article class="technique-comparison-example"><img src="${esc(item.examples[0].image)}" alt="${esc(`${text(item.examples[0].artist)} ${text(item.examples[0].title)}`)}"><div><p class="example-year">${esc(item.examples[0].year)} · ${esc(text(item.examples[0].role))}</p><h3>${esc(text(item.examples[0].title))}</h3><p class="artist">${esc(artistDisplay(item.examples[0].artist))}</p></div></article>`:''}</article>`;
+    const side=item=>`<article class="technique-comparison-side"><header><p class="eyebrow">${esc(item.introduced)}</p><h2${uHangulAttributes(item.name)}>${esc(text(item.name))}</h2><p class="subtitle">${esc(text(item.subtitle))}</p></header><section><h3>${esc(copy[language].definition)}</h3><p>${esc(text(item.definition))}</p><p>${esc(text(item.explanation))}</p></section>${item.examples?.[0]?`<article class="technique-comparison-example"><img src="${esc(item.examples[0].image)}" alt="${esc(`${text(item.examples[0].artist)} ${text(item.examples[0].title)}`)}"><div><p class="example-year">${esc(item.examples[0].year)} · ${esc(text(item.examples[0].role))}</p><h3>${esc(text(item.examples[0].title))}</h3><p class="artist"${uHangulAttributes(item.examples[0].artist,artistUHangulDisplay(item.examples[0].artist),artistListKoreanName(item.examples[0].artist))}>${esc(artistDisplay(item.examples[0].artist))}</p></div></article>`:''}</article>`;
     techniqueContent.innerHTML=`<header><p class="eyebrow">TECHNIQUE COMPARISON</p><div class="technique-title-row"><h1${uHangulAttributes(technique.name)}>${esc(text(technique.name))}</h1>${linkAdd}${linkControls}</div><p class="subtitle">두 기법이 무엇을 우선하고 어떤 화면 효과를 만드는지 나란히 비교합니다.</p>${linkEntry}</header><section class="technique-comparison">${side(technique.left)}${side(technique.right)}</section>`;
     renderLanguage();
     setupTechniqueLinkEntry(technique);
@@ -161,7 +188,7 @@ function renderTechnique(technique){
     return;
   }
   const examples=Array.isArray(technique.examples)?technique.examples:[];
-  const development=examples.length?`<section class="development"><h2>${esc(copy[language].development)}</h2>${examples.map(example=>`<article class="technique-example"><div class="example-image"><img src="${esc(example.image)}" alt="${esc(`${text(example.artist)} ${text(example.title)}`)}"></div><div class="example-note"><p class="example-year">${esc(example.year)} · ${esc(text(example.role))}</p><h3>${esc(text(example.title))}</h3><p class="artist ${font === 'uhangul' ? 'uhangul-font' : ''}"${uHangulAttributes(example.artist)}>${esc(artistDisplay(example.artist))}</p><p>${esc(text(example.note))}</p></div></article>`).join('')}</section>`:'';
+  const development=examples.length?`<section class="development"><h2>${esc(copy[language].development)}</h2>${examples.map(example=>`<article class="technique-example"><div class="example-image"><img src="${esc(example.image)}" alt="${esc(`${text(example.artist)} ${text(example.title)}`)}"></div><div class="example-note"><p class="example-year">${esc(example.year)} · ${esc(text(example.role))}</p><h3>${esc(text(example.title))}</h3><p class="artist ${font === 'uhangul' ? 'uhangul-font' : ''}"${uHangulAttributes(example.artist,artistUHangulDisplay(example.artist),artistListKoreanName(example.artist))}>${esc(artistDisplay(example.artist))}</p><p>${esc(text(example.note))}</p></div></article>`).join('')}</section>`:'';
   techniqueContent.innerHTML=`<header><p class="eyebrow">TECHNIQUE · ${esc(technique.introduced)}</p><div class="technique-title-row"><h1${uHangulAttributes(technique.name)}>${esc(text(technique.name))}</h1>${linkAdd}${linkControls}</div><p class="subtitle">${esc(text(technique.subtitle))}</p>${linkEntry}</header><section class="definition"><h2>${esc(copy[language].definition)}</h2><p>${esc(text(technique.definition))}</p><p>${esc(text(technique.explanation))}</p></section>${development}`;
   renderLanguage();
   setupTechniqueLinkEntry(technique);

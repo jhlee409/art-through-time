@@ -1,13 +1,13 @@
 const fs = require('fs');
 const file = 'data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html';
 let html = fs.readFileSync(file, 'utf8');
-const link = (id, original, korean, display) => `<a class="art-atlas-artist-link" href="../../index.html?artist=${id}" target="_blank" rel="noopener" data-artist-id="${id}" data-uh-original="${original}" data-uh-korean="${korean}" data-uh-display-korean="${display}" title="${korean} 연표로 이동">${display}</a>`;
-const eyck = link('artist-Q102272','Jan van Eyck','반 에이크, 얀','얀 반 에이크');
-const weyden = link('artist-Q68631','Rogier van der Weyden','반 데르 베이던, 로히어르','로히어르 반 데르 베이던');
+const link = (id, original, korean, display, list = display) => `<a class="art-atlas-artist-link" href="../../index.html?artist=${id}" target="_blank" rel="noopener" data-artist-id="${id}" data-uh-original="${original}" data-uh-korean="${korean}" data-uh-display-korean="${display}" data-uh-list-korean="${list}" title="${korean} 연표로 이동">${list}</a>`;
+const eyck = link('artist-Q102272','Jan van Eyck','얀 반 에이크','반 에이크, 얀','반 에이크');
+const weyden = link('artist-Q68631','Rogier van der Weyden','로히어르 반 데르 베이던','반 데르 베이던, 로히어르','반 데르 베이던');
 const bruegel = link('artist-Q43270','Pieter Brueghel the Elder','대 피터르 브뤼헐','브뤼헐');
-const durer = link('artist-Q5580','Albrecht Dürer','뒤러, 알브레히트','알브레히트 뒤러');
-const cranach = link('artist-Q191748','Lucas Cranach the Elder','크라나흐, 루카스','루카스 크라나흐');
-const holbein = link('artist-Q48319','Hans Holbein the Younger','홀바인, 한스','한스 홀바인 2세');
+const durer = link('artist-Q5580','Albrecht Dürer','알브레히트 뒤러','뒤러, 알브레히트','뒤러');
+const cranach = link('artist-Q191748','Lucas Cranach the Elder','루카스 크라나흐','크라나흐, 루카스','크라나흐');
+const holbein = link('artist-Q48319','Hans Holbein the Younger','한스 홀바인','홀바인, 한스','홀바인');
 const altdorfer = link('artist-Q153746','Albrecht Altdorfer','알브레히트 알트도르퍼','알브레히트 알트도르퍼');
 const huber = link('artist-Q610556','Wolf Huber','볼프 후버','볼프 후버');
 const replacement = `      <tr><td>저지대 — 초기 네덜란드 회화, 15세기</td><td>유화의 투명한 색층, 반사광, 사물의 재질과 일상 공간을 세밀하게 관찰하는 방식이 두드러졌다. ${eyck}의 물질 묘사와 ${weyden}의 압축된 감정이 이 흐름의 핵심이다.</td><td>${eyck}, ${weyden}</td></tr>

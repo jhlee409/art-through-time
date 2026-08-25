@@ -16,7 +16,7 @@
 .artist-facet-trigger { display:flex; align-items:center; justify-content:space-between; width:100%; min-height:33px; border:1px solid #d7ddd0; border-radius:5px; background:#fffdf8; color:#435448; padding:7px 9px; font:700 11px/1.25 var(--sans); text-align:left; }
 .artist-facet-trigger span { display:inline-grid; place-items:center; min-width:16px; height:16px; margin-left:auto; margin-right:6px; border-radius:999px; background:#e2eadb; color:#425345; font-size:10px; }
 .artist-facet-trigger b { font-size:12px; font-weight:700; }
-.artist-facet-popover { position:absolute; z-index:20; top:calc(100% + 6px); right:0; width:min(340px, calc(100vw - 44px)); max-height:calc(100vh - 150px); overflow:auto; border:1px solid #d7ddd0; border-radius:7px; background:#fffdf8; box-shadow:0 12px 28px rgba(24,34,30,.16); }
+.artist-facet-popover { position:absolute; z-index:20; top:calc(100% + 6px); right:0; width:min(170px, calc(100vw - 44px)); max-height:calc(100vh - 150px); overflow:auto; border:1px solid #d7ddd0; border-radius:7px; background:#fffdf8; box-shadow:0 12px 28px rgba(24,34,30,.16); }
 .artist-facet-title-row { display:flex; align-items:center; justify-content:space-between; padding:7px 7px 3px 9px; }
 .artist-facet-title { font-size: 11px; font-weight: 700; color: #435448; }
 .artist-facet-all-actions { display:flex; gap:3px; }
@@ -100,6 +100,7 @@
 .sidebar > :not(.artist-list) { flex: none; }
 .logout-button { margin-top: 12px; }
 .artist-list { min-height: 0; flex: 1 1 auto; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; }
+.artist-item .avatar { flex: 0 0 31px; width: 31px; min-width: 31px; max-width: 31px; aspect-ratio: 1; }
 
 /* Desktop panes scroll independently instead of moving the whole page. */
 .app-shell { height: 100vh; overflow: hidden; }

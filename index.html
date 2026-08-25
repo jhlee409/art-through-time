@@ -32,7 +32,7 @@
         </div>
         <div class="sidebar-heading">
           <p><span data-i18n="collection">나의 화가 목록</span><span id="artist-count" class="artist-count">총 0명</span></p>
-          <label class="sort-select"><span data-i18n="sort">정렬</span><select id="sort"><option value="name" data-i18n="nameAsc">이름순</option><option value="birth" data-i18n="birthAsc" selected>생년순</option></select></label>
+          <label class="sort-select"><span data-i18n="sort">정렬</span><select id="sort"><option value="nameAsc" data-i18n="nameAsc">이름오름차순</option><option value="nameDesc" data-i18n="nameDesc">이름내림차순</option><option value="birth" data-i18n="birthAsc" selected>생년순</option></select></label>
         </div>
         <nav id="artist-list" class="artist-list" aria-label="화가 목록"></nav>
         <div class="language"><button id="logout-button" class="logout-button" type="button">로그아웃</button><button id="migration-export-button" class="admin-export-button hidden" type="button">FIREBASE 내보내기</button></div>
@@ -61,7 +61,7 @@
         <p class="dialog-description" data-i18n="addHelp">이름을 입력한 뒤 자동완성 목록에서 정확한 후보를 선택해 저장하세요.</p>
         <input id="entry-type" type="hidden" value="artist" />
         <label class="entry-name-field"><span id="entry-name-label" data-i18n="name">이름</span><input id="entry-name" required autocomplete="off" /><div id="suggestions" class="suggestions hidden" role="listbox"></div></label>
-        <label class="artist-full-name-field hidden"><span data-i18n="fullName">Full Name (목록·연표·HTML 표기)</span><input id="entry-full-name" autocomplete="off" placeholder="예: 디 본도네, 조토" /></label><p id="form-message" class="form-message hidden" aria-live="polite"></p>
+        <label class="artist-full-name-field hidden"><span data-i18n="fullName">정식 한국어 이름 (선택)</span><input id="entry-full-name" autocomplete="off" placeholder="예: 조토 디 본도네" /></label><p id="form-message" class="form-message hidden" aria-live="polite"></p>
         <label class="artist-aliases-field hidden"><span data-i18n="artistAliases">별명·줄임말 (쉼표로 구분)</span><input id="entry-artist-aliases" autocomplete="off" placeholder="예: 조토, Giotto di Bondone" /></label>
         <label class="artist-field"><span data-i18n="birthYear">출생 연도 (선택)</span><input id="entry-birth" type="number" min="1" max="2100" /></label>
         <label class="artwork-field hidden"><span data-i18n="artistName">화가 이름</span><input id="entry-artist" list="artist-names" autocomplete="off" /><datalist id="artist-names"></datalist></label>

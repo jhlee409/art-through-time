@@ -197,11 +197,11 @@ timeline.addEventListener('click', event => {
 });
 
 const copy = {
-  ko: {collection:'나의 화가 목록',sort:'정렬',nameAsc:'이름순',birthAsc:'생년순',addArtist:'화가 추가',newRecord:'NEW RECORD',addTitle:'화가 추가',addHelp:'이름을 입력한 뒤 자동완성 목록에서 정확한 후보를 선택해 저장하세요.',addArtwork:'그림 추가',addArtworkTitle:'그림 1점 추가',artworkPage:'로컬 이미지 파일',artworkTitleInput:'작품 제목 (선택)',artworkYearInput:'제작 연도 (선택)',entryType:'추가할 항목',artist:'화가',painting:'그림',webpage:'웹페이지 주소',name:'이름',birthYear:'Birth year (optional)',artistName:'화가 이름',madeYear:'제작 연도',save:'저장하기',timeline:'작품 연표',slideshow:'슬라이드 쇼',selectWork:'작품을 선택하면\n이곳에서 자세히 볼 수 있어요.',noWork:'아직 등록한 작품이 없습니다.',noImage:'이미지 없음',imagePendingUpload:'이미지 업로드 예정',untitled:'제목 없는 작품',unknown:'정보 없음',country:'제작 국가',movement:'화파',year:'제작 연도',source:'저장된 출처',delete:'삭제',confirmDelete:'이 화가와 등록한 작품을 목록에서 삭제할까요?',confirmDeleteWork:'이 작품을 삭제할까요?',manualWorks:'직접 추가한 작품',movementAtlas:'미술 사조로 보기',countries:'비교할 나라',selectAllCountries:'전체 선택 / 해제',exportChanges:'변경사항_압축',migrationExport:'FIREBASE 내보내기',period:'기간',artistSpan:'선택 화가의 활동 기간',storedInfo:'저장된 작품 정보',loadingInfo:'작품 정보를 정리해 저장하는 중입니다.',noInfo:'저장된 설명이 아직 없습니다.',favorites:'MY FAVORITES',searchArtists:'화가 이름 검색',movementFilter:'사조 선택',allMovements:'전체 사조',clearMovementFilter:'사조 필터 해제',noSearchResult:'일치하는 화가가 없습니다.'},
-  en: {collection:'MY ARTISTS',sort:'SORT',nameAsc:'Name',birthAsc:'Birth year',addArtist:'Add artist',addTitle:'Add artist',addHelp:'Enter a name, then choose the correct artist from suggestions.',addArtwork:'Add artwork',addArtworkTitle:'Add one artwork',artworkPage:'Local image file',artworkTitleInput:'Artwork title (optional)',artworkYearInput:'Year made (optional)',entryType:'Add',artist:'Artist',painting:'Artwork',webpage:'Webpage URL',name:'Name',birthYear:'Birth year (optional)',artistName:'Artist name',madeYear:'Year made',save:'Save',timeline:'WORKS TIMELINE',slideshow:'Slideshow',selectWork:'Select an artwork\nto view its details here.',noWork:'No artworks have been added yet.',noImage:'No image available',imagePendingUpload:'Image scheduled for upload',untitled:'Untitled',unknown:'Unknown',country:'Country made',movement:'Movement',year:'Year made',source:'Stored source',delete:'Delete this artist and their listed works?',confirmDeleteWork:'Delete this artwork?',manualWorks:'MANUALLY ADDED WORKS',movementAtlas:'Movement comparison',countries:'Countries',selectAllCountries:'Select / clear all',exportChanges:'EXPORT CHANGES',migrationExport:'EXPORT FOR FIREBASE',period:'Period',artistSpan:'Selected artist lifespan',storedInfo:'Stored artwork information',loadingInfo:'Preparing and saving artwork information.',noInfo:'No stored description yet.',favorites:'MY FAVORITES',searchArtists:'Search artists',movementFilter:'Movement filter',allMovements:'All movements',clearMovementFilter:'Clear movement filter',noSearchResult:'No matching artists.'}
+  ko: {collection:'나의 화가 목록',sort:'정렬',nameAsc:'이름오름차순',nameDesc:'이름내림차순',birthAsc:'생년순',addArtist:'화가 추가',newRecord:'NEW RECORD',addTitle:'화가 추가',addHelp:'이름을 입력한 뒤 자동완성 목록에서 정확한 후보를 선택해 저장하세요.',addArtwork:'그림 추가',addArtworkTitle:'그림 1점 추가',artworkPage:'로컬 이미지 파일',artworkTitleInput:'작품 제목 (선택)',artworkYearInput:'제작 연도 (선택)',entryType:'추가할 항목',artist:'화가',painting:'그림',webpage:'웹페이지 주소',name:'이름',birthYear:'Birth year (optional)',artistName:'화가 이름',madeYear:'제작 연도',save:'저장하기',timeline:'작품 연표',slideshow:'슬라이드 쇼',selectWork:'작품을 선택하면\n이곳에서 자세히 볼 수 있어요.',noWork:'아직 등록한 작품이 없습니다.',noImage:'이미지 없음',imagePendingUpload:'이미지 업로드 예정',untitled:'제목 없는 작품',unknown:'정보 없음',country:'제작 국가',movement:'화파',year:'제작 연도',source:'저장된 출처',delete:'삭제',confirmDelete:'이 화가와 등록한 작품을 목록에서 삭제할까요?',confirmDeleteWork:'이 작품을 삭제할까요?',manualWorks:'직접 추가한 작품',movementAtlas:'미술 사조로 보기',countries:'비교할 나라',selectAllCountries:'전체 선택 / 해제',exportChanges:'변경사항_압축',migrationExport:'FIREBASE 내보내기',period:'기간',artistSpan:'선택 화가의 활동 기간',storedInfo:'저장된 작품 정보',loadingInfo:'작품 정보를 정리해 저장하는 중입니다.',noInfo:'저장된 설명이 아직 없습니다.',favorites:'MY FAVORITES',searchArtists:'화가 이름 검색',movementFilter:'사조 선택',allMovements:'전체 사조',clearMovementFilter:'사조 필터 해제',noSearchResult:'일치하는 화가가 없습니다.'},
+  en: {collection:'MY ARTISTS',sort:'SORT',nameAsc:'Name ascending',nameDesc:'Name descending',birthAsc:'Birth year',addArtist:'Add artist',addTitle:'Add artist',addHelp:'Enter a name, then choose the correct artist from suggestions.',addArtwork:'Add artwork',addArtworkTitle:'Add one artwork',artworkPage:'Local image file',artworkTitleInput:'Artwork title (optional)',artworkYearInput:'Year made (optional)',entryType:'Add',artist:'Artist',painting:'Artwork',webpage:'Webpage URL',name:'Name',birthYear:'Birth year (optional)',artistName:'Artist name',madeYear:'Year made',save:'Save',timeline:'WORKS TIMELINE',slideshow:'Slideshow',selectWork:'Select an artwork\nto view its details here.',noWork:'No artworks have been added yet.',noImage:'No image available',imagePendingUpload:'Image scheduled for upload',untitled:'Untitled',unknown:'Unknown',country:'Country made',movement:'Movement',year:'Year made',source:'Stored source',delete:'Delete this artist and their listed works?',confirmDeleteWork:'Delete this artwork?',manualWorks:'MANUALLY ADDED WORKS',movementAtlas:'Movement comparison',countries:'Countries',selectAllCountries:'Select / clear all',exportChanges:'EXPORT CHANGES',migrationExport:'EXPORT FOR FIREBASE',period:'Period',artistSpan:'Selected artist lifespan',storedInfo:'Stored artwork information',loadingInfo:'Preparing and saving artwork information.',noInfo:'No stored description yet.',favorites:'MY FAVORITES',searchArtists:'Search artists',movementFilter:'Movement filter',allMovements:'All movements',clearMovementFilter:'Clear movement filter',noSearchResult:'No matching artists.'}
 };
 Object.assign(copy.ko, {
-  fullName:'Full Name (목록·연표·HTML 표기)',
+  fullName:'정식 한국어 이름 (선택)',
   artistAliases:'별명·줄임말 (쉼표로 구분)',
   artworkPage:'로컬 이미지 파일',
   localArtwork:'로컬 이미지',
@@ -504,10 +504,11 @@ function countryInk(country) {
 const esc = (text='') => String(text).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
 function uHangulArtistAttributes(artist, displayName) {
   const original = artist?.name?.en || '';
-  const korean = artist?.name?.ko || '';
-  const display = displayName || korean;
-  if (!original && !korean && !display) return '';
-  return ` data-uh-original="${esc(original)}" data-uh-korean="${esc(korean)}" data-uh-display-korean="${esc(display)}"`;
+  const korean = artistStandardKoreanName(artist);
+  const display = artistUHangulDisplayName(artist) || korean;
+  const listKorean = displayName || korean;
+  if (!original && !korean && !display && !listKorean) return '';
+  return ` data-uh-original="${esc(original)}" data-uh-korean="${esc(korean)}" data-uh-display-korean="${esc(display)}" data-uh-list-korean="${esc(listKorean)}"`;
 }
 function setUHangulMode(mode) {
   uHangulMode = ['uhangul','original'].includes(mode) ? mode : 'korean';
@@ -632,12 +633,62 @@ const koreanArtistDisplayOverrides = {
   Q5598: '렘브란트 하르먼손 반 레인',
   Q312617: '로소 피오렌티노'
 };
+const koreanArtistListNameOverrides = {
+  Q7814: '조토',
+  Q102272: '반 에이크',
+  Q68631: '반 데르 베이던',
+  Q762: '다 빈치',
+  Q5592: '미켈란젤로',
+  Q5597: '라파엘로',
+  Q47551: '티치아노',
+  Q312617: '로소',
+  Q48319: '홀바인',
+  Q7803: '브론치노',
+  Q9348: '파르미자니노',
+  Q9319: '틴토레토',
+  Q43270: '브뤼헐',
+  Q301: '엘 그레코',
+  Q42207: '카라바조',
+  Q5598: '렘브란트',
+  Q82445: '툴루즈로트레크',
+  Q155151: '바토',
+  Q296: '모네'
+};
+const koreanNameParticles = new Set(['반', '판', '폰', '데', '드', '델', '다', '디', '더', '르', '라', '레', '테르']);
+function koreanNameFirst(name) {
+  const source = String(name || '').trim();
+  if (!source.includes(',')) return source;
+  const [family, given] = source.split(',').map(part => part.trim()).filter(Boolean);
+  return [given, family].filter(Boolean).join(' ') || source;
+}
 function artistDisplayName(artist) {
   if (language !== 'ko') return loc(artist?.name);
-  const fullName = String(artist?.fullName || '').trim();
-  if (fullName) return fullName;
-  const koreanName = artist?.name?.ko || loc(artist?.name) || '';
+  return artistStandardKoreanName(artist);
+}
+function artistStandardKoreanName(artist) {
+  return koreanNameFirst(artist?.name?.ko || loc(artist?.name) || artist?.fullName || '');
+}
+function artistUHangulDisplayName(artist) {
+  const koreanName = artistStandardKoreanName(artist);
   return koreanArtistDisplayOverrides[artist?.qid] || koreanFamilyFirst(koreanName, artist?.name?.en || '');
+}
+function artistListKoreanName(artist) {
+  const explicit = artist?.listName?.ko || artist?.shortName?.ko;
+  if (explicit) return explicit;
+  const qid = artist?.qid;
+  if (koreanArtistListNameOverrides[qid]) return koreanArtistListNameOverrides[qid];
+  const aliases = textList(artist?.aliases?.ko || []);
+  const standard = artistStandardKoreanName(artist);
+  const alias = aliases.find(value => {
+    const text = String(value || '').trim();
+    return text && !text.includes(',') && text !== standard && text.split(/\s+/).length <= 3;
+  });
+  if (alias) return alias;
+  const words = standard.replace(/,/g, ' ').split(/\s+/).filter(Boolean);
+  if (words.length <= 1) return standard;
+  let start = words.length - 1;
+  while (start > 0 && koreanNameParticles.has(words[start - 1])) start--;
+  return words.slice(start).join(' ');
 }
 function textList(value) {
   return (Array.isArray(value) ? value : []).map(item => String(item || '').trim()).filter(Boolean);
@@ -648,7 +699,15 @@ function artistAliases(artist) {
   return [...textList(aliases?.ko), ...textList(aliases?.en)];
 }
 function artistSearchText(artist) {
-  return [artist?.fullName, artist?.name?.ko, artist?.name?.en, loc(artist?.name), artistDisplayName(artist), ...artistAliases(artist)].filter(Boolean).join(' ').toLocaleLowerCase();
+  return [artist?.fullName, artist?.name?.ko, artist?.name?.en, loc(artist?.name), artistDisplayName(artist), artistUHangulDisplayName(artist), artistListKoreanName(artist), ...artistAliases(artist)].filter(Boolean).join(' ').toLocaleLowerCase();
+}
+function compareArtistsByName(a, b) {
+  return artistListKoreanName(a).localeCompare(artistListKoreanName(b), 'ko');
+}
+function compareArtistsForSort(a, b, sort) {
+  if (sort === 'birth') return (a.birth || 9999) - (b.birth || 9999) || compareArtistsByName(a, b);
+  const byName = compareArtistsByName(a, b);
+  return sort === 'nameDesc' ? -byName : byName;
 }
 function artistLinks(artist) {
   return Array.isArray(artist?.links) ? artist.links.filter(link => {
@@ -1561,7 +1620,7 @@ function renderList() {
   const artistCount = $('#artist-count');
   if (artistCount) artistCount.textContent = language === 'ko' ? `총 ${artists.length}명` : `${artists.length} artists`;
   const sort = $('#sort').value;
-  const effectiveSort = Object.values(artistFacetFilters).some(values => values.size) ? 'birth' : sort;
+  const effectiveSort = sort === 'name' ? 'nameAsc' : sort;
   const query = artistSearchQuery.toLocaleLowerCase();
   const compactQuery = normalized(artistSearchQuery);
   const ordered = [...artists].filter(a => {
@@ -1569,17 +1628,17 @@ function renderList() {
     if (!query) return true;
     const searchText = artistSearchText(a);
     return searchText.includes(query) || (compactQuery && normalized(searchText).includes(compactQuery));
-  }).sort((a,b) => effectiveSort === 'birth' ? (a.birth || 9999) - (b.birth || 9999) : artistDisplayName(a).localeCompare(artistDisplayName(b), language));
+  }).sort((a,b) => compareArtistsForSort(a, b, effectiveSort));
   list.innerHTML = ordered.length ? ordered.map(a => {
     const country = artistCountryInfo(a), countryLabel = artistCountryLabel(a), movement = artistMovementDisplayInfo(a).parentLabel;
-    const displayName = artistDisplayName(a);
+    const displayName = language === 'ko' ? artistListKoreanName(a) : loc(a.name);
     const nameAttributes = uHangulArtistAttributes(a, displayName);
     const historicalCountry = country.original !== country.name;
     return `<div class="artist-row ${a.id === selectedId ? 'active':''}"><button class="artist-item" data-id="${esc(a.id)}"><span class="avatar ${historicalCountry ? 'historical-country' : ''}" style="background:${countryColor(country.colorKey)};color:${countryInk(country.colorKey)}" title="${esc(countryLabel)}" aria-label="${esc(countryLabel)}">${esc(countryAvatarText(country))}</span><span class="artist-text"><span class="artist-name"${nameAttributes}>${esc(displayName)}</span><span class="artist-years">${years(a)}${movement ? ` · ${esc(movement)}` : ''}</span></span></button>${currentUserIsAdmin ? `<button class="delete-artist" data-id="${esc(a.id)}" title="${esc(t('delete'))}" aria-label="${esc(t('delete'))}">×</button>` : ''}</div>`;
   }).join('') : `<p class="artist-search-empty">${t('noSearchResult')}</p>`;
   list.querySelectorAll('.artist-item').forEach(button => button.onclick = async () => { viewMode = 'timeline'; selectedId = button.dataset.id; persist(); closeDetail(); const artist = artists.find(item => item.id === selectedId); await hydrateThumbnails(artist); renderList(); renderTimeline(); await enrichArtist(); });
   list.querySelectorAll('.delete-artist').forEach(button => button.onclick = async event => { event.stopPropagation(); if (!currentUserIsAdmin || !confirm(t('confirmDelete'))) return; const deleted = artists.find(artist => artist.id === button.dataset.id); artists = artists.filter(artist => artist.id !== button.dataset.id); if (selectedId === button.dataset.id) selectedId = artists[0]?.id || null; persist(); if (!await saveArtistsNow()) { artists.push(deleted); if (!selectedId) selectedId = deleted.id; alert(language === 'ko' ? '삭제 내용을 저장하지 못해 복원했습니다.' : 'The deletion could not be saved, so it was restored.'); } render(); });
-  $('#artist-names').innerHTML = artists.flatMap(a => [artistDisplayName(a), a.fullName, a.name?.ko, a.name?.en, ...artistAliases(a)]).filter(Boolean).filter((value,index,self) => self.indexOf(value) === index).map(value => `<option value="${esc(value)}"></option>`).join('');
+  $('#artist-names').innerHTML = artists.flatMap(a => [artistListKoreanName(a), artistDisplayName(a), artistUHangulDisplayName(a), a.fullName, a.name?.ko, a.name?.en, ...artistAliases(a)]).filter(Boolean).filter((value,index,self) => self.indexOf(value) === index).map(value => `<option value="${esc(value)}"></option>`).join('');
 }
 function setupArtistSummaryEditor(artist) {
   const box = timeline.querySelector('.artist-summary-box');

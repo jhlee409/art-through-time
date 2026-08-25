@@ -59,7 +59,9 @@ async function linkEntries() {
       id: artist.id,
       name: artist.name?.ko || artist.name?.en || alias,
       korean: artist.name?.ko || '',
-      original: artist.name?.en || ''
+      original: artist.name?.en || '',
+      displayKorean: artist.fullName || artist.name?.ko || '',
+      listKorean: artist.listName?.ko || artist.shortName?.ko || artist.name?.ko || alias
     });
   }
   return entries.sort((a, b) => b.alias.length - a.alias.length || a.alias.localeCompare(b.alias, 'ko'));
@@ -95,7 +97,7 @@ function linkHtml(html, entries) {
     return part.replace(artistPattern, (match, name, particle = '') => {
       const entry = byAlias.get(name.normalize('NFC').toLocaleLowerCase('ko-KR'));
       if (!entry) return match;
-      return `<a class="art-atlas-artist-link" href="../../index.html?artist=${encodeURIComponent(entry.id)}" target="_blank" rel="noopener" data-artist-id="${escapeAttribute(entry.id)}" data-uh-original="${escapeAttribute(entry.original)}" data-uh-korean="${escapeAttribute(entry.korean)}" data-uh-display-korean="${escapeAttribute(name)}" title="${escapeAttribute(entry.name)} 연표로 이동">${name}</a>${particle}`;
+      return `<a class="art-atlas-artist-link" href="../../index.html?artist=${encodeURIComponent(entry.id)}" target="_blank" rel="noopener" data-artist-id="${escapeAttribute(entry.id)}" data-uh-original="${escapeAttribute(entry.original)}" data-uh-korean="${escapeAttribute(entry.korean)}" data-uh-display-korean="${escapeAttribute(entry.displayKorean || entry.name || entry.korean)}" data-uh-list-korean="${escapeAttribute(entry.listKorean || name)}" title="${escapeAttribute(entry.korean || entry.name)} 연표로 이동">${name}</a>${particle}`;
     });
   }).join('');
   return injectStyle(linked);

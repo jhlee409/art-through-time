@@ -30,7 +30,7 @@ html = html.replace(
   '$1로히어르 반 데르 베이던"',
 );
 
-const bruegelLink = '<a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q43270" target="_blank" rel="noopener" data-artist-id="artist-Q43270" data-uh-original="Pieter Brueghel the Elder" data-uh-korean="대 피터르 브뤼헐" data-uh-display-korean="브뤼헐" title="대 피터르 브뤼헐 연표로 이동">브뤼헐</a>';
+const bruegelLink = '<a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q43270" target="_blank" rel="noopener" data-artist-id="artist-Q43270" data-uh-original="Pieter Brueghel the Elder" data-uh-korean="대 피터르 브뤼헐" data-uh-display-korean="브뤼헐, 피터르 대" title="대 피터르 브뤼헐 연표로 이동" data-uh-list-korean="브뤼헐">브뤼헐</a>';
 const flandersRowStart = html.indexOf('<td>네덜란드·플랑드르</td>');
 const flandersRowEnd = html.indexOf('</tr>', flandersRowStart);
 if (flandersRowStart < 0 || flandersRowEnd < 0) throw new Error('Netherlands–Flanders row not found');
@@ -80,7 +80,7 @@ for (const card of cards) {
 const veronese = `<article class="movement-work-card">
   <div class="movement-work-image"><img src="images/Veronese-Wedding-Feast-at-Cana.jpg" alt="파올로 베로네세, 《가나의 혼인잔치》"></div>
   <div class="movement-work-body">
-    <h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q9440" target="_blank" rel="noopener" data-artist-id="artist-Q9440" data-uh-original="Paolo Veronese" data-uh-korean="베로네세, 파올로" data-uh-display-korean="파올로 베로네세" title="베로네세, 파올로 연표로 이동">파올로 베로네세</a>, 《가나의 혼인잔치》</h3>
+    <h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q9440" target="_blank" rel="noopener" data-artist-id="artist-Q9440" data-uh-original="Paolo Veronese" data-uh-korean="파올로 베로네세" data-uh-display-korean="베로네세, 파올로" title="파올로 베로네세 연표로 이동" data-uh-list-korean="베로네세">베로네세</a>, 《가나의 혼인잔치》</h3>
     <small>1562–1563 · 루브르 박물관, 파리</small>
     <p>거대한 연회 장면을 건축과 음악, 화려한 색채의 무대로 만들며 베네치아 르네상스의 장식적 장엄함을 보여준다.</p>
   </div>

@@ -4,14 +4,14 @@ const path = require('path');
 const file = path.join(__dirname, '..', 'data', '미술사조', '37a05b9246dcdbd89a685d55-1.html');
 let html = fs.readFileSync(file, 'utf8');
 
-function anchor(id, original, korean, display) {
-  return `<a class="art-atlas-artist-link" href="../../index.html?artist=artist-${id}" target="_blank" rel="noopener" data-artist-id="artist-${id}" data-uh-original="${original}" data-uh-korean="${korean}" data-uh-display-korean="${display}" title="${korean} 연표로 이동">${display}</a>`;
+function anchor(id, original, korean, display, list = display) {
+  return `<a class="art-atlas-artist-link" href="../../index.html?artist=artist-${id}" target="_blank" rel="noopener" data-artist-id="artist-${id}" data-uh-original="${original}" data-uh-korean="${korean}" data-uh-display-korean="${display}" data-uh-list-korean="${list}" title="${korean} 연표로 이동">${list}</a>`;
 }
 
 const caravaggio = anchor('1786371252483', 'Caravaggio', '카라바조', '카라바조');
 const carracci = anchor('Q7824', 'Annibale Carracci', '안니발레 카라치', '카라치');
-const bernini = anchor('Q160538', 'Gian Lorenzo Bernini', '베르니니, 잔 로렌초', '베르니니');
-const hals = anchor('Q167654', 'Frans Hals', '할스, 프란스', '프란스 할스');
+const bernini = anchor('Q160538', 'Gian Lorenzo Bernini', '잔 로렌초 베르니니', '베르니니, 잔 로렌초', '베르니니');
+const hals = anchor('Q167654', 'Frans Hals', '프란스 할스', '할스, 프란스', '할스');
 const rembrandt = anchor('rembrandt', 'Rembrandt Harmenszoon van Rijn', '렘브란트 하르먼손 반 레인', '렘브란트');
 const vermeer = anchor('Q41264', 'Johannes Vermeer', '요하네스 페르메이르', '베르메르');
 const zurbaran = anchor('Q209615', 'Francisco de Zurbaran', '프란시스코 데 수르바란', '수르바란');

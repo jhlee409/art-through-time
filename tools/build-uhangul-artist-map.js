@@ -107,8 +107,39 @@ const koreanArtistDisplayOverrides = {
   Q5592: '부오나로티, 미켈란젤로',
   Q5597: '산치오, 라파엘로',
   Q5598: '렘브란트 하르먼손 반 레인',
-  Q312617: '로소 피오렌티노'
+  Q312617: '로소 피오렌티노',
+  Q83155: '다비드, 자크루이'
 };
+const koreanArtistListNameOverrides = {
+  Q7814: '조토',
+  Q102272: '반 에이크',
+  Q68631: '반 데르 베이던',
+  Q762: '다 빈치',
+  Q5592: '미켈란젤로',
+  Q5597: '라파엘로',
+  Q47551: '티치아노',
+  Q312617: '로소',
+  Q48319: '홀바인',
+  Q7803: '브론치노',
+  Q9348: '파르미자니노',
+  Q9319: '틴토레토',
+  Q43270: '브뤼헐',
+  Q301: '엘 그레코',
+  Q42207: '카라바조',
+  Q5598: '렘브란트',
+  Q82445: '툴루즈로트레크',
+  Q155151: '바토',
+  Q296: '모네',
+  Q83155: '다비드'
+};
+const koreanNameParticles = new Set(['반', '판', '폰', '데', '드', '델', '다', '디', '더', '르', '라', '레', '테르']);
+
+function koreanNameFirst(name) {
+  const source = String(name || '').trim();
+  if (!source.includes(',')) return source;
+  const [family, given] = source.split(',').map(part => part.trim()).filter(Boolean);
+  return [given, family].filter(Boolean).join(' ') || source;
+}
 
 function koreanFamilyFirst(name, originalName) {
   if (String(name || '').includes(',')) return String(name || '').trim();
@@ -123,8 +154,26 @@ function koreanFamilyFirst(name, originalName) {
 }
 
 function displayName(artist) {
-  const korean = artist?.name?.ko || '';
+  const korean = koreanNameFirst(artist?.name?.ko || '');
   return koreanArtistDisplayOverrides[artist?.qid] || koreanFamilyFirst(korean, artist?.name?.en || '');
+}
+
+function listName(artist) {
+  const explicit = artist?.listName?.ko || artist?.shortName?.ko;
+  if (explicit) return explicit;
+  if (koreanArtistListNameOverrides[artist?.qid]) return koreanArtistListNameOverrides[artist.qid];
+  const standard = koreanNameFirst(artist?.name?.ko || '');
+  const aliases = Array.isArray(artist?.aliases?.ko) ? artist.aliases.ko : [];
+  const alias = aliases.find(value => {
+    const text = String(value || '').trim();
+    return text && !text.includes(',') && text !== standard && text.split(/\s+/).length <= 3;
+  });
+  if (alias) return alias;
+  const words = standard.replace(/,/g, ' ').split(/\s+/).filter(Boolean);
+  if (words.length <= 1) return standard;
+  let start = words.length - 1;
+  while (start > 0 && koreanNameParticles.has(words[start - 1])) start--;
+  return words.slice(start).join(' ');
 }
 
 function latinKey(value) {
@@ -314,10 +363,11 @@ function displayNotation(canonicalKorean, canonicalNotation, displayKorean) {
   return display.replace(/[가-힣]+/g, word => wordMap.get(word) || autoNotation('', word));
 }
 
-function createNameRecord({id, original, korean, displayKorean, language = 'und', spanish = false}={}) {
+function createNameRecord({id, original, korean, displayKorean, listKorean, language = 'und', spanish = false}={}) {
   original = String(original || '');
-  korean = String(korean || '');
+  korean = koreanNameFirst(String(korean || ''));
   const shown = String(displayKorean || korean || original);
+  const listed = String(listKorean || shown);
   const canonicalNotation = autoNotation(original, korean || shown, {spanish});
   const manual = manualUHangulByOriginal[normalizeText(latinKey(original))];
   return {
@@ -327,6 +377,7 @@ function createNameRecord({id, original, korean, displayKorean, language = 'und'
     language,
     korean,
     displayKorean: shown,
+    listKorean: listed,
     aliases: aliasesForName(original, korean || shown, shown),
     uhangul: manual ? manual({original, korean, displayKorean: shown}) : displayNotation(korean || shown, canonicalNotation, shown),
     note: 'auto-generated from original and Korean artist names'
@@ -338,7 +389,7 @@ function artistRecord(artist) {
   const korean = artist?.name?.ko || '';
   const nationality = `${artist?.nationality?.ko || ''} ${artist?.nationality?.en || ''}`;
   const spanish = !/스페인령|spanish netherlands/i.test(nationality) && /스페인|\bspain\b|멕시코|\bmexico\b|콜롬비아|\bcolombia\b|아르헨티나|\bargentina\b|칠레|\bchile\b|페루|\bperu\b/i.test(nationality);
-  return createNameRecord({id:artist.qid || artist.id,original,korean,displayKorean:displayName(artist) || korean || original,language:spanish ? 'es' : 'und',spanish});
+  return createNameRecord({id:artist.qid || artist.id,original,korean,displayKorean:displayName(artist) || korean || original,listKorean:listName(artist) || korean || original,language:spanish ? 'es' : 'und',spanish});
 }
 
 function buildArtistMap(artists) {

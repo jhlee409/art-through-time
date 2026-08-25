@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-25T12:07:58.819Z",
+  "generatedAt": "2026-08-25T14:31:04.151Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -10,6 +10,7 @@
       "language": "und",
       "korean": "아브라함 블로에마르트",
       "displayKorean": "블로에마르트, 아브라함",
+      "listKorean": "블로에마르트",
       "aliases": {
         "ko": [
           "블로에마르트",
@@ -42,6 +43,7 @@
       "language": "und",
       "korean": "아돌프 멘첼",
       "displayKorean": "아돌프 멘첼",
+      "listKorean": "아돌프 멘첼",
       "aliases": {
         "ko": [
           "멘첼"
@@ -65,6 +67,7 @@
       "language": "und",
       "korean": "아드리안 브라우어",
       "displayKorean": "아드리안 브라우어",
+      "listKorean": "아드리안 브라우어",
       "aliases": {
         "ko": [
           "브라우어"
@@ -88,6 +91,7 @@
       "language": "und",
       "korean": "애그니스 마틴",
       "displayKorean": "애그니스 마틴",
+      "listKorean": "애그니스 마틴",
       "aliases": {
         "ko": [
           "마틴"
@@ -111,6 +115,7 @@
       "language": "und",
       "korean": "아고스티노 카라치",
       "displayKorean": "아고스티노 카라치",
+      "listKorean": "아고스티노 카라치",
       "aliases": {
         "ko": [
           "카라치"
@@ -134,6 +139,7 @@
       "language": "und",
       "korean": "아이웨이웨이",
       "displayKorean": "아이웨이웨이",
+      "listKorean": "아이웨이웨이",
       "aliases": {
         "ko": [],
         "en": [
@@ -155,6 +161,7 @@
       "language": "und",
       "korean": "알브레히트 알트도르퍼",
       "displayKorean": "알트도르퍼, 알브레히트",
+      "listKorean": "알트도르퍼",
       "aliases": {
         "ko": [
           "알트도르퍼",
@@ -185,6 +192,7 @@
       "language": "und",
       "korean": "알브레히트 뒤러",
       "displayKorean": "뒤러, 알브레히트",
+      "listKorean": "뒤러",
       "aliases": {
         "ko": [
           "뒤러",
@@ -216,6 +224,7 @@
       "language": "und",
       "korean": "데이네카",
       "displayKorean": "데이네카",
+      "listKorean": "데이네카",
       "aliases": {
         "ko": [],
         "en": [
@@ -237,6 +246,7 @@
       "language": "und",
       "korean": "게라시모프",
       "displayKorean": "게라시모프",
+      "listKorean": "게라시모프",
       "aliases": {
         "ko": [],
         "en": [
@@ -258,6 +268,7 @@
       "language": "und",
       "korean": "알렉산드르 로드첸코",
       "displayKorean": "알렉산드르 로드첸코",
+      "listKorean": "알렉산드르 로드첸코",
       "aliases": {
         "ko": [
           "로드첸코"
@@ -281,6 +292,7 @@
       "language": "und",
       "korean": "알렉세이 폰 야블렌스키",
       "displayKorean": "알렉세이 폰 야블렌스키",
+      "listKorean": "알렉세이 폰 야블렌스키",
       "aliases": {
         "ko": [
           "폰 야블렌스키",
@@ -306,6 +318,7 @@
       "language": "und",
       "korean": "알프레드 시슬레",
       "displayKorean": "알프레드 시슬레",
+      "listKorean": "알프레드 시슬레",
       "aliases": {
         "ko": [
           "시슬레"
@@ -329,6 +342,7 @@
       "language": "und",
       "korean": "알폰스 무하",
       "displayKorean": "알폰스 무하",
+      "listKorean": "알폰스 무하",
       "aliases": {
         "ko": [
           "무하"
@@ -352,6 +366,7 @@
       "language": "und",
       "korean": "암브로조 로렌체티",
       "displayKorean": "암브로조 로렌체티",
+      "listKorean": "암브로조 로렌체티",
       "aliases": {
         "ko": [
           "로렌체티"
@@ -375,6 +390,7 @@
       "language": "und",
       "korean": "아메데오 모딜리아니",
       "displayKorean": "아메데오 모딜리아니",
+      "listKorean": "아메데오 모딜리아니",
       "aliases": {
         "ko": [
           "모딜리아니"
@@ -398,6 +414,7 @@
       "language": "und",
       "korean": "앙드레 브르통",
       "displayKorean": "앙드레 브르통",
+      "listKorean": "앙드레 브르통",
       "aliases": {
         "ko": [
           "브르통"
@@ -422,6 +439,7 @@
       "language": "und",
       "korean": "드랭",
       "displayKorean": "드랭",
+      "listKorean": "드랭",
       "aliases": {
         "ko": [],
         "en": [
@@ -444,6 +462,7 @@
       "language": "und",
       "korean": "앙드레 마송",
       "displayKorean": "앙드레 마송",
+      "listKorean": "앙드레 마송",
       "aliases": {
         "ko": [
           "마송"
@@ -468,6 +487,7 @@
       "language": "und",
       "korean": "안드레아 델 사르토",
       "displayKorean": "안드레아 델 사르토",
+      "listKorean": "안드레아 델 사르토",
       "aliases": {
         "ko": [
           "델 사르토",
@@ -493,6 +513,7 @@
       "language": "und",
       "korean": "안드레아 델 베로키오",
       "displayKorean": "안드레아 델 베로키오",
+      "listKorean": "안드레아 델 베로키오",
       "aliases": {
         "ko": [
           "델 베로키오",
@@ -518,6 +539,7 @@
       "language": "und",
       "korean": "안드레아 만테냐",
       "displayKorean": "안드레아 만테냐",
+      "listKorean": "안드레아 만테냐",
       "aliases": {
         "ko": [
           "만테냐"
@@ -540,8 +562,9 @@
       "uhangulVersion": "0.7",
       "original": "Angelica Kauffman",
       "language": "und",
-      "korean": "안젤리카 카우프만",
+      "korean": "앙겔리카 카우프만",
       "displayKorean": "카우프만, 앙겔리카",
+      "listKorean": "카우프만",
       "aliases": {
         "ko": [
           "카우프만",
@@ -569,6 +592,7 @@
       "language": "und",
       "korean": "아니시 카푸어",
       "displayKorean": "아니시 카푸어",
+      "listKorean": "아니시 카푸어",
       "aliases": {
         "ko": [
           "카푸어"
@@ -590,8 +614,9 @@
       "uhangulVersion": "0.7",
       "original": "Annibale Carracci",
       "language": "und",
-      "korean": "카라치",
+      "korean": "안니발레 카라치",
       "displayKorean": "카라치, 안니발레",
+      "listKorean": "카라치",
       "aliases": {
         "ko": [
           "카라치",
@@ -625,6 +650,7 @@
       "language": "und",
       "korean": "안젤름 키퍼",
       "displayKorean": "안젤름 키퍼",
+      "listKorean": "안젤름 키퍼",
       "aliases": {
         "ko": [
           "키퍼"
@@ -648,6 +674,7 @@
       "language": "und",
       "korean": "안토니 반 다이크",
       "displayKorean": "반 다이크, 안토니",
+      "listKorean": "반 다이크",
       "aliases": {
         "ko": [
           "반 다이크",
@@ -685,24 +712,26 @@
       "uhangulVersion": "0.7",
       "original": "Antoine Watteau",
       "language": "und",
-      "korean": "와토",
-      "displayKorean": "와토, 앙투안",
+      "korean": "앙투안 바토",
+      "displayKorean": "바토, 앙투안",
+      "listKorean": "바토",
       "aliases": {
         "ko": [
-          "와토",
-          "앙투안 와토"
+          "바토",
+          "앙투안 바토"
         ],
         "en": [
           "Watteau",
           "Antoine Watteau"
         ]
       },
-      "uhangul": "와토, 앙투안",
+      "uhangul": "[Vㅏ]토, 앙투안",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
+        "data/techniques.json",
         "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
@@ -714,6 +743,7 @@
       "language": "und",
       "korean": "안톤 라파엘 멩스",
       "displayKorean": "멩스, 안톤 라파엘",
+      "listKorean": "멩스",
       "aliases": {
         "ko": [
           "멩스",
@@ -741,6 +771,7 @@
       "language": "und",
       "korean": "안토넬로 다 메시나",
       "displayKorean": "안토넬로 다 메시나",
+      "listKorean": "안토넬로 다 메시나",
       "aliases": {
         "ko": [
           "다 메시나",
@@ -766,6 +797,7 @@
       "language": "und",
       "korean": "안토니오 카노바",
       "displayKorean": "카노바, 안토니오",
+      "listKorean": "카노바",
       "aliases": {
         "ko": [
           "카노바",
@@ -793,6 +825,7 @@
       "language": "und",
       "korean": "아르놀트 뵈클린",
       "displayKorean": "아르놀트 뵈클린",
+      "listKorean": "아르놀트 뵈클린",
       "aliases": {
         "ko": [
           "뵈클린"
@@ -817,6 +850,7 @@
       "language": "und",
       "korean": "아쉴 고키",
       "displayKorean": "아쉴 고키",
+      "listKorean": "아쉴 고키",
       "aliases": {
         "ko": [
           "고키"
@@ -840,6 +874,7 @@
       "language": "und",
       "korean": "아르테미시아 젠틸레스키",
       "displayKorean": "아르테미시아 젠틸레스키",
+      "listKorean": "아르테미시아 젠틸레스키",
       "aliases": {
         "ko": [
           "젠틸레스키"
@@ -863,6 +898,7 @@
       "language": "und",
       "korean": "아서 스트리튼",
       "displayKorean": "아서 스트리튼",
+      "listKorean": "아서 스트리튼",
       "aliases": {
         "ko": [
           "스트리튼"
@@ -886,6 +922,7 @@
       "language": "und",
       "korean": "아삼 형제",
       "displayKorean": "아삼 형제",
+      "listKorean": "아삼 형제",
       "aliases": {
         "ko": [
           "형제"
@@ -909,6 +946,7 @@
       "language": "und",
       "korean": "오브리 비어즐리",
       "displayKorean": "오브리 비어즐리",
+      "listKorean": "오브리 비어즐리",
       "aliases": {
         "ko": [
           "비어즐리"
@@ -932,6 +970,7 @@
       "language": "und",
       "korean": "아우구스트 마케",
       "displayKorean": "아우구스트 마케",
+      "listKorean": "아우구스트 마케",
       "aliases": {
         "ko": [
           "마케"
@@ -955,6 +994,7 @@
       "language": "und",
       "korean": "노이만",
       "displayKorean": "노이만",
+      "listKorean": "노이만",
       "aliases": {
         "ko": [],
         "en": [
@@ -976,6 +1016,7 @@
       "language": "und",
       "korean": "뱅크시",
       "displayKorean": "뱅크시",
+      "listKorean": "뱅크시",
       "aliases": {
         "ko": [],
         "en": []
@@ -995,6 +1036,7 @@
       "language": "und",
       "korean": "바버라 크루거",
       "displayKorean": "바버라 크루거",
+      "listKorean": "바버라 크루거",
       "aliases": {
         "ko": [
           "크루거"
@@ -1016,8 +1058,9 @@
       "uhangulVersion": "0.7",
       "original": "Bartholomeus Spranger",
       "language": "und",
-      "korean": "바르톨로메우스 슈프랑어",
+      "korean": "바르톨로메우스 슈프랑거",
       "displayKorean": "슈프랑거, 바르톨로메우스",
+      "listKorean": "슈프랑거",
       "aliases": {
         "ko": [
           "슈프랑어",
@@ -1048,8 +1091,9 @@
       "uhangulVersion": "0.7",
       "original": "Bartolomé Esteban Murillo",
       "language": "und",
-      "korean": "무리요",
+      "korean": "바르톨로메 에스테반 무리요",
       "displayKorean": "무리요, 바르톨로메 에스테반",
+      "listKorean": "무리요",
       "aliases": {
         "ko": [
           "무리요",
@@ -1080,6 +1124,7 @@
       "language": "und",
       "korean": "벨러 초벨",
       "displayKorean": "벨러 초벨",
+      "listKorean": "벨러 초벨",
       "aliases": {
         "ko": [
           "초벨"
@@ -1104,6 +1149,7 @@
       "language": "und",
       "korean": "벤저민 웨스트",
       "displayKorean": "웨스트, 벤저민",
+      "listKorean": "웨스트",
       "aliases": {
         "ko": [
           "웨스트",
@@ -1131,6 +1177,7 @@
       "language": "und",
       "korean": "베르텔 토르발센",
       "displayKorean": "베르텔 토르발센",
+      "listKorean": "베르텔 토르발센",
       "aliases": {
         "ko": [
           "토르발센"
@@ -1154,6 +1201,7 @@
       "language": "und",
       "korean": "모리조",
       "displayKorean": "모리조",
+      "listKorean": "모리조",
       "aliases": {
         "ko": [],
         "en": [
@@ -1175,6 +1223,7 @@
       "language": "und",
       "korean": "빌 비올라",
       "displayKorean": "빌 비올라",
+      "listKorean": "빌 비올라",
       "aliases": {
         "ko": [
           "비올라"
@@ -1198,6 +1247,7 @@
       "language": "und",
       "korean": "브론치노",
       "displayKorean": "브론치노",
+      "listKorean": "브론치노",
       "aliases": {
         "ko": [
           "아뇰로 브론치노",
@@ -1233,6 +1283,7 @@
       "language": "und",
       "korean": "브루스 나우먼",
       "displayKorean": "브루스 나우먼",
+      "listKorean": "브루스 나우먼",
       "aliases": {
         "ko": [
           "나우먼"
@@ -1256,6 +1307,7 @@
       "language": "und",
       "korean": "차이궈창",
       "displayKorean": "차이궈창",
+      "listKorean": "차이궈창",
       "aliases": {
         "ko": [],
         "en": [
@@ -1277,6 +1329,7 @@
       "language": "und",
       "korean": "피사로",
       "displayKorean": "피사로",
+      "listKorean": "피사로",
       "aliases": {
         "ko": [
           "피사로"
@@ -1301,6 +1354,7 @@
       "language": "und",
       "korean": "카날레토",
       "displayKorean": "카날레토",
+      "listKorean": "카날레토",
       "aliases": {
         "ko": [
           "카날레토"
@@ -1315,6 +1369,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
+        "data/techniques.json",
         "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
@@ -1326,6 +1381,7 @@
       "language": "und",
       "korean": "카라바조",
       "displayKorean": "카라바조",
+      "listKorean": "카라바조",
       "aliases": {
         "ko": [
           "다 카라바조",
@@ -1344,7 +1400,8 @@
         "data/techniques.json",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
-        "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
+        "data/미술사조/c0d228e179032941f8d9ebfb-1.html",
+        "data/미술사조/de537ba74c4bee89423120bc-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1355,6 +1412,7 @@
       "language": "und",
       "korean": "칼 안드레",
       "displayKorean": "칼 안드레",
+      "listKorean": "칼 안드레",
       "aliases": {
         "ko": [
           "안드레"
@@ -1378,6 +1436,7 @@
       "language": "und",
       "korean": "칼 라르손",
       "displayKorean": "라르손, 칼",
+      "listKorean": "라르손",
       "aliases": {
         "ko": [
           "라르손",
@@ -1408,6 +1467,7 @@
       "language": "und",
       "korean": "카를로 마라타",
       "displayKorean": "카를로 마라타",
+      "listKorean": "카를로 마라타",
       "aliases": {
         "ko": [
           "마라타"
@@ -1429,8 +1489,9 @@
       "uhangulVersion": "0.7",
       "original": "Caspar David Friedrich",
       "language": "und",
-      "korean": "카스파르 다비트 프리드리히",
+      "korean": "카스파 다비드 프리드리히",
       "displayKorean": "프리드리히, 카스파 다비드",
+      "listKorean": "프리드리히",
       "aliases": {
         "ko": [
           "프리드리히",
@@ -1465,6 +1526,7 @@
       "language": "und",
       "korean": "샤를 르브룅",
       "displayKorean": "샤를 르브룅",
+      "listKorean": "르브룅",
       "aliases": {
         "ko": [
           "르브룅",
@@ -1495,6 +1557,7 @@
       "language": "und",
       "korean": "차일드 해섬",
       "displayKorean": "차일드 해섬",
+      "listKorean": "차일드 해섬",
       "aliases": {
         "ko": [
           "해섬"
@@ -1518,6 +1581,7 @@
       "language": "und",
       "korean": "치마 다 코넬리아노",
       "displayKorean": "치마 다 코넬리아노",
+      "listKorean": "치마 다 코넬리아노",
       "aliases": {
         "ko": [
           "다 코넬리아노",
@@ -1543,6 +1607,7 @@
       "language": "und",
       "korean": "치마부에",
       "displayKorean": "치마부에",
+      "listKorean": "치마부에",
       "aliases": {
         "ko": [],
         "en": []
@@ -1562,6 +1627,7 @@
       "language": "und",
       "korean": "신디 셔먼",
       "displayKorean": "신디 셔먼",
+      "listKorean": "신디 셔먼",
       "aliases": {
         "ko": [
           "셔먼"
@@ -1585,6 +1651,7 @@
       "language": "und",
       "korean": "클로드 로랭",
       "displayKorean": "로랭, 클로드",
+      "listKorean": "로랭",
       "aliases": {
         "ko": [
           "로랭",
@@ -1610,13 +1677,12 @@
       "uhangulVersion": "0.7",
       "original": "Claude Monet",
       "language": "und",
-      "korean": "모네",
-      "displayKorean": "다비드, 자크루이",
+      "korean": "클로드 모네",
+      "displayKorean": "모네, 클로드",
+      "listKorean": "모네",
       "aliases": {
         "ko": [
           "모네",
-          "다비드",
-          "자크루이 다비드",
           "클로드 모네",
           "오스카클로드 모네"
         ],
@@ -1627,13 +1693,14 @@
           "Claude Oscar Monet"
         ]
       },
-      "uhangul": "다비드, 자크루이",
+      "uhangul": "모네, 클로드",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/techniques.json",
+        "data/미술사조/236b5b248aa3129573179c3b-1.html",
         "data/미술사조/81bf5950142af1141dfcf738-1.html",
         "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html",
         "tools/complete-impressionist-cards.js",
@@ -1651,6 +1718,7 @@
       "language": "und",
       "korean": "코르넬리스 반 하를렘",
       "displayKorean": "반 하를렘, 코르넬리스",
+      "listKorean": "코르넬리스 판 하를럼",
       "aliases": {
         "ko": [
           "반 하를렘",
@@ -1689,6 +1757,7 @@
       "language": "und",
       "korean": "코레조",
       "displayKorean": "코레조",
+      "listKorean": "코레조",
       "aliases": {
         "ko": [],
         "en": []
@@ -1708,6 +1777,7 @@
       "language": "und",
       "korean": "데이미언 허스트",
       "displayKorean": "데이미언 허스트",
+      "listKorean": "데이미언 허스트",
       "aliases": {
         "ko": [
           "허스트"
@@ -1731,6 +1801,7 @@
       "language": "und",
       "korean": "댄 플래빈",
       "displayKorean": "댄 플래빈",
+      "listKorean": "댄 플래빈",
       "aliases": {
         "ko": [
           "플래빈"
@@ -1754,6 +1825,7 @@
       "language": "und",
       "korean": "단테 가브리엘 로세티",
       "displayKorean": "단테 가브리엘 로세티",
+      "listKorean": "단테 가브리엘 로세티",
       "aliases": {
         "ko": [
           "로세티"
@@ -1777,6 +1849,7 @@
       "language": "und",
       "korean": "다비드 알파로 시케이로스",
       "displayKorean": "다비드 알파로 시케이로스",
+      "listKorean": "다비드 알파로 시케이로스",
       "aliases": {
         "ko": [
           "시케이로스"
@@ -1800,6 +1873,7 @@
       "language": "und",
       "korean": "데이비드 해먼스",
       "displayKorean": "데이비드 해먼스",
+      "listKorean": "데이비드 해먼스",
       "aliases": {
         "ko": [
           "해먼스"
@@ -1823,6 +1897,7 @@
       "language": "und",
       "korean": "다비드 테니르스",
       "displayKorean": "다비드 테니르스",
+      "listKorean": "다비드 테니르스",
       "aliases": {
         "ko": [
           "테니르스"
@@ -1847,6 +1922,7 @@
       "language": "und",
       "korean": "디에고 리베라",
       "displayKorean": "디에고 리베라",
+      "listKorean": "디에고 리베라",
       "aliases": {
         "ko": [
           "리베라"
@@ -1868,8 +1944,9 @@
       "uhangulVersion": "0.7",
       "original": "Diego Velázquez",
       "language": "und",
-      "korean": "벨라스케스",
+      "korean": "디에고 벨라스케스",
       "displayKorean": "벨라스케스, 디에고",
+      "listKorean": "벨라스케스",
       "aliases": {
         "ko": [
           "벨라스케스",
@@ -1903,6 +1980,7 @@
       "language": "und",
       "korean": "도메니키노",
       "displayKorean": "도메니키노",
+      "listKorean": "도메니키노",
       "aliases": {
         "ko": [],
         "en": []
@@ -1922,6 +2000,7 @@
       "language": "und",
       "korean": "도메니코 기를란다요",
       "displayKorean": "도메니코 기를란다요",
+      "listKorean": "도메니코 기를란다요",
       "aliases": {
         "ko": [
           "기를란다요"
@@ -1945,6 +2024,7 @@
       "language": "und",
       "korean": "도메니코 베네치아노",
       "displayKorean": "도메니코 베네치아노",
+      "listKorean": "도메니코 베네치아노",
       "aliases": {
         "ko": [
           "베네치아노"
@@ -1968,6 +2048,7 @@
       "language": "und",
       "korean": "도널드 저드",
       "displayKorean": "도널드 저드",
+      "listKorean": "도널드 저드",
       "aliases": {
         "ko": [
           "저드"
@@ -1991,6 +2072,7 @@
       "language": "und",
       "korean": "도로시아 태닝",
       "displayKorean": "도로시아 태닝",
+      "listKorean": "도로시아 태닝",
       "aliases": {
         "ko": [
           "태닝"
@@ -2014,6 +2096,7 @@
       "language": "und",
       "korean": "두초",
       "displayKorean": "두초",
+      "listKorean": "두초",
       "aliases": {
         "ko": [],
         "en": []
@@ -2033,6 +2116,7 @@
       "language": "und",
       "korean": "드가",
       "displayKorean": "드가",
+      "listKorean": "드가",
       "aliases": {
         "ko": [],
         "en": [
@@ -2052,8 +2136,9 @@
       "uhangulVersion": "0.7",
       "original": "Édouard Manet",
       "language": "und",
-      "korean": "마네",
+      "korean": "에두아르 마네",
       "displayKorean": "마네, 에두아르",
+      "listKorean": "마네",
       "aliases": {
         "ko": [
           "마네",
@@ -2087,6 +2172,7 @@
       "language": "und",
       "korean": "에두아르 뷔야르",
       "displayKorean": "에두아르 뷔야르",
+      "listKorean": "에두아르 뷔야르",
       "aliases": {
         "ko": [
           "뷔야르"
@@ -2111,6 +2197,7 @@
       "language": "und",
       "korean": "에드바르 뭉크",
       "displayKorean": "에드바르 뭉크",
+      "listKorean": "에드바르 뭉크",
       "aliases": {
         "ko": [
           "뭉크"
@@ -2134,6 +2221,7 @@
       "language": "und",
       "korean": "에드워드 워즈워스",
       "displayKorean": "에드워드 워즈워스",
+      "listKorean": "에드워드 워즈워스",
       "aliases": {
         "ko": [
           "워즈워스"
@@ -2157,6 +2245,7 @@
       "language": "und",
       "korean": "에곤 실레",
       "displayKorean": "에곤 실레",
+      "listKorean": "에곤 실레",
       "aliases": {
         "ko": [
           "실레"
@@ -2180,6 +2269,7 @@
       "language": "und",
       "korean": "엘 아나추이",
       "displayKorean": "엘 아나추이",
+      "listKorean": "엘 아나추이",
       "aliases": {
         "ko": [
           "아나추이"
@@ -2203,6 +2293,7 @@
       "language": "und",
       "korean": "엘 그레코",
       "displayKorean": "엘 그레코",
+      "listKorean": "엘 그레코",
       "aliases": {
         "ko": [
           "그레코",
@@ -2239,6 +2330,7 @@
       "language": "und",
       "korean": "리시츠키",
       "displayKorean": "리시츠키",
+      "listKorean": "리시츠키",
       "aliases": {
         "ko": [],
         "en": [
@@ -2260,6 +2352,7 @@
       "language": "und",
       "korean": "엘리자베스 루이 비제 르 브룅",
       "displayKorean": "비제 르 브룅, 엘리자베스 루이",
+      "listKorean": "르 브룅",
       "aliases": {
         "ko": [
           "르 브룅",
@@ -2283,6 +2376,7 @@
         "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html",
         "data/미술사조/c0d228e179032941f8d9ebfb-1.html",
         "tools/apply-first-batch-movement-enhancements.js",
+        "tools/link-neoclassical-document.js",
         "Wikidata"
       ],
       "status": "verified-pair",
@@ -2297,6 +2391,7 @@
       "language": "und",
       "korean": "엘리자베타 시라니",
       "displayKorean": "엘리자베타 시라니",
+      "listKorean": "엘리자베타 시라니",
       "aliases": {
         "ko": [
           "시라니"
@@ -2320,6 +2415,7 @@
       "language": "und",
       "korean": "에밀 필라",
       "displayKorean": "에밀 필라",
+      "listKorean": "에밀 필라",
       "aliases": {
         "ko": [
           "필라"
@@ -2343,6 +2439,7 @@
       "language": "und",
       "korean": "에밀 놀데",
       "displayKorean": "에밀 놀데",
+      "listKorean": "에밀 놀데",
       "aliases": {
         "ko": [
           "놀데"
@@ -2366,6 +2463,7 @@
       "language": "und",
       "korean": "에미 헤닝스",
       "displayKorean": "에미 헤닝스",
+      "listKorean": "에미 헤닝스",
       "aliases": {
         "ko": [
           "헤닝스"
@@ -2389,6 +2487,7 @@
       "language": "und",
       "korean": "헤켈",
       "displayKorean": "헤켈",
+      "listKorean": "헤켈",
       "aliases": {
         "ko": [],
         "en": [
@@ -2410,6 +2509,7 @@
       "language": "und",
       "korean": "키르히너",
       "displayKorean": "키르히너",
+      "listKorean": "키르히너",
       "aliases": {
         "ko": [],
         "en": [
@@ -2431,6 +2531,7 @@
       "language": "und",
       "korean": "외젠 부댕",
       "displayKorean": "외젠 부댕",
+      "listKorean": "외젠 부댕",
       "aliases": {
         "ko": [
           "부댕"
@@ -2453,8 +2554,9 @@
       "uhangulVersion": "0.7",
       "original": "Eugène Delacroix",
       "language": "und",
-      "korean": "들라크루아",
+      "korean": "외젠 들라크루아",
       "displayKorean": "들라크루아, 외젠",
+      "listKorean": "들라크루아",
       "aliases": {
         "ko": [
           "들라크루아",
@@ -2485,6 +2587,7 @@
       "language": "und",
       "korean": "에바 곤잘레스",
       "displayKorean": "에바 곤잘레스",
+      "listKorean": "에바 곤잘레스",
       "aliases": {
         "ko": [
           "곤잘레스"
@@ -2509,6 +2612,7 @@
       "language": "und",
       "korean": "에바 헤세",
       "displayKorean": "에바 헤세",
+      "listKorean": "에바 헤세",
       "aliases": {
         "ko": [
           "헤세"
@@ -2532,6 +2636,7 @@
       "language": "und",
       "korean": "페이스 링골드",
       "displayKorean": "페이스 링골드",
+      "listKorean": "페이스 링골드",
       "aliases": {
         "ko": [
           "링골드"
@@ -2555,6 +2660,7 @@
       "language": "und",
       "korean": "페르낭 크노프",
       "displayKorean": "페르낭 크노프",
+      "listKorean": "페르낭 크노프",
       "aliases": {
         "ko": [
           "크노프"
@@ -2578,6 +2684,7 @@
       "language": "und",
       "korean": "페르난도 보테로",
       "displayKorean": "페르난도 보테로",
+      "listKorean": "페르난도 보테로",
       "aliases": {
         "ko": [
           "보테로"
@@ -2601,6 +2708,7 @@
       "language": "und",
       "korean": "필리포 리피",
       "displayKorean": "필리포 리피",
+      "listKorean": "필리포 리피",
       "aliases": {
         "ko": [
           "리피"
@@ -2624,6 +2732,7 @@
       "language": "und",
       "korean": "포드 매덕스 브라운",
       "displayKorean": "포드 매덕스 브라운",
+      "listKorean": "포드 매덕스 브라운",
       "aliases": {
         "ko": [
           "브라운"
@@ -2647,6 +2756,7 @@
       "language": "und",
       "korean": "프라 안젤리코",
       "displayKorean": "프라 안젤리코",
+      "listKorean": "프라 안젤리코",
       "aliases": {
         "ko": [
           "안젤리코"
@@ -2670,6 +2780,7 @@
       "language": "und",
       "korean": "프란체스코 과르디",
       "displayKorean": "프란체스코 과르디",
+      "listKorean": "프란체스코 과르디",
       "aliases": {
         "ko": [
           "과르디"
@@ -2691,8 +2802,9 @@
       "uhangulVersion": "0.7",
       "original": "Francesco Primaticcio",
       "language": "und",
-      "korean": "프리마티초",
+      "korean": "프란체스코 프리마티초",
       "displayKorean": "프리마티초, 프란체스코",
+      "listKorean": "프리마티초",
       "aliases": {
         "ko": [
           "프리마티초",
@@ -2722,6 +2834,7 @@
       "language": "und",
       "korean": "프란체스코 프리마티초 · 조반니 바티스타 만토바노",
       "displayKorean": "프란체스코 프리마티초 · 조반니 바티스타 만토바노",
+      "listKorean": "프란체스코 프리마티초 · 조반니 바티스타 만토바노",
       "aliases": {
         "ko": [
           "만토바노"
@@ -2745,6 +2858,7 @@
       "language": "und",
       "korean": "프란체스코 솔리메나",
       "displayKorean": "프란체스코 솔리메나",
+      "listKorean": "프란체스코 솔리메나",
       "aliases": {
         "ko": [
           "솔리메나"
@@ -2768,6 +2882,7 @@
       "language": "und",
       "korean": "피카비아",
       "displayKorean": "피카비아",
+      "listKorean": "피카비아",
       "aliases": {
         "ko": [],
         "en": [
@@ -2787,8 +2902,9 @@
       "uhangulVersion": "0.7",
       "original": "Francisco de Zurbarán",
       "language": "und",
-      "korean": "수르바란",
+      "korean": "프란시스코 데 수르바란",
       "displayKorean": "데 수르바란, 프란시스코",
+      "listKorean": "수르바란",
       "aliases": {
         "ko": [
           "데 수르바란",
@@ -2807,7 +2923,7 @@
           "Francisco de Zurbaran Salazar"
         ]
       },
-      "uhangul": "데 [Zㅜ][Rㅡ]바[Rㅏㄴ], [Fㅡ][Rㅏㄴ]시스코",
+      "uhangul": "데 수[Rㅡ]바[Rㅏㄴ], [Fㅡ][Rㅏㄴ]시스코",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
@@ -2824,6 +2940,7 @@
       "language": "und",
       "korean": "프란시스코 고야",
       "displayKorean": "고야, 프란시스코",
+      "listKorean": "고야",
       "aliases": {
         "ko": [
           "고야",
@@ -2851,6 +2968,7 @@
       "language": "und",
       "korean": "프란시스코 리발타",
       "displayKorean": "프란시스코 리발타",
+      "listKorean": "프란시스코 리발타",
       "aliases": {
         "ko": [
           "리발타"
@@ -2872,8 +2990,9 @@
       "uhangulVersion": "0.7",
       "original": "François Boucher",
       "language": "und",
-      "korean": "부셰",
+      "korean": "프랑수아 부셰",
       "displayKorean": "부셰, 프랑수아",
+      "listKorean": "부셰",
       "aliases": {
         "ko": [
           "부셰",
@@ -2902,6 +3021,7 @@
       "language": "und",
       "korean": "프랑수아 클루에",
       "displayKorean": "클루에, 프랑수아",
+      "listKorean": "클루에",
       "aliases": {
         "ko": [
           "클루에",
@@ -2935,6 +3055,7 @@
       "language": "und",
       "korean": "프랭크 스텔라",
       "displayKorean": "프랭크 스텔라",
+      "listKorean": "프랭크 스텔라",
       "aliases": {
         "ko": [
           "스텔라"
@@ -2958,6 +3079,7 @@
       "language": "und",
       "korean": "프란스 할스",
       "displayKorean": "할스, 프란스",
+      "listKorean": "할스",
       "aliases": {
         "ko": [
           "할스",
@@ -2987,6 +3109,7 @@
       "language": "und",
       "korean": "프란스 스네이더르스",
       "displayKorean": "프란스 스네이더르스",
+      "listKorean": "프란스 스네이더르스",
       "aliases": {
         "ko": [
           "스네이더르스"
@@ -3010,6 +3133,7 @@
       "language": "und",
       "korean": "프란츠 마르크",
       "displayKorean": "프란츠 마르크",
+      "listKorean": "프란츠 마르크",
       "aliases": {
         "ko": [
           "마르크"
@@ -3033,6 +3157,7 @@
       "language": "und",
       "korean": "프란츠 폰 슈투크",
       "displayKorean": "프란츠 폰 슈투크",
+      "listKorean": "프란츠 폰 슈투크",
       "aliases": {
         "ko": [
           "폰 슈투크",
@@ -3058,6 +3183,7 @@
       "language": "und",
       "korean": "프레데리크 바지유",
       "displayKorean": "프레데리크 바지유",
+      "listKorean": "프레데리크 바지유",
       "aliases": {
         "ko": [
           "바지유"
@@ -3082,6 +3208,7 @@
       "language": "und",
       "korean": "프레더릭 에드윈 처치",
       "displayKorean": "처치, 프레더릭 에드윈",
+      "listKorean": "처치",
       "aliases": {
         "ko": [
           "처치",
@@ -3109,6 +3236,7 @@
       "language": "und",
       "korean": "프레더릭 레이턴",
       "displayKorean": "프레더릭 레이턴",
+      "listKorean": "프레더릭 레이턴",
       "aliases": {
         "ko": [
           "레이턴"
@@ -3130,8 +3258,9 @@
       "uhangulVersion": "0.7",
       "original": "Frida Kahlo",
       "language": "und",
-      "korean": "칼로",
+      "korean": "프리다 칼로",
       "displayKorean": "칼로, 프리다",
+      "listKorean": "칼로",
       "aliases": {
         "ko": [
           "칼로",
@@ -3166,6 +3295,7 @@
       "language": "und",
       "korean": "가브리엘 메추",
       "displayKorean": "가브리엘 메추",
+      "listKorean": "가브리엘 메추",
       "aliases": {
         "ko": [
           "메추"
@@ -3189,6 +3319,7 @@
       "language": "und",
       "korean": "가브리엘레 뮌터",
       "displayKorean": "가브리엘레 뮌터",
+      "listKorean": "가브리엘레 뮌터",
       "aliases": {
         "ko": [
           "뮌터"
@@ -3213,6 +3344,7 @@
       "language": "und",
       "korean": "젠틸레 다 파브리아노",
       "displayKorean": "젠틸레 다 파브리아노",
+      "listKorean": "젠틸레 다 파브리아노",
       "aliases": {
         "ko": [
           "다 파브리아노",
@@ -3238,6 +3370,7 @@
       "language": "und",
       "korean": "게오르크 바젤리츠",
       "displayKorean": "게오르크 바젤리츠",
+      "listKorean": "게오르크 바젤리츠",
       "aliases": {
         "ko": [
           "바젤리츠"
@@ -3261,6 +3394,7 @@
       "language": "und",
       "korean": "조지 프레더릭 와츠",
       "displayKorean": "조지 프레더릭 와츠",
+      "listKorean": "조지 프레더릭 와츠",
       "aliases": {
         "ko": [
           "와츠"
@@ -3284,6 +3418,7 @@
       "language": "und",
       "korean": "그로스",
       "displayKorean": "그로스",
+      "listKorean": "그로스",
       "aliases": {
         "ko": [
           "그로스"
@@ -3307,6 +3442,7 @@
       "language": "und",
       "korean": "조지 스텁스",
       "displayKorean": "조지 스텁스",
+      "listKorean": "조지 스텁스",
       "aliases": {
         "ko": [
           "스텁스"
@@ -3330,6 +3466,7 @@
       "language": "und",
       "korean": "브라크",
       "displayKorean": "브라크",
+      "listKorean": "브라크",
       "aliases": {
         "ko": [],
         "en": [
@@ -3351,6 +3488,7 @@
       "language": "und",
       "korean": "조르주 드 라 투르",
       "displayKorean": "조르주 드 라 투르",
+      "listKorean": "조르주 드 라 투르",
       "aliases": {
         "ko": [
           "드 라 투르",
@@ -3376,6 +3514,7 @@
       "language": "und",
       "korean": "조르주 리브몽데세뉴",
       "displayKorean": "조르주 리브몽데세뉴",
+      "listKorean": "조르주 리브몽데세뉴",
       "aliases": {
         "ko": [
           "리브몽데세뉴"
@@ -3399,6 +3538,7 @@
       "language": "und",
       "korean": "쇠라",
       "displayKorean": "쇠라",
+      "listKorean": "쇠라",
       "aliases": {
         "ko": [
           "쇠라"
@@ -3423,6 +3563,7 @@
       "language": "und",
       "korean": "헤라르트 테르 보르흐",
       "displayKorean": "헤라르트 테르 보르흐",
+      "listKorean": "헤라르트 테르 보르흐",
       "aliases": {
         "ko": [
           "테르 보르흐",
@@ -3448,6 +3589,7 @@
       "language": "und",
       "korean": "게르하르트 리히터",
       "displayKorean": "게르하르트 리히터",
+      "listKorean": "게르하르트 리히터",
       "aliases": {
         "ko": [
           "리히터"
@@ -3471,6 +3613,7 @@
       "language": "und",
       "korean": "발라",
       "displayKorean": "발라",
+      "listKorean": "발라",
       "aliases": {
         "ko": [],
         "en": [
@@ -3492,6 +3635,7 @@
       "language": "und",
       "korean": "티에폴로",
       "displayKorean": "티에폴로",
+      "listKorean": "티에폴로",
       "aliases": {
         "ko": [],
         "en": [
@@ -3513,6 +3657,7 @@
       "language": "und",
       "korean": "잠볼로냐",
       "displayKorean": "잠볼로냐",
+      "listKorean": "잠볼로냐",
       "aliases": {
         "ko": [],
         "en": []
@@ -3530,8 +3675,9 @@
       "uhangulVersion": "0.7",
       "original": "Gian Lorenzo Bernini",
       "language": "und",
-      "korean": "베르니니",
+      "korean": "잔 로렌초 베르니니",
       "displayKorean": "베르니니, 잔 로렌초",
+      "listKorean": "베르니니",
       "aliases": {
         "ko": [
           "베르니니",
@@ -3565,6 +3711,7 @@
       "language": "und",
       "korean": "길버트 스튜어트",
       "displayKorean": "길버트 스튜어트",
+      "listKorean": "길버트 스튜어트",
       "aliases": {
         "ko": [
           "스튜어트"
@@ -3588,6 +3735,7 @@
       "language": "und",
       "korean": "세베리니",
       "displayKorean": "세베리니",
+      "listKorean": "세베리니",
       "aliases": {
         "ko": [],
         "en": [
@@ -3609,6 +3757,7 @@
       "language": "und",
       "korean": "조르조 데 키리코",
       "displayKorean": "조르조 데 키리코",
+      "listKorean": "조르조 데 키리코",
       "aliases": {
         "ko": [
           "데 키리코",
@@ -3634,6 +3783,7 @@
       "language": "und",
       "korean": "조르조 모란디",
       "displayKorean": "조르조 모란디",
+      "listKorean": "조르조 모란디",
       "aliases": {
         "ko": [
           "모란디"
@@ -3657,6 +3807,7 @@
       "language": "und",
       "korean": "조르조네",
       "displayKorean": "조르조네",
+      "listKorean": "조르조네",
       "aliases": {
         "ko": [
           "조르조네",
@@ -3692,6 +3843,7 @@
       "language": "und",
       "korean": "조토 디 본도네",
       "displayKorean": "디 본도네, 조토",
+      "listKorean": "조토",
       "aliases": {
         "ko": [
           "디 본도네",
@@ -3728,6 +3880,7 @@
       "language": "und",
       "korean": "조토 디 본도네",
       "displayKorean": "조토 디 본도네",
+      "listKorean": "조토 디 본도네",
       "aliases": {
         "ko": [
           "디 본도네",
@@ -3753,6 +3906,7 @@
       "language": "und",
       "korean": "조반니 바티스타 가울리",
       "displayKorean": "조반니 바티스타 가울리",
+      "listKorean": "조반니 바티스타 가울리",
       "aliases": {
         "ko": [
           "가울리"
@@ -3776,6 +3930,7 @@
       "language": "und",
       "korean": "조반니 바티스타 피아체타",
       "displayKorean": "조반니 바티스타 피아체타",
+      "listKorean": "조반니 바티스타 피아체타",
       "aliases": {
         "ko": [
           "피아체타"
@@ -3799,6 +3954,7 @@
       "language": "und",
       "korean": "조반니 바티스타 티에폴로",
       "displayKorean": "티에폴로, 조반니 바티스타",
+      "listKorean": "티에폴로",
       "aliases": {
         "ko": [
           "티에폴로",
@@ -3825,6 +3981,7 @@
       "language": "und",
       "korean": "조반니 벨리니",
       "displayKorean": "벨리니, 조반니",
+      "listKorean": "벨리니",
       "aliases": {
         "ko": [
           "벨리니",
@@ -3859,6 +4016,7 @@
       "language": "und",
       "korean": "조반니 란프랑코",
       "displayKorean": "조반니 란프랑코",
+      "listKorean": "조반니 란프랑코",
       "aliases": {
         "ko": [
           "란프랑코"
@@ -3882,6 +4040,7 @@
       "language": "und",
       "korean": "주세페 아르침볼도",
       "displayKorean": "아르침볼도, 주세페",
+      "listKorean": "아르침볼도",
       "aliases": {
         "ko": [
           "아르침볼도",
@@ -3913,6 +4072,7 @@
       "language": "und",
       "korean": "구에르치노 · 아고스티노 타시",
       "displayKorean": "구에르치노 · 아고스티노 타시",
+      "listKorean": "구에르치노 · 아고스티노 타시",
       "aliases": {
         "ko": [
           "타시"
@@ -3936,6 +4096,7 @@
       "language": "und",
       "korean": "귀도 레니",
       "displayKorean": "귀도 레니",
+      "listKorean": "귀도 레니",
       "aliases": {
         "ko": [
           "레니"
@@ -3959,6 +4120,7 @@
       "language": "und",
       "korean": "구스타프 클림트",
       "displayKorean": "구스타프 클림트",
+      "listKorean": "구스타프 클림트",
       "aliases": {
         "ko": [
           "클림트"
@@ -3982,6 +4144,7 @@
       "language": "und",
       "korean": "쿠르베",
       "displayKorean": "쿠르베",
+      "listKorean": "쿠르베",
       "aliases": {
         "ko": [],
         "en": [
@@ -4003,6 +4166,7 @@
       "language": "und",
       "korean": "귀스타브 도레",
       "displayKorean": "귀스타브 도레",
+      "listKorean": "귀스타브 도레",
       "aliases": {
         "ko": [
           "도레"
@@ -4027,6 +4191,7 @@
       "language": "und",
       "korean": "귀스타브 모로",
       "displayKorean": "귀스타브 모로",
+      "listKorean": "귀스타브 모로",
       "aliases": {
         "ko": [
           "모로"
@@ -4050,6 +4215,7 @@
       "language": "und",
       "korean": "회흐",
       "displayKorean": "회흐",
+      "listKorean": "회흐",
       "aliases": {
         "ko": [],
         "en": [
@@ -4072,6 +4238,7 @@
       "language": "und",
       "korean": "아르프",
       "displayKorean": "아르프",
+      "listKorean": "아르프",
       "aliases": {
         "ko": [
           "아르프"
@@ -4095,6 +4262,7 @@
       "language": "und",
       "korean": "한스 발둥",
       "displayKorean": "한스 발둥",
+      "listKorean": "한스 발둥",
       "aliases": {
         "ko": [
           "발둥"
@@ -4112,45 +4280,21 @@
       "status": "verified-pair"
     },
     {
-      "id": "hans-holbein-younger",
-      "uhangulVersion": "0.7",
-      "original": "Hans Holbein the Younger",
-      "language": "und",
-      "korean": "한스 홀바인 2세",
-      "displayKorean": "한스 홀바인 2세",
-      "aliases": {
-        "ko": [
-          "2세",
-          "홀바인",
-          "한스 홀바인"
-        ],
-        "en": [
-          "Holbein",
-          "Hans Holbein"
-        ]
-      },
-      "uhangul": "한스 홀바인 2세",
-      "note": "auto-generated from original and Korean artist names",
-      "kind": "person",
-      "sources": [
-        "data/미술사조/manual-person-overrides"
-      ],
-      "status": "verified-pair"
-    },
-    {
       "id": "Q48319",
       "uhangulVersion": "0.7",
       "original": "Hans Holbein the Younger",
       "language": "und",
       "korean": "한스 홀바인",
       "displayKorean": "홀바인, 한스",
+      "listKorean": "홀바인",
       "aliases": {
         "ko": [
+          "2세",
           "홀바인",
+          "한스 홀바인",
           "한스 홀바인 2세",
           "한스 홀바인 소",
-          "홀바인 소",
-          "한스 홀바인"
+          "홀바인 소"
         ],
         "en": [
           "Holbein",
@@ -4164,7 +4308,33 @@
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
+        "data/미술사조/manual-person-overrides",
         "data/artists.json",
+        "data/techniques.json"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "Q48319",
+      "uhangulVersion": "0.7",
+      "original": "Hans Holbein the Younger",
+      "language": "und",
+      "korean": "한스 홀바인",
+      "displayKorean": "홀바인, 한스",
+      "listKorean": "홀바인",
+      "aliases": {
+        "ko": [
+          "홀바인"
+        ],
+        "en": [
+          "Holbein",
+          "Hans Holbein"
+        ]
+      },
+      "uhangul": "홀바인, 한스",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
@@ -4176,6 +4346,7 @@
       "language": "und",
       "korean": "한스 멤링",
       "displayKorean": "한스 멤링",
+      "listKorean": "한스 멤링",
       "aliases": {
         "ko": [
           "멤링"
@@ -4199,6 +4370,7 @@
       "language": "und",
       "korean": "한스 리히터",
       "displayKorean": "한스 리히터",
+      "listKorean": "한스 리히터",
       "aliases": {
         "ko": [
           "리히터"
@@ -4222,6 +4394,7 @@
       "language": "und",
       "korean": "헬렌 프랭컨탤러",
       "displayKorean": "헬렌 프랭컨탤러",
+      "listKorean": "헬렌 프랭컨탤러",
       "aliases": {
         "ko": [
           "프랭컨탤러"
@@ -4245,6 +4418,7 @@
       "language": "und",
       "korean": "헨드릭 골치우스",
       "displayKorean": "골치우스, 헨드릭",
+      "listKorean": "골치우스",
       "aliases": {
         "ko": [
           "골치우스",
@@ -4277,6 +4451,7 @@
       "language": "und",
       "korean": "헨드릭 테르 브뤼헌",
       "displayKorean": "헨드릭 테르 브뤼헌",
+      "listKorean": "헨드릭 테르 브뤼헌",
       "aliases": {
         "ko": [
           "테르 브뤼헌",
@@ -4300,8 +4475,9 @@
       "uhangulVersion": "0.7",
       "original": "Henri de Toulouse-Lautrec",
       "language": "und",
-      "korean": "툴루즈로트렉",
+      "korean": "앙리 드 툴루즈로트레크",
       "displayKorean": "툴루즈로트레크, 앙리 드",
+      "listKorean": "툴루즈로트레크",
       "aliases": {
         "ko": [
           "툴루즈로트레크",
@@ -4339,6 +4515,7 @@
       "language": "und",
       "korean": "마티스",
       "displayKorean": "마티스",
+      "listKorean": "마티스",
       "aliases": {
         "ko": [],
         "en": [
@@ -4360,6 +4537,7 @@
       "language": "und",
       "korean": "앙리 루소",
       "displayKorean": "앙리 루소",
+      "listKorean": "앙리 루소",
       "aliases": {
         "ko": [
           "루소"
@@ -4383,6 +4561,7 @@
       "language": "und",
       "korean": "앙리에드몽 크로스",
       "displayKorean": "앙리에드몽 크로스",
+      "listKorean": "앙리에드몽 크로스",
       "aliases": {
         "ko": [
           "크로스"
@@ -4406,6 +4585,7 @@
       "language": "und",
       "korean": "헨리 퓌슬리",
       "displayKorean": "헨리 퓌슬리",
+      "listKorean": "헨리 퓌슬리",
       "aliases": {
         "ko": [
           "퓌슬리"
@@ -4429,6 +4609,7 @@
       "language": "und",
       "korean": "히에로니무스 보스",
       "displayKorean": "히에로니무스 보스",
+      "listKorean": "히에로니무스 보스",
       "aliases": {
         "ko": [
           "보스"
@@ -4452,6 +4633,7 @@
       "language": "und",
       "korean": "도미에",
       "displayKorean": "도미에",
+      "listKorean": "도미에",
       "aliases": {
         "ko": [],
         "en": [
@@ -4474,6 +4656,7 @@
       "language": "und",
       "korean": "후고 발",
       "displayKorean": "후고 발",
+      "listKorean": "후고 발",
       "aliases": {
         "ko": [],
         "en": [
@@ -4495,6 +4678,7 @@
       "language": "und",
       "korean": "후고 반 데르 후스",
       "displayKorean": "후고 반 데르 후스",
+      "listKorean": "후고 반 데르 후스",
       "aliases": {
         "ko": [
           "후스"
@@ -4519,6 +4703,7 @@
       "language": "und",
       "korean": "야생트 리고",
       "displayKorean": "리고, 야생트",
+      "listKorean": "리고",
       "aliases": {
         "ko": [
           "리고",
@@ -4537,7 +4722,8 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
+        "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
+        "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
     },
@@ -4548,6 +4734,7 @@
       "language": "und",
       "korean": "이브라힘 엘살라히",
       "displayKorean": "이브라힘 엘살라히",
+      "listKorean": "이브라힘 엘살라히",
       "aliases": {
         "ko": [
           "엘살라히"
@@ -4571,6 +4758,7 @@
       "language": "und",
       "korean": "일리야 레핀",
       "displayKorean": "일리야 레핀",
+      "listKorean": "일리야 레핀",
       "aliases": {
         "ko": [
           "레핀"
@@ -4594,6 +4782,7 @@
       "language": "und",
       "korean": "동판화 장인",
       "displayKorean": "동판화 장인",
+      "listKorean": "동판화 장인",
       "aliases": {
         "ko": [
           "장인"
@@ -4617,6 +4806,7 @@
       "language": "und",
       "korean": "브로드스키",
       "displayKorean": "브로드스키",
+      "listKorean": "브로드스키",
       "aliases": {
         "ko": [],
         "en": [
@@ -4638,6 +4828,7 @@
       "language": "und",
       "korean": "레비탄",
       "displayKorean": "레비탄",
+      "listKorean": "레비탄",
       "aliases": {
         "ko": [],
         "en": [
@@ -4659,6 +4850,7 @@
       "language": "und",
       "korean": "이반 크람스코이",
       "displayKorean": "이반 크람스코이",
+      "listKorean": "이반 크람스코이",
       "aliases": {
         "ko": [
           "크람스코이"
@@ -4682,6 +4874,7 @@
       "language": "und",
       "korean": "시시킨",
       "displayKorean": "시시킨",
+      "listKorean": "시시킨",
       "aliases": {
         "ko": [],
         "en": [
@@ -4701,8 +4894,9 @@
       "uhangulVersion": "0.7",
       "original": "J. M. W. Turner",
       "language": "und",
-      "korean": "터너",
+      "korean": "조지프 말로드 윌리엄 터너",
       "displayKorean": "터너, 조지프 말로드 윌리엄",
+      "listKorean": "터너",
       "aliases": {
         "ko": [
           "조지프 말로드 윌리엄 터너",
@@ -4720,32 +4914,8 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
+        "data/techniques.json",
         "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
-      ],
-      "status": "verified-pair"
-    },
-    {
-      "id": "name-jmwturner",
-      "uhangulVersion": "0.7",
-      "original": "J. M. W. Turner",
-      "language": "und",
-      "korean": "J. M. W. 터너",
-      "displayKorean": "J. M. W. 터너",
-      "aliases": {
-        "ko": [
-          "터너",
-          "조지프 말로드 윌리엄 터너"
-        ],
-        "en": [
-          "Turner",
-          "Joseph Mallord William Turner"
-        ]
-      },
-      "uhangul": "J. M. W. 터너",
-      "note": "auto-generated from original and Korean artist names",
-      "kind": "person",
-      "sources": [
-        "data/techniques.json"
       ],
       "status": "verified-pair"
     },
@@ -4756,6 +4926,7 @@
       "language": "und",
       "korean": "야코프 요르단스",
       "displayKorean": "야코프 요르단스",
+      "listKorean": "야코프 요르단스",
       "aliases": {
         "ko": [
           "요르단스"
@@ -4779,6 +4950,7 @@
       "language": "und",
       "korean": "야코프 반 라위스달",
       "displayKorean": "야코프 반 라위스달",
+      "listKorean": "야코프 반 라위스달",
       "aliases": {
         "ko": [
           "반 라위스달",
@@ -4804,6 +4976,7 @@
       "language": "und",
       "korean": "야코포 바사노",
       "displayKorean": "야코포 바사노",
+      "listKorean": "야코포 바사노",
       "aliases": {
         "ko": [
           "바사노"
@@ -4827,6 +5000,7 @@
       "language": "und",
       "korean": "틴토레토",
       "displayKorean": "틴토레토",
+      "listKorean": "틴토레토",
       "aliases": {
         "ko": [
           "야코포 틴토레토",
@@ -4854,12 +5028,13 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q296",
+      "id": "Q83155",
       "uhangulVersion": "0.7",
       "original": "Jacques-Louis David",
       "language": "und",
       "korean": "자크루이 다비드",
       "displayKorean": "다비드, 자크루이",
+      "listKorean": "다비드",
       "aliases": {
         "ko": [
           "다비드",
@@ -4878,9 +5053,7 @@
         "data/artists.json",
         "data/미술사조/0930062b29f8f38dd88ee1a5-1.html",
         "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html",
-        "data/미술사조/236b5b248aa3129573179c3b-1.html",
-        "data/미술사조/81bf5950142af1141dfcf738-1.html",
-        "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html"
+        "tools/add-missing-neoclassical-card.js"
       ],
       "status": "verified-pair"
     },
@@ -4891,6 +5064,7 @@
       "language": "und",
       "korean": "제임스 앙소르",
       "displayKorean": "제임스 앙소르",
+      "listKorean": "제임스 앙소르",
       "aliases": {
         "ko": [
           "앙소르"
@@ -4914,6 +5088,7 @@
       "language": "und",
       "korean": "제임스 맥닐 휘슬러",
       "displayKorean": "제임스 맥닐 휘슬러",
+      "listKorean": "제임스 맥닐 휘슬러",
       "aliases": {
         "ko": [
           "휘슬러"
@@ -4937,6 +5112,7 @@
       "language": "und",
       "korean": "얀 호사르트",
       "displayKorean": "얀 호사르트",
+      "listKorean": "얀 호사르트",
       "aliases": {
         "ko": [
           "호사르트"
@@ -4960,6 +5136,7 @@
       "language": "und",
       "korean": "얀 스테인",
       "displayKorean": "얀 스테인",
+      "listKorean": "얀 스테인",
       "aliases": {
         "ko": [
           "스테인"
@@ -4983,6 +5160,7 @@
       "language": "und",
       "korean": "얀 반 에이크",
       "displayKorean": "반 에이크, 얀",
+      "listKorean": "반 에이크",
       "aliases": {
         "ko": [
           "반 에이크",
@@ -5014,6 +5192,7 @@
       "language": "und",
       "korean": "야니스 쿠넬리스",
       "displayKorean": "야니스 쿠넬리스",
+      "listKorean": "야니스 쿠넬리스",
       "aliases": {
         "ko": [
           "쿠넬리스"
@@ -5037,6 +5216,7 @@
       "language": "und",
       "korean": "장 아르프",
       "displayKorean": "장 아르프",
+      "listKorean": "장 아르프",
       "aliases": {
         "ko": [
           "아르프"
@@ -5060,6 +5240,7 @@
       "language": "und",
       "korean": "장 클루에",
       "displayKorean": "클루에, 장",
+      "listKorean": "클루에",
       "aliases": {
         "ko": [
           "클루에",
@@ -5090,8 +5271,9 @@
       "uhangulVersion": "0.7",
       "original": "Jean-Auguste-Dominique Ingres",
       "language": "und",
-      "korean": "앵그르",
+      "korean": "장오귀스트도미니크 앵그르",
       "displayKorean": "앵그르, 장오귀스트도미니크",
+      "listKorean": "앵그르",
       "aliases": {
         "ko": [
           "앵그르",
@@ -5119,6 +5301,7 @@
       "language": "und",
       "korean": "장바티스트 그뢰즈",
       "displayKorean": "장바티스트 그뢰즈",
+      "listKorean": "장바티스트 그뢰즈",
       "aliases": {
         "ko": [
           "그뢰즈"
@@ -5142,6 +5325,7 @@
       "language": "und",
       "korean": "장바티스트카미유 코로",
       "displayKorean": "장바티스트카미유 코로",
+      "listKorean": "장바티스트카미유 코로",
       "aliases": {
         "ko": [
           "코로"
@@ -5165,6 +5349,7 @@
       "language": "und",
       "korean": "장바티스트 시메옹 샤르댕",
       "displayKorean": "샤르댕, 장바티스트 시메옹",
+      "listKorean": "샤르댕",
       "aliases": {
         "ko": [
           "샤르댕",
@@ -5193,6 +5378,7 @@
       "language": "und",
       "korean": "장에티엔 리오타르",
       "displayKorean": "장에티엔 리오타르",
+      "listKorean": "장에티엔 리오타르",
       "aliases": {
         "ko": [
           "리오타르"
@@ -5217,6 +5403,7 @@
       "language": "und",
       "korean": "밀레",
       "displayKorean": "밀레",
+      "listKorean": "밀레",
       "aliases": {
         "ko": [
           "밀레"
@@ -5240,8 +5427,9 @@
       "uhangulVersion": "0.7",
       "original": "Jean-Honoré Fragonard",
       "language": "und",
-      "korean": "프라고나르",
+      "korean": "장오노레 프라고나르",
       "displayKorean": "프라고나르, 장오노레",
+      "listKorean": "프라고나르",
       "aliases": {
         "ko": [
           "프라고나르",
@@ -5271,6 +5459,7 @@
       "language": "und",
       "korean": "장미셸 바스키아",
       "displayKorean": "장미셸 바스키아",
+      "listKorean": "장미셸 바스키아",
       "aliases": {
         "ko": [
           "바스키아"
@@ -5294,6 +5483,7 @@
       "language": "und",
       "korean": "제니 홀저",
       "displayKorean": "제니 홀저",
+      "listKorean": "제니 홀저",
       "aliases": {
         "ko": [
           "홀저"
@@ -5317,6 +5507,7 @@
       "language": "und",
       "korean": "요아힘 뵈켈라르",
       "displayKorean": "요아힘 뵈켈라르",
+      "listKorean": "요아힘 뵈켈라르",
       "aliases": {
         "ko": [
           "뵈켈라르"
@@ -5340,6 +5531,7 @@
       "language": "und",
       "korean": "요아힘 파티니르",
       "displayKorean": "요아힘 파티니르",
+      "listKorean": "요아힘 파티니르",
       "aliases": {
         "ko": [
           "파티니르"
@@ -5363,6 +5555,7 @@
       "language": "und",
       "korean": "호안 미로",
       "displayKorean": "호안 미로",
+      "listKorean": "호안 미로",
       "aliases": {
         "ko": [
           "미로"
@@ -5387,6 +5580,7 @@
       "language": "und",
       "korean": "조앤 미첼",
       "displayKorean": "조앤 미첼",
+      "listKorean": "조앤 미첼",
       "aliases": {
         "ko": [
           "미첼"
@@ -5410,6 +5604,7 @@
       "language": "und",
       "korean": "호아킨 토레스가르시아",
       "displayKorean": "호아킨 토레스가르시아",
+      "listKorean": "호아킨 토레스가르시아",
       "aliases": {
         "ko": [
           "토레스가르시아"
@@ -5434,6 +5629,7 @@
       "language": "und",
       "korean": "요한 요아힘 빙켈만",
       "displayKorean": "요한 요아힘 빙켈만",
+      "listKorean": "요한 요아힘 빙켈만",
       "aliases": {
         "ko": [
           "빙켈만"
@@ -5455,13 +5651,13 @@
       "uhangulVersion": "0.7",
       "original": "Johannes Vermeer",
       "language": "und",
-      "korean": "베르메르",
+      "korean": "요하네스 페르메이르",
       "displayKorean": "페르메이르, 요하네스",
+      "listKorean": "페르메이르",
       "aliases": {
         "ko": [
           "페르메이르",
           "요하네스 페르메이르",
-          "베르메르",
           "얀 페르메이르"
         ],
         "en": [
@@ -5492,8 +5688,9 @@
       "uhangulVersion": "0.7",
       "original": "John Constable",
       "language": "und",
-      "korean": "컨스터블",
+      "korean": "존 컨스터블",
       "displayKorean": "컨스터블, 존",
+      "listKorean": "컨스터블",
       "aliases": {
         "ko": [
           "컨스터블",
@@ -5522,6 +5719,7 @@
       "language": "und",
       "korean": "존 에버렛 밀레이",
       "displayKorean": "존 에버렛 밀레이",
+      "listKorean": "존 에버렛 밀레이",
       "aliases": {
         "ko": [
           "밀레이"
@@ -5545,6 +5743,7 @@
       "language": "und",
       "korean": "존 플랙스먼",
       "displayKorean": "존 플랙스먼",
+      "listKorean": "존 플랙스먼",
       "aliases": {
         "ko": [
           "플랙스먼"
@@ -5568,6 +5767,7 @@
       "language": "und",
       "korean": "하트필드",
       "displayKorean": "하트필드",
+      "listKorean": "하트필드",
       "aliases": {
         "ko": [],
         "en": [
@@ -5589,6 +5789,7 @@
       "language": "und",
       "korean": "존 싱어 사전트",
       "displayKorean": "존 싱어 사전트",
+      "listKorean": "존 싱어 사전트",
       "aliases": {
         "ko": [
           "사전트"
@@ -5612,6 +5813,7 @@
       "language": "und",
       "korean": "존 싱글턴 코플리",
       "displayKorean": "존 싱글턴 코플리",
+      "listKorean": "존 싱글턴 코플리",
       "aliases": {
         "ko": [
           "코플리"
@@ -5635,6 +5837,7 @@
       "language": "und",
       "korean": "존 소운",
       "displayKorean": "존 소운",
+      "listKorean": "존 소운",
       "aliases": {
         "ko": [
           "소운"
@@ -5658,6 +5861,7 @@
       "language": "und",
       "korean": "존 트럼불",
       "displayKorean": "존 트럼불",
+      "listKorean": "존 트럼불",
       "aliases": {
         "ko": [
           "트럼불"
@@ -5681,6 +5885,7 @@
       "language": "und",
       "korean": "호세 클레멘테 오로스코",
       "displayKorean": "호세 클레멘테 오로스코",
+      "listKorean": "호세 클레멘테 오로스코",
       "aliases": {
         "ko": [
           "오로스코"
@@ -5705,6 +5910,7 @@
       "language": "und",
       "korean": "호세 데 리베라",
       "displayKorean": "호세 데 리베라",
+      "listKorean": "호세 데 리베라",
       "aliases": {
         "ko": [
           "데 리베라",
@@ -5731,6 +5937,7 @@
       "language": "und",
       "korean": "요제프 보이스",
       "displayKorean": "요제프 보이스",
+      "listKorean": "요제프 보이스",
       "aliases": {
         "ko": [
           "보이스"
@@ -5754,6 +5961,7 @@
       "language": "und",
       "korean": "조지프 코수스",
       "displayKorean": "조지프 코수스",
+      "listKorean": "조지프 코수스",
       "aliases": {
         "ko": [
           "코수스"
@@ -5777,6 +5985,7 @@
       "language": "und",
       "korean": "조지프 라이트",
       "displayKorean": "조지프 라이트",
+      "listKorean": "조지프 라이트",
       "aliases": {
         "ko": [
           "라이트"
@@ -5800,6 +6009,7 @@
       "language": "und",
       "korean": "조슈아 레이놀즈",
       "displayKorean": "레이놀즈, 조슈아",
+      "listKorean": "레이놀즈",
       "aliases": {
         "ko": [
           "레이놀즈",
@@ -5827,6 +6037,7 @@
       "language": "und",
       "korean": "후안 데 수르바란",
       "displayKorean": "후안 데 수르바란",
+      "listKorean": "후안 데 수르바란",
       "aliases": {
         "ko": [
           "데 수르바란",
@@ -5853,6 +6064,7 @@
       "language": "und",
       "korean": "후안 그리스",
       "displayKorean": "후안 그리스",
+      "listKorean": "후안 그리스",
       "aliases": {
         "ko": [
           "그리스"
@@ -5876,6 +6088,7 @@
       "language": "und",
       "korean": "후안 산체스 코탄",
       "displayKorean": "후안 산체스 코탄",
+      "listKorean": "후안 산체스 코탄",
       "aliases": {
         "ko": [
           "코탄"
@@ -5900,6 +6113,7 @@
       "language": "und",
       "korean": "유디트 레이스터",
       "displayKorean": "유디트 레이스터",
+      "listKorean": "유디트 레이스터",
       "aliases": {
         "ko": [
           "레이스터"
@@ -5923,6 +6137,7 @@
       "language": "und",
       "korean": "호세 데 리베라",
       "displayKorean": "호세 데 리베라",
+      "listKorean": "호세 데 리베라",
       "aliases": {
         "ko": [
           "데 리베라",
@@ -5948,6 +6163,7 @@
       "language": "und",
       "korean": "말레비치",
       "displayKorean": "말레비치",
+      "listKorean": "말레비치",
       "aliases": {
         "ko": [],
         "en": [
@@ -5969,6 +6185,7 @@
       "language": "und",
       "korean": "키스 해링",
       "displayKorean": "키스 해링",
+      "listKorean": "키스 해링",
       "aliases": {
         "ko": [
           "해링"
@@ -5992,6 +6209,7 @@
       "language": "und",
       "korean": "케네스 놀런드",
       "displayKorean": "케네스 놀런드",
+      "listKorean": "케네스 놀런드",
       "aliases": {
         "ko": [
           "놀런드"
@@ -6015,6 +6233,7 @@
       "language": "und",
       "korean": "케리 제임스 마셜",
       "displayKorean": "케리 제임스 마셜",
+      "listKorean": "케리 제임스 마셜",
       "aliases": {
         "ko": [
           "마셜"
@@ -6038,6 +6257,7 @@
       "language": "und",
       "korean": "슈비터스",
       "displayKorean": "슈비터스",
+      "listKorean": "슈비터스",
       "aliases": {
         "ko": [],
         "en": [
@@ -6059,6 +6279,7 @@
       "language": "und",
       "korean": "로런스 앨마태디마",
       "displayKorean": "로런스 앨마태디마",
+      "listKorean": "로런스 앨마태디마",
       "aliases": {
         "ko": [
           "앨마태디마"
@@ -6082,6 +6303,7 @@
       "language": "und",
       "korean": "로런스 위너",
       "displayKorean": "로런스 위너",
+      "listKorean": "로런스 위너",
       "aliases": {
         "ko": [
           "위너"
@@ -6105,6 +6327,7 @@
       "language": "und",
       "korean": "리 크래스너",
       "displayKorean": "리 크래스너",
+      "listKorean": "리 크래스너",
       "aliases": {
         "ko": [
           "크래스너"
@@ -6126,8 +6349,9 @@
       "uhangulVersion": "0.7",
       "original": "Leonardo da Vinci",
       "language": "und",
-      "korean": "레오나르도",
+      "korean": "레오나르도 다 빈치",
       "displayKorean": "다 빈치, 레오나르도",
+      "listKorean": "다 빈치",
       "aliases": {
         "ko": [
           "다 빈치",
@@ -6171,6 +6395,7 @@
       "language": "und",
       "korean": "레오노라 캐링턴",
       "displayKorean": "레오노라 캐링턴",
+      "listKorean": "레오노라 캐링턴",
       "aliases": {
         "ko": [
           "캐링턴"
@@ -6194,6 +6419,7 @@
       "language": "und",
       "korean": "석판화가",
       "displayKorean": "석판화가",
+      "listKorean": "석판화가",
       "aliases": {
         "ko": [],
         "en": []
@@ -6213,6 +6439,7 @@
       "language": "und",
       "korean": "로렌초 디 크레디",
       "displayKorean": "로렌초 디 크레디",
+      "listKorean": "로렌초 디 크레디",
       "aliases": {
         "ko": [
           "디 크레디",
@@ -6238,6 +6465,7 @@
       "language": "und",
       "korean": "아라공",
       "displayKorean": "아라공",
+      "listKorean": "아라공",
       "aliases": {
         "ko": [],
         "en": [
@@ -6259,6 +6487,7 @@
       "language": "und",
       "korean": "루이즈 부르주아",
       "displayKorean": "루이즈 부르주아",
+      "listKorean": "루이즈 부르주아",
       "aliases": {
         "ko": [
           "부르주아"
@@ -6282,6 +6511,7 @@
       "language": "und",
       "korean": "루카 조르다노",
       "displayKorean": "루카 조르다노",
+      "listKorean": "루카 조르다노",
       "aliases": {
         "ko": [
           "조르다노"
@@ -6305,6 +6535,7 @@
       "language": "und",
       "korean": "루카스 크라나흐",
       "displayKorean": "크라나흐, 루카스",
+      "listKorean": "크라나흐",
       "aliases": {
         "ko": [
           "크라나흐",
@@ -6338,6 +6569,7 @@
       "language": "und",
       "korean": "루치오 폰타나",
       "displayKorean": "루치오 폰타나",
+      "listKorean": "루치오 폰타나",
       "aliases": {
         "ko": [
           "폰타나"
@@ -6361,6 +6593,7 @@
       "language": "und",
       "korean": "리오넬 파이닝거",
       "displayKorean": "리오넬 파이닝거",
+      "listKorean": "리오넬 파이닝거",
       "aliases": {
         "ko": [
           "파이닝거"
@@ -6384,6 +6617,7 @@
       "language": "und",
       "korean": "포포바",
       "displayKorean": "포포바",
+      "listKorean": "포포바",
       "aliases": {
         "ko": [],
         "en": [
@@ -6405,6 +6639,7 @@
       "language": "und",
       "korean": "만 레이",
       "displayKorean": "만 레이",
+      "listKorean": "만 레이",
       "aliases": {
         "ko": [
           "레이"
@@ -6428,6 +6663,7 @@
       "language": "und",
       "korean": "뒤샹",
       "displayKorean": "뒤샹",
+      "listKorean": "뒤샹",
       "aliases": {
         "ko": [
           "뒤샹"
@@ -6451,6 +6687,7 @@
       "language": "und",
       "korean": "마리안네 폰 베레프킨",
       "displayKorean": "마리안네 폰 베레프킨",
+      "listKorean": "마리안네 폰 베레프킨",
       "aliases": {
         "ko": [
           "폰 베레프킨",
@@ -6476,6 +6713,7 @@
       "language": "und",
       "korean": "마리 브라크몽",
       "displayKorean": "마리 브라크몽",
+      "listKorean": "마리 브라크몽",
       "aliases": {
         "ko": [
           "브라크몽"
@@ -6499,6 +6737,7 @@
       "language": "und",
       "korean": "마리나 아브라모비치",
       "displayKorean": "마리나 아브라모비치",
+      "listKorean": "마리나 아브라모비치",
       "aliases": {
         "ko": [
           "아브라모비치"
@@ -6523,6 +6762,7 @@
       "language": "und",
       "korean": "말린 뒤마",
       "displayKorean": "말린 뒤마",
+      "listKorean": "말린 뒤마",
       "aliases": {
         "ko": [
           "뒤마"
@@ -6546,6 +6786,7 @@
       "language": "und",
       "korean": "메리 카사트",
       "displayKorean": "메리 카사트",
+      "listKorean": "메리 카사트",
       "aliases": {
         "ko": [
           "카사트"
@@ -6569,6 +6810,7 @@
       "language": "und",
       "korean": "마사초",
       "displayKorean": "마사초",
+      "listKorean": "마사초",
       "aliases": {
         "ko": [
           "마사초"
@@ -6596,6 +6838,7 @@
       "language": "und",
       "korean": "마티아스 그뤼네발트",
       "displayKorean": "마티아스 그뤼네발트",
+      "listKorean": "마티아스 그뤼네발트",
       "aliases": {
         "ko": [
           "그뤼네발트"
@@ -6620,6 +6863,7 @@
       "language": "und",
       "korean": "블라맹크",
       "displayKorean": "블라맹크",
+      "listKorean": "블라맹크",
       "aliases": {
         "ko": [],
         "en": [
@@ -6642,6 +6886,7 @@
       "language": "und",
       "korean": "모리스 드니",
       "displayKorean": "모리스 드니",
+      "listKorean": "모리스 드니",
       "aliases": {
         "ko": [
           "드니"
@@ -6665,6 +6910,7 @@
       "language": "und",
       "korean": "막스 베크만",
       "displayKorean": "막스 베크만",
+      "listKorean": "막스 베크만",
       "aliases": {
         "ko": [
           "베크만"
@@ -6688,6 +6934,7 @@
       "language": "und",
       "korean": "막스 에른스트",
       "displayKorean": "막스 에른스트",
+      "listKorean": "막스 에른스트",
       "aliases": {
         "ko": [
           "에른스트"
@@ -6711,6 +6958,7 @@
       "language": "und",
       "korean": "막스 페히슈타인",
       "displayKorean": "막스 페히슈타인",
+      "listKorean": "막스 페히슈타인",
       "aliases": {
         "ko": [
           "페히슈타인"
@@ -6734,6 +6982,7 @@
       "language": "und",
       "korean": "메인더르트 호베마",
       "displayKorean": "메인더르트 호베마",
+      "listKorean": "메인더르트 호베마",
       "aliases": {
         "ko": [
           "호베마"
@@ -6757,6 +7006,7 @@
       "language": "und",
       "korean": "메레트 오펜하임",
       "displayKorean": "메레트 오펜하임",
+      "listKorean": "메레트 오펜하임",
       "aliases": {
         "ko": [
           "오펜하임"
@@ -6781,6 +7031,7 @@
       "language": "und",
       "korean": "미켈란젤로 부오나로티",
       "displayKorean": "부오나로티, 미켈란젤로",
+      "listKorean": "미켈란젤로",
       "aliases": {
         "ko": [
           "부오나로티",
@@ -6807,6 +7058,7 @@
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "data/미술사조/9e553fb48e9a464402114360-1.html",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
+        "tools/apply-first-batch-movement-enhancements.js",
         "Wikidata"
       ],
       "status": "verified-pair",
@@ -6821,6 +7073,7 @@
       "language": "und",
       "korean": "미켈란젤로",
       "displayKorean": "미켈란젤로",
+      "listKorean": "미켈란젤로",
       "aliases": {
         "ko": [
           "부오나로티",
@@ -6836,40 +7089,9 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/techniques.json",
-        "tools/apply-first-batch-movement-enhancements.js"
+        "data/techniques.json"
       ],
       "status": "verified-pair"
-    },
-    {
-      "id": "name-michelangelomerisidacaravaggio",
-      "uhangulVersion": "0.7",
-      "original": "Michelangelo Merisi da Caravaggio",
-      "language": "und",
-      "korean": "미켈란젤로 메리시 다 카라바조",
-      "displayKorean": "미켈란젤로 메리시 다 카라바조",
-      "aliases": {
-        "ko": [
-          "다 카라바조",
-          "카라바조"
-        ],
-        "en": [
-          "da Caravaggio",
-          "Caravaggio",
-          "Michelangelo Merisi"
-        ]
-      },
-      "uhangul": "미켈란젤로 메[Rㅣ]시 다 카[Rㅏ][Vㅏ]조",
-      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
-      "kind": "person",
-      "sources": [
-        "data/미술사조/de537ba74c4bee89423120bc-1.html",
-        "Wikidata"
-      ],
-      "status": "verified-pair",
-      "englishFullName": "Michelangelo Merisi da Caravaggio",
-      "wikipediaTitle": "Caravaggio",
-      "wikidataQid": "Q42207"
     },
     {
       "id": "mikhail-larionov",
@@ -6878,6 +7100,7 @@
       "language": "und",
       "korean": "미하일 라리오노프",
       "displayKorean": "미하일 라리오노프",
+      "listKorean": "미하일 라리오노프",
       "aliases": {
         "ko": [
           "라리오노프"
@@ -6901,6 +7124,7 @@
       "language": "und",
       "korean": "미하일 브루벨",
       "displayKorean": "미하일 브루벨",
+      "listKorean": "미하일 브루벨",
       "aliases": {
         "ko": [
           "브루벨"
@@ -6924,6 +7148,7 @@
       "language": "und",
       "korean": "모리스 루이스",
       "displayKorean": "모리스 루이스",
+      "listKorean": "모리스 루이스",
       "aliases": {
         "ko": [
           "루이스"
@@ -6947,6 +7172,7 @@
       "language": "und",
       "korean": "백남준",
       "displayKorean": "백남준",
+      "listKorean": "백남준",
       "aliases": {
         "ko": [],
         "en": [
@@ -6968,6 +7194,7 @@
       "language": "und",
       "korean": "나탈리아 곤차로바",
       "displayKorean": "나탈리아 곤차로바",
+      "listKorean": "나탈리아 곤차로바",
       "aliases": {
         "ko": [
           "곤차로바"
@@ -6991,6 +7218,7 @@
       "language": "und",
       "korean": "니콜라 푸생",
       "displayKorean": "푸생, 니콜라",
+      "listKorean": "푸생",
       "aliases": {
         "ko": [
           "푸생",
@@ -7021,6 +7249,7 @@
       "language": "und",
       "korean": "오딜롱 르동",
       "displayKorean": "오딜롱 르동",
+      "listKorean": "오딜롱 르동",
       "aliases": {
         "ko": [
           "르동"
@@ -7044,6 +7273,7 @@
       "language": "und",
       "korean": "올라퍼 엘리아슨",
       "displayKorean": "올라퍼 엘리아슨",
+      "listKorean": "올라퍼 엘리아슨",
       "aliases": {
         "ko": [
           "엘리아슨"
@@ -7067,6 +7297,7 @@
       "language": "und",
       "korean": "온 가와라",
       "displayKorean": "온 가와라",
+      "listKorean": "온 가와라",
       "aliases": {
         "ko": [
           "가와라"
@@ -7090,6 +7321,7 @@
       "language": "und",
       "korean": "오라치오 젠틸레스키",
       "displayKorean": "오라치오 젠틸레스키",
+      "listKorean": "오라치오 젠틸레스키",
       "aliases": {
         "ko": [
           "젠틸레스키"
@@ -7113,6 +7345,7 @@
       "language": "und",
       "korean": "오스카 코코슈카",
       "displayKorean": "오스카 코코슈카",
+      "listKorean": "오스카 코코슈카",
       "aliases": {
         "ko": [
           "코코슈카"
@@ -7136,6 +7369,7 @@
       "language": "und",
       "korean": "오토 딕스",
       "displayKorean": "오토 딕스",
+      "listKorean": "오토 딕스",
       "aliases": {
         "ko": [
           "딕스"
@@ -7159,6 +7393,7 @@
       "language": "und",
       "korean": "피카소",
       "displayKorean": "피카소",
+      "listKorean": "피카소",
       "aliases": {
         "ko": [],
         "en": [
@@ -7180,6 +7415,7 @@
       "language": "und",
       "korean": "파올로 우첼로",
       "displayKorean": "파올로 우첼로",
+      "listKorean": "파올로 우첼로",
       "aliases": {
         "ko": [
           "우첼로"
@@ -7203,6 +7439,7 @@
       "language": "und",
       "korean": "파올로 베로네세",
       "displayKorean": "베로네세, 파올로",
+      "listKorean": "베로네세",
       "aliases": {
         "ko": [
           "베로네세",
@@ -7241,6 +7478,7 @@
       "language": "und",
       "korean": "파르미자니노",
       "displayKorean": "파르미자니노",
+      "listKorean": "파르미자니노",
       "aliases": {
         "ko": [
           "프란체스코 마촐라",
@@ -7277,6 +7515,7 @@
       "language": "und",
       "korean": "세잔",
       "displayKorean": "세잔",
+      "listKorean": "세잔",
       "aliases": {
         "ko": [],
         "en": [
@@ -7299,6 +7538,7 @@
       "language": "und",
       "korean": "폴 델보",
       "displayKorean": "폴 델보",
+      "listKorean": "폴 델보",
       "aliases": {
         "ko": [
           "델보"
@@ -7322,6 +7562,7 @@
       "language": "und",
       "korean": "폴 가셰",
       "displayKorean": "폴 가셰",
+      "listKorean": "폴 가셰",
       "aliases": {
         "ko": [
           "가셰"
@@ -7345,6 +7586,7 @@
       "language": "und",
       "korean": "고갱",
       "displayKorean": "고갱",
+      "listKorean": "고갱",
       "aliases": {
         "ko": [],
         "en": [
@@ -7366,6 +7608,7 @@
       "language": "und",
       "korean": "파울 클레",
       "displayKorean": "파울 클레",
+      "listKorean": "파울 클레",
       "aliases": {
         "ko": [
           "클레"
@@ -7389,6 +7632,7 @@
       "language": "und",
       "korean": "폴 세뤼지에",
       "displayKorean": "폴 세뤼지에",
+      "listKorean": "폴 세뤼지에",
       "aliases": {
         "ko": [
           "세뤼지에"
@@ -7413,6 +7657,7 @@
       "language": "und",
       "korean": "폴 시냐크",
       "displayKorean": "폴 시냐크",
+      "listKorean": "폴 시냐크",
       "aliases": {
         "ko": [
           "시냐크"
@@ -7437,6 +7682,7 @@
       "language": "und",
       "korean": "파울라 모더존베커",
       "displayKorean": "파울라 모더존베커",
+      "listKorean": "파울라 모더존베커",
       "aliases": {
         "ko": [
           "모더존베커"
@@ -7460,6 +7706,7 @@
       "language": "und",
       "korean": "파벨 야나크",
       "displayKorean": "파벨 야나크",
+      "listKorean": "파벨 야나크",
       "aliases": {
         "ko": [
           "야나크"
@@ -7484,6 +7731,7 @@
       "language": "und",
       "korean": "페테르 파울 루벤스",
       "displayKorean": "루벤스, 페테르 파울",
+      "listKorean": "루벤스",
       "aliases": {
         "ko": [
           "루벤스",
@@ -7521,6 +7769,7 @@
       "language": "und",
       "korean": "필립 윌슨 스티어",
       "displayKorean": "필립 윌슨 스티어",
+      "listKorean": "필립 윌슨 스티어",
       "aliases": {
         "ko": [
           "스티어"
@@ -7544,6 +7793,7 @@
       "language": "und",
       "korean": "필리프 드 샹파뉴",
       "displayKorean": "필리프 드 샹파뉴",
+      "listKorean": "필리프 드 샹파뉴",
       "aliases": {
         "ko": [
           "드 샹파뉴",
@@ -7569,6 +7819,7 @@
       "language": "und",
       "korean": "피에로 델라 프란체스카",
       "displayKorean": "피에로 델라 프란체스카",
+      "listKorean": "피에로 델라 프란체스카",
       "aliases": {
         "ko": [
           "프란체스카"
@@ -7593,6 +7844,7 @@
       "language": "und",
       "korean": "피에로 만초니",
       "displayKorean": "피에로 만초니",
+      "listKorean": "피에로 만초니",
       "aliases": {
         "ko": [
           "만초니"
@@ -7616,6 +7868,7 @@
       "language": "und",
       "korean": "피에르 보나르",
       "displayKorean": "피에르 보나르",
+      "listKorean": "피에르 보나르",
       "aliases": {
         "ko": [
           "보나르"
@@ -7639,6 +7892,7 @@
       "language": "und",
       "korean": "퓌비 드 샤반",
       "displayKorean": "퓌비 드 샤반",
+      "listKorean": "퓌비 드 샤반",
       "aliases": {
         "ko": [
           "드 샤반",
@@ -7664,6 +7918,7 @@
       "language": "und",
       "korean": "르누아르",
       "displayKorean": "르누아르",
+      "listKorean": "르누아르",
       "aliases": {
         "ko": [],
         "en": [
@@ -7686,6 +7941,7 @@
       "language": "und",
       "korean": "피터르 아르트선",
       "displayKorean": "피터르 아르트선",
+      "listKorean": "피터르 아르트선",
       "aliases": {
         "ko": [
           "아르트선"
@@ -7709,6 +7965,7 @@
       "language": "und",
       "korean": "브뤼헐",
       "displayKorean": "브뤼헐",
+      "listKorean": "브뤼헐",
       "aliases": {
         "ko": [
           "피터르 브뤼헐"
@@ -7733,6 +7990,7 @@
       "language": "und",
       "korean": "대 피터르 브뤼헐",
       "displayKorean": "브뤼헐, 피터르 대",
+      "listKorean": "브뤼헐",
       "aliases": {
         "ko": [
           "브뤼헐",
@@ -7769,6 +8027,7 @@
       "language": "und",
       "korean": "피터르 더 호흐",
       "displayKorean": "피터르 더 호흐",
+      "listKorean": "피터르 더 호흐",
       "aliases": {
         "ko": [
           "더 호흐",
@@ -7794,6 +8053,7 @@
       "language": "und",
       "korean": "피에트로 다 코르토나",
       "displayKorean": "피에트로 다 코르토나",
+      "listKorean": "피에트로 다 코르토나",
       "aliases": {
         "ko": [
           "다 코르토나",
@@ -7819,6 +8079,7 @@
       "language": "und",
       "korean": "피에트로 로렌체티",
       "displayKorean": "피에트로 로렌체티",
+      "listKorean": "피에트로 로렌체티",
       "aliases": {
         "ko": [
           "로렌체티"
@@ -7842,6 +8103,7 @@
       "language": "und",
       "korean": "피에트로 페루지노",
       "displayKorean": "피에트로 페루지노",
+      "listKorean": "피에트로 페루지노",
       "aliases": {
         "ko": [
           "페루지노"
@@ -7865,6 +8127,7 @@
       "language": "und",
       "korean": "피사넬로",
       "displayKorean": "피사넬로",
+      "listKorean": "피사넬로",
       "aliases": {
         "ko": [],
         "en": []
@@ -7882,8 +8145,9 @@
       "uhangulVersion": "0.7",
       "original": "Pontormo",
       "language": "und",
-      "korean": "폰토르모",
+      "korean": "야코포 다 폰토르모",
       "displayKorean": "야코포 다 폰토르모",
+      "listKorean": "폰토르모",
       "aliases": {
         "ko": [
           "다 폰토르모",
@@ -7920,6 +8184,7 @@
       "language": "und",
       "korean": "퀜틴 마세이스",
       "displayKorean": "퀜틴 마세이스",
+      "listKorean": "퀜틴 마세이스",
       "aliases": {
         "ko": [
           "마세이스"
@@ -7943,6 +8208,7 @@
       "language": "und",
       "korean": "라파엘로",
       "displayKorean": "라파엘로",
+      "listKorean": "라파엘로",
       "aliases": {
         "ko": [
           "라파엘",
@@ -7972,6 +8238,7 @@
       "language": "und",
       "korean": "하우스만",
       "displayKorean": "하우스만",
+      "listKorean": "하우스만",
       "aliases": {
         "ko": [],
         "en": [
@@ -7993,6 +8260,7 @@
       "language": "und",
       "korean": "라파엘로 산치오",
       "displayKorean": "산치오, 라파엘로",
+      "listKorean": "라파엘로",
       "aliases": {
         "ko": [
           "산치오",
@@ -8040,6 +8308,7 @@
       "language": "und",
       "korean": "레아 멘지스",
       "displayKorean": "레아 멘지스",
+      "listKorean": "레아 멘지스",
       "aliases": {
         "ko": [
           "멘지스"
@@ -8063,6 +8332,7 @@
       "language": "und",
       "korean": "렘브란트 하르먼손 반 레인",
       "displayKorean": "렘브란트 하르먼손 반 레인",
+      "listKorean": "렘브란트",
       "aliases": {
         "ko": [
           "반 레인",
@@ -8099,6 +8369,7 @@
       "language": "und",
       "korean": "렘브란트",
       "displayKorean": "렘브란트",
+      "listKorean": "렘브란트",
       "aliases": {
         "ko": [
           "반 레인",
@@ -8125,6 +8396,7 @@
       "language": "und",
       "korean": "레메디오스 바로",
       "displayKorean": "레메디오스 바로",
+      "listKorean": "레메디오스 바로",
       "aliases": {
         "ko": [
           "바로"
@@ -8148,6 +8420,7 @@
       "language": "und",
       "korean": "르네 마그리트",
       "displayKorean": "르네 마그리트",
+      "listKorean": "르네 마그리트",
       "aliases": {
         "ko": [
           "마그리트"
@@ -8172,6 +8445,7 @@
       "language": "und",
       "korean": "리처드 세라",
       "displayKorean": "리처드 세라",
+      "listKorean": "리처드 세라",
       "aliases": {
         "ko": [
           "세라"
@@ -8195,6 +8469,7 @@
       "language": "und",
       "korean": "로버트 애덤",
       "displayKorean": "로버트 애덤",
+      "listKorean": "로버트 애덤",
       "aliases": {
         "ko": [
           "애덤"
@@ -8218,6 +8493,7 @@
       "language": "und",
       "korean": "로베르 캉팽",
       "displayKorean": "로베르 캉팽",
+      "listKorean": "로베르 캉팽",
       "aliases": {
         "ko": [
           "캉팽"
@@ -8241,6 +8517,7 @@
       "language": "und",
       "korean": "로베르 들로네",
       "displayKorean": "로베르 들로네",
+      "listKorean": "로베르 들로네",
       "aliases": {
         "ko": [
           "들로네"
@@ -8264,6 +8541,7 @@
       "language": "und",
       "korean": "로버트 마더웰",
       "displayKorean": "로버트 마더웰",
+      "listKorean": "로버트 마더웰",
       "aliases": {
         "ko": [
           "마더웰"
@@ -8287,6 +8565,7 @@
       "language": "und",
       "korean": "로저 프라이",
       "displayKorean": "로저 프라이",
+      "listKorean": "로저 프라이",
       "aliases": {
         "ko": [
           "프라이"
@@ -8310,12 +8589,12 @@
       "language": "und",
       "korean": "로히어르 반 데르 베이던",
       "displayKorean": "반 데르 베이던, 로히어르",
+      "listKorean": "반 데르 베이던",
       "aliases": {
         "ko": [
           "베이던",
           "반 데르 베이던",
           "로히어르 반 데르 베이던",
-          "반 데르 베이던, 로히어르",
           "로히어르"
         ],
         "en": [
@@ -8350,6 +8629,7 @@
       "language": "und",
       "korean": "로자 보뇌르",
       "displayKorean": "로자 보뇌르",
+      "listKorean": "로자 보뇌르",
       "aliases": {
         "ko": [
           "보뇌르"
@@ -8373,6 +8653,7 @@
       "language": "und",
       "korean": "로살바 카리에라",
       "displayKorean": "카리에라, 로살바",
+      "listKorean": "카리에라",
       "aliases": {
         "ko": [
           "카리에라",
@@ -8400,6 +8681,7 @@
       "language": "und",
       "korean": "로소 피오렌티노",
       "displayKorean": "로소 피오렌티노",
+      "listKorean": "로소",
       "aliases": {
         "ko": [
           "피오렌티노",
@@ -8435,6 +8717,7 @@
       "language": "und",
       "korean": "살바도르 달리",
       "displayKorean": "살바도르 달리",
+      "listKorean": "살바도르 달리",
       "aliases": {
         "ko": [
           "달리"
@@ -8459,6 +8742,7 @@
       "language": "und",
       "korean": "샘 프랜시스",
       "displayKorean": "샘 프랜시스",
+      "listKorean": "샘 프랜시스",
       "aliases": {
         "ko": [
           "프랜시스"
@@ -8482,6 +8766,7 @@
       "language": "und",
       "korean": "산드로 보티첼리",
       "displayKorean": "산드로 보티첼리",
+      "listKorean": "산드로 보티첼리",
       "aliases": {
         "ko": [
           "보티첼리"
@@ -8505,6 +8790,7 @@
       "language": "und",
       "korean": "실크스크린 제작자",
       "displayKorean": "실크스크린 제작자",
+      "listKorean": "실크스크린 제작자",
       "aliases": {
         "ko": [
           "제작자"
@@ -8528,6 +8814,7 @@
       "language": "und",
       "korean": "세바스티아노 델 피옴보",
       "displayKorean": "세바스티아노 델 피옴보",
+      "listKorean": "세바스티아노 델 피옴보",
       "aliases": {
         "ko": [
           "델 피옴보",
@@ -8553,6 +8840,7 @@
       "language": "und",
       "korean": "지그마르 폴케",
       "displayKorean": "지그마르 폴케",
+      "listKorean": "지그마르 폴케",
       "aliases": {
         "ko": [
           "폴케"
@@ -8576,6 +8864,7 @@
       "language": "und",
       "korean": "시몽 부에",
       "displayKorean": "시몽 부에",
+      "listKorean": "시몽 부에",
       "aliases": {
         "ko": [
           "부에"
@@ -8599,6 +8888,7 @@
       "language": "und",
       "korean": "시모네 마르티니",
       "displayKorean": "시모네 마르티니",
+      "listKorean": "시모네 마르티니",
       "aliases": {
         "ko": [
           "마르티니"
@@ -8622,6 +8912,7 @@
       "language": "und",
       "korean": "소포니스바 앙귀솔라",
       "displayKorean": "소포니스바 앙귀솔라",
+      "listKorean": "소포니스바 앙귀솔라",
       "aliases": {
         "ko": [
           "앙귀솔라"
@@ -8645,6 +8936,7 @@
       "language": "und",
       "korean": "솔 르윗",
       "displayKorean": "솔 르윗",
+      "listKorean": "솔 르윗",
       "aliases": {
         "ko": [
           "르윗"
@@ -8668,6 +8960,7 @@
       "language": "und",
       "korean": "소니아 들로네",
       "displayKorean": "소니아 들로네",
+      "listKorean": "소니아 들로네",
       "aliases": {
         "ko": [
           "들로네"
@@ -8691,6 +8984,7 @@
       "language": "und",
       "korean": "소피 토이버아르프",
       "displayKorean": "소피 토이버아르프",
+      "listKorean": "소피 토이버아르프",
       "aliases": {
         "ko": [
           "토이버아르프"
@@ -8714,6 +9008,7 @@
       "language": "und",
       "korean": "무라카미 다카시",
       "displayKorean": "무라카미 다카시",
+      "listKorean": "무라카미 다카시",
       "aliases": {
         "ko": [
           "다카시"
@@ -8737,6 +9032,7 @@
       "language": "und",
       "korean": "타르실라 두 아마랄",
       "displayKorean": "타르실라 두 아마랄",
+      "listKorean": "타르실라 두 아마랄",
       "aliases": {
         "ko": [
           "아마랄"
@@ -8760,6 +9056,7 @@
       "language": "und",
       "korean": "테오 반 리셀베르허",
       "displayKorean": "테오 반 리셀베르허",
+      "listKorean": "테오 반 리셀베르허",
       "aliases": {
         "ko": [
           "반 리셀베르허",
@@ -8786,6 +9083,7 @@
       "language": "und",
       "korean": "테오도르 샤세리오",
       "displayKorean": "테오도르 샤세리오",
+      "listKorean": "테오도르 샤세리오",
       "aliases": {
         "ko": [
           "샤세리오"
@@ -8808,8 +9106,9 @@
       "uhangulVersion": "0.7",
       "original": "Théodore Géricault",
       "language": "und",
-      "korean": "제리코",
+      "korean": "테오도르 제리코",
       "displayKorean": "제리코, 테오도르",
+      "listKorean": "제리코",
       "aliases": {
         "ko": [
           "제리코",
@@ -8838,6 +9137,7 @@
       "language": "und",
       "korean": "토머스 콜",
       "displayKorean": "콜, 토머스",
+      "listKorean": "콜",
       "aliases": {
         "ko": [
           "토머스 콜"
@@ -8864,6 +9164,7 @@
       "language": "und",
       "korean": "토머스 에이킨스",
       "displayKorean": "토머스 에이킨스",
+      "listKorean": "토머스 에이킨스",
       "aliases": {
         "ko": [
           "에이킨스"
@@ -8887,6 +9188,7 @@
       "language": "und",
       "korean": "토머스 게인즈버러",
       "displayKorean": "게인즈버러, 토머스",
+      "listKorean": "게인즈버러",
       "aliases": {
         "ko": [
           "게인즈버러",
@@ -8914,6 +9216,7 @@
       "language": "und",
       "korean": "토머스 제퍼슨",
       "displayKorean": "토머스 제퍼슨",
+      "listKorean": "토머스 제퍼슨",
       "aliases": {
         "ko": [
           "제퍼슨"
@@ -8937,6 +9240,7 @@
       "language": "und",
       "korean": "틴토레토",
       "displayKorean": "틴토레토",
+      "listKorean": "틴토레토",
       "aliases": {
         "ko": [],
         "en": []
@@ -8957,6 +9261,7 @@
       "language": "und",
       "korean": "티치아노",
       "displayKorean": "티치아노",
+      "listKorean": "티치아노",
       "aliases": {
         "ko": [
           "티치아노 베첼리오",
@@ -8996,6 +9301,7 @@
       "language": "und",
       "korean": "톰 로버츠",
       "displayKorean": "톰 로버츠",
+      "listKorean": "톰 로버츠",
       "aliases": {
         "ko": [
           "로버츠"
@@ -9019,6 +9325,7 @@
       "language": "und",
       "korean": "트레이시 에민",
       "displayKorean": "트레이시 에민",
+      "listKorean": "트레이시 에민",
       "aliases": {
         "ko": [
           "에민"
@@ -9042,6 +9349,7 @@
       "language": "und",
       "korean": "차라",
       "displayKorean": "차라",
+      "listKorean": "차라",
       "aliases": {
         "ko": [],
         "en": [
@@ -9063,6 +9371,7 @@
       "language": "und",
       "korean": "울라이",
       "displayKorean": "울라이",
+      "listKorean": "울라이",
       "aliases": {
         "ko": [],
         "en": []
@@ -9082,6 +9391,7 @@
       "language": "und",
       "korean": "보초니",
       "displayKorean": "보초니",
+      "listKorean": "보초니",
       "aliases": {
         "ko": [],
         "en": [
@@ -9103,6 +9413,7 @@
       "language": "und",
       "korean": "스테파노바",
       "displayKorean": "스테파노바",
+      "listKorean": "스테파노바",
       "aliases": {
         "ko": [],
         "en": [
@@ -9124,6 +9435,7 @@
       "language": "und",
       "korean": "바실리 페로프",
       "displayKorean": "바실리 페로프",
+      "listKorean": "바실리 페로프",
       "aliases": {
         "ko": [
           "페로프"
@@ -9147,6 +9459,7 @@
       "language": "und",
       "korean": "바실리 푸키레프",
       "displayKorean": "푸키레프, 바실리",
+      "listKorean": "푸키레프",
       "aliases": {
         "ko": [
           "푸키레프",
@@ -9182,6 +9495,7 @@
       "language": "und",
       "korean": "빅토르 보리소프무사토프",
       "displayKorean": "빅토르 보리소프무사토프",
+      "listKorean": "빅토르 보리소프무사토프",
       "aliases": {
         "ko": [
           "보리소프무사토프"
@@ -9205,6 +9519,7 @@
       "language": "und",
       "korean": "빌헬름 함메르쇠이",
       "displayKorean": "빌헬름 함메르쇠이",
+      "listKorean": "빌헬름 함메르쇠이",
       "aliases": {
         "ko": [
           "함메르쇠이"
@@ -9228,6 +9543,7 @@
       "language": "und",
       "korean": "빈센트 반 고흐",
       "displayKorean": "반 고흐, 빈센트",
+      "listKorean": "반 고흐",
       "aliases": {
         "ko": [
           "반 고흐",
@@ -9268,6 +9584,7 @@
       "language": "und",
       "korean": "비토레 카르파초",
       "displayKorean": "비토레 카르파초",
+      "listKorean": "비토레 카르파초",
       "aliases": {
         "ko": [
           "카르파초"
@@ -9291,6 +9608,7 @@
       "language": "und",
       "korean": "타틀린",
       "displayKorean": "타틀린",
+      "listKorean": "타틀린",
       "aliases": {
         "ko": [],
         "en": [
@@ -9312,6 +9630,7 @@
       "language": "und",
       "korean": "월터 시커트",
       "displayKorean": "월터 시커트",
+      "listKorean": "월터 시커트",
       "aliases": {
         "ko": [
           "시커트"
@@ -9335,6 +9654,7 @@
       "language": "und",
       "korean": "칸딘스키",
       "displayKorean": "칸딘스키",
+      "listKorean": "칸딘스키",
       "aliases": {
         "ko": [],
         "en": [
@@ -9356,6 +9676,7 @@
       "language": "und",
       "korean": "위프레도 람",
       "displayKorean": "위프레도 람",
+      "listKorean": "위프레도 람",
       "aliases": {
         "ko": [],
         "en": [
@@ -9377,6 +9698,7 @@
       "language": "und",
       "korean": "빌럼 칼프",
       "displayKorean": "빌럼 칼프",
+      "listKorean": "빌럼 칼프",
       "aliases": {
         "ko": [
           "칼프"
@@ -9400,6 +9722,7 @@
       "language": "und",
       "korean": "윌리엄 블레이크",
       "displayKorean": "윌리엄 블레이크",
+      "listKorean": "윌리엄 블레이크",
       "aliases": {
         "ko": [
           "블레이크"
@@ -9423,6 +9746,7 @@
       "language": "und",
       "korean": "윌리엄 호가스",
       "displayKorean": "호가스, 윌리엄",
+      "listKorean": "호가스",
       "aliases": {
         "ko": [
           "호가스",
@@ -9450,6 +9774,7 @@
       "language": "und",
       "korean": "윌리엄 홀먼 헌트",
       "displayKorean": "윌리엄 홀먼 헌트",
+      "listKorean": "윌리엄 홀먼 헌트",
       "aliases": {
         "ko": [
           "헌트"
@@ -9473,6 +9798,7 @@
       "language": "und",
       "korean": "윌리엄 켄트리지",
       "displayKorean": "윌리엄 켄트리지",
+      "listKorean": "윌리엄 켄트리지",
       "aliases": {
         "ko": [
           "켄트리지"
@@ -9496,6 +9822,7 @@
       "language": "und",
       "korean": "윌리엄 모리스",
       "displayKorean": "윌리엄 모리스",
+      "listKorean": "윌리엄 모리스",
       "aliases": {
         "ko": [
           "모리스"
@@ -9519,6 +9846,7 @@
       "language": "und",
       "korean": "윈슬로 호머",
       "displayKorean": "윈슬로 호머",
+      "listKorean": "윈슬로 호머",
       "aliases": {
         "ko": [
           "호머"
@@ -9542,6 +9870,7 @@
       "language": "und",
       "korean": "볼프 후버",
       "displayKorean": "후버, 볼프",
+      "listKorean": "후버",
       "aliases": {
         "ko": [
           "후버",
@@ -9576,6 +9905,7 @@
       "language": "und",
       "korean": "볼프 포스텔",
       "displayKorean": "볼프 포스텔",
+      "listKorean": "볼프 포스텔",
       "aliases": {
         "ko": [
           "포스텔"
@@ -9599,6 +9929,7 @@
       "language": "und",
       "korean": "목판 장인",
       "displayKorean": "목판 장인",
+      "listKorean": "목판 장인",
       "aliases": {
         "ko": [
           "장인"
@@ -9622,6 +9953,7 @@
       "language": "und",
       "korean": "윈덤 루이스",
       "displayKorean": "윈덤 루이스",
+      "listKorean": "윈덤 루이스",
       "aliases": {
         "ko": [
           "루이스"
@@ -9645,6 +9977,7 @@
       "language": "und",
       "korean": "쿠사마 야요이",
       "displayKorean": "쿠사마 야요이",
+      "listKorean": "쿠사마 야요이",
       "aliases": {
         "ko": [
           "야요이"
@@ -9668,6 +10001,7 @@
       "language": "und",
       "korean": "오노 요코",
       "displayKorean": "오노 요코",
+      "listKorean": "오노 요코",
       "aliases": {
         "ko": [
           "요코"
@@ -9691,6 +10025,7 @@
       "language": "und",
       "korean": "이브 탕기",
       "displayKorean": "이브 탕기",
+      "listKorean": "이브 탕기",
       "aliases": {
         "ko": [
           "탕기"
@@ -9714,6 +10049,7 @@
       "language": "und",
       "korean": "장샤오강",
       "displayKorean": "장샤오강",
+      "listKorean": "장샤오강",
       "aliases": {
         "ko": [],
         "en": [
@@ -9735,6 +10071,7 @@
       "language": "und",
       "korean": "치머만 형제",
       "displayKorean": "치머만 형제",
+      "listKorean": "치머만 형제",
       "aliases": {
         "ko": [
           "형제"
@@ -9758,6 +10095,7 @@
       "language": "und",
       "korean": "대기 원근법",
       "displayKorean": "대기 원근법",
+      "listKorean": "대기 원근법",
       "aliases": {
         "ko": [
           "원근법"
@@ -9781,6 +10119,7 @@
       "language": "und",
       "korean": "알라 프리마",
       "displayKorean": "알라 프리마",
+      "listKorean": "알라 프리마",
       "aliases": {
         "ko": [
           "프리마"
@@ -9804,6 +10143,7 @@
       "language": "und",
       "korean": "분할된 붓질",
       "displayKorean": "분할된 붓질",
+      "listKorean": "분할된 붓질",
       "aliases": {
         "ko": [
           "붓질"
@@ -9821,12 +10161,33 @@
       "status": "verified-pair"
     },
     {
+      "id": "capriccio",
+      "uhangulVersion": "0.7",
+      "original": "Capriccio",
+      "language": "und",
+      "korean": "카프리치오",
+      "displayKorean": "카프리치오",
+      "listKorean": "카프리치오",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
+      "uhangul": "카프[Rㅣ]치오",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "technique",
+      "sources": [
+        "data/techniques.json"
+      ],
+      "status": "verified-pair"
+    },
+    {
       "id": "chiaroscuro",
       "uhangulVersion": "0.7",
       "original": "Chiaroscuro",
       "language": "und",
       "korean": "키아로스쿠로",
       "displayKorean": "키아로스쿠로",
+      "listKorean": "키아로스쿠로",
       "aliases": {
         "ko": [],
         "en": []
@@ -9846,6 +10207,7 @@
       "language": "und",
       "korean": "콜로리토",
       "displayKorean": "콜로리토",
+      "listKorean": "콜로리토",
       "aliases": {
         "ko": [],
         "en": []
@@ -9865,6 +10227,7 @@
       "language": "und",
       "korean": "디세뇨",
       "displayKorean": "디세뇨",
+      "listKorean": "디세뇨",
       "aliases": {
         "ko": [],
         "en": []
@@ -9884,6 +10247,7 @@
       "language": "und",
       "korean": "분할주의",
       "displayKorean": "분할주의",
+      "listKorean": "분할주의",
       "aliases": {
         "ko": [],
         "en": []
@@ -9903,6 +10267,7 @@
       "language": "und",
       "korean": "드라이 브러시",
       "displayKorean": "드라이 브러시",
+      "listKorean": "드라이 브러시",
       "aliases": {
         "ko": [
           "브러시"
@@ -9926,6 +10291,7 @@
       "language": "und",
       "korean": "야외제작",
       "displayKorean": "야외제작",
+      "listKorean": "야외제작",
       "aliases": {
         "ko": [],
         "en": [
@@ -9941,12 +10307,38 @@
       "status": "verified-pair"
     },
     {
+      "id": "fete-galante",
+      "uhangulVersion": "0.7",
+      "original": "Fête galante",
+      "language": "und",
+      "korean": "페트 갈랑트",
+      "displayKorean": "페트 갈랑트",
+      "listKorean": "페트 갈랑트",
+      "aliases": {
+        "ko": [
+          "갈랑트"
+        ],
+        "en": [
+          "Fete galante",
+          "galante"
+        ]
+      },
+      "uhangul": "[Fㅔ]트 갈랑트",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "technique",
+      "sources": [
+        "data/techniques.json"
+      ],
+      "status": "verified-pair"
+    },
+    {
       "id": "figura-serpentinata",
       "uhangulVersion": "0.7",
       "original": "Figura serpentinata",
       "language": "und",
       "korean": "피구라 세르펜티나",
       "displayKorean": "피구라 세르펜티나",
+      "listKorean": "피구라 세르펜티나",
       "aliases": {
         "ko": [
           "세르펜티나"
@@ -9970,6 +10362,7 @@
       "language": "und",
       "korean": "프레스코",
       "displayKorean": "프레스코",
+      "listKorean": "프레스코",
       "aliases": {
         "ko": [],
         "en": []
@@ -9989,6 +10382,7 @@
       "language": "und",
       "korean": "글레이징",
       "displayKorean": "글레이징",
+      "listKorean": "글레이징",
       "aliases": {
         "ko": [],
         "en": []
@@ -10008,6 +10402,7 @@
       "language": "und",
       "korean": "그리자이유",
       "displayKorean": "그리자이유",
+      "listKorean": "그리자이유",
       "aliases": {
         "ko": [],
         "en": []
@@ -10027,6 +10422,7 @@
       "language": "und",
       "korean": "임파스토",
       "displayKorean": "임파스토",
+      "listKorean": "임파스토",
       "aliases": {
         "ko": [],
         "en": []
@@ -10046,6 +10442,7 @@
       "language": "und",
       "korean": "임프리마투라",
       "displayKorean": "임프리마투라",
+      "listKorean": "임프리마투라",
       "aliases": {
         "ko": [],
         "en": []
@@ -10065,6 +10462,7 @@
       "language": "und",
       "korean": "선원근법",
       "displayKorean": "선원근법",
+      "listKorean": "선원근법",
       "aliases": {
         "ko": [],
         "en": [
@@ -10086,6 +10484,7 @@
       "language": "und",
       "korean": "점묘법",
       "displayKorean": "점묘법",
+      "listKorean": "점묘법",
       "aliases": {
         "ko": [],
         "en": []
@@ -10105,6 +10504,7 @@
       "language": "und",
       "korean": "프레스테차",
       "displayKorean": "프레스테차",
+      "listKorean": "프레스테차",
       "aliases": {
         "ko": [],
         "en": []
@@ -10124,6 +10524,7 @@
       "language": "und",
       "korean": "판화",
       "displayKorean": "판화",
+      "listKorean": "판화",
       "aliases": {
         "ko": [],
         "en": []
@@ -10143,6 +10544,7 @@
       "language": "und",
       "korean": "콰드라투라",
       "displayKorean": "콰드라투라",
+      "listKorean": "콰드라투라",
       "aliases": {
         "ko": [],
         "en": []
@@ -10162,6 +10564,7 @@
       "language": "und",
       "korean": "뤼켄피구어",
       "displayKorean": "뤼켄피구어",
+      "listKorean": "뤼켄피구어",
       "aliases": {
         "ko": [],
         "en": [
@@ -10183,6 +10586,7 @@
       "language": "und",
       "korean": "스컴블링",
       "displayKorean": "스컴블링",
+      "listKorean": "스컴블링",
       "aliases": {
         "ko": [],
         "en": []
@@ -10202,6 +10606,7 @@
       "language": "und",
       "korean": "스푸마토",
       "displayKorean": "스푸마토",
+      "listKorean": "스푸마토",
       "aliases": {
         "ko": [],
         "en": []
@@ -10221,6 +10626,7 @@
       "language": "und",
       "korean": "스투코",
       "displayKorean": "스투코",
+      "listKorean": "스투코",
       "aliases": {
         "ko": [],
         "en": []
@@ -10240,6 +10646,7 @@
       "language": "und",
       "korean": "테피스트리",
       "displayKorean": "테피스트리",
+      "listKorean": "테피스트리",
       "aliases": {
         "ko": [],
         "en": []
@@ -10259,6 +10666,7 @@
       "language": "und",
       "korean": "템페라",
       "displayKorean": "템페라",
+      "listKorean": "템페라",
       "aliases": {
         "ko": [],
         "en": []
@@ -10278,11 +10686,32 @@
       "language": "und",
       "korean": "테네브리즘",
       "displayKorean": "테네브리즘",
+      "listKorean": "테네브리즘",
       "aliases": {
         "ko": [],
         "en": []
       },
       "uhangul": "테네브[Rㅣ]즘",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "technique",
+      "sources": [
+        "data/techniques.json"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "tronie",
+      "uhangulVersion": "0.7",
+      "original": "Tronie",
+      "language": "und",
+      "korean": "트로니",
+      "displayKorean": "트로니",
+      "listKorean": "트로니",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
+      "uhangul": "트[Rㅗ]니",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
       "sources": [
@@ -10297,11 +10726,52 @@
       "language": "und",
       "korean": "밑칠",
       "displayKorean": "밑칠",
+      "listKorean": "밑칠",
       "aliases": {
         "ko": [],
         "en": []
       },
       "uhangul": "밑칠",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "technique",
+      "sources": [
+        "data/techniques.json"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "vanitas",
+      "uhangulVersion": "0.7",
+      "original": "Vanitas",
+      "language": "und",
+      "korean": "바니타스",
+      "displayKorean": "바니타스",
+      "listKorean": "바니타스",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
+      "uhangul": "[Vㅏ]니타스",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "technique",
+      "sources": [
+        "data/techniques.json"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "veduta",
+      "uhangulVersion": "0.7",
+      "original": "Veduta",
+      "language": "und",
+      "korean": "베두타",
+      "displayKorean": "베두타",
+      "listKorean": "베두타",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
+      "uhangul": "[Vㅔ]두타",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
       "sources": [
@@ -10316,6 +10786,7 @@
       "language": "und",
       "korean": "웻 온 웻",
       "displayKorean": "웻 온 웻",
+      "listKorean": "웻 온 웻",
       "aliases": {
         "ko": [],
         "en": []

@@ -91,7 +91,7 @@ function rebuildRecordIndex() {
     catch(e) { console.error("[uHangul] bad record", rec, e); rec._encoded = rec.korean; }
     byId.set(rec.id,rec);
     const aliases = Array.isArray(rec.aliases) ? rec.aliases : [...(Array.isArray(rec.aliases?.ko) ? rec.aliases.ko : []), ...(Array.isArray(rec.aliases?.en) ? rec.aliases.en : [])];
-    [rec.original,rec.korean,rec.displayKorean,...aliases].filter(Boolean).forEach(text => {
+    [rec.original,rec.korean,rec.displayKorean,rec.listKorean,...aliases].filter(Boolean).forEach(text => {
       const key=normalizeText(text), existing=byText.get(key);
       // A research-only long-name record can share aliases with the canonical
       // Wikidata artist record (for example, Caravaggio). Keep the canonical
@@ -99,13 +99,13 @@ function rebuildRecordIndex() {
       if(!existing || !/^Q\d+$/.test(String(existing.id || '')) || /^Q\d+$/.test(String(rec.id || ''))) byText.set(key,rec);
     });
   }
-  candidates = RECORDS.flatMap(r => [{id:r.id,text:r.original}, {id:r.id,text:r.korean}, {id:r.id,text:r.displayKorean}]).filter(x=>x.text).sort((a,b)=>b.text.length-a.text.length);
+  candidates = RECORDS.flatMap(r => [{id:r.id,text:r.original}, {id:r.id,text:r.korean}, {id:r.id,text:r.displayKorean}, {id:r.id,text:r.listKorean}]).filter(x=>x.text).sort((a,b)=>b.text.length-a.text.length);
 }
 rebuildRecordIndex();
 
 function displayText(rec) {
   if(currentMode==="original") return rec.original;
-  if(currentMode==="korean") return rec.korean;
+  if(currentMode==="korean") return rec.listKorean || rec.korean;
   return rec._encoded || rec.korean;
 }
 
@@ -211,8 +211,8 @@ function displayNotation(canonicalKorean, canonicalNotation, displayKorean) {
   return display.replace(/[가-힣]+/g, word => wordMap.get(word) || autoNotation("",word));
 }
 
-function generatedRecord(original, korean, displayKorean) {
-  const key=[original,korean,displayKorean].map(value=>String(value || "")).join("\u001f");
+function generatedRecord(original, korean, displayKorean, listKorean) {
+  const key=[original,korean,displayKorean,listKorean].map(value=>String(value || "")).join("\u001f");
   if(dynamicRecords.has(key)) return dynamicRecords.get(key);
   const canonical=korean || displayKorean || "";
   const shown=displayKorean || canonical;
@@ -221,7 +221,9 @@ function generatedRecord(original, korean, displayKorean) {
   const rec={
     id:"auto-"+(normalizeText(original) || normalizeText(shown) || "artist"),
     original:original || shown,
-    korean:shown,
+    korean:canonical,
+    displayKorean:shown,
+    listKorean:listKorean || shown,
     uhangul:notation,
     generated:true
   };
@@ -232,7 +234,10 @@ function generatedRecord(original, korean, displayKorean) {
 }
 
 function recordForElement(el) {
-  if(el.dataset.uhOriginal || el.dataset.uhKorean || el.dataset.uhDisplayKorean) {
+  if(el.dataset.uhOriginal || el.dataset.uhKorean || el.dataset.uhDisplayKorean || el.dataset.uhListKorean) {
+    if(el.dataset.uhListKorean) {
+      return generatedRecord(el.dataset.uhOriginal || "",el.dataset.uhKorean || "",el.dataset.uhDisplayKorean || el.dataset.uhKorean || "",el.dataset.uhListKorean || "");
+    }
     const rec = byText.get(normalizeText(el.dataset.uhDisplayKorean)) || byText.get(normalizeText(el.dataset.uhKorean)) || byText.get(normalizeText(el.dataset.uhOriginal));
     if(rec) {
       el.dataset.uhId = rec.id;
@@ -256,7 +261,7 @@ function applySpan(span) {
 }
 
 function boundSelector() {
-  return "[data-uh-id],[data-uh-original],[data-uh-korean],[data-uh-display-korean]";
+  return "[data-uh-id],[data-uh-original],[data-uh-korean],[data-uh-display-korean],[data-uh-list-korean]";
 }
 
 function targetCount() {
@@ -300,7 +305,7 @@ function skip(node) {
   const p=node.parentElement;
   if(!p) return true;
   if(EXCLUDED.has(p.tagName)) return true;
-  if(p.closest("[data-uh-ignore],[data-uhangul-ui],[data-uh-id],[data-uh-original],[data-uh-korean],[data-uh-display-korean]")) return true;
+  if(p.closest("[data-uh-ignore],[data-uhangul-ui],[data-uh-id],[data-uh-original],[data-uh-korean],[data-uh-display-korean],[data-uh-list-korean]")) return true;
   if(p.isContentEditable) return true;
   return false;
 }

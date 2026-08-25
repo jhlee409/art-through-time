@@ -51,12 +51,12 @@ for (const card of cards) {
 }
 
 const links = {
-  'artist-Q207929': '<a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q207929" target="_blank" rel="noopener" data-artist-id="artist-Q207929" data-uh-original="Pontormo" data-uh-korean="야코포 다 폰토르모" data-uh-display-korean="폰토르모" title="야코포 다 폰토르모 연표로 이동">폰토르모</a>',
-  'artist-Q9348': '<a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q9348" target="_blank" rel="noopener" data-artist-id="artist-Q9348" data-uh-original="Parmigianino" data-uh-korean="파르미자니노" data-uh-display-korean="파르미자니노" title="파르미자니노 연표로 이동">파르미자니노</a>',
-  'artist-Q7803': '<a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q7803" target="_blank" rel="noopener" data-artist-id="artist-Q7803" data-uh-original="Bronzino" data-uh-korean="브론치노" data-uh-display-korean="브론치노" title="브론치노 연표로 이동">브론치노</a>',
-  'artist-Q165367': '<a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q165367" target="_blank" rel="noopener" data-artist-id="artist-Q165367" data-uh-original="Hendrick Goltzius" data-uh-korean="헨드릭 골치우스" data-uh-display-korean="헨드릭 골치우스" title="헨드릭 골치우스 연표로 이동">헨드릭 골치우스</a>',
-  'artist-Q442484': '<a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q442484" target="_blank" rel="noopener" data-artist-id="artist-Q442484" data-uh-original="Cornelis van Haarlem" data-uh-korean="코르넬리스 반 하를렘" data-uh-display-korean="코르넬리스 반 하를렘" title="코르넬리스 반 하를렘 연표로 이동">코르넬리스 반 하를렘</a>',
-  'artist-Q329811': '<a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q329811" target="_blank" rel="noopener" data-artist-id="artist-Q329811" data-uh-original="Abraham Bloemaert" data-uh-korean="아브라함 블로에마르트" data-uh-display-korean="아브라함 블로에마르트" title="아브라함 블로에마르트 연표로 이동">아브라함 블로에마르트</a>',
+  'artist-Q207929': '<a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q207929" target="_blank" rel="noopener" data-artist-id="artist-Q207929" data-uh-original="Pontormo" data-uh-korean="야코포 다 폰토르모" data-uh-display-korean="야코포 다 폰토르모" title="야코포 다 폰토르모 연표로 이동" data-uh-list-korean="폰토르모">폰토르모</a>',
+  'artist-Q9348': '<a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q9348" target="_blank" rel="noopener" data-artist-id="artist-Q9348" data-uh-original="Parmigianino" data-uh-korean="파르미자니노" data-uh-display-korean="파르미자니노" title="파르미자니노 연표로 이동" data-uh-list-korean="파르미자니노">파르미자니노</a>',
+  'artist-Q7803': '<a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q7803" target="_blank" rel="noopener" data-artist-id="artist-Q7803" data-uh-original="Bronzino" data-uh-korean="브론치노" data-uh-display-korean="브론치노" title="브론치노 연표로 이동" data-uh-list-korean="브론치노">브론치노</a>',
+  'artist-Q165367': '<a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q165367" target="_blank" rel="noopener" data-artist-id="artist-Q165367" data-uh-original="Hendrick Goltzius" data-uh-korean="헨드릭 골치우스" data-uh-display-korean="골치우스, 헨드릭" title="헨드릭 골치우스 연표로 이동" data-uh-list-korean="골치우스">골치우스</a>',
+  'artist-Q442484': '<a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q442484" target="_blank" rel="noopener" data-artist-id="artist-Q442484" data-uh-original="Cornelis van Haarlem" data-uh-korean="코르넬리스 반 하를렘" data-uh-display-korean="반 하를렘, 코르넬리스" title="코르넬리스 반 하를렘 연표로 이동" data-uh-list-korean="코르넬리스 판 하를럼">코르넬리스 판 하를럼</a>',
+  'artist-Q329811': '<a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q329811" target="_blank" rel="noopener" data-artist-id="artist-Q329811" data-uh-original="Abraham Bloemaert" data-uh-korean="아브라함 블로에마르트" data-uh-display-korean="블로에마르트, 아브라함" title="아브라함 블로에마르트 연표로 이동" data-uh-list-korean="블로에마르트">블로에마르트</a>',
 };
 
 const newCards = {

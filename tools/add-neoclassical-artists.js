@@ -1,6 +1,6 @@
 const fs=require('fs'); const file='data/artists.json'; const d=JSON.parse(fs.readFileSync(file,'utf8'));
 const rows=[
-['artist-Q296','Q296','자크루이 다비드','Jacques-Louis David',1748,1825,'프랑스','France',1774,1825,'다비드','The Oath of the Horatii','호라티우스 형제의 맹세',1784,'David-Oath-of-the-Horatii-1784-d473275ac167.jpg'],
+['artist-Q83155','Q83155','자크루이 다비드','Jacques-Louis David',1748,1825,'프랑스','France',1774,1825,'다비드','The Oath of the Horatii','호라티우스 형제의 맹세',1784,'David-Oath-of-the-Horatii-1784-d473275ac167.jpg'],
 ['artist-Q161472','Q161472','장오귀스트도미니크 앵그르','Jean-Auguste-Dominique Ingres',1780,1867,'프랑스','France',1800,1867,'앵그르','Napoleon on His Imperial Throne','황제의 옥좌에 앉은 나폴레옹',1806,'Ingres-Napoleon-on-Imperial-Throne.jpg'],
 ['artist-Q5547','Q5547','안토니오 카노바','Antonio Canova',1757,1822,'이탈리아','Italy',1775,1822,'카노바','Psyche Revived by Cupid’s Kiss','큐피드의 키스로 되살아난 프시케',1793,'Canova-Psyche-Revived-by-Cupids-Kiss.jpg'],
 ['artist-Q312387','Q312387','조슈아 레이놀즈','Joshua Reynolds',1723,1792,'영국','United Kingdom',1740,1792,'레이놀즈','Mrs Siddons as the Tragic Muse','비극의 뮤즈로 분장한 세라 시던스',1784,'Reynolds-Mrs-Siddons-as-Tragic-Muse.jpg'],

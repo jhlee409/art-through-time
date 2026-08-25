@@ -893,7 +893,7 @@ async function uHangulRuleIssues(artists) {
   const byText=new Map();
   for(const record of records) {
     const aliases=Array.isArray(record.aliases) ? record.aliases : [...(Array.isArray(record.aliases?.ko) ? record.aliases.ko : []), ...(Array.isArray(record.aliases?.en) ? record.aliases.en : [])];
-    [record.original,record.korean,record.displayKorean,...aliases].filter(Boolean).forEach(value=>byText.set(compactCheckText(value),record));
+    [record.original,record.korean,record.displayKorean,record.listKorean,...aliases].filter(Boolean).forEach(value=>byText.set(compactCheckText(value),record));
   }
   for(const artist of artists) {
     const key=String(artist.qid || artist.id || '');
@@ -904,6 +904,7 @@ async function uHangulRuleIssues(artists) {
     if(/\[[A-Z]+_[A-Z_]*[ㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣ]/.test(String(record.uhangul || ''))) issues.push(artistRuleItem(artist,'uHangul v0.7 제외 토큰 잔재'));
     const expected=expectedArtistDisplayNameForCheck(artist);
     if(expected && record.displayKorean !== expected) issues.push(artistRuleItem(artist,`uHangul 표시명 불일치: ${record.displayKorean || '(없음)'} → ${expected}`));
+    if(!record.listKorean) issues.push(artistRuleItem(artist,'왼쪽 목록용 한국어 표시명 누락'));
     const manualExpected=expectedManualUHangulByArtistId[key];
     if(manualExpected && record.uhangul !== manualExpected) issues.push(artistRuleItem(artist,`uHangul 변환 표식 불일치: ${record.uhangul || '(없음)'} → ${manualExpected}`));
     const display=actualArtistDisplayNameForCheck(artist);
@@ -1366,7 +1367,7 @@ async function movementArtistLinkEntries() {
   const data=await readArtistsFile();
   const entries=[];
   for(const artist of data.artists || []) {
-    for(const alias of movementArtistAliases(artist)) entries.push({alias,id:artist.id,name:artist.fullName || artist.name?.ko || artist.name?.en || alias,korean:artist.fullName || artist.name?.ko || '',original:artist.name?.en || ''});
+    for(const alias of movementArtistAliases(artist)) entries.push({alias,id:artist.id,name:artist.name?.ko || artist.fullName || artist.name?.en || alias,korean:artist.name?.ko || artist.fullName || '',original:artist.name?.en || '',displayKorean:artist.fullName || artist.name?.ko || '',listKorean:artist.listName?.ko || artist.shortName?.ko || artist.name?.ko || alias});
   }
   return entries.sort((a,b)=>b.alias.length-a.alias.length || a.alias.localeCompare(b.alias,'ko'));
 }
@@ -1650,7 +1651,7 @@ async function linkMovementDocumentArtists(buffer, linkEntries=null) {
     return part.replace(pattern,(match,name,particle='')=>{
       const entry=byAlias.get(name.normalize('NFC').toLocaleLowerCase('ko-KR'));
       if(!entry) return match;
-      return `<a class="art-atlas-artist-link" href="../../index.html?artist=${encodeURIComponent(entry.id)}" target="_blank" rel="noopener" data-artist-id="${escapeAttribute(entry.id)}" data-uh-original="${escapeAttribute(entry.original)}" data-uh-korean="${escapeAttribute(entry.korean)}" data-uh-display-korean="${escapeAttribute(name)}" title="${escapeAttribute(entry.name)} 연표로 이동">${name}</a>${particle}`;
+      return `<a class="art-atlas-artist-link" href="../../index.html?artist=${encodeURIComponent(entry.id)}" target="_blank" rel="noopener" data-artist-id="${escapeAttribute(entry.id)}" data-uh-original="${escapeAttribute(entry.original)}" data-uh-korean="${escapeAttribute(entry.korean)}" data-uh-display-korean="${escapeAttribute(entry.displayKorean || entry.name || entry.korean)}" data-uh-list-korean="${escapeAttribute(entry.listKorean || name)}" title="${escapeAttribute(entry.korean || entry.name)} 연표로 이동">${name}</a>${particle}`;
     });
   }).join('');
   return Buffer.from(injectMovementArtistLinkStyle(html),'utf8');

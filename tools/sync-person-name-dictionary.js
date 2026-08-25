@@ -51,7 +51,7 @@ const manualPersonOverrides = [
   {id:'francisco-goya', original:'Francisco Goya', korean:'프란시스코 고야'},
   {id:'thomas-cole', original:'Thomas Cole', korean:'토머스 콜'},
   {id:'frederic-edwin-church', original:'Frederic Edwin Church', korean:'프레더릭 에드윈 처치'},
-  {id:'jacques-louis-david', original:'Jacques-Louis David', korean:'자크루이 다비드'},
+  {id:'artist-Q83155', original:'Jacques-Louis David', korean:'자크루이 다비드'},
   {id:'jean-auguste-dominique-ingres', original:'Jean-Auguste-Dominique Ingres', korean:'앵그르'},
   {id:'antonio-canova', original:'Antonio Canova', korean:'안토니오 카노바'},
   {id:'joshua-reynolds', original:'Joshua Reynolds', korean:'조슈아 레이놀즈'},
@@ -153,7 +153,7 @@ const manualPersonOverrides = [
   {id:'isaac-brodsky', original:'Isaac Brodsky', korean:'브로드스키'},
   {id:'alexander-deineka', original:'Alexander Deyneka', korean:'데이네카'},
   {id:'alexander-gerasimov', original:'Alexander Gerasimov', korean:'게라시모프'},
-  {id:'antoine-watteau', original:'Antoine Watteau', korean:'와토'},
+  {id:'antoine-watteau', original:'Antoine Watteau', korean:'바토'},
   {id:'francois-boucher', original:'François Boucher', korean:'부셰'},
   {id:'zimmermann-brothers', original:'Zimmermann brothers', korean:'치머만 형제'},
   {id:'balthasar-neumann', original:'Balthasar Neumann', korean:'노이만'},
@@ -181,7 +181,7 @@ const foreignWord = "[A-ZÀ-ÖØ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'’.-]*";
 const foreignJoiner = "(?:de|del|della|da|di|du|van|von|der|den|ten|ter|la|le|st\\.)";
 const foreignName = `${foreignWord}(?:\\s+(?:${foreignWord}|${foreignJoiner})){1,5}`;
 const pairedNamePattern = new RegExp(`(${koreanName})\\s*[（(]\\s*(${foreignName})\\s*[)）]`, 'g');
-const linkedNamePattern = /data-uh-original="([^"]+)"[^>]*data-uh-korean="([^"]+)"/g;
+const linkedNamePattern = /data-uh-original="([^"]+)"[^>]*data-uh-korean="([^"]+)"(?:[^>]*data-uh-display-korean="([^"]+)")?(?:[^>]*data-uh-list-korean="([^"]+)")?/g;
 
 function decodeHtml(value) {
   return String(value || '').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
@@ -233,7 +233,7 @@ function isPersonLike(original, korean, strict = false) {
     && (!strict || (originalWords >= 2 && koreanWords <= originalWords + 1));
 }
 
-function addEntry(entries, original, korean, source, id, strict = false, kind = 'person', aliases = {}, displayKorean = '') {
+function addEntry(entries, original, korean, source, id, strict = false, kind = 'person', aliases = {}, displayKorean = '', listKorean = '') {
   original = String(original || '').trim().replace(/\s+/g, ' ');
   korean = String(korean || '').trim().replace(/\s+/g, ' ');
   if (strict) {
@@ -246,17 +246,24 @@ function addEntry(entries, original, korean, source, id, strict = false, kind = 
   }
   if (kind === 'person' && !isPersonLike(original, korean, strict)) return;
   if (kind === 'technique' && (!original || !korean)) return;
-  const key = `${kind}\u001f${normalize(original)}\u001f${normalize(korean)}`;
-  const nextRecord = createNameRecord({ id: id || idFor(original, korean), original, korean, displayKorean });
-  const existing = entries.get(key);
+  const originalKey = normalize(original);
+  const key = `${kind}\u001f${originalKey}\u001f${normalize(korean)}`;
+  const relatedEntry = [...entries.values()].find(record => (record.kind || 'person') === kind && normalize(record.original) === originalKey && (record.id === id || source === 'data/artists.json'));
+  const nextRecord = createNameRecord({ id: id || idFor(original, korean), original, korean, displayKorean, listKorean });
+  const existing = entries.get(key) || relatedEntry;
   if (existing) {
     if (!existing.sources.includes(source)) existing.sources.push(source);
     existing.aliases = mergeAliases(existing.aliases, nextRecord.aliases, aliases);
+    if (source === 'data/artists.json') {
+      existing.id = id || existing.id;
+      existing.korean = nextRecord.korean;
+    }
     if (displayKorean) {
       existing.id = id || existing.id;
       existing.displayKorean = nextRecord.displayKorean;
       existing.uhangul = nextRecord.uhangul;
     }
+    if (listKorean) existing.listKorean = nextRecord.listKorean;
     return;
   }
   const record = {...nextRecord, aliases:mergeAliases(nextRecord.aliases, aliases)};
@@ -302,7 +309,7 @@ function scanFile(file, entries) {
   pairedNamePattern.lastIndex = 0;
   for (let match; (match = pairedNamePattern.exec(content));) addEntry(entries, match[2], match[1], source, '', true);
   linkedNamePattern.lastIndex = 0;
-  for (let match; (match = linkedNamePattern.exec(content));) addEntry(entries, decodeHtml(match[1]), decodeHtml(match[2]), source);
+  for (let match; (match = linkedNamePattern.exec(content));) addEntry(entries, decodeHtml(match[1]), decodeHtml(match[2]), source, '', false, 'person', {}, decodeHtml(match[3] || ''), decodeHtml(match[4] || ''));
 }
 
 function readManualRecords() {
@@ -347,18 +354,25 @@ function syncPersonNameDictionary({artists, additionalFiles = []} = {}) {
   }
   const sourceArtists = Array.isArray(artists) ? artists : JSON.parse(fs.readFileSync(artistsFile, 'utf8')).artists || [];
   for (const person of [...manualPersonOverrides, ...curatedPersonOverrides]) addEntry(entries, person.original, person.korean, 'data/미술사조/manual-person-overrides', person.id);
-  const artistDisplayRecords = new Map(buildArtistMap(sourceArtists).map(record => [String(record.id || ''), record]));
+  const builtArtistRecords = buildArtistMap(sourceArtists);
+  const artistDisplayRecords = new Map(builtArtistRecords.map(record => [String(record.id || ''), record]));
+  const artistRecordsByOriginal = new Map(builtArtistRecords.map(record => [normalize(record.original), record]));
   for (const artist of sourceArtists) {
     const artistId = artist?.qid || artist?.id;
-    const displayKorean = artistDisplayRecords.get(String(artistId || ''))?.displayKorean || artist?.fullName || '';
-    addEntry(entries, artist?.name?.en, artist?.name?.ko, 'data/artists.json', artistId, false, 'person', mergeAliases(artist?.aliases, {ko:[artist?.name?.ko], en:[artist?.name?.en]}), displayKorean);
+    const artistRecord = artistDisplayRecords.get(String(artistId || ''));
+    const displayKorean = artistRecord?.displayKorean || artist?.fullName || '';
+    const listKorean = artistRecord?.listKorean || artist?.listName?.ko || '';
+    addEntry(entries, artist?.name?.en, artist?.name?.ko, 'data/artists.json', artistId, false, 'person', mergeAliases(artist?.aliases, {ko:[artist?.name?.ko], en:[artist?.name?.en]}), displayKorean, listKorean);
   }
   const techniques = JSON.parse(fs.readFileSync(techniquesFile, 'utf8')).techniques || [];
   for (const technique of techniques) {
     const original = technique?.name?.en;
     const korean = techniqueKoreanOverrides[technique?.id] || technique?.name?.ko;
     addEntry(entries, original, korean, 'data/techniques.json', technique?.id, false, 'technique');
-    for (const example of technique?.examples || []) addEntry(entries, example?.artist?.en, example?.artist?.ko, 'data/techniques.json', '', false, 'person');
+    for (const example of technique?.examples || []) {
+      const artistRecord = artistRecordsByOriginal.get(normalize(example?.artist?.en));
+      addEntry(entries, artistRecord?.original || example?.artist?.en, artistRecord?.korean || example?.artist?.ko, 'data/techniques.json', artistRecord?.id || '', false, 'person', {}, artistRecord?.displayKorean || '', artistRecord?.listKorean || '');
+    }
   }
   const files = [...new Set([...walk(root), ...additionalFiles.map(file => path.resolve(file))])];
   for (const file of files) {
@@ -367,6 +381,17 @@ function syncPersonNameDictionary({artists, additionalFiles = []} = {}) {
   }
   const records = [...entries.values()];
   applyResearch(records);
+  for (const record of records) {
+    if ((record.kind || 'person') !== 'person') continue;
+    const artistRecord = artistRecordsByOriginal.get(normalize(record.original));
+    if (!artistRecord) continue;
+    record.id = artistRecord.id;
+    record.korean = artistRecord.korean;
+    record.displayKorean = artistRecord.displayKorean;
+    record.listKorean = artistRecord.listKorean;
+    record.uhangul = artistRecord.uhangul;
+    record.aliases = mergeAliases(record.aliases, artistRecord.aliases);
+  }
   records.sort((a, b) => a.kind.localeCompare(b.kind) || a.original.localeCompare(b.original, 'en'));
   const payload = {schema:2, generatedAt:new Date().toISOString(), description:'Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.', records};
   fs.mkdirSync(path.dirname(dictionaryFile), {recursive:true});

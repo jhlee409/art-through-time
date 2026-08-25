@@ -4,7 +4,7 @@ const file = 'data/artists.json';
 const data = JSON.parse(fs.readFileSync(file, 'utf8'));
 const asset = name => `data/미술사조/images/${name}`;
 const artists = [
-  ['artist-Q155151','Q155151','앙투안 와토','Antoine Watteau',1684,1721,'프랑스','France',1702,1721,'와토','Pilgrimage to Cythera','키테라섬으로의 순례',1717,'Antoine-20Watteau-20-20Pilgrimage-20to-20Cythera-20-20WGA25454-de23e298c518.jpg','페트 갈랑트를 통해 귀족의 사교와 덧없는 감정을 섬세한 색조로 그렸다.'],
+  ['artist-Q155151','Q155151','앙투안 바토','Antoine Watteau',1684,1721,'프랑스','France',1702,1721,'바토','Pilgrimage to Cythera','키테라섬으로의 순례',1717,'Antoine-20Watteau-20-20Pilgrimage-20to-20Cythera-20-20WGA25454-de23e298c518.jpg','페트 갈랑트를 통해 귀족의 사교와 덧없는 감정을 섬세한 색조로 그렸다.'],
   ['artist-Q313122','Q313122','프랑수아 부셰','François Boucher',1703,1770,'프랑스','France',1723,1770,'부셰','The Toilet of Venus','비너스의 단장',1751,'The-20Toilet-20of-20Venus-20by-20Fran-C3-A7ois-20Boucher-fc27175742d6.jpg','신화와 장식, 관능적인 색채를 결합해 프랑스 로코코의 살롱 취향을 대표했다.'],
   ['artist-Q313898','Q313898','장오노레 프라고나르','Jean-Honoré Fragonard',1732,1806,'프랑스','France',1752,1806,'프라고나르','The Swing','그네',1767,'Fragonard-The-Swing-af227c46d654.jpg','가볍고 빠른 붓질과 은밀한 연애의 서사로 로코코의 유희성을 극대화했다.'],
   ['artist-Q162048','Q162048','조반니 바티스타 티에폴로','Giovanni Battista Tiepolo',1696,1770,'이탈리아','Italy',1715,1770,'티에폴로','Apollo and the Continents','아폴론과 대륙들',1752,'Giovanni-20Battista-20Tiepolo-20-20Apollo-20and-20the-20Continents-20-4da05d03665b.jpg','밝은 색채와 솟구치는 원근법으로 베네치아 로코코 천장화의 환영을 만들었다.'],

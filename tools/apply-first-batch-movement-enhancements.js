@@ -25,13 +25,13 @@ const style = `<style>
 </style>`;
 
 const a = {
-  michelangelo: `<a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q5592" target="_blank" rel="noopener" data-artist-id="artist-Q5592" data-uh-original="Michelangelo Buonarroti" data-uh-korean="미켈란젤로 부오나로티" data-uh-display-korean="미켈란젤로" title="미켈란젤로 부오나로티 연표로 이동">미켈란젤로</a>`,
-  elgreco: `<a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q301" target="_blank" rel="noopener" data-artist-id="artist-Q301" data-uh-original="El Greco" data-uh-korean="엘 그레코" data-uh-display-korean="엘 그레코" title="엘 그레코 연표로 이동">엘 그레코</a>`,
-  titian: `<a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q47551" target="_blank" rel="noopener" data-artist-id="artist-Q47551" data-uh-original="Titian" data-uh-korean="티치아노" data-uh-display-korean="티치아노" title="티치아노 연표로 이동">티치아노</a>`,
-  rubens: `<a class="art-atlas-artist-link" href="../../index.html?artist=artist-url-1786879941678" target="_blank" rel="noopener" data-artist-id="artist-url-1786879941678" data-uh-original="Peter Paul Rubens" data-uh-korean="페테르 파울 루벤스" data-uh-display-korean="루벤스" title="페테르 파울 루벤스 연표로 이동">루벤스</a>`,
-  rembrandt: `<a class="art-atlas-artist-link" href="../../index.html?artist=artist-rembrandt" target="_blank" rel="noopener" data-artist-id="artist-rembrandt" data-uh-original="Rembrandt Harmenszoon van Rijn" data-uh-korean="렘브란트 하르먼손 반 레인" data-uh-display-korean="렘브란트" title="렘브란트 하르먼손 반 레인 연표로 이동">렘브란트</a>`,
-  vermeer: `<a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q41264" target="_blank" rel="noopener" data-artist-id="artist-Q41264" data-uh-original="Johannes Vermeer" data-uh-korean="요하네스 페르메이르" data-uh-display-korean="베르메르" title="요하네스 페르메이르 연표로 이동">베르메르</a>`,
-  vigee: `<a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q213163" target="_blank" rel="noopener" data-artist-id="artist-Q213163" data-uh-original="Élisabeth Louise Vigée Le Brun" data-uh-korean="엘리자베스 루이 비제 르 브룅" data-uh-display-korean="비제 르 브룅" title="엘리자베스 루이 비제 르 브룅 연표로 이동">비제 르 브룅</a>`
+  michelangelo: `<a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q5592" target="_blank" rel="noopener" data-artist-id="artist-Q5592" data-uh-original="Michelangelo" data-uh-korean="미켈란젤로 부오나로티" data-uh-display-korean="부오나로티, 미켈란젤로" title="미켈란젤로 부오나로티 연표로 이동" data-uh-list-korean="미켈란젤로">미켈란젤로</a>`,
+  elgreco: `<a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q301" target="_blank" rel="noopener" data-artist-id="artist-Q301" data-uh-original="El Greco" data-uh-korean="엘 그레코" data-uh-display-korean="엘 그레코" title="엘 그레코 연표로 이동" data-uh-list-korean="엘 그레코">엘 그레코</a>`,
+  titian: `<a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q47551" target="_blank" rel="noopener" data-artist-id="artist-Q47551" data-uh-original="Titian" data-uh-korean="티치아노" data-uh-display-korean="티치아노" title="티치아노 연표로 이동" data-uh-list-korean="티치아노">티치아노</a>`,
+  rubens: `<a class="art-atlas-artist-link" href="../../index.html?artist=artist-url-1786879941678" target="_blank" rel="noopener" data-artist-id="artist-url-1786879941678" data-uh-original="Peter Paul Rubens" data-uh-korean="페테르 파울 루벤스" data-uh-display-korean="루벤스, 페테르 파울" title="페테르 파울 루벤스 연표로 이동" data-uh-list-korean="루벤스">루벤스</a>`,
+  rembrandt: `<a class="art-atlas-artist-link" href="../../index.html?artist=artist-rembrandt" target="_blank" rel="noopener" data-artist-id="artist-rembrandt" data-uh-original="Rembrandt Harmenszoon van Rijn" data-uh-korean="렘브란트 하르먼손 반 레인" data-uh-display-korean="렘브란트 하르먼손 반 레인" title="렘브란트 하르먼손 반 레인 연표로 이동" data-uh-list-korean="렘브란트">렘브란트</a>`,
+  vermeer: `<a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q41264" target="_blank" rel="noopener" data-artist-id="artist-Q41264" data-uh-original="Johannes Vermeer" data-uh-korean="요하네스 페르메이르" data-uh-display-korean="페르메이르, 요하네스" title="요하네스 페르메이르 연표로 이동" data-uh-list-korean="페르메이르">페르메이르</a>`,
+  vigee: `<a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q213163" target="_blank" rel="noopener" data-artist-id="artist-Q213163" data-uh-original="Élisabeth Louise Vigée Le Brun" data-uh-korean="엘리자베스 루이 비제 르 브룅" data-uh-display-korean="비제 르 브룅, 엘리자베스 루이" title="엘리자베스 루이 비제 르 브룅 연표로 이동" data-uh-list-korean="르 브룅">르 브룅</a>`
 };
 
 const blocks = {
@@ -198,7 +198,7 @@ ${style}
     <div class="enhancement-panel">
       <h3>따로 HTML로 나누지 않은 내부 화파</h3>
       <ul>
-        <li>프랑스 로코코의 페트 갈랑트는 와토가 대표한다. 야외 축제와 연애 장면은 단순한 풍속화가 아니라 귀족 사회가 스스로를 우아한 놀이와 덧없는 감정의 세계로 상상한 결과다.</li>
+        <li>프랑스 로코코의 페트 갈랑트는 바토가 대표한다. 야외 축제와 연애 장면은 단순한 풍속화가 아니라 귀족 사회가 스스로를 우아한 놀이와 덧없는 감정의 세계로 상상한 결과다.</li>
         <li>부셰와 프라고나르의 살롱 회화는 신화, 목가, 실내 장식, 애정 장면을 부드러운 색과 곡선으로 연결했다. 여기서 그림은 독립된 엄숙한 역사화라기보다 방의 벽, 가구, 직물, 도자기와 어울리는 감각적 환경의 일부가 된다.</li>
         <li>파스텔 초상은 로코코의 중요한 하위 흐름이다. 로살바 카리에라와 라 투르는 피부, 레이스, 표정, 사교적 지성을 부드러운 가루 안료로 표현해 궁정과 살롱의 친밀한 이미지를 만들었다.</li>
         <li>베네치아 로코코는 티에폴로의 천장화와 카날레토의 도시 풍경으로 갈라진다. 티에폴로가 하늘로 열리는 장대한 환영을 만들었다면, 카날레토는 여행자와 그랜드 투어 시장을 위한 정밀한 도시 이미지를 발전시켰다.</li>
@@ -216,7 +216,7 @@ ${style}
     </div>
   </div>
   <h3>표에는 나오지만 문서 상단에 도판이 없던 대표작</h3>
-  <p class="enhancement-intro">아래 카드는 앞부분의 와토, 부셰, 프라고나르, 티에폴로, 리고를 반복하지 않고 로코코의 주변부와 확장 영역을 보여준다.</p>
+  <p class="enhancement-intro">아래 카드는 앞부분의 바토, 부셰, 프라고나르, 티에폴로, 리고를 반복하지 않고 로코코의 주변부와 확장 영역을 보여준다.</p>
   <div class="movement-work-grid">
     <article class="movement-work-card">
       <div class="movement-work-image"><img src="images/Chardin-The-Ray-WGA04738.jpg" alt="샤르댕, 가오리"></div>
