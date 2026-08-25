@@ -64,21 +64,39 @@ body {
   display: inline-flex;
   flex: none;
   align-items: center;
+  gap: 10px;
   width: max-content;
   color: #1b2923;
-  font: 400 17px/1.2 var(--serif);
-  letter-spacing: .015em;
+  font: 700 13px/1 var(--sans);
+  letter-spacing: .14em;
+  text-decoration: none;
 }
 
 .technique-brand::before {
-  width: 21px;
-  height: 1px;
-  margin-right: 10px;
-  background: #cf9369;
-  content: '';
+  display: none;
+  content: none;
+}
+
+.technique-brand .brand-mark {
+  display: grid;
+  flex: 0 0 27px;
+  width: 27px;
+  height: 27px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--orange);
+  color: white;
+  font-family: var(--serif);
+  font-size: 17px;
+  font-style: italic;
+  letter-spacing: 0;
 }
 
 .technique-brand:hover { color: #56715e; }
+.page-nav-actions { position: fixed; z-index: 140; top: 10px; right: 18px; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; max-width: calc(100vw - 36px); }
+.page-nav-actions .rules-check-button { flex: none; }
+.atlas-nav-button { display: inline-flex; align-items: center; justify-content: center; min-height: 31px; border: 1px solid #aebba8; border-radius: 4px; background: var(--sage); color: var(--ink); padding: 7px 10px; font-size: 12px; font-weight: 700; line-height: 1; text-decoration: none; white-space: nowrap; }
+.atlas-nav-button:hover, .atlas-nav-button:focus-visible { border-color: #8e9b8b; background: #edf3e9; color: var(--ink); outline: none; }
 
 .technique-display-mode {
   position: relative;
@@ -109,6 +127,7 @@ body {
 .technique-display-mode.technique-display-mode--round { display:flex; grid-template-columns:none; padding:0; border:0; background:transparent; }
 .technique-display-mode--round .technique-display-mode-button { display:grid; width:28px; min-height:28px; height:28px; place-items:center; padding:0; border:1px solid #aebba8; border-radius:50%; background:#fbfcf9; font:700 10px/1 var(--sans); }
 .technique-display-mode--round .technique-display-mode-button.active { border-color:#425043; background:#425043; color:#fffdf8; }
+.technique-sidebar-title { margin:12px 0 10px; color:#1b2923; font:400 23.4px/1.25 var(--serif); letter-spacing:0; word-break:keep-all; overflow-wrap:break-word; }
 
 .technique-sidebar .eyebrow {
   position: relative;
@@ -403,6 +422,9 @@ body {
 @media (max-width: 760px) {
   .technique-shell { display: block; }
   .technique-sidebar { width: 100%; min-width: 0; max-width: none; }
+  .technique-sidebar-title { font-size:18px; }
+  .page-nav-actions { top: 8px; right: 8px; gap: 5px; max-width: calc(100vw - 16px); }
+  .page-nav-actions .atlas-nav-button, .page-nav-actions .rules-check-button { min-height: 28px; padding: 6px 8px; font-size: 11px; }
   .sidebar-resize-handle { display: none; }
 }
 
@@ -426,7 +448,14 @@ body {
 /* Denser hierarchy in the explanation panel. */
 .technique-search { margin: 2px 0 10px; }
 .technique-content { padding-top: 10px; padding-bottom: 70px; }
-#technique-content > header { padding-bottom: 10px; }
+#technique-content > header { padding-bottom: 4px; }
+#technique-content > header h1 { font: 400 39px/1.25 var(--serif); letter-spacing: 0; }
+#technique-content > header .eyebrow { margin-bottom: 6px; }
+#technique-content > header .subtitle { margin-top: 5px; }
+#technique-content > .definition { padding: 7px 0 20px; }
+#technique-content > .definition h2 { margin: 0 0 6px; }
+#technique-content > .definition p { margin: 6px 0 0; line-height: 1.72; }
+#technique-content > .technique-comparison { padding-top: 10px; }
 
 /* Administrator delete target at the right edge of a technique item. */
 .technique-item.has-delete { padding-right: 42px; padding-left: 11px; }
@@ -487,3 +516,7 @@ body {
 /* Slightly tighter rows after adding filters above the list. */
 .technique-list-row { height: 28px; }
 .technique-list-row .technique-item { height: 28px; padding: 4px 10px 4px 11px; font-size: 12.5px; line-height: 1.2; }
+
+@media (max-width: 760px) {
+  #technique-content > header h1 { font-size: 30px; }
+}

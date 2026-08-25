@@ -8,12 +8,18 @@
   <link rel="stylesheet" href="topics.css">
   <link rel="stylesheet" href="rules-check.css">
   <link rel="stylesheet" href="./uhangul/uhangul-runtime.css?v=0.7" data-uhangul-integration="v0.7">
-  <style>.topic-title-row{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}.topic-title-row #hint{margin-bottom:0}.topic-title-row>div:last-child{display:flex;gap:6px;align-items:flex-start}.topic-title-row button{flex:none;margin-top:4px;border:1px solid #aebba8;border-radius:6px;background:#f9f7f1;padding:8px 11px;color:#425043;font-weight:700}.topic-title-row .rules-check-button,.topic-title-row #topic-add-artwork,.topic-title-row #topic-mosaic-view{display:inline-flex;align-items:center;justify-content:center;min-height:31px;border:1px solid #8e9b8b;border-radius:4px;background:#fffdf8;padding:7px 10px;color:#334334;font:700 11px/1 var(--sans,'Noto Sans KR',sans-serif);white-space:nowrap}.topic-title-row button:hover{background:#dfe8d9}.topic-display-mode{display:flex;gap:4px;margin:12px 0 8px}.topic-display-mode button{display:grid;width:28px;height:28px;min-height:28px;place-items:center;margin:0;padding:0;border:1px solid #aebba8;border-radius:50%;background:#fffdf8;color:#425043;font:700 10px/1 var(--sans,'Noto Sans KR',sans-serif)}.topic-display-mode button.active{border-color:#425043;background:#425043;color:#fffdf8}.topic-year-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}.topic-form-error{min-height:1.25em;color:#a43d27;font-size:12px}.topic-artwork-dialog[open]{z-index:100}@media(max-width:600px){.topic-title-row{display:block}.topic-title-row>div:last-child{display:flex;margin-top:14px}.topic-title-row button{margin-top:0}}</style>
+  <style>.topic-title-row{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}.topic-title-row #hint{margin-bottom:0}.topic-display-mode{display:flex;gap:4px;margin:12px 0 8px}.topic-display-mode button{display:grid;width:28px;height:28px;min-height:28px;place-items:center;margin:0;padding:0;border:1px solid #aebba8;border-radius:50%;background:#fffdf8;color:#425043;font:700 10px/1 var(--sans,'Noto Sans KR',sans-serif)}.topic-display-mode button.active{border-color:#425043;background:#425043;color:#fffdf8}.topic-year-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}.topic-form-error{min-height:1.25em;color:#a43d27;font-size:12px}.topic-artwork-dialog[open]{z-index:100}@media(max-width:600px){.topic-title-row{display:block}}</style>
 </head>
 <body>
+  <nav class="page-nav-actions" aria-label="탭 이동">
+    <a class="atlas-nav-button" href="index.html" data-page-nav-url="index.html" data-page-nav-target="artThroughTimeArtists" target="artThroughTimeArtists">화가</a>
+    <a class="atlas-nav-button" href="index.html?movementPopup=1" data-page-nav-url="index.html?movementPopup=1" data-page-nav-target="artThroughTimeMovements" target="artThroughTimeMovements">사조</a>
+    <a class="atlas-nav-button" href="techniques.html" data-page-nav-url="techniques.html" data-page-nav-target="artThroughTimeTechniques" target="artThroughTimeTechniques">기법·용어</a>
+    <button class="rules-check-button" type="button" data-rules-check hidden></button>
+  </nav>
   <div class="topics-shell">
     <aside class="topic-sidebar">
-      <a class="topic-brand" href="index.html">Art Through Time</a>
+      <a class="topic-brand" href="index.html"><span class="brand-mark">A</span><span>Art Through Time</span></a>
       <div class="topic-display-mode" role="group" aria-label="이름 표기 방식"><button type="button" data-display-mode="korean" aria-label="한국어" title="한국어">한</button><button type="button" data-display-mode="uhangul" aria-label="uHangul" title="uHangul">u</button><button type="button" data-display-mode="original" aria-label="국제 표기" title="국제 표기">표</button></div>
       <h1 class="topic-sidebar-title">주제-사건</h1>
       <label class="topic-search"><input id="topic-search" type="search" autocomplete="off" placeholder="주제·사건 검색" aria-label="주제·사건 검색"></label>
@@ -23,7 +29,7 @@
       <nav id="topics"></nav>
       <button id="topic-logout" class="topic-logout" type="button">로그아웃</button>
     </aside>
-    <main><header><div class="topic-title-row"><div><h2 id="title"></h2><p id="hint">주제를 선택하세요</p></div><div><button class="rules-check-button" type="button" data-rules-check hidden></button><button id="topic-add-artwork" type="button" hidden>＋ 그림 추가</button><button id="topic-mosaic-view" type="button" hidden>모자이크 보기</button></div></div></header><div id="axis"></div></main>
+    <main><header><div class="topic-title-row"><div><h2 id="title"></h2><p id="hint">주제를 선택하세요</p></div></div></header><div id="axis"></div></main>
     <aside id="detail"><p>그림을 클릭하면 설명이 표시됩니다.</p></aside>
   </div>
   <dialog id="topic-artwork-dialog"><form id="topic-artwork-form" method="dialog"><button class="close" type="button" data-close-topic-dialog aria-label="닫기">×</button><h2>그림 추가</h2><p id="topic-artwork-file-name" class="dialog-description"></p><label>제목<input id="topic-artwork-title" name="title" required></label><div class="topic-year-fields"><label>시작 연도<input id="topic-artwork-start" name="startYear" type="number" min="1" required></label><label>끝 연도<input id="topic-artwork-end" name="endYear" type="number" min="1" required></label></div><p id="topic-artwork-error" class="topic-form-error" aria-live="polite"></p><button class="save" type="submit">저장</button></form></dialog>

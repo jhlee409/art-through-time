@@ -8,10 +8,16 @@ let listDirection = 'asc';
 const sessionStorageKey = 'art-atlas-access-session-v1';
 const topicSidebarWidthStorageKey = 'art-through-time-topic-sidebar-width-v1';
 const uHangulModeStorageKey = 'ArtThroughTime.uHangulMode.v7';
+window.name = 'artThroughTimeTopics';
 const requestedUHangulMode = new URLSearchParams(location.search).get('uhangul');
 const initialUHangulMode = ['original','uhangul','korean'].includes(requestedUHangulMode) ? requestedUHangulMode : 'korean';
 let uHangulMode = initialUHangulMode;
-function renderDisplayMode(){document.querySelectorAll('[data-display-mode]').forEach(button=>{const active=button.dataset.displayMode===uHangulMode;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));});window.dispatchEvent(new CustomEvent('uhangulmodechange',{detail:{mode:uHangulMode}}));}
+function pageNavUrl(url){const target=new URL(url,location.href);target.searchParams.set('uhangul',uHangulMode);return target.href;}
+function openNamedPage(url,targetName){const opened=window.open('',targetName);if(!opened)return;try{if(opened.location.href==='about:blank')opened.location.href=url;}catch(_){opened.location.href=url;}if(typeof opened.focus==='function')opened.focus();}
+function syncPageNavLinks(){document.querySelectorAll('[data-page-nav-url]').forEach(link=>{link.href=pageNavUrl(link.dataset.pageNavUrl);if(link.dataset.pageNavTarget)link.target=link.dataset.pageNavTarget;});}
+function handlePageNavClick(event){const link=event.target.closest('[data-page-nav-url][data-page-nav-target]');if(!link)return;event.preventDefault();openNamedPage(pageNavUrl(link.dataset.pageNavUrl),link.dataset.pageNavTarget);}
+document.addEventListener('click',handlePageNavClick);
+function renderDisplayMode(){syncPageNavLinks();document.querySelectorAll('[data-display-mode]').forEach(button=>{const active=button.dataset.displayMode===uHangulMode;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));});window.dispatchEvent(new CustomEvent('uhangulmodechange',{detail:{mode:uHangulMode}}));}
 document.addEventListener('click',event=>{const button=event.target.closest('[data-display-mode]');if(!button)return;uHangulMode=['original','uhangul'].includes(button.dataset.displayMode)?button.dataset.displayMode:'korean';sessionStorage.setItem(uHangulModeStorageKey,uHangulMode);renderDisplayMode();});
 const adminToken = () => {
   try {
@@ -135,11 +141,11 @@ function topicWorks(topic) {
 
 function render() {
   const items = topicWorks(selected);
-  $('#topic-add-artwork').hidden = !adminToken();
-  $('#topic-mosaic-view').hidden = !items.some(work => topicImage(work) && topicImage(work) !== fallbackImage);
+  const canAddArtwork = !!adminToken();
+  const canOpenMosaic = items.some(work => topicImage(work) && topicImage(work) !== fallbackImage);
   $('#title').textContent = text(selected.name);
   $('#hint').textContent = selected.description?.ko || '';
-  $('#axis').innerHTML = `<div class="topic-axis">${items.map(work => `
+  $('#axis').innerHTML = `<div class="topic-gallery-actions"><button id="topic-add-artwork" type="button"${canAddArtwork ? '' : ' hidden'}>＋ 그림 추가</button><button id="topic-mosaic-view" type="button"${canOpenMosaic ? '' : ' hidden'}>모자이크 보기</button></div><div class="topic-axis">${items.map(work => `
     <section class="topic-row">
       <div class="topic-axis-label"><strong>${esc(work.year)}</strong><span>${esc(work.movement)}</span></div>
       <article class="topic-card">
@@ -204,7 +210,10 @@ $('#detail').onclick = event => { if (event.target.closest('.close-topic-detail'
 $('#topic-search').oninput = renderList;
 $('#topic-sort').onchange = event => { listDirection = event.currentTarget.value === 'desc' ? 'desc' : 'asc'; renderList(); };
 $('#topic-logout').onclick = logoutTopicPage;
-$('#topic-mosaic-view').onclick = () => { if (selected) openTopicMosaicWindow(selected); };
+document.addEventListener('click', event => {
+  if (!event.target.closest('#topic-mosaic-view')) return;
+  if (selected) openTopicMosaicWindow(selected);
+});
 
 const topicArtworkDialog = $('#topic-artwork-dialog');
 const topicArtworkForm = $('#topic-artwork-form');
@@ -259,11 +268,12 @@ async function deleteTopicArtwork(work) {
     render();
   } catch (deleteError) { alert(deleteError.message); }
 }
-$('#topic-add-artwork').onclick = () => {
+document.addEventListener('click', event => {
+  if (!event.target.closest('#topic-add-artwork')) return;
   if (!selected || !adminToken()) return;
   topicArtworkPicker.value = '';
   topicArtworkPicker.click();
-};
+});
 topicArtworkPicker.onchange = () => {
   const files = [...(topicArtworkPicker.files || [])];
   if (!files.length) return;

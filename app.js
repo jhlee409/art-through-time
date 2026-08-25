@@ -38,6 +38,7 @@ const artistImportedWorkLimit = 60;
 const sharedMovementId = 'global-contemporary';
 const artistMovementFallbacks = { Q104884:{ko:'독일 낭만주의',en:'German Romanticism'} };
 const isMovementPopup = startupParams.get('movementPopup') === '1';
+window.name = isMovementPopup ? 'artThroughTimeMovements' : 'artThroughTimeArtists';
 const forceLogin = startupParams.get('login') === '1';
 if (forceLogin) {
   try { sessionStorage.removeItem(accessSessionStorageKey); } catch (_) {}
@@ -197,8 +198,8 @@ timeline.addEventListener('click', event => {
 });
 
 const copy = {
-  ko: {collection:'나의 화가 목록',sort:'정렬',nameAsc:'이름오름차순',nameDesc:'이름내림차순',birthAsc:'생년순',addArtist:'화가 추가',newRecord:'NEW RECORD',addTitle:'화가 추가',addHelp:'이름을 입력한 뒤 자동완성 목록에서 정확한 후보를 선택해 저장하세요.',addArtwork:'그림 추가',addArtworkTitle:'그림 1점 추가',artworkPage:'로컬 이미지 파일',artworkTitleInput:'작품 제목 (선택)',artworkYearInput:'제작 연도 (선택)',entryType:'추가할 항목',artist:'화가',painting:'그림',webpage:'웹페이지 주소',name:'이름',birthYear:'Birth year (optional)',artistName:'화가 이름',madeYear:'제작 연도',save:'저장하기',timeline:'작품 연표',slideshow:'슬라이드 쇼',selectWork:'작품을 선택하면\n이곳에서 자세히 볼 수 있어요.',noWork:'아직 등록한 작품이 없습니다.',noImage:'이미지 없음',imagePendingUpload:'이미지 업로드 예정',untitled:'제목 없는 작품',unknown:'정보 없음',country:'제작 국가',movement:'화파',year:'제작 연도',source:'저장된 출처',delete:'삭제',confirmDelete:'이 화가와 등록한 작품을 목록에서 삭제할까요?',confirmDeleteWork:'이 작품을 삭제할까요?',manualWorks:'직접 추가한 작품',movementAtlas:'미술 사조로 보기',countries:'비교할 나라',selectAllCountries:'전체 선택 / 해제',exportChanges:'변경사항_압축',migrationExport:'FIREBASE 내보내기',period:'기간',artistSpan:'선택 화가의 활동 기간',storedInfo:'저장된 작품 정보',loadingInfo:'작품 정보를 정리해 저장하는 중입니다.',noInfo:'저장된 설명이 아직 없습니다.',favorites:'MY FAVORITES',searchArtists:'화가 이름 검색',movementFilter:'사조 선택',allMovements:'전체 사조',clearMovementFilter:'사조 필터 해제',noSearchResult:'일치하는 화가가 없습니다.'},
-  en: {collection:'MY ARTISTS',sort:'SORT',nameAsc:'Name ascending',nameDesc:'Name descending',birthAsc:'Birth year',addArtist:'Add artist',addTitle:'Add artist',addHelp:'Enter a name, then choose the correct artist from suggestions.',addArtwork:'Add artwork',addArtworkTitle:'Add one artwork',artworkPage:'Local image file',artworkTitleInput:'Artwork title (optional)',artworkYearInput:'Year made (optional)',entryType:'Add',artist:'Artist',painting:'Artwork',webpage:'Webpage URL',name:'Name',birthYear:'Birth year (optional)',artistName:'Artist name',madeYear:'Year made',save:'Save',timeline:'WORKS TIMELINE',slideshow:'Slideshow',selectWork:'Select an artwork\nto view its details here.',noWork:'No artworks have been added yet.',noImage:'No image available',imagePendingUpload:'Image scheduled for upload',untitled:'Untitled',unknown:'Unknown',country:'Country made',movement:'Movement',year:'Year made',source:'Stored source',delete:'Delete this artist and their listed works?',confirmDeleteWork:'Delete this artwork?',manualWorks:'MANUALLY ADDED WORKS',movementAtlas:'Movement comparison',countries:'Countries',selectAllCountries:'Select / clear all',exportChanges:'EXPORT CHANGES',migrationExport:'EXPORT FOR FIREBASE',period:'Period',artistSpan:'Selected artist lifespan',storedInfo:'Stored artwork information',loadingInfo:'Preparing and saving artwork information.',noInfo:'No stored description yet.',favorites:'MY FAVORITES',searchArtists:'Search artists',movementFilter:'Movement filter',allMovements:'All movements',clearMovementFilter:'Clear movement filter',noSearchResult:'No matching artists.'}
+  ko: {artistWorksTitle:'화가 및 작품',collection:'나의 화가 목록',sort:'정렬',nameAsc:'이름오름차순',nameDesc:'이름내림차순',birthAsc:'생년순',addArtist:'화가 추가',newRecord:'NEW RECORD',addTitle:'화가 추가',addHelp:'이름을 입력한 뒤 자동완성 목록에서 정확한 후보를 선택해 저장하세요.',addArtwork:'그림 추가',addArtworkTitle:'그림 1점 추가',artworkPage:'로컬 이미지 파일',artworkTitleInput:'작품 제목 (선택)',artworkYearInput:'제작 연도 (선택)',entryType:'추가할 항목',artist:'화가',painting:'그림',webpage:'웹페이지 주소',name:'이름',birthYear:'Birth year (optional)',artistName:'화가 이름',madeYear:'제작 연도',save:'저장하기',timeline:'작품 연표',slideshow:'슬라이드 쇼',selectWork:'작품을 선택하면\n이곳에서 자세히 볼 수 있어요.',noWork:'아직 등록한 작품이 없습니다.',noImage:'이미지 없음',imagePendingUpload:'이미지 업로드 예정',untitled:'제목 없는 작품',unknown:'정보 없음',country:'제작 국가',movement:'화파',year:'제작 연도',source:'저장된 출처',delete:'삭제',confirmDelete:'이 화가와 등록한 작품을 목록에서 삭제할까요?',confirmDeleteWork:'이 작품을 삭제할까요?',manualWorks:'직접 추가한 작품',movementAtlas:'미술 사조로 보기',countries:'비교할 나라',selectAllCountries:'전체 선택 / 해제',exportChanges:'변경사항_압축',period:'기간',artistSpan:'선택 화가의 활동 기간',storedInfo:'저장된 작품 정보',loadingInfo:'작품 정보를 정리해 저장하는 중입니다.',noInfo:'저장된 설명이 아직 없습니다.',favorites:'MY FAVORITES',searchArtists:'화가 이름 검색',movementFilter:'사조 선택',allMovements:'전체 사조',clearMovementFilter:'사조 필터 해제',noSearchResult:'일치하는 화가가 없습니다.'},
+  en: {artistWorksTitle:'Artists and Works',collection:'MY ARTISTS',sort:'SORT',nameAsc:'Name ascending',nameDesc:'Name descending',birthAsc:'Birth year',addArtist:'Add artist',addTitle:'Add artist',addHelp:'Enter a name, then choose the correct artist from suggestions.',addArtwork:'Add artwork',addArtworkTitle:'Add one artwork',artworkPage:'Local image file',artworkTitleInput:'Artwork title (optional)',artworkYearInput:'Year made (optional)',entryType:'Add',artist:'Artist',painting:'Artwork',webpage:'Webpage URL',name:'Name',birthYear:'Birth year (optional)',artistName:'Artist name',madeYear:'Year made',save:'Save',timeline:'WORKS TIMELINE',slideshow:'Slideshow',selectWork:'Select an artwork\nto view its details here.',noWork:'No artworks have been added yet.',noImage:'No image available',imagePendingUpload:'Image scheduled for upload',untitled:'Untitled',unknown:'Unknown',country:'Country made',movement:'Movement',year:'Year made',source:'Stored source',delete:'Delete this artist and their listed works?',confirmDeleteWork:'Delete this artwork?',manualWorks:'MANUALLY ADDED WORKS',movementAtlas:'Movement comparison',countries:'Countries',selectAllCountries:'Select / clear all',exportChanges:'EXPORT CHANGES',period:'Period',artistSpan:'Selected artist lifespan',storedInfo:'Stored artwork information',loadingInfo:'Preparing and saving artwork information.',noInfo:'No stored description yet.',favorites:'MY FAVORITES',searchArtists:'Search artists',movementFilter:'Movement filter',allMovements:'All movements',clearMovementFilter:'Clear movement filter',noSearchResult:'No matching artists.'}
 };
 Object.assign(copy.ko, {
   fullName:'정식 한국어 이름 (선택)',
@@ -520,17 +521,27 @@ function uHangulModeUrl(url, mode=uHangulMode) {
   target.searchParams.set('uhangul', mode);
   return target.href;
 }
+function openNamedPage(url, targetName) {
+  const opened = window.open('', targetName);
+  if (!opened) return;
+  try {
+    if (opened.location.href === 'about:blank') opened.location.href = url;
+  } catch (_) {
+    opened.location.href = url;
+  }
+  if (typeof opened.focus === 'function') opened.focus();
+}
 function generatedCatalogueFile(artistOrResult={}) {
   return `data/generated/${artistOrResult.qid ? `qid-${artistOrResult.qid}` : artistOrResult.id}.json`;
 }
 function openArtistListPage() {
-  window.open(uHangulModeUrl('index.html'), 'artThroughTimeArtists');
+  openNamedPage(uHangulModeUrl('index.html'), 'artThroughTimeArtists');
 }
 function openTechniquesPage() {
-  window.open(uHangulModeUrl('techniques.html'), 'artThroughTimeTechniques');
+  openNamedPage(uHangulModeUrl('techniques.html'), 'artThroughTimeTechniques');
 }
 function openTopicsPage() {
-  window.open(uHangulModeUrl('topics.html'), 'artThroughTimeTopics');
+  openNamedPage(uHangulModeUrl('topics.html'), 'artThroughTimeTopics');
 }
 const normalized = value => String(value || '').toLowerCase().replace(/[^a-z0-9가-힣]/g, '');
 const selectionKey = work => {
@@ -1557,16 +1568,13 @@ function renderText() {
     button.setAttribute('aria-pressed', String(active));
   });
   window.dispatchEvent(new CustomEvent('uhangulmodechange', {detail:{mode:uHangulMode}}));
-  const migrationExportButton = $('#migration-export-button');
-  migrationExportButton.classList.toggle('hidden', !currentUserIsAdmin);
-  migrationExportButton.textContent = t('migrationExport');
   const addButton = $('#add-button');
   if (addButton) {
     addButton.classList.toggle('hidden', !currentUserIsAdmin);
     addButton.title = t('addArtistTooltip');
     addButton.setAttribute('aria-label', t('addArtistTooltip'));
   }
-  $('#movement-atlas-button').classList.toggle('active', viewMode === 'movements');
+  $('#movement-atlas-button')?.classList.toggle('active', viewMode === 'movements');
 }
 function artistFacetValues(artist, key) { return Array.isArray(artist?.[key]) ? artist[key] : []; }
 function artistMatchesFacetFilters(artist) {
@@ -1838,8 +1846,7 @@ function renderTimeline() {
     ? `${timelineArtistNameMarkup}${originalName && originalName !== koreanName ? ` <a class="original-artist-name" data-uh-ignore="true" href="${esc(originalArtistWikipediaUrl)}" data-artist-wiki="${esc(artist.qid || '')}">${esc(originalName)}</a>` : ''}${linkControls}`
     : `${esc(loc(artist.name))}${linkControls}`;
   const slideshowHelp = language === 'ko' ? '전체 화면 슬라이드 쇼 시작 · 5초마다 다음 작품' : 'Start fullscreen slideshow · next artwork every 5 seconds';
-  const rulesCheckButton = currentUserIsAdmin ? `<button class="rules-check-button" type="button" data-rules-check hidden></button>` : '';
-  const headerActions = rulesCheckButton;
+  const headerActions = '';
   const timelineHeader = `<header class="timeline-sticky-header"><p class="eyebrow">${t('timeline')}</p><div class="timeline-title-row"><h1 class="timeline-title">${displayName}</h1><div class="timeline-title-actions">${headerActions}</div></div>${currentUserIsAdmin ? `<form class="artist-link-entry hidden"><input type="url" inputmode="url" placeholder="https://" aria-label="${esc(linkInputLabel)}" required><button type="submit">${esc(confirmLinkLabel)}</button></form>` : ''}<p class="life">${years(artist)}${nationalityLabel ? ` · ${esc(nationalityLabel)}` : ''}${artistMovement ? ` · ${artistMovementLabel}` : ''}</p></header>`;
   const standardTimelineMarkup = `<div class="timeline">${works.length ? [...worksByYear.entries()].map(([year, group]) => `<div class="timeline-row"><span class="year">${year}</span><span class="node"></span><div class="artworks-at-year">${group.map(card).join('')}</div></div>`).join('') : `<p class="empty-timeline">${t('noWork')}</p>`}</div>`;
   const leonardoTimelineMarkup = (() => {
@@ -2322,11 +2329,12 @@ function renderMovementAtlas() {
   const rangeText = `${yearLabel(start)}–${yearLabel(end)}`;
   const periodControls = `<fieldset class="atlas-period-control"><legend>${language === 'ko' ? '기간' : 'Period'}</legend><div class="atlas-period-sliders"><span class="atlas-period-min">${movementAtlasMinimum}</span><label aria-label="${language === 'ko' ? '시작 연도' : 'Start year'}"><input class="atlas-period-start" type="range" min="${movementAtlasMinimum}" max="${movementAtlasEnd}" step="1" value="${start}"></label><label aria-label="${language === 'ko' ? '끝 연도' : 'End year'}"><input class="atlas-period-end" type="range" min="${movementAtlasMinimum}" max="${movementAtlasEnd}" step="1" value="${end}"></label><span class="atlas-period-now">${language === 'ko' ? '현재' : 'Today'}</span></div><div class="atlas-period-entry"><label><span>${language === 'ko' ? '시작입력' : 'Start input'}</span><input class="atlas-period-start-value" type="number" min="${movementAtlasMinimum}" max="${movementAtlasEnd - movementMinimumRangeSpan}" step="1" value="${start}" aria-label="${language === 'ko' ? '시작 연도 입력' : 'Start year input'}"></label><div class="atlas-period-selected"><span>${language === 'ko' ? '선택된 연도' : 'Selected years'}</span><p class="atlas-range">${rangeText}</p></div><label><span>${language === 'ko' ? '끝입력' : 'End input'}</span><input class="atlas-period-end-value" type="number" min="${movementAtlasMinimum + movementMinimumRangeSpan}" max="${movementAtlasEnd}" step="1" value="${end}" aria-label="${language === 'ko' ? '끝 연도 입력' : 'End year input'}"></label></div></fieldset>`;
   const densityControls = `<fieldset class="atlas-density-control"><legend>${language === 'ko' ? '표시 밀도' : 'Display density'}</legend><div class="atlas-density-row"><span>1x</span><input class="atlas-density-slider" type="range" min="${movementDensityMinimum}" max="${movementDensityMaximum}" step="0.1" value="${density}" aria-label="${language === 'ko' ? '표시 밀도' : 'Display density'}"><span>${movementDensityMaximum}x</span><output>${density.toFixed(1)}x</output></div></fieldset>`;
-  const artistListLabel = language === 'ko' ? '화가 목록' : 'Artist list';
-  const techniquesLabel = language === 'ko' ? '기법·용어' : 'Techniques & Terms';
-  const topicsLabel = language === 'ko' ? '주제 - 사조' : 'Topics - movements';
-  timeline.innerHTML = `<div class="timeline-title-row movement-title-row"><h1 class="timeline-title">${t('movementAtlas')}</h1><div class="timeline-title-actions movement-title-actions"><button class="atlas-nav-button movement-nav-artists" type="button">${artistListLabel}</button><button class="atlas-nav-button movement-nav-techniques" type="button">${techniquesLabel}</button><button class="atlas-nav-button movement-nav-topics" type="button">${topicsLabel}</button></div></div><div class="atlas-controls">${countryControls}${periodControls}${densityControls}<div class="atlas-event-actions"><button class="atlas-event-toggle" type="button">${toggleEventsLabel}</button>${eventEditorButton}</div></div><div class="atlas-scroll">${columns.length ? `<div class="atlas-chart" style="grid-template-columns:${chartColumns}">${showHistoricalEvents ? renderAtlasEvents(start, countryEnd, height, yearScale) : ''}${axis(start, countryEnd, height)}${columns.map(column).join('')}</div>` : ''}${sharedBox ? `${columns.length ? '<div class="atlas-shared-divider"></div>' : ''}${sharedBox}` : ''}${!columns.length && !sharedBox ? `<p class="empty-timeline">${language === 'ko' ? '비교할 나라를 하나 이상 선택해 주세요.' : 'Select at least one country.'}</p>` : ''}</div>`;
-  if (currentUserIsAdmin) timeline.querySelector('.movement-title-actions')?.insertAdjacentHTML('beforeend','<button class="rules-check-button" type="button" data-rules-check hidden></button>');
+  const artistListLabel = language === 'ko' ? '화가' : 'Artists';
+  const techniquesLabel = language === 'ko' ? '기법·용어' : 'Techniques';
+  const topicsLabel = language === 'ko' ? '주제-사건' : 'Topics & Events';
+  const movementBrand = `<a class="movement-view-brand" href="index.html"><span class="brand-mark">A</span><span>Art Through Time</span></a>`;
+  const pageNav = `<nav class="page-nav-actions" aria-label="${language === 'ko' ? '탭 이동' : 'Tab navigation'}"><button class="atlas-nav-button movement-nav-artists" type="button">${artistListLabel}</button><button class="atlas-nav-button movement-nav-techniques" type="button">${techniquesLabel}</button><button class="atlas-nav-button movement-nav-topics" type="button">${topicsLabel}</button><button class="rules-check-button" type="button" data-rules-check hidden></button></nav>`;
+  timeline.innerHTML = `${pageNav}<div class="movement-view-header">${movementBrand}<div class="timeline-title-row movement-title-row"><h1 class="timeline-title">${t('movementAtlas')}</h1><div class="timeline-title-actions movement-title-actions"></div></div></div><div class="atlas-controls">${countryControls}${periodControls}${densityControls}<div class="atlas-event-actions"><button class="atlas-event-toggle" type="button">${toggleEventsLabel}</button>${eventEditorButton}</div></div><div class="atlas-scroll">${columns.length ? `<div class="atlas-chart" style="grid-template-columns:${chartColumns}">${showHistoricalEvents ? renderAtlasEvents(start, countryEnd, height, yearScale) : ''}${axis(start, countryEnd, height)}${columns.map(column).join('')}</div>` : ''}${sharedBox ? `${columns.length ? '<div class="atlas-shared-divider"></div>' : ''}${sharedBox}` : ''}${!columns.length && !sharedBox ? `<p class="empty-timeline">${language === 'ko' ? '비교할 나라를 하나 이상 선택해 주세요.' : 'Select at least one country.'}</p>` : ''}</div>`;
   timeline.querySelector('.movement-nav-artists')?.addEventListener('click', openArtistListPage);
   timeline.querySelector('.movement-nav-techniques')?.addEventListener('click', openTechniquesPage);
   timeline.querySelector('.movement-nav-topics')?.addEventListener('click', openTopicsPage);
@@ -2465,7 +2473,7 @@ function openMovementAtlas() {
     pageUrl.searchParams.delete('artist');
     pageUrl.searchParams.delete('artistId');
     pageUrl.searchParams.set('movementPopup', '1');
-    window.open(uHangulModeUrl(pageUrl.href), '_blank');
+    openNamedPage(uHangulModeUrl(pageUrl.href), 'artThroughTimeMovements');
     return;
   }
   movementView = normalizeMovementView(movementView);
@@ -3154,9 +3162,9 @@ async function addLocalArtworksToSelectedArtist(files, title, yearInput) {
 
 $('#sort').onchange = renderList;
 $('#artist-search').oninput = event => { artistSearchQuery = event.currentTarget.value.trim(); renderList(); };
-$('#movement-atlas-button').onclick = openMovementAtlas;
-$('#techniques-button').onclick = openTechniquesPage;
-$('#topics-button').onclick = openTopicsPage;
+$('#movement-atlas-button')?.addEventListener('click', openMovementAtlas);
+$('#techniques-button')?.addEventListener('click', openTechniquesPage);
+$('#topics-button')?.addEventListener('click', openTopicsPage);
 $('#close-add-dialog').onclick = () => dialog.close();
 $('#close-add-artwork-dialog').onclick = () => artworkDialog.close();
 $('#close-slideshow').onclick = closeSlideshow;
@@ -3309,26 +3317,6 @@ window.addEventListener('message', event => {
   setUHangulMode(event.data.mode);
   renderText();
 });
-$('#migration-export-button').onclick = async () => {
-  if (!currentUserIsAdmin) return;
-  const button = $('#migration-export-button');
-  button.disabled = true;
-  try {
-    await saveArtistsNow();
-    const response = await apiFetch('/api/migration-export', {cache:'no-store'});
-    if (!response.ok) { const result = await response.json().catch(() => ({})); throw new Error(result.error || 'Could not create export'); }
-    const file = await response.blob();
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(file);
-    link.download = `art-through-time-firebase-${new Date().toISOString().slice(0,10)}.json`;
-    link.click();
-    setTimeout(() => URL.revokeObjectURL(link.href), 1000);
-  } catch (error) {
-    alert(language === 'ko' ? `Firebase 내보내기를 만들지 못했습니다. ${error.message || ''}` : `Could not create the Firebase export. ${error.message || ''}`);
-  } finally {
-    button.disabled = false;
-  }
-};
 async function startApp() {
   await chooseAccessMode();
   await loadCurrentUserRole();

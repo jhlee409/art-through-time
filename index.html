@@ -13,6 +13,12 @@
   <link rel="stylesheet" href="./uhangul/uhangul-runtime.css?v=0.7" data-uhangul-integration="v0.7">
 </head>
   <body class="auth-pending">
+    <nav class="page-nav-actions artist-page-nav" aria-label="탭 이동">
+      <button id="movement-atlas-button" class="atlas-nav-button" type="button" title="미술 사조의 이해" aria-label="미술 사조의 이해">사조</button>
+      <button id="techniques-button" class="atlas-nav-button" type="button" title="미술 기법 및 용어" aria-label="미술 기법 및 용어">기법·용어</button>
+      <button id="topics-button" class="atlas-nav-button" type="button" title="주제-사건" aria-label="주제-사건">주제-사건</button>
+      <button class="rules-check-button" type="button" data-rules-check hidden></button>
+    </nav>
     <div class="app-shell">
       <aside class="sidebar">
         <div class="brand"><span class="brand-mark">A</span><span>Art Through Time</span></div>
@@ -21,11 +27,7 @@
           <button class="display-mode-button" type="button" data-display-mode="uhangul" aria-label="uHangul" title="uHangul" aria-pressed="false">u</button>
           <button class="display-mode-button" type="button" data-display-mode="original" aria-label="국제 표기" title="국제 표기" aria-pressed="false">표</button>
         </div>
-        <div class="sidebar-section-tools" role="group" aria-label="미술 자료">
-          <button id="movement-atlas-button" class="movement-atlas-button" type="button" title="미술 사조의 이해" aria-label="미술 사조의 이해">사조</button>
-          <button id="techniques-button" class="movement-atlas-button techniques-button" type="button" title="미술 기법 및 용어" aria-label="미술 기법 및 용어">기법·용어</button>
-          <button id="topics-button" class="movement-atlas-button techniques-button" type="button" title="주제와 사건" aria-label="주제와 사건">주제-사건</button>
-        </div>
+        <h1 class="sidebar-page-title" data-i18n="artistWorksTitle">화가 및 작품</h1>
         <div class="artist-filter-row">
           <label class="artist-search"><span class="sr-only" data-i18n="searchArtists">화가 검색</span><input id="artist-search" type="search" autocomplete="off" data-i18n-placeholder="searchArtists" placeholder="화가 이름 검색" /></label>
           <section id="artist-facet-filters" class="artist-facet-filters" aria-label="화가 다중 필터"></section>
@@ -35,7 +37,7 @@
           <label class="sort-select"><span data-i18n="sort">정렬</span><select id="sort"><option value="nameAsc" data-i18n="nameAsc">이름오름차순</option><option value="nameDesc" data-i18n="nameDesc">이름내림차순</option><option value="birth" data-i18n="birthAsc" selected>생년순</option></select></label>
         </div>
         <nav id="artist-list" class="artist-list" aria-label="화가 목록"></nav>
-        <div class="language"><button id="logout-button" class="logout-button" type="button">로그아웃</button><button id="migration-export-button" class="admin-export-button hidden" type="button">FIREBASE 내보내기</button></div>
+        <div class="language"><button id="logout-button" class="logout-button" type="button">로그아웃</button></div>
       </aside>
       <main class="main-area">
         <section id="timeline-panel" class="timeline-panel"></section>
