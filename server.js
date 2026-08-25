@@ -1300,12 +1300,15 @@ function normalizeMovementCardPresentation(html) {
   source=source.replace(/<article\b(?=[^>]*\bclass=["'][^"']*\b(?:movement-work-card|card)\b[^"']*["'])[\s\S]*?<\/article>/gi,card=>card.replace(/(<div\b(?=[^>]*\bclass=["'][^"']*\b(?:movement-work-body|caption)\b[^"']*["'])[^>]*>)([\s\S]*?)(<\/div>)/i,(_,open,body,close)=>{
     const withoutLabel=body.replace(/^\s*<span\b(?=[^>]*\bclass=["'][^"']*\bmini-label\b)[^>]*>[\s\S]*?<\/span>\s*/i,'');
     const titled=withoutLabel.replace(/(<h3\b[^>]*>)([\s\S]*?)(<\/h3>)/i,(_,headingOpen,title,headingClose)=>{
-      const cleanTitle=title.replace(/\s*<span\b(?=[^>]*\bclass=["'][^"']*\bmovement-card-title-tag\b)[^>]*>[\s\S]*?<\/span>\s*/gi,'');
-      return `${headingOpen}${cleanTitle}<span class="movement-card-title-tag"> · ${escapeAttribute(movement)}</span>${headingClose}`;
+      const activityRegion=title.match(/\s*<span\b(?=[^>]*\bclass=["'][^"']*\bmovement-card-activity-region\b)[^>]*>[\s\S]*?<\/span>\s*/i)?.[0] || '';
+      const cleanTitle=title
+        .replace(/\s*<span\b(?=[^>]*\bclass=["'][^"']*\bmovement-card-title-tag\b)[^>]*>[\s\S]*?<\/span>\s*/gi,'')
+        .replace(/\s*<span\b(?=[^>]*\bclass=["'][^"']*\bmovement-card-activity-region\b)[^>]*>[\s\S]*?<\/span>\s*/gi,'');
+      return `${headingOpen}${cleanTitle}<span class="movement-card-title-tag"> · ${escapeAttribute(movement)}</span>${activityRegion}${headingClose}`;
     });
     return `${open}${titled}${close}`;
   }));
-  const style='<style id="art-atlas-movement-card-presentation-style">.movement-card-title-tag{color:#9aa5af;font-size:.78em;font-weight:600;white-space:nowrap}</style>';
+  const style='<style id="art-atlas-movement-card-presentation-style">.movement-card-title-tag,.movement-card-activity-region{color:#9aa5af;font-size:.78em;font-weight:600;white-space:nowrap}</style>';
   return /<\/head>/i.test(source) ? source.replace(/<\/head>/i,`${style}\n</head>`) : `${style}\n${source}`;
 }
 async function injectMovementHighResolutionViewer(html) {
