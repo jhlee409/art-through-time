@@ -30021,7 +30021,7 @@
               },
               "collection": [
                 {
-                  "ko": "우�����치 미술관",
+                  "ko": "우피치 미술관",
                   "en": "Uffizi Gallery"
                 }
               ]
@@ -30089,7 +30089,7 @@
       "id": "artist-Q333366",
       "qid": "Q333366",
       "name": {
-        "ko": "프��체스코 프리���티초",
+        "ko": "프란체스코 프리마티초",
         "en": "Francesco Primaticcio"
       },
       "birth": 1504,
@@ -34837,7 +34837,7 @@
           "representative": true,
           "movementContribution": true,
           "description": {
-            "ko": "꽃과 식물을 사람의 얼굴과 옷처럼 조합한 계절 연작으로, 자연물과 초상을 하나의 지적 수수께끼로 결합하는 아르침볼도의 매너리즘적 ���상을 보여 줍니다.",
+            "ko": "꽃과 식물을 사람의 얼굴과 옷처럼 조합한 계절 연작으로, 자연물과 초상을 하나의 지적 수수께끼로 결합하는 아르침볼도의 매너리즘적 환상을 보여 줍니다.",
             "en": "Part of the Seasons series, combining flowers and plants into a human portrait and showing Arcimboldo’s Mannerist transformation of nature into a witty image."
           },
           "technique": {
@@ -40034,7 +40034,7 @@
               "en": "Farnese Hercules"
             },
             "subtitle": {
-              "ko": "하를럼 ���너리즘과 골치우스의 판화적 기교",
+              "ko": "하를럼 매너리즘과 골치우스의 판화적 기교",
               "en": "Haarlem Mannerism and Goltzius’s graphic virtuosity"
             },
             "description": {
@@ -49070,412 +49070,7 @@
           "origin": "generated",
           "thumbnail": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-24.jpg",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-16T11:41:46.017Z",
-          "metadata": {
-            "createdAt": "2026-08-22T20:51:10.793Z",
-            "updatedAt": "2026-08-23T23:55:20.834Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-24.jpg",
-              "highResolution": "",
-              "sourceUrl": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
-              "sourceUrls": [
-                "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Peter_Paul_Rubens_-_Jupiter_and_Callisto.jpg/250px-Peter_Paul_Rubens_-_Jupiter_and_Callisto.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          }
-        },
-        {
-          "id": "wikipedia-Q5599-44",
-          "year": 1613,
-          "title": {
-            "ko": "Lot and His Daughters , c. &#8201;1613–14",
-            "en": "Lot and His Daughters , c. &#8201;1613–14"
-          },
-          "country": {
-            "ko": "스페인령 네덜란드",
-            "en": "Spanish Netherlands"
-          },
-          "movement": {
-            "ko": "",
-            "en": ""
-          },
-          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Lot_and_his_daughters%2C_by_Peter_Paul_Rubens.jpg/250px-Lot_and_his_daughters%2C_by_Peter_Paul_Rubens.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
-          "description": {
-            "ko": "",
-            "en": ""
-          },
-          "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
-          "verified": true,
-          "representative": false,
-          "popularity": 955,
-          "thumbnail": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-44.jpg",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-16T11:41:46.152Z",
-          "metadata": {
-            "createdAt": "2026-08-11T05:38:09.851Z",
-            "updatedAt": "2026-08-23T23:55:20.834Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-44.jpg",
-              "highResolution": "",
-              "sourceUrl": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
-              "sourceUrls": [
-                "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Lot_and_his_daughters%2C_by_Peter_Paul_Rubens.jpg/250px-Lot_and_his_daughters%2C_by_Peter_Paul_Rubens.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "movementContribution": false,
-          "origin": "manual"
-        },
-        {
-          "id": "wikipedia-Q5599-8",
-          "year": 1614,
-          "title": {
-            "ko": "Child with a bird , 1614 and 1625, Gemäldegalerie, Berlin",
-            "en": "Child with a bird , 1614 and 1625, Gemäldegalerie, Berlin"
-          },
-          "country": {
-            "ko": "스페인령 네덜란드",
-            "en": "Spanish Netherlands"
-          },
-          "movement": {
-            "ko": "",
-            "en": ""
-          },
-          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Peter_Paul_Rubens_-_Das_Kind_mit_dem_Vogel_%28Gem%C3%A4ldegalerie_Berlin%29.jpg/250px-Peter_Paul_Rubens_-_Das_Kind_mit_dem_Vogel_%28Gem%C3%A4ldegalerie_Berlin%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
-          "description": {
-            "ko": "",
-            "en": ""
-          },
-          "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
-          "verified": true,
-          "popularity": 991,
-          "movementContribution": false,
-          "origin": "generated",
-          "thumbnail": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-8.jpg",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-16T11:41:46.307Z",
-          "metadata": {
-            "createdAt": "2026-08-22T20:51:10.793Z",
-            "updatedAt": "2026-08-23T23:55:20.834Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-8.jpg",
-              "highResolution": "",
-              "sourceUrl": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
-              "sourceUrls": [
-                "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Peter_Paul_Rubens_-_Das_Kind_mit_dem_Vogel_%28Gem%C3%A4ldegalerie_Berlin%29.jpg/250px-Peter_Paul_Rubens_-_Das_Kind_mit_dem_Vogel_%28Gem%C3%A4ldegalerie_Berlin%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          }
-        },
-        {
-          "id": "wikipedia-Q5599-15",
-          "year": 1615,
-          "title": {
-            "ko": "Landscape with the Ruins of Mount Palatine in Rome , 1615",
-            "en": "Landscape with the Ruins of Mount Palatine in Rome , 1615"
-          },
-          "country": {
-            "ko": "스페인령 네덜란드",
-            "en": "Spanish Netherlands"
-          },
-          "movement": {
-            "ko": "",
-            "en": ""
-          },
-          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Peter_Paul_Rubens_-_Landscape_with_the_Ruins_of_Mount_Palatine_in_Rome.JPG/250px-Peter_Paul_Rubens_-_Landscape_with_the_Ruins_of_Mount_Palatine_in_Rome.JPG?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
-          "description": {
-            "ko": "",
-            "en": ""
-          },
-          "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
-          "verified": true,
-          "popularity": 984,
-          "movementContribution": false,
-          "origin": "generated",
-          "thumbnail": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-15.JPG",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-16T11:42:38.731Z",
-          "metadata": {
-            "createdAt": "2026-08-22T20:51:10.793Z",
-            "updatedAt": "2026-08-23T23:55:20.834Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-15.JPG",
-              "highResolution": "",
-              "sourceUrl": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
-              "sourceUrls": [
-                "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Peter_Paul_Rubens_-_Landscape_with_the_Ruins_of_Mount_Palatine_in_Rome.JPG/250px-Peter_Paul_Rubens_-_Landscape_with_the_Ruins_of_Mount_Palatine_in_Rome.JPG?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          }
-        },
-        {
-          "id": "wikipedia-Q5599-43",
-          "year": 1615,
-          "title": {
-            "ko": "Jan Brueghel the Elder and Peter Paul Rubens, The Garden of Eden with the Fall of Man , Mauritshuis , The Hague",
-            "en": "Jan Brueghel the Elder and Peter Paul Rubens, The Garden of Eden with the Fall of Man , Mauritshuis , The Hague"
-          },
-          "country": {
-            "ko": "스페인령 네덜란드",
-            "en": "Spanish Netherlands"
-          },
-          "movement": {
-            "ko": "",
-            "en": ""
-          },
-          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Jan_Brueghel_de_Oude_en_Peter_Paul_Rubens_-_Het_aards_paradijs_met_de_zondeval_van_Adam_en_Eva.jpg/250px-Jan_Brueghel_de_Oude_en_Peter_Paul_Rubens_-_Het_aards_paradijs_met_de_zondeval_van_Adam_en_Eva.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
-          "description": {
-            "ko": "",
-            "en": ""
-          },
-          "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
-          "verified": true,
-          "representative": false,
-          "popularity": 956,
-          "thumbnail": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-43.jpg",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-16T11:39:42.291Z",
-          "metadata": {
-            "createdAt": "2026-08-11T05:38:09.851Z",
-            "updatedAt": "2026-08-23T23:55:20.834Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-43.jpg",
-              "highResolution": "",
-              "sourceUrl": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
-              "sourceUrls": [
-                "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Jan_Brueghel_de_Oude_en_Peter_Paul_Rubens_-_Het_aards_paradijs_met_de_zondeval_van_Adam_en_Eva.jpg/250px-Jan_Brueghel_de_Oude_en_Peter_Paul_Rubens_-_Het_aards_paradijs_met_de_zondeval_van_Adam_en_Eva.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "movementContribution": false,
-          "origin": "manual"
-        },
-        {
-          "id": "wikidata-Q3940915",
-          "year": 1615,
-          "popularity": 16,
-          "title": {
-            "ko": "Romulus and Remus",
-            "en": "Romulus and Remus"
-          },
-          "country": {
-            "ko": "",
-            "en": ""
-          },
-          "movement": {
-            "ko": "",
-            "en": ""
-          },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Romulus%20and%20Remus%20by%20Peter%20Paul%20Rubens.jpg",
-          "description": {
-            "ko": "painting by Peter Paul Rubens",
-            "en": "painting by Peter Paul Rubens"
-          },
-          "source": "http://www.wikidata.org/entity/Q3940915",
-          "verified": true,
-          "representative": false,
-          "movementContribution": false,
-          "origin": "generated",
-          "thumbnail": "data/thumbnails/artist-url-1786879941678/wikidata-Q3940915.jpg",
-          "thumbnailValidation": 2,
-          "metadataVerifiedAt": "2026-08-22T20:51:12.816Z",
-          "thumbnailCacheKey": "2026-08-17T00:24:27.534Z",
-          "metadata": {
-            "createdAt": "2026-08-22T20:51:10.793Z",
-            "updatedAt": "2026-08-23T23:55:20.834Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/thumbnails/artist-url-1786879941678/wikidata-Q3940915.jpg",
-              "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q3940915",
-              "sourceUrls": [
-                "http://www.wikidata.org/entity/Q3940915",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Romulus%20and%20Remus%20by%20Peter%20Paul%20Rubens.jpg"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          }
-        },
-        {
-          "id": "wikipedia-Q5599-45",
-          "year": 1616,
-          "title": {
-            "ko": "The Holy Trinity , Kunstmuseum Basel",
-            "en": "The Holy Trinity , Kunstmuseum Basel"
-          },
-          "country": {
-            "ko": "스페인령 네덜란드",
-            "en": "Spanish Netherlands"
-          },
-          "movement": {
-            "ko": "",
-            "en": ""
-          },
-          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Die_Heilige_Dreifaltigkeit_-_Peter_Paul_Rubens.jpg/250px-Die_Heilige_Dreifaltigkeit_-_Peter_Paul_Rubens.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
-          "description": {
-            "ko": "",
-            "en": ""
-          },
-          "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
-          "verified": true,
-          "representative": false,
-          "popularity": 954,
-          "thumbnail": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-45.jpg",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-16T11:39:42.438Z",
-          "metadata": {
-            "createdAt": "2026-08-11T05:38:09.851Z",
-            "updatedAt": "2026-08-23T23:55:20.834Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-45.jpg",
-              "highResolution": "",
-              "sourceUrl": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
-              "sourceUrls": [
-                "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Die_Heilige_Dreifaltigkeit_-_Peter_Paul_Rubens.jpg/250px-Die_Heilige_Dreifaltigkeit_-_Peter_Paul_Rubens.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "movementContribution": false,
-          "origin": "manual"
-        },
-        {
-          "id": "wikipedia-Q5599-5",
-          "year": 1617,
-          "title": {
-            "ko": "Diana Returning from the Hunt , c. &#8201;1617 , oil on canvas, Hessisches Landesmuseum Darmstadt , collaboration with Snyders",
-            "en": "Diana Returning from the Hunt , c. &#8201;1617 , oil on canvas, Hessisches Landesmuseum Darmstadt , collaboration with Snyders"
-          },
-          "country": {
-            "ko": "스페인령 네덜란드",
-            "en": "Spanish Netherlands"
-          },
-          "movement": {
-            "ko": "",
-            "en": ""
-          },
-          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Peter_Paul_Rubens_and_Frans_Snyders_-_Diana_Returning_from_the_Hunt.jpg/250px-Peter_Paul_Rubens_and_Frans_Snyders_-_Diana_Returning_from_the_Hunt.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
-          "description": {
-            "ko": "",
-            "en": ""
-          },
-          "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
-          "verified": true,
-          "representative": true,
-          "popularity": 994,
-          "thumbnail": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-5.jpg",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-16T11:40:14.553Z",
-          "metadata": {
-            "createdAt": "2026-08-11T05:38:09.851Z",
-            "updatedAt": "2026-08-23T23:55:20.834Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-5.jpg",
-              "highResolution": "",
-              "sourceUrl": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
-              "sourceUrls": [
-                "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Peter_Paul_Rubens_and_Frans_Snyders_-_Diana_Returning_from_the_Hunt.jpg/250px-Peter_Paul_Rubens_and_Frans_Snyders_-_Diana_Returning_from_the_Hunt.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "movementContribution": false,
-          "origin": "manual"
-        },
-        {
-          "id": "wikipedia-Q5599-11",
-          "year": 1617,
-          "title": {
-            "ko": "Portrait of George Villiers, 1st Duke of Buckingham , c. &#8201;1617–1628 , Pollok House",
-            "en": "Portrait of George Villiers, 1st Duke of Buckingham , c. &#8201;1617–1628 , Pollok House"
-          },
-          "country": {
-            "ko": "스페인령 네덜란드",
-            "en": "Spanish Netherlands"
-          },
-          "movement": {
-            "ko": "",
-            "en": ""
-          },
-          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Peter_Paul_Rubens_-_Portrait_of_George_Villiers%2C_1st_Duke_of_Buckingham_GL_GM_PC_49.jpg/250px-Peter_Paul_Rubens_-_Portrait_of_George_Villiers%2C_1st_Duke_of_Buckingham_GL_GM_PC_49.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
-          "description": {
-            "ko": "",
-            "en": ""
-          },
-          "source": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
-          "verified": true,
-          "representative": false,
-          "popularity": 988,
-          "thumbnail": "data/thumbnails/artist-url-1786879941678/wikipedia-Q5599-11.jpg",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-16T11:42:40.733Z",
+          "thumbnailCacheKey": "2026-08-11T05:38:09.851Z",
           "metadata": {
             "createdAt": "2026-08-11T05:38:09.851Z",
             "updatedAt": "2026-08-23T23:55:20.834Z",
@@ -54787,7 +54382,7 @@
             "en": "Apollo and Daphne"
           },
           "description": {
-            "ko": "다프네가 월계수로 변하는 찰나를 대리석의 잎, 머리카락, 피부로 동시에 표현한 작품입니다. 서사적 절정과 관람자의 이동 시점이 결합된 베르니���의 대표작입니다.",
+            "ko": "다프네가 월계수로 변하는 찰나를 대리석의 잎, 머리카락, 피부로 동시에 표현한 작품입니다. 서사적 절정과 관람자의 이동 시점이 결합된 베르니니의 대표작입니다.",
             "en": "A sculpture that turns Daphne’s transformation into marble leaves, hair, and skin, joining narrative climax with the viewer’s moving viewpoint."
           },
           "country": {
@@ -54827,7 +54422,7 @@
               "en": "A Baroque sculpture catching the instant of transformation"
             },
             "summary": {
-              "ko": "다프네가 월계수로 변하는 찰나를 대리석의 잎, 머리카락, 피부로 동시에 표현한 작품입니다. 서사적 절정과 ��람자의 이동 시점이 결합된 베르니니의 대표작입니다.",
+              "ko": "다프네가 월계수로 변하는 찰나를 대리석의 잎, 머리카락, 피부로 동시에 표현한 작품입니다. 서사적 절정과 관람자의 이동 시점이 결합된 베르니니의 대표작입니다.",
               "en": "A sculpture that turns Daphne’s transformation into marble leaves, hair, and skin, joining narrative climax with the viewer’s moving viewpoint."
             },
             "sources": [
@@ -59901,7 +59496,7 @@
           "thumbnailValidation": 2,
           "thumbnailCacheKey": "2026-08-17T00:00:00.000Z",
           "description": {
-            "ko": "도살되어 매달린 ���의 사체와 뒤편의 인물을 묘사한 1655년작이다. 루브르 회화부 MI 169 소장.",
+            "ko": "도살되어 매달린 소의 사체와 뒤편의 인물을 묘사한 1655년작이다. 루브르 회화부 MI 169 소장.",
             "en": "A 1655 painting of a slaughtered ox hanging in an interior, with a figure behind it. In the Louvre Department of Paintings, MI 169."
           },
           "source": "https://collections.louvre.fr/ark:/53355/cl010065605",
@@ -62481,7 +62076,7 @@
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Johannes%20Vermeer%20-%20View%20of%20Delft%20-%2092%20-%20Mauritshuis.jpg",
           "description": {
-            "ko": "요하��스 페르메이르의 그림",
+            "ko": "요하네스 페르메이르의 그림",
             "en": "요하네스 페르메이르의 그림"
           },
           "source": "http://www.wikidata.org/entity/Q523974",
@@ -67402,7 +66997,7 @@
           },
           "movement": {
             "ko": "낭만주의",
-            "en": "낭만��의"
+            "en": "Romanticism"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caspar%20David%20Friedrich%20-%20Meeresstrand%20im%20Nebel%20%28ca.1807%29.jpg",
           "description": {
@@ -75765,7 +75360,7 @@
           "popularity": 8,
           "title": {
             "ko": "네르비아의 계곡",
-            "en": "네르비��의 계곡"
+            "en": "Valley of the Nervia"
           },
           "country": {
             "ko": "",
@@ -78019,7 +77614,7 @@
           "year": 1887,
           "popularity": 12,
           "title": {
-            "ko": "종달새가 있는 밀��",
+            "ko": "종달새가 있는 밀밭",
             "en": "Wheat Field with a Lark"
           },
           "country": {
@@ -85756,7 +85351,7 @@
             "schema": 2,
             "cachedFromExistingData": true,
             "summary": {
-              "ko": "부서진 기둥은/는 프리다 칼로의 1944년경 제작된 작품입��다. 초현실주의와 관련된 작품으로 정리되어 있습니다.",
+            "ko": "부서진 기둥은 프리다 칼로의 1944년경 제작된 작품입니다. 초현실주의와 관련된 작품으로 정리되어 있습니다.",
               "en": "The Broken Column is a work by Frida Kahlo made around 1944. It is associated with Surrealism."
             },
             "sources": [

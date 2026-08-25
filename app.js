@@ -2388,6 +2388,15 @@ function renderMovementAtlas() {
       showMovementDocumentMenu(event, button.dataset.movementExplanation, '1', button.dataset.movementLabel);
     };
   });
+  timeline.querySelectorAll('.movement-bar').forEach(bar => {
+    bar.addEventListener('dblclick', event => {
+      const link = bar.querySelector('.movement-explanation-link');
+      if (!link) return;
+      event.preventDefault();
+      event.stopPropagation();
+      openMovementDocument(link.dataset.movementExplanation, '1', link.dataset.movementLabel);
+    });
+  });
   timeline.querySelectorAll('.atlas-event-label').forEach(button => button.onclick = () => openHistoricalEventWikipedia(button.dataset.eventWiki));
   timeline.querySelector('.atlas-event-editor')?.addEventListener('click', openHistoricalEventEditor);
   timeline.querySelector('.atlas-event-toggle').onclick = () => { movementView.showHistoricalEvents = !showHistoricalEvents; persistMovementView(); renderMovementAtlas(); };
@@ -2638,11 +2647,11 @@ function openFavoritesWindow() {
     const runtimeStyle = popup.document.createElement('link');
     runtimeStyle.rel = 'stylesheet';
     runtimeStyle.href = new URL('uhangul/uhangul-runtime.css', location.href).href;
-    runtimeStyle.dataset.uhangulIntegration = 'v0.6';
+    runtimeStyle.dataset.uhangulIntegration = 'v0.6-draft';
     const runtimeScript = popup.document.createElement('script');
     runtimeScript.defer = true;
-    runtimeScript.src = new URL('uhangul/uhangul-runtime.js?v=0.6', location.href).href;
-    runtimeScript.dataset.uhangulIntegration = 'v0.6';
+    runtimeScript.src = new URL('uhangul/uhangul-runtime.js?v=0.6-draft', location.href).href;
+    runtimeScript.dataset.uhangulIntegration = 'v0.6-draft';
     popup.document.head.append(runtimeStyle, runtimeScript);
   } catch (_) { /* The popup still works if its document cannot be extended. */ }
   popup.document.exitFullscreen?.();

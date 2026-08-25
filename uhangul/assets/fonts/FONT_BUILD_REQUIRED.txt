@@ -1,13 +1,14 @@
-uHangul v0.6 font binary is intentionally not included.
+uHangul v0.6-draft font is built locally from the single source of truth:
+uhangul/spec/uhangul-v0.6-draft.json.
 
 Run the installer with source font paths, for example:
 
-INSTALL_uHangul_v0_5.cmd "C:\Fonts\UnDotum.ttf" "C:\Fonts\UnBatang.ttf"
+python uhangul/font/build_uhangul_v06_draft.py "C:\Fonts\UnDotum.ttf" "uhangul/assets/fonts/uHangul-v0.6-draft.woff2" --fallback "C:\Fonts\UnBatang.ttf"
 
 or from PowerShell:
 
-.\INSTALL_uHangul_v0_5.ps1 `
-  -BaseFont "C:\Fonts\UnDotum.ttf" `
-  -OldJamoFont "C:\Fonts\UnBatang.ttf"
+python uhangul/font/validate_uhangul_v06_draft.py `
+  "uhangul/assets/fonts/uHangul-v0.6-draft.woff2"
 
-The resulting uHangul-v0.6.woff2 is built locally inside Art_through_Time\uhangul\assets\fonts.
+TH /θ/ is the sole IPA exception. It uses the Greek glyph θ in the onset
+component; all new consonants remain onset-only.

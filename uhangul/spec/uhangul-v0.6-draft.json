@@ -1,0 +1,22 @@
+{
+  "version": "0.6-draft",
+  "status": "draft",
+  "spua": {"base": "U+FA000", "legacyRanges": [{"version":"0.5.x","base":"U+F8000"}]},
+  "principles": {"onsetOnly": true, "noNewFinals": true, "languageAware": true, "combiningMarks": true},
+  "glyphs": [
+    {"id":"F","phoneme":"/f/","glyph":"ᅗ","status":"confirmed","templateOnset":"ㅍ"},
+    {"id":"V","phoneme":"/v/","glyph":"ᄫ","status":"confirmed","templateOnset":"ㅂ"},
+    {"id":"Z","phoneme":"/z/","glyph":"ᅀ","status":"confirmed","templateOnset":"ㅅ"},
+    {"id":"TH","phoneme":"/θ/","glyph":"θ","status":"confirmed","templateOnset":"ㅅ","ipaException":true},
+    {"id":"X","phoneme":"/x/","glyph":"ᅘ","status":"confirmed","templateOnset":"ㅎ"},
+    {"id":"R","phoneme":"/ɹ/","glyph":"ᄛ","status":"provisional","templateOnset":"ㄹ"},
+    {"id":"TRILL_R","phoneme":"/r/","glyph":"ᄙ","status":"provisional","templateOnset":"ㄹ"},
+    {"id":"UVULAR_R","phoneme":"/ʁ/","glyph":"ᅇ","status":"provisional","templateOnset":"ㄹ"},
+    {"id":"MANDARIN_SH","phoneme":"/ʂ/","status":"provisional"},
+    {"id":"MANDARIN_ZH","phoneme":"/ʈʂ/","status":"provisional"},
+    {"id":"MANDARIN_CH","phoneme":"/ʈʂʰ/","status":"provisional"},
+    {"id":"RUSSIAN_PALATALIZATION","status":"unresolved"}
+  ],
+  "rules": {"dh":"ㄷ","germanIch":"ㅎ","frenchNasal":"combining-tilde","mandarinTone":"left-dots-0-to-3","neutralTone":"unresolved"},
+  "legacyRetired": ["R-to-ᄙ","ç-to-ᅙ","new-consonant-finals","er-special-R-final","v0.5-SPUA"]
+}

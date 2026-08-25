@@ -1,13 +1,14 @@
-/* uHangul v0.6 — file:// compatible runtime
+/* uHangul v0.6-draft — file:// compatible runtime
  * No ES modules. A local dictionary is loaded when the page is served.
  * New consonants are onset-only.
  */
 (function() {
 "use strict";
 
-const VERSION = "0.6";
-const SPUA_BASE = 0xF8000;
-const NEW = Object.freeze(["F","V","Z","R","TH","X"]);
+const VERSION = "0.6-draft";
+const SPUA_BASE = 0xFA000;
+// The active list is the confirmed subset of uhangul-v0.6-draft.json.
+const NEW = Object.freeze(["F","V","Z","TH","X"]);
 const VOWELS = Object.freeze(Array.from("ㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣ"));
 const FINALS = Object.freeze(["", ...Array.from("ㄱㄲㄳㄴㄵㄶㄷㄹㄺㄻㄼㄽㄾㄿㅀㅁㅂㅄㅅㅆㅇㅈㅊㅋㅌㅍㅎ")]);
 let RECORDS = [{"id": "frank-stella", "original": "Frank Stella", "language": "en-US", "korean": "프랭크 스텔라", "uhangul": "[Fㅡ][Rㅐㅇ]크 스텔라", "note": "F, R; 새 자음은 초성만"}, {"id": "roy-lichtenstein", "original": "Roy Lichtenstein", "language": "en-US", "korean": "로이 리히텐슈타인", "uhangul": "[Rㅗ]이 리히텐슈타인", "note": "R 초성"}, {"id": "robert-rauschenberg", "original": "Robert Rauschenberg", "language": "en-US", "korean": "로버트 라우션버그", "uhangul": "[Rㅗ]버트 [Rㅏ]우션버그", "note": "어말/종성 r 표기 제거"}, {"id": "georgia-okeeffe", "original": "Georgia O'Keeffe", "language": "en-US", "korean": "조지아 오키프", "uhangul": "조지아 오키[Fㅡ]", "note": "final /f/가 기존 프 음절로 실현되어 F를 초성으로 사용"}, {"id": "jasper-johns", "original": "Jasper Johns", "language": "en-US", "korean": "재스퍼 존스", "uhangul": "재스퍼 존스", "note": "종성 r/z를 새 종성으로 만들지 않음"}, {"id": "jeff-koons", "original": "Jeff Koons", "language": "en-US", "korean": "제프 쿤스", "uhangul": "제[Fㅡ] 쿤[Zㅡ]", "note": "프/스의 초성만 F/Z로 교체"}, {"id": "keith-haring", "original": "Keith Haring", "language": "en-US", "korean": "키스 해링", "uhangul": "키[THㅡ] 해[Rㅣㅇ]", "note": "TH, R 초성"}, {"id": "andy-warhol", "original": "Andy Warhol", "language": "en-US", "korean": "앤디 워홀", "uhangul": "앤디 워홀", "note": "종성/rhotic R 미표기"}, {"id": "francis-bacon", "original": "Francis Bacon", "language": "en-US", "korean": "프랜시스 베이컨", "uhangul": "[Fㅡ][Rㅐㄴ]시스 베이컨", "note": "F, R"}, {"id": "richard-hamilton", "original": "Richard Hamilton", "language": "en-US", "korean": "리처드 해밀턴", "uhangul": "[Rㅣ]처드 해밀턴", "note": "초성 R만 사용"}, {"id": "edward-hopper", "original": "Edward Hopper", "language": "en-US", "korean": "에드워드 호퍼", "uhangul": "에드워드 호퍼", "note": "종성/rhotic R 미표기"}, {"id": "mark-rothko", "original": "Mark Rothko", "language": "en-US", "korean": "마크 로스코", "uhangul": "마크 [Rㅗ][THㅡ]코", "note": "R 초성; /θ/가 스 음절로 실현"}, {"id": "cindy-sherman", "original": "Cindy Sherman", "language": "en-US", "korean": "신디 셔먼", "uhangul": "신디 셔먼", "note": "rhotic R 미표기"}, {"id": "barbara-kruger", "original": "Barbara Kruger", "language": "en-US", "korean": "바버라 크루거", "uhangul": "바버[Rㅏ] 크[Rㅜ]거", "note": "실제 R 초성으로 실현되는 음절만 교체"}, {"id": "helen-frankenthaler", "original": "Helen Frankenthaler", "language": "en-US", "korean": "헬렌 프랭컨탈러", "uhangul": "헬렌 [Fㅡ][Rㅐㅇ]컨[THㅏㄹ]러", "note": "F, R, TH; rhotic 종성 없음"}, {"id": "david-hockney", "original": "David Hockney", "language": "en-US", "korean": "데이비드 호크니", "uhangul": "데이[Vㅣ]드 호크니", "note": "V"}, {"id": "vanessa-bell", "original": "Vanessa Bell", "language": "en-US", "korean": "바네사 벨", "uhangul": "[Vㅏ]네사 벨", "note": "V"}, {"id": "eva-hesse", "original": "Eva Hesse", "language": "en-US", "korean": "에바 헤세", "uhangul": "에[Vㅏ] 헤세", "note": "V"}, {"id": "frida-kahlo", "original": "Frida Kahlo", "language": "es-MX", "korean": "프리다 칼로", "uhangul": "[Fㅡ]리다 칼로", "note": "F; 스페인어 r는 /ɹ/가 아니므로 ㄹ 유지"}, {"id": "lucas-cranach", "original": "Lucas Cranach", "language": "de-DE", "korean": "루카스 크라나흐", "uhangul": "루카스 크라나[Xㅡ]", "note": "독일어 /x/"}, {"id": "caspar-david-friedrich", "original": "Caspar David Friedrich", "language": "de-DE", "korean": "카스파르 다비트 프리드리히", "uhangul": "카스파르 다[Vㅣ]트 [Fㅡ]리드리히", "note": "V, F; /ç/는 기존 ㅎ으로 표기"}, {"id": "gerhard-richter", "original": "Gerhard Richter", "language": "de-DE", "korean": "게르하르트 리히터", "uhangul": "게르하르트 리히터", "note": "/ç/는 기존 ㅎ으로 표기; 독일어 r는 /ɹ/로 강제 변환하지 않음"}];
@@ -28,7 +29,6 @@ const TARGET_ONSETS = Object.freeze({
   F: new Set(["ㅍ"]),
   V: new Set(["ㅂ","ㅍ"]),
   Z: new Set(["ㅈ","ㅅ","ㅆ"]),
-  R: new Set(["ㄹ"]),
   TH: new Set(["ㅅ","ㅌ","ㄷ"]),
   X: new Set(["ㅎ"])
 });
@@ -66,6 +66,12 @@ function blockToCodePoint(block) {
   const t=tokenizeBlock(String(block).trim());
   if(t.length < 2 || t.length > 3) throw new Error("bad block ["+block+"]");
   const onset=t[0], vowel=t[1], final=t[2] || "";
+  // Old record data can contain [R…].  R is provisional in v0.6-draft, so
+  // render it as ordinary ㄹ rather than exposing an unbuilt legacy PUA glyph.
+  if(onset === "R") {
+    if(VOWELS.indexOf(vowel)<0 || FINALS.indexOf(final)<0) throw new Error("bad legacy R block: ["+block+"]");
+    return 0xAC00 + ((ONSETS.indexOf("ㄹ")*21 + VOWELS.indexOf(vowel))*28 + FINALS.indexOf(final));
+  }
   const oi=NEW.indexOf(onset), vi=VOWELS.indexOf(vowel), fi=FINALS.indexOf(final);
   if(oi<0) throw new Error("new consonant must be onset: ["+block+"]");
   if(vi<0) throw new Error("bad vowel: ["+block+"]");
@@ -124,7 +130,6 @@ function targetCues(original) {
     if(ch==="f") cues.push("F");
     else if(ch==="v" || ch==="w") cues.push("V");
     else if(ch==="z") cues.push("Z");
-    else if(ch==="r") cues.push("R");
     else if(ch==="x" || (ch==="g" && text[i+1]==="h")) cues.push("X");
     i += ch==="g" && text[i+1]==="h" ? 2 : 1;
   }
@@ -142,7 +147,6 @@ function consonantEvents(original) {
     if(ch==="f") events.push({token:"F",target:true,allowed:TARGET_ONSETS.F});
     else if(ch==="v" || ch==="w") events.push({token:"V",target:true,allowed:TARGET_ONSETS.V});
     else if(ch==="z") events.push({token:"Z",target:true,allowed:TARGET_ONSETS.Z});
-    else if(ch==="r") events.push({token:"R",target:true,allowed:TARGET_ONSETS.R});
     else if(ch==="x") events.push({token:"X",target:true,allowed:TARGET_ONSETS.X});
     else if(ch==="l") events.push({target:false,allowed:PASSTHROUGH_ONSETS.L});
     else if(PASSTHROUGH_ONSETS[ch.toUpperCase()]) events.push({target:false,allowed:PASSTHROUGH_ONSETS[ch.toUpperCase()]});
