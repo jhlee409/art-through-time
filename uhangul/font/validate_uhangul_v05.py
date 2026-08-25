@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Structural validator for uHangul v0.5."""
+"""Structural validator for uHangul v0.6."""
 from pathlib import Path
 import argparse
 from fontTools.ttLib import TTFont
 
 SPUA_BASE=0xF8000
-TOKENS=("F","V","Z","R","TH","X","CH")
-REF={"F":"ㅍ","V":"ㅂ","Z":"ㅅ","R":"ㄹ","TH":"ㅅ","X":"ㅎ","CH":"ㅎ"}
+TOKENS=("F","V","Z","R","TH","X")
+REF={"F":"ㅍ","V":"ㅂ","Z":"ㅅ","R":"ㄹ","TH":"ㅅ","X":"ㅎ"}
 L=tuple("ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ")
 V=tuple("ㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣ")
 T=("",)+tuple("ㄱㄲㄳㄴㄵㄶㄷㄹㄺㄻㄼㄽㄾㄿㅀㅁㅂㅄㅅㅆㅇㅈㅊㅋㅌㅍㅎ")
@@ -27,7 +27,7 @@ def main():
     oc=out.getBestCmap()
     errors=[]
 
-    expected=set(range(SPUA_BASE,SPUA_BASE+7*21*28))
+    expected=set(range(SPUA_BASE,SPUA_BASE+len(TOKENS)*21*28))
     actual={c for c in oc if SPUA_BASE <= c < SPUA_BASE+7*21*28}
     if actual != expected:
         errors.append(f"SPUA discontinuity/missing: expected {len(expected)}, actual {len(actual)}")
@@ -54,7 +54,7 @@ def main():
                     if a1.glyphName != b1.glyphName or a1.getComponentInfo()[1] != b1.getComponentInfo()[1]:
                         errors.append(f"non-onset component changed U+{c:X}, component {i}")
 
-    print(f"Expected extended syllables: {7*21*28}")
+    print(f"Expected extended syllables: {len(TOKENS)*21*28}")
     print(f"Actual extended syllables:   {len(actual)}")
     print("New-final feature:            DISABLED by design")
     print(f"Errors:                       {len(errors)}")

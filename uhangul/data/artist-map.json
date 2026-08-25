@@ -112,7 +112,7 @@
         "Dürer"
       ]
     },
-    "uhangul": "뒤[Rㅓ], 알브레[CHㅣ]트",
+    "uhangul": "뒤[Rㅓ], 알브레히트",
     "note": "auto-generated from original and Korean artist names"
   },
   {
@@ -129,7 +129,7 @@
         "Lucas Cranach"
       ]
     },
-    "uhangul": "크[Rㅏ]나[CHㅡ], 루카스",
+    "uhangul": "크[Rㅏ]나흐, 루카스",
     "note": "auto-generated from original and Korean artist names"
   },
   {
@@ -171,7 +171,7 @@
         "Altdorfer"
       ]
     },
-    "uhangul": "알트도르[Fㅓ], 알브레[CHㅣ]트",
+    "uhangul": "알트도르[Fㅓ], 알브레히트",
     "note": "auto-generated from original and Korean artist names"
   },
   {
@@ -716,7 +716,7 @@
         "Friedrich"
       ]
     },
-    "uhangul": "[Fㅡ][Rㅣ]드[Rㅣ][CHㅣ], 카스파 다[Vㅣ]드",
+    "uhangul": "[Fㅡ][Rㅣ]드[Rㅣ]히, 카스파 다[Vㅣ]드",
     "note": "auto-generated from original and Korean artist names"
   },
   {
@@ -836,6 +836,390 @@
       ]
     },
     "uhangul": "칼로, [Fㅡ][Rㅣ]다",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q9340",
+    "original": "Claude Lorrain",
+    "korean": "클로드 로랭",
+    "displayKorean": "로랭, 클로드",
+    "aliases": {
+      "ko": [
+        "로랭"
+      ],
+      "en": [
+        "Lorrain"
+      ]
+    },
+    "uhangul": "로[Rㅐㅇ], 클로드",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q155151",
+    "original": "Antoine Watteau",
+    "korean": "앙투안 와토",
+    "displayKorean": "와토, 앙투안",
+    "aliases": {
+      "ko": [
+        "와토"
+      ],
+      "en": [
+        "Watteau"
+      ]
+    },
+    "uhangul": "와토, 앙투안",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q313122",
+    "original": "François Boucher",
+    "korean": "프랑수아 부셰",
+    "displayKorean": "부셰, 프랑수아",
+    "aliases": {
+      "ko": [
+        "부셰"
+      ],
+      "en": [
+        "Francois Boucher",
+        "Boucher"
+      ]
+    },
+    "uhangul": "부셰, [Fㅡ][Rㅏㅇ]수아",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q313898",
+    "original": "Jean-Honoré Fragonard",
+    "korean": "장오노레 프라고나르",
+    "displayKorean": "프라고나르, 장오노레",
+    "aliases": {
+      "ko": [
+        "프라고나르"
+      ],
+      "en": [
+        "Jean-Honore Fragonard",
+        "Fragonard"
+      ]
+    },
+    "uhangul": "프라고나[Rㅡ], 장오노레",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q162048",
+    "original": "Giovanni Battista Tiepolo",
+    "korean": "조반니 바티스타 티에폴로",
+    "displayKorean": "티에폴로, 조반니 바티스타",
+    "aliases": {
+      "ko": [
+        "티에폴로"
+      ],
+      "en": [
+        "Tiepolo"
+      ]
+    },
+    "uhangul": "티에폴로, 조[Vㅏㄴ]니 바티스타",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q161866",
+    "original": "Canaletto",
+    "korean": "카날레토",
+    "displayKorean": "카날레토",
+    "aliases": {
+      "ko": [],
+      "en": []
+    },
+    "uhangul": "카날레토",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q180117",
+    "original": "Thomas Gainsborough",
+    "korean": "토머스 게인즈버러",
+    "displayKorean": "게인즈버러, 토머스",
+    "aliases": {
+      "ko": [
+        "게인즈버러"
+      ],
+      "en": [
+        "Gainsborough"
+      ]
+    },
+    "uhangul": "게인즈버[Rㅓ], [THㅗ]머스",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q189621",
+    "original": "William Hogarth",
+    "korean": "윌리엄 호가스",
+    "displayKorean": "호가스, 윌리엄",
+    "aliases": {
+      "ko": [
+        "호가스"
+      ],
+      "en": [
+        "Hogarth"
+      ]
+    },
+    "uhangul": "호가[THㅡ], 윌리엄",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q312309",
+    "original": "Jean-Baptiste-Siméon Chardin",
+    "korean": "장바티스트 시메옹 샤르댕",
+    "displayKorean": "샤르댕, 장바티스트 시메옹",
+    "aliases": {
+      "ko": [
+        "샤르댕"
+      ],
+      "en": [
+        "Jean-Baptiste-Simeon Chardin",
+        "Chardin"
+      ]
+    },
+    "uhangul": "샤[Rㅡ]댕, 장바티스트 시메옹",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q235547",
+    "original": "Rosalba Carriera",
+    "korean": "로살바 카리에라",
+    "displayKorean": "카리에라, 로살바",
+    "aliases": {
+      "ko": [
+        "카리에라"
+      ],
+      "en": [
+        "Carriera"
+      ]
+    },
+    "uhangul": "카[Rㅣ]에[Rㅏ], [Rㅗ]살바",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q296",
+    "original": "Jacques-Louis David",
+    "korean": "자크루이 다비드",
+    "displayKorean": "다비드, 자크루이",
+    "aliases": {
+      "ko": [
+        "다비드"
+      ],
+      "en": [
+        "David"
+      ]
+    },
+    "uhangul": "다[Vㅣ]드, 자크루이",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q161472",
+    "original": "Jean-Auguste-Dominique Ingres",
+    "korean": "장오귀스트도미니크 앵그르",
+    "displayKorean": "앵그르, 장오귀스트도미니크",
+    "aliases": {
+      "ko": [
+        "앵그르"
+      ],
+      "en": [
+        "Ingres"
+      ]
+    },
+    "uhangul": "앵그[Rㅡ], 장오귀스트도미니크",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q5547",
+    "original": "Antonio Canova",
+    "korean": "안토니오 카노바",
+    "displayKorean": "카노바, 안토니오",
+    "aliases": {
+      "ko": [
+        "카노바"
+      ],
+      "en": [
+        "Canova"
+      ]
+    },
+    "uhangul": "카노[Vㅏ], 안토니오",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q312387",
+    "original": "Joshua Reynolds",
+    "korean": "조슈아 레이놀즈",
+    "displayKorean": "레이놀즈, 조슈아",
+    "aliases": {
+      "ko": [
+        "레이놀즈"
+      ],
+      "en": [
+        "Reynolds"
+      ]
+    },
+    "uhangul": "[Rㅔ]이놀즈, 조슈아",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q312130",
+    "original": "Anton Raphael Mengs",
+    "korean": "안톤 라파엘 멩스",
+    "displayKorean": "멩스, 안톤 라파엘",
+    "aliases": {
+      "ko": [
+        "멩스"
+      ],
+      "en": [
+        "Mengs"
+      ]
+    },
+    "uhangul": "멩스, 안톤 [Rㅏ][Fㅏ]엘",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q313526",
+    "original": "Benjamin West",
+    "korean": "벤저민 웨스트",
+    "displayKorean": "웨스트, 벤저민",
+    "aliases": {
+      "ko": [
+        "웨스트"
+      ],
+      "en": [
+        "West"
+      ]
+    },
+    "uhangul": "웨스트, 벤저민",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "Q155733",
+    "original": "Angelica Kauffman",
+    "korean": "앙겔리카 카우프만",
+    "displayKorean": "카우프만, 앙겔리카",
+    "aliases": {
+      "ko": [
+        "카우프만"
+      ],
+      "en": [
+        "Kauffman"
+      ]
+    },
+    "uhangul": "카우[Fㅡ]만, 앙겔리카",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "artist-romantic-gericault",
+    "original": "Théodore Géricault",
+    "korean": "테오도르 제리코",
+    "displayKorean": "제리코, 테오도르",
+    "aliases": {
+      "ko": [
+        "제리코"
+      ],
+      "en": [
+        "Theodore Gericault",
+        "Géricault"
+      ]
+    },
+    "uhangul": "제[Rㅣ]코, [THㅔ]오도[Rㅡ]",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "artist-romantic-delacroix",
+    "original": "Eugène Delacroix",
+    "korean": "외젠 들라크루아",
+    "displayKorean": "들라크루아, 외젠",
+    "aliases": {
+      "ko": [
+        "들라크루아"
+      ],
+      "en": [
+        "Eugene Delacroix",
+        "Delacroix"
+      ]
+    },
+    "uhangul": "들라크[Rㅜ]아, 외젠",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "artist-romantic-goya",
+    "original": "Francisco Goya",
+    "korean": "프란시스코 고야",
+    "displayKorean": "고야, 프란시스코",
+    "aliases": {
+      "ko": [
+        "고야"
+      ],
+      "en": [
+        "Goya"
+      ]
+    },
+    "uhangul": "고야, [Fㅡ][Rㅏㄴ]시스코",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "artist-romantic-turner",
+    "original": "J. M. W. Turner",
+    "korean": "조지프 말로드 윌리엄 터너",
+    "displayKorean": "터너, 조지프 말로드 윌리엄",
+    "aliases": {
+      "ko": [
+        "터너"
+      ],
+      "en": [
+        "Turner",
+        "Joseph Mallord William Turner"
+      ]
+    },
+    "uhangul": "터너, 조지프 말로드 윌리엄",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "artist-romantic-constable",
+    "original": "John Constable",
+    "korean": "존 컨스터블",
+    "displayKorean": "컨스터블, 존",
+    "aliases": {
+      "ko": [
+        "컨스터블"
+      ],
+      "en": [
+        "Constable"
+      ]
+    },
+    "uhangul": "컨스터블, 존",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "artist-romantic-cole",
+    "original": "Thomas Cole",
+    "korean": "토머스 콜",
+    "displayKorean": "콜, 토머스",
+    "aliases": {
+      "ko": [],
+      "en": [
+        "Cole"
+      ]
+    },
+    "uhangul": "콜, [THㅗ]머스",
+    "note": "auto-generated from original and Korean artist names"
+  },
+  {
+    "id": "artist-romantic-church",
+    "original": "Frederic Edwin Church",
+    "korean": "프레더릭 에드윈 처치",
+    "displayKorean": "처치, 프레더릭 에드윈",
+    "aliases": {
+      "ko": [
+        "처치"
+      ],
+      "en": [
+        "Church"
+      ]
+    },
+    "uhangul": "처치, [Fㅡ][Rㅔ]더[Rㅣㄱ] 에드윈",
     "note": "auto-generated from original and Korean artist names"
   }
 ]

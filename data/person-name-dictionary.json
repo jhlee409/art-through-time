@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-23T23:55:21.377Z",
+  "generatedAt": "2026-08-25T00:37:14.095Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -28,7 +28,8 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
+        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
+        "tools/reorder-mannerism-representative-cards.js"
       ],
       "status": "verified-pair"
     },
@@ -152,7 +153,7 @@
           "Albrecht Altdorfer"
         ]
       },
-      "uhangul": "알트도르[Fㅓ], 알브레[CHㅣ]트",
+      "uhangul": "알트도르[Fㅓ], 알브레히트",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
@@ -181,7 +182,7 @@
           "Albrecht Dürer"
         ]
       },
-      "uhangul": "뒤[Rㅓ], 알브레[CHㅣ]트",
+      "uhangul": "뒤[Rㅓ], 알브레히트",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
@@ -307,7 +308,7 @@
           "Mucha"
         ]
       },
-      "uhangul": "알[Fㅗㄴ]스 무[CHㅏ]",
+      "uhangul": "알[Fㅗㄴ]스 무하",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
@@ -490,23 +491,27 @@
       "status": "verified-pair"
     },
     {
-      "id": "angelica-kauffman",
+      "id": "Q155733",
       "original": "Angelica Kauffman",
       "korean": "안젤리카 카우프만",
-      "displayKorean": "안젤리카 카우프만",
+      "displayKorean": "카우프만, 앙겔리카",
       "aliases": {
         "ko": [
-          "카우프만"
+          "카우프만",
+          "앙겔리카 카우프만"
         ],
         "en": [
-          "Kauffman"
+          "Kauffman",
+          "Angelica Kauffman"
         ]
       },
-      "uhangul": "안젤리카 카우[Fㅡ]만",
+      "uhangul": "카우[Fㅡ]만, 앙겔리카",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html"
       ],
       "status": "verified-pair"
     },
@@ -621,42 +626,52 @@
       "status": "verified-pair"
     },
     {
-      "id": "antoine-watteau",
+      "id": "Q155151",
       "original": "Antoine Watteau",
       "korean": "와토",
-      "displayKorean": "와토",
+      "displayKorean": "와토, 앙투안",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "와토",
+          "앙투안 와토"
+        ],
         "en": [
-          "Watteau"
+          "Watteau",
+          "Antoine Watteau"
         ]
       },
-      "uhangul": "와토",
+      "uhangul": "와토, 앙투안",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "anton-raphael-mengs",
+      "id": "Q312130",
       "original": "Anton Raphael Mengs",
       "korean": "안톤 라파엘 멩스",
-      "displayKorean": "안톤 라파엘 멩스",
+      "displayKorean": "멩스, 안톤 라파엘",
       "aliases": {
         "ko": [
-          "멩스"
+          "멩스",
+          "안톤 라파엘 멩스"
         ],
         "en": [
-          "Mengs"
+          "Mengs",
+          "Anton Raphael Mengs"
         ]
       },
-      "uhangul": "안톤 [Rㅏ][Fㅏ]엘 멩스",
+      "uhangul": "멩스, 안톤 [Rㅏ][Fㅏ]엘",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html"
       ],
       "status": "verified-pair"
     },
@@ -684,23 +699,27 @@
       "status": "verified-pair"
     },
     {
-      "id": "antonio-canova",
+      "id": "Q5547",
       "original": "Antonio Canova",
       "korean": "안토니오 카노바",
-      "displayKorean": "안토니오 카노바",
+      "displayKorean": "카노바, 안토니오",
       "aliases": {
         "ko": [
-          "카노바"
+          "카노바",
+          "안토니오 카노바"
         ],
         "en": [
-          "Canova"
+          "Canova",
+          "Antonio Canova"
         ]
       },
-      "uhangul": "안토니오 카노[Vㅏ]",
+      "uhangul": "카노[Vㅏ], 안토니오",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html"
       ],
       "status": "verified-pair"
     },
@@ -990,23 +1009,27 @@
       "status": "verified-pair"
     },
     {
-      "id": "benjamin-west",
+      "id": "Q313526",
       "original": "Benjamin West",
       "korean": "벤저민 웨스트",
-      "displayKorean": "벤저민 웨스트",
+      "displayKorean": "웨스트, 벤저민",
       "aliases": {
         "ko": [
-          "웨스트"
+          "웨스트",
+          "벤저민 웨스트"
         ],
         "en": [
-          "West"
+          "West",
+          "Benjamin West"
         ]
       },
-      "uhangul": "벤저민 웨스트",
+      "uhangul": "웨스트, 벤저민",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1099,7 +1122,8 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
+        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
+        "tools/reorder-mannerism-representative-cards.js"
       ],
       "status": "verified-pair"
     },
@@ -1166,19 +1190,25 @@
       "status": "verified-pair"
     },
     {
-      "id": "canaletto",
+      "id": "Q161866",
       "original": "Canaletto",
       "korean": "카날레토",
       "displayKorean": "카날레토",
       "aliases": {
-        "ko": [],
-        "en": []
+        "ko": [
+          "카날레토"
+        ],
+        "en": [
+          "Canaletto"
+        ]
       },
       "uhangul": "카날레토",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1204,7 +1234,8 @@
         "data/artists.json",
         "data/techniques.json",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
+        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
+        "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1293,7 +1324,7 @@
           "Caspar David Friedrich"
         ]
       },
-      "uhangul": "[Fㅡ][Rㅣ]드[Rㅣ][CHㅣ], 카스파 다[Vㅣ]드",
+      "uhangul": "[Fㅡ][Rㅣ]드[Rㅣ]히, 카스파 다[Vㅣ]드",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
@@ -1415,23 +1446,27 @@
       "status": "verified-pair"
     },
     {
-      "id": "name-claudelorrain",
+      "id": "Q9340",
       "original": "Claude Lorrain",
       "korean": "클로드 로랭",
-      "displayKorean": "클로드 로랭",
+      "displayKorean": "로랭, 클로드",
       "aliases": {
         "ko": [
-          "로랭"
+          "로랭",
+          "클로드 로랭"
         ],
         "en": [
-          "Lorrain"
+          "Lorrain",
+          "Claude Lorrain"
         ]
       },
-      "uhangul": "클로드 로[Rㅐㅇ]",
+      "uhangul": "로[Rㅐㅇ], 클로드",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/techniques.json"
+        "data/artists.json",
+        "data/techniques.json",
+        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1439,10 +1474,12 @@
       "id": "Q296",
       "original": "Claude Monet",
       "korean": "모네",
-      "displayKorean": "모네, 클로드",
+      "displayKorean": "다비드, 자크루이",
       "aliases": {
         "ko": [
           "모네",
+          "다비드",
+          "자크루이 다비드",
           "클로드 모네",
           "오스카클로드 모네"
         ],
@@ -1453,7 +1490,7 @@
           "Claude Oscar Monet"
         ]
       },
-      "uhangul": "모네, 클로드",
+      "uhangul": "다비드, 자크루이",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
@@ -1463,6 +1500,7 @@
         "data/미술사조/236b5b248aa3129573179c3b-1.html",
         "data/미술사조/81bf5950142af1141dfcf738-1.html",
         "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html",
+        "tools/complete-impressionist-cards.js",
         "Wikidata"
       ],
       "status": "verified-pair",
@@ -1501,7 +1539,8 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
+        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
+        "tools/reorder-mannerism-representative-cards.js"
       ],
       "status": "verified-pair"
     },
@@ -2054,7 +2093,7 @@
       "sources": [
         "data/artists.json",
         "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
+        "data/미술사조/c0d228e179032941f8d9ebfb-1.html",
         "tools/apply-first-batch-movement-enhancements.js",
         "Wikidata"
       ],
@@ -2158,7 +2197,7 @@
           "Heckel"
         ]
       },
-      "uhangul": "[CHㅔ]켈",
+      "uhangul": "헤켈",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
@@ -2208,22 +2247,29 @@
       "status": "verified-pair"
     },
     {
-      "id": "eugene-delacroix",
+      "id": "artist-romantic-delacroix",
       "original": "Eugène Delacroix",
       "korean": "들라크루아",
-      "displayKorean": "들라크루아",
+      "displayKorean": "들라크루아, 외젠",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "들라크루아",
+          "외젠 들라크루아"
+        ],
         "en": [
           "Eugene Delacroix",
-          "Delacroix"
+          "Delacroix",
+          "Eugène Delacroix"
         ]
       },
-      "uhangul": "들라크[Rㅜ]아",
+      "uhangul": "들라크[Rㅜ]아, 외젠",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/0930062b29f8f38dd88ee1a5-1.html",
+        "data/미술사조/7daaa6cee232ed701f97dea0-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2540,23 +2586,27 @@
       "status": "verified-pair"
     },
     {
-      "id": "francisco-goya",
+      "id": "artist-romantic-goya",
       "original": "Francisco Goya",
       "korean": "프란시스코 고야",
-      "displayKorean": "프란시스코 고야",
+      "displayKorean": "고야, 프란시스코",
       "aliases": {
         "ko": [
-          "고야"
+          "고야",
+          "프란시스코 고야"
         ],
         "en": [
-          "Goya"
+          "Goya",
+          "Francisco Goya"
         ]
       },
-      "uhangul": "[Fㅡ][Rㅏㄴ]시스코 고야",
+      "uhangul": "고야, [Fㅡ][Rㅏㄴ]시스코",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2582,22 +2632,28 @@
       "status": "verified-pair"
     },
     {
-      "id": "francois-boucher",
+      "id": "Q313122",
       "original": "François Boucher",
       "korean": "부셰",
-      "displayKorean": "부셰",
+      "displayKorean": "부셰, 프랑수아",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "부셰",
+          "프랑수아 부셰"
+        ],
         "en": [
           "Francois Boucher",
-          "Boucher"
+          "Boucher",
+          "François Boucher"
         ]
       },
-      "uhangul": "부셰",
+      "uhangul": "부셰, [Fㅡ][Rㅏㅇ]수아",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2768,23 +2824,27 @@
       "status": "verified-pair"
     },
     {
-      "id": "frederic-edwin-church",
+      "id": "artist-romantic-church",
       "original": "Frederic Edwin Church",
       "korean": "프레더릭 에드윈 처치",
-      "displayKorean": "프레더릭 에드윈 처치",
+      "displayKorean": "처치, 프레더릭 에드윈",
       "aliases": {
         "ko": [
-          "처치"
+          "처치",
+          "프레더릭 에드윈 처치"
         ],
         "en": [
-          "Church"
+          "Church",
+          "Frederic Edwin Church"
         ]
       },
-      "uhangul": "[Fㅡ][Rㅔ]더[Rㅣㄱ] 에드윈 처치",
+      "uhangul": "처치, [Fㅡ][Rㅔ]더[Rㅣㄱ] 에드윈",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3091,7 +3151,7 @@
           "Borch"
         ]
       },
-      "uhangul": "헤[Rㅏ][Rㅡ]트 테[Rㅡ] 보[Rㅡ][CHㅡ]",
+      "uhangul": "헤[Rㅏ][Rㅡ]트 테[Rㅡ] 보[Rㅡ]흐",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
@@ -3112,7 +3172,7 @@
           "Richter"
         ]
       },
-      "uhangul": "게[Rㅡ]하[Rㅡ]트 [Rㅣ][CHㅣ]터",
+      "uhangul": "게[Rㅡ]하[Rㅡ]트 [Rㅣ]히터",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
@@ -3418,6 +3478,30 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "Q162048",
+      "original": "Giovanni Battista Tiepolo",
+      "korean": "조반니 바티스타 티에폴로",
+      "displayKorean": "티에폴로, 조반니 바티스타",
+      "aliases": {
+        "ko": [
+          "티에폴로",
+          "조반니 바티스타 티에폴로"
+        ],
+        "en": [
+          "Tiepolo",
+          "Giovanni Battista Tiepolo"
+        ]
+      },
+      "uhangul": "티에폴로, 조[Vㅏㄴ]니 바티스타",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3778,7 +3862,7 @@
           "Richter"
         ]
       },
-      "uhangul": "한스 [Rㅣ][CHㅣ]터",
+      "uhangul": "한스 [Rㅣ]히터",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
@@ -3832,7 +3916,8 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
+        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
+        "tools/reorder-mannerism-representative-cards.js"
       ],
       "status": "verified-pair"
     },
@@ -4221,24 +4306,28 @@
       "status": "verified-pair"
     },
     {
-      "id": "turner-table",
+      "id": "artist-romantic-turner",
       "original": "J. M. W. Turner",
       "korean": "터너",
-      "displayKorean": "터너",
+      "displayKorean": "터너, 조지프 말로드 윌리엄",
       "aliases": {
         "ko": [
-          "조지프 말로드 윌리엄 터너"
+          "조지프 말로드 윌리엄 터너",
+          "터너"
         ],
         "en": [
           "Turner",
-          "Joseph Mallord William Turner"
+          "Joseph Mallord William Turner",
+          "J. M. W. Turner"
         ]
       },
-      "uhangul": "터너",
+      "uhangul": "터너, 조지프 말로드 윌리엄",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
       ],
       "status": "verified-pair"
     },
@@ -4356,28 +4445,35 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
+        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "jacques-louis-david",
+      "id": "Q296",
       "original": "Jacques-Louis David",
       "korean": "자크루이 다비드",
-      "displayKorean": "자크루이 다비드",
+      "displayKorean": "다비드, 자크루이",
       "aliases": {
         "ko": [
-          "다비드"
+          "다비드",
+          "자크루이 다비드"
         ],
         "en": [
-          "David"
+          "David",
+          "Jacques-Louis David"
         ]
       },
-      "uhangul": "자크루이 다[Vㅣ]드",
+      "uhangul": "다[Vㅣ]드, 자크루이",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/0930062b29f8f38dd88ee1a5-1.html",
+        "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html",
+        "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html"
       ],
       "status": "verified-pair"
     },
@@ -4567,21 +4663,27 @@
       "status": "verified-pair"
     },
     {
-      "id": "jean-auguste-dominique-ingres",
+      "id": "Q161472",
       "original": "Jean-Auguste-Dominique Ingres",
       "korean": "앵그르",
-      "displayKorean": "앵그르",
+      "displayKorean": "앵그르, 장오귀스트도미니크",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "앵그르",
+          "장오귀스트도미니크 앵그르"
+        ],
         "en": [
-          "Ingres"
+          "Ingres",
+          "Jean-Auguste-Dominique Ingres"
         ]
       },
-      "uhangul": "앵그[Rㅡ]",
+      "uhangul": "앵그[Rㅡ], 장오귀스트도미니크",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html"
       ],
       "status": "verified-pair"
     },
@@ -4628,24 +4730,28 @@
       "status": "verified-pair"
     },
     {
-      "id": "jean-baptiste-simeon-chardin",
+      "id": "Q312309",
       "original": "Jean-Baptiste-Siméon Chardin",
       "korean": "장바티스트 시메옹 샤르댕",
-      "displayKorean": "장바티스트 시메옹 샤르댕",
+      "displayKorean": "샤르댕, 장바티스트 시메옹",
       "aliases": {
         "ko": [
-          "샤르댕"
+          "샤르댕",
+          "장바티스트 시메옹 샤르댕"
         ],
         "en": [
           "Jean-Baptiste-Simeon Chardin",
-          "Chardin"
+          "Chardin",
+          "Jean-Baptiste-Siméon Chardin"
         ]
       },
-      "uhangul": "장바티스트 시메옹 샤[Rㅡ]댕",
+      "uhangul": "샤[Rㅡ]댕, 장바티스트 시메옹",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
     },
@@ -4695,22 +4801,29 @@
       "status": "verified-pair"
     },
     {
-      "id": "jean-honore-fragonard",
+      "id": "Q313898",
       "original": "Jean-Honoré Fragonard",
       "korean": "프라고나르",
-      "displayKorean": "프라고나르",
+      "displayKorean": "프라고나르, 장오노레",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "프라고나르",
+          "장오노레 프라고나르"
+        ],
         "en": [
           "Jean-Honore Fragonard",
-          "Fragonard"
+          "Fragonard",
+          "Jean-Honoré Fragonard"
         ]
       },
-      "uhangul": "프라고나[Rㅡ]",
+      "uhangul": "프라고나[Rㅡ], 장오노레",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html",
+        "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
     },
@@ -4769,7 +4882,7 @@
           "Beuckelaer"
         ]
       },
-      "uhangul": "요아[CHㅣㅁ] 뵈켈라[Rㅡ]",
+      "uhangul": "요아힘 뵈켈라[Rㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
@@ -4790,7 +4903,7 @@
           "Patinir"
         ]
       },
-      "uhangul": "요아[CHㅣㅁ] 파티니[Rㅡ]",
+      "uhangul": "요아힘 파티니[Rㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
@@ -4876,7 +4989,7 @@
           "Winckelmann"
         ]
       },
-      "uhangul": "요한 요아[CHㅣㅁ] [Vㅣㅇ]켈만",
+      "uhangul": "요한 요아힘 [Vㅣㅇ]켈만",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
@@ -4920,24 +5033,28 @@
       "wikidataQid": "Q41264"
     },
     {
-      "id": "constable-table",
+      "id": "artist-romantic-constable",
       "original": "John Constable",
       "korean": "컨스터블",
-      "displayKorean": "컨스터블",
+      "displayKorean": "컨스터블, 존",
       "aliases": {
         "ko": [
-          "컨스터블"
+          "컨스터블",
+          "존 컨스터블"
         ],
         "en": [
-          "Constable"
+          "Constable",
+          "John Constable"
         ]
       },
-      "uhangul": "컨스터블",
+      "uhangul": "컨스터블, 존",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/techniques.json"
+        "data/artists.json",
+        "data/techniques.json",
+        "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5196,23 +5313,27 @@
       "status": "verified-pair"
     },
     {
-      "id": "joshua-reynolds",
+      "id": "Q312387",
       "original": "Joshua Reynolds",
       "korean": "조슈아 레이놀즈",
-      "displayKorean": "조슈아 레이놀즈",
+      "displayKorean": "레이놀즈, 조슈아",
       "aliases": {
         "ko": [
-          "레이놀즈"
+          "레이놀즈",
+          "조슈아 레이놀즈"
         ],
         "en": [
-          "Reynolds"
+          "Reynolds",
+          "Joshua Reynolds"
         ]
       },
-      "uhangul": "조슈아 [Rㅔ]이놀즈",
+      "uhangul": "[Rㅔ]이놀즈, 조슈아",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5275,7 +5396,7 @@
           "Cotán"
         ]
       },
-      "uhangul": "후안 산체[Zㅡ] 코탄",
+      "uhangul": "후안 산체스 코탄",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
@@ -5674,7 +5795,7 @@
           "Lucas Cranach the Elder"
         ]
       },
-      "uhangul": "크[Rㅏ]나[CHㅡ], 루카스",
+      "uhangul": "크[Rㅏ]나흐, 루카스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
@@ -6038,7 +6159,7 @@
           "Pechstein"
         ]
       },
-      "uhangul": "막스 페[CHㅣ]슈타인",
+      "uhangul": "막스 페히슈타인",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
@@ -6172,7 +6293,6 @@
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
-        "data/미술사조/c0d228e179032941f8d9ebfb-1.html",
         "data/미술사조/de537ba74c4bee89423120bc-1.html",
         "Wikidata"
       ],
@@ -6509,7 +6629,8 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
+        "tools/reorder-renaissance-representative-cards.js"
       ],
       "status": "verified-pair"
     },
@@ -6542,7 +6663,8 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
+        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
+        "tools/reorder-mannerism-representative-cards.js"
       ],
       "status": "verified-pair"
     },
@@ -6990,6 +7112,7 @@
       "sources": [
         "data/artists.json",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
+        "tools/reorder-renaissance-representative-cards.js",
         "Wikidata"
       ],
       "status": "verified-pair",
@@ -7012,7 +7135,7 @@
           "Hooch"
         ]
       },
-      "uhangul": "피터[Rㅡ] 더 호[CHㅡ]",
+      "uhangul": "피터[Rㅡ] 더 호흐",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
@@ -7131,7 +7254,8 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/techniques.json",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
+        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
+        "tools/reorder-mannerism-representative-cards.js"
       ],
       "status": "verified-pair"
     },
@@ -7234,7 +7358,6 @@
         "data/artists.json",
         "data/미술사조/0930062b29f8f38dd88ee1a5-1.html",
         "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
-        "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
         "data/미술사조/4e7a664301ed396184c3cb5d-1.html",
         "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
@@ -7556,23 +7679,27 @@
       "status": "verified-pair"
     },
     {
-      "id": "rosalba-carriera",
+      "id": "Q235547",
       "original": "Rosalba Carriera",
       "korean": "로살바 카리에라",
-      "displayKorean": "로살바 카리에라",
+      "displayKorean": "카리에라, 로살바",
       "aliases": {
         "ko": [
-          "카리에라"
+          "카리에라",
+          "로살바 카리에라"
         ],
         "en": [
-          "Carriera"
+          "Carriera",
+          "Rosalba Carriera"
         ]
       },
-      "uhangul": "[Rㅗ]살바 카[Rㅣ]에[Rㅏ]",
+      "uhangul": "카[Rㅣ]에[Rㅏ], [Rㅗ]살바",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7953,41 +8080,52 @@
       "status": "verified-pair"
     },
     {
-      "id": "theodore-gericault",
+      "id": "artist-romantic-gericault",
       "original": "Théodore Géricault",
       "korean": "제리코",
-      "displayKorean": "제리코",
+      "displayKorean": "제리코, 테오도르",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "제리코",
+          "테오도르 제리코"
+        ],
         "en": [
           "Theodore Gericault",
-          "Géricault"
+          "Géricault",
+          "Théodore Géricault"
         ]
       },
-      "uhangul": "제[Rㅣ]코",
+      "uhangul": "제[Rㅣ]코, [THㅔ]오도[Rㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "thomas-cole",
+      "id": "artist-romantic-cole",
       "original": "Thomas Cole",
       "korean": "토머스 콜",
-      "displayKorean": "토머스 콜",
+      "displayKorean": "콜, 토머스",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "토머스 콜"
+        ],
         "en": [
-          "Cole"
+          "Cole",
+          "Thomas Cole"
         ]
       },
-      "uhangul": "[THㅗ]머스 콜",
+      "uhangul": "콜, [THㅗ]머스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8013,23 +8151,27 @@
       "status": "verified-pair"
     },
     {
-      "id": "thomas-gainsborough",
+      "id": "Q180117",
       "original": "Thomas Gainsborough",
       "korean": "토머스 게인즈버러",
-      "displayKorean": "토머스 게인즈버러",
+      "displayKorean": "게인즈버러, 토머스",
       "aliases": {
         "ko": [
-          "게인즈버러"
+          "게인즈버러",
+          "토머스 게인즈버러"
         ],
         "en": [
-          "Gainsborough"
+          "Gainsborough",
+          "Thomas Gainsborough"
         ]
       },
-      "uhangul": "[THㅗ]머스 게인즈버[Rㅓ]",
+      "uhangul": "게인즈버[Rㅓ], [THㅗ]머스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8501,23 +8643,27 @@
       "status": "verified-pair"
     },
     {
-      "id": "william-hogarth",
+      "id": "Q189621",
       "original": "William Hogarth",
       "korean": "윌리엄 호가스",
-      "displayKorean": "윌리엄 호가스",
+      "displayKorean": "호가스, 윌리엄",
       "aliases": {
         "ko": [
-          "호가스"
+          "호가스",
+          "윌리엄 호가스"
         ],
         "en": [
-          "Hogarth"
+          "Hogarth",
+          "William Hogarth"
         ]
       },
-      "uhangul": "윌리엄 호가[THㅡ]",
+      "uhangul": "호가[THㅡ], 윌리엄",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
     },

@@ -7,6 +7,10 @@ let selected = null;
 let listDirection = 'asc';
 const sessionStorageKey = 'art-atlas-access-session-v1';
 const topicSidebarWidthStorageKey = 'art-through-time-topic-sidebar-width-v1';
+const uHangulModeStorageKey = 'ArtThroughTime.uHangulMode.v3';
+let uHangulMode = ['original','uhangul','korean'].includes(sessionStorage.getItem(uHangulModeStorageKey)) ? sessionStorage.getItem(uHangulModeStorageKey) : 'korean';
+function renderDisplayMode(){document.querySelectorAll('[data-display-mode]').forEach(button=>{const active=button.dataset.displayMode===uHangulMode;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));});window.dispatchEvent(new CustomEvent('uhangulmodechange',{detail:{mode:uHangulMode}}));}
+document.addEventListener('click',event=>{const button=event.target.closest('[data-display-mode]');if(!button)return;uHangulMode=['original','uhangul'].includes(button.dataset.displayMode)?button.dataset.displayMode:'korean';sessionStorage.setItem(uHangulModeStorageKey,uHangulMode);renderDisplayMode();});
 const adminToken = () => {
   try {
     const session = JSON.parse(sessionStorage.getItem(sessionStorageKey) || 'null');
@@ -318,4 +322,5 @@ topicArtworkForm.onsubmit = async event => {
   finally { submit.disabled = false; }
 };
 
+renderDisplayMode();
 fetch('data/topics.json').then(response => response.json()).then(data => { topics = data.topics || []; renderList(); });

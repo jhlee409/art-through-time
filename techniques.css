@@ -85,7 +85,7 @@ body {
   z-index: 1;
   display: grid;
   flex: none;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 3px;
   margin: 16px 0 -2px;
   padding: 4px;
@@ -105,6 +105,10 @@ body {
 .technique-display-mode-button:hover { color: #1b2923; }
 .technique-display-mode-button.active { background: #e3e7dc; color: #1b2923; }
 .technique-display-mode-button:focus-visible { outline: 2px solid #dca47c; outline-offset: 2px; }
+.technique-display-mode--round { display:flex; gap:4px; padding:0; border:0; background:transparent; }
+.technique-display-mode.technique-display-mode--round { display:flex; grid-template-columns:none; padding:0; border:0; background:transparent; }
+.technique-display-mode--round .technique-display-mode-button { display:grid; width:28px; min-height:28px; height:28px; place-items:center; padding:0; border:1px solid #aebba8; border-radius:50%; background:#fbfcf9; font:700 10px/1 var(--sans); }
+.technique-display-mode--round .technique-display-mode-button.active { border-color:#425043; background:#425043; color:#fffdf8; }
 
 .technique-sidebar .eyebrow {
   position: relative;
@@ -420,8 +424,6 @@ body {
 /* One language toggle plus an autocomplete technique finder. */
 .technique-language-button[data-language="ko"] { display: none; }
 .technique-language { align-items: flex-start; }
-.technique-language-button[data-language="en"] { display: grid; width: 30px; height: 30px; place-items: center; border: 1px solid #aebba8; border-radius: 50%; background: #fbfcf9; color: #425043; padding: 0; font: 700 10px/1 'DM Mono', monospace; letter-spacing: .03em; }
-.technique-language-button[data-language="en"]:hover, .technique-language-button[data-language="en"]:focus-visible { border-color: #56715e; background: #e3e7dc; outline: none; }
 .technique-search { position: relative; z-index: 20; margin: 13px 0 10px; }
 .technique-search-input { width: 100%; min-width: 0; border: 1px solid #d7ddd4; border-radius: 4px; background: #fbfcf9; color: #34423a; padding: 8px 9px; font-size: 12px; outline: 0; }
 .technique-search-input:focus { border-color: #8ea18f; box-shadow: 0 0 0 2px #dfe8d9; }

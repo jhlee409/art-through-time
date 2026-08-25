@@ -14,8 +14,7 @@ const TARGET_ONSETS = {
   Z: new Set(['ㅈ', 'ㅅ', 'ㅆ']),
   R: new Set(['ㄹ']),
   TH: new Set(['ㅅ', 'ㅌ', 'ㄷ']),
-  X: new Set(['ㅎ']),
-  CH: new Set(['ㅎ'])
+  X: new Set(['ㅎ'])
 };
 const PASSTHROUGH_ONSETS = {
   L: new Set(['ㄹ']),
@@ -214,7 +213,6 @@ function targetCues(original) {
   for (let i = 0; i < text.length;) {
     if (text.startsWith('th', i)) { cues.push('TH'); i += 2; continue; }
     if (text.startsWith('ph', i)) { cues.push('F'); i += 2; continue; }
-    if (text.startsWith('ch', i)) { cues.push('CH'); i += 2; continue; }
     const ch = text[i];
     if (ch === 'f') cues.push('F');
     else if (ch === 'v' || ch === 'w') cues.push('V');
@@ -232,7 +230,6 @@ function consonantEvents(original) {
   for (let i = 0; i < text.length;) {
     if (text.startsWith('th', i)) { events.push({token: 'TH', target: true, allowed: TARGET_ONSETS.TH}); i += 2; continue; }
     if (text.startsWith('ph', i)) { events.push({token: 'F', target: true, allowed: TARGET_ONSETS.F}); i += 2; continue; }
-    if (text.startsWith('ch', i)) { events.push({token: 'CH', target: true, allowed: TARGET_ONSETS.CH}); i += 2; continue; }
     if (text.startsWith('gh', i)) { events.push({token: 'X', target: true, allowed: TARGET_ONSETS.X}); i += 2; continue; }
     const ch = text[i];
     if (ch === 'f') events.push({token: 'F', target: true, allowed: TARGET_ONSETS.F});

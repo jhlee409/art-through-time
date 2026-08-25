@@ -874,11 +874,11 @@ const expectedManualUHangulByArtistId = {
 };
 async function uHangulRuleIssues(artists) {
   const issues=[];
-  const fontFile=path.join(root,'uhangul','assets','fonts','uHangul-v0.5.woff2');
+  const fontFile=path.join(root,'uhangul','assets','fonts','uHangul-v0.6.woff2');
   const runtimeFile=path.join(root,'uhangul','uhangul-runtime.js');
   const cssFile=path.join(root,'uhangul','uhangul-runtime.css');
   const exists=file=>fs.access(file).then(()=>true).catch(()=>false);
-  if(!await exists(fontFile)) issues.push({artist:'uHangul',artistId:'uhangul-font',work:'uHangul 폰트 파일 누락',workId:'uhangul/assets/fonts/uHangul-v0.5.woff2'});
+  if(!await exists(fontFile)) issues.push({artist:'uHangul',artistId:'uhangul-font',work:'uHangul 폰트 파일 누락',workId:'uhangul/assets/fonts/uHangul-v0.6.woff2'});
   if(!await exists(runtimeFile)) issues.push({artist:'uHangul',artistId:'uhangul-runtime',work:'uHangul 런타임 파일 누락',workId:'uhangul/uhangul-runtime.js'});
   if(!await exists(cssFile)) issues.push({artist:'uHangul',artistId:'uhangul-css',work:'uHangul CSS 파일 누락',workId:'uhangul/uhangul-runtime.css'});
   const runtimeText=await fs.readFile(runtimeFile,'utf8').catch(()=>'');
@@ -1469,7 +1469,7 @@ async function injectMovementArtworkMovementLabels(html) {
   return stripMovementArtworkMovementLabels(html);
 }
 const movementArtistLinkStyle = `.art-atlas-artist-link{font-weight:900;color:#191007!important;background:linear-gradient(180deg,rgba(255,232,151,.98),rgba(255,198,86,.9));border-bottom:2px solid #a96f12;border-radius:.22em;padding:0 .16em;text-decoration:none!important;box-decoration-break:clone;-webkit-box-decoration-break:clone}.art-atlas-artist-link:hover{filter:brightness(1.08);box-shadow:0 0 0 2px rgba(255,214,102,.24)}`;
-const uHangulDocumentIntegration = `<link rel="stylesheet" href="../../uhangul/uhangul-runtime.css" data-uhangul-integration="v0.4">\n<script defer src="../../uhangul/uhangul-runtime.js" data-uhangul-integration="v0.4"></script>`;
+const uHangulDocumentIntegration = `<link rel="stylesheet" href="../../uhangul/uhangul-runtime.css" data-uhangul-integration="v0.6">\n<script defer src="../../uhangul/uhangul-runtime.js?v=0.6" data-uhangul-integration="v0.6"></script>`;
 const movementPioneerContexts = {
   '비잔틴 미술':'<b>문제의식:</b> 고대의 자연주의를 단순히 되살리기보다, 그리스도교의 초월적 진리와 전례 속 만남을 어떤 시각 언어로 보일지 탐구했다. <b>돌파:</b> 이콘·모자이크·프레스코, 금빛 바탕, 정면성·위계·상징색으로 성스러운 현존을 구성했으며, 후기에는 더 유연한 선·몸짓·서사와 공간의 암시를 더해 정서적 밀도를 높였다.',
   '고딕 미술':'<b>문제의식:</b> 로마네스크의 무거운 벽과 어두운 실내가 공동체의 빛·상승감·풍부한 성서 서사를 충분히 담지 못한다고 보았다. <b>돌파:</b> 첨두아치·리브 볼트·플라잉 버트레스로 하중을 분산하고 벽을 큰 창으로 열었으며, 스테인드글라스·포털 조각·필사본의 빛과 연속된 이야기로 신앙 경험을 확장했다.',
@@ -1568,8 +1568,7 @@ function injectMovementPioneerContext(html, explicitContextKey='') {
   const block=`<aside data-art-atlas-pioneer-context style="max-width:1060px;margin:1.1rem 0 0;padding:1rem 1.15rem;border-left:4px solid #d7a74a;border-radius:0 10px 10px 0;background:rgba(215,167,74,.09);color:#e5e9ed;font-size:1rem;line-height:1.72"><strong style="display:block;margin-bottom:.28rem;color:#efcb80;letter-spacing:.03em">선구자들의 문제의식과 돌파</strong>${context}</aside>`;
   return source.replace(/(<h1\b[^>]*>[\s\S]*?<\/h1>)/i,`$1\n${block}`);
 }
-const uHangulDocumentToolbar = `<div data-uhangul-document-toolbar data-uhangul-ui role="group" aria-label="이름 표기 방식" style="float:right!important;position:relative!important;z-index:2147483647!important;display:flex!important;gap:4px!important;margin:14px!important;padding:5px!important;background:#18221e!important;color:#fff!important;border:1px solid #526356!important;border-radius:8px!important;box-shadow:0 4px 18px rgba(0,0,0,.35)!important;font:600 12px/1 'Noto Sans KR',sans-serif!important;visibility:visible!important;opacity:1!important"><button type="button" data-uh-mode="korean" data-uh-local-mode="korean" aria-pressed="true" style="display:block!important;border:0!important;border-radius:4px!important;padding:7px 10px!important;background:#f5f1e8!important;color:#18221e!important;font:inherit!important;cursor:pointer!important">한국어</button><button type="button" data-uh-mode="uhangul" data-uh-local-mode="uhangul" aria-pressed="false" style="display:block!important;border:0!important;border-radius:4px!important;padding:7px 10px!important;background:transparent!important;color:#fff!important;font:inherit!important;cursor:pointer!important">uHangul</button></div>`;
-const uHangulDocumentCornerButton = `<div data-uhangul-corner-bar style="position:sticky!important;top:0!important;z-index:2147483647!important;clear:both!important;height:64px!important;display:flex!important;align-items:center!important;padding:10px 18px!important;background:#0c1014!important;border-bottom:1px solid #2d3540!important"><button type="button" data-uhangul-corner-button aria-label="uHangul 켜기" title="uHangul 켜기" aria-pressed="false" style="position:relative!important;z-index:2147483647!important;display:block!important;border:2px solid #f4c55b!important;border-radius:50%!important;width:38px!important;height:38px!important;padding:0!important;background:#18221e!important;color:#f4c55b!important;font:800 23px/34px Georgia,serif!important;text-align:center!important;cursor:pointer!important;visibility:visible!important;opacity:1!important">u</button></div>`;
+const uHangulDocumentToolbar = `<div data-uhangul-document-toolbar role="group" aria-label="이름 표기 방식" style="position:fixed!important;top:14px!important;left:16px!important;z-index:2147483647!important;display:flex!important;gap:4px!important"><button type="button" data-uh-mode="korean" data-uh-local-mode="korean" aria-label="한국어" title="한국어" style="display:grid!important;width:28px!important;height:28px!important;place-items:center!important;padding:0!important;border:1px solid #aebba8!important;border-radius:50%!important;background:#fffdf8!important;color:#425043!important;font:700 10px/1 'Noto Sans KR',sans-serif!important;cursor:pointer!important">한</button><button type="button" data-uh-mode="uhangul" data-uh-local-mode="uhangul" aria-label="uHangul" title="uHangul" style="display:grid!important;width:28px!important;height:28px!important;place-items:center!important;padding:0!important;border:1px solid #aebba8!important;border-radius:50%!important;background:#fffdf8!important;color:#425043!important;font:700 10px/1 'Noto Sans KR',sans-serif!important;cursor:pointer!important">u</button><button type="button" data-uh-mode="original" data-uh-local-mode="original" aria-label="국제 표기" title="국제 표기" style="display:grid!important;width:28px!important;height:28px!important;place-items:center!important;padding:0!important;border:1px solid #aebba8!important;border-radius:50%!important;background:#fffdf8!important;color:#425043!important;font:700 10px/1 'Noto Sans KR',sans-serif!important;cursor:pointer!important">표</button></div>`;
 function injectUHangulDocumentIntegration(html) {
   const source=String(html || '');
   const styleLink=uHangulDocumentIntegration.split('\n')[0];
@@ -1581,7 +1580,8 @@ function injectUHangulDocumentIntegration(html) {
   const existingToolbar=/<div\b(?=[^>]*data-uhangul-document-toolbar)[\s\S]*?<\/div>/i;
   documentHtml=documentHtml.replace(existingToolbar,'');
   documentHtml=documentHtml.replace(/<div\b(?=[^>]*data-uhangul-corner-bar)[\s\S]*?<\/div>/i,'').replace(/<button\b(?=[^>]*data-uhangul-corner-button)[\s\S]*?<\/button>/i,'');
-  documentHtml=/<body\b[^>]*>/i.test(documentHtml) ? documentHtml.replace(/<body\b[^>]*>/i,match=>`${match}\n${uHangulDocumentCornerButton}`) : `${uHangulDocumentCornerButton}\n${documentHtml}`;
+  documentHtml=documentHtml.replace(/\n?<a\b(?=[^>]*\bclass=["'][^"']*\bart-atlas-movement-wiki-button\b)[^>]*>[\s\S]*?<\/a>/i,'');
+  documentHtml=/<body\b[^>]*>/i.test(documentHtml) ? documentHtml.replace(/<body\b[^>]*>/i,match=>`${match}\n${uHangulDocumentToolbar}`) : `${uHangulDocumentToolbar}\n${documentHtml}`;
   if (existingRuntime.test(documentHtml)) return documentHtml;
   return /<\/body>/i.test(documentHtml) ? documentHtml.replace(/<\/body>/i,`${runtimeScript}\n</body>`) : `${documentHtml}\n${runtimeScript}`;
 }
@@ -1591,14 +1591,13 @@ function injectMovementArtistLinkStyle(html) {
   return /<\/head>/i.test(html) ? html.replace(/<\/head>/i,`${style}\n</head>`) : `${style}\n${html}`;
 }
 function injectMovementWikipediaHeading(html, movementName='', movementLabel='') {
+  let output=String(html || '').replace(/\n?<a\b(?=[^>]*\bclass=["'][^"']*\bart-atlas-movement-wiki-button\b)[^>]*>[\s\S]*?<\/a>/i,'');
   const wikiName=String(movementName || '').trim();
   const label=String(movementLabel || movementName || '').trim();
-  if(!wikiName || !label || /data-art-atlas-movement-wiki-ready/i.test(html)) return html;
+  if(!wikiName || !label || /data-art-atlas-movement-wiki-ready/i.test(output)) return output;
   const href=`https://en.wikipedia.org/w/index.php?search=${encodeURIComponent(wikiName)}`;
-  const style='<style id="art-atlas-movement-wiki-title-style" data-art-atlas-movement-wiki-ready>.art-atlas-movement-wiki-title{color:inherit;text-decoration:underline;text-decoration-thickness:.08em;text-underline-offset:.18em}.art-atlas-movement-wiki-title:hover{filter:brightness(.82)}.art-atlas-movement-wiki-button{position:fixed;top:14px;right:16px;z-index:2147483646;display:inline-flex;align-items:center;min-height:34px;padding:8px 12px;border:1px solid #8e9b8b;border-radius:6px;background:#fffdf8;color:#18221e;text-decoration:none;font:700 12px/1 system-ui,sans-serif;box-shadow:0 4px 16px rgba(24,34,30,.16)}.art-atlas-movement-wiki-button:hover{background:#eef4ea}</style>';
-  let output=/<\/head>/i.test(html) ? html.replace(/<\/head>/i,`${style}\n</head>`) : `${style}\n${html}`;
-  const button=`<a class="art-atlas-movement-wiki-button" href="${escapeAttribute(href)}" target="_blank" rel="noopener">위키피디아</a>`;
-  output=/<body\b[^>]*>/i.test(output) ? output.replace(/<body\b[^>]*>/i,match=>`${match}\n${button}`) : `${button}\n${output}`;
+  const style='<style id="art-atlas-movement-wiki-title-style" data-art-atlas-movement-wiki-ready>.art-atlas-movement-wiki-title{color:inherit;text-decoration:underline;text-decoration-thickness:.08em;text-underline-offset:.18em}.art-atlas-movement-wiki-title:hover{filter:brightness(.82)}</style>';
+  output=/<\/head>/i.test(output) ? output.replace(/<\/head>/i,`${style}\n</head>`) : `${style}\n${output}`;
   const link=`<a class="art-atlas-movement-wiki-title" data-art-atlas-movement-wiki-title href="${escapeAttribute(href)}" target="_blank" rel="noopener">${escapeAttribute(label)}</a>`;
   const headingPattern=/<h([1-3])([^>]*)>([\s\S]*?)<\/h\1>/i;
   if(headingPattern.test(output)) {
@@ -1640,8 +1639,8 @@ function movementDocumentNeedsSetup(buffer) {
   const html=Buffer.isBuffer(buffer) ? buffer.toString('utf8') : String(buffer || '');
   return !(/<link\b[^>]*data-uhangul-integration/i.test(html)
     && /<script\b[^>]*data-uhangul-integration/i.test(html)
-    && /data-uhangul-corner-bar/i.test(html)
-    && /data-uhangul-corner-button/i.test(html)
+    && /data-uhangul-document-toolbar/i.test(html)
+    && !/data-uhangul-corner-bar|data-uhangul-corner-button|art-atlas-movement-wiki-button/i.test(html)
     && /id=["']art-atlas-artist-link-style["']/i.test(html));
 }
 async function ensureStoredMovementDocumentControls() {

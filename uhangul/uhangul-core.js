@@ -2,9 +2,9 @@
  * One completed extended syllable = one SPUA-A code point.
  * No new consonant may occur in final position.
  */
-export const VERSION = "0.5";
+export const VERSION = "0.6";
 export const SPUA_BASE = 0xF8000;
-export const NEW = Object.freeze(["F","V","Z","R","TH","X","CH"]);
+export const NEW = Object.freeze(["F","V","Z","R","TH","X"]);
 export const VOWELS = Object.freeze(Array.from("ㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣ"));
 export const FINALS = Object.freeze(["", ...Array.from("ㄱㄲㄳㄴㄵㄶㄷㄹㄺㄻㄼㄽㄾㄿㅀㅁㅂㅄㅅㅆㅇㅈㅊㅋㅌㅍㅎ")]);
 
@@ -12,7 +12,6 @@ function tokenizeBlock(block) {
   const tokens = [];
   for (let i = 0; i < block.length;) {
     if (block.startsWith("TH", i)) { tokens.push("TH"); i += 2; continue; }
-    if (block.startsWith("CH", i)) { tokens.push("CH"); i += 2; continue; }
     tokens.push(block[i++]);
   }
   return tokens;
@@ -21,7 +20,7 @@ function tokenizeBlock(block) {
 export function blockToCodePoint(block) {
   const t = tokenizeBlock(String(block).trim());
   if (t.length < 2 || t.length > 3) {
-    throw new Error(`uHangul v0.5 block must be onset+vowel(+existing final): [${block}]`);
+    throw new Error(`uHangul v0.6 block must be onset+vowel(+existing final): [${block}]`);
   }
 
   const [onset, vowel, final = ""] = t;
@@ -30,11 +29,11 @@ export function blockToCodePoint(block) {
   const fi = FINALS.indexOf(final);
 
   if (oi < 0) {
-    throw new Error(`uHangul v0.5 requires a NEW consonant in ONSET position: [${block}]`);
+    throw new Error(`uHangul v0.6 requires a NEW consonant in ONSET position: [${block}]`);
   }
   if (vi < 0) throw new Error(`Invalid vowel in [${block}]`);
   if (final && NEW.includes(final)) {
-    throw new Error(`New consonants are onset-only in v0.5; invalid final in [${block}]`);
+    throw new Error(`New consonants are onset-only in v0.6; invalid final in [${block}]`);
   }
   if (fi < 0) throw new Error(`Invalid existing Hangul final in [${block}]`);
 

@@ -22,7 +22,6 @@ const favoriteWorksStorageKey = 'art-atlas-favorite-works-v1';
 const accessSessionStorageKey = 'art-atlas-access-session-v1';
 const uHangulModeStorageKey = 'ArtThroughTime.uHangulMode.v3';
 const artistListEnglishStorageKey = 'ArtThroughTime.artistListEnglish.v1';
-const artworkTitleModeStorageKey = 'ArtThroughTime.artworkTitleMode.v1';
 // The app can be opened through the local server or directly as index.html.
 // In the latter case, API calls must explicitly target the local server.
 const apiUrl = endpoint => location.protocol === 'file:' ? `http://localhost:4173${endpoint}` : endpoint;
@@ -57,9 +56,7 @@ const legacyMovementCountryIds = ['france','germany','netherlands','italy','unit
 const allMovementCountryIds = ['france','germany','switzerland','netherlands','italy','united-kingdom','spain','russia','sweden','denmark','greece','united-states'];
 const defaultMovementView = {countries:[...allMovementCountryIds],start:movementAtlasStart,end:movementAtlasEnd,showHistoricalEvents:true,density:1};
 let language = 'ko';
-let uHangulMode = requestedUHangulMode === 'uhangul' || requestedUHangulMode === 'korean' ? requestedUHangulMode : (sessionStorage.getItem(uHangulModeStorageKey) === 'uhangul' ? 'uhangul' : 'korean');
-let artistListEnglish = sessionStorage.getItem(artistListEnglishStorageKey) === 'true';
-let artworkTitleMode = ['ko','en','original'].includes(sessionStorage.getItem(artworkTitleModeStorageKey)) ? sessionStorage.getItem(artworkTitleModeStorageKey) : 'ko';
+let uHangulMode = ['uhangul','korean','original'].includes(requestedUHangulMode) ? requestedUHangulMode : (['uhangul','korean','original'].includes(sessionStorage.getItem(uHangulModeStorageKey)) ? sessionStorage.getItem(uHangulModeStorageKey) : 'korean');
 let artists = [];
 let selectedId = localStorage.getItem('art-atlas-selected');
 let requestedArtistMissing = false;
@@ -98,7 +95,11 @@ const artistFacetFilters = {
   movements:new Set(startupParams.getAll('movement')),
   submovements:new Set(startupParams.getAll('submovement'))
 };
-const expandedArtistFacetGroups = new Set(['periods','regions','movements','submovements']);
+// Set this to false to restore the previous, always-visible inline filter layout.
+const useCompactArtistFacetPanel = true;
+let artistFacetPanelOpen = false;
+// Keep the filter classification tree compact until the visitor chooses a section to open.
+const expandedArtistFacetGroups = new Set();
 const highResolutionWidthChecks = new Map();
 const artworkWikipediaLinkChecks = new Map();
 let currentUserEmail = '';
@@ -268,26 +269,15 @@ function artistSummaryEditorText(lines) {
   const items = localizedLines(lines);
   return items.length ? items.map(line => `- ${line}`).join('\n') : '- ';
 }
-const artworkTitleModeOrder = ['ko','en','original'];
-const artworkTitleModeLabels = {ko:'KO',en:'EN',original:'OR'};
+const artworkTitleLocales = ['ko','en','original'];
 function artworkTitleValue(title, mode) {
   if (!title || typeof title !== 'object') return mode === 'ko' || mode === 'en' ? String(title || '').trim() : '';
   const original = title.original || title.native || title.originalTitle || title.nativeTitle || title.sourceTitle || '';
   const values = {ko:title.ko, en:title.en, original};
   return String(values[mode] || '').trim();
 }
-function artworkAvailableTitleModes(work) {
-  return artworkTitleModeOrder.filter(mode => artworkTitleValue(work?.title, mode));
-}
-function artworkDisplayTitle(work, preferredMode=artworkTitleMode) {
-  const modes = artworkAvailableTitleModes(work);
-  if (!modes.length) return t('untitled');
-  const start = artworkTitleModeOrder.indexOf(preferredMode);
-  const ordered = start >= 0
-    ? [...artworkTitleModeOrder.slice(start), ...artworkTitleModeOrder.slice(0,start)]
-    : artworkTitleModeOrder;
-  const mode = ordered.find(item => modes.includes(item)) || modes[0];
-  return artworkTitleValue(work.title, mode) || t('untitled');
+function artworkDisplayTitle(work) {
+  return artworkTitleLocales.map(mode => artworkTitleValue(work?.title, mode)).find(Boolean) || t('untitled');
 }
 function artworkThumbnailTitle(work, artist) {
   let title = artworkDisplayTitle(work).replace(/\s+/g, ' ').trim();
@@ -317,24 +307,11 @@ function artworkThumbnailTitle(work, artist) {
   }
   return title.trim() || artworkDisplayTitle(work);
 }
-function availableArtworkTitleModesForWorks(works=[]) {
-  return artworkTitleModeOrder.filter(mode => works.some(work => artworkTitleValue(work?.title, mode)));
-}
-function nextArtworkTitleMode(works=[]) {
-  const available = availableArtworkTitleModesForWorks(works);
-  if (!available.length) return 'ko';
-  const current = available.includes(artworkTitleMode) ? artworkTitleMode : available[0];
-  return available[(available.indexOf(current) + 1) % available.length];
-}
-function setArtworkTitleMode(mode) {
-  artworkTitleMode = artworkTitleModeOrder.includes(mode) ? mode : 'ko';
-  sessionStorage.setItem(artworkTitleModeStorageKey, artworkTitleMode);
-}
 function artworkTitleAliases(work) {
   const title = work?.title;
   if (!title) return [];
   if (typeof title !== 'object') return [String(title).trim()].filter(Boolean);
-  return [...new Set(artworkTitleModeOrder.map(mode => artworkTitleValue(title, mode)).filter(Boolean))];
+  return [...new Set(artworkTitleLocales.map(mode => artworkTitleValue(title, mode)).filter(Boolean))];
 }
 function wikipediaPageInfo(url) {
   try {
@@ -532,7 +509,7 @@ function uHangulArtistAttributes(artist, displayName) {
   return ` data-uh-original="${esc(original)}" data-uh-korean="${esc(korean)}" data-uh-display-korean="${esc(display)}"`;
 }
 function setUHangulMode(mode) {
-  uHangulMode = mode === 'uhangul' ? 'uhangul' : 'korean';
+  uHangulMode = ['uhangul','original'].includes(mode) ? mode : 'korean';
   sessionStorage.setItem(uHangulModeStorageKey, uHangulMode);
   window.dispatchEvent(new CustomEvent('uhangulmodechange', {detail:{mode:uHangulMode}}));
 }
@@ -1516,11 +1493,6 @@ function renderText() {
     button.classList.toggle('active', active);
     button.setAttribute('aria-pressed', String(active));
   });
-  const artistListEnglishButton = $('#artist-list-en-button');
-  if (artistListEnglishButton) {
-    artistListEnglishButton.classList.toggle('active', artistListEnglish);
-    artistListEnglishButton.setAttribute('aria-pressed', String(artistListEnglish));
-  }
   window.dispatchEvent(new CustomEvent('uhangulmodechange', {detail:{mode:uHangulMode}}));
   const migrationExportButton = $('#migration-export-button');
   migrationExportButton.classList.toggle('hidden', !currentUserIsAdmin);
@@ -1559,6 +1531,7 @@ function facetCount(key, value) {
 function renderArtistFacetFilters() {
   const root = $('#artist-facet-filters');
   if (!root) return;
+  root.classList.toggle('artist-facet-inline', !useCompactArtistFacetPanel);
   const labels = {periods:'연대',regions:'활동 지역',movements:'사조',submovements:'세부사조·학파'};
   const active = Object.entries(artistFacetFilters).flatMap(([key,values]) => [...values].map(value => ({key,value,label:facetOptions(key).find(item => item.id === value)?.label || value})));
   const group = key => {
@@ -1567,7 +1540,11 @@ function renderArtistFacetFilters() {
     const options = facetOptions(key).filter(option => !hasContext || artistFacetFilters[key].has(option.id) || facetCount(key, option.id) > 0);
     return `<section class="artist-facet-group"><button type="button" class="artist-facet-heading" data-facet-toggle="${key}" aria-expanded="${expanded}"><span>${labels[key]}</span><span>${expanded ? '▴' : '▾'}</span></button>${expanded ? `<div class="artist-facet-options">${options.map(option => `<label><input type="checkbox" data-facet-key="${key}" value="${esc(option.id)}"${artistFacetFilters[key].has(option.id) ? ' checked' : ''}><span>${esc(option.label)}</span><small>${facetCount(key,option.id)}</small></label>`).join('') || '<p>선택 가능한 항목이 없습니다.</p>'}</div>` : ''}</section>`;
   };
-  root.innerHTML = `<div class="artist-facet-title-row"><div class="artist-facet-title">화가 찾기</div><div class="artist-facet-all-actions" role="group" aria-label="필터 전체 펼치기 및 접기"><button type="button" data-facet-expand-all title="전체 펼치기" aria-label="전체 펼치기">▾</button><button type="button" data-facet-collapse-all title="전체 접기" aria-label="전체 접기">▴</button></div></div><p class="artist-facet-guide">주 활동 지역부터 고르면 사조·학파·시대 범위가 해당 조건에 맞춰 좁혀집니다.</p>${active.length ? `<div class="artist-facet-chips">${active.map(item => `<button type="button" data-facet-remove="${item.key}" data-facet-value="${esc(item.value)}">${esc(item.label)} ×</button>`).join('')}</div>` : ''}<button type="button" class="artist-facet-clear"${active.length ? '' : ' hidden'}>모든 필터 초기화</button>${['regions','movements','submovements','periods'].map(group).join('')}`;
+  const filterContent = `<div class="artist-facet-title-row"><div class="artist-facet-title">${useCompactArtistFacetPanel ? '분류 필터' : '화가 찾기'}</div><div class="artist-facet-all-actions" role="group" aria-label="필터 전체 펼치기 및 접기"><button type="button" data-facet-expand-all title="전체 펼치기" aria-label="전체 펼치기">▾</button><button type="button" data-facet-collapse-all title="전체 접기" aria-label="전체 접기">▴</button></div></div>${active.length ? `<div class="artist-facet-chips">${active.map(item => `<button type="button" data-facet-remove="${item.key}" data-facet-value="${esc(item.value)}">${esc(item.label)} ×</button>`).join('')}</div>` : ''}<button type="button" class="artist-facet-clear"${active.length ? '' : ' hidden'}>모든 필터 초기화</button>${['regions','movements','submovements','periods'].map(group).join('')}`;
+  root.innerHTML = useCompactArtistFacetPanel
+    ? `<button type="button" class="artist-facet-trigger" data-facet-panel-toggle aria-expanded="${artistFacetPanelOpen}" aria-controls="artist-facet-popover">화가 찾기${active.length ? ` <span>${active.length}</span>` : ''}<b aria-hidden="true">${artistFacetPanelOpen ? '▴' : '▾'}</b></button>${artistFacetPanelOpen ? `<div id="artist-facet-popover" class="artist-facet-popover">${filterContent}</div>` : ''}`
+    : filterContent;
+  root.querySelector('[data-facet-panel-toggle]')?.addEventListener('click', () => { artistFacetPanelOpen = !artistFacetPanelOpen; renderArtistFacetFilters(); });
   root.querySelector('[data-facet-expand-all]')?.addEventListener('click', () => { ['regions','movements','submovements','periods'].forEach(key => expandedArtistFacetGroups.add(key)); renderArtistFacetFilters(); });
   root.querySelector('[data-facet-collapse-all]')?.addEventListener('click', () => { expandedArtistFacetGroups.clear(); renderArtistFacetFilters(); });
   root.querySelectorAll('[data-facet-toggle]').forEach(button => button.onclick = () => { const key=button.dataset.facetToggle; expandedArtistFacetGroups.has(key) ? expandedArtistFacetGroups.delete(key) : expandedArtistFacetGroups.add(key); renderArtistFacetFilters(); });
@@ -1591,8 +1568,8 @@ function renderList() {
   }).sort((a,b) => effectiveSort === 'birth' ? (a.birth || 9999) - (b.birth || 9999) : artistDisplayName(a).localeCompare(artistDisplayName(b), language));
   list.innerHTML = ordered.length ? ordered.map(a => {
     const country = artistCountryInfo(a), countryLabel = artistCountryLabel(a), movement = artistMovementDisplayInfo(a).parentLabel;
-    const displayName = artistListEnglish ? (a.name?.en || artistDisplayName(a)) : artistDisplayName(a);
-    const nameAttributes = artistListEnglish ? ' data-uh-ignore="true"' : uHangulArtistAttributes(a, displayName);
+    const displayName = artistDisplayName(a);
+    const nameAttributes = uHangulArtistAttributes(a, displayName);
     const historicalCountry = country.original !== country.name;
     return `<div class="artist-row ${a.id === selectedId ? 'active':''}"><button class="artist-item" data-id="${esc(a.id)}"><span class="avatar ${historicalCountry ? 'historical-country' : ''}" style="background:${countryColor(country.colorKey)};color:${countryInk(country.colorKey)}" title="${esc(countryLabel)}" aria-label="${esc(countryLabel)}">${esc(countryAvatarText(country))}</span><span class="artist-text"><span class="artist-name"${nameAttributes}>${esc(displayName)}</span><span class="artist-years">${years(a)}${movement ? ` · ${esc(movement)}` : ''}</span></span></button>${currentUserIsAdmin ? `<button class="delete-artist" data-id="${esc(a.id)}" title="${esc(t('delete'))}" aria-label="${esc(t('delete'))}">×</button>` : ''}</div>`;
   }).join('') : `<p class="artist-search-empty">${t('noSearchResult')}</p>`;
@@ -1730,8 +1707,6 @@ function renderTimeline() {
   const leonardoLayout = isLeonardoTimeline && sessionStorage.getItem(leonardoLayoutKey) === 'chronology'
     ? 'chronology'
     : 'gallery';
-  const availableTitleModes = availableArtworkTitleModesForWorks(works);
-  if (availableTitleModes.length && !availableTitleModes.includes(artworkTitleMode)) setArtworkTitleMode(availableTitleModes[0]);
   const worksByYear = new Map();
   // A timeline row represents the year a work began.  Date ranges that share
   // the same start year therefore stay together on one horizontal row.
@@ -1800,9 +1775,8 @@ function renderTimeline() {
     ? `${timelineArtistNameMarkup}${originalName && originalName !== koreanName ? ` <a class="original-artist-name" data-uh-ignore="true" href="${esc(originalArtistWikipediaUrl)}" data-artist-wiki="${esc(artist.qid || '')}">${esc(originalName)}</a>` : ''}${linkControls}`
     : `${esc(loc(artist.name))}${linkControls}`;
   const slideshowHelp = language === 'ko' ? '전체 화면 슬라이드 쇼 시작 · 5초마다 다음 작품' : 'Start fullscreen slideshow · next artwork every 5 seconds';
-  const titleModeButton = availableTitleModes.length > 1 ? `<button class="artwork-title-mode-button" type="button" title="${esc(language === 'ko' ? '작품 제목 표기 전환' : 'Switch artwork title language')}" aria-label="${esc(language === 'ko' ? '작품 제목 표기 전환' : 'Switch artwork title language')}">${esc(artworkTitleModeLabels[nextArtworkTitleMode(works)] || 'EN')}</button>` : '';
   const rulesCheckButton = currentUserIsAdmin ? `<button class="rules-check-button" type="button" data-rules-check hidden></button>` : '';
-  const headerActions = `${titleModeButton}${rulesCheckButton}`;
+  const headerActions = rulesCheckButton;
   const timelineHeader = `<header class="timeline-sticky-header"><p class="eyebrow">${t('timeline')}</p><div class="timeline-title-row"><h1 class="timeline-title">${displayName}</h1><div class="timeline-title-actions">${headerActions}</div></div>${currentUserIsAdmin ? `<form class="artist-link-entry hidden"><input type="url" inputmode="url" placeholder="https://" aria-label="${esc(linkInputLabel)}" required><button type="submit">${esc(confirmLinkLabel)}</button></form>` : ''}<p class="life">${years(artist)}${nationalityLabel ? ` · ${esc(nationalityLabel)}` : ''}${artistMovement ? ` · ${artistMovementLabel}` : ''}</p></header>`;
   const standardTimelineMarkup = `<div class="timeline">${works.length ? [...worksByYear.entries()].map(([year, group]) => `<div class="timeline-row"><span class="year">${year}</span><span class="node"></span><div class="artworks-at-year">${group.map(card).join('')}</div></div>`).join('') : `<p class="empty-timeline">${t('noWork')}</p>`}</div>`;
   const leonardoTimelineMarkup = (() => {
@@ -1844,10 +1818,6 @@ function renderTimeline() {
   timeline.innerHTML = `${timelineHeader}${leonardoTimelineMarkup}`;
   setupArtistSummaryEditor(artist);
   timeline.querySelector('.add-artwork-button')?.addEventListener('click', () => openAddArtworkDialog(artist));
-  timeline.querySelector('.artwork-title-mode-button')?.addEventListener('click', () => {
-    setArtworkTitleMode(nextArtworkTitleMode(works));
-    renderTimeline();
-  });
   timeline.querySelectorAll('.start-slideshow').forEach(button => button.onclick = () => startSlideshow(artist, button.dataset.slideshowScope === 'featured' ? leonardoFeaturedWorks : works));
   timeline.querySelectorAll('.leonardo-layout-button').forEach(button => button.addEventListener('click', () => {
     sessionStorage.setItem(leonardoLayoutKey, button.dataset.leonardoLayout || 'gallery');
@@ -2668,11 +2638,11 @@ function openFavoritesWindow() {
     const runtimeStyle = popup.document.createElement('link');
     runtimeStyle.rel = 'stylesheet';
     runtimeStyle.href = new URL('uhangul/uhangul-runtime.css', location.href).href;
-    runtimeStyle.dataset.uhangulIntegration = 'v0.5.4';
+    runtimeStyle.dataset.uhangulIntegration = 'v0.6';
     const runtimeScript = popup.document.createElement('script');
     runtimeScript.defer = true;
-    runtimeScript.src = new URL('uhangul/uhangul-runtime.js', location.href).href;
-    runtimeScript.dataset.uhangulIntegration = 'v0.5.4';
+    runtimeScript.src = new URL('uhangul/uhangul-runtime.js?v=0.6', location.href).href;
+    runtimeScript.dataset.uhangulIntegration = 'v0.6';
     popup.document.head.append(runtimeStyle, runtimeScript);
   } catch (_) { /* The popup still works if its document cannot be extended. */ }
   popup.document.exitFullscreen?.();
@@ -2774,7 +2744,7 @@ function movementExplanationWindow(url='about:blank') {
 }
 function openExplanationUrl(url, popup=null, movementName='', movementLabel='') {
   const target = new URL(uHangulModeUrl(url));
-  target.searchParams.set('documentVersion', 'uhangul-toolbar-v3');
+  target.searchParams.set('documentVersion', 'uhangul-controls-v4');
   if (movementName) target.searchParams.set('movementWiki', movementName);
   if (movementLabel) target.searchParams.set('movementLabel', movementLabel);
   const targetUrl = target.href;
@@ -2882,7 +2852,8 @@ async function openMovementDocumentInDetail(name, label) {
   const loadingLabel = language === 'ko' ? '설명 페이지를 준비하는 중입니다.' : 'Preparing the explanation page.';
   detail.classList.add('show');
   $('.main-area').classList.add('detail-open');
-  detail.innerHTML = `<div class="detail-panel-resize" role="separator" aria-orientation="vertical" aria-label="${language === 'ko' ? '설명 창 너비 조절' : 'Resize detail panel'}"></div><button class="close-detail" type="button" aria-label="${language === 'ko' ? '닫기' : 'Close'}">×</button><section class="movement-document-detail"><h2>${esc(label || name)}</h2><div class="movement-document-mode" role="group" aria-label="이름 표기 방식"><button type="button" data-movement-document-mode="korean" class="active" aria-pressed="true">한국어</button><button type="button" data-movement-document-mode="uhangul" aria-pressed="false">uHangul</button></div><p class="movement-document-loading">${esc(loadingLabel)}</p><iframe class="movement-document-frame" title="${esc(label || name)}" sandbox="allow-same-origin allow-scripts allow-popups"></iframe></section>`;
+  detail.innerHTML = `<div class="detail-panel-resize" role="separator" aria-orientation="vertical" aria-label="${language === 'ko' ? '설명 창 너비 조절' : 'Resize detail panel'}"></div><button class="close-detail" type="button" aria-label="${language === 'ko' ? '닫기' : 'Close'}">×</button><section class="movement-document-detail"><h2>${esc(label || name)}</h2><p class="movement-document-loading">${esc(loadingLabel)}</p><iframe class="movement-document-frame" title="${esc(label || name)}" sandbox="allow-same-origin allow-scripts allow-popups"></iframe></section>`;
+  renderText();
   detail.querySelector('.close-detail').onclick = closeDetail;
   setupDetailPanelResize();
   const frame = detail.querySelector('.movement-document-frame');
@@ -2894,16 +2865,9 @@ async function openMovementDocumentInDetail(name, label) {
   let documentUrl;
   try { documentUrl = await refreshMovementDocument(name, '1'); }
   catch (_) { documentUrl = url; }
-  const setDocumentMode = mode => {
-    detail.querySelectorAll('[data-movement-document-mode]').forEach(button => {
-      const active = button.dataset.movementDocumentMode === mode;
-      button.classList.toggle('active', active);
-      button.setAttribute('aria-pressed', String(active));
-    });
-    frame.src = uHangulModeUrl(documentUrl, mode);
-  };
-  detail.querySelectorAll('[data-movement-document-mode]').forEach(button => button.onclick = () => setDocumentMode(button.dataset.movementDocumentMode));
-  setDocumentMode('korean');
+  detail.dataset.movementDocumentUrl = documentUrl;
+  const updateFrameMode = () => { if (detail.contains(frame)) frame.src = uHangulModeUrl(documentUrl); };
+  updateFrameMode();
 }
 async function openMovementDocument(name, slot, label) {
   const url = movementDocuments?.[name]?.[slot];
@@ -2954,7 +2918,7 @@ function openHistoricalEventWikipedia(name) {
   const popupLeft = Math.max(30, window.screen.availWidth - popupWidth - 30);
   window.open(url, 'artAtlasHistoricalEventWikipedia', `popup=yes,width=${popupWidth},height=${popupHeight},left=${popupLeft},top=50,noopener`);
 }
-function closeDetail() { detail.classList.remove('show'); $('.main-area').classList.remove('detail-open'); detail.innerHTML = placeholder(); setupDetailPanelResize(); }
+function closeDetail() { delete detail.dataset.movementDocumentUrl; detail.classList.remove('show'); $('.main-area').classList.remove('detail-open'); detail.innerHTML = placeholder(); setupDetailPanelResize(); }
 function render() { renderText(); renderList(); if (viewMode === 'movements') renderMovementAtlas(); else renderTimeline(); closeDetail(); }
 
 async function uploadLocalArtworkImage(artist, work, file) {
@@ -3253,11 +3217,19 @@ $('#add-form').addEventListener('submit', async event => {
     setAddFormBusy(false);
   }
 });
-document.querySelectorAll('[data-display-mode]').forEach(button => button.addEventListener('click', () => {
+document.addEventListener('click', event => {
+  const button = event.target.closest('[data-display-mode]');
+  if (!button) return;
   language = 'ko';
   setUHangulMode(button.dataset.displayMode);
+  const openFrame = detail.querySelector('.movement-document-frame');
+  if (openFrame && detail.dataset.movementDocumentUrl) {
+    renderText();
+    openFrame.src = uHangulModeUrl(detail.dataset.movementDocumentUrl);
+    return;
+  }
   render();
-}));
+});
 $('#logout-button').onclick = logoutEverywhere;
 $('#movement-logout-button').onclick = logoutEverywhere;
 window.addEventListener('storage', event => {
@@ -3265,11 +3237,10 @@ window.addEventListener('storage', event => {
   try { sessionStorage.removeItem(accessSessionStorageKey); } catch (_) {}
   location.assign(new URL('index.html?login=1', location.href).href);
 });
-$('#artist-list-en-button')?.addEventListener('click', () => {
-  artistListEnglish = !artistListEnglish;
-  sessionStorage.setItem(artistListEnglishStorageKey, String(artistListEnglish));
+window.addEventListener('message', event => {
+  if (event.origin !== location.origin || event.data?.type !== 'art-through-time-uhangul-mode') return;
+  setUHangulMode(event.data.mode);
   renderText();
-  renderList();
 });
 $('#migration-export-button').onclick = async () => {
   if (!currentUserIsAdmin) return;

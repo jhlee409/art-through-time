@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""uHangul v0.5.4 automatic compatible-font detector.
+"""uHangul v0.6 automatic compatible-font detector.
 
 Finds:
 1) a glyf-based TrueType base whose contextual reference Hangul syllables
    are composite glyphs; and
-2) a font containing all seven source shapes needed by uHangul.
+2) a font containing all six source shapes needed by uHangul.
 
 No font is modified. Results are written as JSON.
 """
@@ -13,8 +13,8 @@ import argparse, json, os, sys
 from pathlib import Path
 from fontTools.ttLib import TTFont, TTCollection
 
-TOKENS = ("F","V","Z","R","TH","X","CH")
-SOURCE_CPS = (0x1157, 0x112B, 0x1140, 0x1119, 0x03B8, 0x1158, 0x1159)
+TOKENS = ("F","V","Z","R","TH","X")
+SOURCE_CPS = (0x1157, 0x112B, 0x1140, 0x111B, 0x03B8, 0x1158)
 REF_ONSETS = ("ㅍ","ㅂ","ㅅ","ㄹ","ㅎ")
 L_LIST = tuple("ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ")
 V_LIST = tuple("ㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣ")
@@ -200,7 +200,7 @@ def main():
             pair = {"base":bases[0], "source":sources[0], "sameFile":False}
 
     result = {
-        "version":"0.5.4",
+        "version":"0.6",
         "success": pair is not None,
         "searchedDirectories": search_dirs,
         "fontFilesScanned": len(files),
@@ -214,7 +214,7 @@ def main():
     Path(args.output).write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
 
     lines = [
-        "uHangul v0.5.4 font auto-detection",
+        "uHangul v0.6 font auto-detection",
         "====================================",
         f"Scanned font files: {len(files)}",
         f"Compatible base fonts: {len(bases)}",

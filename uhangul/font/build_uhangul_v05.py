@@ -3,7 +3,7 @@
 
 Invariant
 ---------
-* The seven uHangul consonants are ONSET ONLY.
+* The six uHangul consonants are ONSET ONLY.
 * Vowels, finals, advance width, baseline, and all non-onset components are
   copied verbatim from an existing complete Hangul syllable used as a
   contextual template.
@@ -13,7 +13,7 @@ Invariant
 SPUA-A mapping
 --------------
 cp = U+F8000 + ((new_onset_index * 21 + vowel_index) * 28 + final_index)
-Range: U+F8000..U+F9013 (4,116 syllables)
+Range: U+F8000..U+F8DC7 (3,528 syllables)
 """
 from __future__ import annotations
 import argparse
@@ -28,15 +28,14 @@ from fontTools.pens.ttGlyphPen import TTGlyphPen
 from fontTools.pens.transformPen import TransformPen
 
 SPUA_BASE = 0xF8000
-TOKENS = ("F", "V", "Z", "R", "TH", "X", "CH")
+TOKENS = ("F", "V", "Z", "R", "TH", "X")
 TOKEN_INFO = {
     "F":  (0x1157, "ㅍ", "/f/", "ᅗ"),
     "V":  (0x112B, "ㅂ", "/v/", "ᄫ"),
     "Z":  (0x1140, "ㅅ", "/z/", "ᅀ"),
-    "R":  (0x1119, "ㄹ", "/ɹ/", "ᄙ"),
+    "R":  (0x111B, "ㄹ", "/ɹ/", "ᄛ"),
     "TH": (0x03B8, "ㅅ", "/θ/", "θ"),
     "X":  (0x1158, "ㅎ", "/x/", "ᅘ"),
-    "CH": (0x1159, "ㅎ", "/ç/", "ᅙ"),
 }
 L_LIST = tuple("ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ")
 V_LIST = tuple("ㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣ")
@@ -83,6 +82,10 @@ def add_full_unicode_cmap(font, mapping: Dict[int, str]):
     for table in font["cmap"].tables:
         if table.isUnicode():
             full.update(table.cmap)
+    # Remove mappings from the retired seven-token layout before adding the
+    # current six-token layout.  This prevents the abolished CH glyphs from
+    # remaining addressable in a rebuilt font.
+    full = {cp: name for cp, name in full.items() if not (SPUA_BASE <= cp < SPUA_BASE + 7 * 21 * 28)}
     full.update(mapping)
     font["cmap"].tables = [
         t for t in font["cmap"].tables
@@ -174,6 +177,9 @@ def build(base_path: Path, output_path: Path, old_jamo_path: Path | None = None)
     font["glyf"].glyphOrder = final_order
     add_full_unicode_cmap(font, spua)
     rename_font(font)
+
+    if output_path.suffix.lower() == ".woff2":
+        font.flavor = "woff2"
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     font.save(str(output_path), reorderTables=True)

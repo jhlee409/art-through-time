@@ -1,22 +1,22 @@
-/* uHangul v0.5.4 — file:// compatible runtime
+/* uHangul v0.6 — file:// compatible runtime
  * No ES modules. A local dictionary is loaded when the page is served.
  * New consonants are onset-only.
  */
 (function() {
 "use strict";
 
-const VERSION = "0.5.4";
+const VERSION = "0.6";
 const SPUA_BASE = 0xF8000;
-const NEW = Object.freeze(["F","V","Z","R","TH","X","CH"]);
+const NEW = Object.freeze(["F","V","Z","R","TH","X"]);
 const VOWELS = Object.freeze(Array.from("ㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣ"));
 const FINALS = Object.freeze(["", ...Array.from("ㄱㄲㄳㄴㄵㄶㄷㄹㄺㄻㄼㄽㄾㄿㅀㅁㅂㅄㅅㅆㅇㅈㅊㅋㅌㅍㅎ")]);
-let RECORDS = [{"id": "frank-stella", "original": "Frank Stella", "language": "en-US", "korean": "프랭크 스텔라", "uhangul": "[Fㅡ][Rㅐㅇ]크 스텔라", "note": "F, R; 새 자음은 초성만"}, {"id": "roy-lichtenstein", "original": "Roy Lichtenstein", "language": "en-US", "korean": "로이 리히텐슈타인", "uhangul": "[Rㅗ]이 리히텐슈타인", "note": "R 초성"}, {"id": "robert-rauschenberg", "original": "Robert Rauschenberg", "language": "en-US", "korean": "로버트 라우션버그", "uhangul": "[Rㅗ]버트 [Rㅏ]우션버그", "note": "어말/종성 r 표기 제거"}, {"id": "georgia-okeeffe", "original": "Georgia O'Keeffe", "language": "en-US", "korean": "조지아 오키프", "uhangul": "조지아 오키[Fㅡ]", "note": "final /f/가 기존 프 음절로 실현되어 F를 초성으로 사용"}, {"id": "jasper-johns", "original": "Jasper Johns", "language": "en-US", "korean": "재스퍼 존스", "uhangul": "재스퍼 존스", "note": "종성 r/z를 새 종성으로 만들지 않음"}, {"id": "jeff-koons", "original": "Jeff Koons", "language": "en-US", "korean": "제프 쿤스", "uhangul": "제[Fㅡ] 쿤[Zㅡ]", "note": "프/스의 초성만 F/Z로 교체"}, {"id": "keith-haring", "original": "Keith Haring", "language": "en-US", "korean": "키스 해링", "uhangul": "키[THㅡ] 해[Rㅣㅇ]", "note": "TH, R 초성"}, {"id": "andy-warhol", "original": "Andy Warhol", "language": "en-US", "korean": "앤디 워홀", "uhangul": "앤디 워홀", "note": "종성/rhotic R 미표기"}, {"id": "francis-bacon", "original": "Francis Bacon", "language": "en-US", "korean": "프랜시스 베이컨", "uhangul": "[Fㅡ][Rㅐㄴ]시스 베이컨", "note": "F, R"}, {"id": "richard-hamilton", "original": "Richard Hamilton", "language": "en-US", "korean": "리처드 해밀턴", "uhangul": "[Rㅣ]처드 해밀턴", "note": "초성 R만 사용"}, {"id": "edward-hopper", "original": "Edward Hopper", "language": "en-US", "korean": "에드워드 호퍼", "uhangul": "에드워드 호퍼", "note": "종성/rhotic R 미표기"}, {"id": "mark-rothko", "original": "Mark Rothko", "language": "en-US", "korean": "마크 로스코", "uhangul": "마크 [Rㅗ][THㅡ]코", "note": "R 초성; /θ/가 스 음절로 실현"}, {"id": "cindy-sherman", "original": "Cindy Sherman", "language": "en-US", "korean": "신디 셔먼", "uhangul": "신디 셔먼", "note": "rhotic R 미표기"}, {"id": "barbara-kruger", "original": "Barbara Kruger", "language": "en-US", "korean": "바버라 크루거", "uhangul": "바버[Rㅏ] 크[Rㅜ]거", "note": "실제 R 초성으로 실현되는 음절만 교체"}, {"id": "helen-frankenthaler", "original": "Helen Frankenthaler", "language": "en-US", "korean": "헬렌 프랭컨탈러", "uhangul": "헬렌 [Fㅡ][Rㅐㅇ]컨[THㅏㄹ]러", "note": "F, R, TH; rhotic 종성 없음"}, {"id": "david-hockney", "original": "David Hockney", "language": "en-US", "korean": "데이비드 호크니", "uhangul": "데이[Vㅣ]드 호크니", "note": "V"}, {"id": "vanessa-bell", "original": "Vanessa Bell", "language": "en-US", "korean": "바네사 벨", "uhangul": "[Vㅏ]네사 벨", "note": "V"}, {"id": "eva-hesse", "original": "Eva Hesse", "language": "en-US", "korean": "에바 헤세", "uhangul": "에[Vㅏ] 헤세", "note": "V"}, {"id": "frida-kahlo", "original": "Frida Kahlo", "language": "es-MX", "korean": "프리다 칼로", "uhangul": "[Fㅡ]리다 칼로", "note": "F; 스페인어 r는 /ɹ/가 아니므로 ㄹ 유지"}, {"id": "lucas-cranach", "original": "Lucas Cranach", "language": "de-DE", "korean": "루카스 크라나흐", "uhangul": "루카스 크라나[Xㅡ]", "note": "독일어 /x/"}, {"id": "caspar-david-friedrich", "original": "Caspar David Friedrich", "language": "de-DE", "korean": "카스파르 다비트 프리드리히", "uhangul": "카스파르 다[Vㅣ]트 [Fㅡ]리드리[CHㅡ]", "note": "V, F, 독일어 ich-Laut /ç/"}, {"id": "gerhard-richter", "original": "Gerhard Richter", "language": "de-DE", "korean": "게르하르트 리히터", "uhangul": "게르하르트 리[CHㅡ]터", "note": "독일어 /ç/; 독일어 r는 /ɹ/로 강제 변환하지 않음"}];
+let RECORDS = [{"id": "frank-stella", "original": "Frank Stella", "language": "en-US", "korean": "프랭크 스텔라", "uhangul": "[Fㅡ][Rㅐㅇ]크 스텔라", "note": "F, R; 새 자음은 초성만"}, {"id": "roy-lichtenstein", "original": "Roy Lichtenstein", "language": "en-US", "korean": "로이 리히텐슈타인", "uhangul": "[Rㅗ]이 리히텐슈타인", "note": "R 초성"}, {"id": "robert-rauschenberg", "original": "Robert Rauschenberg", "language": "en-US", "korean": "로버트 라우션버그", "uhangul": "[Rㅗ]버트 [Rㅏ]우션버그", "note": "어말/종성 r 표기 제거"}, {"id": "georgia-okeeffe", "original": "Georgia O'Keeffe", "language": "en-US", "korean": "조지아 오키프", "uhangul": "조지아 오키[Fㅡ]", "note": "final /f/가 기존 프 음절로 실현되어 F를 초성으로 사용"}, {"id": "jasper-johns", "original": "Jasper Johns", "language": "en-US", "korean": "재스퍼 존스", "uhangul": "재스퍼 존스", "note": "종성 r/z를 새 종성으로 만들지 않음"}, {"id": "jeff-koons", "original": "Jeff Koons", "language": "en-US", "korean": "제프 쿤스", "uhangul": "제[Fㅡ] 쿤[Zㅡ]", "note": "프/스의 초성만 F/Z로 교체"}, {"id": "keith-haring", "original": "Keith Haring", "language": "en-US", "korean": "키스 해링", "uhangul": "키[THㅡ] 해[Rㅣㅇ]", "note": "TH, R 초성"}, {"id": "andy-warhol", "original": "Andy Warhol", "language": "en-US", "korean": "앤디 워홀", "uhangul": "앤디 워홀", "note": "종성/rhotic R 미표기"}, {"id": "francis-bacon", "original": "Francis Bacon", "language": "en-US", "korean": "프랜시스 베이컨", "uhangul": "[Fㅡ][Rㅐㄴ]시스 베이컨", "note": "F, R"}, {"id": "richard-hamilton", "original": "Richard Hamilton", "language": "en-US", "korean": "리처드 해밀턴", "uhangul": "[Rㅣ]처드 해밀턴", "note": "초성 R만 사용"}, {"id": "edward-hopper", "original": "Edward Hopper", "language": "en-US", "korean": "에드워드 호퍼", "uhangul": "에드워드 호퍼", "note": "종성/rhotic R 미표기"}, {"id": "mark-rothko", "original": "Mark Rothko", "language": "en-US", "korean": "마크 로스코", "uhangul": "마크 [Rㅗ][THㅡ]코", "note": "R 초성; /θ/가 스 음절로 실현"}, {"id": "cindy-sherman", "original": "Cindy Sherman", "language": "en-US", "korean": "신디 셔먼", "uhangul": "신디 셔먼", "note": "rhotic R 미표기"}, {"id": "barbara-kruger", "original": "Barbara Kruger", "language": "en-US", "korean": "바버라 크루거", "uhangul": "바버[Rㅏ] 크[Rㅜ]거", "note": "실제 R 초성으로 실현되는 음절만 교체"}, {"id": "helen-frankenthaler", "original": "Helen Frankenthaler", "language": "en-US", "korean": "헬렌 프랭컨탈러", "uhangul": "헬렌 [Fㅡ][Rㅐㅇ]컨[THㅏㄹ]러", "note": "F, R, TH; rhotic 종성 없음"}, {"id": "david-hockney", "original": "David Hockney", "language": "en-US", "korean": "데이비드 호크니", "uhangul": "데이[Vㅣ]드 호크니", "note": "V"}, {"id": "vanessa-bell", "original": "Vanessa Bell", "language": "en-US", "korean": "바네사 벨", "uhangul": "[Vㅏ]네사 벨", "note": "V"}, {"id": "eva-hesse", "original": "Eva Hesse", "language": "en-US", "korean": "에바 헤세", "uhangul": "에[Vㅏ] 헤세", "note": "V"}, {"id": "frida-kahlo", "original": "Frida Kahlo", "language": "es-MX", "korean": "프리다 칼로", "uhangul": "[Fㅡ]리다 칼로", "note": "F; 스페인어 r는 /ɹ/가 아니므로 ㄹ 유지"}, {"id": "lucas-cranach", "original": "Lucas Cranach", "language": "de-DE", "korean": "루카스 크라나흐", "uhangul": "루카스 크라나[Xㅡ]", "note": "독일어 /x/"}, {"id": "caspar-david-friedrich", "original": "Caspar David Friedrich", "language": "de-DE", "korean": "카스파르 다비트 프리드리히", "uhangul": "카스파르 다[Vㅣ]트 [Fㅡ]리드리히", "note": "V, F; /ç/는 기존 ㅎ으로 표기"}, {"id": "gerhard-richter", "original": "Gerhard Richter", "language": "de-DE", "korean": "게르하르트 리히터", "uhangul": "게르하르트 리히터", "note": "/ç/는 기존 ㅎ으로 표기; 독일어 r는 /ɹ/로 강제 변환하지 않음"}];
 
 const EXCLUDED = new Set(["SCRIPT","STYLE","TEXTAREA","INPUT","SELECT","OPTION","CODE","PRE","SVG","CANVAS"]);
 const STORAGE_KEY = "ArtThroughTime.uHangulMode.v3";
 const requestedMode = new URLSearchParams(location.search).get("uhangul");
-const savedMode = requestedMode === "uhangul" || requestedMode === "korean" ? requestedMode : sessionStorage.getItem(STORAGE_KEY);
-let currentMode = savedMode === "uhangul" ? "uhangul" : "korean";
+const savedMode = ["original","uhangul","korean"].includes(requestedMode) ? requestedMode : sessionStorage.getItem(STORAGE_KEY);
+let currentMode = ["original","uhangul"].includes(savedMode) ? savedMode : "korean";
 const byId = new Map();
 const normalizeText = text => String(text || "").toLowerCase().replace(/[^a-z0-9가-힣]/g, "");
 const byText = new Map();
@@ -30,8 +30,7 @@ const TARGET_ONSETS = Object.freeze({
   Z: new Set(["ㅈ","ㅅ","ㅆ"]),
   R: new Set(["ㄹ"]),
   TH: new Set(["ㅅ","ㅌ","ㄷ"]),
-  X: new Set(["ㅎ"]),
-  CH: new Set(["ㅎ"])
+  X: new Set(["ㅎ"])
 });
 const PASSTHROUGH_ONSETS = Object.freeze({
   L: new Set(["ㄹ"]),
@@ -58,7 +57,6 @@ function tokenizeBlock(block) {
   const out=[];
   for(let i=0;i<block.length;) {
     if(block.startsWith("TH",i)) { out.push("TH"); i+=2; continue; }
-    if(block.startsWith("CH",i)) { out.push("CH"); i+=2; continue; }
     out.push(block[i++]);
   }
   return out;
@@ -122,7 +120,6 @@ function targetCues(original) {
   for(let i=0;i<text.length;) {
     if(text.startsWith("th",i)) { cues.push("TH"); i+=2; continue; }
     if(text.startsWith("ph",i)) { cues.push("F"); i+=2; continue; }
-    if(text.startsWith("ch",i)) { cues.push("CH"); i+=2; continue; }
     const ch=text[i];
     if(ch==="f") cues.push("F");
     else if(ch==="v" || ch==="w") cues.push("V");
@@ -140,7 +137,6 @@ function consonantEvents(original) {
   for(let i=0;i<text.length;) {
     if(text.startsWith("th",i)) { events.push({token:"TH",target:true,allowed:TARGET_ONSETS.TH}); i+=2; continue; }
     if(text.startsWith("ph",i)) { events.push({token:"F",target:true,allowed:TARGET_ONSETS.F}); i+=2; continue; }
-    if(text.startsWith("ch",i)) { events.push({token:"CH",target:true,allowed:TARGET_ONSETS.CH}); i+=2; continue; }
     if(text.startsWith("gh",i)) { events.push({token:"X",target:true,allowed:TARGET_ONSETS.X}); i+=2; continue; }
     const ch=text[i];
     if(ch==="f") events.push({token:"F",target:true,allowed:TARGET_ONSETS.F});
@@ -286,20 +282,11 @@ function applyAll(persist=true) {
     const a=btn.dataset.uhMode===currentMode;
     btn.dataset.active=String(a);
     btn.setAttribute("aria-pressed",String(a));
-  });
-  document.querySelectorAll("[data-uh-toggle]").forEach(btn=>{
-    const active=currentMode==="uhangul";
-    btn.dataset.active=String(active);
-    btn.classList.toggle("active",active);
-    btn.setAttribute("aria-pressed",String(active));
-  });
-  document.querySelectorAll("[data-uhangul-corner-button]").forEach(btn=>{
-    const active=currentMode==="uhangul";
-    btn.setAttribute("aria-pressed",String(active));
-    btn.setAttribute("aria-label",active ? "한국어로 돌아가기" : "uHangul 켜기");
-    btn.title=active ? "한국어로 돌아가기" : "uHangul 켜기";
-    btn.style.background=active ? "#f4c55b" : "#18221e";
-    btn.style.color=active ? "#18221e" : "#f4c55b";
+    if(btn.closest("[data-uhangul-document-toolbar]")) {
+      btn.style.background=a ? "#425043" : "#fffdf8";
+      btn.style.borderColor=a ? "#425043" : "#aebba8";
+      btn.style.color=a ? "#fffdf8" : "#425043";
+    }
   });
   const count=String(targetCount());
   document.querySelectorAll("[data-uh-count]").forEach(c=>{ c.textContent=count; });
@@ -403,23 +390,19 @@ window.addEventListener("uhangulmodechange", event => {
 });
 
 document.addEventListener("click", event => {
-  const cornerButton=event.target.closest("[data-uhangul-corner-button]");
-  if(cornerButton) {
-    event.preventDefault();
-    currentMode=currentMode==="uhangul" ? "korean" : "uhangul";
-    applyAll(false);
-    return;
-  }
   const button=event.target.closest("[data-uh-local-mode]");
   if(!button) return;
   const mode=button.dataset.uhLocalMode;
-  if(!["korean","uhangul"].includes(mode)) return;
+  if(!["original","korean","uhangul"].includes(mode)) return;
   event.preventDefault();
   currentMode=mode;
   applyAll(false);
+  if(window.parent && window.parent !== window) {
+    window.parent.postMessage({type:"art-through-time-uhangul-mode",mode},location.origin);
+  }
 });
 
-window.uHangulV05 = {
+window.uHangulV06 = {
   version: VERSION,
   encodeNotation,
   blockToCodePoint,

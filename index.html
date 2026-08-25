@@ -10,15 +10,16 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="extras.css" />
     <link rel="stylesheet" href="rules-check.css" />
-  <link rel="stylesheet" href="./uhangul/uhangul-runtime.css" data-uhangul-integration="v0.5.4">
+  <link rel="stylesheet" href="./uhangul/uhangul-runtime.css" data-uhangul-integration="v0.6">
 </head>
   <body class="auth-pending">
     <div class="app-shell">
       <aside class="sidebar">
         <div class="brand"><span class="brand-mark">A</span><span>Art Through Time</span></div>
-        <div class="display-mode" role="group" aria-label="이름 표기 방식">
-          <button class="display-mode-button active" type="button" data-display-mode="korean" aria-pressed="true">한국어</button>
-          <button class="display-mode-button" type="button" data-display-mode="uhangul" aria-pressed="false">uHangul</button>
+        <div class="display-mode display-mode--round" role="group" aria-label="이름 표기 방식">
+          <button class="display-mode-button active" type="button" data-display-mode="korean" aria-label="한국어" title="한국어" aria-pressed="true">한</button>
+          <button class="display-mode-button" type="button" data-display-mode="uhangul" aria-label="uHangul" title="uHangul" aria-pressed="false">u</button>
+          <button class="display-mode-button" type="button" data-display-mode="original" aria-label="국제 표기" title="국제 표기" aria-pressed="false">표</button>
         </div>
         <div class="sidebar-section-tools" role="group" aria-label="미술 자료">
           <button id="movement-atlas-button" class="movement-atlas-button" type="button" title="미술 사조의 이해" aria-label="미술 사조의 이해">사조</button>
@@ -34,7 +35,7 @@
           <label class="sort-select"><span data-i18n="sort">정렬</span><select id="sort"><option value="name" data-i18n="nameAsc">이름순</option><option value="birth" data-i18n="birthAsc" selected>생년순</option></select></label>
         </div>
         <nav id="artist-list" class="artist-list" aria-label="화가 목록"></nav>
-        <div class="language"><button id="artist-list-en-button" class="language-button" type="button" aria-pressed="false">EN</button><button id="logout-button" class="logout-button" type="button">로그아웃</button><button id="migration-export-button" class="admin-export-button hidden" type="button">FIREBASE 내보내기</button></div>
+        <div class="language"><button id="logout-button" class="logout-button" type="button">로그아웃</button><button id="migration-export-button" class="admin-export-button hidden" type="button">FIREBASE 내보내기</button></div>
       </aside>
       <main class="main-area">
         <section id="timeline-panel" class="timeline-panel"></section>
@@ -92,7 +93,7 @@
     </section>
     <script src="app.js"></script>
     <script src="rules-check.js?v=20260821-3"></script>
-  <script defer src="./uhangul/uhangul-runtime.js" data-uhangul-integration="v0.5.4"></script>
+  <script defer src="./uhangul/uhangul-runtime.js?v=0.6" data-uhangul-integration="v0.6"></script>
 </body>
 </html>
 
