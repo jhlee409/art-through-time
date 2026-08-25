@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "policy": "local-only; search known download folders first; leave unmatched works pending upload",
+  "projectRelativeDirectories": [
+    "download"
+  ],
+  "oneDriveRelativeDirectories": [
+    "AI-Programming/Art_through_Time/download"
+  ],
+  "legacyDirectories": [
+    "C:/Users/jhlee/OneDrive - UOU/AI-Programming/Art_through_Time/download"
+  ]
+}

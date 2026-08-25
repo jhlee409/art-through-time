@@ -870,7 +870,7 @@ async function movementClassificationSyncIssues() {
   return issues;
 }
 const expectedManualUHangulByArtistId = {
-  Q68631:'[Vㅏㄴ] 데르 [Vㅔ]이던, [Rㅗ]히어르'
+  Q68631:'[Vㅏㄴ] 데르 [Vㅔ]이던, 로히어르'
 };
 async function uHangulRuleIssues(artists) {
   const issues=[];
@@ -883,6 +883,21 @@ async function uHangulRuleIssues(artists) {
   if(!await exists(cssFile)) issues.push({artist:'uHangul',artistId:'uhangul-css',work:'uHangul CSS 파일 누락',workId:'uhangul/uhangul-runtime.css'});
   const runtimeText=await fs.readFile(runtimeFile,'utf8').catch(()=>'');
   if(runtimeText && !/byText\.get\(normalizeText\(el\.dataset\.uhDisplayKorean\)\)/.test(runtimeText)) issues.push({artist:'uHangul',artistId:'uhangul-runtime-attribute-resolution',work:'화면 data-uh-display-korean 속성이 uHangul 사전을 먼저 찾지 않음',workId:'uhangul/uhangul-runtime.js'});
+  if(runtimeText && (/onset === "R"/.test(runtimeText) || /\[R[ㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣ]/.test(runtimeText))) issues.push({artist:'uHangul',artistId:'uhangul-runtime-provisional-r',work:'v0.6-draft에서 미확정 R 확장 표기가 런타임에 남아 있음',workId:'uhangul/uhangul-runtime.js'});
+  const dictionaryFile=path.join(root,'data','person-name-dictionary.json');
+  const dictionary=await fs.readFile(dictionaryFile,'utf8').then(JSON.parse).catch(()=>null);
+  const dictionaryRecords=Array.isArray(dictionary?.records) ? dictionary.records : [];
+  if(!dictionaryRecords.length) issues.push({artist:'uHangul',artistId:'uhangul-dictionary',work:'v0.6-draft 이름 사전을 읽을 수 없음',workId:'data/person-name-dictionary.json'});
+  for(const record of dictionaryRecords) {
+    if(record.uhangulVersion !== '0.6-draft' || !record.language) {
+      issues.push({artist:'uHangul',artistId:`uhangul-dictionary-${record.id || 'unknown'}`,work:'이름 사전에 v0.6-draft 버전 또는 언어 메타데이터가 없음',workId:'data/person-name-dictionary.json'});
+      break;
+    }
+    if(/\[R[ㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣ]/.test(String(record.uhangul || ''))) {
+      issues.push({artist:'uHangul',artistId:`uhangul-dictionary-${record.id || 'unknown'}`,work:'이름 사전에 미확정 R 확장 표기가 남아 있음',workId:'data/person-name-dictionary.json'});
+      break;
+    }
+  }
   const records=buildArtistMap(artists);
   const byId=new Map(records.map(record=>[String(record.id || ''), record]));
   const byText=new Map();
@@ -895,6 +910,8 @@ async function uHangulRuleIssues(artists) {
     const record=byId.get(key);
     if(!record) { issues.push(artistRuleItem(artist,'uHangul 화가 맵 항목 누락')); continue; }
     if(!record.uhangul) issues.push(artistRuleItem(artist,'uHangul 표기 누락'));
+    if(record.uhangulVersion !== '0.6-draft' || !record.language) issues.push(artistRuleItem(artist,'uHangul v0.6-draft 버전 또는 언어 메타데이터 누락'));
+    if(/\[R[ㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣ]/.test(String(record.uhangul || ''))) issues.push(artistRuleItem(artist,'uHangul 미확정 R 확장 표기 잔재'));
     const expected=expectedArtistDisplayNameForCheck(artist);
     if(expected && record.displayKorean !== expected) issues.push(artistRuleItem(artist,`uHangul 표시명 불일치: ${record.displayKorean || '(없음)'} → ${expected}`));
     const manualExpected=expectedManualUHangulByArtistId[key];
@@ -1782,7 +1799,7 @@ http.createServer(async (req,res) => { const url=new URL(req.url,`http://${req.h
   if (req.method==='POST' && url.pathname==='/api/auth/login') { let body=''; req.on('data',chunk=>body+=chunk); req.on('end',async()=>{ try { await accessControlReady; if (!adminPasswordHash) throw new Error('관리자 설정 파일이 없어 보기 전용으로 실행 중입니다.'); const {email,password}=JSON.parse(body || '{}'), normalized=normalizedEmail(email); if (!isAdminEmail(normalized) || !samePassword(password)) throw new Error('이메일 또는 비밀번호가 올바르지 않습니다.'); activeAdminSession(); clearAdminSessions(normalized); const token=createAdminSession(normalized); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:true,email:normalized,role:'admin',token})); } catch(error) { res.writeHead(401,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:false,error:error.message})); } }); return; }
   const session=adminSession(req);
   if (req.method==='POST' && url.pathname==='/api/auth/heartbeat') { if (!session) return sendAdminRequired(res); res.writeHead(204,{'Cache-Control':'no-store'}); return res.end(); }
-  if (req.method==='POST' && url.pathname==='/api/auth/logout') { if (session) { const token=/^Bearer\s+(.+)$/i.exec(String(req.headers.authorization || ''))?.[1]; if (token) adminSessions.delete(token); } res.writeHead(204,{'Cache-Control':'no-store'}); res.end(); setTimeout(()=>process.exit(0),200); return; }
+  if (req.method==='POST' && url.pathname==='/api/auth/logout') { if (session) { const token=/^Bearer\s+(.+)$/i.exec(String(req.headers.authorization || ''))?.[1]; if (token) adminSessions.delete(token); } res.writeHead(204,{'Cache-Control':'no-store'}); res.end(); return; }
   if (requiresAdmin(req,url.pathname) && !session) return sendAdminRequired(res);
   if (req.method==='GET' && url.pathname==='/api/movement-section-links') { try { const data=await readMovementSectionLinks(); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); return res.end(JSON.stringify(data)); } catch(error) { res.writeHead(500,{'Content-Type':'application/json; charset=utf-8'}); return res.end(JSON.stringify({schema:1,sections:{},error:error.message})); } }
   if (req.method==='PUT' && url.pathname==='/api/movement-section-links') { let body=''; req.on('data',chunk=>body+=chunk); req.on('end',async()=>{ try { const payload=JSON.parse(body || '{}'), data=await saveMovementSectionLinks(String(payload.sectionId || ''),payload.links); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:true,sections:data.sections})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json; charset=utf-8'}); res.end(JSON.stringify({ok:false,error:error.message})); } }); return; }

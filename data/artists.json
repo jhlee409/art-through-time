@@ -35353,7 +35353,6 @@
       ],
       "generated": {
         "schema": 20,
-        "file": "data/generated/qid-Q7751.json",
         "fetchedAt": "2026-08-23T00:14:48.942Z"
       },
       "metadata": {
@@ -87719,10 +87718,9 @@
             "ko": "낭만주의",
             "en": "Romanticism"
           },
-          "image": "data/미술사조/images/Gericault-Raft-of-the-Medusa.jpg",
-          "thumbnail": "data/미술사조/images/Gericault-Raft-of-the-Medusa.jpg",
-          "highResImage": "data/미술사조/images/Gericault-Raft-of-the-Medusa.jpg",
-          "source": "existing local project asset: data/미술사조/images/Gericault-Raft-of-the-Medusa.jpg",
+          "imageUploadStatus": "pending-upload",
+          "localImageCandidates": ["Gericault-Raft-of-the-Medusa"],
+          "source": "로컬 이미지 후보를 지정 다운로드 폴더에서 찾지 못함; 업로드 예정",
           "verified": true,
           "representative": true,
           "movementContribution": true,
@@ -87799,10 +87797,9 @@
             "ko": "낭만주의",
             "en": "Romanticism"
           },
-          "image": "data/미술사조/images/Delacroix-Liberty-Leading-the-People.jpg",
-          "thumbnail": "data/미술사조/images/Delacroix-Liberty-Leading-the-People.jpg",
-          "highResImage": "data/미술사조/images/Delacroix-Liberty-Leading-the-People.jpg",
-          "source": "existing local project asset: data/미술사조/images/Delacroix-Liberty-Leading-the-People.jpg",
+          "imageUploadStatus": "pending-upload",
+          "localImageCandidates": ["Delacroix-Liberty-Leading-the-People"],
+          "source": "로컬 이미지 후보를 지정 다운로드 폴더에서 찾지 못함; 업로드 예정",
           "verified": true,
           "representative": true,
           "movementContribution": true,
@@ -87959,10 +87956,9 @@
             "ko": "낭만주의",
             "en": "Romanticism"
           },
-          "image": "data/미술사조/images/Turner-Fighting-Temeraire.jpg",
-          "thumbnail": "data/미술사조/images/Turner-Fighting-Temeraire.jpg",
-          "highResImage": "data/미술사조/images/Turner-Fighting-Temeraire.jpg",
-          "source": "existing local project asset: data/미술사조/images/Turner-Fighting-Temeraire.jpg",
+          "imageUploadStatus": "pending-upload",
+          "localImageCandidates": ["Turner-Fighting-Temeraire"],
+          "source": "로컬 이미지 후보를 지정 다운로드 폴더에서 찾지 못함; 업로드 예정",
           "verified": true,
           "representative": true,
           "movementContribution": true,

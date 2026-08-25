@@ -12,7 +12,6 @@ const TARGET_ONSETS = {
   F: new Set(['ㅍ']),
   V: new Set(['ㅂ', 'ㅍ']),
   Z: new Set(['ㅈ', 'ㅅ', 'ㅆ']),
-  R: new Set(['ㄹ']),
   TH: new Set(['ㅅ', 'ㅌ', 'ㄷ']),
   X: new Set(['ㅎ'])
 };
@@ -33,14 +32,11 @@ const PASSTHROUGH_ONSETS = {
 };
 const manualUHangulByOriginal = {
   carllarsson: ({displayKorean, korean}) => displayKorean || korean || '라르손, 칼',
-  rogiervanderweyden: () => '[Vㅏㄴ] 데르 [Vㅔ]이던, [Rㅗ]히어르',
-  // In standard Spanish, the initial v of Velázquez is /b/ rather than the
-  // English /v/, and both z letters are /θ/ in the Castilian pronunciation.
-  diegovelazquez: ({displayKorean, korean}) => String(displayKorean || korean || '벨라스케스').replace(/벨라스케스/g, '벨라[THㅡ]케[THㅡ]'),
-  // Spanish z is not English /z/.  Keep the ordinary Korean spelling
-  // 수르바란, but mark the initial Zur- with TH rather than Z in uHangul.
-  franciscodezurbaran: () => '데 [THㅜ][Rㅡ]바[Rㅏㄴ], [Fㅡ][Rㅏㄴ]시스코',
-  juandezurbaran: () => '후안 데 [THㅜ][Rㅡ]바[Rㅏㄴ]'
+  rogiervanderweyden: () => '[Vㅏㄴ] 데르 [Vㅔ]이던, 로히어르',
+  // Spanish z is represented with the ordinary Korean ㅅ onset, never with
+  // the Z or TH extension. Velázquez also keeps Spanish v as the ordinary
+  // Korean spelling rather than an English /v/ extension.
+  diegovelazquez: ({displayKorean, korean}) => displayKorean || korean || '벨라스케스'
 };
 
 const manualAliasesByOriginal = {
@@ -207,7 +203,7 @@ function aliasesForName(original, korean, displayKorean) {
   };
 }
 
-function targetCues(original) {
+function targetCues(original, {spanish = false} = {}) {
   const text = latinKey(original);
   const cues = [];
   for (let i = 0; i < text.length;) {
@@ -216,15 +212,14 @@ function targetCues(original) {
     const ch = text[i];
     if (ch === 'f') cues.push('F');
     else if (ch === 'v' || ch === 'w') cues.push('V');
-    else if (ch === 'z') cues.push('Z');
-    else if (ch === 'r') cues.push('R');
+    else if (ch === 'z' && !spanish) cues.push('Z');
     else if (ch === 'x' || (ch === 'g' && text[i + 1] === 'h')) cues.push('X');
     i += ch === 'g' && text[i + 1] === 'h' ? 2 : 1;
   }
   return cues;
 }
 
-function consonantEvents(original) {
+function consonantEvents(original, {spanish = false} = {}) {
   const text = latinKey(original);
   const events = [];
   for (let i = 0; i < text.length;) {
@@ -234,8 +229,7 @@ function consonantEvents(original) {
     const ch = text[i];
     if (ch === 'f') events.push({token: 'F', target: true, allowed: TARGET_ONSETS.F});
     else if (ch === 'v' || ch === 'w') events.push({token: 'V', target: true, allowed: TARGET_ONSETS.V});
-    else if (ch === 'z') events.push({token: 'Z', target: true, allowed: TARGET_ONSETS.Z});
-    else if (ch === 'r') events.push({token: 'R', target: true, allowed: TARGET_ONSETS.R});
+    else if (ch === 'z' && !spanish) events.push({token: 'Z', target: true, allowed: TARGET_ONSETS.Z});
     else if (ch === 'x') events.push({token: 'X', target: true, allowed: TARGET_ONSETS.X});
     else if (ch === 'l') events.push({target: false, allowed: PASSTHROUGH_ONSETS.L});
     else if (PASSTHROUGH_ONSETS[ch.toUpperCase()]) events.push({target: false, allowed: PASSTHROUGH_ONSETS[ch.toUpperCase()]});
@@ -260,7 +254,7 @@ function notationSyllable(char, token) {
   return parts ? `[${token}${parts.vowel}${parts.final}]` : char;
 }
 
-function applyCuesToKorean(original, korean) {
+function applyCuesToKorean(original, korean, options = {}) {
   const source = String(korean || '');
   const chars = Array.from(source);
   const used = new Set();
@@ -275,7 +269,7 @@ function applyCuesToKorean(original, korean) {
     });
   }
   let cursor = 0;
-  for (const event of consonantEvents(original)) {
+  for (const event of consonantEvents(original, options)) {
     const allowed = event.allowed;
     if (!allowed) continue;
     for (let index = cursor; index < chars.length; index++) {
@@ -291,14 +285,14 @@ function applyCuesToKorean(original, korean) {
   return chars.join('');
 }
 
-function autoNotation(original, korean) {
+function autoNotation(original, korean, options = {}) {
   const originalWords = latinKey(original).match(/[a-z]+/g) || [];
   const koreanWords = String(korean || '').match(/[가-힣]+/g) || [];
   if (originalWords.length > 1 && originalWords.length === koreanWords.length) {
     let wordIndex = 0;
-    return String(korean || '').replace(/[가-힣]+/g, word => applyCuesToKorean(originalWords[wordIndex++] || '', word));
+    return String(korean || '').replace(/[가-힣]+/g, word => applyCuesToKorean(originalWords[wordIndex++] || '', word, options));
   }
-  return applyCuesToKorean(original, korean);
+  return applyCuesToKorean(original, korean, options);
 }
 
 function displayNotation(canonicalKorean, canonicalNotation, displayKorean) {
@@ -314,15 +308,17 @@ function displayNotation(canonicalKorean, canonicalNotation, displayKorean) {
   return display.replace(/[가-힣]+/g, word => wordMap.get(word) || autoNotation('', word));
 }
 
-function createNameRecord({id, original, korean, displayKorean}={}) {
+function createNameRecord({id, original, korean, displayKorean, language = 'und', spanish = false}={}) {
   original = String(original || '');
   korean = String(korean || '');
   const shown = String(displayKorean || korean || original);
-  const canonicalNotation = autoNotation(original, korean || shown);
+  const canonicalNotation = autoNotation(original, korean || shown, {spanish});
   const manual = manualUHangulByOriginal[normalizeText(latinKey(original))];
   return {
     id: id || slug(original || shown),
+    uhangulVersion: '0.6-draft',
     original,
+    language,
     korean,
     displayKorean: shown,
     aliases: aliasesForName(original, korean || shown, shown),
@@ -334,7 +330,9 @@ function createNameRecord({id, original, korean, displayKorean}={}) {
 function artistRecord(artist) {
   const original = artist?.name?.en || '';
   const korean = artist?.name?.ko || '';
-  return createNameRecord({id:artist.qid || artist.id,original,korean,displayKorean:displayName(artist) || korean || original});
+  const nationality = `${artist?.nationality?.ko || ''} ${artist?.nationality?.en || ''}`;
+  const spanish = !/스페인령|spanish netherlands/i.test(nationality) && /스페인|\bspain\b|멕시코|\bmexico\b|콜롬비아|\bcolombia\b|아르헨티나|\bargentina\b|칠레|\bchile\b|페루|\bperu\b/i.test(nationality);
+  return createNameRecord({id:artist.qid || artist.id,original,korean,displayKorean:displayName(artist) || korean || original,language:spanish ? 'es' : 'und',spanish});
 }
 
 function buildArtistMap(artists) {

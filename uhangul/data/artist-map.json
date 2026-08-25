@@ -1,7 +1,9 @@
 [
   {
     "id": "Q7814",
+    "uhangulVersion": "0.6-draft",
     "original": "Giotto",
+    "language": "und",
     "korean": "조토 디 본도네",
     "displayKorean": "디 본도네, 조토",
     "aliases": {
@@ -16,7 +18,9 @@
   },
   {
     "id": "Q102272",
+    "uhangulVersion": "0.6-draft",
     "original": "Jan van Eyck",
+    "language": "und",
     "korean": "얀 반 에이크",
     "displayKorean": "반 에이크, 얀",
     "aliases": {
@@ -34,7 +38,9 @@
   },
   {
     "id": "Q68631",
+    "uhangulVersion": "0.6-draft",
     "original": "Rogier van der Weyden",
+    "language": "und",
     "korean": "반 데르 베이던, 로히어르",
     "displayKorean": "반 데르 베이던, 로히어르",
     "aliases": {
@@ -47,12 +53,14 @@
         "Weyden"
       ]
     },
-    "uhangul": "[Vㅏㄴ] 데르 [Vㅔ]이던, [Rㅗ]히어르",
+    "uhangul": "[Vㅏㄴ] 데르 [Vㅔ]이던, 로히어르",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q5811",
+    "uhangulVersion": "0.6-draft",
     "original": "Masaccio",
+    "language": "und",
     "korean": "마사초",
     "displayKorean": "마사초",
     "aliases": {
@@ -64,7 +72,9 @@
   },
   {
     "id": "Q17169",
+    "uhangulVersion": "0.6-draft",
     "original": "Giovanni Bellini",
+    "language": "und",
     "korean": "조반니 벨리니",
     "displayKorean": "벨리니, 조반니",
     "aliases": {
@@ -80,7 +90,9 @@
   },
   {
     "id": "Q762",
+    "uhangulVersion": "0.6-draft",
     "original": "Leonardo da Vinci",
+    "language": "und",
     "korean": "레오나르도 다 빈치",
     "displayKorean": "다 빈치, 레오나르도",
     "aliases": {
@@ -95,12 +107,14 @@
         "Leonardo"
       ]
     },
-    "uhangul": "다 [Vㅣㄴ]치, 레오나[Rㅡ]도",
+    "uhangul": "다 [Vㅣㄴ]치, 레오나르도",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q5580",
+    "uhangulVersion": "0.6-draft",
     "original": "Albrecht Dürer",
+    "language": "und",
     "korean": "알브레히트 뒤러",
     "displayKorean": "뒤러, 알브레히트",
     "aliases": {
@@ -112,12 +126,14 @@
         "Dürer"
       ]
     },
-    "uhangul": "뒤[Rㅓ], 알브레히트",
+    "uhangul": "뒤러, 알브레히트",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q191748",
+    "uhangulVersion": "0.6-draft",
     "original": "Lucas Cranach the Elder",
+    "language": "und",
     "korean": "루카스 크라나흐",
     "displayKorean": "크라나흐, 루카스",
     "aliases": {
@@ -129,12 +145,14 @@
         "Lucas Cranach"
       ]
     },
-    "uhangul": "크[Rㅏ]나흐, 루카스",
+    "uhangul": "크라나흐, 루카스",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q5592",
+    "uhangulVersion": "0.6-draft",
     "original": "Michelangelo",
+    "language": "und",
     "korean": "미켈란젤로 부오나로티",
     "displayKorean": "부오나로티, 미켈란젤로",
     "aliases": {
@@ -148,19 +166,23 @@
   },
   {
     "id": "Q8459",
+    "uhangulVersion": "0.6-draft",
     "original": "Giorgione",
+    "language": "und",
     "korean": "조르조네",
     "displayKorean": "조르조네",
     "aliases": {
       "ko": [],
       "en": []
     },
-    "uhangul": "조[Rㅡ]조네",
+    "uhangul": "조르조네",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q153746",
+    "uhangulVersion": "0.6-draft",
     "original": "Albrecht Altdorfer",
+    "language": "und",
     "korean": "알브레히트 알트도르퍼",
     "displayKorean": "알트도르퍼, 알브레히트",
     "aliases": {
@@ -176,7 +198,9 @@
   },
   {
     "id": "Q378800",
+    "uhangulVersion": "0.6-draft",
     "original": "Jean Clouet",
+    "language": "und",
     "korean": "장 클루에",
     "displayKorean": "클루에, 장",
     "aliases": {
@@ -192,7 +216,9 @@
   },
   {
     "id": "Q5597",
+    "uhangulVersion": "0.6-draft",
     "original": "Raphael",
+    "language": "und",
     "korean": "라파엘로 산치오",
     "displayKorean": "산치오, 라파엘로",
     "aliases": {
@@ -201,12 +227,14 @@
       ],
       "en": []
     },
-    "uhangul": "산치오, [Rㅏ][Fㅏ]엘로",
+    "uhangul": "산치오, 라[Fㅏ]엘로",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q610556",
+    "uhangulVersion": "0.6-draft",
     "original": "Wolf Huber",
+    "language": "und",
     "korean": "볼프 후버",
     "displayKorean": "후버, 볼프",
     "aliases": {
@@ -222,7 +250,9 @@
   },
   {
     "id": "Q47551",
+    "uhangulVersion": "0.6-draft",
     "original": "Titian",
+    "language": "und",
     "korean": "티치아노",
     "displayKorean": "티치아노",
     "aliases": {
@@ -240,7 +270,9 @@
   },
   {
     "id": "Q312617",
+    "uhangulVersion": "0.6-draft",
     "original": "Rosso Fiorentino",
+    "language": "und",
     "korean": "로소 피오렌티노",
     "displayKorean": "로소 피오렌티노",
     "aliases": {
@@ -251,12 +283,14 @@
         "Fiorentino"
       ]
     },
-    "uhangul": "[Rㅗ]소 [Fㅣ]오[Rㅔㄴ]티노",
+    "uhangul": "로소 [Fㅣ]오렌티노",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q207929",
+    "uhangulVersion": "0.6-draft",
     "original": "Pontormo",
+    "language": "und",
     "korean": "야코포 다 폰토르모",
     "displayKorean": "야코포 다 폰토르모",
     "aliases": {
@@ -266,12 +300,14 @@
       ],
       "en": []
     },
-    "uhangul": "야코포 다 폰토[Rㅡ]모",
+    "uhangul": "야코포 다 폰토르모",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q48319",
+    "uhangulVersion": "0.6-draft",
     "original": "Hans Holbein the Younger",
+    "language": "und",
     "korean": "한스 홀바인",
     "displayKorean": "홀바인, 한스",
     "aliases": {
@@ -288,31 +324,37 @@
   },
   {
     "id": "Q7803",
+    "uhangulVersion": "0.6-draft",
     "original": "Bronzino",
+    "language": "und",
     "korean": "브론치노",
     "displayKorean": "브론치노",
     "aliases": {
       "ko": [],
       "en": []
     },
-    "uhangul": "브[Rㅗㄴ]치노",
+    "uhangul": "브론치노",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q9348",
+    "uhangulVersion": "0.6-draft",
     "original": "Parmigianino",
+    "language": "und",
     "korean": "파르미자니노",
     "displayKorean": "파르미자니노",
     "aliases": {
       "ko": [],
       "en": []
     },
-    "uhangul": "파[Rㅡ]미자니노",
+    "uhangul": "파르미자니노",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q333366",
+    "uhangulVersion": "0.6-draft",
     "original": "Francesco Primaticcio",
+    "language": "und",
     "korean": "프란체스코 프리마티초",
     "displayKorean": "프리마티초, 프란체스코",
     "aliases": {
@@ -323,12 +365,14 @@
         "Primaticcio"
       ]
     },
-    "uhangul": "프리마티초, 프란체스코",
+    "uhangul": "프리마티초, [Fㅡ]란체스코",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q336747",
+    "uhangulVersion": "0.6-draft",
     "original": "François Clouet",
+    "language": "und",
     "korean": "프랑수아 클루에",
     "displayKorean": "클루에, 프랑수아",
     "aliases": {
@@ -340,12 +384,14 @@
         "Clouet"
       ]
     },
-    "uhangul": "클루에, [Fㅡ][Rㅏㅇ]수아",
+    "uhangul": "클루에, [Fㅡ]랑수아",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q9319",
+    "uhangulVersion": "0.6-draft",
     "original": "Jacopo Tintoretto",
+    "language": "und",
     "korean": "틴토레토",
     "displayKorean": "틴토레토",
     "aliases": {
@@ -354,12 +400,14 @@
         "Tintoretto"
       ]
     },
-    "uhangul": "틴토[Rㅔ]토",
+    "uhangul": "틴토레토",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q43270",
+    "uhangulVersion": "0.6-draft",
     "original": "Pieter Brueghel the Elder",
+    "language": "und",
     "korean": "대 피터르 브뤼헐",
     "displayKorean": "브뤼헐, 피터르 대",
     "aliases": {
@@ -372,12 +420,14 @@
         "Pieter Brueghel"
       ]
     },
-    "uhangul": "브[Rㅟ][Xㅓㄹ], 피터[Rㅡ] 대",
+    "uhangul": "브뤼[Xㅓㄹ], 피터르 대",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q7751",
+    "uhangulVersion": "0.6-draft",
     "original": "Giuseppe Arcimboldo",
+    "language": "und",
     "korean": "주세페 아르침볼도",
     "displayKorean": "아르침볼도, 주세페",
     "aliases": {
@@ -388,12 +438,14 @@
         "Arcimboldo"
       ]
     },
-    "uhangul": "아[Rㅡ]침볼도, 주세페",
+    "uhangul": "아르침볼도, 주세페",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q9440",
+    "uhangulVersion": "0.6-draft",
     "original": "Paolo Veronese",
+    "language": "und",
     "korean": "파올로 베로네세",
     "displayKorean": "베로네세, 파올로",
     "aliases": {
@@ -404,12 +456,14 @@
         "Veronese"
       ]
     },
-    "uhangul": "[Vㅔ][Rㅗ]네세, 파올로",
+    "uhangul": "[Vㅔ]로네세, 파올로",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q301",
+    "uhangulVersion": "0.6-draft",
     "original": "El Greco",
+    "language": "und",
     "korean": "엘 그레코",
     "displayKorean": "엘 그레코",
     "aliases": {
@@ -420,12 +474,14 @@
         "Greco"
       ]
     },
-    "uhangul": "엘 그[Rㅔ]코",
+    "uhangul": "엘 그레코",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q447682",
+    "uhangulVersion": "0.6-draft",
     "original": "Bartholomeus Spranger",
+    "language": "und",
     "korean": "바르톨로메우스 슈프랑거",
     "displayKorean": "슈프랑거, 바르톨로메우스",
     "aliases": {
@@ -436,12 +492,14 @@
         "Spranger"
       ]
     },
-    "uhangul": "슈프[Rㅏㅇ]거, 바[Rㅡ][THㅗㄹ]로메우스",
+    "uhangul": "슈프랑거, 바르[THㅗㄹ]로메우스",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q165367",
+    "uhangulVersion": "0.6-draft",
     "original": "Hendrick Goltzius",
+    "language": "und",
     "korean": "헨드릭 골치우스",
     "displayKorean": "골치우스, 헨드릭",
     "aliases": {
@@ -452,12 +510,14 @@
         "Goltzius"
       ]
     },
-    "uhangul": "골치우[Zㅡ], 헨드[Rㅣㄱ]",
+    "uhangul": "골치우[Zㅡ], 헨드릭",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q7824",
+    "uhangulVersion": "0.6-draft",
     "original": "Annibale Carracci",
+    "language": "und",
     "korean": "안니발레 카라치",
     "displayKorean": "카라치, 안니발레",
     "aliases": {
@@ -468,12 +528,14 @@
         "Carracci"
       ]
     },
-    "uhangul": "카[Rㅏ]치, 안니발레",
+    "uhangul": "카라치, 안니발레",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q442484",
+    "uhangulVersion": "0.6-draft",
     "original": "Cornelis van Haarlem",
+    "language": "und",
     "korean": "코르넬리스 반 하를렘",
     "displayKorean": "반 하를렘, 코르넬리스",
     "aliases": {
@@ -486,12 +548,14 @@
         "Haarlem"
       ]
     },
-    "uhangul": "[Vㅏㄴ] 하[Rㅡㄹ]렘, 코[Rㅡ]넬리스",
+    "uhangul": "[Vㅏㄴ] 하를렘, 코르넬리스",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q329811",
+    "uhangulVersion": "0.6-draft",
     "original": "Abraham Bloemaert",
+    "language": "und",
     "korean": "아브라함 블로에마르트",
     "displayKorean": "블로에마르트, 아브라함",
     "aliases": {
@@ -502,24 +566,28 @@
         "Bloemaert"
       ]
     },
-    "uhangul": "블로에마[Rㅡ]트, 아브[Rㅏ]함",
+    "uhangul": "블로에마르트, 아브라함",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q42207",
+    "uhangulVersion": "0.6-draft",
     "original": "Caravaggio",
+    "language": "und",
     "korean": "카라바조",
     "displayKorean": "카라바조",
     "aliases": {
       "ko": [],
       "en": []
     },
-    "uhangul": "카[Rㅏ][Vㅏ]조",
+    "uhangul": "카라[Vㅏ]조",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q5599",
+    "uhangulVersion": "0.6-draft",
     "original": "Peter Paul Rubens",
+    "language": "und",
     "korean": "페테르 파울 루벤스",
     "displayKorean": "루벤스, 페테르 파울",
     "aliases": {
@@ -530,12 +598,14 @@
         "Rubens"
       ]
     },
-    "uhangul": "[Rㅜ]벤스, 페테[Rㅡ] 파울",
+    "uhangul": "루벤스, 페테르 파울",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q167654",
+    "uhangulVersion": "0.6-draft",
     "original": "Frans Hals",
+    "language": "und",
     "korean": "프란스 할스",
     "displayKorean": "할스, 프란스",
     "aliases": {
@@ -546,12 +616,14 @@
         "Hals"
       ]
     },
-    "uhangul": "할스, [Fㅡ][Rㅏㄴ]스",
+    "uhangul": "할스, [Fㅡ]란스",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q41554",
+    "uhangulVersion": "0.6-draft",
     "original": "Nicolas Poussin",
+    "language": "und",
     "korean": "니콜라 푸생",
     "displayKorean": "푸생, 니콜라",
     "aliases": {
@@ -567,7 +639,9 @@
   },
   {
     "id": "Q160538",
+    "uhangulVersion": "0.6-draft",
     "original": "Gian Lorenzo Bernini",
+    "language": "und",
     "korean": "잔 로렌초 베르니니",
     "displayKorean": "베르니니, 잔 로렌초",
     "aliases": {
@@ -578,12 +652,14 @@
         "Bernini"
       ]
     },
-    "uhangul": "베[Rㅡ]니니, 잔 로[Rㅔㄴ]초",
+    "uhangul": "베르니니, 잔 로렌초",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q209615",
+    "uhangulVersion": "0.6-draft",
     "original": "Francisco de Zurbaran",
+    "language": "es",
     "korean": "프란시스코 데 수르바란",
     "displayKorean": "데 수르바란, 프란시스코",
     "aliases": {
@@ -596,12 +672,14 @@
         "Zurbaran"
       ]
     },
-    "uhangul": "데 [THㅜ][Rㅡ]바[Rㅏㄴ], [Fㅡ][Rㅏㄴ]시스코",
+    "uhangul": "데 수르바란, [Fㅡ]란시스코",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q297",
+    "uhangulVersion": "0.6-draft",
     "original": "Diego Velazquez",
+    "language": "es",
     "korean": "디에고 벨라스케스",
     "displayKorean": "벨라스케스, 디에고",
     "aliases": {
@@ -612,12 +690,14 @@
         "Velazquez"
       ]
     },
-    "uhangul": "벨라[THㅡ]케[THㅡ], 디에고",
+    "uhangul": "벨라스케스, 디에고",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q150679",
+    "uhangulVersion": "0.6-draft",
     "original": "Anthony van Dyck",
+    "language": "und",
     "korean": "안토니 반 다이크",
     "displayKorean": "반 다이크, 안토니",
     "aliases": {
@@ -635,7 +715,9 @@
   },
   {
     "id": "Q5598",
+    "uhangulVersion": "0.6-draft",
     "original": "Rembrandt Harmenszoon van Rijn",
+    "language": "und",
     "korean": "렘브란트 하르먼손 반 레인",
     "displayKorean": "렘브란트 하르먼손 반 레인",
     "aliases": {
@@ -648,12 +730,14 @@
         "Rijn"
       ]
     },
-    "uhangul": "[Rㅔㅁ]브[Rㅏㄴ]트 하[Rㅡ]먼손 [Vㅏㄴ] [Rㅔ]인",
+    "uhangul": "렘브란트 하르먼손 [Vㅏㄴ] 레인",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q192062",
+    "uhangulVersion": "0.6-draft",
     "original": "Bartolome Esteban Murillo",
+    "language": "es",
     "korean": "바르톨로메 에스테반 무리요",
     "displayKorean": "무리요, 바르톨로메 에스테반",
     "aliases": {
@@ -664,12 +748,14 @@
         "Murillo"
       ]
     },
-    "uhangul": "무[Rㅣ]요, 바[Rㅡ]톨로메 에스테반",
+    "uhangul": "무리요, 바르톨로메 에스테반",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q41264",
+    "uhangulVersion": "0.6-draft",
     "original": "Johannes Vermeer",
+    "language": "und",
     "korean": "요하네스 페르메이르",
     "displayKorean": "페르메이르, 요하네스",
     "aliases": {
@@ -680,12 +766,14 @@
         "Vermeer"
       ]
     },
-    "uhangul": "[Vㅔ][Rㅡ]메이[Rㅡ], 요하네스",
+    "uhangul": "[Vㅔ]르메이르, 요하네스",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q213163",
+    "uhangulVersion": "0.6-draft",
     "original": "Élisabeth Louise Vigée Le Brun",
+    "language": "und",
     "korean": "엘리자베스 루이 비제 르 브룅",
     "displayKorean": "비제 르 브룅, 엘리자베스 루이",
     "aliases": {
@@ -700,12 +788,14 @@
         "Brun"
       ]
     },
-    "uhangul": "[Vㅣ]제 르 브[Rㅚㅇ], 엘리자베스 루이",
+    "uhangul": "[Vㅣ]제 르 브룅, 엘리자베스 루이",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q104884",
+    "uhangulVersion": "0.6-draft",
     "original": "Caspar David Friedrich",
+    "language": "und",
     "korean": "카스파 다비드 프리드리히",
     "displayKorean": "프리드리히, 카스파 다비드",
     "aliases": {
@@ -716,12 +806,14 @@
         "Friedrich"
       ]
     },
-    "uhangul": "[Fㅡ][Rㅣ]드[Rㅣ]히, 카스파 다[Vㅣ]드",
+    "uhangul": "[Fㅡ]리드리히, 카스파 다[Vㅣ]드",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q6394591",
+    "uhangulVersion": "0.6-draft",
     "original": "Vassili Vladimirovich Pukiryov",
+    "language": "und",
     "korean": "바실리 푸키레프",
     "displayKorean": "푸키레프, 바실리",
     "aliases": {
@@ -737,7 +829,9 @@
   },
   {
     "id": "Q40599",
+    "uhangulVersion": "0.6-draft",
     "original": "Édouard Manet",
+    "language": "und",
     "korean": "에두아르 마네",
     "displayKorean": "마네, 에두아르",
     "aliases": {
@@ -749,12 +843,14 @@
         "Manet"
       ]
     },
-    "uhangul": "마네, 에두아[Rㅡ]",
+    "uhangul": "마네, 에두아르",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q296",
+    "uhangulVersion": "0.6-draft",
     "original": "Claude Monet",
+    "language": "und",
     "korean": "클로드 모네",
     "displayKorean": "모네, 클로드",
     "aliases": {
@@ -770,7 +866,9 @@
   },
   {
     "id": "Q5582",
+    "uhangulVersion": "0.6-draft",
     "original": "Vincent van Gogh",
+    "language": "und",
     "korean": "빈센트 반 고흐",
     "displayKorean": "반 고흐, 빈센트",
     "aliases": {
@@ -788,7 +886,9 @@
   },
   {
     "id": "Q187310",
+    "uhangulVersion": "0.6-draft",
     "original": "Carl Larsson",
+    "language": "und",
     "korean": "칼 라르손",
     "displayKorean": "라르손, 칼",
     "aliases": {
@@ -804,7 +904,9 @@
   },
   {
     "id": "Q82445",
+    "uhangulVersion": "0.6-draft",
     "original": "Henri de Toulouse-Lautrec",
+    "language": "und",
     "korean": "앙리 드 툴루즈로트레크",
     "displayKorean": "툴루즈로트레크, 앙리 드",
     "aliases": {
@@ -819,12 +921,14 @@
         "Lautrec"
       ]
     },
-    "uhangul": "툴루즈로트[Rㅔ]크, 앙[Rㅣ] 드",
+    "uhangul": "툴루즈로트레크, 앙리 드",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q5588",
+    "uhangulVersion": "0.6-draft",
     "original": "Frida Kahlo",
+    "language": "es",
     "korean": "프리다 칼로",
     "displayKorean": "칼로, 프리다",
     "aliases": {
@@ -835,12 +939,14 @@
         "Kahlo"
       ]
     },
-    "uhangul": "칼로, [Fㅡ][Rㅣ]다",
+    "uhangul": "칼로, [Fㅡ]리다",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q9340",
+    "uhangulVersion": "0.6-draft",
     "original": "Claude Lorrain",
+    "language": "und",
     "korean": "클로드 로랭",
     "displayKorean": "로랭, 클로드",
     "aliases": {
@@ -851,12 +957,14 @@
         "Lorrain"
       ]
     },
-    "uhangul": "로[Rㅐㅇ], 클로드",
+    "uhangul": "로랭, 클로드",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q155151",
+    "uhangulVersion": "0.6-draft",
     "original": "Antoine Watteau",
+    "language": "und",
     "korean": "앙투안 와토",
     "displayKorean": "와토, 앙투안",
     "aliases": {
@@ -872,7 +980,9 @@
   },
   {
     "id": "Q313122",
+    "uhangulVersion": "0.6-draft",
     "original": "François Boucher",
+    "language": "und",
     "korean": "프랑수아 부셰",
     "displayKorean": "부셰, 프랑수아",
     "aliases": {
@@ -884,12 +994,14 @@
         "Boucher"
       ]
     },
-    "uhangul": "부셰, [Fㅡ][Rㅏㅇ]수아",
+    "uhangul": "부셰, [Fㅡ]랑수아",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q313898",
+    "uhangulVersion": "0.6-draft",
     "original": "Jean-Honoré Fragonard",
+    "language": "und",
     "korean": "장오노레 프라고나르",
     "displayKorean": "프라고나르, 장오노레",
     "aliases": {
@@ -901,12 +1013,14 @@
         "Fragonard"
       ]
     },
-    "uhangul": "프라고나[Rㅡ], 장오노레",
+    "uhangul": "프라고나르, 장오노레",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q162048",
+    "uhangulVersion": "0.6-draft",
     "original": "Giovanni Battista Tiepolo",
+    "language": "und",
     "korean": "조반니 바티스타 티에폴로",
     "displayKorean": "티에폴로, 조반니 바티스타",
     "aliases": {
@@ -922,7 +1036,9 @@
   },
   {
     "id": "Q161866",
+    "uhangulVersion": "0.6-draft",
     "original": "Canaletto",
+    "language": "und",
     "korean": "카날레토",
     "displayKorean": "카날레토",
     "aliases": {
@@ -934,7 +1050,9 @@
   },
   {
     "id": "Q180117",
+    "uhangulVersion": "0.6-draft",
     "original": "Thomas Gainsborough",
+    "language": "und",
     "korean": "토머스 게인즈버러",
     "displayKorean": "게인즈버러, 토머스",
     "aliases": {
@@ -945,12 +1063,14 @@
         "Gainsborough"
       ]
     },
-    "uhangul": "게인즈버[Rㅓ], [THㅗ]머스",
+    "uhangul": "게인즈버러, [THㅗ]머스",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q189621",
+    "uhangulVersion": "0.6-draft",
     "original": "William Hogarth",
+    "language": "und",
     "korean": "윌리엄 호가스",
     "displayKorean": "호가스, 윌리엄",
     "aliases": {
@@ -966,7 +1086,9 @@
   },
   {
     "id": "Q312309",
+    "uhangulVersion": "0.6-draft",
     "original": "Jean-Baptiste-Siméon Chardin",
+    "language": "und",
     "korean": "장바티스트 시메옹 샤르댕",
     "displayKorean": "샤르댕, 장바티스트 시메옹",
     "aliases": {
@@ -978,12 +1100,14 @@
         "Chardin"
       ]
     },
-    "uhangul": "샤[Rㅡ]댕, 장바티스트 시메옹",
+    "uhangul": "샤르댕, 장바티스트 시메옹",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q235547",
+    "uhangulVersion": "0.6-draft",
     "original": "Rosalba Carriera",
+    "language": "und",
     "korean": "로살바 카리에라",
     "displayKorean": "카리에라, 로살바",
     "aliases": {
@@ -994,12 +1118,14 @@
         "Carriera"
       ]
     },
-    "uhangul": "카[Rㅣ]에[Rㅏ], [Rㅗ]살바",
+    "uhangul": "카리에라, 로살바",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q296",
+    "uhangulVersion": "0.6-draft",
     "original": "Jacques-Louis David",
+    "language": "und",
     "korean": "자크루이 다비드",
     "displayKorean": "다비드, 자크루이",
     "aliases": {
@@ -1015,7 +1141,9 @@
   },
   {
     "id": "Q161472",
+    "uhangulVersion": "0.6-draft",
     "original": "Jean-Auguste-Dominique Ingres",
+    "language": "und",
     "korean": "장오귀스트도미니크 앵그르",
     "displayKorean": "앵그르, 장오귀스트도미니크",
     "aliases": {
@@ -1026,12 +1154,14 @@
         "Ingres"
       ]
     },
-    "uhangul": "앵그[Rㅡ], 장오귀스트도미니크",
+    "uhangul": "앵그르, 장오귀스트도미니크",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q5547",
+    "uhangulVersion": "0.6-draft",
     "original": "Antonio Canova",
+    "language": "und",
     "korean": "안토니오 카노바",
     "displayKorean": "카노바, 안토니오",
     "aliases": {
@@ -1047,7 +1177,9 @@
   },
   {
     "id": "Q312387",
+    "uhangulVersion": "0.6-draft",
     "original": "Joshua Reynolds",
+    "language": "und",
     "korean": "조슈아 레이놀즈",
     "displayKorean": "레이놀즈, 조슈아",
     "aliases": {
@@ -1058,12 +1190,14 @@
         "Reynolds"
       ]
     },
-    "uhangul": "[Rㅔ]이놀즈, 조슈아",
+    "uhangul": "레이놀즈, 조슈아",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q312130",
+    "uhangulVersion": "0.6-draft",
     "original": "Anton Raphael Mengs",
+    "language": "und",
     "korean": "안톤 라파엘 멩스",
     "displayKorean": "멩스, 안톤 라파엘",
     "aliases": {
@@ -1074,12 +1208,14 @@
         "Mengs"
       ]
     },
-    "uhangul": "멩스, 안톤 [Rㅏ][Fㅏ]엘",
+    "uhangul": "멩스, 안톤 라[Fㅏ]엘",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "Q313526",
+    "uhangulVersion": "0.6-draft",
     "original": "Benjamin West",
+    "language": "und",
     "korean": "벤저민 웨스트",
     "displayKorean": "웨스트, 벤저민",
     "aliases": {
@@ -1095,7 +1231,9 @@
   },
   {
     "id": "Q155733",
+    "uhangulVersion": "0.6-draft",
     "original": "Angelica Kauffman",
+    "language": "und",
     "korean": "앙겔리카 카우프만",
     "displayKorean": "카우프만, 앙겔리카",
     "aliases": {
@@ -1111,7 +1249,9 @@
   },
   {
     "id": "artist-romantic-gericault",
+    "uhangulVersion": "0.6-draft",
     "original": "Théodore Géricault",
+    "language": "und",
     "korean": "테오도르 제리코",
     "displayKorean": "제리코, 테오도르",
     "aliases": {
@@ -1123,12 +1263,14 @@
         "Géricault"
       ]
     },
-    "uhangul": "제[Rㅣ]코, [THㅔ]오도[Rㅡ]",
+    "uhangul": "제리코, [THㅔ]오도르",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "artist-romantic-delacroix",
+    "uhangulVersion": "0.6-draft",
     "original": "Eugène Delacroix",
+    "language": "und",
     "korean": "외젠 들라크루아",
     "displayKorean": "들라크루아, 외젠",
     "aliases": {
@@ -1140,12 +1282,14 @@
         "Delacroix"
       ]
     },
-    "uhangul": "들라크[Rㅜ]아, 외젠",
+    "uhangul": "들라크루아, 외젠",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "artist-romantic-goya",
+    "uhangulVersion": "0.6-draft",
     "original": "Francisco Goya",
+    "language": "es",
     "korean": "프란시스코 고야",
     "displayKorean": "고야, 프란시스코",
     "aliases": {
@@ -1156,12 +1300,14 @@
         "Goya"
       ]
     },
-    "uhangul": "고야, [Fㅡ][Rㅏㄴ]시스코",
+    "uhangul": "고야, [Fㅡ]란시스코",
     "note": "auto-generated from original and Korean artist names"
   },
   {
     "id": "artist-romantic-turner",
+    "uhangulVersion": "0.6-draft",
     "original": "J. M. W. Turner",
+    "language": "und",
     "korean": "조지프 말로드 윌리엄 터너",
     "displayKorean": "터너, 조지프 말로드 윌리엄",
     "aliases": {
@@ -1178,7 +1324,9 @@
   },
   {
     "id": "artist-romantic-constable",
+    "uhangulVersion": "0.6-draft",
     "original": "John Constable",
+    "language": "und",
     "korean": "존 컨스터블",
     "displayKorean": "컨스터블, 존",
     "aliases": {
@@ -1194,7 +1342,9 @@
   },
   {
     "id": "artist-romantic-cole",
+    "uhangulVersion": "0.6-draft",
     "original": "Thomas Cole",
+    "language": "und",
     "korean": "토머스 콜",
     "displayKorean": "콜, 토머스",
     "aliases": {
@@ -1208,7 +1358,9 @@
   },
   {
     "id": "artist-romantic-church",
+    "uhangulVersion": "0.6-draft",
     "original": "Frederic Edwin Church",
+    "language": "und",
     "korean": "프레더릭 에드윈 처치",
     "displayKorean": "처치, 프레더릭 에드윈",
     "aliases": {
@@ -1219,7 +1371,7 @@
         "Church"
       ]
     },
-    "uhangul": "처치, [Fㅡ][Rㅔ]더[Rㅣㄱ] 에드윈",
+    "uhangul": "처치, [Fㅡ]레더릭 에드윈",
     "note": "auto-generated from original and Korean artist names"
   }
 ]

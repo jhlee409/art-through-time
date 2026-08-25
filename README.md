@@ -93,17 +93,13 @@ http://localhost:4173/?login=1
 
 새 화가를 추가할 때는 사용자가 먼저 작품 이미지를 다운로드 폴더에 저장합니다. 이후 작업 요청에서는 다운로드 폴더를 다시 언급하지 않아도 됩니다.
 
-프로젝트에서 “다운로드 폴더”라고 하면 아래 위치를 뜻합니다.
-
-```text
-C:\Users\jhlee\OneDrive - UOU\AI-Programming\Art_through_Time\download
-```
+프로젝트에서 “다운로드 폴더”는 고정 사용자 경로가 아니라 [data/local-image-sources.json](data/local-image-sources.json)의 후보 폴더를 우선순위로 검색한 결과를 뜻합니다. 프로젝트의 `download/`와 각 컴퓨터의 `OneDrive*` 폴더 아래 `AI-Programming/Art_through_Time/download`를 순서대로 확인합니다. 따라서 OneDrive의 상위 경로가 컴퓨터마다 달라도 됩니다.
 
 Codex에는 화가의 이름, 국적, 사조만 제시하고 추가를 요청합니다. 위키피디아 주소를 따로 입력하지 않아도 됩니다.
 
 Codex가 새 화가를 추가할 때 지켜야 할 기준:
 
-- 위 `download` 폴더에서 작품 이미지 후보를 찾습니다.
+- 저장된 다운로드 폴더 후보에서 작품 이미지 후보를 먼저 찾습니다. 파일이 있으면 로컬 파일만 연결하고, 외부에서 이미지를 받지 않습니다.
 - 위키피디아/Wikidata는 원어명, 생몰년, 국가, 간단한 설명, 작품명, 출처 링크 같은 텍스트 정보 보충에만 사용합니다.
 - 위키피디아, Wikimedia, 웹 검색, 외부 이미지 URL을 사용해 작품 이미지를 자동 검색하거나 자동 다운로드하지 않습니다.
 - 새 화가 데이터에는 반드시 `artistSummary: { "ko": [], "en": [] }` 기본 필드를 둡니다.
@@ -121,8 +117,22 @@ Codex가 새 화가를 추가할 때 지켜야 할 기준:
 - 사조 HTML과 표시 데이터에서는 외부 이미지 URL, `data/thumbnails/`, `data/high-resolution/` 직접 참조를 피합니다. 필요한 이미지는 해당 화면의 안정 폴더로 복사한 뒤 연결합니다.
 - 화가 작품 데이터에 과거 원본 `image` URL이 남아 있어도 화면 표시용 이미지로 사용하지 않습니다. 로컬 썸네일이나 로컬 고해상도 파일이 없으면 이미지를 표시하지 않습니다.
 - 외부 URL, Wikipedia, Wikimedia, Openverse 등에서 이미지를 검색해 URL을 찾거나 내려받아 저장하는 자동화 코드는 삭제했습니다.
+- 로컬 이미지 후보를 찾지 못한 작품은 잘못된 파일 경로를 유지하지 않고 `이미지 업로드 예정`으로 표시합니다.
 - URL에서 이미지 파일을 찾아 다운로드하거나 URL 응답을 파일로 저장해야 하는 예외 상황은 반드시 사용자에게 먼저 허락을 받아야 합니다. 허락 없이 URL 이미지 파일을 다운로드하거나 외부 이미지 URL 의존을 새로 만들지 않습니다.
 - URL 이미지 다운로드 스크립트를 새로 만들 때는 `tools/url-download-permission.js`의 승인 가드를 호출하고, `node tools/check-url-download-approval.js` 검사를 통과해야 합니다.
+
+### 대기 이미지 확인·연결
+
+이미지 파일을 다운로드 폴더에 넣은 뒤에는 아래 순서로 처리합니다.
+
+```powershell
+node tools/check-pending-local-images.js
+node tools/import-pending-local-images.js
+```
+
+- 두 도구 모두 등록된 다운로드 폴더 후보를 자동 탐색합니다.
+- 파일을 찾으면 가져오기 도구가 10MB 이하의 JPG, PNG, WebP, GIF를 `data/thumbnails/`로 복사하고 작품에 연결합니다.
+- 파일이 없거나 10MB를 넘으면 외부 다운로드를 시도하지 않고 `이미지 업로드 예정` 상태를 유지합니다.
 
 ## 전체 규칙 점검
 
