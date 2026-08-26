@@ -40,6 +40,7 @@ const movementDensityMaximum = 4;
 const countryArtDensityMinimum = .25;
 const countryArtDensityMaximum = 1;
 const countryArtLabelColumnWidth = 234;
+const countryArtEventRailHeight = 108;
 const highResolutionMinimumWidth = 1600;
 const artistImportedWorkLimit = 60;
 const sharedMovementId = 'global-contemporary';
@@ -80,6 +81,8 @@ let countryArtView = parseCountryArtView();
 let countryArtResetZoomOnRender = true;
 const countryArtWorkCache = new Map();
 const countryArtWorkRequests = new Map();
+let countryArtEvents = {schema:1,countries:{}};
+let countryMovementBackgrounds = {schema:1,countries:{},mechanisms:{}};
 if (localStorage.getItem(movementCountryMigrationKey) !== 'v1') {
   if (legacyMovementCountryIds.every(id => movementView.countries.includes(id)) && !movementView.countries.includes('switzerland')) {
     movementView.countries = [...movementView.countries, 'switzerland'];
@@ -1212,6 +1215,8 @@ async function loadData() {
   if (currentUserIsAdmin) await saveArtistsNow();
   try { artTaxonomy = await (await fetch('data/art-taxonomy.json')).json(); } catch (_) { artTaxonomy = {periods:[], movements:[]}; }
   try { movementCountries = (await (await fetch('data/art-movements.json')).json()).countries || []; } catch (_) { movementCountries = []; }
+  try { countryArtEvents = await (await fetch('data/country-art-events.json', {cache:'no-store'})).json(); } catch (_) { countryArtEvents = {schema:1,countries:{}}; }
+  try { countryMovementBackgrounds = await (await fetch('data/country-movement-backgrounds.json', {cache:'no-store'})).json(); } catch (_) { countryMovementBackgrounds = {schema:1,countries:{},mechanisms:{}}; }
   try { movementDocuments = (await (await fetch(apiUrl('/api/movement-documents'))).json()).documents || {}; } catch (_) { movementDocuments = {}; }
   const requestedArtist = requestedArtistId ? artists.find(a => a.id === requestedArtistId) : null;
   if (requestedArtist) {
@@ -2616,7 +2621,154 @@ function countryArtWorksFor(country, movement) {
   }
   return {state:'loading',works:[]};
 }
+const countryArtEventCategories = ['war-revolution', 'social-political', 'religion-thought', 'patronage', 'art-institution', 'technology-economy'];
+const countryArtEventCategoryLabel = category => ({
+  'war-revolution': language === 'ko' ? '전쟁·혁명' : 'War & revolution',
+  'social-political': language === 'ko' ? '사회·정치' : 'Social & political',
+  'religion-thought': language === 'ko' ? '종교·사상' : 'Religion & thought',
+  patronage: language === 'ko' ? '후원·궁정' : 'Patronage & court',
+  'art-institution': language === 'ko' ? '미술 제도' : 'Art institutions',
+  'technology-economy': language === 'ko' ? '기술·경제' : 'Technology & economy'
+}[category] || category);
+function countryArtEventsFor(countryId, start, end) {
+  return (countryArtEvents?.countries?.[countryId] || [])
+    .map(event => ({...event,start:Number(event.start),end:event.end === undefined || event.end === null ? null : Number(event.end),importance:Number(event.importance) || 1}))
+    .filter(event => Number.isFinite(event.start) && event.start <= end && (Number.isFinite(event.end) ? event.end : event.start) >= start)
+    .sort((a,b) => a.start - b.start || b.importance - a.importance || loc(a.name).localeCompare(loc(b.name), language));
+}
+function countryArtEventMode(density) {
+  if (density >= .72) return 'expanded';
+  if (density >= .5) return 'labels';
+  if (density >= .34) return 'key';
+  return 'dots';
+}
+function openCountryArtEventWikipedia(wiki, fallback) {
+  const url = String(wiki || '').trim();
+  if (/^https?:\/\//i.test(url)) window.open(url, '_blank', 'noopener');
+  else openHistoricalEventWikipedia(url || fallback || '');
+}
+function renderCountryArtEventRail(countryId, start, end, chartWidth, yearScale, density, yearLabel) {
+  const events = countryArtEventsFor(countryId, start, end);
+  const mode = countryArtEventMode(density);
+  const categoryIndex = category => Math.max(0, countryArtEventCategories.indexOf(category));
+  const visibleCategories = [...new Set(events.map(event => event.category).filter(Boolean))];
+  const legend = visibleCategories.length
+    ? `<div class="country-art-event-legend">${visibleCategories.map(category => `<span data-country-event-category="${esc(category)}">${esc(countryArtEventCategoryLabel(category))}</span>`).join('')}</div>`
+    : '';
+  const eventButtons = events.map(event => {
+    const eventEnd = Number.isFinite(event.end) ? event.end : event.start;
+    const clippedStart = Math.max(start, event.start);
+    const clippedEnd = Math.min(end, eventEnd);
+    const left = Math.max(0, (clippedStart - start) * yearScale);
+    const width = Math.max(2, (clippedEnd - clippedStart) * yearScale);
+    const lane = categoryIndex(event.category) % countryArtEventCategories.length;
+    const top = 17 + lane * 14;
+    const years = Number.isFinite(event.end) && event.end > event.start ? `${yearLabel(event.start)}–${yearLabel(event.end)}` : yearLabel(event.start);
+    const title = `${loc(event.name)} · ${years}${loc(event.impact) ? `\n${loc(event.impact)}` : ''}`;
+    const duration = Number.isFinite(event.end) && event.end > event.start ? `<span class="country-art-event-duration" style="width:${width}px"></span>` : '';
+    return `<button class="country-art-event country-art-event-importance-${Math.min(3, Math.max(1, event.importance))}" type="button" data-country-event-wiki="${esc(event.wiki || '')}" data-country-event-name="${esc(event.name?.en || event.name?.ko || '')}" data-country-event-category="${esc(event.category || '')}" style="left:${left}px;top:${top}px" title="${esc(title)}" aria-label="${esc(title)}">${duration}<span class="country-art-event-marker"></span><span class="country-art-event-label"><strong>${esc(loc(event.name))}</strong><small>${esc(years)}</small>${mode === 'expanded' && loc(event.impact) ? `<em>${esc(loc(event.impact))}</em>` : ''}</span></button>`;
+  }).join('');
+  const empty = language === 'ko' ? '등록된 국가별 사건 없음' : 'No country events';
+  return `<div class="country-art-event-corner">${language === 'ko' ? '사건' : 'Events'}</div><div class="country-art-event-rail country-art-event-mode-${mode}" style="width:${chartWidth}px;height:${countryArtEventRailHeight}px">${legend}${eventButtons || `<p>${empty}</p>`}</div>`;
+}
+function countryMovementDataKey(movement) {
+  return compactMovementName(movement?.name?.en || movement?.movement || movement?.name?.ko || '');
+}
+function countryMovementBackgroundFor(countryId, movement) {
+  const keys = new Set([movement?.id, movement?.movement, movement?.name?.en, movement?.name?.ko].filter(Boolean).map(compactMovementName));
+  return (countryMovementBackgrounds?.countries?.[countryId] || []).find(entry => {
+    const entryKeys = [entry.id, entry.movement, entry.movementEn, entry.movementKo].filter(Boolean).map(compactMovementName);
+    return entryKeys.some(key => keys.has(key));
+  }) || null;
+}
+function countryMovementMatchesRelatedLabel(relatedLabel, movement) {
+  const relatedKey = compactMovementName(relatedLabel);
+  if (!relatedKey) return false;
+  const movementKeys = [movement?.name?.en, movement?.name?.ko, movement?.movement].filter(Boolean).map(compactMovementName);
+  return movementKeys.some(key => key === relatedKey || key.includes(relatedKey) || relatedKey.includes(key));
+}
+function normalizedCountryArtEvents(countryId) {
+  return (countryArtEvents?.countries?.[countryId] || [])
+    .map(event => ({...event,start:Number(event.start),end:event.end === undefined || event.end === null ? null : Number(event.end),importance:Number(event.importance) || 1}))
+    .filter(event => Number.isFinite(event.start));
+}
+function countryMovementBackgroundEvents(countryId, movement, background=null) {
+  return countryMovementBackgroundEventGroups(countryId, movement, background).all;
+}
+function countryMovementBackgroundEventGroups(countryId, movement, background=null) {
+  const events = normalizedCountryArtEvents(countryId);
+  const byId = new Map(events.map(event => [event.id, event]));
+  const selected = [];
+  [...(background?.preludeEventIds || []), ...(background?.eventIds || [])].forEach(id => {
+    const event = byId.get(id);
+    if (event && !selected.some(item => item.id === event.id)) selected.push(event);
+  });
+  events.forEach(event => {
+    const related = Array.isArray(event.relatedMovements) ? event.relatedMovements : [];
+    if (!related.some(label => countryMovementMatchesRelatedLabel(label, movement))) return;
+    if (!selected.some(item => item.id === event.id)) selected.push(event);
+  });
+  const movementStart = Number(movement?.sourceStart ?? movement?.start);
+  const all = selected.sort((a,b) => a.start - b.start || b.importance - a.importance);
+  if (!Number.isFinite(movementStart)) return {prelude:all, crystallization:[], all};
+  return {
+    prelude: all.filter(event => event.start <= movementStart),
+    crystallization: all.filter(event => event.start > movementStart),
+    all,
+  };
+}
+function countryMovementMechanismLabel(id) {
+  return loc(countryMovementBackgrounds?.mechanisms?.[id]) || id;
+}
+function renderCountryMovementBackgroundButton(countryId, movement) {
+  const background = countryMovementBackgroundFor(countryId, movement);
+  const events = countryMovementBackgroundEvents(countryId, movement, background);
+  if (!background && !events.length) return '';
+  const label = language === 'ko' ? '사조 시작 배경 보기' : 'Show movement emergence background';
+  return `<button class="country-art-background-button" type="button" data-country="${esc(countryId)}" data-country-movement-key="${esc(countryMovementDataKey(movement))}" title="${esc(label)}" aria-label="${esc(label)}">!</button>`;
+}
+function closeCountryMovementBackgroundPanel() {
+  document.querySelector('.country-art-background-panel')?.remove();
+}
+function showCountryMovementBackgroundPanel(anchor, country, movement) {
+  closeCountryMovementBackgroundPanel();
+  const background = countryMovementBackgroundFor(country.id, movement);
+  const eventGroups = countryMovementBackgroundEventGroups(country.id, movement, background);
+  if (!background && !eventGroups.all.length) return;
+  const panel = document.createElement('aside');
+  panel.className = 'country-art-background-panel';
+  const years = `${movement.sourceStart ?? movement.start}–${movement.sourceEnd ?? movement.end}`;
+  const mechanismItems = (background?.mechanisms || []).map(id => `<span>${esc(countryMovementMechanismLabel(id))}</span>`).join('');
+  const thesis = loc(background?.thesis);
+  const eventButton = event => {
+    const eventYears = Number.isFinite(event.end) && event.end > event.start ? `${event.start}–${event.end}` : event.start;
+    return `<button type="button" data-country-event-wiki="${esc(event.wiki || '')}" data-country-event-name="${esc(event.name?.en || event.name?.ko || '')}"><strong>${esc(loc(event.name))}</strong><small>${esc(eventYears)} · ${esc(countryArtEventCategoryLabel(event.category))}</small>${loc(event.impact) ? `<em>${esc(loc(event.impact))}</em>` : ''}</button>`;
+  };
+  const preludeItems = eventGroups.prelude.map(eventButton).join('');
+  const crystallizationItems = eventGroups.crystallization.map(eventButton).join('');
+  const noThesis = language === 'ko'
+    ? '이 사조와 연결된 사건을 시작 이전 조건과 이후의 공식화 과정으로 나누어 읽어 볼 수 있습니다.'
+    : 'Read this movement through the events linked to its emergence.';
+  const preludeBlock = preludeItems ? `<div class="country-art-background-events"><h3>${language === 'ko' ? '태동 전 조건' : 'Before emergence'}</h3>${preludeItems}</div>` : '';
+  const crystallizationBlock = crystallizationItems ? `<div class="country-art-background-events country-art-background-events-later"><h3>${language === 'ko' ? '공식화·확산 사건' : 'Crystallization and spread'}</h3>${crystallizationItems}</div>` : '';
+  const emptyPrelude = !preludeItems && crystallizationItems ? `<p class="country-art-background-note">${language === 'ko' ? '현재 연결된 사건은 사조가 이미 태동한 뒤의 공개·제도화 사건입니다. 더 이른 배경 사건은 별도로 보강할 수 있습니다.' : 'The linked events currently mark public or institutional crystallization after emergence. Earlier background events can be added separately.'}</p>` : '';
+  panel.innerHTML = `<button class="country-art-background-close" type="button" aria-label="${language === 'ko' ? '닫기' : 'Close'}">×</button><p class="country-art-background-eyebrow">${esc(loc(country.name))}</p><h2>${esc(loc(movement.name))}</h2><small class="country-art-background-years">${esc(years)}</small><p>${esc(thesis || noThesis)}</p>${mechanismItems ? `<div class="country-art-background-mechanisms">${mechanismItems}</div>` : ''}${emptyPrelude}${preludeBlock}${crystallizationBlock}`;
+  const rect = anchor.getBoundingClientRect();
+  document.body.append(panel);
+  const width = Math.min(420, window.innerWidth - 24);
+  panel.style.width = `${width}px`;
+  const left = Math.max(12, Math.min(rect.right + 10, window.innerWidth - width - 12));
+  const top = Math.max(12, Math.min(rect.top - 10, window.innerHeight - panel.offsetHeight - 12));
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+  panel.querySelector('.country-art-background-close')?.addEventListener('click', closeCountryMovementBackgroundPanel);
+  panel.querySelectorAll('[data-country-event-wiki]').forEach(button => button.addEventListener('click', event => {
+    event.stopPropagation();
+    openCountryArtEventWikipedia(button.dataset.countryEventWiki, button.dataset.countryEventName);
+  }));
+}
 function renderCountryArt() {
+  closeCountryMovementBackgroundPanel();
   timeline.classList.remove('artist-timeline-panel');
   countryArtView = normalizeCountryArtView(countryArtView);
   const start = countryArtView.start, end = countryArtView.end;
@@ -2636,7 +2788,7 @@ function renderCountryArt() {
   const movementRowHeight = Math.ceil((window.innerWidth / 14) * .8) + 54;
   const chartContentWidth = countryArtLabelColumnWidth + chartWidth;
   // Country heading (about 37px) plus the time axis and all movement rows.
-  const chartContentHeight = 76 + entries.length * movementRowHeight;
+  const chartContentHeight = 76 + countryArtEventRailHeight + entries.length * movementRowHeight;
   const defaultCountryArtDensity = Math.max(countryArtDensityMinimum, Math.min(
     countryArtDensityMaximum,
     (Math.max(360, timeline.getBoundingClientRect().width - 84) / chartContentWidth),
@@ -2658,24 +2810,38 @@ function renderCountryArt() {
   });
   const displayedWorksByEntry = new Map(entries.map(entry => [entry, workSources.get(entry).works.filter(work => preferredWorksByImage.get(work.src)?.entry === entry)]));
   const axis = `<div class="country-art-axis-corner">${language === 'ko' ? '사조' : 'Movement'}</div><div class="country-art-time-axis" style="width:${chartWidth}px"><span class="country-art-time-axis-line"></span>${Array.from({length:Math.floor((end-start)/atlasTickStep(start,end))+2},(_,index) => Math.ceil(start/atlasTickStep(start,end))*atlasTickStep(start,end)+index*atlasTickStep(start,end)).filter(year => year <= end).map(year => `<span class="country-art-time-tick" style="left:${(year-start)*yearScale}px">${yearLabel(year)}</span>`).join('')}</div>`;
+  const eventRail = renderCountryArtEventRail(country.id, start, end, chartWidth, yearScale, density, yearLabel);
   const workMarkup = (entry) => {
     const source = workSources.get(entry);
     const left = Math.max(0,entry.start-start)*yearScale;
     const barWidth = Math.max(92,(Math.min(end,entry.end)-Math.max(start,entry.start))*yearScale);
     const works = displayedWorksByEntry.get(entry).map(work => `<figure class="country-art-work"><img src="${esc(work.src)}" alt="${esc(work.alt)}" loading="lazy"><figcaption>${esc(work.title)}${work.year ? `<small>${esc(work.year)}</small>` : ''}</figcaption></figure>`).join('');
     const empty = source.state === 'loading' ? (language === 'ko' ? '대표작 자료를 불러오는 중' : 'Loading representative works') : (language === 'ko' ? '대표작 자료 없음' : 'No representative work available');
-    return `<div class="country-art-movement-label" style="height:${movementRowHeight}px"><strong>${esc(loc(entry.name))}</strong><small>${yearLabel(entry.sourceStart ?? entry.start)}–${yearLabel(entry.sourceEnd ?? entry.end)}</small></div><div class="country-art-time-row" style="width:${chartWidth}px;height:${movementRowHeight}px"><article class="country-art-movement" style="left:${left}px;width:${barWidth}px;height:${movementRowHeight}px;--movement-color:${esc(entry.color)}"><div class="country-art-work-list">${works || `<p>${empty}</p>`}</div></article></div>`;
+    const backgroundButton = renderCountryMovementBackgroundButton(country.id, entry);
+    return `<div class="country-art-movement-label" style="height:${movementRowHeight}px"><strong>${esc(loc(entry.name))}</strong><small>${yearLabel(entry.sourceStart ?? entry.start)}–${yearLabel(entry.sourceEnd ?? entry.end)}</small></div><div class="country-art-time-row" style="width:${chartWidth}px;height:${movementRowHeight}px"><article class="country-art-movement" style="left:${left}px;width:${barWidth}px;height:${movementRowHeight}px;--movement-color:${esc(entry.color)}">${backgroundButton}<div class="country-art-work-list">${works || `<p>${empty}</p>`}</div></article></div>`;
   };
   const countryLabel = language === 'ko' ? '국가 선택' : 'Country selection';
   const sidebarActions = $('#movement-sidebar-actions');
   if (sidebarActions) sidebarActions.innerHTML = `<section class="country-art-selector" aria-label="${countryLabel}"><p>${countryLabel}</p><div>${countryOptions.map(option => `<label><input type="radio" name="country-art-country" value="${esc(option.id)}" ${option.id === country.id ? 'checked' : ''}>${esc(loc(option.name))}</label>`).join('')}</div></section>`;
   const pageNav = `<nav class="page-nav-actions" aria-label="${language === 'ko' ? '탭 이동' : 'Tab navigation'}"><button class="atlas-nav-button country-art-nav-artists" type="button">${language === 'ko' ? '화가' : 'Artists'}</button><button class="atlas-nav-button country-art-nav-movements" type="button">${language === 'ko' ? '사조' : 'Movements'}</button><button class="atlas-nav-button country-art-nav-techniques" type="button">${language === 'ko' ? '기법·용어' : 'Techniques'}</button><button class="atlas-nav-button country-art-nav-topics" type="button">${language === 'ko' ? '주제-사건' : 'Topics & Events'}</button><button class="rules-check-button" type="button" data-rules-check hidden></button></nav>`;
-  timeline.innerHTML = `${pageNav}<div class="atlas-scroll country-art-scroll"><div class="country-art-zoom-viewport" style="width:${Math.ceil(chartContentWidth * density)}px;height:${Math.ceil(chartContentHeight * density)}px"><div class="country-art-zoom-layer" style="width:${chartContentWidth}px;transform:scale(${density})"><div class="country-art-country-name" style="width:${countryArtLabelColumnWidth}px;min-width:${countryArtLabelColumnWidth}px">${esc(loc(country.name))}</div><div class="country-art-chart" style="width:${chartContentWidth}px;grid-template-columns:${countryArtLabelColumnWidth}px ${chartWidth}px">${axis}${entries.map(workMarkup).join('')}</div></div></div></div>`;
+  timeline.innerHTML = `${pageNav}<div class="atlas-scroll country-art-scroll"><div class="country-art-zoom-viewport" style="width:${Math.ceil(chartContentWidth * density)}px;height:${Math.ceil(chartContentHeight * density)}px"><div class="country-art-zoom-layer country-art-event-mode-${countryArtEventMode(density)}" style="width:${chartContentWidth}px;transform:scale(${density})"><div class="country-art-country-name" style="width:${countryArtLabelColumnWidth}px;min-width:${countryArtLabelColumnWidth}px">${esc(loc(country.name))}</div><div class="country-art-chart" style="width:${chartContentWidth}px;grid-template-columns:${countryArtLabelColumnWidth}px ${chartWidth}px">${axis}${eventRail}${entries.map(workMarkup).join('')}</div></div></div></div>`;
   timeline.querySelector('.country-art-nav-artists')?.addEventListener('click', openArtistListPage);
   timeline.querySelector('.country-art-nav-movements')?.addEventListener('click', openMovementAtlas);
   timeline.querySelector('.country-art-nav-techniques')?.addEventListener('click', openTechniquesPage);
   timeline.querySelector('.country-art-nav-topics')?.addEventListener('click', openTopicsPage);
+  timeline.querySelectorAll('.country-art-event').forEach(button => button.addEventListener('click', event => {
+    event.stopPropagation();
+    openCountryArtEventWikipedia(button.dataset.countryEventWiki, button.dataset.countryEventName);
+  }));
+  const countryMovementEntriesByKey = new Map(entries.map(entry => [countryMovementDataKey(entry), entry]));
+  timeline.querySelectorAll('.country-art-background-button').forEach(button => button.addEventListener('click', event => {
+    event.preventDefault();
+    event.stopPropagation();
+    const entry = countryMovementEntriesByKey.get(button.dataset.countryMovementKey);
+    if (entry) showCountryMovementBackgroundPanel(button, country, entry);
+  }));
   sidebarActions?.querySelectorAll('input[name="country-art-country"]').forEach(input => input.addEventListener('change', () => {
+    closeCountryMovementBackgroundPanel();
     document.querySelector('.country-art-movement-preview')?.remove();
     document.querySelector('.country-art-image-magnifier')?.remove();
     countryArtView.country=input.value;
@@ -2709,6 +2875,7 @@ function renderCountryArt() {
     const clone = source.cloneNode(true);
     const color = source.style.getPropertyValue('--movement-color');
     clone.classList.add('country-art-movement-preview-content');
+    clone.querySelectorAll('.country-art-background-button').forEach(button => button.remove());
     clone.removeAttribute('style');
     clone.style.setProperty('--movement-color', color);
     preview.innerHTML = `<button class="country-art-movement-preview-close" type="button" aria-label="${language === 'ko' ? '확대 창 닫기' : 'Close enlarged view'}">×</button><div class="country-art-movement-preview-stage"></div>`;

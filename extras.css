@@ -654,6 +654,40 @@
 .country-art-time-axis { position: sticky; top: 0; z-index: 6; height: 38px; border-bottom: 1px solid #d8d2c6; background: #eee9de; }
 .country-art-time-axis-line { position: absolute; inset: 28px 0 auto; height: 1px; background: #aeb9ac; }
 .country-art-time-tick { position: absolute; top: 7px; transform: translateX(-50%); color: #58635b; font: 10px/1 'DM Mono', monospace; white-space: nowrap; }
+.country-art-event-corner { position: sticky; left: 0; z-index: 6; display: flex; align-items: center; justify-content: center; box-sizing: border-box; height: 108px; padding: 10px; border-right: 1px solid #d8d2c6; border-bottom: 1px solid #d8d2c6; background: #f0ebe1; color: var(--muted); font-size: 11px; font-weight: 700; }
+.country-art-event-rail { position: relative; box-sizing: border-box; overflow: hidden; border-bottom: 1px solid #d8d2c6; background: linear-gradient(#f8f5ed, #fdfbf7); }
+.country-art-event-rail > p { margin: 40px 0 0; color: var(--muted); font-size: 10px; text-align: center; }
+.country-art-event-legend { position: sticky; left: 8px; z-index: 2; display: flex; flex-wrap: wrap; gap: 4px; width: max-content; max-width: 430px; padding: 6px 0 0 8px; pointer-events: none; }
+.country-art-event-legend span { display: inline-flex; align-items: center; min-height: 16px; padding: 2px 5px; border: 1px solid #d5cec1; border-radius: 3px; background: #fffdf8cc; color: #59645b; font-size: 8px; font-weight: 700; white-space: nowrap; }
+.country-art-event { position: absolute; z-index: 3; display: block; width: 0; height: 16px; border: 0; padding: 0; background: transparent; color: #17211e; text-align: left; cursor: pointer; }
+.country-art-event-marker { position: absolute; left: -5px; top: 5px; width: 9px; height: 9px; box-sizing: border-box; border: 2px solid #fffdf8; border-radius: 50%; background: #516973; box-shadow: 0 0 0 1px #2c3431; }
+.country-art-event-duration { position: absolute; left: 0; top: 9px; height: 2px; min-width: 12px; background: #516973; opacity: .7; transform: translateY(-50%); }
+.country-art-event-label { position: absolute; left: 9px; top: -4px; display: none; width: max-content; max-width: 152px; box-sizing: border-box; padding: 3px 5px 4px; border: 1px solid #cfc6b8; border-radius: 4px; background: #fffdf8f2; box-shadow: 0 2px 6px #18221e18; font-size: 8px; line-height: 1.25; white-space: normal; }
+.country-art-event-label strong { display: block; overflow: hidden; color: #17211e; text-overflow: ellipsis; white-space: nowrap; }
+.country-art-event-label small { display: block; margin-top: 1px; color: #6a746a; font: 7px/1.1 'DM Mono', monospace; }
+.country-art-event-label em { display: block; margin-top: 3px; color: #526258; font-style: normal; }
+.country-art-event:hover { z-index: 12; }
+.country-art-event:hover .country-art-event-label,
+.country-art-event:focus-visible .country-art-event-label { display: block; max-width: 220px; outline: 0; }
+.country-art-event-mode-key .country-art-event-importance-3 .country-art-event-label,
+.country-art-event-mode-labels .country-art-event-importance-2 .country-art-event-label,
+.country-art-event-mode-labels .country-art-event-importance-3 .country-art-event-label,
+.country-art-event-mode-expanded .country-art-event-label { display: block; }
+.country-art-event-mode-dots .country-art-event-legend { opacity: .78; }
+.country-art-event-mode-key .country-art-event-label { max-width: 96px; }
+.country-art-event-mode-expanded .country-art-event-label { max-width: 230px; }
+.country-art-event[data-country-event-category="war-revolution"] .country-art-event-marker,
+.country-art-event[data-country-event-category="war-revolution"] .country-art-event-duration { background: #b64b42; }
+.country-art-event[data-country-event-category="social-political"] .country-art-event-marker,
+.country-art-event[data-country-event-category="social-political"] .country-art-event-duration { background: #4f6f9a; }
+.country-art-event[data-country-event-category="religion-thought"] .country-art-event-marker,
+.country-art-event[data-country-event-category="religion-thought"] .country-art-event-duration { background: #7a6299; }
+.country-art-event[data-country-event-category="patronage"] .country-art-event-marker,
+.country-art-event[data-country-event-category="patronage"] .country-art-event-duration { background: #a97842; }
+.country-art-event[data-country-event-category="art-institution"] .country-art-event-marker,
+.country-art-event[data-country-event-category="art-institution"] .country-art-event-duration { background: #5b8872; }
+.country-art-event[data-country-event-category="technology-economy"] .country-art-event-marker,
+.country-art-event[data-country-event-category="technology-economy"] .country-art-event-duration { background: #6f7f42; }
 .country-art-movement-label { position: sticky; left: 0; z-index: 5; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; box-sizing: border-box; padding: 9px 10px; border-right: 1px solid #d8d2c6; border-bottom: 1px solid #e2ddd4; background: #f7f4ed; text-align: center; }
 .country-art-movement-label strong { font-size: clamp(22px, 2.1vw, 32px); line-height: 1.2; }
 .country-art-movement-label small { color: var(--muted); font: clamp(18px, 1.6vw, 22px)/1.2 'DM Mono', monospace; }
@@ -678,6 +712,26 @@
 .country-art-movement.country-art-movement-preview-content { position: relative; display: flex; width: 100%; height: 100%; box-sizing: border-box; }
 .country-art-movement > header { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding: 5px 8px; background: color-mix(in srgb, var(--movement-color) 68%, white); font-size: 11px; }
 .country-art-movement > header small { flex: none; font: 10px/1 'DM Mono', monospace; }
+.country-art-background-button { position: absolute; z-index: 5; top: 5px; left: 5px; display: grid; width: 27px; height: 27px; place-items: center; border: 1px solid #f8f5ed; border-radius: 50%; background: #17211ed9; color: #fffdf8; font: 800 18px/1 'DM Mono', monospace; cursor: pointer; }
+.country-art-background-button:hover,
+.country-art-background-button:focus-visible { background: #fffdf8; color: #17211e; outline: 2px solid #17211e; }
+.country-art-background-panel { position: fixed; z-index: 1300; box-sizing: border-box; max-height: min(520px, calc(100vh - 24px)); overflow: auto; padding: 16px 16px 14px; border: 1px solid #8e988c; border-radius: 6px; background: #fffdf8; box-shadow: 0 18px 45px #18221e4d; color: #17211e; }
+.country-art-background-close { position: absolute; top: 8px; right: 8px; display: grid; width: 26px; height: 26px; place-items: center; border: 1px solid #c8c0b3; border-radius: 50%; background: #f8f5ed; color: #17211e; font-size: 18px; line-height: 1; cursor: pointer; }
+.country-art-background-eyebrow { margin: 0 34px 5px 0; color: #687369; font-size: 10px; font-weight: 800; letter-spacing: 0; text-transform: uppercase; }
+.country-art-background-panel h2 { margin: 0 34px 2px 0; font: 400 24px/1.12 var(--serif); }
+.country-art-background-years { display: block; margin-bottom: 10px; color: #687369; font: 10px/1 'DM Mono', monospace; }
+.country-art-background-panel p { margin: 0; color: #2d3934; font-size: 13px; line-height: 1.55; }
+.country-art-background-note { margin-top: 12px !important; padding: 8px 9px; border-left: 3px solid #a97842; background: #f8f1e4; color: #5b4b34 !important; font-size: 11px !important; }
+.country-art-background-mechanisms { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 12px; }
+.country-art-background-mechanisms span { padding: 3px 6px; border: 1px solid #d7cfc1; border-radius: 3px; background: #f8f5ed; color: #4f5b52; font-size: 10px; font-weight: 700; }
+.country-art-background-events { margin-top: 14px; }
+.country-art-background-events-later { padding-top: 10px; border-top: 1px solid #e0d9ce; }
+.country-art-background-events h3 { margin: 0 0 7px; color: #4f5b52; font-size: 11px; font-weight: 800; }
+.country-art-background-events button { display: block; width: 100%; margin: 0 0 6px; padding: 8px 9px; border: 1px solid #d7cfc1; border-radius: 4px; background: #f8f5ed; color: #17211e; text-align: left; cursor: pointer; }
+.country-art-background-events button:hover { border-color: #8e988c; background: #eef2e8; }
+.country-art-background-events strong { display: block; font-size: 12px; line-height: 1.25; }
+.country-art-background-events small { display: block; margin-top: 2px; color: #687369; font: 9px/1.2 'DM Mono', monospace; }
+.country-art-background-events em { display: block; margin-top: 5px; color: #4f5b52; font-size: 11px; font-style: normal; line-height: 1.4; }
 .country-art-work-list { display: grid; flex: 1 1 auto; grid-auto-flow: column; grid-auto-columns: 5.714286vw; align-items: start; gap: 5px; min-height: 0; box-sizing: border-box; overflow: auto; padding: 5px; }
 .country-art-work-list > p { align-self: center; margin: auto; color: #506054; font-size: 10px; text-align: center; }
 .country-art-work { width: 5.714286vw; min-width: 5.714286vw; height: calc(5.714286vw + 40px); box-sizing: border-box; margin: 0; border: 1px solid #ffffff9c; background: #fffdf7b8; }
