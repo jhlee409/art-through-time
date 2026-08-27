@@ -38,8 +38,10 @@ const movementAtlasStart = 1400;
 const movementAtlasEnd = 2026;
 const movementCountryEnd = 1950;
 const movementMinimumRangeSpan = 30;
-const movementDensityMinimum = 1;
-const movementDensityMaximum = 4;
+const movementDensityMinimum = .5;
+const movementDensityMaximum = 11.25;
+const movementCenturyAxisWidth = 59;
+const movementChartGap = 14;
 const countryArtDensityMinimum = .25;
 const countryArtDensityMaximum = 1;
 const artistListDensityMinimum = .03;
@@ -82,6 +84,7 @@ if (isArtistRelationsPage) document.body.classList.add('artist-relations-page');
 const legacyMovementCountryIds = ['france','germany','netherlands','italy','united-kingdom','spain','russia','sweden','denmark','greece','united-states'];
 const preExpansionMovementCountryIds = ['france','germany','switzerland','netherlands','italy','united-kingdom','spain','russia','sweden','denmark','greece','united-states'];
 const allMovementCountryIds = ['france','germany','austria','belgium','switzerland','netherlands','italy','united-kingdom','spain','russia','norway','sweden','denmark','greece','united-states'];
+const historicalEventCategories = ['history', 'religion-thought', 'science-economy', 'art'];
 const defaultMovementView = {countries:[...allMovementCountryIds],start:movementAtlasStart,end:movementAtlasEnd,showHistoricalEvents:true,eventCategory:'history',density:1};
 const defaultCountryArtView = {country:'france',start:movementAtlasStart,end:movementCountryEnd,density:1};
 const defaultArtistListView = {countries:[...allMovementCountryIds],start:movementAtlasStart,end:movementCountryEnd,density:1};
@@ -1720,8 +1723,8 @@ function normalizeMovementView(value) {
   end = Math.max(start + movementMinimumRangeSpan, Math.min(movementAtlasEnd, Math.round(end)));
   let density = Number(value?.density);
   if (!Number.isFinite(density)) density = defaultMovementView.density;
-  density = Math.round(Math.min(movementDensityMaximum, Math.max(movementDensityMinimum, density)) * 10) / 10;
-  const eventCategory = ['history', 'religion-thought', 'art'].includes(value?.eventCategory) ? value.eventCategory : defaultMovementView.eventCategory;
+  density = Math.round(Math.min(movementDensityMaximum, Math.max(movementDensityMinimum, density)) * 100) / 100;
+  const eventCategory = historicalEventCategories.includes(value?.eventCategory) ? value.eventCategory : defaultMovementView.eventCategory;
   return {
     // An empty array is a valid "clear all" choice; only a missing or malformed value uses the default.
     countries: Array.isArray(value?.countries) ? value.countries : [...defaultMovementView.countries],
@@ -2450,8 +2453,11 @@ const atlasHistoricalEvents = [
   {id:'council-trent',start:1545,end:1563,name:{ko:'트리엔트 공의회',en:'Council of Trent'},impact:{ko:'가톨릭 미술의 명료성·감정성·교화 기능을 강화했습니다.',en:'Encouraged clarity, emotion, and didactic purpose in Catholic art.'}},
   {id:'scientific-revolution',start:1540,end:1700,name:{ko:'과학혁명',en:'Scientific Revolution'},impact:{ko:'관찰·실험·측정의 문화가 자연, 시각, 지식 재현의 방식을 새롭게 했습니다.',en:'Its culture of observation, experiment, and measurement reshaped ways of seeing nature and knowledge.'}},
   {id:'thirty-years-war',start:1618,end:1648,name:{ko:'30년 전쟁',en:'Thirty Years’ War'},impact:{ko:'유럽의 종교·정치 질서와 궁정·교회 후원을 크게 재편했습니다.',en:'Reordered European politics, religion, and systems of patronage.'}},
+  {id:'italian-plague-1629',start:1629,end:1631,name:{ko:'이탈리아 페스트 유행',en:'Italian plague epidemic'},impact:{ko:'북부 이탈리아의 인구·도시 경제·후원망에 큰 충격을 주어 바로크 미술의 제작과 수요 환경에도 영향을 미쳤습니다.',en:'It disrupted population, urban economies, and patronage networks in northern Italy, affecting Baroque production and demand.'}},
   {id:'royal-academy',start:1648,name:{ko:'프랑스 왕립회화조각아카데미 설립',en:'French Royal Academy founded'},impact:{ko:'아카데미 교육·살롱·장르 위계의 제도적 기반이 되었습니다.',en:'Established academic training, Salons, and the hierarchy of genres.'}},
+  {id:'great-plague-london',start:1665,end:1666,name:{ko:'런던 대페스트',en:'Great Plague of London'},impact:{ko:'도시 인구와 공공생활의 위기는 런던의 건축·출판·시각문화 환경을 일시적으로 크게 바꾸었습니다.',en:'The crisis in population and public life temporarily reshaped London’s architecture, publishing, and visual culture.'}},
   {id:'enlightenment',start:1680,end:1789,name:{ko:'계몽주의',en:'Enlightenment'},impact:{ko:'이성·공공성·고전 고대에 대한 관심이 신고전주의와 공적 미술 담론의 토대가 되었습니다.',en:'Its emphasis on reason, the public sphere, and classical antiquity helped ground Neoclassicism and public-art discourse.'}},
+  {id:'marseille-plague',start:1720,end:1722,name:{ko:'마르세유 대페스트',en:'Great Plague of Marseille'},impact:{ko:'지중해 무역항의 검역·교역·도시 생활을 흔들어 프랑스 남부의 경제와 시각문화 유통에 영향을 주었습니다.',en:'It disrupted quarantine, trade, and urban life at a Mediterranean port, affecting southern French economies and visual circulation.'}},
   {id:'herculaneum-excavations',start:1738,name:{ko:'헤르쿨라네움 발굴 시작',en:'Excavations at Herculaneum begin'},impact:{ko:'고대 로마 미술과 장식에 대한 직접적 관심을 높여 신고전주의의 고고학적 토대를 넓혔습니다.',en:'Heightened direct interest in Roman art and decoration, expanding Neoclassicism’s archaeological foundation.'}},
   {id:'pompeii-excavations',start:1748,name:{ko:'폼페이 발굴 시작',en:'Excavations at Pompeii begin'},impact:{ko:'고대 벽화·건축·일상 문화의 발견이 유럽의 신고전주의 양식과 장식 예술에 영향을 주었습니다.',en:'Discoveries of ancient murals, architecture, and daily life influenced European Neoclassicism and decorative arts.'}},
   {id:'industrial-revolution',start:1760,end:1840,name:{ko:'산업혁명',en:'Industrial Revolution'},impact:{ko:'도시화·새 계층·새 재료가 미술의 주제와 시장을 바꾸었습니다.',en:'Urbanisation, new classes, and new materials changed art subjects and markets.'}},
@@ -2459,11 +2465,13 @@ const atlasHistoricalEvents = [
   {id:'french-revolution',start:1789,end:1799,name:{ko:'프랑스 혁명',en:'French Revolution'},impact:{ko:'왕정 후원과 공공 이미지의 체계를 뒤흔들고 신고전주의 정치미술을 부각했습니다.',en:'Disrupted royal patronage and made Neoclassical political imagery central.'}},
   {id:'congress-vienna',start:1815,name:{ko:'빈 체제 성립',en:'Congress of Vienna order'},impact:{ko:'나폴레옹 전쟁 이후 독일 연방과 복고 질서가 형성되어 독일 낭만주의·비더마이어의 정치적 배경이 되었습니다.',en:'After the Napoleonic Wars, the German Confederation and Restoration order framed German Romanticism and Biedermeier culture.'}},
   {id:'metternich-system',start:1815,end:1848,name:{ko:'메테르니히 체제',en:'Metternich system'},impact:{ko:'검열과 보수적 질서가 공적 정치 표현을 억제하면서 사적 실내문화, 풍경, 시민적 일상에 대한 관심을 강화했습니다.',en:'Censorship and conservative order constrained public politics while intensifying interest in private interiors, landscape, and bourgeois everyday life.'}},
+  {id:'railway-expansion',start:1830,end:1870,name:{ko:'철도의 보급',en:'Railway expansion'},impact:{ko:'사람·상품·이미지의 이동 속도를 높이고 도시화와 관광, 풍경을 바라보는 감각을 바꾸었습니다.',en:'It accelerated the movement of people, goods, and images, reshaping urbanisation, tourism, and perceptions of landscape.'}},
   {id:'july-revolution',start:1830,name:{ko:'프랑스 7월 혁명',en:'July Revolution in France'}},
   {id:'victorian-era',start:1837,end:1901,name:{ko:'빅토리아 시대',en:'Victorian era'},impact:{ko:'산업화·제국주의·도덕관·디자인 개혁이 라파엘 전파와 유미주의의 배경이 되었습니다.',en:'Industrialisation, empire, morality, and design reform framed the Pre-Raphaelites and Aestheticism.'}},
   {id:'february-revolution',start:1848,name:{ko:'프랑스 2월 혁명',en:'February Revolution in France'}},
   {id:'german-revolutions-1848',start:1848,end:1849,name:{ko:'독일 3월 혁명',en:'German revolutions of 1848-1849'},impact:{ko:'자유주의와 민족통일 요구가 폭발하며 비더마이어 이후의 시민사회, 정치 풍자, 사실주의적 문제의식을 자극했습니다.',en:'Liberal and national-unification demands reshaped civic culture, political satire, and realist social concerns after Biedermeier.'}},
   {id:'photography',start:1839,name:{ko:'사진술 공표',en:'Photography announced'},impact:{ko:'재현의 역할을 재정의하고 사실주의·인상주의의 시각 언어에 영향을 주었습니다.',en:'Redefined representation and influenced Realism and Impressionist vision.'}},
+  {id:'camera-adoption',start:1840,end:1880,name:{ko:'사진기의 보급',en:'Camera adoption'},impact:{ko:'초상·기록·보도의 이미지 생산과 유통을 넓혀 회화와 대중 시각문화의 관계를 새롭게 만들었습니다.',en:'It expanded image-making and circulation for portraiture, documentation, and news, reshaping painting’s relationship with mass visual culture.'}},
   {id:'paint-tube',start:1841,name:{ko:'튜브 유화 물감 특허',en:'Oil paint tube patented'},impact:{ko:'야외 제작을 실용화해 인상주의의 작업 방식을 뒷받침했습니다.',en:'Made portable outdoor painting practical and supported Impressionist practice.'}},
   {id:'great-exhibition',start:1851,name:{ko:'런던 만국박람회',en:'Great Exhibition'},impact:{ko:'산업 디자인·재료·전시 문화에 대한 관심을 높였습니다.',en:'Elevated attention to industrial design, materials, and exhibition culture.'}},
   {id:'napoleon-iii-accession',start:1852,name:{ko:'나폴레옹 3세 즉위',en:'Napoleon III becomes Emperor'},impact:{ko:'제2제정기의 대규모 도시 정비·살롱 제도·국가 후원이 파리의 미술 환경을 크게 바꾸었습니다.',en:'Second Empire urban renewal, the Salon system, and state patronage profoundly reshaped Paris’s art world.'}},
@@ -2487,16 +2495,19 @@ const atlasHistoricalEvents = [
   {id:'generative-ai',start:2022,name:{ko:'생성형 AI의 대중화',en:'Generative AI mainstreaming'},impact:{ko:'저작·창작·이미지 생산의 경계를 둘러싼 논의를 확장했습니다.',en:'Expanded debates over authorship, creativity, and image production.'}}
 ];
 const religiousThoughtEventIds = new Set(['reformation', 'council-trent', 'enlightenment', 'interpretation-of-dreams']);
+const scienceEconomyEventIds = new Set(['printing-press', 'italian-plague-1629', 'scientific-revolution', 'great-plague-london', 'marseille-plague', 'industrial-revolution', 'railway-expansion', 'camera-adoption', 'great-depression', 'moon-landing', 'covid-19']);
 const artEventIds = new Set(['royal-academy', 'herculaneum-excavations', 'pompeii-excavations', 'photography', 'paint-tube', 'great-exhibition', 'cinema', 'bauhaus', 'television', 'world-wide-web', 'smartphone', 'generative-ai']);
 const historicalEventCategory = event => {
-  if (['history', 'religion-thought', 'art'].includes(event?.category)) return event.category;
+  if (historicalEventCategories.includes(event?.category)) return event.category;
   if (religiousThoughtEventIds.has(event?.id)) return 'religion-thought';
+  if (scienceEconomyEventIds.has(event?.id)) return 'science-economy';
   if (artEventIds.has(event?.id)) return 'art';
   return 'history';
 };
 const historicalEventCategoryLabel = category => ({
   history: language === 'ko' ? '사회·정치' : 'Social & political',
   'religion-thought': language === 'ko' ? '종교·사상' : 'Religion & thought',
+  'science-economy': language === 'ko' ? '과학·경제' : 'Science & economy',
   art: language === 'ko' ? '미술사' : 'Art history'
 }[category] || category);
 function atlasEventGroups(start, end, category) {
@@ -2510,12 +2521,18 @@ function atlasEventGroups(start, end, category) {
 function atlasFitYearScale(start, end) {
   const scrollHeight = window.innerWidth <= 590
     ? window.innerHeight * .72
-    : window.innerHeight - 255;
+    : window.innerHeight - 76;
   const availableBarsHeight = Math.max(220, scrollHeight - 92);
   return availableBarsHeight / Math.max(movementMinimumRangeSpan, end - start);
 }
 function renderAtlasEvents(start, end, height, yearScale, category) {
   const groups = atlasEventGroups(start, end, category);
+  const columnWidth = atlasEventColumnWidth(groups);
+  const durationColors = ['#111111', '#c62828', '#1565c0', '#2e7d32'];
+  let durationIndex = [...atlasHistoricalEvents, ...customHistoricalEvents].filter(event => event.start >= movementAtlasStart && event.start < start && event.end > event.start && historicalEventCategory(event) === category).length;
+  return `<aside class="atlas-events" style="height:${height + 40}px;width:${columnWidth}px;--atlas-event-column-width:${columnWidth}px">${groups.map(([year, events]) => { const top = Math.max(0, year - start) * yearScale; return `<div class="atlas-event-group ${events.length > 1 ? 'same-year' : ''}" style="top:${top}px"><div class="atlas-event-labels">${events.map(event => { const endYear = Math.min(end, event.end || event.start), hasDuration = event.end && event.end > event.start, duration = hasDuration ? `<span class="atlas-event-duration" style="height:${Math.max(6, (endYear - event.start) * yearScale)}px;--atlas-event-duration-color:${durationColors[durationIndex++ % durationColors.length]}"></span>` : ''; const years = hasDuration ? `${event.start}–${event.end}` : event.start; const impact = loc(event.impact) || ''; return `<button class="atlas-event-label" type="button" data-event-wiki="${esc(event.wiki || event.name?.en || event.name?.ko || '')}" title="${esc(impact)}">${esc(loc(event.name))} (${years})${duration}</button>`; }).join('')}</div>${events.length > 1 ? '<span class="atlas-event-bracket"></span>' : ''}<span class="atlas-event-link"></span></div>`; }).join('')}</aside>`;
+}
+function atlasEventColumnWidth(groups) {
   const measure = document.createElement('canvas').getContext('2d');
   if (measure) measure.font = '10px "Noto Sans KR", sans-serif';
   const longestLabel = groups.flatMap(([, events]) => events).reduce((width, event) => {
@@ -2523,9 +2540,8 @@ function renderAtlasEvents(start, end, height, yearScale, category) {
     const label = `${loc(event.name)} (${years})`;
     return Math.max(width, measure ? measure.measureText(label).width : label.length * 9);
   }, 0);
-  // Keep the event column legible without allowing one unusually long label to dominate the chart.
-  const columnWidth = Math.max(180, Math.min(360, Math.ceil(longestLabel + 48)));
-  return `<aside class="atlas-events" style="height:${height + 40}px;width:${columnWidth}px;--atlas-event-column-width:${columnWidth}px">${groups.map(([year, events]) => { const top = Math.max(0, year - start) * yearScale; return `<div class="atlas-event-group ${events.length > 1 ? 'same-year' : ''}" style="top:${top}px"><div class="atlas-event-labels">${events.map(event => { const endYear = Math.min(end, event.end || event.start), duration = event.end && event.end > event.start ? `<span class="atlas-event-duration" style="height:${Math.max(6, (endYear - event.start) * yearScale)}px"></span>` : ''; const years = event.end && event.end > event.start ? `${event.start}–${event.end}` : event.start; const impact = loc(event.impact) || ''; return `<button class="atlas-event-label" type="button" data-event-wiki="${esc(event.wiki || event.name?.en || event.name?.ko || '')}" title="${esc(impact)}">${esc(loc(event.name))} (${years})${duration}</button>`; }).join('')}</div>${events.length > 1 ? '<span class="atlas-event-bracket"></span>' : ''}<span class="atlas-event-link"></span></div>`; }).join('')}</aside>`;
+  // Leave only a small left inset after reserving the label padding and the century-side link gap.
+  return Math.max(48, Math.ceil(longestLabel + 24));
 }
 function clippedMovement(item, start, end) {
   const clippedStart = Math.max(start, item.start);
@@ -2547,15 +2563,15 @@ function openHistoricalEventEditor() {
     return;
   }
   const addLabel = language === 'ko' ? '중요 사건 추가' : 'Add important event', nameLabel = language === 'ko' ? '사건 이름' : 'Event name', startLabel = language === 'ko' ? '시작 연도' : 'Start year', endLabel = language === 'ko' ? '종료 연도 (선택)' : 'End year (optional)', categoryLabel = language === 'ko' ? '사건 분류' : 'Event category', saveLabel = language === 'ko' ? '추가하고 저장' : 'Add and save';
-  historicalEventDialog.innerHTML = `<form method="dialog" class="event-editor-form"><button class="close" type="button">×</button><p class="eyebrow">HISTORICAL EVENTS</p><h2>${addLabel}</h2><label><span>${nameLabel}</span><input name="name" required></label><label><span>${categoryLabel}</span><select name="category">${['history', 'religion-thought', 'art'].map(category => `<option value="${category}">${historicalEventCategoryLabel(category)}</option>`).join('')}</select></label><label><span>${startLabel}</span><input name="start" type="number" min="-500" max="2026" required></label><label><span>${endLabel}</span><input name="end" type="number" min="-500" max="2026"></label><button class="save" type="submit">${saveLabel}</button><div class="custom-event-list">${customHistoricalEvents.map(event => `<div><span>${esc(loc(event.name))} · ${historicalEventCategoryLabel(historicalEventCategory(event))} (${event.start}${event.end ? `–${event.end}` : ''})</span><button type="button" data-delete-event="${esc(event.id)}">×</button></div>`).join('') || `<p>${language === 'ko' ? '추가한 사건이 없습니다.' : 'No custom events yet.'}</p>`}</div></form>`;
+  historicalEventDialog.innerHTML = `<form method="dialog" class="event-editor-form"><button class="close" type="button">×</button><p class="eyebrow">HISTORICAL EVENTS</p><h2>${addLabel}</h2><label><span>${nameLabel}</span><input name="name" required></label><label><span>${categoryLabel}</span><select name="category">${historicalEventCategories.map(category => `<option value="${category}">${historicalEventCategoryLabel(category)}</option>`).join('')}</select></label><label><span>${startLabel}</span><input name="start" type="number" min="-500" max="2026" required></label><label><span>${endLabel}</span><input name="end" type="number" min="-500" max="2026"></label><button class="save" type="submit">${saveLabel}</button><div class="custom-event-list">${customHistoricalEvents.map(event => `<div><span>${esc(loc(event.name))} · ${historicalEventCategoryLabel(historicalEventCategory(event))} (${event.start}${event.end ? `–${event.end}` : ''})</span><button type="button" data-delete-event="${esc(event.id)}">×</button></div>`).join('') || `<p>${language === 'ko' ? '추가한 사건이 없습니다.' : 'No custom events yet.'}</p>`}</div></form>`;
   historicalEventDialog.querySelector('.close').onclick = () => historicalEventDialog.close();
   historicalEventDialog.querySelectorAll('[data-delete-event]').forEach(button => button.onclick = async () => { customHistoricalEvents = customHistoricalEvents.filter(event => event.id !== button.dataset.deleteEvent); await saveArtistsNow(); openHistoricalEventEditor(); });
-  historicalEventDialog.querySelector('form').onsubmit = async event => { event.preventDefault(); const form = new FormData(event.currentTarget), name = String(form.get('name') || '').trim(), category = String(form.get('category') || 'history'), start = Number(form.get('start')), end = Number(form.get('end')) || null; if (!name || !['history', 'religion-thought', 'art'].includes(category) || !start || (end && end < start)) return; customHistoricalEvents.push({id:`custom-event-${Date.now()}`,name:{ko:name,en:name},category,start,end}); await saveArtistsNow(); historicalEventDialog.close(); renderMovementAtlas(); };
+  historicalEventDialog.querySelector('form').onsubmit = async event => { event.preventDefault(); const form = new FormData(event.currentTarget), name = String(form.get('name') || '').trim(), category = String(form.get('category') || 'history'), start = Number(form.get('start')), end = Number(form.get('end')) || null; if (!name || !historicalEventCategories.includes(category) || !start || (end && end < start)) return; customHistoricalEvents.push({id:`custom-event-${Date.now()}`,name:{ko:name,en:name},category,start,end}); await saveArtistsNow(); historicalEventDialog.close(); renderMovementAtlas(); };
   historicalEventDialog.showModal();
 }
 function renderMovementAtlas() {
   timeline.classList.remove('artist-timeline-panel');
-  movementView = normalizeMovementView(movementView);
+  movementView = normalizeMovementView({...movementView, start: movementAtlasStart, end: movementAtlasEnd});
   const start = movementView.start;
   const end = movementView.end;
   const countryEnd = Math.min(movementCountryEnd,end);
@@ -2583,8 +2599,12 @@ function renderMovementAtlas() {
   })).filter(country => country.movements.length) : [];
   const columns = countryColumns;
   const widthFor = column => { const lanes = Math.max(1, ...pack(column.movements).map(item => item.lane + 1)); return lanes * 96 + 16; };
+  const eventGroups = showHistoricalEvents ? atlasEventGroups(start, countryEnd, eventCategory) : [];
+  const eventColumnWidth = showHistoricalEvents ? atlasEventColumnWidth(eventGroups) : 0;
   const eventColumn = showHistoricalEvents ? renderAtlasEvents(start, countryEnd, height, yearScale, eventCategory) : '';
-  const chartColumns = `${showHistoricalEvents ? 'max-content ' : ''}74px ${columns.map(column => `${widthFor(column)}px`).join(' ')}`;
+  const centuryStickyLeft = showHistoricalEvents ? eventColumnWidth + movementChartGap : 0;
+  const chartColumns = `${showHistoricalEvents ? `${eventColumnWidth}px ` : ''}${movementCenturyAxisWidth}px ${columns.map(column => `${widthFor(column)}px`).join(' ')}`;
+  const chartStickyStyle = `--atlas-century-sticky-left:${centuryStickyLeft}px;grid-template-columns:${chartColumns}`;
   const column = country => {
     const entries = pack(country.movements);
     const lanes = Math.max(1, ...entries.map(item => item.lane + 1));
@@ -2597,24 +2617,24 @@ function renderMovementAtlas() {
   const sharedItems = shared?.movements?.length && sharedEnd > sharedStart ? shared.movements.map(item => clippedMovement(item,sharedStart,sharedEnd)).filter(Boolean) : [];
   const sharedEntries = pack(sharedItems);
   const sharedLanes = Math.max(1, ...sharedEntries.map(item => item.lane + 1));
+  const sharedEventGroups = showHistoricalEvents ? atlasEventGroups(sharedStart, sharedEnd, eventCategory) : [];
+  const sharedEventColumnWidth = showHistoricalEvents ? atlasEventColumnWidth(sharedEventGroups) : 0;
   const sharedEvents = showHistoricalEvents ? renderAtlasEvents(sharedStart, sharedEnd, sharedHeight, yearScale, eventCategory) : '';
-  const sharedBox = sharedEntries.length ? `<div class="atlas-shared-chart" style="grid-template-columns:${showHistoricalEvents ? 'max-content ' : ''}74px ${sharedLanes * 96 + 16}px">${sharedEvents}${axis(sharedStart, sharedEnd, sharedHeight)}<section class="atlas-country atlas-shared-country" style="min-width:${sharedLanes * 96 + 16}px"><div class="atlas-bars" style="height:${sharedHeight}px">${atlasCenturyGrid(sharedStart, sharedEnd, sharedHeight)}${sharedEntries.map(item => bar(item, sharedStart, sharedEnd)).join('')}</div></section></div>` : '';
+  const sharedCenturyStickyLeft = showHistoricalEvents ? sharedEventColumnWidth + movementChartGap : 0;
+  const sharedBox = sharedEntries.length ? `<div class="atlas-shared-chart" style="--atlas-century-sticky-left:${sharedCenturyStickyLeft}px;grid-template-columns:${showHistoricalEvents ? `${sharedEventColumnWidth}px ` : ''}${movementCenturyAxisWidth}px ${sharedLanes * 96 + 16}px">${sharedEvents}${axis(sharedStart, sharedEnd, sharedHeight)}<section class="atlas-country atlas-shared-country" style="min-width:${sharedLanes * 96 + 16}px"><div class="atlas-bars" style="height:${sharedHeight}px">${atlasCenturyGrid(sharedStart, sharedEnd, sharedHeight)}${sharedEntries.map(item => bar(item, sharedStart, sharedEnd)).join('')}</div></section></div>` : '';
   const editEventsLabel = language === 'ko' ? '역사 사건 추가' : 'Add historical event';
   const eventEditorButton = `<button class="atlas-event-editor" type="button">${editEventsLabel}</button>`;
   const toggleEventsLabel = showHistoricalEvents ? (language === 'ko' ? '역사 사건 숨기기' : 'Hide historical events') : (language === 'ko' ? '역사 사건 보기' : 'Show historical events');
-  const eventCategoryControls = `<section class="movement-event-category-controls" aria-label="${language === 'ko' ? '역사 사건 분류 선택' : 'Historical event category'}"><p>${language === 'ko' ? '표시할 사건 분류' : 'Event category to show'}</p><div>${['history', 'religion-thought', 'art'].map(category => `<button type="button" class="movement-event-category${eventCategory === category ? ' active' : ''}" data-event-category="${category}" aria-pressed="${eventCategory === category}">${historicalEventCategoryLabel(category)}</button>`).join('')}</div></section>`;
+  const eventCategoryControls = `<section class="movement-event-category-controls" aria-label="${language === 'ko' ? '역사 사건 분류 선택' : 'Historical event category'}"><p>${language === 'ko' ? '표시할 사건 분류' : 'Event category to show'}</p><div>${historicalEventCategories.map(category => `<button type="button" class="movement-event-category${eventCategory === category ? ' active' : ''}" data-event-category="${category}" aria-pressed="${eventCategory === category}">${historicalEventCategoryLabel(category)}</button>`).join('')}</div></section>`;
   const sidebarActions = $('#movement-sidebar-actions');
   const selectedCountryCount = countryOptions.filter(country => movementView.countries.includes(country.id)).length;
   const countryControls = `<section class="movement-country-controls" aria-label="${language === 'ko' ? '국가 선택' : 'Country selection'}"><p>${language === 'ko' ? `국가 선택 ${selectedCountryCount}개` : `Countries ${selectedCountryCount}`}</p><div class="atlas-country-actions"><button type="button" data-country-select-all>${language === 'ko' ? '전체 선택' : 'Select all'}</button><button type="button" data-country-clear-all>${language === 'ko' ? '전체 해제' : 'Clear all'}</button></div><div class="atlas-country-options">${countryOptions.map(country => `<div class="atlas-country-option"><label><input type="checkbox" value="${esc(country.id)}" ${movementView.countries.includes(country.id) ? 'checked' : ''}>${esc(loc(country.name))}</label></div>`).join('')}</div></section>`;
   if (sidebarActions) sidebarActions.innerHTML = `<button class="atlas-event-toggle" type="button">${toggleEventsLabel}</button>${eventCategoryControls}${eventEditorButton}${countryControls}`;
-  const rangeText = `${yearLabel(start)}–${yearLabel(end)}`;
-  const periodControls = `<fieldset class="atlas-period-control"><legend>${language === 'ko' ? '기간' : 'Period'}</legend><div class="atlas-period-sliders"><span class="atlas-period-min">${movementAtlasMinimum}</span><label aria-label="${language === 'ko' ? '시작 연도' : 'Start year'}"><input class="atlas-period-start" type="range" min="${movementAtlasMinimum}" max="${movementAtlasEnd}" step="1" value="${start}"></label><label aria-label="${language === 'ko' ? '끝 연도' : 'End year'}"><input class="atlas-period-end" type="range" min="${movementAtlasMinimum}" max="${movementAtlasEnd}" step="1" value="${end}"></label><span class="atlas-period-now">${language === 'ko' ? '현재' : 'Today'}</span></div><div class="atlas-period-entry"><label><span>${language === 'ko' ? '시작입력' : 'Start input'}</span><input class="atlas-period-start-value" type="number" min="${movementAtlasMinimum}" max="${movementAtlasEnd - movementMinimumRangeSpan}" step="1" value="${start}" aria-label="${language === 'ko' ? '시작 연도 입력' : 'Start year input'}"></label><div class="atlas-period-selected"><span>${language === 'ko' ? '선택된 연도' : 'Selected years'}</span><p class="atlas-range">${rangeText}</p></div><label><span>${language === 'ko' ? '끝입력' : 'End input'}</span><input class="atlas-period-end-value" type="number" min="${movementAtlasMinimum + movementMinimumRangeSpan}" max="${movementAtlasEnd}" step="1" value="${end}" aria-label="${language === 'ko' ? '끝 연도 입력' : 'End year input'}"></label></div></fieldset>`;
-  const densityControls = `<fieldset class="atlas-density-control"><legend>${language === 'ko' ? '표시 밀도' : 'Display density'}</legend><div class="atlas-density-row"><span>1x</span><input class="atlas-density-slider" type="range" min="${movementDensityMinimum}" max="${movementDensityMaximum}" step="0.1" value="${density}" aria-label="${language === 'ko' ? '표시 밀도' : 'Display density'}"><span>${movementDensityMaximum}x</span><output>${density.toFixed(1)}x</output></div></fieldset>`;
   const artistListLabel = language === 'ko' ? '화가' : 'Artists';
   const techniquesLabel = language === 'ko' ? '기법·용어' : 'Techniques';
   const topicsLabel = language === 'ko' ? '주제-사건' : 'Topics & Events';
   const pageNav = `<nav class="page-nav-actions" aria-label="${language === 'ko' ? '탭 이동' : 'Tab navigation'}"><button class="atlas-nav-button movement-nav-artists" type="button">${artistListLabel}</button><button class="atlas-nav-button movement-nav-artist-list" type="button">${language === 'ko' ? '화가 리스트' : 'Artist List'}</button><button class="atlas-nav-button movement-nav-country-art" type="button">${language === 'ko' ? '국가별 미술' : 'Art by Country'}</button><button class="atlas-nav-button movement-nav-techniques" type="button">${techniquesLabel}</button><button class="atlas-nav-button movement-nav-topics" type="button">${topicsLabel}</button><button class="rules-check-button" type="button" data-rules-check hidden></button></nav>`;
-  timeline.innerHTML = `${pageNav}<div class="atlas-controls">${periodControls}${densityControls}</div><div class="atlas-scroll">${columns.length ? `<div class="atlas-chart" style="grid-template-columns:${chartColumns}">${eventColumn}${axis(start, countryEnd, height)}${columns.map(column).join('')}</div>` : ''}${sharedBox ? `${columns.length ? '<div class="atlas-shared-divider"></div>' : ''}${sharedBox}` : ''}${!columns.length && !sharedBox ? `<p class="empty-timeline">${language === 'ko' ? '비교할 나라를 하나 이상 선택해 주세요.' : 'Select at least one country.'}</p>` : ''}</div>`;
+  timeline.innerHTML = `${pageNav}<div class="atlas-scroll">${columns.length ? `<div class="atlas-chart" style="${chartStickyStyle}">${eventColumn}${axis(start, countryEnd, height)}${columns.map(column).join('')}</div>` : ''}${sharedBox ? `${columns.length ? '<div class="atlas-shared-divider"></div>' : ''}${sharedBox}` : ''}${!columns.length && !sharedBox ? `<p class="empty-timeline">${language === 'ko' ? '비교할 나라를 하나 이상 선택해 주세요.' : 'Select at least one country.'}</p>` : ''}</div>`;
   timeline.querySelector('.movement-nav-artists')?.addEventListener('click', openArtistListPage);
   timeline.querySelector('.movement-nav-artist-list')?.addEventListener('click', openPainterListPage);
   timeline.querySelector('.movement-nav-country-art')?.addEventListener('click', openCountryArtPage);
@@ -2626,66 +2646,27 @@ function renderMovementAtlas() {
   sidebarCountryControls?.querySelector('[data-country-clear-all]')?.addEventListener('click', () => { movementView.countries = []; rerenderCountries(); });
   sidebarCountryControls?.querySelectorAll('.atlas-country-options input').forEach(input => input.onchange = () => { movementView.countries = input.checked ? [...new Set([...movementView.countries, input.value])] : movementView.countries.filter(id => id !== input.value); rerenderCountries(); });
   sidebarActions?.querySelectorAll('[data-event-category]').forEach(button => button.addEventListener('click', () => { movementView.eventCategory = button.dataset.eventCategory; persistMovementView(); renderMovementAtlas(); }));
-  const startInput = timeline.querySelector('.atlas-period-start');
-  const endInput = timeline.querySelector('.atlas-period-end');
-  const startValueInput = timeline.querySelector('.atlas-period-start-value');
-  const endValueInput = timeline.querySelector('.atlas-period-end-value');
-  const previewPeriod = changed => {
-    let nextStart = Number(changed === 'start-text' ? startValueInput.value : startInput.value);
-    let nextEnd = Number(changed === 'end-text' ? endValueInput.value : endInput.value);
-    if (!Number.isFinite(nextStart)) nextStart = movementView.start;
-    if (!Number.isFinite(nextEnd)) nextEnd = movementView.end;
-    if (nextEnd - nextStart < movementMinimumRangeSpan) {
-      if (changed === 'start' || changed === 'start-text') {
-        nextEnd = Math.min(movementAtlasEnd, nextStart + movementMinimumRangeSpan);
-        if (nextEnd - nextStart < movementMinimumRangeSpan) nextStart = nextEnd - movementMinimumRangeSpan;
-      } else {
-        nextStart = Math.max(movementAtlasMinimum, nextEnd - movementMinimumRangeSpan);
-        if (nextEnd - nextStart < movementMinimumRangeSpan) nextEnd = nextStart + movementMinimumRangeSpan;
-      }
-    }
-    nextStart = Math.min(movementAtlasEnd - movementMinimumRangeSpan, Math.max(movementAtlasMinimum, nextStart));
-    nextEnd = Math.max(movementAtlasMinimum + movementMinimumRangeSpan, Math.min(movementAtlasEnd, nextEnd));
-    if (nextEnd - nextStart < movementMinimumRangeSpan) {
-      if (changed === 'start' || changed === 'start-text') nextStart = nextEnd - movementMinimumRangeSpan;
-      else nextEnd = nextStart + movementMinimumRangeSpan;
-    }
-    startInput.value = String(nextStart);
-    endInput.value = String(nextEnd);
-    startValueInput.value = String(nextStart);
-    endValueInput.value = String(nextEnd);
-    const rangeOutput = timeline.querySelector('.atlas-period-control .atlas-range');
-    if (rangeOutput) rangeOutput.textContent = `${yearLabel(nextStart)}–${yearLabel(nextEnd)}`;
-    return {nextStart,nextEnd};
-  };
-  const commitPeriod = changed => {
-    const {nextStart,nextEnd} = previewPeriod(changed);
-    if (movementView.start === nextStart && movementView.end === nextEnd) return;
-    movementView.start = nextStart;
-    movementView.end = nextEnd;
-    movementView = normalizeMovementView(movementView);
+  const movementAtlasScroll = timeline.querySelector('.atlas-scroll');
+  const setMovementDensity = (nextDensity, anchorClientY) => {
+    if (!movementAtlasScroll) return;
+    const rect = movementAtlasScroll.getBoundingClientRect();
+    const anchorOffsetY = anchorClientY - rect.top;
+    const anchorContentY = (movementAtlasScroll.scrollTop + anchorOffsetY) / Math.max(density, .001);
+    movementView.density = Math.round(Math.max(movementDensityMinimum, Math.min(movementDensityMaximum, nextDensity)) * 100) / 100;
     persistMovementView();
     renderMovementAtlas();
+    requestAnimationFrame(() => {
+      const nextScroll = timeline.querySelector('.atlas-scroll');
+      if (!nextScroll) return;
+      nextScroll.scrollTop = Math.max(0, anchorContentY * movementView.density - anchorOffsetY);
+    });
   };
-  startInput?.addEventListener('input', () => previewPeriod('start'));
-  endInput?.addEventListener('input', () => previewPeriod('end'));
-  startInput?.addEventListener('change', () => commitPeriod('start'));
-  endInput?.addEventListener('change', () => commitPeriod('end'));
-  startValueInput?.addEventListener('change', () => commitPeriod('start-text'));
-  endValueInput?.addEventListener('change', () => commitPeriod('end-text'));
-  startValueInput?.addEventListener('keydown', event => { if (event.key === 'Enter') commitPeriod('start-text'); });
-  endValueInput?.addEventListener('keydown', event => { if (event.key === 'Enter') commitPeriod('end-text'); });
-  const densityInput = timeline.querySelector('.atlas-density-slider');
-  const densityOutput = timeline.querySelector('.atlas-density-row output');
-  densityInput?.addEventListener('input', () => {
-    if (densityOutput) densityOutput.textContent = `${Number(densityInput.value).toFixed(1)}x`;
-  });
-  densityInput?.addEventListener('change', () => {
-    movementView.density = Number(densityInput.value);
-    movementView = normalizeMovementView(movementView);
-    persistMovementView();
-    renderMovementAtlas();
-  });
+  movementAtlasScroll?.addEventListener('wheel', event => {
+    if (!event.deltaY) return;
+    event.preventDefault();
+    const factor = event.deltaY < 0 ? 1.15 : 1 / 1.15;
+    setMovementDensity(movementView.density * factor, event.clientY);
+  }, {passive:false});
   timeline.querySelectorAll('.atlas-country-heading[data-country-id]').forEach(heading => {
     let startX = 0;
     const reset = () => { heading.classList.remove('dragging'); heading.style.transform = ''; };
@@ -2718,14 +2699,15 @@ function renderMovementAtlas() {
   const atlasScroll = timeline.querySelector('.atlas-scroll');
   let atlasPan = null;
   atlasScroll.addEventListener('pointerdown', event => {
-    if (event.button !== 0 || !event.target.closest('.atlas-country') || event.target.closest('.atlas-country-heading, .movement-bar')) return;
-    atlasPan = {pointerId:event.pointerId, startY:event.clientY, scrollTop:atlasScroll.scrollTop};
+    if (event.button !== 0 || event.target.closest('.atlas-country-heading, .movement-bar, .atlas-event-label, button, a, input, select, textarea, label')) return;
+    atlasPan = {pointerId:event.pointerId, startX:event.clientX, startY:event.clientY, scrollLeft:atlasScroll.scrollLeft, scrollTop:atlasScroll.scrollTop};
     atlasScroll.setPointerCapture(event.pointerId);
     atlasScroll.classList.add('atlas-panning');
     event.preventDefault();
   });
   atlasScroll.addEventListener('pointermove', event => {
     if (!atlasPan || event.pointerId !== atlasPan.pointerId) return;
+    atlasScroll.scrollLeft = atlasPan.scrollLeft - (event.clientX - atlasPan.startX);
     atlasScroll.scrollTop = atlasPan.scrollTop - (event.clientY - atlasPan.startY);
   });
   const stopAtlasPan = event => {
