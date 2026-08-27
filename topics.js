@@ -13,7 +13,7 @@ const requestedUHangulMode = new URLSearchParams(location.search).get('uhangul')
 const initialUHangulMode = ['original','uhangul','korean'].includes(requestedUHangulMode) ? requestedUHangulMode : 'korean';
 let uHangulMode = initialUHangulMode;
 function pageNavUrl(url){const target=new URL(url,location.href);target.searchParams.set('uhangul',uHangulMode);return target.href;}
-function openNamedPage(url,targetName){const opened=window.open('',targetName);if(!opened)return;try{if(opened.location.href==='about:blank')opened.location.href=url;}catch(_){opened.location.href=url;}if(typeof opened.focus==='function')opened.focus();}
+function openNamedPage(url,targetName){const opened=window.open('',targetName);if(!opened)return;try{if(opened.location.href!==url)opened.location.href=url;}catch(_){opened.location.href=url;}if(typeof opened.focus==='function')opened.focus();}
 function syncPageNavLinks(){document.querySelectorAll('[data-page-nav-url]').forEach(link=>{link.href=pageNavUrl(link.dataset.pageNavUrl);if(link.dataset.pageNavTarget)link.target=link.dataset.pageNavTarget;});}
 function handlePageNavClick(event){const link=event.target.closest('[data-page-nav-url][data-page-nav-target]');if(!link)return;event.preventDefault();openNamedPage(pageNavUrl(link.dataset.pageNavUrl),link.dataset.pageNavTarget);}
 document.addEventListener('click',handlePageNavClick);

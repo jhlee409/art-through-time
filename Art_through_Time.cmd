@@ -54,13 +54,27 @@ if defined ART_ATLAS_PID (
   start "Art Through Time" http://localhost:4173/?login=1
   exit /b 0
 )
-start "Art Through Time Server" cmd /c "cd /d ""%~dp0"" && node server.js 1>> logs\art-atlas-server.out.log 2>> logs\art-atlas-server.err.log"
+powershell -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -Command "Start-Process -WindowStyle Hidden -FilePath cmd.exe -ArgumentList '/c cd /d ""%~dp0"" && node server.js 1>> logs\art-atlas-server.out.log 2>> logs\art-atlas-server.err.log'"
 set /a ART_THROUGH_TIME_WAIT=0
 :wait_for_art_through_time_server
 curl.exe -fsS http://localhost:4173/api/access >nul 2>&1 && goto open_art_through_time
 set /a ART_THROUGH_TIME_WAIT+=1
-if %ART_THROUGH_TIME_WAIT% GEQ 10 goto open_art_through_time
+if %ART_THROUGH_TIME_WAIT% GEQ 10 goto art_through_time_server_failed
 timeout /t 1 /nobreak >nul
 goto wait_for_art_through_time_server
 :open_art_through_time
 start "Art Through Time" http://localhost:4173/?login=1
+exit /b 0
+
+:art_through_time_server_failed
+echo.
+echo Art Through Time server did not respond on port 4173.
+echo Check logs\art-atlas-server.err.log for the latest server error.
+if exist "logs\art-atlas-server.err.log" (
+  echo.
+  echo ---- Recent server errors ----
+  powershell -NoProfile -Command "Get-Content -Path 'logs\art-atlas-server.err.log' -Tail 20"
+  echo ------------------------------
+)
+pause
+exit /b 1

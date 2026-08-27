@@ -21,6 +21,7 @@ const detailImageHeightStorageKey = 'art-atlas-detail-image-height-v1';
 const detailPanelWidthStorageKey = 'art-atlas-detail-panel-width-v1';
 const artistSidebarWidthStorageKey = 'art-atlas-artist-sidebar-width-v1';
 const movementSidebarWidthStorageKey = 'art-atlas-movement-sidebar-width-v1';
+const countryArtSidebarWidthStorageKey = 'art-atlas-country-art-sidebar-width-v1';
 const lastPositionStorageKey = 'art-atlas-last-position-v1';
 const favoriteWorksStorageKey = 'art-atlas-favorite-works-v1';
 const accessSessionStorageKey = 'art-atlas-access-session-v1';
@@ -40,8 +41,8 @@ const movementDensityMinimum = 1;
 const movementDensityMaximum = 4;
 const countryArtDensityMinimum = .25;
 const countryArtDensityMaximum = 1;
-const countryArtLabelColumnWidth = 234;
-const countryArtEventRailHeight = 108;
+const countryArtLabelColumnWidth = 211;
+const countryArtEventRailHeight = 216;
 const highResolutionMinimumWidth = 1600;
 const artistImportedWorkLimit = 60;
 const sharedMovementId = 'global-contemporary';
@@ -49,7 +50,7 @@ const artistMovementFallbacks = { Q104884:{ko:'독일 낭만주의',en:'German R
 const isMovementPopup = startupParams.get('movementPopup') === '1';
 const isCountryArtPage = startupParams.get('countryArt') === '1';
 const isArtistRelationsPage = startupParams.get('artistRelations') === '1';
-window.name = isArtistRelationsPage ? 'artThroughTimeArtistRelations' : (isCountryArtPage ? 'artThroughTimeCountryArt' : (isMovementPopup ? 'artThroughTimeMovements' : 'artThroughTimeArtists'));
+const isPainterListPage = startupParams.get('artistList') === '1';
 const forceLogin = startupParams.get('login') === '1';
 if (forceLogin) {
   try { sessionStorage.removeItem(accessSessionStorageKey); } catch (_) {}
@@ -64,8 +65,14 @@ function clearLoginRequestFromUrl() {
 const requestedUHangulMode = startupParams.get('uhangul');
 const initialUHangulMode = ['uhangul','korean','original'].includes(requestedUHangulMode) ? requestedUHangulMode : 'korean';
 const requestedArtistId = startupParams.get('artist') || startupParams.get('artistId');
-if (isMovementPopup) document.body.classList.add('movement-popup');
+const isArtistListPage = startupParams.get('artists') === '1';
+const isDefaultMovementPage = !isMovementPopup && !isCountryArtPage && !isArtistRelationsPage && !isPainterListPage && !isArtistListPage && !requestedArtistId;
+const isExplicitMovementPage = isMovementPopup && !isCountryArtPage && !isArtistRelationsPage && !isPainterListPage;
+const isMovementPage = isExplicitMovementPage || isDefaultMovementPage;
+window.name = isArtistRelationsPage ? 'artThroughTimeArtistRelations' : (isPainterListPage ? 'artThroughTimeArtistList' : (isCountryArtPage ? 'artThroughTimeCountryArt' : (isMovementPage ? 'artThroughTimeMovements' : 'artThroughTimeArtists')));
+if (isMovementPage) document.body.classList.add('movement-popup');
 if (isCountryArtPage) document.body.classList.add('country-art-page');
+if (isPainterListPage) document.body.classList.add('country-art-page', 'artist-list-page');
 if (isArtistRelationsPage) document.body.classList.add('artist-relations-page');
 const legacyMovementCountryIds = ['france','germany','netherlands','italy','united-kingdom','spain','russia','sweden','denmark','greece','united-states'];
 const preExpansionMovementCountryIds = ['france','germany','switzerland','netherlands','italy','united-kingdom','spain','russia','sweden','denmark','greece','united-states'];
@@ -79,7 +86,7 @@ let selectedId = localStorage.getItem('art-atlas-selected');
 let requestedArtistMissing = false;
 // The root screen opens with the movement atlas. Explicit artist, relation,
 // country, and movement-popup URLs still select their requested view later.
-let viewMode = isArtistRelationsPage ? 'artist-relations' : (isCountryArtPage ? 'country-art' : 'movements');
+let viewMode = isArtistRelationsPage ? 'artist-relations' : (isPainterListPage ? 'artist-list' : (isCountryArtPage ? 'country-art' : (isMovementPage ? 'movements' : 'timeline')));
 let movementCountries = [];
 let movementView = parseMovementView();
 let countryArtView = parseCountryArtView();
@@ -165,12 +172,19 @@ setDetailPanelWidth(detailPanelWidth);
 function setupArtistSidebarResize() {
   const shell = $('.app-shell');
   const sidebar = $('.sidebar');
-  const sidebarWidthStorageKey = isMovementPopup ? movementSidebarWidthStorageKey : artistSidebarWidthStorageKey;
+  const isCountryArtLayoutPage = isCountryArtPage || isPainterListPage;
+  const sidebarWidthStorageKey = isCountryArtLayoutPage ? countryArtSidebarWidthStorageKey : (isMovementPage ? movementSidebarWidthStorageKey : artistSidebarWidthStorageKey);
   if (!shell || !sidebar) return;
   const mobileQuery = window.matchMedia('(max-width: 590px)');
   const compactQuery = window.matchMedia('(max-width: 840px)');
-  const minWidth = () => compactQuery.matches ? 245 : 312;
-  const maxWidth = () => Math.max(minWidth(), Math.min(compactQuery.matches ? 430 : 560, Math.floor(window.innerWidth * (compactQuery.matches ? 0.52 : 0.44))));
+  const minWidth = () => compactQuery.matches ? (isCountryArtLayoutPage ? 221 : 245) : (isCountryArtLayoutPage ? 281 : 312);
+  const maxWidth = () => Math.max(
+    minWidth(),
+    Math.min(
+      compactQuery.matches ? (isCountryArtLayoutPage ? 387 : 430) : (isCountryArtLayoutPage ? 504 : 560),
+      Math.floor(window.innerWidth * (compactQuery.matches ? (isCountryArtLayoutPage ? 0.468 : 0.52) : (isCountryArtLayoutPage ? 0.396 : 0.44))),
+    ),
+  );
   const clearWidth = () => {
     sidebar.style.removeProperty('width');
     sidebar.style.removeProperty('max-width');
@@ -191,7 +205,7 @@ function setupArtistSidebarResize() {
   handle.className = 'sidebar-resize-handle';
   handle.setAttribute('role', 'separator');
   handle.setAttribute('aria-orientation', 'vertical');
-  handle.setAttribute('aria-label', isMovementPopup ? (language === 'ko' ? '사조 목록 너비 조절' : 'Resize movement list') : (language === 'ko' ? '화가 목록 너비 조절' : 'Resize artist list'));
+  handle.setAttribute('aria-label', isMovementPage ? (language === 'ko' ? '사조 목록 너비 조절' : 'Resize movement list') : (language === 'ko' ? '화가 목록 너비 조절' : 'Resize artist list'));
   sidebar.append(handle);
   handle.addEventListener('pointerdown', event => {
     if (event.button !== 0 || mobileQuery.matches) return;
@@ -536,6 +550,62 @@ function countryInk(country) {
   return 'hsl(' + hue + ' 34% 28%)';
 }
 const esc = (text='') => String(text).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+function ordinalSuffix(number) {
+  const value = Math.abs(Number(number) || 0);
+  const mod100 = value % 100;
+  if (mod100 >= 11 && mod100 <= 13) return 'th';
+  return {1:'st', 2:'nd', 3:'rd'}[value % 10] || 'th';
+}
+function timelineCenturyStart(year) {
+  const value = Number(year);
+  return Number.isFinite(value) ? Math.floor(value / 100) * 100 : null;
+}
+function timelineCenturyLabelFromStart(start) {
+  const value = Number(start);
+  if (!Number.isFinite(value)) return language === 'ko' ? '연도 미상' : 'Undated';
+  const century = Math.floor(value / 100) + 1;
+  return language === 'ko' ? `${century}세기` : `${century}${ordinalSuffix(century)} century`;
+}
+function timelineCenturyBands(start, end, yearScale) {
+  const first = timelineCenturyStart(start);
+  if (first === null) return '';
+  const axisEnd = Math.max(start + 1, end);
+  const bands = [];
+  let index = 0;
+  for (let year = first; year < axisEnd; year += 100) {
+    const clippedStart = Math.max(start, year);
+    const clippedEnd = Math.min(axisEnd, year + 100);
+    if (clippedEnd <= clippedStart) {
+      index++;
+      continue;
+    }
+    const left = (clippedStart - start) * yearScale;
+    const width = Math.max(1, (clippedEnd - clippedStart) * yearScale);
+    bands.push(`<span class="timeline-century-band ${index % 2 ? '' : 'timeline-century-band--tinted'}" style="left:${left}px;width:${width}px"><span>${esc(timelineCenturyLabelFromStart(year))}</span></span>`);
+    index++;
+  }
+  return bands.join('');
+}
+function timelineVerticalCenturyBands(start, end, yearScale, className='timeline-century-y-band') {
+  const first = timelineCenturyStart(start);
+  if (first === null) return '';
+  const axisEnd = Math.max(start + 1, end);
+  const bands = [];
+  let index = 0;
+  for (let year = first; year < axisEnd; year += 100) {
+    const clippedStart = Math.max(start, year);
+    const clippedEnd = Math.min(axisEnd, year + 100);
+    if (clippedEnd <= clippedStart) {
+      index++;
+      continue;
+    }
+    const top = (clippedStart - start) * yearScale;
+    const height = Math.max(1, (clippedEnd - clippedStart) * yearScale);
+    bands.push(`<span class="${className} ${index % 2 ? '' : `${className}--tinted`}" style="top:${top}px;height:${height}px"><span>${esc(timelineCenturyLabelFromStart(year))}</span></span>`);
+    index++;
+  }
+  return bands.join('');
+}
 function uHangulArtistAttributes(artist, displayName) {
   const original = artist?.name?.en || '';
   const korean = artistStandardKoreanName(artist);
@@ -558,7 +628,7 @@ function openNamedPage(url, targetName) {
   const opened = window.open('', targetName);
   if (!opened) return;
   try {
-    if (opened.location.href === 'about:blank') opened.location.href = url;
+    if (opened.location.href !== url) opened.location.href = url;
   } catch (_) {
     opened.location.href = url;
   }
@@ -568,11 +638,40 @@ function generatedCatalogueFile(artistOrResult={}) {
   return `data/generated/${artistOrResult.qid ? `qid-${artistOrResult.qid}` : artistOrResult.id}.json`;
 }
 function openArtistListPage() {
-  openNamedPage(uHangulModeUrl('index.html'), 'artThroughTimeArtists');
+  const pageUrl = new URL('index.html', location.href);
+  pageUrl.searchParams.delete('artistList');
+  pageUrl.searchParams.delete('countryArt');
+  pageUrl.searchParams.delete('movementPopup');
+  pageUrl.searchParams.delete('artistRelations');
+  pageUrl.searchParams.set('artists', '1');
+  openNamedPage(uHangulModeUrl(pageUrl.href), 'artThroughTimeArtists');
+}
+function openPainterListPage() {
+  if (!isPainterListPage) {
+    const pageUrl = new URL('index.html', location.href);
+    pageUrl.searchParams.delete('artists');
+    pageUrl.searchParams.delete('artist');
+    pageUrl.searchParams.delete('artistId');
+    pageUrl.searchParams.delete('countryArt');
+    pageUrl.searchParams.delete('movementPopup');
+    pageUrl.searchParams.delete('artistRelations');
+    pageUrl.searchParams.set('artistList', '1');
+    openNamedPage(uHangulModeUrl(pageUrl.href), 'artThroughTimeArtistList');
+    return;
+  }
+  countryArtView = normalizeCountryArtView(countryArtView);
+  persistCountryArtView();
+  viewMode = 'artist-list';
+  closeDetail();
+  render();
 }
 function openArtistRelationsPage(artist) {
   if (!artist?.id) return;
   const pageUrl = new URL('index.html', location.href);
+  pageUrl.searchParams.delete('artists');
+  pageUrl.searchParams.delete('artistList');
+  pageUrl.searchParams.delete('countryArt');
+  pageUrl.searchParams.delete('movementPopup');
   pageUrl.searchParams.set('artistRelations', '1');
   pageUrl.searchParams.set('artist', artist.id);
   openNamedPage(uHangulModeUrl(pageUrl.href), 'artThroughTimeArtistRelations');
@@ -585,10 +684,13 @@ function openTopicsPage() {
 }
 function openCountryArtPage() {
   if (!isCountryArtPage) {
-    const pageUrl = new URL(location.href);
+    const pageUrl = new URL('index.html', location.href);
+    pageUrl.searchParams.delete('artists');
+    pageUrl.searchParams.delete('artistList');
     pageUrl.searchParams.delete('artist');
     pageUrl.searchParams.delete('artistId');
     pageUrl.searchParams.delete('movementPopup');
+    pageUrl.searchParams.delete('artistRelations');
     pageUrl.searchParams.set('countryArt', '1');
     openNamedPage(uHangulModeUrl(pageUrl.href), 'artThroughTimeCountryArt');
     return;
@@ -1094,7 +1196,7 @@ async function chooseAccessMode() {
       currentUserRole='viewer';
       currentUserIsAdmin=false;
       adminSessionToken='';
-      if (isMovementPopup) return;
+      if (isExplicitMovementPage) return;
     }
   }
   if (requestedArtistId && !forceLogin) {
@@ -1105,7 +1207,7 @@ async function chooseAccessMode() {
     enterViewerMode();
     return;
   }
-  if (isMovementPopup) {
+  if (isExplicitMovementPage) {
     enterViewerMode();
     return;
   }
@@ -1241,12 +1343,12 @@ async function loadData() {
   const requestedArtist = requestedArtistId ? artists.find(a => a.id === requestedArtistId) : null;
   if (requestedArtist) {
     selectedId = requestedArtistId;
-    if (!isArtistRelationsPage) viewMode = 'timeline';
+    if (!isArtistRelationsPage && !isCountryArtPage && !isPainterListPage && !isMovementPage) viewMode = 'timeline';
     localStorage.setItem('art-atlas-selected', selectedId);
   } else if (requestedArtistId) {
     requestedArtistMissing = true;
     selectedId = null;
-    if (!isArtistRelationsPage) viewMode = 'timeline';
+    if (!isArtistRelationsPage && !isCountryArtPage && !isPainterListPage && !isMovementPage) viewMode = 'timeline';
     localStorage.removeItem('art-atlas-selected');
   }
   if (!requestedArtistMissing && (!selectedId || !artists.some(a => a.id === selectedId))) selectedId = artists[0]?.id;
@@ -1643,9 +1745,9 @@ async function hydrateArtistProfile(artist) {
 function renderText() {
   document.documentElement.lang = language;
   document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n); });
-  if (isMovementPopup || isCountryArtPage || isArtistRelationsPage) {
+  if (isMovementPage || isCountryArtPage || isPainterListPage || isArtistRelationsPage) {
     const title = document.querySelector('.sidebar-page-title');
-    if (title) title.textContent = isArtistRelationsPage ? (language === 'ko' ? '화가 관계도' : 'Artist Relations') : (isCountryArtPage ? (language === 'ko' ? '국가별 미술' : 'Art by Country') : t('movementAtlas'));
+    if (title) title.textContent = isArtistRelationsPage ? (language === 'ko' ? '화가 관계도' : 'Artist Relations') : (isPainterListPage ? (language === 'ko' ? '화가 리스트' : 'Artist List') : (isCountryArtPage ? (language === 'ko' ? '국가별 미술' : 'Art by Country') : t('movementAtlas')));
   }
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => { el.placeholder = t(el.dataset.i18nPlaceholder); });
   document.querySelectorAll('[data-display-mode]').forEach(button => {
@@ -1662,6 +1764,7 @@ function renderText() {
   }
   $('#movement-atlas-button')?.classList.toggle('active', viewMode === 'movements');
   $('#country-art-button')?.classList.toggle('active', viewMode === 'country-art');
+  $('#artist-list-button')?.classList.toggle('active', viewMode === 'artist-list');
 }
 function artistFacetValues(artist, key) { return Array.isArray(artist?.[key]) ? artist[key] : []; }
 function artistMatchesFacetFilters(artist) {
@@ -1945,7 +2048,20 @@ function renderTimeline() {
   const slideshowHelp = language === 'ko' ? '전체 화면 슬라이드 쇼 시작 · 5초마다 다음 작품' : 'Start fullscreen slideshow · next artwork every 5 seconds';
   const headerActions = '';
   const timelineHeader = `<header class="timeline-sticky-header"><p class="eyebrow">${t('timeline')}</p><div class="timeline-title-row"><h1 class="timeline-title">${displayName}</h1><div class="timeline-title-actions">${headerActions}</div></div>${currentUserIsAdmin ? `<form class="artist-link-entry hidden"><input type="url" inputmode="url" placeholder="https://" aria-label="${esc(linkInputLabel)}" required><button type="submit">${esc(confirmLinkLabel)}</button></form>` : ''}<p class="life">${years(artist)}${nationalityLabel ? ` · ${esc(nationalityLabel)}` : ''}${artistMovement ? ` · ${artistMovementLabel}` : ''}</p></header>`;
-  const standardTimelineMarkup = `<div class="timeline">${works.length ? [...worksByYear.entries()].map(([year, group]) => `<div class="timeline-row"><span class="year">${year}</span><span class="node"></span><div class="artworks-at-year">${group.map(card).join('')}</div></div>`).join('') : `<p class="empty-timeline">${t('noWork')}</p>`}</div>`;
+  const standardYearGroups = new Map();
+  [...worksByYear.entries()].forEach(([year, group]) => {
+    const centuryStart = timelineCenturyStart(year);
+    const key = centuryStart === null ? 'undated' : String(centuryStart);
+    standardYearGroups.set(key, [...(standardYearGroups.get(key) || []), [year, group]]);
+  });
+  const standardTimelineSections = [...standardYearGroups.entries()]
+    .sort(([left], [right]) => {
+      if (left === 'undated') return 1;
+      if (right === 'undated') return -1;
+      return Number(left) - Number(right);
+    })
+    .map(([period, rows]) => `<section class="timeline-century-section"><h2 class="timeline-century-label">${esc(period === 'undated' ? (language === 'ko' ? '연도 미상' : 'Undated') : timelineCenturyLabelFromStart(Number(period)))}</h2><div class="timeline-century-rows">${rows.map(([year, group]) => `<div class="timeline-row"><span class="node"></span><span class="timeline-work-year">${esc(year)}</span><div class="artworks-at-year">${group.map(card).join('')}</div></div>`).join('')}</div></section>`);
+  const standardTimelineMarkup = `<div class="timeline timeline-century-axis">${works.length ? standardTimelineSections.join('') : `<p class="empty-timeline">${t('noWork')}</p>`}</div>`;
   const leonardoTimelineMarkup = (() => {
     const galleryLabel = language === 'ko' ? '전체 작품' : 'All works';
     const chronologyLabel = language === 'ko' ? '시기별 연표' : 'By period';
@@ -1956,12 +2072,17 @@ function renderTimeline() {
     const periodGroups = new Map();
     works.forEach(work => {
       const year = Number(work.year);
-      const decade = Math.floor(year / 10) * 10;
-      const label = Number.isFinite(year) ? (language === 'ko' ? `${decade}년대` : `${decade}s`) : (language === 'ko' ? '연도 미상' : 'Undated');
-      periodGroups.set(label, [...(periodGroups.get(label) || []), work]);
+      const centuryStart = timelineCenturyStart(year);
+      const key = centuryStart === null ? 'undated' : String(centuryStart);
+      periodGroups.set(key, [...(periodGroups.get(key) || []), work]);
+    });
+    const sortedPeriodGroups = [...periodGroups.entries()].sort(([left], [right]) => {
+      if (left === 'undated') return 1;
+      if (right === 'undated') return -1;
+      return Number(left) - Number(right);
     });
     const gallery = `<div class="leonardo-work-grid">${works.map(card).join('')}</div>`;
-    const chronology = `<div class="leonardo-period-list">${[...periodGroups.entries()].map(([period, group]) => `<section class="leonardo-period"><h2>${esc(period)}</h2><div class="leonardo-work-grid">${group.map(card).join('')}</div></section>`).join('')}</div>`;
+    const chronology = `<div class="leonardo-period-list artist-century-timeline">${sortedPeriodGroups.map(([period, group]) => `<section class="leonardo-period artist-century-section"><h2>${esc(period === 'undated' ? (language === 'ko' ? '연도 미상' : 'Undated') : timelineCenturyLabelFromStart(Number(period)))}</h2><div class="leonardo-work-grid">${group.map(card).join('')}</div></section>`).join('')}</div>`;
     const slideshowButton = (scope, label) => `<button class="start-slideshow leonardo-section-slideshow" type="button" data-slideshow-scope="${scope}" aria-label="${esc(label)}" title="${esc(label)}"><span>▶</span><span>${esc(t('slideshow'))}</span></button>`;
     const layoutControls = `<div class="leonardo-layout-controls" role="group" aria-label="${esc(language === 'ko' ? '작품 보기 방식' : 'Artwork view')}"><button class="leonardo-layout-button${leonardoLayout === 'gallery' ? ' active' : ''}" type="button" data-leonardo-layout="gallery">${esc(galleryLabel)}</button><button class="leonardo-layout-button${leonardoLayout === 'chronology' ? ' active' : ''}" type="button" data-leonardo-layout="chronology">${esc(chronologyLabel)}</button></div><p class="leonardo-layout-guide">${esc(guide)}</p>`;
     const canDragFeaturedWorks = currentUserIsAdmin && leonardoFeaturedWorks.length > 1;
@@ -2417,10 +2538,8 @@ function renderMovementAtlas() {
     return [...movements].sort((a,b) => a.start - b.start).map(movement => { let lane = ends.findIndex(laneEnd => laneEnd < movement.start); if (lane < 0) lane = ends.length; ends[lane] = movement.end; return {...movement,lane}; });
   };
   const yearLabel = year => Number(year) < 0 ? `${Math.abs(year)} BCE` : (year === movementAtlasEnd ? (language === 'ko' ? '현대' : 'Today') : String(year));
-  const axis = (axisStart, axisEnd, axisHeight, step = atlasTickStep(axisStart,axisEnd)) => {
-    const ticks = []; for (let year = Math.ceil(axisStart / step) * step; year <= axisEnd; year += step) ticks.push(year);
-    return `<aside class="atlas-axis" style="height:${axisHeight + 40}px"><span class="atlas-axis-line"></span>${ticks.map(year => `<span class="atlas-tick" style="top:${(year-axisStart)*yearScale}px">${yearLabel(year)}</span>`).join('')}</aside>`;
-  };
+  const axis = (axisStart, axisEnd, axisHeight) => `<aside class="atlas-axis atlas-century-axis" style="height:${axisHeight}px">${timelineVerticalCenturyBands(axisStart, axisEnd, yearScale, 'atlas-century-band')}</aside>`;
+  const atlasCenturyGrid = (axisStart, axisEnd, axisHeight) => `<div class="atlas-century-grid" aria-hidden="true" style="height:${axisHeight}px">${timelineVerticalCenturyBands(axisStart, axisEnd, yearScale, 'atlas-century-grid-band')}</div>`;
   const bar = (item, axisStart, axisEnd) => { const top=Math.max(0,item.start-axisStart)*yearScale, barHeight=Math.max(18,(Math.min(axisEnd,item.end)-Math.max(axisStart,item.start))*yearScale), left=8 + item.lane * 96, years=`${yearLabel(item.sourceStart ?? item.start)}–${yearLabel(item.sourceEnd ?? item.end)}`, movementName=item.name.en || item.name.ko || ''; return `<div class="movement-bar" title="${esc(loc(item.name))} · ${years}" data-movement-explanation="${esc(movementName)}" data-movement-label="${esc(loc(item.name))}" style="top:${top}px;height:${barHeight}px;left:${left}px;width:90px;--movement-color:${esc(item.color)}"><span>${esc(loc(item.name))}</span><small>${years}</small></div>`; };
   const countryColumns = start < countryEnd ? movementView.countries.map(id => countryById.get(id)).filter(Boolean).map(country => ({
     ...country,
@@ -2434,7 +2553,7 @@ function renderMovementAtlas() {
     const entries = pack(country.movements);
     const lanes = Math.max(1, ...entries.map(item => item.lane + 1));
     const draggable = ` data-country-id="${esc(country.id)}"`;
-    return `<section class="atlas-country"${draggable} style="min-width:${lanes * 96 + 16}px"><h2 class="atlas-country-heading"${draggable}>${esc(loc(country.name))}</h2><div class="atlas-bars" style="height:${height}px">${entries.map(item => bar(item, start, countryEnd)).join('')}</div></section>`;
+    return `<section class="atlas-country"${draggable} style="min-width:${lanes * 96 + 16}px"><h2 class="atlas-country-heading"${draggable}>${esc(loc(country.name))}</h2><div class="atlas-bars" style="height:${height}px">${atlasCenturyGrid(start, countryEnd, height)}${entries.map(item => bar(item, start, countryEnd)).join('')}</div></section>`;
   };
   const sharedStart = Math.max(start,movementCountryEnd);
   const sharedEnd = end;
@@ -2443,7 +2562,7 @@ function renderMovementAtlas() {
   const sharedEntries = pack(sharedItems);
   const sharedLanes = Math.max(1, ...sharedEntries.map(item => item.lane + 1));
   const sharedEvents = showHistoricalEvents ? renderAtlasEvents(sharedStart, sharedEnd, sharedHeight, yearScale, eventCategory) : '';
-  const sharedBox = sharedEntries.length ? `<div class="atlas-shared-chart" style="grid-template-columns:${showHistoricalEvents ? 'max-content ' : ''}74px ${sharedLanes * 96 + 16}px">${sharedEvents}${axis(sharedStart, sharedEnd, sharedHeight)}<section class="atlas-country atlas-shared-country" style="min-width:${sharedLanes * 96 + 16}px"><div class="atlas-bars" style="height:${sharedHeight}px">${sharedEntries.map(item => bar(item, sharedStart, sharedEnd)).join('')}</div></section></div>` : '';
+  const sharedBox = sharedEntries.length ? `<div class="atlas-shared-chart" style="grid-template-columns:${showHistoricalEvents ? 'max-content ' : ''}74px ${sharedLanes * 96 + 16}px">${sharedEvents}${axis(sharedStart, sharedEnd, sharedHeight)}<section class="atlas-country atlas-shared-country" style="min-width:${sharedLanes * 96 + 16}px"><div class="atlas-bars" style="height:${sharedHeight}px">${atlasCenturyGrid(sharedStart, sharedEnd, sharedHeight)}${sharedEntries.map(item => bar(item, sharedStart, sharedEnd)).join('')}</div></section></div>` : '';
   const editEventsLabel = language === 'ko' ? '역사 사건 추가' : 'Add historical event';
   const eventEditorButton = `<button class="atlas-event-editor" type="button">${editEventsLabel}</button>`;
   const toggleEventsLabel = showHistoricalEvents ? (language === 'ko' ? '역사 사건 숨기기' : 'Hide historical events') : (language === 'ko' ? '역사 사건 보기' : 'Show historical events');
@@ -2458,9 +2577,10 @@ function renderMovementAtlas() {
   const artistListLabel = language === 'ko' ? '화가' : 'Artists';
   const techniquesLabel = language === 'ko' ? '기법·용어' : 'Techniques';
   const topicsLabel = language === 'ko' ? '주제-사건' : 'Topics & Events';
-  const pageNav = `<nav class="page-nav-actions" aria-label="${language === 'ko' ? '탭 이동' : 'Tab navigation'}"><button class="atlas-nav-button movement-nav-artists" type="button">${artistListLabel}</button><button class="atlas-nav-button movement-nav-country-art" type="button">${language === 'ko' ? '국가별 미술' : 'Art by Country'}</button><button class="atlas-nav-button movement-nav-techniques" type="button">${techniquesLabel}</button><button class="atlas-nav-button movement-nav-topics" type="button">${topicsLabel}</button><button class="rules-check-button" type="button" data-rules-check hidden></button></nav>`;
+  const pageNav = `<nav class="page-nav-actions" aria-label="${language === 'ko' ? '탭 이동' : 'Tab navigation'}"><button class="atlas-nav-button movement-nav-artists" type="button">${artistListLabel}</button><button class="atlas-nav-button movement-nav-artist-list" type="button">${language === 'ko' ? '화가 리스트' : 'Artist List'}</button><button class="atlas-nav-button movement-nav-country-art" type="button">${language === 'ko' ? '국가별 미술' : 'Art by Country'}</button><button class="atlas-nav-button movement-nav-techniques" type="button">${techniquesLabel}</button><button class="atlas-nav-button movement-nav-topics" type="button">${topicsLabel}</button><button class="rules-check-button" type="button" data-rules-check hidden></button></nav>`;
   timeline.innerHTML = `${pageNav}<div class="atlas-controls">${periodControls}${densityControls}</div><div class="atlas-scroll">${columns.length ? `<div class="atlas-chart" style="grid-template-columns:${chartColumns}">${eventColumn}${axis(start, countryEnd, height)}${columns.map(column).join('')}</div>` : ''}${sharedBox ? `${columns.length ? '<div class="atlas-shared-divider"></div>' : ''}${sharedBox}` : ''}${!columns.length && !sharedBox ? `<p class="empty-timeline">${language === 'ko' ? '비교할 나라를 하나 이상 선택해 주세요.' : 'Select at least one country.'}</p>` : ''}</div>`;
   timeline.querySelector('.movement-nav-artists')?.addEventListener('click', openArtistListPage);
+  timeline.querySelector('.movement-nav-artist-list')?.addEventListener('click', openPainterListPage);
   timeline.querySelector('.movement-nav-country-art')?.addEventListener('click', openCountryArtPage);
   timeline.querySelector('.movement-nav-techniques')?.addEventListener('click', openTechniquesPage);
   timeline.querySelector('.movement-nav-topics')?.addEventListener('click', openTopicsPage);
@@ -2661,6 +2781,18 @@ const countryArtEventCategoryLabel = category => ({
   'art-institution': language === 'ko' ? '미술 제도' : 'Art institutions',
   'technology-economy': language === 'ko' ? '기술·경제' : 'Technology & economy'
 }[category] || category);
+const countryArtWarOutcomeLabel = outcome => ({
+  victory: language === 'ko' ? '승전' : 'victory',
+  defeat: language === 'ko' ? '패전' : 'defeat',
+  unclear: language === 'ko' ? '불명확' : 'unclear'
+}[outcome] || (language === 'ko' ? '불명확' : 'unclear'));
+function countryArtEventKind(event) {
+  return String(event?.eventKind || event?.kind || '').trim().toLowerCase();
+}
+function countryArtWarOutcome(event) {
+  const outcome = String(event?.countryOutcome || event?.warOutcome || '').trim().toLowerCase();
+  return ['victory', 'defeat'].includes(outcome) ? outcome : 'unclear';
+}
 function countryArtEventsFor(countryId, start, end) {
   return (countryArtEvents?.countries?.[countryId] || [])
     .map(event => ({...event,start:Number(event.start),end:event.end === undefined || event.end === null ? null : Number(event.end),importance:Number(event.importance) || 1}))
@@ -2693,11 +2825,20 @@ function renderCountryArtEventRail(countryId, start, end, chartWidth, yearScale,
     const left = Math.max(0, (clippedStart - start) * yearScale);
     const width = Math.max(2, (clippedEnd - clippedStart) * yearScale);
     const lane = categoryIndex(event.category) % countryArtEventCategories.length;
-    const top = 17 + lane * 14;
+    const top = 34 + lane * 28;
     const years = Number.isFinite(event.end) && event.end > event.start ? `${yearLabel(event.start)}–${yearLabel(event.end)}` : yearLabel(event.start);
-    const title = `${loc(event.name)} · ${years}${loc(event.impact) ? `\n${loc(event.impact)}` : ''}`;
+    const isWarEvent = countryArtEventKind(event) === 'war';
+    const warOutcome = countryArtWarOutcome(event);
+    const title = `${loc(event.name)} · ${years}${isWarEvent ? ` · ${countryArtWarOutcomeLabel(warOutcome)}` : ''}${loc(event.impact) ? `\n${loc(event.impact)}` : ''}`;
     const duration = Number.isFinite(event.end) && event.end > event.start ? `<span class="country-art-event-duration" style="width:${width}px"></span>` : '';
-    return `<button class="country-art-event country-art-event-importance-${Math.min(3, Math.max(1, event.importance))}" type="button" data-country-event-wiki="${esc(event.wiki || '')}" data-country-event-name="${esc(event.name?.en || event.name?.ko || '')}" data-country-event-category="${esc(event.category || '')}" style="left:${left}px;top:${top}px" title="${esc(title)}" aria-label="${esc(title)}">${duration}<span class="country-art-event-marker"></span><span class="country-art-event-label"><strong>${esc(loc(event.name))}</strong><small>${esc(years)}</small>${mode === 'expanded' && loc(event.impact) ? `<em>${esc(loc(event.impact))}</em>` : ''}</span></button>`;
+    const classes = [
+      'country-art-event',
+      `country-art-event-importance-${Math.min(3, Math.max(1, event.importance))}`,
+      isWarEvent ? 'country-art-event-war' : '',
+      isWarEvent ? `country-art-war-outcome-${warOutcome}` : ''
+    ].filter(Boolean).join(' ');
+    const outcomeLine = isWarEvent ? `<small class="country-art-war-outcome-label">${esc(countryArtWarOutcomeLabel(warOutcome))}</small>` : '';
+    return `<button class="${classes}" type="button" data-country-event-wiki="${esc(event.wiki || '')}" data-country-event-name="${esc(event.name?.en || event.name?.ko || '')}" data-country-event-category="${esc(event.category || '')}" data-country-event-kind="${esc(countryArtEventKind(event))}" data-country-war-outcome="${esc(isWarEvent ? warOutcome : '')}" style="left:${left}px;top:${top}px" title="${esc(title)}" aria-label="${esc(title)}">${duration}<span class="country-art-event-marker"></span><span class="country-art-event-label"><strong>${esc(loc(event.name))}</strong><small>${esc(years)}</small>${outcomeLine}${mode === 'expanded' && loc(event.impact) ? `<em>${esc(loc(event.impact))}</em>` : ''}</span></button>`;
   }).join('');
   const empty = language === 'ko' ? '등록된 국가별 사건 없음' : 'No country events';
   return `<div class="country-art-event-corner">${language === 'ko' ? '사건' : 'Events'}</div><div class="country-art-event-rail country-art-event-mode-${mode}" style="width:${chartWidth}px;height:${countryArtEventRailHeight}px">${legend}${eventButtons || `<p>${empty}</p>`}</div>`;
@@ -2798,7 +2939,8 @@ function showCountryMovementBackgroundPanel(anchor, country, movement) {
     openCountryArtEventWikipedia(button.dataset.countryEventWiki, button.dataset.countryEventName);
   }));
 }
-function renderCountryArt() {
+function renderCountryArt(options = {}) {
+  const artistListMode = Boolean(options.artistListMode);
   closeCountryMovementBackgroundPanel();
   timeline.classList.remove('artist-timeline-panel');
   countryArtView = normalizeCountryArtView(countryArtView);
@@ -2814,7 +2956,8 @@ function renderCountryArt() {
   // The row and bar match the standardized card's maximum height, including list padding and bar borders.
   const movementRowHeight = Math.ceil((window.innerWidth / 14) * .8) + 54;
   // Country heading (about 37px) plus the time axis and all movement rows.
-  const chartContentHeight = 76 + countryArtEventRailHeight + entries.length * movementRowHeight;
+  const eventRailHeight = artistListMode ? 0 : countryArtEventRailHeight;
+  const chartContentHeight = 76 + eventRailHeight + entries.length * movementRowHeight;
   // Fit the vertical set of rows first. The timeline's base width is then
   // expanded inversely to that default zoom, so the full date range reaches
   // the right edge of the monitor without changing work-card proportions.
@@ -2837,21 +2980,29 @@ function renderCountryArt() {
   const chartWidth = baseTimeWidth;
   const yearScale = chartWidth / (end - start);
   const chartContentWidth = countryArtLabelColumnWidth + chartWidth;
-  const workSources = new Map(entries.map(entry => [entry, countryArtWorksFor(country, entry)]));
+  const workSources = artistListMode ? new Map() : new Map(entries.map(entry => [entry, countryArtWorksFor(country, entry)]));
   const preferredWorksByImage = new Map();
-  entries.forEach(entry => {
+  if (!artistListMode) entries.forEach(entry => {
     workSources.get(entry).works.forEach(work => {
       const preferred = preferredWorksByImage.get(work.src);
       if (!preferred || work.descriptionLength < preferred.work.descriptionLength) preferredWorksByImage.set(work.src, {entry, work});
     });
   });
-  const displayedWorksByEntry = new Map(entries.map(entry => [entry, workSources.get(entry).works.filter(work => preferredWorksByImage.get(work.src)?.entry === entry)]));
-  const axis = `<div class="country-art-axis-corner">${language === 'ko' ? '사조' : 'Movement'}</div><div class="country-art-time-axis" style="width:${chartWidth}px"><span class="country-art-time-axis-line"></span>${Array.from({length:Math.floor((end-start)/atlasTickStep(start,end))+2},(_,index) => Math.ceil(start/atlasTickStep(start,end))*atlasTickStep(start,end)+index*atlasTickStep(start,end)).filter(year => year <= end).map(year => `<span class="country-art-time-tick" style="left:${(year-start)*yearScale}px">${yearLabel(year)}</span>`).join('')}</div>`;
-  const eventRail = renderCountryArtEventRail(country.id, start, end, chartWidth, yearScale, density, yearLabel);
+  const displayedWorksByEntry = artistListMode ? new Map() : new Map(entries.map(entry => [entry, workSources.get(entry).works.filter(work => preferredWorksByImage.get(work.src)?.entry === entry)]));
+  const centuryBands = timelineCenturyBands(start, end, yearScale);
+  const centuryGrid = `<div class="country-art-century-grid" aria-hidden="true" style="left:${countryArtLabelColumnWidth}px;width:${chartWidth}px;height:${chartContentHeight}px">${centuryBands}</div>`;
+  const axis = `<div class="country-art-axis-corner">${language === 'ko' ? '사조' : 'Movement'}</div><div class="country-art-time-axis" style="width:${chartWidth}px">${centuryBands}</div>`;
+  const eventRail = artistListMode ? '' : renderCountryArtEventRail(country.id, start, end, chartWidth, yearScale, density, yearLabel);
+  const frozenMovementLabels = entries.map(entry => `<div class="country-art-movement-label" style="height:${movementRowHeight}px"><strong>${esc(loc(entry.name))}</strong><small>${yearLabel(entry.sourceStart ?? entry.start)}–${yearLabel(entry.sourceEnd ?? entry.end)}</small></div>`).join('');
+  const frozenEventCorner = artistListMode ? '' : `<div class="country-art-event-corner">${language === 'ko' ? '사건' : 'Events'}</div>`;
+  const frozenLabels = `<div class="country-art-frozen-labels" aria-hidden="true" style="width:${Math.ceil(countryArtLabelColumnWidth * density)}px"><div class="country-art-frozen-labels-layer" style="width:${countryArtLabelColumnWidth}px;transform:scale(${density})"><div class="country-art-country-name" style="width:${countryArtLabelColumnWidth}px;min-width:${countryArtLabelColumnWidth}px">${esc(loc(country.name))}</div><div class="country-art-frozen-chart" style="width:${countryArtLabelColumnWidth}px"><div class="country-art-axis-corner">${language === 'ko' ? '사조' : 'Movement'}</div>${frozenEventCorner}${frozenMovementLabels}</div></div></div>`;
   const workMarkup = (entry) => {
-    const source = workSources.get(entry);
     const left = Math.max(0,entry.start-start)*yearScale;
     const barWidth = Math.max(92,(Math.min(end,entry.end)-Math.max(start,entry.start))*yearScale);
+    if (artistListMode) {
+      return `<div class="country-art-movement-label" style="height:${movementRowHeight}px"><strong>${esc(loc(entry.name))}</strong><small>${yearLabel(entry.sourceStart ?? entry.start)}–${yearLabel(entry.sourceEnd ?? entry.end)}</small></div><div class="country-art-time-row" style="width:${chartWidth}px;height:${movementRowHeight}px"><article class="country-art-movement artist-list-empty-movement" style="left:${left}px;width:${barWidth}px;height:${movementRowHeight}px;--movement-color:${esc(entry.color)}"><div class="country-art-work-list country-art-work-list-empty" aria-hidden="true"></div></article></div>`;
+    }
+    const source = workSources.get(entry);
     const works = displayedWorksByEntry.get(entry).map(work => `<figure class="country-art-work"><img src="${esc(work.src)}" alt="${esc(work.alt)}" loading="lazy"><figcaption>${esc(work.title)}${work.year ? `<small>${esc(work.year)}</small>` : ''}</figcaption></figure>`).join('');
     const empty = source.state === 'loading' ? (language === 'ko' ? '대표작 자료를 불러오는 중' : 'Loading representative works') : (language === 'ko' ? '대표작 자료 없음' : 'No representative work available');
     const backgroundButton = renderCountryMovementBackgroundButton(country.id, entry);
@@ -2860,10 +3011,14 @@ function renderCountryArt() {
   const countryLabel = language === 'ko' ? '국가 선택' : 'Country selection';
   const sidebarActions = $('#movement-sidebar-actions');
   if (sidebarActions) sidebarActions.innerHTML = `<section class="country-art-selector" aria-label="${countryLabel}"><p>${countryLabel}</p><div>${countryOptions.map(option => `<label><input type="radio" name="country-art-country" value="${esc(option.id)}" ${option.id === country.id ? 'checked' : ''}>${esc(loc(option.name))}</label>`).join('')}</div></section>`;
-  const pageNav = `<nav class="page-nav-actions" aria-label="${language === 'ko' ? '탭 이동' : 'Tab navigation'}"><button class="atlas-nav-button country-art-nav-artists" type="button">${language === 'ko' ? '화가' : 'Artists'}</button><button class="atlas-nav-button country-art-nav-movements" type="button">${language === 'ko' ? '사조' : 'Movements'}</button><button class="atlas-nav-button country-art-nav-techniques" type="button">${language === 'ko' ? '기법·용어' : 'Techniques'}</button><button class="atlas-nav-button country-art-nav-topics" type="button">${language === 'ko' ? '주제-사건' : 'Topics & Events'}</button><button class="rules-check-button" type="button" data-rules-check hidden></button></nav>`;
-  timeline.innerHTML = `${pageNav}<div class="atlas-scroll country-art-scroll"><div class="country-art-zoom-viewport" style="width:${Math.ceil(chartContentWidth * density)}px;height:${Math.ceil(chartContentHeight * density)}px"><div class="country-art-zoom-layer country-art-event-mode-${countryArtEventMode(density)}" style="width:${chartContentWidth}px;transform:scale(${density})"><div class="country-art-country-name" style="width:${countryArtLabelColumnWidth}px;min-width:${countryArtLabelColumnWidth}px">${esc(loc(country.name))}</div><div class="country-art-chart" style="width:${chartContentWidth}px;grid-template-columns:${countryArtLabelColumnWidth}px ${chartWidth}px">${axis}${eventRail}${entries.map(workMarkup).join('')}</div></div></div></div>`;
+  const painterListButton = artistListMode ? '' : `<button class="atlas-nav-button country-art-nav-artist-list" type="button">${language === 'ko' ? '화가 리스트' : 'Artist List'}</button>`;
+  const countryArtButton = artistListMode ? `<button class="atlas-nav-button country-art-nav-country-art" type="button">${language === 'ko' ? '국가별 미술' : 'Art by Country'}</button>` : '';
+  const pageNav = `<nav class="page-nav-actions" aria-label="${language === 'ko' ? '탭 이동' : 'Tab navigation'}"><button class="atlas-nav-button country-art-nav-artists" type="button">${language === 'ko' ? '화가' : 'Artists'}</button><button class="atlas-nav-button country-art-nav-movements" type="button">${language === 'ko' ? '사조' : 'Movements'}</button>${countryArtButton}${painterListButton}<button class="atlas-nav-button country-art-nav-techniques" type="button">${language === 'ko' ? '기법·용어' : 'Techniques'}</button><button class="atlas-nav-button country-art-nav-topics" type="button">${language === 'ko' ? '주제-사건' : 'Topics & Events'}</button><button class="rules-check-button" type="button" data-rules-check hidden></button></nav>`;
+  timeline.innerHTML = `${pageNav}<div class="atlas-scroll country-art-scroll">${frozenLabels}<div class="country-art-zoom-viewport" style="width:${Math.ceil(chartContentWidth * density)}px;height:${Math.ceil(chartContentHeight * density)}px"><div class="country-art-zoom-layer country-art-event-mode-${countryArtEventMode(density)}" style="width:${chartContentWidth}px;transform:scale(${density})"><div class="country-art-country-name" style="width:${countryArtLabelColumnWidth}px;min-width:${countryArtLabelColumnWidth}px">${esc(loc(country.name))}</div><div class="country-art-chart" style="width:${chartContentWidth}px;grid-template-columns:${countryArtLabelColumnWidth}px ${chartWidth}px">${centuryGrid}${axis}${eventRail}${entries.map(workMarkup).join('')}</div></div></div></div>`;
   timeline.querySelector('.country-art-nav-artists')?.addEventListener('click', openArtistListPage);
   timeline.querySelector('.country-art-nav-movements')?.addEventListener('click', openMovementAtlas);
+  timeline.querySelector('.country-art-nav-country-art')?.addEventListener('click', openCountryArtPage);
+  timeline.querySelector('.country-art-nav-artist-list')?.addEventListener('click', openPainterListPage);
   timeline.querySelector('.country-art-nav-techniques')?.addEventListener('click', openTechniquesPage);
   timeline.querySelector('.country-art-nav-topics')?.addEventListener('click', openTopicsPage);
   timeline.querySelectorAll('.country-art-event').forEach(button => button.addEventListener('click', event => {
@@ -2884,7 +3039,7 @@ function renderCountryArt() {
     countryArtView.country=input.value;
     countryArtResetZoomOnRender=true;
     persistCountryArtView();
-    renderCountryArt();
+    renderCountryArt(options);
   }));
   const openCountryArtMovementPreview = (source, clientX, clientY) => {
     document.querySelector('.country-art-movement-preview')?.remove();
@@ -2981,6 +3136,15 @@ function renderCountryArt() {
     });
   });
   const countryArtScroll = timeline.querySelector('.country-art-scroll');
+  const frozenLabelColumn = timeline.querySelector('.country-art-frozen-labels');
+  const syncFrozenLabelColumn = () => {
+    if (!frozenLabelColumn || !countryArtScroll) return;
+    const isActive = countryArtScroll.scrollLeft > 1 && countryArtScroll.scrollWidth > countryArtScroll.clientWidth + 1;
+    frozenLabelColumn.classList.toggle('country-art-frozen-labels-active', isActive);
+    countryArtScroll.classList.toggle('country-art-frozen-labels-active', isActive);
+  };
+  countryArtScroll?.addEventListener('scroll', syncFrozenLabelColumn, {passive:true});
+  syncFrozenLabelColumn();
   const setCountryArtDensity = (nextDensity, anchorClientX) => {
     const oldScale = yearScale * density;
     const rect = countryArtScroll.getBoundingClientRect();
@@ -2988,13 +3152,14 @@ function renderCountryArt() {
     const anchorYearOffset = (countryArtScroll.scrollLeft + anchorOffset) / oldScale;
     countryArtView.density = Math.round(Math.max(countryArtDensityMinimum, Math.min(countryArtDensityMaximum, nextDensity)) * 100) / 100;
     persistCountryArtView();
-    renderCountryArt();
+    renderCountryArt(options);
     requestAnimationFrame(() => {
       const nextScroll = timeline.querySelector('.country-art-scroll');
       if (!nextScroll) return;
       const nextAxis = nextScroll.querySelector('.country-art-time-axis');
       const nextScale = nextAxis ? (nextAxis.offsetWidth / (end - start)) * countryArtView.density : oldScale;
       nextScroll.scrollLeft = Math.max(0, anchorYearOffset * nextScale - anchorOffset);
+      nextScroll.dispatchEvent(new Event('scroll'));
     });
   };
   countryArtScroll?.addEventListener('wheel', event => {
@@ -3002,7 +3167,7 @@ function renderCountryArt() {
     event.preventDefault();
     setCountryArtDensity(countryArtView.density + (event.deltaY < 0 ? .05 : -.05), event.clientX);
   }, {passive:false});
-  const resetCountryArtZoom = () => { countryArtResetZoomOnRender=true; renderCountryArt(); };
+  const resetCountryArtZoom = () => { countryArtResetZoomOnRender=true; renderCountryArt(options); };
   countryArtScroll?.addEventListener('contextmenu', event => {
     event.preventDefault();
     document.querySelector('.country-art-zoom-menu')?.remove();
@@ -3048,7 +3213,7 @@ function renderCountryArt() {
 }
 function renderArtistRelations() {
   const artist = artists.find(item => item.id === selectedId);
-  const pageNav = `<nav class="page-nav-actions" aria-label="${language === 'ko' ? '탭 이동' : 'Tab navigation'}"><button class="atlas-nav-button artist-relations-nav-artists" type="button">${language === 'ko' ? '화가' : 'Artists'}</button><button class="atlas-nav-button artist-relations-nav-movements" type="button">${language === 'ko' ? '사조' : 'Movements'}</button><button class="atlas-nav-button artist-relations-nav-country" type="button">${language === 'ko' ? '국가별 미술' : 'Art by Country'}</button><button class="atlas-nav-button artist-relations-nav-techniques" type="button">${language === 'ko' ? '기법·용어' : 'Techniques'}</button><button class="atlas-nav-button artist-relations-nav-topics" type="button">${language === 'ko' ? '주제-사건' : 'Topics & Events'}</button><button class="rules-check-button" type="button" data-rules-check hidden></button></nav>`;
+  const pageNav = `<nav class="page-nav-actions" aria-label="${language === 'ko' ? '탭 이동' : 'Tab navigation'}"><button class="atlas-nav-button artist-relations-nav-artists" type="button">${language === 'ko' ? '화가' : 'Artists'}</button><button class="atlas-nav-button artist-relations-nav-movements" type="button">${language === 'ko' ? '사조' : 'Movements'}</button><button class="atlas-nav-button artist-relations-nav-country" type="button">${language === 'ko' ? '국가별 미술' : 'Art by Country'}</button><button class="atlas-nav-button artist-relations-nav-artist-list" type="button">${language === 'ko' ? '화가 리스트' : 'Artist List'}</button><button class="atlas-nav-button artist-relations-nav-techniques" type="button">${language === 'ko' ? '기법·용어' : 'Techniques'}</button><button class="atlas-nav-button artist-relations-nav-topics" type="button">${language === 'ko' ? '주제-사건' : 'Topics & Events'}</button><button class="rules-check-button" type="button" data-rules-check hidden></button></nav>`;
   if (!artist) {
     timeline.innerHTML = `${pageNav}<section class="artist-relations-empty"><h1>${esc(language === 'ko' ? '화가를 찾을 수 없습니다.' : 'Artist not found.')}</h1><p>${esc(language === 'ko' ? '화가 목록에서 연표 제목의 이름을 눌러 관계도를 다시 열어 주세요.' : 'Open the relationship map again from an artist timeline title.')}</p></section>`;
   } else {
@@ -3092,6 +3257,7 @@ function renderArtistRelations() {
   timeline.querySelector('.artist-relations-nav-artists')?.addEventListener('click', openArtistListPage);
   timeline.querySelector('.artist-relations-nav-movements')?.addEventListener('click', openMovementAtlas);
   timeline.querySelector('.artist-relations-nav-country')?.addEventListener('click', openCountryArtPage);
+  timeline.querySelector('.artist-relations-nav-artist-list')?.addEventListener('click', openPainterListPage);
   timeline.querySelector('.artist-relations-nav-techniques')?.addEventListener('click', openTechniquesPage);
   timeline.querySelector('.artist-relations-nav-topics')?.addEventListener('click', openTopicsPage);
   queueMicrotask(() => window.dispatchEvent(new Event('art-through-time-rules-check-refresh')));
@@ -3106,10 +3272,14 @@ function showRelationAgentAnswer(name='', answer='') {
   document.body.append(panel);
 }
 function openMovementAtlas() {
-  if (!isMovementPopup) {
-    const pageUrl = new URL(location.href);
+  if (!isMovementPage) {
+    const pageUrl = new URL('index.html', location.href);
+    pageUrl.searchParams.delete('artists');
+    pageUrl.searchParams.delete('artistList');
     pageUrl.searchParams.delete('artist');
     pageUrl.searchParams.delete('artistId');
+    pageUrl.searchParams.delete('artistRelations');
+    pageUrl.searchParams.delete('countryArt');
     pageUrl.searchParams.set('movementPopup', '1');
     openNamedPage(uHangulModeUrl(pageUrl.href), 'artThroughTimeMovements');
     return;
@@ -3714,7 +3884,7 @@ function openHistoricalEventWikipedia(name) {
   window.open(url, '_blank', 'noopener');
 }
 function closeDetail() { delete detail.dataset.movementDocumentUrl; detail.classList.remove('show'); $('.main-area').classList.remove('detail-open'); detail.innerHTML = placeholder(); setupDetailPanelResize(); }
-function render() { renderText(); renderList(); if (viewMode === 'movements') renderMovementAtlas(); else if (viewMode === 'country-art') renderCountryArt(); else if (viewMode === 'artist-relations') renderArtistRelations(); else renderTimeline(); closeDetail(); }
+function render() { renderText(); renderList(); if (viewMode === 'movements') renderMovementAtlas(); else if (viewMode === 'country-art') renderCountryArt(); else if (viewMode === 'artist-list') renderCountryArt({artistListMode:true}); else if (viewMode === 'artist-relations') renderArtistRelations(); else renderTimeline(); closeDetail(); }
 
 async function uploadLocalArtworkImage(artist, work, file) {
   if (!currentUserIsAdmin || !file) throw new Error(language === 'ko' ? '관리자 권한과 이미지 파일이 필요합니다.' : 'Administrator access and an image file are required.');
@@ -3884,6 +4054,7 @@ $('#sort').onchange = renderList;
 $('#artist-search').oninput = event => { artistSearchQuery = event.currentTarget.value.trim(); renderList(); };
 $('#movement-atlas-button')?.addEventListener('click', openMovementAtlas);
 $('#country-art-button')?.addEventListener('click', openCountryArtPage);
+$('#artist-list-button')?.addEventListener('click', openPainterListPage);
 $('#techniques-button')?.addEventListener('click', openTechniquesPage);
 $('#topics-button')?.addEventListener('click', openTopicsPage);
 $('#close-add-dialog').onclick = () => dialog.close();
@@ -4028,11 +4199,12 @@ document.addEventListener('click', event => {
 });
 $('#logout-button').onclick = logoutEverywhere;
 window.addEventListener('storage', event => {
-  if (event.key === countryArtDocumentRevisionStorageKey && isCountryArtPage) {
+  if (event.key === countryArtDocumentRevisionStorageKey && (isCountryArtPage || isPainterListPage)) {
     countryArtWorkCache.clear();
     document.querySelector('.country-art-movement-preview')?.remove();
     document.querySelector('.country-art-image-magnifier')?.remove();
     if (viewMode === 'country-art') renderCountryArt();
+    if (viewMode === 'artist-list') renderCountryArt({artistListMode:true});
   }
   if (event.key !== 'art-atlas-logout-signal') return;
   try { sessionStorage.removeItem(accessSessionStorageKey); localStorage.removeItem(sharedAccessSessionStorageKey); } catch (_) {}

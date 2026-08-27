@@ -12,6 +12,8 @@ const backgrounds = readJson('data/country-movement-backgrounds.json');
 const issues = [];
 const countryIds = new Set((movements.countries || []).map(country => country.id));
 const allowedCategories = new Set(events.categories || []);
+const allowedEventKinds = new Set(['war']);
+const allowedCountryOutcomes = new Set(['victory', 'defeat', 'unclear']);
 const eventIdsByCountry = new Map();
 let eventTotal = 0;
 
@@ -27,6 +29,8 @@ for (const [countryId, list] of Object.entries(events.countries || {})) {
     if (ids.has(event.id)) issues.push(`${countryId}: duplicate event id ${event.id}`);
     ids.add(event.id);
     if (!allowedCategories.has(event.category)) issues.push(`${countryId}:${id} invalid category ${event.category}`);
+    if (event.eventKind && !allowedEventKinds.has(event.eventKind)) issues.push(`${countryId}:${id} invalid eventKind ${event.eventKind}`);
+    if (event.eventKind === 'war' && !allowedCountryOutcomes.has(event.countryOutcome)) issues.push(`${countryId}:${id} invalid countryOutcome ${event.countryOutcome}`);
     if (event.end != null && Number(event.end) < Number(event.start)) issues.push(`${countryId}:${id} invalid year range`);
     if (event.wiki && !/^https?:\/\/[^\s]+$/i.test(event.wiki)) issues.push(`${countryId}:${id} invalid wiki URL`);
   }
