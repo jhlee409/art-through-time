@@ -46,5 +46,6 @@
   });
   new MutationObserver(updateButtons).observe(document.documentElement, {childList:true,subtree:true});
   window.addEventListener('storage', updateButtons);
+  window.addEventListener('art-through-time-rules-check-refresh', updateButtons);
   updateButtons();
 })();

@@ -2,6 +2,10 @@
 
 The local collection remains the source of truth until the public application is deployed.
 
+## Current status
+
+Firebase support is deliberately dormant: the application does not show an export button and does not connect to Firebase at runtime. Keep the export contract and preparation tool in place for a future database-platform decision; do not delete or run them as part of ordinary content editing. Before an actual migration, review the exported schema, image-status report, authentication design, and backup/rollback plan.
+
 ## Current contract
 
 - Artist and artwork IDs are stable and must never be changed during migration.
@@ -16,6 +20,12 @@ Run the following from the project folder:
 
 ```powershell
 node tools/prepare-firebase-migration.js --write
+```
+
+Run the read-only health check first:
+
+```powershell
+node tools/check-project-health.js
 ```
 
 This normalizes the local data and creates these migration artifacts:

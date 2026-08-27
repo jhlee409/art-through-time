@@ -1208,7 +1208,7 @@ async function saveMovementDocumentHtml(name, slot, html) {
   if(Buffer.byteLength(source,'utf8') > jsonRequestBodyLimit) throw new Error('The HTML document exceeds the 12 MB limit');
   const data=await readMovementDocuments(), relative=data.documents?.[safeName]?.[safeSlot];
   if(!relative || !/^data\/미술사조\/[a-f0-9]{24}-[12]\.html$/.test(relative)) throw new Error('There is no saved movement document');
-  const savedFile=path.join(root,relative), linkedHtml=await linkMovementDocumentArtists(normalizeMovementCardPresentation(injectUHangulDocumentIntegration(source)));
+  const savedFile=path.join(root,relative), linkedHtml=synchronizeMovementCountryTableArtistOrder(await linkMovementDocumentArtists(normalizeMovementCardPresentation(injectUHangulDocumentIntegration(source))));
   await fs.writeFile(savedFile,linkedHtml);
   syncPersonNameDictionary({additionalFiles:[savedFile]});
   return {ok:true,url:relative};
@@ -1218,7 +1218,7 @@ async function refreshMovementDocumentLinks(name, slot) {
   const data=await readMovementDocuments(), relative=data.documents?.[name]?.[slot];
   if(!relative) throw new Error('There is no saved movement document');
   if(!/^data\/미술사조\/[a-f0-9]{24}-[12]\.html$/.test(String(relative || ''))) throw new Error('Invalid movement document path');
-  const file=path.join(root,relative), before=await fs.readFile(file), after=await linkMovementDocumentArtists(normalizeMovementCardPresentation(injectUHangulDocumentIntegration(before)));
+  const file=path.join(root,relative), before=await fs.readFile(file), after=synchronizeMovementCountryTableArtistOrder(await linkMovementDocumentArtists(normalizeMovementCardPresentation(injectUHangulDocumentIntegration(before))));
   const changed=!before.equals(after);
   if(changed) await fs.writeFile(file,after);
   return {ok:true,url:relative,changed};
@@ -1309,6 +1309,58 @@ function normalizeMovementCardPresentation(html) {
   }));
   const style='<style id="art-atlas-movement-card-presentation-style">.movement-card-title-tag,.movement-card-activity-region{color:#9aa5af;font-size:.78em;font-weight:600;white-space:nowrap}</style>';
   return /<\/head>/i.test(source) ? source.replace(/<\/head>/i,`${style}\n</head>`) : `${style}\n${source}`;
+}
+function matchingHtmlElementEnd(source, start, tagName) {
+  const tag=new RegExp(`<\\/?${tagName}\\b[^>]*>`, 'gi');
+  tag.lastIndex=start;
+  let depth=0;
+  for(let match; (match=tag.exec(source));) {
+    if(/^<\//.test(match[0])) {
+      depth--;
+      if(depth===0) return tag.lastIndex;
+    } else if(!/\/>$/.test(match[0])) depth++;
+  }
+  return -1;
+}
+function synchronizeMovementCountryTableArtistOrder(html) {
+  const source=String(html || '');
+  const countriesStart=source.search(/<section\b[^>]*\bid=["']countries["'][^>]*>/i);
+  if(countriesStart < 0) return source;
+  const countriesEnd=matchingHtmlElementEnd(source,countriesStart,'section');
+  const enhancementStarts=[...source.matchAll(/<section\b(?=[^>]*\bclass=["'][^"']*\bmovement-enhancement\b[^"']*["'])[^>]*>/gi)].map(match=>match.index);
+  const deepeningStart=enhancementStarts.at(-1);
+  if(countriesEnd < 0 || deepeningStart === undefined) return source;
+  const deepeningEnd=matchingHtmlElementEnd(source,deepeningStart,'section');
+  if(deepeningEnd < 0) return source;
+  const artistLink=/<a\b(?=[^>]*\bdata-artist-id=["']([^"']+)["'])[^>]*>[\s\S]*?<\/a>/gi;
+  const cardOrder=new Map();
+  [...source.slice(deepeningStart,deepeningEnd).matchAll(/<article\b(?=[^>]*\bclass=["'][^"']*\b(?:movement-work-card|card)\b[^"']*["'])[^>]*>[\s\S]*?<\/article>/gi)].forEach((card,index)=>{
+    const artistId=card[0].match(/\bdata-artist-id=["']([^"']+)["']/i)?.[1];
+    if(artistId && !cardOrder.has(artistId)) cardOrder.set(artistId,index);
+  });
+  if(!cardOrder.size) return source;
+  const countries=source.slice(countriesStart,countriesEnd).replace(/<tr\b[^>]*>[\s\S]*?<\/tr>/gi,row=>{
+    const cells=[...row.matchAll(/<td\b[^>]*>[\s\S]*?<\/td>/gi)];
+    const artistCell=[...cells].reverse().find(cell=>artistLink.test(cell[0]));
+    artistLink.lastIndex=0;
+    if(!artistCell) return row;
+    const links=[...artistCell[0].matchAll(artistLink)].map((match,index)=>({id:match[1],markup:match[0],index}));
+    artistLink.lastIndex=0;
+    const ordered=[...links].sort((a,b)=>{
+      const aOrder=cardOrder.get(a.id), bOrder=cardOrder.get(b.id);
+      if(aOrder === undefined && bOrder === undefined) return a.index-b.index;
+      if(aOrder === undefined) return 1;
+      if(bOrder === undefined) return -1;
+      return aOrder-bOrder || a.index-b.index;
+    });
+    if(ordered.every((link,index)=>link === links[index])) return row;
+    let next=0;
+    const replacement=artistCell[0].replace(artistLink,()=>ordered[next++].markup);
+    artistLink.lastIndex=0;
+    return `${row.slice(0,artistCell.index)}${replacement}${row.slice(artistCell.index+artistCell[0].length)}`;
+  });
+  artistLink.lastIndex=0;
+  return `${source.slice(0,countriesStart)}${countries}${source.slice(countriesEnd)}`;
 }
 async function injectMovementHighResolutionViewer(html) {
   let source=String(html || '');
@@ -1807,7 +1859,7 @@ http.createServer(async (req,res) => { const url=new URL(req.url,`http://${req.h
   if (req.method==='PUT' && url.pathname==='/api/movement-section-links') { try { const payload=JSON.parse(await readJsonRequest(req) || '{}'), data=await saveMovementSectionLinks(String(payload.sectionId || ''),payload.links); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:true,sections:data.sections})); } catch(error) { sendJsonBodyError(res,error); } return; }
   if (req.method==='GET' && url.pathname==='/api/movement-documents') { try { const data=await readMovementDocuments(); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); return res.end(JSON.stringify(data)); } catch(error) { res.writeHead(500,{'Content-Type':'application/json; charset=utf-8'}); return res.end(JSON.stringify({documents:{},error:error.message})); } }
   if (req.method==='POST' && url.pathname==='/api/movement-documents/refresh') { try { const payload=JSON.parse(await readJsonRequest(req) || '{}'), name=movementDocumentName(payload.name), slot=movementDocumentSlot(payload.slot), result=await refreshMovementDocumentLinks(name,slot); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify(result)); } catch(error) { sendJsonBodyError(res,error); } return; }
-  if (req.method==='POST' && url.pathname==='/api/movement-documents') { try { const form=multipartForm(await readRequestBuffer(req,30*1024*1024),req.headers['content-type']), name=movementDocumentName(form.fields.name), slot=movementDocumentSlot(form.fields.slot), file=form.files.document, ext=path.extname(String(file?.filename || '')).toLowerCase(); if(!file || !['.html','.htm'].includes(ext) || !/^(text\/html|application\/xhtml\+xml|)$/.test(file.contentType)) throw new Error('Upload an HTML file'); if(!file.data.length) throw new Error('The HTML file is empty'); const data=await readMovementDocuments(), relative=movementDocumentRelative(name,slot), previous=data.documents?.[name]?.[slot], linkedHtml=await linkMovementDocumentArtists(normalizeMovementCardPresentation(injectUHangulDocumentIntegration(file.data))); await fs.mkdir(movementDocumentDir,{recursive:true}); const savedFile=path.join(root,relative); await fs.writeFile(savedFile,linkedHtml); if(previous && previous!==relative) await removeMovementDocument(previous); data.documents[name]={...(data.documents[name]||{}),[slot]:relative}; await writeMovementDocuments(data); syncPersonNameDictionary({additionalFiles:[savedFile]}); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8'}); return res.end(JSON.stringify({ok:true,url:relative})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json; charset=utf-8'}); return res.end(JSON.stringify({ok:false,error:error.message})); } }
+  if (req.method==='POST' && url.pathname==='/api/movement-documents') { try { const form=multipartForm(await readRequestBuffer(req,30*1024*1024),req.headers['content-type']), name=movementDocumentName(form.fields.name), slot=movementDocumentSlot(form.fields.slot), file=form.files.document, ext=path.extname(String(file?.filename || '')).toLowerCase(); if(!file || !['.html','.htm'].includes(ext) || !/^(text\/html|application\/xhtml\+xml|)$/.test(file.contentType)) throw new Error('Upload an HTML file'); if(!file.data.length) throw new Error('The HTML file is empty'); const data=await readMovementDocuments(), relative=movementDocumentRelative(name,slot), previous=data.documents?.[name]?.[slot], linkedHtml=synchronizeMovementCountryTableArtistOrder(await linkMovementDocumentArtists(normalizeMovementCardPresentation(injectUHangulDocumentIntegration(file.data)))); await fs.mkdir(movementDocumentDir,{recursive:true}); const savedFile=path.join(root,relative); await fs.writeFile(savedFile,linkedHtml); if(previous && previous!==relative) await removeMovementDocument(previous); data.documents[name]={...(data.documents[name]||{}),[slot]:relative}; await writeMovementDocuments(data); syncPersonNameDictionary({additionalFiles:[savedFile]}); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8'}); return res.end(JSON.stringify({ok:true,url:relative})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json; charset=utf-8'}); return res.end(JSON.stringify({ok:false,error:error.message})); } }
   if (req.method==='PUT' && url.pathname==='/api/movement-documents') { try { const payload=JSON.parse(await readJsonRequest(req) || '{}'), result=await saveMovementDocumentHtml(payload.name,payload.slot,payload.html); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify(result)); } catch(error) { sendJsonBodyError(res,error); } return; }
   if (req.method==='DELETE' && url.pathname==='/api/movement-documents') { try { const {name,slot}=JSON.parse(await readJsonRequest(req) || '{}'), safeName=movementDocumentName(name), safeSlot=movementDocumentSlot(slot), data=await readMovementDocuments(), relative=data.documents?.[safeName]?.[safeSlot]; if(relative) await removeMovementDocument(relative); if(data.documents?.[safeName]) { delete data.documents[safeName][safeSlot]; if(!Object.keys(data.documents[safeName]).length) delete data.documents[safeName]; } await writeMovementDocuments(data); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8'}); res.end(JSON.stringify({ok:true})); } catch(error) { sendJsonBodyError(res,error); } return; }
   if (req.method==='POST' && url.pathname==='/api/local-artwork-image') { try { const form=multipartForm(await readRequestBuffer(req,500*1024*1024),req.headers['content-type']), result=await saveLocalArtworkImage(form); res.writeHead(200,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({ok:true,...result})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({ok:false,error:error.message})); } }
@@ -1827,4 +1879,4 @@ http.createServer(async (req,res) => { const url=new URL(req.url,`http://${req.h
   if (req.method==='POST' && url.pathname==='/api/artwork-info') { try { const {artist,work}=JSON.parse(await readJsonRequest(req)); const result=await artworkInfo(artist,work); res.writeHead(200,{'Content-Type':'application/json'}); res.end(JSON.stringify({work:result})); } catch(error) { const status=error?.message === 'JSON request body exceeds the 12 MB limit' ? 413 : 502; res.writeHead(status,{'Content-Type':'application/json'}); res.end(JSON.stringify({error:error.message})); } return; }
   if (req.method==='POST' && url.pathname==='/api/local-thumbnail-image') { try { const form=multipartForm(await readRequestBuffer(req,sourceImageInputLimit + 1024*1024),req.headers['content-type']), artist=JSON.parse(form.fields.artist || '{}'), work=JSON.parse(form.fields.work || '{}'); if(!artist?.id || !work?.id) throw new Error('Invalid artwork upload'); const thumbnail=await saveThumbnailFromLocalUpload(artist,work,form.files.image,adminEmail); res.writeHead(200,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({thumbnail,verified:true})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({thumbnail:'',verified:false,error:error.message})); } }
   if (req.method==='GET' && url.pathname==='/api/search') { try { const query=url.searchParams.get('q')||'', kind=url.searchParams.get('type')||'artist'; const raw=kind==='artist' ? await artistSearchCandidates(query) : (await getJsonFast(api({action:'wbsearchentities',search:query,language:'ko',uselang:'ko',type:'item',limit:'20'}))).search?.map(item=>({id:item.id,label:item.label,description:item.description||''})) || []; const ranked=[...raw].sort((a,b)=>{const score=item=>similarityScore(query,item.label)+(kind==='artwork' ? /(회화|그림|painting|artwork|work of art)/i.test(item.description)?120:0 : /(화가|예술가|painter|visual artist|artist)/i.test(item.description)?120:0); return score(b)-score(a);}); const values=ranked.slice(0,8); res.writeHead(200,{'Content-Type':'application/json'}); return res.end(JSON.stringify(values)); } catch(error) { res.writeHead(502,{'Content-Type':'application/json'}); return res.end(JSON.stringify([])); } }
-  const file=safePath(url.pathname);if(!file){res.writeHead(403);return res.end();}try{let data=await fs.readFile(file);const relativeFile=path.relative(root,file).replace(/\\/g,'/');if(/^data[\\/]미술사조[\\/][a-f0-9]{24}-[12]\.html$/i.test(path.relative(root,file))) { let html=(await linkMovementDocumentArtists(data)).toString('utf8'); html=await injectMovementArtworkMovementLabels(html); html=normalizeMovementCardPresentation(html); html=injectMovementPioneerContext(html,await movementDocumentPioneerContextKey(relativeFile)); html=injectUHangulDocumentIntegration(html); html=injectMovementWikipediaHeading(html,url.searchParams.get('movementWiki') || '',url.searchParams.get('movementLabel') || ''); html=await injectMovementHighResolutionViewer(html); data=Buffer.from(html,'utf8'); }res.writeHead(200,{'Content-Type':mime[path.extname(file)]||'application/octet-stream','Cache-Control':'no-store'});res.end(data);}catch(error){if(error?.code!=='ENOENT') console.error('Static file error:',error?.stack || error?.message || error);res.writeHead(404);res.end('Not found');}}).listen(4173,'127.0.0.1',()=>console.log(`Art Atlas: http://localhost:4173${adminPasswordHash ? '' : ' (read-only: .env not found)'}`));
+  const file=safePath(url.pathname);if(!file){res.writeHead(403);return res.end();}try{let data=await fs.readFile(file);const relativeFile=path.relative(root,file).replace(/\\/g,'/');if(/^data[\\/]미술사조[\\/][a-f0-9]{24}-[12]\.html$/i.test(path.relative(root,file))) { let html=(await linkMovementDocumentArtists(data)).toString('utf8'); html=await injectMovementArtworkMovementLabels(html); html=normalizeMovementCardPresentation(html); html=synchronizeMovementCountryTableArtistOrder(html); html=injectMovementPioneerContext(html,await movementDocumentPioneerContextKey(relativeFile)); html=injectUHangulDocumentIntegration(html); html=injectMovementWikipediaHeading(html,url.searchParams.get('movementWiki') || '',url.searchParams.get('movementLabel') || ''); html=await injectMovementHighResolutionViewer(html); data=Buffer.from(html,'utf8'); }res.writeHead(200,{'Content-Type':mime[path.extname(file)]||'application/octet-stream','Cache-Control':'no-store'});res.end(data);}catch(error){if(error?.code!=='ENOENT') console.error('Static file error:',error?.stack || error?.message || error);res.writeHead(404);res.end('Not found');}}).listen(4173,'127.0.0.1',()=>console.log(`Art Atlas: http://localhost:4173${adminPasswordHash ? '' : ' (read-only: .env not found)'}`));

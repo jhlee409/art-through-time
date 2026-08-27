@@ -80,6 +80,7 @@ function setupTopicSidebarResize() {
 }
 setupTopicSidebarResize();
 async function logoutTopicPage() {
+  if (typeof window.artThroughTimeLogoutAll === 'function') return window.artThroughTimeLogoutAll();
   const token = adminToken();
   try {
     await fetch('/api/auth/logout', { method: 'POST', headers: token ? { Authorization: `Bearer ${token}` } : {} });

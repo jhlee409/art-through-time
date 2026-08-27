@@ -34,6 +34,7 @@
     <aside id="detail"><p>그림을 클릭하면 설명이 표시됩니다.</p></aside>
   </div>
   <dialog id="topic-artwork-dialog"><form id="topic-artwork-form" method="dialog"><button class="close" type="button" data-close-topic-dialog aria-label="닫기">×</button><h2>그림 추가</h2><p id="topic-artwork-file-name" class="dialog-description"></p><label>제목<input id="topic-artwork-title" name="title" required></label><div class="topic-year-fields"><label>시작 연도<input id="topic-artwork-start" name="startYear" type="number" min="1" required></label><label>끝 연도<input id="topic-artwork-end" name="endYear" type="number" min="1" required></label></div><p id="topic-artwork-error" class="topic-form-error" aria-live="polite"></p><button class="save" type="submit">저장</button></form></dialog>
+  <script src="tab-session.js"></script>
   <script src="topics.js"></script>
   <script src="rules-check.js?v=20260821-3"></script>
   <script defer src="./uhangul/uhangul-runtime.js?v=0.7" data-uhangul-integration="v0.7"></script>

@@ -64,6 +64,68 @@
 .country-art-page .detail-panel { display: none; }
 .country-art-page .main-area { display: block; width: auto; flex: 1 1 0; min-width: 0; height: 100vh; }
 .country-art-page .timeline-panel { display: flex; flex-direction: column; height: 100vh; overflow: hidden; padding: 76px 42px 0; }
+.artist-relations-page .detail-panel { display: none; }
+.artist-relations-page .main-area { display: block; width: auto; flex: 1 1 0; min-width: 0; height: 100vh; }
+.artist-relations-page .timeline-panel { height: 100vh; padding: 76px 0 42px; }
+.artist-relations-page .artist-page-nav { display: none; }
+.artist-relations-page .sidebar { display: flex; }
+.artist-relations-page .sidebar > :not(.brand, .display-mode, .sidebar-page-title, .language, .sidebar-resize-handle) { display: none; }
+.artist-relations-page .sidebar .display-mode { display: flex !important; visibility: visible !important; }
+.artist-relations-page .sidebar-page-title { margin: 12px 2px 0; }
+.artist-relations-page .sidebar .language { margin-top: auto; }
+.timeline-artist-name { border: 0; background: transparent; color: inherit; font: inherit; padding: 0; text-align: inherit; }
+.timeline-artist-relations-link { cursor: pointer; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.timeline-artist-relations-link:hover, .timeline-artist-relations-link:focus-visible { color: var(--orange); outline: none; }
+.artist-relations-header { max-width: 980px; margin: 18px auto 12px; padding: 0 20px; text-align: center; }
+.artist-relations-header .eyebrow { display: inline-flex; margin: 0 0 8px; border: 1px solid #d9dfd7; border-radius: 999px; background: #f4f6f1; color: #536257; padding: 4px 10px; font-size: 10px; letter-spacing: .09em; }
+.artist-relations-header h1 { margin: 0; color: #1f2b24; font: 400 clamp(25px, 2.5vw, 35px)/1.15 var(--serif); }
+.artist-relations-header p:last-child { margin: 8px 0 0; color: #758077; font-size: 11px; line-height: 1.5; }
+.artist-relations-empty { max-width: 640px; margin: 130px auto; text-align: center; }
+.artist-relations-empty h1 { font: 400 28px/1.2 var(--serif); }
+.artist-relations-empty p { color: var(--muted); line-height: 1.6; }
+.artist-relation-map { position: relative; box-sizing: border-box; width: 100%; min-height: 560px; margin: 0; border-top: 1px solid #e3e6df; border-bottom: 1px solid #e3e6df; background: radial-gradient(circle at 50% 50%, #ffffff 0, #fcfcf9 32%, #f5f7f2 100%); padding: 20px 0; overflow: hidden; }
+.artist-relation-map::before { content: ''; position: absolute; inset: 24px 0; background-image: radial-gradient(#cbd4ca 0.7px, transparent 0.8px); background-size: 18px 18px; opacity: .28; pointer-events: none; }
+.artist-relation-center { position: absolute; z-index: 2; left: 50%; top: 50%; display: grid; place-items: center; transform: translate(-50%, -50%); }
+.artist-relation-lane { position: absolute; z-index: 2; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; min-width: 0; border: 1px solid #cad5ca; border-radius: 14px; background: rgba(255,254,250,.88); padding: 11px 12px 13px; box-shadow: 0 5px 14px rgba(31,43,36,.06); }
+.artist-relation-lane h2 { margin: 0 0 9px; color: #526158; font: 700 10px/1.35 var(--sans); letter-spacing: .06em; text-align: center; }
+.artist-relation-lane > div { display: flex; flex-wrap: nowrap; align-items: center; justify-content: flex-start; gap: 0; width: 100%; max-width: none; overflow: visible; padding: 2px 0; }
+.artist-relation-lane--study { left: 0; right: calc(50% + 102px); top: auto; bottom: calc(50% + 102px); width: auto; }
+.artist-relation-lane--teachers { left: 0; right: calc(50% + 102px); top: calc(50% + 102px); bottom: auto; width: auto; }
+.artist-relation-lane--exchanges { left: calc(50% + 102px); right: 0; top: auto; bottom: calc(50% + 102px); width: auto; }
+.artist-relation-lane--rivals { left: calc(50% + 102px); right: 0; top: calc(50% + 102px); bottom: auto; width: auto; transform: none; }
+.artist-relation-lane--study > div, .artist-relation-lane--teachers > div { flex-direction: row-reverse; }
+.artist-relation-lane--study h2, .artist-relation-lane--teachers h2 { align-self: flex-end; }
+.artist-relation-lane--exchanges h2, .artist-relation-lane--rivals h2 { align-self: flex-start; }
+.artist-relation-lane--exchanges { border-color: #a9d4e5; background: rgba(239,249,253,.9); }
+.artist-relation-lane--exchanges h2 { color: #39708a; }
+.artist-relation-lane--rivals { border-color: #d6a39e; background: rgba(253,242,240,.91); }
+.artist-relation-lane--rivals h2 { color: #914c47; }
+.artist-relation-node { display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; min-height: 43px; border: 1px solid #bdc8bf; border-radius: 999px; background: #fffefa; color: #334138; padding: 7px 14px; font: 600 18px/1.2 var(--sans); text-align: center; white-space: nowrap; box-shadow: 0 3px 8px rgba(31,43,36,.08); }
+button.artist-relation-node { cursor: pointer; }
+button.artist-relation-node:hover, button.artist-relation-node:focus-visible { border-color: #708579; background: #f0f5ee; box-shadow: 0 5px 12px rgba(31,43,36,.14); outline: none; transform: translateY(-1px); }
+.artist-relation-node--center { min-width: 150px; min-height: 58px; border: 3px solid #25332a; background: #fffefa; color: #1e2a22; font: 700 26px/1.2 var(--sans); text-align: center; box-shadow: 0 10px 24px rgba(31,43,36,.16); }
+.artist-relation-node--exchanges { border-color: #9ccce0; background: #e4f4fb; color: #20475a; }
+.artist-relation-node--rivals { border-color: #c77b76; background: #f3d8d5; color: #5b201d; }
+.artist-relation-node:not(.artist-relation-node--center) { min-height: auto; border: 0; border-radius: 0; background: transparent; box-shadow: none; padding: 3px 1px; color: #314138; font-weight: 650; }
+.artist-relation-node--exchanges:not(.artist-relation-node--center) { color: #28627c; }
+.artist-relation-node--rivals:not(.artist-relation-node--center) { color: #8b3935; }
+.artist-relation-separator { flex: 0 0 auto; padding: 0 7px 0 1px; color: #879187; font: 600 16px/1 var(--sans); }
+.artist-relation-artist-link, .artist-relation-wikipedia-link { text-decoration: none; }
+.artist-relation-artist-link { border: 1px solid #c69a3a !important; border-radius: 999px !important; background: #f7e5af !important; color: #5d4211 !important; padding: 5px 11px !important; box-shadow: 0 2px 5px rgba(104,75,19,.15) !important; }
+.artist-relation-artist-link:hover, .artist-relation-artist-link:focus-visible { border-color: #96701d !important; background: #f2d783 !important; color: #3d2907 !important; box-shadow: 0 4px 10px rgba(104,75,19,.22) !important; text-decoration: none; outline: none; transform: translateY(-1px); }
+.artist-relation-wikipedia-link:hover, .artist-relation-wikipedia-link:focus-visible { color: #17211e; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; outline: none; }
+button.artist-relation-node:not(.artist-relation-node--center):hover, button.artist-relation-node:not(.artist-relation-node--center):focus-visible { border: 0; background: transparent; box-shadow: none; color: #17211e; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; transform: none; }
+.artist-relation-none { margin: 0; color: #8a9188; font-size: 10px; line-height: 1.35; text-align: center; }
+.artist-relation-connector { position: absolute; z-index: 1; left: 50%; top: 50%; display: block; width: 144px; height: 3px; background: #2a342d; box-shadow: 0 1px 0 #fff; transform-origin: 0 50%; }
+.artist-relation-connector--up { transform: rotate(-135deg); }
+.artist-relation-connector--right { transform: rotate(-45deg); }
+.artist-relation-connector--left { transform: rotate(135deg); }
+.artist-relation-connector--down { transform: rotate(45deg); }
+.artist-relation-agent-answer { position: fixed; z-index: 220; right: 24px; bottom: 24px; width: min(360px, calc(100vw - 48px)); border: 1px solid #bdc8bf; border-radius: 12px; background: #fffefa; box-shadow: 0 16px 42px rgba(31,43,36,.2); padding: 17px 18px; color: #2b3930; }
+.artist-relation-agent-answer button { position: absolute; top: 7px; right: 8px; border: 0; background: transparent; color: #68746a; font: 700 20px/1 var(--sans); cursor: pointer; }
+.artist-relation-agent-answer p { margin: 0 0 5px; color: #637568; font: 700 10px/1.3 var(--sans); letter-spacing: .07em; }
+.artist-relation-agent-answer h2 { margin: 0 26px 9px 0; font: 700 17px/1.2 var(--sans); }
+.artist-relation-agent-answer div { color: #536057; font-size: 13px; line-height: 1.65; white-space: pre-line; }
 .atlas-popup-close { float: right; border: 1px solid var(--line); border-radius: 4px; background: #fffdf8; color: var(--ink); padding: 7px 12px; font-size: 12px; }
 .atlas-popup-close:hover { border-color: #8e9b8b; color: var(--ink); }
 .artist-row.active { background: var(--sage); }
@@ -740,6 +802,12 @@
 .country-art-work figcaption small { display: block; margin-top: 2px; color: var(--muted); font: 9px/1.2 'DM Mono', monospace; }
 
 @media (max-width: 840px) {
+  .artist-relations-page .timeline-panel { padding: 62px 18px 28px; }
+  .artist-relation-map { display: flex; flex-direction: column; gap: 18px; min-height: 0; padding: 8px 0; }
+  .artist-relation-center, .artist-relation-lane--study, .artist-relation-lane--teachers, .artist-relation-lane--exchanges, .artist-relation-lane--rivals { position: static; left:auto; right:auto; top:auto; bottom:auto; width:auto; transform:none; }
+  .artist-relation-center { order: -1; min-height: 80px; }
+  .artist-relation-lane { padding: 13px 0; border-top: 1px solid #ddd8cc; }
+  .artist-relation-connector { display: none; }
   .movement-title-row .timeline-title { font-size: 18px; }
   .sidebar-page-title { font-size: 18px; }
   .page-nav-actions { top: 8px; right: 8px; gap: 5px; max-width: calc(100vw - 16px); }

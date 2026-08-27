@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "artists": {
+    "artist-url-1787307872488": {
+      "study": [
+        "artist-Q7814"
+      ],
+      "teachers": [],
+      "exchanges": [
+        {
+          "name": {
+            "ko": "마솔리노 다 파니칼레",
+            "en": "Masolino da Panicale"
+          },
+          "wikipedia": "https://en.wikipedia.org/wiki/Masolino_da_Panicale"
+        },
+        {
+          "name": {
+            "ko": "필리포 브루넬레스키",
+            "en": "Filippo Brunelleschi"
+          },
+          "wikipedia": "https://en.wikipedia.org/wiki/Filippo_Brunelleschi"
+        },
+        {
+          "name": {
+            "ko": "도나텔로",
+            "en": "Donatello"
+          },
+          "wikipedia": "https://en.wikipedia.org/wiki/Donatello"
+        }
+      ],
+      "rivals": [],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Masaccio"
+      ]
+    }
+  }
+}

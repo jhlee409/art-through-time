@@ -47,7 +47,8 @@ const sharedMovementId = 'global-contemporary';
 const artistMovementFallbacks = { Q104884:{ko:'독일 낭만주의',en:'German Romanticism'} };
 const isMovementPopup = startupParams.get('movementPopup') === '1';
 const isCountryArtPage = startupParams.get('countryArt') === '1';
-window.name = isCountryArtPage ? 'artThroughTimeCountryArt' : (isMovementPopup ? 'artThroughTimeMovements' : 'artThroughTimeArtists');
+const isArtistRelationsPage = startupParams.get('artistRelations') === '1';
+window.name = isArtistRelationsPage ? 'artThroughTimeArtistRelations' : (isCountryArtPage ? 'artThroughTimeCountryArt' : (isMovementPopup ? 'artThroughTimeMovements' : 'artThroughTimeArtists'));
 const forceLogin = startupParams.get('login') === '1';
 if (forceLogin) {
   try { sessionStorage.removeItem(accessSessionStorageKey); } catch (_) {}
@@ -64,6 +65,7 @@ const initialUHangulMode = ['uhangul','korean','original'].includes(requestedUHa
 const requestedArtistId = startupParams.get('artist') || startupParams.get('artistId');
 if (isMovementPopup) document.body.classList.add('movement-popup');
 if (isCountryArtPage) document.body.classList.add('country-art-page');
+if (isArtistRelationsPage) document.body.classList.add('artist-relations-page');
 const legacyMovementCountryIds = ['france','germany','netherlands','italy','united-kingdom','spain','russia','sweden','denmark','greece','united-states'];
 const preExpansionMovementCountryIds = ['france','germany','switzerland','netherlands','italy','united-kingdom','spain','russia','sweden','denmark','greece','united-states'];
 const allMovementCountryIds = ['france','germany','austria','belgium','switzerland','netherlands','italy','united-kingdom','spain','russia','norway','sweden','denmark','greece','united-states'];
@@ -74,7 +76,7 @@ let uHangulMode = initialUHangulMode;
 let artists = [];
 let selectedId = localStorage.getItem('art-atlas-selected');
 let requestedArtistMissing = false;
-let viewMode = isCountryArtPage ? 'country-art' : (isMovementPopup ? 'movements' : 'timeline');
+let viewMode = isArtistRelationsPage ? 'artist-relations' : (isCountryArtPage ? 'country-art' : (isMovementPopup ? 'movements' : 'timeline'));
 let movementCountries = [];
 let movementView = parseMovementView();
 let countryArtView = parseCountryArtView();
@@ -83,6 +85,7 @@ const countryArtWorkCache = new Map();
 const countryArtWorkRequests = new Map();
 let countryArtEvents = {schema:1,countries:{}};
 let countryMovementBackgrounds = {schema:1,countries:{},mechanisms:{}};
+let artistRelations = {schema:1,artists:{}};
 if (localStorage.getItem(movementCountryMigrationKey) !== 'v1') {
   if (legacyMovementCountryIds.every(id => movementView.countries.includes(id)) && !movementView.countries.includes('switzerland')) {
     movementView.countries = [...movementView.countries, 'switzerland'];
@@ -564,6 +567,13 @@ function generatedCatalogueFile(artistOrResult={}) {
 function openArtistListPage() {
   openNamedPage(uHangulModeUrl('index.html'), 'artThroughTimeArtists');
 }
+function openArtistRelationsPage(artist) {
+  if (!artist?.id) return;
+  const pageUrl = new URL('index.html', location.href);
+  pageUrl.searchParams.set('artistRelations', '1');
+  pageUrl.searchParams.set('artist', artist.id);
+  openNamedPage(uHangulModeUrl(pageUrl.href), 'artThroughTimeArtistRelations');
+}
 function openTechniquesPage() {
   openNamedPage(uHangulModeUrl('techniques.html'), 'artThroughTimeTechniques');
 }
@@ -1028,6 +1038,7 @@ function saveAdminSession(email, token) {
   clearLoginRequestFromUrl();
 }
 async function logoutEverywhere() {
+  if (typeof window.artThroughTimeLogoutAll === 'function') return window.artThroughTimeLogoutAll();
   try { await apiFetch('/api/auth/logout',{method:'POST',cache:'no-store'}); } catch (_) {}
   if (adminSessionHeartbeat) clearInterval(adminSessionHeartbeat);
   try { sessionStorage.removeItem(accessSessionStorageKey); } catch (_) {}
@@ -1217,16 +1228,17 @@ async function loadData() {
   try { movementCountries = (await (await fetch('data/art-movements.json')).json()).countries || []; } catch (_) { movementCountries = []; }
   try { countryArtEvents = await (await fetch('data/country-art-events.json', {cache:'no-store'})).json(); } catch (_) { countryArtEvents = {schema:1,countries:{}}; }
   try { countryMovementBackgrounds = await (await fetch('data/country-movement-backgrounds.json', {cache:'no-store'})).json(); } catch (_) { countryMovementBackgrounds = {schema:1,countries:{},mechanisms:{}}; }
+  try { artistRelations = await (await fetch('data/artist-relations.json', {cache:'no-store'})).json(); } catch (_) { artistRelations = {schema:1,artists:{}}; }
   try { movementDocuments = (await (await fetch(apiUrl('/api/movement-documents'))).json()).documents || {}; } catch (_) { movementDocuments = {}; }
   const requestedArtist = requestedArtistId ? artists.find(a => a.id === requestedArtistId) : null;
   if (requestedArtist) {
     selectedId = requestedArtistId;
-    viewMode = 'timeline';
+    if (!isArtistRelationsPage) viewMode = 'timeline';
     localStorage.setItem('art-atlas-selected', selectedId);
   } else if (requestedArtistId) {
     requestedArtistMissing = true;
     selectedId = null;
-    viewMode = 'timeline';
+    if (!isArtistRelationsPage) viewMode = 'timeline';
     localStorage.removeItem('art-atlas-selected');
   }
   if (!requestedArtistMissing && (!selectedId || !artists.some(a => a.id === selectedId))) selectedId = artists[0]?.id;
@@ -1623,9 +1635,9 @@ async function hydrateArtistProfile(artist) {
 function renderText() {
   document.documentElement.lang = language;
   document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n); });
-  if (isMovementPopup || isCountryArtPage) {
+  if (isMovementPopup || isCountryArtPage || isArtistRelationsPage) {
     const title = document.querySelector('.sidebar-page-title');
-    if (title) title.textContent = isCountryArtPage ? (language === 'ko' ? '국가별 미술' : 'Art by Country') : t('movementAtlas');
+    if (title) title.textContent = isArtistRelationsPage ? (language === 'ko' ? '화가 관계도' : 'Artist Relations') : (isCountryArtPage ? (language === 'ko' ? '국가별 미술' : 'Art by Country') : t('movementAtlas'));
   }
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => { el.placeholder = t(el.dataset.i18nPlaceholder); });
   document.querySelectorAll('[data-display-mode]').forEach(button => {
@@ -1907,11 +1919,12 @@ function renderTimeline() {
     ? `<button class="artist-movement-link" type="button" data-movement-document="${esc(artistMovementDocument)}">${esc(artistMovement)}</button>`
     : `<span class="artist-movement-label">${esc(artistMovement)}</span>`;
   const timelineArtistName = artistDisplayName(artist);
-  const timelineArtistNameMarkup = `<span class="timeline-artist-name"${uHangulArtistAttributes(artist, timelineArtistName)}>${esc(timelineArtistName)}</span>`;
+  const artistRelationsLabel = language === 'ko' ? `${timelineArtistName} 관계도 열기` : `Open ${timelineArtistName} relationship map`;
+  const timelineArtistNameMarkup = `<button class="timeline-artist-name timeline-artist-relations-link" type="button" title="${esc(artistRelationsLabel)}" aria-label="${esc(artistRelationsLabel)}"${uHangulArtistAttributes(artist, timelineArtistName)}>${esc(timelineArtistName)}</button>`;
   const originalArtistWikipediaUrl = artistWikipediaUrl(artist, originalName);
   const displayName = language === 'ko' && koreanName
     ? `${timelineArtistNameMarkup}${originalName && originalName !== koreanName ? ` <a class="original-artist-name" data-uh-ignore="true" href="${esc(originalArtistWikipediaUrl)}" data-artist-wiki="${esc(artist.qid || '')}">${esc(originalName)}</a>` : ''}${linkControls}`
-    : `${esc(loc(artist.name))}${linkControls}`;
+    : `${timelineArtistNameMarkup}${linkControls}`;
   const slideshowHelp = language === 'ko' ? '전체 화면 슬라이드 쇼 시작 · 5초마다 다음 작품' : 'Start fullscreen slideshow · next artwork every 5 seconds';
   const headerActions = '';
   const timelineHeader = `<header class="timeline-sticky-header"><p class="eyebrow">${t('timeline')}</p><div class="timeline-title-row"><h1 class="timeline-title">${displayName}</h1><div class="timeline-title-actions">${headerActions}</div></div>${currentUserIsAdmin ? `<form class="artist-link-entry hidden"><input type="url" inputmode="url" placeholder="https://" aria-label="${esc(linkInputLabel)}" required><button type="submit">${esc(confirmLinkLabel)}</button></form>` : ''}<p class="life">${years(artist)}${nationalityLabel ? ` · ${esc(nationalityLabel)}` : ''}${artistMovement ? ` · ${artistMovementLabel}` : ''}</p></header>`;
@@ -1953,6 +1966,7 @@ function renderTimeline() {
     return `<div class="leonardo-timeline">${summaryBox}${featured}${layoutControls}<section class="leonardo-all-works"><div class="leonardo-section-heading"><p class="eyebrow">${esc(leonardoLayout === 'gallery' ? galleryLabel : chronologyLabel)}</p><div class="leonardo-section-actions">${allWorksAction}</div><p>${esc(language === 'ko' ? `${works.length}점 · 왼쪽 위에서 오른쪽 아래로 갈수록 뒤의 작품입니다.` : `${works.length} works · Earlier works begin at the upper left.`)}</p></div>${leonardoLayout === 'gallery' ? gallery : chronology}</section></div>`;
   })();
   timeline.innerHTML = `${timelineHeader}${leonardoTimelineMarkup}`;
+  timeline.querySelector('.timeline-artist-relations-link')?.addEventListener('click', () => openArtistRelationsPage(artist));
   setupArtistSummaryEditor(artist);
   timeline.querySelector('.add-artwork-button')?.addEventListener('click', () => openAddArtworkDialog(artist));
   timeline.querySelectorAll('.start-slideshow').forEach(button => button.onclick = () => startSlideshow(artist, button.dataset.slideshowScope === 'featured' ? leonardoFeaturedWorks : works));
@@ -2777,21 +2791,18 @@ function renderCountryArt() {
   const country = countryOptions.find(item => item.id === countryArtView.country) || countryOptions[0];
   if (!country) { timeline.innerHTML = `<p class="empty-timeline">${language === 'ko' ? '국가별 사조 데이터가 없습니다.' : 'No country movement data is available.'}</p>`; return; }
   if (country.id !== countryArtView.country) { countryArtView.country = country.id; persistCountryArtView(); }
-  // At 1×, the visible horizontal timeline represents 300 years regardless of the selected range.
-  const timeViewportWidth = Math.max(480, Math.floor(timeline.getBoundingClientRect().width || window.innerWidth) - 244);
-  const yearScale = timeViewportWidth / 300;
   const movements = (country.movements || []).map(item => clippedMovement(item,start,end)).filter(Boolean);
   const entries = [...movements].sort((a,b) => a.start-b.start || a.end-b.end).map((item, column) => ({...item, column}));
-  const chartWidth = Math.max(timeViewportWidth, Math.ceil((end - start) * yearScale));
   const yearLabel = year => Number(year) < 0 ? `${Math.abs(year)} BCE` : String(year);
   // The row and bar match the standardized card's maximum height, including list padding and bar borders.
   const movementRowHeight = Math.ceil((window.innerWidth / 14) * .8) + 54;
-  const chartContentWidth = countryArtLabelColumnWidth + chartWidth;
   // Country heading (about 37px) plus the time axis and all movement rows.
   const chartContentHeight = 76 + countryArtEventRailHeight + entries.length * movementRowHeight;
+  // Fit the vertical set of rows first. The timeline's base width is then
+  // expanded inversely to that default zoom, so the full date range reaches
+  // the right edge of the monitor without changing work-card proportions.
   const defaultCountryArtDensity = Math.max(countryArtDensityMinimum, Math.min(
     countryArtDensityMaximum,
-    (Math.max(360, timeline.getBoundingClientRect().width - 84) / chartContentWidth),
     (Math.max(320, window.innerHeight - 76) / chartContentHeight),
   ));
   if (countryArtResetZoomOnRender) {
@@ -2800,6 +2811,15 @@ function renderCountryArt() {
     persistCountryArtView();
     countryArtResetZoomOnRender = false;
   }
+  const visibleChartWidth = Math.max(360, Math.floor(timeline.getBoundingClientRect().width || window.innerWidth) - 84);
+  // Keep this base width tied to the default zoom. At that zoom the chart fits
+  // the monitor exactly; user wheel zoom can then intentionally create scroll.
+  const baseTimeWidth = Math.max(1, Math.ceil(visibleChartWidth / defaultCountryArtDensity - countryArtLabelColumnWidth));
+  // At the current zoom, the full selected range fills the usable horizontal
+  // area. Horizontal scrolling is therefore only needed after a user zooms in.
+  const chartWidth = baseTimeWidth;
+  const yearScale = chartWidth / (end - start);
+  const chartContentWidth = countryArtLabelColumnWidth + chartWidth;
   const workSources = new Map(entries.map(entry => [entry, countryArtWorksFor(country, entry)]));
   const preferredWorksByImage = new Map();
   entries.forEach(entry => {
@@ -2955,7 +2975,8 @@ function renderCountryArt() {
     requestAnimationFrame(() => {
       const nextScroll = timeline.querySelector('.country-art-scroll');
       if (!nextScroll) return;
-      const nextScale = (Math.max(480, Math.floor(timeline.getBoundingClientRect().width || window.innerWidth) - 244) / 300) * countryArtView.density;
+      const nextAxis = nextScroll.querySelector('.country-art-time-axis');
+      const nextScale = nextAxis ? (nextAxis.offsetWidth / (end - start)) * countryArtView.density : oldScale;
       nextScroll.scrollLeft = Math.max(0, anchorYearOffset * nextScale - anchorOffset);
     });
   };
@@ -3007,6 +3028,63 @@ function renderCountryArt() {
   };
   countryArtScroll?.addEventListener('pointerup', stopCountryArtPan);
   countryArtScroll?.addEventListener('pointercancel', stopCountryArtPan);
+}
+function renderArtistRelations() {
+  const artist = artists.find(item => item.id === selectedId);
+  const pageNav = `<nav class="page-nav-actions" aria-label="${language === 'ko' ? '탭 이동' : 'Tab navigation'}"><button class="atlas-nav-button artist-relations-nav-artists" type="button">${language === 'ko' ? '화가' : 'Artists'}</button><button class="atlas-nav-button artist-relations-nav-movements" type="button">${language === 'ko' ? '사조' : 'Movements'}</button><button class="atlas-nav-button artist-relations-nav-country" type="button">${language === 'ko' ? '국가별 미술' : 'Art by Country'}</button><button class="atlas-nav-button artist-relations-nav-techniques" type="button">${language === 'ko' ? '기법·용어' : 'Techniques'}</button><button class="atlas-nav-button artist-relations-nav-topics" type="button">${language === 'ko' ? '주제-사건' : 'Topics & Events'}</button><button class="rules-check-button" type="button" data-rules-check hidden></button></nav>`;
+  if (!artist) {
+    timeline.innerHTML = `${pageNav}<section class="artist-relations-empty"><h1>${esc(language === 'ko' ? '화가를 찾을 수 없습니다.' : 'Artist not found.')}</h1><p>${esc(language === 'ko' ? '화가 목록에서 연표 제목의 이름을 눌러 관계도를 다시 열어 주세요.' : 'Open the relationship map again from an artist timeline title.')}</p></section>`;
+  } else {
+    const relation = artistRelations?.artists?.[artist.id] || artistRelations?.artists?.[artist.qid] || {};
+    const relationGroups = [
+      {key:'study', label:language === 'ko' ? '연구·모사·학습한 선행 화가' : 'Earlier artists studied or copied', position:'study'},
+      {key:'teachers', label:language === 'ko' ? '성장기에 사사 받은 스승' : 'Teachers and mentors', position:'teachers'},
+      {key:'exchanges', label:language === 'ko' ? '교류한 미술가' : 'Artists in exchange', position:'exchanges'},
+      {key:'rivals', label:language === 'ko' ? '대립·경쟁한 미술가' : 'Rivals and competitors', position:'rivals'}
+    ];
+    const relationNodes = group => {
+      const nodes = (Array.isArray(relation[group.key]) ? relation[group.key] : [])
+      .map(entry => {
+        const id = typeof entry === 'string' ? entry : entry?.id;
+        const registeredArtist = id ? artists.find(item => item.id === id || item.qid === id) : null;
+        const name = registeredArtist ? (language === 'ko' ? artistListKoreanName(registeredArtist) : loc(registeredArtist.name)) : loc(entry?.name || entry?.label);
+        if (!name) return '';
+        const classes = `artist-relation-node artist-relation-node--${group.position}`;
+        if (registeredArtist) {
+          const title = language === 'ko' ? `${name} 화가 연표 보기` : `Open ${name} artist timeline`;
+          const href = uHangulModeUrl(`index.html?artist=${encodeURIComponent(registeredArtist.id)}`);
+          return `<a class="${classes} artist-relation-artist-link" href="${esc(href)}" target="artThroughTimeArtists" title="${esc(title)}"${uHangulArtistAttributes(registeredArtist, name)}>${esc(name)}</a>`;
+        }
+        const wikipedia = typeof entry?.wikipedia === 'string' ? entry.wikipedia.trim() : '';
+        if (wikipedia) return `<a class="${classes} artist-relation-wikipedia-link" href="${esc(wikipedia)}" target="artAtlasArtistWikipedia" rel="noopener" title="${esc(language === 'ko' ? `${name} 영문 위키피디아 열기` : `Open ${name} on English Wikipedia`)}">${esc(name)}</a>`;
+        const answer = entry?.agentAnswer || (language === 'ko' ? `${name}에 관한 확인 가능한 외부 링크가 아직 등록되지 않았습니다. 관계 데이터에 출처와 설명을 추가해 주세요.` : `No verified external link is recorded for ${name}. Add a source and explanation to the relationship data.`);
+        return `<button class="${classes} artist-relation-agent-link" type="button" data-relation-agent-name="${esc(name)}" data-relation-agent-answer="${esc(answer)}" title="${esc(language === 'ko' ? `${name} AI 에이전트 안내 보기` : `View AI agent note for ${name}`)}">${esc(name)}</button>`;
+      })
+      .filter(Boolean);
+      return nodes.length ? nodes.join('<span class="artist-relation-separator" aria-hidden="true">,</span>') : `<p class="artist-relation-none">${esc(language === 'ko' ? '등록된 관계 없음' : 'No relation recorded')}</p>`;
+    };
+    const lanes = relationGroups.map(group => `<section class="artist-relation-lane artist-relation-lane--${group.position}"><h2>${esc(group.label)}</h2><div>${relationNodes(group)}</div></section>`).join('');
+    const subtitle = language === 'ko'
+      ? '검증된 관계만 표시합니다. 관계 정보가 없는 방향은 비워 둡니다.'
+      : 'Only verified relationships are shown; directions without records remain empty.';
+    timeline.innerHTML = `${pageNav}<header class="artist-relations-header"><p class="eyebrow">${esc(language === 'ko' ? '화가 관계도' : 'Artist Relationship Map')}</p><h1>${esc(artistDisplayName(artist))}</h1><p>${esc(subtitle)}</p></header><section class="artist-relation-map" aria-label="${esc(language === 'ko' ? `${artistDisplayName(artist)} 관계도` : `${artistDisplayName(artist)} relationship map`)}"><span class="artist-relation-connector artist-relation-connector--up" aria-hidden="true"></span><span class="artist-relation-connector artist-relation-connector--down" aria-hidden="true"></span><span class="artist-relation-connector artist-relation-connector--left" aria-hidden="true"></span><span class="artist-relation-connector artist-relation-connector--right" aria-hidden="true"></span>${lanes}<div class="artist-relation-center"><span class="artist-relation-node artist-relation-node--center"${uHangulArtistAttributes(artist, artistDisplayName(artist))}>${esc(artistDisplayName(artist))}</span></div></section>`;
+    timeline.querySelectorAll('[data-relation-agent-name]').forEach(button => button.addEventListener('click', () => showRelationAgentAnswer(button.dataset.relationAgentName, button.dataset.relationAgentAnswer)));
+  }
+  timeline.querySelector('.artist-relations-nav-artists')?.addEventListener('click', openArtistListPage);
+  timeline.querySelector('.artist-relations-nav-movements')?.addEventListener('click', openMovementAtlas);
+  timeline.querySelector('.artist-relations-nav-country')?.addEventListener('click', openCountryArtPage);
+  timeline.querySelector('.artist-relations-nav-techniques')?.addEventListener('click', openTechniquesPage);
+  timeline.querySelector('.artist-relations-nav-topics')?.addEventListener('click', openTopicsPage);
+  queueMicrotask(() => window.dispatchEvent(new Event('art-through-time-rules-check-refresh')));
+}
+function showRelationAgentAnswer(name='', answer='') {
+  document.querySelector('.artist-relation-agent-answer')?.remove();
+  const panel = document.createElement('aside');
+  panel.className = 'artist-relation-agent-answer';
+  panel.setAttribute('role', 'status');
+  panel.innerHTML = `<button type="button" aria-label="${esc(language === 'ko' ? '안내 닫기' : 'Close note')}">×</button><p>${esc(language === 'ko' ? 'AI 에이전트 안내' : 'AI agent note')}</p><h2>${esc(name)}</h2><div>${esc(answer)}</div>`;
+  panel.querySelector('button')?.addEventListener('click', () => panel.remove());
+  document.body.append(panel);
 }
 function openMovementAtlas() {
   if (!isMovementPopup) {
@@ -3617,7 +3695,7 @@ function openHistoricalEventWikipedia(name) {
   window.open(url, '_blank', 'noopener');
 }
 function closeDetail() { delete detail.dataset.movementDocumentUrl; detail.classList.remove('show'); $('.main-area').classList.remove('detail-open'); detail.innerHTML = placeholder(); setupDetailPanelResize(); }
-function render() { renderText(); renderList(); if (viewMode === 'movements') renderMovementAtlas(); else if (viewMode === 'country-art') renderCountryArt(); else renderTimeline(); closeDetail(); }
+function render() { renderText(); renderList(); if (viewMode === 'movements') renderMovementAtlas(); else if (viewMode === 'country-art') renderCountryArt(); else if (viewMode === 'artist-relations') renderArtistRelations(); else renderTimeline(); closeDetail(); }
 
 async function uploadLocalArtworkImage(artist, work, file) {
   if (!currentUserIsAdmin || !file) throw new Error(language === 'ko' ? '관리자 권한과 이미지 파일이 필요합니다.' : 'Administrator access and an image file are required.');
@@ -3939,7 +4017,6 @@ window.addEventListener('storage', event => {
   }
   if (event.key !== 'art-atlas-logout-signal') return;
   try { sessionStorage.removeItem(accessSessionStorageKey); } catch (_) {}
-  location.assign(new URL('index.html?login=1', location.href).href);
 });
 window.addEventListener('message', event => {
   if (event.origin !== location.origin || event.data?.type !== 'art-through-time-uhangul-mode') return;
