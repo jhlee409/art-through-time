@@ -54,7 +54,7 @@ if defined ART_ATLAS_PID (
   start "Art Through Time" http://localhost:4173/?login=1
   exit /b 0
 )
-powershell -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -Command "Start-Process -WindowStyle Hidden -FilePath cmd.exe -ArgumentList '/c cd /d ""%~dp0"" && node server.js 1>> logs\art-atlas-server.out.log 2>> logs\art-atlas-server.err.log'"
+powershell -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -Command "Start-Process -WindowStyle Hidden -FilePath cmd.exe -ArgumentList '/c cd /d ""%~dp0"" && node server.js 1> logs\art-atlas-server.out.log 2> logs\art-atlas-server.err.log'"
 set /a ART_THROUGH_TIME_WAIT=0
 :wait_for_art_through_time_server
 curl.exe -fsS http://localhost:4173/api/access >nul 2>&1 && goto open_art_through_time

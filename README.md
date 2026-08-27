@@ -23,7 +23,7 @@ README는 프로젝트 전체 개요와 실행·데이터 안내를 맡습니다
 - Node.js가 없으면 Windows Package Manager(`winget`)로 Node.js LTS 설치를 시도합니다.
 - 이미 `4173` 포트에서 서버가 실행 중이면 새 서버를 띄우지 않고 기존 로그인 페이지를 엽니다.
 - 새 서버를 띄울 때는 서버용 CLI 창을 숨김으로 실행하고 브라우저만 엽니다.
-- 서버 로그는 `logs/art-atlas-server.out.log`, `logs/art-atlas-server.err.log`에 저장됩니다.
+- 서버 로그는 `logs/art-atlas-server.out.log`, `logs/art-atlas-server.err.log`에 저장되며 새 서버를 띄울 때마다 이전 실행 로그를 덮어씁니다.
 - 서버가 10초 안에 응답하지 않으면 브라우저를 열지 않고 최근 오류 로그를 표시합니다.
 
 직접 실행:
