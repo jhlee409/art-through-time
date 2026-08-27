@@ -8,6 +8,7 @@
 - 사조 막대는 더블클릭으로 설명 HTML을 새 탭에 열며 별도 원문자 설명 아이콘을 넣지 않는다.
 - uHangul v0.7 스타일시트와 런타임을 각각 한 번 포함한다.
 - 화가 링크는 정식 한국어 이름(`data-uh-korean`), uHangul 표시명(`data-uh-display-korean`), 짧은 통용명(`data-uh-list-korean`)을 분리한다. `node tools/sync-artist-link-display-names.js`로 동기화한다.
+- 공통 레이아웃 규칙(상단 고정 사조명, 심화 카드 제목의 국가별 지역·특징 설명, 해당 글자 크기·중복 레이블 제거)을 바꾸면 같은 작업에서 `node tools/sync-all-movement-html-rules.js`를 실행해 모든 저장 HTML에 반영한다. 서버의 화면 주입만으로 끝내지 않는다.
 
 ## 국가 전개와 카드
 

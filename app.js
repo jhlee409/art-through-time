@@ -24,6 +24,7 @@ const movementSidebarWidthStorageKey = 'art-atlas-movement-sidebar-width-v1';
 const lastPositionStorageKey = 'art-atlas-last-position-v1';
 const favoriteWorksStorageKey = 'art-atlas-favorite-works-v1';
 const accessSessionStorageKey = 'art-atlas-access-session-v1';
+const sharedAccessSessionStorageKey = 'art-atlas-access-session-shared-v1';
 const uHangulModeStorageKey = 'ArtThroughTime.uHangulMode.v7';
 const artistListEnglishStorageKey = 'ArtThroughTime.artistListEnglish.v1';
 // The app can be opened through the local server or directly as index.html.
@@ -1023,7 +1024,7 @@ async function loadCurrentUserRole() {
   document.body.classList.remove('auth-pending');
   document.body.classList.add('auth-ready');
 }
-function enterViewerMode() {
+function enterViewerMode({clearShared=false} = {}) {
   if (adminSessionHeartbeat) clearInterval(adminSessionHeartbeat);
   adminSessionHeartbeat = undefined;
   currentUserEmail = '';
@@ -1031,24 +1032,29 @@ function enterViewerMode() {
   currentUserIsAdmin = false;
   adminSessionToken = '';
   try { sessionStorage.setItem(accessSessionStorageKey, JSON.stringify({role:'viewer'})); } catch (_) {}
+  if (clearShared) try { localStorage.removeItem(sharedAccessSessionStorageKey); } catch (_) {}
   clearLoginRequestFromUrl();
 }
 function saveAdminSession(email, token) {
-  try { sessionStorage.setItem(accessSessionStorageKey, JSON.stringify({role:'admin',email,token})); } catch (_) {}
+  const session = JSON.stringify({role:'admin',email,token});
+  try { sessionStorage.setItem(accessSessionStorageKey, session); } catch (_) {}
+  try { localStorage.setItem(sharedAccessSessionStorageKey, session); } catch (_) {}
   clearLoginRequestFromUrl();
 }
 async function logoutEverywhere() {
   if (typeof window.artThroughTimeLogoutAll === 'function') return window.artThroughTimeLogoutAll();
   try { await apiFetch('/api/auth/logout',{method:'POST',cache:'no-store'}); } catch (_) {}
   if (adminSessionHeartbeat) clearInterval(adminSessionHeartbeat);
-  try { sessionStorage.removeItem(accessSessionStorageKey); } catch (_) {}
+  try { sessionStorage.removeItem(accessSessionStorageKey); localStorage.removeItem(sharedAccessSessionStorageKey); } catch (_) {}
   try { localStorage.setItem('art-atlas-logout-signal', String(Date.now())); } catch (_) {}
   location.assign(new URL('index.html?login=1', location.href).href);
 }
 function savedAccessSession() {
   try {
-    const saved=JSON.parse(sessionStorage.getItem(accessSessionStorageKey) || 'null');
-    return saved && ['admin','viewer'].includes(saved.role) ? saved : null;
+    const privateSession=JSON.parse(sessionStorage.getItem(accessSessionStorageKey) || 'null');
+    const sharedSession=JSON.parse(localStorage.getItem(sharedAccessSessionStorageKey) || 'null');
+    if (sharedSession?.role === 'admin' && sharedSession.token) return sharedSession;
+    return privateSession && ['admin','viewer'].includes(privateSession.role) ? privateSession : null;
   } catch (_) {
     return null;
   }
@@ -1061,7 +1067,7 @@ function startAdminSessionHeartbeat() {
       const response = await apiFetch('/api/auth/heartbeat',{method:'POST',cache:'no-store'});
       if (!response.ok) throw new Error('관리자 세션이 종료되었습니다.');
     } catch (_) {
-      enterViewerMode();
+      enterViewerMode({clearShared:true});
       render();
     }
   };
@@ -1081,7 +1087,7 @@ async function chooseAccessMode() {
       clearLoginRequestFromUrl();
       return;
     } catch (_) {
-      try { sessionStorage.removeItem(accessSessionStorageKey); } catch (_) {}
+      try { sessionStorage.removeItem(accessSessionStorageKey); localStorage.removeItem(sharedAccessSessionStorageKey); } catch (_) {}
       currentUserEmail='';
       currentUserRole='viewer';
       currentUserIsAdmin=false;
@@ -4018,7 +4024,7 @@ window.addEventListener('storage', event => {
     if (viewMode === 'country-art') renderCountryArt();
   }
   if (event.key !== 'art-atlas-logout-signal') return;
-  try { sessionStorage.removeItem(accessSessionStorageKey); } catch (_) {}
+  try { sessionStorage.removeItem(accessSessionStorageKey); localStorage.removeItem(sharedAccessSessionStorageKey); } catch (_) {}
 });
 window.addEventListener('message', event => {
   if (event.origin !== location.origin || event.data?.type !== 'art-through-time-uhangul-mode') return;
