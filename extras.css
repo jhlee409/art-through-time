@@ -69,7 +69,7 @@
 .artist-relations-page .timeline-panel { height: 100vh; padding: 76px 0 42px; }
 .artist-relations-page .artist-page-nav { display: none; }
 .artist-relations-page .sidebar { display: flex; }
-.artist-relations-page .sidebar > :not(.brand, .display-mode, .sidebar-page-title, .language, .sidebar-resize-handle) { display: none; }
+.artist-relations-page .sidebar > :not(.sidebar-toggle, .brand, .display-mode, .sidebar-page-title, .language, .sidebar-resize-handle) { display: none; }
 .artist-relations-page .sidebar .display-mode { display: flex !important; visibility: visible !important; }
 .artist-relations-page .sidebar-page-title { margin: 12px 2px 0; }
 .artist-relations-page .sidebar .language { margin-top: auto; }
@@ -718,7 +718,7 @@ button.artist-relation-node:not(.artist-relation-node--center):hover, button.art
 
 /* The movement tab shares the app shell, but has its own deliberately minimal sidebar. */
 .movement-popup .sidebar { display: flex; }
-.movement-popup .sidebar > :not(.brand, .sidebar-page-title, .movement-sidebar-actions, .language, .sidebar-resize-handle) { display: none; }
+.movement-popup .sidebar > :not(.sidebar-toggle, .brand, .sidebar-page-title, .movement-sidebar-actions, .language, .sidebar-resize-handle) { display: none; }
 .movement-popup .sidebar-page-title { margin: 12px 2px 0; }
 .movement-sidebar-actions { display: none; }
 .movement-popup .movement-sidebar-actions { display: flex; flex-direction: column; gap: 6px; margin: 12px 0 0; }
@@ -738,7 +738,7 @@ button.artist-relation-node:not(.artist-relation-node--center):hover, button.art
 .movement-popup .movement-country-controls .atlas-country-options label { display: flex; align-items: center; min-width: 0; font-size: 11px; white-space: nowrap; }
 .movement-popup .sidebar .language { margin-top: auto; }
 .country-art-page .sidebar { display: flex; }
-.country-art-page .sidebar > :not(.brand, .sidebar-page-title, .movement-sidebar-actions, .language, .sidebar-resize-handle) { display: none; }
+.country-art-page .sidebar > :not(.sidebar-toggle, .brand, .sidebar-page-title, .movement-sidebar-actions, .language, .sidebar-resize-handle) { display: none; }
 .country-art-page .sidebar-page-title { margin: 12px 2px 0; }
 .country-art-page .movement-sidebar-actions { display: block; margin: 12px 0 0; }
 .country-art-page .sidebar .language { margin-top: auto; }
@@ -976,5 +976,97 @@ button.artist-relation-node:not(.artist-relation-node--center):hover, button.art
   }
   .timeline-sticky-header .timeline-title-actions {
     justify-content: flex-start;
+  }
+}
+
+/* Shared sidebar visibility controls. */
+.sidebar {
+  position: relative;
+}
+
+.sidebar .brand {
+  min-height: 28px;
+  margin-right: 38px;
+}
+
+.sidebar-toggle,
+.sidebar-restore-toggle {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  padding: 0;
+  border: 1px solid #aebba8;
+  border-radius: 50%;
+  background: #fffdf8;
+  color: #425043;
+  box-shadow: 0 3px 8px rgba(24, 34, 30, .08);
+}
+
+.sidebar-toggle {
+  position: absolute;
+  z-index: 90;
+  top: 27px;
+  right: 14px;
+}
+
+.sidebar-restore-toggle {
+  position: fixed;
+  z-index: 170;
+  top: 12px;
+  left: 12px;
+  display: none;
+}
+
+.sidebar-toggle:hover,
+.sidebar-toggle:focus-visible,
+.sidebar-restore-toggle:hover,
+.sidebar-restore-toggle:focus-visible {
+  border-color: #8e9b8b;
+  background: #edf3e9;
+  color: #1b2923;
+  outline: none;
+}
+
+.sidebar-toggle:focus-visible,
+.sidebar-restore-toggle:focus-visible {
+  box-shadow: 0 0 0 3px rgba(220, 164, 124, .42);
+}
+
+.sidebar-toggle-icon {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+body.sidebar-collapsed .sidebar {
+  display: none !important;
+}
+
+body.sidebar-collapsed .main-area {
+  width: 100%;
+  flex: 1 1 auto;
+}
+
+body.sidebar-collapsed .sidebar-restore-toggle {
+  display: grid;
+}
+
+.auth-pending .sidebar-restore-toggle {
+  visibility: hidden;
+}
+
+@media (max-width: 590px) {
+  .sidebar-toggle {
+    top: 16px;
+    right: 16px;
+  }
+
+  .sidebar .brand {
+    margin-right: 38px;
   }
 }
