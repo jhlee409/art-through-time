@@ -77,7 +77,9 @@ let uHangulMode = initialUHangulMode;
 let artists = [];
 let selectedId = localStorage.getItem('art-atlas-selected');
 let requestedArtistMissing = false;
-let viewMode = isArtistRelationsPage ? 'artist-relations' : (isCountryArtPage ? 'country-art' : (isMovementPopup ? 'movements' : 'timeline'));
+// The root screen opens with the movement atlas. Explicit artist, relation,
+// country, and movement-popup URLs still select their requested view later.
+let viewMode = isArtistRelationsPage ? 'artist-relations' : (isCountryArtPage ? 'country-art' : 'movements');
 let movementCountries = [];
 let movementView = parseMovementView();
 let countryArtView = parseCountryArtView();
