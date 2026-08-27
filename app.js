@@ -1729,6 +1729,15 @@ function renderList() {
     const historicalCountry = country.original !== country.name;
     return `<div class="artist-row ${a.id === selectedId ? 'active':''}"><button class="artist-item" data-id="${esc(a.id)}"><span class="avatar ${historicalCountry ? 'historical-country' : ''}" style="background:${countryColor(country.colorKey)};color:${countryInk(country.colorKey)}" title="${esc(countryLabel)}" aria-label="${esc(countryLabel)}">${esc(countryAvatarText(country))}</span><span class="artist-text"><span class="artist-name"${nameAttributes}>${esc(displayName)}</span><span class="artist-years">${years(a)}${movement ? ` · ${esc(movement)}` : ''}</span></span></button>${currentUserIsAdmin ? `<button class="delete-artist" data-id="${esc(a.id)}" title="${esc(t('delete'))}" aria-label="${esc(t('delete'))}">×</button>` : ''}</div>`;
   }).join('') : `<p class="artist-search-empty">${t('noSearchResult')}</p>`;
+  // Keep the active artist easy to find without touching the right-hand
+  // timeline scroll position or changing the user's selection.
+  if (viewMode === 'timeline' && selectedId) requestAnimationFrame(() => {
+    const activeRow = list.querySelector('.artist-row.active');
+    if (!activeRow) return;
+    const centeredTop = activeRow.offsetTop - (list.clientHeight - activeRow.offsetHeight) / 2;
+    const maximumTop = Math.max(0, list.scrollHeight - list.clientHeight);
+    list.scrollTo({top:Math.max(0, Math.min(centeredTop, maximumTop)), behavior:'auto'});
+  });
   list.querySelectorAll('.artist-item').forEach(button => button.onclick = async () => { viewMode = 'timeline'; selectedId = button.dataset.id; persist(); closeDetail(); const artist = artists.find(item => item.id === selectedId); await hydrateThumbnails(artist); renderList(); renderTimeline(); await enrichArtist(); });
   list.querySelectorAll('.delete-artist').forEach(button => button.onclick = async event => { event.stopPropagation(); if (!currentUserIsAdmin || !confirm(t('confirmDelete'))) return; const deleted = artists.find(artist => artist.id === button.dataset.id); artists = artists.filter(artist => artist.id !== button.dataset.id); if (selectedId === button.dataset.id) selectedId = artists[0]?.id || null; persist(); if (!await saveArtistsNow()) { artists.push(deleted); if (!selectedId) selectedId = deleted.id; alert(language === 'ko' ? '삭제 내용을 저장하지 못해 복원했습니다.' : 'The deletion could not be saved, so it was restored.'); } render(); });
   $('#artist-names').innerHTML = artists.flatMap(a => [artistListKoreanName(a), artistDisplayName(a), artistUHangulDisplayName(a), a.fullName, a.name?.ko, a.name?.en, ...artistAliases(a)]).filter(Boolean).filter((value,index,self) => self.indexOf(value) === index).map(value => `<option value="${esc(value)}"></option>`).join('');
