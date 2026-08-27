@@ -68,11 +68,13 @@ async function destinationFor(source) {
 
 function convertUnderLimit(source, destination) {
   const staging = fsSync.mkdtempSync(path.join(os.tmpdir(), 'art-atlas-image-'));
+  const input = path.join(staging, `source${path.extname(source) || '.img'}`);
   const tmp = path.join(staging, 'display.png');
   const sizes = [2400, 2000, 1600, 1200, 1000, 800, 640, 480, 360];
   try {
+    fsSync.copyFileSync(source, input);
     for (const size of sizes) {
-      execFileSync(ffmpegPath, ['-y', '-i', source, '-vf', `scale=min(${size}\\,iw):-2`, '-frames:v', '1', '-update', '1', '-compression_level', '9', '-pred', 'mixed', tmp], {stdio: 'ignore', windowsHide: true});
+      execFileSync(ffmpegPath, ['-y', '-i', input, '-vf', `scale=min(${size}\\,iw):-2`, '-frames:v', '1', '-update', '1', '-compression_level', '9', '-pred', 'mixed', tmp], {stdio: 'ignore', windowsHide: true});
       const stat = fsSync.statSync(tmp);
       if (stat.size <= limitBytes) {
         fsSync.copyFileSync(tmp, destination);

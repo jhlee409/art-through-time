@@ -24,5 +24,6 @@
 ## 이미지와 검증
 
 - 로컬 이미지 또는 기존 내장 이미지만 사용하며 외부 이미지 URL·다운로드 의존을 새로 만들지 않는다. 화가별 로컬 썸네일을 카드에 재사용할 때는 상대 경로와 `data-art-atlas-highres`가 같은 로컬 자산을 가리키는지 확인한다.
+- `<img src="data:image/...">` 형태의 base64 인라인 이미지는 사조 HTML에 넣지 않는다. 사용해야 하는 기존 내장 이미지는 `data/미술사조/images/`의 로컬 파일로 분리한 뒤 상대 경로로 참조한다.
 - 대표작 카드는 전체 폭 3열, 작은 화면 1열을 유지한다.
 - 완료 전 `node tools/validate-movement-links.js`, `node --check server.js`, `git diff --check`를 실행한다.

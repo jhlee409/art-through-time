@@ -9,8 +9,17 @@ let files = 0;
 let links = 0;
 let missingTargets = 0;
 let externalImgs = 0;
+let inlineImgs = 0;
+let missingLocalImgs = 0;
 let nestedAnchors = 0;
 const missing = [];
+const missingImages = [];
+
+function localImagePath(file, src) {
+  const normalized = src.replace(/\\/g, '/');
+  if (/^\//.test(normalized)) return path.join(root, normalized.replace(/^\/+/, ''));
+  return path.resolve(path.dirname(file), normalized);
+}
 
 function countNestedAnchors(html) {
   let depth = 0;
@@ -31,7 +40,18 @@ for (const name of fs.readdirSync(movementDir).filter(file => /\.html?$/i.test(f
   const html = fs.readFileSync(path.join(movementDir, name), 'utf8');
   links += (html.match(/class="art-atlas-artist-link"/g) || []).length;
   externalImgs += (html.match(/<img[^>]+src=["']https?:\/\//gi) || []).length;
+  inlineImgs += (html.match(/<img[^>]+src=["']data:image\//gi) || []).length;
   nestedAnchors += countNestedAnchors(html);
+  for (const match of html.matchAll(/<img\b[^>]*\bsrc=["']([^"']+)["']/gi)) {
+    const src = match[1];
+    if (/^(?:data:image\/|https?:\/\/)/i.test(src)) continue;
+    const target = localImagePath(path.join(movementDir, name), src);
+    const relative = path.relative(root, target);
+    if (!relative || relative.startsWith('..') || path.isAbsolute(relative) || !fs.existsSync(target)) {
+      missingLocalImgs += 1;
+      missingImages.push({file: name, src});
+    }
+  }
   for (const match of html.matchAll(/index\.html\?artist=([^"'&>]+)/g)) {
     const id = decodeURIComponent(match[1]);
     if (!artists.has(id)) {
@@ -41,5 +61,5 @@ for (const name of fs.readdirSync(movementDir).filter(file => /\.html?$/i.test(f
   }
 }
 
-console.log(JSON.stringify({files, links, missingTargets, externalImgs, nestedAnchors, missing}, null, 2));
-process.exitCode = missingTargets || externalImgs || nestedAnchors ? 1 : 0;
+console.log(JSON.stringify({files, links, missingTargets, externalImgs, inlineImgs, missingLocalImgs, nestedAnchors, missing, missingImages}, null, 2));
+process.exitCode = missingTargets || externalImgs || inlineImgs || missingLocalImgs || nestedAnchors ? 1 : 0;
