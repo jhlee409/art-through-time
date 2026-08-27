@@ -83,7 +83,7 @@
 .artist-relations-empty { max-width: 640px; margin: 130px auto; text-align: center; }
 .artist-relations-empty h1 { font: 400 28px/1.2 var(--serif); }
 .artist-relations-empty p { color: var(--muted); line-height: 1.6; }
-.artist-relation-map { position: relative; box-sizing: border-box; width: 100%; min-height: 560px; margin: 0; border-top: 1px solid #e3e6df; border-bottom: 1px solid #e3e6df; background: radial-gradient(circle at 50% 50%, #ffffff 0, #fcfcf9 32%, #f5f7f2 100%); padding: 20px 0; overflow: hidden; }
+.artist-relation-map { position: relative; box-sizing: border-box; width: 100%; min-height: 448px; margin: 0; border-top: 1px solid #e3e6df; border-bottom: 1px solid #e3e6df; background: radial-gradient(circle at 50% 50%, #ffffff 0, #fcfcf9 32%, #f5f7f2 100%); padding: 20px 0; overflow: hidden; }
 .artist-relation-map::before { content: ''; position: absolute; inset: 24px 0; background-image: radial-gradient(#cbd4ca 0.7px, transparent 0.8px); background-size: 18px 18px; opacity: .28; pointer-events: none; }
 .artist-relation-center { position: absolute; z-index: 2; left: 50%; top: 50%; display: grid; place-items: center; transform: translate(-50%, -50%); }
 .artist-relation-lane { position: absolute; z-index: 2; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; min-width: 0; border: 1px solid #cad5ca; border-radius: 14px; background: rgba(255,254,250,.88); padding: 11px 12px 13px; box-shadow: 0 5px 14px rgba(31,43,36,.06); }
@@ -126,6 +126,19 @@ button.artist-relation-node:not(.artist-relation-node--center):hover, button.art
 .artist-relation-agent-answer p { margin: 0 0 5px; color: #637568; font: 700 10px/1.3 var(--sans); letter-spacing: .07em; }
 .artist-relation-agent-answer h2 { margin: 0 26px 9px 0; font: 700 17px/1.2 var(--sans); }
 .artist-relation-agent-answer div { color: #536057; font-size: 13px; line-height: 1.65; white-space: pre-line; }
+.artist-impact-events { width: 100%; margin: 32px 0 48px; border: 1px solid #d9dfd7; border-radius: 15px; background: #fffefa; box-shadow: 0 8px 24px rgba(31,43,36,.06); overflow: hidden; }
+.artist-impact-events-heading { display: flex; align-items: baseline; gap: 8px; padding: 12px 17px 10px; border-bottom: 1px solid #e3e7e0; background: linear-gradient(90deg, #f4f7f1, #fffefa); }
+.artist-impact-events-heading p { margin: 0; color: #6d7b70; font: 700 10px/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; }
+.artist-impact-events-heading h2 { margin: 0; color: #29372e; font: 400 18px/1.15 var(--serif); }
+.artist-impact-events-table { display: grid; }
+.artist-impact-events-row { display: grid; grid-template-columns: 118px minmax(180px, .9fr) minmax(0, 2.1fr); align-items: start; border-top: 1px solid #edf0eb; }
+.artist-impact-events-row:first-child { border-top: 0; }
+.artist-impact-events-row > * { min-width: 0; padding: 9px 13px; }
+.artist-impact-events-row > * + * { border-left: 1px solid #edf0eb; }
+.artist-impact-events-row--head { background: #f7f8f4; color: #647168; font: 700 10px/1.2 var(--sans); letter-spacing: .06em; }
+.artist-impact-events-row time { color: #8c6730; font: 700 12px/1.3 'DM Mono', monospace; }
+.artist-impact-events-row strong { color: #2f3d34; font: 650 13px/1.35 var(--sans); text-align: left; }
+.artist-impact-events-row p { margin: 0; color: #5d6a60; font-size: 11px; line-height: 1.4; }
 .atlas-popup-close { float: right; border: 1px solid var(--line); border-radius: 4px; background: #fffdf8; color: var(--ink); padding: 7px 12px; font-size: 12px; }
 .atlas-popup-close:hover { border-color: #8e9b8b; color: var(--ink); }
 .artist-row.active { background: var(--sage); }
@@ -807,6 +820,11 @@ button.artist-relation-node:not(.artist-relation-node--center):hover, button.art
   .artist-relation-center, .artist-relation-lane--study, .artist-relation-lane--teachers, .artist-relation-lane--exchanges, .artist-relation-lane--rivals { position: static; left:auto; right:auto; top:auto; bottom:auto; width:auto; transform:none; }
   .artist-relation-center { order: -1; min-height: 80px; }
   .artist-relation-lane { padding: 13px 0; border-top: 1px solid #ddd8cc; }
+  .artist-impact-events { margin: 25px 0 34px; border-radius: 10px; }
+  .artist-impact-events-row { grid-template-columns: 88px minmax(0, 1fr); }
+  .artist-impact-events-row > * { padding: 8px 10px; }
+  .artist-impact-events-row > div { grid-column: 2; border-left: 1px solid #edf0eb; border-top: 1px solid #edf0eb; }
+  .artist-impact-events-row--head > :last-child { display: none; }
   .artist-relation-connector { display: none; }
   .movement-title-row .timeline-title { font-size: 18px; }
   .sidebar-page-title { font-size: 18px; }

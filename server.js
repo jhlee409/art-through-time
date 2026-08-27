@@ -12,6 +12,7 @@ const { normalizeArtistsPayload, validateArtistsPayload, firebaseExport } = requ
 const { invalidArtworkThumbnail } = require('./thumbnail-validation');
 const { buildArtistMap, writeArtistMap: writeUHangulArtistMap } = require('./tools/build-uhangul-artist-map');
 const { syncPersonNameDictionary } = require('./tools/sync-person-name-dictionary');
+const { recordArtistRelationImpactAudit } = require('./tools/artist-relation-impact-audit');
 process.once('uncaughtException', error => {
   if (error?.code === 'EADDRINUSE') {
     console.error('Art Atlas is already running on http://localhost:4173');
@@ -1310,6 +1311,59 @@ function normalizeMovementCardPresentation(html) {
   const style='<style id="art-atlas-movement-card-presentation-style">.movement-card-title-tag,.movement-card-activity-region{color:#9aa5af;font-size:.78em;font-weight:600;white-space:nowrap}</style>';
   return /<\/head>/i.test(source) ? source.replace(/<\/head>/i,`${style}\n</head>`) : `${style}\n${source}`;
 }
+function movementPlainText(value='') {
+  return htmlDecode(String(value || '')).replace(/<br\s*\/?\s*>/gi,' ').replace(/<[^>]+>/g,' ').replace(/&nbsp;/gi,' ').replace(/\s+/g,' ').trim();
+}
+function movementCountryLabelKey(value='') {
+  return movementPlainText(value).replace(/\s+(?:공화국|왕국|제국)$/,'').replace(/\s+/g,'').trim();
+}
+function movementCountryCardContexts(html) {
+  const source=String(html || '');
+  const countriesStart=source.search(/<section\b[^>]*\bid=["']countries["'][^>]*>/i);
+  if(countriesStart < 0) return [];
+  const countriesEnd=matchingHtmlElementEnd(source,countriesStart,'section');
+  if(countriesEnd < 0) return [];
+  const contexts=[];
+  for(const row of source.slice(countriesStart,countriesEnd).matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)) {
+    const cells=[...row[1].matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/gi)].map(cell=>movementPlainText(cell[1]));
+    if(cells.length < 2) continue;
+    const [country='', region='']=cells[0].split(/\s*(?:—|–)\s*/,2);
+    const key=movementCountryLabelKey(country);
+    if(!key || !cells[1]) continue;
+    contexts.push({country:country.trim(),region:region.trim(),feature:cells[1],key});
+  }
+  return contexts;
+}
+function injectMovementCountryCardContexts(html) {
+  let source=String(html || '')
+    .replace(/\s*<style\b[^>]*id=["']art-atlas-movement-country-card-context-style["'][^>]*>[\s\S]*?<\/style>\s*/gi,'\n');
+  const contexts=movementCountryCardContexts(source);
+  if(!contexts.length) return source;
+  source=source.replace(/<section\b(?=[^>]*\bclass=["'][^"']*\bart-atlas-submovement-group\b[^"']*["'])[^>]*>[\s\S]*?<\/section>/gi,group=>{
+    const groupName=movementPlainText(group.match(/\bdata-art-atlas-submovement=["']([^"']+)["']/i)?.[1] || group.match(/<h3\b(?=[^>]*\bclass=["'][^"']*\bart-atlas-submovement-heading\b[^"']*["'])[^>]*>([\s\S]*?)<\/h3>/i)?.[1] || '');
+    const groupKey=movementCountryLabelKey(groupName);
+    const context=contexts.find(item=>item.key===groupKey) || contexts.find(item=>item.key.includes(groupKey) || groupKey.includes(item.key));
+    if(!context) return group;
+    return group.replace(/(<h3\b(?=[^>]*\bclass=["'][^"']*\bart-atlas-submovement-heading\b[^"']*["'])[^>]*>)([\s\S]*?)(<\/h3>)/i,(_,open,title,close)=>{
+      const cleanTitle=title.replace(/\s*<span\b(?=[^>]*\bclass=["'][^"']*\bmovement-country-card-context\b[^"']*["'])[^>]*>[\s\S]*?<\/span>\s*/gi,'');
+      const region=context.region ? `<span class="movement-country-card-context-region"><b>지역</b> ${escapeAttribute(context.region)}</span>` : '';
+      return `${open}${cleanTitle}<span class="movement-country-card-context">${region}<span class="movement-country-card-context-feature"><b>특징</b> ${escapeAttribute(context.feature)}</span></span>${close}`;
+    });
+  });
+  const style='<style id="art-atlas-movement-country-card-context-style">.movement-enhancement .art-atlas-submovement-heading{display:flex;flex-wrap:wrap;align-items:baseline;gap:.45rem}.movement-enhancement .movement-country-card-context{display:inline-flex;flex:1 1 20rem;flex-wrap:wrap;gap:.32rem .7rem;align-items:baseline;color:#aeb9c3;font-size:.76rem;font-weight:500;line-height:1.55}.movement-enhancement .movement-country-card-context b{color:#e6c98d;font-size:.92em;font-weight:800}.movement-enhancement .movement-country-card-context-region{white-space:nowrap}.movement-enhancement .movement-country-card-context-feature{min-width:12rem}</style>';
+  return /<\/head>/i.test(source) ? source.replace(/<\/head>/i,`${style}\n</head>`) : `${style}\n${source}`;
+}
+function injectMovementStickyTitle(html) {
+  let source=String(html || '')
+    .replace(/\s*<style\b[^>]*id=["']art-atlas-movement-sticky-title-style["'][^>]*>[\s\S]*?<\/style>\s*/gi,'\n');
+  const title=movementCardDocumentName(source);
+  if(!title) return source;
+  const nav=/<nav\b[^>]*>[\s\S]*?<\/nav>/i;
+  if(!nav.test(source)) return source;
+  source=source.replace(nav,`<nav aria-label="현재 사조"><div class="wrap"><span class="art-atlas-movement-sticky-title">${escapeAttribute(title)}</span></div></nav>`);
+  const style='<style id="art-atlas-movement-sticky-title-style">nav .wrap{display:flex;align-items:center}nav .art-atlas-movement-sticky-title{display:block;color:inherit;font:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit}</style>';
+  return /<\/head>/i.test(source) ? source.replace(/<\/head>/i,`${style}\n</head>`) : `${style}\n${source}`;
+}
 function matchingHtmlElementEnd(source, start, tagName) {
   const tag=new RegExp(`<\\/?${tagName}\\b[^>]*>`, 'gi');
   tag.lastIndex=start;
@@ -1765,7 +1819,8 @@ async function saveLocalArtworkImage(form) {
     await removeHighResolutionFiles(location.folder,workId);
     await fs.rename(display,path.join(location.folder,`${fileBase}.display.png`));
     const image=`${location.relativePrefix}/${fileBase}.display.png`;
-    return {image,thumbnail};
+    const relationImpactAudit=recordArtistRelationImpactAudit({artistId,workId,trigger:'timeline-high-resolution-image-added'});
+    return {image,thumbnail,relationImpactAudit};
   } finally { await fs.rm(staging,{recursive:true,force:true}).catch(()=>{}); }
 }
 async function saveTopicArtwork(form) {
@@ -1877,6 +1932,6 @@ http.createServer(async (req,res) => { const url=new URL(req.url,`http://${req.h
   if (req.method==='POST' && url.pathname==='/api/normalize-artist-works') { try { const result=await normalizeArtistWorks(JSON.parse(await readJsonRequest(req)).artist); res.writeHead(200,{'Content-Type':'application/json'}); res.end(JSON.stringify(result)); } catch(error) { sendJsonBodyError(res,error); } return; }
   if (req.method==='GET' && url.pathname==='/api/artist-profile') { try { const qid=url.searchParams.get('qid'); if(!/^Q\d+$/.test(qid || '')) throw new Error('Invalid artist'); const artistEntity=(await getEntities([qid]))[qid]; const nationalityQid=entityId(artistEntity,'P27'); const nationalityEntity=nationalityQid ? (await getEntities([nationalityQid]))[nationalityQid] : null; res.writeHead(200,{'Content-Type':'application/json'}); return res.end(JSON.stringify({name:{ko:koreanArtistNameOverrides[qid] || entityLabel(artistEntity,'ko'),en:englishArtistNameOverrides[qid] || entityLabel(artistEntity,'en')},birth:entityYear(artistEntity,'P569'),death:entityYear(artistEntity,'P570'),nationality:{ko:entityLabel(nationalityEntity,'ko'),en:entityLabel(nationalityEntity,'en')}})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json'}); return res.end(JSON.stringify({error:error.message})); } }
   if (req.method==='POST' && url.pathname==='/api/artwork-info') { try { const {artist,work}=JSON.parse(await readJsonRequest(req)); const result=await artworkInfo(artist,work); res.writeHead(200,{'Content-Type':'application/json'}); res.end(JSON.stringify({work:result})); } catch(error) { const status=error?.message === 'JSON request body exceeds the 12 MB limit' ? 413 : 502; res.writeHead(status,{'Content-Type':'application/json'}); res.end(JSON.stringify({error:error.message})); } return; }
-  if (req.method==='POST' && url.pathname==='/api/local-thumbnail-image') { try { const form=multipartForm(await readRequestBuffer(req,sourceImageInputLimit + 1024*1024),req.headers['content-type']), artist=JSON.parse(form.fields.artist || '{}'), work=JSON.parse(form.fields.work || '{}'); if(!artist?.id || !work?.id) throw new Error('Invalid artwork upload'); const thumbnail=await saveThumbnailFromLocalUpload(artist,work,form.files.image,adminEmail); res.writeHead(200,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({thumbnail,verified:true})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({thumbnail:'',verified:false,error:error.message})); } }
+  if (req.method==='POST' && url.pathname==='/api/local-thumbnail-image') { try { const form=multipartForm(await readRequestBuffer(req,sourceImageInputLimit + 1024*1024),req.headers['content-type']), artist=JSON.parse(form.fields.artist || '{}'), work=JSON.parse(form.fields.work || '{}'); if(!artist?.id || !work?.id) throw new Error('Invalid artwork upload'); const thumbnail=await saveThumbnailFromLocalUpload(artist,work,form.files.image,adminEmail), relationImpactAudit=recordArtistRelationImpactAudit({artistId:artist.id,workId:work.id,trigger:'timeline-thumbnail-image-added'}); res.writeHead(200,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({thumbnail,verified:true,relationImpactAudit})); } catch(error) { res.writeHead(422,{'Content-Type':'application/json','Cache-Control':'no-store'}); return res.end(JSON.stringify({thumbnail:'',verified:false,error:error.message})); } }
   if (req.method==='GET' && url.pathname==='/api/search') { try { const query=url.searchParams.get('q')||'', kind=url.searchParams.get('type')||'artist'; const raw=kind==='artist' ? await artistSearchCandidates(query) : (await getJsonFast(api({action:'wbsearchentities',search:query,language:'ko',uselang:'ko',type:'item',limit:'20'}))).search?.map(item=>({id:item.id,label:item.label,description:item.description||''})) || []; const ranked=[...raw].sort((a,b)=>{const score=item=>similarityScore(query,item.label)+(kind==='artwork' ? /(회화|그림|painting|artwork|work of art)/i.test(item.description)?120:0 : /(화가|예술가|painter|visual artist|artist)/i.test(item.description)?120:0); return score(b)-score(a);}); const values=ranked.slice(0,8); res.writeHead(200,{'Content-Type':'application/json'}); return res.end(JSON.stringify(values)); } catch(error) { res.writeHead(502,{'Content-Type':'application/json'}); return res.end(JSON.stringify([])); } }
-  const file=safePath(url.pathname);if(!file){res.writeHead(403);return res.end();}try{let data=await fs.readFile(file);const relativeFile=path.relative(root,file).replace(/\\/g,'/');if(/^data[\\/]미술사조[\\/][a-f0-9]{24}-[12]\.html$/i.test(path.relative(root,file))) { let html=(await linkMovementDocumentArtists(data)).toString('utf8'); html=await injectMovementArtworkMovementLabels(html); html=normalizeMovementCardPresentation(html); html=synchronizeMovementCountryTableArtistOrder(html); html=injectMovementPioneerContext(html,await movementDocumentPioneerContextKey(relativeFile)); html=injectUHangulDocumentIntegration(html); html=injectMovementWikipediaHeading(html,url.searchParams.get('movementWiki') || '',url.searchParams.get('movementLabel') || ''); html=await injectMovementHighResolutionViewer(html); data=Buffer.from(html,'utf8'); }res.writeHead(200,{'Content-Type':mime[path.extname(file)]||'application/octet-stream','Cache-Control':'no-store'});res.end(data);}catch(error){if(error?.code!=='ENOENT') console.error('Static file error:',error?.stack || error?.message || error);res.writeHead(404);res.end('Not found');}}).listen(4173,'127.0.0.1',()=>console.log(`Art Atlas: http://localhost:4173${adminPasswordHash ? '' : ' (read-only: .env not found)'}`));
+  const file=safePath(url.pathname);if(!file){res.writeHead(403);return res.end();}try{let data=await fs.readFile(file);const relativeFile=path.relative(root,file).replace(/\\/g,'/');if(/^data[\\/]미술사조[\\/][a-f0-9]{24}-[12]\.html$/i.test(path.relative(root,file))) { let html=(await linkMovementDocumentArtists(data)).toString('utf8'); html=await injectMovementArtworkMovementLabels(html); html=normalizeMovementCardPresentation(html); html=synchronizeMovementCountryTableArtistOrder(html); html=injectMovementCountryCardContexts(html); html=injectMovementPioneerContext(html,await movementDocumentPioneerContextKey(relativeFile)); html=injectUHangulDocumentIntegration(html); html=injectMovementWikipediaHeading(html,url.searchParams.get('movementWiki') || '',url.searchParams.get('movementLabel') || ''); html=injectMovementStickyTitle(html); html=await injectMovementHighResolutionViewer(html); data=Buffer.from(html,'utf8'); }res.writeHead(200,{'Content-Type':mime[path.extname(file)]||'application/octet-stream','Cache-Control':'no-store'});res.end(data);}catch(error){if(error?.code!=='ENOENT') console.error('Static file error:',error?.stack || error?.message || error);res.writeHead(404);res.end('Not found');}}).listen(4173,'127.0.0.1',()=>console.log(`Art Atlas: http://localhost:4173${adminPasswordHash ? '' : ' (read-only: .env not found)'}`));
