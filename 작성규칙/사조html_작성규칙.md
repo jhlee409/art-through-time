@@ -4,7 +4,7 @@
 
 ## 구조와 이름
 
-- `<section id="countries">`, `<section class="movement-enhancement" id="movement-deepening">`를 둔다. 상단 고정 바는 서버가 문서의 사조명을 같은 글자 크기로 표시하므로, 목차 링크를 고정 내비게이션으로 사용하지 않는다.
+- `<section id="countries">`, `<section class="movement-enhancement" id="movement-deepening">`를 둔다. 상단 고정 바는 서버가 문서의 사조명을 기본 내비게이션 글자 크기의 두 배(`2em`)로, 문서 폭 중앙에 표시하므로 목차 링크를 고정 내비게이션으로 사용하지 않는다.
 - 사조 막대는 더블클릭으로 설명 HTML을 새 탭에 열며 별도 원문자 설명 아이콘을 넣지 않는다.
 - uHangul v0.7 스타일시트와 런타임을 각각 한 번 포함한다.
 - 화가 링크는 정식 한국어 이름(`data-uh-korean`), uHangul 표시명(`data-uh-display-korean`), 짧은 통용명(`data-uh-list-korean`)을 분리한다. `node tools/sync-artist-link-display-names.js`로 동기화한다.
@@ -13,7 +13,8 @@
 
 - 국가별 전개 표의 화가·제작자는 상단 도판 유무와 관계없이 마지막 심화 카드에 모두 포함한다. 표에 없는 화가로 카드를 채우지 않는다.
 - 대표작 카드는 국가·지역별 세부 전개별 독립 `.movement-work-grid`에 둔다. 카드의 `movement-card-activity-region`은 해당 지역과 일치해야 한다.
-- 국가별 심화 카드 묶음의 제목에는 `data-art-atlas-submovement`을 국가명으로 지정한다. 서버는 `#countries` 표의 `국가·지역` 및 `특징` 값을 제목 옆에 자동으로 표시하므로, 동일한 지역·특징 문구를 카드마다 반복하지 않는다.
+- 국가별 심화 카드 묶음의 제목에는 `data-art-atlas-submovement`을 국가명으로 지정한다. 서버는 `#countries` 표의 `국가·지역` 및 `특징` 값을 제목 옆에 자동으로 표시하므로, 동일한 지역·특징 문구를 카드마다 반복하지 않는다. 국가명은 제목에 이미 있으므로 뒤 설명에는 `지역` 레이블을 붙이지 않고 지역·세부 사조명만 표시한다(예: `스페인 · 스페인 바로크`).
+- 심화 카드 묶음에서 국가명 뒤에 자동 표시하는 `지역`·`특징` 설명(`.movement-country-card-context`)은 기본 `0.912rem`으로 둔다. 이는 1.14rem 기준을 80%로 낮춘 크기이며, 국가명과 설명의 위계를 유지하면서도 스크롤 없이 읽을 수 있어야 한다.
 - 카드 DOM 순서는 국가별 미술 탭의 표시 순서이며, 저장한 카드 순서는 표의 화가 링크 순서에도 자동 반영된다.
 - 카드 첫 줄은 `화가명, 《작품명》 · 사조 · 지역` 순서로 쓴다.
 

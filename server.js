@@ -1346,11 +1346,11 @@ function injectMovementCountryCardContexts(html) {
     if(!context) return group;
     return group.replace(/(<h3\b(?=[^>]*\bclass=["'][^"']*\bart-atlas-submovement-heading\b[^"']*["'])[^>]*>)([\s\S]*?)(<\/h3>)/i,(_,open,title,close)=>{
       const cleanTitle=title.replace(/\s*<span\b(?=[^>]*\bclass=["'][^"']*\bmovement-country-card-context\b[^"']*["'])[^>]*>[\s\S]*?<\/span>\s*/gi,'');
-      const region=context.region ? `<span class="movement-country-card-context-region"><b>지역</b> ${escapeAttribute(context.region)}</span>` : '';
+      const region=context.region ? `<span class="movement-country-card-context-region">${escapeAttribute(context.region)}</span>` : '';
       return `${open}${cleanTitle}<span class="movement-country-card-context">${region}<span class="movement-country-card-context-feature"><b>특징</b> ${escapeAttribute(context.feature)}</span></span>${close}`;
     });
   });
-  const style='<style id="art-atlas-movement-country-card-context-style">.movement-enhancement .art-atlas-submovement-heading{display:flex;flex-wrap:wrap;align-items:baseline;gap:.45rem}.movement-enhancement .movement-country-card-context{display:inline-flex;flex:1 1 20rem;flex-wrap:wrap;gap:.32rem .7rem;align-items:baseline;color:#aeb9c3;font-size:.76rem;font-weight:500;line-height:1.55}.movement-enhancement .movement-country-card-context b{color:#e6c98d;font-size:.92em;font-weight:800}.movement-enhancement .movement-country-card-context-region{white-space:nowrap}.movement-enhancement .movement-country-card-context-feature{min-width:12rem}</style>';
+  const style='<style id="art-atlas-movement-country-card-context-style">.movement-enhancement .art-atlas-submovement-heading{display:flex;flex-wrap:wrap;align-items:baseline;gap:.45rem}.movement-enhancement .movement-country-card-context{display:inline-flex;flex:1 1 20rem;flex-wrap:wrap;gap:.32rem .7rem;align-items:baseline;color:#aeb9c3;font-size:.912rem;font-weight:500;line-height:1.55}.movement-enhancement .movement-country-card-context b{color:#e6c98d;font-size:.92em;font-weight:800}.movement-enhancement .movement-country-card-context-region{white-space:nowrap}.movement-enhancement .movement-country-card-context-feature{min-width:12rem}</style>';
   return /<\/head>/i.test(source) ? source.replace(/<\/head>/i,`${style}\n</head>`) : `${style}\n${source}`;
 }
 function injectMovementStickyTitle(html) {
@@ -1361,7 +1361,7 @@ function injectMovementStickyTitle(html) {
   const nav=/<nav\b[^>]*>[\s\S]*?<\/nav>/i;
   if(!nav.test(source)) return source;
   source=source.replace(nav,`<nav aria-label="현재 사조"><div class="wrap"><span class="art-atlas-movement-sticky-title">${escapeAttribute(title)}</span></div></nav>`);
-  const style='<style id="art-atlas-movement-sticky-title-style">nav .wrap{display:flex;align-items:center}nav .art-atlas-movement-sticky-title{display:block;color:inherit;font:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit}</style>';
+  const style='<style id="art-atlas-movement-sticky-title-style">nav .wrap{display:flex;align-items:center;justify-content:center}nav .art-atlas-movement-sticky-title{display:block;width:100%;color:inherit;font-family:inherit;font-size:2em;font-weight:inherit;letter-spacing:inherit;line-height:inherit;text-align:center}</style>';
   return /<\/head>/i.test(source) ? source.replace(/<\/head>/i,`${style}\n</head>`) : `${style}\n${source}`;
 }
 function matchingHtmlElementEnd(source, start, tagName) {

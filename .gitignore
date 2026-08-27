@@ -6,6 +6,7 @@ delivery/
 data/backups/
 data/*.tmp
 data/.image-staging/
+data/artist-relation-impact-audits.json
 
 data/thumbnails/*
 !data/thumbnails/_placeholder/
