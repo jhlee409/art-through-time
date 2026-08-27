@@ -770,7 +770,7 @@
             "ko": "베네치아 페스트와 이른 죽음",
             "en": "Venetian plague and early death"
           },
-          "description": {
+      "impact": {
             "ko": "1510년 베네치아를 휩쓴 페스트로 조르조네가 젊은 나이에 사망했다. 이사벨라 데스테와의 1510년 말 서신은 그가 페스트로 사망했음을 기록하며, 그의 미완성 작품 일부는 티치아노가 이어 완성했다.",
             "en": "Giorgione died young in the plague that devastated Venice in 1510. Late-1510 correspondence with Isabella d’Este records his death from plague, and Titian completed some of his unfinished paintings."
           },
@@ -1119,7 +1119,7 @@
             "ko": "베네치아 페스트와 마지막 《피에타》",
             "en": "Venetian plague and the final Pietà"
           },
-          "description": {
+      "impact": {
             "ko": "베네치아를 휩쓴 페스트 속에서 《피에타》를 전염병에 맞선 봉헌 그림으로 바꾸어 작업했으나, 1576년 8월 27일 그가 사망하면서 작품은 미완성으로 남았다. 이후 야코포 팔마 일 조바네가 마무리했다.",
             "en": "During the Venetian plague, Titian turned the Pietà into a votive image against the epidemic. His death on 27 August 1576 left it unfinished; Jacopo Palma il Giovane later completed it."
           },
@@ -1190,7 +1190,7 @@
             "ko": "로마 약탈과 프랑스로의 이동",
             "en": "Sack of Rome and move to France"
           },
-          "description": {
+      "impact": {
             "ko": "1527년 로마 약탈 뒤 로소는 로마를 떠나 이탈리아 여러 도시를 옮겨 다니다가 프랑스로 향했다. 프랑수아 1세의 궁정 화가가 되어 퐁텐블로 궁전 장식을 맡았고, 이는 그의 경력을 국제 매너리즘의 중심으로 전환시켰다.",
             "en": "After the 1527 Sack of Rome, Rosso left the city and travelled through several Italian centres before reaching France. As Francis I’s court painter, he decorated Fontainebleau, redirecting his career toward the centre of international Mannerism."
           },
@@ -2072,7 +2072,7 @@
             "ko": "베네치아 페스트와 후기 양식의 변화",
             "en": "Venetian plague and the shift in his late style"
           },
-          "description": {
+      "impact": {
             "ko": "1576년의 심각한 베네치아 페스트는 그의 후기 단계가 시작되는 역사적 조건 중 하나였다. 이후 작품은 더 극적이고 불안정한 구성, 흐릿한 형상, 어두워진 색채와 방향성 있는 빛으로 변화했다.",
             "en": "The severe Venetian plague of 1576 was one of the historical circumstances shaping the start of Veronese’s late period. His paintings shifted toward more dramatic, unstable compositions, hazier forms, darker colour, and directional light."
           },
@@ -4417,6 +4417,13 @@
             "en": "Sebastiano Ricci"
           },
           "wikipedia": "https://en.wikipedia.org/wiki/Sebastiano_Ricci"
+        },
+        {
+          "name": {
+            "ko": "잠바티스타 피아체타",
+            "en": "Giambattista Piazzetta"
+          },
+          "wikipedia": "https://en.wikipedia.org/wiki/Giovanni_Battista_Piazzetta"
         }
       ],
       "teachers": [
@@ -4435,11 +4442,27 @@
             "en": "Giandomenico Tiepolo"
           },
           "wikipedia": "https://en.wikipedia.org/wiki/Giovanni_Domenico_Tiepolo"
+        },
+        {
+          "name": {
+            "ko": "로렌초 티에폴로",
+            "en": "Lorenzo Tiepolo"
+          },
+          "wikipedia": "https://en.wikipedia.org/wiki/Lorenzo_Tiepolo_(painter)"
+        },
+        {
+          "name": {
+            "ko": "지롤라모 멩고치 콜론나",
+            "en": "Girolamo Mengozzi Colonna"
+          },
+          "wikipedia": "https://en.wikipedia.org/wiki/Gerolamo_Mengozzi_Colonna"
         }
       ],
       "rivals": [],
       "sources": [
-        "https://www.museothyssen.org/en/collection/artists/tiepolo-giambattista"
+        "https://www.museothyssen.org/en/collection/artists/tiepolo-giambattista",
+        "https://carezzonico.visitmuve.it/en/layout-and-collections/first-floor/",
+        "https://www.metmuseum.org/essays/giovanni-battista-tiepolo-1696-1770"
       ],
       "impactEvents": [
         {
@@ -4455,6 +4478,18 @@
           "source": "https://en.wikipedia.org/wiki/Giovanni_Battista_Tiepolo"
         },
         {
+          "year": "1717",
+          "title": {
+            "ko": "베네치아 화가 길드 등록",
+            "en": "Registration in the Venetian painters’ guild"
+          },
+          "impact": {
+            "ko": "라차리니 화실 수련 뒤 화가 길드에 등록하며 독립 화가로 활동을 시작했습니다.",
+            "en": "After training with Lazzarini, he registered with the painters’ guild and began his independent career."
+          },
+          "source": "https://www.museothyssen.org/sites/default/files/document/2018-08/acerca_Tiepolo_eng.pdf"
+        },
+        {
           "year": "1726–1729",
           "title": {
             "ko": "우디네 대주교궁 프레스코",
@@ -4467,16 +4502,64 @@
           "source": "https://www.museothyssen.org/en/collection/artists/tiepolo-giambattista"
         },
         {
-          "year": "1750–1762",
+          "year": "1732–1739",
           "title": {
-            "ko": "뷔르츠부르크와 마드리드 궁정 작업",
-            "en": "Würzburg and Madrid court work"
+            "ko": "베네치아·베르가모의 교회 장식 수주",
+            "en": "Church decoration commissions in Venice and Bergamo"
           },
           "impact": {
-            "ko": "아들들과 뷔르츠부르크 주교관을 장식하고 이후 스페인 왕실의 부름으로 마드리드에서 작업하며 유럽적 장식 양식을 완성했습니다.",
-            "en": "Würzburg and Madrid court commissions completed his European decorative language."
+            "ko": "콜레오니 예배당과 베네치아 제수아티 교회의 장식에서 어두운 초기 명암을 투명한 색과 큰 환영 공간으로 전환했습니다.",
+            "en": "Decorations for the Colleoni Chapel and Venice’s Gesuati church shifted his early dark contrasts toward transparent colour and expansive illusionistic space."
           },
           "source": "https://www.museothyssen.org/en/collection/artists/tiepolo-giambattista"
+        },
+        {
+          "year": "1746–1750",
+          "title": {
+            "ko": "팔라초 라비아의 안토니우스·클레오파트라 연작",
+            "en": "Antony and Cleopatra cycle at Palazzo Labia"
+          },
+          "impact": {
+            "ko": "가상 건축을 그린 멩고치 콜론나와 함께, 역사 장면을 베네치아 귀족의 연회 같은 대형 무대로 바꾸었습니다.",
+            "en": "With Mengozzi Colonna’s fictive architecture, he turned history into a grand spectacle resembling a Venetian aristocratic pageant."
+          },
+          "source": "https://www.nationalgallery.org.uk/paintings/giovanni-battista-tiepolo-the-banquet-of-cleopatra"
+        },
+        {
+          "year": "1750–1753",
+          "title": {
+            "ko": "뷔르츠부르크 레지덴츠 장식",
+            "en": "Würzburg Residenz decoration"
+          },
+          "impact": {
+            "ko": "대주교 궁전의 대계단 천장에 《아폴론과 대륙들》을 그리며, 색·단축 원근·빛을 결합한 국제적 로코코 장식의 정점에 이르렀습니다.",
+            "en": "At the prince-bishop’s palace he brought colour, foreshortening, and light to an international Rococo peak in Apollo and the Continents."
+          },
+          "source": "https://www.metmuseum.org/essays/giovanni-battista-tiepolo-1696-1770"
+        },
+        {
+          "year": "1756–1757",
+          "title": {
+            "ko": "베네치아 아카데미 회장·카 레초니코 협업",
+            "en": "Accademia presidency and Ca’ Rezzonico collaboration"
+          },
+          "impact": {
+            "ko": "1756년 베네치아 아카데미 회장이 되었고, 이듬해 도메니코·멩고치 콜론나와 《혼인 알레고리》를 완성해 천장 환영을 가장 정교하게 구현했습니다.",
+            "en": "He became president of the Venetian Accademia in 1756; the following year, with Domenico and Mengozzi Colonna, he refined ceiling illusion in the Nuptial Allegory."
+          },
+          "source": "https://carezzonico.visitmuve.it/en/layout-and-collections/first-floor/"
+        },
+        {
+          "year": "1762–1770",
+          "title": {
+            "ko": "카를로스 3세 궁정과 마드리드 말년",
+            "en": "Court of Charles III and final Madrid years"
+          },
+          "impact": {
+            "ko": "두 아들과 함께 마드리드로 가 카를로스 3세를 위해 왕궁 천장화와 제단화를 제작하며, 베네치아 로코코를 스페인 궁정 공간으로 확장했습니다.",
+            "en": "Travelling to Madrid with both sons, he made palace ceilings and altarpieces for Charles III, extending Venetian Rococo into Spain’s courtly spaces."
+          },
+          "source": "https://resources.metmuseum.org/resources/metpublications/pdf/Domenico_Tiepolo_Drawings_Prints_and_Paintings_in_The_Metropolitan_Museum_of_Art_Bulletin_v_54_no_3_Winter_1996-97.pdf"
         }
       ]
     },
@@ -4488,6 +4571,13 @@
             "en": "Luca Carlevarijs"
           },
           "wikipedia": "https://en.wikipedia.org/wiki/Luca_Carlevarijs"
+        },
+        {
+          "name": {
+            "ko": "가스파르 판 비텔",
+            "en": "Gaspar van Wittel"
+          },
+          "wikipedia": "https://en.wikipedia.org/wiki/Gaspar_van_Wittel"
         }
       ],
       "teachers": [
@@ -4502,15 +4592,39 @@
       "exchanges": [
         {
           "name": {
-            "ko": "조지프 스미스",
-            "en": "Joseph Smith"
+            "ko": "베르나르도 벨로토",
+            "en": "Bernardo Bellotto"
           },
-          "wikipedia": "https://en.wikipedia.org/wiki/Joseph_Smith_(British_consul)"
+          "wikipedia": "https://en.wikipedia.org/wiki/Bernardo_Bellotto"
+        },
+        {
+          "name": {
+            "ko": "안토니오 비센티니",
+            "en": "Antonio Visentini"
+          },
+          "wikipedia": "https://en.wikipedia.org/wiki/Antonio_Visentini"
         }
       ],
-      "rivals": [],
+      "rivals": [
+        {
+          "name": {
+            "ko": "미켈레 마리에스키",
+            "en": "Michele Marieschi"
+          },
+          "wikipedia": "https://en.wikipedia.org/wiki/Michele_Marieschi"
+        },
+        {
+          "name": {
+            "ko": "프란체스코 과르디",
+            "en": "Francesco Guardi"
+          },
+          "wikipedia": "https://en.wikipedia.org/wiki/Francesco_Guardi"
+        }
+      ],
       "sources": [
-        "https://en.wikipedia.org/wiki/Canaletto"
+        "https://www.nationalgallery.org.uk/artists/canaletto",
+        "https://www.nationalgallery.org.uk/about-us/press-and-media/press-and-media/press-releases/canaletto",
+        "https://www.metmuseum.org/met-publications/canaletto"
       ],
       "impactEvents": [
         {
@@ -4523,7 +4637,7 @@
             "ko": "베네치아에서 무대 화가 베르나르도 카날의 아들로 태어나 건축적 무대와 원근 표현을 가까이서 익었습니다.",
             "en": "Born in Venice to theatrical painter Bernardo Canal, learning architectural staging and perspective early."
           },
-          "source": "https://en.wikipedia.org/wiki/Canaletto"
+          "source": "https://www.nationalgallery.org.uk/artists/canaletto"
         },
         {
           "year": "1719–1720",
@@ -4535,19 +4649,55 @@
             "ko": "로마에서 무대 장식 작업을 하며 고대 건축과 도시 경관을 관찰한 뒤, 베네치아의 베두타 화가로 전환했습니다.",
             "en": "Roman stage work and observation of antiquity prompted a turn to Venetian vedute."
           },
-          "source": "https://en.wikipedia.org/wiki/Canaletto"
+          "source": "https://www.nationalgallery.org.uk/about-us/press-and-media/press-and-media/press-releases/canaletto"
         },
         {
-          "year": "1720s–1740s",
+          "year": "1720년대 후반–1730년대",
           "title": {
-            "ko": "스미스 영사의 후원과 국제 시장",
-            "en": "Consul Smith's patronage and international market"
+            "ko": "베두타의 확립과 베네치아 시장 장악",
+            "en": "Establishing veduta and leading the Venetian market"
           },
           "impact": {
-            "ko": "영국 영사 조지프 스미스의 후원으로 베네치아를 찾는 영국 여행자에게 도시 풍경을 공급하며 정확한 도시 이미지의 국제적 수요를 만들었습니다.",
-            "en": "Consul Joseph Smith's patronage connected precise Venetian views to the Grand Tour market."
+            "ko": "초기 작품의 어두운 분위기를 따뜻한 햇빛과 넓은 도시 공간으로 바꾸며, 베네치아 도시 풍경을 독립된 수집 장르로 성장시켰습니다.",
+            "en": "He shifted from early moodiness to sunlit, expansive city views and helped establish veduta as an independent collecting genre."
           },
-          "source": "https://en.wikipedia.org/wiki/Canaletto"
+          "source": "https://www.nationalgallery.org.uk/about-us/press-and-media/press-and-media/press-releases/canaletto"
+        },
+        {
+          "year": "1735–1746",
+          "title": {
+            "ko": "조지프 스미스의 후원과 판화 확산",
+            "en": "Joseph Smith’s patronage and circulation through prints"
+          },
+          "impact": {
+            "ko": "베네치아 주재 영국 영사 스미스의 주문과 후원, 비센티니의 판화 작업을 통해 그의 베두타가 영국 수집가와 그랜드 투어 시장에 널리 알려졌습니다.",
+            "en": "Orders from Consul Smith and Visentini’s prints brought his vedute to British collectors and the Grand Tour market."
+          },
+          "source": "https://www.britishmuseum.org/collection/term/BIOG46590"
+        },
+        {
+          "year": "1746–1755",
+          "title": {
+            "ko": "런던 체류와 템스 강 베두타",
+            "en": "London residence and Thames vedute"
+          },
+          "impact": {
+            "ko": "영국에 체류하며 웨스트민스터 다리·템스 강·이튼을 그렸고, 베네치아에서 다듬은 도시 풍경의 시선을 런던의 공적 공간과 풍경에 적용했습니다.",
+            "en": "Living in England, he painted Westminster Bridge, the Thames, and Eton, applying Venetian view-painting to London’s civic spaces and landscape."
+          },
+          "source": "https://www.nationalgallery.org.uk/paintings/canaletto-eton-college"
+        },
+        {
+          "year": "1755–1768",
+          "title": {
+            "ko": "베네치아 귀환과 후기의 자유로운 붓질",
+            "en": "Return to Venice and freer late handling"
+          },
+          "impact": {
+            "ko": "1755년 귀환 뒤에는 더 작은 화면, 가벼운 붓질, 절제된 색으로 베네치아 건축을 재구성했습니다. 이 시기 과르디가 새로운 경쟁자로 부상했습니다.",
+            "en": "After returning in 1755, he reworked Venetian architecture with smaller formats, lighter touch, and restrained colour as Guardi emerged as a new rival."
+          },
+          "source": "https://www.nationalgallery.org.uk/paintings/canaletto-venice-palazzo-grimani"
         }
       ]
     },
@@ -4752,6 +4902,42 @@
             "en": "Royal Academy admission elevated still life and domestic genre painting."
           },
           "source": "https://www.museodelprado.es/en/whats-on/exhibition/chardin-1699-1779/d3d98bfc-9379-4026-8e7c-61a596b4d156?searchid=0415d9b9-91b1-a37f-b074-054fd538fc44"
+        },
+        {
+          "year": "1755–1777",
+          "title": {
+            "ko": "왕립 아카데미 재무관·살롱 전시 책임",
+            "en": "Académie treasurer and Salon hanging responsibility"
+          },
+          "impact": {
+            "ko": "1755년 재무관으로 선출되고 같은 해 살롱 전시 배치를 맡아 22년간 수행했습니다. 작가 활동과 함께 전시 제도를 운영하며 동시대 미술계에서 영향력을 넓혔습니다.",
+            "en": "Elected Académie treasurer in 1755, he also took charge of hanging the Salon for 22 years, extending his role within the art world."
+          },
+          "source": "https://www.nationalgallery.org.uk/paintings/catalogues/wine-2018/jean-simeon-chardin"
+        },
+        {
+          "year": "1757",
+          "title": {
+            "ko": "루이 15세의 루브르 작업실·거처 제공",
+            "en": "Louis XV grants Louvre studio and lodging"
+          },
+          "impact": {
+            "ko": "국왕이 루브르에 작업실과 거처를 제공해, 파리의 공적 미술 제도 안에서 안정적으로 작업할 기반을 얻었습니다.",
+            "en": "Louis XV granted him a studio and lodging at the Louvre, providing an institutional base for his work in Paris."
+          },
+          "source": "https://www.metmuseum.org/exhibitions/listings/2000/chardin"
+        },
+        {
+          "year": "1770년대",
+          "title": {
+            "ko": "시력 문제 가능성과 파스텔 초상 전환",
+            "en": "Possible eyesight problems and turn to pastel portraits"
+          },
+          "impact": {
+            "ko": "말년에는 파스텔 초상을 제작했습니다. 유화 물감의 납 성분과 관련된 시력 문제가 매체 전환의 한 계기였을 가능성이 있으나, 이는 확정적 인과가 아닌 미술관의 신중한 해석입니다.",
+            "en": "In his final years he made pastel portraits; eyesight problems possibly related to lead in oil paint may have prompted the shift, though this remains a cautious interpretation."
+          },
+          "source": "https://www.nationalgallery.org.uk/paintings/catalogues/wine-2018/jean-simeon-chardin"
         }
       ]
     },
@@ -4764,6 +4950,13 @@
             "en": "Giuseppe Diamantini"
           },
           "wikipedia": "https://en.wikipedia.org/wiki/Rosalba_Carriera"
+        },
+        {
+          "name": {
+            "ko": "장 스테브",
+            "en": "Jean Steve"
+          },
+          "wikipedia": "https://en.wikipedia.org/wiki/Rosalba_Carriera"
         }
       ],
       "exchanges": [
@@ -4773,6 +4966,20 @@
             "en": "Antoine Watteau"
           },
           "wikipedia": "https://en.wikipedia.org/wiki/Antoine_Watteau"
+        },
+        {
+          "name": {
+            "ko": "앙투안 코이펠",
+            "en": "Antoine Coypel"
+          },
+          "wikipedia": "https://en.wikipedia.org/wiki/Antoine_Coypel"
+        },
+        {
+          "name": {
+            "ko": "안토니오 펠레그리니",
+            "en": "Antonio Pellegrini"
+          },
+          "wikipedia": "https://en.wikipedia.org/wiki/Antonio_Pellegrini_(painter)"
         }
       ],
       "rivals": [],
@@ -4793,6 +5000,18 @@
           "source": "https://www.culture.gouv.fr/thematiques/musees/Les-musees-en-France/les-collections-des-musees-de-france/decouvrir-les-collections/les-femmes-artistes-sortent-de-leur-reserve/icones/Carriera-Rosalba"
         },
         {
+          "year": "1690년대–1705",
+          "title": {
+            "ko": "미니어처 수련과 성 루카 아카데미 입회",
+            "en": "Miniature training and admission to the Accademia di San Luca"
+          },
+          "impact": {
+            "ko": "프랑스인 장 스테브에게 미니어처를 배우고, 1705년 로마 성 루카 아카데미에 상아 미니어처 초상으로 입회했습니다. 세밀한 표면 관찰이 이후 파스텔 초상의 기반이 되었습니다.",
+            "en": "After learning miniature painting from Jean Steve, she was admitted to Rome’s Accademia di San Luca in 1705 with an ivory miniature portrait, building the close surface observation of her pastels."
+          },
+          "source": "https://www.culture.gouv.fr/thematiques/musees/Les-musees-en-France/les-collections-des-musees-de-france/decouvrir-les-collections/les-femmes-artistes-sortent-de-leur-reserve/icones/Carriera-Rosalba"
+        },
+        {
           "year": "1703–1706",
           "title": {
             "ko": "파스텔 전환과 궁정 주문",
@@ -4805,6 +5024,18 @@
           "source": "https://www.culture.gouv.fr/thematiques/musees/Les-musees-en-France/les-collections-des-musees-de-france/decouvrir-les-collections/les-femmes-artistes-sortent-de-leur-reserve/icones/Carriera-Rosalba"
         },
         {
+          "year": "1706",
+          "title": {
+            "ko": "뒤셀도르프 궁정 초청",
+            "en": "Invitation to the Düsseldorf court"
+          },
+          "impact": {
+            "ko": "파스텔 전문화 뒤 뒤셀도르프 궁정에 초청받으며, 베네치아를 넘어 유럽 궁정 초상 시장으로 진입했습니다.",
+            "en": "An invitation to the Düsseldorf court marked her entry into a European court-portrait market beyond Venice."
+          },
+          "source": "https://www.culture.gouv.fr/thematiques/musees/Les-musees-en-France/les-collections-des-musees-de-france/decouvrir-les-collections/les-femmes-artistes-sortent-de-leur-reserve/icones/Carriera-Rosalba"
+        },
+        {
           "year": "1720–1721",
           "title": {
             "ko": "파리 체류와 왕립 아카데미",
@@ -4813,6 +5044,30 @@
           "impact": {
             "ko": "크로자의 초청으로 파리에 가 아카데미 회원이 되고 파스텔 초상 유행을 이끌었습니다.",
             "en": "Crozat's invitation led to Academy membership and pastel portrait fashion."
+          },
+          "source": "https://www.culture.gouv.fr/thematiques/musees/Les-musees-en-France/les-collections-des-musees-de-france/decouvrir-les-collections/les-femmes-artistes-sortent-de-leur-reserve/icones/Carriera-Rosalba"
+        },
+        {
+          "year": "1723–1730년대",
+          "title": {
+            "ko": "모데나·빈 궁정 주문과 국제적 명성",
+            "en": "Modena and Vienna court commissions"
+          },
+          "impact": {
+            "ko": "1723년 에스테 가문의 모데나 초청과 1730년대 빈 궁정 주문은 그녀의 파스텔 초상을 합스부르크를 포함한 유럽 궁정 문화의 세련된 표준으로 만들었습니다.",
+            "en": "Invitations to Modena in 1723 and Vienna in the 1730s made her pastel portraiture a refined standard across European courts, including the Habsburg world."
+          },
+          "source": "https://www.culture.gouv.fr/thematiques/musees/Les-musees-en-France/les-collections-des-musees-de-france/decouvrir-les-collections/les-femmes-artistes-sortent-de-leur-reserve/icones/Carriera-Rosalba"
+        },
+        {
+          "year": "1745 이후",
+          "title": {
+            "ko": "시력 약화·백내장 수술과 실명",
+            "en": "Failing sight, cataract surgery, and blindness"
+          },
+          "impact": {
+            "ko": "1745년부터 시력이 약해졌고 백내장 수술 뒤 몇 달 만에 시력을 잃었습니다. 이는 말년의 작업을 근본적으로 제한한 개인적 사건입니다.",
+            "en": "Her sight weakened from 1745; after cataract surgery she lost it within months, fundamentally limiting her late work."
           },
           "source": "https://www.culture.gouv.fr/thematiques/musees/Les-musees-en-France/les-collections-des-musees-de-france/decouvrir-les-collections/les-femmes-artistes-sortent-de-leur-reserve/icones/Carriera-Rosalba"
         }

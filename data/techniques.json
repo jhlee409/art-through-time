@@ -110,6 +110,118 @@
       "examples": []
     },
     {
+      "id": "etching",
+      "introduced": 1510,
+      "name": {
+        "ko": "에칭",
+        "en": "Etching"
+      },
+      "tags": [
+        "제작 기법",
+        "매체·공예",
+        "판화",
+        "요판 인쇄",
+        "선·명암"
+      ],
+      "subtitle": {
+        "ko": "산으로 금속판을 부식시켜 선을 만드는 요판화",
+        "en": "An intaglio print made by acid-biting lines into a metal plate"
+      },
+      "definition": {
+        "ko": "에칭(Etching)은 구리·아연·철 같은 금속판에 산에 견디는 방청막(그라운드)을 입힌 뒤, 에칭 바늘로 그 막을 긁어 금속을 드러내고 산으로 부식시키는 요판화 기법입니다. 부식된 홈에 잉크를 채운 뒤 표면의 잉크를 닦아 내고, 젖은 종이를 강한 압력으로 찍어 선과 명암을 옮깁니다.",
+        "en": "Etching is an intaglio process in which a metal plate—usually copper, zinc, or iron—is coated with an acid-resistant ground. The artist scratches through the ground with an etching needle, then acid bites the exposed metal. Ink is worked into the recessed lines, wiped from the surface, and transferred to damp paper under pressure."
+      },
+      "explanation": {
+        "ko": "에칭은 손으로 금속을 직접 파내는 동판화(engraving)와 달리 산의 작용으로 선을 만들기 때문에, 펜 드로잉에 가까운 유연하고 즉흥적인 선을 내기 좋습니다. 산에 담그는 시간을 달리하면 선의 깊이와 농도를 조절할 수 있고, 같은 판을 여러 차례 수정해 서로 다른 상태(state)의 판화를 만들 수도 있습니다. 16세기 초 무기 장식에서 발전한 에칭은 곧 화가들의 드로잉 감각을 판화로 옮기는 매체가 되었습니다. 렘브란트는 에칭에 드라이포인트와 동판화를 함께 사용해 빛의 농도, 거친 선, 깊은 어둠을 다층적으로 만들었습니다. 아쿠아틴트는 선뿐 아니라 넓은 명암 면을 얻기 위해 에칭과 결합하는 별도 요판 기법이며, 드라이포인트는 산 대신 바늘로 금속을 직접 긁어 부드러운 버(burr) 선을 남기는 방식입니다.",
+        "en": "Unlike engraving, where the artist cuts directly into metal with a burin, etching relies on acid and readily preserves the flexible, immediate character of pen drawing. Varying the acid-bath time changes a line's depth and darkness, and a plate may be revised repeatedly to create different states. Developed from early-sixteenth-century etched armour decoration, it soon became a medium through which painters could translate drawing into print. Rembrandt combined etching with drypoint and engraving to build layered light, rough line, and deep shadow. Aquatint is a related intaglio process often combined with etching for broad tonal areas; drypoint scratches metal directly instead of using acid, leaving a soft burr line."
+      },
+      "examples": [
+        {
+          "year": "1648년경",
+          "artist": {
+            "ko": "렘브란트 판 레인",
+            "en": "Rembrandt van Rijn"
+          },
+          "title": {
+            "ko": "《병자를 고치시는 예수 (100 길더 판화)》",
+            "en": "Christ Healing the Sick (The Hundred Guilder Print)"
+          },
+          "image": "data/thumbnails/artist-rembrandt/rijksmuseum-RP-P-1962-1-christ-healing-sick.jpg",
+          "role": {
+            "ko": "에칭·드라이포인트·동판화의 결합",
+            "en": "A combination of etching, drypoint, and engraving"
+          },
+          "note": {
+            "ko": "이 작품은 에칭만으로 만든 단일 기법 판화가 아니라 드라이포인트와 동판화를 함께 쓴 복합 요판화입니다. 그 결합 덕분에 인물마다 선의 성격과 어둠의 밀도가 달라지며, 에칭이 다른 요판 기법과 결합해 얼마나 풍부한 명암과 분위기를 만들 수 있는지 보여줍니다.",
+            "en": "This is not an etching in a single technique: Rembrandt combined etching with drypoint and engraving. The result varies line quality and density of shadow from figure to figure, demonstrating how etching can join other intaglio processes to produce exceptionally rich tone and atmosphere."
+          }
+        }
+      ],
+      "links": [
+        {
+          "url": "https://www.metmuseum.org/perspectives/materials-and-techniques-printmaking-etching"
+        },
+        {
+          "url": "https://www.rijksmuseum.nl/en/collection/object/The-Hundred-Guilder-Print--07168088c25948a3ea5eec00547d2f7a"
+        }
+      ]
+    },
+    {
+      "id": "pastel",
+      "introduced": 1500,
+      "name": {
+        "ko": "파스텔",
+        "en": "Pastel"
+      },
+      "tags": [
+        "제작 기법",
+        "드로잉·초상",
+        "빛·색채"
+      ],
+      "subtitle": {
+        "ko": "가루 안료 스틱으로 종이 위에 빛나는 색을 쌓는 기법",
+        "en": "Brilliant colour built on paper with powdered-pigment sticks"
+      },
+      "definition": {
+        "ko": "파스텔(Pastel)은 곱게 간 안료에 소량의 결합재(보통 아라비아고무)를 섞어 막대 모양으로 굳힌 뒤, 거친 종이 위에 직접 문질러 색을 올리는 기법입니다. 물감처럼 액체로 칠하는 방식이 아니라 가루 안료가 종이 표면의 결에 붙는 방식이므로, 표면은 벨벳처럼 부드럽고 빛을 산란시키는 맑은 색감을 냅니다.",
+        "en": "Pastel is a medium made by mixing finely ground pigment with a small amount of binder, usually gum arabic, forming it into sticks and applying it directly to textured paper. Rather than being brushed on as a liquid, its powder catches in the paper's tooth, producing a soft, velvety surface and luminous colour."
+      },
+      "explanation": {
+        "ko": "파스텔은 16세기에 사용되기 시작했으며, 처음에는 드로잉의 색을 보강하는 재료로 쓰였습니다. 17세기를 거쳐 독립된 회화 매체로 자리 잡고, 18세기에는 로코코 시대의 초상화와 특히 잘 맞는 매체가 되었습니다. 로살바 카리에라는 피부·레이스·비단의 섬세한 질감을 밝고 가벼운 색으로 표현해 국제적인 명성을 얻었고, 모리스 캉탱 드 라 투르는 파스텔 초상을 왕실과 살롱 문화의 중요한 형식으로 만들었습니다. 샤르댕은 말년에 유화 대신 파스텔로 자화상과 초상을 그려, 짧은 터치와 종이의 바탕을 이용한 절제된 관찰을 보여주었습니다. 19세기 드가와 르동은 색 막대를 겹치고 문지르거나 고정액을 부분적으로 써서 파스텔을 단순한 초상 재료에서 실험적인 색채 매체로 확장했습니다. 다만 가루 안료는 종이에 느슨하게 붙어 있어 마찰과 진동에 약하므로, 작품은 유리로 보호하고 강한 고정액은 최소한으로 사용합니다.",
+        "en": "Pastel began to be used in the sixteenth century, initially to add colour to drawings. It became an independent pictorial medium over the seventeenth century and was especially suited to Rococo portraiture in the eighteenth. Rosalba Carriera achieved international fame through luminous renderings of skin, lace, and silk, while Maurice Quentin de La Tour made pastel portraiture important to court and salon culture. In his final years Chardin used pastel for portraits and self-portraits, exploiting brief touches and the paper ground for restrained observation. In the nineteenth century Degas and Redon extended the medium beyond portraiture through layering, blending, and selective fixative. Because the powder is only loosely held by paper, pastel is vulnerable to abrasion and vibration; it is normally glazed and fixed sparingly."
+      },
+      "examples": [
+        {
+          "year": "1740년대",
+          "artist": {
+            "ko": "로살바 카리에라",
+            "en": "Rosalba Carriera"
+          },
+          "title": {
+            "ko": "《자화상》",
+            "en": "Self-Portrait"
+          },
+          "image": "data/미술사조/images/Rosalba-Carriera-Self-Portrait-WGA04503.jpg",
+          "role": {
+            "ko": "로코코 파스텔 초상의 대표",
+            "en": "A landmark of Rococo pastel portraiture"
+          },
+          "note": {
+            "ko": "카리에라는 파스텔의 가는 가루를 여러 겹 얹어 피부와 옷감에 부드러운 빛을 만들었습니다. 선명한 윤곽을 딱딱하게 고정하지 않고 색의 미세한 차이로 얼굴의 온기와 사교적 친밀감을 드러내는 점에서, 18세기 파스텔 초상의 전형을 보여줍니다.",
+            "en": "Carriera builds soft light across skin and fabric by layering fine pastel powder. Rather than fixing a hard contour, she uses subtle colour shifts to convey warmth and social intimacy, making this a defining example of eighteenth-century pastel portraiture."
+          }
+        }
+      ],
+      "links": [
+        {
+          "url": "https://www.metmuseum.org/perspectives/materials-and-techniques-drawing-pastel"
+        },
+        {
+          "url": "https://www.metmuseum.org/essays/the-eighteenth-century-pastel-portrait"
+        }
+      ]
+    },
+    {
       "id": "linear-perspective",
       "introduced": 1420,
       "name": {

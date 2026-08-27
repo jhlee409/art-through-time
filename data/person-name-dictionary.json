@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-27T05:52:52.131Z",
+  "generatedAt": "2026-08-27T07:46:02.712Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -8372,8 +8372,9 @@
       "listKorean": "렘브란트",
       "aliases": {
         "ko": [
-          "반 레인",
-          "레인"
+          "판 레인",
+          "레인",
+          "반 레인"
         ],
         "en": [
           "van Rijn",
@@ -8670,6 +8671,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
+        "data/techniques.json",
         "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
@@ -10307,6 +10309,26 @@
       "status": "verified-pair"
     },
     {
+      "id": "etching",
+      "uhangulVersion": "0.7",
+      "original": "Etching",
+      "language": "und",
+      "korean": "에칭",
+      "displayKorean": "에칭",
+      "listKorean": "에칭",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
+      "uhangul": "에칭",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "technique",
+      "sources": [
+        "data/techniques.json"
+      ],
+      "status": "verified-pair"
+    },
+    {
       "id": "fete-galante",
       "uhangulVersion": "0.7",
       "original": "Fête galante",
@@ -10470,6 +10492,26 @@
         ]
       },
       "uhangul": "선원근법",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "technique",
+      "sources": [
+        "data/techniques.json"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "pastel",
+      "uhangulVersion": "0.7",
+      "original": "Pastel",
+      "language": "und",
+      "korean": "파스텔",
+      "displayKorean": "파스텔",
+      "listKorean": "파스텔",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
+      "uhangul": "파스텔",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
       "sources": [
