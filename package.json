@@ -1,0 +1,14 @@
+{
+  "name": "art-through-time",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local Art Through Time study app.",
+  "scripts": {
+    "start": "node server.js",
+    "health": "node tools/check-project-health.js",
+    "test": "node tools/check-project-health.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

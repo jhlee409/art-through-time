@@ -7,6 +7,8 @@ const {normalizeArtistsPayload, validateArtistsPayload} = require('../data-contr
 
 const root = path.resolve(__dirname, '..');
 const ignoredDirectories = new Set(['.git', 'node_modules', 'delivery', 'logs']);
+const imageDirectories = ['data/thumbnails', 'data/high-resolution', 'data/topic-images', 'data/미술사조/images', 'data/techniques'];
+const oversizedImageLimit = 10 * 1024 * 1024;
 
 function walk(directory, predicate, result = []) {
   for (const entry of fs.readdirSync(directory, {withFileTypes: true})) {
@@ -32,6 +34,25 @@ function checkCommand(label, command, args) {
   return label;
 }
 
+function summarizeOversizedImages() {
+  const files = imageDirectories.flatMap(directory => {
+    const absolute = path.join(root, directory);
+    return fs.existsSync(absolute) ? walk(absolute, name => /\.(?:jpe?g|png|webp|gif)$/i.test(name)) : [];
+  });
+  const oversized = files
+    .map(file => ({file, size: fs.statSync(file).size}))
+    .filter(item => item.size > oversizedImageLimit)
+    .sort((left, right) => right.size - left.size);
+  return {
+    count: oversized.length,
+    limitMB: Math.round(oversizedImageLimit / 1024 / 1024),
+    examples: oversized.slice(0, 10).map(item => ({
+      file: relative(item.file),
+      mb: Number((item.size / 1024 / 1024).toFixed(2))
+    }))
+  };
+}
+
 function main() {
   const javascript = walk(root, name => name.endsWith('.js'));
   const jsonFiles = walk(path.join(root, 'data'), name => name.endsWith('.json'));
@@ -52,6 +73,7 @@ function main() {
   ].forEach(([label, script]) => checked.push(checkCommand(label, process.execPath, [script])));
 
   const env = fs.existsSync(path.join(root, '.env')) && /ART_ATLAS_ADMIN_PASSWORD\s*=\s*\S+/.test(fs.readFileSync(path.join(root, '.env'), 'utf8'));
+  const oversizedImages = summarizeOversizedImages();
   console.log(JSON.stringify({
     ok: true,
     javascriptFiles: javascript.length,
@@ -59,6 +81,7 @@ function main() {
     administratorConfigured: env,
     artistStats: validation.stats,
     sourceWarnings: validation.warnings.length,
+    oversizedImages,
     checks: checked.length
   }, null, 2));
 }

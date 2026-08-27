@@ -49,10 +49,17 @@ if not exist "logs" mkdir "logs"
 set "ART_ATLAS_PID="
 for /f "tokens=5" %%a in ('netstat -ano ^| findstr /R /C:":4173 .*LISTENING"') do set ART_ATLAS_PID=%%a
 if defined ART_ATLAS_PID (
-  echo Art Through Time is already running on port 4173.
-  echo Opening the existing Art Through Time login page...
-  start "Art Through Time" http://localhost:4173/?login=1
-  exit /b 0
+  curl.exe -fsS http://localhost:4173/api/access >nul 2>&1
+  if not errorlevel 1 (
+    echo Art Through Time is already running on port 4173.
+    echo Opening the existing Art Through Time login page...
+    start "Art Through Time" http://localhost:4173/?login=1
+    exit /b 0
+  )
+  echo Port 4173 is already in use, but it is not responding as Art Through Time.
+  echo Close the other program using port 4173, then run this file again.
+  pause
+  exit /b 1
 )
 powershell -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -Command "Start-Process -WindowStyle Hidden -FilePath cmd.exe -ArgumentList '/c cd /d ""%~dp0"" && node server.js 1> logs\art-atlas-server.out.log 2> logs\art-atlas-server.err.log'"
 set /a ART_THROUGH_TIME_WAIT=0

@@ -30,12 +30,16 @@ README는 프로젝트 전체 개요와 실행·데이터 안내를 맡습니다
 
 ```powershell
 node server.js
+# 또는
+npm start
 ```
 
 점검 실행(파일을 수정하지 않음):
 
 ```powershell
 node tools/check-project-health.js
+# 또는
+npm test
 ```
 
 브라우저 주소:

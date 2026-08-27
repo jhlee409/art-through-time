@@ -1161,7 +1161,59 @@ async function migrationExport() {
   const control=await readAccessControl();
   return {export:firebaseExport(artists,movements,control,assets),validation};
 }
-function safePath(urlPath) { const name=urlPath==='/'?'index.html':decodeURIComponent(urlPath).replace(/^\/+/, ''); if(name.startsWith('.') || ['server.js','data/access-control.json'].includes(name) || name.startsWith('data/backups/') || name.startsWith('data/audit') || name.startsWith('.git/')) return null; const output=path.resolve(root,name), relative=path.relative(root,output); return relative && !relative.startsWith('..') && !path.isAbsolute(relative) ? output : (name==='index.html' ? output : null); }
+const publicRootFiles = new Set([
+  'index.html',
+  'app.js',
+  'styles.css',
+  'extras.css',
+  'rules-check.css',
+  'rules-check.js',
+  'tab-session.js',
+  'techniques.html',
+  'techniques.css',
+  'techniques.js',
+  'topics.html',
+  'topics.css',
+  'topics.js'
+]);
+const publicDataFiles = new Set([
+  'data/artists.json',
+  'data/artist-relations.json',
+  'data/art-taxonomy.json',
+  'data/art-movements.json',
+  'data/country-art-events.json',
+  'data/country-movement-backgrounds.json',
+  'data/featured-works.json',
+  'data/movement-section-links.json',
+  'data/미술사조/index.json',
+  'data/person-name-dictionary.json',
+  'data/techniques.json',
+  'data/topics.json'
+]);
+const publicPathPrefixes = [
+  'data/generated/',
+  'data/high-resolution/',
+  'data/techniques/',
+  'data/thumbnails/',
+  'data/topic-images/',
+  'uhangul/uhangul-runtime.css',
+  'uhangul/uhangul-runtime.js'
+];
+function isPublicStaticPath(relative) {
+  if (publicRootFiles.has(relative) || publicDataFiles.has(relative)) return true;
+  if (/^data\/미술사조\/[a-f0-9]{24}-[12]\.html$/i.test(relative)) return true;
+  if (/^data\/미술사조\/images\/[^/]+\.(?:jpe?g|png|webp|gif|json)$/i.test(relative)) return true;
+  if (/^uhangul\/assets\/fonts\/[^/]+\.ttf$/i.test(relative)) return true;
+  return publicPathPrefixes.some(prefix => relative === prefix || relative.startsWith(prefix));
+}
+function safePath(urlPath) {
+  const name=urlPath==='/'?'index.html':decodeURIComponent(urlPath).replace(/^\/+/, '').replace(/\\/g,'/');
+  const output=path.resolve(root,name);
+  const relative=path.relative(root,output).replace(/\\/g,'/');
+  if(!relative || relative.startsWith('..') || path.isAbsolute(relative)) return null;
+  if(!isPublicStaticPath(relative)) return null;
+  return output;
+}
 function techniqueLinks(value) {
   if (!Array.isArray(value) || value.length > 40) throw new Error('Invalid technique links');
   return value.map(link => {
@@ -1903,7 +1955,17 @@ async function saveMovementSectionLinks(sectionId, links) {
   await fs.writeFile(movementSectionLinksFile,JSON.stringify(data,null,2)+'\n','utf8');
   return data;
 }
-http.createServer(async (req,res) => { const url=new URL(req.url,`http://${req.headers.host}`); res.setHeader('Access-Control-Allow-Origin','*'); res.setHeader('Access-Control-Allow-Methods','GET, POST, PUT, DELETE, OPTIONS'); res.setHeader('Access-Control-Allow-Headers','Content-Type, Authorization'); if(req.method==='OPTIONS') { res.writeHead(204); return res.end(); } if (!enforceJsonRequestLimit(req,res,url.pathname)) return;
+function applyCors(req, res) {
+  const origin=String(req.headers.origin || '');
+  const allowed=new Set(['http://localhost:4173','http://127.0.0.1:4173','null']);
+  if(allowed.has(origin)) {
+    res.setHeader('Access-Control-Allow-Origin',origin);
+    res.setHeader('Vary','Origin');
+    res.setHeader('Access-Control-Allow-Methods','GET, POST, PUT, DELETE, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers','Content-Type, Authorization');
+  }
+}
+http.createServer(async (req,res) => { const url=new URL(req.url,`http://${req.headers.host}`); applyCors(req,res); if(req.method==='OPTIONS') { res.writeHead(204); return res.end(); } if (!enforceJsonRequestLimit(req,res,url.pathname)) return;
   if (req.method==='GET' && url.pathname==='/api/access') { res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); return res.end(JSON.stringify({adminConfigured:Boolean(adminPasswordHash)})); }
   if (req.method==='POST' && url.pathname==='/api/auth/login') { try { await accessControlReady; if (!adminPasswordHash) throw new Error('관리자 설정 파일이 없어 보기 전용으로 실행 중입니다.'); const {email,password}=JSON.parse(await readJsonRequest(req) || '{}'), normalized=normalizedEmail(email); if (!isAdminEmail(normalized) || !samePassword(password)) throw new Error('이메일 또는 비밀번호가 올바르지 않습니다.'); activeAdminSession(); clearAdminSessions(normalized); const token=createAdminSession(normalized); res.writeHead(200,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:true,email:normalized,role:'admin',token})); } catch(error) { const isTooLarge=error?.message === 'JSON request body exceeds the 12 MB limit'; res.writeHead(isTooLarge ? 413 : 401,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}); res.end(JSON.stringify({ok:false,error:error.message})); } return; }
   const session=adminSession(req);
