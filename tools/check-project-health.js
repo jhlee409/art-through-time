@@ -53,6 +53,30 @@ function summarizeOversizedImages() {
   };
 }
 
+function checkApplicationModuleSplit() {
+  const appModules = ['app-core.js', 'app-artists.js', 'app-atlas.js', 'app-detail.js', 'app.js'];
+  const indexHtml = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  let previousPosition = -1;
+  for (const file of appModules) {
+    const position = indexHtml.indexOf(`src="${file}"`);
+    if (position < 0) throw new Error(`index.html is missing application module: ${file}`);
+    if (position <= previousPosition) throw new Error(`index.html application module order is invalid: ${file}`);
+    previousPosition = position;
+  }
+
+  const contentSource = fs.readFileSync(path.join(root, 'server-content.js'), 'utf8');
+  for (const file of appModules) {
+    if (!contentSource.includes(`'${file}'`)) throw new Error(`server-content.js does not allow public application module: ${file}`);
+  }
+
+  const serverSource = fs.readFileSync(path.join(root, 'server.js'), 'utf8');
+  if (!serverSource.includes('readAppSourceText()')) throw new Error('server rule checks do not read split application sources');
+  for (const file of appModules) {
+    if (!serverSource.includes(`'${file}'`)) throw new Error(`server rule checks do not include application module: ${file}`);
+  }
+  return 'application module split';
+}
+
 function main() {
   const javascript = walk(root, name => name.endsWith('.js'));
   const jsonFiles = walk(path.join(root, 'data'), name => name.endsWith('.json'));
@@ -60,6 +84,7 @@ function main() {
 
   for (const file of javascript) checked.push(checkCommand(`syntax ${relative(file)}`, process.execPath, ['--check', file]));
   for (const file of jsonFiles) JSON.parse(fs.readFileSync(file, 'utf8'));
+  checked.push(checkApplicationModuleSplit());
 
   const artists = JSON.parse(fs.readFileSync(path.join(root, 'data', 'artists.json'), 'utf8'));
   const validation = validateArtistsPayload(normalizeArtistsPayload(artists));
