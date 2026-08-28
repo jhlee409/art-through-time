@@ -42,7 +42,7 @@ function openingTags(html, element, className) {
 function parentDocumentAudit(parent, html, categories, countries, attrs, globalDevelopments) {
   const rootTag = /<html\b[^>]*>/i.exec(html)?.[0] || '';
   assert(attr(rootTag, attrs.syncVersion) === '1', `${parent.documentKey}: sync version is not 1`);
-  assert(['structure', 'complete'].includes(attr(rootTag, attrs.syncState)), `${parent.documentKey}: invalid sync state`);
+  assert(['structure', 'content', 'complete'].includes(attr(rootTag, attrs.syncState)), `${parent.documentKey}: invalid sync state`);
   assert(attr(rootTag, attrs.parentId) === parent.id, `${parent.documentKey}: parent ID differs`);
   assert(attr(rootTag, attrs.contextId) == null, `${parent.documentKey}: parent document also has context ID`);
 
@@ -105,7 +105,7 @@ function parentDocumentAudit(parent, html, categories, countries, attrs, globalD
 function contextDocumentAudit(context, html, attrs) {
   const rootTag = /<html\b[^>]*>/i.exec(html)?.[0] || '';
   assert(attr(rootTag, attrs.syncVersion) === '1', `${context.documentKey}: sync version is not 1`);
-  assert(['structure', 'complete'].includes(attr(rootTag, attrs.syncState)), `${context.documentKey}: invalid sync state`);
+  assert(['structure', 'content', 'complete'].includes(attr(rootTag, attrs.syncState)), `${context.documentKey}: invalid sync state`);
   assert(attr(rootTag, attrs.contextId) === context.id, `${context.documentKey}: context ID differs`);
   assert(attr(rootTag, attrs.parentId) == null, `${context.documentKey}: context document also has parent ID`);
   const representativeSections = openingTags(html, 'section', 'movement-enhancement').filter(tag => attr(tag, attrs.representativeSection) === 'works');
@@ -128,7 +128,7 @@ function makeReport(canonical, migration, parentResults, contextResults, legacy)
   const totalGroups = [...parentResults.values()].reduce((sum, result) => sum + result.groups, 0);
   const totalCards = [...parentResults.values()].reduce((sum, result) => sum + result.cards, 0) + [...contextResults.values()].reduce((sum, result) => sum + result.cards, 0);
   return `# 사조 HTML 4단계 이관 결과\n\n` +
-    `이 문서는 \`data/art-movement-canonical.json\`과 현재 HTML을 검사해 자동 생성한다. 모든 대상 문서는 동기화 버전 1의 \`structure\` 상태이며, 대표 화가·작품의 최종 선별은 5단계에서 수행한다.\n\n` +
+    `이 문서는 \`data/art-movement-canonical.json\`과 현재 HTML을 검사해 자동 생성한다. \`structure\`는 4단계 구조 이관, \`content\`는 5단계 대표 콘텐츠 구축, \`complete\`는 6단계 편집 동기화 완료 상태다.\n\n` +
     `## 요약\n\n` +
     `- 정본 부모 문서: ${parents.length}개 (${modeCounts.linked}개 세부 범주 연동형, ${modeCounts.single}개 단일 부모형)\n` +
     `- 문서 수준: 상세 ${levelCounts.detailed}개, 연결 ${levelCounts.bridge}개, 참고 ${levelCounts.reference}개\n` +

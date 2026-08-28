@@ -200,10 +200,11 @@
   "invariants": {
     "profiles": {
       "structure": "4단계 이관 상태. 문서 신분, 68개 범주의 행·카드 묶음 자리, 대표작 구역을 검사하며 대표 화가·작품 완전 일치는 보류한다.",
+      "content": "5단계 콘텐츠 상태. 대표 화가·작품·선정 이유와 표·카드 순서를 완성했지만 6단계 ID 기반 편집·화가 목록 동기화 전까지 저장 기능을 잠근다.",
       "complete": "5단계 콘텐츠 재구축 이후 상태. 모든 hard 불변식을 저장 전 검사한다."
     },
     "hard": [
-      "버전 1 문서는 syncState가 structure 또는 complete이며 parentId와 contextId 중 정확히 하나를 가진다.",
+      "버전 1 문서는 syncState가 structure, content 또는 complete이며 parentId와 contextId 중 정확히 하나를 가진다.",
       "documentRoot parentId는 canonical에서 role=document인 부모이고 contextId는 contextReferences에 있어야 한다.",
       "대표작 심화 구역은 representativeSection=works로 표시된 요소가 정확히 하나다.",
       "모든 developmentId는 프로젝트 전체에서 유일하고 지정 패턴을 만족한다.",
@@ -236,7 +237,7 @@
       "sunset": "24개 연동형·10개 단일형·2개 참고형 문서 이관 완료 후 제거"
     },
     "versionedDocumentRule": "sync version 1 문서는 문자열·부분일치·국가 별칭 fallback을 사용하지 않는다.",
-    "migrationStateRule": "syncState=structure 문서는 구조 ID만 신뢰하고 대표 화가·작품 편집은 잠근다. syncState=complete가 된 뒤 전체 저장·드래그·화가 목록 동기화를 활성화한다."
+    "migrationStateRule": "syncState=structure 또는 content인 문서는 편집을 잠근다. content에서는 대표 콘텐츠를 읽을 수 있지만, syncState=complete가 된 뒤에만 전체 저장·드래그·화가 목록 동기화를 활성화한다."
   },
   "example": {
     "parentId": "baroque",

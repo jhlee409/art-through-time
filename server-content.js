@@ -138,7 +138,7 @@ async function saveMovementDocumentHtml(name, slot, html) {
   const data=await readMovementDocuments(), relative=data.documents?.[safeName]?.[safeSlot];
   if(!relative || !/^data\/미술사조\/[a-f0-9]{24}-[12]\.html$/.test(relative)) throw new Error('There is no saved movement document');
   const savedFile=path.join(root,relative), current=await fs.readFile(savedFile,'utf8');
-  if(movementDocumentSyncState(current)==='structure') throw new Error('Movement document editing is locked during structural migration');
+  if(['structure','content'].includes(movementDocumentSyncState(current))) throw new Error('Movement document editing is locked until ID-based synchronization is complete');
   const linkedHtml=synchronizeMovementCountryTableArtistOrder(await linkMovementDocumentArtists(normalizeMovementCardPresentation(injectUHangulDocumentIntegration(source))));
   await fs.writeFile(savedFile,linkedHtml);
   syncPersonNameDictionary({additionalFiles:[savedFile]});
@@ -150,7 +150,7 @@ async function refreshMovementDocumentLinks(name, slot) {
   if(!relative) throw new Error('There is no saved movement document');
   if(!/^data\/미술사조\/[a-f0-9]{24}-[12]\.html$/.test(String(relative || ''))) throw new Error('Invalid movement document path');
   const file=path.join(root,relative), before=await fs.readFile(file);
-  if(movementDocumentSyncState(before)==='structure') return {ok:true,url:relative,changed:false,locked:true};
+  if(['structure','content'].includes(movementDocumentSyncState(before))) return {ok:true,url:relative,changed:false,locked:true};
   const after=synchronizeMovementCountryTableArtistOrder(await linkMovementDocumentArtists(normalizeMovementCardPresentation(injectUHangulDocumentIntegration(before))));
   const changed=!before.equals(after);
   if(changed) await fs.writeFile(file,after);

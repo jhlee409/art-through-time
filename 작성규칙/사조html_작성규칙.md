@@ -8,7 +8,9 @@
 - 국가 전개 표 첫 열, 심화 대표작 카드 범주 제목, 화가 리스트의 세부 범주 박스는 정본의 같은 `categoryId`와 표시명을 사용해야 한다. 구체적인 HTML 속성과 저장 동기화 방식은 재구축 동기화 계약에 따르되, 이름을 문서별로 줄이거나 합치거나 새로 만들지 않는다.
 - `coveredTopics`는 핵심 범주로 별도 노출하지 않고 해당 범주 설명 안에서 다룰 관련 화파·경향이다. 별칭이나 동일 사조로 간주하지 않는다.
 - 동기화 버전 1의 구체적인 속성·권한·편집 트랜잭션은 `data/art-movement-sync-contract.json`을 따른다. 문서 루트에는 `data-art-atlas-sync-version="1"`, `data-art-atlas-sync-state`, 그리고 `data-art-atlas-parent-id` 또는 `data-art-atlas-context-id` 중 하나만 둔다. 대표작 심화 구역에는 `data-art-atlas-representative-section="works"`를 둔다.
-- 4단계 구조 이관 문서는 `data-art-atlas-sync-state="structure"`로 둔다. 이 상태에서는 문서·범주·전개 ID와 68개 행·카드 묶음 자리만 신뢰하며 카드 드래그, 대표 화가 편집, 화가 목록 반영을 잠근다. 표의 대표 화가와 카드의 화가·작품·선정 이유를 모두 맞춘 문서만 5단계에서 `complete`로 올린다.
+- 4단계 구조 이관 문서는 `data-art-atlas-sync-state="structure"`로 둔다. 이 상태에서는 문서·범주·전개 ID와 68개 행·카드 묶음 자리만 신뢰한다.
+- 5단계에서 표의 대표 화가와 카드의 화가·작품·선정 이유를 모두 맞춘 문서는 `data-art-atlas-sync-state="content"`로 올린다. `content`는 화면에서 읽을 수 있는 콘텐츠 완성 상태지만 카드 드래그, 대표 화가 편집, 저장, 화가 목록 반영은 잠근다.
+- 6단계의 ID 기반 양방향 동기화와 저장 전 불변식 검사가 끝난 문서만 `data-art-atlas-sync-state="complete"`로 올린다.
 - 정본 36개 색인에서 제외한 기존 하위 사조 문서는 5단계 흡수 작업이 끝날 때까지 삭제하지 않고 `data/미술사조/legacy-index.json`에 소유 부모·범주·용도를 기록한다.
 - 국가 전개 표의 각 행과 대응 카드 묶음에는 같은 `data-art-atlas-development-id`·`data-art-atlas-category-id`·`data-art-atlas-country-ids`를 둔다. `developmentId`는 프로젝트 전체에서 유일하며 한 행과 한 카드 묶음만 연결한다.
 - 버전 1 대표작 카드는 `data-artist-id`·`data-work-id`·`data-art-atlas-image-state`를 가지며 선정 이유와 작품 설명을 각각 `data-art-atlas-selection-reason`, `data-art-atlas-card-description`으로 구분한다. 이미지가 아직 없으면 외부 URL을 만들지 않고 `imageState="pending"`으로 둔다.

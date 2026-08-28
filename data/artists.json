@@ -2,10 +2,11 @@
   "dataSchema": 1,
   "metadata": {
     "createdAt": "2026-08-22T12:46:59.824Z",
-    "updatedAt": "2026-08-27T07:46:01.699Z",
+    "updatedAt": "2026-08-28T00:00:00.000Z",
     "createdBy": "jhlee409@gmail.com",
-    "updatedBy": "jhlee409@gmail.com",
-    "revision": 887
+    "updatedBy": "phase-5-rebuild",
+    "revision": 888,
+    "representativeContentSchema": 1
   },
   "artists": [
     {
@@ -2703,18 +2704,18 @@
         {
           "id": "wikidata-Q734834",
           "year": 1432,
-          "popularity": 39,
+          "popularity": 90,
           "title": {
             "ko": "헨트 제단화",
-            "en": "헨트 제단화"
+            "en": "Ghent Altarpiece"
           },
           "country": {
-            "ko": "",
-            "en": ""
+            "ko": "네덜란드계",
+            "en": "Netherlandish"
           },
           "movement": {
-            "ko": "플랑드르파",
-            "en": "플랑드르파"
+            "ko": "북방 르네상스",
+            "en": "Northern Renaissance"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ghent%20Altarpiece%20by%20Jan%20van%20Eyck%20ALL.jpg",
           "description": {
@@ -2724,7 +2725,7 @@
           "source": "http://www.wikidata.org/entity/Q734834",
           "verified": true,
           "representative": true,
-          "movementContribution": false,
+          "movementContribution": true,
           "thumbnail": "data/thumbnails/artist-Q102272/wikidata-Q734834.jpg",
           "thumbnailValidation": 2,
           "thumbnailCacheKey": "2026-08-21T11:54:36.573Z",
@@ -2734,8 +2735,8 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/thumbnails/artist-Q102272/wikidata-Q734834.jpg",
-              "sourceUrl": "http://www.wikidata.org/entity/Q734834",
               "highResolution": "data/thumbnails/artist-Q102272/wikidata-Q734834.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q734834",
               "sourceUrls": [
                 "http://www.wikidata.org/entity/Q734834",
                 "http://commons.wikimedia.org/wiki/Special:FilePath/Ghent%20Altarpiece%20by%20Jan%20van%20Eyck%20ALL.jpg"
@@ -2749,7 +2750,8 @@
             "updatedAt": "2026-08-27T07:46:01.699Z",
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
-          }
+          },
+          "origin": "art-movement-representatives"
         },
         {
           "id": "wikidata-Q1150782",
@@ -4077,11 +4079,12 @@
       },
       "metadata": {
         "createdAt": "2026-08-21T11:02:06.057Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "featuredWorkIds": [
+        "wikidata-Q734834",
         "wikidata-Q220859"
       ],
       "artistSummary": {
@@ -4807,19 +4810,19 @@
         },
         {
           "id": "wikidata-Q977200",
-          "year": 1420,
-          "popularity": 19,
+          "year": 1427,
+          "popularity": 90,
           "title": {
-            "ko": "Holy Trinity",
+            "ko": "성 삼위일체",
             "en": "Holy Trinity"
           },
           "country": {
-            "ko": "",
-            "en": ""
+            "ko": "이탈리아",
+            "en": "Italian"
           },
           "movement": {
-            "ko": "초기 르네상스",
-            "en": "초기 르네상스"
+            "ko": "르네상스",
+            "en": "Renaissance"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%20-%20Trinity%20-%20Santa%20Maria%20Novella.jpg",
           "description": {
@@ -4829,7 +4832,7 @@
           "source": "http://www.wikidata.org/entity/Q977200",
           "verified": true,
           "representative": true,
-          "movementContribution": false,
+          "movementContribution": true,
           "thumbnail": "data/thumbnails/artist-url-1787307872488/wikidata-Q977200.jpg",
           "thumbnailValidation": 2,
           "thumbnailCacheKey": "2026-08-21T10:44:34.594Z",
@@ -4853,7 +4856,8 @@
               "license": "",
               "institution": ""
             }
-          }
+          },
+          "origin": "art-movement-representatives"
         },
         {
           "id": "wikidata-Q1759631",
@@ -6587,9 +6591,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-21T10:24:32.488Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "movement": {
         "ko": "이탈리아 르네상스",
@@ -10398,12 +10402,12 @@
             "en": "The Last Supper"
           },
           "country": {
-            "ko": "밀라노 공국",
-            "en": "Duchy of Milan"
+            "ko": "이탈리아",
+            "en": "Italian"
           },
           "movement": {
-            "ko": "전성기 르네상스",
-            "en": "High Renaissance"
+            "ko": "르네상스",
+            "en": "Renaissance"
           },
           "image": "data/미술사조/images/Leonardo-Last-Supper.jpg",
           "description": {
@@ -10437,7 +10441,8 @@
               "license": "",
               "institution": ""
             }
-          }
+          },
+          "origin": "art-movement-representatives"
         },
         {
           "id": "wikidata-Q656434",
@@ -11707,9 +11712,9 @@
       ],
       "metadata": {
         "createdAt": "2026-08-10T13:50:59.717Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "migration-tool",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [
@@ -11728,8 +11733,8 @@
         "en": "High Renaissance"
       },
       "featuredWorkIds": [
-        "wikidata-Q1217213",
         "wikidata-Q128910",
+        "wikidata-Q1217213",
         "wikidata-Q12418",
         "wikidata-Q563727"
       ],
@@ -11884,10 +11889,10 @@
           },
           "country": {
             "ko": "독일",
-            "en": "Germany"
+            "en": "German"
           },
           "movement": {
-            "ko": "북유럽 르네상스",
+            "ko": "북방 르네상스",
             "en": "Northern Renaissance"
           },
           "collection": [
@@ -12526,9 +12531,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-22T02:54:46.266Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "local image import",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "links": [
         {
@@ -24739,18 +24744,18 @@
         {
           "id": "wikidata-Q1899740",
           "year": 1517,
-          "popularity": 27,
+          "popularity": 90,
           "title": {
             "ko": "성모 승천",
-            "en": "성모 승천"
+            "en": "Assumption of the Virgin"
           },
           "country": {
-            "ko": "베네치아 공화국",
-            "en": "베네치아 공화국"
+            "ko": "이탈리아",
+            "en": "Italian"
           },
           "movement": {
-            "ko": "전성기 르네상스",
-            "en": "전성기 르네상스"
+            "ko": "르네상스",
+            "en": "Renaissance"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tizian%20041.jpg",
           "description": {
@@ -24760,7 +24765,7 @@
           "source": "http://www.wikidata.org/entity/Q1899740",
           "verified": true,
           "representative": true,
-          "movementContribution": false,
+          "movementContribution": true,
           "thumbnail": "data/thumbnails/artist-Q47551/wikidata-Q1899740.jpg",
           "thumbnailValidation": 2,
           "thumbnailCacheKey": "2026-08-20T02:41:22.202Z",
@@ -24784,7 +24789,8 @@
               "license": "",
               "institution": ""
             }
-          }
+          },
+          "origin": "art-movement-representatives"
         },
         {
           "id": "wikidata-Q2046100",
@@ -26765,9 +26771,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-20T02:26:11.396Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "links": [
         {
@@ -26811,7 +26817,8 @@
         "르네상스"
       ],
       "submovements": [
-        "베네치아파"
+        "베네치아파",
+        "베네치아 르네상스"
       ],
       "primaryMovement": "르네상스",
       "regions": [
@@ -27604,15 +27611,15 @@
           "popularity": 8300,
           "title": {
             "ko": "코끼리",
-            "en": "Elephant"
+            "en": "The Elephant"
           },
           "description": {
             "ko": "프랑수아 1세 갤러리 장식의 한 장면으로, 로소가 프랑스 궁정에서 퐁텐블로파 형성에 참여했음을 보여줍니다.",
             "en": "A scene from the Gallery of Francis I, showing Rosso’s role in shaping the First School of Fontainebleau at the French court."
           },
           "country": {
-            "ko": "프랑스",
-            "en": "France"
+            "ko": "이탈리아·프랑스 활동",
+            "en": "Italian, active in France"
           },
           "movement": {
             "ko": "매너리즘",
@@ -27790,6 +27797,7 @@
         "fetchedAt": "2026-08-22T09:10:55.892Z"
       },
       "featuredWorkIds": [
+        "rosso-fiorentino-elephant-fontainebleau-1533-1539",
         "rosso-fiorentino-bacchus-venus-cupid-1530s",
         "rosso-fiorentino-pieta-1537-1540",
         "rosso-fiorentino-descent-from-cross-1521"
@@ -27802,9 +27810,9 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-22T09:10:55.892Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "artistSummary": {
         "ko": [],
@@ -27813,7 +27821,9 @@
       "movements": [
         "매너리즘"
       ],
-      "submovements": [],
+      "submovements": [
+        "퐁텐블로파"
+      ],
       "primaryMovement": "매너리즘",
       "regions": [
         "이탈리아"
@@ -28216,7 +28226,7 @@
           "popularity": 10000,
           "title": {
             "ko": "십자가에서 내려지는 그리스도",
-            "en": "The Deposition from the Cross"
+            "en": "Deposition from the Cross"
           },
           "description": {
             "ko": "산타 펠리치타 카포니 예배당의 제단화로, 떠 있는 듯한 인물, 불안정한 공간, 차갑고 밝은 색채가 매너리즘의 핵심을 압축한 폰토르모의 대표작입니다.",
@@ -28224,7 +28234,7 @@
           },
           "country": {
             "ko": "이탈리아",
-            "en": "Italy"
+            "en": "Italian"
           },
           "movement": {
             "ko": "매너리즘",
@@ -28702,9 +28712,9 @@
       ],
       "metadata": {
         "createdAt": "2026-08-22T07:28:01.522Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "artistSummary": {
         "ko": [],
@@ -28713,7 +28723,9 @@
       "movements": [
         "매너리즘"
       ],
-      "submovements": [],
+      "submovements": [
+        "이탈리아 매너리즘"
+      ],
       "primaryMovement": "매너리즘",
       "regions": [
         "이탈리아"
@@ -47917,19 +47929,19 @@
         },
         {
           "id": "wikidata-Q969377",
-          "year": 1609,
-          "popularity": 33,
+          "year": 1599,
+          "popularity": 90,
           "title": {
-            "ko": "성 마태오를 부르심",
+            "ko": "성 마태오의 소명",
             "en": "The Calling of Saint Matthew"
           },
           "country": {
-            "ko": "",
-            "en": ""
+            "ko": "이탈리아",
+            "en": "Italian"
           },
           "movement": {
-            "ko": "",
-            "en": ""
+            "ko": "바로크",
+            "en": "Baroque"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caravaggio%20%E2%80%94%20The%20Calling%20of%20Saint%20Matthew.jpg",
           "description": {
@@ -47938,11 +47950,11 @@
           },
           "source": "http://www.wikidata.org/entity/Q969377",
           "verified": true,
-          "representative": false,
+          "representative": true,
           "movementContribution": true,
           "movementContributionReason": "artist-movement-characteristic",
           "origin": "generated",
-          "thumbnail": "data/thumbnails/artist-1786371252483/wikidata-Q969377.jpg",
+          "thumbnail": "data/미술사조/images/Caravaggio-27s-The-Calling-of-St-Matthew-2068cdb551fc.jpg",
           "thumbnailValidation": 2,
           "metadataVerifiedAt": "2026-08-22T20:50:15.958Z",
           "thumbnailCacheKey": "2026-08-11T12:34:01.976Z",
@@ -47956,7 +47968,7 @@
             "schema": 1,
             "image": {
               "status": "ready",
-              "localThumbnail": "data/thumbnails/artist-1786371252483/wikidata-Q969377.jpg",
+              "localThumbnail": "data/미술사조/images/Caravaggio-27s-The-Calling-of-St-Matthew-2068cdb551fc.jpg",
               "highResolution": "",
               "sourceUrl": "http://www.wikidata.org/entity/Q969377",
               "sourceUrls": [
@@ -48242,9 +48254,9 @@
       ],
       "metadata": {
         "createdAt": "2026-08-10T14:28:29.862Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "migration-tool",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [
@@ -48268,7 +48280,8 @@
         "바로크"
       ],
       "submovements": [
-        "카라바조주의"
+        "카라바조주의",
+        "이탈리아 바로크"
       ],
       "primaryMovement": "바로크",
       "regions": [
@@ -48282,7 +48295,10 @@
       "activeTo": 1610,
       "listName": {
         "ko": "카라바조"
-      }
+      },
+      "featuredWorkIds": [
+        "wikidata-Q969377"
+      ]
     },
     {
       "id": "artist-url-1786879941678",
@@ -48949,7 +48965,7 @@
           },
           "country": {
             "ko": "플랑드르",
-            "en": "Flanders"
+            "en": "Flemish"
           },
           "movement": {
             "ko": "바로크",
@@ -48989,7 +49005,7 @@
               "institution": "Cathedral of Our Lady, Antwerp"
             }
           },
-          "movementContribution": false
+          "movementContribution": true
         },
         {
           "id": "wikipedia-Q5599-23",
@@ -50869,9 +50885,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-16T11:39:39.817Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "migration-tool",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "profileResolved": true,
       "aliases": {
@@ -51923,7 +51939,7 @@
           },
           "country": {
             "ko": "프랑스",
-            "en": "France"
+            "en": "French"
           },
           "movement": {
             "ko": "바로크",
@@ -52007,7 +52023,6 @@
                 "https://en.wikipedia.org/wiki/Nicolas_Poussin",
                 "https://www.wikidata.org/wiki/Q41554"
               ],
-              "checkedAt": "2026-08-23T13:48:04.714Z",
               "license": "",
               "institution": "Minneapolis Institute of Art"
             }
@@ -54305,15 +54320,16 @@
         }
       ],
       "featuredWorkIds": [
+        "poussin-death-of-germanicus-1627",
         "poussin-et-in-arcadia-ego-1637-1638",
         "poussin-judgment-of-solomon-1649",
         "poussin-summer-ruth-and-boaz-1660-1664"
       ],
       "metadata": {
         "createdAt": "2026-08-23T13:48:04.714Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "local download import",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "movements": [
         "바로크"
@@ -56041,7 +56057,7 @@
           },
           "country": {
             "ko": "스페인",
-            "en": "Spain"
+            "en": "Spanish"
           },
           "movement": {
             "ko": "바로크",
@@ -56125,7 +56141,6 @@
                 "https://en.wikipedia.org/wiki/Diego_Velazquez",
                 "https://www.wikidata.org/wiki/Q297"
               ],
-              "checkedAt": "2026-08-23T11:19:38.260Z",
               "license": "",
               "institution": "Museo del Prado, Madrid"
             }
@@ -56137,9 +56152,9 @@
       ],
       "metadata": {
         "createdAt": "2026-08-23T11:19:38.260Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "local download import",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "artistSummary": {
         "ko": [],
@@ -58943,8 +58958,8 @@
             "en": "The Night Watch"
           },
           "country": {
-            "ko": "네덜란드 공화국",
-            "en": "Dutch Republic"
+            "ko": "네덜란드",
+            "en": "Dutch"
           },
           "movement": {
             "ko": "바로크",
@@ -58983,7 +58998,7 @@
               "institution": "Rijksmuseum"
             }
           },
-          "movementContribution": false
+          "movementContribution": true
         },
         {
           "id": "met-437393",
@@ -60103,9 +60118,9 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-17T00:00:00.000Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "links": [
         {
@@ -60144,7 +60159,8 @@
         "바로크"
       ],
       "submovements": [
-        "네덜란드 황금기"
+        "네덜란드 황금기",
+        "네덜란드 황금기 회화"
       ],
       "primaryMovement": "바로크",
       "regions": [
@@ -68001,18 +68017,18 @@
         {
           "id": "wikidata-Q311243",
           "year": 1818,
-          "popularity": 48,
+          "popularity": 90,
           "title": {
             "ko": "안개 바다 위의 방랑자",
             "en": "Wanderer above the Sea of Fog"
           },
           "country": {
             "ko": "독일",
-            "en": "Germany"
+            "en": "German"
           },
           "movement": {
-            "ko": "",
-            "en": ""
+            "ko": "낭만주의",
+            "en": "Romanticism"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Friedrich%2C%20Caspar%20David%20-%20Wanderer%20%C3%BCber%20dem%20Nebelmeer.jpg",
           "description": {
@@ -68021,7 +68037,7 @@
           },
           "source": "http://www.wikidata.org/entity/Q311243",
           "verified": true,
-          "representative": false,
+          "representative": true,
           "movementContribution": true,
           "movementContributionReason": "artist-movement-characteristic",
           "origin": "generated",
@@ -69730,9 +69746,9 @@
       ],
       "metadata": {
         "createdAt": "2026-08-10T13:22:11.79Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "migration-tool",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [
@@ -69753,7 +69769,9 @@
       "movements": [
         "낭만주의"
       ],
-      "submovements": [],
+      "submovements": [
+        "독일 낭만주의"
+      ],
       "primaryMovement": "낭만주의",
       "regions": [
         "독일"
@@ -69768,7 +69786,10 @@
       "activeTo": 1840,
       "listName": {
         "ko": "프리드리히"
-      }
+      },
+      "featuredWorkIds": [
+        "wikidata-Q311243"
+      ]
     },
     {
       "id": "artist-Q6394591",
@@ -74091,7 +74112,7 @@
           },
           "country": {
             "ko": "프랑스",
-            "en": "France"
+            "en": "French"
           },
           "movement": {
             "ko": "인상주의",
@@ -74183,8 +74204,9 @@
               "institution": ""
             }
           },
-          "movementContribution": false,
-          "popularity": 0
+          "movementContribution": true,
+          "popularity": 90,
+          "verified": true
         },
         {
           "id": "wikidata-Q328523",
@@ -76967,9 +76989,9 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-10T13:21:52.312Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "migration-tool",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [
@@ -76990,7 +77012,9 @@
       "movements": [
         "인상주의"
       ],
-      "submovements": [],
+      "submovements": [
+        "프랑스 인상주의"
+      ],
       "primaryMovement": "인상주의",
       "regions": [
         "프랑스"
@@ -77008,7 +77032,10 @@
       "activeTo": 1926,
       "listName": {
         "ko": "모네"
-      }
+      },
+      "featuredWorkIds": [
+        "impression-sunrise"
+      ]
     },
     {
       "id": "vincent-van-gogh",
@@ -79472,18 +79499,18 @@
         {
           "id": "wikidata-Q45585",
           "year": 1889,
-          "popularity": 76,
+          "popularity": 90,
           "title": {
             "ko": "별이 빛나는 밤",
             "en": "The Starry Night"
           },
           "country": {
-            "ko": "프랑스",
-            "en": "France"
+            "ko": "네덜란드",
+            "en": "Dutch"
           },
           "movement": {
             "ko": "후기인상주의",
-            "en": "후기인상주의"
+            "en": "Post-Impressionism"
           },
           "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Starry%20Night%20-%20Google%20Art%20Project.jpg",
           "description": {
@@ -79492,8 +79519,8 @@
           },
           "source": "http://www.wikidata.org/entity/Q45585",
           "verified": true,
-          "representative": false,
-          "movementContribution": false,
+          "representative": true,
+          "movementContribution": true,
           "origin": "generated",
           "thumbnail": "data/thumbnails/vincent-van-gogh/wikidata-Q45585.jpg",
           "thumbnailValidation": 2,
@@ -80156,9 +80183,9 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-10T13:21:43.815Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "migration-tool",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [
@@ -80181,7 +80208,9 @@
       "movements": [
         "후기인상주의"
       ],
-      "submovements": [],
+      "submovements": [
+        "후기인상주의"
+      ],
       "primaryMovement": "후기인상주의",
       "movementActivityCountry": "프랑스",
       "regions": [
@@ -80197,7 +80226,10 @@
       "activeTo": 1890,
       "listName": {
         "ko": "반 고흐"
-      }
+      },
+      "featuredWorkIds": [
+        "wikidata-Q45585"
+      ]
     },
     {
       "id": "artist-Q187310",
@@ -86657,7 +86689,7 @@
           },
           "country": {
             "ko": "프랑스",
-            "en": "France"
+            "en": "French"
           },
           "movement": {
             "ko": "로코코",
@@ -87213,14 +87245,16 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-24T00:00:00Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "manual entry",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "movements": [
         "로코코"
       ],
-      "submovements": [],
+      "submovements": [
+        "프랑스 로코코"
+      ],
       "primaryMovement": "로코코",
       "regions": [
         "프랑스"
@@ -88641,7 +88675,7 @@
           },
           "country": {
             "ko": "이탈리아",
-            "en": "Italy"
+            "en": "Italian"
           },
           "movement": {
             "ko": "로코코",
@@ -88846,14 +88880,16 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-24T00:00:00Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "manual entry",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "movements": [
         "로코코"
       ],
-      "submovements": [],
+      "submovements": [
+        "베네치아 로코코"
+      ],
       "primaryMovement": "로코코",
       "regions": [
         "이탈리아"
@@ -90764,7 +90800,7 @@
           "popularity": 90,
           "title": {
             "ko": "호라티우스 형제의 맹세",
-            "en": "The Oath of the Horatii"
+            "en": "Oath of the Horatii"
           },
           "description": {
             "ko": "자크루이 다비드는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다.",
@@ -90776,7 +90812,7 @@
           },
           "country": {
             "ko": "프랑스",
-            "en": "France"
+            "en": "French"
           },
           "movement": {
             "ko": "신고전주의",
@@ -90818,14 +90854,16 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-24T00:00:00Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "manual entry",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "movements": [
         "신고전주의"
       ],
-      "submovements": [],
+      "submovements": [
+        "프랑스 신고전주의"
+      ],
       "primaryMovement": "신고전주의",
       "regions": [
         "프랑스"
@@ -90998,7 +91036,7 @@
           "popularity": 90,
           "title": {
             "ko": "큐피드의 키스로 되살아난 프시케",
-            "en": "Psyche Revived by Cupid’s Kiss"
+            "en": "Psyche Revived by Cupid's Kiss"
           },
           "description": {
             "ko": "안토니오 카노바는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다.",
@@ -91010,7 +91048,7 @@
           },
           "country": {
             "ko": "이탈리아",
-            "en": "Italy"
+            "en": "Italian"
           },
           "movement": {
             "ko": "신고전주의",
@@ -91052,14 +91090,16 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-24T00:00:00Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "manual entry",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "movements": [
         "신고전주의"
       ],
-      "submovements": [],
+      "submovements": [
+        "로마 국제 신고전주의"
+      ],
       "primaryMovement": "신고전주의",
       "regions": [
         "이탈리아"
@@ -91695,13 +91735,12 @@
           },
           "country": {
             "ko": "프랑스",
-            "en": "프랑스"
+            "en": "French"
           },
           "movement": {
             "ko": "낭만주의",
             "en": "Romanticism"
           },
-          "imageUploadStatus": "pending-upload",
           "localImageCandidates": [
             "Delacroix-Liberty-Leading-the-People"
           ],
@@ -91719,15 +91758,16 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
+              "status": "ready",
+              "localThumbnail": "data/미술사조/images/Eug-C3-A8ne-Delacroix-Le-28-Juillet-La-Libert-C3-A9-guidant-le-peuple-808a8bab8e3b.jpg",
               "highResolution": "",
               "sourceUrl": "",
               "sourceUrls": [],
               "license": "",
               "institution": ""
             }
-          }
+          },
+          "thumbnail": "data/미술사조/images/Eug-C3-A8ne-Delacroix-Le-28-Juillet-La-Libert-C3-A9-guidant-le-peuple-808a8bab8e3b.jpg"
         }
       ],
       "featuredWorkIds": [
@@ -91737,7 +91777,9 @@
       "movements": [
         "낭만주의"
       ],
-      "submovements": [],
+      "submovements": [
+        "프랑스 낭만주의"
+      ],
       "primaryMovement": "낭만주의",
       "regions": [
         "프랑스"
@@ -91751,9 +91793,9 @@
       "activeTo": 1863,
       "metadata": {
         "createdAt": "2026-08-25T10:02:06.175Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "listName": {
         "ko": "들라크루아"
@@ -91803,7 +91845,7 @@
           },
           "country": {
             "ko": "스페인",
-            "en": "스페인"
+            "en": "Spanish"
           },
           "movement": {
             "ko": "낭만주의",
@@ -91844,7 +91886,9 @@
       "movements": [
         "낭만주의"
       ],
-      "submovements": [],
+      "submovements": [
+        "스페인 낭만주의"
+      ],
       "primaryMovement": "낭만주의",
       "regions": [
         "스페인"
@@ -91858,9 +91902,9 @@
       "activeTo": 1828,
       "metadata": {
         "createdAt": "2026-08-25T10:02:06.175Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "listName": {
         "ko": "고야"
@@ -91910,7 +91954,7 @@
           },
           "country": {
             "ko": "영국",
-            "en": "영국"
+            "en": "British"
           },
           "movement": {
             "ko": "낭만주의",
@@ -91952,7 +91996,9 @@
       "movements": [
         "낭만주의"
       ],
-      "submovements": [],
+      "submovements": [
+        "영국 낭만주의"
+      ],
       "primaryMovement": "낭만주의",
       "regions": [
         "영국"
@@ -91966,9 +92012,9 @@
       "activeTo": 1851,
       "metadata": {
         "createdAt": "2026-08-25T10:02:06.175Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "listName": {
         "ko": "터너"
@@ -93075,6 +93121,3766 @@
       "activeTo": 1743,
       "listName": {
         "ko": "리고"
+      }
+    },
+    {
+      "id": "artist-art-atlas-courbet",
+      "name": {
+        "ko": "귀스타브 쿠르베",
+        "en": "Gustave Courbet"
+      },
+      "birth": 1819,
+      "death": 1877,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "French"
+      },
+      "movement": {
+        "ko": "사실주의",
+        "en": "Realism"
+      },
+      "works": [
+        {
+          "id": "courbet-burial-at-ornans",
+          "title": {
+            "ko": "오르낭의 매장",
+            "en": "A Burial at Ornans"
+          },
+          "year": 1849,
+          "popularity": 90,
+          "country": {
+            "ko": "프랑스",
+            "en": "French"
+          },
+          "movement": {
+            "ko": "사실주의",
+            "en": "Realism"
+          },
+          "description": {
+            "ko": "영웅도 이상적 신체도 없이 실제 마을 사람들이 화면을 가득 채운다. 일상의 공동체와 불편한 현실을 거대한 형식으로 마주하게 함으로써 무엇이 중요한 회화 주제가 될 수 있는지를 바꾸었다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "thumbnail": "data/미술사조/images/Gustave-Courbet-A-Burial-at-Ornans-Google-Art-Project-2-45d9e62b27f4.jpg",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/미술사조/images/Gustave-Courbet-A-Burial-at-Ornans-Google-Art-Project-2-45d9e62b27f4.jpg",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "courbet-burial-at-ornans"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "사실주의"
+      ],
+      "submovements": [
+        "프랑스 사실주의"
+      ],
+      "primaryMovement": "사실주의",
+      "regions": [
+        "프랑스"
+      ],
+      "activeFrom": 1839,
+      "activeTo": 1877,
+      "listName": {
+        "ko": "쿠르베"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-repin",
+      "name": {
+        "ko": "일리야 레핀",
+        "en": "Ilya Repin"
+      },
+      "birth": 1844,
+      "death": 1930,
+      "nationality": {
+        "ko": "러시아",
+        "en": "Russian"
+      },
+      "movement": {
+        "ko": "사실주의",
+        "en": "Realism"
+      },
+      "works": [
+        {
+          "id": "repin-barge-haulers-volga",
+          "title": {
+            "ko": "볼가강의 배 끄는 인부들",
+            "en": "Barge Haulers on the Volga"
+          },
+          "year": 1870,
+          "popularity": 90,
+          "country": {
+            "ko": "러시아",
+            "en": "Russian"
+          },
+          "movement": {
+            "ko": "사실주의",
+            "en": "Realism"
+          },
+          "description": {
+            "ko": "한 줄로 묶인 노동자들은 익명의 군중이 아니라 서로 다른 나이와 표정을 가진 개인으로 보인다. 넓은 강과 밝은 하늘 아래의 고된 노동은 제국의 진보와 현실 사이의 모순을 드러낸다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "thumbnail": "data/미술사조/images/Repin-Barge-Haulers-on-the-Volga.jpg",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/미술사조/images/Repin-Barge-Haulers-on-the-Volga.jpg",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "repin-barge-haulers-volga"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "사실주의"
+      ],
+      "submovements": [
+        "러시아 사실주의"
+      ],
+      "primaryMovement": "사실주의",
+      "regions": [
+        "러시아"
+      ],
+      "activeFrom": 1864,
+      "activeTo": 1930,
+      "listName": {
+        "ko": "레핀"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-seurat",
+      "name": {
+        "ko": "조르주 쇠라",
+        "en": "Georges Seurat"
+      },
+      "birth": 1859,
+      "death": 1891,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "French"
+      },
+      "movement": {
+        "ko": "후기인상주의",
+        "en": "Post-Impressionism"
+      },
+      "works": [
+        {
+          "id": "seurat-la-grande-jatte",
+          "title": {
+            "ko": "그랑드자트섬의 일요일 오후",
+            "en": "A Sunday Afternoon on the Island of La Grande Jatte"
+          },
+          "year": 1884,
+          "popularity": 90,
+          "country": {
+            "ko": "프랑스",
+            "en": "French"
+          },
+          "movement": {
+            "ko": "후기인상주의",
+            "en": "Post-Impressionism"
+          },
+          "description": {
+            "ko": "서로 다른 색점이 멀리서 눈 안에서 섞이고 인물들은 수직과 수평의 반복 속에 배치된다. 자연광의 인상을 과학적 방법과 장기 제작으로 재구성했다는 점에서 인상주의와 구별된다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "thumbnail": "data/미술사조/images/Georges-Seurat-Un-dimanche-apr-C3-A8s-midi-C3-A0-l-27-C3-8Ele-de-la-Gr-8037631ce03d.jpg",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/미술사조/images/Georges-Seurat-Un-dimanche-apr-C3-A8s-midi-C3-A0-l-27-C3-8Ele-de-la-Gr-8037631ce03d.jpg",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "seurat-la-grande-jatte"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "후기인상주의"
+      ],
+      "submovements": [
+        "신인상주의"
+      ],
+      "primaryMovement": "후기인상주의",
+      "regions": [
+        "프랑스"
+      ],
+      "activeFrom": 1879,
+      "activeTo": 1891,
+      "listName": {
+        "ko": "쇠라"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-gauguin",
+      "name": {
+        "ko": "폴 고갱",
+        "en": "Paul Gauguin"
+      },
+      "birth": 1848,
+      "death": 1903,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "French"
+      },
+      "movement": {
+        "ko": "후기인상주의",
+        "en": "Post-Impressionism"
+      },
+      "works": [
+        {
+          "id": "gauguin-vision-after-sermon",
+          "title": {
+            "ko": "설교 후의 환상",
+            "en": "Vision after the Sermon"
+          },
+          "year": 1888,
+          "popularity": 90,
+          "country": {
+            "ko": "프랑스",
+            "en": "French"
+          },
+          "movement": {
+            "ko": "후기인상주의",
+            "en": "Post-Impressionism"
+          },
+          "description": {
+            "ko": "붉은 바닥은 관찰된 자연색이 아니라 현실과 환상을 연결하는 상징적 장이 된다. 사과나무의 대각선이 기도하는 여성과 성서의 환상을 나누며, 회화가 보이는 것을 복사하기보다 관념을 조직할 수 있음을 보여 준다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "gauguin-vision-after-sermon"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "후기인상주의"
+      ],
+      "submovements": [
+        "퐁타방파와 종합주의"
+      ],
+      "primaryMovement": "후기인상주의",
+      "regions": [
+        "프랑스"
+      ],
+      "activeFrom": 1868,
+      "activeTo": 1903,
+      "listName": {
+        "ko": "고갱"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-kirchner",
+      "name": {
+        "ko": "에른스트 루트비히 키르히너",
+        "en": "Ernst Ludwig Kirchner"
+      },
+      "birth": 1880,
+      "death": 1938,
+      "nationality": {
+        "ko": "독일",
+        "en": "German"
+      },
+      "movement": {
+        "ko": "표현주의",
+        "en": "Expressionism"
+      },
+      "works": [
+        {
+          "id": "kirchner-street-dresden",
+          "title": {
+            "ko": "드레스덴의 거리",
+            "en": "Street, Dresden"
+          },
+          "year": 1908,
+          "popularity": 90,
+          "country": {
+            "ko": "독일",
+            "en": "German"
+          },
+          "movement": {
+            "ko": "표현주의",
+            "en": "Expressionism"
+          },
+          "description": {
+            "ko": "얼굴과 몸은 길고 각지게 변형되고 분홍과 녹색이 현실의 피부색을 밀어낸다. 군중 속 가까운 거리감이 오히려 소외와 불안을 만들어 표현주의가 외형보다 심리적 진실을 택했음을 보여 준다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "thumbnail": "data/미술사조/images/Kirchner-Street-Dresden.jpg",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/미술사조/images/Kirchner-Street-Dresden.jpg",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "kirchner-street-dresden"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "표현주의"
+      ],
+      "submovements": [
+        "다리파"
+      ],
+      "primaryMovement": "표현주의",
+      "regions": [
+        "독일"
+      ],
+      "activeFrom": 1900,
+      "activeTo": 1938,
+      "listName": {
+        "ko": "키르히너"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-kandinsky",
+      "name": {
+        "ko": "바실리 칸딘스키",
+        "en": "Wassily Kandinsky"
+      },
+      "birth": 1866,
+      "death": 1944,
+      "nationality": {
+        "ko": "러시아·독일 활동",
+        "en": "Russian, active in Germany"
+      },
+      "movement": {
+        "ko": "표현주의",
+        "en": "Expressionism"
+      },
+      "works": [
+        {
+          "id": "kandinsky-composition-vii",
+          "title": {
+            "ko": "구성 VII",
+            "en": "Composition VII"
+          },
+          "year": 1913,
+          "popularity": 90,
+          "country": {
+            "ko": "러시아·독일 활동",
+            "en": "Russian, active in Germany"
+          },
+          "movement": {
+            "ko": "표현주의",
+            "en": "Expressionism"
+          },
+          "description": {
+            "ko": "소용돌이치는 선과 색면은 하나의 사물을 묘사하지 않지만 충돌과 상승의 리듬을 만든다. 음악처럼 비대상적 요소가 감정을 일으킬 수 있다는 생각이 표현주의에서 추상미술로 넘어가는 길을 보여 준다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "kandinsky-composition-vii"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "표현주의"
+      ],
+      "submovements": [
+        "청기사파"
+      ],
+      "primaryMovement": "표현주의",
+      "regions": [
+        "러시아·독일 활동"
+      ],
+      "activeFrom": 1886,
+      "activeTo": 1944,
+      "listName": {
+        "ko": "칸딘스키"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-schiele",
+      "name": {
+        "ko": "에곤 실레",
+        "en": "Egon Schiele"
+      },
+      "birth": 1890,
+      "death": 1918,
+      "nationality": {
+        "ko": "오스트리아",
+        "en": "Austrian"
+      },
+      "movement": {
+        "ko": "표현주의",
+        "en": "Expressionism"
+      },
+      "works": [
+        {
+          "id": "schiele-self-portrait-physalis",
+          "title": {
+            "ko": "꽈리와 자화상",
+            "en": "Self-Portrait with Physalis"
+          },
+          "year": 1912,
+          "popularity": 90,
+          "country": {
+            "ko": "오스트리아",
+            "en": "Austrian"
+          },
+          "movement": {
+            "ko": "표현주의",
+            "en": "Expressionism"
+          },
+          "description": {
+            "ko": "마른 몸과 꺾인 자세, 날카로운 윤곽은 자연스러운 초상보다 심리적 긴장을 앞세운다. 빈 분리파의 선과 평면성이 개인의 취약성과 욕망을 드러내는 도구로 변한 과정을 볼 수 있다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "schiele-self-portrait-physalis"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "표현주의"
+      ],
+      "submovements": [
+        "오스트리아 표현주의"
+      ],
+      "primaryMovement": "표현주의",
+      "regions": [
+        "오스트리아"
+      ],
+      "activeFrom": 1910,
+      "activeTo": 1918,
+      "listName": {
+        "ko": "실레"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-picasso",
+      "name": {
+        "ko": "파블로 피카소",
+        "en": "Pablo Picasso"
+      },
+      "birth": 1881,
+      "death": 1973,
+      "nationality": {
+        "ko": "스페인·프랑스 활동",
+        "en": "Spanish, active in France"
+      },
+      "movement": {
+        "ko": "입체주의",
+        "en": "Cubism"
+      },
+      "works": [
+        {
+          "id": "picasso-ma-jolie",
+          "title": {
+            "ko": "마 졸리",
+            "en": "Ma Jolie"
+          },
+          "year": 1911,
+          "popularity": 90,
+          "country": {
+            "ko": "스페인·프랑스 활동",
+            "en": "Spanish, active in France"
+          },
+          "movement": {
+            "ko": "입체주의",
+            "en": "Cubism"
+          },
+          "description": {
+            "ko": "인물과 악기는 작은 각면과 제한된 갈색·회색 속에 흩어져 있다. 회화가 창문처럼 현실을 보여 주는 대신 대상을 보고 아는 과정을 시간 속에서 재구성한다는 입체주의의 핵심을 드러낸다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "picasso-ma-jolie"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "입체주의"
+      ],
+      "submovements": [
+        "분석적 입체주의"
+      ],
+      "primaryMovement": "입체주의",
+      "regions": [
+        "스페인·프랑스 활동"
+      ],
+      "activeFrom": 1901,
+      "activeTo": 1973,
+      "listName": {
+        "ko": "피카소"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-gris",
+      "name": {
+        "ko": "후안 그리스",
+        "en": "Juan Gris"
+      },
+      "birth": 1887,
+      "death": 1927,
+      "nationality": {
+        "ko": "스페인·프랑스 활동",
+        "en": "Spanish, active in France"
+      },
+      "movement": {
+        "ko": "입체주의",
+        "en": "Cubism"
+      },
+      "works": [
+        {
+          "id": "gris-portrait-picasso",
+          "title": {
+            "ko": "파블로 피카소의 초상",
+            "en": "Portrait of Pablo Picasso"
+          },
+          "year": 1912,
+          "popularity": 90,
+          "country": {
+            "ko": "스페인·프랑스 활동",
+            "en": "Spanish, active in France"
+          },
+          "movement": {
+            "ko": "입체주의",
+            "en": "Cubism"
+          },
+          "description": {
+            "ko": "각진 면이 인물을 해체하지만 손과 얼굴, 의자의 단서가 다시 초상을 읽게 한다. 형태를 부수는 데서 멈추지 않고 선택한 기호와 색으로 새 전체를 만든다는 종합적 입체주의의 방향을 보여 준다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "thumbnail": "data/미술사조/images/Juan-Gris-Portrait-of-Pablo-Picasso-Google-Art-Project-5708b16ee683.jpg",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/미술사조/images/Juan-Gris-Portrait-of-Pablo-Picasso-Google-Art-Project-5708b16ee683.jpg",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "gris-portrait-picasso"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "입체주의"
+      ],
+      "submovements": [
+        "종합적 입체주의"
+      ],
+      "primaryMovement": "입체주의",
+      "regions": [
+        "스페인·프랑스 활동"
+      ],
+      "activeFrom": 1907,
+      "activeTo": 1927,
+      "listName": {
+        "ko": "그리스"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-malevich",
+      "name": {
+        "ko": "카지미르 말레비치",
+        "en": "Kazimir Malevich"
+      },
+      "birth": 1879,
+      "death": 1935,
+      "nationality": {
+        "ko": "러시아 제국·소련",
+        "en": "Russian Empire and Soviet"
+      },
+      "movement": {
+        "ko": "러시아 아방가르드",
+        "en": "Russian avant-garde"
+      },
+      "works": [
+        {
+          "id": "malevich-black-square",
+          "title": {
+            "ko": "검은 사각형",
+            "en": "Black Square"
+          },
+          "year": 1915,
+          "popularity": 90,
+          "country": {
+            "ko": "러시아 제국·소련",
+            "en": "Russian Empire and Soviet"
+          },
+          "movement": {
+            "ko": "러시아 아방가르드",
+            "en": "Russian avant-garde"
+          },
+          "description": {
+            "ko": "흰 바탕 위 검은 사각형은 풍경이나 인물을 묘사하지 않고 색과 형태의 관계만 남긴다. 회화의 가치를 무엇을 닮았는지가 아니라 비대상적 감각의 강도에서 찾는 급진적 전환을 보여 준다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "malevich-black-square"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "러시아 아방가르드"
+      ],
+      "submovements": [
+        "절대주의"
+      ],
+      "primaryMovement": "러시아 아방가르드",
+      "regions": [
+        "러시아 제국·소련"
+      ],
+      "activeFrom": 1899,
+      "activeTo": 1935,
+      "listName": {
+        "ko": "말레비치"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-rodchenko",
+      "name": {
+        "ko": "알렉산드르 로드첸코",
+        "en": "Aleksandr Rodchenko"
+      },
+      "birth": 1891,
+      "death": 1956,
+      "nationality": {
+        "ko": "러시아·소련",
+        "en": "Russian and Soviet"
+      },
+      "movement": {
+        "ko": "러시아 아방가르드",
+        "en": "Russian avant-garde"
+      },
+      "works": [
+        {
+          "id": "rodchenko-pure-colors",
+          "title": {
+            "ko": "순수한 빨강·노랑·파랑",
+            "en": "Pure Red Color, Pure Yellow Color, Pure Blue Color"
+          },
+          "year": 1921,
+          "popularity": 90,
+          "country": {
+            "ko": "러시아·소련",
+            "en": "Russian and Soviet"
+          },
+          "movement": {
+            "ko": "러시아 아방가르드",
+            "en": "Russian avant-garde"
+          },
+          "description": {
+            "ko": "세 캔버스는 각각 하나의 기본색만 보여 주며 재현과 작가의 손맛을 의도적으로 제거한다. 회화의 종결을 선언하고 예술가가 사회의 물건과 시각 정보를 설계해야 한다는 구성주의의 전환점이 된다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "rodchenko-pure-colors"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "러시아 아방가르드"
+      ],
+      "submovements": [
+        "구성주의"
+      ],
+      "primaryMovement": "러시아 아방가르드",
+      "regions": [
+        "러시아·소련"
+      ],
+      "activeFrom": 1911,
+      "activeTo": 1956,
+      "listName": {
+        "ko": "로드첸코"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-taeuber-arp",
+      "name": {
+        "ko": "조피 토이버아르프",
+        "en": "Sophie Taeuber-Arp"
+      },
+      "birth": 1889,
+      "death": 1943,
+      "nationality": {
+        "ko": "스위스",
+        "en": "Swiss"
+      },
+      "movement": {
+        "ko": "다다",
+        "en": "Dada"
+      },
+      "works": [
+        {
+          "id": "taeuber-arp-dada-head",
+          "title": {
+            "ko": "다다 두상",
+            "en": "Dada Head"
+          },
+          "year": 1920,
+          "popularity": 90,
+          "country": {
+            "ko": "스위스",
+            "en": "Swiss"
+          },
+          "movement": {
+            "ko": "다다",
+            "en": "Dada"
+          },
+          "description": {
+            "ko": "나무로 만든 기계적 머리는 초상과 생활 오브제, 무대 소품의 경계를 흐린다. 장난스러운 표정과 추상 무늬는 전통 조각의 진지함을 해체하면서 새로운 일상 미술의 가능성을 연다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "thumbnail": "data/미술사조/images/Taeuber-Arp-Dada-Head.jpg",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/미술사조/images/Taeuber-Arp-Dada-Head.jpg",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "taeuber-arp-dada-head"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "다다"
+      ],
+      "submovements": [
+        "취리히 다다"
+      ],
+      "primaryMovement": "다다",
+      "regions": [
+        "스위스"
+      ],
+      "activeFrom": 1909,
+      "activeTo": 1943,
+      "listName": {
+        "ko": "토이버아르프"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-hoch",
+      "name": {
+        "ko": "한나 회흐",
+        "en": "Hannah Hoch"
+      },
+      "birth": 1889,
+      "death": 1978,
+      "nationality": {
+        "ko": "독일",
+        "en": "German"
+      },
+      "movement": {
+        "ko": "다다",
+        "en": "Dada"
+      },
+      "works": [
+        {
+          "id": "hoch-kitchen-knife",
+          "title": {
+            "ko": "부엌칼로 자르기",
+            "en": "Cut with the Kitchen Knife"
+          },
+          "year": 1919,
+          "popularity": 90,
+          "country": {
+            "ko": "독일",
+            "en": "German"
+          },
+          "movement": {
+            "ko": "다다",
+            "en": "Dada"
+          },
+          "description": {
+            "ko": "신문의 정치인, 기계, 무용수, 글자가 충돌하며 안정된 권력 이미지를 조각낸다. 대중매체의 재료를 그대로 사용해 매체가 만든 현실을 같은 도구로 비판하는 베를린 다다의 성격이 드러난다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "thumbnail": "data/미술사조/images/Hoch-Cut-With-the-Kitchen-Knife-78af8df2b81f.jpg",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/미술사조/images/Hoch-Cut-With-the-Kitchen-Knife-78af8df2b81f.jpg",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "hoch-kitchen-knife"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "다다"
+      ],
+      "submovements": [
+        "베를린 다다"
+      ],
+      "primaryMovement": "다다",
+      "regions": [
+        "독일"
+      ],
+      "activeFrom": 1909,
+      "activeTo": 1978,
+      "listName": {
+        "ko": "회흐"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-duchamp",
+      "name": {
+        "ko": "마르셀 뒤샹",
+        "en": "Marcel Duchamp"
+      },
+      "birth": 1887,
+      "death": 1968,
+      "nationality": {
+        "ko": "프랑스·미국 활동",
+        "en": "French and American"
+      },
+      "movement": {
+        "ko": "다다",
+        "en": "Dada"
+      },
+      "works": [
+        {
+          "id": "duchamp-fountain",
+          "title": {
+            "ko": "샘",
+            "en": "Fountain"
+          },
+          "year": 1917,
+          "popularity": 90,
+          "country": {
+            "ko": "프랑스·미국 활동",
+            "en": "French and American"
+          },
+          "movement": {
+            "ko": "다다",
+            "en": "Dada"
+          },
+          "description": {
+            "ko": "소변기는 뒤집혀 서명되고 전시장에 제출되면서 기능과 정체성이 바뀐다. 작품을 손으로 만들지 않아도 선택, 명명, 맥락이 예술적 행위가 될 수 있는가라는 질문이 이후 개념미술로 이어진다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "thumbnail": "data/미술사조/images/Marcel-Duchamp-1917-Fountain-photograph-by-Alfred-Stieglitz-17209e2773c3.jpg",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/미술사조/images/Marcel-Duchamp-1917-Fountain-photograph-by-Alfred-Stieglitz-17209e2773c3.jpg",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "duchamp-fountain"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "다다"
+      ],
+      "submovements": [
+        "뉴욕 다다"
+      ],
+      "primaryMovement": "다다",
+      "regions": [
+        "프랑스·미국 활동"
+      ],
+      "activeFrom": 1907,
+      "activeTo": 1968,
+      "listName": {
+        "ko": "뒤샹"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-pollock",
+      "name": {
+        "ko": "잭슨 폴록",
+        "en": "Jackson Pollock"
+      },
+      "birth": 1912,
+      "death": 1956,
+      "nationality": {
+        "ko": "미국",
+        "en": "American"
+      },
+      "movement": {
+        "ko": "추상표현주의",
+        "en": "Abstract Expressionism"
+      },
+      "works": [
+        {
+          "id": "pollock-autumn-rhythm-30",
+          "title": {
+            "ko": "가을 리듬: 넘버 30",
+            "en": "Autumn Rhythm: Number 30"
+          },
+          "year": 1950,
+          "popularity": 90,
+          "country": {
+            "ko": "미국",
+            "en": "American"
+          },
+          "movement": {
+            "ko": "추상표현주의",
+            "en": "Abstract Expressionism"
+          },
+          "description": {
+            "ko": "중심과 가장자리의 위계를 없앤 선의 그물이 거대한 화면을 가득 덮는다. 물감을 붓고 흘린 흔적은 우연만이 아니라 몸의 거리, 속도, 반복이 기록된 결과여서 제작 행위 자체가 작품의 의미가 된다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "pollock-autumn-rhythm-30"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "추상표현주의"
+      ],
+      "submovements": [
+        "액션 페인팅"
+      ],
+      "primaryMovement": "추상표현주의",
+      "regions": [
+        "미국"
+      ],
+      "activeFrom": 1932,
+      "activeTo": 1956,
+      "listName": {
+        "ko": "폴록"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-rothko",
+      "name": {
+        "ko": "마크 로스코",
+        "en": "Mark Rothko"
+      },
+      "birth": 1903,
+      "death": 1970,
+      "nationality": {
+        "ko": "미국",
+        "en": "American"
+      },
+      "movement": {
+        "ko": "추상표현주의",
+        "en": "Abstract Expressionism"
+      },
+      "works": [
+        {
+          "id": "rothko-no-14-1960",
+          "title": {
+            "ko": "넘버 14, 1960",
+            "en": "No. 14, 1960"
+          },
+          "year": 1960,
+          "popularity": 90,
+          "country": {
+            "ko": "미국",
+            "en": "American"
+          },
+          "movement": {
+            "ko": "추상표현주의",
+            "en": "Abstract Expressionism"
+          },
+          "description": {
+            "ko": "가장자리가 흐릿한 두 색면은 화면 앞에 떠 있거나 안으로 스며드는 듯 보인다. 구체적 이야기를 지우고 큰 크기와 미세한 색의 층만 남겨 관람자의 감정과 지속적인 응시를 작품의 일부로 만든다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "rothko-no-14-1960"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "추상표현주의"
+      ],
+      "submovements": [
+        "색면회화"
+      ],
+      "primaryMovement": "추상표현주의",
+      "regions": [
+        "미국"
+      ],
+      "activeFrom": 1923,
+      "activeTo": 1970,
+      "listName": {
+        "ko": "로스코"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-hamilton",
+      "name": {
+        "ko": "리처드 해밀턴",
+        "en": "Richard Hamilton"
+      },
+      "birth": 1922,
+      "death": 2011,
+      "nationality": {
+        "ko": "영국",
+        "en": "British"
+      },
+      "movement": {
+        "ko": "팝아트",
+        "en": "Pop Art"
+      },
+      "works": [
+        {
+          "id": "hamilton-just-what-is-it",
+          "title": {
+            "ko": "오늘날의 가정을 그토록 색다르고 매력적으로 만드는 것은 무엇인가?",
+            "en": "Just what is it that makes today's homes so different, so appealing?"
+          },
+          "year": 1956,
+          "popularity": 90,
+          "country": {
+            "ko": "영국",
+            "en": "British"
+          },
+          "movement": {
+            "ko": "팝아트",
+            "en": "Pop Art"
+          },
+          "description": {
+            "ko": "잡지에서 잘라낸 근육질 남성, 가전제품, 만화, 포장 상품이 하나의 과장된 실내를 만든다. 소비 이미지에 매혹되면서도 그 인공성과 성 역할을 드러내는 양가적 태도가 영국 팝아트의 특징이다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "hamilton-just-what-is-it"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "팝아트"
+      ],
+      "submovements": [
+        "영국 팝아트"
+      ],
+      "primaryMovement": "팝아트",
+      "regions": [
+        "영국"
+      ],
+      "activeFrom": 1942,
+      "activeTo": 2011,
+      "listName": {
+        "ko": "해밀턴"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-warhol",
+      "name": {
+        "ko": "앤디 워홀",
+        "en": "Andy Warhol"
+      },
+      "birth": 1928,
+      "death": 1987,
+      "nationality": {
+        "ko": "미국",
+        "en": "American"
+      },
+      "movement": {
+        "ko": "팝아트",
+        "en": "Pop Art"
+      },
+      "works": [
+        {
+          "id": "warhol-marilyn-diptych",
+          "title": {
+            "ko": "마릴린 두폭화",
+            "en": "Marilyn Diptych"
+          },
+          "year": 1962,
+          "popularity": 90,
+          "country": {
+            "ko": "미국",
+            "en": "American"
+          },
+          "movement": {
+            "ko": "팝아트",
+            "en": "Pop Art"
+          },
+          "description": {
+            "ko": "같은 얼굴이 화려한 색과 흑백으로 수십 번 반복되며 점차 번지고 사라진다. 스타의 영원한 이미지와 한 인간의 죽음, 기계적 복제와 물질적 오류가 동시에 보이게 된다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "warhol-marilyn-diptych"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "팝아트"
+      ],
+      "submovements": [
+        "미국 팝아트"
+      ],
+      "primaryMovement": "팝아트",
+      "regions": [
+        "미국"
+      ],
+      "activeFrom": 1948,
+      "activeTo": 1987,
+      "listName": {
+        "ko": "워홀"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-sherman",
+      "name": {
+        "ko": "신디 셔먼",
+        "en": "Cindy Sherman"
+      },
+      "birth": 1954,
+      "nationality": {
+        "ko": "미국",
+        "en": "American"
+      },
+      "movement": {
+        "ko": "포스트모더니즘",
+        "en": "Postmodernism"
+      },
+      "works": [
+        {
+          "id": "sherman-untitled-film-still-21",
+          "title": {
+            "ko": "무제 영화 스틸 #21",
+            "en": "Untitled Film Still #21"
+          },
+          "year": 1978,
+          "popularity": 90,
+          "country": {
+            "ko": "미국",
+            "en": "American"
+          },
+          "movement": {
+            "ko": "포스트모더니즘",
+            "en": "Postmodernism"
+          },
+          "description": {
+            "ko": "작가는 배우, 감독, 모델이 되어 전형적인 젊은 도시 여성의 한 장면을 연출한다. 특정 영화의 복사가 아닌데도 익숙하게 느껴진다는 사실이 대중매체의 성 역할이 관람자의 기억에 이미 학습되어 있음을 보여 준다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "sherman-untitled-film-still-21"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "포스트모더니즘"
+      ],
+      "submovements": [
+        "차용미술과 픽처스 제너레이션"
+      ],
+      "primaryMovement": "포스트모더니즘",
+      "regions": [
+        "미국"
+      ],
+      "activeFrom": 1974,
+      "listName": {
+        "ko": "셔먼"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-basquiat",
+      "name": {
+        "ko": "장미셸 바스키아",
+        "en": "Jean-Michel Basquiat"
+      },
+      "birth": 1960,
+      "death": 1988,
+      "nationality": {
+        "ko": "미국",
+        "en": "American"
+      },
+      "movement": {
+        "ko": "포스트모더니즘",
+        "en": "Postmodernism"
+      },
+      "works": [
+        {
+          "id": "basquiat-untitled-1981",
+          "title": {
+            "ko": "무제",
+            "en": "Untitled"
+          },
+          "year": 1981,
+          "popularity": 90,
+          "country": {
+            "ko": "미국",
+            "en": "American"
+          },
+          "movement": {
+            "ko": "포스트모더니즘",
+            "en": "Postmodernism"
+          },
+          "description": {
+            "ko": "인물, 왕관, 단어, 지운 흔적이 동시에 남아 화면이 완결된 이야기보다 충돌하는 기억처럼 작동한다. 회화의 귀환이 과거 양식의 반복이 아니라 인종, 권력, 도시 경험을 다시 쓰는 행위였음을 보여 준다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "basquiat-untitled-1981"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "포스트모더니즘"
+      ],
+      "submovements": [
+        "신표현주의"
+      ],
+      "primaryMovement": "포스트모더니즘",
+      "regions": [
+        "미국"
+      ],
+      "activeFrom": 1980,
+      "activeTo": 1988,
+      "listName": {
+        "ko": "바스키아"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-bouguereau",
+      "name": {
+        "ko": "윌리엄아돌프 부그로",
+        "en": "William-Adolphe Bouguereau"
+      },
+      "birth": 1825,
+      "death": 1905,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "French"
+      },
+      "movement": {
+        "ko": "아카데미즘",
+        "en": "Academicism"
+      },
+      "works": [
+        {
+          "id": "bouguereau-birth-of-venus",
+          "title": {
+            "ko": "비너스의 탄생",
+            "en": "The Birth of Venus"
+          },
+          "year": 1879,
+          "popularity": 90,
+          "country": {
+            "ko": "프랑스",
+            "en": "French"
+          },
+          "movement": {
+            "ko": "아카데미즘",
+            "en": "Academicism"
+          },
+          "description": {
+            "ko": "고전 신화의 누드는 정확한 해부학과 매끈한 피부, 균형 잡힌 군상으로 제시된다. 같은 시대 사실주의와 인상주의가 거부한 공식적 기준이 무엇이었는지를 비교하게 하는 데 가장 유용하다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "bouguereau-birth-of-venus"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "아카데미즘"
+      ],
+      "submovements": [
+        "아카데미즘"
+      ],
+      "primaryMovement": "아카데미즘",
+      "regions": [
+        "프랑스"
+      ],
+      "activeFrom": 1845,
+      "activeTo": 1905,
+      "listName": {
+        "ko": "부그로"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-hassam",
+      "name": {
+        "ko": "차일드 해섬",
+        "en": "Childe Hassam"
+      },
+      "birth": 1859,
+      "death": 1935,
+      "nationality": {
+        "ko": "미국",
+        "en": "American"
+      },
+      "movement": {
+        "ko": "인상주의",
+        "en": "Impressionism"
+      },
+      "works": [
+        {
+          "id": "hassam-avenue-in-the-rain",
+          "title": {
+            "ko": "비 오는 날의 대로",
+            "en": "Avenue in the Rain"
+          },
+          "year": 1917,
+          "popularity": 90,
+          "country": {
+            "ko": "미국",
+            "en": "American"
+          },
+          "movement": {
+            "ko": "인상주의",
+            "en": "Impressionism"
+          },
+          "description": {
+            "ko": "젖은 거리와 연속된 깃발이 짧은 붓질 속에서 반짝이며 도시의 움직임을 만든다. 프랑스의 유람·카페 장면에서 배운 시각 언어가 미국의 근대 도시와 전시 동원이라는 다른 맥락에 맞게 변형된다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "thumbnail": "data/미술사조/images/Hassam-Avenue-in-the-Rain.jpg",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/미술사조/images/Hassam-Avenue-in-the-Rain.jpg",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "hassam-avenue-in-the-rain"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "인상주의"
+      ],
+      "submovements": [
+        "미국 인상주의"
+      ],
+      "primaryMovement": "인상주의",
+      "regions": [
+        "미국"
+      ],
+      "activeFrom": 1879,
+      "activeTo": 1935,
+      "listName": {
+        "ko": "해섬"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-moreau",
+      "name": {
+        "ko": "귀스타브 모로",
+        "en": "Gustave Moreau"
+      },
+      "birth": 1826,
+      "death": 1898,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "French"
+      },
+      "movement": {
+        "ko": "상징주의",
+        "en": "Symbolism"
+      },
+      "works": [
+        {
+          "id": "moreau-oedipus-sphinx",
+          "title": {
+            "ko": "오이디푸스와 스핑크스",
+            "en": "Oedipus and the Sphinx"
+          },
+          "year": 1864,
+          "popularity": 90,
+          "country": {
+            "ko": "프랑스",
+            "en": "French"
+          },
+          "movement": {
+            "ko": "상징주의",
+            "en": "Symbolism"
+          },
+          "description": {
+            "ko": "오이디푸스와 스핑크스는 싸우기보다 서로의 눈을 응시하며 정신적 대결을 벌인다. 고고학적 세부와 비현실적 긴장이 결합해 외부 사건보다 욕망, 지식, 운명의 관념을 읽게 한다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "moreau-oedipus-sphinx"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "상징주의"
+      ],
+      "submovements": [
+        "프랑스·벨기에 상징주의"
+      ],
+      "primaryMovement": "상징주의",
+      "regions": [
+        "프랑스"
+      ],
+      "activeFrom": 1846,
+      "activeTo": 1898,
+      "listName": {
+        "ko": "모로"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-munch",
+      "name": {
+        "ko": "에드바르 뭉크",
+        "en": "Edvard Munch"
+      },
+      "birth": 1863,
+      "death": 1944,
+      "nationality": {
+        "ko": "노르웨이",
+        "en": "Norwegian"
+      },
+      "movement": {
+        "ko": "상징주의",
+        "en": "Symbolism"
+      },
+      "works": [
+        {
+          "id": "munch-the-scream",
+          "title": {
+            "ko": "절규",
+            "en": "The Scream"
+          },
+          "year": 1893,
+          "popularity": 90,
+          "country": {
+            "ko": "노르웨이",
+            "en": "Norwegian"
+          },
+          "movement": {
+            "ko": "상징주의",
+            "en": "Symbolism"
+          },
+          "description": {
+            "ko": "인물의 얼굴과 하늘, 다리 아래 풍경이 같은 파동처럼 휘어져 내면의 공포가 세계 전체로 번진다. 실제 장소를 그렸지만 자연의 색과 형태를 심리 상태에 종속시킨 점이 상징주의의 핵심이다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "thumbnail": "data/미술사조/images/Munch-The-Scream.jpg",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/미술사조/images/Munch-The-Scream.jpg",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "munch-the-scream"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "상징주의"
+      ],
+      "submovements": [
+        "중부·북유럽 상징주의"
+      ],
+      "primaryMovement": "상징주의",
+      "regions": [
+        "노르웨이"
+      ],
+      "activeFrom": 1883,
+      "activeTo": 1944,
+      "listName": {
+        "ko": "뭉크"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-mucha",
+      "name": {
+        "ko": "알폰스 무하",
+        "en": "Alphonse Mucha"
+      },
+      "birth": 1860,
+      "death": 1939,
+      "nationality": {
+        "ko": "체코·프랑스 활동",
+        "en": "Czech, active in France"
+      },
+      "movement": {
+        "ko": "아르누보",
+        "en": "Art Nouveau"
+      },
+      "works": [
+        {
+          "id": "mucha-the-seasons",
+          "title": {
+            "ko": "사계",
+            "en": "The Seasons"
+          },
+          "year": 1896,
+          "popularity": 90,
+          "country": {
+            "ko": "체코·프랑스 활동",
+            "en": "Czech, active in France"
+          },
+          "movement": {
+            "ko": "아르누보",
+            "en": "Art Nouveau"
+          },
+          "description": {
+            "ko": "여성의 머리카락과 식물 줄기, 테두리 무늬가 끊기지 않는 곡선으로 이어진다. 순수회화와 상업 포스터의 경계를 낮추고 동일한 양식을 일상 시각문화에 퍼뜨린다는 아르누보의 목표가 드러난다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "mucha-the-seasons"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "아르누보"
+      ],
+      "submovements": [
+        "프랑스·벨기에 아르누보"
+      ],
+      "primaryMovement": "아르누보",
+      "regions": [
+        "체코·프랑스 활동"
+      ],
+      "activeFrom": 1880,
+      "activeTo": 1939,
+      "listName": {
+        "ko": "무하"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-klimt",
+      "name": {
+        "ko": "구스타프 클림트",
+        "en": "Gustav Klimt"
+      },
+      "birth": 1862,
+      "death": 1918,
+      "nationality": {
+        "ko": "오스트리아",
+        "en": "Austrian"
+      },
+      "movement": {
+        "ko": "아르누보",
+        "en": "Art Nouveau"
+      },
+      "works": [
+        {
+          "id": "klimt-the-kiss",
+          "title": {
+            "ko": "키스",
+            "en": "The Kiss"
+          },
+          "year": 1907,
+          "popularity": 90,
+          "country": {
+            "ko": "오스트리아",
+            "en": "Austrian"
+          },
+          "movement": {
+            "ko": "아르누보",
+            "en": "Art Nouveau"
+          },
+          "description": {
+            "ko": "두 사람의 몸은 금빛 직사각형과 원형 무늬 속에 거의 흡수되고 얼굴과 손만 현실적으로 남는다. 평면 장식과 인간의 친밀감이 공존하며 프랑스·벨기에의 식물 곡선과 다른 빈의 기하학적 성격을 보여 준다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "thumbnail": "data/미술사조/images/Klimt-The-Kiss.jpg",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/미술사조/images/Klimt-The-Kiss.jpg",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "klimt-the-kiss"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "아르누보"
+      ],
+      "submovements": [
+        "빈 분리파"
+      ],
+      "primaryMovement": "아르누보",
+      "regions": [
+        "오스트리아"
+      ],
+      "activeFrom": 1882,
+      "activeTo": 1918,
+      "listName": {
+        "ko": "클림트"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-matisse",
+      "name": {
+        "ko": "앙리 마티스",
+        "en": "Henri Matisse"
+      },
+      "birth": 1869,
+      "death": 1954,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "French"
+      },
+      "movement": {
+        "ko": "야수주의",
+        "en": "Fauvism"
+      },
+      "works": [
+        {
+          "id": "matisse-woman-with-hat",
+          "title": {
+            "ko": "모자를 쓴 여인",
+            "en": "Woman with a Hat"
+          },
+          "year": 1905,
+          "popularity": 90,
+          "country": {
+            "ko": "프랑스",
+            "en": "French"
+          },
+          "movement": {
+            "ko": "야수주의",
+            "en": "Fauvism"
+          },
+          "description": {
+            "ko": "얼굴에는 녹색, 분홍, 노랑이 현실의 명암 대신 나란히 놓이고 거친 붓질이 형태를 만든다. 색은 사물을 충실히 설명하는 수단이 아니라 화면 전체의 감정과 균형을 결정하는 독립 요소가 된다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "thumbnail": "data/미술사조/images/Matisse-Woman-with-a-Hat-4552a63769d7.jpg",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/미술사조/images/Matisse-Woman-with-a-Hat-4552a63769d7.jpg",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "matisse-woman-with-hat"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "야수주의"
+      ],
+      "submovements": [
+        "마티스·샤투 중심 야수파"
+      ],
+      "primaryMovement": "야수주의",
+      "regions": [
+        "프랑스"
+      ],
+      "activeFrom": 1889,
+      "activeTo": 1954,
+      "listName": {
+        "ko": "마티스"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-dufy",
+      "name": {
+        "ko": "라울 뒤피",
+        "en": "Raoul Dufy"
+      },
+      "birth": 1877,
+      "death": 1953,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "French"
+      },
+      "movement": {
+        "ko": "야수주의",
+        "en": "Fauvism"
+      },
+      "works": [
+        {
+          "id": "dufy-beach-sainte-adresse",
+          "title": {
+            "ko": "생타드레스의 해변",
+            "en": "The Beach at Sainte-Adresse"
+          },
+          "year": 1906,
+          "popularity": 90,
+          "country": {
+            "ko": "프랑스",
+            "en": "French"
+          },
+          "movement": {
+            "ko": "야수주의",
+            "en": "Fauvism"
+          },
+          "description": {
+            "ko": "바다와 모래, 인물은 넓은 색면과 빠른 선으로 축약되어 실제 공간보다 리듬감 있는 표면이 된다. 샤투의 강렬한 실험이 르아브르에서는 빛과 여가의 경쾌한 회화로 이어졌음을 비교할 수 있다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "dufy-beach-sainte-adresse"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "야수주의"
+      ],
+      "submovements": [
+        "르아브르파 야수주의"
+      ],
+      "primaryMovement": "야수주의",
+      "regions": [
+        "프랑스"
+      ],
+      "activeFrom": 1897,
+      "activeTo": 1953,
+      "listName": {
+        "ko": "뒤피"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-boccioni",
+      "name": {
+        "ko": "움베르토 보초니",
+        "en": "Umberto Boccioni"
+      },
+      "birth": 1882,
+      "death": 1916,
+      "nationality": {
+        "ko": "이탈리아",
+        "en": "Italian"
+      },
+      "movement": {
+        "ko": "미래주의",
+        "en": "Futurism"
+      },
+      "works": [
+        {
+          "id": "boccioni-unique-forms",
+          "title": {
+            "ko": "공간 속에서 연속하는 유일한 형태",
+            "en": "Unique Forms of Continuity in Space"
+          },
+          "year": 1913,
+          "popularity": 90,
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italian"
+          },
+          "movement": {
+            "ko": "미래주의",
+            "en": "Futurism"
+          },
+          "description": {
+            "ko": "걷는 인체의 표면은 바람과 기계 부품처럼 뒤로 뻗고 몸과 공간의 경계가 사라진다. 한 순간의 자세가 아니라 시간 속 연속 운동을 하나의 형태로 만든다는 미래주의의 목표가 명확하다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "thumbnail": "data/미술사조/images/Boccioni-Unique-Forms.jpg",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/미술사조/images/Boccioni-Unique-Forms.jpg",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "boccioni-unique-forms"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "미래주의"
+      ],
+      "submovements": [
+        "이탈리아 미래주의"
+      ],
+      "primaryMovement": "미래주의",
+      "regions": [
+        "이탈리아"
+      ],
+      "activeFrom": 1902,
+      "activeTo": 1916,
+      "listName": {
+        "ko": "보초니"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-goncharova",
+      "name": {
+        "ko": "나탈리아 곤차로바",
+        "en": "Natalia Goncharova"
+      },
+      "birth": 1881,
+      "death": 1962,
+      "nationality": {
+        "ko": "러시아·프랑스 활동",
+        "en": "Russian, active in France"
+      },
+      "movement": {
+        "ko": "미래주의",
+        "en": "Futurism"
+      },
+      "works": [
+        {
+          "id": "goncharova-cyclist",
+          "title": {
+            "ko": "자전거 타는 사람",
+            "en": "Cyclist"
+          },
+          "year": 1913,
+          "popularity": 90,
+          "country": {
+            "ko": "러시아·프랑스 활동",
+            "en": "Russian, active in France"
+          },
+          "movement": {
+            "ko": "미래주의",
+            "en": "Futurism"
+          },
+          "description": {
+            "ko": "자전거와 몸의 윤곽이 겹쳐 움직임의 잔상을 만들고 배경의 간판 글자가 화면의 속도를 높인다. 이탈리아의 기계 숭배를 그대로 따르지 않고 러시아의 대중 이미지와 회화 전통을 섞었다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "thumbnail": "data/미술사조/images/Goncharova-Cyclist.jpg",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/미술사조/images/Goncharova-Cyclist.jpg",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "goncharova-cyclist"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "미래주의"
+      ],
+      "submovements": [
+        "러시아 입체미래주의"
+      ],
+      "primaryMovement": "미래주의",
+      "regions": [
+        "러시아·프랑스 활동"
+      ],
+      "activeFrom": 1901,
+      "activeTo": 1962,
+      "listName": {
+        "ko": "곤차로바"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-mondrian",
+      "name": {
+        "ko": "피트 몬드리안",
+        "en": "Piet Mondrian"
+      },
+      "birth": 1872,
+      "death": 1944,
+      "nationality": {
+        "ko": "네덜란드",
+        "en": "Dutch"
+      },
+      "movement": {
+        "ko": "데 스틸",
+        "en": "De Stijl"
+      },
+      "works": [
+        {
+          "id": "mondrian-composition-1921",
+          "title": {
+            "ko": "빨강·파랑·검정·노랑·회색의 구성",
+            "en": "Composition with Red, Blue, Black, Yellow, and Gray"
+          },
+          "year": 1921,
+          "popularity": 90,
+          "country": {
+            "ko": "네덜란드",
+            "en": "Dutch"
+          },
+          "movement": {
+            "ko": "데 스틸",
+            "en": "De Stijl"
+          },
+          "description": {
+            "ko": "검은 수직·수평선이 크기가 다른 직사각형을 만들고 기본색은 일부 면에만 놓인다. 좌우 대칭 없이도 긴장과 균형을 이루며 회화의 원리가 건축과 디자인으로 확장될 수 있음을 보여 준다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "mondrian-composition-1921"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "데 스틸"
+      ],
+      "submovements": [
+        "데 스틸"
+      ],
+      "primaryMovement": "데 스틸",
+      "regions": [
+        "네덜란드"
+      ],
+      "activeFrom": 1892,
+      "activeTo": 1944,
+      "listName": {
+        "ko": "몬드리안"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-gropius",
+      "name": {
+        "ko": "발터 그로피우스",
+        "en": "Walter Gropius"
+      },
+      "birth": 1883,
+      "death": 1969,
+      "nationality": {
+        "ko": "독일·미국 활동",
+        "en": "German and American"
+      },
+      "movement": {
+        "ko": "바우하우스",
+        "en": "Bauhaus"
+      },
+      "works": [
+        {
+          "id": "gropius-bauhaus-dessau",
+          "title": {
+            "ko": "데사우 바우하우스 건물",
+            "en": "Bauhaus Building, Dessau"
+          },
+          "year": 1926,
+          "popularity": 90,
+          "country": {
+            "ko": "독일·미국 활동",
+            "en": "German and American"
+          },
+          "movement": {
+            "ko": "바우하우스",
+            "en": "Bauhaus"
+          },
+          "description": {
+            "ko": "유리 커튼월은 내부 작업을 드러내고 서로 다른 기능의 동들이 비대칭적으로 연결된다. 장식적 정면보다 사용과 동선을 형태의 근거로 삼아 예술과 기술의 통합이 추상 구호가 아니라 생활 환경 설계임을 보여 준다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "gropius-bauhaus-dessau"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "바우하우스"
+      ],
+      "submovements": [
+        "바우하우스"
+      ],
+      "primaryMovement": "바우하우스",
+      "regions": [
+        "독일·미국 활동"
+      ],
+      "activeFrom": 1903,
+      "activeTo": 1969,
+      "listName": {
+        "ko": "그로피우스"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-miro",
+      "name": {
+        "ko": "호안 미로",
+        "en": "Joan Miro"
+      },
+      "birth": 1893,
+      "death": 1983,
+      "nationality": {
+        "ko": "스페인·카탈루냐",
+        "en": "Spanish and Catalan"
+      },
+      "movement": {
+        "ko": "초현실주의",
+        "en": "Surrealism"
+      },
+      "works": [
+        {
+          "id": "miro-harlequins-carnival",
+          "title": {
+            "ko": "어릿광대의 카니발",
+            "en": "Harlequin's Carnival"
+          },
+          "year": 1924,
+          "popularity": 90,
+          "country": {
+            "ko": "스페인·카탈루냐",
+            "en": "Spanish and Catalan"
+          },
+          "movement": {
+            "ko": "초현실주의",
+            "en": "Surrealism"
+          },
+          "description": {
+            "ko": "눈, 사다리, 악기, 생물 같은 기호가 중력과 정상적 크기를 잃고 방 안을 떠다닌다. 꿈의 장면을 사실적으로 복사하기보다 선과 색의 연쇄가 다음 형태를 불러오는 제작 방식이 핵심이다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "thumbnail": "data/미술사조/images/The-Harlequin-27s-Carnival-a136210e2369.jpg",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/미술사조/images/The-Harlequin-27s-Carnival-a136210e2369.jpg",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "miro-harlequins-carnival"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "초현실주의"
+      ],
+      "submovements": [
+        "자동기술적 초현실주의"
+      ],
+      "primaryMovement": "초현실주의",
+      "regions": [
+        "스페인·카탈루냐"
+      ],
+      "activeFrom": 1913,
+      "activeTo": 1983,
+      "listName": {
+        "ko": "미로"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-dali",
+      "name": {
+        "ko": "살바도르 달리",
+        "en": "Salvador Dali"
+      },
+      "birth": 1904,
+      "death": 1989,
+      "nationality": {
+        "ko": "스페인",
+        "en": "Spanish"
+      },
+      "movement": {
+        "ko": "초현실주의",
+        "en": "Surrealism"
+      },
+      "works": [
+        {
+          "id": "dali-persistence-memory",
+          "title": {
+            "ko": "기억의 지속",
+            "en": "The Persistence of Memory"
+          },
+          "year": 1931,
+          "popularity": 90,
+          "country": {
+            "ko": "스페인",
+            "en": "Spanish"
+          },
+          "movement": {
+            "ko": "초현실주의",
+            "en": "Surrealism"
+          },
+          "description": {
+            "ko": "단단해야 할 시계가 천처럼 늘어지고 고요한 해안 풍경은 꿈의 무대가 된다. 익숙한 사물을 정확히 그릴수록 결합의 불가능성이 더 불안하게 느껴져 자동기술 계열과 다른 전략을 보여 준다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "thumbnail": "data/미술사조/images/The-Persistence-of-Memory-2ad13469edc2.jpg",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/미술사조/images/The-Persistence-of-Memory-2ad13469edc2.jpg",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "dali-persistence-memory"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "초현실주의"
+      ],
+      "submovements": [
+        "환영적 초현실주의"
+      ],
+      "primaryMovement": "초현실주의",
+      "regions": [
+        "스페인"
+      ],
+      "activeFrom": 1924,
+      "activeTo": 1989,
+      "listName": {
+        "ko": "달리"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-rivera",
+      "name": {
+        "ko": "디에고 리베라",
+        "en": "Diego Rivera"
+      },
+      "birth": 1886,
+      "death": 1957,
+      "nationality": {
+        "ko": "멕시코",
+        "en": "Mexican"
+      },
+      "movement": {
+        "ko": "멕시코 벽화운동",
+        "en": "Mexican Muralism"
+      },
+      "works": [
+        {
+          "id": "rivera-detroit-industry",
+          "title": {
+            "ko": "디트로이트 산업 벽화",
+            "en": "Detroit Industry Murals"
+          },
+          "year": 1932,
+          "popularity": 90,
+          "country": {
+            "ko": "멕시코",
+            "en": "Mexican"
+          },
+          "movement": {
+            "ko": "멕시코 벽화운동",
+            "en": "Mexican Muralism"
+          },
+          "description": {
+            "ko": "자동차 공장의 노동자와 기계가 벽면 전체를 연결하는 집단적 생산의 장면을 이룬다. 개인 수집가의 캔버스가 아니라 시민이 공유하는 건축 공간에서 노동과 기술의 의미를 토론하게 한다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "rivera-detroit-industry"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "멕시코 벽화운동"
+      ],
+      "submovements": [
+        "멕시코 벽화운동"
+      ],
+      "primaryMovement": "멕시코 벽화운동",
+      "regions": [
+        "멕시코"
+      ],
+      "activeFrom": 1906,
+      "activeTo": 1957,
+      "listName": {
+        "ko": "리베라"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-shahn",
+      "name": {
+        "ko": "벤 샨",
+        "en": "Ben Shahn"
+      },
+      "birth": 1898,
+      "death": 1969,
+      "nationality": {
+        "ko": "미국",
+        "en": "American"
+      },
+      "movement": {
+        "ko": "사회적 사실주의",
+        "en": "Social Realism"
+      },
+      "works": [
+        {
+          "id": "shahn-sacco-vanzetti",
+          "title": {
+            "ko": "사코와 반제티의 수난",
+            "en": "The Passion of Sacco and Vanzetti"
+          },
+          "year": 1931,
+          "popularity": 90,
+          "country": {
+            "ko": "미국",
+            "en": "American"
+          },
+          "movement": {
+            "ko": "사회적 사실주의",
+            "en": "Social Realism"
+          },
+          "description": {
+            "ko": "처형된 두 이민자와 사건 관계자들이 단순하고 건조한 형태로 한 화면에 배치된다. 영웅화보다 부당한 사법 제도와 기억의 문제를 직접 제기해 사회적 사실주의가 공공 논쟁에 개입한 방식을 보여 준다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "shahn-sacco-vanzetti"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "사회적 사실주의"
+      ],
+      "submovements": [
+        "사회적 사실주의"
+      ],
+      "primaryMovement": "사회적 사실주의",
+      "regions": [
+        "미국"
+      ],
+      "activeFrom": 1918,
+      "activeTo": 1969,
+      "listName": {
+        "ko": "샨"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-deyneka",
+      "name": {
+        "ko": "알렉산드르 데이네카",
+        "en": "Aleksandr Deyneka"
+      },
+      "birth": 1899,
+      "death": 1969,
+      "nationality": {
+        "ko": "소련",
+        "en": "Soviet"
+      },
+      "movement": {
+        "ko": "사회주의적 사실주의",
+        "en": "Socialist Realism"
+      },
+      "works": [
+        {
+          "id": "deyneka-defence-petrograd",
+          "title": {
+            "ko": "페트로그라드 방어",
+            "en": "The Defence of Petrograd"
+          },
+          "year": 1928,
+          "popularity": 90,
+          "country": {
+            "ko": "소련",
+            "en": "Soviet"
+          },
+          "movement": {
+            "ko": "사회주의적 사실주의",
+            "en": "Socialist Realism"
+          },
+          "description": {
+            "ko": "무장 노동자의 행렬과 부상병의 귀환이 위아래 두 띠에서 반대 방향으로 움직인다. 단순한 실루엣과 반복 리듬은 혁명 공동체를 개인보다 앞세우며 국가적 서사의 명료성을 만든다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "deyneka-defence-petrograd"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "사회주의적 사실주의"
+      ],
+      "submovements": [
+        "사회주의적 사실주의"
+      ],
+      "primaryMovement": "사회주의적 사실주의",
+      "regions": [
+        "소련"
+      ],
+      "activeFrom": 1919,
+      "activeTo": 1969,
+      "listName": {
+        "ko": "데이네카"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-dubuffet",
+      "name": {
+        "ko": "장 뒤뷔페",
+        "en": "Jean Dubuffet"
+      },
+      "birth": 1901,
+      "death": 1985,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "French"
+      },
+      "movement": {
+        "ko": "앵포르멜",
+        "en": "Art Informel"
+      },
+      "works": [
+        {
+          "id": "dubuffet-corps-de-dame",
+          "title": {
+            "ko": "여인의 몸, 에투프 성",
+            "en": "Corps de dame, Chateau d'Etoupe"
+          },
+          "year": 1950,
+          "popularity": 90,
+          "country": {
+            "ko": "프랑스",
+            "en": "French"
+          },
+          "movement": {
+            "ko": "앵포르멜",
+            "en": "Art Informel"
+          },
+          "description": {
+            "ko": "인체는 이상적 비례를 잃고 흙처럼 두껍고 긁힌 표면으로 펼쳐진다. 전통 소묘와 아름다운 마감보다 물질의 저항과 즉흥 흔적을 앞세워 전후 유럽 추상의 다른 방향을 이해하게 한다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "dubuffet-corps-de-dame"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "앵포르멜"
+      ],
+      "submovements": [
+        "앵포르멜"
+      ],
+      "primaryMovement": "앵포르멜",
+      "regions": [
+        "프랑스"
+      ],
+      "activeFrom": 1921,
+      "activeTo": 1985,
+      "listName": {
+        "ko": "뒤뷔페"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-klein",
+      "name": {
+        "ko": "이브 클랭",
+        "en": "Yves Klein"
+      },
+      "birth": 1928,
+      "death": 1962,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "French"
+      },
+      "movement": {
+        "ko": "누보 레알리슴",
+        "en": "Nouveau Réalisme"
+      },
+      "works": [
+        {
+          "id": "klein-anthropometry-blue-epoch",
+          "title": {
+            "ko": "청색 시대의 인체측정",
+            "en": "Anthropometry of the Blue Epoch"
+          },
+          "year": 1960,
+          "popularity": 90,
+          "country": {
+            "ko": "프랑스",
+            "en": "French"
+          },
+          "movement": {
+            "ko": "누보 레알리슴",
+            "en": "Nouveau Réalisme"
+          },
+          "description": {
+            "ko": "청색 안료를 바른 모델의 몸이 붓처럼 종이에 흔적을 남기고 관객은 그 과정을 지켜본다. 완성된 그림보다 몸, 사건, 기록이 하나의 작품이 되어 회화와 퍼포먼스의 경계를 바꾼다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "klein-anthropometry-blue-epoch"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "누보 레알리슴"
+      ],
+      "submovements": [
+        "누보 레알리슴"
+      ],
+      "primaryMovement": "누보 레알리슴",
+      "regions": [
+        "프랑스"
+      ],
+      "activeFrom": 1948,
+      "activeTo": 1962,
+      "listName": {
+        "ko": "클랭"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-judd",
+      "name": {
+        "ko": "도널드 저드",
+        "en": "Donald Judd"
+      },
+      "birth": 1928,
+      "death": 1994,
+      "nationality": {
+        "ko": "미국",
+        "en": "American"
+      },
+      "movement": {
+        "ko": "미니멀리즘",
+        "en": "Minimalism"
+      },
+      "works": [
+        {
+          "id": "judd-untitled-stack-1967",
+          "title": {
+            "ko": "무제(스택)",
+            "en": "Untitled (Stack)"
+          },
+          "year": 1967,
+          "popularity": 90,
+          "country": {
+            "ko": "미국",
+            "en": "American"
+          },
+          "movement": {
+            "ko": "미니멀리즘",
+            "en": "Minimalism"
+          },
+          "description": {
+            "ko": "같은 상자들이 일정한 간격으로 수직 반복되고 각 상자 사이의 빈 공간도 동일한 단위가 된다. 조각 속 상징을 해석하기보다 재료, 규모, 벽, 관람자의 이동을 실제로 경험하게 한다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "judd-untitled-stack-1967"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "미니멀리즘"
+      ],
+      "submovements": [
+        "미니멀리즘"
+      ],
+      "primaryMovement": "미니멀리즘",
+      "regions": [
+        "미국"
+      ],
+      "activeFrom": 1948,
+      "activeTo": 1994,
+      "listName": {
+        "ko": "저드"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-kosuth",
+      "name": {
+        "ko": "조지프 코수스",
+        "en": "Joseph Kosuth"
+      },
+      "birth": 1945,
+      "nationality": {
+        "ko": "미국",
+        "en": "American"
+      },
+      "movement": {
+        "ko": "개념미술",
+        "en": "Conceptual Art"
+      },
+      "works": [
+        {
+          "id": "kosuth-one-three-chairs",
+          "title": {
+            "ko": "하나이면서 셋인 의자",
+            "en": "One and Three Chairs"
+          },
+          "year": 1965,
+          "popularity": 90,
+          "country": {
+            "ko": "미국",
+            "en": "American"
+          },
+          "movement": {
+            "ko": "개념미술",
+            "en": "Conceptual Art"
+          },
+          "description": {
+            "ko": "하나의 대상을 물체, 이미지, 단어라는 세 방식으로 제시하지만 어느 것이 더 진짜 의자인지는 정해지지 않는다. 작품은 제작 기술보다 정의와 의미가 어떻게 생기는지를 질문하는 사고의 장치가 된다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "kosuth-one-three-chairs"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "개념미술"
+      ],
+      "submovements": [
+        "아이디어·언어 중심 개념미술"
+      ],
+      "primaryMovement": "개념미술",
+      "regions": [
+        "미국"
+      ],
+      "activeFrom": 1965,
+      "listName": {
+        "ko": "코수스"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-paik",
+      "name": {
+        "ko": "백남준",
+        "en": "Nam June Paik"
+      },
+      "birth": 1932,
+      "death": 2006,
+      "nationality": {
+        "ko": "한국·미국 활동",
+        "en": "Korean and American"
+      },
+      "movement": {
+        "ko": "개념미술",
+        "en": "Conceptual Art"
+      },
+      "works": [
+        {
+          "id": "paik-tv-buddha",
+          "title": {
+            "ko": "TV 부처",
+            "en": "TV Buddha"
+          },
+          "year": 1974,
+          "popularity": 90,
+          "country": {
+            "ko": "한국·미국 활동",
+            "en": "Korean and American"
+          },
+          "movement": {
+            "ko": "개념미술",
+            "en": "Conceptual Art"
+          },
+          "description": {
+            "ko": "부처상이 폐쇄회로 카메라로 촬영된 자기 모습을 텔레비전에서 바라본다. 오래된 명상 이미지와 실시간 전자 영상이 서로를 비추며 동서 문화, 관찰자와 대상, 현재와 복제의 경계를 흔든다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "paik-tv-buddha"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "개념미술"
+      ],
+      "submovements": [
+        "플럭서스"
+      ],
+      "primaryMovement": "개념미술",
+      "regions": [
+        "한국·미국 활동"
+      ],
+      "activeFrom": 1952,
+      "activeTo": 2006,
+      "listName": {
+        "ko": "백남준"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-vasarely",
+      "name": {
+        "ko": "빅토르 바자렐리",
+        "en": "Victor Vasarely"
+      },
+      "birth": 1906,
+      "death": 1997,
+      "nationality": {
+        "ko": "헝가리·프랑스 활동",
+        "en": "Hungarian and French"
+      },
+      "movement": {
+        "ko": "옵아트",
+        "en": "Op Art"
+      },
+      "works": [
+        {
+          "id": "vasarely-vega-nor",
+          "title": {
+            "ko": "베가-노르",
+            "en": "Vega-Nor"
+          },
+          "year": 1969,
+          "popularity": 90,
+          "country": {
+            "ko": "헝가리·프랑스 활동",
+            "en": "Hungarian and French"
+          },
+          "movement": {
+            "ko": "옵아트",
+            "en": "Op Art"
+          },
+          "description": {
+            "ko": "규칙적인 색 사각형이 중앙에서 크기와 방향을 바꾸며 구형 표면처럼 돌출된다. 작품의 주제는 사물이나 감정이 아니라 눈과 뇌가 평면 정보를 움직이는 공간으로 해석하는 과정 자체다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "vasarely-vega-nor"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "옵아트"
+      ],
+      "submovements": [
+        "옵아트"
+      ],
+      "primaryMovement": "옵아트",
+      "regions": [
+        "헝가리·프랑스 활동"
+      ],
+      "activeFrom": 1926,
+      "activeTo": 1997,
+      "listName": {
+        "ko": "바자렐리"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-abramovic",
+      "name": {
+        "ko": "마리나 아브라모비치",
+        "en": "Marina Abramovic"
+      },
+      "birth": 1946,
+      "nationality": {
+        "ko": "세르비아",
+        "en": "Serbian"
+      },
+      "movement": {
+        "ko": "현대미술",
+        "en": "Contemporary Art"
+      },
+      "works": [
+        {
+          "id": "abramovic-artist-present",
+          "title": {
+            "ko": "예술가가 여기 있다",
+            "en": "The Artist Is Present"
+          },
+          "year": 2010,
+          "popularity": 90,
+          "country": {
+            "ko": "세르비아",
+            "en": "Serbian"
+          },
+          "movement": {
+            "ko": "현대미술",
+            "en": "Contemporary Art"
+          },
+          "description": {
+            "ko": "작가는 미술관에서 매일 침묵한 채 앉아 한 번에 한 관객과 시선을 마주했다. 물체로 남는 작품보다 공유된 시간, 신체적 인내, 관객의 감정이 핵심이 되어 설치·퍼포먼스 미술의 경험적 성격을 드러낸다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "abramovic-artist-present"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "현대미술"
+      ],
+      "submovements": [
+        "설치·퍼포먼스 미술"
+      ],
+      "primaryMovement": "현대미술",
+      "regions": [
+        "세르비아"
+      ],
+      "activeFrom": 1966,
+      "listName": {
+        "ko": "아브라모비치"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-steyerl",
+      "name": {
+        "ko": "히토 슈타이얼",
+        "en": "Hito Steyerl"
+      },
+      "birth": 1966,
+      "nationality": {
+        "ko": "독일",
+        "en": "German"
+      },
+      "movement": {
+        "ko": "현대미술",
+        "en": "Contemporary Art"
+      },
+      "works": [
+        {
+          "id": "steyerl-how-not-seen",
+          "title": {
+            "ko": "보이지 않는 법: 빌어먹을 교육용 .MOV 파일",
+            "en": "How Not to Be Seen: A Fucking Didactic Educational .MOV File"
+          },
+          "year": 2013,
+          "popularity": 90,
+          "country": {
+            "ko": "독일",
+            "en": "German"
+          },
+          "movement": {
+            "ko": "현대미술",
+            "en": "Contemporary Art"
+          },
+          "description": {
+            "ko": "로봇 음성과 합성 화면이 보이지 않는 방법을 익살스럽게 가르치지만 배경에는 군사용 항공 촬영의 보정 표적이 등장한다. 디지털 이미지는 현실을 단순히 기록하지 않고 누가 보이고 지워지는지를 결정하는 권력 장치가 된다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "steyerl-how-not-seen"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "현대미술"
+      ],
+      "submovements": [
+        "뉴미디어·디지털 아트"
+      ],
+      "primaryMovement": "현대미술",
+      "regions": [
+        "독일"
+      ],
+      "activeFrom": 1986,
+      "listName": {
+        "ko": "슈타이얼"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      }
+    },
+    {
+      "id": "artist-art-atlas-banksy",
+      "name": {
+        "ko": "뱅크시",
+        "en": "Banksy"
+      },
+      "nationality": {
+        "ko": "영국",
+        "en": "British"
+      },
+      "movement": {
+        "ko": "현대미술",
+        "en": "Contemporary Art"
+      },
+      "works": [
+        {
+          "id": "banksy-girl-balloon",
+          "title": {
+            "ko": "풍선을 든 소녀",
+            "en": "Girl with Balloon"
+          },
+          "year": 2002,
+          "popularity": 90,
+          "country": {
+            "ko": "영국",
+            "en": "British"
+          },
+          "movement": {
+            "ko": "현대미술",
+            "en": "Contemporary Art"
+          },
+          "description": {
+            "ko": "검은 소녀의 실루엣과 멀어지는 붉은 하트 풍선은 단순해서 멀리서도 즉시 읽히고 다양한 장소와 매체로 복제된다. 작품의 의미는 벽의 위치, 도시의 사건, 관객의 공유와 재해석 속에서 계속 바뀐다.",
+            "en": ""
+          },
+          "representative": true,
+          "movementContribution": true,
+          "verified": true,
+          "origin": "art-movement-representatives",
+          "imageUploadStatus": "pending-upload",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "missing",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": ""
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "banksy-girl-balloon"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "현대미술"
+      ],
+      "submovements": [
+        "거리·참여 미술"
+      ],
+      "primaryMovement": "현대미술",
+      "regions": [
+        "영국"
+      ],
+      "listName": {
+        "ko": "뱅크시"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
       }
     }
   ],
