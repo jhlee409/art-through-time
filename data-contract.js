@@ -82,6 +82,7 @@ function recordMetadata(record, fallbackDate, actor, touch, updateDate = fallbac
   const existing = asObject(record.metadata);
   const createdAt = timestamp(existing.createdAt, fallbackDate);
   return {
+    ...existing,
     createdAt,
     updatedAt: touch ? updateDate : timestamp(existing.updatedAt, createdAt),
     createdBy: normalizedEmail(existing.createdBy) || normalizedEmail(actor) || 'legacy-import',

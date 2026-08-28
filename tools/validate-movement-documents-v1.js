@@ -175,8 +175,20 @@ function main() {
     contextResults.set(context.id, contextDocumentAudit(context, fs.readFileSync(absolute, 'utf8'), attrs));
   });
   assert(globalDevelopments.size === 68, `expected 68 canonical development rows, got ${globalDevelopments.size}`);
-  assert(Object.keys(legacy.documents || {}).length === 8, 'legacy index must preserve eight source documents');
-  Object.entries(legacy.documents || {}).forEach(([key, value]) => assert(fs.existsSync(path.join(root, value['1'])), `${key}: legacy source file is missing`));
+  const normalizedPath = value => String(value || '').replace(/\\/g, '/');
+  const activePaths = new Set(actualKeys.map(key => normalizedPath(index.documents[key]?.['1'])));
+  const physicalPaths = fs.readdirSync(documentDir)
+    .filter(name => name.endsWith('.html'))
+    .map(name => normalizedPath(path.relative(root,path.join(documentDir,name))));
+  const expectedLegacyPaths = physicalPaths.filter(relative => !activePaths.has(relative)).sort();
+  const legacyPaths = Object.entries(legacy.documents || {}).map(([key,value]) => {
+    const relative = normalizedPath(value['1']);
+    assert(relative && fs.existsSync(path.join(root,relative)), `${key}: legacy source file is missing`);
+    assert(!activePaths.has(relative), `${key}: active document must not also be registered as legacy`);
+    return relative;
+  }).sort();
+  unique(legacyPaths, 'legacy document paths');
+  assert(JSON.stringify(legacyPaths) === JSON.stringify(expectedLegacyPaths), 'legacy index must exactly inventory every HTML outside the 36 active documents');
   const report = makeReport(canonical, migration, parentResults, contextResults, legacy);
   if (write) fs.writeFileSync(files.report, report, 'utf8');
   else {

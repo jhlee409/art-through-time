@@ -430,6 +430,46 @@ async function backupArtistsFile(previousRevision) {
   await Promise.all(backups.slice(0,Math.max(0,backups.length-20)).map(name=>fs.unlink(path.join(backupsDir,name)).catch(()=>{})));
   return path.relative(root,backup).replace(/\\/g,'/');
 }
+function recordValueForChange(value, omitWorks=false) {
+  if (!value || typeof value !== 'object') return value;
+  if (Array.isArray(value)) return value.map(item=>recordValueForChange(item));
+  return Object.fromEntries(Object.entries(value).filter(([key])=>key !== 'metadata' && (!omitWorks || key !== 'works')).map(([key,item])=>[key,recordValueForChange(item)]));
+}
+function recordChanged(current, previous, omitWorks=false) {
+  if (!previous) return true;
+  return JSON.stringify(recordValueForChange(current,omitWorks)) !== JSON.stringify(recordValueForChange(previous,omitWorks));
+}
+function savedRecordMetadata(current, previous, changed, actor, now) {
+  const incoming=current?.metadata && typeof current.metadata === 'object' ? current.metadata : {};
+  const existing=previous?.metadata && typeof previous.metadata === 'object' ? previous.metadata : {};
+  const base={...existing,...incoming};
+  const createdAt=existing.createdAt || incoming.createdAt || now;
+  return {
+    ...base,
+    createdAt,
+    updatedAt:changed ? now : (existing.updatedAt || incoming.updatedAt || createdAt),
+    createdBy:existing.createdBy || incoming.createdBy || normalizedEmail(actor) || 'legacy-import',
+    updatedBy:changed ? (normalizedEmail(actor) || existing.updatedBy || incoming.updatedBy || 'legacy-import') : (existing.updatedBy || incoming.updatedBy || normalizedEmail(actor) || 'legacy-import')
+  };
+}
+function touchChangedArtistRecords(payload, previous, actor, now) {
+  const previousArtists=new Map((previous.artists || []).map(artist=>[artist.id,artist]));
+  payload.artists=(payload.artists || []).map(artist=>{
+    const before=previousArtists.get(artist.id);
+    const previousWorks=new Map((before?.works || []).map(work=>[work.id,work]));
+    const currentWorks=artist.works || [];
+    const currentWorkIds=new Set(currentWorks.map(work=>work.id));
+    let workChanged=previousWorks.size !== currentWorks.length || [...previousWorks.keys()].some(id=>!currentWorkIds.has(id));
+    artist.works=currentWorks.map(work=>{
+      const previousWork=previousWorks.get(work.id);
+      const changed=recordChanged(work,previousWork);
+      workChanged=workChanged || changed;
+      return {...work,metadata:savedRecordMetadata(work,previousWork,changed,actor,now)};
+    });
+    return {...artist,metadata:savedRecordMetadata(artist,before,workChanged || recordChanged(artist,before,true),actor,now)};
+  });
+  return payload;
+}
 async function writeArtistsFileNow(payload, actor='') {
   if (!payload || !Array.isArray(payload.artists)) throw new Error('Invalid artists payload');
   let previous={metadata:{}};
@@ -442,8 +482,10 @@ async function writeArtistsFileNow(payload, actor='') {
   })};
   (payload.artists || []).forEach(artist=>{ if(artist && typeof artist==='object') delete artist._detailLoaded; });
   payload=await hydrateMissingArtistProfiles(payload);
-  payload=normalizeArtistsPayload(payload,{actor,touch:true});
-  payload.metadata={...payload.metadata,revision:previousRevision+1};
+  payload=normalizeArtistsPayload(payload,{actor,touch:false});
+  const now=new Date().toISOString();
+  payload=touchChangedArtistRecords(payload,previous,actor,now);
+  payload.metadata={...payload.metadata,updatedAt:now,updatedBy:normalizedEmail(actor) || payload.metadata.updatedBy || 'local-admin',revision:previousRevision+1};
   const validation=validateArtistsPayload(payload);
   if (!validation.valid) throw new Error(validation.errors.join('; '));
   payload=await sanitizeRubensLegacyThumbnails(payload);

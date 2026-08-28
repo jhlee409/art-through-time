@@ -114,7 +114,10 @@ function validateDocument(parent, entries, artistMap) {
 
     const artist = artistMap.get(entry.artist.id);
     assert(artist, `${entry.categoryId}: artist ${entry.artist.id} is absent from artists.json`);
-    assert((artist.works || []).some(work => work.id === entry.work.id), `${entry.categoryId}: work ${entry.work.id} is absent from artists.json`);
+    const representativeWork = (artist.works || []).find(work => work.id === entry.work.id);
+    assert(representativeWork, `${entry.categoryId}: work ${entry.work.id} is absent from artists.json`);
+    assert(representativeWork.movementContribution === true, `${entry.categoryId}: canonical work is not marked as a movement contribution`);
+    assert(representativeWork.movementContributionReason === 'canonical-movement-representative', `${entry.categoryId}: canonical contribution reason is missing`);
     const imageState = attr(cardTag, attrs.imageState);
     const imageTag = /<img\b[^>]*>/i.exec(card)?.[0] || '';
     if (imageState === 'ready') {

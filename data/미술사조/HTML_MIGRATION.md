@@ -9,7 +9,7 @@
 - 이전 미술 참고 문서: 2개
 - 초심자 핵심 범주 행·카드 묶음: 68개 / 68개
 - 보존된 기존 대표작 카드: 81개
-- 정본 색인 밖에 보존한 원문 문서: 8개
+- 정본 색인 밖에 보존한 원문 문서: 12개
 
 ## 부모 문서
 
@@ -69,3 +69,7 @@
 | Russian Symbolism | `symbolism` | `symbolism--central-northern-european` | covered-topic |
 | Suprematism | `russian-avant-garde` | `russian-avant-garde--suprematism` | category-source |
 | Constructivism | `russian-avant-garde` | `russian-avant-garde--constructivism` | category-source |
+| Renaissance archived duplicate A | `renaissance` | - | archived-duplicate |
+| Renaissance archived duplicate B | `renaissance` | - | archived-duplicate |
+| Realism archived duplicate | `realism` | - | archived-duplicate |
+| Russian Baroque | `baroque` | - | context-source |

@@ -220,6 +220,7 @@ function upsertArtist(artists, entry, parent) {
   work.description ||= {ko: entry.description, en: ''};
   work.representative = true;
   work.movementContribution = true;
+  work.movementContributionReason = 'canonical-movement-representative';
   work.verified = true;
   work.origin ||= 'art-movement-representatives';
   if (entry.work.localImage && fs.existsSync(path.join(root, entry.work.localImage))) {
@@ -242,6 +243,11 @@ function upsertArtist(artists, entry, parent) {
     }
   };
   artist.featuredWorkIds = [...new Set([entry.work.id, ...(artist.featuredWorkIds || [])])];
+  artist.works.forEach(candidate => {
+    if (candidate.id === entry.work.id || candidate.movementContributionReason !== 'artist-movement-characteristic') return;
+    candidate.movementContribution = false;
+    delete candidate.movementContributionReason;
+  });
   artist.movements = [...new Set([...(artist.movements || []), parent.name.ko])];
   artist.submovements = [...new Set([...(artist.submovements || []), entry.category.name.ko])];
   artist.metadata ||= {};

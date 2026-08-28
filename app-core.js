@@ -749,26 +749,43 @@ const workYearForSort = work => {
   const year = Number(value);
   return value && Number.isFinite(year) ? year : Number.POSITIVE_INFINITY;
 };
-const workMovementText = work => `${work?.movement?.ko || ''} ${work?.movement?.en || ''}`.toLocaleLowerCase();
+const movementNameParts = value => [...new Set(
+  (typeof value === 'string' ? [value] : [value?.ko,value?.en])
+    .map(item => String(item || '').normalize('NFKC').toLocaleLowerCase().replace(/\s+/g,' ').trim())
+    .filter(Boolean)
+)];
+const movementNameContains = (longer,shorter) => {
+  const compactLonger = longer.replace(/[^\p{L}\p{N}]+/gu,'');
+  const compactShorter = shorter.replace(/[^\p{L}\p{N}]+/gu,'');
+  const index = compactLonger.indexOf(compactShorter);
+  if (index < 0) return false;
+  const prefix = compactLonger.slice(0,index);
+  return !/(?:post|neo|néo|후기|신)$/.test(prefix);
+};
+function movementNamesMatch(left,right) {
+  const leftNames = movementNameParts(left);
+  const rightNames = movementNameParts(right);
+  return leftNames.some(leftName => rightNames.some(rightName =>
+    leftName === rightName || movementNameContains(leftName,rightName) || movementNameContains(rightName,leftName)
+  ));
+}
+const workMovementText = work => movementNameParts(work?.movement).join(' ');
 function representativeScore(work, artist={}) {
   const source = String(work?.source || '');
   const movement = workMovementText(work);
-  const artistMovement = `${artist?.movement?.ko || ''} ${artist?.movement?.en || ''}`.toLocaleLowerCase();
   let score = workPopularity(work);
   if (work?.origin === 'curated') score += 100000;
   if (work?.image || work?.thumbnail) score += 1200;
   if (work?.verified) score += 600;
   if (/wikidata\.org|commons\.wikimedia\.org|api\.artic\.edu|clevelandart\.org/i.test(source)) score += 420;
   if (/wikipedia\.org/i.test(source)) score -= 120;
-  if (artistMovement && movement && (movement.includes(artistMovement) || artistMovement.includes(movement))) score += 900;
+  if (movementNamesMatch(work?.movement,artist?.movement)) score += 900;
   if (movement) score += 240;
   if (work?.description?.ko || work?.description?.en) score += 120;
   return score;
 }
 function movementMatchesArtist(work, artist={}) {
-  const movement = workMovementText(work);
-  const artistMovement = `${artist?.movement?.ko || ''} ${artist?.movement?.en || ''}`.toLocaleLowerCase();
-  return Boolean(artistMovement && movement && (movement.includes(artistMovement) || artistMovement.includes(movement)));
+  return movementNamesMatch(work?.movement,artist?.movement);
 }
 function movementContributionScore(work, artist={}) {
   let score = representativeScore(work, artist);
@@ -804,15 +821,24 @@ function selectArtistWorks(works, limit=artistImportedWorkLimit, artist={}) {
   const curatedKeys = new Set(curatedWorks.map(selectionKey));
   const generatedWorks = unique.filter(work => !manualKeys.has(selectionKey(work)) && !curatedKeys.has(selectionKey(work))).sort((a,b) => representativeScore(b,artist) - representativeScore(a,artist) || workYearForSort(a) - workYearForSort(b));
   const selected = [...manualWorks,...curatedWorks,...generatedWorks.slice(0,Math.max(0,limit-manualWorks.length-curatedWorks.length))];
+  const authoritativeContributions = selected.filter(work =>
+    work?.movementContribution && work?.movementContributionReason !== 'artist-movement-characteristic'
+  );
   const aligned = selected.filter(work => movementMatchesArtist(work, artist));
   const contributionPool = aligned.length ? aligned : selected;
   const movementContributionKeys = new Set(
-    contributionPool
+    (authoritativeContributions.length ? authoritativeContributions : contributionPool
       .sort((a,b) => movementContributionScore(b,artist) - movementContributionScore(a,artist) || workYearForSort(a) - workYearForSort(b))
-      .slice(0,3)
+      .slice(0,3))
       .map(selectionKey)
   );
-  return selected.map(work => ({...work,movementContribution:movementContributionKeys.has(selectionKey(work)),movementContributionReason:movementContributionKeys.has(selectionKey(work)) ? 'artist-movement-characteristic' : undefined})).sort((a,b) => workYearForSort(a) - workYearForSort(b));
+  return selected.map(work => {
+    const movementContribution = movementContributionKeys.has(selectionKey(work));
+    const next = {...work,movementContribution};
+    if (!movementContribution) delete next.movementContributionReason;
+    else if (!authoritativeContributions.length) next.movementContributionReason = 'artist-movement-characteristic';
+    return next;
+  }).sort((a,b) => workYearForSort(a) - workYearForSort(b));
 }
 function koreanFamilyFirst(name, originalName) {
   if (String(name || '').includes(',')) return String(name || '').trim();
@@ -1365,10 +1391,10 @@ async function loadData() {
   try {
     const curated = await (await fetch('data/featured-works.json')).json();
     curated.artists.forEach(entry => { const artist = artists.find(item => item.id === entry.id || (entry.qid && item.qid === entry.qid)); if (!artist) return; entry.works.forEach(work => { const existing = (artist.works || []).find(item => item.id === work.id); if (existing) { const preserved = {description:existing.description,detail:existing.detail,thumbnail:existing.thumbnail,thumbnailValidation:existing.thumbnailValidation,highResImage:existing.highResImage,highResOriginal:existing.highResOriginal}; Object.assign(existing, work); if (!loc(work.description)) existing.description = preserved.description; if (preserved.detail) existing.detail = preserved.detail; if (preserved.thumbnail) existing.thumbnail = preserved.thumbnail; if (preserved.thumbnailValidation) existing.thumbnailValidation = preserved.thumbnailValidation; if (preserved.highResImage) existing.highResImage = preserved.highResImage; if (preserved.highResOriginal) existing.highResOriginal = preserved.highResOriginal; } else artist.works.push(work); }); artist.works = selectArtistWorks(artist.works || [], artistImportedWorkLimit, artist); });
-    if (currentUserIsAdmin) await saveArtistsNow();
   } catch (_) { /* The main collection continues to work without the optional curated list. */ }
   await markLegacyManualWorks();
-  if (currentUserIsAdmin) await saveArtistsNow();
+  // Loading may overlay curated data and legacy provenance in memory, but a
+  // read-only page visit must never rewrite the administrator's data files.
   try { artTaxonomy = await (await fetch('data/art-taxonomy.json')).json(); } catch (_) { artTaxonomy = {periods:[], movements:[]}; }
   try { artMovementCanonical = await (await fetch('data/art-movement-canonical.json')).json(); } catch (_) { artMovementCanonical = {parents:[],categories:[]}; }
   try {

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "purpose": "정본 36개 문서 색인에서 제외했지만 5단계 내용 흡수 전까지 삭제하지 않는 기존 사조 문서",
+  "purpose": "정본 36개 활성 문서 색인에서 제외하고 내용 출처·중복 이력으로만 보존하는 기존 사조 문서",
   "documents": {
     "Biedermeier": {
       "1": "data/미술사조/69d074f0099b13691bf428c4-1.html",
@@ -45,6 +45,26 @@
       "ownerId": "russian-avant-garde",
       "categoryId": "russian-avant-garde--constructivism",
       "placement": "category-source"
+    },
+    "Renaissance archived duplicate A": {
+      "1": "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
+      "ownerId": "renaissance",
+      "placement": "archived-duplicate"
+    },
+    "Renaissance archived duplicate B": {
+      "1": "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
+      "ownerId": "renaissance",
+      "placement": "archived-duplicate"
+    },
+    "Realism archived duplicate": {
+      "1": "data/미술사조/9edf7288e6dd0ee42f7fa1bf-1.html",
+      "ownerId": "realism",
+      "placement": "archived-duplicate"
+    },
+    "Russian Baroque": {
+      "1": "data/미술사조/de537ba74c4bee89423120bc-1.html",
+      "ownerId": "baroque",
+      "placement": "context-source"
     }
   }
 }

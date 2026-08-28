@@ -84,6 +84,25 @@ function checkApplicationModuleSplit() {
   return 'application module split';
 }
 
+function checkArtistPersistenceGuards() {
+  const appSource = fs.readFileSync(path.join(root, 'app-core.js'), 'utf8');
+  const loadStart = appSource.indexOf('async function loadData()');
+  const loadEnd = appSource.indexOf('async function markLegacyManualWorks()', loadStart);
+  if (loadStart < 0 || loadEnd < 0) throw new Error('Could not inspect the loadData persistence boundary');
+  if (/\b(?:await\s+)?saveArtistsNow\s*\(/.test(appSource.slice(loadStart, loadEnd))) throw new Error('loadData must not persist artist files during a page visit');
+
+  const preserved = normalizeArtistsPayload({
+    metadata:{createdAt:'2026-01-01T00:00:00.000Z',representativeContentSchema:1},
+    artists:[]
+  }, {touch:false});
+  if (preserved.metadata.representativeContentSchema !== 1) throw new Error('artist normalization discards custom collection metadata');
+  if (!appSource.includes('const movementNameParts =') || !appSource.includes('function movementNamesMatch(left,right)') || !appSource.includes('return movementNamesMatch(work?.movement,artist?.movement);')) throw new Error('movement contribution matching must compare normalized localized movement names');
+  if (!appSource.includes("work?.movementContributionReason !== 'artist-movement-characteristic'")) throw new Error('curated movement contributions must take precedence over automatic scoring');
+  const serverDataSource = fs.readFileSync(path.join(root, 'server-data.js'), 'utf8');
+  if (!serverDataSource.includes('previousWorks.size !== currentWorks.length')) throw new Error('artist metadata must be touched when a work is deleted');
+  return 'artist persistence guards';
+}
+
 function main() {
   const javascript = walk(root, name => name.endsWith('.js'));
   const jsonFiles = walk(path.join(root, 'data'), name => name.endsWith('.json'));
@@ -92,6 +111,7 @@ function main() {
   for (const file of javascript) checked.push(checkCommand(`syntax ${relative(file)}`, process.execPath, ['--check', file]));
   for (const file of jsonFiles) JSON.parse(fs.readFileSync(file, 'utf8'));
   checked.push(checkApplicationModuleSplit());
+  checked.push(checkArtistPersistenceGuards());
 
   const artists = JSON.parse(fs.readFileSync(path.join(root, 'data', 'artists.json'), 'utf8'));
   const artistIndex = JSON.parse(fs.readFileSync(path.join(root, 'data', 'artists-index.json'), 'utf8'));
@@ -108,10 +128,11 @@ function main() {
     ['movement representative content', 'tools/validate-movement-representatives.js'],
     ['movement ID sync runtime', 'tools/validate-movement-sync-v1-runtime.js'],
     ['movement phase 6 completion', 'tools/complete-movement-sync-v1.js'],
+    ['movement learning guides', 'tools/sync-movement-learning-guides.js', '--check'],
     ['country art data', 'tools/validate-country-art-data.js'],
     ['Renaissance country table', 'tools/verify-renaissance-country-table.js'],
     ['URL download approval guard', 'tools/check-url-download-approval.js']
-  ].forEach(([label, script]) => checked.push(checkCommand(label, process.execPath, [script])));
+  ].forEach(([label, script, ...args]) => checked.push(checkCommand(label, process.execPath, [script,...args])));
 
   const env = fs.existsSync(path.join(root, '.env')) && /ART_ATLAS_ADMIN_PASSWORD\s*=\s*\S+/.test(fs.readFileSync(path.join(root, '.env'), 'utf8'));
   const oversizedImages = summarizeOversizedImages();
