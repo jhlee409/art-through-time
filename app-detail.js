@@ -371,19 +371,39 @@ function chooseMovementDocumentFile() {
   });
 }
 function setupMovementImageDescriptionEditors(frame, name, slot='1') {
-  if (!currentUserIsAdmin) return;
   const documentInFrame = frame.contentDocument || frame.document;
   if (!documentInFrame || documentInFrame.querySelector('#art-atlas-description-editor-style')) return;
+  if (!currentUserIsAdmin) {
+    const countryFeatureSection=documentInFrame.querySelector('#countries[data-art-atlas-country-feature-editor]');
+    countryFeatureSection?.querySelectorAll('tbody tr').forEach(row => {
+      const feature=row.cells?.[1];
+      if (!feature || feature.querySelector('[data-art-atlas-country-feature-editor-control]')) return;
+      const control=documentInFrame.createElement('span');
+      control.dataset.artAtlasCountryFeatureEditorControl='true';
+      feature.style.position='relative'; feature.style.paddingRight='48px'; feature.style.verticalAlign='middle';
+      control.style.cssText='position:absolute;top:10px;right:10px;display:inline-flex';
+      const edit=documentInFrame.createElement('button');
+      edit.type='button'; edit.textContent='✎'; edit.title=language === 'ko' ? '관리자 로그인 후 편집할 수 있습니다.' : 'Sign in as an administrator to edit.'; edit.setAttribute('aria-label',edit.title);
+      edit.style.cssText='width:25px;height:25px;border:1px solid #8e9b8b;border-radius:5px;background:#f5f1e8;color:#18221e;font:700 15px/1 system-ui,sans-serif;cursor:pointer';
+      edit.addEventListener('click', () => alert(edit.title));
+      control.append(edit); feature.append(control);
+    });
+    return;
+  }
   const editorStyle = documentInFrame.createElement('style');
   editorStyle.id = 'art-atlas-description-editor-style';
   editorStyle.textContent = '.movement-work-body,.caption{position:relative}.movement-work-body>h3:first-child,.caption>h3:first-child{padding-right:38px}.art-atlas-description-editor{position:absolute;top:10px;right:10px;z-index:2;display:flex;align-items:center;gap:7px}.art-atlas-description-editor button{border:1px solid #8e9b8b;border-radius:5px;width:28px;height:28px;padding:0;background:#f5f1e8;color:#18221e;font:700 16px/1 system-ui,sans-serif;cursor:pointer}.art-atlas-description-editor button[data-action="save"]{background:#18221e;color:#fff;border-color:#18221e}.art-atlas-description-editor.editing{position:static;width:100%;align-items:flex-start;margin-top:12px}.art-atlas-description-editor.editing button{width:auto;height:auto;padding:6px 9px;font-size:12px}.art-atlas-description-editor.editing textarea{width:100%;min-height:130px;resize:vertical;border:1px solid #8e9b8b;border-radius:6px;padding:10px;background:#fff;color:#18221e;font:14px/1.6 system-ui,sans-serif}.movement-work-grid.art-atlas-work-sortable{outline:1px dashed rgba(142,155,139,.72);outline-offset:7px}.movement-work-card[data-art-atlas-sortable-work="true"]{cursor:grab}.movement-work-card.art-atlas-work-dragging{opacity:.45;cursor:grabbing}';
   documentInFrame.head.append(editorStyle);
+  const genericCountryFeatureStyle=documentInFrame.createElement('style');
+  genericCountryFeatureStyle.id='art-atlas-generic-country-feature-editor-style';
+  genericCountryFeatureStyle.textContent='#countries[data-art-atlas-country-feature-editor] tbody td:nth-child(2){position:relative;padding-right:48px;text-align:left;vertical-align:middle}#countries[data-art-atlas-country-feature-editor] .art-atlas-country-feature-editor{position:absolute;top:10px;right:10px;display:inline-flex}#countries[data-art-atlas-country-feature-editor] .art-atlas-country-feature-editor button{width:25px;height:25px;border:1px solid #8e9b8b;border-radius:5px;background:#f5f1e8;color:#18221e;font:700 15px/1 system-ui,sans-serif;cursor:pointer}#countries[data-art-atlas-country-feature-editor] td textarea{display:block;width:100%;height:calc(40 * 1.6em + 20px);max-height:calc(40 * 1.6em + 20px);padding:9px;resize:vertical;border:1px solid #8e9b8b;border-radius:6px;background:#fff;color:#18221e;font:14px/1.6 system-ui,sans-serif}#countries[data-art-atlas-country-feature-editor] td>button{margin:8px 6px 0 0;padding:6px 9px;border:1px solid #8e9b8b;border-radius:5px;background:#f5f1e8;color:#18221e;font:700 12px/1 system-ui,sans-serif;cursor:pointer}#countries[data-art-atlas-country-feature-editor] td>button[data-action="save"]{background:#18221e;color:#fff;border-color:#18221e}';
+  documentInFrame.head.append(genericCountryFeatureStyle);
   const label = language === 'ko' ? '설명 편집' : 'Edit description';
   const saveLabel = language === 'ko' ? '저장' : 'Save';
   const cancelLabel = language === 'ko' ? '취소' : 'Cancel';
   const saveDocument = async () => {
     const copy = documentInFrame.documentElement.cloneNode(true);
-    copy.querySelectorAll('[data-art-atlas-description-editor], #art-atlas-description-editor-style').forEach(element => element.remove());
+    copy.querySelectorAll('[data-art-atlas-description-editor], [data-art-atlas-country-feature-editor-control], #art-atlas-description-editor-style, #art-atlas-generic-country-feature-editor-style').forEach(element => element.remove());
     copy.querySelectorAll('[data-art-atlas-sortable-work]').forEach(card => {
       card.removeAttribute('data-art-atlas-sortable-work');
       card.removeAttribute('draggable');
@@ -440,6 +460,60 @@ function setupMovementImageDescriptionEditors(frame, name, slot='1') {
       });
     });
   });
+  const countryFeatureSection=documentInFrame.querySelector('#countries[data-art-atlas-country-feature-editor]');
+  if (countryFeatureSection) {
+    const featureToText = cell => {
+      const rows=[...cell.querySelectorAll(':scope > ol > li')];
+      if (!rows.length) return `1. 핵심 특징\n- ${cell.textContent.replace(/\s+/g,' ').trim()}`;
+      return rows.map((row,index) => {
+        const title=row.querySelector(':scope > strong')?.textContent.trim() || `항목 ${index+1}`;
+        const bullets=[...row.querySelectorAll(':scope > ul > li')].map(item => `- ${item.textContent.replace(/\s+/g,' ').trim()}`);
+        return [`${index+1}. ${title}`,...(bullets.length ? bullets : [`- ${row.textContent.replace(/\s+/g,' ').trim()}`])].join('\n');
+      }).join('\n');
+    };
+    const featureToMarkup = value => {
+      const groups=[]; let current=null;
+      String(value || '').split(/\r?\n/).map(line => line.trim()).filter(Boolean).forEach(line => {
+        const heading=line.match(/^\d+\.\s*(.+)$/);
+        if (heading) { current={title:heading[1],bullets:[]}; groups.push(current); return; }
+        if (!current) { current={title:'핵심 특징',bullets:[]}; groups.push(current); }
+        current.bullets.push(line.replace(/^[-*]\s*/,''));
+      });
+      return `<ol class="art-atlas-country-feature-list">${groups.map(group => `<li><strong>${esc(group.title)}</strong><ul>${group.bullets.map(bullet => `<li>${esc(bullet)}</li>`).join('')}</ul></li>`).join('')}</ol>`;
+    };
+    const attachEditor = cell => {
+      if (cell.querySelector('[data-art-atlas-country-feature-editor-control]')) return;
+      const control=documentInFrame.createElement('span');
+      control.dataset.artAtlasCountryFeatureEditorControl='true';
+      control.className='art-atlas-country-feature-editor';
+      const edit=documentInFrame.createElement('button');
+      edit.type='button'; edit.textContent='✎'; edit.title=language === 'ko' ? '국가별 특징 편집' : 'Edit regional characteristics'; edit.setAttribute('aria-label',edit.title);
+      control.append(edit); cell.append(control);
+      edit.addEventListener('click', () => {
+        const original=cell.innerHTML;
+        const textarea=documentInFrame.createElement('textarea');
+        textarea.value=featureToText(cell); textarea.rows=40; textarea.setAttribute('aria-label',edit.title);
+        const clampLines=() => { const lines=textarea.value.split(/\r?\n/); if (lines.length > 40) textarea.value=lines.slice(0,40).join('\n'); };
+        textarea.addEventListener('input',clampLines);
+        const save=documentInFrame.createElement('button'); save.type='button'; save.dataset.action='save'; save.textContent=saveLabel;
+        const cancel=documentInFrame.createElement('button'); cancel.type='button'; cancel.textContent=cancelLabel;
+        control.classList.add('editing'); cell.replaceChildren(textarea,save,cancel); textarea.focus();
+        cancel.addEventListener('click', () => { cell.innerHTML=original; attachEditor(cell); });
+        save.addEventListener('click', async () => {
+          clampLines(); const next=textarea.value.trim(); if (!next) return;
+          save.disabled=true; cell.innerHTML=featureToMarkup(next); attachEditor(cell);
+          try { await saveDocument(); }
+          catch (error) { cell.innerHTML=original; attachEditor(cell); alert(error.message || (language === 'ko' ? '국가별 특징을 저장하지 못했습니다.' : 'Could not save regional characteristics.')); }
+        });
+      });
+    };
+    countryFeatureSection.querySelectorAll('tbody tr').forEach(row => {
+      const feature=row.cells?.[1];
+      if (!feature) return;
+      if (!feature.querySelector(':scope > ol.art-atlas-country-feature-list')) feature.innerHTML=featureToMarkup(`1. 핵심 특징\n- ${feature.textContent.replace(/\s+/g,' ').trim()}`);
+      attachEditor(feature);
+    });
+  }
   const enhancementSections = [...documentInFrame.querySelectorAll('.movement-enhancement')];
   const representativeSection = enhancementSections.at(-1);
   const submovementLabel = card => (card.querySelector('.movement-card-activity-region')?.textContent || '').replace(/^\s*·\s*/, '').trim() || (language === 'ko' ? '공통 전개' : 'Shared development');
@@ -545,7 +619,7 @@ async function openMovementDocument(name, slot, label) {
   if (url) {
     const popup = movementExplanationWindow();
     if (!currentUserIsAdmin) writeMovementDocumentLoading(popup, label || name);
-    if (currentUserIsAdmin && popup) {
+    if (popup) {
       let editorAttachAttempts = 0;
       let editorAttachTimer;
       const attachEditorsAfterDocumentLoad = () => {

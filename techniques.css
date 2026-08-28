@@ -94,7 +94,6 @@ body {
 
 .technique-brand:hover { color: #56715e; }
 .page-nav-actions { position: fixed; z-index: 140; top: 10px; right: 18px; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; max-width: calc(100vw - 36px); }
-.page-nav-actions .rules-check-button { flex: none; }
 .atlas-nav-button { display: inline-flex; align-items: center; justify-content: center; min-height: 31px; border: 1px solid #aebba8; border-radius: 4px; background: var(--sage); color: var(--ink); padding: 7px 10px; font-size: 12px; font-weight: 700; line-height: 1; text-decoration: none; white-space: nowrap; }
 .atlas-nav-button:hover, .atlas-nav-button:focus-visible { border-color: #8e9b8b; background: #edf3e9; color: var(--ink); outline: none; }
 
@@ -424,7 +423,7 @@ body {
   .technique-sidebar { width: 100%; min-width: 0; max-width: none; }
   .technique-sidebar-title { font-size:18px; }
   .page-nav-actions { top: 8px; right: 8px; gap: 5px; max-width: calc(100vw - 16px); }
-  .page-nav-actions .atlas-nav-button, .page-nav-actions .rules-check-button { min-height: 28px; padding: 6px 8px; font-size: 11px; }
+  .page-nav-actions .atlas-nav-button { min-height: 28px; padding: 6px 8px; font-size: 11px; }
   .sidebar-resize-handle { display: none; }
 }
 

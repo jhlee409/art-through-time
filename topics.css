@@ -125,7 +125,6 @@ body {
   gap: 8px;
   max-width: calc(100vw - 36px);
 }
-.page-nav-actions .rules-check-button { flex: none; }
 
 .atlas-nav-button {
   display: inline-flex;
@@ -566,8 +565,7 @@ body {
     gap: 5px;
     max-width: calc(100vw - 16px);
   }
-  .page-nav-actions .atlas-nav-button,
-  .page-nav-actions .rules-check-button {
+  .page-nav-actions .atlas-nav-button {
     min-height: 28px;
     padding: 6px 8px;
     font-size: 11px;

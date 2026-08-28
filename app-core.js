@@ -1701,6 +1701,20 @@ function movementDocumentKey(label='') {
   if (direct) return direct;
   const knownMovement = movementCountries.flatMap(country => country.movements || []).find(movement => [movement.name?.ko, movement.name?.en].some(name => compactMovementName(name) === compact));
   if (knownMovement?.name?.en && movementDocuments?.[knownMovement.name.en]?.['1']) return knownMovement.name.en;
+  // Country-level movements often share a single explanation document with
+  // their parent movement. Resolve that documented parent before falling back
+  // to an external encyclopedia search.
+  const displayRule = artistMovementDisplayRules.find(rule => rule.keys.has(compact));
+  const hierarchyGroup = artistMovementFilterHierarchy.find(group => movementFilterTreeKeys(group).has(compact));
+  const documentedCandidate = [
+    displayRule?.documentLabel?.en,
+    displayRule?.documentLabel?.ko,
+    displayRule?.parent?.en,
+    displayRule?.parent?.ko,
+    hierarchyGroup?.label?.en,
+    hierarchyGroup?.label?.ko
+  ].find(candidate => candidate && movementDocuments?.[candidate]?.['1']);
+  if (documentedCandidate) return documentedCandidate;
   const aliases = {
     '후기인상주의':'Post-Impressionism',
     '이탈리아르네상스':'Renaissance',

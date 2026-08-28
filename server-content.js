@@ -1,6 +1,6 @@
 /* Movement documents, local image uploads, and public static-file services. */
 module.exports = function createContentService(deps) {
-  const { fs, path, URL, createHash, randomBytes, execFileAsync, ffmpegPath, root, dataDir, highResolutionDir, imageStagingDir, techniquesFile, topicsFile, topicImageDir, movementSectionLinksFile, migrationAssetManifestFile, adminEmail, highResolutionStoredLimit, sourceImageInputLimit, jsonRequestBodyLimit, normalizeArtistsPayload, validateArtistsPayload, firebaseExport, invalidArtworkThumbnail, syncPersonNameDictionary, recordArtistRelationImpactAudit, readAccessControl, readArtistsFile, writeArtistsFile, saveThumbnailBuffer } = deps;
+  const { fs, path, URL, createHash, randomBytes, execFileAsync, ffmpegPath, root, dataDir, highResolutionDir, imageStagingDir, techniquesFile, topicsFile, topicImageDir, movementSectionLinksFile, migrationAssetManifestFile, adminEmail, highResolutionStoredLimit, sourceImageInputLimit, jsonRequestBodyLimit, normalizeArtistsPayload, validateArtistsPayload, firebaseExport, invalidArtworkThumbnail, syncPersonNameDictionary, recordArtistRelationImpactAudit, readAccessControl, readArtistsFile, writeArtistsFile, saveThumbnailBuffer, highResolutionPathExists } = deps;
 function highResolutionLocation(email, artistId) {
   return {folder:path.join(highResolutionDir,artistId), relativePrefix:`data/high-resolution/${artistId}`};
 }
@@ -40,8 +40,6 @@ const publicRootFiles = new Set([
   'app-detail.js',
   'styles.css',
   'extras.css',
-  'rules-check.css',
-  'rules-check.js',
   'tab-session.js',
   'techniques.html',
   'techniques.css',
@@ -153,6 +151,18 @@ async function refreshMovementDocumentLinks(name, slot) {
 }
 function escapeRegex(value) { return String(value).replace(/[.*+?^${}()|[\]\\]/g,'\\$&'); }
 function escapeAttribute(value) { return String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char])); }
+function htmlDecode(value='') {
+  const named={nbsp:' ',amp:'&',lt:'<',gt:'>',quot:'"',apos:"'"};
+  return String(value || '').replace(/&(#x?[0-9a-f]+|[a-z]+);/gi,(match,entity)=>{
+    if(entity[0]==='#') { const number=entity[1]?.toLowerCase()==='x' ? parseInt(entity.slice(2),16) : parseInt(entity.slice(1),10); return Number.isFinite(number) ? String.fromCodePoint(number) : match; }
+    return named[entity.toLowerCase()] ?? match;
+  });
+}
+function tagAttrs(tag='') {
+  const attrs={};
+  for (const match of String(tag).matchAll(/([:\w-]+)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/g)) attrs[match[1].toLowerCase()]=htmlDecode(match[2] || match[3] || match[4] || '').trim();
+  return attrs;
+}
 function normalizeMovementImageReference(value='') {
   const text=htmlDecode(String(value || '').trim()).replace(/\\/g,'/');
   if(!text || /^data:/i.test(text)) return text;

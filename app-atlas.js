@@ -81,7 +81,7 @@ function renderMovementAtlas() {
   const yearLabel = year => Number(year) < 0 ? `${Math.abs(year)} BCE` : (year === movementAtlasEnd ? (language === 'ko' ? '현대' : 'Today') : String(year));
   const axis = (axisStart, axisEnd, axisHeight) => `<aside class="atlas-axis atlas-century-axis" style="height:${axisHeight}px">${timelineVerticalCenturyBands(axisStart, axisEnd, yearScale, 'atlas-century-band')}</aside>`;
   const atlasCenturyGrid = (axisStart, axisEnd, axisHeight) => `<div class="atlas-century-grid" aria-hidden="true" style="height:${axisHeight}px">${timelineVerticalCenturyBands(axisStart, axisEnd, yearScale, 'atlas-century-grid-band')}</div>`;
-  const bar = (item, axisStart, axisEnd) => { const top=Math.max(0,item.start-axisStart)*yearScale, barHeight=Math.max(18,(Math.min(axisEnd,item.end)-Math.max(axisStart,item.start))*yearScale), left=8 + item.lane * 96, years=`${yearLabel(item.sourceStart ?? item.start)}–${yearLabel(item.sourceEnd ?? item.end)}`, movementName=item.name.en || item.name.ko || ''; return `<div class="movement-bar" title="${esc(loc(item.name))} · ${years}" data-movement-explanation="${esc(movementName)}" data-movement-label="${esc(loc(item.name))}" style="top:${top}px;height:${barHeight}px;left:${left}px;width:90px;--movement-color:${esc(item.color)}"><span>${esc(loc(item.name))}</span><small>${years}</small></div>`; };
+  const bar = (item, axisStart, axisEnd) => { const top=Math.max(0,item.start-axisStart)*yearScale, barHeight=Math.max(18,(Math.min(axisEnd,item.end)-Math.max(axisStart,item.start))*yearScale), left=8 + item.lane * 96, years=`${yearLabel(item.sourceStart ?? item.start)}–${yearLabel(item.sourceEnd ?? item.end)}`, rawMovementName=item.name.en || item.name.ko || '', movementName=movementDocumentKey(rawMovementName) || rawMovementName; return `<div class="movement-bar" title="${esc(loc(item.name))} · ${years}" data-movement-explanation="${esc(movementName)}" data-movement-label="${esc(loc(item.name))}" style="top:${top}px;height:${barHeight}px;left:${left}px;width:90px;--movement-color:${esc(item.color)}"><span>${esc(loc(item.name))}</span><small>${years}</small></div>`; };
   const countryColumns = start < countryEnd ? movementView.countries.map(id => countryById.get(id)).filter(Boolean).map(country => ({
     ...country,
     movements:(country.movements || []).map(item => clippedMovement(item,start,countryEnd)).filter(Boolean)
@@ -122,7 +122,7 @@ function renderMovementAtlas() {
   const artistListLabel = language === 'ko' ? '화가' : 'Artists';
   const techniquesLabel = language === 'ko' ? '기법·용어' : 'Techniques';
   const topicsLabel = language === 'ko' ? '주제-사건' : 'Topics & Events';
-  const pageNav = `<nav class="page-nav-actions" aria-label="${language === 'ko' ? '탭 이동' : 'Tab navigation'}"><button class="atlas-nav-button movement-nav-artists" type="button">${artistListLabel}</button><button class="atlas-nav-button movement-nav-artist-list" type="button">${language === 'ko' ? '화가 리스트' : 'Artist List'}</button><button class="atlas-nav-button movement-nav-country-art" type="button">${language === 'ko' ? '국가별 미술' : 'Art by Country'}</button><button class="atlas-nav-button movement-nav-techniques" type="button">${techniquesLabel}</button><button class="atlas-nav-button movement-nav-topics" type="button">${topicsLabel}</button><button class="rules-check-button" type="button" data-rules-check hidden></button></nav>`;
+  const pageNav = `<nav class="page-nav-actions" aria-label="${language === 'ko' ? '탭 이동' : 'Tab navigation'}"><button class="atlas-nav-button movement-nav-artists" type="button">${artistListLabel}</button><button class="atlas-nav-button movement-nav-artist-list" type="button">${language === 'ko' ? '화가 리스트' : 'Artist List'}</button><button class="atlas-nav-button movement-nav-country-art" type="button">${language === 'ko' ? '국가별 미술' : 'Art by Country'}</button><button class="atlas-nav-button movement-nav-techniques" type="button">${techniquesLabel}</button><button class="atlas-nav-button movement-nav-topics" type="button">${topicsLabel}</button></nav>`;
   timeline.innerHTML = `${pageNav}<div class="atlas-scroll">${columns.length ? `<div class="atlas-chart" style="${chartStickyStyle}">${eventColumn}${axis(start, countryEnd, height)}${columns.map(column).join('')}</div>` : ''}${sharedBox ? `${columns.length ? '<div class="atlas-shared-divider"></div>' : ''}${sharedBox}` : ''}${!columns.length && !sharedBox ? `<p class="empty-timeline">${language === 'ko' ? '비교할 나라를 하나 이상 선택해 주세요.' : 'Select at least one country.'}</p>` : ''}</div>`;
   timeline.querySelector('.movement-nav-artists')?.addEventListener('click', openArtistListPage);
   timeline.querySelector('.movement-nav-artist-list')?.addEventListener('click', openPainterListPage);
@@ -572,6 +572,84 @@ const artistListPillGap = 1;
 const artistListSubmovementTopPadding = 6;
 const artistListSubmovementBottomPadding = 8;
 const artistListParentMovementPalette = ['#8cbfd6','#d9ab69','#9cbd91','#bc9ac7','#d48c83','#8dbab2'];
+let artistListRegionFeaturePanel = null;
+function artistListRegionFeatureText(html, countryId) {
+  const documentHtml = new DOMParser().parseFromString(html, 'text/html');
+  const aliases=(countryArtAliases[countryId] || []).map(value => String(value).toLocaleLowerCase('ko-KR'));
+  const sections=[...documentHtml.querySelectorAll('section')].filter(section => /여러\s*국가에서의\s*전개/.test(section.querySelector('h2,h3')?.textContent || ''));
+  for (const section of sections) for (const table of section.querySelectorAll('table')) {
+    const headers=[...table.querySelectorAll('thead th')].map(cell => cell.textContent.replace(/\s+/g,' ').trim());
+    if (headers.length < 2 || !/(국가|지역|권역)/.test(headers[0])) continue;
+    const featureIndex=Math.max(1, headers.findIndex((header,index) => index > 0 && /(특징|전개|관심|의미|방식)/.test(header)));
+    for (const row of table.querySelectorAll('tbody tr')) {
+      const cells=[...row.querySelectorAll('th,td')];
+      const region=(cells[0]?.textContent || '').replace(/\s+/g,' ').trim().toLocaleLowerCase('ko-KR');
+      if (!aliases.some(alias => region.includes(alias))) continue;
+      const sourceCell=cells[featureIndex];
+      const feature=(sourceCell?.textContent || '').replace(/\s+/g,' ').trim();
+      if (!feature) continue;
+      const copy=sourceCell.cloneNode(true);
+      copy.querySelectorAll('button,textarea,input,select,option,style,script,[data-art-atlas-description-editor],[data-art-atlas-country-feature-editor-control],.art-atlas-country-feature-editor').forEach(element => element.remove());
+      return {region:(cells[0]?.textContent || '').replace(/\s+/g,' ').trim(), featureHtml:copy.innerHTML.trim(), feature};
+    }
+  }
+  return null;
+}
+function showArtistListRegionFeaturePanel(title) {
+  const sourceKey=title.dataset.regionFeatureKey;
+  artistListRegionFeaturePanel?.remove();
+  const parent=title.dataset.regionFeatureParent || '';
+  const parentLabel=title.dataset.regionFeatureParentLabel || parent;
+  const countryId=title.dataset.regionFeatureCountry || '';
+  const countryLabel=title.dataset.regionFeatureCountryLabel || '';
+  const panel=document.createElement('section');
+  panel.className='artist-list-region-feature-panel';
+  panel.dataset.sourceKey=sourceKey;
+  panel.style.left=`${Math.max(20, Math.min(title.getBoundingClientRect().left + 18, window.innerWidth - 460))}px`;
+  panel.style.top=`${Math.max(20, Math.min(title.getBoundingClientRect().bottom + 14, window.innerHeight - 300))}px`;
+  panel.innerHTML=`<header class="artist-list-region-feature-panel-header"><strong>${esc(`${countryLabel} · ${parentLabel}`)}</strong><small>${language === 'ko' ? '창을 다시 더블 클릭하면 닫힘' : 'Double-click this window again to close'}</small></header><div class="artist-list-region-feature-panel-body">${language === 'ko' ? '지역적 특징을 불러오는 중입니다.' : 'Loading regional characteristics.'}</div>${['n','e','s','w','ne','nw','se','sw'].map(direction => `<i class="artist-list-region-feature-panel-resizer artist-list-region-feature-panel-resizer--${direction}" data-resize="${direction}"></i>`).join('')}`;
+  document.body.append(panel);
+  const panelHeader=panel.querySelector('.artist-list-region-feature-panel-header');
+  const titleWidth=panelHeader.querySelector('strong')?.scrollWidth || 0;
+  const hintWidth=panelHeader.querySelector('small')?.scrollWidth || 0;
+  const defaultWidth=Math.min(window.innerWidth-40, Math.max(430, titleWidth + hintWidth + 42));
+  panel.style.width=`${defaultWidth}px`;
+  panel.style.left=`${Math.max(20, Math.min(title.getBoundingClientRect().left + 18, window.innerWidth-defaultWidth-20))}px`;
+  artistListRegionFeaturePanel=panel;
+  panel.addEventListener('dblclick', event => {
+    event.preventDefault();
+    event.stopPropagation();
+    panel.remove();
+    if (artistListRegionFeaturePanel === panel) artistListRegionFeaturePanel=null;
+  });
+  const body=panel.querySelector('.artist-list-region-feature-panel-body');
+  const documentName=movementDocumentKey(parent);
+  const url=documentName && movementDocuments?.[documentName]?.['1'];
+  const render=result => { if (!panel.isConnected) return; body.innerHTML=result?.featureHtml || `<p>${esc(result?.feature || (language === 'ko' ? '이 사조 설명 문서의 여러 국가에서의 전개 표에서 해당 지역의 특징을 찾지 못했습니다.' : 'No regional characteristic was found for this country in the development table.'))}</p>`; if (result?.region) panel.querySelector('strong').textContent=`${result.region} · ${parentLabel}`; };
+  if (!url) render(null);
+  else fetch(url,{cache:'no-store'}).then(response => response.ok ? response.text() : Promise.reject()).then(html => render(artistListRegionFeatureText(html,countryId))).catch(() => render(null));
+  let interaction=null;
+  panel.addEventListener('pointerdown', event => {
+    const handle=event.target.closest('[data-resize]');
+    const header=event.target.closest('.artist-list-region-feature-panel-header');
+    if (!handle && !header) return;
+    const rect=panel.getBoundingClientRect();
+    interaction={pointerId:event.pointerId, direction:handle?.dataset.resize || '', startX:event.clientX, startY:event.clientY, left:rect.left, top:rect.top, width:rect.width, height:rect.height};
+    panel.setPointerCapture(event.pointerId); event.preventDefault(); event.stopPropagation();
+  });
+  panel.addEventListener('pointermove', event => {
+    if (!interaction || interaction.pointerId !== event.pointerId) return;
+    const dx=event.clientX-interaction.startX, dy=event.clientY-interaction.startY, direction=interaction.direction;
+    if (!direction) { panel.style.left=`${Math.max(0,interaction.left+dx)}px`; panel.style.top=`${Math.max(0,interaction.top+dy)}px`; return; }
+    const west=direction.includes('w'), north=direction.includes('n'), east=direction.includes('e'), south=direction.includes('s');
+    const width=Math.max(280, interaction.width+(east?dx:west?-dx:0)), height=Math.max(170, interaction.height+(south?dy:north?-dy:0));
+    panel.style.width=`${width}px`; panel.style.height=`${height}px`;
+    if (west) panel.style.left=`${interaction.left + interaction.width-width}px`;
+    if (north) panel.style.top=`${interaction.top + interaction.height-height}px`;
+  });
+  const stop=event => { if (interaction?.pointerId === event.pointerId) interaction=null; };
+  panel.addEventListener('pointerup',stop); panel.addEventListener('pointercancel',stop);
+}
 function artistListPackedArtistLayout(entry, chartStart, chartEnd, yearScale) {
   const candidates = artistListArtistsForMovement(entry).map(item => {
     const movementStart = Number(entry.sourceStart ?? entry.start);
@@ -900,6 +978,12 @@ function renderCountryArt(options = {}) {
     : (language === 'ko' ? '사조' : 'Movement');
   const axisCornerStyle = artistListMode ? ` style="height:${axisHeight}px;min-height:${axisHeight}px"` : '';
   const axisCorner = `<div class="country-art-axis-corner"${axisCornerStyle}><span>${esc(axisHeading)}</span></div>`;
+  // The frozen left header sits in a vertically scaled layer while the frozen
+  // century axis is screen-sized. Give its source cell the inverse height so
+  // the two headers remain exactly aligned during horizontal navigation.
+  const frozenAxisCorner = artistListMode
+    ? `<div class="country-art-axis-corner" style="height:${axisHeight / Math.max(verticalDensity,.001)}px;min-height:${axisHeight / Math.max(verticalDensity,.001)}px"><span>${esc(axisHeading)}</span></div>`
+    : axisCorner;
   const centuryBands = timelineCenturyBands(start, end, yearScale);
   const centuryGrid = `<div class="country-art-century-grid" aria-hidden="true" style="left:${countryArtLabelColumnWidth}px;width:${chartWidth}px;height:${chartContentHeight}px">${centuryBands}</div>`;
   const axis = `${axisCorner}<div class="country-art-time-axis" style="width:${chartWidth}px">${centuryBands}</div>`;
@@ -919,7 +1003,7 @@ function renderCountryArt(options = {}) {
   // labels retain their normal font proportions at the default view and zoom.
   const frozenLabelTextXScale = artistListMode ? 1 / Math.max(density, .001) : 1;
   const frozenLabelTextYScale = artistListMode ? 1 / Math.max(verticalDensity, .001) : 1;
-  const frozenLabels = `<div class="country-art-frozen-labels" aria-hidden="true" style="width:${Math.ceil(countryArtLabelColumnWidth * density)}px"><div class="country-art-frozen-labels-layer" style="width:${countryArtLabelColumnWidth}px;transform:scale(${density}, ${verticalDensity});--artist-list-label-text-x-scale:${frozenLabelTextXScale};--artist-list-label-text-y-scale:${frozenLabelTextYScale}">${frozenCountryHeading}<div class="country-art-frozen-chart" style="width:${countryArtLabelColumnWidth}px">${axisCorner}${frozenEventCorner}${frozenMovementLabels}</div></div></div>`;
+  const frozenLabels = `<div class="country-art-frozen-labels" aria-hidden="true" style="width:${Math.ceil(countryArtLabelColumnWidth * density)}px"><div class="country-art-frozen-labels-layer" style="width:${countryArtLabelColumnWidth}px;transform:scale(${density}, ${verticalDensity});--artist-list-label-text-x-scale:${frozenLabelTextXScale};--artist-list-label-text-y-scale:${frozenLabelTextYScale}">${frozenCountryHeading}<div class="country-art-frozen-chart" style="width:${countryArtLabelColumnWidth}px">${frozenAxisCorner}${frozenEventCorner}${frozenMovementLabels}</div></div></div>`;
   const frozenAxisVerticalDensity = artistListMode ? 1 : verticalDensity;
   const centuryLabelXScale = artistListMode ? 1 / Math.max(density, .001) : 1;
   const frozenTimeAxis = `<div class="country-art-frozen-time-axis" aria-hidden="true" style="width:${Math.ceil(chartContentWidth * density)}px"><div class="country-art-frozen-time-axis-layer" style="left:${Math.ceil(countryArtLabelColumnWidth * density)}px;width:${Math.ceil(chartWidth * density)}px;height:${Math.ceil(axisHeight * frozenAxisVerticalDensity)}px"><div style="width:${chartWidth}px;transform:scale(${density}, ${frozenAxisVerticalDensity});--artist-list-century-label-x-scale:${centuryLabelXScale}"><div class="country-art-time-axis" style="width:${chartWidth}px;height:${axisHeight}px">${centuryBands}</div></div></div></div>`;
@@ -938,7 +1022,9 @@ function renderCountryArt(options = {}) {
           const childWidth=Math.max(2,(Math.min(end,child.end)-Math.max(start,child.start))*yearScale);
           const countryName=artistListMovementCountryLabel(child);
           const childTitle=`${countryName} · ${loc(child.name)} · ${yearLabel(child.sourceStart ?? child.start)}–${yearLabel(child.sourceEnd ?? child.end)}`;
-          return `<div class="artist-list-submovement-box" style="left:${childLeft}px;top:${child.submovementTop}px;width:${childWidth}px;height:${child.submovementHeight}px;--movement-color:${esc(entry.artistListParentColor)}" title="${esc(childTitle)}"><span class="artist-list-submovement-title">${esc(`${countryName} · ${loc(child.name)}`)}</span></div>`;
+          const parentDocumentName=movementDocumentKey(entry.name?.en || entry.name?.ko || '');
+          const regionFeatureKey=`${parentDocumentName}|${child.countryId}|${artistListMovementLabelKey(child)}`;
+          return `<div class="artist-list-submovement-box" data-region-feature-key="${esc(regionFeatureKey)}" data-region-feature-parent="${esc(parentDocumentName || entry.name?.en || entry.name?.ko || '')}" data-region-feature-parent-label="${esc(loc(entry.name))}" data-region-feature-country="${esc(child.countryId || '')}" data-region-feature-country-label="${esc(countryName)}" style="left:${childLeft}px;top:${child.submovementTop}px;width:${childWidth}px;height:${child.submovementHeight}px;--movement-color:${esc(entry.artistListParentColor)}" title="${esc(childTitle)}"><span class="artist-list-submovement-title">${esc(`${countryName} · ${loc(child.name)}`)}</span></div>`;
         }).join('');
         artistPills = submovements.map(child => artistListPackedArtistMarkup(child, start, end, yearScale, child.submovementTop, child.artistLayout)).join('');
       } catch (error) {
@@ -964,7 +1050,7 @@ function renderCountryArt(options = {}) {
   }
   const painterListButton = artistListMode ? '' : `<button class="atlas-nav-button country-art-nav-artist-list" type="button">${language === 'ko' ? '화가 리스트' : 'Artist List'}</button>`;
   const countryArtButton = artistListMode ? `<button class="atlas-nav-button country-art-nav-country-art" type="button">${language === 'ko' ? '국가별 미술' : 'Art by Country'}</button>` : '';
-  const pageNav = `<nav class="page-nav-actions" aria-label="${language === 'ko' ? '탭 이동' : 'Tab navigation'}"><button class="atlas-nav-button country-art-nav-artists" type="button">${language === 'ko' ? '화가' : 'Artists'}</button><button class="atlas-nav-button country-art-nav-movements" type="button">${language === 'ko' ? '사조' : 'Movements'}</button>${countryArtButton}${painterListButton}<button class="atlas-nav-button country-art-nav-techniques" type="button">${language === 'ko' ? '기법·용어' : 'Techniques'}</button><button class="atlas-nav-button country-art-nav-topics" type="button">${language === 'ko' ? '주제-사건' : 'Topics & Events'}</button><button class="rules-check-button" type="button" data-rules-check hidden></button></nav>`;
+  const pageNav = `<nav class="page-nav-actions" aria-label="${language === 'ko' ? '탭 이동' : 'Tab navigation'}"><button class="atlas-nav-button country-art-nav-artists" type="button">${language === 'ko' ? '화가' : 'Artists'}</button><button class="atlas-nav-button country-art-nav-movements" type="button">${language === 'ko' ? '사조' : 'Movements'}</button>${countryArtButton}${painterListButton}<button class="atlas-nav-button country-art-nav-techniques" type="button">${language === 'ko' ? '기법·용어' : 'Techniques'}</button><button class="atlas-nav-button country-art-nav-topics" type="button">${language === 'ko' ? '주제-사건' : 'Topics & Events'}</button></nav>`;
   const defaultFitClass = hideDefaultScrollbars ? ' country-art-scroll-default-fit' : '';
   const chartCountryHeading = artistListMode ? '' : `<div class="country-art-country-name" style="width:${countryArtLabelColumnWidth}px;min-width:${countryArtLabelColumnWidth}px">${esc(chartHeading)}</div>`;
   timeline.innerHTML = `${pageNav}<div class="atlas-scroll country-art-scroll${defaultFitClass}">${frozenLabels}${frozenTimeAxis}<div class="country-art-zoom-viewport" style="width:${Math.ceil(chartContentWidth * density)}px;height:${Math.ceil(chartContentHeight * verticalDensity)}px"><div class="country-art-zoom-layer country-art-event-mode-${countryArtEventMode(density)}" style="width:${chartContentWidth}px;transform:scale(${density}, ${verticalDensity});--artist-list-label-text-x-scale:${frozenLabelTextXScale};--artist-list-label-text-y-scale:${frozenLabelTextYScale}">${chartCountryHeading}<div class="country-art-chart" style="width:${chartContentWidth}px;grid-template-columns:${countryArtLabelColumnWidth}px ${chartWidth}px">${centuryGrid}${axis}${eventRail}${entries.map(workMarkup).join('')}</div></div></div></div>`;
@@ -1217,6 +1303,12 @@ function renderCountryArt(options = {}) {
       openCountryArtMovementPreview(event.currentTarget, event.clientX, event.clientY);
     });
   });
+  if (artistListMode) timeline.querySelectorAll('.artist-list-submovement-box[data-region-feature-key]').forEach(box => box.addEventListener('dblclick', event => {
+    if (event.target.closest('.artist-life-pill, .artist-list-submovement-title')) return;
+    event.preventDefault();
+    event.stopPropagation();
+    showArtistListRegionFeaturePanel(box);
+  }));
   const countryArtScroll = timeline.querySelector('.country-art-scroll');
   const frozenLabelColumn = timeline.querySelector('.country-art-frozen-labels');
   countryArtScroll?.classList.add('country-art-frozen-axis-active');
@@ -1267,7 +1359,7 @@ function renderCountryArt(options = {}) {
   });
   let countryArtPan = null;
   countryArtScroll?.addEventListener('pointerdown', event => {
-    if (event.button !== 0 || event.target.closest('input, button') || (artistListMode && event.target.closest('[data-artist-list-row-key]'))) return;
+    if (event.button !== 0 || event.target.closest('input, button, .artist-list-submovement-box') || (artistListMode && event.target.closest('[data-artist-list-row-key]'))) return;
     // Do not suppress a normal click here: cards use the native dblclick event
     // to open their enlarged, non-modal preview. Panning begins only after a
     // real drag distance has been crossed.
@@ -1297,7 +1389,7 @@ function renderCountryArt(options = {}) {
 }
 function renderArtistRelations() {
   const artist = artists.find(item => item.id === selectedId);
-  const pageNav = `<nav class="page-nav-actions" aria-label="${language === 'ko' ? '탭 이동' : 'Tab navigation'}"><button class="atlas-nav-button artist-relations-nav-artists" type="button">${language === 'ko' ? '화가' : 'Artists'}</button><button class="atlas-nav-button artist-relations-nav-movements" type="button">${language === 'ko' ? '사조' : 'Movements'}</button><button class="atlas-nav-button artist-relations-nav-country" type="button">${language === 'ko' ? '국가별 미술' : 'Art by Country'}</button><button class="atlas-nav-button artist-relations-nav-artist-list" type="button">${language === 'ko' ? '화가 리스트' : 'Artist List'}</button><button class="atlas-nav-button artist-relations-nav-techniques" type="button">${language === 'ko' ? '기법·용어' : 'Techniques'}</button><button class="atlas-nav-button artist-relations-nav-topics" type="button">${language === 'ko' ? '주제-사건' : 'Topics & Events'}</button><button class="rules-check-button" type="button" data-rules-check hidden></button></nav>`;
+  const pageNav = `<nav class="page-nav-actions" aria-label="${language === 'ko' ? '탭 이동' : 'Tab navigation'}"><button class="atlas-nav-button artist-relations-nav-artists" type="button">${language === 'ko' ? '화가' : 'Artists'}</button><button class="atlas-nav-button artist-relations-nav-movements" type="button">${language === 'ko' ? '사조' : 'Movements'}</button><button class="atlas-nav-button artist-relations-nav-country" type="button">${language === 'ko' ? '국가별 미술' : 'Art by Country'}</button><button class="atlas-nav-button artist-relations-nav-artist-list" type="button">${language === 'ko' ? '화가 리스트' : 'Artist List'}</button><button class="atlas-nav-button artist-relations-nav-techniques" type="button">${language === 'ko' ? '기법·용어' : 'Techniques'}</button><button class="atlas-nav-button artist-relations-nav-topics" type="button">${language === 'ko' ? '주제-사건' : 'Topics & Events'}</button></nav>`;
   if (!artist) {
     timeline.innerHTML = `${pageNav}<section class="artist-relations-empty"><h1>${esc(language === 'ko' ? '화가를 찾을 수 없습니다.' : 'Artist not found.')}</h1><p>${esc(language === 'ko' ? '화가 목록에서 연표 제목의 이름을 눌러 관계도를 다시 열어 주세요.' : 'Open the relationship map again from an artist timeline title.')}</p></section>`;
   } else {
@@ -1344,7 +1436,6 @@ function renderArtistRelations() {
   timeline.querySelector('.artist-relations-nav-artist-list')?.addEventListener('click', openPainterListPage);
   timeline.querySelector('.artist-relations-nav-techniques')?.addEventListener('click', openTechniquesPage);
   timeline.querySelector('.artist-relations-nav-topics')?.addEventListener('click', openTopicsPage);
-  queueMicrotask(() => window.dispatchEvent(new Event('art-through-time-rules-check-refresh')));
 }
 function showRelationAgentAnswer(name='', answer='') {
   document.querySelector('.artist-relation-agent-answer')?.remove();

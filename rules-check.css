@@ -1,4 +1,0 @@
-.rules-check-button { display:inline-flex; align-items:center; justify-content:center; min-height:31px; border:1px solid #8e9b8b; border-radius:4px; background:#fffdf8; color:#334334; padding:7px 10px; font:700 11px/1 var(--sans, 'Noto Sans KR', sans-serif); white-space:nowrap; cursor:pointer; }
-.rules-check-button[hidden] { display:none; }
-.rules-check-button:hover, .rules-check-button:focus-visible { border-color:#425043; background:#dfe8d9; color:#18221e; outline:none; }
-.rules-check-button:disabled { cursor:wait; opacity:.65; }

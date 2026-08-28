@@ -6,7 +6,6 @@
   <title>주제-사건 · Art Through Time</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="topics.css">
-  <link rel="stylesheet" href="rules-check.css">
   <link rel="stylesheet" href="./uhangul/uhangul-runtime.css?v=0.7" data-uhangul-integration="v0.7">
   <style>.topic-title-row{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}.topic-title-row #hint{margin-bottom:0}.topic-display-mode{display:flex;gap:4px;margin:12px 0 8px}.topic-display-mode button{display:grid;width:28px;height:28px;min-height:28px;place-items:center;margin:0;padding:0;border:1px solid #aebba8;border-radius:50%;background:#fffdf8;color:#425043;font:700 10px/1 var(--sans,'Noto Sans KR',sans-serif)}.topic-display-mode button.active{border-color:#425043;background:#425043;color:#fffdf8}.topic-year-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}.topic-form-error{min-height:1.25em;color:#a43d27;font-size:12px}.topic-artwork-dialog[open]{z-index:100}@media(max-width:600px){.topic-title-row{display:block}}</style>
 </head>
@@ -17,7 +16,6 @@
     <a class="atlas-nav-button" href="index.html?countryArt=1" data-page-nav-url="index.html?countryArt=1" data-page-nav-target="artThroughTimeCountryArt" target="artThroughTimeCountryArt">국가별 미술</a>
     <a class="atlas-nav-button" href="index.html?artistList=1" data-page-nav-url="index.html?artistList=1" data-page-nav-target="artThroughTimeArtistList" target="artThroughTimeArtistList">화가 리스트</a>
     <a class="atlas-nav-button" href="techniques.html" data-page-nav-url="techniques.html" data-page-nav-target="artThroughTimeTechniques" target="artThroughTimeTechniques">기법·용어</a>
-    <button class="rules-check-button" type="button" data-rules-check hidden></button>
   </nav>
   <div class="topics-shell">
     <aside class="topic-sidebar">
@@ -37,7 +35,6 @@
   <dialog id="topic-artwork-dialog"><form id="topic-artwork-form" method="dialog"><button class="close" type="button" data-close-topic-dialog aria-label="닫기">×</button><h2>그림 추가</h2><p id="topic-artwork-file-name" class="dialog-description"></p><label>제목<input id="topic-artwork-title" name="title" required></label><div class="topic-year-fields"><label>시작 연도<input id="topic-artwork-start" name="startYear" type="number" min="1" required></label><label>끝 연도<input id="topic-artwork-end" name="endYear" type="number" min="1" required></label></div><p id="topic-artwork-error" class="topic-form-error" aria-live="polite"></p><button class="save" type="submit">저장</button></form></dialog>
   <script src="tab-session.js"></script>
   <script src="topics.js"></script>
-  <script src="rules-check.js?v=20260821-3"></script>
   <script defer src="./uhangul/uhangul-runtime.js?v=0.7" data-uhangul-integration="v0.7"></script>
 </body>
 </html>
