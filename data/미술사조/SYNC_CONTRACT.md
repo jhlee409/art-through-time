@@ -63,7 +63,7 @@
 
 ## 필수 불변식
 
-- 버전 1 문서는 syncState가 structure 또는 complete이며 parentId와 contextId 중 정확히 하나를 가진다.
+- 버전 1 문서는 syncState가 structure, content 또는 complete이며 parentId와 contextId 중 정확히 하나를 가진다.
 - documentRoot parentId는 canonical에서 role=document인 부모이고 contextId는 contextReferences에 있어야 한다.
 - 대표작 심화 구역은 representativeSection=works로 표시된 요소가 정확히 하나다.
 - 모든 developmentId는 프로젝트 전체에서 유일하고 지정 패턴을 만족한다.

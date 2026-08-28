@@ -1,27 +1,33 @@
-const fs = require('fs');
+const fs = require('node:fs');
+const path = require('node:path');
 
-const file = 'data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html';
+const root = path.resolve(__dirname, '..');
+const canonical = require('../data/art-movement-canonical.json');
+const representatives = require('../data/art-movement-representatives.json');
+const index = require('../data/미술사조/index.json');
+const parent = canonical.parents.find(entry => entry.id === 'renaissance');
+const file = path.join(root, index.documents[parent.documentKey]['1']);
 const html = fs.readFileSync(file, 'utf8');
-const tableArtists = [
-  '얀 반 에이크', '로히어르 반 데르 베이던', '브뤼헐', '알브레히트 뒤러',
-  '루카스 크라나흐', '한스 홀바인 2세', '알브레히트 알트도르퍼', '볼프 후버'
-];
-if (!tableArtists.every(name => html.includes(name))) {
-  throw new Error('국가 전개 표의 대표 화가가 누락되었습니다.');
+const entries = new Map(representatives.categories.map(entry => [entry.categoryId, entry]));
+
+if (!/<html\b[^>]*data-art-atlas-sync-state="complete"/i.test(html)) {
+  throw new Error('르네상스 문서가 6단계 complete 상태가 아닙니다.');
 }
 
-const heading = '<h3>여러 국가에서의 전개 — 대표 화가의 대표작</h3>';
-const start = html.indexOf(heading);
-const gridStart = html.indexOf('<div class="movement-work-grid three">', start);
-const sectionEnd = html.indexOf('</section>', gridStart);
-const grid = html.slice(gridStart, sectionEnd);
-const cards = grid.match(/<article class="movement-work-card">[\s\S]*?<\/article>/g) || [];
-const ids = cards.map(card => card.match(/data-artist-id="([^"]+)"/)?.[1] || '');
-const germanOrder = ['artist-Q5580', 'artist-Q191748', 'artist-Q48319'];
-if (germanOrder.some(id => ids.filter(value => value === id).length !== 1)) {
-  throw new Error(`독일 르네상스 카드가 중복되었거나 누락되었습니다: ${ids.join(', ')}`);
+for (const categoryId of parent.categoryIds) {
+  const entry = entries.get(categoryId);
+  if (!entry) throw new Error(`르네상스 정본 대표 콘텐츠가 누락되었습니다: ${categoryId}`);
+  const rowPattern = new RegExp(`<tr\\b[^>]*data-art-atlas-category-id="${categoryId}"[\\s\\S]*?<\\/tr>`, 'i');
+  const cardPattern = new RegExp(`<article\\b[^>]*data-art-atlas-category-id="${categoryId}"[^>]*data-artist-id="${entry.artist.id}"[^>]*data-work-id="${entry.work.id}"[\\s\\S]*?<\\/article>`, 'i');
+  const row = rowPattern.exec(html)?.[0] || '';
+  if (!row.includes(`data-artist-id="${entry.artist.id}"`)) throw new Error(`르네상스 표 대표 화가가 누락되었습니다: ${categoryId}`);
+  if (!cardPattern.test(html)) throw new Error(`르네상스 대표작 카드가 누락되었습니다: ${categoryId}`);
 }
-if (ids.indexOf(germanOrder[0]) > ids.indexOf(germanOrder[1]) || ids.indexOf(germanOrder[1]) > ids.indexOf(germanOrder[2])) {
-  throw new Error(`독일 르네상스 카드 순서가 잘못되었습니다: ${ids.join(', ')}`);
+
+const boundRows = html.match(/<tr\b[^>]*data-art-atlas-category-id=/gi) || [];
+const cards = html.match(/<article\b[^>]*class="[^"]*movement-work-card/gi) || [];
+if (boundRows.length !== parent.categoryIds.length || cards.length !== parent.categoryIds.length) {
+  throw new Error(`르네상스 3개 범주와 표·카드 수가 일치하지 않습니다: rows=${boundRows.length}, cards=${cards.length}`);
 }
-console.log('검증 완료: 표 대표 화가 8명 보존, 독일 카드 순서 뒤러·크라나흐·홀바인, 중복 없음.');
+
+console.log('검증 완료: 르네상스 3개 정본 범주의 표·대표 화가·대표작 카드가 일치합니다.');

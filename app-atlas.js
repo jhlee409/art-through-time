@@ -249,6 +249,8 @@ function countryArtTextMatches(value, countryId) {
   });
 }
 function countryArtCardBelongs(card, countryId) {
+  const canonicalCountries = (card.closest('[data-art-atlas-country-ids]')?.dataset.artAtlasCountryIds || '').split(/\s+/).filter(Boolean);
+  if (canonicalCountries.length) return canonicalCountries.includes(countryId);
   const region = card.querySelector('.movement-card-activity-region')?.textContent || '';
   if (countryArtTextMatches(region, countryId)) return true;
   const artistId = new URL(card.querySelector('.art-atlas-artist-link')?.href || '', location.href).searchParams.get('artist');
@@ -272,14 +274,14 @@ function countryArtWorksFor(country, movement) {
       // Comparison illustrations at the start of a movement document are contextual only.
       // The final enhancement section is the canonical representative-work card collection.
       const enhancementSections = [...source.querySelectorAll('.movement-enhancement')];
-      const representativeSection = enhancementSections.at(-1);
+      const representativeSection = source.querySelector('.movement-enhancement[data-art-atlas-representative-section="works"]') || enhancementSections.at(-1);
       const works = [...(representativeSection?.querySelectorAll('article.movement-work-card, article.card') || [])].filter(card => countryArtCardBelongs(card, country.id)).map(card => {
         const image = card.querySelector('img');
         if (!image?.getAttribute('src')) return null;
         const title = card.querySelector('h3')?.textContent?.replace(/\s+/g, ' ').trim() || image.alt || (language === 'ko' ? '대표작' : 'Representative work');
         const year = card.querySelector('small')?.textContent?.trim() || '';
         const sortYear = Number((year.match(/-?\d{3,4}/) || [])[0]) || 9999;
-        const description = card.querySelector('.movement-work-body p, .card-body p, p')?.textContent?.replace(/\s+/g, ' ').trim() || '';
+        const description = (card.querySelector('[data-art-atlas-card-description]') || card.querySelector('.movement-work-body p, .card-body p, p'))?.textContent?.replace(/\s+/g, ' ').trim() || '';
         return {src:new URL(image.getAttribute('src'), new URL(documentUrl, location.href)).href, alt:image.alt || title, title, year, sortYear, descriptionLength:description.length};
       }).filter(Boolean);
       countryArtWorkCache.set(cacheKey, works);
@@ -568,7 +570,8 @@ function artistListArtistsForMovement(entry) {
   const movementEnd = Number(entry.sourceEnd ?? entry.end);
   const countryIds = new Set(entry.countryIds || [entry.countryId].filter(Boolean));
   const documentName=entry.parentDocumentName || movementDocumentKey(entry.name?.en || entry.name?.ko || loc(entry.name));
-  const representativeRows=[...countryIds].flatMap(countryId => artistListCountryDevelopmentRepresentatives.get(`${documentName}::${countryId}`) || []).filter(row => !entry.countryDevelopmentDetail || row.label === entry.countryDevelopmentDetail);
+  const canonicalRow = entry.developmentId && artistListCountryDevelopmentRepresentatives.get(`development::${entry.developmentId}`);
+  const representativeRows=canonicalRow ? [canonicalRow] : [...countryIds].flatMap(countryId => artistListCountryDevelopmentRepresentatives.get(`${documentName}::${countryId}`) || []).filter(row => !entry.countryDevelopmentDetail || row.label === entry.countryDevelopmentDetail);
   const representativeIds=representativeRows.flatMap(row => row.artistIds || []);
   if (!artistListCountryDevelopmentRepresentativesReady) {
     loadArtistListCountryDevelopmentRepresentatives();
@@ -579,11 +582,13 @@ function artistListArtistsForMovement(entry) {
   return (artists || []).map(artist => {
     const life = artistListArtistLifeSpan(artist);
     if (!life || life.start > movementEnd || life.end < movementStart) return null;
-    const artistCountryIds = artistListArtistCountryIds(artist);
-    if (!artistCountryIds.some(countryId => countryIds.has(countryId))) return null;
     if (!representativeSet.has(artist.id)) return null;
-    const movementEntries = artistMovementEntries(artist);
-    if (!movementEntries.some(artistEntry => artistListMovementKeyMatchesArtistEntry(movementKey, artistEntry))) return null;
+    const artistCountryIds = artistListArtistCountryIds(artist);
+    if (!canonicalRow) {
+      if (!artistCountryIds.some(countryId => countryIds.has(countryId))) return null;
+      const movementEntries = artistMovementEntries(artist);
+      if (!movementEntries.some(artistEntry => artistListMovementKeyMatchesArtistEntry(movementKey, artistEntry))) return null;
+    }
     const countryLabel = artistCountryIds.filter(countryId => countryIds.has(countryId)).map(countryId => loc(movementCountries.find(country => country.id === countryId)?.name)).filter(Boolean).join(', ');
     return {artist, life, countryLabel};
   }).filter(Boolean);
@@ -591,6 +596,7 @@ function artistListArtistsForMovement(entry) {
 function loadArtistListCountryDevelopmentRepresentatives() {
   if (artistListCountryDevelopmentRepresentativesRequest) return artistListCountryDevelopmentRepresentativesRequest;
   const documents=Object.entries(movementDocuments || {}).flatMap(([name,slots]) => Object.values(slots || {}).filter(Boolean).map(url => ({name,url})));
+  artistListCountryDevelopmentRepresentatives.clear();
   artistListCountryDevelopmentRepresentativesRequest=Promise.all(documents.map(async ({name,url}) => {
     const response=await fetch(url,{cache:'no-store'}).catch(() => null);
     if (!response?.ok) return;
@@ -601,19 +607,35 @@ function loadArtistListCountryDevelopmentRepresentatives() {
     const headers=[...table.querySelectorAll('thead th')].map(cell => cell.textContent.replace(/\s+/g,' ').trim());
     const representativeIndex=headers.findIndex(header => /(대표.*(?:화가|제작)|(?:화가|제작).*대표)/.test(header));
     if (representativeIndex < 0) return;
+    const parentId=source.documentElement.dataset.artAtlasParentId || '';
+    const categoryNames=new Map((artMovementCanonical.categories || []).map(category => [category.id,category.name]));
     table.querySelectorAll('tbody tr').forEach(row => {
       const cells=[...row.querySelectorAll(':scope > td')];
+      const developmentId=row.dataset.artAtlasDevelopmentId || '';
+      const categoryId=row.dataset.artAtlasCategoryId || '';
+      const canonicalCountries=(row.dataset.artAtlasCountryIds || '').split(/\s+/).filter(Boolean);
       const countryText=(cells[0]?.textContent || '').replace(/\s+/g,' ').trim().toLocaleLowerCase('ko-KR');
       const countryParts=(cells[0]?.textContent || '').replace(/\s+/g,' ').trim().split(/\s*[—–-]\s*/,2);
-      const detailLabel=countryParts.length > 1 ? countryParts[1] : '';
+      const canonicalName=categoryNames.get(categoryId);
+      const detailLabel=loc(canonicalName) || (countryParts.length > 1 ? countryParts[1] : '');
       const ids=[...(cells[representativeIndex]?.querySelectorAll('[data-artist-id]') || [])].map(link => link.dataset.artistId).filter(Boolean);
+      const detail={parentId,developmentId,categoryId,countryIds:canonicalCountries,label:detailLabel,artistIds:ids,featureHtml:cells[1]?.innerHTML.trim() || '',feature:(cells[1]?.textContent || '').replace(/\s+/g,' ').trim()};
+      if (developmentId && canonicalCountries.length) {
+        artistListCountryDevelopmentRepresentatives.set(`development::${developmentId}`,detail);
+        canonicalCountries.forEach(countryId => {
+          const key=`${name}::${countryId}`;
+          const previous=artistListCountryDevelopmentRepresentatives.get(key) || [];
+          artistListCountryDevelopmentRepresentatives.set(key,[...previous,detail]);
+        });
+        return;
+      }
       if (!countryText) return;
       movementCountries.filter(country => country.id !== sharedMovementId).forEach(country => {
         const aliases=(countryArtAliases[country.id] || []).map(value => String(value).toLocaleLowerCase('ko-KR'));
         if (!aliases.some(alias => countryText.includes(alias))) return;
         const key=`${name}::${country.id}`;
         const previous=artistListCountryDevelopmentRepresentatives.get(key) || [];
-        artistListCountryDevelopmentRepresentatives.set(key,[...previous,{label:detailLabel,artistIds:ids}]);
+        artistListCountryDevelopmentRepresentatives.set(key,[...previous,detail]);
       });
     });
   })).catch(error => console.warn('Could not load country-development representatives:',error)).finally(() => {
@@ -655,6 +677,7 @@ function artistListRegionFeatureText(html, countryId) {
 }
 function showArtistListRegionFeaturePanel(title) {
   const sourceKey=title.dataset.regionFeatureKey;
+  const developmentId=title.dataset.regionFeatureDevelopment || '';
   artistListRegionFeaturePanel?.remove();
   const parent=title.dataset.regionFeatureParent || '';
   const parentLabel=title.dataset.regionFeatureParentLabel || parent;
@@ -681,10 +704,12 @@ function showArtistListRegionFeaturePanel(title) {
     if (artistListRegionFeaturePanel === panel) artistListRegionFeaturePanel=null;
   });
   const body=panel.querySelector('.artist-list-region-feature-panel-body');
+  const canonicalDetail=developmentId && artistListCountryDevelopmentRepresentatives.get(`development::${developmentId}`);
   const documentName=movementDocumentKey(parent);
   const url=documentName && movementDocuments?.[documentName]?.['1'];
   const render=result => { if (!panel.isConnected) return; body.innerHTML=result?.featureHtml || `<p>${esc(result?.feature || (language === 'ko' ? '이 사조 설명 문서의 여러 국가에서의 전개 표에서 해당 지역의 특징을 찾지 못했습니다.' : 'No regional characteristic was found for this country in the development table.'))}</p>`; if (result?.region) panel.querySelector('strong').textContent=`${result.region} · ${parentLabel}`; };
-  if (!url) render(null);
+  if (canonicalDetail) render({featureHtml:canonicalDetail.featureHtml,feature:canonicalDetail.feature,region:`${countryLabel} · ${canonicalDetail.label}`});
+  else if (!url) render(null);
   else fetch(url,{cache:'no-store'}).then(response => response.ok ? response.text() : Promise.reject()).then(html => render(artistListRegionFeatureText(html,countryId))).catch(() => render(null));
   let interaction=null;
   panel.addEventListener('pointerdown', event => {
@@ -805,11 +830,14 @@ function artistListMovementEntries(countries, selectedCountryIds, start, end) {
       if (movementIsContextOnly(movement)) return;
       const clipped = clippedMovement(movement, start, end);
       if (!clipped) return;
-      const parentDocumentName=movementDocumentKey(clipped.name?.en || clipped.name?.ko || loc(clipped.name));
-      const details=artistListCountryDevelopmentRepresentatives.get(`${parentDocumentName}::${country.id}`) || [];
+      const canonicalBinding=clipped.canonical || null;
+      const owner=canonicalBinding && (artMovementCanonical.parents || []).find(parent => parent.id === canonicalBinding.documentOwnerId);
+      const parentDocumentName=owner?.documentKey || movementDocumentKey(clipped.name?.en || clipped.name?.ko || loc(clipped.name));
+      const canonicalDetails=(canonicalBinding?.developmentIds || []).map(developmentId => artistListCountryDevelopmentRepresentatives.get(`development::${developmentId}`)).filter(detail => detail?.countryIds?.includes(country.id));
+      const details=canonicalBinding ? canonicalDetails : (artistListCountryDevelopmentRepresentatives.get(`${parentDocumentName}::${country.id}`) || []);
       details.forEach((detail, detailOrder) => rows.push({
         ...clipped,
-        name:{ko:detail.label || loc(clipped.name),en:detail.label || loc(clipped.name)},
+        name:(artMovementCanonical.categories || []).find(category => category.id === detail.categoryId)?.name || {ko:detail.label || loc(clipped.name),en:detail.label || loc(clipped.name)},
         country,
         countryId:country.id,
         countryIds:[country.id],
@@ -818,6 +846,8 @@ function artistListMovementEntries(countries, selectedCountryIds, start, end) {
         countryOrder,
         movementOrder,
         detailOrder,
+        developmentId:detail.developmentId || '',
+        categoryId:detail.categoryId || '',
         countryDevelopmentDetail:detail.label,
         parentDocumentName,
         parentMovementKey:artistListMovementLabelKey(clipped),
@@ -1082,7 +1112,7 @@ function renderCountryArt(options = {}) {
           const childTitle=`${countryName} · ${loc(child.name)} · ${yearLabel(child.sourceStart ?? child.start)}–${yearLabel(child.sourceEnd ?? child.end)}`;
           const parentDocumentName=movementDocumentKey(entry.name?.en || entry.name?.ko || '');
           const regionFeatureKey=`${parentDocumentName}|${child.countryId}|${artistListMovementLabelKey(child)}`;
-          return `<div class="artist-list-submovement-box" data-region-feature-key="${esc(regionFeatureKey)}" data-region-feature-parent="${esc(parentDocumentName || entry.name?.en || entry.name?.ko || '')}" data-region-feature-parent-label="${esc(loc(entry.name))}" data-region-feature-country="${esc(child.countryId || '')}" data-region-feature-country-label="${esc(countryName)}" style="left:${childLeft}px;top:${child.submovementTop}px;width:${childWidth}px;height:${child.submovementHeight}px;--movement-color:${esc(entry.artistListParentColor)}" title="${esc(childTitle)}"><span class="artist-list-submovement-title">${esc(`${countryName} · ${loc(child.name)}`)}</span></div>`;
+          return `<div class="artist-list-submovement-box" data-region-feature-key="${esc(regionFeatureKey)}" data-region-feature-development="${esc(child.developmentId || '')}" data-region-feature-parent="${esc(parentDocumentName || entry.name?.en || entry.name?.ko || '')}" data-region-feature-parent-label="${esc(loc(entry.name))}" data-region-feature-country="${esc(child.countryId || '')}" data-region-feature-country-label="${esc(countryName)}" style="left:${childLeft}px;top:${child.submovementTop}px;width:${childWidth}px;height:${child.submovementHeight}px;--movement-color:${esc(entry.artistListParentColor)}" title="${esc(childTitle)}"><span class="artist-list-submovement-title">${esc(`${countryName} · ${loc(child.name)}`)}</span></div>`;
         }).join('');
         artistPills = submovements.map(child => artistListPackedArtistMarkup(child, start, end, yearScale, child.submovementTop, child.artistLayout)).join('');
       } catch (error) {

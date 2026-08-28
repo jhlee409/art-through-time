@@ -31,8 +31,10 @@
 - 국가별 전개 표에서 국가·지역·특징·대표 화가처럼 병렬 컬럼을 비교하는 편집형 표는 각 컬럼 사이를 흰색 `1px` 실선으로 구분한다. 마지막 컬럼 오른쪽에는 추가 선을 그리지 않는다.
 - 전체 사조 설명 문서의 국가 전개 표를 이 기준으로 일괄 정리할 때는 먼저 `node tools/normalize-country-development-tables.js --dry-run`으로 3컬럼 표가 없는 예외를 확인하고, 내용 근거를 보완한 뒤 `node tools/normalize-country-development-tables.js`를 실행한다. 모든 문서는 `국가·지역·세부 사조`·`지역적 특징`·`대표 화가·제작자` 3컬럼과 특징 목록 형식을 유지한다.
 - 심화 카드 묶음에서 국가명 뒤에 자동 표시하는 `지역`·`특징` 설명(`.movement-country-card-context`)은 기본 `0.912rem`으로 둔다. 이는 1.14rem 기준을 80%로 낮춘 크기이며, 국가명과 설명의 위계를 유지하면서도 스크롤 없이 읽을 수 있어야 한다.
-- 카드 DOM 순서는 국가별 미술 탭의 표시 순서이며, 관리자가 같은 국가·세부 전개 그리드에서 카드 순서를 저장하면 그 그리드의 카드 화가 전체(기존 표에 없던 카드 화가 포함)를 국가 전개 표의 같은 행에 같은 순서로 자동 반영한다. 표에 있으나 카드가 아직 없는 화가는 저장 과정에서 삭제하지 않고, 먼저 같은 지역 그리드에 카드(로컬 이미지가 없으면 `이미지 추가 예정` 카드)를 보강한 뒤 다시 저장한다. 최종 상태에는 카드와 표의 화가 누락·중복을 남기지 않는다.
+- 카드 DOM 순서는 국가별 미술 탭의 표시 순서다. 버전 1 `complete` 문서는 같은 `developmentId`에서 카드와 표의 대표 화가 집합이 저장 전부터 정확히 같아야 하며, 카드 순서만 표 링크 순서에 반영한다. 카드 드래그 저장으로 화가를 암묵적으로 추가·삭제하지 않는다. 소속 변경은 별도 분류 명령으로 표와 카드를 한 트랜잭션에서 함께 바꾼다.
 - 버전 1 카드 드래그는 같은 `developmentId`의 그리드 안에서만 허용하고 표의 대표 화가 링크 순서를 같은 저장 트랜잭션에서 바꾼다. 다른 전개·범주로 화가를 옮길 때는 카드 간 드래그를 사용하지 않고 국가 전개 표의 대표 화가 분류 명령으로 카드와 표를 함께 이동한다.
+- 버전 1 `complete` 문서 저장은 현재 파일과 제출 DOM의 parent·category·development·country·artist·work ID를 먼저 비교한다. 특징, 선정 이유, 작품 설명과 같은 허용 필드 및 동일 전개 안의 카드 순서 외 구조 변경은 거부하며, 전체 hard 불변식을 통과한 HTML만 임시 파일을 거쳐 한 번 교체한다. 검증·기록 실패 시 화면의 카드와 표 순서를 모두 저장 전 상태로 되돌린다.
+- 선정 이유와 작품 설명은 하나의 카드 편집 동작에서 각각 비어 있지 않은 값으로 저장한다. `imageState=pending` 카드도 텍스트 편집 대상이며, 이미지가 없다는 이유로 편집기나 화가 리스트 연동에서 제외하지 않는다.
 - 한 화가는 기본적으로 한 문서의 한 `developmentId`에만 둔다. 서로 다른 작품으로 두 범주의 차이를 설명하는 데 대체 불가능해 중복할 때에는 모든 해당 카드에 `data-art-atlas-duplicate-artist-reason`으로 교육적 이유를 기록한다.
 - 카드 첫 줄은 `화가명, 《작품명》 · 사조 · 지역` 순서로 쓴다.
 - 카드의 대표작은 단순히 유명한 작품이 아니라 해당 국가·세부 사조의 색채, 빛, 공간, 주제, 후원·사교 환경을 가장 잘 설명하는 작품으로 고른다. 더 적합한 작품으로 교체할 때는 이미지·대체 텍스트·고해상도 경로·작품명·연도·활동 지역·설명을 한 번에 교체한다.
@@ -43,4 +45,4 @@
 - 로컬 이미지 또는 기존 내장 이미지만 사용하며 외부 이미지 URL·다운로드 의존을 새로 만들지 않는다. 화가별 로컬 썸네일을 카드에 재사용할 때는 상대 경로와 `data-art-atlas-highres`가 같은 로컬 자산을 가리키는지 확인한다.
 - `<img src="data:image/...">` 형태의 base64 인라인 이미지는 사조 HTML에 넣지 않는다. 사용해야 하는 기존 내장 이미지는 `data/미술사조/images/`의 로컬 파일로 분리한 뒤 상대 경로로 참조한다.
 - 대표작 카드는 전체 폭 3열, 작은 화면 1열을 유지한다.
-- 완료 전 `node tools/validate-movement-canonical.js`, `node tools/validate-movement-sync-contract.js`, `node tools/validate-movement-documents-v1.js`, `node tools/validate-movement-links.js`, `node tools/normalize-country-development-tables.js --dry-run`, `node --check server.js`, `node tools/check-project-health.js`, `git diff --check`를 실행한다. 사조 HTML 제공 경로나 서버 콘텐츠 서비스를 고쳤다면 서버 재시작 뒤 `index.json` 등록 문서 전체의 HTTP 200 응답도 확인한다.
+- 완료 전 `node tools/validate-movement-canonical.js`, `node tools/validate-movement-sync-contract.js`, `node tools/validate-movement-documents-v1.js`, `node tools/validate-movement-representatives.js`, `node tools/validate-movement-sync-v1-runtime.js`, `node tools/complete-movement-sync-v1.js`, `node tools/validate-movement-links.js`, `node --check server.js`, `node tools/check-project-health.js`, `git diff --check`를 실행한다. 사조 HTML 제공 경로나 서버 콘텐츠 서비스를 고쳤다면 서버 재시작 뒤 `index.json` 등록 문서 전체의 HTTP 200 응답도 확인한다.

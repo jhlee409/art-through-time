@@ -11,6 +11,7 @@ const representativesFile = path.join(dataDir, 'art-movement-representatives.jso
 const migrationFile = path.join(dataDir, 'art-movement-document-migration.json');
 const movementsFile = path.join(dataDir, 'art-movements.json');
 const artistsFile = path.join(dataDir, 'artists.json');
+const artistIndexFile = path.join(dataDir, 'artists-index.json');
 const indexFile = path.join(documentDir, 'index.json');
 const reportFile = path.join(documentDir, 'REPRESENTATIVE_CONTENT.md');
 const generatedAt = '2026-08-28T00:00:00.000Z';
@@ -172,8 +173,8 @@ function rebuildRepresentativeSection(html, entries, parent, documentFile, count
   }).join('\n');
   const close = section.lastIndexOf('</section>');
   assert(close > 0, `${parent.id}: representative section closing tag is missing`);
-  const wrapper = `\n<div class="wrap art-atlas-representative-groups" data-art-atlas-content-source="data/art-movement-representatives.json">${groups}</div>\n`;
-  section = section.slice(0, close) + wrapper + section.slice(close);
+  const wrapper = `<div class="wrap art-atlas-representative-groups" data-art-atlas-content-source="data/art-movement-representatives.json">${groups}</div>`;
+  section = section.slice(0, close).replace(/\s*$/, '') + `\n${wrapper}\n` + section.slice(close);
   html = html.slice(0, sectionOpening.index) + section + html.slice(end);
   html = html.replace(/<style\b[^>]*\bid=["']art-atlas-representative-content-style["'][^>]*>[\s\S]*?<\/style>/gi, '');
   const style = '<style id="art-atlas-representative-content-style">.art-atlas-representative-groups{width:min(1534px,94vw);max-width:none;margin:0 auto}.art-atlas-representative-groups .art-atlas-submovement-group{margin:34px 0}.art-atlas-representative-groups .movement-work-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.art-atlas-representative-groups .movement-work-card{border:1px solid var(--line,#3a3f44);border-radius:8px;background:var(--panel,#181b1e);overflow:hidden}.art-atlas-representative-groups .movement-work-image{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#0e1114}.art-atlas-representative-groups .movement-work-image img{width:100%;height:100%;object-fit:cover}.art-atlas-representative-groups .art-atlas-image-pending{color:var(--muted,#b8bdc2);border-bottom:1px dashed var(--line,#3a3f44)}.art-atlas-representative-groups .movement-work-body{padding:16px}.art-atlas-representative-groups .movement-work-body h3{font-size:1.08rem;line-height:1.45;margin:0 0 8px}.art-atlas-representative-groups .work-meta{color:var(--muted,#b8bdc2);margin:.25rem 0 .85rem}.art-atlas-representative-groups .movement-selection-reason{padding:.75rem;border-left:3px solid var(--accent,#e2b85f);background:rgba(226,184,95,.08)}.art-atlas-representative-groups .movement-country-card-context{display:block;margin-top:.4rem;color:var(--muted,#b8bdc2);font-size:.85em;font-weight:400}.art-atlas-representative-groups .movement-country-card-context-region{display:block;color:var(--accent,#e2b85f);font-weight:700}.art-atlas-representative-groups .movement-country-card-context-feature{display:block}@media(max-width:980px){.art-atlas-representative-groups .movement-work-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:680px){.art-atlas-representative-groups .movement-work-grid{grid-template-columns:1fr}}</style>';
@@ -299,6 +300,14 @@ function main() {
   artistsData.metadata.updatedBy = 'phase-5-rebuild';
   artistsData.metadata.representativeContentSchema = representatives.schema;
   writeJson(artistsFile, artistsData);
+  writeJson(artistIndexFile, {
+    dataSchema: artistsData.dataSchema || 1,
+    metadata: artistsData.metadata || {},
+    artists: artistsData.artists.map(({works, ...artist}) => ({...artist, workCount: Array.isArray(works) ? works.length : 0, _detailLoaded: false})),
+    deletedArtists: Array.isArray(artistsData.deletedArtists) ? artistsData.deletedArtists : [],
+    historicalEvents: Array.isArray(artistsData.historicalEvents) ? artistsData.historicalEvents : [],
+    favoriteWorks: Array.isArray(artistsData.favoriteWorks) ? artistsData.favoriteWorks : []
+  });
   fs.writeFileSync(reportFile,
     '# 5단계 대표 화가·대표작 콘텐츠\n\n' +
     `- 정본 범주: ${entries.length}개\n` +

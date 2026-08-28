@@ -24766,7 +24766,6 @@
           "verified": true,
           "representative": true,
           "movementContribution": true,
-          "thumbnail": "data/thumbnails/artist-Q47551/wikidata-Q1899740.jpg",
           "thumbnailValidation": 2,
           "thumbnailCacheKey": "2026-08-20T02:41:22.202Z",
           "metadata": {
@@ -24779,7 +24778,7 @@
             "schema": 1,
             "image": {
               "status": "ready",
-              "localThumbnail": "data/thumbnails/artist-Q47551/wikidata-Q1899740.jpg",
+              "localThumbnail": "data/미술사조/images/Tizian-041-c1f1a35ec75c.jpg",
               "highResolution": "",
               "sourceUrl": "http://www.wikidata.org/entity/Q1899740",
               "sourceUrls": [
@@ -24790,7 +24789,8 @@
               "institution": ""
             }
           },
-          "origin": "art-movement-representatives"
+          "origin": "art-movement-representatives",
+          "thumbnail": "data/미술사조/images/Tizian-041-c1f1a35ec75c.jpg"
         },
         {
           "id": "wikidata-Q2046100",

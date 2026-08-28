@@ -2,10 +2,11 @@
   "dataSchema": 1,
   "metadata": {
     "createdAt": "2026-08-22T12:46:59.824Z",
-    "updatedAt": "2026-08-27T07:46:01.699Z",
+    "updatedAt": "2026-08-28T00:00:00.000Z",
     "createdBy": "jhlee409@gmail.com",
-    "updatedBy": "jhlee409@gmail.com",
-    "revision": 887
+    "updatedBy": "phase-5-rebuild",
+    "revision": 888,
+    "representativeContentSchema": 1
   },
   "artists": [
     {
@@ -102,11 +103,12 @@
       },
       "metadata": {
         "createdAt": "2026-08-21T11:02:06.057Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "featuredWorkIds": [
+        "wikidata-Q734834",
         "wikidata-Q220859"
       ],
       "artistSummary": {
@@ -243,9 +245,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-21T10:24:32.488Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "movement": {
         "ko": "이탈리아 르네상스",
@@ -376,9 +378,9 @@
       ],
       "metadata": {
         "createdAt": "2026-08-10T13:50:59.717Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "migration-tool",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [
@@ -397,8 +399,8 @@
         "en": "High Renaissance"
       },
       "featuredWorkIds": [
-        "wikidata-Q1217213",
         "wikidata-Q128910",
+        "wikidata-Q1217213",
         "wikidata-Q12418",
         "wikidata-Q563727"
       ],
@@ -475,9 +477,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-22T02:54:46.266Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "local image import",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "links": [
         {
@@ -1082,9 +1084,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-20T02:26:11.396Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "links": [
         {
@@ -1128,7 +1130,8 @@
         "르네상스"
       ],
       "submovements": [
-        "베네치아파"
+        "베네치아파",
+        "베네치아 르네상스"
       ],
       "primaryMovement": "르네상스",
       "regions": [
@@ -1184,6 +1187,7 @@
         "fetchedAt": "2026-08-22T09:10:55.892Z"
       },
       "featuredWorkIds": [
+        "rosso-fiorentino-elephant-fontainebleau-1533-1539",
         "rosso-fiorentino-bacchus-venus-cupid-1530s",
         "rosso-fiorentino-pieta-1537-1540",
         "rosso-fiorentino-descent-from-cross-1521"
@@ -1196,9 +1200,9 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-22T09:10:55.892Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "artistSummary": {
         "ko": [],
@@ -1207,7 +1211,9 @@
       "movements": [
         "매너리즘"
       ],
-      "submovements": [],
+      "submovements": [
+        "퐁텐블로파"
+      ],
       "primaryMovement": "매너리즘",
       "regions": [
         "이탈리아"
@@ -1268,9 +1274,9 @@
       ],
       "metadata": {
         "createdAt": "2026-08-22T07:28:01.522Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "artistSummary": {
         "ko": [],
@@ -1279,7 +1285,9 @@
       "movements": [
         "매너리즘"
       ],
-      "submovements": [],
+      "submovements": [
+        "이탈리아 매너리즘"
+      ],
       "primaryMovement": "매너리즘",
       "regions": [
         "이탈리아"
@@ -2413,9 +2421,9 @@
       ],
       "metadata": {
         "createdAt": "2026-08-10T14:28:29.862Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "migration-tool",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [
@@ -2439,7 +2447,8 @@
         "바로크"
       ],
       "submovements": [
-        "카라바조주의"
+        "카라바조주의",
+        "이탈리아 바로크"
       ],
       "primaryMovement": "바로크",
       "regions": [
@@ -2454,6 +2463,9 @@
       "listName": {
         "ko": "카라바조"
       },
+      "featuredWorkIds": [
+        "wikidata-Q969377"
+      ],
       "workCount": 60,
       "_detailLoaded": false
     },
@@ -2486,9 +2498,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-16T11:39:39.817Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "migration-tool",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "profileResolved": true,
       "aliases": {
@@ -2658,15 +2670,16 @@
         "wikidata": "https://www.wikidata.org/wiki/Q41554"
       },
       "featuredWorkIds": [
+        "poussin-death-of-germanicus-1627",
         "poussin-et-in-arcadia-ego-1637-1638",
         "poussin-judgment-of-solomon-1649",
         "poussin-summer-ruth-and-boaz-1660-1664"
       ],
       "metadata": {
         "createdAt": "2026-08-23T13:48:04.714Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "local download import",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "movements": [
         "바로크"
@@ -2897,9 +2910,9 @@
       ],
       "metadata": {
         "createdAt": "2026-08-23T11:19:38.260Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "local download import",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "artistSummary": {
         "ko": [],
@@ -3025,9 +3038,9 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-17T00:00:00.000Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "links": [
         {
@@ -3066,7 +3079,8 @@
         "바로크"
       ],
       "submovements": [
-        "네덜란드 황금기"
+        "네덜란드 황금기",
+        "네덜란드 황금기 회화"
       ],
       "primaryMovement": "바로크",
       "regions": [
@@ -3336,9 +3350,9 @@
       ],
       "metadata": {
         "createdAt": "2026-08-10T13:22:11.79Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "migration-tool",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [
@@ -3359,7 +3373,9 @@
       "movements": [
         "낭만주의"
       ],
-      "submovements": [],
+      "submovements": [
+        "독일 낭만주의"
+      ],
       "primaryMovement": "낭만주의",
       "regions": [
         "독일"
@@ -3375,6 +3391,9 @@
       "listName": {
         "ko": "프리드리히"
       },
+      "featuredWorkIds": [
+        "wikidata-Q311243"
+      ],
       "workCount": 60,
       "_detailLoaded": false
     },
@@ -3526,9 +3545,9 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-10T13:21:52.312Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "migration-tool",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [
@@ -3549,7 +3568,9 @@
       "movements": [
         "인상주의"
       ],
-      "submovements": [],
+      "submovements": [
+        "프랑스 인상주의"
+      ],
       "primaryMovement": "인상주의",
       "regions": [
         "프랑스"
@@ -3568,6 +3589,9 @@
       "listName": {
         "ko": "모네"
       },
+      "featuredWorkIds": [
+        "impression-sunrise"
+      ],
       "workCount": 60,
       "_detailLoaded": false
     },
@@ -3592,9 +3616,9 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-10T13:21:43.815Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "migration-tool",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [
@@ -3617,7 +3641,9 @@
       "movements": [
         "후기인상주의"
       ],
-      "submovements": [],
+      "submovements": [
+        "후기인상주의"
+      ],
       "primaryMovement": "후기인상주의",
       "movementActivityCountry": "프랑스",
       "regions": [
@@ -3634,6 +3660,9 @@
       "listName": {
         "ko": "반 고흐"
       },
+      "featuredWorkIds": [
+        "wikidata-Q45585"
+      ],
       "workCount": 60,
       "_detailLoaded": false
     },
@@ -3963,14 +3992,16 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-24T00:00:00Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "manual entry",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "movements": [
         "로코코"
       ],
-      "submovements": [],
+      "submovements": [
+        "프랑스 로코코"
+      ],
       "primaryMovement": "로코코",
       "regions": [
         "프랑스"
@@ -4170,14 +4201,16 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-24T00:00:00Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "manual entry",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "movements": [
         "로코코"
       ],
-      "submovements": [],
+      "submovements": [
+        "베네치아 로코코"
+      ],
       "primaryMovement": "로코코",
       "regions": [
         "이탈리아"
@@ -4563,14 +4596,16 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-24T00:00:00Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "manual entry",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "movements": [
         "신고전주의"
       ],
-      "submovements": [],
+      "submovements": [
+        "프랑스 신고전주의"
+      ],
       "primaryMovement": "신고전주의",
       "regions": [
         "프랑스"
@@ -4691,14 +4726,16 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-24T00:00:00Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "manual entry",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "movements": [
         "신고전주의"
       ],
-      "submovements": [],
+      "submovements": [
+        "로마 국제 신고전주의"
+      ],
       "primaryMovement": "신고전주의",
       "regions": [
         "이탈리아"
@@ -5068,7 +5105,9 @@
       "movements": [
         "낭만주의"
       ],
-      "submovements": [],
+      "submovements": [
+        "프랑스 낭만주의"
+      ],
       "primaryMovement": "낭만주의",
       "regions": [
         "프랑스"
@@ -5082,9 +5121,9 @@
       "activeTo": 1863,
       "metadata": {
         "createdAt": "2026-08-25T10:02:06.175Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "listName": {
         "ko": "들라크루아"
@@ -5128,7 +5167,9 @@
       "movements": [
         "낭만주의"
       ],
-      "submovements": [],
+      "submovements": [
+        "스페인 낭만주의"
+      ],
       "primaryMovement": "낭만주의",
       "regions": [
         "스페인"
@@ -5142,9 +5183,9 @@
       "activeTo": 1828,
       "metadata": {
         "createdAt": "2026-08-25T10:02:06.175Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "listName": {
         "ko": "고야"
@@ -5188,7 +5229,9 @@
       "movements": [
         "낭만주의"
       ],
-      "submovements": [],
+      "submovements": [
+        "영국 낭만주의"
+      ],
       "primaryMovement": "낭만주의",
       "regions": [
         "영국"
@@ -5202,9 +5245,9 @@
       "activeTo": 1851,
       "metadata": {
         "createdAt": "2026-08-25T10:02:06.175Z",
-        "updatedAt": "2026-08-27T07:46:01.699Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "listName": {
         "ko": "터너"
@@ -5542,6 +5585,2018 @@
       "activeTo": 1743,
       "listName": {
         "ko": "리고"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-courbet",
+      "name": {
+        "ko": "귀스타브 쿠르베",
+        "en": "Gustave Courbet"
+      },
+      "birth": 1819,
+      "death": 1877,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "French"
+      },
+      "movement": {
+        "ko": "사실주의",
+        "en": "Realism"
+      },
+      "featuredWorkIds": [
+        "courbet-burial-at-ornans"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "사실주의"
+      ],
+      "submovements": [
+        "프랑스 사실주의"
+      ],
+      "primaryMovement": "사실주의",
+      "regions": [
+        "프랑스"
+      ],
+      "activeFrom": 1839,
+      "activeTo": 1877,
+      "listName": {
+        "ko": "쿠르베"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-repin",
+      "name": {
+        "ko": "일리야 레핀",
+        "en": "Ilya Repin"
+      },
+      "birth": 1844,
+      "death": 1930,
+      "nationality": {
+        "ko": "러시아",
+        "en": "Russian"
+      },
+      "movement": {
+        "ko": "사실주의",
+        "en": "Realism"
+      },
+      "featuredWorkIds": [
+        "repin-barge-haulers-volga"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "사실주의"
+      ],
+      "submovements": [
+        "러시아 사실주의"
+      ],
+      "primaryMovement": "사실주의",
+      "regions": [
+        "러시아"
+      ],
+      "activeFrom": 1864,
+      "activeTo": 1930,
+      "listName": {
+        "ko": "레핀"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-seurat",
+      "name": {
+        "ko": "조르주 쇠라",
+        "en": "Georges Seurat"
+      },
+      "birth": 1859,
+      "death": 1891,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "French"
+      },
+      "movement": {
+        "ko": "후기인상주의",
+        "en": "Post-Impressionism"
+      },
+      "featuredWorkIds": [
+        "seurat-la-grande-jatte"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "후기인상주의"
+      ],
+      "submovements": [
+        "신인상주의"
+      ],
+      "primaryMovement": "후기인상주의",
+      "regions": [
+        "프랑스"
+      ],
+      "activeFrom": 1879,
+      "activeTo": 1891,
+      "listName": {
+        "ko": "쇠라"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-gauguin",
+      "name": {
+        "ko": "폴 고갱",
+        "en": "Paul Gauguin"
+      },
+      "birth": 1848,
+      "death": 1903,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "French"
+      },
+      "movement": {
+        "ko": "후기인상주의",
+        "en": "Post-Impressionism"
+      },
+      "featuredWorkIds": [
+        "gauguin-vision-after-sermon"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "후기인상주의"
+      ],
+      "submovements": [
+        "퐁타방파와 종합주의"
+      ],
+      "primaryMovement": "후기인상주의",
+      "regions": [
+        "프랑스"
+      ],
+      "activeFrom": 1868,
+      "activeTo": 1903,
+      "listName": {
+        "ko": "고갱"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-kirchner",
+      "name": {
+        "ko": "에른스트 루트비히 키르히너",
+        "en": "Ernst Ludwig Kirchner"
+      },
+      "birth": 1880,
+      "death": 1938,
+      "nationality": {
+        "ko": "독일",
+        "en": "German"
+      },
+      "movement": {
+        "ko": "표현주의",
+        "en": "Expressionism"
+      },
+      "featuredWorkIds": [
+        "kirchner-street-dresden"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "표현주의"
+      ],
+      "submovements": [
+        "다리파"
+      ],
+      "primaryMovement": "표현주의",
+      "regions": [
+        "독일"
+      ],
+      "activeFrom": 1900,
+      "activeTo": 1938,
+      "listName": {
+        "ko": "키르히너"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-kandinsky",
+      "name": {
+        "ko": "바실리 칸딘스키",
+        "en": "Wassily Kandinsky"
+      },
+      "birth": 1866,
+      "death": 1944,
+      "nationality": {
+        "ko": "러시아·독일 활동",
+        "en": "Russian, active in Germany"
+      },
+      "movement": {
+        "ko": "표현주의",
+        "en": "Expressionism"
+      },
+      "featuredWorkIds": [
+        "kandinsky-composition-vii"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "표현주의"
+      ],
+      "submovements": [
+        "청기사파"
+      ],
+      "primaryMovement": "표현주의",
+      "regions": [
+        "러시아·독일 활동"
+      ],
+      "activeFrom": 1886,
+      "activeTo": 1944,
+      "listName": {
+        "ko": "칸딘스키"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-schiele",
+      "name": {
+        "ko": "에곤 실레",
+        "en": "Egon Schiele"
+      },
+      "birth": 1890,
+      "death": 1918,
+      "nationality": {
+        "ko": "오스트리아",
+        "en": "Austrian"
+      },
+      "movement": {
+        "ko": "표현주의",
+        "en": "Expressionism"
+      },
+      "featuredWorkIds": [
+        "schiele-self-portrait-physalis"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "표현주의"
+      ],
+      "submovements": [
+        "오스트리아 표현주의"
+      ],
+      "primaryMovement": "표현주의",
+      "regions": [
+        "오스트리아"
+      ],
+      "activeFrom": 1910,
+      "activeTo": 1918,
+      "listName": {
+        "ko": "실레"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-picasso",
+      "name": {
+        "ko": "파블로 피카소",
+        "en": "Pablo Picasso"
+      },
+      "birth": 1881,
+      "death": 1973,
+      "nationality": {
+        "ko": "스페인·프랑스 활동",
+        "en": "Spanish, active in France"
+      },
+      "movement": {
+        "ko": "입체주의",
+        "en": "Cubism"
+      },
+      "featuredWorkIds": [
+        "picasso-ma-jolie"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "입체주의"
+      ],
+      "submovements": [
+        "분석적 입체주의"
+      ],
+      "primaryMovement": "입체주의",
+      "regions": [
+        "스페인·프랑스 활동"
+      ],
+      "activeFrom": 1901,
+      "activeTo": 1973,
+      "listName": {
+        "ko": "피카소"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-gris",
+      "name": {
+        "ko": "후안 그리스",
+        "en": "Juan Gris"
+      },
+      "birth": 1887,
+      "death": 1927,
+      "nationality": {
+        "ko": "스페인·프랑스 활동",
+        "en": "Spanish, active in France"
+      },
+      "movement": {
+        "ko": "입체주의",
+        "en": "Cubism"
+      },
+      "featuredWorkIds": [
+        "gris-portrait-picasso"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "입체주의"
+      ],
+      "submovements": [
+        "종합적 입체주의"
+      ],
+      "primaryMovement": "입체주의",
+      "regions": [
+        "스페인·프랑스 활동"
+      ],
+      "activeFrom": 1907,
+      "activeTo": 1927,
+      "listName": {
+        "ko": "그리스"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-malevich",
+      "name": {
+        "ko": "카지미르 말레비치",
+        "en": "Kazimir Malevich"
+      },
+      "birth": 1879,
+      "death": 1935,
+      "nationality": {
+        "ko": "러시아 제국·소련",
+        "en": "Russian Empire and Soviet"
+      },
+      "movement": {
+        "ko": "러시아 아방가르드",
+        "en": "Russian avant-garde"
+      },
+      "featuredWorkIds": [
+        "malevich-black-square"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "러시아 아방가르드"
+      ],
+      "submovements": [
+        "절대주의"
+      ],
+      "primaryMovement": "러시아 아방가르드",
+      "regions": [
+        "러시아 제국·소련"
+      ],
+      "activeFrom": 1899,
+      "activeTo": 1935,
+      "listName": {
+        "ko": "말레비치"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-rodchenko",
+      "name": {
+        "ko": "알렉산드르 로드첸코",
+        "en": "Aleksandr Rodchenko"
+      },
+      "birth": 1891,
+      "death": 1956,
+      "nationality": {
+        "ko": "러시아·소련",
+        "en": "Russian and Soviet"
+      },
+      "movement": {
+        "ko": "러시아 아방가르드",
+        "en": "Russian avant-garde"
+      },
+      "featuredWorkIds": [
+        "rodchenko-pure-colors"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "러시아 아방가르드"
+      ],
+      "submovements": [
+        "구성주의"
+      ],
+      "primaryMovement": "러시아 아방가르드",
+      "regions": [
+        "러시아·소련"
+      ],
+      "activeFrom": 1911,
+      "activeTo": 1956,
+      "listName": {
+        "ko": "로드첸코"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-taeuber-arp",
+      "name": {
+        "ko": "조피 토이버아르프",
+        "en": "Sophie Taeuber-Arp"
+      },
+      "birth": 1889,
+      "death": 1943,
+      "nationality": {
+        "ko": "스위스",
+        "en": "Swiss"
+      },
+      "movement": {
+        "ko": "다다",
+        "en": "Dada"
+      },
+      "featuredWorkIds": [
+        "taeuber-arp-dada-head"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "다다"
+      ],
+      "submovements": [
+        "취리히 다다"
+      ],
+      "primaryMovement": "다다",
+      "regions": [
+        "스위스"
+      ],
+      "activeFrom": 1909,
+      "activeTo": 1943,
+      "listName": {
+        "ko": "토이버아르프"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-hoch",
+      "name": {
+        "ko": "한나 회흐",
+        "en": "Hannah Hoch"
+      },
+      "birth": 1889,
+      "death": 1978,
+      "nationality": {
+        "ko": "독일",
+        "en": "German"
+      },
+      "movement": {
+        "ko": "다다",
+        "en": "Dada"
+      },
+      "featuredWorkIds": [
+        "hoch-kitchen-knife"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "다다"
+      ],
+      "submovements": [
+        "베를린 다다"
+      ],
+      "primaryMovement": "다다",
+      "regions": [
+        "독일"
+      ],
+      "activeFrom": 1909,
+      "activeTo": 1978,
+      "listName": {
+        "ko": "회흐"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-duchamp",
+      "name": {
+        "ko": "마르셀 뒤샹",
+        "en": "Marcel Duchamp"
+      },
+      "birth": 1887,
+      "death": 1968,
+      "nationality": {
+        "ko": "프랑스·미국 활동",
+        "en": "French and American"
+      },
+      "movement": {
+        "ko": "다다",
+        "en": "Dada"
+      },
+      "featuredWorkIds": [
+        "duchamp-fountain"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "다다"
+      ],
+      "submovements": [
+        "뉴욕 다다"
+      ],
+      "primaryMovement": "다다",
+      "regions": [
+        "프랑스·미국 활동"
+      ],
+      "activeFrom": 1907,
+      "activeTo": 1968,
+      "listName": {
+        "ko": "뒤샹"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-pollock",
+      "name": {
+        "ko": "잭슨 폴록",
+        "en": "Jackson Pollock"
+      },
+      "birth": 1912,
+      "death": 1956,
+      "nationality": {
+        "ko": "미국",
+        "en": "American"
+      },
+      "movement": {
+        "ko": "추상표현주의",
+        "en": "Abstract Expressionism"
+      },
+      "featuredWorkIds": [
+        "pollock-autumn-rhythm-30"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "추상표현주의"
+      ],
+      "submovements": [
+        "액션 페인팅"
+      ],
+      "primaryMovement": "추상표현주의",
+      "regions": [
+        "미국"
+      ],
+      "activeFrom": 1932,
+      "activeTo": 1956,
+      "listName": {
+        "ko": "폴록"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-rothko",
+      "name": {
+        "ko": "마크 로스코",
+        "en": "Mark Rothko"
+      },
+      "birth": 1903,
+      "death": 1970,
+      "nationality": {
+        "ko": "미국",
+        "en": "American"
+      },
+      "movement": {
+        "ko": "추상표현주의",
+        "en": "Abstract Expressionism"
+      },
+      "featuredWorkIds": [
+        "rothko-no-14-1960"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "추상표현주의"
+      ],
+      "submovements": [
+        "색면회화"
+      ],
+      "primaryMovement": "추상표현주의",
+      "regions": [
+        "미국"
+      ],
+      "activeFrom": 1923,
+      "activeTo": 1970,
+      "listName": {
+        "ko": "로스코"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-hamilton",
+      "name": {
+        "ko": "리처드 해밀턴",
+        "en": "Richard Hamilton"
+      },
+      "birth": 1922,
+      "death": 2011,
+      "nationality": {
+        "ko": "영국",
+        "en": "British"
+      },
+      "movement": {
+        "ko": "팝아트",
+        "en": "Pop Art"
+      },
+      "featuredWorkIds": [
+        "hamilton-just-what-is-it"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "팝아트"
+      ],
+      "submovements": [
+        "영국 팝아트"
+      ],
+      "primaryMovement": "팝아트",
+      "regions": [
+        "영국"
+      ],
+      "activeFrom": 1942,
+      "activeTo": 2011,
+      "listName": {
+        "ko": "해밀턴"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-warhol",
+      "name": {
+        "ko": "앤디 워홀",
+        "en": "Andy Warhol"
+      },
+      "birth": 1928,
+      "death": 1987,
+      "nationality": {
+        "ko": "미국",
+        "en": "American"
+      },
+      "movement": {
+        "ko": "팝아트",
+        "en": "Pop Art"
+      },
+      "featuredWorkIds": [
+        "warhol-marilyn-diptych"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "팝아트"
+      ],
+      "submovements": [
+        "미국 팝아트"
+      ],
+      "primaryMovement": "팝아트",
+      "regions": [
+        "미국"
+      ],
+      "activeFrom": 1948,
+      "activeTo": 1987,
+      "listName": {
+        "ko": "워홀"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-sherman",
+      "name": {
+        "ko": "신디 셔먼",
+        "en": "Cindy Sherman"
+      },
+      "birth": 1954,
+      "nationality": {
+        "ko": "미국",
+        "en": "American"
+      },
+      "movement": {
+        "ko": "포스트모더니즘",
+        "en": "Postmodernism"
+      },
+      "featuredWorkIds": [
+        "sherman-untitled-film-still-21"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "포스트모더니즘"
+      ],
+      "submovements": [
+        "차용미술과 픽처스 제너레이션"
+      ],
+      "primaryMovement": "포스트모더니즘",
+      "regions": [
+        "미국"
+      ],
+      "activeFrom": 1974,
+      "listName": {
+        "ko": "셔먼"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-basquiat",
+      "name": {
+        "ko": "장미셸 바스키아",
+        "en": "Jean-Michel Basquiat"
+      },
+      "birth": 1960,
+      "death": 1988,
+      "nationality": {
+        "ko": "미국",
+        "en": "American"
+      },
+      "movement": {
+        "ko": "포스트모더니즘",
+        "en": "Postmodernism"
+      },
+      "featuredWorkIds": [
+        "basquiat-untitled-1981"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "포스트모더니즘"
+      ],
+      "submovements": [
+        "신표현주의"
+      ],
+      "primaryMovement": "포스트모더니즘",
+      "regions": [
+        "미국"
+      ],
+      "activeFrom": 1980,
+      "activeTo": 1988,
+      "listName": {
+        "ko": "바스키아"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-bouguereau",
+      "name": {
+        "ko": "윌리엄아돌프 부그로",
+        "en": "William-Adolphe Bouguereau"
+      },
+      "birth": 1825,
+      "death": 1905,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "French"
+      },
+      "movement": {
+        "ko": "아카데미즘",
+        "en": "Academicism"
+      },
+      "featuredWorkIds": [
+        "bouguereau-birth-of-venus"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "아카데미즘"
+      ],
+      "submovements": [
+        "아카데미즘"
+      ],
+      "primaryMovement": "아카데미즘",
+      "regions": [
+        "프랑스"
+      ],
+      "activeFrom": 1845,
+      "activeTo": 1905,
+      "listName": {
+        "ko": "부그로"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-hassam",
+      "name": {
+        "ko": "차일드 해섬",
+        "en": "Childe Hassam"
+      },
+      "birth": 1859,
+      "death": 1935,
+      "nationality": {
+        "ko": "미국",
+        "en": "American"
+      },
+      "movement": {
+        "ko": "인상주의",
+        "en": "Impressionism"
+      },
+      "featuredWorkIds": [
+        "hassam-avenue-in-the-rain"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "인상주의"
+      ],
+      "submovements": [
+        "미국 인상주의"
+      ],
+      "primaryMovement": "인상주의",
+      "regions": [
+        "미국"
+      ],
+      "activeFrom": 1879,
+      "activeTo": 1935,
+      "listName": {
+        "ko": "해섬"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-moreau",
+      "name": {
+        "ko": "귀스타브 모로",
+        "en": "Gustave Moreau"
+      },
+      "birth": 1826,
+      "death": 1898,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "French"
+      },
+      "movement": {
+        "ko": "상징주의",
+        "en": "Symbolism"
+      },
+      "featuredWorkIds": [
+        "moreau-oedipus-sphinx"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "상징주의"
+      ],
+      "submovements": [
+        "프랑스·벨기에 상징주의"
+      ],
+      "primaryMovement": "상징주의",
+      "regions": [
+        "프랑스"
+      ],
+      "activeFrom": 1846,
+      "activeTo": 1898,
+      "listName": {
+        "ko": "모로"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-munch",
+      "name": {
+        "ko": "에드바르 뭉크",
+        "en": "Edvard Munch"
+      },
+      "birth": 1863,
+      "death": 1944,
+      "nationality": {
+        "ko": "노르웨이",
+        "en": "Norwegian"
+      },
+      "movement": {
+        "ko": "상징주의",
+        "en": "Symbolism"
+      },
+      "featuredWorkIds": [
+        "munch-the-scream"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "상징주의"
+      ],
+      "submovements": [
+        "중부·북유럽 상징주의"
+      ],
+      "primaryMovement": "상징주의",
+      "regions": [
+        "노르웨이"
+      ],
+      "activeFrom": 1883,
+      "activeTo": 1944,
+      "listName": {
+        "ko": "뭉크"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-mucha",
+      "name": {
+        "ko": "알폰스 무하",
+        "en": "Alphonse Mucha"
+      },
+      "birth": 1860,
+      "death": 1939,
+      "nationality": {
+        "ko": "체코·프랑스 활동",
+        "en": "Czech, active in France"
+      },
+      "movement": {
+        "ko": "아르누보",
+        "en": "Art Nouveau"
+      },
+      "featuredWorkIds": [
+        "mucha-the-seasons"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "아르누보"
+      ],
+      "submovements": [
+        "프랑스·벨기에 아르누보"
+      ],
+      "primaryMovement": "아르누보",
+      "regions": [
+        "체코·프랑스 활동"
+      ],
+      "activeFrom": 1880,
+      "activeTo": 1939,
+      "listName": {
+        "ko": "무하"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-klimt",
+      "name": {
+        "ko": "구스타프 클림트",
+        "en": "Gustav Klimt"
+      },
+      "birth": 1862,
+      "death": 1918,
+      "nationality": {
+        "ko": "오스트리아",
+        "en": "Austrian"
+      },
+      "movement": {
+        "ko": "아르누보",
+        "en": "Art Nouveau"
+      },
+      "featuredWorkIds": [
+        "klimt-the-kiss"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "아르누보"
+      ],
+      "submovements": [
+        "빈 분리파"
+      ],
+      "primaryMovement": "아르누보",
+      "regions": [
+        "오스트리아"
+      ],
+      "activeFrom": 1882,
+      "activeTo": 1918,
+      "listName": {
+        "ko": "클림트"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-matisse",
+      "name": {
+        "ko": "앙리 마티스",
+        "en": "Henri Matisse"
+      },
+      "birth": 1869,
+      "death": 1954,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "French"
+      },
+      "movement": {
+        "ko": "야수주의",
+        "en": "Fauvism"
+      },
+      "featuredWorkIds": [
+        "matisse-woman-with-hat"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "야수주의"
+      ],
+      "submovements": [
+        "마티스·샤투 중심 야수파"
+      ],
+      "primaryMovement": "야수주의",
+      "regions": [
+        "프랑스"
+      ],
+      "activeFrom": 1889,
+      "activeTo": 1954,
+      "listName": {
+        "ko": "마티스"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-dufy",
+      "name": {
+        "ko": "라울 뒤피",
+        "en": "Raoul Dufy"
+      },
+      "birth": 1877,
+      "death": 1953,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "French"
+      },
+      "movement": {
+        "ko": "야수주의",
+        "en": "Fauvism"
+      },
+      "featuredWorkIds": [
+        "dufy-beach-sainte-adresse"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "야수주의"
+      ],
+      "submovements": [
+        "르아브르파 야수주의"
+      ],
+      "primaryMovement": "야수주의",
+      "regions": [
+        "프랑스"
+      ],
+      "activeFrom": 1897,
+      "activeTo": 1953,
+      "listName": {
+        "ko": "뒤피"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-boccioni",
+      "name": {
+        "ko": "움베르토 보초니",
+        "en": "Umberto Boccioni"
+      },
+      "birth": 1882,
+      "death": 1916,
+      "nationality": {
+        "ko": "이탈리아",
+        "en": "Italian"
+      },
+      "movement": {
+        "ko": "미래주의",
+        "en": "Futurism"
+      },
+      "featuredWorkIds": [
+        "boccioni-unique-forms"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "미래주의"
+      ],
+      "submovements": [
+        "이탈리아 미래주의"
+      ],
+      "primaryMovement": "미래주의",
+      "regions": [
+        "이탈리아"
+      ],
+      "activeFrom": 1902,
+      "activeTo": 1916,
+      "listName": {
+        "ko": "보초니"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-goncharova",
+      "name": {
+        "ko": "나탈리아 곤차로바",
+        "en": "Natalia Goncharova"
+      },
+      "birth": 1881,
+      "death": 1962,
+      "nationality": {
+        "ko": "러시아·프랑스 활동",
+        "en": "Russian, active in France"
+      },
+      "movement": {
+        "ko": "미래주의",
+        "en": "Futurism"
+      },
+      "featuredWorkIds": [
+        "goncharova-cyclist"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "미래주의"
+      ],
+      "submovements": [
+        "러시아 입체미래주의"
+      ],
+      "primaryMovement": "미래주의",
+      "regions": [
+        "러시아·프랑스 활동"
+      ],
+      "activeFrom": 1901,
+      "activeTo": 1962,
+      "listName": {
+        "ko": "곤차로바"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-mondrian",
+      "name": {
+        "ko": "피트 몬드리안",
+        "en": "Piet Mondrian"
+      },
+      "birth": 1872,
+      "death": 1944,
+      "nationality": {
+        "ko": "네덜란드",
+        "en": "Dutch"
+      },
+      "movement": {
+        "ko": "데 스틸",
+        "en": "De Stijl"
+      },
+      "featuredWorkIds": [
+        "mondrian-composition-1921"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "데 스틸"
+      ],
+      "submovements": [
+        "데 스틸"
+      ],
+      "primaryMovement": "데 스틸",
+      "regions": [
+        "네덜란드"
+      ],
+      "activeFrom": 1892,
+      "activeTo": 1944,
+      "listName": {
+        "ko": "몬드리안"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-gropius",
+      "name": {
+        "ko": "발터 그로피우스",
+        "en": "Walter Gropius"
+      },
+      "birth": 1883,
+      "death": 1969,
+      "nationality": {
+        "ko": "독일·미국 활동",
+        "en": "German and American"
+      },
+      "movement": {
+        "ko": "바우하우스",
+        "en": "Bauhaus"
+      },
+      "featuredWorkIds": [
+        "gropius-bauhaus-dessau"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "바우하우스"
+      ],
+      "submovements": [
+        "바우하우스"
+      ],
+      "primaryMovement": "바우하우스",
+      "regions": [
+        "독일·미국 활동"
+      ],
+      "activeFrom": 1903,
+      "activeTo": 1969,
+      "listName": {
+        "ko": "그로피우스"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-miro",
+      "name": {
+        "ko": "호안 미로",
+        "en": "Joan Miro"
+      },
+      "birth": 1893,
+      "death": 1983,
+      "nationality": {
+        "ko": "스페인·카탈루냐",
+        "en": "Spanish and Catalan"
+      },
+      "movement": {
+        "ko": "초현실주의",
+        "en": "Surrealism"
+      },
+      "featuredWorkIds": [
+        "miro-harlequins-carnival"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "초현실주의"
+      ],
+      "submovements": [
+        "자동기술적 초현실주의"
+      ],
+      "primaryMovement": "초현실주의",
+      "regions": [
+        "스페인·카탈루냐"
+      ],
+      "activeFrom": 1913,
+      "activeTo": 1983,
+      "listName": {
+        "ko": "미로"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-dali",
+      "name": {
+        "ko": "살바도르 달리",
+        "en": "Salvador Dali"
+      },
+      "birth": 1904,
+      "death": 1989,
+      "nationality": {
+        "ko": "스페인",
+        "en": "Spanish"
+      },
+      "movement": {
+        "ko": "초현실주의",
+        "en": "Surrealism"
+      },
+      "featuredWorkIds": [
+        "dali-persistence-memory"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "초현실주의"
+      ],
+      "submovements": [
+        "환영적 초현실주의"
+      ],
+      "primaryMovement": "초현실주의",
+      "regions": [
+        "스페인"
+      ],
+      "activeFrom": 1924,
+      "activeTo": 1989,
+      "listName": {
+        "ko": "달리"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-rivera",
+      "name": {
+        "ko": "디에고 리베라",
+        "en": "Diego Rivera"
+      },
+      "birth": 1886,
+      "death": 1957,
+      "nationality": {
+        "ko": "멕시코",
+        "en": "Mexican"
+      },
+      "movement": {
+        "ko": "멕시코 벽화운동",
+        "en": "Mexican Muralism"
+      },
+      "featuredWorkIds": [
+        "rivera-detroit-industry"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "멕시코 벽화운동"
+      ],
+      "submovements": [
+        "멕시코 벽화운동"
+      ],
+      "primaryMovement": "멕시코 벽화운동",
+      "regions": [
+        "멕시코"
+      ],
+      "activeFrom": 1906,
+      "activeTo": 1957,
+      "listName": {
+        "ko": "리베라"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-shahn",
+      "name": {
+        "ko": "벤 샨",
+        "en": "Ben Shahn"
+      },
+      "birth": 1898,
+      "death": 1969,
+      "nationality": {
+        "ko": "미국",
+        "en": "American"
+      },
+      "movement": {
+        "ko": "사회적 사실주의",
+        "en": "Social Realism"
+      },
+      "featuredWorkIds": [
+        "shahn-sacco-vanzetti"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "사회적 사실주의"
+      ],
+      "submovements": [
+        "사회적 사실주의"
+      ],
+      "primaryMovement": "사회적 사실주의",
+      "regions": [
+        "미국"
+      ],
+      "activeFrom": 1918,
+      "activeTo": 1969,
+      "listName": {
+        "ko": "샨"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-deyneka",
+      "name": {
+        "ko": "알렉산드르 데이네카",
+        "en": "Aleksandr Deyneka"
+      },
+      "birth": 1899,
+      "death": 1969,
+      "nationality": {
+        "ko": "소련",
+        "en": "Soviet"
+      },
+      "movement": {
+        "ko": "사회주의적 사실주의",
+        "en": "Socialist Realism"
+      },
+      "featuredWorkIds": [
+        "deyneka-defence-petrograd"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "사회주의적 사실주의"
+      ],
+      "submovements": [
+        "사회주의적 사실주의"
+      ],
+      "primaryMovement": "사회주의적 사실주의",
+      "regions": [
+        "소련"
+      ],
+      "activeFrom": 1919,
+      "activeTo": 1969,
+      "listName": {
+        "ko": "데이네카"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-dubuffet",
+      "name": {
+        "ko": "장 뒤뷔페",
+        "en": "Jean Dubuffet"
+      },
+      "birth": 1901,
+      "death": 1985,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "French"
+      },
+      "movement": {
+        "ko": "앵포르멜",
+        "en": "Art Informel"
+      },
+      "featuredWorkIds": [
+        "dubuffet-corps-de-dame"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "앵포르멜"
+      ],
+      "submovements": [
+        "앵포르멜"
+      ],
+      "primaryMovement": "앵포르멜",
+      "regions": [
+        "프랑스"
+      ],
+      "activeFrom": 1921,
+      "activeTo": 1985,
+      "listName": {
+        "ko": "뒤뷔페"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-klein",
+      "name": {
+        "ko": "이브 클랭",
+        "en": "Yves Klein"
+      },
+      "birth": 1928,
+      "death": 1962,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "French"
+      },
+      "movement": {
+        "ko": "누보 레알리슴",
+        "en": "Nouveau Réalisme"
+      },
+      "featuredWorkIds": [
+        "klein-anthropometry-blue-epoch"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "누보 레알리슴"
+      ],
+      "submovements": [
+        "누보 레알리슴"
+      ],
+      "primaryMovement": "누보 레알리슴",
+      "regions": [
+        "프랑스"
+      ],
+      "activeFrom": 1948,
+      "activeTo": 1962,
+      "listName": {
+        "ko": "클랭"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-judd",
+      "name": {
+        "ko": "도널드 저드",
+        "en": "Donald Judd"
+      },
+      "birth": 1928,
+      "death": 1994,
+      "nationality": {
+        "ko": "미국",
+        "en": "American"
+      },
+      "movement": {
+        "ko": "미니멀리즘",
+        "en": "Minimalism"
+      },
+      "featuredWorkIds": [
+        "judd-untitled-stack-1967"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "미니멀리즘"
+      ],
+      "submovements": [
+        "미니멀리즘"
+      ],
+      "primaryMovement": "미니멀리즘",
+      "regions": [
+        "미국"
+      ],
+      "activeFrom": 1948,
+      "activeTo": 1994,
+      "listName": {
+        "ko": "저드"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-kosuth",
+      "name": {
+        "ko": "조지프 코수스",
+        "en": "Joseph Kosuth"
+      },
+      "birth": 1945,
+      "nationality": {
+        "ko": "미국",
+        "en": "American"
+      },
+      "movement": {
+        "ko": "개념미술",
+        "en": "Conceptual Art"
+      },
+      "featuredWorkIds": [
+        "kosuth-one-three-chairs"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "개념미술"
+      ],
+      "submovements": [
+        "아이디어·언어 중심 개념미술"
+      ],
+      "primaryMovement": "개념미술",
+      "regions": [
+        "미국"
+      ],
+      "activeFrom": 1965,
+      "listName": {
+        "ko": "코수스"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-paik",
+      "name": {
+        "ko": "백남준",
+        "en": "Nam June Paik"
+      },
+      "birth": 1932,
+      "death": 2006,
+      "nationality": {
+        "ko": "한국·미국 활동",
+        "en": "Korean and American"
+      },
+      "movement": {
+        "ko": "개념미술",
+        "en": "Conceptual Art"
+      },
+      "featuredWorkIds": [
+        "paik-tv-buddha"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "개념미술"
+      ],
+      "submovements": [
+        "플럭서스"
+      ],
+      "primaryMovement": "개념미술",
+      "regions": [
+        "한국·미국 활동"
+      ],
+      "activeFrom": 1952,
+      "activeTo": 2006,
+      "listName": {
+        "ko": "백남준"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-vasarely",
+      "name": {
+        "ko": "빅토르 바자렐리",
+        "en": "Victor Vasarely"
+      },
+      "birth": 1906,
+      "death": 1997,
+      "nationality": {
+        "ko": "헝가리·프랑스 활동",
+        "en": "Hungarian and French"
+      },
+      "movement": {
+        "ko": "옵아트",
+        "en": "Op Art"
+      },
+      "featuredWorkIds": [
+        "vasarely-vega-nor"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "옵아트"
+      ],
+      "submovements": [
+        "옵아트"
+      ],
+      "primaryMovement": "옵아트",
+      "regions": [
+        "헝가리·프랑스 활동"
+      ],
+      "activeFrom": 1926,
+      "activeTo": 1997,
+      "listName": {
+        "ko": "바자렐리"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-abramovic",
+      "name": {
+        "ko": "마리나 아브라모비치",
+        "en": "Marina Abramovic"
+      },
+      "birth": 1946,
+      "nationality": {
+        "ko": "세르비아",
+        "en": "Serbian"
+      },
+      "movement": {
+        "ko": "현대미술",
+        "en": "Contemporary Art"
+      },
+      "featuredWorkIds": [
+        "abramovic-artist-present"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "현대미술"
+      ],
+      "submovements": [
+        "설치·퍼포먼스 미술"
+      ],
+      "primaryMovement": "현대미술",
+      "regions": [
+        "세르비아"
+      ],
+      "activeFrom": 1966,
+      "listName": {
+        "ko": "아브라모비치"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-steyerl",
+      "name": {
+        "ko": "히토 슈타이얼",
+        "en": "Hito Steyerl"
+      },
+      "birth": 1966,
+      "nationality": {
+        "ko": "독일",
+        "en": "German"
+      },
+      "movement": {
+        "ko": "현대미술",
+        "en": "Contemporary Art"
+      },
+      "featuredWorkIds": [
+        "steyerl-how-not-seen"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "현대미술"
+      ],
+      "submovements": [
+        "뉴미디어·디지털 아트"
+      ],
+      "primaryMovement": "현대미술",
+      "regions": [
+        "독일"
+      ],
+      "activeFrom": 1986,
+      "listName": {
+        "ko": "슈타이얼"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-art-atlas-banksy",
+      "name": {
+        "ko": "뱅크시",
+        "en": "Banksy"
+      },
+      "nationality": {
+        "ko": "영국",
+        "en": "British"
+      },
+      "movement": {
+        "ko": "현대미술",
+        "en": "Contemporary Art"
+      },
+      "featuredWorkIds": [
+        "banksy-girl-balloon"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "현대미술"
+      ],
+      "submovements": [
+        "거리·참여 미술"
+      ],
+      "primaryMovement": "현대미술",
+      "regions": [
+        "영국"
+      ],
+      "listName": {
+        "ko": "뱅크시"
+      },
+      "metadata": {
+        "createdAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "createdBy": "phase-5-rebuild",
+        "updatedBy": "phase-5-rebuild"
       },
       "workCount": 1,
       "_detailLoaded": false

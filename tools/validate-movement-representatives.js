@@ -59,7 +59,7 @@ function validateDocument(parent, entries, artistMap) {
   const html = fs.readFileSync(documentFile, 'utf8');
   const rootTag = /<html\b[^>]*>/i.exec(html)?.[0] || '';
   assert(attr(rootTag, attrs.syncVersion) === contract.documentSyncVersion, `${parent.id}: sync version mismatch`);
-  assert(attr(rootTag, attrs.syncState) === 'content', `${parent.id}: phase 5 document must be in content state`);
+  assert(attr(rootTag, attrs.syncState) === 'complete', `${parent.id}: phase 6 document must be in complete state`);
   assert(attr(rootTag, attrs.parentId) === parent.id, `${parent.id}: parent ID mismatch`);
 
   const countrySectionMatch = openingTags(html, 'section').find(match => attr(match[0], 'id') === 'countries');
@@ -154,7 +154,7 @@ function main() {
     totals.pending += result.pending;
   });
   assert(totals.categories === canonical.counts.beginnerCategories, 'Validated category total mismatch');
-  assert(totals.cards === totals.categories, 'Each category must have exactly one phase 5 anchor card');
+  assert(totals.cards === totals.categories, 'Each category must have exactly one beginner anchor card');
   console.log(JSON.stringify(totals, null, 2));
 }
 

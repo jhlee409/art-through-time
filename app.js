@@ -147,16 +147,20 @@ document.addEventListener('click', event => {
   render();
 });
 $('#logout-button').onclick = logoutEverywhere;
+function refreshMovementDocumentConsumers() {
+  countryArtWorkCache.clear();
+  artistListCountryDevelopmentRepresentatives.clear();
+  artistListCountryDevelopmentRepresentativesReady=false;
+  artistListCountryDevelopmentRepresentativesRequest=null;
+  document.querySelector('.country-art-movement-preview')?.remove();
+  document.querySelector('.country-art-image-magnifier')?.remove();
+  if (viewMode === 'country-art') renderCountryArt();
+  if (viewMode === 'artist-list') renderCountryArt({artistListMode:true});
+}
+window.addEventListener('art-atlas-movement-document-saved', refreshMovementDocumentConsumers);
 window.addEventListener('storage', event => {
   if (event.key === countryArtDocumentRevisionStorageKey && (isCountryArtPage || isPainterListPage)) {
-    countryArtWorkCache.clear();
-    artistListCountryDevelopmentRepresentatives.clear();
-    artistListCountryDevelopmentRepresentativesReady=false;
-    artistListCountryDevelopmentRepresentativesRequest=null;
-    document.querySelector('.country-art-movement-preview')?.remove();
-    document.querySelector('.country-art-image-magnifier')?.remove();
-    if (viewMode === 'country-art') renderCountryArt();
-    if (viewMode === 'artist-list') renderCountryArt({artistListMode:true});
+    refreshMovementDocumentConsumers();
   }
   if (event.key !== 'art-atlas-logout-signal') return;
   try { sessionStorage.removeItem(accessSessionStorageKey); localStorage.removeItem(sharedAccessSessionStorageKey); } catch (_) {}

@@ -1,4 +1,5 @@
 /* Movement documents, local image uploads, and public static-file services. */
+const {assertStableEditableStructure, synchronizeTableArtistOrder, validateCompleteDocument} = require('./movement-sync-v1');
 module.exports = function createContentService(deps) {
   const { fs, path, URL, createHash, randomBytes, execFileAsync, ffmpegPath, root, dataDir, highResolutionDir, imageStagingDir, techniquesFile, topicsFile, topicImageDir, movementSectionLinksFile, migrationAssetManifestFile, adminEmail, highResolutionStoredLimit, sourceImageInputLimit, jsonRequestBodyLimit, normalizeArtistsPayload, validateArtistsPayload, firebaseExport, invalidArtworkThumbnail, syncPersonNameDictionary, recordArtistRelationImpactAudit, readAccessControl, readArtistsFile, writeArtistsFile, saveThumbnailBuffer, highResolutionPathExists } = deps;
 function highResolutionLocation(email, artistId) {
@@ -53,6 +54,7 @@ const publicDataFiles = new Set([
   'data/artists-index.json',
   'data/artist-relations.json',
   'data/art-taxonomy.json',
+  'data/art-movement-canonical.json',
   'data/art-movements.json',
   'data/country-art-events.json',
   'data/country-movement-backgrounds.json',
@@ -139,8 +141,28 @@ async function saveMovementDocumentHtml(name, slot, html) {
   if(!relative || !/^data\/미술사조\/[a-f0-9]{24}-[12]\.html$/.test(relative)) throw new Error('There is no saved movement document');
   const savedFile=path.join(root,relative), current=await fs.readFile(savedFile,'utf8');
   if(['structure','content'].includes(movementDocumentSyncState(current))) throw new Error('Movement document editing is locked until ID-based synchronization is complete');
+  if(/<html\b[^>]*\bdata-art-atlas-sync-version=["']1["']/i.test(current)) {
+    assertStableEditableStructure(current,source);
+    const synchronized=synchronizeTableArtistOrder(source);
+    const [canonical,artists,movements]=await Promise.all([
+      fs.readFile(path.join(dataDir,'art-movement-canonical.json'),'utf8').then(JSON.parse),
+      readArtistsFile(),
+      fs.readFile(path.join(dataDir,'art-movements.json'),'utf8').then(JSON.parse)
+    ]);
+    validateCompleteDocument(synchronized,{canonical,artists,movements,documentFile:savedFile});
+    const temporary=`${savedFile}.${randomBytes(8).toString('hex')}.tmp`;
+    try {
+      await fs.writeFile(temporary,synchronized,'utf8');
+      await fs.rename(temporary,savedFile);
+    } catch(error) {
+      await fs.unlink(temporary).catch(()=>{});
+      throw error;
+    }
+    syncPersonNameDictionary({additionalFiles:[savedFile]});
+    return {ok:true,url:relative,revision:`${Date.now()}-${randomBytes(4).toString('hex')}`};
+  }
   const linkedHtml=synchronizeMovementCountryTableArtistOrder(await linkMovementDocumentArtists(normalizeMovementCardPresentation(injectUHangulDocumentIntegration(source))));
-  await fs.writeFile(savedFile,linkedHtml);
+  await fs.writeFile(savedFile,linkedHtml,'utf8');
   syncPersonNameDictionary({additionalFiles:[savedFile]});
   return {ok:true,url:relative};
 }
@@ -151,6 +173,15 @@ async function refreshMovementDocumentLinks(name, slot) {
   if(!/^data\/미술사조\/[a-f0-9]{24}-[12]\.html$/.test(String(relative || ''))) throw new Error('Invalid movement document path');
   const file=path.join(root,relative), before=await fs.readFile(file);
   if(['structure','content'].includes(movementDocumentSyncState(before))) return {ok:true,url:relative,changed:false,locked:true};
+  if(/<html\b[^>]*\bdata-art-atlas-sync-version=["']1["']/i.test(before.toString('utf8'))) {
+    const [canonical,artists,movements]=await Promise.all([
+      fs.readFile(path.join(dataDir,'art-movement-canonical.json'),'utf8').then(JSON.parse),
+      readArtistsFile(),
+      fs.readFile(path.join(dataDir,'art-movements.json'),'utf8').then(JSON.parse)
+    ]);
+    validateCompleteDocument(before.toString('utf8'),{canonical,artists,movements,documentFile:file});
+    return {ok:true,url:relative,changed:false,idSynchronized:true};
+  }
   const after=synchronizeMovementCountryTableArtistOrder(await linkMovementDocumentArtists(normalizeMovementCardPresentation(injectUHangulDocumentIntegration(before))));
   const changed=!before.equals(after);
   if(changed) await fs.writeFile(file,after);
