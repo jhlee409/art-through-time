@@ -233,7 +233,7 @@ function renderMovementAtlas() {
   sidebarActions?.querySelector('.atlas-event-toggle')?.addEventListener('click', () => { movementView.showHistoricalEvents = !showHistoricalEvents; persistMovementView(); renderMovementAtlas(); });
 }
 const countryArtAliases = {
-  france:['프랑스','france'], germany:['독일','germany'], austria:['오스트리아','austria'], belgium:['벨기에','belgium','플랑드르','flanders'], switzerland:['스위스','switzerland'], netherlands:['네덜란드','netherlands','네덜란드 공화국','dutch'], italy:['이탈리아','italy'], 'united-kingdom':['영국','united kingdom','britain','british','england'], spain:['스페인','spain','spanish'], russia:['러시아','russia','russian','소련'], norway:['노르웨이','norway','norwegian'], sweden:['스웨덴','sweden','swedish'], denmark:['덴마크','denmark','danish'], greece:['그리스','greece','greek'], 'united-states':['미국','united states','american']
+  france:['프랑스','france'], germany:['독일','germany'], austria:['오스트리아','austria'], belgium:['벨기에','belgium','플랑드르','flanders'], switzerland:['스위스','switzerland'], netherlands:['네덜란드','netherlands','네덜란드 공화국','dutch'], italy:['이탈리아','italy'], 'united-kingdom':['영국','united kingdom','britain','british','england'], spain:['스페인','spain','spanish'], russia:['러시아','russia','russian','소련'], norway:['노르웨이','norway','norwegian'], sweden:['스웨덴','sweden','swedish'], denmark:['덴마크','denmark','danish'], greece:['그리스','greece','greek'], mexico:['멕시코','mexico','mexican'], 'united-states':['미국','united states','american']
 };
 function countryArtTextMatches(value, countryId) {
   const text = String(value || '').toLowerCase();

@@ -88,7 +88,7 @@ if (isPainterListPage) document.body.classList.add('country-art-page', 'artist-l
 if (isArtistRelationsPage) document.body.classList.add('artist-relations-page');
 const legacyMovementCountryIds = ['france','germany','netherlands','italy','united-kingdom','spain','russia','sweden','denmark','greece','united-states'];
 const preExpansionMovementCountryIds = ['france','germany','switzerland','netherlands','italy','united-kingdom','spain','russia','sweden','denmark','greece','united-states'];
-const allMovementCountryIds = ['france','germany','austria','belgium','switzerland','netherlands','italy','united-kingdom','spain','russia','norway','sweden','denmark','greece','united-states'];
+const allMovementCountryIds = ['france','germany','austria','belgium','switzerland','netherlands','italy','united-kingdom','spain','russia','norway','sweden','denmark','greece','mexico','united-states'];
 const historicalEventCategories = ['history', 'religion-thought', 'science-economy', 'art'];
 const defaultMovementView = {countries:[...allMovementCountryIds],start:movementAtlasStart,end:movementAtlasEnd,showHistoricalEvents:true,eventCategory:'history',density:1};
 const defaultCountryArtView = {country:'france',start:movementAtlasStart,end:movementCountryEnd,density:1};

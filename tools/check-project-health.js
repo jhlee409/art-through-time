@@ -96,6 +96,8 @@ function main() {
   [
     ['movement links', 'tools/validate-movement-links.js'],
     ['movement canonical taxonomy', 'tools/validate-movement-canonical.js'],
+    ['movement sync contract', 'tools/validate-movement-sync-contract.js'],
+    ['movement HTML v1 migration', 'tools/validate-movement-documents-v1.js'],
     ['country art data', 'tools/validate-country-art-data.js'],
     ['Renaissance country table', 'tools/verify-renaissance-country-table.js'],
     ['URL download approval guard', 'tools/check-url-download-approval.js']

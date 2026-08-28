@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "purpose": "정본 36개 문서 색인에서 제외했지만 5단계 내용 흡수 전까지 삭제하지 않는 기존 사조 문서",
+  "documents": {
+    "Biedermeier": {
+      "1": "data/미술사조/69d074f0099b13691bf428c4-1.html",
+      "ownerId": "romanticism",
+      "placement": "context"
+    },
+    "New Objectivity": {
+      "1": "data/미술사조/813ce956e2554f3fba756eaa-1.html",
+      "ownerId": "expressionism",
+      "placement": "context"
+    },
+    "Danube School": {
+      "1": "data/미술사조/080336f866ce0c573e6c2b7f-1.html",
+      "ownerId": "northern-renaissance",
+      "categoryId": "northern-renaissance--german",
+      "placement": "covered-topic"
+    },
+    "Russian icon painting": {
+      "1": "data/미술사조/7792df2f1b12ffedf6954a68-1.html",
+      "placement": "legacy-reference"
+    },
+    "Peredvizhniki": {
+      "1": "data/미술사조/8d49878ffcd14be08ced07c5-1.html",
+      "ownerId": "realism",
+      "categoryId": "realism--russian",
+      "placement": "covered-topic"
+    },
+    "Russian Symbolism": {
+      "1": "data/미술사조/97a11ca32a8d272b2be7e303-1.html",
+      "ownerId": "symbolism",
+      "categoryId": "symbolism--central-northern-european",
+      "placement": "covered-topic"
+    },
+    "Suprematism": {
+      "1": "data/미술사조/b46bfdbe92e0d5deb9173151-1.html",
+      "ownerId": "russian-avant-garde",
+      "categoryId": "russian-avant-garde--suprematism",
+      "placement": "category-source"
+    },
+    "Constructivism": {
+      "1": "data/미술사조/fb0c60537b81544f0e8cb57f-1.html",
+      "ownerId": "russian-avant-garde",
+      "categoryId": "russian-avant-garde--constructivism",
+      "placement": "category-source"
+    }
+  }
+}

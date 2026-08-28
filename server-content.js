@@ -128,13 +128,18 @@ function movementDocumentSlot(value) { if(!['1','2'].includes(String(value))) th
 async function readMovementDocuments() { try { const data=JSON.parse(await fs.readFile(movementDocumentIndex,'utf8')); return data && typeof data.documents==='object' ? data : {documents:{}}; } catch(error) { if(error.code==='ENOENT') return {documents:{}}; throw error; } }
 async function writeMovementDocuments(data) { await fs.mkdir(movementDocumentDir,{recursive:true}); await fs.writeFile(movementDocumentIndex,JSON.stringify(data,null,2)+'\n','utf8'); }
 function movementDocumentRelative(name, slot) { return `data/미술사조/${createHash('sha256').update(`${name}:${slot}`,'utf8').digest('hex').slice(0,24)}-${slot}.html`; }
+function movementDocumentSyncState(html) {
+  return /<html\b[^>]*\bdata-art-atlas-sync-state=["']([^"']+)["']/i.exec(String(html || ''))?.[1] || '';
+}
 async function saveMovementDocumentHtml(name, slot, html) {
   const safeName=movementDocumentName(name), safeSlot=movementDocumentSlot(slot), source=String(html || '');
   if(!source.trim()) throw new Error('The HTML document is empty');
   if(Buffer.byteLength(source,'utf8') > jsonRequestBodyLimit) throw new Error('The HTML document exceeds the 12 MB limit');
   const data=await readMovementDocuments(), relative=data.documents?.[safeName]?.[safeSlot];
   if(!relative || !/^data\/미술사조\/[a-f0-9]{24}-[12]\.html$/.test(relative)) throw new Error('There is no saved movement document');
-  const savedFile=path.join(root,relative), linkedHtml=synchronizeMovementCountryTableArtistOrder(await linkMovementDocumentArtists(normalizeMovementCardPresentation(injectUHangulDocumentIntegration(source))));
+  const savedFile=path.join(root,relative), current=await fs.readFile(savedFile,'utf8');
+  if(movementDocumentSyncState(current)==='structure') throw new Error('Movement document editing is locked during structural migration');
+  const linkedHtml=synchronizeMovementCountryTableArtistOrder(await linkMovementDocumentArtists(normalizeMovementCardPresentation(injectUHangulDocumentIntegration(source))));
   await fs.writeFile(savedFile,linkedHtml);
   syncPersonNameDictionary({additionalFiles:[savedFile]});
   return {ok:true,url:relative};
@@ -144,7 +149,9 @@ async function refreshMovementDocumentLinks(name, slot) {
   const data=await readMovementDocuments(), relative=data.documents?.[name]?.[slot];
   if(!relative) throw new Error('There is no saved movement document');
   if(!/^data\/미술사조\/[a-f0-9]{24}-[12]\.html$/.test(String(relative || ''))) throw new Error('Invalid movement document path');
-  const file=path.join(root,relative), before=await fs.readFile(file), after=synchronizeMovementCountryTableArtistOrder(await linkMovementDocumentArtists(normalizeMovementCardPresentation(injectUHangulDocumentIntegration(before))));
+  const file=path.join(root,relative), before=await fs.readFile(file);
+  if(movementDocumentSyncState(before)==='structure') return {ok:true,url:relative,changed:false,locked:true};
+  const after=synchronizeMovementCountryTableArtistOrder(await linkMovementDocumentArtists(normalizeMovementCardPresentation(injectUHangulDocumentIntegration(before))));
   const changed=!before.equals(after);
   if(changed) await fs.writeFile(file,after);
   return {ok:true,url:relative,changed};
