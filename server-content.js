@@ -52,6 +52,7 @@ const publicRootFiles = new Set([
 ]);
 const publicDataFiles = new Set([
   'data/artists.json',
+  'data/artists-index.json',
   'data/artist-relations.json',
   'data/art-taxonomy.json',
   'data/art-movements.json',

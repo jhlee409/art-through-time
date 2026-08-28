@@ -87,6 +87,9 @@ function main() {
   checked.push(checkApplicationModuleSplit());
 
   const artists = JSON.parse(fs.readFileSync(path.join(root, 'data', 'artists.json'), 'utf8'));
+  const artistIndex = JSON.parse(fs.readFileSync(path.join(root, 'data', 'artists-index.json'), 'utf8'));
+  if ((artistIndex.artists || []).length !== (artists.artists || []).length) throw new Error('artists-index.json artist count differs from artists.json');
+  if ((artistIndex.artists || []).some(artist => Array.isArray(artist.works) || artist._detailLoaded !== false)) throw new Error('artists-index.json must not contain works');
   const validation = validateArtistsPayload(normalizeArtistsPayload(artists));
   if (!validation.valid) throw new Error(`artists data contract failed:\n${validation.errors.join('\n')}`);
 

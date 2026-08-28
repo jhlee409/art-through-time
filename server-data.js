@@ -390,6 +390,9 @@ async function resolveHighResolutionPaths(payload) {
   return payload;
 }
 async function readArtistsFile() { return resolveHighResolutionPaths(JSON.parse(await fs.readFile(artistsFile,'utf8'))); }
+function artistIndexRecord(artist) { const {works,...summary}=artist || {}; return {...summary,workCount:Array.isArray(works)?works.length:0,_detailLoaded:false}; }
+async function readArtistsIndex() { const payload=await readArtistsFile(); return {...payload,artists:(payload.artists||[]).map(artistIndexRecord)}; }
+async function readArtistDetail(id) { const payload=await readArtistsFile(), artist=(payload.artists||[]).find(item=>item.id===id); return artist ? {...artist,_detailLoaded:true} : null; }
 const offlineArtworkPlaceholder = 'data/thumbnails/_placeholder/artwork-placeholder.png';
 async function sanitizeRubensLegacyThumbnails(payload) {
   const artist=(payload.artists || []).find(item=>item.id==='artist-Q5599' || item.qid==='Q5599');
@@ -432,6 +435,12 @@ async function writeArtistsFileNow(payload, actor='') {
   let previous={metadata:{}};
   try { previous=JSON.parse(await fs.readFile(artistsFile,'utf8')); } catch(error) { if(error.code !== 'ENOENT') throw error; }
   const previousRevision=Math.max(0,Number(previous?.metadata?.revision) || 0);
+  const previousArtists=new Map((previous.artists || []).map(artist=>[artist.id,artist]));
+  payload={...payload,artists:(payload.artists || []).map(artist=>{
+    const existing=previousArtists.get(artist?.id);
+    return artist?._detailLoaded === false && existing ? {...artist,works:existing.works || []} : artist;
+  })};
+  (payload.artists || []).forEach(artist=>{ if(artist && typeof artist==='object') delete artist._detailLoaded; });
   payload=await hydrateMissingArtistProfiles(payload);
   payload=normalizeArtistsPayload(payload,{actor,touch:true});
   payload.metadata={...payload.metadata,revision:previousRevision+1};
@@ -444,6 +453,7 @@ async function writeArtistsFileNow(payload, actor='') {
   const temporary = `${artistsFile}.${process.pid}.${Date.now()}.tmp`;
   await fs.writeFile(temporary,JSON.stringify({dataSchema:payload.dataSchema,metadata:payload.metadata,artists:payload.artists,deletedArtists:[],historicalEvents:Array.isArray(payload.historicalEvents) ? payload.historicalEvents : [],favoriteWorks:Array.isArray(payload.favoriteWorks) ? payload.favoriteWorks : []},null,2) + '\n','utf8');
   await fs.rename(temporary,artistsFile);
+  await require('./tools/build-artist-index').writeArtistIndex(payload);
   writeUHangulArtistMap(payload.artists);
   syncPersonNameDictionary({artists:payload.artists});
   await appendAudit({type:'artists.save',actor:normalizedEmail(actor) || 'local-admin',revision:payload.metadata.revision,backup,stats:validation.stats});
@@ -459,7 +469,7 @@ function writeArtistsFile(payload, actor='') {
     getJsonFast, api, similarityScore,
     getEntities, entityId, entityYear, entityLabel, koreanArtistNameOverrides,
     saveThumbnailBuffer, saveThumbnailFromLocalUpload, removeThumbnailFiles,
-    readArtistsFile, writeArtistsFile, highResolutionPathExists, resolvedHighResolutionPath,
+    readArtistsFile, readArtistsIndex, readArtistDetail, writeArtistsFile, highResolutionPathExists, resolvedHighResolutionPath,
     resolveHighResolutionPaths, safeUploadId, uploadExtension
   };
 };

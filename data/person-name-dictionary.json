@@ -1,10 +1,10 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-27T07:46:02.712Z",
+  "generatedAt": "2026-08-27T23:12:13.352Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
-      "id": "Q329811",
+      "id": "name-abrahambloemaert",
       "uhangulVersion": "0.7",
       "original": "Abraham Bloemaert",
       "language": "und",
@@ -13,24 +13,16 @@
       "listKorean": "블로에마르트",
       "aliases": {
         "ko": [
-          "블로에마르트",
-          "아브라함 블루마르트",
-          "블루마르트",
-          "아브라함 블로에마르트"
+          "블로에마르트"
         ],
         "en": [
-          "Bloemaert",
-          "Abraham Bloemart",
-          "Abraham Blomaert",
-          "Abraham Bloemaart",
-          "Abraham Bloemaert"
+          "Bloemaert"
         ]
       },
       "uhangul": "블로에마[Rㅡ]트, 아브[Rㅏ]함",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/artists.json",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "tools/reorder-mannerism-representative-cards.js"
       ],
@@ -155,7 +147,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q153746",
+      "id": "albrecht-altdorfer",
       "uhangulVersion": "0.7",
       "original": "Albrecht Altdorfer",
       "language": "und",
@@ -164,14 +156,10 @@
       "listKorean": "알트도르퍼",
       "aliases": {
         "ko": [
-          "알트도르퍼",
-          "알브레히트 알트도르퍼"
+          "알트도르퍼"
         ],
         "en": [
-          "Altdorfer",
-          "Altdorfer, Albrecht",
-          "Albrecht Altdorffer",
-          "Albrecht Altdorfer"
+          "Altdorfer"
         ]
       },
       "uhangul": "알트도르[Fㅓ], 알브레히트",
@@ -179,14 +167,13 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/080336f866ce0c573e6c2b7f-1.html",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "Q5580",
+      "id": "albrecht-durer",
       "uhangulVersion": "0.7",
       "original": "Albrecht Dürer",
       "language": "und",
@@ -195,15 +182,11 @@
       "listKorean": "뒤러",
       "aliases": {
         "ko": [
-          "뒤러",
-          "알브레히트 뒤러"
+          "뒤러"
         ],
         "en": [
           "Albrecht Durer",
-          "Dürer",
-          "Albrecht Duerer",
-          "Durer",
-          "Albrecht Dürer"
+          "Dürer"
         ]
       },
       "uhangul": "뒤[Rㅓ], 알브레히트",
@@ -211,7 +194,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/080336f866ce0c573e6c2b7f-1.html",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
@@ -558,21 +540,19 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q155733",
+      "id": "angelica-kauffman",
       "uhangulVersion": "0.7",
       "original": "Angelica Kauffman",
       "language": "und",
-      "korean": "앙겔리카 카우프만",
+      "korean": "안젤리카 카우프만",
       "displayKorean": "카우프만, 앙겔리카",
       "listKorean": "카우프만",
       "aliases": {
         "ko": [
-          "카우프만",
-          "앙겔리카 카우프만"
+          "카우프만"
         ],
         "en": [
-          "Kauffman",
-          "Angelica Kauffman"
+          "Kauffman"
         ]
       },
       "uhangul": "카우[Fㅡ]만, 앙겔리카",
@@ -580,7 +560,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html"
       ],
       "status": "verified-pair"
@@ -610,21 +589,19 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q7824",
+      "id": "annibale-carracci-short",
       "uhangulVersion": "0.7",
       "original": "Annibale Carracci",
       "language": "und",
-      "korean": "안니발레 카라치",
+      "korean": "카라치",
       "displayKorean": "카라치, 안니발레",
       "listKorean": "카라치",
       "aliases": {
         "ko": [
-          "카라치",
-          "안니발레 카라치"
+          "카라치"
         ],
         "en": [
-          "Carracci",
-          "Annibale Carracci"
+          "Carracci"
         ]
       },
       "uhangul": "카[Rㅏ]치, 안니발레",
@@ -632,7 +609,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "data/미술사조/de537ba74c4bee89423120bc-1.html",
@@ -668,7 +644,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q150679",
+      "id": "anthony-van-dyck",
       "uhangulVersion": "0.7",
       "original": "Anthony van Dyck",
       "language": "und",
@@ -678,23 +654,11 @@
       "aliases": {
         "ko": [
           "반 다이크",
-          "다이크",
-          "안토니 판 다이크",
-          "안톤 반 다이크",
-          "안토니스 반 다이크",
-          "반 다이크, 안토니",
-          "안토니 반 다이크"
+          "다이크"
         ],
         "en": [
           "van Dyck",
-          "Dyck",
-          "Sir Anthony van Dyck",
-          "Anthony Vandyke",
-          "Antoon van Dyck",
-          "Anthonis van Dyck",
-          "Anton van Dyck",
-          "Vandyke",
-          "Anthony van Dyck"
+          "Dyck"
         ]
       },
       "uhangul": "[Vㅏㄴ] 다이크, 안토니",
@@ -702,42 +666,38 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "Q155151",
+      "id": "antoine-watteau",
       "uhangulVersion": "0.7",
       "original": "Antoine Watteau",
       "language": "und",
-      "korean": "앙투안 바토",
-      "displayKorean": "바토, 앙투안",
+      "korean": "바토",
+      "displayKorean": "앙투안 바토",
       "listKorean": "바토",
       "aliases": {
         "ko": [
-          "바토",
-          "앙투안 바토"
+          "바토"
         ],
         "en": [
-          "Watteau",
-          "Antoine Watteau"
+          "Watteau"
         ]
       },
-      "uhangul": "[Vㅏ]토, 앙투안",
+      "uhangul": "앙투안 [Vㅏ]토",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/techniques.json",
         "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "Q312130",
+      "id": "anton-raphael-mengs",
       "uhangulVersion": "0.7",
       "original": "Anton Raphael Mengs",
       "language": "und",
@@ -746,12 +706,10 @@
       "listKorean": "멩스",
       "aliases": {
         "ko": [
-          "멩스",
-          "안톤 라파엘 멩스"
+          "멩스"
         ],
         "en": [
-          "Mengs",
-          "Anton Raphael Mengs"
+          "Mengs"
         ]
       },
       "uhangul": "멩스, 안톤 [Rㅏ][Fㅏ]엘",
@@ -759,7 +717,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html"
       ],
       "status": "verified-pair"
@@ -791,7 +748,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q5547",
+      "id": "antonio-canova",
       "uhangulVersion": "0.7",
       "original": "Antonio Canova",
       "language": "und",
@@ -800,12 +757,10 @@
       "listKorean": "카노바",
       "aliases": {
         "ko": [
-          "카노바",
-          "안토니오 카노바"
+          "카노바"
         ],
         "en": [
-          "Canova",
-          "Antonio Canova"
+          "Canova"
         ]
       },
       "uhangul": "카노[Vㅏ], 안토니오",
@@ -813,7 +768,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html"
       ],
       "status": "verified-pair"
@@ -1054,26 +1008,20 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q447682",
+      "id": "bartholomeus-spranger",
       "uhangulVersion": "0.7",
       "original": "Bartholomeus Spranger",
       "language": "und",
-      "korean": "바르톨로메우스 슈프랑거",
+      "korean": "바르톨로메우스 슈프랑어",
       "displayKorean": "슈프랑거, 바르톨로메우스",
       "listKorean": "슈프랑거",
       "aliases": {
         "ko": [
           "슈프랑어",
-          "슈프랑거",
-          "바르톨로메우스 슈프라거",
-          "슈프라거",
-          "바르톨로메우스 슈프랑거"
+          "슈프랑거"
         ],
         "en": [
-          "Spranger",
-          "Bartholomaeus Spranger",
-          "Bartholomäus Spranger",
-          "Bartholomeus Spranger"
+          "Spranger"
         ]
       },
       "uhangul": "슈프[Rㅏㅇ]거, 바[Rㅡ][THㅗㄹ]로메우스",
@@ -1081,30 +1029,25 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "Q192062",
+      "id": "bartolome-esteban-murillo",
       "uhangulVersion": "0.7",
       "original": "Bartolomé Esteban Murillo",
       "language": "und",
-      "korean": "바르톨로메 에스테반 무리요",
+      "korean": "무리요",
       "displayKorean": "무리요, 바르톨로메 에스테반",
       "listKorean": "무리요",
       "aliases": {
         "ko": [
-          "무리요",
-          "바르톨로메 무리요",
-          "바르톨로메 에스테반 무리요"
+          "무리요"
         ],
         "en": [
           "Bartolome Esteban Murillo",
-          "Murillo",
-          "Bartolome Murillo",
-          "Bartolomé Esteban Murillo"
+          "Murillo"
         ]
       },
       "uhangul": "무[Rㅣ]요, 바[Rㅡ]톨로메 에스테반",
@@ -1112,7 +1055,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
@@ -1143,7 +1085,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q313526",
+      "id": "benjamin-west",
       "uhangulVersion": "0.7",
       "original": "Benjamin West",
       "language": "und",
@@ -1152,12 +1094,10 @@
       "listKorean": "웨스트",
       "aliases": {
         "ko": [
-          "웨스트",
-          "벤저민 웨스트"
+          "웨스트"
         ],
         "en": [
-          "West",
-          "Benjamin West"
+          "West"
         ]
       },
       "uhangul": "웨스트, 벤저민",
@@ -1165,7 +1105,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html"
       ],
       "status": "verified-pair"
@@ -1241,7 +1180,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q7803",
+      "id": "bronzino",
       "uhangulVersion": "0.7",
       "original": "Bronzino",
       "language": "und",
@@ -1249,28 +1188,14 @@
       "displayKorean": "브론치노",
       "listKorean": "브론치노",
       "aliases": {
-        "ko": [
-          "아뇰로 브론치노",
-          "아뇰로 디 코시모",
-          "일 브론치노",
-          "브론치노, 아뇰로",
-          "브론치노"
-        ],
-        "en": [
-          "Agnolo Bronzino",
-          "Agnolo di Cosimo",
-          "Agnolo di Cosimo di Mariano",
-          "Il Bronzino",
-          "Angelo Bronzino",
-          "Bronzino"
-        ]
+        "ko": [],
+        "en": []
       },
       "uhangul": "브[Rㅗㄴ]치노",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "tools/reorder-mannerism-representative-cards.js"
       ],
@@ -1348,7 +1273,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q161866",
+      "id": "canaletto",
       "uhangulVersion": "0.7",
       "original": "Canaletto",
       "language": "und",
@@ -1356,26 +1281,21 @@
       "displayKorean": "카날레토",
       "listKorean": "카날레토",
       "aliases": {
-        "ko": [
-          "카날레토"
-        ],
-        "en": [
-          "Canaletto"
-        ]
+        "ko": [],
+        "en": []
       },
       "uhangul": "카날레토",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/techniques.json",
         "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "Q42207",
+      "id": "name-caravaggio",
       "uhangulVersion": "0.7",
       "original": "Caravaggio",
       "language": "und",
@@ -1383,20 +1303,13 @@
       "displayKorean": "카라바조",
       "listKorean": "카라바조",
       "aliases": {
-        "ko": [
-          "다 카라바조",
-          "카라바조"
-        ],
-        "en": [
-          "da Caravaggio",
-          "Caravaggio"
-        ]
+        "ko": [],
+        "en": []
       },
       "uhangul": "카[Rㅏ][Vㅏ]조",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/artists.json",
         "data/techniques.json",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
@@ -1430,37 +1343,6 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q187310",
-      "uhangulVersion": "0.7",
-      "original": "Carl Larsson",
-      "language": "und",
-      "korean": "칼 라르손",
-      "displayKorean": "라르손, 칼",
-      "listKorean": "라르손",
-      "aliases": {
-        "ko": [
-          "라르손",
-          "칼 라르손"
-        ],
-        "en": [
-          "Larsson",
-          "Carl Larsson",
-          "Carl Olof Larsson"
-        ]
-      },
-      "uhangul": "라르손, 칼",
-      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
-      "kind": "person",
-      "sources": [
-        "data/artists.json",
-        "Wikidata"
-      ],
-      "status": "verified-pair",
-      "englishFullName": "Carl Olof Larsson",
-      "wikipediaTitle": "Carl Larsson",
-      "wikidataQid": "Q187310"
-    },
-    {
       "id": "carlo-marattta",
       "uhangulVersion": "0.7",
       "original": "Carlo Maratta",
@@ -1485,21 +1367,19 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q104884",
+      "id": "caspar-david-friedrich-table",
       "uhangulVersion": "0.7",
       "original": "Caspar David Friedrich",
       "language": "und",
-      "korean": "카스파 다비드 프리드리히",
+      "korean": "카스파르 다비트 프리드리히",
       "displayKorean": "프리드리히, 카스파 다비드",
       "listKorean": "프리드리히",
       "aliases": {
         "ko": [
-          "프리드리히",
-          "카스파 다비드 프리드리히"
+          "프리드리히"
         ],
         "en": [
-          "Friedrich",
-          "Caspar David Friedrich"
+          "Friedrich"
         ]
       },
       "uhangul": "[Fㅡ][Rㅣ]드[Rㅣ]히, 카스파 다[Vㅣ]드",
@@ -1507,7 +1387,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/techniques.json",
         "data/미술사조/0930062b29f8f38dd88ee1a5-1.html",
         "data/미술사조/69d074f0099b13691bf428c4-1.html",
@@ -1520,7 +1399,7 @@
       "wikidataQid": "Q104884"
     },
     {
-      "id": "Q170170",
+      "id": "charles-le-brun",
       "uhangulVersion": "0.7",
       "original": "Charles Le Brun",
       "language": "und",
@@ -1529,15 +1408,11 @@
       "listKorean": "르브룅",
       "aliases": {
         "ko": [
-          "르브룅",
-          "샤를 르 브룅",
-          "샤를 르브룅"
+          "르브룅"
         ],
         "en": [
           "Le Brun",
-          "Brun",
-          "Charles Lebrun",
-          "Charles Le Brun"
+          "Brun"
         ]
       },
       "uhangul": "샤[Rㅡㄹ] 르브룅",
@@ -1545,7 +1420,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
@@ -1645,50 +1519,45 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q9340",
+      "id": "name-claudelorrain",
       "uhangulVersion": "0.7",
       "original": "Claude Lorrain",
       "language": "und",
       "korean": "클로드 로랭",
-      "displayKorean": "로랭, 클로드",
+      "displayKorean": "클로드 로랭",
       "listKorean": "로랭",
       "aliases": {
         "ko": [
-          "로랭",
-          "클로드 로랭"
+          "로랭"
         ],
         "en": [
-          "Lorrain",
-          "Claude Lorrain"
+          "Lorrain"
         ]
       },
-      "uhangul": "로[Rㅐㅇ], 클로드",
+      "uhangul": "클로드 로[Rㅐㅇ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/artists.json",
         "data/techniques.json",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "Q296",
+      "id": "claude-monet-short",
       "uhangulVersion": "0.7",
       "original": "Claude Monet",
       "language": "und",
-      "korean": "클로드 모네",
+      "korean": "모네",
       "displayKorean": "모네, 클로드",
       "listKorean": "모네",
       "aliases": {
         "ko": [
           "모네",
-          "클로드 모네",
           "오스카클로드 모네"
         ],
         "en": [
           "Monet",
-          "Claude Monet",
           "Oscar-Claude Monet",
           "Claude Oscar Monet"
         ]
@@ -1698,7 +1567,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/techniques.json",
         "data/미술사조/236b5b248aa3129573179c3b-1.html",
         "data/미술사조/81bf5950142af1141dfcf738-1.html",
@@ -1712,7 +1580,7 @@
       "wikidataQid": "Q296"
     },
     {
-      "id": "Q442484",
+      "id": "name-cornelisvanhaarlem",
       "uhangulVersion": "0.7",
       "original": "Cornelis van Haarlem",
       "language": "und",
@@ -1722,29 +1590,17 @@
       "aliases": {
         "ko": [
           "반 하를렘",
-          "하를렘",
-          "코르넬리스 코르넬리스 판 하를럼",
-          "코르넬리스 판 하를럼",
-          "코르넬리스 반 하를럼",
-          "코르넬리스 코르넬리스존 반 하를렘",
-          "코르넬리스 반 하를렘"
+          "하를렘"
         ],
         "en": [
           "van Haarlem",
-          "Haarlem",
-          "Cornelis Cornelisz. van Haarlem",
-          "Cornelis Corneliszoon van Haarlem",
-          "Cornelis Cornelisz van Haarlem",
-          "Cornelis Van Haarlem",
-          "Cornelis van Haerlem",
-          "Cornelis van Haarlem"
+          "Haarlem"
         ]
       },
       "uhangul": "[Vㅏㄴ] 하[Rㅡㄹ]렘, 코[Rㅡ]넬리스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/artists.json",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "tools/reorder-mannerism-representative-cards.js"
       ],
@@ -1940,25 +1796,21 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q297",
+      "id": "diego-velazquez-table",
       "uhangulVersion": "0.7",
       "original": "Diego Velázquez",
       "language": "und",
-      "korean": "디에고 벨라스케스",
+      "korean": "벨라스케스",
       "displayKorean": "벨라스케스, 디에고",
       "listKorean": "벨라스케스",
       "aliases": {
         "ko": [
-          "벨라스케스",
-          "디에고 벨라스케스",
-          "디에고 로드리게스 데 실바 이 벨라스케스"
+          "벨라스케스"
         ],
         "en": [
           "Diego Velazquez",
           "Velázquez",
-          "Velazquez",
-          "Diego Velázquez",
-          "Diego Rodríguez de Silva y Velázquez"
+          "Velazquez"
         ]
       },
       "uhangul": "벨라스케스, 디에고",
@@ -1966,7 +1818,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/techniques.json",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
@@ -2132,30 +1983,27 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q40599",
+      "id": "edouard-manet-short",
       "uhangulVersion": "0.7",
       "original": "Édouard Manet",
       "language": "und",
-      "korean": "에두아르 마네",
-      "displayKorean": "마네, 에두아르",
+      "korean": "마네",
+      "displayKorean": "에두아르 마네",
       "listKorean": "마네",
       "aliases": {
         "ko": [
-          "마네",
-          "에두아르 마네"
+          "마네"
         ],
         "en": [
           "Edouard Manet",
-          "Manet",
-          "Édouard Manet"
+          "Manet"
         ]
       },
-      "uhangul": "마네, 에두아[Rㅡ]",
+      "uhangul": "에두아[Rㅡ] 마네",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/techniques.json",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
         "Wikidata"
@@ -2287,7 +2135,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q301",
+      "id": "el-greco",
       "uhangulVersion": "0.7",
       "original": "El Greco",
       "language": "und",
@@ -2297,12 +2145,10 @@
       "aliases": {
         "ko": [
           "그레코",
-          "엘 그레코",
           "도메니코스 테오토코풀로스"
         ],
         "en": [
           "Greco",
-          "El Greco",
           "Domenikos Theotokopoulos",
           "Doménikos Theotokópoulos",
           "Dominico Greco"
@@ -2313,7 +2159,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "tools/apply-first-batch-movement-enhancements.js",
         "Wikidata"
@@ -2346,7 +2191,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q213163",
+      "id": "name-elisabethlouisevigeelebrun",
       "uhangulVersion": "0.7",
       "original": "Élisabeth Louise Vigée Le Brun",
       "language": "und",
@@ -2357,14 +2202,12 @@
         "ko": [
           "르 브룅",
           "브룅",
-          "비제 르 브룅",
-          "엘리자베스 루이 비제 르 브룅"
+          "비제 르 브룅"
         ],
         "en": [
           "Elisabeth Louise Vigee Le Brun",
           "Le Brun",
           "Brun",
-          "Élisabeth Louise Vigée Le Brun",
           "Élisabeth Vigée Le Brun"
         ]
       },
@@ -2372,7 +2215,6 @@
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
-        "data/artists.json",
         "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html",
         "data/미술사조/c0d228e179032941f8d9ebfb-1.html",
         "tools/apply-first-batch-movement-enhancements.js",
@@ -2550,22 +2392,20 @@
       "status": "verified-pair"
     },
     {
-      "id": "artist-romantic-delacroix",
+      "id": "eugene-delacroix",
       "uhangulVersion": "0.7",
       "original": "Eugène Delacroix",
       "language": "und",
-      "korean": "외젠 들라크루아",
+      "korean": "들라크루아",
       "displayKorean": "들라크루아, 외젠",
       "listKorean": "들라크루아",
       "aliases": {
         "ko": [
-          "들라크루아",
-          "외젠 들라크루아"
+          "들라크루아"
         ],
         "en": [
           "Eugene Delacroix",
-          "Delacroix",
-          "Eugène Delacroix"
+          "Delacroix"
         ]
       },
       "uhangul": "들라크[Rㅜ]아, 외젠",
@@ -2573,7 +2413,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/0930062b29f8f38dd88ee1a5-1.html",
         "data/미술사조/7daaa6cee232ed701f97dea0-1.html",
         "data/미술사조/9edf7288e6dd0ee42f7fa1bf-1.html"
@@ -2798,23 +2637,19 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q333366",
+      "id": "francesco-primaticcio",
       "uhangulVersion": "0.7",
       "original": "Francesco Primaticcio",
       "language": "und",
-      "korean": "프란체스코 프리마티초",
+      "korean": "프리마티초",
       "displayKorean": "프리마티초, 프란체스코",
       "listKorean": "프리마티초",
       "aliases": {
         "ko": [
-          "프리마티초",
-          "프란체스코 프리마티치오",
-          "프란체스코 프리마티초"
+          "프리마티초"
         ],
         "en": [
-          "Primaticcio",
-          "Francesco Primaticcio",
-          "Il Primaticcio"
+          "Primaticcio"
         ]
       },
       "uhangul": "프[Rㅣ]마티초, [Fㅡ][Rㅏㄴ]체스코",
@@ -2822,7 +2657,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
       ],
       "status": "verified-pair"
@@ -2898,43 +2732,37 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q209615",
+      "id": "francisco-zurbaran",
       "uhangulVersion": "0.7",
       "original": "Francisco de Zurbarán",
       "language": "und",
-      "korean": "프란시스코 데 수르바란",
-      "displayKorean": "데 수르바란, 프란시스코",
+      "korean": "수르바란",
+      "displayKorean": "수르바란, 프란시스코 데",
       "listKorean": "수르바란",
       "aliases": {
         "ko": [
           "데 수르바란",
-          "수르바란",
-          "프란시스코 수르바란",
-          "프란시스코 데 수르바란"
+          "수르바란"
         ],
         "en": [
           "Francisco de Zurbaran",
           "de Zurbarán",
           "Zurbarán",
           "de Zurbaran",
-          "Zurbaran",
-          "Francisco Zurbaran",
-          "Francisco de Zurbarán",
-          "Francisco de Zurbaran Salazar"
+          "Zurbaran"
         ]
       },
-      "uhangul": "데 수[Rㅡ]바[Rㅏㄴ], [Fㅡ][Rㅏㄴ]시스코",
+      "uhangul": "[Zㅜ][Rㅡ]바[Rㅏㄴ], [Fㅡ][Rㅏㄴ]시스코 데",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "artist-romantic-goya",
+      "id": "francisco-goya",
       "uhangulVersion": "0.7",
       "original": "Francisco Goya",
       "language": "und",
@@ -2943,12 +2771,10 @@
       "listKorean": "고야",
       "aliases": {
         "ko": [
-          "고야",
-          "프란시스코 고야"
+          "고야"
         ],
         "en": [
-          "Goya",
-          "Francisco Goya"
+          "Goya"
         ]
       },
       "uhangul": "고야, [Fㅡ][Rㅏㄴ]시스코",
@@ -2956,7 +2782,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
       ],
       "status": "verified-pair"
@@ -2986,36 +2811,33 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q313122",
+      "id": "francois-boucher",
       "uhangulVersion": "0.7",
       "original": "François Boucher",
       "language": "und",
-      "korean": "프랑수아 부셰",
-      "displayKorean": "부셰, 프랑수아",
+      "korean": "부셰",
+      "displayKorean": "프랑수아 부셰",
       "listKorean": "부셰",
       "aliases": {
         "ko": [
-          "부셰",
-          "프랑수아 부셰"
+          "부셰"
         ],
         "en": [
           "Francois Boucher",
-          "Boucher",
-          "François Boucher"
+          "Boucher"
         ]
       },
-      "uhangul": "부셰, [Fㅡ][Rㅏㅇ]수아",
+      "uhangul": "[Fㅡ][Rㅏㅇ]수아 부셰",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "Q336747",
+      "id": "francois-clouet",
       "uhangulVersion": "0.7",
       "original": "François Clouet",
       "language": "und",
@@ -3024,18 +2846,11 @@
       "listKorean": "클루에",
       "aliases": {
         "ko": [
-          "클루에",
-          "프랑수아 클루에",
-          "프랑수와 클루에",
-          "클루에, 프랑수아",
-          "클루에, 프랑수와"
+          "클루에"
         ],
         "en": [
           "Francois Clouet",
-          "Clouet",
-          "François Clouet",
-          "Janet Clouet",
-          "Jehannet Clouet"
+          "Clouet"
         ]
       },
       "uhangul": "클루에, [Fㅡ][Rㅏㅇ]수아",
@@ -3043,7 +2858,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
@@ -3073,7 +2887,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q167654",
+      "id": "name-franshals",
       "uhangulVersion": "0.7",
       "original": "Frans Hals",
       "language": "und",
@@ -3082,21 +2896,16 @@
       "listKorean": "할스",
       "aliases": {
         "ko": [
-          "할스",
-          "프란스 할스"
+          "할스"
         ],
         "en": [
-          "Hals",
-          "Frans Hals the Elder",
-          "Frans Franchoisz Hals",
-          "Frans Hals"
+          "Hals"
         ]
       },
       "uhangul": "할스, [Fㅡ][Rㅏㄴ]스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/artists.json",
         "data/techniques.json",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
       ],
@@ -3202,7 +3011,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "artist-romantic-church",
+      "id": "frederic-edwin-church",
       "uhangulVersion": "0.7",
       "original": "Frederic Edwin Church",
       "language": "und",
@@ -3211,12 +3020,10 @@
       "listKorean": "처치",
       "aliases": {
         "ko": [
-          "처치",
-          "프레더릭 에드윈 처치"
+          "처치"
         ],
         "en": [
-          "Church",
-          "Frederic Edwin Church"
+          "Church"
         ]
       },
       "uhangul": "처치, [Fㅡ][Rㅔ]더[Rㅣㄱ] 에드윈",
@@ -3224,7 +3031,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
       ],
       "status": "verified-pair"
@@ -3254,22 +3060,20 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q5588",
+      "id": "frida-kahlo-short",
       "uhangulVersion": "0.7",
       "original": "Frida Kahlo",
       "language": "und",
-      "korean": "프리다 칼로",
+      "korean": "칼로",
       "displayKorean": "칼로, 프리다",
       "listKorean": "칼로",
       "aliases": {
         "ko": [
           "칼로",
-          "프리다 칼로",
           "막달레나 카르멘 프리다 칼로 이 칼데론"
         ],
         "en": [
           "Kahlo",
-          "Frida Kahlo",
           "Magdalena Carmen Frida Kahlo y Calderón",
           "Frieda Kahlo"
         ]
@@ -3279,7 +3083,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/b6f307845ec9a6f73e9d4e44-1.html",
         "Wikidata"
       ],
@@ -3671,27 +3474,19 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q160538",
+      "id": "gian-lorenzo-bernini",
       "uhangulVersion": "0.7",
       "original": "Gian Lorenzo Bernini",
       "language": "und",
-      "korean": "잔 로렌초 베르니니",
+      "korean": "베르니니",
       "displayKorean": "베르니니, 잔 로렌초",
       "listKorean": "베르니니",
       "aliases": {
         "ko": [
-          "베르니니",
-          "잔로렌초 베르니니",
-          "조반니 로렌초 베르니니",
-          "베르니니, 잔 로렌초",
-          "잔 로렌초 베르니니"
+          "베르니니"
         ],
         "en": [
-          "Bernini",
-          "Gianlorenzo Bernini",
-          "Giovanni Lorenzo Bernini",
-          "Giovan Lorenzo Bernini",
-          "Gian Lorenzo Bernini"
+          "Bernini"
         ]
       },
       "uhangul": "베[Rㅡ]니니, 잔 로[Rㅔㄴ]초",
@@ -3699,7 +3494,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
@@ -3801,7 +3595,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q8459",
+      "id": "giorgione",
       "uhangulVersion": "0.7",
       "original": "Giorgione",
       "language": "und",
@@ -3810,11 +3604,9 @@
       "listKorean": "조르조네",
       "aliases": {
         "ko": [
-          "조르조네",
           "조르조 바르바렐리"
         ],
         "en": [
-          "Giorgione",
           "Giorgio Barbarelli",
           "Giorgio Barbarelli da Castelfranco"
         ]
@@ -3824,7 +3616,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
         "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
         "data/미술사조/9e553fb48e9a464402114360-1.html",
@@ -3837,7 +3628,7 @@
       "wikidataQid": "Q8459"
     },
     {
-      "id": "Q7814",
+      "id": "name-giotto",
       "uhangulVersion": "0.7",
       "original": "Giotto",
       "language": "und",
@@ -3848,11 +3639,10 @@
         "ko": [
           "디 본도네",
           "본도네",
-          "조토 디 본도네",
-          "조토"
+          "조토",
+          "조토 디 본도네"
         ],
         "en": [
-          "Giotto",
           "Giotto di Bondone",
           "Ambrogiotto",
           "Angelotto"
@@ -3862,7 +3652,6 @@
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
-        "data/artists.json",
         "data/미술사조/0ff40245e0c5bda0e3f254d2-1.html",
         "data/미술사조/9e553fb48e9a464402114360-1.html",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
@@ -3948,34 +3737,31 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q162048",
+      "id": "name-giovannibattistatiepolo",
       "uhangulVersion": "0.7",
       "original": "Giovanni Battista Tiepolo",
       "language": "und",
       "korean": "조반니 바티스타 티에폴로",
-      "displayKorean": "티에폴로, 조반니 바티스타",
+      "displayKorean": "조반니 바티스타 티에폴로",
       "listKorean": "티에폴로",
       "aliases": {
         "ko": [
-          "티에폴로",
-          "조반니 바티스타 티에폴로"
+          "티에폴로"
         ],
         "en": [
-          "Tiepolo",
-          "Giovanni Battista Tiepolo"
+          "Tiepolo"
         ]
       },
-      "uhangul": "티에폴로, 조[Vㅏㄴ]니 바티스타",
+      "uhangul": "조[Vㅏㄴ]니 바티스타 티에폴로",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/artists.json",
         "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "Q17169",
+      "id": "giovanni-bellini",
       "uhangulVersion": "0.7",
       "original": "Giovanni Bellini",
       "language": "und",
@@ -3984,12 +3770,10 @@
       "listKorean": "벨리니",
       "aliases": {
         "ko": [
-          "벨리니",
-          "조반니 벨리니"
+          "벨리니"
         ],
         "en": [
-          "Bellini",
-          "Giovanni Bellini"
+          "Bellini"
         ]
       },
       "uhangul": "벨리니, 조[Vㅏㄴ]니",
@@ -3997,7 +3781,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
         "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
         "data/미술사조/9e553fb48e9a464402114360-1.html",
@@ -4034,7 +3817,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q7751",
+      "id": "giuseppe-arcimboldo",
       "uhangulVersion": "0.7",
       "original": "Giuseppe Arcimboldo",
       "language": "und",
@@ -4043,16 +3826,10 @@
       "listKorean": "아르침볼도",
       "aliases": {
         "ko": [
-          "아르침볼도",
-          "주세페 아르침볼디",
-          "주세페 아르침볼도"
+          "아르침볼도"
         ],
         "en": [
-          "Arcimboldo",
-          "Giuseppe Arcimboldi",
-          "Giuseppe Archimboldo",
-          "Arcimboldi",
-          "Giuseppe Arcimboldo"
+          "Arcimboldo"
         ]
       },
       "uhangul": "아[Rㅡ]침볼도, 주세페",
@@ -4060,7 +3837,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
       ],
       "status": "verified-pair"
@@ -4280,42 +4056,34 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q48319",
+      "id": "hans-holbein-younger",
       "uhangulVersion": "0.7",
       "original": "Hans Holbein the Younger",
       "language": "und",
-      "korean": "한스 홀바인",
-      "displayKorean": "홀바인, 한스",
-      "listKorean": "홀바인",
+      "korean": "한스 홀바인 2세",
+      "displayKorean": "한스 홀바인 2세",
+      "listKorean": "한스 홀바인 2세",
       "aliases": {
         "ko": [
           "2세",
           "홀바인",
-          "한스 홀바인",
-          "한스 홀바인 2세",
-          "한스 홀바인 소",
-          "홀바인 소"
+          "한스 홀바인"
         ],
         "en": [
           "Holbein",
-          "Hans Holbein",
-          "Hans Holbein (II)",
-          "Hans Holbein der Jüngere",
-          "Hans Holbein the Younger"
+          "Hans Holbein"
         ]
       },
-      "uhangul": "홀바인, 한스",
+      "uhangul": "한스 홀바인 2세",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides",
-        "data/artists.json",
-        "data/techniques.json"
+        "data/미술사조/manual-person-overrides"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "Q48319",
+      "id": "name-hansholbeintheyounger",
       "uhangulVersion": "0.7",
       "original": "Hans Holbein the Younger",
       "language": "und",
@@ -4335,6 +4103,7 @@
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
+        "data/techniques.json",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
@@ -4412,7 +4181,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q165367",
+      "id": "name-hendrickgoltzius",
       "uhangulVersion": "0.7",
       "original": "Hendrick Goltzius",
       "language": "und",
@@ -4421,24 +4190,16 @@
       "listKorean": "골치우스",
       "aliases": {
         "ko": [
-          "골치우스",
-          "헨드리크 골치우스",
-          "헨드릭 골치우스"
+          "골치우스"
         ],
         "en": [
-          "Goltzius",
-          "Hendrik Goltzius",
-          "Hendrick Goltz",
-          "Hendrick Goltius",
-          "Hendricus Goltzius",
-          "Hendrick Goltzius"
+          "Goltzius"
         ]
       },
       "uhangul": "골치우[Zㅡ], 헨드[Rㅣㄱ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/artists.json",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "tools/reorder-mannerism-representative-cards.js"
       ],
@@ -4471,11 +4232,11 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q82445",
+      "id": "henri-de-toulouse-lautrec-table",
       "uhangulVersion": "0.7",
       "original": "Henri de Toulouse-Lautrec",
       "language": "und",
-      "korean": "앙리 드 툴루즈로트레크",
+      "korean": "툴루즈로트렉",
       "displayKorean": "툴루즈로트레크, 앙리 드",
       "listKorean": "툴루즈로트레크",
       "aliases": {
@@ -4490,7 +4251,6 @@
           "de Toulouse-Lautrec",
           "Toulouse-Lautrec",
           "Lautrec",
-          "Henri de Toulouse-Lautrec",
           "Henri Marie Raymond de Toulouse-Lautrec-Monfa"
         ]
       },
@@ -4499,7 +4259,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/81bf5950142af1141dfcf738-1.html",
         "Wikidata"
       ],
@@ -4697,31 +4456,26 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q49898",
+      "id": "hyacinthe-rigaud",
       "uhangulVersion": "0.7",
       "original": "Hyacinthe Rigaud",
       "language": "und",
       "korean": "야생트 리고",
-      "displayKorean": "리고, 야생트",
+      "displayKorean": "야생트 리고",
       "listKorean": "리고",
       "aliases": {
         "ko": [
-          "리고",
-          "야생트 리고"
+          "리고"
         ],
         "en": [
-          "Rigaud",
-          "Hyacinthe Rigaud",
-          "Hyacinthe Rigault",
-          "Hyacinthe Rigaud y Ros"
+          "Rigaud"
         ]
       },
-      "uhangul": "리고, 야생트",
+      "uhangul": "야생트 리고",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
         "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
@@ -4890,11 +4644,11 @@
       "status": "verified-pair"
     },
     {
-      "id": "artist-romantic-turner",
+      "id": "turner-table",
       "uhangulVersion": "0.7",
       "original": "J. M. W. Turner",
       "language": "und",
-      "korean": "조지프 말로드 윌리엄 터너",
+      "korean": "터너",
       "displayKorean": "터너, 조지프 말로드 윌리엄",
       "listKorean": "터너",
       "aliases": {
@@ -4904,8 +4658,7 @@
         ],
         "en": [
           "Turner",
-          "Joseph Mallord William Turner",
-          "J. M. W. Turner"
+          "Joseph Mallord William Turner"
         ]
       },
       "uhangul": "터너, 조지프 말로드 윌리엄",
@@ -4913,9 +4666,33 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
-        "data/techniques.json",
         "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "name-jmwturner",
+      "uhangulVersion": "0.7",
+      "original": "J. M. W. Turner",
+      "language": "und",
+      "korean": "J. M. W. 터너",
+      "displayKorean": "J. M. W. 터너",
+      "listKorean": "J. M. W. 터너",
+      "aliases": {
+        "ko": [
+          "터너",
+          "조지프 말로드 윌리엄 터너"
+        ],
+        "en": [
+          "Turner",
+          "Joseph Mallord William Turner"
+        ]
+      },
+      "uhangul": "J. M. W. 터너",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/techniques.json"
       ],
       "status": "verified-pair"
     },
@@ -4994,7 +4771,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q9319",
+      "id": "name-jacopotintoretto",
       "uhangulVersion": "0.7",
       "original": "Jacopo Tintoretto",
       "language": "und",
@@ -5002,33 +4779,22 @@
       "displayKorean": "틴토레토",
       "listKorean": "틴토레토",
       "aliases": {
-        "ko": [
-          "야코포 틴토레토",
-          "야코포 로부스티",
-          "야코포 코민",
-          "일 푸리오소",
-          "틴토레토"
-        ],
+        "ko": [],
         "en": [
-          "Tintoretto",
-          "Jacopo Tintoretto",
-          "Jacopo Robusti",
-          "Jacopo Comin",
-          "Il Furioso"
+          "Tintoretto"
         ]
       },
       "uhangul": "틴토[Rㅔ]토",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/artists.json",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "Q83155",
+      "id": "artist-Q83155",
       "uhangulVersion": "0.7",
       "original": "Jacques-Louis David",
       "language": "und",
@@ -5037,12 +4803,10 @@
       "listKorean": "다비드",
       "aliases": {
         "ko": [
-          "다비드",
-          "자크루이 다비드"
+          "다비드"
         ],
         "en": [
-          "David",
-          "Jacques-Louis David"
+          "David"
         ]
       },
       "uhangul": "다[Vㅣ]드, 자크루이",
@@ -5050,7 +4814,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/0930062b29f8f38dd88ee1a5-1.html",
         "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html",
         "tools/add-missing-neoclassical-card.js"
@@ -5154,7 +4917,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q102272",
+      "id": "jan-van-eyck-table",
       "uhangulVersion": "0.7",
       "original": "Jan van Eyck",
       "language": "und",
@@ -5164,13 +4927,11 @@
       "aliases": {
         "ko": [
           "반 에이크",
-          "에이크",
-          "얀 반 에이크"
+          "에이크"
         ],
         "en": [
           "van Eyck",
-          "Eyck",
-          "Jan van Eyck"
+          "Eyck"
         ]
       },
       "uhangul": "[Vㅏㄴ] 에이크, 얀",
@@ -5178,7 +4939,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/techniques.json",
         "data/미술사조/9e553fb48e9a464402114360-1.html",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
@@ -5234,7 +4994,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q378800",
+      "id": "jean-clouet",
       "uhangulVersion": "0.7",
       "original": "Jean Clouet",
       "language": "und",
@@ -5243,17 +5003,10 @@
       "listKorean": "클루에",
       "aliases": {
         "ko": [
-          "클루에",
-          "장 클루에",
-          "클루에, 장",
-          "자네 클루에"
+          "클루에"
         ],
         "en": [
-          "Clouet",
-          "Janet Clouet",
-          "Jehannot Clouet",
-          "Jeannet Clouet",
-          "Jean Clouet"
+          "Clouet"
         ]
       },
       "uhangul": "클루에, 장",
@@ -5261,27 +5014,24 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "Q161472",
+      "id": "jean-auguste-dominique-ingres",
       "uhangulVersion": "0.7",
       "original": "Jean-Auguste-Dominique Ingres",
       "language": "und",
-      "korean": "장오귀스트도미니크 앵그르",
+      "korean": "앵그르",
       "displayKorean": "앵그르, 장오귀스트도미니크",
       "listKorean": "앵그르",
       "aliases": {
         "ko": [
-          "앵그르",
-          "장오귀스트도미니크 앵그르"
+          "앵그르"
         ],
         "en": [
-          "Ingres",
-          "Jean-Auguste-Dominique Ingres"
+          "Ingres"
         ]
       },
       "uhangul": "앵그[Rㅡ], 장오귀스트도미니크",
@@ -5289,7 +5039,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html"
       ],
       "status": "verified-pair"
@@ -5343,30 +5092,27 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q312309",
+      "id": "jean-baptiste-simeon-chardin",
       "uhangulVersion": "0.7",
       "original": "Jean-Baptiste-Siméon Chardin",
       "language": "und",
       "korean": "장바티스트 시메옹 샤르댕",
-      "displayKorean": "샤르댕, 장바티스트 시메옹",
+      "displayKorean": "장바티스트 시메옹 샤르댕",
       "listKorean": "샤르댕",
       "aliases": {
         "ko": [
-          "샤르댕",
-          "장바티스트 시메옹 샤르댕"
+          "샤르댕"
         ],
         "en": [
           "Jean-Baptiste-Simeon Chardin",
-          "Chardin",
-          "Jean-Baptiste-Siméon Chardin"
+          "Chardin"
         ]
       },
-      "uhangul": "샤[Rㅡ]댕, 장바티스트 시메옹",
+      "uhangul": "장바티스트 시메옹 샤[Rㅡ]댕",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
@@ -5423,30 +5169,27 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q313898",
+      "id": "jean-honore-fragonard",
       "uhangulVersion": "0.7",
       "original": "Jean-Honoré Fragonard",
       "language": "und",
-      "korean": "장오노레 프라고나르",
-      "displayKorean": "프라고나르, 장오노레",
+      "korean": "프라고나르",
+      "displayKorean": "장오노레 프라고나르",
       "listKorean": "프라고나르",
       "aliases": {
         "ko": [
-          "프라고나르",
-          "장오노레 프라고나르"
+          "프라고나르"
         ],
         "en": [
           "Jean-Honore Fragonard",
-          "Fragonard",
-          "Jean-Honoré Fragonard"
+          "Fragonard"
         ]
       },
-      "uhangul": "프라고나[Rㅡ], 장오노레",
+      "uhangul": "장오노레 프라고나[Rㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html",
         "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
@@ -5647,22 +5390,21 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q41264",
+      "id": "johannes-vermeer-table",
       "uhangulVersion": "0.7",
       "original": "Johannes Vermeer",
       "language": "und",
-      "korean": "요하네스 페르메이르",
+      "korean": "베르메르",
       "displayKorean": "페르메이르, 요하네스",
       "listKorean": "페르메이르",
       "aliases": {
         "ko": [
+          "베르메르",
           "페르메이르",
-          "요하네스 페르메이르",
           "얀 페르메이르"
         ],
         "en": [
           "Vermeer",
-          "Johannes Vermeer",
           "Jan Vermeer",
           "Johannes van der Meer"
         ]
@@ -5672,7 +5414,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/techniques.json",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
         "tools/apply-first-batch-movement-enhancements.js",
@@ -5684,21 +5425,19 @@
       "wikidataQid": "Q41264"
     },
     {
-      "id": "artist-romantic-constable",
+      "id": "constable-table",
       "uhangulVersion": "0.7",
       "original": "John Constable",
       "language": "und",
-      "korean": "존 컨스터블",
+      "korean": "컨스터블",
       "displayKorean": "컨스터블, 존",
       "listKorean": "컨스터블",
       "aliases": {
         "ko": [
-          "컨스터블",
-          "존 컨스터블"
+          "컨스터블"
         ],
         "en": [
-          "Constable",
-          "John Constable"
+          "Constable"
         ]
       },
       "uhangul": "컨스터블, 존",
@@ -5706,7 +5445,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/techniques.json",
         "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
       ],
@@ -6003,7 +5741,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q312387",
+      "id": "joshua-reynolds",
       "uhangulVersion": "0.7",
       "original": "Joshua Reynolds",
       "language": "und",
@@ -6012,12 +5750,10 @@
       "listKorean": "레이놀즈",
       "aliases": {
         "ko": [
-          "레이놀즈",
-          "조슈아 레이놀즈"
+          "레이놀즈"
         ],
         "en": [
-          "Reynolds",
-          "Joshua Reynolds"
+          "Reynolds"
         ]
       },
       "uhangul": "[Rㅔ]이놀즈, 조슈아",
@@ -6025,7 +5761,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html"
       ],
       "status": "verified-pair"
@@ -6345,11 +6080,11 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q762",
+      "id": "leonardo-table",
       "uhangulVersion": "0.7",
       "original": "Leonardo da Vinci",
       "language": "und",
-      "korean": "레오나르도 다 빈치",
+      "korean": "레오나르도",
       "displayKorean": "다 빈치, 레오나르도",
       "listKorean": "다 빈치",
       "aliases": {
@@ -6357,14 +6092,12 @@
           "다 빈치",
           "빈치",
           "레오나르도",
-          "레오나르도 다 빈치",
           "레오나르도 디 세르 피에로 다 빈치"
         ],
         "en": [
           "da Vinci",
           "Vinci",
           "Leonardo",
-          "Leonardo da Vinci",
           "Leonardo di ser Piero da Vinci",
           "Leonardo di Piero da Vinci"
         ]
@@ -6374,7 +6107,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/techniques.json",
         "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
         "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
@@ -6529,7 +6261,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q191748",
+      "id": "lucas-cranach",
       "uhangulVersion": "0.7",
       "original": "Lucas Cranach the Elder",
       "language": "und",
@@ -6538,17 +6270,11 @@
       "listKorean": "크라나흐",
       "aliases": {
         "ko": [
-          "크라나흐",
-          "루카스 카라나흐",
-          "카라나흐",
-          "루카스 크라나흐"
+          "크라나흐"
         ],
         "en": [
           "Cranach",
-          "Lucas Cranach",
-          "Lucas Cranach (I)",
-          "Lucas Cranach der Ältere",
-          "Lucas Cranach the Elder"
+          "Lucas Cranach"
         ]
       },
       "uhangul": "크[Rㅏ]나흐, 루카스",
@@ -6556,7 +6282,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/080336f866ce0c573e6c2b7f-1.html",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
@@ -6804,7 +6529,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q5811",
+      "id": "masaccio-table",
       "uhangulVersion": "0.7",
       "original": "Masaccio",
       "language": "und",
@@ -6812,19 +6537,14 @@
       "displayKorean": "마사초",
       "listKorean": "마사초",
       "aliases": {
-        "ko": [
-          "마사초"
-        ],
-        "en": [
-          "Masaccio"
-        ]
+        "ko": [],
+        "en": []
       },
       "uhangul": "마사초",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/techniques.json",
         "data/미술사조/9e553fb48e9a464402114360-1.html",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
@@ -7025,7 +6745,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q5592",
+      "id": "name-michelangelo",
       "uhangulVersion": "0.7",
       "original": "Michelangelo",
       "language": "und",
@@ -7035,13 +6755,9 @@
       "aliases": {
         "ko": [
           "부오나로티",
-          "미켈란젤로",
-          "미켈란젤로 부오나로티",
           "미켈란젤로 부오나로티 시모니"
         ],
         "en": [
-          "Buonarroti",
-          "Michelangelo",
           "Michelangelo Buonarroti",
           "Michelangelo di Lodovico Buonarroti Simoni"
         ]
@@ -7050,7 +6766,6 @@
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
-        "data/artists.json",
         "data/techniques.json",
         "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
@@ -7212,7 +6927,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q41554",
+      "id": "nicolas-poussin",
       "uhangulVersion": "0.7",
       "original": "Nicolas Poussin",
       "language": "und",
@@ -7221,15 +6936,10 @@
       "listKorean": "푸생",
       "aliases": {
         "ko": [
-          "푸생",
-          "푸셍",
-          "니콜라 푸생",
-          "니콜라 푸셍"
+          "푸생"
         ],
         "en": [
-          "Poussin",
-          "Nicolas Poussin",
-          "Nicholas Poussin"
+          "Poussin"
         ]
       },
       "uhangul": "푸생, 니콜라",
@@ -7237,7 +6947,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
@@ -7433,7 +7142,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q9440",
+      "id": "paolo-veronese",
       "uhangulVersion": "0.7",
       "original": "Paolo Veronese",
       "language": "und",
@@ -7442,21 +7151,10 @@
       "listKorean": "베로네세",
       "aliases": {
         "ko": [
-          "베로네세",
-          "파올로 칼리아리",
-          "파올로 칼리아리 베로네세",
-          "일 베로네세",
-          "베로네세, 파올로",
-          "파올로 베로네세"
+          "베로네세"
         ],
         "en": [
-          "Veronese",
-          "Paolo Caliari",
-          "Paolo Cagliari",
-          "Paolo Caliari Veronese",
-          "Il Veronese",
-          "Paul Veronese",
-          "Paolo Veronese"
+          "Veronese"
         ]
       },
       "uhangul": "[Vㅔ][Rㅗ]네세, 파올로",
@@ -7464,7 +7162,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
         "tools/reorder-renaissance-representative-cards.js"
@@ -7472,7 +7169,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q9348",
+      "id": "parmigianino",
       "uhangulVersion": "0.7",
       "original": "Parmigianino",
       "language": "und",
@@ -7480,28 +7177,14 @@
       "displayKorean": "파르미자니노",
       "listKorean": "파르미자니노",
       "aliases": {
-        "ko": [
-          "프란체스코 마촐라",
-          "지롤라모 프란체스코 마리아 마촐라",
-          "마촐라, 프란체스코",
-          "일 파르미자니노",
-          "파르미자니노"
-        ],
-        "en": [
-          "Francesco Mazzola",
-          "Girolamo Francesco Maria Mazzola",
-          "Francesco Mazzuoli",
-          "Il Parmigianino",
-          "Parmigiano",
-          "Parmigianino"
-        ]
+        "ko": [],
+        "en": []
       },
       "uhangul": "파[Rㅡ]미자니노",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "tools/reorder-mannerism-representative-cards.js"
@@ -7725,7 +7408,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q5599",
+      "id": "name-peterpaulrubens",
       "uhangulVersion": "0.7",
       "original": "Peter Paul Rubens",
       "language": "und",
@@ -7734,12 +7417,10 @@
       "listKorean": "루벤스",
       "aliases": {
         "ko": [
-          "루벤스",
-          "페테르 파울 루벤스"
+          "루벤스"
         ],
         "en": [
           "Rubens",
-          "Peter Paul Rubens",
           "Pieter Paul Rubens"
         ]
       },
@@ -7747,7 +7428,6 @@
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
-        "data/artists.json",
         "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
         "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
@@ -7984,7 +7664,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q43270",
+      "id": "name-pieterbruegheltheelder",
       "uhangulVersion": "0.7",
       "original": "Pieter Brueghel the Elder",
       "language": "und",
@@ -7995,13 +7675,11 @@
         "ko": [
           "브뤼헐",
           "피터르 대 브뤼헐",
-          "대 피터르 브뤼헐",
           "피터르 브뤼헐 대"
         ],
         "en": [
           "Brueghel",
           "Pieter Brueghel",
-          "Pieter Brueghel the Elder",
           "Pieter Bruegel the Elder",
           "Pieter Bruegel"
         ]
@@ -8010,7 +7688,6 @@
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
-        "data/artists.json",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
         "tools/reorder-renaissance-representative-cards.js",
         "Wikidata"
@@ -8141,36 +7818,25 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q207929",
+      "id": "pontormo",
       "uhangulVersion": "0.7",
       "original": "Pontormo",
       "language": "und",
-      "korean": "야코포 다 폰토르모",
+      "korean": "폰토르모",
       "displayKorean": "야코포 다 폰토르모",
       "listKorean": "폰토르모",
       "aliases": {
         "ko": [
           "다 폰토르모",
-          "폰토르모",
-          "야코포 폰토르모",
-          "폰토르모, 야코포 다",
-          "카루치, 야코포",
-          "야코포 다 폰토르모"
+          "폰토르모"
         ],
-        "en": [
-          "Pontormo",
-          "Jacopo da Pontormo",
-          "Jacopo Pontormo",
-          "Jacopo Carucci",
-          "Jacopo Carrucci"
-        ]
+        "en": []
       },
       "uhangul": "야코포 다 폰토[Rㅡ]모",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/techniques.json",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "tools/reorder-mannerism-representative-cards.js"
@@ -8254,7 +7920,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q5597",
+      "id": "name-raphael",
       "uhangulVersion": "0.7",
       "original": "Raphael",
       "language": "und",
@@ -8264,17 +7930,10 @@
       "aliases": {
         "ko": [
           "산치오",
-          "라파엘로",
-          "라파엘",
-          "라파엘로 산치오",
           "라파엘로 산티",
           "라파엘로 다 우르비노"
         ],
         "en": [
-          "da Urbino",
-          "Urbino",
-          "Raphael",
-          "Raffaello",
           "Raffaello Sanzio",
           "Raffaello Santi",
           "Raffaello da Urbino",
@@ -8285,7 +7944,6 @@
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
-        "data/artists.json",
         "data/미술사조/0930062b29f8f38dd88ee1a5-1.html",
         "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
@@ -8326,7 +7984,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q5598",
+      "id": "name-rembrandtharmenszoonvanrijn",
       "uhangulVersion": "0.7",
       "original": "Rembrandt Harmenszoon van Rijn",
       "language": "und",
@@ -8337,13 +7995,11 @@
         "ko": [
           "반 레인",
           "레인",
-          "렘브란트 하르먼손 반 레인",
           "렘브란트"
         ],
         "en": [
           "van Rijn",
           "Rijn",
-          "Rembrandt Harmenszoon van Rijn",
           "Rembrandt",
           "Rembrandt van Rijn"
         ]
@@ -8352,7 +8008,6 @@
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
-        "data/artists.json",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
         "tools/apply-first-batch-movement-enhancements.js",
         "Wikidata"
@@ -8584,7 +8239,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q68631",
+      "id": "rogier-van-der-weyden",
       "uhangulVersion": "0.7",
       "original": "Rogier van der Weyden",
       "language": "und",
@@ -8602,7 +8257,6 @@
           "van der Weyden",
           "Weyden",
           "Roger de la Pasture",
-          "Rogier van der Weyden",
           "Rogier de la Pasture"
         ]
       },
@@ -8611,7 +8265,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
         "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
         "data/미술사조/9e553fb48e9a464402114360-1.html",
@@ -8648,36 +8301,33 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q235547",
+      "id": "rosalba-carriera",
       "uhangulVersion": "0.7",
       "original": "Rosalba Carriera",
       "language": "und",
       "korean": "로살바 카리에라",
-      "displayKorean": "카리에라, 로살바",
+      "displayKorean": "로살바 카리에라",
       "listKorean": "카리에라",
       "aliases": {
         "ko": [
-          "카리에라",
-          "로살바 카리에라"
+          "카리에라"
         ],
         "en": [
-          "Carriera",
-          "Rosalba Carriera"
+          "Carriera"
         ]
       },
-      "uhangul": "카[Rㅣ]에[Rㅏ], [Rㅗ]살바",
+      "uhangul": "[Rㅗ]살바 카[Rㅣ]에[Rㅏ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/techniques.json",
         "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "Q312617",
+      "id": "rosso-fiorentino",
       "uhangulVersion": "0.7",
       "original": "Rosso Fiorentino",
       "language": "und",
@@ -8686,20 +8336,10 @@
       "listKorean": "로소",
       "aliases": {
         "ko": [
-          "피오렌티노",
-          "로소",
-          "일 로소",
-          "조반니 바티스타 디 야코포",
-          "로소 피오렌티노, 조반니 바티스타 디 야코포",
-          "로소 피오렌티노"
+          "피오렌티노"
         ],
         "en": [
-          "Fiorentino",
-          "Rosso",
-          "Il Rosso",
-          "Giovanni Battista di Jacopo",
-          "Giovanni Battista di Jacopo di Guasparre Rosso",
-          "Rosso Fiorentino"
+          "Fiorentino"
         ]
       },
       "uhangul": "[Rㅗ]소 [Fㅣ]오[Rㅔㄴ]티노",
@@ -8707,7 +8347,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
       ],
       "status": "verified-pair"
@@ -9104,22 +8743,20 @@
       "status": "verified-pair"
     },
     {
-      "id": "artist-romantic-gericault",
+      "id": "theodore-gericault",
       "uhangulVersion": "0.7",
       "original": "Théodore Géricault",
       "language": "und",
-      "korean": "테오도르 제리코",
+      "korean": "제리코",
       "displayKorean": "제리코, 테오도르",
       "listKorean": "제리코",
       "aliases": {
         "ko": [
-          "제리코",
-          "테오도르 제리코"
+          "제리코"
         ],
         "en": [
           "Theodore Gericault",
-          "Géricault",
-          "Théodore Géricault"
+          "Géricault"
         ]
       },
       "uhangul": "제[Rㅣ]코, [THㅔ]오도[Rㅡ]",
@@ -9127,13 +8764,12 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "artist-romantic-cole",
+      "id": "thomas-cole",
       "uhangulVersion": "0.7",
       "original": "Thomas Cole",
       "language": "und",
@@ -9141,12 +8777,9 @@
       "displayKorean": "콜, 토머스",
       "listKorean": "콜",
       "aliases": {
-        "ko": [
-          "토머스 콜"
-        ],
+        "ko": [],
         "en": [
-          "Cole",
-          "Thomas Cole"
+          "Cole"
         ]
       },
       "uhangul": "콜, [THㅗ]머스",
@@ -9154,7 +8787,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
       ],
       "status": "verified-pair"
@@ -9184,29 +8816,26 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q180117",
+      "id": "thomas-gainsborough",
       "uhangulVersion": "0.7",
       "original": "Thomas Gainsborough",
       "language": "und",
       "korean": "토머스 게인즈버러",
-      "displayKorean": "게인즈버러, 토머스",
+      "displayKorean": "토머스 게인즈버러",
       "listKorean": "게인즈버러",
       "aliases": {
         "ko": [
-          "게인즈버러",
-          "토머스 게인즈버러"
+          "게인즈버러"
         ],
         "en": [
-          "Gainsborough",
-          "Thomas Gainsborough"
+          "Gainsborough"
         ]
       },
-      "uhangul": "게인즈버[Rㅓ], [THㅗ]머스",
+      "uhangul": "[THㅗ]머스 게인즈버[Rㅓ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
@@ -9257,7 +8886,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q47551",
+      "id": "titian-table",
       "uhangulVersion": "0.7",
       "original": "Titian",
       "language": "und",
@@ -9267,13 +8896,11 @@
       "aliases": {
         "ko": [
           "티치아노 베첼리오",
-          "베첼리오",
-          "티치아노"
+          "베첼리오"
         ],
         "en": [
           "Tiziano Vecellio",
-          "Tiziano",
-          "Titian"
+          "Tiziano"
         ]
       },
       "uhangul": "티치아노",
@@ -9281,7 +8908,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/techniques.json",
         "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
         "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
@@ -9455,7 +9081,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q6394591",
+      "id": "name-vassilivladimirovichpukiryov",
       "uhangulVersion": "0.7",
       "original": "Vassili Vladimirovich Pukiryov",
       "language": "und",
@@ -9465,12 +9091,10 @@
       "aliases": {
         "ko": [
           "푸키레프",
-          "바실리 푸키레프",
           "바실리 푸키료프"
         ],
         "en": [
           "Pukiryov",
-          "Vassili Vladimirovich Pukiryov",
           "Vasily Vladimirovich Pukiryov",
           "Vasily Pukirev",
           "Vassili Pukiryov"
@@ -9480,7 +9104,6 @@
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
-        "data/artists.json",
         "data/미술사조/8d49878ffcd14be08ced07c5-1.html",
         "data/미술사조/9edf7288e6dd0ee42f7fa1bf-1.html",
         "Wikidata"
@@ -9539,7 +9162,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q5582",
+      "id": "name-vincentvangogh",
       "uhangulVersion": "0.7",
       "original": "Vincent van Gogh",
       "language": "und",
@@ -9550,13 +9173,11 @@
         "ko": [
           "반 고흐",
           "고흐",
-          "빈센트 반 고흐",
           "빈센트 빌럼 반 고흐"
         ],
         "en": [
           "van Gogh",
           "Gogh",
-          "Vincent van Gogh",
           "Vincent Willem van Gogh",
           "Van Gogh"
         ]
@@ -9565,7 +9186,6 @@
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
-        "data/artists.json",
         "data/techniques.json",
         "data/미술사조/236b5b248aa3129573179c3b-1.html",
         "data/미술사조/4e7a664301ed396184c3cb5d-1.html",
@@ -9742,29 +9362,26 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q189621",
+      "id": "william-hogarth",
       "uhangulVersion": "0.7",
       "original": "William Hogarth",
       "language": "und",
       "korean": "윌리엄 호가스",
-      "displayKorean": "호가스, 윌리엄",
+      "displayKorean": "윌리엄 호가스",
       "listKorean": "호가스",
       "aliases": {
         "ko": [
-          "호가스",
-          "윌리엄 호가스"
+          "호가스"
         ],
         "en": [
-          "Hogarth",
-          "William Hogarth"
+          "Hogarth"
         ]
       },
-      "uhangul": "호가[THㅡ], 윌리엄",
+      "uhangul": "윌리엄 호가[THㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
@@ -9866,7 +9483,7 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q610556",
+      "id": "wolf-huber",
       "uhangulVersion": "0.7",
       "original": "Wolf Huber",
       "language": "und",
@@ -9875,18 +9492,10 @@
       "listKorean": "후버",
       "aliases": {
         "ko": [
-          "후버",
-          "볼프 후버",
-          "후버, 볼프",
-          "후버, 한스",
-          "한스 후버"
+          "후버"
         ],
         "en": [
-          "Huber",
-          "Wolfgang Huber",
-          "Master WH",
-          "Monogrammist WH",
-          "Wolf Huber"
+          "Huber"
         ]
       },
       "uhangul": "후버, [Vㅗㄹ][Fㅡ]",
@@ -9894,7 +9503,6 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/미술사조/080336f866ce0c573e6c2b7f-1.html",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
