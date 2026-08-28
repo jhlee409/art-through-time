@@ -102,6 +102,7 @@ let requestedArtistMissing = false;
 // country, and movement-popup URLs still select their requested view later.
 let viewMode = isArtistRelationsPage ? 'artist-relations' : (isPainterListPage ? 'artist-list' : (isCountryArtPage ? 'country-art' : (isMovementPage ? 'movements' : 'timeline')));
 let movementCountries = [];
+let movementContextOnlyNames = new Set();
 let movementView = parseMovementView();
 let countryArtView = parseCountryArtView();
 let artistListView = parseArtistListView();
@@ -1368,7 +1369,14 @@ async function loadData() {
   await markLegacyManualWorks();
   if (currentUserIsAdmin) await saveArtistsNow();
   try { artTaxonomy = await (await fetch('data/art-taxonomy.json')).json(); } catch (_) { artTaxonomy = {periods:[], movements:[]}; }
-  try { movementCountries = (await (await fetch('data/art-movements.json')).json()).countries || []; } catch (_) { movementCountries = []; }
+  try {
+    const movementData = await (await fetch('data/art-movements.json')).json();
+    movementCountries = movementData.countries || [];
+    movementContextOnlyNames = new Set((movementData.contextOnlyMovements || []).map(compactMovementName));
+  } catch (_) {
+    movementCountries = [];
+    movementContextOnlyNames = new Set();
+  }
   try { countryArtEvents = await (await fetch('data/country-art-events.json', {cache:'no-store'})).json(); } catch (_) { countryArtEvents = {schema:1,countries:{}}; }
   try { countryMovementBackgrounds = await (await fetch('data/country-movement-backgrounds.json', {cache:'no-store'})).json(); } catch (_) { countryMovementBackgrounds = {schema:1,countries:{},mechanisms:{}}; }
   try { artistRelations = await (await fetch('data/artist-relations.json', {cache:'no-store'})).json(); } catch (_) { artistRelations = {schema:1,artists:{}}; }
@@ -1456,6 +1464,10 @@ function movementContributionWorksForArtist(artist, sourceWorks=artist?.works ||
     .filter(work => work && (!visibleKeys.size || visibleKeys.has(selectionKey(work)) || work.image || work.thumbnail));
 }
 function compactMovementName(value='') { return String(value).normalize('NFKC').toLocaleLowerCase().replace(/[^0-9a-z가-힣]+/g,''); }
+function movementIsContextOnly(movement) {
+  const names = typeof movement === 'string' ? [movement] : [movement?.name?.en, movement?.name?.ko];
+  return names.some(name => movementContextOnlyNames.has(compactMovementName(name)));
+}
 function movementFilterSpec(label, includes=[], extra={}) {
   const keys = new Set([label?.ko, label?.en, ...includes].filter(Boolean).map(compactMovementName));
   return {
@@ -1545,8 +1557,8 @@ const artistMovementDisplayRules = [
   movementFilterSpec({ko:'도나우파', en:'Danube School'}, ['Danube School','도나우파'], {parent:{ko:'르네상스', en:'Renaissance'}, documentLabel:{ko:'도나우파', en:'Danube School'}}),
   movementFilterSpec({ko:'네덜란드·플랑드르 르네상스', en:'Netherlandish and Flemish Renaissance'}, ['Early Netherlandish painting','Dutch and Flemish Renaissance painting','Netherlandish and Flemish Renaissance painting','초기 네덜란드 회화','플랑드르파','네덜란드 및 플랑드르 르네상스 회화','네덜란드·플랑드르 르네상스'], {parent:{ko:'르네상스', en:'Renaissance'}, documentLabel:{ko:'북유럽 르네상스', en:'Northern Renaissance'}}),
   movementFilterSpec({ko:'프랑스 르네상스', en:'French Renaissance'}, ['French Renaissance','프랑스 르네상스'], {parent:{ko:'르네상스', en:'Renaissance'}, documentLabel:{ko:'르네상스', en:'Renaissance'}}),
-  movementFilterSpec({ko:'덴마크 르네상스', en:'Danish Renaissance'}, ['Danish Renaissance','덴마크 르네상스'], {parent:{ko:'르네상스', en:'Renaissance'}, documentLabel:{ko:'덴마크 르네상스', en:'Danish Renaissance'}}),
-  movementFilterSpec({ko:'노르딕 르네상스', en:'Nordic Renaissance'}, ['Nordic Renaissance','북유럽 르네상스','노르딕 르네상스'], {parent:{ko:'르네상스', en:'Renaissance'}, documentLabel:{ko:'노르딕 르네상스', en:'Nordic Renaissance'}}),
+  movementFilterSpec({ko:'덴마크 르네상스', en:'Danish Renaissance'}, ['Danish Renaissance','덴마크 르네상스'], {parent:{ko:'북방 르네상스', en:'Northern Renaissance'}, documentLabel:{ko:'북방 르네상스', en:'Northern Renaissance'}}),
+  movementFilterSpec({ko:'노르딕 르네상스', en:'Nordic Renaissance'}, ['Nordic Renaissance','북유럽 르네상스','노르딕 르네상스'], {parent:{ko:'북방 르네상스', en:'Northern Renaissance'}, documentLabel:{ko:'북방 르네상스', en:'Northern Renaissance'}}),
   movementFilterSpec({ko:'플랑드르 바로크 회화', en:'Flemish Baroque painting'}, ['Flemish Baroque painting','플랑드르 바로크 회화'], {parent:{ko:'바로크', en:'Baroque'}, documentLabel:{ko:'바로크', en:'Baroque'}}),
   movementFilterSpec({ko:'이탈리아 바로크 회화', en:'Italian Baroque painting'}, ['Italian Baroque painting','이탈리아 바로크 회화'], {parent:{ko:'바로크', en:'Baroque'}, documentLabel:{ko:'바로크', en:'Baroque'}}),
   movementFilterSpec({ko:'네덜란드 황금기 회화', en:'Dutch Golden Age painting'}, ['Dutch Golden Age painting','Dutch Baroque','네덜란드 황금기 회화','네덜란드 바로크'], {parent:{ko:'바로크', en:'Baroque'}, documentLabel:{ko:'바로크', en:'Baroque'}}),
@@ -1559,6 +1571,8 @@ const artistMovementDisplayRules = [
   movementFilterSpec({ko:'프라하 궁정 매너리즘', en:'Prague Court Mannerism'}, ['Prague Court Mannerism','Habsburg Court Mannerism','Rudolfine Mannerism','프라하 궁정 매너리즘','프라하·합스부르크 궁정','루돌프 2세 궁정 매너리즘'], {parent:{ko:'매너리즘', en:'Mannerism'}, documentLabel:{ko:'매너리즘', en:'Mannerism'}}),
   movementFilterSpec({ko:'독일 낭만주의', en:'German Romanticism'}, ['German Romanticism','독일 낭만주의'], {parent:{ko:'낭만주의', en:'Romanticism'}, documentLabel:{ko:'낭만주의', en:'Romanticism'}}),
   movementFilterSpec({ko:'낭만주의', en:'Romanticism'}, ['Romanticism','낭만주의']),
+  movementFilterSpec({ko:'러시아 바로크', en:'Russian Baroque'}, ['Russian Baroque','러시아 바로크'], {parent:{ko:'바로크', en:'Baroque'}, documentLabel:{ko:'바로크', en:'Baroque'}}),
+  movementFilterSpec({ko:'러시아 사실주의', en:'Russian Realism'}, ['Russian Realism','러시아 사실주의'], {parent:{ko:'사실주의', en:'Realism'}, documentLabel:{ko:'사실주의', en:'Realism'}}),
   movementFilterSpec({ko:'후기 인상주의', en:'Post-Impressionism'}, ['Post-Impressionism','Post-impressionism','후기 인상주의','후기인상주의'])
 ];
 const artistMovementClassificationOverrides = {

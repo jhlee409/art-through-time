@@ -531,6 +531,9 @@ button.artist-relation-node:not(.artist-relation-node--center):hover, button.art
 .movement-bar:hover, .movement-bar:focus-visible { z-index: 5; filter: brightness(1.08); outline: 2px solid var(--ink); }
 .movement-bar span { display: block; font-size: 11px; font-weight: 700; line-height: 1.25; }
 .movement-bar small { display: block; margin-top: 3px; font-family: 'DM Mono', monospace; font-size: 9px; opacity: .82; }
+.movement-bar small b { display: block; margin-top: 2px; font-family: var(--sans); font-size: 8px; font-weight: 800; line-height: 1.15; }
+.movement-bar--typed { border-style: double; border-width: 3px; }
+.movement-bar--context { border-style: dashed; opacity: .78; filter: saturate(.55); }
 .movement-document-menu { position: fixed; z-index: 1000; width: 145px; padding: 4px; border: 1px solid #8e988c; border-radius: 5px; background: #fffdf8; box-shadow: 0 5px 16px #18221e40; }
 .movement-document-menu button { display: block; width: 100%; padding: 7px 9px; border: 0; background: transparent; color: #17211e; text-align: left; font: 12px 'Noto Sans KR', sans-serif; cursor: pointer; }
 .movement-document-menu button:hover { background: #e4ecdf; }

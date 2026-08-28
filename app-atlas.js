@@ -81,7 +81,18 @@ function renderMovementAtlas() {
   const yearLabel = year => Number(year) < 0 ? `${Math.abs(year)} BCE` : (year === movementAtlasEnd ? (language === 'ko' ? '현대' : 'Today') : String(year));
   const axis = (axisStart, axisEnd, axisHeight) => `<aside class="atlas-axis atlas-century-axis" style="height:${axisHeight}px">${timelineVerticalCenturyBands(axisStart, axisEnd, yearScale, 'atlas-century-band')}</aside>`;
   const atlasCenturyGrid = (axisStart, axisEnd, axisHeight) => `<div class="atlas-century-grid" aria-hidden="true" style="height:${axisHeight}px">${timelineVerticalCenturyBands(axisStart, axisEnd, yearScale, 'atlas-century-grid-band')}</div>`;
-  const bar = (item, axisStart, axisEnd) => { const top=Math.max(0,item.start-axisStart)*yearScale, barHeight=Math.max(18,(Math.min(axisEnd,item.end)-Math.max(axisStart,item.start))*yearScale), left=8 + item.lane * 96, years=`${yearLabel(item.sourceStart ?? item.start)}–${yearLabel(item.sourceEnd ?? item.end)}`, rawMovementName=item.name.en || item.name.ko || '', movementName=movementDocumentKey(rawMovementName) || rawMovementName; return `<div class="movement-bar" title="${esc(loc(item.name))} · ${years}" data-movement-explanation="${esc(movementName)}" data-movement-label="${esc(loc(item.name))}" style="top:${top}px;height:${barHeight}px;left:${left}px;width:90px;--movement-color:${esc(item.color)}"><span>${esc(loc(item.name))}</span><small>${years}</small></div>`; };
+  const bar = (item, axisStart, axisEnd) => {
+    const top = Math.max(0,item.start-axisStart) * yearScale;
+    const barHeight = Math.max(18,(Math.min(axisEnd,item.end)-Math.max(axisStart,item.start)) * yearScale);
+    const left = 8 + item.lane * 96;
+    const years = `${yearLabel(item.sourceStart ?? item.start)}–${yearLabel(item.sourceEnd ?? item.end)}`;
+    const rawMovementName = item.name.en || item.name.ko || '';
+    const movementName = movementDocumentKey(rawMovementName) || rawMovementName;
+    const contextOnly = movementIsContextOnly(item);
+    const kind = contextOnly ? (language === 'ko' ? '이전 미술 참고' : 'Earlier-art context') : loc(item.kind);
+    const detail = kind ? `${years} · ${kind}` : years;
+    return `<div class="movement-bar${kind ? ' movement-bar--typed' : ''}${contextOnly ? ' movement-bar--context' : ''}" title="${esc(`${loc(item.name)} · ${detail}`)}" data-movement-explanation="${esc(movementName)}" data-movement-label="${esc(loc(item.name))}" style="top:${top}px;height:${barHeight}px;left:${left}px;width:90px;--movement-color:${esc(item.color)}"><span>${esc(loc(item.name))}</span><small>${esc(years)}${kind ? `<b>${esc(kind)}</b>` : ''}</small></div>`;
+  };
   const countryColumns = start < countryEnd ? movementView.countries.map(id => countryById.get(id)).filter(Boolean).map(country => ({
     ...country,
     movements:(country.movements || []).map(item => clippedMovement(item,start,countryEnd)).filter(Boolean)
@@ -791,6 +802,7 @@ function artistListMovementEntries(countries, selectedCountryIds, start, end) {
   }
   countries.filter(country => selected.has(country.id)).forEach((country, countryOrder) => {
     (country.movements || []).forEach((movement, movementOrder) => {
+      if (movementIsContextOnly(movement)) return;
       const clipped = clippedMovement(movement, start, end);
       if (!clipped) return;
       const parentDocumentName=movementDocumentKey(clipped.name?.en || clipped.name?.ko || loc(clipped.name));
@@ -923,7 +935,7 @@ function renderCountryArt(options = {}) {
   }
   let entries = artistListMode
     ? artistListMovementEntries(countriesByDataOrder, artistListView.countries, start, end)
-    : (country.movements || []).map(item => clippedMovement(item,start,end)).filter(Boolean).sort((a,b) => a.start-b.start || a.end-b.end).map((item, column) => ({...item, column}));
+    : (country.movements || []).filter(item => !movementIsContextOnly(item)).map(item => clippedMovement(item,start,end)).filter(Boolean).sort((a,b) => a.start-b.start || a.end-b.end).map((item, column) => ({...item, column}));
   if (artistListMode) {
     entries=orderedArtistListMovementEntries(entries).map((entry,index) => ({
       ...entry,
