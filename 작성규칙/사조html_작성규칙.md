@@ -4,6 +4,9 @@
 
 ## 구조와 이름
 
+- 전면 재구축에서 부모 사조와 핵심 범주의 정본은 `data/art-movement-canonical.json`이다. 독립 HTML은 `role: document`인 부모 34개와 `contextReferences`의 이전 미술 참고 2개만 대상으로 하며, `role: absorbed`인 부모 10개는 `documentOwnerId` 문서 안에서 설명한다.
+- 국가 전개 표 첫 열, 심화 대표작 카드 범주 제목, 화가 리스트의 세부 범주 박스는 정본의 같은 `categoryId`와 표시명을 사용해야 한다. 구체적인 HTML 속성과 저장 동기화 방식은 재구축 동기화 계약에 따르되, 이름을 문서별로 줄이거나 합치거나 새로 만들지 않는다.
+- `coveredTopics`는 핵심 범주로 별도 노출하지 않고 해당 범주 설명 안에서 다룰 관련 화파·경향이다. 별칭이나 동일 사조로 간주하지 않는다.
 - 독자적 조형 언어, 제도·집단, 선언 또는 분명한 내부 분화가 있는 항목만 별도 설명 HTML로 만든다. 한 국가에서 상위 사조를 수용·변형한 지역적 전개는 국가별 막대는 유지할 수 있지만, 별도 HTML을 복제하지 않고 상위 사조 문서의 `여러 국가에서의 전개`에서 설명한다.
 - `<section id="countries">`, `<section class="movement-enhancement" id="movement-deepening">`를 둔다. 상단 고정 바는 서버가 문서의 사조명을 기본 내비게이션 글자 크기의 두 배(`2em`)로, 문서 폭 중앙에 표시하므로 목차 링크를 고정 내비게이션으로 사용하지 않는다.
 - 사조 막대는 더블클릭으로 설명 HTML을 새 탭에 열며 별도 원문자 설명 아이콘을 넣지 않는다.
@@ -31,4 +34,4 @@
 - 로컬 이미지 또는 기존 내장 이미지만 사용하며 외부 이미지 URL·다운로드 의존을 새로 만들지 않는다. 화가별 로컬 썸네일을 카드에 재사용할 때는 상대 경로와 `data-art-atlas-highres`가 같은 로컬 자산을 가리키는지 확인한다.
 - `<img src="data:image/...">` 형태의 base64 인라인 이미지는 사조 HTML에 넣지 않는다. 사용해야 하는 기존 내장 이미지는 `data/미술사조/images/`의 로컬 파일로 분리한 뒤 상대 경로로 참조한다.
 - 대표작 카드는 전체 폭 3열, 작은 화면 1열을 유지한다.
-- 완료 전 `node tools/validate-movement-links.js`, `node tools/normalize-country-development-tables.js --dry-run`, `node --check server.js`, `node tools/check-project-health.js`, `git diff --check`를 실행한다. 사조 HTML 제공 경로나 서버 콘텐츠 서비스를 고쳤다면 서버 재시작 뒤 `index.json` 등록 문서 전체의 HTTP 200 응답도 확인한다.
+- 완료 전 `node tools/validate-movement-canonical.js`, `node tools/validate-movement-links.js`, `node tools/normalize-country-development-tables.js --dry-run`, `node --check server.js`, `node tools/check-project-health.js`, `git diff --check`를 실행한다. 사조 HTML 제공 경로나 서버 콘텐츠 서비스를 고쳤다면 서버 재시작 뒤 `index.json` 등록 문서 전체의 HTTP 200 응답도 확인한다.
