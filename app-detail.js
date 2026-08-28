@@ -385,7 +385,36 @@ function setupMovementImageDescriptionEditors(frame, name, slot='1') {
   const label = language === 'ko' ? '설명 편집' : 'Edit description';
   const saveLabel = language === 'ko' ? '저장' : 'Save';
   const cancelLabel = language === 'ko' ? '취소' : 'Cancel';
+  const syncCountryDevelopmentRepresentatives = () => {
+    const representativeSection=[...documentInFrame.querySelectorAll('.movement-enhancement')].at(-1);
+    const countrySection=documentInFrame.querySelector('#countries[data-art-atlas-country-feature-editor]');
+    if (!representativeSection || !countrySection) return;
+    const countryKey=value => String(value || '').split(/\s*[—–-]\s*/)[0].replace(/\s+/g,'').trim();
+    const grids=[...representativeSection.querySelectorAll('.movement-work-grid[data-art-atlas-submovement]')];
+    countrySection.querySelectorAll('tbody tr').forEach(row => {
+      const countryCell=row.cells?.[0], representativeCell=row.cells?.[2];
+      if (!countryCell || !representativeCell) return;
+      const key=countryKey(countryCell.textContent);
+      const grid=grids.find(item => countryKey(item.dataset.artAtlasSubmovement) === key);
+      if (!grid) return;
+      const artists=[];
+      [...grid.querySelectorAll(':scope > article.movement-work-card, :scope > article.card')].forEach(card => {
+        const link=card.querySelector('.movement-work-body h3 a[data-artist-id], .caption h3 a[data-artist-id]');
+        const id=link?.dataset.artistId;
+        if (!link || !id || artists.some(item => item.dataset.artistId === id)) return;
+        artists.push(link.cloneNode(true));
+      });
+      if (!artists.length) return;
+      const existingIds=[...representativeCell.querySelectorAll('[data-artist-id]')].map(link => link.dataset.artistId).filter(Boolean);
+      // Never discard a documented representative that still lacks a card.
+      // The validation workflow must add that card before this row can be
+      // regenerated from the card order.
+      if (existingIds.some(id => !artists.some(artist => artist.dataset.artistId === id))) return;
+      representativeCell.replaceChildren(...artists.flatMap((artist,index) => index ? [documentInFrame.createTextNode(', '),artist] : [artist]));
+    });
+  };
   const saveDocument = async () => {
+    syncCountryDevelopmentRepresentatives();
     const copy = documentInFrame.documentElement.cloneNode(true);
     copy.querySelectorAll('[data-art-atlas-description-editor], [data-art-atlas-country-feature-editor-control], #art-atlas-description-editor-style, #art-atlas-generic-country-feature-editor-style').forEach(element => element.remove());
     copy.querySelectorAll('[data-art-atlas-sortable-work]').forEach(card => {

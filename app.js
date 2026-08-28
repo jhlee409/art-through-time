@@ -150,6 +150,9 @@ $('#logout-button').onclick = logoutEverywhere;
 window.addEventListener('storage', event => {
   if (event.key === countryArtDocumentRevisionStorageKey && (isCountryArtPage || isPainterListPage)) {
     countryArtWorkCache.clear();
+    artistListCountryDevelopmentRepresentatives.clear();
+    artistListCountryDevelopmentRepresentativesReady=false;
+    artistListCountryDevelopmentRepresentativesRequest=null;
     document.querySelector('.country-art-movement-preview')?.remove();
     document.querySelector('.country-art-image-magnifier')?.remove();
     if (viewMode === 'country-art') renderCountryArt();
