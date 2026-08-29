@@ -2,6 +2,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const {requireUrlFileDownloadApproval} = require('./url-download-permission');
+const {workHasLocalImage} = require('./image-path-utils');
 
 const root = path.resolve(__dirname, '..');
 const representativesFile = path.join(root, 'data', 'art-movement-representatives.json');
@@ -111,9 +112,7 @@ async function mapLimit(items, limit, mapper) {
 
 async function main() {
   const representatives = JSON.parse(fs.readFileSync(representativesFile, 'utf8'));
-  const pending = representatives.furtherArtists.flatMap(category => category.artists.map(item => ({...item, categoryId:category.categoryId}))).filter(item => {
-    return !item.work.localImage || !fs.existsSync(path.join(root, item.work.localImage));
-  });
+  const pending = representatives.furtherArtists.flatMap(category => category.artists.map(item => ({...item, categoryId:category.categoryId}))).filter(item => !workHasLocalImage(item.work, item.artist.id));
   const searches = await mapLimit(pending, 2, searchCommons);
   const items = pending.map((item, index) => {
     const candidates = Array.isArray(searches[index]) ? searches[index] : [];

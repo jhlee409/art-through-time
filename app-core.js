@@ -1119,7 +1119,8 @@ function thumbnail(url, width = 240) { return ''; }
 function isExternalImageSource(value) { return /^https?:\/\//i.test(String(value || '')); }
 const offlineArtworkPlaceholder = 'data/images/_placeholder/artwork-placeholder.png';
 function localArtworkImage(work) {
-  const image = work?.thumbnail || '';
+  const image = [work?.thumbnail, work?.image, work?.highResImage, work?.highResOriginal]
+    .find(value => value && !isExternalImageSource(value)) || '';
   if (!image || isExternalImageSource(image)) return offlineArtworkPlaceholder;
   if (image === offlineArtworkPlaceholder) return image;
   return work?.thumbnailCacheKey ? `${image}?v=${encodeURIComponent(work.thumbnailCacheKey)}` : image;

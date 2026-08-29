@@ -7,9 +7,10 @@
   "policy": "작가당 확정 대표작 1점만 받으며 Commons 파일 페이지의 공개 라이선스와 작품 일치를 검토한 candidate만 다운로드한다.",
   "counts": {
     "pending": 130,
-    "downloaded": 6,
+    "downloaded": 52,
     "candidates": 0,
-    "unresolved": 124
+    "unresolved": 78,
+    "failed": 0
   },
   "items": [
     {
@@ -191,10 +192,12 @@
         "en": "The Flagellation of Christ"
       },
       "targetPath": "data/images/artist-mid-piero-della-francesca/piero-flagellation.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-mid-piero-della-francesca: Commons API 429"
+      "error": "artist-mid-piero-della-francesca: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.579Z",
+      "bytes": 918320
     },
     {
       "categoryId": "renaissance--high",
@@ -458,7 +461,7 @@
         "en": "Isenheim Altarpiece"
       },
       "targetPath": "data/images/artist-mid-grunewald/grunewald-isenheim-altarpiece.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 22,
         "artistMatches": 2,
@@ -524,7 +527,9 @@
           "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
           "artistCredit": "<a href=\"//commons.wikimedia.org/wiki/User:Txllxt_TxllxT\" title=\"User:Txllxt TxllxT\">Txllxt TxllxT</a>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T06:03:38.582Z",
+      "bytes": 1126024
     },
     {
       "categoryId": "mannerism--italian",
@@ -622,10 +627,12 @@
         "en": "Judith Slaying Holofernes"
       },
       "targetPath": "data/images/artist-mid-artemisia-gentileschi/gentileschi-judith-slaying-holofernes.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-mid-artemisia-gentileschi: Commons API 429"
+      "error": "artist-mid-artemisia-gentileschi: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.583Z",
+      "bytes": 711545
     },
     {
       "categoryId": "baroque--flemish",
@@ -640,10 +647,12 @@
         "en": "The King Drinks"
       },
       "targetPath": "data/images/artist-mid-jacob-jordaens/jordaens-king-drinks.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-mid-jacob-jordaens: Commons API 429"
+      "error": "artist-mid-jacob-jordaens: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.584Z",
+      "bytes": 188995
     },
     {
       "categoryId": "baroque--dutch-golden-age",
@@ -658,10 +667,12 @@
         "en": "The Laughing Cavalier"
       },
       "targetPath": "data/images/artist-Q167654/frans-hals-laughing-cavalier-1624.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-Q167654: Commons API 429"
+      "error": "artist-Q167654: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.584Z",
+      "bytes": 1151126
     },
     {
       "categoryId": "baroque--dutch-golden-age",
@@ -676,10 +687,12 @@
         "en": "Self-Portrait"
       },
       "targetPath": "data/images/artist-mid-judith-leyster/leyster-self-portrait.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-mid-judith-leyster: Commons API 429"
+      "error": "artist-mid-judith-leyster: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.585Z",
+      "bytes": 1509495
     },
     {
       "categoryId": "baroque--dutch-golden-age",
@@ -694,10 +707,12 @@
         "en": "The Windmill at Wijk bij Duurstede"
       },
       "targetPath": "data/images/artist-mid-jacob-van-ruisdael/ruisdael-windmill-at-wijk.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-mid-jacob-van-ruisdael: Commons API 429"
+      "error": "artist-mid-jacob-van-ruisdael: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.586Z",
+      "bytes": 905205
     },
     {
       "categoryId": "baroque--spanish",
@@ -712,10 +727,12 @@
         "en": "The Martyrdom of Saint Philip"
       },
       "targetPath": "data/images/artist-mid-jusepe-de-ribera/ribera-martyrdom-saint-philip.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-mid-jusepe-de-ribera: Commons API 429"
+      "error": "artist-mid-jusepe-de-ribera: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.586Z",
+      "bytes": 170174
     },
     {
       "categoryId": "baroque--french",
@@ -730,10 +747,12 @@
         "en": "Magdalene with the Smoking Flame"
       },
       "targetPath": "data/images/artist-mid-georges-de-la-tour/la-tour-magdalene-smoking-flame.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-mid-georges-de-la-tour: Commons API 429"
+      "error": "artist-mid-georges-de-la-tour: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.587Z",
+      "bytes": 798908
     },
     {
       "categoryId": "realism--french",
@@ -748,10 +767,12 @@
         "en": "The Gleaners"
       },
       "targetPath": "data/images/artist-further-millet/millet-the-gleaners.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-further-millet: Commons API 429"
+      "error": "artist-further-millet: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.587Z",
+      "bytes": 170469
     },
     {
       "categoryId": "realism--french",
@@ -766,10 +787,12 @@
         "en": "The Third-Class Carriage"
       },
       "targetPath": "data/images/artist-mid-honore-daumier/daumier-third-class-carriage.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-mid-honore-daumier: Commons API 429"
+      "error": "artist-mid-honore-daumier: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.588Z",
+      "bytes": 878440
     },
     {
       "categoryId": "realism--russian",
@@ -784,10 +807,12 @@
         "en": "Christ in the Desert"
       },
       "targetPath": "data/images/artist-further-kramskoi/kramskoi-christ-in-the-desert.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-further-kramskoi: Commons API 429"
+      "error": "artist-further-kramskoi: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.589Z",
+      "bytes": 231797
     },
     {
       "categoryId": "realism--russian",
@@ -802,10 +827,12 @@
         "en": "The Morning of the Streltsy Execution"
       },
       "targetPath": "data/images/artist-mid-vasily-surikov/surikov-morning-streltsy-execution.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-mid-vasily-surikov: Commons API 429"
+      "error": "artist-mid-vasily-surikov: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.589Z",
+      "bytes": 897573
     },
     {
       "categoryId": "post-impressionism--core",
@@ -820,10 +847,12 @@
         "en": "Mont Sainte-Victoire"
       },
       "targetPath": "data/images/artist-further-cezanne/cezanne-mont-sainte-victoire.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-further-cezanne: Commons API 429"
+      "error": "artist-further-cezanne: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.590Z",
+      "bytes": 1166547
     },
     {
       "categoryId": "post-impressionism--neo-impressionism",
@@ -838,10 +867,12 @@
         "en": "The Port of Saint-Tropez"
       },
       "targetPath": "data/images/artist-further-signac/signac-port-saint-tropez.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-further-signac: Commons API 429"
+      "error": "artist-further-signac: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.591Z",
+      "bytes": 1392691
     },
     {
       "categoryId": "post-impressionism--pont-aven-synthetism",
@@ -874,10 +905,12 @@
         "en": "The Talisman"
       },
       "targetPath": "data/images/artist-mid-paul-serusier/serusier-the-talisman.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-mid-paul-serusier: Commons API 429"
+      "error": "artist-mid-paul-serusier: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.595Z",
+      "bytes": 1060059
     },
     {
       "categoryId": "expressionism--brucke",
@@ -1000,10 +1033,12 @@
         "en": "Laughing Self-Portrait"
       },
       "targetPath": "data/images/artist-mid-richard-gerstl/gerstl-laughing-self-portrait.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-mid-richard-gerstl: Commons API 429"
+      "error": "artist-mid-richard-gerstl: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.616Z",
+      "bytes": 123700
     },
     {
       "categoryId": "cubism--analytic",
@@ -1035,11 +1070,13 @@
         "ko": "세 명의 음악가",
         "en": "Three Musicians"
       },
-      "targetPath": "data/images/artist-art-atlas-picasso/picasso-three-musicians.jpg",
-      "reviewStatus": "unresolved",
+      "targetPath": "data/images/artist-art-atlas-picasso/picasso-three-musicians.jpeg",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-art-atlas-picasso: Commons API 429"
+      "error": "artist-art-atlas-picasso: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.620Z",
+      "bytes": 42234
     },
     {
       "categoryId": "russian-avant-garde--suprematism",
@@ -1072,10 +1109,12 @@
         "en": "Green Stripe"
       },
       "targetPath": "data/images/artist-mid-olga-rozanova/rozanova-green-stripe.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-mid-olga-rozanova: Commons API 429"
+      "error": "artist-mid-olga-rozanova: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.624Z",
+      "bytes": 1083076
     },
     {
       "categoryId": "russian-avant-garde--constructivism",
@@ -1090,10 +1129,12 @@
         "en": "Monument to the Third International"
       },
       "targetPath": "data/images/artist-further-tatlin/tatlin-monument-third-international.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-further-tatlin: Commons API 429"
+      "error": "artist-further-tatlin: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.625Z",
+      "bytes": 219495
     },
     {
       "categoryId": "russian-avant-garde--constructivism",
@@ -1108,10 +1149,12 @@
         "en": "Painterly Architectonic"
       },
       "targetPath": "data/images/artist-mid-lyubov-popova/popova-painterly-architectonic.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-mid-lyubov-popova: Commons API 429"
+      "error": "artist-mid-lyubov-popova: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.626Z",
+      "bytes": 1531979
     },
     {
       "categoryId": "russian-avant-garde--constructivism",
@@ -1126,10 +1169,12 @@
         "en": "The Billiard Players"
       },
       "targetPath": "data/images/artist-mid-varvara-stepanova/stepanova-billiard-players.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-mid-varvara-stepanova: Commons API 429"
+      "error": "artist-mid-varvara-stepanova: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.626Z",
+      "bytes": 687977
     },
     {
       "categoryId": "dada--zurich",
@@ -1216,10 +1261,12 @@
         "en": "Gift"
       },
       "targetPath": "data/images/artist-further-man-ray/man-ray-gift.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-further-man-ray: Commons API 429"
+      "error": "artist-further-man-ray: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.640Z",
+      "bytes": 280591
     },
     {
       "categoryId": "dada--new-york",
@@ -1252,10 +1299,12 @@
         "en": "Woman I"
       },
       "targetPath": "data/images/artist-further-de-kooning/de-kooning-woman-i.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-further-de-kooning: Commons API 429"
+      "error": "artist-further-de-kooning: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.644Z",
+      "bytes": 606169
     },
     {
       "categoryId": "abstract-expressionism--action-painting",
@@ -1540,10 +1589,12 @@
         "en": "The Doge Palace and the Riva degli Schiavoni"
       },
       "targetPath": "data/images/artist-mid-francesco-guardi/guardi-doges-palace.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-mid-francesco-guardi: Commons API 429"
+      "error": "artist-mid-francesco-guardi: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.693Z",
+      "bytes": 2658923
     },
     {
       "categoryId": "romanticism--german",
@@ -1576,10 +1627,12 @@
         "en": "The Ancient of Days"
       },
       "targetPath": "data/images/artist-mid-william-blake/blake-ancient-of-days.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-mid-william-blake: Commons API 429"
+      "error": "artist-mid-william-blake: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.697Z",
+      "bytes": 1252499
     },
     {
       "categoryId": "romanticism--french",
@@ -1630,10 +1683,12 @@
         "en": "The Birth of Venus"
       },
       "targetPath": "data/images/artist-further-cabanel/cabanel-birth-of-venus.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-further-cabanel: Commons API 429"
+      "error": "artist-further-cabanel: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.704Z",
+      "bytes": 369920
     },
     {
       "categoryId": "academicism--core",
@@ -1648,10 +1703,12 @@
         "en": "Pollice Verso"
       },
       "targetPath": "data/images/artist-mid-jean-leon-gerome/gerome-pollice-verso.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-mid-jean-leon-gerome: Commons API 429"
+      "error": "artist-mid-jean-leon-gerome: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.705Z",
+      "bytes": 977459
     },
     {
       "categoryId": "impressionism--french",
@@ -1666,10 +1723,12 @@
         "en": "Dance at Le Moulin de la Galette"
       },
       "targetPath": "data/images/artist-further-renoir/renoir-moulin-galette.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-further-renoir: Commons API 429"
+      "error": "artist-further-renoir: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.705Z",
+      "bytes": 937418
     },
     {
       "categoryId": "impressionism--french",
@@ -1684,10 +1743,12 @@
         "en": "The Boulevard Montmartre at Night"
       },
       "targetPath": "data/images/artist-mid-camille-pissarro/pissarro-boulevard-montmartre-night.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-mid-camille-pissarro: Commons API 429"
+      "error": "artist-mid-camille-pissarro: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.706Z",
+      "bytes": 1224142
     },
     {
       "categoryId": "impressionism--french",
@@ -1702,10 +1763,12 @@
         "en": "The Dance Class"
       },
       "targetPath": "data/images/artist-mid-edgar-degas/degas-dance-class.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-mid-edgar-degas: Commons API 429"
+      "error": "artist-mid-edgar-degas: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.707Z",
+      "bytes": 1133527
     },
     {
       "categoryId": "impressionism--french",
@@ -1720,10 +1783,12 @@
         "en": "The Cradle"
       },
       "targetPath": "data/images/artist-mid-berthe-morisot/morisot-cradle.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-mid-berthe-morisot: Commons API 429"
+      "error": "artist-mid-berthe-morisot: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.707Z",
+      "bytes": 239603
     },
     {
       "categoryId": "impressionism--american",
@@ -1737,11 +1802,13 @@
         "ko": "아이의 목욕",
         "en": "The Child’s Bath"
       },
-      "targetPath": "data/images/artist-further-cassatt/cassatt-child-bath.jpg",
-      "reviewStatus": "unresolved",
+      "targetPath": "data/images/artist-further-cassatt/cassatt-child-bath.jpeg",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-further-cassatt: Commons API 429"
+      "error": "artist-further-cassatt: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.708Z",
+      "bytes": 1887502
     },
     {
       "categoryId": "impressionism--american",
@@ -1756,10 +1823,12 @@
         "en": "Idle Hours"
       },
       "targetPath": "data/images/artist-mid-william-merritt-chase/chase-idle-hours.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-mid-william-merritt-chase: Commons API 429"
+      "error": "artist-mid-william-merritt-chase: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.709Z",
+      "bytes": 802133
     },
     {
       "categoryId": "symbolism--french-belgian",
@@ -1774,10 +1843,12 @@
         "en": "The Cyclops"
       },
       "targetPath": "data/images/artist-further-redon/redon-cyclops.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-further-redon: Commons API 429"
+      "error": "artist-further-redon: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.710Z",
+      "bytes": 2067483
     },
     {
       "categoryId": "symbolism--french-belgian",
@@ -1792,10 +1863,12 @@
         "en": "The Caresses"
       },
       "targetPath": "data/images/artist-mid-fernand-khnopff/khnopff-caresses.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-mid-fernand-khnopff: Commons API 429"
+      "error": "artist-mid-fernand-khnopff: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.710Z",
+      "bytes": 318140
     },
     {
       "categoryId": "symbolism--central-northern-european",
@@ -1810,10 +1883,12 @@
         "en": "Judith I"
       },
       "targetPath": "data/images/artist-art-atlas-klimt/klimt-judith-i.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-art-atlas-klimt: Commons API 429"
+      "error": "artist-art-atlas-klimt: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.711Z",
+      "bytes": 3040406
     },
     {
       "categoryId": "symbolism--central-northern-european",
@@ -1828,10 +1903,12 @@
         "en": "Isle of the Dead"
       },
       "targetPath": "data/images/artist-mid-arnold-bocklin/bocklin-isle-of-the-dead.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-mid-arnold-bocklin: Commons API 429"
+      "error": "artist-mid-arnold-bocklin: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.712Z",
+      "bytes": 135793
     },
     {
       "categoryId": "art-nouveau--french-belgian",
@@ -1846,10 +1923,12 @@
         "en": "Paris Metro Entrance"
       },
       "targetPath": "data/images/artist-further-guimard/guimard-paris-metro-entrance.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-further-guimard: Commons API 429"
+      "error": "artist-further-guimard: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.712Z",
+      "bytes": 918988
     },
     {
       "categoryId": "art-nouveau--french-belgian",
@@ -1918,10 +1997,12 @@
         "en": "Charing Cross Bridge"
       },
       "targetPath": "data/images/artist-further-derain/derain-charing-cross-bridge.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-further-derain: Commons API 429"
+      "error": "artist-further-derain: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.723Z",
+      "bytes": 918258
     },
     {
       "categoryId": "fauvism--matisse-chatou",
@@ -2025,11 +2106,13 @@
         "ko": "칼 가는 사람",
         "en": "The Knife Grinder"
       },
-      "targetPath": "data/images/artist-art-atlas-malevich/malevich-knife-grinder.jpg",
-      "reviewStatus": "unresolved",
+      "targetPath": "data/images/artist-art-atlas-malevich/malevich-knife-grinder.jpeg",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-art-atlas-malevich: Commons API 429"
+      "error": "artist-art-atlas-malevich: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.740Z",
+      "bytes": 1005351
     },
     {
       "categoryId": "futurism--russian-cubo",
@@ -2080,10 +2163,12 @@
         "en": "Red Balloon"
       },
       "targetPath": "data/images/artist-further-klee/klee-red-balloon.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-further-klee: Commons API 429"
+      "error": "artist-further-klee: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.747Z",
+      "bytes": 1919435
     },
     {
       "categoryId": "bauhaus--core",
@@ -2098,10 +2183,12 @@
         "en": "Composition VII"
       },
       "targetPath": "data/images/artist-art-atlas-kandinsky/kandinsky-composition-vii.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-art-atlas-kandinsky: Commons API 429"
+      "error": "artist-art-atlas-kandinsky: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.748Z",
+      "bytes": 2737272
     },
     {
       "categoryId": "bauhaus--core",
@@ -2116,10 +2203,12 @@
         "en": "Light-Space Modulator"
       },
       "targetPath": "data/images/artist-mid-laszlo-moholy-nagy/moholy-nagy-light-space-modulator.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-mid-laszlo-moholy-nagy: Commons API 429"
+      "error": "artist-mid-laszlo-moholy-nagy: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.749Z",
+      "bytes": 1060946
     },
     {
       "categoryId": "bauhaus--core",
@@ -2602,10 +2691,12 @@
         "en": "Cut Piece"
       },
       "targetPath": "data/images/artist-further-yoko-ono/ono-cut-piece.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-further-yoko-ono: Commons API 429"
+      "error": "artist-further-yoko-ono: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.831Z",
+      "bytes": 512175
     },
     {
       "categoryId": "conceptual-art--fluxus",
@@ -2800,10 +2891,12 @@
         "en": "Sunflower Seeds"
       },
       "targetPath": "data/images/artist-mid-ai-weiwei/ai-sunflower-seeds.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-mid-ai-weiwei: Commons API 429"
+      "error": "artist-mid-ai-weiwei: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.863Z",
+      "bytes": 971139
     }
   ]
 }

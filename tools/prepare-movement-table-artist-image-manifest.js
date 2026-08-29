@@ -2,6 +2,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const {requireUrlFileDownloadApproval} = require('./url-download-permission');
+const {workHasLocalImage} = require('./image-path-utils');
 
 const root = path.resolve(__dirname, '..');
 const representativesFile = path.join(root, 'data', 'art-movement-representatives.json');
@@ -30,22 +31,6 @@ function normalize(value) {
 
 function tokens(value) {
   return normalize(value).split(/\s+/).filter(token => token.length > 2 && !stopWords.has(token));
-}
-
-function existingLocalPath(value) {
-  const clean = String(value || '').trim();
-  if (!clean || /^https?:/i.test(clean)) return '';
-  const absolute = path.join(root, clean.replace(/\//g, path.sep));
-  return fs.existsSync(absolute) ? clean : '';
-}
-
-function workHasLocalImage(work) {
-  return Boolean(
-    existingLocalPath(work?.localImage)
-    || existingLocalPath(work?.thumbnail)
-    || existingLocalPath(work?.migration?.image?.localThumbnail)
-    || existingLocalPath(work?.image)
-  );
 }
 
 function representativeRows(representatives) {
@@ -169,7 +154,7 @@ async function main() {
   const pending = representativeRows(representatives).filter(item => {
     const artist = artistsById.get(item.artist.id);
     const artistWork = (artist?.works || []).find(work => String(work.id) === String(item.work.id));
-    return !workHasLocalImage(item.work) && !workHasLocalImage(artistWork);
+    return !workHasLocalImage(item.work, item.artist.id) && !workHasLocalImage(artistWork, item.artist.id);
   });
   const searches = await mapLimit(pending, 4, async (item, index) => {
     const label = `${index + 1}/${pending.length} ${item.role} ${item.artist.name.ko} - ${item.work.title.ko}`;

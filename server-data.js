@@ -314,8 +314,8 @@ async function reduceImageBufferForStorage(image, extension, fileBase) {
   }
 }
 function localThumbnailIndexTarget(relativePath) {
-  const clean=String(relativePath || '').trim().replace(/[?#].*$/,'').replace(/\\/g,'/');
-  if(!/^data\/thumbnails\//.test(clean) || clean === offlineArtworkPlaceholder) return null;
+  const clean=String(relativePath || '').trim().replace(/[?#].*$/,'').replace(/\\/g,'/').replace(/^data\/thumbnails\//,'data/images/');
+  if(!/^data\/images\//.test(clean) || clean === offlineArtworkPlaceholder) return null;
   const target=path.resolve(root,clean);
   const relative=path.relative(root,target).replace(/\\/g,'/');
   return relative && !relative.startsWith('..') && !path.isAbsolute(relative) ? target : null;

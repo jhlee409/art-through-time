@@ -769,8 +769,10 @@ async function hydrateThumbnails(artist) {
   try {
     const index = await (await fetch(`data/images/${encodeURIComponent(artist.id)}/index.json`)).json();
     (artist.works || []).forEach(work => {
-      if (index[work.id]?.thumbnail) {
-        work.thumbnail = index[work.id].thumbnail;
+      const indexedThumbnail = String(index[work.id]?.thumbnail || '')
+        .replace(/^data\/thumbnails\//, 'data/images/');
+      if (indexedThumbnail) {
+        work.thumbnail = indexedThumbnail;
         work.thumbnailCacheKey = index[work.id].checkedAt || '';
         work.thumbnailValidation = work.thumbnail === offlineArtworkPlaceholder ? 0 : 2;
       }

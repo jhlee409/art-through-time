@@ -2,6 +2,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const {requireUrlFileDownloadApproval} = require('./url-download-permission');
+const {workHasLocalImage} = require('./image-path-utils');
 
 const root = path.resolve(__dirname, '..');
 const artistsFile = path.join(root, 'data', 'artists.json');
@@ -29,22 +30,6 @@ function normalize(value) {
 
 function tokens(value) {
   return normalize(value).split(/\s+/).filter(token => token.length > 2 && !stopWords.has(token));
-}
-
-function existingLocalPath(value) {
-  const clean = String(value || '').trim();
-  if (!clean || /^https?:/i.test(clean)) return '';
-  const absolute = path.join(root, clean.replace(/\//g, path.sep));
-  return fs.existsSync(absolute) ? clean : '';
-}
-
-function workHasLocalImage(work) {
-  return Boolean(
-    existingLocalPath(work?.thumbnail)
-    || existingLocalPath(work?.image)
-    || existingLocalPath(work?.highResImage)
-    || existingLocalPath(work?.migration?.image?.localThumbnail)
-  );
 }
 
 function candidateScore(candidate, artistName, workTitle) {
@@ -143,7 +128,7 @@ async function mapLimit(items, limit, mapper) {
 async function main() {
   const artists = readJson(artistsFile).artists || [];
   const pending = artists.flatMap(artist => (artist.works || [])
-    .filter(work => !workHasLocalImage(work))
+    .filter(work => !workHasLocalImage(work, artist.id))
     .map(work => ({
       artistId: artist.id,
       artistName: artist.name || {},
@@ -187,7 +172,7 @@ async function main() {
       pending: items.length,
       candidates: items.filter(item => item.reviewStatus === 'candidate').length,
       unresolved: items.filter(item => item.reviewStatus === 'unresolved').length,
-      skippedNoSearchTokens: artists.flatMap(artist => artist.works || []).filter(work => !workHasLocalImage(work)).length - pending.length
+    skippedNoSearchTokens: artists.flatMap(artist => (artist.works || []).map(work => ({artist, work}))).filter(item => !workHasLocalImage(item.work, item.artist.id)).length - pending.length
     },
     items
   };

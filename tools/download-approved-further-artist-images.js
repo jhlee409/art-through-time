@@ -2,6 +2,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const {requireUrlFileDownloadApproval} = require('./url-download-permission');
+const {existingLocalPathForWork, resolveExistingLocalImagePath} = require('./image-path-utils');
 
 const root = path.resolve(__dirname, '..');
 const manifestFile = path.join(root, 'data', 'further-artist-image-download-manifest.json');
@@ -51,17 +52,20 @@ async function main() {
   };
   for (const item of approved) {
     try {
-      const source = new URL(item.selected.downloadUrl);
-      const approvedHost = source.hostname === 'upload.wikimedia.org'
-        || (source.hostname === 'commons.wikimedia.org' && source.pathname.startsWith('/wiki/Special:Redirect/file/'));
-      if (source.protocol !== 'https:' || !approvedHost) {
-        throw new Error(`${item.artistId}: unapproved image host ${source.hostname}`);
-      }
-      const absolute = path.join(root, item.targetPath);
+      const work = workMap.get(`${item.artistId}|${item.workId}`);
+      if (!work) throw new Error(`${item.artistId}: representative work is missing`);
+      let localPath = existingLocalPathForWork(work, item.artistId) || resolveExistingLocalImagePath(item.targetPath);
+      let absolute = localPath ? path.join(root, localPath) : path.join(root, item.targetPath);
       let buffer;
-      if (fs.existsSync(absolute) && fs.statSync(absolute).size > 0) {
+      if (localPath && fs.existsSync(absolute) && fs.statSync(absolute).size > 0) {
         buffer = fs.readFileSync(absolute);
       } else {
+        const source = new URL(item.selected.downloadUrl);
+        const approvedHost = source.hostname === 'upload.wikimedia.org'
+          || (source.hostname === 'commons.wikimedia.org' && source.pathname.startsWith('/wiki/Special:Redirect/file/'));
+        if (source.protocol !== 'https:' || !approvedHost) {
+          throw new Error(`${item.artistId}: unapproved image host ${source.hostname}`);
+        }
         let response;
         for (let attempt = 0; attempt < 5; attempt += 1) {
           response = await fetch(source, {
@@ -80,13 +84,14 @@ async function main() {
         if (declaredBytes > maxBytes) throw new Error(`${item.artistId}: image exceeds ${maxBytes} bytes`);
         buffer = Buffer.from(await response.arrayBuffer());
         if (!buffer.length || buffer.length > maxBytes) throw new Error(`${item.artistId}: invalid image size ${buffer.length}`);
+        localPath = item.targetPath;
+        absolute = path.join(root, localPath);
         fs.mkdirSync(path.dirname(absolute), {recursive:true});
         fs.writeFileSync(absolute, buffer);
         await new Promise(resolve => setTimeout(resolve, 3000));
       }
-      const work = workMap.get(`${item.artistId}|${item.workId}`);
-      if (!work) throw new Error(`${item.artistId}: representative work is missing`);
-      work.localImage = item.targetPath;
+      item.targetPath = localPath;
+      work.localImage = localPath;
       work.sourceUrl = item.selected.pageUrl;
       work.license = item.selected.license;
       work.institution = 'Wikimedia Commons';
@@ -98,7 +103,7 @@ async function main() {
         curatedItem.reviewStatus = 'downloaded';
         curatedItem.downloadedAt = item.downloadedAt;
       }
-      results.push({artistId:item.artistId, workId:item.workId, targetPath:item.targetPath, bytes:buffer.length});
+      results.push({artistId:item.artistId, workId:item.workId, targetPath:localPath, bytes:buffer.length});
       persist();
       console.log(`downloaded ${item.artistId} (${buffer.length} bytes)`);
     } catch (error) {

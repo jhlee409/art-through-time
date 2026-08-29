@@ -7,10 +7,10 @@
   "policy": "전체 화가 작품 중 로컬 이미지가 없는 작품을 대상으로 하며, Commons 후보에서 작가명과 작품명이 충분히 일치한 candidate만 다운로드한다.",
   "counts": {
     "pending": 308,
-    "downloaded": 50,
-    "candidates": 40,
-    "unresolved": 187,
-    "failed": 31,
+    "downloaded": 74,
+    "candidates": 34,
+    "unresolved": 174,
+    "failed": 26,
     "skippedNoSearchTokens": 8
   },
   "items": [
@@ -3294,8 +3294,8 @@
         "ko": "플랑드르파",
         "en": "Early Netherlandish painting"
       },
-      "targetPath": "data/images/artist-Q68631/rogier-portrait-of-a-lady.jpg",
-      "reviewStatus": "unresolved",
+      "targetPath": "data/images/artist-Q68631/rogier-portrait-of-a-lady.png",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [
         {
@@ -3346,7 +3346,9 @@
           "credit": "<a rel=\"nofollow\" class=\"external free\" href=\"http://www.nationalgallery.org.uk/paintings/workshop-of-rogier-van-der-weyden-portrait-of-a-lady\">http://www.nationalgallery.org.uk/paintings/workshop-of-rogier-van-der-weyden-portrait-of-a-lady</a>",
           "artistCredit": "<bdi>Workshop of <a href=\"https://en.wikipedia.org/wiki/en:Rogier_van_der_Weyden\" class=\"extiw\" title=\"w:en:Rogier van der Weyden\"><span title=\"early Netherlandish painter (c. 1399–1464)\">Rogier van der Weyden</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T06:03:37.694Z",
+      "bytes": 6291044
     },
     {
       "artistId": "artist-url-1787307872488",
@@ -6524,8 +6526,8 @@
         "ko": "독일 르네상스",
         "en": "German Renaissance"
       },
-      "targetPath": "data/images/artist-Q191748/cranach-hunt-hartenfels.jpg",
-      "reviewStatus": "unresolved",
+      "targetPath": "data/images/artist-Q191748/cranach-hunt-hartenfels.png",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [
         {
@@ -6544,7 +6546,9 @@
           "credit": "1. <a rel=\"nofollow\" class=\"external text\" href=\"https://www.clevelandart.org/art/1958.425\">The Cleveland Museum of Art</a>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Lucas_Cranach_the_Elder\" class=\"extiw\" title=\"w:en:Lucas Cranach the Elder\"><span title=\"German painter and printmaker (1472–1553)\">Lucas Cranach the Elder</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T06:03:37.881Z",
+      "bytes": 8115742
     },
     {
       "artistId": "artist-Q5592",
@@ -6737,10 +6741,12 @@
         "en": ""
       },
       "targetPath": "data/images/artist-Q5592/wikipedia-Q5592-13.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-Q5592: Commons API 429"
+      "error": "artist-Q5592: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:37.884Z",
+      "bytes": 25427
     },
     {
       "artistId": "artist-Q5592",
@@ -6759,10 +6765,12 @@
         "en": ""
       },
       "targetPath": "data/images/artist-Q5592/wikipedia-Q5592-14.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-Q5592: Commons API 429"
+      "error": "artist-Q5592: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:37.885Z",
+      "bytes": 25427
     },
     {
       "artistId": "artist-Q5592",
@@ -6781,10 +6789,12 @@
         "en": ""
       },
       "targetPath": "data/images/artist-Q5592/wikipedia-Q5592-15.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-Q5592: Commons API 429"
+      "error": "artist-Q5592: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:37.886Z",
+      "bytes": 25427
     },
     {
       "artistId": "artist-Q5592",
@@ -6890,7 +6900,7 @@
         "en": ""
       },
       "targetPath": "data/images/artist-Q5592/wikipedia-Q5592-10.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [
         {
@@ -6941,7 +6951,9 @@
           "credit": "<a href=\"https://en.wikipedia.org/wiki/en:Web_Gallery_of_Art\" class=\"extiw\" title=\"w:en:Web Gallery of Art\"><span title=\"virtual art gallery for European fine art created before 1900\">Web Gallery of Art</span></a>:  <span typeof=\"mw:File\"><a href=\"http://www.wga.hu/art/m/michelan/3sistina/3prophet/09_1pr6.jpg\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/20px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/40px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"60\" data-file-height=\"60\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://www.wga.hu/art/m/michelan/3sistina/3prophet/09_1pr6.jpg\">Image</a> <span typeof=\"mw:File\"><a href=\"http://www.wga.hu/html/m/michelan/3sistina/3prophet/09_1pr6.html\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/20px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/40px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"620\" data-file-height=\"620\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://www.wga.hu/html/m/michelan/3sistina/3prophet/09_1pr6.html\">Info about artwork</a><div style=\"display: none;\">wga QS:P11807,\"m/michelan/3sistina/3prophet/09_1pr6\"</div>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Michelangelo\" class=\"extiw\" title=\"w:en:Michelangelo\"><span title=\"Italian artist and architect (1475-1564)\">Michelangelo</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T06:03:37.888Z",
+      "bytes": 25427
     },
     {
       "artistId": "artist-Q5592",
@@ -6959,8 +6971,8 @@
         "ko": "전성기 르네상스",
         "en": "전성기 르네상스"
       },
-      "targetPath": "data/images/artist-Q5592/wikidata-Q1886263.jpg",
-      "reviewStatus": "unresolved",
+      "targetPath": "data/images/artist-Q5592/michelangelo-crucifixion-st-peter.jpg",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [
         {
@@ -7011,7 +7023,9 @@
           "credit": "This file was derived from:  <a href=\"//commons.wikimedia.org/wiki/File:Crucifixion_of_Saint_Peter-Caravaggio_(c.1600).jpg\" title=\"File:Crucifixion of Saint Peter-Caravaggio (c.1600).jpg\">Crucifixion of Saint Peter-Caravaggio (c.1600).jpg</a>: <span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Crucifixion_of_Saint_Peter-Caravaggio_(c.1600).jpg\" class=\"mw-file-description\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Crucifixion_of_Saint_Peter-Caravaggio_%28c.1600%29.jpg/120px-Crucifixion_of_Saint_Peter-Caravaggio_%28c.1600%29.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"120\" height=\"155\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Crucifixion_of_Saint_Peter-Caravaggio_%28c.1600%29.jpg/250px-Crucifixion_of_Saint_Peter-Caravaggio_%28c.1600%29.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"8180\" data-file-height=\"10537\"></a></span><br>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Caravaggio\" class=\"extiw\" title=\"w:en:Caravaggio\"><span title=\"Italian painter (1571–1610)\">Caravaggio</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T06:03:37.889Z",
+      "bytes": 29376
     },
     {
       "artistId": "artist-Q8459",
@@ -8624,8 +8638,8 @@
         "ko": "매너리즘",
         "en": "Mannerism"
       },
-      "targetPath": "data/images/artist-Q207929/pontormo-visitation-1514-1516.jpg",
-      "reviewStatus": "failed",
+      "targetPath": "data/images/artist-Q207929/pontormo-visitation-1514-1516.png",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 15,
         "artistMatches": 1,
@@ -8692,7 +8706,9 @@
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Pontormo\" class=\"extiw\" title=\"w:en:Pontormo\"><span title=\"Florentine Mannerist painter\">Pontormo</span></a></bdi>"
         }
       ],
-      "error": "artist-Q207929: image download 429"
+      "error": "artist-Q207929: image download 429",
+      "downloadedAt": "2026-08-29T05:31:15.266Z",
+      "bytes": 5473298
     },
     {
       "artistId": "artist-Q9348",
@@ -8710,8 +8726,8 @@
         "ko": "매너리즘",
         "en": "Mannerism"
       },
-      "targetPath": "data/images/artist-Q9348/parmigianino-vision-of-saint-jerome-1526-1527.jpg",
-      "reviewStatus": "failed",
+      "targetPath": "data/images/artist-Q9348/parmigianino-vision-of-saint-jerome-1526-1527.png",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 13,
         "artistMatches": 1,
@@ -8778,7 +8794,9 @@
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Parmigianino\" class=\"extiw\" title=\"w:en:Parmigianino\"><span title=\"Italian Mannerist painter and printmaker (1503–1540)\">Parmigianino</span></a></bdi>"
         }
       ],
-      "error": "artist-Q9348: image download 429"
+      "error": "artist-Q9348: image download 429",
+      "downloadedAt": "2026-08-29T05:31:15.267Z",
+      "bytes": 4991324
     },
     {
       "artistId": "artist-Q336747",
@@ -8883,8 +8901,8 @@
         "ko": "프랑스 르네상스",
         "en": "French Renaissance"
       },
-      "targetPath": "data/images/artist-Q336747/francois-clouet-elisabeth-of-austria-1571.jpg",
-      "reviewStatus": "failed",
+      "targetPath": "data/images/artist-Q336747/francois-clouet-elisabeth-of-austria-1571.png",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 22,
         "artistMatches": 2,
@@ -8951,7 +8969,9 @@
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Fran%C3%A7ois_Clouet\" class=\"extiw\" title=\"w:en:François Clouet\"><span title=\"French Renaissance miniaturist and painter (c.1510-1572)\">François Clouet</span></a></bdi>"
         }
       ],
-      "error": "artist-Q336747: image download 429"
+      "error": "artist-Q336747: image download 429",
+      "downloadedAt": "2026-08-29T05:31:15.268Z",
+      "bytes": 5895233
     },
     {
       "artistId": "artist-Q9319",
@@ -9056,8 +9076,8 @@
         "ko": "베네치아 르네상스",
         "en": "Venetian Renaissance"
       },
-      "targetPath": "data/images/artist-Q9319/tintoretto-st-marks-body-brought-to-venice-1562-1566.jpg",
-      "reviewStatus": "failed",
+      "targetPath": "data/images/artist-Q9319/tintoretto-st-marks-body-brought-to-venice-1562-1566.10mb.png",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 28,
         "artistMatches": 2,
@@ -9124,7 +9144,9 @@
           "artistCredit": "<a href=\"//commons.wikimedia.org/wiki/User:Gsimonov\" title=\"User:Gsimonov\">Gleb Simonov</a>"
         }
       ],
-      "error": "artist-Q9319: image download 429"
+      "error": "artist-Q9319: image download 429",
+      "downloadedAt": "2026-08-29T05:31:15.269Z",
+      "bytes": 7623455
     },
     {
       "artistId": "artist-Q9319",
@@ -9142,8 +9164,8 @@
         "ko": "베네치아 르네상스",
         "en": "Venetian Renaissance"
       },
-      "targetPath": "data/images/artist-Q9319/tintoretto-baptism-of-jesus-c1580.jpg",
-      "reviewStatus": "unresolved",
+      "targetPath": "data/images/artist-Q9319/tintoretto-baptism-of-jesus-c1580.png",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [
         {
@@ -9194,7 +9216,9 @@
           "credit": "<a rel=\"nofollow\" class=\"external free\" href=\"https://clevelandart.org/art/1950.400\">https://clevelandart.org/art/1950.400</a>",
           "artistCredit": "<div class=\"fn value\">\nJacopo Tintoretto</div>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T06:03:37.976Z",
+      "bytes": 5556731
     },
     {
       "artistId": "artist-Q9440",
@@ -9212,8 +9236,8 @@
         "ko": "베네치아 르네상스",
         "en": "Venetian Renaissance"
       },
-      "targetPath": "data/images/artist-Q9440/veronese-sacrificial-death-of-marcus-curtius-1550-1552.jpg",
-      "reviewStatus": "failed",
+      "targetPath": "data/images/artist-Q9440/veronese-sacrificial-death-of-marcus-curtius-1550-1552.10mb.png",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 14,
         "artistMatches": 2,
@@ -9264,7 +9288,9 @@
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Paolo_Veronese\" class=\"extiw\" title=\"w:en:Paolo Veronese\"><span title=\"Italian painter of the Renaissance (1528–1588)\">Paolo Veronese</span></a></bdi>"
         }
       ],
-      "error": "artist-Q9440: image download 429"
+      "error": "artist-Q9440: image download 429",
+      "downloadedAt": "2026-08-29T05:31:15.271Z",
+      "bytes": 8356987
     },
     {
       "artistId": "artist-Q9440",
@@ -9282,11 +9308,13 @@
         "ko": "베네치아 르네상스",
         "en": "Venetian Renaissance"
       },
-      "targetPath": "data/images/artist-Q9440/veronese-saint-jerome-in-penance-1570-1580.jpg",
-      "reviewStatus": "unresolved",
+      "targetPath": "data/images/artist-Q9440/veronese-saint-jerome-in-penance-1570-1580.10mb.png",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-Q9440: Commons API 429"
+      "error": "artist-Q9440: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:37.978Z",
+      "bytes": 6702251
     },
     {
       "artistId": "artist-Q7824",
@@ -10860,8 +10888,8 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/images/artist-url-1786879941678/wikidata-Q2667782.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-url-1786879941678/rubens-descent-antwerp-1612.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 26,
         "artistMatches": 3,
@@ -10927,7 +10955,9 @@
           "credit": "<a href=\"https://en.wikipedia.org/wiki/en:Web_Gallery_of_Art\" class=\"extiw\" title=\"w:en:Web Gallery of Art\"><span title=\"virtual art gallery for European fine art created before 1900\">Web Gallery of Art</span></a>:  <span typeof=\"mw:File\"><a href=\"http://www.wga.hu/art/r/rubens/12religi/371relig.jpg\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/20px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/40px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"60\" data-file-height=\"60\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://www.wga.hu/art/r/rubens/12religi/371relig.jpg\">Image</a> <span typeof=\"mw:File\"><a href=\"http://www.wga.hu/html/r/rubens/12religi/371relig.html\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/20px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/40px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"620\" data-file-height=\"620\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://www.wga.hu/html/r/rubens/12religi/371relig.html\">Info about artwork</a><div style=\"display: none;\">wga QS:P11807,\"r/rubens/12religi/371relig\"</div>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Peter_Paul_Rubens\" class=\"extiw\" title=\"w:en:Peter Paul Rubens\"><span title=\"Flemish painter (1577–1640)\">Peter Paul Rubens</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T05:54:09.545Z",
+      "bytes": 756015
     },
     {
       "artistId": "artist-Q297",
@@ -10945,11 +10975,13 @@
         "ko": "바로크",
         "en": "Baroque"
       },
-      "targetPath": "data/images/artist-Q297/velazquez-surrender-of-breda-1634-1635.jpg",
-      "reviewStatus": "unresolved",
+      "targetPath": "data/images/artist-Q297/velazquez-surrender-of-breda-1634-1635.png",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-Q297: Commons API 429"
+      "error": "artist-Q297: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.077Z",
+      "bytes": 6525966
     },
     {
       "artistId": "artist-Q297",
@@ -10967,11 +10999,13 @@
         "ko": "바로크",
         "en": "Baroque"
       },
-      "targetPath": "data/images/artist-Q297/velazquez-rokeby-venus-1647-1651.jpg",
-      "reviewStatus": "unresolved",
+      "targetPath": "data/images/artist-Q297/velazquez-rokeby-venus-1647-1651.png",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-Q297: Commons API 429"
+      "error": "artist-Q297: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.078Z",
+      "bytes": 6258661
     },
     {
       "artistId": "artist-Q150679",
@@ -11222,7 +11256,7 @@
         "en": "네덜란드 황금기 회화"
       },
       "targetPath": "data/images/artist-rembrandt/wikidata-Q1243299.jpg",
-      "reviewStatus": "candidate",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 26,
         "artistMatches": 3,
@@ -11288,7 +11322,9 @@
           "credit": "<a rel=\"nofollow\" class=\"external text\" href=\"//www.google.com/culturalinstitute/asset-viewer/JwHVmnI-bQWnRw\">JwHVmnI-bQWnRw at Google Cultural Institute</a> zoom level cropped from maximum",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Rembrandt\" class=\"extiw\" title=\"w:en:Rembrandt\"><span title=\"Dutch painter and printmaker (1606–1669)\">Rembrandt</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T05:31:15.325Z",
+      "bytes": 377420
     },
     {
       "artistId": "artist-rembrandt",
@@ -11307,7 +11343,7 @@
         "en": "네덜란드 황금기 회화"
       },
       "targetPath": "data/images/artist-rembrandt/wikidata-Q17343012.jpg",
-      "reviewStatus": "candidate",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 21,
         "artistMatches": 3,
@@ -11373,7 +11409,9 @@
           "credit": "Hamburger Kunsthalle, Hamburg",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Rembrandt\" class=\"extiw\" title=\"w:en:Rembrandt\"><span title=\"Dutch painter and printmaker (1606–1669)\">Rembrandt</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T05:31:15.325Z",
+      "bytes": 420896
     },
     {
       "artistId": "artist-rembrandt",
@@ -11476,8 +11514,8 @@
         "ko": "네덜란드 황금기 회화",
         "en": "네덜란드 황금기 회화"
       },
-      "targetPath": "data/images/artist-rembrandt/wikidata-Q1111394.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-rembrandt/dresden-1559-rembrandt-saskia-prodigal-son.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 21,
         "artistMatches": 3,
@@ -11543,7 +11581,9 @@
           "credit": "Corel Professional Photos CD-ROM",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Rembrandt\" class=\"extiw\" title=\"w:en:Rembrandt\"><span title=\"Dutch painter and printmaker (1606–1669)\">Rembrandt</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T05:54:09.569Z",
+      "bytes": 1610194
     },
     {
       "artistId": "artist-rembrandt",
@@ -11646,8 +11686,8 @@
         "ko": "바로크",
         "en": "바로크"
       },
-      "targetPath": "data/images/artist-rembrandt/wikidata-Q1211651.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-rembrandt/commons-blinding-samson.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 26,
         "artistMatches": 3,
@@ -11713,7 +11753,9 @@
           "credit": "<a rel=\"nofollow\" class=\"external free\" href=\"https://sammlung.staedelmuseum.de/de/werk/die-blendung-simsons\">https://sammlung.staedelmuseum.de/de/werk/die-blendung-simsons</a>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Rembrandt\" class=\"extiw\" title=\"w:en:Rembrandt\"><span title=\"Dutch painter and printmaker (1606–1669)\">Rembrandt</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T05:54:09.578Z",
+      "bytes": 187094
     },
     {
       "artistId": "artist-rembrandt",
@@ -11816,11 +11858,13 @@
         "ko": "네덜란드 황금기 회화",
         "en": "네덜란드 황금기 회화"
       },
-      "targetPath": "data/images/artist-rembrandt/wikidata-Q32496.jpg",
-      "reviewStatus": "unresolved",
+      "targetPath": "data/images/artist-rembrandt/louvre-MI-957-bathsheba.jpg",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-rembrandt: Commons API 429"
+      "error": "artist-rembrandt: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.111Z",
+      "bytes": 826637
     },
     {
       "artistId": "artist-rembrandt",
@@ -11861,10 +11905,12 @@
         "en": ""
       },
       "targetPath": "data/images/artist-Q213163/wikidata-Q19005301.jpg",
-      "reviewStatus": "unresolved",
+      "reviewStatus": "downloaded",
       "selected": null,
       "candidates": [],
-      "error": "artist-Q213163: Commons API 429"
+      "error": "artist-Q213163: Commons API 429",
+      "downloadedAt": "2026-08-29T06:03:38.115Z",
+      "bytes": 554833
     },
     {
       "artistId": "artist-Q187310",
@@ -13000,8 +13046,8 @@
         "ko": "로코코",
         "en": "Rococo"
       },
-      "targetPath": "data/images/artist-Q313122/artist-Q313122-resting-girl.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q313122/artist-Q313122-resting-girl.png",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 14,
         "artistMatches": 2,
@@ -13067,7 +13113,9 @@
           "credit": "This file was derived from:  <a href=\"//commons.wikimedia.org/wiki/File:Resting_Girl_by_Fran%C3%A7ois_Boucher_(1753)_-_Alte_Pinakothek_-_Munich_-_Germany_2017_(crop).jpg\" title=\"File:Resting Girl by François Boucher (1753) - Alte Pinakothek - Munich - Germany 2017 (crop).jpg\">Resting Girl by François Boucher (1753) - Alte Pinakothek - Munich - Germany 2017 (crop).jpg</a>: <span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Resting_Girl_by_Fran%C3%A7ois_Boucher_(1753)_-_Alte_Pinakothek_-_Munich_-_Germany_2017_(crop).jpg\" class=\"mw-file-description\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Resting_Girl_by_Fran%C3%A7ois_Boucher_%281753%29_-_Alte_Pinakothek_-_Munich_-_Germany_2017_%28crop%29.jpg/120px-Resting_Girl_by_Fran%C3%A7ois_Boucher_%281753%29_-_Alte_Pinakothek_-_Munich_-_Germany_2017_%28crop%29.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"120\" height=\"96\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Resting_Girl_by_Fran%C3%A7ois_Boucher_%281753%29_-_Alte_Pinakothek_-_Munich_-_Germany_2017_%28crop%29.jpg/250px-Resting_Girl_by_Fran%C3%A7ois_Boucher_%281753%29_-_Alte_Pinakothek_-_Munich_-_Germany_2017_%28crop%29.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"3597\" data-file-height=\"2871\"></a></span><br>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Fran%C3%A7ois_Boucher\" class=\"extiw\" title=\"w:en:François Boucher\"><span title=\"French painter (1703–1770)\">François Boucher</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T05:31:15.408Z",
+      "bytes": 7406424
     },
     {
       "artistId": "artist-Q162048",

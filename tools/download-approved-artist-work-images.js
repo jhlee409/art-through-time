@@ -2,6 +2,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const {requireUrlFileDownloadApproval} = require('./url-download-permission');
+const {existingLocalPathForWork, resolveExistingLocalImagePath} = require('./image-path-utils');
 
 const root = path.resolve(__dirname, '..');
 const manifestFile = path.join(root, 'data', 'artist-work-image-download-manifest.json');
@@ -117,26 +118,30 @@ async function main() {
 
   for (const item of approved) {
     try {
-      const url = approvedDownloadUrl(item);
-      const absolute = path.join(root, item.targetPath);
+      const artist = artistMap.get(item.artistId);
+      const work = (artist?.works || []).find(candidate => candidate.id === item.workId);
+      if (!work) throw new Error(`${item.artistId}: artist work is missing`);
+      let localPath = existingLocalPathForWork(work, item.artistId) || resolveExistingLocalImagePath(item.targetPath);
+      let absolute = localPath ? path.join(root, localPath) : path.join(root, item.targetPath);
       let buffer;
-      if (fs.existsSync(absolute) && fs.statSync(absolute).size > 0) {
+      if (localPath && fs.existsSync(absolute) && fs.statSync(absolute).size > 0) {
         buffer = fs.readFileSync(absolute);
       } else {
+        const url = approvedDownloadUrl(item);
         buffer = await fetchImage(url, item.artistId);
+        localPath = item.targetPath;
+        absolute = path.join(root, localPath);
         fs.mkdirSync(path.dirname(absolute), {recursive: true});
         fs.writeFileSync(absolute, buffer);
         await new Promise(resolve => setTimeout(resolve, 3000));
       }
-      const artist = artistMap.get(item.artistId);
-      const work = (artist?.works || []).find(candidate => candidate.id === item.workId);
-      if (!work) throw new Error(`${item.artistId}: artist work is missing`);
       item.downloadedAt = new Date().toISOString();
       item.bytes = buffer.length;
-      updateWorkImage(work, item, item.targetPath);
+      item.targetPath = localPath;
+      updateWorkImage(work, item, localPath);
       const repWork = repWorkMap.get(`${item.artistId}|${item.workId}`);
       if (repWork) {
-        repWork.localImage = item.targetPath;
+        repWork.localImage = localPath;
         repWork.sourceUrl = item.selected.pageUrl;
         repWork.sourceUrls = [...new Set([item.selected.pageUrl, item.selected.downloadUrl].filter(Boolean))];
         repWork.license = item.selected.license || '';
@@ -144,7 +149,7 @@ async function main() {
       }
       item.reviewStatus = 'downloaded';
       consecutiveRateLimits = 0;
-      results.push({artistId: item.artistId, workId: item.workId, targetPath: item.targetPath, bytes: buffer.length});
+      results.push({artistId: item.artistId, workId: item.workId, targetPath: localPath, bytes: buffer.length});
       persist();
       console.log(`downloaded ${item.artistId} ${item.workId} (${buffer.length} bytes)`);
       await new Promise(resolve => setTimeout(resolve, 5000));
