@@ -13,6 +13,8 @@ const root = path.resolve(__dirname, '..');
 const artistsFile = path.join(root, 'data', 'artists.json');
 const representativesFile = path.join(root, 'data', 'art-movement-representatives.json');
 const apply = process.argv.includes('--apply');
+const suggest = process.argv.includes('--suggest');
+const suggestionFile = path.join(root, 'data', 'generated', 'missing-local-image-investigation.json');
 const imageUrlPattern = /(?:special:filepath|upload\.wikimedia|\.(?:jpe?g|png|webp|gif)(?:[?#/]|$))/i;
 
 function readJson(file) {
@@ -29,7 +31,7 @@ function text(value) {
 }
 
 function normalizedTitle(value) {
-  return text(value).toLowerCase().normalize('NFKD').replace(/[^a-z0-9가-힣]+/g, '');
+  return text(value).toLowerCase().normalize('NFKC').replace(/[^a-z0-9가-힣]+/g, '');
 }
 
 function imageUrls(work) {
@@ -79,6 +81,70 @@ function yearsClose(left, right) {
   return a > 0 && b > 0 && Math.abs(a - b) <= 1;
 }
 
+function bigrams(value) {
+  const source = normalizedTitle(value);
+  if (source.length < 2) return source ? [source] : [];
+  return Array.from({length: source.length - 1}, (_, index) => source.slice(index, index + 2));
+}
+
+function diceCoefficient(left, right) {
+  const a = bigrams(left);
+  const b = bigrams(right);
+  if (!a.length || !b.length) return 0;
+  const counts = new Map();
+  for (const item of a) counts.set(item, (counts.get(item) || 0) + 1);
+  let shared = 0;
+  for (const item of b) {
+    const count = counts.get(item) || 0;
+    if (!count) continue;
+    shared += 1;
+    counts.set(item, count - 1);
+  }
+  return (2 * shared) / (a.length + b.length);
+}
+
+function workTitleSimilarity(left, right) {
+  const leftTitles = [left?.title?.ko, left?.title?.en].filter(Boolean);
+  const rightTitles = [right?.title?.ko, right?.title?.en].filter(Boolean);
+  let best = 0;
+  for (const a of leftTitles) for (const b of rightTitles) best = Math.max(best, diceCoefficient(a, b));
+  return best;
+}
+
+function suggestedMatches(work, candidates) {
+  const workSources = sourceKeys(work);
+  const byPath = new Map();
+  for (const candidate of candidates || []) {
+    const sourceMatch = [...sourceKeys(candidate.work)].some(key => workSources.has(key));
+    const similarity = workTitleSimilarity(work, candidate.work);
+    const leftYear = Number(work.year || 0);
+    const rightYear = Number(candidate.work.year || 0);
+    const yearDistance = leftYear && rightYear ? Math.abs(leftYear - rightYear) : null;
+    let score = sourceMatch ? 100 : Math.round(similarity * 80);
+    if (!sourceMatch) {
+      if (yearDistance !== null && yearDistance <= 1) score += 20;
+      else if (yearDistance !== null && yearDistance <= 5) score += 10;
+    }
+    if (score < 65) continue;
+    const item = {
+      path: candidate.localPath,
+      score,
+      similarity: Number(similarity.toFixed(3)),
+      sourceMatch,
+      historicalWorkId: candidate.work.id,
+      historicalTitle: text(candidate.work.title),
+      historicalEnglishTitle: candidate.work.title?.en || '',
+      historicalYear: candidate.work.year || null,
+      historicalImage: candidate.work.image || '',
+      historicalSources: imageUrls(candidate.work),
+      yearDistance
+    };
+    const previous = byPath.get(candidate.localPath);
+    if (!previous || item.score > previous.score) byPath.set(candidate.localPath, item);
+  }
+  return [...byPath.values()].sort((left, right) => right.score - left.score).slice(0, 3);
+}
+
 function historicalPayloads() {
   let commits = [];
   try {
@@ -120,10 +186,19 @@ function historicalPayloads() {
   return payloads;
 }
 
-function imageFileCatalog(current) {
+function imageFileCatalog() {
   const catalog = new Map();
-  for (const artist of current.artists || []) {
-    const folder = path.join(root, 'data', 'images', artist.id);
+  const imagesRoot = path.join(root, 'data', 'images');
+  let artistIds = [];
+  try {
+    artistIds = fs.readdirSync(imagesRoot, {withFileTypes: true})
+      .filter(entry => entry.isDirectory())
+      .map(entry => entry.name);
+  } catch (_) {
+    return catalog;
+  }
+  for (const artistId of artistIds) {
+    const folder = path.join(imagesRoot, artistId);
     let names = [];
     try {
       names = fs.readdirSync(folder, {withFileTypes: true})
@@ -132,10 +207,44 @@ function imageFileCatalog(current) {
     } catch (_) {
       // An unavailable OneDrive folder contributes no match candidates.
     }
-    const paths = names.map(name => `data/images/${artist.id}/${name}`);
-    catalog.set(artist.id, {paths, pathSet: new Set(paths)});
+    const paths = names.map(name => `data/images/${artistId}/${name}`);
+    const sourceEntries = [];
+    try {
+      const index = readJson(path.join(folder, 'index.json'));
+      for (const [workId, value] of Object.entries(index)) {
+        const importedName = String(value?.verifiedBy || '').match(/:\s*(.+\.(?:jpe?g|png|webp|gif|tiff?))$/i)?.[1] || '';
+        if (!importedName) continue;
+        const indexedLocalPath = existingLocalPath(String(value?.thumbnail || '').replace(/^data\/thumbnails\//, 'data/images/'));
+        const localPath = indexedLocalPath || paths.find(value => path.basename(value).toLowerCase().startsWith(String(workId).toLowerCase())) || '';
+        if (localPath) sourceEntries.push({workId, localPath, importedName, key: normalizedTitle(importedName)});
+      }
+    } catch (_) {
+      // Index metadata is optional.
+    }
+    catalog.set(artistId, {paths, pathSet: new Set(paths), sourceEntries});
   }
   return catalog;
+}
+
+function indexedSourceMatches(work, catalog) {
+  const keys = sourceKeys(work);
+  if (!keys.size) return [];
+  const matches = [];
+  for (const [artistId, item] of catalog) {
+    for (const entry of item.sourceEntries || []) {
+      if (!keys.has(entry.key)) continue;
+      matches.push({artistId, ...entry});
+    }
+  }
+  return matches;
+}
+
+function artistKeys(artist) {
+  return [...new Set([
+    `id:${String(artist?.id || '').toLowerCase()}`,
+    `name:${normalizedTitle(artist?.name?.ko)}`,
+    `name:${normalizedTitle(artist?.name?.en)}`
+  ].filter(value => !value.endsWith(':')))];
 }
 
 function catalogLocalPath(work, artistId, catalog) {
@@ -178,11 +287,31 @@ function candidateRecords(current, history, catalog) {
         if (seen.has(key)) continue;
         seen.add(key);
         const row = {artistId: artist.id, work, localPath};
-        byArtist.set(artist.id, [...(byArtist.get(artist.id) || []), row]);
+        for (const artistKey of artistKeys(artist)) {
+          byArtist.set(artistKey, [...(byArtist.get(artistKey) || []), row]);
+        }
       }
     }
   }
   return byArtist;
+}
+
+function candidatesForArtist(candidates, artist) {
+  const rows = artistKeys(artist).flatMap(key => candidates.get(key) || []);
+  const seen = new Set();
+  return rows.filter(row => {
+    const key = [
+      row.artistId,
+      row.work.id,
+      row.localPath,
+      [...titleKeys(row.work)].sort().join(','),
+      row.work.year || '',
+      [...sourceKeys(row.work)].sort().join(',')
+    ].join('|');
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
 }
 
 function indexedPath(artistId, workId) {
@@ -260,13 +389,27 @@ function main() {
   const payload = readJson(artistsFile);
   const representatives = readJson(representativesFile);
   const history = historicalPayloads();
-  const catalog = imageFileCatalog(payload);
+  const catalog = imageFileCatalog();
   const candidates = candidateRecords(payload, history, catalog);
+  const indexedSourceMatchesFound = [];
+  for (const artist of payload.artists || []) {
+    for (const work of artist.works || []) {
+      if (recordedLocalPath(work)) continue;
+      const matches = indexedSourceMatches(work, catalog);
+      if (matches.length) indexedSourceMatchesFound.push({
+        artistId: artist.id,
+        artist: text(artist.name) || artist.id,
+        workId: work.id,
+        title: text(work.title) || work.id,
+        matches
+      });
+    }
+  }
   const artistMatches = [];
   for (const artist of payload.artists || []) {
     for (const work of artist.works || []) {
       if (recordedLocalPath(work)) continue;
-      const match = matchWork(artist, work, candidates.get(artist.id));
+      const match = matchWork(artist, work, candidatesForArtist(candidates, artist));
       if (!match) continue;
       artistMatches.push({
         artistId: artist.id,
@@ -283,7 +426,7 @@ function main() {
   const currentWorks = new Map((payload.artists || []).flatMap(artist => (artist.works || []).map(work => [`${artist.id}|${work.id}`, work])));
   for (const row of representativeRows(representatives)) {
     if (recordedLocalPath(row.work) || existingLocalPath(row.work.localImage)) continue;
-    const match = matchWork(row.artist, row.work, candidates.get(row.artist.id));
+    const match = matchWork(row.artist, row.work, candidatesForArtist(candidates, row.artist));
     if (!match) continue;
     representativeMatches.push({
       categoryId: row.categoryId,
@@ -303,13 +446,52 @@ function main() {
   }
   if (apply && (artistMatches.length || representativeMatches.length)) writeJson(artistsFile, payload);
   if (apply && representativeMatches.length) writeJson(representativesFile, representatives);
+  const suggestions = [];
+  if (suggest) {
+    for (const artist of payload.artists || []) {
+      for (const work of artist.works || []) {
+        if (recordedLocalPath(work)) continue;
+        const items = suggestedMatches(work, candidatesForArtist(candidates, artist));
+        if (!items.length) continue;
+        suggestions.push({
+          artistId: artist.id,
+          artist: text(artist.name) || artist.id,
+          workId: work.id,
+          title: text(work.title) || work.id,
+          englishTitle: work.title?.en || '',
+          year: work.year || null,
+          image: work.image || '',
+          sources: imageUrls(work),
+          candidates: items
+        });
+      }
+    }
+    fs.mkdirSync(path.dirname(suggestionFile), {recursive: true});
+    writeJson(suggestionFile, {
+      historicalSnapshots: history.length,
+      exactImportedFilenameMatches: indexedSourceMatchesFound.length,
+      importedFilenameItems: indexedSourceMatchesFound,
+      works: suggestions.length,
+      items: suggestions
+    });
+  }
   console.log(JSON.stringify({
     mode: apply ? 'apply' : 'check',
     historicalSnapshots: history.length,
     artistMatches: artistMatches.length,
     representativeMatches: representativeMatches.length,
+    exactImportedFilenameMatches: indexedSourceMatchesFound.length,
+    suggestionFile: suggest ? path.relative(root, suggestionFile).replace(/\\/g, '/') : '',
+    suggestions: suggestions.length,
     artists: artistMatches,
-    representatives: representativeMatches
+    representatives: representativeMatches,
+    ...(suggest ? {suggestionSummary: suggestions.map(item => ({
+      artist: item.artist,
+      workId: item.workId,
+      title: item.title,
+      topScore: item.candidates[0].score,
+      topPath: item.candidates[0].path
+    }))} : {})
   }, null, 2));
 }
 

@@ -1,0 +1,623 @@
+{
+  "historicalSnapshots": 55,
+  "exactImportedFilenameMatches": 0,
+  "importedFilenameItems": [],
+  "works": 18,
+  "items": [
+    {
+      "artistId": "artist-Q7814",
+      "artist": "조토 디 본도네",
+      "workId": "wikidata-Q3933580",
+      "title": "Resurrection",
+      "englishTitle": "Resurrection",
+      "year": 1303,
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2037%20Scenes%20from%20the%20Life%20of%20Christ%20-%2021.%20Resurrection%20%28Noli%20me%20tangere%29%20-%20WGA09224.jpg",
+      "sources": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2037%20Scenes%20from%20the%20Life%20of%20Christ%20-%2021.%20Resurrection%20%28Noli%20me%20tangere%29%20-%20WGA09224.jpg",
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2037%20Scenes%20from%20the%20Life%20of%20Christ%20-%2021.%20Resurrection%20%28Noli%20me%20tangere%29%20-%20WGA09224.jpg"
+      ],
+      "candidates": [
+        {
+          "path": "data/images/artist-Q7814/wikidata-Q952482.jpg",
+          "score": 80,
+          "similarity": 1,
+          "sourceMatch": false,
+          "historicalWorkId": "wikidata-Q952482",
+          "historicalTitle": "Resurrection",
+          "historicalEnglishTitle": "Resurrection",
+          "historicalYear": 1291,
+          "historicalImage": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20%28attr.%29%2C%20resurrezione.jpg",
+          "historicalSources": [
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20%28attr.%29%2C%20resurrezione.jpg",
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20%28attr.%29%2C%20resurrezione.jpg"
+          ],
+          "yearDistance": 12
+        }
+      ]
+    },
+    {
+      "artistId": "artist-Q7814",
+      "artist": "조토 디 본도네",
+      "workId": "wikidata-Q3910923",
+      "title": "Presentation at the Temple",
+      "englishTitle": "Presentation at the Temple",
+      "year": 1303,
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2019%20Scenes%20from%20the%20Life%20of%20Christ%20-%203.%20Presentation%20of%20Christ%20at%20the%20Temple%20-%20WGA09197.jpg",
+      "sources": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2019%20Scenes%20from%20the%20Life%20of%20Christ%20-%203.%20Presentation%20of%20Christ%20at%20the%20Temple%20-%20WGA09197.jpg",
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2019%20Scenes%20from%20the%20Life%20of%20Christ%20-%203.%20Presentation%20of%20Christ%20at%20the%20Temple%20-%20WGA09197.jpg"
+      ],
+      "candidates": [
+        {
+          "path": "data/images/artist-Q7814/wikidata-Q3910927.jpg",
+          "score": 75,
+          "similarity": 0.691,
+          "sourceMatch": false,
+          "historicalWorkId": "wikidata-Q3910927",
+          "historicalTitle": "Presentation of the Virgin in the Temple",
+          "historicalEnglishTitle": "Presentation of the Virgin in the Temple",
+          "historicalYear": 1303,
+          "historicalImage": "http://commons.wikimedia.org/wiki/Special:FilePath/Presentation%20of%20the%20Virgin%20-%20Capella%20dei%20Scrovegni%20-%20Padua%202016.jpg",
+          "historicalSources": [
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Presentation%20of%20the%20Virgin%20-%20Capella%20dei%20Scrovegni%20-%20Padua%202016.jpg",
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Presentation%20of%20the%20Virgin%20-%20Capella%20dei%20Scrovegni%20-%20Padua%202016.jpg"
+          ],
+          "yearDistance": 0
+        }
+      ]
+    },
+    {
+      "artistId": "artist-Q102272",
+      "artist": "얀 반 에이크",
+      "workId": "wikidata-Q107438391",
+      "title": "Portrait of a man",
+      "englishTitle": "Portrait of a man",
+      "year": 1430,
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Bildnis%20eines%20Mannes%2C%201420%20-%201440%2C%20523C.jpg",
+      "sources": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Bildnis%20eines%20Mannes%2C%201420%20-%201440%2C%20523C.jpg",
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Bildnis%20eines%20Mannes%2C%201420%20-%201440%2C%20523C.jpg"
+      ],
+      "candidates": [
+        {
+          "path": "data/images/artist-Q102272/wikidata-Q2392901.jpg",
+          "score": 65,
+          "similarity": 0.684,
+          "sourceMatch": false,
+          "historicalWorkId": "wikidata-Q2392901",
+          "historicalTitle": "Portrait of a Man (Self      Portrait?)",
+          "historicalEnglishTitle": "Portrait of a Man (Self      Portrait?)",
+          "historicalYear": 1433,
+          "historicalImage": "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Portrait%20of%20a%20Man%20%28Self%20Portrait%3F%29%201433.jpg",
+          "historicalSources": [
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Portrait%20of%20a%20Man%20%28Self%20Portrait%3F%29%201433.jpg",
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Portrait%20of%20a%20Man%20%28Self%20Portrait%3F%29%201433.jpg"
+          ],
+          "yearDistance": 3
+        }
+      ]
+    },
+    {
+      "artistId": "artist-Q102272",
+      "artist": "얀 반 에이크",
+      "workId": "wikidata-Q28056879",
+      "title": "Singing Angels",
+      "englishTitle": "Singing Angels",
+      "year": 1432,
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hubert%20van%20Eyck%20017.jpg",
+      "sources": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Hubert%20van%20Eyck%20017.jpg",
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Hubert%20van%20Eyck%20017.jpg"
+      ],
+      "candidates": [
+        {
+          "path": "data/images/artist-Q102272/wikidata-Q28057385.jpg",
+          "score": 71,
+          "similarity": 0.643,
+          "sourceMatch": false,
+          "historicalWorkId": "wikidata-Q28057385",
+          "historicalTitle": "Music-making Angels",
+          "historicalEnglishTitle": "Music-making Angels",
+          "historicalYear": 1432,
+          "historicalImage": "data/images/artist-Q102272/wikidata-Q28057385.jpg",
+          "historicalSources": [
+            "https://commons.wikimedia.org/wiki/File:Jan_van_Eyck_-_The_Ghent_Altarpiece_-_Angels_Playing_Music_-_WGA07644.jpg",
+            "https://commons.wikimedia.org/wiki/File:Jan_van_Eyck_-_The_Ghent_Altarpiece_-_Angels_Playing_Music_-_WGA07644.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/2/26/Jan_van_Eyck_-_The_Ghent_Altarpiece_-_Angels_Playing_Music_-_WGA07644.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+          ],
+          "yearDistance": 0
+        }
+      ]
+    },
+    {
+      "artistId": "artist-url-1787307872488",
+      "artist": "마사초",
+      "workId": "wikidata-Q3947757",
+      "title": "Saint Paul",
+      "englishTitle": "Saint Paul",
+      "year": 1424,
+      "image": "",
+      "sources": [],
+      "candidates": [
+        {
+          "path": "data/images/artist-url-1787307872488/wikidata-Q2884282.jpg",
+          "score": 90,
+          "similarity": 1,
+          "sourceMatch": false,
+          "historicalWorkId": "wikidata-Q2884282",
+          "historicalTitle": "Saint Paul",
+          "historicalEnglishTitle": "Saint Paul",
+          "historicalYear": 1426,
+          "historicalImage": "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20san%20paolo%2C%20pisa.jpg",
+          "historicalSources": [
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20san%20paolo%2C%20pisa.jpg",
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20san%20paolo%2C%20pisa.jpg"
+          ],
+          "yearDistance": 2
+        }
+      ]
+    },
+    {
+      "artistId": "artist-url-1787307872488",
+      "artist": "마사초",
+      "workId": "wikidata-Q3698230",
+      "title": "The Crucifixion of Saint Peter",
+      "englishTitle": "The Crucifixion of Saint Peter",
+      "year": 1426,
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20Crucifixion%20of%20St%20Peter%2C%20predella%20of%20the%20altar%20for%20St%20Maria%20del%20Carmine%2C%20Pisa%2C%20c1426%2C%20tempera%2C%20Berlin%2C%20Gem%C3%A4ldegalerie.jpg",
+      "sources": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20Crucifixion%20of%20St%20Peter%2C%20predella%20of%20the%20altar%20for%20St%20Maria%20del%20Carmine%2C%20Pisa%2C%20c1426%2C%20tempera%2C%20Berlin%2C%20Gem%C3%A4ldegalerie.jpg",
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20Crucifixion%20of%20St%20Peter%2C%20predella%20of%20the%20altar%20for%20St%20Maria%20del%20Carmine%2C%20Pisa%2C%20c1426%2C%20tempera%2C%20Berlin%2C%20Gem%C3%A4ldegalerie.jpg"
+      ],
+      "candidates": [
+        {
+          "path": "data/images/artist-url-1787307872488/wikidata-Q1054459.jpg",
+          "score": 66,
+          "similarity": 0.571,
+          "sourceMatch": false,
+          "historicalWorkId": "wikidata-Q1054459",
+          "historicalTitle": "Crucifixion",
+          "historicalEnglishTitle": "Crucifixion",
+          "historicalYear": 1426,
+          "historicalImage": "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%20-%20Crocifissione%20%28Cuspide%20di%20Polittico%20di%20Pisa%29.jpg",
+          "historicalSources": [
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%20-%20Crocifissione%20%28Cuspide%20di%20Polittico%20di%20Pisa%29.jpg",
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%20-%20Crocifissione%20%28Cuspide%20di%20Polittico%20di%20Pisa%29.jpg"
+          ],
+          "yearDistance": 0
+        },
+        {
+          "path": "data/images/artist-url-1787307872488/wikidata-Q3850304.jpg",
+          "score": 65,
+          "similarity": 0.562,
+          "sourceMatch": false,
+          "historicalWorkId": "wikidata-Q99227759",
+          "historicalTitle": "The Crucifixion of Saint Peter and the Decapitation of Saint John the Baptist",
+          "historicalEnglishTitle": "The Crucifixion of Saint Peter and the Decapitation of Saint John the Baptist",
+          "historicalYear": 1426,
+          "historicalImage": "data/images/artist-url-1787307872488/wikidata-Q3850304.jpg",
+          "historicalSources": [
+            "https://commons.wikimedia.org/wiki/File:Masaccio,_Crucifixion_of_St_Peter_and_Decapitation_of_St_John_the_Baptist,_predella_panel_of_the_altar_for_St_Maria_del_Carmine,_Pisa,_c1426,_Berlin,_Gem%C3%A4ldegalerie.jpg",
+            "https://commons.wikimedia.org/wiki/File:Masaccio,_Crucifixion_of_St_Peter_and_Decapitation_of_St_John_the_Baptist,_predella_panel_of_the_altar_for_St_Maria_del_Carmine,_Pisa,_c1426,_Berlin,_Gem%C3%A4ldegalerie.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Masaccio%2C_Crucifixion_of_St_Peter_and_Decapitation_of_St_John_the_Baptist%2C_predella_panel_of_the_altar_for_St_Maria_del_Carmine%2C_Pisa%2C_c1426%2C_Berlin%2C_Gem%C3%A4ldegalerie.jpg/1920px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+          ],
+          "yearDistance": 0
+        }
+      ]
+    },
+    {
+      "artistId": "artist-Q17169",
+      "artist": "조반니 벨리니",
+      "workId": "wikidata-Q3221336",
+      "title": "Blessing Christ",
+      "englishTitle": "Blessing Christ",
+      "year": 1465,
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Blessing%20Christ%20by%20Giovanni%20Bellini%20%28Louvre%20RF%202039%29.jpg",
+      "sources": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Blessing%20Christ%20by%20Giovanni%20Bellini%20%28Louvre%20RF%202039%29.jpg",
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Blessing%20Christ%20by%20Giovanni%20Bellini%20%28Louvre%20RF%202039%29.jpg"
+      ],
+      "candidates": [
+        {
+          "path": "data/images/artist-Q17169/wikidata-Q65068185.jpg",
+          "score": 74,
+          "similarity": 0.923,
+          "sourceMatch": false,
+          "historicalWorkId": "wikidata-Q65068185",
+          "historicalTitle": "Christ Blessing",
+          "historicalEnglishTitle": "Christ Blessing",
+          "historicalYear": 1500,
+          "historicalImage": "http://commons.wikimedia.org/wiki/Special:FilePath/%27Christ%20Blessing%27%2C%20tempera%2C%20oil%2C%20and%20gold%20on%20panel%20by%20Giovanni%20Bellini%2C%20c.%201500%2C%20Kimbell%20Art%20Museum.jpg",
+          "historicalSources": [
+            "http://commons.wikimedia.org/wiki/Special:FilePath/%27Christ%20Blessing%27%2C%20tempera%2C%20oil%2C%20and%20gold%20on%20panel%20by%20Giovanni%20Bellini%2C%20c.%201500%2C%20Kimbell%20Art%20Museum.jpg",
+            "http://commons.wikimedia.org/wiki/Special:FilePath/%27Christ%20Blessing%27%2C%20tempera%2C%20oil%2C%20and%20gold%20on%20panel%20by%20Giovanni%20Bellini%2C%20c.%201500%2C%20Kimbell%20Art%20Museum.jpg"
+          ],
+          "yearDistance": 35
+        }
+      ]
+    },
+    {
+      "artistId": "artist-Q17169",
+      "artist": "조반니 벨리니",
+      "workId": "manual-bellini-rimini-pieta-1470",
+      "title": "피에타: 천사들이 받치는 죽은 그리스도",
+      "englishTitle": "Pietà, or Dead Christ Supported by Angels",
+      "year": 1470,
+      "image": "",
+      "sources": [],
+      "candidates": [
+        {
+          "path": "data/images/artist-Q17169/wikidata-Q3697653.jpg",
+          "score": 76,
+          "similarity": 0.82,
+          "sourceMatch": false,
+          "historicalWorkId": "wikidata-Q3697653",
+          "historicalTitle": "Dead Christ Supported by Two Angels",
+          "historicalEnglishTitle": "Dead Christ Supported by Two Angels",
+          "historicalYear": 1472,
+          "historicalImage": "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20%28um%201435%20-%201516%29%20-%20The%20Dead%20Christ%20supported%20by%20Two%20Angels%20-%2028%20-%20Gem%C3%A4ldegalerie.jpg",
+          "historicalSources": [
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20%28um%201435%20-%201516%29%20-%20The%20Dead%20Christ%20supported%20by%20Two%20Angels%20-%2028%20-%20Gem%C3%A4ldegalerie.jpg",
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20%28um%201435%20-%201516%29%20-%20The%20Dead%20Christ%20supported%20by%20Two%20Angels%20-%2028%20-%20Gem%C3%A4ldegalerie.jpg"
+          ],
+          "yearDistance": 2
+        },
+        {
+          "path": "data/images/artist-Q17169/wikidata-Q3697654.jpg",
+          "score": 73,
+          "similarity": 0.781,
+          "sourceMatch": false,
+          "historicalWorkId": "wikidata-Q3697654",
+          "historicalTitle": "두 천사가 받치는 죽은 그리스도",
+          "historicalEnglishTitle": "The Dead Christ Supported by Two Angels",
+          "historicalYear": 1465,
+          "historicalImage": "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Giovanni%20-%20Dead%20Christ%20Supported%20by%20Two%20Angels.jpg",
+          "historicalSources": [
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Giovanni%20-%20Dead%20Christ%20Supported%20by%20Two%20Angels.jpg",
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Giovanni%20-%20Dead%20Christ%20Supported%20by%20Two%20Angels.jpg"
+          ],
+          "yearDistance": 5
+        }
+      ]
+    },
+    {
+      "artistId": "artist-Q17169",
+      "artist": "조반니 벨리니",
+      "workId": "wikidata-Q3997723",
+      "title": "Transfiguration of Christ",
+      "englishTitle": "Transfiguration of Christ",
+      "year": 1478,
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Paris%201er%20-%20Mus%C3%A9e%20du%20Louvre%20-%20Exposition%20Naples%20%C3%A0%20Paris%20-%20La%20Transfiguration%20%28Giovanni%20Bellini%29.jpg",
+      "sources": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Paris%201er%20-%20Mus%C3%A9e%20du%20Louvre%20-%20Exposition%20Naples%20%C3%A0%20Paris%20-%20La%20Transfiguration%20%28Giovanni%20Bellini%29.jpg",
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Paris%201er%20-%20Mus%C3%A9e%20du%20Louvre%20-%20Exposition%20Naples%20%C3%A0%20Paris%20-%20La%20Transfiguration%20%28Giovanni%20Bellini%29.jpg"
+      ],
+      "candidates": [
+        {
+          "path": "data/images/artist-Q17169/wikidata-Q3997716.jpg",
+          "score": 80,
+          "similarity": 1,
+          "sourceMatch": false,
+          "historicalWorkId": "wikidata-Q3997716",
+          "historicalTitle": "Transfiguration of Christ",
+          "historicalEnglishTitle": "Transfiguration of Christ",
+          "historicalYear": 1455,
+          "historicalImage": "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20-%20Trasfigurazione%20di%20Cristo%20%28Venezia%29.jpg",
+          "historicalSources": [
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20-%20Trasfigurazione%20di%20Cristo%20%28Venezia%29.jpg",
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20-%20Trasfigurazione%20di%20Cristo%20%28Venezia%29.jpg"
+          ],
+          "yearDistance": 23
+        }
+      ]
+    },
+    {
+      "artistId": "artist-Q8459",
+      "artist": "조르조네",
+      "workId": "wikidata-Q3605531",
+      "title": "Adoration of the Magi",
+      "englishTitle": "Adoration of the Magi",
+      "year": 1506,
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Adorazione%20dei%20Magi%20%281506-1507%29.jpg",
+      "sources": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Adorazione%20dei%20Magi%20%281506-1507%29.jpg",
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Adorazione%20dei%20Magi%20%281506-1507%29.jpg"
+      ],
+      "candidates": [
+        {
+          "path": "data/images/artist-Q8459/wikidata-Q3605563.jpg",
+          "score": 73,
+          "similarity": 0.667,
+          "sourceMatch": false,
+          "historicalWorkId": "wikidata-Q3605563",
+          "historicalTitle": "Adoration of the Shepherds",
+          "historicalEnglishTitle": "Adoration of the Shepherds",
+          "historicalYear": 1507,
+          "historicalImage": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Adoration%20of%20the%20Shepherds%20-%20National%20Gallery%20of%20Art.jpg",
+          "historicalSources": [
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Adoration%20of%20the%20Shepherds%20-%20National%20Gallery%20of%20Art.jpg",
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Adoration%20of%20the%20Shepherds%20-%20National%20Gallery%20of%20Art.jpg"
+          ],
+          "yearDistance": 1
+        }
+      ]
+    },
+    {
+      "artistId": "artist-Q8459",
+      "artist": "조르조네",
+      "workId": "wikidata-Q27968196",
+      "title": "Portrait of An Archer",
+      "englishTitle": "Portrait of An Archer",
+      "year": 1508,
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20%28attrib.%29%20-%20Portrait%20of%20An%20Archer.jpg",
+      "sources": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20%28attrib.%29%20-%20Portrait%20of%20An%20Archer.jpg",
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20%28attrib.%29%20-%20Portrait%20of%20An%20Archer.jpg"
+      ],
+      "candidates": [
+        {
+          "path": "data/images/artist-Q8459/wikidata-Q3937411.jpg",
+          "score": 79,
+          "similarity": 0.733,
+          "sourceMatch": false,
+          "historicalWorkId": "wikidata-Q3937411",
+          "historicalTitle": "Portrait of a Man",
+          "historicalEnglishTitle": "Portrait of a Man",
+          "historicalYear": 1508,
+          "historicalImage": "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%2C%20Portrait%20of%20a%20Man.jpg",
+          "historicalSources": [
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%2C%20Portrait%20of%20a%20Man.jpg",
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%2C%20Portrait%20of%20a%20Man.jpg"
+          ],
+          "yearDistance": 0
+        }
+      ]
+    },
+    {
+      "artistId": "artist-Q47551",
+      "artist": "티치아노",
+      "workId": "wikidata-Q19798137",
+      "title": "Portrait of Charles V with a Dog",
+      "englishTitle": "Portrait of Charles V with a Dog",
+      "year": 1533,
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tizian%20081.jpg",
+      "sources": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Tizian%20081.jpg",
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Tizian%20081.jpg"
+      ],
+      "candidates": [
+        {
+          "path": "data/images/artist-Q47551/wikidata-Q2609585.jpg",
+          "score": 65,
+          "similarity": 0.81,
+          "sourceMatch": false,
+          "historicalWorkId": "wikidata-Q2609585",
+          "historicalTitle": "Portrait of Charles V",
+          "historicalEnglishTitle": "Portrait of Charles V",
+          "historicalYear": 1548,
+          "historicalImage": "http://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20Charles%20V%2C%20Holy%20Roman%20Emperor%2C%20seated%20%281500%E2%80%931558%29%2C%20formerly%20attributed%20to%20Titian%20%28Alte%20Pinakothek%2C%20Munich%29.jpg",
+          "historicalSources": [
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20Charles%20V%2C%20Holy%20Roman%20Emperor%2C%20seated%20%281500%E2%80%931558%29%2C%20formerly%20attributed%20to%20Titian%20%28Alte%20Pinakothek%2C%20Munich%29.jpg",
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20Charles%20V%2C%20Holy%20Roman%20Emperor%2C%20seated%20%281500%E2%80%931558%29%2C%20formerly%20attributed%20to%20Titian%20%28Alte%20Pinakothek%2C%20Munich%29.jpg"
+          ],
+          "yearDistance": 15
+        }
+      ]
+    },
+    {
+      "artistId": "artist-Q7824",
+      "artist": "안니발레 카라치",
+      "workId": "wikidata-Q17651291",
+      "title": "Pietà",
+      "englishTitle": "Pietà",
+      "year": 1603,
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20Piet%C3%A0%20-%20GG%20230%20-%20Kunsthistorisches%20Museum.jpg",
+      "sources": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20Piet%C3%A0%20-%20GG%20230%20-%20Kunsthistorisches%20Museum.jpg",
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20Piet%C3%A0%20-%20GG%20230%20-%20Kunsthistorisches%20Museum.jpg"
+      ],
+      "candidates": [
+        {
+          "path": "data/images/artist-Q7824/wikidata-Q21121936.jpg",
+          "score": 90,
+          "similarity": 1,
+          "sourceMatch": false,
+          "historicalWorkId": "wikidata-Q21121936",
+          "historicalTitle": "Pietà",
+          "historicalEnglishTitle": "Pietà",
+          "historicalYear": 1599,
+          "historicalImage": "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%201560-1609%20Pieta.jpg",
+          "historicalSources": [
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%201560-1609%20Pieta.jpg",
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%201560-1609%20Pieta.jpg"
+          ],
+          "yearDistance": 4
+        }
+      ]
+    },
+    {
+      "artistId": "artist-Q7824",
+      "artist": "안니발레 카라치",
+      "workId": "wikidata-Q21722833",
+      "title": "Rest on the Flight into Egypt",
+      "englishTitle": "Rest on the Flight into Egypt",
+      "year": 1604,
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20La%20Santa%20Famiglia%20%28Riposo%20durante%20la%20fuga%20in%20Egitto%29.jpg",
+      "sources": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20La%20Santa%20Famiglia%20%28Riposo%20durante%20la%20fuga%20in%20Egitto%29.jpg",
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20La%20Santa%20Famiglia%20%28Riposo%20durante%20la%20fuga%20in%20Egitto%29.jpg"
+      ],
+      "candidates": [
+        {
+          "path": "data/images/artist-Q7824/wikidata-Q1115595.jpg",
+          "score": 88,
+          "similarity": 0.85,
+          "sourceMatch": false,
+          "historicalWorkId": "wikidata-Q1115595",
+          "historicalTitle": "The Flight into Egypt",
+          "historicalEnglishTitle": "The Flight into Egypt",
+          "historicalYear": 1604,
+          "historicalImage": "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20003.jpg",
+          "historicalSources": [
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20003.jpg",
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20003.jpg"
+          ],
+          "yearDistance": 0
+        }
+      ]
+    },
+    {
+      "artistId": "artist-rembrandt",
+      "artist": "렘브란트 하르먼손 반 레인",
+      "workId": "wikidata-Q3630751",
+      "title": "Self-Portrait at the Age of 34",
+      "englishTitle": "Self-Portrait at the Age of 34",
+      "year": 1640,
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt%2C%20Self%20Portrait%20at%20the%20Age%20of%2034.jpg",
+      "sources": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt%2C%20Self%20Portrait%20at%20the%20Age%20of%2034.jpg",
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt%2C%20Self%20Portrait%20at%20the%20Age%20of%2034.jpg"
+      ],
+      "candidates": [
+        {
+          "path": "data/images/artist-rembrandt/national-gallery-NG221-self-portrait-1669.jpg",
+          "score": 73,
+          "similarity": 0.913,
+          "sourceMatch": false,
+          "historicalWorkId": "national-gallery-NG221-self-portrait-1669",
+          "historicalTitle": "63세의 자화상",
+          "historicalEnglishTitle": "Self-Portrait at the Age of 63",
+          "historicalYear": 1669,
+          "historicalImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt,_Self_Portrait_at_the_Age_of_63.jpg?width=1600",
+          "historicalSources": [
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt,_Self_Portrait_at_the_Age_of_63.jpg?width=1600",
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt,_Self_Portrait_at_the_Age_of_63.jpg?width=1600"
+          ],
+          "yearDistance": 29
+        }
+      ]
+    },
+    {
+      "artistId": "artist-Q187310",
+      "artist": "칼 라르손",
+      "workId": "wikidata-Q106368934",
+      "title": "The Founders of the Art Collections: Lovisa Ulrika and C.G. Tessin Cartoon for the Fresco in the Lower Hall of the NM",
+      "englishTitle": "The Founders of the Art Collections: Lovisa Ulrika and C.G. Tessin Cartoon for the Fresco in the Lower Hall of the NM",
+      "year": 1895,
+      "image": "",
+      "sources": [],
+      "candidates": [
+        {
+          "path": "data/images/artist-Q187310/wikidata-Q106368938.jpg",
+          "score": 65,
+          "similarity": 0.558,
+          "sourceMatch": false,
+          "historicalWorkId": "wikidata-Q106368938",
+          "historicalTitle": "Cartoon for the Lower Hall of the NM. Patron of the Fine Arts and Founder of the Museum King Gustav III of Sweden Receiving Antique Pieces of Art",
+          "historicalEnglishTitle": "Cartoon for the Lower Hall of the NM. Patron of the Fine Arts and Founder of the Museum King Gustav III of Sweden Receiving Antique Pieces of Art",
+          "historicalYear": 1895,
+          "historicalImage": "http://commons.wikimedia.org/wiki/Special:FilePath/Cartoon%20for%20the%20Lower%20Hall%20of%20the%20NM%20-%20Nationalmuseum%20-%2025334.tif",
+          "historicalSources": [
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Cartoon%20for%20the%20Lower%20Hall%20of%20the%20NM%20-%20Nationalmuseum%20-%2025334.tif",
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Cartoon%20for%20the%20Lower%20Hall%20of%20the%20NM%20-%20Nationalmuseum%20-%2025334.tif"
+          ],
+          "yearDistance": 0
+        }
+      ]
+    },
+    {
+      "artistId": "artist-Q82445",
+      "artist": "앙리 드 툴루즈로트레크",
+      "workId": "wikidata-Q19883438",
+      "title": "La Goulue at the Moulin Rouge",
+      "englishTitle": "La Goulue at the Moulin Rouge",
+      "year": 1891,
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toulouse-Lautrec%20-%20La%20Goulue%20at%20the%20Moulin%20Rouge%2C%201891-92.jpg",
+      "sources": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Toulouse-Lautrec%20-%20La%20Goulue%20at%20the%20Moulin%20Rouge%2C%201891-92.jpg",
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Toulouse-Lautrec%20-%20La%20Goulue%20at%20the%20Moulin%20Rouge%2C%201891-92.jpg"
+      ],
+      "candidates": [
+        {
+          "path": "data/images/artist-Q82445/wikidata-Q17026577.jpg",
+          "score": 86,
+          "similarity": 0.829,
+          "sourceMatch": false,
+          "historicalWorkId": "wikidata-Q17026577",
+          "historicalTitle": "물랭 루주: 라 굴뤼",
+          "historicalEnglishTitle": "Moulin Rouge: La Goulue",
+          "historicalYear": 1891,
+          "historicalImage": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%20049.jpg",
+          "historicalSources": [
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%20049.jpg",
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%20049.jpg"
+          ],
+          "yearDistance": 0
+        },
+        {
+          "path": "data/images/artist-Q82445/wikidata-Q3607521.jpg",
+          "score": 83,
+          "similarity": 0.789,
+          "sourceMatch": false,
+          "historicalWorkId": "wikidata-Q3607521",
+          "historicalTitle": "물랭 루주에서",
+          "historicalEnglishTitle": "At the Moulin Rouge",
+          "historicalYear": 1892,
+          "historicalImage": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%20-%20At%20the%20Moulin%20Rouge%20-%201928.610%20-%20Art%20Institute%20of%20Chicago.jpg",
+          "historicalSources": [
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%20-%20At%20the%20Moulin%20Rouge%20-%201928.610%20-%20Art%20Institute%20of%20Chicago.jpg",
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%20-%20At%20the%20Moulin%20Rouge%20-%201928.610%20-%20Art%20Institute%20of%20Chicago.jpg"
+          ],
+          "yearDistance": 1
+        },
+        {
+          "path": "data/images/artist-Q82445/wikidata-Q3633443.jpg",
+          "score": 72,
+          "similarity": 0.652,
+          "sourceMatch": false,
+          "historicalWorkId": "wikidata-Q3633443",
+          "historicalTitle": "물랭 루주에서, 춤",
+          "historicalEnglishTitle": "At the Moulin Rouge, The Dance",
+          "historicalYear": 1890,
+          "historicalImage": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%2C%20French%20-%20At%20the%20Moulin%20Rouge-%20The%20Dance%20-%20Google%20Art%20Project.jpg",
+          "historicalSources": [
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%2C%20French%20-%20At%20the%20Moulin%20Rouge-%20The%20Dance%20-%20Google%20Art%20Project.jpg",
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%2C%20French%20-%20At%20the%20Moulin%20Rouge-%20The%20Dance%20-%20Google%20Art%20Project.jpg"
+          ],
+          "yearDistance": 1
+        }
+      ]
+    },
+    {
+      "artistId": "artist-Q82445",
+      "artist": "앙리 드 툴루즈로트레크",
+      "workId": "wikidata-Q18685999",
+      "title": "Two Friends",
+      "englishTitle": "Two Friends",
+      "year": 1895,
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20R.%20de%20Toulouse-Lautrec%20-%20Two%20Friends%20-%20Google%20Art%20Project.jpg",
+      "sources": [
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20R.%20de%20Toulouse-Lautrec%20-%20Two%20Friends%20-%20Google%20Art%20Project.jpg",
+        "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20R.%20de%20Toulouse-Lautrec%20-%20Two%20Friends%20-%20Google%20Art%20Project.jpg"
+      ],
+      "candidates": [
+        {
+          "path": "data/images/artist-Q82445/wikidata-Q18191111.jpg",
+          "score": 71,
+          "similarity": 0.64,
+          "sourceMatch": false,
+          "historicalWorkId": "wikidata-Q18191111",
+          "historicalTitle": "The Two Girl Friends",
+          "historicalEnglishTitle": "The Two Girl Friends",
+          "historicalYear": 1895,
+          "historicalImage": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%20-%20Les%20Deux%20Amies%20-%20106%20-%20Foundation%20E.G.%20B%C3%BChrle%20Collection.jpg",
+          "historicalSources": [
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%20-%20Les%20Deux%20Amies%20-%20106%20-%20Foundation%20E.G.%20B%C3%BChrle%20Collection.jpg",
+            "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20de%20Toulouse-Lautrec%20-%20Les%20Deux%20Amies%20-%20106%20-%20Foundation%20E.G.%20B%C3%BChrle%20Collection.jpg"
+          ],
+          "yearDistance": 0
+        }
+      ]
+    }
+  ]
+}
