@@ -9,6 +9,8 @@ const artistsFile = path.join(root, 'data', 'artists.json');
 const manifestFile = path.join(root, 'data', 'artist-work-image-download-manifest.json');
 const commonsApi = 'https://commons.wikimedia.org/w/api.php';
 const stopWords = new Set(['a', 'an', 'and', 'at', 'by', 'for', 'from', 'in', 'of', 'on', 'the', 'to', 'untitled', 'with']);
+const pendingUploadOnly = process.argv.includes('--pending-upload-only');
+const excludePendingUpload = process.argv.includes('--exclude-pending-upload');
 
 requireUrlFileDownloadApproval({
   purpose: 'Build the one-time user-approved Wikimedia Commons image manifest for artist works without local images.',
@@ -127,8 +129,17 @@ async function mapLimit(items, limit, mapper) {
 
 async function main() {
   const artists = readJson(artistsFile).artists || [];
+  const missingWorks = artists.flatMap(artist => (artist.works || []).map(work => ({artist, work})))
+    .filter(({artist, work}) => !workHasLocalImage(work, artist.id));
+  const scopedMissingWorks = missingWorks.filter(({work}) => {
+    if (pendingUploadOnly) return work.imageUploadStatus === 'pending-upload';
+    if (excludePendingUpload) return work.imageUploadStatus !== 'pending-upload';
+    return true;
+  });
   const pending = artists.flatMap(artist => (artist.works || [])
     .filter(work => !workHasLocalImage(work, artist.id))
+    .filter(work => !pendingUploadOnly || work.imageUploadStatus === 'pending-upload')
+    .filter(work => !excludePendingUpload || work.imageUploadStatus !== 'pending-upload')
     .map(work => ({
       artistId: artist.id,
       artistName: artist.name || {},
@@ -176,7 +187,10 @@ async function main() {
       pending: items.length,
       candidates: items.filter(item => item.reviewStatus === 'candidate').length,
       unresolved: items.filter(item => item.reviewStatus === 'unresolved').length,
-    skippedNoSearchTokens: artists.flatMap(artist => (artist.works || []).map(work => ({artist, work}))).filter(item => !workHasLocalImage(item.work, item.artist.id)).length - pending.length
+      skippedNoSearchTokens: scopedMissingWorks.length - pending.length,
+      totalMissingLocalImages: missingWorks.length,
+      scopedToPendingUploadOnly: pendingUploadOnly,
+      scopedToExcludePendingUpload: excludePendingUpload
     },
     items
   };

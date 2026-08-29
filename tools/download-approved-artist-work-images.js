@@ -9,6 +9,9 @@ const manifestFile = path.join(root, 'data', 'artist-work-image-download-manifes
 const artistsFile = path.join(root, 'data', 'artists.json');
 const representativesFile = path.join(root, 'data', 'art-movement-representatives.json');
 const maxBytes = 10 * 1024 * 1024;
+const includeFailed = process.argv.includes('--include-failed');
+const delayOption = process.argv.find(arg => arg.startsWith('--delay-ms='));
+const postItemDelayMs = delayOption ? Math.max(0, Number(delayOption.split('=')[1]) || 0) : 5000;
 
 requireUrlFileDownloadApproval({
   purpose: 'Download only reviewed Wikimedia Commons image candidates for artist works without local images.',
@@ -97,7 +100,10 @@ async function main() {
   const representatives = readJson(representativesFile);
   const artistMap = new Map((artistsPayload.artists || []).map(artist => [artist.id, artist]));
   const repWorkMap = representativeWorkMap(representatives);
-  const approved = (manifest.items || []).filter(item => item.reviewStatus === 'candidate' && item.selected && !item.selected.derivative);
+  const approved = (manifest.items || []).filter(item => (
+    item.reviewStatus === 'candidate'
+    || (includeFailed && item.reviewStatus === 'failed')
+  ) && item.selected && !item.selected.derivative);
   const results = [];
   const errors = [];
   let consecutiveRateLimits = 0;
@@ -153,7 +159,7 @@ async function main() {
       results.push({artistId: item.artistId, workId: item.workId, targetPath: localPath, bytes: buffer.length});
       persist();
       console.log(`downloaded ${item.artistId} ${item.workId} (${buffer.length} bytes)`);
-      await new Promise(resolve => setTimeout(resolve, 5000));
+      await new Promise(resolve => setTimeout(resolve, postItemDelayMs));
     } catch (error) {
       item.reviewStatus = 'failed';
       item.error = error.message;
@@ -169,6 +175,7 @@ async function main() {
       } else {
         consecutiveRateLimits = 0;
       }
+      await new Promise(resolve => setTimeout(resolve, postItemDelayMs));
     }
   }
   persist();

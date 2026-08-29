@@ -1,15 +1,15 @@
 {
   "schema": 1,
-  "generatedAt": "2026-08-29T09:36:38.922Z",
+  "generatedAt": "2026-08-29T10:42:30.560Z",
   "namingStandard": "shortArtist_titleFirst3Words_startYear__workId.ext",
   "stats": {
-    "images": 1666,
-    "linkedImages": 1666,
+    "images": 1698,
+    "linkedImages": 1698,
     "unlinkedImages": 0,
-    "standardNames": 39,
+    "standardNames": 71,
     "legacyNames": 1627,
     "newNonstandardNames": 0,
-    "duplicateHashGroups": 0
+    "duplicateHashGroups": 2
   },
   "images": [
     {
@@ -5930,6 +5930,72 @@
       ]
     },
     {
+      "path": "data/images/artist-further-emile-bernard/베르나르_목초지의 브르타뉴 여인들_1888__bernard-breton-women-meadow.jpg",
+      "filename": "베르나르_목초지의 브르타뉴 여인들_1888__bernard-breton-women-meadow.jpg",
+      "bytes": 1049177,
+      "sha256": "3bf534a55431ef493876cb5e4f502bb34a6881362bc0683200832374e5e000a6",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-further-emile-bernard",
+          "artistQid": "",
+          "artistNameKo": "에밀 베르나르",
+          "artistNameEn": "Emile Bernard",
+          "workId": "bernard-breton-women-meadow",
+          "workQid": "",
+          "titleKo": "목초지의 브르타뉴 여인들",
+          "titleEn": "Breton Women in a Meadow",
+          "year": 1888
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-further-franz-marc/마르크_푸른 말 I_1911__marc-blue-horse-i.jpg",
+      "filename": "마르크_푸른 말 I_1911__marc-blue-horse-i.jpg",
+      "bytes": 2072450,
+      "sha256": "929f7d95784965556ce9fde388020265917618f91782b36943f001ccd7d6f01f",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-further-franz-marc",
+          "artistQid": "",
+          "artistNameKo": "프란츠 마르크",
+          "artistNameEn": "Franz Marc",
+          "workId": "marc-blue-horse-i",
+          "workQid": "",
+          "titleKo": "푸른 말 I",
+          "titleEn": "Blue Horse I",
+          "year": 1911
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-further-friesz/프리에스_라 시오타_1907__friesz-la-ciotat.jpg",
+      "filename": "프리에스_라 시오타_1907__friesz-la-ciotat.jpg",
+      "bytes": 686721,
+      "sha256": "75a8c6880b7ee196604b5d1576b94dd2c64d562a45a2654601c306430d536dbd",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-further-friesz",
+          "artistQid": "",
+          "artistNameKo": "오톤 프리에스",
+          "artistNameEn": "Othon Friesz",
+          "workId": "friesz-la-ciotat",
+          "workQid": "",
+          "titleKo": "라 시오타",
+          "titleEn": "La Ciotat",
+          "year": 1907
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-further-guimard/guimard-paris-metro-entrance.jpg",
       "filename": "guimard-paris-metro-entrance.jpg",
       "bytes": 918988,
@@ -6091,6 +6157,28 @@
       ]
     },
     {
+      "path": "data/images/artist-further-runge/룽게_아침_1808__runge-morning.jpg",
+      "filename": "룽게_아침_1808__runge-morning.jpg",
+      "bytes": 161842,
+      "sha256": "569c724c7cb6b3fe0677a21d5fec301ec0257d07fb2067ba9551b634002ce588",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-further-runge",
+          "artistQid": "",
+          "artistNameKo": "필리프 오토 룽게",
+          "artistNameEn": "Philipp Otto Runge",
+          "workId": "runge-morning",
+          "workQid": "",
+          "titleKo": "아침",
+          "titleEn": "Morning",
+          "year": 1808
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-further-signac/signac-port-saint-tropez.jpg",
       "filename": "signac-port-saint-tropez.jpg",
       "bytes": 1392691,
@@ -6137,6 +6225,28 @@
       ]
     },
     {
+      "path": "data/images/artist-further-van-doesburg/두스뷔르흐_반구성 V_1924__van-doesburg-counter-composition-v.jpg",
+      "filename": "두스뷔르흐_반구성 V_1924__van-doesburg-counter-composition-v.jpg",
+      "bytes": 93012,
+      "sha256": "9ef2ca500a37cf1e6426d0601002ddea486998ecee1191fb7fd70756b2483692",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-further-van-doesburg",
+          "artistQid": "",
+          "artistNameKo": "테오 판 두스뷔르흐",
+          "artistNameEn": "Theo van Doesburg",
+          "workId": "van-doesburg-counter-composition-v",
+          "workQid": "",
+          "titleKo": "반구성 V",
+          "titleEn": "Counter-Composition V",
+          "year": 1924
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-further-yoko-ono/ono-cut-piece.jpg",
       "filename": "ono-cut-piece.jpg",
       "bytes": 512175,
@@ -6179,6 +6289,28 @@
           "titleKo": "해바라기 씨",
           "titleEn": "Sunflower Seeds",
           "year": 2010
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-mid-anni-albers/알버스_벽걸이_1926__albers-wall-hanging.jpg",
+      "filename": "알버스_벽걸이_1926__albers-wall-hanging.jpg",
+      "bytes": 2350572,
+      "sha256": "7c80d56d3e519c4a74651f53acecb995229b6beab6675bc22c83ce5e9e3eead7",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-mid-anni-albers",
+          "artistQid": "",
+          "artistNameKo": "아니 알버스",
+          "artistNameEn": "Anni Albers",
+          "workId": "albers-wall-hanging",
+          "workQid": "",
+          "titleKo": "벽걸이",
+          "titleEn": "Wall Hanging",
+          "year": 1926
         }
       ]
     },
@@ -6574,6 +6706,28 @@
       ]
     },
     {
+      "path": "data/images/artist-mid-keith-haring/해링_크랙은 끝장이다_1986__haring-crack-is-wack.jpg",
+      "filename": "해링_크랙은 끝장이다_1986__haring-crack-is-wack.jpg",
+      "bytes": 794017,
+      "sha256": "824122ebad81efb2fa8815fea956d404f768130581ab5d3ef10e4ad91d16309d",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-mid-keith-haring",
+          "artistQid": "",
+          "artistNameKo": "키스 해링",
+          "artistNameEn": "Keith Haring",
+          "workId": "haring-crack-is-wack",
+          "workQid": "",
+          "titleKo": "크랙은 끝장이다",
+          "titleEn": "Crack Is Wack",
+          "year": 1986
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-mid-laszlo-moholy-nagy/moholy-nagy-light-space-modulator.jpg",
       "filename": "moholy-nagy-light-space-modulator.jpg",
       "bytes": 1060946,
@@ -6639,6 +6793,28 @@
           "titleKo": "초록 줄무늬",
           "titleEn": "Green Stripe",
           "year": 1917
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-mid-on-kawara/가와라_오늘 연작_1966__kawara-today-series.jpg",
+      "filename": "가와라_오늘 연작_1966__kawara-today-series.jpg",
+      "bytes": 777112,
+      "sha256": "96be7051bcd0b9b15ef45135d6685dc5883f5381432843809ee9a5a6f7fba434",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-mid-on-kawara",
+          "artistQid": "",
+          "artistNameKo": "온 가와라",
+          "artistNameEn": "On Kawara",
+          "workId": "kawara-today-series",
+          "workQid": "",
+          "titleKo": "오늘 연작",
+          "titleEn": "Today Series",
+          "year": 1966
         }
       ]
     },
@@ -6781,6 +6957,28 @@
       ]
     },
     {
+      "path": "data/images/artist-mid-victor-horta/오르타_호텔 타셀_1893__horta-hotel-tassel.jpg",
+      "filename": "오르타_호텔 타셀_1893__horta-hotel-tassel.jpg",
+      "bytes": 976752,
+      "sha256": "fa731b949076513ffa398de89fc6c1a21447d9583390fc949c531edd217a3594",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-mid-victor-horta",
+          "artistQid": "",
+          "artistNameKo": "빅토르 오르타",
+          "artistNameEn": "Victor Horta",
+          "workId": "horta-hotel-tassel",
+          "workQid": "",
+          "titleKo": "호텔 타셀",
+          "titleEn": "Hotel Tassel",
+          "year": 1893
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-mid-william-blake/blake-ancient-of-days.jpg",
       "filename": "blake-ancient-of-days.jpg",
       "bytes": 1252499,
@@ -6823,6 +7021,72 @@
           "titleKo": "한가한 시간",
           "titleEn": "Idle Hours",
           "year": 1894
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q102272/반 에이크_Adam_1432__wikidata-Q3605033.jpg",
+      "filename": "반 에이크_Adam_1432__wikidata-Q3605033.jpg",
+      "bytes": 119402,
+      "sha256": "7e70bd24ece2a94e07954b432be56536635ae138a80b7079c082b1033be26bfd",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q102272",
+          "artistQid": "Q102272",
+          "artistNameKo": "얀 반 에이크",
+          "artistNameEn": "Jan van Eyck",
+          "workId": "wikidata-Q3605033",
+          "workQid": "Q3605033",
+          "titleKo": "Adam",
+          "titleEn": "Adam",
+          "year": 1432
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q102272/반 에이크_Eve_1432__wikidata-Q20050620.jpg",
+      "filename": "반 에이크_Eve_1432__wikidata-Q20050620.jpg",
+      "bytes": 109535,
+      "sha256": "6b8ac13daaef520d6b2c2501078ca4cc293e9cdc3750235fb186f3a020c44d64",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q102272",
+          "artistQid": "Q102272",
+          "artistNameKo": "얀 반 에이크",
+          "artistNameEn": "Jan van Eyck",
+          "workId": "wikidata-Q20050620",
+          "workQid": "Q20050620",
+          "titleKo": "Eve",
+          "titleEn": "Eve",
+          "year": 1432
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q102272/반 에이크_Singing Angels_1432__wikidata-Q28056879.jpg",
+      "filename": "반 에이크_Singing Angels_1432__wikidata-Q28056879.jpg",
+      "bytes": 170090,
+      "sha256": "3872a68011668b863a5e3e894cb97e2eadaedc675679b3d05448d221be4a510d",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q102272",
+          "artistQid": "Q102272",
+          "artistNameKo": "얀 반 에이크",
+          "artistNameEn": "Jan van Eyck",
+          "workId": "wikidata-Q28056879",
+          "workQid": "Q28056879",
+          "titleKo": "Singing Angels",
+          "titleEn": "Singing Angels",
+          "year": 1432
         }
       ]
     },
@@ -7471,6 +7735,28 @@
       ]
     },
     {
+      "path": "data/images/artist-Q150679/반 다이크_찰스 1세의 딸_1637__van-dyck-princess-mary-daughter-of-charles-i-1637.jpg",
+      "filename": "반 다이크_찰스 1세의 딸_1637__van-dyck-princess-mary-daughter-of-charles-i-1637.jpg",
+      "bytes": 1596711,
+      "sha256": "b344d3a672a07d5ed1ee9813a379b97f4f4bcd7740acab58092b0d07b1f1e2e3",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q150679",
+          "artistQid": "Q150679",
+          "artistNameKo": "안토니 반 다이크",
+          "artistNameEn": "Anthony van Dyck",
+          "workId": "van-dyck-princess-mary-daughter-of-charles-i-1637",
+          "workQid": "",
+          "titleKo": "찰스 1세의 딸 메리 공주",
+          "titleEn": "Princess Mary, Daughter of Charles I",
+          "year": 1637
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-Q150679/van-dyck-charles-i-and-henrietta-maria-with-children-1632.jpg",
       "filename": "van-dyck-charles-i-and-henrietta-maria-with-children-1632.jpg",
       "bytes": 5088923,
@@ -7812,6 +8098,28 @@
           "titleKo": "숲속의 성 게오르기우스와 용",
           "titleEn": "Saint George in the Forest",
           "year": 1510
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q155151/바토_사랑의 즐거움_1718__artist-Q155151-pleasures-of-love.jpg",
+      "filename": "바토_사랑의 즐거움_1718__artist-Q155151-pleasures-of-love.jpg",
+      "bytes": 1700053,
+      "sha256": "500a8d0ed81616c18e83adff96fe54de58491313793991946a3f3b2dba1f267a",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q155151",
+          "artistQid": "Q155151",
+          "artistNameKo": "앙투안 바토",
+          "artistNameEn": "Antoine Watteau",
+          "workId": "artist-Q155151-pleasures-of-love",
+          "workQid": "Q155151",
+          "titleKo": "사랑의 즐거움",
+          "titleEn": "Pleasures of Love",
+          "year": 1718
         }
       ]
     },
@@ -9143,6 +9451,72 @@
           "titleKo": "쿠피도의 날개를 자르는 비너스",
           "titleEn": "Venus Clipping Cupid’s Wings",
           "year": 1650
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q17169/벨리니_Madonna and Child_1490__wikidata-Q3842594.jpg",
+      "filename": "벨리니_Madonna and Child_1490__wikidata-Q3842594.jpg",
+      "bytes": 403037,
+      "sha256": "7355db3e18e5a3f6d2b1fced3d203d5e836597f3b20021c9bc193b9640b85354",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q17169",
+          "artistQid": "Q17169",
+          "artistNameKo": "조반니 벨리니",
+          "artistNameEn": "Giovanni Bellini",
+          "workId": "wikidata-Q3842594",
+          "workQid": "Q3842594",
+          "titleKo": "Madonna and Child between Saints Catherine and Mary Magdalene",
+          "titleEn": "Madonna and Child between Saints Catherine and Mary Magdalene",
+          "year": 1490
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q17169/벨리니_Madonna del Prato_1500__wikidata-Q1115613.jpg",
+      "filename": "벨리니_Madonna del Prato_1500__wikidata-Q1115613.jpg",
+      "bytes": 874892,
+      "sha256": "812d58c81988bc0187105cca899819b30d7320d697d8669454e0df693dbdc0f6",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q17169",
+          "artistQid": "Q17169",
+          "artistNameKo": "조반니 벨리니",
+          "artistNameEn": "Giovanni Bellini",
+          "workId": "wikidata-Q1115613",
+          "workQid": "Q1115613",
+          "titleKo": "Madonna del Prato",
+          "titleEn": "Madonna del Prato",
+          "year": 1500
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q17169/벨리니_Pietà with Madonna_1455__wikidata-Q3904392.jpg",
+      "filename": "벨리니_Pietà with Madonna_1455__wikidata-Q3904392.jpg",
+      "bytes": 3042581,
+      "sha256": "10ddbd60798840c2838ad2bd8539a51976cd860db748c5b6695c2a18bc0094e8",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q17169",
+          "artistQid": "Q17169",
+          "artistNameKo": "조반니 벨리니",
+          "artistNameEn": "Giovanni Bellini",
+          "workId": "wikidata-Q3904392",
+          "workQid": "Q3904392",
+          "titleKo": "Pietà with Madonna and St. John the Evangelist",
+          "titleEn": "Pietà with Madonna and St. John the Evangelist",
+          "year": 1455
         }
       ]
     },
@@ -13291,6 +13665,28 @@
           "titleKo": "Portrait of Marie-Louise-Adélaïde-Jacquette de Robien",
           "titleEn": "Portrait of Marie-Louise-Adélaïde-Jacquette de Robien",
           "year": 1774
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q235547/카리에라_《앙투안 바토의 초상》_1720__local-carriera-watteau-portrait.jpg",
+      "filename": "카리에라_《앙투안 바토의 초상》_1720__local-carriera-watteau-portrait.jpg",
+      "bytes": 398218,
+      "sha256": "ed1b5d710db54750bdccc3fee5e3603a17fab5985573f6d2594a57dd62e3fdc8",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q235547",
+          "artistQid": "Q235547",
+          "artistNameKo": "로살바 카리에라",
+          "artistNameEn": "Rosalba Carriera",
+          "workId": "local-carriera-watteau-portrait",
+          "workQid": "",
+          "titleKo": "《앙투안 바토의 초상》",
+          "titleEn": "Portrait of Antoine Watteau",
+          "year": 1720
         }
       ]
     },
@@ -22208,6 +22604,28 @@
       ]
     },
     {
+      "path": "data/images/artist-Q5580/뒤러_동방박사의 경배_1504__durer-adoration-of-the-magi.jpg",
+      "filename": "뒤러_동방박사의 경배_1504__durer-adoration-of-the-magi.jpg",
+      "bytes": 732264,
+      "sha256": "0daa010adb083bed62e1f723f0028a3cfaee3840e5bfee3d051f4411b79c5fa3",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q5580",
+          "artistQid": "Q5580",
+          "artistNameKo": "알브레히트 뒤러",
+          "artistNameEn": "Albrecht Dürer",
+          "workId": "durer-adoration-of-the-magi",
+          "workQid": "",
+          "titleKo": "동방박사의 경배",
+          "titleEn": "Adoration of the Magi",
+          "year": 1504
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-Q5580/durer-adoration-of-the-trinity.jpg",
       "filename": "durer-adoration-of-the-trinity.jpg",
       "bytes": 243275,
@@ -26280,6 +26698,204 @@
           "titleKo": "비너스, 큐피드, 어리석음과 시간",
           "titleEn": "Venus, Cupid, Folly and Time",
           "year": 1544
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q7814/조토_Adoration of the_1305__wikidata-Q650189.jpg",
+      "filename": "조토_Adoration of the_1305__wikidata-Q650189.jpg",
+      "bytes": 156342,
+      "sha256": "07a591e2d488aaeab881d5dcb2373595b6c7cc0755511378001229e63a1a5012",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q7814",
+          "artistQid": "Q7814",
+          "artistNameKo": "조토 디 본도네",
+          "artistNameEn": "Giotto",
+          "workId": "wikidata-Q650189",
+          "workQid": "Q650189",
+          "titleKo": "Adoration of the Magi",
+          "titleEn": "Adoration of the Magi",
+          "year": 1305
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q7814/조토_Annunciation to Saint_1300__wikidata-Q3618200.jpg",
+      "filename": "조토_Annunciation to Saint_1300__wikidata-Q3618200.jpg",
+      "bytes": 134958,
+      "sha256": "c5ffce27eeddedf700eb495ebddeda5029b7a9dcb89249b5f52ae9ec04781dfa",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q7814",
+          "artistQid": "Q7814",
+          "artistNameKo": "조토 디 본도네",
+          "artistNameEn": "Giotto",
+          "workId": "wikidata-Q3618200",
+          "workQid": "Q3618200",
+          "titleKo": "Annunciation to Saint Anne",
+          "titleEn": "Annunciation to Saint Anne",
+          "year": 1300
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q7814/조토_Flagellation_1303__wikidata-Q3697612.jpg",
+      "filename": "조토_Flagellation_1303__wikidata-Q3697612.jpg",
+      "bytes": 192815,
+      "sha256": "ddb414f44b7a755a00bcea2be5d117746db055fb820ec1cce00dfb41d37a3db4",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q7814",
+          "artistQid": "Q7814",
+          "artistNameKo": "조토 디 본도네",
+          "artistNameEn": "Giotto",
+          "workId": "wikidata-Q3697612",
+          "workQid": "Q3697612",
+          "titleKo": "Flagellation",
+          "titleEn": "Flagellation",
+          "year": 1303
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q7814/조토_Judas' Betrayal_1306__wikidata-Q3997179.jpg",
+      "filename": "조토_Judas' Betrayal_1306__wikidata-Q3997179.jpg",
+      "bytes": 170826,
+      "sha256": "0965de8ab7ed5a61534ac8384921f8ae0f3bf3140471f310d09084b597b6849f",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q7814",
+          "artistQid": "Q7814",
+          "artistNameKo": "조토 디 본도네",
+          "artistNameEn": "Giotto",
+          "workId": "wikidata-Q3997179",
+          "workQid": "Q3997179",
+          "titleKo": "Judas' Betrayal",
+          "titleEn": "Judas' Betrayal",
+          "year": 1306
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q7814/조토_Last Supper_1303__wikidata-Q4003125.jpg",
+      "filename": "조토_Last Supper_1303__wikidata-Q4003125.jpg",
+      "bytes": 116492,
+      "sha256": "9a540524e1cef8a988d47f9b6231d2c7922754f0cd1519ba5fb16be74db6fba6",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q7814",
+          "artistQid": "Q7814",
+          "artistNameKo": "조토 디 본도네",
+          "artistNameEn": "Giotto",
+          "workId": "wikidata-Q4003125",
+          "workQid": "Q4003125",
+          "titleKo": "Last Supper",
+          "titleEn": "Last Supper",
+          "year": 1303
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q7814/조토_Presentation at the_1303__wikidata-Q3910923.jpg",
+      "filename": "조토_Presentation at the_1303__wikidata-Q3910923.jpg",
+      "bytes": 92935,
+      "sha256": "50551f1915bdc8ed76e95ae39b80f49db33199b48e8683b7720ee624ad2f959c",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q7814",
+          "artistQid": "Q7814",
+          "artistNameKo": "조토 디 본도네",
+          "artistNameEn": "Giotto",
+          "workId": "wikidata-Q3910923",
+          "workQid": "Q3910923",
+          "titleKo": "Presentation at the Temple",
+          "titleEn": "Presentation at the Temple",
+          "year": 1303
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q7814/조토_Resurrection_1303__wikidata-Q3933580.jpg",
+      "filename": "조토_Resurrection_1303__wikidata-Q3933580.jpg",
+      "bytes": 159455,
+      "sha256": "fb9c777da8abcc90cc29cf563f9f9cd6c033c68d5365cbc2b45f33eddc66a52a",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q7814",
+          "artistQid": "Q7814",
+          "artistNameKo": "조토 디 본도네",
+          "artistNameEn": "Giotto",
+          "workId": "wikidata-Q3933580",
+          "workQid": "Q3933580",
+          "titleKo": "Resurrection",
+          "titleEn": "Resurrection",
+          "year": 1303
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q7814/조토_The Annunciation_1300__wikidata-Q3618182.jpg",
+      "filename": "조토_The Annunciation_1300__wikidata-Q3618182.jpg",
+      "bytes": 134958,
+      "sha256": "c5ffce27eeddedf700eb495ebddeda5029b7a9dcb89249b5f52ae9ec04781dfa",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q7814",
+          "artistQid": "Q7814",
+          "artistNameKo": "조토 디 본도네",
+          "artistNameEn": "Giotto",
+          "workId": "wikidata-Q3618182",
+          "workQid": "Q3618182",
+          "titleKo": "The Annunciation",
+          "titleEn": "The Annunciation",
+          "year": 1300
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q7814/조토_Visitation_1306__wikidata-Q734197.jpg",
+      "filename": "조토_Visitation_1306__wikidata-Q734197.jpg",
+      "bytes": 149150,
+      "sha256": "78a558d57506c455b17b0aef2c2006dc95c700b42775b65e98e481453d5470b4",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q7814",
+          "artistQid": "Q7814",
+          "artistNameKo": "조토 디 본도네",
+          "artistNameEn": "Giotto",
+          "workId": "wikidata-Q734197",
+          "workQid": "Q734197",
+          "titleKo": "Visitation",
+          "titleEn": "Visitation",
+          "year": 1306
         }
       ]
     },
@@ -32243,6 +32859,54 @@
       ]
     },
     {
+      "path": "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__artist-romantic-gericault-work.jpg",
+      "filename": "제리코_메두사호의 뗏목_1819__artist-romantic-gericault-work.jpg",
+      "bytes": 717116,
+      "sha256": "930558b0de73d8f6e4ca97f9b3ccfbeb2e3d96958399b0adb14f6b8fce417e8e",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [
+        "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__gericault-raft-of-medusa.jpg"
+      ],
+      "works": [
+        {
+          "artistId": "artist-romantic-gericault",
+          "artistQid": "",
+          "artistNameKo": "테오도르 제리코",
+          "artistNameEn": "Théodore Géricault",
+          "workId": "artist-romantic-gericault-work",
+          "workQid": "",
+          "titleKo": "메두사호의 뗏목",
+          "titleEn": "The Raft of the Medusa",
+          "year": 1819
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__gericault-raft-of-medusa.jpg",
+      "filename": "제리코_메두사호의 뗏목_1819__gericault-raft-of-medusa.jpg",
+      "bytes": 717116,
+      "sha256": "930558b0de73d8f6e4ca97f9b3ccfbeb2e3d96958399b0adb14f6b8fce417e8e",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [
+        "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__artist-romantic-gericault-work.jpg"
+      ],
+      "works": [
+        {
+          "artistId": "artist-romantic-gericault",
+          "artistQid": "",
+          "artistNameKo": "테오도르 제리코",
+          "artistNameEn": "Théodore Géricault",
+          "workId": "gericault-raft-of-medusa",
+          "workQid": "",
+          "titleKo": "메두사호의 뗏목",
+          "titleEn": "The Raft of the Medusa",
+          "year": 1819
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-romantic-goya/고야_1808년 5월 3일_1814__artist-romantic-goya-work.jpg",
       "filename": "고야_1808년 5월 3일_1814__artist-romantic-goya-work.jpg",
       "bytes": 234625,
@@ -33513,6 +34177,50 @@
           "titleKo": "Portrait of King Philip IV of Spain , c. &#8201;1628 –29",
           "titleEn": "Portrait of King Philip IV of Spain , c. &#8201;1628 –29",
           "year": 1628
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-url-1787307872488/마사초_Raising of the_1427__wikidata-Q3933568.jpg",
+      "filename": "마사초_Raising of the_1427__wikidata-Q3933568.jpg",
+      "bytes": 1408407,
+      "sha256": "c14b484cc51651f3176e65e915874e5b22a872fb592718307121e3dc3e387572",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-url-1787307872488",
+          "artistQid": "Q5811",
+          "artistNameKo": "마사초",
+          "artistNameEn": "Masaccio",
+          "workId": "wikidata-Q3933568",
+          "workQid": "Q3933568",
+          "titleKo": "Raising of the Son of Teophilus and St. Peter Enthroned",
+          "titleEn": "Raising of the Son of Teophilus and St. Peter Enthroned",
+          "year": 1427
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-url-1787307872488/마사초_The Crucifixion of_1426__wikidata-Q3698230.jpg",
+      "filename": "마사초_The Crucifixion of_1426__wikidata-Q3698230.jpg",
+      "bytes": 523392,
+      "sha256": "eb0118ab3399801c3e14e81a2802afab0fdd62f4cb619410c44c601746d6f96c",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-url-1787307872488",
+          "artistQid": "Q5811",
+          "artistNameKo": "마사초",
+          "artistNameEn": "Masaccio",
+          "workId": "wikidata-Q3698230",
+          "workQid": "Q3698230",
+          "titleKo": "The Crucifixion of Saint Peter",
+          "titleEn": "The Crucifixion of Saint Peter",
+          "year": 1426
         }
       ]
     },

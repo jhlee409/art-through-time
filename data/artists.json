@@ -1098,12 +1098,12 @@
             "ko": "선르네상스",
             "en": "선르네상스"
           },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2014%20Annunciation%20-%20The%20Angel%20Gabriel%20Sent%20by%20God%20-%20WGA09190.jpg",
+          "image": "data/images/artist-Q7814/조토_The Annunciation_1300__wikidata-Q3618182.jpg",
           "description": {
             "ko": "double fresco by Giotto di Bondone",
             "en": "double fresco by Giotto di Bondone"
           },
-          "source": "http://www.wikidata.org/entity/Q3618182",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-03-_-_Annunciation_to_St_Anne.jpg",
           "verified": true,
           "representative": false,
           "movementContribution": false,
@@ -1116,18 +1116,24 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q3618182",
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q7814/조토_The Annunciation_1300__wikidata-Q3618182.jpg",
+              "highResolution": "data/images/artist-Q7814/조토_The Annunciation_1300__wikidata-Q3618182.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-03-_-_Annunciation_to_St_Anne.jpg",
               "sourceUrls": [
-                "http://www.wikidata.org/entity/Q3618182",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2014%20Annunciation%20-%20The%20Angel%20Gabriel%20Sent%20by%20God%20-%20WGA09190.jpg"
+                "https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-03-_-_Annunciation_to_St_Anne.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/b/b4/Giotto_-_Scrovegni_-_-03-_-_Annunciation_to_St_Anne.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
               ],
-              "license": "",
-              "institution": ""
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "thumbnail": "data/images/artist-Q7814/조토_The Annunciation_1300__wikidata-Q3618182.jpg",
+          "highResImage": "data/images/artist-Q7814/조토_The Annunciation_1300__wikidata-Q3618182.jpg",
+          "highResOriginal": "data/images/artist-Q7814/조토_The Annunciation_1300__wikidata-Q3618182.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:16:27.238Z"
         },
         {
           "id": "wikidata-Q3618200",
@@ -1145,12 +1151,12 @@
             "ko": "선르네상스",
             "en": "선르네상스"
           },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20-%2003.%20Annunciation%20to%20St%20Anne%20-%20Cappella%20degli%20Scrovegni%20-%20gallerix%20cropped.jpeg",
+          "image": "data/images/artist-Q7814/조토_Annunciation to Saint_1300__wikidata-Q3618200.jpg",
           "description": {
             "ko": "fresco by Giotto di Bondone",
             "en": "fresco by Giotto di Bondone"
           },
-          "source": "http://www.wikidata.org/entity/Q3618200",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-03-_-_Annunciation_to_St_Anne.jpg",
           "verified": true,
           "representative": false,
           "movementContribution": false,
@@ -1163,18 +1169,24 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q3618200",
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q7814/조토_Annunciation to Saint_1300__wikidata-Q3618200.jpg",
+              "highResolution": "data/images/artist-Q7814/조토_Annunciation to Saint_1300__wikidata-Q3618200.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-03-_-_Annunciation_to_St_Anne.jpg",
               "sourceUrls": [
-                "http://www.wikidata.org/entity/Q3618200",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20-%2003.%20Annunciation%20to%20St%20Anne%20-%20Cappella%20degli%20Scrovegni%20-%20gallerix%20cropped.jpeg"
+                "https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-03-_-_Annunciation_to_St_Anne.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/b/b4/Giotto_-_Scrovegni_-_-03-_-_Annunciation_to_St_Anne.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
               ],
-              "license": "",
-              "institution": ""
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "thumbnail": "data/images/artist-Q7814/조토_Annunciation to Saint_1300__wikidata-Q3618200.jpg",
+          "highResImage": "data/images/artist-Q7814/조토_Annunciation to Saint_1300__wikidata-Q3618200.jpg",
+          "highResOriginal": "data/images/artist-Q7814/조토_Annunciation to Saint_1300__wikidata-Q3618200.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:16:35.898Z"
         },
         {
           "id": "wikidata-Q3504778",
@@ -1298,12 +1310,12 @@
             "ko": "선르네상스",
             "en": "선르네상스"
           },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2037%20Scenes%20from%20the%20Life%20of%20Christ%20-%2021.%20Resurrection%20%28Noli%20me%20tangere%29%20-%20WGA09224.jpg",
+          "image": "data/images/artist-Q7814/조토_Resurrection_1303__wikidata-Q3933580.jpg",
           "description": {
             "ko": "painting by Giotto di Bondone",
             "en": "painting by Giotto di Bondone"
           },
-          "source": "http://www.wikidata.org/entity/Q3933580",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-37-_-_Resurrection_(Noli_me_tangere).jpg",
           "verified": true,
           "representative": false,
           "movementContribution": false,
@@ -1316,18 +1328,24 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q3933580",
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q7814/조토_Resurrection_1303__wikidata-Q3933580.jpg",
+              "highResolution": "data/images/artist-Q7814/조토_Resurrection_1303__wikidata-Q3933580.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-37-_-_Resurrection_(Noli_me_tangere).jpg",
               "sourceUrls": [
-                "http://www.wikidata.org/entity/Q3933580",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2037%20Scenes%20from%20the%20Life%20of%20Christ%20-%2021.%20Resurrection%20%28Noli%20me%20tangere%29%20-%20WGA09224.jpg"
+                "https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-37-_-_Resurrection_(Noli_me_tangere).jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/5/5b/Giotto_-_Scrovegni_-_-37-_-_Resurrection_%28Noli_me_tangere%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
               ],
-              "license": "",
-              "institution": ""
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "thumbnail": "data/images/artist-Q7814/조토_Resurrection_1303__wikidata-Q3933580.jpg",
+          "highResImage": "data/images/artist-Q7814/조토_Resurrection_1303__wikidata-Q3933580.jpg",
+          "highResOriginal": "data/images/artist-Q7814/조토_Resurrection_1303__wikidata-Q3933580.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:16:44.794Z"
         },
         {
           "id": "wikidata-Q3649309",
@@ -1398,12 +1416,12 @@
             "ko": "선르네상스",
             "en": "선르네상스"
           },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2033%20Scenes%20from%20the%20Life%20of%20Christ%20-%2017.%20Flagellation%20-%20WGA09218.jpg",
+          "image": "data/images/artist-Q7814/조토_Flagellation_1303__wikidata-Q3697612.jpg",
           "description": {
             "ko": "painting by Giotto di Bondone",
             "en": "painting by Giotto di Bondone"
           },
-          "source": "http://www.wikidata.org/entity/Q3697612",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-33-_-_Flagellation.jpg",
           "verified": true,
           "representative": false,
           "movementContribution": false,
@@ -1416,18 +1434,24 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q3697612",
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q7814/조토_Flagellation_1303__wikidata-Q3697612.jpg",
+              "highResolution": "data/images/artist-Q7814/조토_Flagellation_1303__wikidata-Q3697612.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-33-_-_Flagellation.jpg",
               "sourceUrls": [
-                "http://www.wikidata.org/entity/Q3697612",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2033%20Scenes%20from%20the%20Life%20of%20Christ%20-%2017.%20Flagellation%20-%20WGA09218.jpg"
+                "https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-33-_-_Flagellation.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/4/45/Giotto_-_Scrovegni_-_-33-_-_Flagellation.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
               ],
-              "license": "",
-              "institution": ""
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "thumbnail": "data/images/artist-Q7814/조토_Flagellation_1303__wikidata-Q3697612.jpg",
+          "highResImage": "data/images/artist-Q7814/조토_Flagellation_1303__wikidata-Q3697612.jpg",
+          "highResOriginal": "data/images/artist-Q7814/조토_Flagellation_1303__wikidata-Q3697612.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:16:53.702Z"
         },
         {
           "id": "wikidata-Q4003125",
@@ -1445,12 +1469,12 @@
             "ko": "선르네상스",
             "en": "선르네상스"
           },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Last%20Supper%20%28by%20Giotto%20di%20Bondone%29%20-%20Capella%20degli%20Scrovegni%20%28Padova%29.jpg",
+          "image": "data/images/artist-Q7814/조토_Last Supper_1303__wikidata-Q4003125.jpg",
           "description": {
             "ko": "painting by Giotto di Bondone, Padova",
             "en": "painting by Giotto di Bondone, Padova"
           },
-          "source": "http://www.wikidata.org/entity/Q4003125",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-29-_-_Last_Supper.jpg",
           "verified": true,
           "representative": false,
           "movementContribution": false,
@@ -1463,18 +1487,24 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q4003125",
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q7814/조토_Last Supper_1303__wikidata-Q4003125.jpg",
+              "highResolution": "data/images/artist-Q7814/조토_Last Supper_1303__wikidata-Q4003125.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-29-_-_Last_Supper.jpg",
               "sourceUrls": [
-                "http://www.wikidata.org/entity/Q4003125",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Last%20Supper%20%28by%20Giotto%20di%20Bondone%29%20-%20Capella%20degli%20Scrovegni%20%28Padova%29.jpg"
+                "https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-29-_-_Last_Supper.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/8/85/Giotto_-_Scrovegni_-_-29-_-_Last_Supper.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
               ],
-              "license": "",
-              "institution": ""
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "thumbnail": "data/images/artist-Q7814/조토_Last Supper_1303__wikidata-Q4003125.jpg",
+          "highResImage": "data/images/artist-Q7814/조토_Last Supper_1303__wikidata-Q4003125.jpg",
+          "highResOriginal": "data/images/artist-Q7814/조토_Last Supper_1303__wikidata-Q4003125.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:17:02.620Z"
         },
         {
           "id": "wikidata-Q3910923",
@@ -1492,12 +1522,12 @@
             "ko": "선르네상스",
             "en": "선르네상스"
           },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2019%20Scenes%20from%20the%20Life%20of%20Christ%20-%203.%20Presentation%20of%20Christ%20at%20the%20Temple%20-%20WGA09197.jpg",
+          "image": "data/images/artist-Q7814/조토_Presentation at the_1303__wikidata-Q3910923.jpg",
           "description": {
             "ko": "fresco by Giotto di Bondone, Cappella degli Scrovegni",
             "en": "fresco by Giotto di Bondone, Cappella degli Scrovegni"
           },
-          "source": "http://www.wikidata.org/entity/Q3910923",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-19-_-_Presentation_at_the_Temple.jpg",
           "verified": true,
           "representative": false,
           "movementContribution": false,
@@ -1510,18 +1540,24 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q3910923",
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q7814/조토_Presentation at the_1303__wikidata-Q3910923.jpg",
+              "highResolution": "data/images/artist-Q7814/조토_Presentation at the_1303__wikidata-Q3910923.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-19-_-_Presentation_at_the_Temple.jpg",
               "sourceUrls": [
-                "http://www.wikidata.org/entity/Q3910923",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2019%20Scenes%20from%20the%20Life%20of%20Christ%20-%203.%20Presentation%20of%20Christ%20at%20the%20Temple%20-%20WGA09197.jpg"
+                "https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-19-_-_Presentation_at_the_Temple.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/d/d2/Giotto_-_Scrovegni_-_-19-_-_Presentation_at_the_Temple.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
               ],
-              "license": "",
-              "institution": ""
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "thumbnail": "data/images/artist-Q7814/조토_Presentation at the_1303__wikidata-Q3910923.jpg",
+          "highResImage": "data/images/artist-Q7814/조토_Presentation at the_1303__wikidata-Q3910923.jpg",
+          "highResOriginal": "data/images/artist-Q7814/조토_Presentation at the_1303__wikidata-Q3910923.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:17:11.441Z"
         },
         {
           "id": "wikidata-Q3005514",
@@ -1751,12 +1787,12 @@
             "ko": "이탈리아 르네상스",
             "en": "이탈리아 르네상스"
           },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2018%20Scenes%20from%20the%20Life%20of%20Christ%20-%202.%20Adoration%20of%20the%20Magi%20-%20WGA09195.jpg",
+          "image": "data/images/artist-Q7814/조토_Adoration of the_1305__wikidata-Q650189.jpg",
           "description": {
             "ko": "fresco by Giotto di Bondone in the Scrovegni Chapel, Padua, Italy",
             "en": "fresco by Giotto di Bondone in the Scrovegni Chapel, Padua, Italy"
           },
-          "source": "http://www.wikidata.org/entity/Q650189",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-18-_-_Adoration_of_the_Magi.jpg",
           "verified": true,
           "representative": false,
           "movementContribution": false,
@@ -1769,18 +1805,24 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q650189",
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q7814/조토_Adoration of the_1305__wikidata-Q650189.jpg",
+              "highResolution": "data/images/artist-Q7814/조토_Adoration of the_1305__wikidata-Q650189.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-18-_-_Adoration_of_the_Magi.jpg",
               "sourceUrls": [
-                "http://www.wikidata.org/entity/Q650189",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2018%20Scenes%20from%20the%20Life%20of%20Christ%20-%202.%20Adoration%20of%20the%20Magi%20-%20WGA09195.jpg"
+                "https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-18-_-_Adoration_of_the_Magi.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/f/f9/Giotto_-_Scrovegni_-_-18-_-_Adoration_of_the_Magi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
               ],
-              "license": "",
-              "institution": ""
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "thumbnail": "data/images/artist-Q7814/조토_Adoration of the_1305__wikidata-Q650189.jpg",
+          "highResImage": "data/images/artist-Q7814/조토_Adoration of the_1305__wikidata-Q650189.jpg",
+          "highResOriginal": "data/images/artist-Q7814/조토_Adoration of the_1305__wikidata-Q650189.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:17:20.110Z"
         },
         {
           "id": "manual-local-1787290551889",
@@ -1898,12 +1940,12 @@
             "ko": "선르네상스",
             "en": "선르네상스"
           },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2016%20Scenes%20from%20the%20Life%20of%20the%20Virgin%20-%207.%20Visitation%20-%20WGA09192.jpg",
+          "image": "data/images/artist-Q7814/조토_Visitation_1306__wikidata-Q734197.jpg",
           "description": {
             "ko": "painting by Giotto di Bondone",
             "en": "painting by Giotto di Bondone"
           },
-          "source": "http://www.wikidata.org/entity/Q734197",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-16-_-_Visitation.jpg",
           "verified": true,
           "representative": false,
           "movementContribution": false,
@@ -1916,18 +1958,24 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q734197",
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q7814/조토_Visitation_1306__wikidata-Q734197.jpg",
+              "highResolution": "data/images/artist-Q7814/조토_Visitation_1306__wikidata-Q734197.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-16-_-_Visitation.jpg",
               "sourceUrls": [
-                "http://www.wikidata.org/entity/Q734197",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2016%20Scenes%20from%20the%20Life%20of%20the%20Virgin%20-%207.%20Visitation%20-%20WGA09192.jpg"
+                "https://commons.wikimedia.org/wiki/File:Giotto_-_Scrovegni_-_-16-_-_Visitation.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/f/f7/Giotto_-_Scrovegni_-_-16-_-_Visitation.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
               ],
-              "license": "",
-              "institution": ""
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "thumbnail": "data/images/artist-Q7814/조토_Visitation_1306__wikidata-Q734197.jpg",
+          "highResImage": "data/images/artist-Q7814/조토_Visitation_1306__wikidata-Q734197.jpg",
+          "highResOriginal": "data/images/artist-Q7814/조토_Visitation_1306__wikidata-Q734197.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:17:28.808Z"
         },
         {
           "id": "wikidata-Q3997179",
@@ -1945,12 +1993,12 @@
             "ko": "선르네상스",
             "en": "선르네상스"
           },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2028%20Scenes%20from%20the%20Life%20of%20Christ%20-%2012.%20Judas%27%20Betrayal%20-%20WGA09213.jpg",
+          "image": "data/images/artist-Q7814/조토_Judas' Betrayal_1306__wikidata-Q3997179.jpg",
           "description": {
             "ko": "painting by Giotto di Bondone",
             "en": "painting by Giotto di Bondone"
           },
-          "source": "http://www.wikidata.org/entity/Q3997179",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Giotto_di_Bondone_-_No._28_Scenes_from_the_Life_of_Christ_-_12._Judas%27_Betrayal_-_WGA09213.jpg",
           "verified": true,
           "representative": false,
           "movementContribution": false,
@@ -1963,18 +2011,24 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q3997179",
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q7814/조토_Judas' Betrayal_1306__wikidata-Q3997179.jpg",
+              "highResolution": "data/images/artist-Q7814/조토_Judas' Betrayal_1306__wikidata-Q3997179.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Giotto_di_Bondone_-_No._28_Scenes_from_the_Life_of_Christ_-_12._Judas%27_Betrayal_-_WGA09213.jpg",
               "sourceUrls": [
-                "http://www.wikidata.org/entity/Q3997179",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2028%20Scenes%20from%20the%20Life%20of%20Christ%20-%2012.%20Judas%27%20Betrayal%20-%20WGA09213.jpg"
+                "https://commons.wikimedia.org/wiki/File:Giotto_di_Bondone_-_No._28_Scenes_from_the_Life_of_Christ_-_12._Judas%27_Betrayal_-_WGA09213.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/a/af/Giotto_di_Bondone_-_No._28_Scenes_from_the_Life_of_Christ_-_12._Judas%27_Betrayal_-_WGA09213.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
               ],
-              "license": "",
-              "institution": ""
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "thumbnail": "data/images/artist-Q7814/조토_Judas' Betrayal_1306__wikidata-Q3997179.jpg",
+          "highResImage": "data/images/artist-Q7814/조토_Judas' Betrayal_1306__wikidata-Q3997179.jpg",
+          "highResOriginal": "data/images/artist-Q7814/조토_Judas' Betrayal_1306__wikidata-Q3997179.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:17:37.902Z"
         },
         {
           "id": "wikidata-Q3698227",
@@ -3084,12 +3138,12 @@
             "ko": "플랑드르파",
             "en": "플랑드르파"
           },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hubert%20van%20Eyck%20015.jpg",
+          "image": "data/images/artist-Q102272/반 에이크_Adam_1432__wikidata-Q3605033.jpg",
           "description": {
             "ko": "painting by Jan and Hubert van Eyck, part of Ghent Altarpiece",
             "en": "painting by Jan and Hubert van Eyck, part of Ghent Altarpiece"
           },
-          "source": "http://www.wikidata.org/entity/Q3605033",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Jan_van_Eyck_-_The_Ghent_Altarpiece_-_Adam,_Cain_and_Abel_-_WGA07623.jpg",
           "verified": true,
           "representative": false,
           "movementContribution": false,
@@ -3102,18 +3156,24 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q3605033",
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q102272/반 에이크_Adam_1432__wikidata-Q3605033.jpg",
+              "highResolution": "data/images/artist-Q102272/반 에이크_Adam_1432__wikidata-Q3605033.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jan_van_Eyck_-_The_Ghent_Altarpiece_-_Adam,_Cain_and_Abel_-_WGA07623.jpg",
               "sourceUrls": [
-                "http://www.wikidata.org/entity/Q3605033",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Hubert%20van%20Eyck%20015.jpg"
+                "https://commons.wikimedia.org/wiki/File:Jan_van_Eyck_-_The_Ghent_Altarpiece_-_Adam,_Cain_and_Abel_-_WGA07623.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/4/47/Jan_van_Eyck_-_The_Ghent_Altarpiece_-_Adam%2C_Cain_and_Abel_-_WGA07623.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
               ],
-              "license": "",
-              "institution": ""
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "thumbnail": "data/images/artist-Q102272/반 에이크_Adam_1432__wikidata-Q3605033.jpg",
+          "highResImage": "data/images/artist-Q102272/반 에이크_Adam_1432__wikidata-Q3605033.jpg",
+          "highResOriginal": "data/images/artist-Q102272/반 에이크_Adam_1432__wikidata-Q3605033.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:17:46.726Z"
         },
         {
           "id": "wikidata-Q20050620",
@@ -3131,12 +3191,12 @@
             "ko": "플랑드르파",
             "en": "플랑드르파"
           },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ghent%20Altarpiece%20-%20Eve.jpg",
+          "image": "data/images/artist-Q102272/반 에이크_Eve_1432__wikidata-Q20050620.jpg",
           "description": {
             "ko": "painting by Jan and Hubert van Eyck, part of Ghent Altarpiece",
             "en": "painting by Jan and Hubert van Eyck, part of Ghent Altarpiece"
           },
-          "source": "http://www.wikidata.org/entity/Q20050620",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Jan_van_Eyck_-_The_Ghent_Altarpiece_-_Eve,_The_Killing_of_Abel_-_WGA07636.jpg",
           "verified": true,
           "representative": false,
           "movementContribution": false,
@@ -3149,18 +3209,24 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q20050620",
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q102272/반 에이크_Eve_1432__wikidata-Q20050620.jpg",
+              "highResolution": "data/images/artist-Q102272/반 에이크_Eve_1432__wikidata-Q20050620.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jan_van_Eyck_-_The_Ghent_Altarpiece_-_Eve,_The_Killing_of_Abel_-_WGA07636.jpg",
               "sourceUrls": [
-                "http://www.wikidata.org/entity/Q20050620",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Ghent%20Altarpiece%20-%20Eve.jpg"
+                "https://commons.wikimedia.org/wiki/File:Jan_van_Eyck_-_The_Ghent_Altarpiece_-_Eve,_The_Killing_of_Abel_-_WGA07636.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/b/b0/Jan_van_Eyck_-_The_Ghent_Altarpiece_-_Eve%2C_The_Killing_of_Abel_-_WGA07636.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
               ],
-              "license": "",
-              "institution": ""
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "thumbnail": "data/images/artist-Q102272/반 에이크_Eve_1432__wikidata-Q20050620.jpg",
+          "highResImage": "data/images/artist-Q102272/반 에이크_Eve_1432__wikidata-Q20050620.jpg",
+          "highResOriginal": "data/images/artist-Q102272/반 에이크_Eve_1432__wikidata-Q20050620.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:17:55.583Z"
         },
         {
           "id": "wikidata-Q28056879",
@@ -3178,12 +3244,12 @@
             "ko": "플랑드르파",
             "en": "플랑드르파"
           },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hubert%20van%20Eyck%20017.jpg",
+          "image": "data/images/artist-Q102272/반 에이크_Singing Angels_1432__wikidata-Q28056879.jpg",
           "description": {
             "ko": "painting by Hubert and Jan van Eyck, upper left part of the Ghent Altarpiece, St. Bavo, Gent",
             "en": "painting by Hubert and Jan van Eyck, upper left part of the Ghent Altarpiece, St. Bavo, Gent"
           },
-          "source": "http://www.wikidata.org/entity/Q28056879",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Jan_van_Eyck_-_The_Ghent_Altarpiece_-_Singing_Angels_-_WGA07640.jpg",
           "verified": true,
           "representative": false,
           "movementContribution": false,
@@ -3196,18 +3262,24 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q28056879",
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q102272/반 에이크_Singing Angels_1432__wikidata-Q28056879.jpg",
+              "highResolution": "data/images/artist-Q102272/반 에이크_Singing Angels_1432__wikidata-Q28056879.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jan_van_Eyck_-_The_Ghent_Altarpiece_-_Singing_Angels_-_WGA07640.jpg",
               "sourceUrls": [
-                "http://www.wikidata.org/entity/Q28056879",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Hubert%20van%20Eyck%20017.jpg"
+                "https://commons.wikimedia.org/wiki/File:Jan_van_Eyck_-_The_Ghent_Altarpiece_-_Singing_Angels_-_WGA07640.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/1/16/Jan_van_Eyck_-_The_Ghent_Altarpiece_-_Singing_Angels_-_WGA07640.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
               ],
-              "license": "",
-              "institution": ""
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "thumbnail": "data/images/artist-Q102272/반 에이크_Singing Angels_1432__wikidata-Q28056879.jpg",
+          "highResImage": "data/images/artist-Q102272/반 에이크_Singing Angels_1432__wikidata-Q28056879.jpg",
+          "highResOriginal": "data/images/artist-Q102272/반 에이크_Singing Angels_1432__wikidata-Q28056879.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:18:04.267Z"
         },
         {
           "id": "wikidata-Q28057385",
@@ -6368,12 +6440,12 @@
             "ko": "이탈리아 르네상스",
             "en": "이탈리아 르네상스"
           },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20Crucifixion%20of%20St%20Peter%2C%20predella%20of%20the%20altar%20for%20St%20Maria%20del%20Carmine%2C%20Pisa%2C%20c1426%2C%20tempera%2C%20Berlin%2C%20Gem%C3%A4ldegalerie.jpg",
+          "image": "data/images/artist-url-1787307872488/마사초_The Crucifixion of_1426__wikidata-Q3698230.jpg",
           "description": {
             "ko": "painting by Masaccio",
             "en": "painting by Masaccio"
           },
-          "source": "http://www.wikidata.org/entity/Q3698230",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Masaccio._Crucifixion_of_St._Peter_and_Beheading_of_St._John_the_Baptist..jpg",
           "verified": true,
           "representative": false,
           "movementContribution": false,
@@ -6386,18 +6458,24 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q3698230",
+              "status": "ready",
+              "localThumbnail": "data/images/artist-url-1787307872488/마사초_The Crucifixion of_1426__wikidata-Q3698230.jpg",
+              "highResolution": "data/images/artist-url-1787307872488/마사초_The Crucifixion of_1426__wikidata-Q3698230.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Masaccio._Crucifixion_of_St._Peter_and_Beheading_of_St._John_the_Baptist..jpg",
               "sourceUrls": [
-                "http://www.wikidata.org/entity/Q3698230",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20Crucifixion%20of%20St%20Peter%2C%20predella%20of%20the%20altar%20for%20St%20Maria%20del%20Carmine%2C%20Pisa%2C%20c1426%2C%20tempera%2C%20Berlin%2C%20Gem%C3%A4ldegalerie.jpg"
+                "https://commons.wikimedia.org/wiki/File:Masaccio._Crucifixion_of_St._Peter_and_Beheading_of_St._John_the_Baptist..jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Masaccio._Crucifixion_of_St._Peter_and_Beheading_of_St._John_the_Baptist..jpg/1920px-Masaccio._Crucifixion_of_St._Peter_and_Beheading_of_St._John_the_Baptist..jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
               ],
-              "license": "",
-              "institution": ""
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "thumbnail": "data/images/artist-url-1787307872488/마사초_The Crucifixion of_1426__wikidata-Q3698230.jpg",
+          "highResImage": "data/images/artist-url-1787307872488/마사초_The Crucifixion of_1426__wikidata-Q3698230.jpg",
+          "highResOriginal": "data/images/artist-url-1787307872488/마사초_The Crucifixion of_1426__wikidata-Q3698230.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:18:13.319Z"
         },
         {
           "id": "wikidata-Q3842642",
@@ -6814,12 +6892,12 @@
             "ko": "",
             "en": ""
           },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Cappella%20brancacci%2C%20Resurrezione%20del%20figlio%20di%20Teofilo%20e%20San%20Pietro%20in%20cattedra%20%28restaurato%29%2C%20Masaccio.jpg",
+          "image": "data/images/artist-url-1787307872488/마사초_Raising of the_1427__wikidata-Q3933568.jpg",
           "description": {
             "ko": "painting by Filippino Lippi and Masaccio, Santa Maria del Carmine, Brancacci Chapel",
             "en": "painting by Filippino Lippi and Masaccio, Santa Maria del Carmine, Brancacci Chapel"
           },
-          "source": "http://www.wikidata.org/entity/Q3933568",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Masaccio._Raising_of_the_Son_of_Teophilus_and_St._Peter_Enthroned._fresco..jpg",
           "verified": true,
           "representative": false,
           "movementContribution": false,
@@ -6832,18 +6910,24 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q3933568",
+              "status": "ready",
+              "localThumbnail": "data/images/artist-url-1787307872488/마사초_Raising of the_1427__wikidata-Q3933568.jpg",
+              "highResolution": "data/images/artist-url-1787307872488/마사초_Raising of the_1427__wikidata-Q3933568.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Masaccio._Raising_of_the_Son_of_Teophilus_and_St._Peter_Enthroned._fresco..jpg",
               "sourceUrls": [
-                "http://www.wikidata.org/entity/Q3933568",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Cappella%20brancacci%2C%20Resurrezione%20del%20figlio%20di%20Teofilo%20e%20San%20Pietro%20in%20cattedra%20%28restaurato%29%2C%20Masaccio.jpg"
+                "https://commons.wikimedia.org/wiki/File:Masaccio._Raising_of_the_Son_of_Teophilus_and_St._Peter_Enthroned._fresco..jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/1/18/Masaccio._Raising_of_the_Son_of_Teophilus_and_St._Peter_Enthroned._fresco..jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
               ],
-              "license": "",
-              "institution": ""
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "thumbnail": "data/images/artist-url-1787307872488/마사초_Raising of the_1427__wikidata-Q3933568.jpg",
+          "highResImage": "data/images/artist-url-1787307872488/마사초_Raising of the_1427__wikidata-Q3933568.jpg",
+          "highResOriginal": "data/images/artist-url-1787307872488/마사초_Raising of the_1427__wikidata-Q3933568.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:18:23.254Z"
         },
         {
           "id": "wikidata-Q3949351",
@@ -7209,12 +7293,12 @@
             "ko": "베네치아 화파",
             "en": "베네치아 화파"
           },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Giovanni%20-%20Piet%C3%A0%20with%20Madonna%20and%20St.%20John%20the%20Evangelist%20-%20Accademia%20Carrara%20Bergamo.jpg",
+          "image": "data/images/artist-Q17169/벨리니_Pietà with Madonna_1455__wikidata-Q3904392.jpg",
           "description": {
             "ko": "painting by Giovanni Bellini in the Accademia Carrara",
             "en": "painting by Giovanni Bellini in the Accademia Carrara"
           },
-          "source": "http://www.wikidata.org/entity/Q3904392",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Bellini,_Giovanni_-_Piet%C3%A0_with_Madonna_and_St._John_the_Evangelist_-_Accademia_Carrara_Bergamo.jpg",
           "verified": true,
           "representative": false,
           "movementContribution": false,
@@ -7227,18 +7311,24 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q3904392",
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q17169/벨리니_Pietà with Madonna_1455__wikidata-Q3904392.jpg",
+              "highResolution": "data/images/artist-Q17169/벨리니_Pietà with Madonna_1455__wikidata-Q3904392.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bellini,_Giovanni_-_Piet%C3%A0_with_Madonna_and_St._John_the_Evangelist_-_Accademia_Carrara_Bergamo.jpg",
               "sourceUrls": [
-                "http://www.wikidata.org/entity/Q3904392",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Giovanni%20-%20Piet%C3%A0%20with%20Madonna%20and%20St.%20John%20the%20Evangelist%20-%20Accademia%20Carrara%20Bergamo.jpg"
+                "https://commons.wikimedia.org/wiki/File:Bellini,_Giovanni_-_Piet%C3%A0_with_Madonna_and_St._John_the_Evangelist_-_Accademia_Carrara_Bergamo.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Bellini%2C_Giovanni_-_Piet%C3%A0_with_Madonna_and_St._John_the_Evangelist_-_Accademia_Carrara_Bergamo.jpg/1920px-Bellini%2C_Giovanni_-_Piet%C3%A0_with_Madonna_and_St._John_the_Evangelist_-_Accademia_Carrara_Bergamo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
               ],
-              "license": "",
-              "institution": ""
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "thumbnail": "data/images/artist-Q17169/벨리니_Pietà with Madonna_1455__wikidata-Q3904392.jpg",
+          "highResImage": "data/images/artist-Q17169/벨리니_Pietà with Madonna_1455__wikidata-Q3904392.jpg",
+          "highResOriginal": "data/images/artist-Q17169/벨리니_Pietà with Madonna_1455__wikidata-Q3904392.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:20:34.805Z"
         },
         {
           "id": "wikidata-Q1131110",
@@ -8643,12 +8733,12 @@
             "ko": "베네치아 화파",
             "en": "베네치아 화파"
           },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Accademia%20-%20Madonna%20con%20Bambino%20tra%20le%20sante%20Caterina%20e%20Maria%20Maddalena%20-%20Giovanni%20Bellini%20-%20Cat%20613.jpg",
+          "image": "data/images/artist-Q17169/벨리니_Madonna and Child_1490__wikidata-Q3842594.jpg",
           "description": {
             "ko": "painting by Giovanni Bellini in the Gallerie dell'Accademia, Venice",
             "en": "painting by Giovanni Bellini in the Gallerie dell'Accademia, Venice"
           },
-          "source": "http://www.wikidata.org/entity/Q3842594",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Madonna_and_the_Child_between_Saints_Catherine_and_Mary_Magdalene_by_Giovanni_Bellini_-_Accademia_-_Venice_2016_-_crop.jpg",
           "verified": true,
           "representative": false,
           "movementContribution": false,
@@ -8661,18 +8751,24 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q3842594",
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q17169/벨리니_Madonna and Child_1490__wikidata-Q3842594.jpg",
+              "highResolution": "data/images/artist-Q17169/벨리니_Madonna and Child_1490__wikidata-Q3842594.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Madonna_and_the_Child_between_Saints_Catherine_and_Mary_Magdalene_by_Giovanni_Bellini_-_Accademia_-_Venice_2016_-_crop.jpg",
               "sourceUrls": [
-                "http://www.wikidata.org/entity/Q3842594",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Accademia%20-%20Madonna%20con%20Bambino%20tra%20le%20sante%20Caterina%20e%20Maria%20Maddalena%20-%20Giovanni%20Bellini%20-%20Cat%20613.jpg"
+                "https://commons.wikimedia.org/wiki/File:Madonna_and_the_Child_between_Saints_Catherine_and_Mary_Magdalene_by_Giovanni_Bellini_-_Accademia_-_Venice_2016_-_crop.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Madonna_and_the_Child_between_Saints_Catherine_and_Mary_Magdalene_by_Giovanni_Bellini_-_Accademia_-_Venice_2016_-_crop.jpg/1920px-Madonna_and_the_Child_between_Saints_Catherine_and_Mary_Magdalene_by_Giovanni_Bellini_-_Accademia_-_Venice_2016_-_crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
               ],
-              "license": "",
-              "institution": ""
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "thumbnail": "data/images/artist-Q17169/벨리니_Madonna and Child_1490__wikidata-Q3842594.jpg",
+          "highResImage": "data/images/artist-Q17169/벨리니_Madonna and Child_1490__wikidata-Q3842594.jpg",
+          "highResOriginal": "data/images/artist-Q17169/벨리니_Madonna and Child_1490__wikidata-Q3842594.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:34:54.703Z"
         },
         {
           "id": "wikidata-Q3685124",
@@ -8796,12 +8892,12 @@
             "ko": "베네치아 화파",
             "en": "베네치아 화파"
           },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Giovanni%20-%20Madonna%20of%20the%20Meadow.jpeg",
+          "image": "data/images/artist-Q17169/벨리니_Madonna del Prato_1500__wikidata-Q1115613.jpg",
           "description": {
             "ko": "painting by Giovanni Bellini, National Gallery",
             "en": "painting by Giovanni Bellini, National Gallery"
           },
-          "source": "http://www.wikidata.org/entity/Q1115613",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Giovanni_bellini,_madonna_del_prato_01.jpg",
           "verified": true,
           "representative": true,
           "movementContribution": false,
@@ -8814,18 +8910,24 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q1115613",
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q17169/벨리니_Madonna del Prato_1500__wikidata-Q1115613.jpg",
+              "highResolution": "data/images/artist-Q17169/벨리니_Madonna del Prato_1500__wikidata-Q1115613.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Giovanni_bellini,_madonna_del_prato_01.jpg",
               "sourceUrls": [
-                "http://www.wikidata.org/entity/Q1115613",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Giovanni%20-%20Madonna%20of%20the%20Meadow.jpeg"
+                "https://commons.wikimedia.org/wiki/File:Giovanni_bellini,_madonna_del_prato_01.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Giovanni_bellini%2C_madonna_del_prato_01.jpg/1920px-Giovanni_bellini%2C_madonna_del_prato_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
               ],
-              "license": "",
-              "institution": ""
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "thumbnail": "data/images/artist-Q17169/벨리니_Madonna del Prato_1500__wikidata-Q1115613.jpg",
+          "highResImage": "data/images/artist-Q17169/벨리니_Madonna del Prato_1500__wikidata-Q1115613.jpg",
+          "highResOriginal": "data/images/artist-Q17169/벨리니_Madonna del Prato_1500__wikidata-Q1115613.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:35:03.882Z"
         },
         {
           "id": "wikidata-Q1759759",
@@ -14397,12 +14499,12 @@
               "en": "Uffizi Gallery"
             }
           ],
-          "image": "",
-          "thumbnail": "",
-          "thumbnailValidation": 0,
-          "thumbnailCacheKey": "2026-08-22T02:54:46.266Z",
-          "highResImage": "",
-          "source": "local file: 다운로드용/Albrecht_Dürer_-_Adorazione_dei_Magi_-_Google_Art_Project.jpg",
+          "image": "data/images/artist-Q5580/뒤러_동방박사의 경배_1504__durer-adoration-of-the-magi.jpg",
+          "thumbnail": "data/images/artist-Q5580/뒤러_동방박사의 경배_1504__durer-adoration-of-the-magi.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T09:59:37.287Z",
+          "highResImage": "data/images/artist-Q5580/뒤러_동방박사의 경배_1504__durer-adoration-of-the-magi.jpg",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Albrecht_Durer_Adoration_of_the_Magi_1504.jpg",
           "verified": true,
           "representative": true,
           "movementContribution": true,
@@ -14449,18 +14551,20 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "pending-upload",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer",
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q5580/뒤러_동방박사의 경배_1504__durer-adoration-of-the-magi.jpg",
+              "highResolution": "data/images/artist-Q5580/뒤러_동방박사의 경배_1504__durer-adoration-of-the-magi.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Albrecht_Durer_Adoration_of_the_Magi_1504.jpg",
               "sourceUrls": [
-                "https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer"
+                "https://commons.wikimedia.org/wiki/File:Albrecht_Durer_Adoration_of_the_Magi_1504.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/3/36/Albrecht_Durer_Adoration_of_the_Magi_1504.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
               ],
-              "license": "",
-              "institution": "Uffizi Gallery"
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
           },
-          "imageUploadStatus": "pending-upload"
+          "imageUploadStatus": "ready",
+          "highResOriginal": "data/images/artist-Q5580/뒤러_동방박사의 경배_1504__durer-adoration-of-the-magi.jpg"
         },
         {
           "id": "durer-praying-hands",
@@ -65912,14 +66016,14 @@
               "en": "Museum of Fine Arts, Boston"
             }
           ],
-          "image": "",
-          "thumbnail": "",
-          "thumbnailValidation": 0,
-          "thumbnailCacheKey": "2026-08-23T08:31:41.272Z",
+          "image": "data/images/artist-Q150679/반 다이크_찰스 1세의 딸_1637__van-dyck-princess-mary-daughter-of-charles-i-1637.jpg",
+          "thumbnail": "data/images/artist-Q150679/반 다이크_찰스 1세의 딸_1637__van-dyck-princess-mary-daughter-of-charles-i-1637.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T09:59:47.103Z",
           "highRes": "data/images/artist-Q150679/van-dyck-princess-mary-daughter-of-charles-i-1637.jpg",
-          "highResImage": "",
-          "highResOriginal": "",
-          "source": "https://commons.wikimedia.org/wiki/File:Anthony_van_Dyck_-_Princess_Mary,_Daughter_of_Charles_I_-_Google_Art_Project.jpg; https://www.wikidata.org/wiki/Q20537525; https://en.wikipedia.org/wiki/Anthony_van_Dyck; https://www.wikidata.org/wiki/Q150679; https://www.nationalgallery.org.uk/artists/anthony-van-dyck; https://www.nga.gov/artists/1259-sir-anthony-van-dyck; local file: 다운로드용/Anthony_van_Dyck_-_Princess_Mary,_Daughter_of_Charles_I_-_Google_Art_Project.jpg",
+          "highResImage": "data/images/artist-Q150679/반 다이크_찰스 1세의 딸_1637__van-dyck-princess-mary-daughter-of-charles-i-1637.jpg",
+          "highResOriginal": "data/images/artist-Q150679/반 다이크_찰스 1세의 딸_1637__van-dyck-princess-mary-daughter-of-charles-i-1637.jpg",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Anthony_van_Dyck_-_Princess_Mary,_Daughter_of_Charles_I_-_Google_Art_Project.jpg",
           "verified": true,
           "status": "verified",
           "representative": false,
@@ -65983,25 +66087,19 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "pending-upload",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Anthony_van_Dyck_-_Princess_Mary,_Daughter_of_Charles_I_-_Google_Art_Project.jpg; https://www.wikidata.org/wiki/Q20537525; https://en.wikipedia.org/wiki/Anthony_van_Dyck; https://www.wikidata.org/wiki/Q150679; https://www.nationalgallery.org.uk/artists/anthony-van-dyck; https://www.nga.gov/artists/1259-sir-anthony-van-dyck; local file: 다운로드용/Anthony_van_Dyck_-_Princess_Mary,_Daughter_of_Charles_I_-_Google_Art_Project.jpg",
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q150679/반 다이크_찰스 1세의 딸_1637__van-dyck-princess-mary-daughter-of-charles-i-1637.jpg",
+              "highResolution": "data/images/artist-Q150679/반 다이크_찰스 1세의 딸_1637__van-dyck-princess-mary-daughter-of-charles-i-1637.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Anthony_van_Dyck_-_Princess_Mary,_Daughter_of_Charles_I_-_Google_Art_Project.jpg",
               "sourceUrls": [
-                "https://commons.wikimedia.org/wiki/File:Anthony_van_Dyck_-_Princess_Mary,_Daughter_of_Charles_I_-_Google_Art_Project.jpg; https://www.wikidata.org/wiki/Q20537525; https://en.wikipedia.org/wiki/Anthony_van_Dyck; https://www.wikidata.org/wiki/Q150679; https://www.nationalgallery.org.uk/artists/anthony-van-dyck; https://www.nga.gov/artists/1259-sir-anthony-van-dyck; local file: 다운로드용/Anthony_van_Dyck_-_Princess_Mary,_Daughter_of_Charles_I_-_Google_Art_Project.jpg",
                 "https://commons.wikimedia.org/wiki/File:Anthony_van_Dyck_-_Princess_Mary,_Daughter_of_Charles_I_-_Google_Art_Project.jpg",
-                "https://www.wikidata.org/wiki/Q20537525",
-                "https://en.wikipedia.org/wiki/Anthony_van_Dyck",
-                "https://www.wikidata.org/wiki/Q150679",
-                "https://www.nationalgallery.org.uk/artists/anthony-van-dyck",
-                "https://www.nga.gov/artists/1259-sir-anthony-van-dyck"
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Anthony_van_Dyck_-_Princess_Mary%2C_Daughter_of_Charles_I_-_Google_Art_Project.jpg/1920px-Anthony_van_Dyck_-_Princess_Mary%2C_Daughter_of_Charles_I_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
               ],
-              "checkedAt": "2026-08-23T08:31:41.272Z",
-              "license": "",
-              "institution": "Museum of Fine Arts, Boston"
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
           },
-          "imageUploadStatus": "pending-upload"
+          "imageUploadStatus": "ready"
         },
         {
           "id": "van-dyck-equestrian-portrait-of-charles-i-1638-1639",
@@ -103335,30 +103433,31 @@
             "ko": "드레스덴 알테 마이스터 회화관",
             "en": "Gemäldegalerie Alte Meister, Dresden"
           },
-          "image": "",
-          "thumbnail": "",
-          "highResImage": "",
-          "highResOriginal": "",
-          "source": "existing local download asset: Antoine_Watteau_-_Pleasures_of_Love_-_Google_Art_Project.jpg",
+          "image": "data/images/artist-Q155151/바토_사랑의 즐거움_1718__artist-Q155151-pleasures-of-love.jpg",
+          "thumbnail": "data/images/artist-Q155151/바토_사랑의 즐거움_1718__artist-Q155151-pleasures-of-love.jpg",
+          "highResImage": "data/images/artist-Q155151/바토_사랑의 즐거움_1718__artist-Q155151-pleasures-of-love.jpg",
+          "highResOriginal": "data/images/artist-Q155151/바토_사랑의 즐거움_1718__artist-Q155151-pleasures-of-love.jpg",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Antoine_Watteau_-_Pleasures_of_Love_-_Google_Art_Project.jpg",
           "sourcePage": "https://commons.wikimedia.org/wiki/File:Antoine_Watteau_-_Pleasures_of_Love_-_Google_Art_Project.jpg",
           "imageHash": "3797c14a5a74557542d71f48023d0b94aa19f653326e1fc501bc6e108b11869c",
           "migration": {
             "schema": 1,
             "image": {
-              "status": "pending-upload",
-              "localThumbnail": "",
-              "highResolution": "",
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q155151/바토_사랑의 즐거움_1718__artist-Q155151-pleasures-of-love.jpg",
+              "highResolution": "data/images/artist-Q155151/바토_사랑의 즐거움_1718__artist-Q155151-pleasures-of-love.jpg",
               "sourceUrl": "https://commons.wikimedia.org/wiki/File:Antoine_Watteau_-_Pleasures_of_Love_-_Google_Art_Project.jpg",
               "sourceUrls": [
-                "https://commons.wikimedia.org/wiki/File:Antoine_Watteau_-_Pleasures_of_Love_-_Google_Art_Project.jpg"
+                "https://commons.wikimedia.org/wiki/File:Antoine_Watteau_-_Pleasures_of_Love_-_Google_Art_Project.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Antoine_Watteau_-_Pleasures_of_Love_-_Google_Art_Project.jpg/1920px-Antoine_Watteau_-_Pleasures_of_Love_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
               ],
-              "license": "public domain",
-              "institution": ""
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
           },
-          "thumbnailCacheKey": "2026-08-25T13:41:57.016Z",
-          "thumbnailValidation": 0,
-          "imageUploadStatus": "pending-upload"
+          "thumbnailCacheKey": "2026-08-29T09:59:56.514Z",
+          "thumbnailValidation": 2,
+          "imageUploadStatus": "ready"
         },
         {
           "id": "artist-Q155151-pleasures-of-the-ball",
@@ -106799,11 +106898,11 @@
             "ko": "로코코",
             "en": "Rococo"
           },
-          "image": "",
-          "thumbnail": "",
-          "highResImage": "",
-          "highResOriginal": "",
-          "source": "local import from 다운로드용/(Treviso)_The_painter_Antoine_Watteau_by_Rosalba_Carriera_-_Museo_civico_di_Santa_Caterina.jpg",
+          "image": "data/images/artist-Q235547/카리에라_《앙투안 바토의 초상》_1720__local-carriera-watteau-portrait.jpg",
+          "thumbnail": "data/images/artist-Q235547/카리에라_《앙투안 바토의 초상》_1720__local-carriera-watteau-portrait.jpg",
+          "highResImage": "data/images/artist-Q235547/카리에라_《앙투안 바토의 초상》_1720__local-carriera-watteau-portrait.jpg",
+          "highResOriginal": "data/images/artist-Q235547/카리에라_《앙투안 바토의 초상》_1720__local-carriera-watteau-portrait.jpg",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Rosalba_Carriera_Portrait_Antoine_Watteau.jpg",
           "verified": true,
           "status": "verified",
           "representative": true,
@@ -106818,17 +106917,21 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "pending-upload",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "",
-              "sourceUrls": [],
-              "license": "local user-provided file",
-              "institution": ""
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q235547/카리에라_《앙투안 바토의 초상》_1720__local-carriera-watteau-portrait.jpg",
+              "highResolution": "data/images/artist-Q235547/카리에라_《앙투안 바토의 초상》_1720__local-carriera-watteau-portrait.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rosalba_Carriera_Portrait_Antoine_Watteau.jpg",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/File:Rosalba_Carriera_Portrait_Antoine_Watteau.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/0/0b/Rosalba_Carriera_Portrait_Antoine_Watteau.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              ],
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
           },
-          "imageUploadStatus": "pending-upload",
-          "thumbnailValidation": 0
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:00:05.573Z"
         },
         {
           "id": "local-carriera-woman-with-mask",
@@ -108161,11 +108264,11 @@
             "ko": "낭만주의",
             "en": "Romanticism"
           },
-          "imageUploadStatus": "pending-upload",
+          "imageUploadStatus": "ready",
           "localImageCandidates": [
             "Gericault-Raft-of-the-Medusa"
           ],
-          "source": "로컬 이미지 후보를 지정 다운로드 폴더에서 찾지 못함; 업로드 예정",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Th%C3%A9odore_G%C3%A9ricault_%22The_raft_of_the_Medusa%22.jpg",
           "verified": true,
           "representative": true,
           "movementContribution": true,
@@ -108179,15 +108282,24 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "",
-              "sourceUrls": [],
-              "license": "",
-              "institution": ""
+              "status": "ready",
+              "localThumbnail": "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__artist-romantic-gericault-work.jpg",
+              "highResolution": "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__artist-romantic-gericault-work.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Th%C3%A9odore_G%C3%A9ricault_%22The_raft_of_the_Medusa%22.jpg",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/File:Th%C3%A9odore_G%C3%A9ricault_%22The_raft_of_the_Medusa%22.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/4/48/Th%C3%A9odore_G%C3%A9ricault_%22The_raft_of_the_Medusa%22.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              ],
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "image": "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__artist-romantic-gericault-work.jpg",
+          "thumbnail": "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__artist-romantic-gericault-work.jpg",
+          "highResImage": "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__artist-romantic-gericault-work.jpg",
+          "highResOriginal": "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__artist-romantic-gericault-work.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:00:14.896Z"
         },
         {
           "id": "gericault-raft-of-medusa",
@@ -108214,19 +108326,29 @@
           "movementContributionReason": "movement-further-study",
           "verified": true,
           "origin": "art-movement-representatives",
-          "imageUploadStatus": "pending-upload",
+          "imageUploadStatus": "ready",
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "",
-              "sourceUrls": [],
-              "license": "",
-              "institution": ""
+              "status": "ready",
+              "localThumbnail": "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__gericault-raft-of-medusa.jpg",
+              "highResolution": "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__gericault-raft-of-medusa.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Th%C3%A9odore_G%C3%A9ricault_%22The_raft_of_the_Medusa%22.jpg",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/File:Th%C3%A9odore_G%C3%A9ricault_%22The_raft_of_the_Medusa%22.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/4/48/Th%C3%A9odore_G%C3%A9ricault_%22The_raft_of_the_Medusa%22.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              ],
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "image": "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__gericault-raft-of-medusa.jpg",
+          "thumbnail": "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__gericault-raft-of-medusa.jpg",
+          "highResImage": "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__gericault-raft-of-medusa.jpg",
+          "highResOriginal": "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__gericault-raft-of-medusa.jpg",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Th%C3%A9odore_G%C3%A9ricault_%22The_raft_of_the_Medusa%22.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:00:23.796Z"
         }
       ],
       "featuredWorkIds": [
@@ -115757,19 +115879,29 @@
           "movementContributionReason": "movement-further-study",
           "verified": true,
           "origin": "art-movement-representatives",
-          "imageUploadStatus": "pending-upload",
+          "imageUploadStatus": "ready",
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "",
-              "sourceUrls": [],
-              "license": "",
-              "institution": ""
+              "status": "ready",
+              "localThumbnail": "data/images/artist-further-emile-bernard/베르나르_목초지의 브르타뉴 여인들_1888__bernard-breton-women-meadow.jpg",
+              "highResolution": "data/images/artist-further-emile-bernard/베르나르_목초지의 브르타뉴 여인들_1888__bernard-breton-women-meadow.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:%C3%89mile_Bernard_-_Two_Breton_women_in_a_meadow_-_Google_Art_Project.jpg",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/File:%C3%89mile_Bernard_-_Two_Breton_women_in_a_meadow_-_Google_Art_Project.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/%C3%89mile_Bernard_-_Two_Breton_women_in_a_meadow_-_Google_Art_Project.jpg/1920px-%C3%89mile_Bernard_-_Two_Breton_women_in_a_meadow_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              ],
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "image": "data/images/artist-further-emile-bernard/베르나르_목초지의 브르타뉴 여인들_1888__bernard-breton-women-meadow.jpg",
+          "thumbnail": "data/images/artist-further-emile-bernard/베르나르_목초지의 브르타뉴 여인들_1888__bernard-breton-women-meadow.jpg",
+          "highResImage": "data/images/artist-further-emile-bernard/베르나르_목초지의 브르타뉴 여인들_1888__bernard-breton-women-meadow.jpg",
+          "highResOriginal": "data/images/artist-further-emile-bernard/베르나르_목초지의 브르타뉴 여인들_1888__bernard-breton-women-meadow.jpg",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:%C3%89mile_Bernard_-_Two_Breton_women_in_a_meadow_-_Google_Art_Project.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:00:33.198Z"
         }
       ],
       "featuredWorkIds": [
@@ -115923,19 +116055,29 @@
           "movementContributionReason": "movement-further-study",
           "verified": true,
           "origin": "art-movement-representatives",
-          "imageUploadStatus": "pending-upload",
+          "imageUploadStatus": "ready",
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "",
-              "sourceUrls": [],
-              "license": "",
-              "institution": ""
+              "status": "ready",
+              "localThumbnail": "data/images/artist-further-franz-marc/마르크_푸른 말 I_1911__marc-blue-horse-i.jpg",
+              "highResolution": "data/images/artist-further-franz-marc/마르크_푸른 말 I_1911__marc-blue-horse-i.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Marc,_Franz_-_Blue_Horse_I_-_Google_Art_Project.jpg",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/File:Marc,_Franz_-_Blue_Horse_I_-_Google_Art_Project.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Marc%2C_Franz_-_Blue_Horse_I_-_Google_Art_Project.jpg/1920px-Marc%2C_Franz_-_Blue_Horse_I_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              ],
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "image": "data/images/artist-further-franz-marc/마르크_푸른 말 I_1911__marc-blue-horse-i.jpg",
+          "thumbnail": "data/images/artist-further-franz-marc/마르크_푸른 말 I_1911__marc-blue-horse-i.jpg",
+          "highResImage": "data/images/artist-further-franz-marc/마르크_푸른 말 I_1911__marc-blue-horse-i.jpg",
+          "highResOriginal": "data/images/artist-further-franz-marc/마르크_푸른 말 I_1911__marc-blue-horse-i.jpg",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Marc,_Franz_-_Blue_Horse_I_-_Google_Art_Project.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:00:42.626Z"
         }
       ],
       "featuredWorkIds": [
@@ -117103,19 +117245,29 @@
           "movementContributionReason": "movement-further-study",
           "verified": true,
           "origin": "art-movement-representatives",
-          "imageUploadStatus": "pending-upload",
+          "imageUploadStatus": "ready",
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "",
-              "sourceUrls": [],
-              "license": "",
-              "institution": ""
+              "status": "ready",
+              "localThumbnail": "data/images/artist-further-runge/룽게_아침_1808__runge-morning.jpg",
+              "highResolution": "data/images/artist-further-runge/룽게_아침_1808__runge-morning.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Runge,_Philipp_Otto_-_The_Great_Morning_-_1809-10.jpg",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/File:Runge,_Philipp_Otto_-_The_Great_Morning_-_1809-10.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/1/1e/Runge%2C_Philipp_Otto_-_The_Great_Morning_-_1809-10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              ],
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "image": "data/images/artist-further-runge/룽게_아침_1808__runge-morning.jpg",
+          "thumbnail": "data/images/artist-further-runge/룽게_아침_1808__runge-morning.jpg",
+          "highResImage": "data/images/artist-further-runge/룽게_아침_1808__runge-morning.jpg",
+          "highResOriginal": "data/images/artist-further-runge/룽게_아침_1808__runge-morning.jpg",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Runge,_Philipp_Otto_-_The_Great_Morning_-_1809-10.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:00:51.981Z"
         }
       ],
       "featuredWorkIds": [
@@ -117886,19 +118038,29 @@
           "movementContributionReason": "movement-further-study",
           "verified": true,
           "origin": "art-movement-representatives",
-          "imageUploadStatus": "pending-upload",
+          "imageUploadStatus": "ready",
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "",
-              "sourceUrls": [],
-              "license": "",
-              "institution": ""
+              "status": "ready",
+              "localThumbnail": "data/images/artist-further-friesz/프리에스_라 시오타_1907__friesz-la-ciotat.jpg",
+              "highResolution": "data/images/artist-further-friesz/프리에스_라 시오타_1907__friesz-la-ciotat.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Othon_Friesz,_1907,_Paysage_%C3%A0_La_Ciotat,_oil_on_canvas,_59.9_x_72.9_cm.jpg",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/File:Othon_Friesz,_1907,_Paysage_%C3%A0_La_Ciotat,_oil_on_canvas,_59.9_x_72.9_cm.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/e/ef/Othon_Friesz%2C_1907%2C_Paysage_%C3%A0_La_Ciotat%2C_oil_on_canvas%2C_59.9_x_72.9_cm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              ],
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "image": "data/images/artist-further-friesz/프리에스_라 시오타_1907__friesz-la-ciotat.jpg",
+          "thumbnail": "data/images/artist-further-friesz/프리에스_라 시오타_1907__friesz-la-ciotat.jpg",
+          "highResImage": "data/images/artist-further-friesz/프리에스_라 시오타_1907__friesz-la-ciotat.jpg",
+          "highResOriginal": "data/images/artist-further-friesz/프리에스_라 시오타_1907__friesz-la-ciotat.jpg",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Othon_Friesz,_1907,_Paysage_%C3%A0_La_Ciotat,_oil_on_canvas,_59.9_x_72.9_cm.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:01:01.755Z"
         }
       ],
       "featuredWorkIds": [
@@ -118052,19 +118214,29 @@
           "movementContributionReason": "movement-further-study",
           "verified": true,
           "origin": "art-movement-representatives",
-          "imageUploadStatus": "pending-upload",
+          "imageUploadStatus": "ready",
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "",
-              "sourceUrls": [],
-              "license": "",
-              "institution": ""
+              "status": "ready",
+              "localThumbnail": "data/images/artist-further-van-doesburg/두스뷔르흐_반구성 V_1924__van-doesburg-counter-composition-v.jpg",
+              "highResolution": "data/images/artist-further-van-doesburg/두스뷔르흐_반구성 V_1924__van-doesburg-counter-composition-v.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Theo_van_Doesburg_Counter-CompositionV_(1924).jpg",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/File:Theo_van_Doesburg_Counter-CompositionV_(1924).jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/e/e0/Theo_van_Doesburg_Counter-CompositionV_%281924%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              ],
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "image": "data/images/artist-further-van-doesburg/두스뷔르흐_반구성 V_1924__van-doesburg-counter-composition-v.jpg",
+          "thumbnail": "data/images/artist-further-van-doesburg/두스뷔르흐_반구성 V_1924__van-doesburg-counter-composition-v.jpg",
+          "highResImage": "data/images/artist-further-van-doesburg/두스뷔르흐_반구성 V_1924__van-doesburg-counter-composition-v.jpg",
+          "highResOriginal": "data/images/artist-further-van-doesburg/두스뷔르흐_반구성 V_1924__van-doesburg-counter-composition-v.jpg",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Theo_van_Doesburg_Counter-CompositionV_(1924).jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:01:20.875Z"
         }
       ],
       "featuredWorkIds": [
@@ -123040,19 +123212,29 @@
           "movementContributionReason": "movement-further-study",
           "verified": true,
           "origin": "art-movement-representatives",
-          "imageUploadStatus": "pending-upload",
+          "imageUploadStatus": "ready",
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "",
-              "sourceUrls": [],
-              "license": "",
-              "institution": ""
+              "status": "ready",
+              "localThumbnail": "data/images/artist-mid-victor-horta/오르타_호텔 타셀_1893__horta-hotel-tassel.jpg",
+              "highResolution": "data/images/artist-mid-victor-horta/오르타_호텔 타셀_1893__horta-hotel-tassel.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Victor_Horta_Hotel_Tassel.JPG",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/File:Victor_Horta_Hotel_Tassel.JPG",
+                "https://upload.wikimedia.org/wikipedia/commons/3/34/Victor_Horta_Hotel_Tassel.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              ],
+              "license": "CC BY-SA 3.0",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "image": "data/images/artist-mid-victor-horta/오르타_호텔 타셀_1893__horta-hotel-tassel.jpg",
+          "thumbnail": "data/images/artist-mid-victor-horta/오르타_호텔 타셀_1893__horta-hotel-tassel.jpg",
+          "highResImage": "data/images/artist-mid-victor-horta/오르타_호텔 타셀_1893__horta-hotel-tassel.jpg",
+          "highResOriginal": "data/images/artist-mid-victor-horta/오르타_호텔 타셀_1893__horta-hotel-tassel.jpg",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Victor_Horta_Hotel_Tassel.JPG",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:01:29.832Z"
         }
       ],
       "featuredWorkIds": [
@@ -123627,19 +123809,29 @@
           "movementContributionReason": "movement-further-study",
           "verified": true,
           "origin": "art-movement-representatives",
-          "imageUploadStatus": "pending-upload",
+          "imageUploadStatus": "ready",
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "",
-              "sourceUrls": [],
-              "license": "",
-              "institution": ""
+              "status": "ready",
+              "localThumbnail": "data/images/artist-mid-anni-albers/알버스_벽걸이_1926__albers-wall-hanging.jpg",
+              "highResolution": "data/images/artist-mid-anni-albers/알버스_벽걸이_1926__albers-wall-hanging.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Anni_Albers_(1899%E2%80%931994),_Design_for_Wall_Hanging,_1925.jpg",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/File:Anni_Albers_(1899%E2%80%931994),_Design_for_Wall_Hanging,_1925.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/d/d0/Anni_Albers_%281899%E2%80%931994%29%2C_Design_for_Wall_Hanging%2C_1925.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              ],
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "image": "data/images/artist-mid-anni-albers/알버스_벽걸이_1926__albers-wall-hanging.jpg",
+          "thumbnail": "data/images/artist-mid-anni-albers/알버스_벽걸이_1926__albers-wall-hanging.jpg",
+          "highResImage": "data/images/artist-mid-anni-albers/알버스_벽걸이_1926__albers-wall-hanging.jpg",
+          "highResOriginal": "data/images/artist-mid-anni-albers/알버스_벽걸이_1926__albers-wall-hanging.jpg",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Anni_Albers_(1899%E2%80%931994),_Design_for_Wall_Hanging,_1925.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:01:40.117Z"
         }
       ],
       "featuredWorkIds": [
@@ -124955,19 +125147,29 @@
           "movementContributionReason": "movement-further-study",
           "verified": true,
           "origin": "art-movement-representatives",
-          "imageUploadStatus": "pending-upload",
+          "imageUploadStatus": "ready",
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "",
-              "sourceUrls": [],
-              "license": "",
-              "institution": ""
+              "status": "ready",
+              "localThumbnail": "data/images/artist-mid-on-kawara/가와라_오늘 연작_1966__kawara-today-series.jpg",
+              "highResolution": "data/images/artist-mid-on-kawara/가와라_오늘 연작_1966__kawara-today-series.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:On_Kawara,_June_19,_1967_from_Today_Series,_No._108,_1966_-_Black_Power_in_the_United_States_,_1967_(3785168562).jpg",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/File:On_Kawara,_June_19,_1967_from_Today_Series,_No._108,_1966_-_Black_Power_in_the_United_States_,_1967_(3785168562).jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/5/53/On_Kawara%2C_June_19%2C_1967_from_Today_Series%2C_No._108%2C_1966_-_Black_Power_in_the_United_States_%2C_1967_%283785168562%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              ],
+              "license": "Public domain",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "image": "data/images/artist-mid-on-kawara/가와라_오늘 연작_1966__kawara-today-series.jpg",
+          "thumbnail": "data/images/artist-mid-on-kawara/가와라_오늘 연작_1966__kawara-today-series.jpg",
+          "highResImage": "data/images/artist-mid-on-kawara/가와라_오늘 연작_1966__kawara-today-series.jpg",
+          "highResOriginal": "data/images/artist-mid-on-kawara/가와라_오늘 연작_1966__kawara-today-series.jpg",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:On_Kawara,_June_19,_1967_from_Today_Series,_No._108,_1966_-_Black_Power_in_the_United_States_,_1967_(3785168562).jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:01:49.547Z"
         }
       ],
       "featuredWorkIds": [
@@ -125453,19 +125655,29 @@
           "movementContributionReason": "movement-further-study",
           "verified": true,
           "origin": "art-movement-representatives",
-          "imageUploadStatus": "pending-upload",
+          "imageUploadStatus": "ready",
           "migration": {
             "schema": 1,
             "image": {
-              "status": "missing",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "",
-              "sourceUrls": [],
-              "license": "",
-              "institution": ""
+              "status": "ready",
+              "localThumbnail": "data/images/artist-mid-keith-haring/해링_크랙은 끝장이다_1986__haring-crack-is-wack.jpg",
+              "highResolution": "data/images/artist-mid-keith-haring/해링_크랙은 끝장이다_1986__haring-crack-is-wack.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Crack_is_wack_-_Keith_Haring.jpg",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/File:Crack_is_wack_-_Keith_Haring.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Crack_is_wack_-_Keith_Haring.jpg/1920px-Crack_is_wack_-_Keith_Haring.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              ],
+              "license": "CC BY 2.0",
+              "institution": "Wikimedia Commons"
             }
-          }
+          },
+          "image": "data/images/artist-mid-keith-haring/해링_크랙은 끝장이다_1986__haring-crack-is-wack.jpg",
+          "thumbnail": "data/images/artist-mid-keith-haring/해링_크랙은 끝장이다_1986__haring-crack-is-wack.jpg",
+          "highResImage": "data/images/artist-mid-keith-haring/해링_크랙은 끝장이다_1986__haring-crack-is-wack.jpg",
+          "highResOriginal": "data/images/artist-mid-keith-haring/해링_크랙은 끝장이다_1986__haring-crack-is-wack.jpg",
+          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Crack_is_wack_-_Keith_Haring.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-29T10:02:09.514Z"
         }
       ],
       "featuredWorkIds": [
