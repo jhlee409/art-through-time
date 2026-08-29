@@ -1355,37 +1355,33 @@ function renderCountryArt(options = {}) {
       });
     });
   }
-  const openCountryArtMovementPreview = (source, clientX, clientY) => {
+  const openCountryArtMovementPreview = source => {
     document.querySelector('.country-art-movement-preview')?.remove();
     document.querySelector('.country-art-image-magnifier')?.remove();
-    const sourceRect = source.getBoundingClientRect();
-    const sourceScale = source.offsetWidth ? sourceRect.width / source.offsetWidth : 1;
     const workList = source.querySelector('.country-art-work-list');
     // Use the unscaled width of every original card, not just the currently
     // visible part of its scroll area. This keeps image, caption and header
     // proportions identical while making the complete strip twice as large.
     const fullStripWidth = Math.max(source.offsetWidth, workList?.scrollWidth || 0);
     const stageHeight = source.offsetHeight;
-    const desiredScale = sourceScale * 2 * 1.2;
-    const availableWidth = Math.max(1, window.innerWidth - 32);
-    const availableHeight = Math.max(1, window.innerHeight - 32);
-    const previewScale = Math.min(desiredScale, availableWidth / fullStripWidth, availableHeight / stageHeight);
-    const previewWidth = Math.max(276, Math.round(fullStripWidth * previewScale));
+    const previewWidth = Math.max(240, Math.round(window.innerWidth * .95));
+    const previewScale = previewWidth / Math.max(1, fullStripWidth);
     const previewHeight = Math.max(210, Math.round(stageHeight * previewScale));
     const preview = document.createElement('section');
     preview.className = 'country-art-movement-preview';
     preview.style.width = `${previewWidth}px`;
     preview.style.height = `${previewHeight}px`;
-    preview.style.left = `${Math.max(16, Math.min(clientX + 14, window.innerWidth - previewWidth - 16))}px`;
-    preview.style.top = `${Math.max(16, Math.min(clientY + 14, window.innerHeight - previewHeight - 16))}px`;
+    preview.style.left = `${Math.max(0, Math.round((window.innerWidth - previewWidth) / 2))}px`;
+    preview.style.top = `${Math.max(0, Math.round((window.innerHeight - previewHeight) / 2))}px`;
     const clone = source.cloneNode(true);
     const color = source.style.getPropertyValue('--movement-color');
     clone.classList.add('country-art-movement-preview-content');
     clone.querySelectorAll('.country-art-background-button').forEach(button => button.remove());
     clone.removeAttribute('style');
     clone.style.setProperty('--movement-color', color);
-    preview.innerHTML = `<button class="country-art-movement-preview-close" type="button" aria-label="${language === 'ko' ? '확대 창 닫기' : 'Close enlarged view'}">×</button><div class="country-art-movement-preview-stage"></div>`;
+    preview.innerHTML = `<div class="country-art-movement-preview-stage"></div><div class="country-art-movement-preview-caption"></div>`;
     const stage = preview.querySelector('.country-art-movement-preview-stage');
+    const previewCaption = preview.querySelector('.country-art-movement-preview-caption');
     stage.style.width = `${fullStripWidth}px`;
     stage.style.height = `${stageHeight}px`;
     stage.style.transform = `scale(${previewScale})`;
@@ -1394,11 +1390,31 @@ function renderCountryArt(options = {}) {
       document.querySelector('.country-art-image-magnifier')?.remove();
       preview.remove();
     };
-    preview.querySelector('.country-art-movement-preview-close').addEventListener('click', closePreview);
+    preview.addEventListener('dblclick', event => {
+      if(event.target.closest('.country-art-work'))return;
+      event.preventDefault();
+      event.stopPropagation();
+      closePreview();
+    });
     document.body.append(preview);
+    const workCaption = image => {
+      const work=image.closest('.country-art-work');
+      return [
+        work?.querySelector('.country-art-work-artist')?.textContent?.trim(),
+        work?.querySelector('.country-art-work-title')?.textContent?.trim(),
+        work?.querySelector('figcaption small')?.textContent?.trim()
+      ].filter(Boolean).join(' · ');
+    };
+    const showPreviewCaption = image => {
+      previewCaption.textContent=workCaption(image);
+      previewCaption.classList.toggle('hidden',!previewCaption.textContent);
+    };
+    const previewImages=[...clone.querySelectorAll('.country-art-work img')];
+    if(previewImages[0])showPreviewCaption(previewImages[0]);
     const showMagnifier = image => {
       const src = image.currentSrc || image.getAttribute('src') || image.src || '';
       const alt = image.getAttribute('alt') || '';
+      const caption = workCaption(image);
       if (!src) return;
       const current = document.querySelector('.country-art-image-magnifier');
       if (current?.dataset.imageSrc === src) {
@@ -1406,74 +1422,41 @@ function renderCountryArt(options = {}) {
         return;
       }
       current?.remove();
-      const imageRect = image.getBoundingClientRect();
-      const previewRect = preview.getBoundingClientRect();
-      const edge = 16, gap = 12;
       const naturalAspect = image.naturalWidth && image.naturalHeight ? image.naturalWidth / image.naturalHeight : null;
+      const imageRect = image.getBoundingClientRect();
       const aspect = naturalAspect || Math.max(.2, imageRect.width) / Math.max(.2, imageRect.height);
-      let visibleWidth = imageRect.width;
-      let visibleHeight = imageRect.height;
-      if (naturalAspect) {
-        const fit = Math.min(imageRect.width / image.naturalWidth, imageRect.height / image.naturalHeight);
-        visibleWidth = image.naturalWidth * fit;
-        visibleHeight = image.naturalHeight * fit;
-      }
-      let width = Math.max(120, visibleWidth * 3);
+      const maxWidth = Math.max(120, window.innerWidth * .9);
+      const maxHeight = Math.max(120, window.innerHeight * .9);
+      let width = maxWidth;
       let height = width / aspect;
-      if (height < 90) {
-        height = 90;
+      if (height > maxHeight) {
+        height = maxHeight;
         width = height * aspect;
       }
-      const maxInitialWidth = Math.max(80, window.innerWidth - edge * 2);
-      const maxInitialHeight = Math.max(80, window.innerHeight - edge * 2);
-      const viewportFit = Math.min(1, maxInitialWidth / width, maxInitialHeight / height);
-      width = Math.round(width * viewportFit);
-      height = Math.round(height * viewportFit);
-      const rightSpace = window.innerWidth - previewRect.right - gap - edge;
-      const leftSpace = previewRect.left - gap - edge;
-      const belowSpace = window.innerHeight - previewRect.bottom - gap - edge;
-      const aboveSpace = previewRect.top - gap - edge;
-      const centeredLeft = imageRect.left + imageRect.width / 2 - width / 2;
-      const centeredTop = imageRect.top + imageRect.height / 2 - height / 2;
-      const left = rightSpace >= width ? previewRect.right + gap : leftSpace >= width ? previewRect.left - gap - width : centeredLeft;
-      const top = belowSpace >= height ? previewRect.bottom + gap : aboveSpace >= height ? previewRect.top - gap - height : centeredTop;
+      width = Math.round(width);
+      height = Math.round(height);
       const magnifier = document.createElement('aside');
       magnifier.className = 'country-art-image-magnifier';
       magnifier.dataset.imageSrc = src;
       magnifier.style.width = `${width}px`;
       magnifier.style.height = `${height}px`;
-      magnifier.style.left = `${Math.max(edge, Math.min(left, window.innerWidth - width - edge))}px`;
-      magnifier.style.top = `${Math.max(edge, Math.min(top, window.innerHeight - height - edge))}px`;
+      magnifier.style.left = `${Math.max(0, Math.round((window.innerWidth - width) / 2))}px`;
+      magnifier.style.top = `${Math.max(0, Math.round((window.innerHeight - height) / 2))}px`;
       magnifier.style.aspectRatio = String(aspect);
-      magnifier.innerHTML = `<img src="${esc(src)}" alt="${esc(alt)}">${['n','e','s','w','ne','nw','se','sw'].map(direction => `<i class="country-art-image-magnifier-resizer country-art-image-magnifier-resizer--${direction}" data-resize="${direction}"></i>`).join('')}`;
+      magnifier.innerHTML = `<img src="${esc(src)}" alt="${esc(alt)}"><div class="country-art-image-magnifier-caption${caption ? '' : ' hidden'}">${esc(caption)}</div>`;
       document.body.append(magnifier);
       let interaction = null;
-      const applyBox = (leftValue, topValue, widthValue, heightValue) => {
-        const minimumWidth = 80;
-        const minimumHeight = 80;
-        if (widthValue < minimumWidth) {
-          widthValue = minimumWidth;
-          heightValue = widthValue / aspect;
-        }
-        if (heightValue < minimumHeight) {
-          heightValue = minimumHeight;
-          widthValue = heightValue * aspect;
-        }
-        magnifier.style.width = `${Math.round(widthValue)}px`;
-        magnifier.style.height = `${Math.round(heightValue)}px`;
-        magnifier.style.left = `${Math.round(Math.max(0, leftValue))}px`;
-        magnifier.style.top = `${Math.round(Math.max(0, topValue))}px`;
-      };
+      // Pointer capture used for dragging retargets the completed double-click
+      // to the box even though both presses begin on its full-size image.
       magnifier.addEventListener('dblclick', event => {
         event.preventDefault();
         event.stopPropagation();
         magnifier.remove();
       });
       magnifier.addEventListener('pointerdown', event => {
-        const handle = event.target.closest('[data-resize]');
-        if (!handle) return;
+        if (event.button !== 0) return;
         const rect = magnifier.getBoundingClientRect();
-        interaction = {pointerId:event.pointerId, direction:handle.dataset.resize, startX:event.clientX, startY:event.clientY, left:rect.left, top:rect.top, width:rect.width, height:rect.height};
+        interaction = {pointerId:event.pointerId, startX:event.clientX, startY:event.clientY, left:rect.left, top:rect.top};
         magnifier.setPointerCapture(event.pointerId);
         event.preventDefault();
         event.stopPropagation();
@@ -1482,42 +1465,20 @@ function renderCountryArt(options = {}) {
         if (!interaction || interaction.pointerId !== event.pointerId) return;
         const dx = event.clientX - interaction.startX;
         const dy = event.clientY - interaction.startY;
-        const direction = interaction.direction;
-        const west = direction.includes('w'), north = direction.includes('n'), east = direction.includes('e'), south = direction.includes('s');
-        const widthFromX = interaction.width + (east ? dx : west ? -dx : 0);
-        const heightFromY = interaction.height + (south ? dy : north ? -dy : 0);
-        let nextWidth = widthFromX;
-        let nextHeight = nextWidth / aspect;
-        if ((north || south) && !(east || west)) {
-          nextHeight = heightFromY;
-          nextWidth = nextHeight * aspect;
-        } else if ((north || south) && (east || west) && Math.abs(dy) > Math.abs(dx)) {
-          nextHeight = heightFromY;
-          nextWidth = nextHeight * aspect;
-        }
-        if (nextWidth < 80) {
-          nextWidth = 80;
-          nextHeight = nextWidth / aspect;
-        }
-        if (nextHeight < 80) {
-          nextHeight = 80;
-          nextWidth = nextHeight * aspect;
-        }
-        let nextLeft = west ? interaction.left + interaction.width - nextWidth : interaction.left;
-        let nextTop = north ? interaction.top + interaction.height - nextHeight : interaction.top;
-        if ((east || west) && !(north || south)) nextTop = interaction.top + (interaction.height - nextHeight) / 2;
-        if ((north || south) && !(east || west)) nextLeft = interaction.left + (interaction.width - nextWidth) / 2;
-        applyBox(nextLeft, nextTop, nextWidth, nextHeight);
+        magnifier.style.left = `${Math.round(interaction.left + dx)}px`;
+        magnifier.style.top = `${Math.round(interaction.top + dy)}px`;
         event.preventDefault();
       });
       const stop = event => { if (interaction?.pointerId === event.pointerId) interaction = null; };
       magnifier.addEventListener('pointerup', stop);
       magnifier.addEventListener('pointercancel', stop);
     };
-    clone.querySelectorAll('.country-art-work img').forEach(image => {
+    previewImages.forEach(image => {
+      image.addEventListener('pointerenter',()=>showPreviewCaption(image));
       image.addEventListener('dblclick', event => {
         event.preventDefault();
         event.stopPropagation();
+        showPreviewCaption(image);
         showMagnifier(image);
       });
     });
@@ -1527,7 +1488,7 @@ function renderCountryArt(options = {}) {
     box.addEventListener('dblclick', event => {
       event.preventDefault();
       event.stopPropagation();
-      openCountryArtMovementPreview(event.currentTarget, event.clientX, event.clientY);
+      openCountryArtMovementPreview(event.currentTarget);
     });
   });
   if (artistListMode) timeline.querySelectorAll('.artist-list-submovement-box[data-region-feature-key]').forEach(box => box.addEventListener('dblclick', event => {

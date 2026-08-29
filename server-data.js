@@ -1,6 +1,7 @@
 /* Wikidata access, artist persistence, and thumbnail storage services. */
 module.exports = function createArtistDataService(deps) {
   const { https, fs, path, URL, createHash, randomBytes, execFileAsync, ffmpegPath, root, dataDir, highResolutionDir, imageStagingDir, artistsFile, backupsDir, auditLogFile, adminEmail, artistImportedWorkLimit, highResolutionStoredLimit, sourceImageInputLimit, normalizeArtistsPayload, validateArtistsPayload, invalidArtworkThumbnail, writeUHangulArtistMap, syncPersonNameDictionary } = deps;
+  const normalizedEmail = value => String(value || '').trim().toLowerCase();
   const uploadTypes = {'image/jpeg':'jpg','image/jpg':'jpg','image/pjpeg':'jpg','image/png':'png','image/webp':'webp','image/gif':'gif'};
   const safeUploadId = value => { if (!/^[A-Za-z0-9_-]{1,140}$/.test(String(value || ''))) throw new Error('Invalid artwork identifier'); return String(value); };
   const uploadExtension = file => { const ext=path.extname(String(file?.filename || '')).toLowerCase(); return uploadTypes[file?.contentType] || ({'.jpg':'jpg','.jpeg':'jpg','.jfif':'jpg','.png':'png','.webp':'webp','.gif':'gif'}[ext]); };
@@ -506,12 +507,66 @@ function writeArtistsFile(payload, actor='') {
   artistsWriteQueue=queued.catch(()=>{});
   return queued;
 }
+function presentationLinks(value, label) {
+  if(!Array.isArray(value) || value.length > 40) throw new Error(`${label} must be an array with at most 40 entries`);
+  return value.map(link=>{
+    const parsed=new URL(String(link?.url || link || '').trim());
+    if(!['http:','https:'].includes(parsed.protocol)) throw new Error(`${label} must use HTTP or HTTPS`);
+    return {url:parsed.href};
+  });
+}
+async function updateArtistPresentationNow(patch, actor='') {
+  const data=JSON.parse(await fs.readFile(artistsFile,'utf8'));
+  const artistId=String(patch?.artistId || ''), artist=(data.artists || []).find(item=>item.id===artistId);
+  if(!artist) throw new Error('Artist not found');
+  const now=new Date().toISOString(), updatedBy=normalizedEmail(actor) || 'local-admin';
+  let changed=false;
+  if(Object.prototype.hasOwnProperty.call(patch,'artistLinks')) {
+    artist.links=presentationLinks(patch.artistLinks,'Artist links');
+    changed=true;
+  }
+  if(Object.prototype.hasOwnProperty.call(patch,'featuredWorkIds')) {
+    if(!Array.isArray(patch.featuredWorkIds)) throw new Error('Featured artwork ids must be an array');
+    const known=new Set((artist.works || []).map(work=>String(work.id || ''))), ids=[...new Set(patch.featuredWorkIds.map(String).filter(Boolean))];
+    if(ids.some(id=>!known.has(id))) throw new Error('Featured artwork was not found');
+    artist.featuredWorkIds=ids;
+    changed=true;
+  }
+  if(Object.prototype.hasOwnProperty.call(patch,'workLinks')) {
+    const workId=String(patch.workId || ''), matches=(artist.works || []).filter(work=>String(work.id || '')===workId);
+    if(!matches.length) throw new Error('Artwork not found');
+    const links=presentationLinks(patch.workLinks,'Artwork links');
+    matches.forEach(work=>{
+      work.links=links.map(link=>({...link}));
+      work.metadata={...(work.metadata || {}),updatedAt:now,updatedBy};
+    });
+    changed=true;
+  }
+  if(!changed) throw new Error('No artist presentation changes were supplied');
+  const previousRevision=Math.max(0,Number(data.metadata?.revision) || 0);
+  artist.metadata={...(artist.metadata || {}),updatedAt:now,updatedBy};
+  data.metadata={...(data.metadata || {}),updatedAt:now,updatedBy,revision:previousRevision+1};
+  const validation=validateArtistsPayload(data);
+  if(!validation.valid) throw new Error(validation.errors.join('; '));
+  const backup=await backupArtistsFile(previousRevision);
+  const temporary=`${artistsFile}.${process.pid}.${Date.now()}.tmp`;
+  await fs.writeFile(temporary,JSON.stringify(data,null,2)+'\n','utf8');
+  await fs.rename(temporary,artistsFile);
+  await require('./tools/build-artist-index').writeArtistIndex(data);
+  await appendAudit({type:'artist.presentation.save',actor:updatedBy,revision:data.metadata.revision,artistId,backup});
+  return {revision:data.metadata.revision,backup,artist};
+}
+function updateArtistPresentation(patch, actor='') {
+  const queued=artistsWriteQueue.then(()=>updateArtistPresentationNow(patch,actor));
+  artistsWriteQueue=queued.catch(()=>{});
+  return queued;
+}
   return {
     artistSearchCandidates, normalizeArtistWorks, artistProfileFromQid, artworkInfo,
     getJsonFast, api, similarityScore,
     getEntities, entityId, entityYear, entityLabel, koreanArtistNameOverrides,
     saveThumbnailBuffer, saveThumbnailFromLocalUpload, removeThumbnailFiles,
-    readArtistsFile, readArtistsIndex, readArtistDetail, writeArtistsFile, highResolutionPathExists, resolvedHighResolutionPath,
+    readArtistsFile, readArtistsIndex, readArtistDetail, writeArtistsFile, updateArtistPresentation, highResolutionPathExists, resolvedHighResolutionPath,
     resolveHighResolutionPaths, safeUploadId, uploadExtension
   };
 };

@@ -132,6 +132,8 @@ let thumbnailObserver;
 const profileRequests = new Set();
 const artworkInfoRequests = new Set();
 let saveTimer;
+let saveInFlight;
+let artistCollectionChangeVersion = 0;
 let lastSavedSnapshot = '';
 let collectionMetadata = {};
 let customHistoricalEvents = [];
@@ -166,10 +168,26 @@ let currentUserIsAdmin = false;
 let adminSessionToken = '';
 let adminSessionHeartbeat;
 let lastSaveError = '';
+function syncAdminSessionFromStorage() {
+  const saved = savedAccessSession();
+  if (saved?.role !== 'admin' || !saved.token || saved.token === adminSessionToken) return false;
+  currentUserEmail = String(saved.email || '');
+  currentUserRole = 'admin';
+  currentUserIsAdmin = true;
+  adminSessionToken = saved.token;
+  return true;
+}
 async function apiFetch(endpoint, options={}) {
+  syncAdminSessionFromStorage();
   const headers = new Headers(options.headers || {});
   if (adminSessionToken) headers.set('Authorization', `Bearer ${adminSessionToken}`);
-  return fetch(apiUrl(endpoint), {...options, headers});
+  let response = await fetch(apiUrl(endpoint), {...options, headers});
+  if (response.status === 401 && syncAdminSessionFromStorage()) {
+    const retryHeaders = new Headers(options.headers || {});
+    if (adminSessionToken) retryHeaders.set('Authorization', `Bearer ${adminSessionToken}`);
+    response = await fetch(apiUrl(endpoint), {...options, headers:retryHeaders});
+  }
+  return response;
 }
 let detailImageHeight = Math.min(900, Math.max(240, Number(localStorage.getItem(detailImageHeightStorageKey)) || 644));
 let detailPanelWidth = Math.min(900, Math.max(330, Number(localStorage.getItem(detailPanelWidthStorageKey)) || 520));
@@ -968,8 +986,7 @@ function showArtistLinkMenu(event, artist, linkIndex) {
     const previousLinks = artist.links;
     artist.links = artistLinks(artist).filter((_, index) => index !== linkIndex);
     closeArtistLinkMenu();
-    persist();
-    if (!await saveArtistsNow()) {
+    if (!await saveArtistPresentationNow(artist,{artistLinks:artist.links})) {
       artist.links = previousLinks;
       alert(saveFailureMessage());
     }
@@ -993,10 +1010,8 @@ function showArtworkLinkMenu(event, artist, work, linkIndex, renderAfterDelete =
     const previousLinks = artworkLinks(work);
     setArtworkLinks(artist, work, previousLinks.filter((_, index) => index !== linkIndex));
     closeArtworkLinkMenu();
-    persist();
-    if (!await saveArtistsNow()) {
+    if (!await saveArtistPresentationNow(artist,{workId:work.id,workLinks:artworkLinks(work)})) {
       setArtworkLinks(artist, work, previousLinks);
-      persist();
       alert(saveFailureMessage());
     }
     renderAfterDelete();
@@ -1098,10 +1113,9 @@ function setupSortableLinkButtons(root, options) {
       options.setLinks(movedLinks(previousLinks, startIndex, endIndex), button);
       controls.classList.add('link-renumber-pending');
       const renumberAfterDelay = new Promise(resolve => setTimeout(resolve, 3000));
-      persist();
-      if (!await saveArtistsNow()) {
+      const nextLinks = options.getLinks(button);
+      if (!await options.saveLinks(nextLinks, button)) {
         options.setLinks(previousLinks, button);
-        persist();
         controls.classList.remove('link-renumber-pending');
         alert(saveFailureMessage());
         options.render(button);
@@ -1188,6 +1202,18 @@ function saveAdminSession(email, token) {
   try { localStorage.setItem(sharedAccessSessionStorageKey, session); } catch (_) {}
   clearLoginRequestFromUrl();
 }
+function removeSavedAdminSession(token='') {
+  const removeMatchingSession = (storage, key) => {
+    try {
+      const saved = JSON.parse(storage.getItem(key) || 'null');
+      if (!token || saved?.token === token) storage.removeItem(key);
+    } catch (_) {
+      storage.removeItem(key);
+    }
+  };
+  removeMatchingSession(sessionStorage, accessSessionStorageKey);
+  removeMatchingSession(localStorage, sharedAccessSessionStorageKey);
+}
 async function logoutEverywhere() {
   if (typeof window.artThroughTimeLogoutAll === 'function') return window.artThroughTimeLogoutAll();
   try { await apiFetch('/api/auth/logout',{method:'POST',cache:'no-store'}); } catch (_) {}
@@ -1210,11 +1236,14 @@ function startAdminSessionHeartbeat() {
   if (adminSessionHeartbeat) clearInterval(adminSessionHeartbeat);
   const keepAlive = async () => {
     if (!currentUserIsAdmin) return;
+    const checkedToken = adminSessionToken;
     try {
       const response = await apiFetch('/api/auth/heartbeat',{method:'POST',cache:'no-store'});
       if (!response.ok) throw new Error('관리자 세션이 종료되었습니다.');
     } catch (_) {
-      enterViewerMode({clearShared:true});
+      if (adminSessionToken !== checkedToken || syncAdminSessionFromStorage()) return;
+      removeSavedAdminSession(checkedToken);
+      enterViewerMode();
       render();
     }
   };
@@ -1234,7 +1263,7 @@ async function chooseAccessMode() {
       clearLoginRequestFromUrl();
       return;
     } catch (_) {
-      try { sessionStorage.removeItem(accessSessionStorageKey); localStorage.removeItem(sharedAccessSessionStorageKey); } catch (_) {}
+      removeSavedAdminSession(adminSessionToken);
       currentUserEmail='';
       currentUserRole='viewer';
       currentUserIsAdmin=false;
@@ -1259,7 +1288,7 @@ async function chooseAccessMode() {
     const response = await fetch(apiUrl('/api/access'), {cache:'no-store'});
     const access = response.ok ? await response.json() : null;
     if (access?.adminConfigured === false) {
-      adminUnavailableMessage = '관리자 설정 파일(.env)이 없어 지금은 보기 전용으로 실행 중입니다. 건너뛰기를 누르면 자료를 볼 수 있습니다.';
+      adminUnavailableMessage = '관리자 설정 파일(.env)이 없어 지금은 보기 전용으로 실행 중입니다. 읽기 전용을 누르면 자료를 볼 수 있습니다.';
     }
   } catch (_) {
     /* When the local server is unavailable, keep the manual viewer choice. */
@@ -1322,23 +1351,63 @@ function readLocalFavoriteWorkKeys() {
 }
 
 async function saveArtistsNow() {
-  if (!currentUserIsAdmin) return false;
+  if (!currentUserIsAdmin && !syncAdminSessionFromStorage()) {
+    lastSaveError = language === 'ko' ? '관리자 세션을 찾지 못했습니다.' : 'Administrator session was not found.';
+    return false;
+  }
+  clearTimeout(saveTimer);
+  if (saveInFlight) await saveInFlight.catch(() => false);
   const snapshot = artistSnapshot();
+  const saveVersion = artistCollectionChangeVersion;
   if (snapshot === lastSavedSnapshot) return true;
-  try {
+  const request = saveInFlight = (async () => {
     const response = await apiFetch('/api/artists', {method:'PUT',headers:{'Content-Type':'application/json'},body:snapshot});
     const result = await response.json().catch(() => ({}));
+    if (response.status === 401) {
+      throw new Error(language === 'ko' ? '관리자 세션이 만료되었습니다. 새로고침 후 다시 로그인해 주세요.' : 'Administrator session expired. Refresh the page and sign in again.');
+    }
     if (!response.ok) throw new Error(result.error || `HTTP ${response.status}`);
     if (Number.isInteger(result.revision)) collectionMetadata = {...collectionMetadata,revision:result.revision};
-    lastSavedSnapshot = artistSnapshot();
+    lastSavedSnapshot = artistCollectionChangeVersion === saveVersion ? artistSnapshot() : '';
     lastSaveError = '';
     localStorage.removeItem(storageKey);
     return true;
+  })();
+  try {
+    return await saveInFlight;
   } catch (error) {
     // User data must be portable: never leave a new record only in this browser.
     lastSaveError = error?.message || '저장 요청을 처리하지 못했습니다.';
     localStorage.removeItem(storageKey);
     return false;
+  } finally {
+    if (saveInFlight === request) saveInFlight = undefined;
+  }
+}
+async function saveArtistPresentationNow(artist, patch) {
+  if (!currentUserIsAdmin && !syncAdminSessionFromStorage()) {
+    lastSaveError = language === 'ko' ? '관리자 세션을 찾지 못했습니다.' : 'Administrator session was not found.';
+    return false;
+  }
+  if (saveInFlight) await saveInFlight.catch(() => false);
+  const request = saveInFlight = (async () => {
+    const response = await apiFetch('/api/artist-presentation', {method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({artistId:artist.id,...patch})});
+    const result = await response.json().catch(() => ({}));
+    if (response.status === 401) throw new Error(language === 'ko' ? '관리자 세션이 만료되었습니다. 새로고침 후 다시 로그인해 주세요.' : 'Administrator session expired. Refresh the page and sign in again.');
+    if (!response.ok || !result.ok) throw new Error(result.error || `HTTP ${response.status}`);
+    if (result.artist) Object.assign(artist,result.artist);
+    if (Number.isInteger(result.revision)) collectionMetadata = {...collectionMetadata,revision:result.revision};
+    lastSavedSnapshot = artistSnapshot();
+    lastSaveError = '';
+    return true;
+  })();
+  try {
+    return await request;
+  } catch (error) {
+    lastSaveError = error?.message || '저장 요청을 처리하지 못했습니다.';
+    return false;
+  } finally {
+    if (saveInFlight === request) saveInFlight = undefined;
   }
 }
 function saveFailureMessage() {
@@ -1355,6 +1424,7 @@ function queueArtistSave() {
   clearTimeout(saveTimer);
   saveTimer = setTimeout(saveArtistsNow, 250);
 }
+function markArtistCollectionChanged() { artistCollectionChangeVersion += 1; }
 
 async function loadData() {
   const browserFavoriteWorks = [...favoriteWorkKeys];
@@ -1419,7 +1489,8 @@ async function markLegacyManualWorks() {
     } catch (_) { /* Without the prior catalogue, leave existing provenance untouched. */ }
   }));
 }
-function persist() { localStorage.setItem('art-atlas-selected', selectedId || ''); queueArtistSave(); }
+function persistSelection() { localStorage.setItem('art-atlas-selected', selectedId || ''); }
+function persist() { persistSelection(); markArtistCollectionChanged(); queueArtistSave(); }
 function persistMovementView() { localStorage.setItem(movementStorageKey, JSON.stringify(movementView)); }
 function readLastPosition() {
   try { return JSON.parse(localStorage.getItem(lastPositionStorageKey) || '{}') || {}; }

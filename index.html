@@ -35,7 +35,7 @@
         </div>
         <div class="sidebar-heading">
           <p><span data-i18n="collection">나의 화가 목록</span><span id="artist-count" class="artist-count">총 0명</span></p>
-          <label class="sort-select"><span data-i18n="sort">정렬</span><select id="sort"><option value="nameAsc" data-i18n="nameAsc">이름오름차순</option><option value="nameDesc" data-i18n="nameDesc">이름내림차순</option><option value="birth" data-i18n="birthAsc" selected>생년순</option></select></label>
+          <label class="sort-select"><span data-i18n="sort">정렬</span><select id="sort"><option value="nameAsc" data-i18n="nameAsc" selected>이름오름차순</option><option value="nameDesc" data-i18n="nameDesc">이름내림차순</option><option value="birth" data-i18n="birthAsc">생년순</option></select></label>
         </div>
         <nav id="artist-list" class="artist-list" aria-label="화가 목록"></nav>
         <div class="language"><button id="logout-button" class="logout-button" type="button">로그아웃</button></div>
@@ -53,7 +53,7 @@
         <label><span>관리자 이메일</span><input id="auth-email" type="email" autocomplete="username" inputmode="email" /></label>
         <label><span>비밀번호</span><input id="auth-password" type="password" autocomplete="current-password" /></label>
         <p id="auth-message" class="form-message hidden" aria-live="polite"></p>
-        <div class="auth-actions"><button id="auth-skip" class="auth-skip" type="button">건너뛰기</button><button class="save" type="submit">관리자로 열기</button></div>
+        <div class="auth-actions"><button id="auth-skip" class="auth-skip" type="button">읽기 전용</button><button class="save" type="submit">관리자로 열기</button></div>
       </form>
     </dialog>
     <dialog id="add-dialog">

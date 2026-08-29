@@ -326,6 +326,14 @@
 .artwork-preview-button { position: absolute; z-index: 20; bottom: 3px; left: 3px; display: grid; width: 20px; height: 20px; place-items: center; border: 0; border-radius: 50%; background: #fffdf8e6; box-shadow: 0 1px 4px #18221e55; color: #28352d; font: 700 16px/1 var(--sans); cursor: pointer; }
 .artwork-preview-button:hover, .artwork-preview-button:focus-visible { background: #fffdf8; color: #a44e2d; outline: 2px solid #253c31; outline-offset: 2px; }
 .high-resolution-artwork { cursor: zoom-in; }
+.artist-timeline-panel .artwork-image-openable { cursor: zoom-in; }
+.artwork-image-viewer { position: fixed; z-index: 1600; left: 50%; top: 50%; width: 90vw; height: 90vh; overflow: hidden; transform: translate(-50%,-50%); border: 2px solid #d8d2c6; border-radius: 6px; background: #0d100d; box-shadow: 0 20px 64px #10171199; }
+.artwork-image-viewer-stage { position: absolute; inset: 0; overflow: hidden; touch-action: none; user-select: none; cursor: crosshair; }
+.artwork-image-viewer-image { position: absolute; left: 50%; top: 50%; display: block; max-width: none; max-height: none; object-fit: contain; user-select: none; -webkit-user-drag: none; }
+.artwork-image-viewer-lens { position: absolute; z-index: 2; display: none; overflow: hidden; pointer-events: none; border: 2px solid #fffdf8; border-radius: 50%; background: #0d100d; box-shadow: 0 4px 18px #0009, inset 0 0 0 1px #17211e99; }
+.artwork-image-viewer-lens.visible { display: block; }
+.artwork-image-viewer-lens img { position: absolute; display: block; max-width: none; max-height: none; user-select: none; -webkit-user-drag: none; }
+.artwork-image-viewer-caption { position: absolute; z-index: 3; left: 14px; bottom: 14px; max-width: calc(100% - 28px); overflow-wrap: anywhere; padding: 8px 11px; border-radius: 4px; background: #050705c7; color: #f7f4ec; font: 600 13px/1.45 var(--sans); pointer-events: none; }
 .leonardo-period-list { display: grid; gap: 0; border: 1px solid #d8d2c6; border-bottom: 0; background: #fffdf8; }
 .leonardo-period { padding: 18px 16px 20px; border-bottom: 1px solid #d8d2c6; }
 .leonardo-period:nth-child(odd) { background: #fdeee6; }
@@ -756,7 +764,7 @@
 .country-art-time-row { position: relative; box-sizing: border-box; border-bottom: 1px solid #e2ddd4; background: transparent; }
 .artist-list-time-row { overflow: visible; }
 .artist-list-submovement-box { position: absolute; z-index: 2; box-sizing: border-box; min-width: 0; overflow: visible; border: var(--artist-list-representative-border-width, 1px) solid color-mix(in srgb, var(--movement-color) 72%, #17211e); border-radius: 6px; background: color-mix(in srgb, var(--movement-color) 28%, #fffdf8); color: #17211e; pointer-events: auto; }
-.artist-list-submovement-title { position: absolute; top: 0; left: 5px; z-index: 1; display: block; max-width: calc(100% - 10px); overflow: hidden; padding: 0 3px; transform: translateY(-50%) scale(var(--artist-list-label-text-x-scale, 1), var(--artist-list-label-text-y-scale, 1)); transform-origin: left center; background: color-mix(in srgb, var(--movement-color) 28%, #fffdf8); font: 800 7.2px/1 var(--sans); text-overflow: ellipsis; white-space: nowrap; }
+.artist-list-submovement-title { position: absolute; top: 0; left: 5px; z-index: 1; display: block; max-width: calc(100% - 10px); overflow: hidden; padding: 0 3px; transform: translateY(-50%) scale(var(--artist-list-label-text-x-scale, 1), var(--artist-list-label-text-y-scale, 1)); transform-origin: left center; background: color-mix(in srgb, var(--movement-color) 28%, #fffdf8); font: 800 9.36px/1 var(--sans); text-overflow: ellipsis; white-space: nowrap; }
 .artist-list-submovement-box[data-region-feature-key] { cursor: help; }
 .artist-list-submovement-box .artist-life-pill,.artist-list-submovement-box .artist-list-submovement-title { cursor: default; }
 .artist-list-region-feature-panel { position: fixed; z-index: 1000; display: flex; flex-direction: column; width: min(430px, calc(100vw - 40px)); height: 310px; min-width: 280px; min-height: 170px; overflow: hidden; border: 2px solid #3d5c6f; border-radius: 9px; background: #fffdf8; color: #17211e; box-shadow: 0 12px 32px #17211e66; }
@@ -791,24 +799,21 @@
 .artist-list-page .country-art-scroll-default-fit::-webkit-scrollbar { width: 0; height: 0; }
 .country-art-scroll.country-art-panning { cursor: grabbing; user-select: none; }
 .country-art-movement-preview { position: fixed; z-index: 160; overflow: hidden; border: 2px solid #8e9b8b; border-radius: 8px; background: #f8f5ed; box-shadow: 0 16px 42px #18221e52; }
-.country-art-movement-preview-close { position: absolute; z-index: 2; top: 6px; right: 6px; display: grid; width: 28px; height: 28px; place-items: center; border: 1px solid #8e9b8b; border-radius: 50%; background: #fffdf8; color: var(--ink); font-size: 20px; line-height: 1; }
-.country-art-image-magnifier { position: fixed; z-index: 220; display: grid; place-items: center; overflow: hidden; touch-action: none; border: 2px solid #71806e; border-radius: 6px; background: #fffdf8; box-shadow: 0 12px 30px #18221e66; }
+.country-art-image-magnifier { position: fixed; z-index: 220; display: grid; place-items: center; overflow: hidden; touch-action: none; border: 2px solid #71806e; border-radius: 6px; background: #fffdf8; box-shadow: 0 12px 30px #18221e66; cursor: move; }
 .country-art-movement-preview-content .country-art-work img { cursor: zoom-in; }
-.country-art-image-magnifier > img { display: block; width: 100%; height: 100%; object-fit: contain; cursor: zoom-out; user-select: none; -webkit-user-drag: none; }
+.country-art-image-magnifier > img { display: block; width: 100%; height: 100%; object-fit: contain; cursor: move; user-select: none; -webkit-user-drag: none; }
+.country-art-movement-preview-caption,.country-art-image-magnifier-caption { position: absolute; z-index: 3; left: 14px; bottom: 14px; max-width: calc(100% - 28px); overflow-wrap: anywhere; padding: 8px 11px; border-radius: 4px; background: #050705c7; color: #f7f4ec; font: 600 13px/1.45 var(--sans); pointer-events: none; }
 .country-art-image-magnifier-stage { transform-origin: top left; }
 .country-art-image-magnifier .country-art-work { margin: 0; }
 .country-art-image-magnifier .country-art-work figcaption { font-size: 4.5px; }
 .country-art-image-magnifier .country-art-work figcaption small { font-size: 4.5px; }
-.country-art-image-magnifier-resizer { position: absolute; z-index: 2; display: block; }
-.country-art-image-magnifier-resizer--n,.country-art-image-magnifier-resizer--s { right: 10px; left: 10px; height: 10px; cursor: ns-resize; }
-.country-art-image-magnifier-resizer--n { top: -5px; }.country-art-image-magnifier-resizer--s { bottom: -5px; }
-.country-art-image-magnifier-resizer--e,.country-art-image-magnifier-resizer--w { top: 10px; bottom: 10px; width: 10px; cursor: ew-resize; }
-.country-art-image-magnifier-resizer--e { right: -5px; }.country-art-image-magnifier-resizer--w { left: -5px; }
-.country-art-image-magnifier-resizer--ne,.country-art-image-magnifier-resizer--nw,.country-art-image-magnifier-resizer--se,.country-art-image-magnifier-resizer--sw { width: 16px; height: 16px; }
-.country-art-image-magnifier-resizer--ne { top: -7px; right: -7px; cursor: nesw-resize; }.country-art-image-magnifier-resizer--nw { top: -7px; left: -7px; cursor: nwse-resize; }.country-art-image-magnifier-resizer--se { right: -7px; bottom: -7px; cursor: nwse-resize; }.country-art-image-magnifier-resizer--sw { bottom: -7px; left: -7px; cursor: nesw-resize; }
 .country-art-movement-preview-stage { transform-origin: top left; }
 .country-art-movement-preview-content { position: relative; display: flex; width: 100%; height: 100%; box-sizing: border-box; overflow: hidden; border: 2px solid #f8f5ed; border-radius: 5px; background: color-mix(in srgb, var(--movement-color) 76%, white); color: #17211e; box-shadow: 0 1px 2px #18221e20; }
-.country-art-movement-preview-content .country-art-work-list { overflow: hidden; }
+.country-art-movement-preview-content .country-art-work-list { height: 100%; align-items: stretch; overflow: hidden; }
+.country-art-movement-preview-content .country-art-work { display: flex; flex-direction: column; height: 100%; }
+.country-art-movement-preview-content .country-art-work img { flex: 0 0 95%; height: 95%; min-height: 0; }
+.country-art-movement-preview-content .country-art-work figcaption { flex: 0 0 5%; height: auto; min-height: 0; padding: 1px 3px; font-size: 7px; line-height: 1.05; }
+.country-art-movement-preview-content .country-art-work figcaption small { margin-top: 1px; font-size: 6px; line-height: 1; }
 .country-art-zoom-menu { position: fixed; z-index: 1000; width: 160px; padding: 4px; border: 1px solid #8e988c; border-radius: 5px; background: #fffdf8; box-shadow: 0 5px 16px #18221e40; }
 .country-art-zoom-menu button { display: block; width: 100%; padding: 7px 9px; border: 0; background: transparent; color: #17211e; text-align: left; font: 12px 'Noto Sans KR', sans-serif; cursor: pointer; }
 .country-art-zoom-menu button:hover { background: #e4ecdf; }

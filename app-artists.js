@@ -106,7 +106,7 @@ function renderList() {
     const maximumTop = Math.max(0, list.scrollHeight - list.clientHeight);
     list.scrollTo({top:Math.max(0, Math.min(centeredTop, maximumTop)), behavior:'auto'});
   });
-  list.querySelectorAll('.artist-item').forEach(button => button.onclick = async () => { artistListScrollTopToRestore = list.scrollTop || 0; viewMode = 'timeline'; selectedId = button.dataset.id; persist(); closeDetail(); const artist = artists.find(item => item.id === selectedId); await hydrateThumbnails(artist); renderList(); renderTimeline(); await enrichArtist(); });
+  list.querySelectorAll('.artist-item').forEach(button => button.onclick = async () => { artistListScrollTopToRestore = list.scrollTop || 0; viewMode = 'timeline'; selectedId = button.dataset.id; persistSelection(); closeDetail(); const artist = artists.find(item => item.id === selectedId); await hydrateThumbnails(artist); renderList(); renderTimeline(); await enrichArtist(); });
   list.querySelectorAll('.delete-artist').forEach(button => button.onclick = async event => { event.stopPropagation(); if (!currentUserIsAdmin || !confirm(t('confirmDelete'))) return; const deleted = artists.find(artist => artist.id === button.dataset.id); artists = artists.filter(artist => artist.id !== button.dataset.id); if (selectedId === button.dataset.id) selectedId = artists[0]?.id || null; persist(); if (!await saveArtistsNow()) { artists.push(deleted); if (!selectedId) selectedId = deleted.id; alert(language === 'ko' ? '삭제 내용을 저장하지 못해 복원했습니다.' : 'The deletion could not be saved, so it was restored.'); } render(); });
   $('#artist-names').innerHTML = artists.flatMap(a => [artistListKoreanName(a), artistDisplayName(a), artistUHangulDisplayName(a), a.fullName, a.name?.ko, a.name?.en, ...artistAliases(a)]).filter(Boolean).filter((value,index,self) => self.indexOf(value) === index).map(value => `<option value="${esc(value)}"></option>`).join('');
 }
@@ -363,7 +363,7 @@ function renderTimeline() {
       ? `<ul class="artist-summary-lines">${summaryLines.map(line => `<li>${esc(line)}</li>`).join('')}</ul>`
       : `<p class="artist-summary-empty">${esc(language === 'ko' ? '아직 화가 해설이 없습니다.' : 'No artist notes yet.')}</p>`;
     const summaryBox = `<section class="artist-summary-box"><div class="artist-summary-heading"><p class="eyebrow">${esc(summaryTitle)}</p>${currentUserIsAdmin ? `<button class="artist-summary-edit-button" type="button">${esc(summaryEditLabel)}</button>` : ''}</div><div class="artist-summary-read">${summaryBody}</div>${currentUserIsAdmin ? `<form class="artist-summary-editor hidden"><textarea rows="6" aria-label="${esc(summaryTitle)}" placeholder="${esc(summaryPlaceholder)}">${esc(artistSummaryEditorText(summaryLines))}</textarea><p>${esc(summaryHelp)}</p><div><button type="button" class="artist-summary-cancel">${esc(summaryCancelLabel)}</button><button type="submit">${esc(summarySaveLabel)}</button></div></form>` : ''}</section>`;
-    const featured = leonardoFeaturedWorks.length ? `<section class="leonardo-featured"><div class="leonardo-section-heading"><p class="eyebrow">${esc(featuredLabel)}</p><div class="leonardo-section-actions">${slideshowButton('featured', language === 'ko' ? '대표작 슬라이드 쇼 시작' : 'Start highlights slideshow')}</div><p>${esc(language === 'ko' ? '우선 크게 살펴볼 작품입니다. Ⓗ 표시는 고해상도 파일이 있음을 뜻하며, 이미지를 더블클릭하면 새 창에서 엽니다.' : 'A small set of works to study first. Ⓗ marks an available high-resolution file; double-click the image to open it.')}</p></div><div class="leonardo-featured-grid">${leonardoFeaturedWorks.map(work => `<div class="leonardo-featured-card" data-featured-work="${esc(work.id)}"${canDragFeaturedWorks ? ' draggable="true"' : ''}>${card(work)}</div>`).join('')}</div></section>` : '';
+    const featured = leonardoFeaturedWorks.length ? `<section class="leonardo-featured"><div class="leonardo-section-heading"><p class="eyebrow">${esc(featuredLabel)}</p><div class="leonardo-section-actions">${slideshowButton('featured', language === 'ko' ? '대표작 슬라이드 쇼 시작' : 'Start highlights slideshow')}</div><p>${esc(language === 'ko' ? '우선 크게 살펴볼 작품입니다. Ⓗ 표시는 고해상도 파일이 있음을 뜻합니다.' : 'A small set of works to study first. Ⓗ marks an available high-resolution file.')}</p></div><div class="leonardo-featured-grid">${leonardoFeaturedWorks.map(work => `<div class="leonardo-featured-card" data-featured-work="${esc(work.id)}"${canDragFeaturedWorks ? ' draggable="true"' : ''}>${card(work)}</div>`).join('')}</div></section>` : '';
     const allWorksAction = `${slideshowButton('all', language === 'ko' ? '전체 작품 슬라이드 쇼 시작' : 'Start all-works slideshow')}${currentUserIsAdmin ? `<button class="add-artwork-button leonardo-section-add-artwork" type="button" title="${esc(t('addArtwork'))}" aria-label="${esc(t('addArtwork'))}"><span>+</span><span>${esc(t('addArtwork'))}</span></button>` : ''}`;
     return `<div class="leonardo-timeline">${summaryBox}${featured}${layoutControls}<section class="leonardo-all-works"><div class="leonardo-section-heading"><p class="eyebrow">${esc(leonardoLayout === 'gallery' ? galleryLabel : chronologyLabel)}</p><div class="leonardo-section-actions">${allWorksAction}</div><p>${esc(language === 'ko' ? `${works.length}점 · 왼쪽 위에서 오른쪽 아래로 갈수록 뒤의 작품입니다.` : `${works.length} works · Earlier works begin at the upper left.`)}</p></div>${leonardoLayout === 'gallery' ? gallery : chronology}</section></div>`;
   })();
@@ -387,8 +387,7 @@ function renderTimeline() {
       if (input.checked) selected.add(workId);
       else selected.delete(workId);
       artist.featuredWorkIds = [...selected];
-      persist();
-      if (!await saveArtistsNow()) {
+      if (!await saveArtistPresentationNow(artist,{featuredWorkIds:artist.featuredWorkIds})) {
         if (hadSavedSelection) artist.featuredWorkIds = previousSelection;
         else delete artist.featuredWorkIds;
         alert(saveFailureMessage());
@@ -435,8 +434,7 @@ function renderTimeline() {
         const hadSavedSelection = Object.prototype.hasOwnProperty.call(artist, 'featuredWorkIds');
         const previousSelection = artist.featuredWorkIds;
         artist.featuredWorkIds = nextOrder;
-        persist();
-        if (!await saveArtistsNow()) {
+        if (!await saveArtistPresentationNow(artist,{featuredWorkIds:nextOrder})) {
           if (hadSavedSelection) artist.featuredWorkIds = previousSelection;
           else delete artist.featuredWorkIds;
           alert(saveFailureMessage());
@@ -470,8 +468,7 @@ function renderTimeline() {
     }
     const previousLinks = artist.links;
     artist.links = [...artistLinks(artist), {url:url.href}];
-    persist();
-    if (!await saveArtistsNow()) {
+    if (!await saveArtistPresentationNow(artist,{artistLinks:artist.links})) {
       artist.links = previousLinks;
       alert(saveFailureMessage());
     }
@@ -483,6 +480,7 @@ function renderTimeline() {
     indexAttribute:'linkIndex',
     getLinks:() => artistLinks(artist),
     setLinks:links => { artist.links = links.map(link => ({...link})); },
+    saveLinks:links => saveArtistPresentationNow(artist,{artistLinks:links}),
     render:renderTimeline,
     contextMenu:(event, index) => showArtistLinkMenu(event, artist, index)
   });
@@ -492,6 +490,7 @@ function renderTimeline() {
   setupThumbnailArtworkLinks(artist, works);
   setupArtworkImageFallbacks();
   setupHighResolutionBadges(artist, works);
+  setupArtworkImageViewer(artist, works);
   setupArtworkHoverPreview();
   if (currentUserIsAdmin) runThumbnailAgent();
 }
@@ -526,10 +525,8 @@ function setupThumbnailArtworkLinks(artist, works) {
       }
       const previousLinks = artworkLinks(work);
       setArtworkLinks(artist, work, [...previousLinks, {url:url.href}]);
-      persist();
-      if (!await saveArtistsNow()) {
+      if (!await saveArtistPresentationNow(artist,{workId:work.id,workLinks:artworkLinks(work)})) {
         setArtworkLinks(artist, work, previousLinks);
-        persist();
         alert(saveFailureMessage());
       }
       renderTimeline();
@@ -541,6 +538,7 @@ function setupThumbnailArtworkLinks(artist, works) {
     indexAttribute:'artworkLinkIndex',
     getLinks:button => artworkLinks(workForButton(button)),
     setLinks:(links, button) => { const work = workForButton(button); if (work) setArtworkLinks(artist, work, links); },
+    saveLinks:(links, button) => { const work = workForButton(button); return work ? saveArtistPresentationNow(artist,{workId:work.id,workLinks:links}) : Promise.resolve(false); },
     render:renderTimeline,
     contextMenu:(event, index, button) => {
       const work = workForButton(button);
@@ -597,8 +595,8 @@ function highResolutionImageWidth(src) {
 }
 function setupHighResolutionBadges(artist, works) {
   const label = language === 'ko'
-    ? `가로 ${highResolutionMinimumWidth}px 이상 고해상도 이미지입니다. 이미지를 더블클릭하면 새 창에서 엽니다.`
-    : `High-resolution image at least ${highResolutionMinimumWidth}px wide. Double-click the image to open it in a new window.`;
+    ? `가로 ${highResolutionMinimumWidth}px 이상 고해상도 이미지입니다.`
+    : `High-resolution image at least ${highResolutionMinimumWidth}px wide.`;
   const worksById = new Map((works || []).map(work => [String(work.id || ''), work]));
   timeline.querySelectorAll('.art-card[data-work]').forEach(card => {
     const work = worksById.get(String(card.dataset.work || ''));
@@ -614,11 +612,23 @@ function setupHighResolutionBadges(artist, works) {
         badge.classList.remove('hidden');
         badge.title = `${label} (${width}px)`;
       }
-      image.addEventListener('dblclick', event => {
-        event.preventDefault();
-        event.stopPropagation();
-        openArtworkImageWindow(highResSource, artworkDisplayTitle(work), {artist:artistDisplayName(artist), title:artworkDisplayTitle(work), year:workYearLabel(work)});
-      });
+    });
+  });
+}
+function setupArtworkImageViewer(artist, works) {
+  if(viewMode!=='timeline' || !timeline.classList.contains('artist-timeline-panel'))return;
+  const worksById = new Map((works || []).map(work=>[String(work.id || ''),work]));
+  timeline.querySelectorAll('.art-card[data-work]').forEach(card=>{
+    const work=worksById.get(String(card.dataset.work || '')),image=card.querySelector('.art-thumb img');
+    if(!work || !image)return;
+    const highResSource=work.highResImage && !isExternalImageSource(work.highResImage) ? work.highResImage : '';
+    const source=highResSource || artworkImageDisplay(work,{detail:true}).src || image.currentSrc || image.src;
+    if(!source)return;
+    image.classList.add('artwork-image-openable');
+    image.addEventListener('dblclick',event=>{
+      event.preventDefault();
+      event.stopPropagation();
+      openArtworkImageWindow(source,artworkDisplayTitle(work),{artist:language === 'ko' ? artistListKoreanName(artist) : loc(artist.name),title:artworkDisplayTitle(work),year:workYearLabel(work)});
     });
   });
 }

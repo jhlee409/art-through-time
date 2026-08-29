@@ -1185,3 +1185,12 @@
 {"at":"2026-08-27T07:45:59.085Z","type":"artists.save","actor":"jhlee409@gmail.com","revision":885,"backup":"","stats":{"artists":78,"works":1516,"images":{"ready":1315,"pending":166,"missing":35},"assetsWithoutSource":105}}
 {"at":"2026-08-27T07:46:01.565Z","type":"artists.save","actor":"jhlee409@gmail.com","revision":886,"backup":"","stats":{"artists":78,"works":1516,"images":{"ready":1315,"pending":166,"missing":35},"assetsWithoutSource":105}}
 {"at":"2026-08-27T07:46:02.717Z","type":"artists.save","actor":"jhlee409@gmail.com","revision":887,"backup":"","stats":{"artists":78,"works":1516,"images":{"ready":1315,"pending":166,"missing":35},"assetsWithoutSource":105}}
+{"at":"2026-08-29T21:35:38.886Z","type":"artists.save","actor":"jhlee409@gmail.com","revision":892,"backup":"","stats":{"artists":246,"works":1913,"images":{"ready":1708,"pending":86,"missing":119},"assetsWithoutSource":360}}
+{"at":"2026-08-29T21:35:48.372Z","type":"artists.save","actor":"jhlee409@gmail.com","revision":893,"backup":"","stats":{"artists":246,"works":1913,"images":{"ready":1708,"pending":86,"missing":119},"assetsWithoutSource":360}}
+{"at":"2026-08-29T21:40:25.314Z","type":"artists.repair","actor":"codex","revision":893,"artistId":"claude-monet","restoredWorks":23,"worksAfter":83,"preservedLinks":1}
+{"at":"2026-08-29T21:41:32.431Z","type":"artist.presentation.save","actor":"jhlee409@gmail.com","revision":894,"artistId":"claude-monet","backup":"data/backups/artists-r893-2026-08-29T21-41-31-753Z.json"}
+{"at":"2026-08-29T21:43:54.662Z","type":"artists.save","actor":"jhlee409@gmail.com","revision":895,"backup":"data/backups/artists-r894-2026-08-29T21-43-53-383Z.json","stats":{"artists":246,"works":1913,"images":{"ready":1708,"pending":86,"missing":119},"assetsWithoutSource":360}}
+{"at":"2026-08-29T21:44:18.202Z","type":"artist.presentation.save","actor":"jhlee409@gmail.com","revision":896,"artistId":"claude-monet","backup":""}
+{"at":"2026-08-29T21:44:23.556Z","type":"artist.presentation.save","actor":"jhlee409@gmail.com","revision":897,"artistId":"claude-monet","backup":""}
+{"at":"2026-08-29T22:30:44.418Z","type":"artist.presentation.save","actor":"jhlee409@gmail.com","revision":898,"artistId":"artist-mid-berthe-morisot","backup":"data/backups/artists-r897-2026-08-29T22-30-44-344Z.json"}
+{"at":"2026-08-29T22:30:46.863Z","type":"artist.presentation.save","actor":"jhlee409@gmail.com","revision":899,"artistId":"artist-mid-berthe-morisot","backup":""}

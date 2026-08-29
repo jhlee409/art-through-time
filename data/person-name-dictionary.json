@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-28T14:20:46.707Z",
+  "generatedAt": "2026-08-29T21:43:54.649Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -84,26 +84,32 @@
       "status": "verified-pair"
     },
     {
-      "id": "agnes-martin",
+      "id": "artist-mid-agnes-martin",
       "uhangulVersion": "0.7",
       "original": "Agnes Martin",
       "language": "und",
       "korean": "애그니스 마틴",
-      "displayKorean": "애그니스 마틴",
-      "listKorean": "애그니스 마틴",
+      "displayKorean": "마틴, 애그니스",
+      "listKorean": "마틴",
       "aliases": {
         "ko": [
-          "마틴"
+          "마틴",
+          "애그니스 마틴"
         ],
         "en": [
-          "Martin"
+          "Martin",
+          "Agnes Martin"
         ]
       },
-      "uhangul": "애그니스 마틴",
+      "uhangul": "마틴, 애그니스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/f3112cb2627a347eff543503-1.html"
       ],
       "status": "verified-pair"
     },
@@ -132,24 +138,31 @@
       "status": "verified-pair"
     },
     {
-      "id": "ai-weiwei",
+      "id": "artist-mid-ai-weiwei",
       "uhangulVersion": "0.7",
       "original": "Ai Weiwei",
       "language": "und",
-      "korean": "아이웨이웨이",
-      "displayKorean": "아이웨이웨이",
-      "listKorean": "아이웨이웨이",
+      "korean": "아이 웨이웨이",
+      "displayKorean": "웨이웨이, 아이",
+      "listKorean": "웨이웨이",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "웨이웨이",
+          "아이 웨이웨이"
+        ],
         "en": [
-          "Weiwei"
+          "Weiwei",
+          "Ai Weiwei"
         ]
       },
-      "uhangul": "아이웨이웨이",
+      "uhangul": "웨이웨이, 아이",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/8f7b750ae233057c81ea4c31-1.html"
       ],
       "status": "verified-pair"
     },
@@ -179,8 +192,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/080336f866ce0c573e6c2b7f-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
+        "data/미술사조/080336f866ce0c573e6c2b7f-1.html"
       ],
       "status": "verified-pair"
     },
@@ -240,6 +252,7 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
+        "data/movement-table-artist-image-download-manifest.json",
         "data/미술사조/d80bc831e2e75f52782edb83-1.html"
       ],
       "status": "verified-pair"
@@ -267,6 +280,7 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
+        "data/movement-table-artist-image-download-manifest.json",
         "data/미술사조/12f4e943b63665f4725c9024-1.html"
       ],
       "status": "verified-pair"
@@ -340,6 +354,34 @@
       "status": "verified-pair"
     },
     {
+      "id": "artist-further-cabanel",
+      "uhangulVersion": "0.7",
+      "original": "Alexandre Cabanel",
+      "language": "und",
+      "korean": "알렉상드르 카바넬",
+      "displayKorean": "카바넬, 알렉상드르",
+      "listKorean": "카바넬",
+      "aliases": {
+        "ko": [
+          "카바넬",
+          "알렉상드르 카바넬"
+        ],
+        "en": [
+          "Cabanel",
+          "Alexandre Cabanel"
+        ]
+      },
+      "uhangul": "카바넬, 알렉상드[Rㅡ]",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/f20d01b9856f3df2c73eebf8-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
       "id": "alexej-von-jawlensky",
       "uhangulVersion": "0.7",
       "original": "Alexej von Jawlensky",
@@ -386,6 +428,35 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-mid-allan-kaprow",
+      "uhangulVersion": "0.7",
+      "original": "Allan Kaprow",
+      "language": "und",
+      "korean": "앨런 캐프로",
+      "displayKorean": "캐프로, 앨런",
+      "listKorean": "캐프로",
+      "aliases": {
+        "ko": [
+          "캐프로",
+          "앨런 캐프로"
+        ],
+        "en": [
+          "Kaprow",
+          "Allan Kaprow"
+        ]
+      },
+      "uhangul": "캐프[Rㅗ], 앨런",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/8f7b750ae233057c81ea4c31-1.html"
       ],
       "status": "verified-pair"
     },
@@ -491,50 +562,62 @@
       "status": "verified-pair"
     },
     {
-      "id": "andre-derain",
+      "id": "artist-further-derain",
       "uhangulVersion": "0.7",
       "original": "André Derain",
       "language": "und",
-      "korean": "드랭",
-      "displayKorean": "드랭",
+      "korean": "앙드레 드랭",
+      "displayKorean": "드랭, 앙드레",
       "listKorean": "드랭",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "드랭",
+          "앙드레 드랭"
+        ],
         "en": [
           "Andre Derain",
           "Derain"
         ]
       },
-      "uhangul": "드[Rㅐㅇ]",
+      "uhangul": "드[Rㅐㅇ], 앙드[Rㅔ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/236b5b248aa3129573179c3b-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "andre-masson",
+      "id": "artist-further-masson",
       "uhangulVersion": "0.7",
       "original": "André Masson",
       "language": "und",
       "korean": "앙드레 마송",
-      "displayKorean": "앙드레 마송",
-      "listKorean": "앙드레 마송",
+      "displayKorean": "마송, 앙드레",
+      "listKorean": "마송",
       "aliases": {
         "ko": [
-          "마송"
+          "마송",
+          "앙드레 마송"
         ],
         "en": [
           "Andre Masson",
           "Masson"
         ]
       },
-      "uhangul": "앙드[Rㅔ] 마송",
+      "uhangul": "마송, 앙드[Rㅔ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/b6f307845ec9a6f73e9d4e44-1.html"
       ],
       "status": "verified-pair"
     },
@@ -638,6 +721,7 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
+        "data/movement-table-artist-image-download-manifest.json",
         "data/미술사조/0177432364121aab51e2e404-1.html"
       ],
       "status": "verified-pair"
@@ -695,6 +779,35 @@
       "status": "verified-pair"
     },
     {
+      "id": "artist-mid-anni-albers",
+      "uhangulVersion": "0.7",
+      "original": "Anni Albers",
+      "language": "und",
+      "korean": "아니 알버스",
+      "displayKorean": "알버스, 아니",
+      "listKorean": "알버스",
+      "aliases": {
+        "ko": [
+          "알버스",
+          "아니 알버스"
+        ],
+        "en": [
+          "Albers",
+          "Anni Albers"
+        ]
+      },
+      "uhangul": "알버스, 아니",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/27cd7106c6176211c4e94b56-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
       "id": "Q7824",
       "uhangulVersion": "0.7",
       "original": "Annibale Carracci",
@@ -718,6 +831,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
+        "data/artist-work-image-download-manifest.json",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "data/미술사조/de537ba74c4bee89423120bc-1.html",
@@ -729,26 +843,32 @@
       "wikidataQid": "Q7824"
     },
     {
-      "id": "anselm-kiefer",
+      "id": "artist-further-kiefer",
       "uhangulVersion": "0.7",
       "original": "Anselm Kiefer",
       "language": "und",
       "korean": "안젤름 키퍼",
-      "displayKorean": "안젤름 키퍼",
-      "listKorean": "안젤름 키퍼",
+      "displayKorean": "키퍼, 안젤름",
+      "listKorean": "키퍼",
       "aliases": {
         "ko": [
-          "키퍼"
+          "키퍼",
+          "안젤름 키퍼"
         ],
         "en": [
-          "Kiefer"
+          "Kiefer",
+          "Anselm Kiefer"
         ]
       },
-      "uhangul": "안젤름 키[Fㅓ]",
+      "uhangul": "키[Fㅓ], 안젤름",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/aed270ba50b5c9e7d19f1050-1.html"
       ],
       "status": "verified-pair"
     },
@@ -844,7 +964,8 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json"
+        "data/artists.json",
+        "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html"
       ],
       "status": "verified-pair"
     },
@@ -903,27 +1024,59 @@
       "status": "verified-pair"
     },
     {
-      "id": "arnold-bocklin",
+      "id": "artist-further-arman",
+      "uhangulVersion": "0.7",
+      "original": "Arman",
+      "language": "und",
+      "korean": "아르망",
+      "displayKorean": "아르망",
+      "listKorean": "아르망",
+      "aliases": {
+        "ko": [
+          "아르망"
+        ],
+        "en": [
+          "Arman"
+        ]
+      },
+      "uhangul": "아[Rㅡ]망",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/f2403fbd2febcd2486d6d5b8-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-mid-arnold-bocklin",
       "uhangulVersion": "0.7",
       "original": "Arnold Böcklin",
       "language": "und",
       "korean": "아르놀트 뵈클린",
-      "displayKorean": "아르놀트 뵈클린",
-      "listKorean": "아르놀트 뵈클린",
+      "displayKorean": "뵈클린, 아르놀트",
+      "listKorean": "뵈클린",
       "aliases": {
         "ko": [
-          "뵈클린"
+          "뵈클린",
+          "아르놀트 뵈클린"
         ],
         "en": [
           "Arnold Bocklin",
-          "Böcklin"
+          "Böcklin",
+          "Bocklin"
         ]
       },
-      "uhangul": "아[Rㅡ]놀트 뵈클린",
+      "uhangul": "뵈클린, 아[Rㅡ]놀트",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/4e7a664301ed396184c3cb5d-1.html"
       ],
       "status": "verified-pair"
     },
@@ -952,26 +1105,31 @@
       "status": "verified-pair"
     },
     {
-      "id": "artemisia-gentileschi",
+      "id": "artist-mid-artemisia-gentileschi",
       "uhangulVersion": "0.7",
       "original": "Artemisia Gentileschi",
       "language": "und",
       "korean": "아르테미시아 젠틸레스키",
-      "displayKorean": "아르테미시아 젠틸레스키",
-      "listKorean": "아르테미시아 젠틸레스키",
+      "displayKorean": "젠틸레스키, 아르테미시아",
+      "listKorean": "젠틸레스키",
       "aliases": {
         "ko": [
-          "젠틸레스키"
+          "젠틸레스키",
+          "아르테미시아 젠틸레스키"
         ],
         "en": [
-          "Gentileschi"
+          "Gentileschi",
+          "Artemisia Gentileschi"
         ]
       },
-      "uhangul": "아[Rㅡ]테미시아 젠틸레스키",
+      "uhangul": "젠틸레스키, 아[Rㅡ]테미시아",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1048,26 +1206,32 @@
       "status": "verified-pair"
     },
     {
-      "id": "august-macke",
+      "id": "artist-mid-august-macke",
       "uhangulVersion": "0.7",
       "original": "August Macke",
       "language": "und",
       "korean": "아우구스트 마케",
-      "displayKorean": "아우구스트 마케",
-      "listKorean": "아우구스트 마케",
+      "displayKorean": "마케, 아우구스트",
+      "listKorean": "마케",
       "aliases": {
         "ko": [
-          "마케"
+          "마케",
+          "아우구스트 마케"
         ],
         "en": [
-          "Macke"
+          "Macke",
+          "August Macke"
         ]
       },
-      "uhangul": "아우구스트 마케",
+      "uhangul": "마케, 아우구스트",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/be9a35cdca8c52adb73b06c7-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1115,31 +1279,67 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
+        "data/movement-table-artist-image-download-manifest.json",
         "data/미술사조/8f7b750ae233057c81ea4c31-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "barbara-kruger-short",
+      "id": "artist-mid-barbara-kruger",
       "uhangulVersion": "0.7",
       "original": "Barbara Kruger",
       "language": "und",
       "korean": "바버라 크루거",
-      "displayKorean": "바버라 크루거",
-      "listKorean": "바버라 크루거",
+      "displayKorean": "크루거, 바버라",
+      "listKorean": "크루거",
       "aliases": {
         "ko": [
-          "크루거"
+          "크루거",
+          "바버라 크루거"
         ],
         "en": [
-          "Kruger"
+          "Kruger",
+          "Barbara Kruger"
         ]
       },
-      "uhangul": "바버[Rㅏ] 크[Rㅜ]거",
+      "uhangul": "크[Rㅜ]거, 바버[Rㅏ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/aed270ba50b5c9e7d19f1050-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-further-newman",
+      "uhangulVersion": "0.7",
+      "original": "Barnett Newman",
+      "language": "und",
+      "korean": "바넷 뉴먼",
+      "displayKorean": "뉴먼, 바넷",
+      "listKorean": "뉴먼",
+      "aliases": {
+        "ko": [
+          "뉴먼",
+          "바넷 뉴먼"
+        ],
+        "en": [
+          "Newman",
+          "Barnett Newman"
+        ]
+      },
+      "uhangul": "뉴먼, 바넷",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/8822876f0626aa0296851626-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1201,7 +1401,8 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json"
+        "data/artists.json",
+        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1308,48 +1509,90 @@
       "status": "verified-pair"
     },
     {
-      "id": "berthed-morisot",
+      "id": "artist-mid-berthe-morisot",
       "uhangulVersion": "0.7",
       "original": "Berthe Morisot",
       "language": "und",
-      "korean": "모리조",
-      "displayKorean": "모리조",
+      "korean": "베르트 모리조",
+      "displayKorean": "모리조, 베르트",
       "listKorean": "모리조",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "모리조",
+          "베르트 모리조"
+        ],
         "en": [
-          "Morisot"
+          "Morisot",
+          "Berthe Morisot"
         ]
       },
-      "uhangul": "모[Rㅣ]조",
+      "uhangul": "모[Rㅣ]조, 베[Rㅡ][THㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "bill-viola",
+      "id": "artist-mid-bill-viola",
       "uhangulVersion": "0.7",
       "original": "Bill Viola",
       "language": "und",
       "korean": "빌 비올라",
-      "displayKorean": "빌 비올라",
-      "listKorean": "빌 비올라",
+      "displayKorean": "비올라, 빌",
+      "listKorean": "비올라",
       "aliases": {
         "ko": [
-          "비올라"
+          "비올라",
+          "빌 비올라"
         ],
         "en": [
-          "Viola"
+          "Viola",
+          "Bill Viola"
         ]
       },
-      "uhangul": "빌 [Vㅣ]올라",
+      "uhangul": "[Vㅣ]올라, 빌",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/8f7b750ae233057c81ea4c31-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-further-riley",
+      "uhangulVersion": "0.7",
+      "original": "Bridget Riley",
+      "language": "und",
+      "korean": "브리짓 라일리",
+      "displayKorean": "라일리, 브리짓",
+      "listKorean": "라일리",
+      "aliases": {
+        "ko": [
+          "라일리",
+          "브리짓 라일리"
+        ],
+        "en": [
+          "Riley",
+          "Bridget Riley"
+        ]
+      },
+      "uhangul": "[Rㅏ]일리, 브[Rㅣ]짓",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/404043fc7c00ba92d8903b08-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1384,6 +1627,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "tools/reorder-mannerism-representative-cards.js"
       ],
@@ -1436,27 +1680,32 @@
       "status": "verified-pair"
     },
     {
-      "id": "camille-pissarro",
+      "id": "artist-mid-camille-pissarro",
       "uhangulVersion": "0.7",
       "original": "Camille Pissarro",
       "language": "und",
-      "korean": "피사로",
-      "displayKorean": "피사로",
+      "korean": "카미유 피사로",
+      "displayKorean": "피사로, 카미유",
       "listKorean": "피사로",
       "aliases": {
         "ko": [
-          "피사로"
+          "피사로",
+          "카미유 피사로"
         ],
         "en": [
-          "Pissarro"
+          "Pissarro",
+          "Camille Pissarro"
         ]
       },
-      "uhangul": "피사로",
+      "uhangul": "피사[Rㅗ], 카미유",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/techniques.json"
+        "data/artists.json",
+        "data/techniques.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1519,26 +1768,32 @@
       "status": "verified-pair"
     },
     {
-      "id": "carl-andre",
+      "id": "artist-mid-carl-andre",
       "uhangulVersion": "0.7",
       "original": "Carl Andre",
       "language": "und",
       "korean": "칼 안드레",
-      "displayKorean": "칼 안드레",
-      "listKorean": "칼 안드레",
+      "displayKorean": "안드레, 칼",
+      "listKorean": "안드레",
       "aliases": {
         "ko": [
-          "안드레"
+          "안드레",
+          "칼 안드레"
         ],
         "en": [
-          "Andre"
+          "Andre",
+          "Carl Andre"
         ]
       },
-      "uhangul": "칼 안드[Rㅔ]",
+      "uhangul": "안드[Rㅔ], 칼",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/f3112cb2627a347eff543503-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1566,12 +1821,42 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
+        "data/artist-work-image-download-manifest.json",
         "Wikidata"
       ],
       "status": "verified-pair",
       "englishFullName": "Carl Olof Larsson",
       "wikipediaTitle": "Carl Larsson",
       "wikidataQid": "Q187310"
+    },
+    {
+      "id": "artist-mid-carlo-carra",
+      "uhangulVersion": "0.7",
+      "original": "Carlo Carra",
+      "language": "und",
+      "korean": "카를로 카라",
+      "displayKorean": "카라, 카를로",
+      "listKorean": "카라",
+      "aliases": {
+        "ko": [
+          "카라",
+          "카를로 카라"
+        ],
+        "en": [
+          "Carra",
+          "Carlo Carra"
+        ]
+      },
+      "uhangul": "카[Rㅏ], 카[Rㅡㄹ]로",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/6826d3a46eb1a6fa61010765-1.html"
+      ],
+      "status": "verified-pair"
     },
     {
       "id": "carlo-marattta",
@@ -1760,7 +2045,37 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
+        "data/movement-table-artist-image-download-manifest.json",
         "data/미술사조/aed270ba50b5c9e7d19f1050-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-mid-claes-oldenburg",
+      "uhangulVersion": "0.7",
+      "original": "Claes Oldenburg",
+      "language": "und",
+      "korean": "클라스 올덴버그",
+      "displayKorean": "올덴버그, 클라스",
+      "listKorean": "올덴버그",
+      "aliases": {
+        "ko": [
+          "올덴버그",
+          "클라스 올덴버그"
+        ],
+        "en": [
+          "Oldenburg",
+          "Claes Oldenburg"
+        ]
+      },
+      "uhangul": "올덴버그, 클라스",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/0177432364121aab51e2e404-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1787,7 +2102,8 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
-        "data/techniques.json"
+        "data/techniques.json",
+        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1829,6 +2145,35 @@
       "englishFullName": "Oscar-Claude Monet",
       "wikipediaTitle": "Claude Monet",
       "wikidataQid": "Q296"
+    },
+    {
+      "id": "artist-mid-clyfford-still",
+      "uhangulVersion": "0.7",
+      "original": "Clyfford Still",
+      "language": "und",
+      "korean": "클리퍼드 스틸",
+      "displayKorean": "스틸, 클리퍼드",
+      "listKorean": "스틸",
+      "aliases": {
+        "ko": [
+          "스틸",
+          "클리퍼드 스틸"
+        ],
+        "en": [
+          "Still",
+          "Clyfford Still"
+        ]
+      },
+      "uhangul": "스틸, 클리[Fㅓ]드",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/8822876f0626aa0296851626-1.html"
+      ],
+      "status": "verified-pair"
     },
     {
       "id": "Q442484",
@@ -1913,26 +2258,32 @@
       "status": "verified-pair"
     },
     {
-      "id": "dan-flavin",
+      "id": "artist-further-flavin",
       "uhangulVersion": "0.7",
       "original": "Dan Flavin",
       "language": "und",
       "korean": "댄 플래빈",
-      "displayKorean": "댄 플래빈",
-      "listKorean": "댄 플래빈",
+      "displayKorean": "플래빈, 댄",
+      "listKorean": "플래빈",
       "aliases": {
         "ko": [
-          "플래빈"
+          "플래빈",
+          "댄 플래빈"
         ],
         "en": [
-          "Flavin"
+          "Flavin",
+          "Dan Flavin"
         ]
       },
-      "uhangul": "댄 [Fㅡㄹ]래[Vㅣㄴ]",
+      "uhangul": "[Fㅡㄹ]래[Vㅣㄴ], 댄",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/f3112cb2627a347eff543503-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1961,26 +2312,32 @@
       "status": "verified-pair"
     },
     {
-      "id": "david-alfaro-siqueiros",
+      "id": "artist-mid-siqueiros",
       "uhangulVersion": "0.7",
       "original": "David Alfaro Siqueiros",
       "language": "und",
       "korean": "다비드 알파로 시케이로스",
-      "displayKorean": "다비드 알파로 시케이로스",
-      "listKorean": "다비드 알파로 시케이로스",
+      "displayKorean": "시케이로스, 다비드 알파로",
+      "listKorean": "시케이로스",
       "aliases": {
         "ko": [
-          "시케이로스"
+          "시케이로스",
+          "다비드 알파로 시케이로스"
         ],
         "en": [
-          "Siqueiros"
+          "Siqueiros",
+          "David Alfaro Siqueiros"
         ]
       },
-      "uhangul": "다[Vㅣ]드 알파로 시케이[Rㅗ]스",
+      "uhangul": "시케이[Rㅗ]스, 다[Vㅣ]드 알파로",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/7f93471fd6e543d3f5af2c58-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2005,6 +2362,35 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-mid-david-hockney",
+      "uhangulVersion": "0.7",
+      "original": "David Hockney",
+      "language": "und",
+      "korean": "데이비드 호크니",
+      "displayKorean": "호크니, 데이비드",
+      "listKorean": "호크니",
+      "aliases": {
+        "ko": [
+          "호크니",
+          "데이비드 호크니"
+        ],
+        "en": [
+          "Hockney",
+          "David Hockney"
+        ]
+      },
+      "uhangul": "호크니, 데이[Vㅣ]드",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/0177432364121aab51e2e404-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2187,6 +2573,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
+        "data/movement-table-artist-image-download-manifest.json",
         "data/미술사조/f3112cb2627a347eff543503-1.html"
       ],
       "status": "verified-pair"
@@ -2236,24 +2623,31 @@
       "status": "verified-pair"
     },
     {
-      "id": "edgar-degas",
+      "id": "artist-mid-edgar-degas",
       "uhangulVersion": "0.7",
       "original": "Edgar Degas",
       "language": "und",
-      "korean": "드가",
-      "displayKorean": "드가",
+      "korean": "에드가 드가",
+      "displayKorean": "드가, 에드가",
       "listKorean": "드가",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "드가",
+          "에드가 드가"
+        ],
         "en": [
-          "Degas"
+          "Degas",
+          "Edgar Degas"
         ]
       },
-      "uhangul": "드가",
+      "uhangul": "드가, 에드가",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2312,6 +2706,35 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-further-paolozzi",
+      "uhangulVersion": "0.7",
+      "original": "Eduardo Paolozzi",
+      "language": "und",
+      "korean": "에두아르도 파올로치",
+      "displayKorean": "파올로치, 에두아르도",
+      "listKorean": "파올로치",
+      "aliases": {
+        "ko": [
+          "파올로치",
+          "에두아르도 파올로치"
+        ],
+        "en": [
+          "Paolozzi",
+          "Eduardo Paolozzi"
+        ]
+      },
+      "uhangul": "파올로치, 에두아[Rㅡ]도",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/0177432364121aab51e2e404-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2457,24 +2880,32 @@
       "wikidataQid": "Q301"
     },
     {
-      "id": "el-lissitzky",
+      "id": "artist-further-lissitzky",
       "uhangulVersion": "0.7",
       "original": "El Lissitzky",
       "language": "und",
-      "korean": "리시츠키",
-      "displayKorean": "리시츠키",
+      "korean": "엘 리시츠키",
+      "displayKorean": "리시츠키, 엘",
       "listKorean": "리시츠키",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "리시츠키",
+          "엘 리시츠키"
+        ],
         "en": [
-          "Lissitzky"
+          "Lissitzky",
+          "El Lissitzky"
         ]
       },
-      "uhangul": "리시츠키",
+      "uhangul": "리시츠키, 엘",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/12f4e943b63665f4725c9024-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2507,6 +2938,7 @@
       "sources": [
         "data/artists.json",
         "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html",
+        "data/미술사조/c0d228e179032941f8d9ebfb-1.html",
         "tools/apply-first-batch-movement-enhancements.js",
         "tools/link-neoclassical-document.js",
         "Wikidata"
@@ -2589,6 +3021,35 @@
       "status": "verified-pair"
     },
     {
+      "id": "artist-further-emile-bernard",
+      "uhangulVersion": "0.7",
+      "original": "Emile Bernard",
+      "language": "und",
+      "korean": "에밀 베르나르",
+      "displayKorean": "베르나르, 에밀",
+      "listKorean": "베르나르",
+      "aliases": {
+        "ko": [
+          "베르나르",
+          "에밀 베르나르"
+        ],
+        "en": [
+          "Bernard",
+          "Emile Bernard"
+        ]
+      },
+      "uhangul": "베[Rㅡ]나[Rㅡ], 에밀",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/81bf5950142af1141dfcf738-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
       "id": "emmy-hennings",
       "uhangulVersion": "0.7",
       "original": "Emmy Hennings",
@@ -2613,24 +3074,32 @@
       "status": "verified-pair"
     },
     {
-      "id": "erich-heckel",
+      "id": "artist-further-heckel",
       "uhangulVersion": "0.7",
       "original": "Erich Heckel",
       "language": "und",
-      "korean": "헤켈",
-      "displayKorean": "헤켈",
+      "korean": "에리히 헤켈",
+      "displayKorean": "헤켈, 에리히",
       "listKorean": "헤켈",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "헤켈",
+          "에리히 헤켈"
+        ],
         "en": [
-          "Heckel"
+          "Heckel",
+          "Erich Heckel"
         ]
       },
-      "uhangul": "헤켈",
+      "uhangul": "헤켈, 에[Rㅣ]히",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/be9a35cdca8c52adb73b06c7-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2719,6 +3188,35 @@
       "status": "verified-pair"
     },
     {
+      "id": "artist-further-eugenio-lucas",
+      "uhangulVersion": "0.7",
+      "original": "Eugenio Lucas Velazquez",
+      "language": "und",
+      "korean": "에우헤니오 루카스 벨라스케스",
+      "displayKorean": "벨라스케스, 에우헤니오 루카스",
+      "listKorean": "벨라스케스",
+      "aliases": {
+        "ko": [
+          "벨라스케스",
+          "에우헤니오 루카스 벨라스케스"
+        ],
+        "en": [
+          "Velazquez",
+          "Eugenio Lucas Velazquez"
+        ]
+      },
+      "uhangul": "[Vㅔㄹ]라스케스, 에우헤니오 루카스",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
       "id": "eva-gonzales",
       "uhangulVersion": "0.7",
       "original": "Eva Gonzalès",
@@ -2792,26 +3290,31 @@
       "status": "verified-pair"
     },
     {
-      "id": "fernand-khnopff",
+      "id": "artist-mid-fernand-khnopff",
       "uhangulVersion": "0.7",
       "original": "Fernand Khnopff",
       "language": "und",
       "korean": "페르낭 크노프",
-      "displayKorean": "페르낭 크노프",
-      "listKorean": "페르낭 크노프",
+      "displayKorean": "크노프, 페르낭",
+      "listKorean": "크노프",
       "aliases": {
         "ko": [
-          "크노프"
+          "크노프",
+          "페르낭 크노프"
         ],
         "en": [
-          "Khnopff"
+          "Khnopff",
+          "Fernand Khnopff"
         ]
       },
-      "uhangul": "[Fㅔ][Rㅡ]낭 크노프",
+      "uhangul": "크노프, [Fㅔ][Rㅡ]낭",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/4e7a664301ed396184c3cb5d-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2888,50 +3391,60 @@
       "status": "verified-pair"
     },
     {
-      "id": "fra-angelico",
+      "id": "artist-mid-fra-angelico",
       "uhangulVersion": "0.7",
       "original": "Fra Angelico",
       "language": "und",
       "korean": "프라 안젤리코",
-      "displayKorean": "프라 안젤리코",
-      "listKorean": "프라 안젤리코",
+      "displayKorean": "안젤리코, 프라",
+      "listKorean": "안젤리코",
       "aliases": {
         "ko": [
-          "안젤리코"
+          "안젤리코",
+          "프라 안젤리코"
         ],
         "en": [
-          "Angelico"
+          "Angelico",
+          "Fra Angelico"
         ]
       },
-      "uhangul": "[Fㅡ][Rㅏ] 안젤리코",
+      "uhangul": "안젤리코, [Fㅡ][Rㅏ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "francesco-guardi",
+      "id": "artist-mid-francesco-guardi",
       "uhangulVersion": "0.7",
       "original": "Francesco Guardi",
       "language": "und",
       "korean": "프란체스코 과르디",
-      "displayKorean": "프란체스코 과르디",
-      "listKorean": "프란체스코 과르디",
+      "displayKorean": "과르디, 프란체스코",
+      "listKorean": "과르디",
       "aliases": {
         "ko": [
-          "과르디"
+          "과르디",
+          "프란체스코 과르디"
         ],
         "en": [
-          "Guardi"
+          "Guardi",
+          "Francesco Guardi"
         ]
       },
-      "uhangul": "[Fㅡ][Rㅏㄴ]체스코 과[Rㅡ]디",
+      "uhangul": "과[Rㅡ]디, [Fㅡ][Rㅏㄴ]체스코",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3014,24 +3527,32 @@
       "status": "verified-pair"
     },
     {
-      "id": "francis-picabia",
+      "id": "artist-mid-francis-picabia",
       "uhangulVersion": "0.7",
       "original": "Francis Picabia",
       "language": "und",
-      "korean": "피카비아",
-      "displayKorean": "피카비아",
+      "korean": "프란시스 피카비아",
+      "displayKorean": "피카비아, 프란시스",
       "listKorean": "피카비아",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "피카비아",
+          "프란시스 피카비아"
+        ],
         "en": [
-          "Picabia"
+          "Picabia",
+          "Francis Picabia"
         ]
       },
-      "uhangul": "[Fㅣ]카비아",
+      "uhangul": "피카비아, [Fㅡ][Rㅏㄴ]시스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/e9d8a876f1b83c5c174c2bbc-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3181,8 +3702,7 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
+        "data/artists.json"
       ],
       "status": "verified-pair"
     },
@@ -3236,6 +3756,7 @@
       "sources": [
         "data/artists.json",
         "data/techniques.json",
+        "data/further-artist-image-download-manifest.json",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
@@ -3265,26 +3786,61 @@
       "status": "verified-pair"
     },
     {
-      "id": "franz-marc",
+      "id": "artist-mid-franz-kline",
+      "uhangulVersion": "0.7",
+      "original": "Franz Kline",
+      "language": "und",
+      "korean": "프란츠 클라인",
+      "displayKorean": "클라인, 프란츠",
+      "listKorean": "클라인",
+      "aliases": {
+        "ko": [
+          "클라인",
+          "프란츠 클라인"
+        ],
+        "en": [
+          "Kline",
+          "Franz Kline"
+        ]
+      },
+      "uhangul": "클라인, [Fㅡ][Rㅏㄴ]츠",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/8822876f0626aa0296851626-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-further-franz-marc",
       "uhangulVersion": "0.7",
       "original": "Franz Marc",
       "language": "und",
       "korean": "프란츠 마르크",
-      "displayKorean": "프란츠 마르크",
-      "listKorean": "프란츠 마르크",
+      "displayKorean": "마르크, 프란츠",
+      "listKorean": "마르크",
       "aliases": {
         "ko": [
-          "마르크"
+          "마르크",
+          "프란츠 마르크"
         ],
         "en": [
-          "Marc"
+          "Marc",
+          "Franz Marc"
         ]
       },
-      "uhangul": "[Fㅡ][Rㅏㄴ]츠 마[Rㅡ]크",
+      "uhangul": "마[Rㅡ]크, [Fㅡ][Rㅏㄴ]츠",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/be9a35cdca8c52adb73b06c7-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3418,6 +3974,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
+        "data/artist-work-image-download-manifest.json",
         "data/미술사조/b6f307845ec9a6f73e9d4e44-1.html",
         "Wikidata"
       ],
@@ -3451,27 +4008,33 @@
       "status": "verified-pair"
     },
     {
-      "id": "gabriele-munter",
+      "id": "artist-mid-gabriele-munter",
       "uhangulVersion": "0.7",
       "original": "Gabriele Münter",
       "language": "und",
       "korean": "가브리엘레 뮌터",
-      "displayKorean": "가브리엘레 뮌터",
-      "listKorean": "가브리엘레 뮌터",
+      "displayKorean": "뮌터, 가브리엘레",
+      "listKorean": "뮌터",
       "aliases": {
         "ko": [
-          "뮌터"
+          "뮌터",
+          "가브리엘레 뮌터"
         ],
         "en": [
           "Gabriele Munter",
-          "Münter"
+          "Münter",
+          "Munter"
         ]
       },
-      "uhangul": "가브[Rㅣ]엘레 뮌터",
+      "uhangul": "뮌터, 가브[Rㅣ]엘레",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/be9a35cdca8c52adb73b06c7-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3502,26 +4065,32 @@
       "status": "verified-pair"
     },
     {
-      "id": "georg-baselitz",
+      "id": "artist-mid-georg-baselitz",
       "uhangulVersion": "0.7",
       "original": "Georg Baselitz",
       "language": "und",
       "korean": "게오르크 바젤리츠",
-      "displayKorean": "게오르크 바젤리츠",
-      "listKorean": "게오르크 바젤리츠",
+      "displayKorean": "바젤리츠, 게오르크",
+      "listKorean": "바젤리츠",
       "aliases": {
         "ko": [
-          "바젤리츠"
+          "바젤리츠",
+          "게오르크 바젤리츠"
         ],
         "en": [
-          "Baselitz"
+          "Baselitz",
+          "Georg Baselitz"
         ]
       },
-      "uhangul": "게오[Rㅡ]크 바젤리츠",
+      "uhangul": "바젤리츠, 게오[Rㅡ]크",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/aed270ba50b5c9e7d19f1050-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3550,26 +4119,61 @@
       "status": "verified-pair"
     },
     {
-      "id": "george-grosz",
+      "id": "artist-mid-george-grosz",
       "uhangulVersion": "0.7",
       "original": "George Grosz",
       "language": "und",
-      "korean": "그로스",
-      "displayKorean": "그로스",
+      "korean": "게오르게 그로스",
+      "displayKorean": "그로스, 게오르게",
       "listKorean": "그로스",
       "aliases": {
         "ko": [
-          "그로스"
+          "그로스",
+          "게오르게 그로스"
         ],
         "en": [
-          "Grosz"
+          "Grosz",
+          "George Grosz"
         ]
       },
-      "uhangul": "그[Rㅗ]스",
+      "uhangul": "그[Rㅗ]스, 게오[Rㅡ]게",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/e9d8a876f1b83c5c174c2bbc-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-mid-george-maciunas",
+      "uhangulVersion": "0.7",
+      "original": "George Maciunas",
+      "language": "und",
+      "korean": "조지 마치우나스",
+      "displayKorean": "마치우나스, 조지",
+      "listKorean": "마치우나스",
+      "aliases": {
+        "ko": [
+          "마치우나스",
+          "조지 마치우나스"
+        ],
+        "en": [
+          "Maciunas",
+          "George Maciunas"
+        ]
+      },
+      "uhangul": "마치우나스, 조지",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/a58f5e30e9cc89681111f83e-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3598,50 +4202,63 @@
       "status": "verified-pair"
     },
     {
-      "id": "georges-braque",
+      "id": "artist-further-braque",
       "uhangulVersion": "0.7",
       "original": "Georges Braque",
       "language": "und",
-      "korean": "브라크",
-      "displayKorean": "브라크",
+      "korean": "조르주 브라크",
+      "displayKorean": "브라크, 조르주",
       "listKorean": "브라크",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "브라크",
+          "조르주 브라크"
+        ],
         "en": [
-          "Braque"
+          "Braque",
+          "Georges Braque"
         ]
       },
-      "uhangul": "브[Rㅏ]크",
+      "uhangul": "브[Rㅏ]크, 조[Rㅡ]주",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/83e1fbbdad822f464a299cf3-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "name-georgesdelatour",
+      "id": "artist-mid-georges-de-la-tour",
       "uhangulVersion": "0.7",
       "original": "Georges de La Tour",
       "language": "und",
       "korean": "조르주 드 라 투르",
-      "displayKorean": "조르주 드 라 투르",
-      "listKorean": "조르주 드 라 투르",
+      "displayKorean": "드 라 투르, 조르주",
+      "listKorean": "투르",
       "aliases": {
         "ko": [
           "드 라 투르",
-          "투르"
+          "투르",
+          "조르주 드 라 투르"
         ],
         "en": [
           "de La Tour",
-          "Tour"
+          "Tour",
+          "Georges de La Tour"
         ]
       },
-      "uhangul": "조[Rㅡ]주 드 라 투[Rㅡ]",
+      "uhangul": "드 라 투[Rㅡ], 조[Rㅡ]주",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/techniques.json"
+        "data/artists.json",
+        "data/techniques.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3749,24 +4366,32 @@
       "status": "verified-pair"
     },
     {
-      "id": "giacomo-balla",
+      "id": "artist-further-balla",
       "uhangulVersion": "0.7",
       "original": "Giacomo Balla",
       "language": "und",
-      "korean": "발라",
-      "displayKorean": "발라",
+      "korean": "자코모 발라",
+      "displayKorean": "발라, 자코모",
       "listKorean": "발라",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "발라",
+          "자코모 발라"
+        ],
         "en": [
-          "Balla"
+          "Balla",
+          "Giacomo Balla"
         ]
       },
-      "uhangul": "발라",
+      "uhangul": "발라, 자코모",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/6826d3a46eb1a6fa61010765-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3871,24 +4496,32 @@
       "status": "verified-pair"
     },
     {
-      "id": "gino-severini",
+      "id": "artist-mid-gino-severini",
       "uhangulVersion": "0.7",
       "original": "Gino Severini",
       "language": "und",
-      "korean": "세베리니",
-      "displayKorean": "세베리니",
+      "korean": "지노 세베리니",
+      "displayKorean": "세베리니, 지노",
       "listKorean": "세베리니",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "세베리니",
+          "지노 세베리니"
+        ],
         "en": [
-          "Severini"
+          "Severini",
+          "Gino Severini"
         ]
       },
-      "uhangul": "세베리니",
+      "uhangul": "세[Vㅔ][Rㅣ]니, 지노",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/6826d3a46eb1a6fa61010765-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3967,6 +4600,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
+        "data/artist-work-image-download-manifest.json",
         "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
         "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
@@ -4004,6 +4638,7 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
+        "data/artist-work-image-download-manifest.json",
         "data/미술사조/0ff40245e0c5bda0e3f254d2-1.html",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
         "Wikidata"
@@ -4110,6 +4745,7 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
+        "data/artist-work-image-download-manifest.json",
         "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
@@ -4138,6 +4774,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
+        "data/artist-work-image-download-manifest.json",
         "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
         "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
@@ -4275,6 +4912,8 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/4e7a664301ed396184c3cb5d-1.html",
         "data/미술사조/f33389a9b75de9c11d171b58-1.html"
       ],
       "status": "verified-pair"
@@ -4438,6 +5077,35 @@
       "status": "verified-pair"
     },
     {
+      "id": "artist-mid-hans-hartung",
+      "uhangulVersion": "0.7",
+      "original": "Hans Hartung",
+      "language": "und",
+      "korean": "한스 아르퉁",
+      "displayKorean": "아르퉁, 한스",
+      "listKorean": "아르퉁",
+      "aliases": {
+        "ko": [
+          "아르퉁",
+          "한스 아르퉁"
+        ],
+        "en": [
+          "Hartung",
+          "Hans Hartung"
+        ]
+      },
+      "uhangul": "아[Rㅡ]퉁, 한스",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/903c178f9ba65fa2554de073-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
       "id": "Q48319",
       "uhangulVersion": "0.7",
       "original": "Hans Holbein the Younger",
@@ -4493,32 +5161,36 @@
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/9e553fb48e9a464402114360-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
+        "data/미술사조/9e553fb48e9a464402114360-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "hans-memling",
+      "id": "artist-mid-hans-memling",
       "uhangulVersion": "0.7",
       "original": "Hans Memling",
       "language": "und",
       "korean": "한스 멤링",
-      "displayKorean": "한스 멤링",
-      "listKorean": "한스 멤링",
+      "displayKorean": "멤링, 한스",
+      "listKorean": "멤링",
       "aliases": {
         "ko": [
-          "멤링"
+          "멤링",
+          "한스 멤링"
         ],
         "en": [
-          "Memling"
+          "Memling",
+          "Hans Memling"
         ]
       },
-      "uhangul": "한스 멤링",
+      "uhangul": "멤링, 한스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/9e553fb48e9a464402114360-1.html"
       ],
       "status": "verified-pair"
     },
@@ -4547,26 +5219,60 @@
       "status": "verified-pair"
     },
     {
-      "id": "helen-frankenthaler-short",
+      "id": "artist-further-guimard",
+      "uhangulVersion": "0.7",
+      "original": "Hector Guimard",
+      "language": "und",
+      "korean": "엑토르 기마르",
+      "displayKorean": "기마르, 엑토르",
+      "listKorean": "기마르",
+      "aliases": {
+        "ko": [
+          "기마르",
+          "엑토르 기마르"
+        ],
+        "en": [
+          "Guimard",
+          "Hector Guimard"
+        ]
+      },
+      "uhangul": "기마[Rㅡ], 엑토[Rㅡ]",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/f33389a9b75de9c11d171b58-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-mid-helen-frankenthaler",
       "uhangulVersion": "0.7",
       "original": "Helen Frankenthaler",
       "language": "und",
       "korean": "헬렌 프랭컨탤러",
-      "displayKorean": "헬렌 프랭컨탤러",
-      "listKorean": "헬렌 프랭컨탤러",
+      "displayKorean": "프랭컨탤러, 헬렌",
+      "listKorean": "프랭컨탤러",
       "aliases": {
         "ko": [
-          "프랭컨탤러"
+          "프랭컨탤러",
+          "헬렌 프랭컨탤러"
         ],
         "en": [
-          "Frankenthaler"
+          "Frankenthaler",
+          "Helen Frankenthaler"
         ]
       },
-      "uhangul": "헬렌 [Fㅡ][Rㅐㅇ]컨[THㅐㄹ]러",
+      "uhangul": "[Fㅡ][Rㅐㅇ]컨[THㅐㄹ]러, 헬렌",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/8822876f0626aa0296851626-1.html"
       ],
       "status": "verified-pair"
     },
@@ -4658,6 +5364,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
+        "data/artist-work-image-download-manifest.json",
         "data/미술사조/81bf5950142af1141dfcf738-1.html",
         "Wikidata"
       ],
@@ -4813,30 +5520,37 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
+        "data/movement-table-artist-image-download-manifest.json",
         "data/미술사조/8f7b750ae233057c81ea4c31-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "honore-daumier",
+      "id": "artist-mid-honore-daumier",
       "uhangulVersion": "0.7",
       "original": "Honoré Daumier",
       "language": "und",
-      "korean": "도미에",
-      "displayKorean": "도미에",
+      "korean": "오노레 도미에",
+      "displayKorean": "도미에, 오노레",
       "listKorean": "도미에",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "도미에",
+          "오노레 도미에"
+        ],
         "en": [
           "Honore Daumier",
           "Daumier"
         ]
       },
-      "uhangul": "도미에",
+      "uhangul": "도미에, 오노[Rㅔ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/7daaa6cee232ed701f97dea0-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5039,26 +5753,60 @@
       "status": "verified-pair"
     },
     {
-      "id": "ivan-kramskoi",
+      "id": "artist-mid-isaak-brodsky",
+      "uhangulVersion": "0.7",
+      "original": "Isaak Brodsky",
+      "language": "und",
+      "korean": "이사크 브로츠키",
+      "displayKorean": "브로츠키, 이사크",
+      "listKorean": "브로츠키",
+      "aliases": {
+        "ko": [
+          "브로츠키",
+          "이사크 브로츠키"
+        ],
+        "en": [
+          "Brodsky",
+          "Isaak Brodsky"
+        ]
+      },
+      "uhangul": "브[Rㅗ]츠키, 이사크",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/d80bc831e2e75f52782edb83-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-further-kramskoi",
       "uhangulVersion": "0.7",
       "original": "Ivan Kramskoi",
       "language": "und",
       "korean": "이반 크람스코이",
-      "displayKorean": "이반 크람스코이",
-      "listKorean": "이반 크람스코이",
+      "displayKorean": "크람스코이, 이반",
+      "listKorean": "크람스코이",
       "aliases": {
         "ko": [
-          "크람스코이"
+          "크람스코이",
+          "이반 크람스코이"
         ],
         "en": [
-          "Kramskoi"
+          "Kramskoi",
+          "Ivan Kramskoi"
         ]
       },
-      "uhangul": "이[Vㅏㄴ] 크[Rㅏㅁ]스코이",
+      "uhangul": "크[Rㅏㅁ]스코이, 이[Vㅏㄴ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/7daaa6cee232ed701f97dea0-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5110,6 +5858,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/techniques.json",
+        "data/movement-table-artist-image-download-manifest.json",
         "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
       ],
       "status": "verified-pair"
@@ -5137,57 +5886,98 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
+        "data/movement-table-artist-image-download-manifest.json",
         "data/미술사조/8822876f0626aa0296851626-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "jacob-jordaens",
+      "id": "artist-mid-jacob-jordaens",
       "uhangulVersion": "0.7",
       "original": "Jacob Jordaens",
       "language": "und",
       "korean": "야코프 요르단스",
-      "displayKorean": "야코프 요르단스",
-      "listKorean": "야코프 요르단스",
+      "displayKorean": "요르단스, 야코프",
+      "listKorean": "요르단스",
       "aliases": {
         "ko": [
-          "요르단스"
+          "요르단스",
+          "야코프 요르단스"
         ],
         "en": [
-          "Jordaens"
+          "Jordaens",
+          "Jacob Jordaens"
         ]
       },
-      "uhangul": "야코프 요[Rㅡ]단스",
+      "uhangul": "요[Rㅡ]단스, 야코프",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "jacob-van-ruisdael",
+      "id": "artist-mid-jacob-lawrence",
       "uhangulVersion": "0.7",
-      "original": "Jacob van Ruisdael",
+      "original": "Jacob Lawrence",
       "language": "und",
-      "korean": "야코프 반 라위스달",
-      "displayKorean": "야코프 반 라위스달",
-      "listKorean": "야코프 반 라위스달",
+      "korean": "제이컵 로런스",
+      "displayKorean": "로런스, 제이컵",
+      "listKorean": "로런스",
       "aliases": {
         "ko": [
-          "반 라위스달",
-          "라위스달"
+          "로런스",
+          "제이컵 로런스"
         ],
         "en": [
-          "van Ruisdael",
-          "Ruisdael"
+          "Lawrence",
+          "Jacob Lawrence"
         ]
       },
-      "uhangul": "야코프 [Vㅏㄴ] [Rㅏ]위스달",
+      "uhangul": "로[Rㅓㄴ]스, 제이컵",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/33c2c0d33af4171ceabb8466-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-mid-jacob-van-ruisdael",
+      "uhangulVersion": "0.7",
+      "original": "Jacob van Ruisdael",
+      "language": "und",
+      "korean": "야코프 판 라위스달",
+      "displayKorean": "판 라위스달, 야코프",
+      "listKorean": "라위스달",
+      "aliases": {
+        "ko": [
+          "반 라위스달",
+          "라위스달",
+          "판 라위스달",
+          "야코프 판 라위스달"
+        ],
+        "en": [
+          "van Ruisdael",
+          "Ruisdael",
+          "Jacob van Ruisdael"
+        ]
+      },
+      "uhangul": "[Vㅏㄴ] [Rㅏ]위스달, 야코프",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5244,7 +6034,8 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
+        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5327,6 +6118,35 @@
       "status": "verified-pair"
     },
     {
+      "id": "artist-mid-james-rosenquist",
+      "uhangulVersion": "0.7",
+      "original": "James Rosenquist",
+      "language": "und",
+      "korean": "제임스 로젠퀴스트",
+      "displayKorean": "로젠퀴스트, 제임스",
+      "listKorean": "로젠퀴스트",
+      "aliases": {
+        "ko": [
+          "로젠퀴스트",
+          "제임스 로젠퀴스트"
+        ],
+        "en": [
+          "Rosenquist",
+          "James Rosenquist"
+        ]
+      },
+      "uhangul": "[Rㅗ]젠퀴스트, 제임스",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/0177432364121aab51e2e404-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
       "id": "jan-gossaert",
       "uhangulVersion": "0.7",
       "original": "Jan Gossaert",
@@ -5401,6 +6221,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/techniques.json",
+        "data/artist-work-image-download-manifest.json",
         "data/미술사조/9e553fb48e9a464402114360-1.html",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
@@ -5431,26 +6252,32 @@
       "status": "verified-pair"
     },
     {
-      "id": "jean-arp",
+      "id": "artist-further-arp",
       "uhangulVersion": "0.7",
       "original": "Jean Arp",
       "language": "und",
       "korean": "장 아르프",
-      "displayKorean": "장 아르프",
-      "listKorean": "장 아르프",
+      "displayKorean": "아르프, 장",
+      "listKorean": "아르프",
       "aliases": {
         "ko": [
-          "아르프"
+          "아르프",
+          "장 아르프"
         ],
         "en": [
-          "Arp"
+          "Arp",
+          "Jean Arp"
         ]
       },
-      "uhangul": "장 아[Rㅡ]프",
+      "uhangul": "아[Rㅡ]프, 장",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/e9d8a876f1b83c5c174c2bbc-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5482,8 +6309,7 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
+        "data/artists.json"
       ],
       "status": "verified-pair"
     },
@@ -5510,7 +6336,37 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
+        "data/movement-table-artist-image-download-manifest.json",
         "data/미술사조/903c178f9ba65fa2554de073-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-mid-jean-tinguely",
+      "uhangulVersion": "0.7",
+      "original": "Jean Tinguely",
+      "language": "und",
+      "korean": "장 팅겔리",
+      "displayKorean": "팅겔리, 장",
+      "listKorean": "팅겔리",
+      "aliases": {
+        "ko": [
+          "팅겔리",
+          "장 팅겔리"
+        ],
+        "en": [
+          "Tinguely",
+          "Jean Tinguely"
+        ]
+      },
+      "uhangul": "팅겔리, 장",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/f2403fbd2febcd2486d6d5b8-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5644,28 +6500,32 @@
       "status": "verified-pair"
     },
     {
-      "id": "jean-francois-millet",
+      "id": "artist-further-millet",
       "uhangulVersion": "0.7",
       "original": "Jean-François Millet",
       "language": "und",
-      "korean": "밀레",
-      "displayKorean": "밀레",
+      "korean": "장프랑수아 밀레",
+      "displayKorean": "밀레, 장프랑수아",
       "listKorean": "밀레",
       "aliases": {
         "ko": [
-          "밀레"
+          "밀레",
+          "장프랑수아 밀레"
         ],
         "en": [
           "Jean-Francois Millet",
           "Millet"
         ]
       },
-      "uhangul": "밀[Rㅔ]",
+      "uhangul": "밀레, 장[Fㅡ][Rㅏㅇ]수아",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/techniques.json"
+        "data/artists.json",
+        "data/techniques.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/7daaa6cee232ed701f97dea0-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5700,6 +6560,34 @@
       "status": "verified-pair"
     },
     {
+      "id": "artist-mid-jean-leon-gerome",
+      "uhangulVersion": "0.7",
+      "original": "Jean-Leon Gerome",
+      "language": "und",
+      "korean": "장레옹 제롬",
+      "displayKorean": "제롬, 장레옹",
+      "listKorean": "제롬",
+      "aliases": {
+        "ko": [
+          "제롬",
+          "장레옹 제롬"
+        ],
+        "en": [
+          "Gerome",
+          "Jean-Leon Gerome"
+        ]
+      },
+      "uhangul": "제[Rㅗㅁ], 장레옹",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/f20d01b9856f3df2c73eebf8-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
       "id": "artist-art-atlas-basquiat",
       "uhangulVersion": "0.7",
       "original": "Jean-Michel Basquiat",
@@ -5723,6 +6611,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
+        "data/movement-table-artist-image-download-manifest.json",
         "data/미술사조/aed270ba50b5c9e7d19f1050-1.html"
       ],
       "status": "verified-pair"
@@ -6016,24 +6905,32 @@
       "status": "verified-pair"
     },
     {
-      "id": "john-heartfield",
+      "id": "artist-mid-john-heartfield",
       "uhangulVersion": "0.7",
       "original": "John Heartfield",
       "language": "und",
-      "korean": "하트필드",
-      "displayKorean": "하트필드",
+      "korean": "존 하트필드",
+      "displayKorean": "하트필드, 존",
       "listKorean": "하트필드",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "하트필드",
+          "존 하트필드"
+        ],
         "en": [
-          "Heartfield"
+          "Heartfield",
+          "John Heartfield"
         ]
       },
-      "uhangul": "하트[Fㅣㄹ]드",
+      "uhangul": "하트[Fㅣㄹ]드, 존",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/e9d8a876f1b83c5c174c2bbc-1.html"
       ],
       "status": "verified-pair"
     },
@@ -6134,27 +7031,32 @@
       "status": "verified-pair"
     },
     {
-      "id": "jose-clemente-orozco",
+      "id": "artist-further-orozco",
       "uhangulVersion": "0.7",
       "original": "José Clemente Orozco",
       "language": "und",
       "korean": "호세 클레멘테 오로스코",
-      "displayKorean": "호세 클레멘테 오로스코",
-      "listKorean": "호세 클레멘테 오로스코",
+      "displayKorean": "오로스코, 호세 클레멘테",
+      "listKorean": "오로스코",
       "aliases": {
         "ko": [
-          "오로스코"
+          "오로스코",
+          "호세 클레멘테 오로스코"
         ],
         "en": [
           "Jose Clemente Orozco",
           "Orozco"
         ]
       },
-      "uhangul": "호세 클레멘테 오[Rㅗ][Zㅡ]코",
+      "uhangul": "오[Rㅗ]스코, 호세 클레멘테",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/7f93471fd6e543d3f5af2c58-1.html"
       ],
       "status": "verified-pair"
     },
@@ -6186,26 +7088,61 @@
       "status": "verified-pair"
     },
     {
-      "id": "joseph-beuys",
+      "id": "artist-mid-josef-hoffmann",
+      "uhangulVersion": "0.7",
+      "original": "Josef Hoffmann",
+      "language": "und",
+      "korean": "요제프 호프만",
+      "displayKorean": "호프만, 요제프",
+      "listKorean": "호프만",
+      "aliases": {
+        "ko": [
+          "호프만",
+          "요제프 호프만"
+        ],
+        "en": [
+          "Hoffmann",
+          "Josef Hoffmann"
+        ]
+      },
+      "uhangul": "호[Fㅡ]만, 요제[Fㅡ]",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/f33389a9b75de9c11d171b58-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-further-beuys",
       "uhangulVersion": "0.7",
       "original": "Joseph Beuys",
       "language": "und",
       "korean": "요제프 보이스",
-      "displayKorean": "요제프 보이스",
-      "listKorean": "요제프 보이스",
+      "displayKorean": "보이스, 요제프",
+      "listKorean": "보이스",
       "aliases": {
         "ko": [
-          "보이스"
+          "보이스",
+          "요제프 보이스"
         ],
         "en": [
-          "Beuys"
+          "Beuys",
+          "Joseph Beuys"
         ]
       },
-      "uhangul": "요제[Fㅡ] 보이스",
+      "uhangul": "보이스, 요제[Fㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/8f7b750ae233057c81ea4c31-1.html"
       ],
       "status": "verified-pair"
     },
@@ -6233,6 +7170,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
+        "data/movement-table-artist-image-download-manifest.json",
         "data/미술사조/a58f5e30e9cc89681111f83e-1.html"
       ],
       "status": "verified-pair"
@@ -6369,52 +7307,92 @@
       "status": "verified-pair"
     },
     {
-      "id": "judith-leyster",
+      "id": "artist-mid-judith-leyster",
       "uhangulVersion": "0.7",
       "original": "Judith Leyster",
       "language": "und",
-      "korean": "유디트 레이스터",
-      "displayKorean": "유디트 레이스터",
-      "listKorean": "유디트 레이스터",
+      "korean": "유디트 레이스테르",
+      "displayKorean": "레이스테르, 유디트",
+      "listKorean": "레이스테르",
       "aliases": {
         "ko": [
-          "레이스터"
+          "레이스터",
+          "레이스테르",
+          "유디트 레이스테르"
         ],
         "en": [
-          "Leyster"
+          "Leyster",
+          "Judith Leyster"
         ]
       },
-      "uhangul": "유디[THㅡ] 레이스터",
+      "uhangul": "레이스테[Rㅡ], 유디[THㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "jusepe-ribera",
+      "id": "artist-mid-jusepe-de-ribera",
       "uhangulVersion": "0.7",
       "original": "Jusepe de Ribera",
       "language": "und",
-      "korean": "호세 데 리베라",
-      "displayKorean": "호세 데 리베라",
-      "listKorean": "호세 데 리베라",
+      "korean": "후세페 데 리베라",
+      "displayKorean": "데 리베라, 후세페",
+      "listKorean": "리베라",
       "aliases": {
         "ko": [
           "데 리베라",
-          "리베라"
+          "리베라",
+          "후세페 데 리베라"
         ],
         "en": [
           "de Ribera",
-          "Ribera"
+          "Ribera",
+          "Jusepe de Ribera"
         ]
       },
-      "uhangul": "호세 데 [Rㅣ]베[Rㅏ]",
+      "uhangul": "데 [Rㅣ]베[Rㅏ], 후세페",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-mid-schmidt-rottluff",
+      "uhangulVersion": "0.7",
+      "original": "Karl Schmidt-Rottluff",
+      "language": "und",
+      "korean": "카를 슈미트로틀루프",
+      "displayKorean": "슈미트로틀루프, 카를",
+      "listKorean": "슈미트로틀루프",
+      "aliases": {
+        "ko": [
+          "슈미트로틀루프",
+          "카를 슈미트로틀루프"
+        ],
+        "en": [
+          "Schmidt-Rottluff",
+          "Karl Schmidt-Rottluff"
+        ]
+      },
+      "uhangul": "슈미트로틀[Rㅜ][Fㅡ], 카[Rㅡㄹ]",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/be9a35cdca8c52adb73b06c7-1.html"
       ],
       "status": "verified-pair"
     },
@@ -6442,31 +7420,39 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/12f4e943b63665f4725c9024-1.html"
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/12f4e943b63665f4725c9024-1.html",
+        "data/미술사조/6826d3a46eb1a6fa61010765-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "keith-haring-short",
+      "id": "artist-mid-keith-haring",
       "uhangulVersion": "0.7",
       "original": "Keith Haring",
       "language": "und",
       "korean": "키스 해링",
-      "displayKorean": "키스 해링",
-      "listKorean": "키스 해링",
+      "displayKorean": "해링, 키스",
+      "listKorean": "해링",
       "aliases": {
         "ko": [
-          "해링"
+          "해링",
+          "키스 해링"
         ],
         "en": [
-          "Haring"
+          "Haring",
+          "Keith Haring"
         ]
       },
-      "uhangul": "키[THㅡ] 해[Rㅣㅇ]",
+      "uhangul": "해[Rㅣㅇ], 키[THㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/8f7b750ae233057c81ea4c31-1.html"
       ],
       "status": "verified-pair"
     },
@@ -6519,6 +7505,35 @@
       "status": "verified-pair"
     },
     {
+      "id": "artist-further-koloman-moser",
+      "uhangulVersion": "0.7",
+      "original": "Koloman Moser",
+      "language": "und",
+      "korean": "콜로만 모저",
+      "displayKorean": "모저, 콜로만",
+      "listKorean": "모저",
+      "aliases": {
+        "ko": [
+          "모저",
+          "콜로만 모저"
+        ],
+        "en": [
+          "Moser",
+          "Koloman Moser"
+        ]
+      },
+      "uhangul": "모저, 콜로만",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/f33389a9b75de9c11d171b58-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
       "id": "kurt-schwitters",
       "uhangulVersion": "0.7",
       "original": "Kurt Schwitters",
@@ -6537,6 +7552,34 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-mid-laszlo-moholy-nagy",
+      "uhangulVersion": "0.7",
+      "original": "Laszlo Moholy-Nagy",
+      "language": "und",
+      "korean": "라슬로 모호이너지",
+      "displayKorean": "모호이너지, 라슬로",
+      "listKorean": "모호이너지",
+      "aliases": {
+        "ko": [
+          "모호이너지",
+          "라슬로 모호이너지"
+        ],
+        "en": [
+          "Moholy-Nagy",
+          "Laszlo Moholy-Nagy"
+        ]
+      },
+      "uhangul": "모호이너[Zㅣ], 라슬로",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/27cd7106c6176211c4e94b56-1.html"
       ],
       "status": "verified-pair"
     },
@@ -6565,50 +7608,63 @@
       "status": "verified-pair"
     },
     {
-      "id": "lawrence-weiner",
+      "id": "artist-further-weiner",
       "uhangulVersion": "0.7",
       "original": "Lawrence Weiner",
       "language": "und",
-      "korean": "로런스 위너",
-      "displayKorean": "로런스 위너",
-      "listKorean": "로런스 위너",
+      "korean": "로런스 와이너",
+      "displayKorean": "와이너, 로런스",
+      "listKorean": "와이너",
       "aliases": {
         "ko": [
-          "위너"
+          "위너",
+          "와이너",
+          "로런스 와이너"
         ],
         "en": [
-          "Weiner"
+          "Weiner",
+          "Lawrence Weiner"
         ]
       },
-      "uhangul": "로[Rㅓㄴ]스 위너",
+      "uhangul": "와이너, 로[Rㅓㄴ]스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/a58f5e30e9cc89681111f83e-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "lee-krasner",
+      "id": "artist-mid-lee-krasner",
       "uhangulVersion": "0.7",
       "original": "Lee Krasner",
       "language": "und",
       "korean": "리 크래스너",
-      "displayKorean": "리 크래스너",
-      "listKorean": "리 크래스너",
+      "displayKorean": "크래스너, 리",
+      "listKorean": "크래스너",
       "aliases": {
         "ko": [
-          "크래스너"
+          "크래스너",
+          "리 크래스너"
         ],
         "en": [
-          "Krasner"
+          "Krasner",
+          "Lee Krasner"
         ]
       },
-      "uhangul": "리 크[Rㅐ]스너",
+      "uhangul": "크[Rㅐ]스너, 리",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/8822876f0626aa0296851626-1.html"
       ],
       "status": "verified-pair"
     },
@@ -6656,26 +7712,32 @@
       "wikidataQid": "Q762"
     },
     {
-      "id": "leonora-carrington",
+      "id": "artist-mid-leonora-carrington",
       "uhangulVersion": "0.7",
       "original": "Leonora Carrington",
       "language": "und",
       "korean": "레오노라 캐링턴",
-      "displayKorean": "레오노라 캐링턴",
-      "listKorean": "레오노라 캐링턴",
+      "displayKorean": "캐링턴, 레오노라",
+      "listKorean": "캐링턴",
       "aliases": {
         "ko": [
-          "캐링턴"
+          "캐링턴",
+          "레오노라 캐링턴"
         ],
         "en": [
-          "Carrington"
+          "Carrington",
+          "Leonora Carrington"
         ]
       },
-      "uhangul": "레오노[Rㅏ] 캐[Rㅣㅇ]턴",
+      "uhangul": "캐[Rㅣㅇ]턴, 레오노[Rㅏ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/b6f307845ec9a6f73e9d4e44-1.html"
       ],
       "status": "verified-pair"
     },
@@ -6825,8 +7887,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/미술사조/080336f866ce0c573e6c2b7f-1.html",
-        "data/미술사조/9e553fb48e9a464402114360-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
+        "data/미술사조/9e553fb48e9a464402114360-1.html"
       ],
       "status": "verified-pair"
     },
@@ -6855,6 +7916,35 @@
       "status": "verified-pair"
     },
     {
+      "id": "artist-mid-lynn-hershman-leeson",
+      "uhangulVersion": "0.7",
+      "original": "Lynn Hershman Leeson",
+      "language": "und",
+      "korean": "린 허시먼 리슨",
+      "displayKorean": "리슨, 린 허시먼",
+      "listKorean": "리슨",
+      "aliases": {
+        "ko": [
+          "리슨",
+          "린 허시먼 리슨"
+        ],
+        "en": [
+          "Leeson",
+          "Lynn Hershman Leeson"
+        ]
+      },
+      "uhangul": "리슨, 린 허시먼",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/8f7b750ae233057c81ea4c31-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
       "id": "lyonel-feininger",
       "uhangulVersion": "0.7",
       "original": "Lyonel Feininger",
@@ -6879,48 +7969,61 @@
       "status": "verified-pair"
     },
     {
-      "id": "lyubov-popova",
+      "id": "artist-mid-lyubov-popova",
       "uhangulVersion": "0.7",
       "original": "Lyubov Popova",
       "language": "und",
-      "korean": "포포바",
-      "displayKorean": "포포바",
+      "korean": "류보프 포포바",
+      "displayKorean": "포포바, 류보프",
       "listKorean": "포포바",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "포포바",
+          "류보프 포포바"
+        ],
         "en": [
-          "Popova"
+          "Popova",
+          "Lyubov Popova"
         ]
       },
-      "uhangul": "포포바",
+      "uhangul": "포포[Vㅏ], 류보[Vㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/12f4e943b63665f4725c9024-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "man-ray",
+      "id": "artist-further-man-ray",
       "uhangulVersion": "0.7",
       "original": "Man Ray",
       "language": "und",
       "korean": "만 레이",
-      "displayKorean": "만 레이",
-      "listKorean": "만 레이",
+      "displayKorean": "레이, 만",
+      "listKorean": "레이",
       "aliases": {
         "ko": [
-          "레이"
+          "레이",
+          "만 레이"
         ],
         "en": [
-          "Ray"
+          "Ray",
+          "Man Ray"
         ]
       },
-      "uhangul": "만 [Rㅔ]이",
+      "uhangul": "[Rㅔ]이, 만",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/e9d8a876f1b83c5c174c2bbc-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7054,6 +8157,7 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
+        "data/movement-table-artist-image-download-manifest.json",
         "data/미술사조/8822876f0626aa0296851626-1.html"
       ],
       "status": "verified-pair"
@@ -7083,26 +8187,31 @@
       "status": "verified-pair"
     },
     {
-      "id": "mary-cassatt",
+      "id": "artist-further-cassatt",
       "uhangulVersion": "0.7",
       "original": "Mary Cassatt",
       "language": "und",
       "korean": "메리 카사트",
-      "displayKorean": "메리 카사트",
-      "listKorean": "메리 카사트",
+      "displayKorean": "카사트, 메리",
+      "listKorean": "카사트",
       "aliases": {
         "ko": [
-          "카사트"
+          "카사트",
+          "메리 카사트"
         ],
         "en": [
-          "Cassatt"
+          "Cassatt",
+          "Mary Cassatt"
         ]
       },
-      "uhangul": "메[Rㅣ] 카사트",
+      "uhangul": "카사트, 메[Rㅣ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7129,55 +8238,70 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/techniques.json",
+        "data/artist-work-image-download-manifest.json",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "mathias-grunewald",
+      "id": "artist-mid-grunewald",
       "uhangulVersion": "0.7",
       "original": "Matthias Grünewald",
       "language": "und",
       "korean": "마티아스 그뤼네발트",
-      "displayKorean": "마티아스 그뤼네발트",
-      "listKorean": "마티아스 그뤼네발트",
+      "displayKorean": "그뤼네발트, 마티아스",
+      "listKorean": "그뤼네발트",
       "aliases": {
         "ko": [
-          "그뤼네발트"
+          "그뤼네발트",
+          "마티아스 그뤼네발트"
         ],
         "en": [
           "Matthias Grunewald",
-          "Grünewald"
+          "Grünewald",
+          "Grunewald"
         ]
       },
-      "uhangul": "마티아[THㅡ] 그[Rㅟ]네[Vㅏㄹ]트",
+      "uhangul": "그[Rㅟ]네[Vㅏㄹ]트, 마티아[THㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/9e553fb48e9a464402114360-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "maurice-vlaminck",
+      "id": "artist-mid-maurice-de-vlaminck",
       "uhangulVersion": "0.7",
       "original": "Maurice de Vlaminck",
       "language": "und",
-      "korean": "블라맹크",
-      "displayKorean": "블라맹크",
+      "korean": "모리스 드 블라맹크",
+      "displayKorean": "드 블라맹크, 모리스",
       "listKorean": "블라맹크",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "드 블라맹크",
+          "블라맹크",
+          "모리스 드 블라맹크"
+        ],
         "en": [
           "de Vlaminck",
-          "Vlaminck"
+          "Vlaminck",
+          "Maurice de Vlaminck"
         ]
       },
-      "uhangul": "블라맹크",
+      "uhangul": "드 [Vㅡㄹ]라맹크, 모[Rㅣ]스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/236b5b248aa3129573179c3b-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7230,26 +8354,32 @@
       "status": "verified-pair"
     },
     {
-      "id": "max-ernst",
+      "id": "artist-mid-max-ernst",
       "uhangulVersion": "0.7",
       "original": "Max Ernst",
       "language": "und",
       "korean": "막스 에른스트",
-      "displayKorean": "막스 에른스트",
-      "listKorean": "막스 에른스트",
+      "displayKorean": "에른스트, 막스",
+      "listKorean": "에른스트",
       "aliases": {
         "ko": [
-          "에른스트"
+          "에른스트",
+          "막스 에른스트"
         ],
         "en": [
-          "Ernst"
+          "Ernst",
+          "Max Ernst"
         ]
       },
-      "uhangul": "막스 에[Rㅡㄴ]스트",
+      "uhangul": "에[Rㅡㄴ]스트, 막스",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/b6f307845ec9a6f73e9d4e44-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7354,6 +8484,7 @@
       "sources": [
         "data/artists.json",
         "data/techniques.json",
+        "data/further-artist-image-download-manifest.json",
         "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
         "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
@@ -7395,26 +8526,32 @@
       "status": "verified-pair"
     },
     {
-      "id": "mikhail-larionov",
+      "id": "artist-mid-mikhail-larionov",
       "uhangulVersion": "0.7",
       "original": "Mikhail Larionov",
       "language": "und",
       "korean": "미하일 라리오노프",
-      "displayKorean": "미하일 라리오노프",
-      "listKorean": "미하일 라리오노프",
+      "displayKorean": "라리오노프, 미하일",
+      "listKorean": "라리오노프",
       "aliases": {
         "ko": [
-          "라리오노프"
+          "라리오노프",
+          "미하일 라리오노프"
         ],
         "en": [
-          "Larionov"
+          "Larionov",
+          "Mikhail Larionov"
         ]
       },
-      "uhangul": "미하일 라[Rㅣ]오노[Vㅡ]",
+      "uhangul": "라[Rㅣ]오노[Vㅡ], 미하일",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/6826d3a46eb1a6fa61010765-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7489,6 +8626,9 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/8f7b750ae233057c81ea4c31-1.html",
         "data/미술사조/a58f5e30e9cc89681111f83e-1.html"
       ],
       "status": "verified-pair"
@@ -7553,26 +8693,62 @@
       "status": "verified-pair"
     },
     {
-      "id": "odilon-redon",
+      "id": "artist-mid-niki-de-saint-phalle",
+      "uhangulVersion": "0.7",
+      "original": "Niki de Saint Phalle",
+      "language": "und",
+      "korean": "니키 드 생팔",
+      "displayKorean": "니키 드 생팔",
+      "listKorean": "생팔",
+      "aliases": {
+        "ko": [
+          "드 생팔",
+          "생팔",
+          "니키 드 생팔"
+        ],
+        "en": [
+          "de Saint Phalle",
+          "Phalle",
+          "Niki de Saint Phalle"
+        ]
+      },
+      "uhangul": "니키 드 생[Fㅏㄹ]",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/f2403fbd2febcd2486d6d5b8-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-further-redon",
       "uhangulVersion": "0.7",
       "original": "Odilon Redon",
       "language": "und",
       "korean": "오딜롱 르동",
-      "displayKorean": "오딜롱 르동",
-      "listKorean": "오딜롱 르동",
+      "displayKorean": "르동, 오딜롱",
+      "listKorean": "르동",
       "aliases": {
         "ko": [
-          "르동"
+          "르동",
+          "오딜롱 르동"
         ],
         "en": [
-          "Redon"
+          "Redon",
+          "Odilon Redon"
         ]
       },
-      "uhangul": "오딜롱 [Rㅡ]동",
+      "uhangul": "[Rㅡ]동, 오딜롱",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/4e7a664301ed396184c3cb5d-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7601,26 +8777,61 @@
       "status": "verified-pair"
     },
     {
-      "id": "on-kawara",
+      "id": "artist-mid-olga-rozanova",
+      "uhangulVersion": "0.7",
+      "original": "Olga Rozanova",
+      "language": "und",
+      "korean": "올가 로자노바",
+      "displayKorean": "로자노바, 올가",
+      "listKorean": "로자노바",
+      "aliases": {
+        "ko": [
+          "로자노바",
+          "올가 로자노바"
+        ],
+        "en": [
+          "Rozanova",
+          "Olga Rozanova"
+        ]
+      },
+      "uhangul": "[Rㅗ][Zㅏ]노[Vㅏ], 올가",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/12f4e943b63665f4725c9024-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-mid-on-kawara",
       "uhangulVersion": "0.7",
       "original": "On Kawara",
       "language": "und",
       "korean": "온 가와라",
-      "displayKorean": "온 가와라",
-      "listKorean": "온 가와라",
+      "displayKorean": "가와라, 온",
+      "listKorean": "가와라",
       "aliases": {
         "ko": [
-          "가와라"
+          "가와라",
+          "온 가와라"
         ],
         "en": [
-          "Kawara"
+          "Kawara",
+          "On Kawara"
         ]
       },
-      "uhangul": "온 가와[Rㅏ]",
+      "uhangul": "가와[Rㅏ], 온",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/a58f5e30e9cc89681111f83e-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7649,26 +8860,61 @@
       "status": "verified-pair"
     },
     {
-      "id": "oskar-kokoschka",
+      "id": "artist-further-kokoschka",
       "uhangulVersion": "0.7",
       "original": "Oskar Kokoschka",
       "language": "und",
       "korean": "오스카 코코슈카",
-      "displayKorean": "오스카 코코슈카",
-      "listKorean": "오스카 코코슈카",
+      "displayKorean": "코코슈카, 오스카",
+      "listKorean": "코코슈카",
       "aliases": {
         "ko": [
-          "코코슈카"
+          "코코슈카",
+          "오스카 코코슈카"
         ],
         "en": [
-          "Kokoschka"
+          "Kokoschka",
+          "Oskar Kokoschka"
         ]
       },
-      "uhangul": "오스카 코코슈카",
+      "uhangul": "코코슈카, 오스카",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/be9a35cdca8c52adb73b06c7-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-further-friesz",
+      "uhangulVersion": "0.7",
+      "original": "Othon Friesz",
+      "language": "und",
+      "korean": "오톤 프리에스",
+      "displayKorean": "프리에스, 오톤",
+      "listKorean": "프리에스",
+      "aliases": {
+        "ko": [
+          "프리에스",
+          "오톤 프리에스"
+        ],
+        "en": [
+          "Friesz",
+          "Othon Friesz"
+        ]
+      },
+      "uhangul": "[Fㅡ][Rㅣ]에스, 오[THㅗㄴ]",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/236b5b248aa3129573179c3b-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7720,6 +8966,8 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
         "data/미술사조/83e1fbbdad822f464a299cf3-1.html"
       ],
       "status": "verified-pair"
@@ -7825,25 +9073,32 @@
       "status": "verified-pair"
     },
     {
-      "id": "paul-cezanne",
+      "id": "artist-further-cezanne",
       "uhangulVersion": "0.7",
       "original": "Paul Cézanne",
       "language": "und",
-      "korean": "세잔",
-      "displayKorean": "세잔",
+      "korean": "폴 세잔",
+      "displayKorean": "세잔, 폴",
       "listKorean": "세잔",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "세잔",
+          "폴 세잔"
+        ],
         "en": [
           "Paul Cezanne",
-          "Cézanne"
+          "Cézanne",
+          "Cezanne"
         ]
       },
-      "uhangul": "세[Zㅏㄴ]",
+      "uhangul": "세[Zㅏㄴ], 폴",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/81bf5950142af1141dfcf738-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7924,76 +9179,91 @@
       "status": "verified-pair"
     },
     {
-      "id": "paul-klee",
+      "id": "artist-further-klee",
       "uhangulVersion": "0.7",
       "original": "Paul Klee",
       "language": "und",
       "korean": "파울 클레",
-      "displayKorean": "파울 클레",
-      "listKorean": "파울 클레",
+      "displayKorean": "클레, 파울",
+      "listKorean": "클레",
       "aliases": {
         "ko": [
-          "클레"
+          "클레",
+          "파울 클레"
         ],
         "en": [
-          "Klee"
+          "Klee",
+          "Paul Klee"
         ]
       },
-      "uhangul": "파울 클레",
-      "note": "auto-generated from original and Korean artist names",
-      "kind": "person",
-      "sources": [
-        "data/미술사조/manual-person-overrides"
-      ],
-      "status": "verified-pair"
-    },
-    {
-      "id": "paul-serusier",
-      "uhangulVersion": "0.7",
-      "original": "Paul Sérusier",
-      "language": "und",
-      "korean": "폴 세뤼지에",
-      "displayKorean": "폴 세뤼지에",
-      "listKorean": "폴 세뤼지에",
-      "aliases": {
-        "ko": [
-          "세뤼지에"
-        ],
-        "en": [
-          "Paul Serusier",
-          "Sérusier"
-        ]
-      },
-      "uhangul": "폴 세[Rㅟ]지에",
-      "note": "auto-generated from original and Korean artist names",
-      "kind": "person",
-      "sources": [
-        "data/미술사조/manual-person-overrides"
-      ],
-      "status": "verified-pair"
-    },
-    {
-      "id": "paul-signac",
-      "uhangulVersion": "0.7",
-      "original": "Paul Signac",
-      "language": "und",
-      "korean": "폴 시냐크",
-      "displayKorean": "폴 시냐크",
-      "listKorean": "폴 시냐크",
-      "aliases": {
-        "ko": [
-          "시냐크"
-        ],
-        "en": [
-          "Signac"
-        ]
-      },
-      "uhangul": "폴 시냐크",
+      "uhangul": "클레, 파울",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/techniques.json"
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/27cd7106c6176211c4e94b56-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-mid-paul-serusier",
+      "uhangulVersion": "0.7",
+      "original": "Paul Sérusier",
+      "language": "und",
+      "korean": "폴 세뤼지에",
+      "displayKorean": "세뤼지에, 폴",
+      "listKorean": "세뤼지에",
+      "aliases": {
+        "ko": [
+          "세뤼지에",
+          "폴 세뤼지에"
+        ],
+        "en": [
+          "Paul Serusier",
+          "Sérusier",
+          "Serusier"
+        ]
+      },
+      "uhangul": "세[Rㅟ]지에, 폴",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/81bf5950142af1141dfcf738-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-further-signac",
+      "uhangulVersion": "0.7",
+      "original": "Paul Signac",
+      "language": "und",
+      "korean": "폴 시냐크",
+      "displayKorean": "시냐크, 폴",
+      "listKorean": "시냐크",
+      "aliases": {
+        "ko": [
+          "시냐크",
+          "폴 시냐크"
+        ],
+        "en": [
+          "Signac",
+          "Paul Signac"
+        ]
+      },
+      "uhangul": "시냐크, 폴",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/techniques.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/81bf5950142af1141dfcf738-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8043,6 +9313,35 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-mid-peter-blake",
+      "uhangulVersion": "0.7",
+      "original": "Peter Blake",
+      "language": "und",
+      "korean": "피터 블레이크",
+      "displayKorean": "블레이크, 피터",
+      "listKorean": "블레이크",
+      "aliases": {
+        "ko": [
+          "블레이크",
+          "피터 블레이크"
+        ],
+        "en": [
+          "Blake",
+          "Peter Blake"
+        ]
+      },
+      "uhangul": "블레이크, 피터",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/0177432364121aab51e2e404-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8108,6 +9407,35 @@
       "status": "verified-pair"
     },
     {
+      "id": "artist-further-runge",
+      "uhangulVersion": "0.7",
+      "original": "Philipp Otto Runge",
+      "language": "und",
+      "korean": "필리프 오토 룽게",
+      "displayKorean": "룽게, 필리프 오토",
+      "listKorean": "룽게",
+      "aliases": {
+        "ko": [
+          "룽게",
+          "필리프 오토 룽게"
+        ],
+        "en": [
+          "Runge",
+          "Philipp Otto Runge"
+        ]
+      },
+      "uhangul": "[Rㅜㅇ]게, [Fㅣㄹ]리프 오토",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
       "id": "philippe-de-champaigne",
       "uhangulVersion": "0.7",
       "original": "Philippe de Champaigne",
@@ -8134,27 +9462,33 @@
       "status": "verified-pair"
     },
     {
-      "id": "name-pierodellafrancesca",
+      "id": "artist-mid-piero-della-francesca",
       "uhangulVersion": "0.7",
       "original": "Piero della Francesca",
       "language": "und",
       "korean": "피에로 델라 프란체스카",
-      "displayKorean": "피에로 델라 프란체스카",
-      "listKorean": "피에로 델라 프란체스카",
+      "displayKorean": "델라 프란체스카, 피에로",
+      "listKorean": "프란체스카",
       "aliases": {
         "ko": [
-          "프란체스카"
+          "프란체스카",
+          "델라 프란체스카",
+          "피에로 델라 프란체스카"
         ],
         "en": [
           "della Francesca",
-          "Francesca"
+          "Francesca",
+          "Piero della Francesca"
         ]
       },
-      "uhangul": "피에[Rㅗ] 델라 [Fㅡ][Rㅏㄴ]체스카",
+      "uhangul": "델라 [Fㅡ][Rㅏㄴ]체스카, 피에[Rㅗ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/techniques.json"
+        "data/artists.json",
+        "data/techniques.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8233,25 +9567,61 @@
       "status": "verified-pair"
     },
     {
-      "id": "pierre-auguste-renoir",
+      "id": "artist-mid-pierre-soulages",
+      "uhangulVersion": "0.7",
+      "original": "Pierre Soulages",
+      "language": "und",
+      "korean": "피에르 술라주",
+      "displayKorean": "술라주, 피에르",
+      "listKorean": "술라주",
+      "aliases": {
+        "ko": [
+          "술라주",
+          "피에르 술라주"
+        ],
+        "en": [
+          "Soulages",
+          "Pierre Soulages"
+        ]
+      },
+      "uhangul": "술라주, 피에[Rㅡ]",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/903c178f9ba65fa2554de073-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-further-renoir",
       "uhangulVersion": "0.7",
       "original": "Pierre-Auguste Renoir",
       "language": "und",
-      "korean": "르누아르",
-      "displayKorean": "르누아르",
+      "korean": "피에르오귀스트 르누아르",
+      "displayKorean": "르누아르, 피에르오귀스트",
       "listKorean": "르누아르",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "르누아르",
+          "피에르오귀스트 르누아르"
+        ],
         "en": [
-          "Renoir"
+          "Renoir",
+          "Pierre-Auguste Renoir"
         ]
       },
-      "uhangul": "[Rㅡ]누아[Rㅡ]",
+      "uhangul": "[Rㅡ]누아[Rㅡ], 피에[Rㅡ]오귀스트",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/techniques.json"
+        "data/artists.json",
+        "data/techniques.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8359,7 +9729,6 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
         "tools/reorder-renaissance-representative-cards.js",
         "Wikidata"
       ],
@@ -8607,24 +9976,32 @@
       "status": "verified-pair"
     },
     {
-      "id": "raoul-hausmann",
+      "id": "artist-further-hausmann",
       "uhangulVersion": "0.7",
       "original": "Raoul Hausmann",
       "language": "und",
-      "korean": "하우스만",
-      "displayKorean": "하우스만",
+      "korean": "라울 하우스만",
+      "displayKorean": "하우스만, 라울",
       "listKorean": "하우스만",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "하우스만",
+          "라울 하우스만"
+        ],
         "en": [
-          "Hausmann"
+          "Hausmann",
+          "Raoul Hausmann"
         ]
       },
-      "uhangul": "하우스만",
+      "uhangul": "하우스만, [Rㅏ]울",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/e9d8a876f1b83c5c174c2bbc-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8700,6 +10077,35 @@
       "status": "verified-pair"
     },
     {
+      "id": "artist-further-reginald-marsh",
+      "uhangulVersion": "0.7",
+      "original": "Reginald Marsh",
+      "language": "und",
+      "korean": "레지널드 마시",
+      "displayKorean": "마시, 레지널드",
+      "listKorean": "마시",
+      "aliases": {
+        "ko": [
+          "마시",
+          "레지널드 마시"
+        ],
+        "en": [
+          "Marsh",
+          "Reginald Marsh"
+        ]
+      },
+      "uhangul": "마시, [Rㅔ]지널드",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/33c2c0d33af4171ceabb8466-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
       "id": "Q5598",
       "uhangulVersion": "0.7",
       "original": "Rembrandt Harmenszoon van Rijn",
@@ -8727,6 +10133,7 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
+        "data/artist-work-image-download-manifest.json",
         "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
         "tools/apply-first-batch-movement-enhancements.js",
         "Wikidata"
@@ -8790,27 +10197,60 @@
       "status": "verified-pair"
     },
     {
-      "id": "rene-magritte",
+      "id": "artist-further-magritte",
       "uhangulVersion": "0.7",
       "original": "René Magritte",
       "language": "und",
       "korean": "르네 마그리트",
-      "displayKorean": "르네 마그리트",
-      "listKorean": "르네 마그리트",
+      "displayKorean": "마그리트, 르네",
+      "listKorean": "마그리트",
       "aliases": {
         "ko": [
-          "마그리트"
+          "마그리트",
+          "르네 마그리트"
         ],
         "en": [
           "Rene Magritte",
           "Magritte"
         ]
       },
-      "uhangul": "[Rㅡ]네 마그[Rㅣ]트",
+      "uhangul": "마그[Rㅣ]트, [Rㅡ]네",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/b6f307845ec9a6f73e9d4e44-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-mid-richard-gerstl",
+      "uhangulVersion": "0.7",
+      "original": "Richard Gerstl",
+      "language": "und",
+      "korean": "리하르트 게르스틀",
+      "displayKorean": "게르스틀, 리하르트",
+      "listKorean": "게르스틀",
+      "aliases": {
+        "ko": [
+          "게르스틀",
+          "리하르트 게르스틀"
+        ],
+        "en": [
+          "Gerstl",
+          "Richard Gerstl"
+        ]
+      },
+      "uhangul": "게[Rㅡ]스틀, [Rㅣ]하[Rㅡ]트",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/be9a35cdca8c52adb73b06c7-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8837,6 +10277,7 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
+        "data/movement-table-artist-image-download-manifest.json",
         "data/미술사조/0177432364121aab51e2e404-1.html"
       ],
       "status": "verified-pair"
@@ -8890,26 +10331,31 @@
       "status": "verified-pair"
     },
     {
-      "id": "robert-campin",
+      "id": "artist-mid-robert-campin",
       "uhangulVersion": "0.7",
       "original": "Robert Campin",
       "language": "und",
       "korean": "로베르 캉팽",
-      "displayKorean": "로베르 캉팽",
-      "listKorean": "로베르 캉팽",
+      "displayKorean": "캉팽, 로베르",
+      "listKorean": "캉팽",
       "aliases": {
         "ko": [
-          "캉팽"
+          "캉팽",
+          "로베르 캉팽"
         ],
         "en": [
-          "Campin"
+          "Campin",
+          "Robert Campin"
         ]
       },
-      "uhangul": "[Rㅗ]베[Rㅡ] 캉팽",
+      "uhangul": "캉팽, [Rㅗ]베[Rㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/9e553fb48e9a464402114360-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8938,6 +10384,35 @@
       "status": "verified-pair"
     },
     {
+      "id": "artist-mid-robert-morris",
+      "uhangulVersion": "0.7",
+      "original": "Robert Morris",
+      "language": "und",
+      "korean": "로버트 모리스",
+      "displayKorean": "모리스, 로버트",
+      "listKorean": "모리스",
+      "aliases": {
+        "ko": [
+          "모리스",
+          "로버트 모리스"
+        ],
+        "en": [
+          "Morris",
+          "Robert Morris"
+        ]
+      },
+      "uhangul": "모[Rㅣ]스, [Rㅗ]버트",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/f3112cb2627a347eff543503-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
       "id": "robert-motherwell",
       "uhangulVersion": "0.7",
       "original": "Robert Motherwell",
@@ -8958,6 +10433,35 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-mid-roberto-matta",
+      "uhangulVersion": "0.7",
+      "original": "Roberto Matta",
+      "language": "und",
+      "korean": "로베르토 마타",
+      "displayKorean": "마타, 로베르토",
+      "listKorean": "마타",
+      "aliases": {
+        "ko": [
+          "마타",
+          "로베르토 마타"
+        ],
+        "en": [
+          "Matta",
+          "Roberto Matta"
+        ]
+      },
+      "uhangul": "마타, [Rㅗ]베[Rㅡ]토",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/b6f307845ec9a6f73e9d4e44-1.html"
       ],
       "status": "verified-pair"
     },
@@ -9016,6 +10520,7 @@
         "data/artists.json",
         "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
         "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
+        "data/미술사조/9e553fb48e9a464402114360-1.html",
         "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
         "Wikidata"
       ],
@@ -9114,6 +10619,35 @@
       "status": "verified-pair"
     },
     {
+      "id": "artist-further-lichtenstein",
+      "uhangulVersion": "0.7",
+      "original": "Roy Lichtenstein",
+      "language": "und",
+      "korean": "로이 리히텐슈타인",
+      "displayKorean": "리히텐슈타인, 로이",
+      "listKorean": "리히텐슈타인",
+      "aliases": {
+        "ko": [
+          "리히텐슈타인",
+          "로이 리히텐슈타인"
+        ],
+        "en": [
+          "Lichtenstein",
+          "Roy Lichtenstein"
+        ]
+      },
+      "uhangul": "리히텐슈타인, [Rㅗ]이",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/0177432364121aab51e2e404-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
       "id": "artist-art-atlas-dali",
       "uhangulVersion": "0.7",
       "original": "Salvador Dalí",
@@ -9167,26 +10701,31 @@
       "status": "verified-pair"
     },
     {
-      "id": "sandro-botticelli",
+      "id": "artist-further-botticelli",
       "uhangulVersion": "0.7",
       "original": "Sandro Botticelli",
       "language": "und",
       "korean": "산드로 보티첼리",
-      "displayKorean": "산드로 보티첼리",
-      "listKorean": "산드로 보티첼리",
+      "displayKorean": "보티첼리, 산드로",
+      "listKorean": "보티첼리",
       "aliases": {
         "ko": [
-          "보티첼리"
+          "보티첼리",
+          "산드로 보티첼리"
         ],
         "en": [
-          "Botticelli"
+          "Botticelli",
+          "Sandro Botticelli"
         ]
       },
-      "uhangul": "산드[Rㅗ] 보티첼리",
+      "uhangul": "보티첼리, 산드[Rㅗ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
@@ -9237,6 +10776,35 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-further-levine",
+      "uhangulVersion": "0.7",
+      "original": "Sherrie Levine",
+      "language": "und",
+      "korean": "셰리 레빈",
+      "displayKorean": "레빈, 셰리",
+      "listKorean": "레빈",
+      "aliases": {
+        "ko": [
+          "레빈",
+          "셰리 레빈"
+        ],
+        "en": [
+          "Levine",
+          "Sherrie Levine"
+        ]
+      },
+      "uhangul": "레[Vㅣㄴ], 셰[Rㅣ]",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/aed270ba50b5c9e7d19f1050-1.html"
       ],
       "status": "verified-pair"
     },
@@ -9337,26 +10905,32 @@
       "status": "verified-pair"
     },
     {
-      "id": "sol-lewitt",
+      "id": "artist-mid-sol-lewitt",
       "uhangulVersion": "0.7",
       "original": "Sol LeWitt",
       "language": "und",
       "korean": "솔 르윗",
-      "displayKorean": "솔 르윗",
-      "listKorean": "솔 르윗",
+      "displayKorean": "르윗, 솔",
+      "listKorean": "르윗",
       "aliases": {
         "ko": [
-          "르윗"
+          "르윗",
+          "솔 르윗"
         ],
         "en": [
-          "LeWitt"
+          "LeWitt",
+          "Sol LeWitt"
         ]
       },
-      "uhangul": "솔 르윗",
+      "uhangul": "르윗, 솔",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/a58f5e30e9cc89681111f83e-1.html"
       ],
       "status": "verified-pair"
     },
@@ -9461,6 +11035,37 @@
       "status": "verified-pair"
     },
     {
+      "id": "artist-further-van-doesburg",
+      "uhangulVersion": "0.7",
+      "original": "Theo van Doesburg",
+      "language": "und",
+      "korean": "테오 판 두스뷔르흐",
+      "displayKorean": "판 두스뷔르흐, 테오",
+      "listKorean": "두스뷔르흐",
+      "aliases": {
+        "ko": [
+          "판 두스뷔르흐",
+          "두스뷔르흐",
+          "테오 판 두스뷔르흐"
+        ],
+        "en": [
+          "van Doesburg",
+          "Doesburg",
+          "Theo van Doesburg"
+        ]
+      },
+      "uhangul": "[Vㅏㄴ] 두스뷔[Rㅡ]흐, [THㅔ]오",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/f70d4d9edb161288992fea9e-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
       "id": "theo-van-rysselberghe",
       "uhangulVersion": "0.7",
       "original": "Théo van Rysselberghe",
@@ -9537,6 +11142,8 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
         "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
       ],
       "status": "verified-pair"
@@ -9692,6 +11299,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/techniques.json",
+        "data/artist-work-image-download-manifest.json",
         "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
         "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
         "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
@@ -9823,48 +11431,89 @@
       "status": "verified-pair"
     },
     {
-      "id": "varvara-stepanova",
+      "id": "artist-mid-varvara-stepanova",
       "uhangulVersion": "0.7",
       "original": "Varvara Stepanova",
       "language": "und",
-      "korean": "스테파노바",
-      "displayKorean": "스테파노바",
+      "korean": "바르바라 스테파노바",
+      "displayKorean": "스테파노바, 바르바라",
       "listKorean": "스테파노바",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "스테파노바",
+          "바르바라 스테파노바"
+        ],
         "en": [
-          "Stepanova"
+          "Stepanova",
+          "Varvara Stepanova"
         ]
       },
-      "uhangul": "스테[Vㅏ]노[Vㅏ]",
+      "uhangul": "스테파노[Vㅏ], [Vㅏ][Rㅡ][Vㅏ][Rㅏ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/12f4e943b63665f4725c9024-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "vasily-perov",
+      "id": "Q315237",
       "uhangulVersion": "0.7",
       "original": "Vasily Perov",
       "language": "und",
       "korean": "바실리 페로프",
-      "displayKorean": "바실리 페로프",
-      "listKorean": "바실리 페로프",
+      "displayKorean": "페로프, 바실리",
+      "listKorean": "페로프",
       "aliases": {
         "ko": [
-          "페로프"
+          "페로프",
+          "바실리 그리고리예비치 페로프",
+          "바실리 페로프"
         ],
         "en": [
-          "Perov"
+          "Perov",
+          "Vasily Grigorevich Perov",
+          "Vasily Grigor'yevich Perov",
+          "Vasily Perov"
         ]
       },
-      "uhangul": "[Vㅏ]실리 페[Rㅗ][Vㅡ]",
+      "uhangul": "페[Rㅗ][Vㅡ], [Vㅏ]실리",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-mid-vasily-surikov",
+      "uhangulVersion": "0.7",
+      "original": "Vasily Surikov",
+      "language": "und",
+      "korean": "바실리 수리코프",
+      "displayKorean": "수리코프, 바실리",
+      "listKorean": "수리코프",
+      "aliases": {
+        "ko": [
+          "수리코프",
+          "바실리 수리코프"
+        ],
+        "en": [
+          "Surikov",
+          "Vasily Surikov"
+        ]
+      },
+      "uhangul": "수[Rㅣ]코[Vㅡ], [Vㅏ]실리",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/7daaa6cee232ed701f97dea0-1.html"
       ],
       "status": "verified-pair"
     },
@@ -9905,6 +11554,64 @@
       "wikidataQid": "Q6394591"
     },
     {
+      "id": "artist-further-mukhina",
+      "uhangulVersion": "0.7",
+      "original": "Vera Mukhina",
+      "language": "und",
+      "korean": "베라 무히나",
+      "displayKorean": "무히나, 베라",
+      "listKorean": "무히나",
+      "aliases": {
+        "ko": [
+          "무히나",
+          "베라 무히나"
+        ],
+        "en": [
+          "Mukhina",
+          "Vera Mukhina"
+        ]
+      },
+      "uhangul": "무히나, [Vㅔ][Rㅏ]",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/d80bc831e2e75f52782edb83-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-mid-victor-horta",
+      "uhangulVersion": "0.7",
+      "original": "Victor Horta",
+      "language": "und",
+      "korean": "빅토르 오르타",
+      "displayKorean": "오르타, 빅토르",
+      "listKorean": "오르타",
+      "aliases": {
+        "ko": [
+          "오르타",
+          "빅토르 오르타"
+        ],
+        "en": [
+          "Horta",
+          "Victor Horta"
+        ]
+      },
+      "uhangul": "오[Rㅡ]타, [Vㅣㄱ]토[Rㅡ]",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/f33389a9b75de9c11d171b58-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
       "id": "artist-art-atlas-vasarely",
       "uhangulVersion": "0.7",
       "original": "Victor Vasarely",
@@ -9927,6 +11634,7 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
+        "data/movement-table-artist-image-download-manifest.json",
         "data/미술사조/404043fc7c00ba92d8903b08-1.html"
       ],
       "status": "verified-pair"
@@ -10045,24 +11753,32 @@
       "status": "verified-pair"
     },
     {
-      "id": "vladimir-tatlin",
+      "id": "artist-further-tatlin",
       "uhangulVersion": "0.7",
       "original": "Vladimir Tatlin",
       "language": "und",
-      "korean": "타틀린",
-      "displayKorean": "타틀린",
+      "korean": "블라디미르 타틀린",
+      "displayKorean": "타틀린, 블라디미르",
       "listKorean": "타틀린",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "타틀린",
+          "블라디미르 타틀린"
+        ],
         "en": [
-          "Tatlin"
+          "Tatlin",
+          "Vladimir Tatlin"
         ]
       },
-      "uhangul": "타틀린",
+      "uhangul": "타틀린, [Vㅡㄹ]라디미[Rㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/12f4e943b63665f4725c9024-1.html"
       ],
       "status": "verified-pair"
     },
@@ -10089,6 +11805,7 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
+        "data/movement-table-artist-image-download-manifest.json",
         "data/미술사조/27cd7106c6176211c4e94b56-1.html"
       ],
       "status": "verified-pair"
@@ -10141,6 +11858,9 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/27cd7106c6176211c4e94b56-1.html",
         "data/미술사조/be9a35cdca8c52adb73b06c7-1.html"
       ],
       "status": "verified-pair"
@@ -10164,6 +11884,37 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-further-de-kooning",
+      "uhangulVersion": "0.7",
+      "original": "Willem de Kooning",
+      "language": "und",
+      "korean": "윌럼 드 쿠닝",
+      "displayKorean": "드 쿠닝, 윌럼",
+      "listKorean": "쿠닝",
+      "aliases": {
+        "ko": [
+          "드 쿠닝",
+          "쿠닝",
+          "윌럼 드 쿠닝"
+        ],
+        "en": [
+          "de Kooning",
+          "Kooning",
+          "Willem de Kooning"
+        ]
+      },
+      "uhangul": "드 쿠닝, 윌럼",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/8822876f0626aa0296851626-1.html"
       ],
       "status": "verified-pair"
     },
@@ -10192,26 +11943,31 @@
       "status": "verified-pair"
     },
     {
-      "id": "william-blake",
+      "id": "artist-mid-william-blake",
       "uhangulVersion": "0.7",
       "original": "William Blake",
       "language": "und",
       "korean": "윌리엄 블레이크",
-      "displayKorean": "윌리엄 블레이크",
-      "listKorean": "윌리엄 블레이크",
+      "displayKorean": "블레이크, 윌리엄",
+      "listKorean": "블레이크",
       "aliases": {
         "ko": [
-          "블레이크"
+          "블레이크",
+          "윌리엄 블레이크"
         ],
         "en": [
-          "Blake"
+          "Blake",
+          "William Blake"
         ]
       },
-      "uhangul": "윌리엄 블레이크",
+      "uhangul": "블레이크, 윌리엄",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
       ],
       "status": "verified-pair"
     },
@@ -10292,6 +12048,34 @@
       "status": "verified-pair"
     },
     {
+      "id": "artist-mid-william-merritt-chase",
+      "uhangulVersion": "0.7",
+      "original": "William Merritt Chase",
+      "language": "und",
+      "korean": "윌리엄 메릿 체이스",
+      "displayKorean": "체이스, 윌리엄 메릿",
+      "listKorean": "체이스",
+      "aliases": {
+        "ko": [
+          "체이스",
+          "윌리엄 메릿 체이스"
+        ],
+        "en": [
+          "Chase",
+          "William Merritt Chase"
+        ]
+      },
+      "uhangul": "체이스, 윌리엄 메[Rㅣㅅ]",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html"
+      ],
+      "status": "verified-pair"
+    },
+    {
       "id": "william-morris",
       "uhangulVersion": "0.7",
       "original": "William Morris",
@@ -10338,6 +12122,7 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
+        "data/movement-table-artist-image-download-manifest.json",
         "data/미술사조/f20d01b9856f3df2c73eebf8-1.html"
       ],
       "status": "verified-pair"
@@ -10396,8 +12181,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/080336f866ce0c573e6c2b7f-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
+        "data/미술사조/080336f866ce0c573e6c2b7f-1.html"
       ],
       "status": "verified-pair"
     },
@@ -10422,6 +12206,33 @@
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "artist-further-wols",
+      "uhangulVersion": "0.7",
+      "original": "Wols",
+      "language": "und",
+      "korean": "볼스",
+      "displayKorean": "볼스",
+      "listKorean": "볼스",
+      "aliases": {
+        "ko": [
+          "볼스"
+        ],
+        "en": [
+          "Wols"
+        ]
+      },
+      "uhangul": "[Vㅗㄹ]스",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/903c178f9ba65fa2554de073-1.html"
       ],
       "status": "verified-pair"
     },
@@ -10474,50 +12285,61 @@
       "status": "verified-pair"
     },
     {
-      "id": "yayoi-kusama",
+      "id": "artist-mid-yayoi-kusama",
       "uhangulVersion": "0.7",
       "original": "Yayoi Kusama",
       "language": "und",
-      "korean": "쿠사마 야요이",
-      "displayKorean": "쿠사마 야요이",
-      "listKorean": "쿠사마 야요이",
+      "korean": "구사마 야요이",
+      "displayKorean": "야요이, 구사마",
+      "listKorean": "야요이",
       "aliases": {
         "ko": [
-          "야요이"
+          "야요이",
+          "구사마 야요이"
         ],
         "en": [
-          "Kusama"
+          "Kusama",
+          "Yayoi Kusama"
         ]
       },
-      "uhangul": "쿠사마 야요이",
+      "uhangul": "야요이, 구사마",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/8f7b750ae233057c81ea4c31-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "yoko-ono",
+      "id": "artist-further-yoko-ono",
       "uhangulVersion": "0.7",
       "original": "Yoko Ono",
       "language": "und",
       "korean": "오노 요코",
-      "displayKorean": "오노 요코",
-      "listKorean": "오노 요코",
+      "displayKorean": "요코, 오노",
+      "listKorean": "요코",
       "aliases": {
         "ko": [
-          "요코"
+          "요코",
+          "오노 요코"
         ],
         "en": [
-          "Ono"
+          "Ono",
+          "Yoko Ono"
         ]
       },
-      "uhangul": "오노 요코",
+      "uhangul": "요코, 오노",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/미술사조/a58f5e30e9cc89681111f83e-1.html"
       ],
       "status": "verified-pair"
     },
@@ -10544,31 +12366,38 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
+        "data/movement-table-artist-image-download-manifest.json",
         "data/미술사조/f2403fbd2febcd2486d6d5b8-1.html"
       ],
       "status": "verified-pair"
     },
     {
-      "id": "yves-tanguy",
+      "id": "artist-mid-yves-tanguy",
       "uhangulVersion": "0.7",
       "original": "Yves Tanguy",
       "language": "und",
       "korean": "이브 탕기",
-      "displayKorean": "이브 탕기",
-      "listKorean": "이브 탕기",
+      "displayKorean": "탕기, 이브",
+      "listKorean": "탕기",
       "aliases": {
         "ko": [
-          "탕기"
+          "탕기",
+          "이브 탕기"
         ],
         "en": [
-          "Tanguy"
+          "Tanguy",
+          "Yves Tanguy"
         ]
       },
-      "uhangul": "이[Vㅡ] 탕기",
+      "uhangul": "탕기, 이[Vㅡ]",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/manual-person-overrides"
+        "data/미술사조/manual-person-overrides",
+        "data/artists.json",
+        "data/further-artist-image-download-manifest.json",
+        "data/movement-table-artist-image-download-manifest.json",
+        "data/미술사조/b6f307845ec9a6f73e9d4e44-1.html"
       ],
       "status": "verified-pair"
     },
@@ -10819,16 +12648,18 @@
       "uhangulVersion": "0.7",
       "original": "En plein air",
       "language": "und",
-      "korean": "야외제작",
-      "displayKorean": "야외제작",
-      "listKorean": "야외제작",
+      "korean": "야외제작(앙 플레네르)",
+      "displayKorean": "야외제작(앙 플레네르)",
+      "listKorean": "야외제작(앙 플레네르)",
       "aliases": {
-        "ko": [],
+        "ko": [
+          "플레네르)"
+        ],
         "en": [
           "air"
         ]
       },
-      "uhangul": "야외제작",
+      "uhangul": "야외제작(앙 플[Rㅔ]네르)",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
       "sources": [

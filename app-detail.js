@@ -113,7 +113,7 @@ function renderArtworkDetail(work, artist, loading=false) {
     render:() => renderArtworkDetail(work, artist, false),
     contextMenu:(event, index) => showArtworkLinkMenu(event, artist, work, index)
   });
-  detail.querySelector('.detail-image-wrap')?.addEventListener('dblclick', () => openArtworkImageWindow(image, loc(work.title), {artist:artistDisplayName(artist), title:artworkDisplayTitle(work), year:workYearLabel(work)}));
+  detail.querySelector('.detail-image-wrap')?.addEventListener('dblclick', () => openArtworkImageWindow(image, loc(work.title), {artist:language === 'ko' ? artistListKoreanName(artist) : loc(artist.name), title:artworkDisplayTitle(work), year:workYearLabel(work)}));
   setupZoomPan(detail.querySelector('.detail-image-wrap'), detail.querySelector('.detail-image'));
   setupDetailImageResize();
 }
@@ -237,26 +237,67 @@ function openFavoritesWindow() {
   popup.focus();
 }
 function openArtworkImageWindow(imageSrc, title, caption={}) {
-  const width = Math.floor(window.screen.availWidth * 0.8);
-  const height = Math.floor(window.screen.availHeight * 0.8);
-  const left = Math.max(0, Math.floor((window.screen.availWidth - width) / 2));
-  const top = Math.max(0, Math.floor((window.screen.availHeight - height) / 2));
-  const popup = window.open('', 'artAtlasArtworkImage', `popup=yes,width=${width},height=${height},left=${left},top=${top}`);
-  if (!popup) return alert(language === 'ko' ? '이미지 창을 열 수 없습니다. 팝업 차단을 해제해 주세요.' : 'Could not open the image window. Please allow pop-ups.');
-  const imageUrl = JSON.stringify(String(imageSrc)).replace(/</g, '\\u003c');
-  const imageTitle = JSON.stringify(String(title || '')).replace(/</g, '\\u003c');
-  popup.document.write(`<!doctype html><html lang="${language}"><head><meta charset="utf-8"><title>${esc(loc(title) || 'Artwork')}</title><style>html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#10120f;color:#f7f4ec;font-family:system-ui,sans-serif}#toolbar{height:42px;box-sizing:border-box;display:flex;align-items:center;padding:0 16px;background:#242820;font-size:12px;color:#c8cdc2}#stage{height:calc(100% - 42px);position:relative;overflow:hidden;touch-action:none;cursor:grab;user-select:none}#stage.dragging{cursor:grabbing}#artwork{position:absolute;top:50%;left:50%;max-width:none;max-height:none;transform:translate(-50%,-50%);pointer-events:none;user-select:none}</style></head><body><div id="toolbar">${language === 'ko' ? '왼쪽 버튼을 누른 채 드래그: 이동 · 휠 위로: 확대 · 휠 아래로: 축소' : 'Left-drag: pan · Wheel up: zoom in · Wheel down: zoom out'}</div><div id="stage"><img id="artwork" alt=""></div><script>const src=${imageUrl}, title=${imageTitle}, stage=document.querySelector('#stage'), image=document.querySelector('#artwork');document.title=title||'Artwork';image.src=src;image.alt=title;let zoom=1,x=0,y=0,drag=null;const clamp=()=>{const maxX=Math.max(0,(image.offsetWidth-stage.clientWidth)/2),maxY=Math.max(0,(image.offsetHeight-stage.clientHeight)/2);x=Math.max(-maxX,Math.min(maxX,x));y=Math.max(-maxY,Math.min(maxY,y));};const draw=()=>{if(!image.naturalWidth)return;const base=Math.min(stage.clientWidth/image.naturalWidth,stage.clientHeight/image.naturalHeight);image.style.width=Math.max(1,image.naturalWidth*base*zoom)+'px';image.style.height=Math.max(1,image.naturalHeight*base*zoom)+'px';clamp();image.style.transform='translate(calc(-50% + '+x+'px), calc(-50% + '+y+'px))';};image.addEventListener('load',draw);window.addEventListener('resize',draw);stage.addEventListener('pointerdown',event=>{if(event.button!==0)return;drag={id:event.pointerId,x:event.clientX,y:event.clientY,startX:x,startY:y};stage.setPointerCapture(event.pointerId);stage.classList.add('dragging');});stage.addEventListener('pointermove',event=>{if(!drag||event.pointerId!==drag.id)return;x=drag.startX+event.clientX-drag.x;y=drag.startY+event.clientY-drag.y;draw();});const stop=event=>{if(!drag||event.pointerId!==drag.id)return;drag=null;stage.classList.remove('dragging');};stage.addEventListener('pointerup',stop);stage.addEventListener('pointercancel',stop);stage.addEventListener('wheel',event=>{event.preventDefault();const oldZoom=zoom,ratio=event.deltaY<0?1.1:1/1.1;zoom=Math.max(.5,Math.min(6,zoom*ratio));const actualRatio=zoom/oldZoom,rect=stage.getBoundingClientRect(),pointX=event.clientX-rect.left-stage.clientWidth/2,pointY=event.clientY-rect.top-stage.clientHeight/2;x=x*actualRatio+pointX*(1-actualRatio);y=y*actualRatio+pointY*(1-actualRatio);draw();},{passive:false});<\/script></body></html>`);
-  popup.document.close();
-  const captionText = [caption.artist, caption.title, caption.year].filter(Boolean).join(' · ');
-  if (captionText) {
-    const captionElement = popup.document.createElement('div');
-    captionElement.textContent = captionText;
-    Object.assign(captionElement.style, {position:'absolute',zIndex:'2',left:'16px',bottom:'16px',maxWidth:'calc(100% - 32px)',padding:'8px 11px',borderRadius:'4px',background:'#050705ba',color:'#f7f4ec',fontSize:'13px',lineHeight:'1.35',pointerEvents:'none'});
-    popup.document.querySelector('#stage')?.append(captionElement);
-  }
-  popup.resizeTo(width, height);
-  popup.moveTo(left, top);
-  popup.focus();
+  const existingViewer = document.querySelector('.artwork-image-viewer');
+  if(existingViewer) (existingViewer.closeArtworkViewer || (()=>existingViewer.remove()))();
+  const viewer = document.createElement('section');
+  viewer.className = 'artwork-image-viewer artist-timeline-image-viewer';
+  viewer.tabIndex = -1;
+  viewer.setAttribute('role','dialog');
+  viewer.setAttribute('aria-modal','true');
+  viewer.setAttribute('aria-label',String(title || (language === 'ko' ? '작품 이미지 확대' : 'Enlarged artwork')));
+  viewer.innerHTML = `<div class="artwork-image-viewer-stage"><img class="artwork-image-viewer-image" src="${esc(imageSrc)}" alt="${esc(title || '')}"><div class="artwork-image-viewer-lens" aria-hidden="true"><img src="${esc(imageSrc)}" alt=""></div></div><div class="artwork-image-viewer-caption"></div>`;
+  const stage = viewer.querySelector('.artwork-image-viewer-stage');
+  const image = stage.querySelector('.artwork-image-viewer-image');
+  const lens = stage.querySelector('.artwork-image-viewer-lens');
+  const lensImage = lens.querySelector('img');
+  const captionElement = viewer.querySelector('.artwork-image-viewer-caption');
+  captionElement.textContent = [caption.artist,caption.title,caption.year].filter(Boolean).join(' · ');
+  captionElement.classList.toggle('hidden',!captionElement.textContent);
+  const fitViewer = () => {
+    if(!image.naturalWidth || !image.naturalHeight) return;
+    const aspect=image.naturalWidth/image.naturalHeight,maxWidth=window.innerWidth*.9,maxHeight=window.innerHeight*.9;
+    let width=maxWidth,height=width/aspect;
+    if(height>maxHeight){height=maxHeight;width=height*aspect;}
+    viewer.style.width=`${Math.max(120,Math.round(width))}px`;
+    viewer.style.height=`${Math.max(120,Math.round(height))}px`;
+  };
+  const draw = () => {
+    if(!image.naturalWidth || !image.naturalHeight) return;
+    const base=Math.min(stage.clientWidth/image.naturalWidth,stage.clientHeight/image.naturalHeight);
+    const width=image.naturalWidth*base,height=image.naturalHeight*base;
+    image.style.width=`${Math.max(1,width)}px`;
+    image.style.height=`${Math.max(1,height)}px`;
+    image.style.transform='translate(-50%,-50%)';
+    lens.classList.remove('visible');
+  };
+  const closeViewer = () => {window.removeEventListener('resize',resizeViewer);document.removeEventListener('keydown',onKeyDown);viewer.remove();};
+  const resizeViewer = () => {fitViewer();draw();};
+  const onKeyDown = event => {if(event.key==='Escape') closeViewer();};
+  const moveLens = event => {
+    const imageRect=image.getBoundingClientRect(),stageRect=stage.getBoundingClientRect();
+    const imageX=event.clientX-imageRect.left,imageY=event.clientY-imageRect.top;
+    if(imageX<0 || imageY<0 || imageX>imageRect.width || imageY>imageRect.height){lens.classList.remove('visible');return;}
+    const diameter=imageRect.height/3;
+    lens.style.width=`${diameter}px`;
+    lens.style.height=`${diameter}px`;
+    lens.style.left=`${event.clientX-stageRect.left-diameter/2}px`;
+    lens.style.top=`${event.clientY-stageRect.top-diameter/2}px`;
+    lensImage.style.width=`${imageRect.width*3}px`;
+    lensImage.style.height=`${imageRect.height*3}px`;
+    lensImage.style.left=`${diameter/2-imageX*3}px`;
+    lensImage.style.top=`${diameter/2-imageY*3}px`;
+    lens.classList.add('visible');
+  };
+  image.addEventListener('load',resizeViewer);
+  image.addEventListener('dblclick',event=>{event.preventDefault();event.stopPropagation();closeViewer();});
+  stage.addEventListener('pointermove',moveLens);
+  stage.addEventListener('pointerleave',()=>lens.classList.remove('visible'));
+  window.addEventListener('resize',resizeViewer);
+  document.addEventListener('keydown',onKeyDown);
+  viewer.closeArtworkViewer=closeViewer;
+  document.body.append(viewer);
+  if(image.complete) resizeViewer();
+  viewer.focus();
 }
 async function openArtworkDetail(work, artist, remember=true) {
   if (!work || !artist) return;
