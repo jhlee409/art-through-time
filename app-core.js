@@ -104,6 +104,7 @@ let movementView = parseMovementView();
 let countryArtView = parseCountryArtView();
 let artistListView = parseArtistListView();
 let artistListManualMovementOrder = [];
+let artistListScrollTopToRestore = null;
 let countryArtResetZoomOnRender = true;
 const countryArtWorkCache = new Map();
 const countryArtWorkRequests = new Map();

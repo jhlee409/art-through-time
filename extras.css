@@ -778,7 +778,6 @@
 .artist-life-pill { position: absolute; z-index: 4; display: flex; align-items: center; justify-content: center; min-width: 0; box-sizing: border-box; padding: 0 4px; overflow: hidden; border: 1px solid #17211e; border-radius: 999px; background: linear-gradient(90deg, #fffdf8 0 var(--artist-active-start, 100%), #dff2fa var(--artist-active-start, 100%) var(--artist-active-end, 100%), #fffdf8 var(--artist-active-end, 100%) 100%); color: #17211e; font-family: var(--sans); font-weight: 800; line-height: 1; white-space: nowrap; box-shadow: 0 1px 2px #18221e3d; cursor: pointer; }
 .artist-life-pill--primary { border: var(--artist-list-representative-border-width, 1px) solid #c1121f; color: #c1121f; font-weight: 900; }
 .artist-life-pill span { display: block; min-width: 0; overflow: hidden; line-height: 1; text-overflow: ellipsis; white-space: nowrap; pointer-events: none; }
-.artist-life-pill--source { visibility: hidden; pointer-events: none; }
 .artist-life-overlay { position: absolute; inset: 0; z-index: 24; overflow: visible; pointer-events: none; }
 .artist-life-overlay .artist-life-pill { pointer-events: auto; }
 .artist-life-overlay .artist-life-pill span { max-width: 100%; }
@@ -793,11 +792,20 @@
 .country-art-scroll.country-art-panning { cursor: grabbing; user-select: none; }
 .country-art-movement-preview { position: fixed; z-index: 160; overflow: hidden; border: 2px solid #8e9b8b; border-radius: 8px; background: #f8f5ed; box-shadow: 0 16px 42px #18221e52; }
 .country-art-movement-preview-close { position: absolute; z-index: 2; top: 6px; right: 6px; display: grid; width: 28px; height: 28px; place-items: center; border: 1px solid #8e9b8b; border-radius: 50%; background: #fffdf8; color: var(--ink); font-size: 20px; line-height: 1; }
-.country-art-image-magnifier { position: fixed; z-index: 220; overflow: hidden; pointer-events: none; border: 2px solid #71806e; border-radius: 6px; background: #fffdf8; box-shadow: 0 12px 30px #18221e66; }
+.country-art-image-magnifier { position: fixed; z-index: 220; display: grid; place-items: center; overflow: hidden; touch-action: none; border: 2px solid #71806e; border-radius: 6px; background: #fffdf8; box-shadow: 0 12px 30px #18221e66; }
+.country-art-movement-preview-content .country-art-work img { cursor: zoom-in; }
+.country-art-image-magnifier > img { display: block; width: 100%; height: 100%; object-fit: contain; cursor: zoom-out; user-select: none; -webkit-user-drag: none; }
 .country-art-image-magnifier-stage { transform-origin: top left; }
 .country-art-image-magnifier .country-art-work { margin: 0; }
 .country-art-image-magnifier .country-art-work figcaption { font-size: 4.5px; }
 .country-art-image-magnifier .country-art-work figcaption small { font-size: 4.5px; }
+.country-art-image-magnifier-resizer { position: absolute; z-index: 2; display: block; }
+.country-art-image-magnifier-resizer--n,.country-art-image-magnifier-resizer--s { right: 10px; left: 10px; height: 10px; cursor: ns-resize; }
+.country-art-image-magnifier-resizer--n { top: -5px; }.country-art-image-magnifier-resizer--s { bottom: -5px; }
+.country-art-image-magnifier-resizer--e,.country-art-image-magnifier-resizer--w { top: 10px; bottom: 10px; width: 10px; cursor: ew-resize; }
+.country-art-image-magnifier-resizer--e { right: -5px; }.country-art-image-magnifier-resizer--w { left: -5px; }
+.country-art-image-magnifier-resizer--ne,.country-art-image-magnifier-resizer--nw,.country-art-image-magnifier-resizer--se,.country-art-image-magnifier-resizer--sw { width: 16px; height: 16px; }
+.country-art-image-magnifier-resizer--ne { top: -7px; right: -7px; cursor: nesw-resize; }.country-art-image-magnifier-resizer--nw { top: -7px; left: -7px; cursor: nwse-resize; }.country-art-image-magnifier-resizer--se { right: -7px; bottom: -7px; cursor: nwse-resize; }.country-art-image-magnifier-resizer--sw { bottom: -7px; left: -7px; cursor: nesw-resize; }
 .country-art-movement-preview-stage { transform-origin: top left; }
 .country-art-movement-preview-content { position: relative; display: flex; width: 100%; height: 100%; box-sizing: border-box; overflow: hidden; border: 2px solid #f8f5ed; border-radius: 5px; background: color-mix(in srgb, var(--movement-color) 76%, white); color: #17211e; box-shadow: 0 1px 2px #18221e20; }
 .country-art-movement-preview-content .country-art-work-list { overflow: hidden; }

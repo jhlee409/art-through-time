@@ -834,7 +834,7 @@ function artistListPackedArtistLayout(entry, chartStart, chartEnd, yearScale) {
   });
   return {packed, laneCount:Math.max(0,lanes.length)};
 }
-function artistListPackedArtistMarkup(entry, chartStart, chartEnd, yearScale, topOffset=0, layout=artistListPackedArtistLayout(entry,chartStart,chartEnd,yearScale)) {
+function artistListPackedArtistOverlayMarkup(entry, chartStart, chartEnd, yearScale, topOffset=0, layout=artistListPackedArtistLayout(entry,chartStart,chartEnd,yearScale), overlayOptions={}) {
   if (!layout.packed.length) return '';
   const movementStart=Number(entry.sourceStart ?? entry.start);
   const movementEnd=Number(entry.sourceEnd ?? entry.end);
@@ -855,7 +855,12 @@ function artistListPackedArtistMarkup(entry, chartStart, chartEnd, yearScale, to
     // activity segment must nevertheless remain inside that box's time span.
     const activity=artistListIndependentActivitySpan(item.artist,item.boxStart,item.boxEnd,movementStart,movementEnd);
     const activityStyle=activity ? `--artist-active-start:${activity.start}%;--artist-active-end:${activity.end}%;` : '';
-    return `<button class="artist-life-pill artist-life-pill--source${className}" type="button" tabindex="-1" aria-hidden="true" data-artist-id="${esc(item.artist.id)}" style="left:${left}px;top:${top}px;width:${width}px;height:${boxHeight}px;font-size:${baseFontSize}px;${activityStyle}" title="${esc(title)}"><span>${esc(name)}</span></button>`;
+    const xScale = overlayOptions.density || 1;
+    const yScale = overlayOptions.verticalDensity || 1;
+    const heightScale = yScale / Math.max(overlayOptions.defaultFitDensity || 1, .001);
+    const overlayLeft = (overlayOptions.labelColumnWidth + left) * xScale;
+    const overlayTop = (overlayOptions.rowTop + top) * yScale;
+    return `<button class="artist-life-pill artist-life-pill--overlay${className}" type="button" data-artist-id="${esc(item.artist.id)}" style="left:${overlayLeft}px;top:${overlayTop}px;width:${width * xScale}px;height:${boxHeight * heightScale}px;font-size:${baseFontSize * heightScale * .8}px;${activityStyle}" title="${esc(title)}"><span>${esc(name)}</span></button>`;
   }).join('');
 }
 function artistListParentMovementName(groupKey, rows) {
@@ -1133,6 +1138,14 @@ function renderCountryArt(options = {}) {
   // fixed century band is not. Use an inverse source height for both sides of
   // the chart so their screen-space boundary stays aligned at every zoom.
   const artistListAxisSourceHeight = artistListMode ? axisHeight / Math.max(verticalDensity,.001) : axisHeight;
+  const artistListRowTops = new Map();
+  if (artistListMode) {
+    let rowTop = artistListAxisSourceHeight;
+    entries.forEach(entry => {
+      artistListRowTops.set(entry, rowTop);
+      rowTop += entry.artistListRowHeight;
+    });
+  }
   const axisCornerStyle = artistListMode ? ` style="height:${artistListAxisSourceHeight}px;min-height:${artistListAxisSourceHeight}px"` : '';
   const axisCorner = `<div class="country-art-axis-corner"${axisCornerStyle}><span>${esc(axisHeading)}</span></div>`;
   // The frozen left header shares the exact source geometry of the chart cell.
@@ -1160,12 +1173,12 @@ function renderCountryArt(options = {}) {
   const frozenAxisVerticalDensity = artistListMode ? 1 : verticalDensity;
   const centuryLabelXScale = artistListMode ? 1 / Math.max(density, .001) : 1;
   const frozenTimeAxis = `<div class="country-art-frozen-time-axis" aria-hidden="true" style="width:${Math.ceil(chartContentWidth * density)}px"><div class="country-art-frozen-time-axis-layer" style="left:${Math.ceil(labelColumnWidth * density)}px;width:${Math.ceil(chartWidth * density)}px;height:${Math.ceil(axisHeight * frozenAxisVerticalDensity)}px"><div style="width:${chartWidth}px;transform:scale(${density}, ${frozenAxisVerticalDensity});--artist-list-century-label-x-scale:${centuryLabelXScale}"><div class="country-art-time-axis" style="width:${chartWidth}px;height:${axisHeight}px">${centuryBands}</div></div></div></div>`;
+  const artistLifeOverlayPills = [];
   const workMarkup = (entry) => {
     const rowHeight=artistListMode ? entry.artistListRowHeight : movementRowHeight;
     const left = Math.max(0,entry.start-start)*yearScale;
     const barWidth = Math.max(92,(Math.min(end,entry.end)-Math.max(start,entry.start))*yearScale);
     if (artistListMode) {
-      let artistPills = '';
       let submovementBoxes = '';
       let submovements = [];
       try {
@@ -1179,12 +1192,18 @@ function renderCountryArt(options = {}) {
           const regionFeatureKey=`${parentDocumentName}|${child.countryId}|${artistListMovementLabelKey(child)}`;
           return `<div class="artist-list-submovement-box" data-region-feature-key="${esc(regionFeatureKey)}" data-region-feature-development="${esc(child.developmentId || '')}" data-region-feature-parent="${esc(parentDocumentName || entry.name?.en || entry.name?.ko || '')}" data-region-feature-parent-label="${esc(loc(entry.name))}" data-region-feature-country="${esc(child.countryId || '')}" data-region-feature-country-label="${esc(countryName)}" style="left:${childLeft}px;top:${child.submovementTop}px;width:${childWidth}px;height:${child.submovementHeight}px;--movement-color:${esc(entry.artistListParentColor)}" title="${esc(childTitle)}"><span class="artist-list-submovement-title">${esc(`${countryName} · ${loc(child.name)}`)}</span></div>`;
         }).join('');
-        artistPills = submovements.map(child => artistListPackedArtistMarkup(child, start, end, yearScale, child.submovementTop, child.artistLayout)).join('');
+        submovements.forEach(child => artistLifeOverlayPills.push(artistListPackedArtistOverlayMarkup(child, start, end, yearScale, child.submovementTop, child.artistLayout, {
+          rowTop:artistListRowTops.get(entry) || 0,
+          labelColumnWidth,
+          density,
+          verticalDensity,
+          defaultFitDensity
+        })));
       } catch (error) {
         console.error('Artist list packing failed:', error);
       }
       const parentMovementBox = submovements.length ? '' : `<article class="country-art-movement artist-list-empty-movement" aria-hidden="true" style="left:${left}px;width:${barWidth}px;height:${rowHeight}px;--movement-color:${esc(entry.artistListParentColor)}" title="${esc(`${artistListMovementCountryLabel(entry)} · ${loc(entry.name)} · ${movementLabelMeta(entry)}`)}"><div class="country-art-work-list country-art-work-list-empty"></div></article>`;
-      return `${movementLabelMarkup(entry)}<div class="country-art-time-row artist-list-time-row" style="width:${chartWidth}px;height:${rowHeight}px">${parentMovementBox}${submovementBoxes}${artistPills}</div>`;
+      return `${movementLabelMarkup(entry)}<div class="country-art-time-row artist-list-time-row" style="width:${chartWidth}px;height:${rowHeight}px">${parentMovementBox}${submovementBoxes}</div>`;
     }
     const source = workSources.get(entry);
     const works = displayedWorksByEntry.get(entry).map(work => `<figure class="country-art-work"><img src="${esc(work.src)}" alt="${esc(work.alt)}" loading="lazy"><figcaption>${work.artistName ? `<strong class="country-art-work-artist">${esc(work.artistName)}</strong>` : ''}<span class="country-art-work-title">${esc(work.title)}</span>${work.year ? `<small>${esc(work.year)}</small>` : ''}</figcaption></figure>`).join('');
@@ -1206,63 +1225,40 @@ function renderCountryArt(options = {}) {
   const pageNav = `<nav class="page-nav-actions" aria-label="${language === 'ko' ? '탭 이동' : 'Tab navigation'}"><button class="atlas-nav-button country-art-nav-artists" type="button">${language === 'ko' ? '화가' : 'Artists'}</button><button class="atlas-nav-button country-art-nav-movements" type="button">${language === 'ko' ? '사조' : 'Movements'}</button>${countryArtButton}${painterListButton}<button class="atlas-nav-button country-art-nav-techniques" type="button">${language === 'ko' ? '기법·용어' : 'Techniques'}</button><button class="atlas-nav-button country-art-nav-topics" type="button">${language === 'ko' ? '주제-사건' : 'Topics & Events'}</button></nav>`;
   const defaultFitClass = hideDefaultScrollbars ? ' country-art-scroll-default-fit' : '';
   const chartCountryHeading = artistListMode ? '' : `<div class="country-art-country-name" style="width:${labelColumnWidth}px;min-width:${labelColumnWidth}px">${esc(chartHeading)}</div>`;
-  timeline.innerHTML = `${pageNav}<div class="atlas-scroll country-art-scroll${defaultFitClass}">${frozenLabels}${frozenTimeAxis}<div class="country-art-zoom-viewport" style="width:${Math.ceil(chartContentWidth * density)}px;height:${Math.ceil(chartContentHeight * verticalDensity)}px"><div class="country-art-zoom-layer country-art-event-mode-${countryArtEventMode(density)}" style="width:${chartContentWidth}px;transform:scale(${density}, ${verticalDensity});--artist-list-label-text-x-scale:${frozenLabelTextXScale};--artist-list-label-text-y-scale:${frozenLabelTextYScale}">${chartCountryHeading}<div class="country-art-chart" style="width:${chartContentWidth}px;grid-template-columns:${labelColumnWidth}px ${chartWidth}px">${centuryGrid}${axis}${eventRail}${entries.map(workMarkup).join('')}</div></div></div></div>`;
+  const chartRows = entries.map(workMarkup).join('');
+  const artistLifeOverlay = artistListMode && artistLifeOverlayPills.length ? `<div class="artist-life-overlay">${artistLifeOverlayPills.join('')}</div>` : '';
+  timeline.innerHTML = `${pageNav}<div class="atlas-scroll country-art-scroll${defaultFitClass}">${frozenLabels}${frozenTimeAxis}<div class="country-art-zoom-viewport" style="width:${Math.ceil(chartContentWidth * density)}px;height:${Math.ceil(chartContentHeight * verticalDensity)}px"><div class="country-art-zoom-layer country-art-event-mode-${countryArtEventMode(density)}" style="width:${chartContentWidth}px;transform:scale(${density}, ${verticalDensity});--artist-list-label-text-x-scale:${frozenLabelTextXScale};--artist-list-label-text-y-scale:${frozenLabelTextYScale}">${chartCountryHeading}<div class="country-art-chart" style="width:${chartContentWidth}px;grid-template-columns:${labelColumnWidth}px ${chartWidth}px">${centuryGrid}${axis}${eventRail}${chartRows}</div></div>${artistLifeOverlay}</div></div>`;
   timeline.querySelector('.country-art-nav-artists')?.addEventListener('click', openArtistListPage);
   timeline.querySelector('.country-art-nav-movements')?.addEventListener('click', openMovementAtlas);
   timeline.querySelector('.country-art-nav-country-art')?.addEventListener('click', openCountryArtPage);
   timeline.querySelector('.country-art-nav-artist-list')?.addEventListener('click', openPainterListPage);
   timeline.querySelector('.country-art-nav-techniques')?.addEventListener('click', openTechniquesPage);
   timeline.querySelector('.country-art-nav-topics')?.addEventListener('click', openTopicsPage);
+  const restoreArtistListChartPosition = action => {
+    const scroll = timeline.querySelector('.country-art-scroll');
+    const scrollLeft = scroll?.scrollLeft || 0;
+    const scrollTop = scroll?.scrollTop || 0;
+    const pageX = window.scrollX || 0;
+    const pageY = window.scrollY || 0;
+    action();
+    const restore = () => {
+      if (scroll?.isConnected) {
+        scroll.scrollLeft = scrollLeft;
+        scroll.scrollTop = scrollTop;
+        scroll.dispatchEvent(new Event('scroll'));
+      }
+      window.scrollTo(pageX, pageY);
+    };
+    requestAnimationFrame(restore);
+    setTimeout(restore, 0);
+  };
   const bindArtistLifePill = button => button.addEventListener('click', event => {
     event.preventDefault();
     event.stopPropagation();
-    openArtistTimelinePage(button.dataset.artistId);
+    button.blur();
+    restoreArtistListChartPosition(() => openArtistTimelinePage(button.dataset.artistId));
   });
-  if (artistListMode) {
-    requestAnimationFrame(() => {
-      const viewport = timeline.querySelector('.country-art-zoom-viewport');
-      if (!viewport) return;
-      const viewportRect = viewport.getBoundingClientRect();
-      // Match every pill's height to its movement row's vertical expansion.
-      // Its lifespan width follows the same horizontal time scale as the chart.
-      const pillHeightZoomRatio = verticalDensity / Math.max(defaultFitDensity, .001);
-      const overlay = document.createElement('div');
-      overlay.className = 'artist-life-overlay';
-      const sources = [...viewport.querySelectorAll('.artist-life-pill--source')];
-      if (!sources.length) return;
-      // One shared height is derived from the shortest packed box in the
-      // complete chart. Do not enlarge or locally clamp individual boxes.
-      const commonPillHeight = Math.min(...sources.map(source => source.offsetHeight));
-      const smallestFontSize = Math.min(...sources.map(source => parseFloat(source.style.fontSize || 0)));
-      sources.forEach(source => {
-        const sourceRect = source.getBoundingClientRect();
-        const sourceRow = source.closest('.artist-list-time-row');
-        const sourceRowRect = sourceRow?.getBoundingClientRect();
-        const clone = source.cloneNode(true);
-        clone.classList.remove('artist-life-pill--source');
-        clone.classList.add('artist-life-pill--overlay');
-        clone.removeAttribute('tabindex');
-        clone.removeAttribute('aria-hidden');
-        clone.style.left = `${sourceRect.left - viewportRect.left}px`;
-        const sourceTop = sourceRect.top - viewportRect.top;
-        const baseOffset = source.offsetTop * defaultFitDensity;
-        // The local box offset shares the movement row's vertical scale, so
-        // top/bottom gaps and inter-box spacing stay proportional.
-        const rowTop = sourceRowRect
-          ? sourceRowRect.top - viewportRect.top
-            + baseOffset * pillHeightZoomRatio
-          : sourceTop;
-        const pillHeight = commonPillHeight * pillHeightZoomRatio;
-        clone.style.top = `${rowTop}px`;
-        clone.style.width = `${sourceRect.width}px`;
-        clone.style.height = `${pillHeight}px`;
-        clone.style.fontSize = `${smallestFontSize * pillHeightZoomRatio * .8}px`;
-        overlay.append(clone);
-        bindArtistLifePill(clone);
-      });
-      viewport.append(overlay);
-    });
-  }
+  if (artistListMode) timeline.querySelectorAll('.artist-life-pill--overlay').forEach(bindArtistLifePill);
   timeline.querySelectorAll('.country-art-event').forEach(button => button.addEventListener('click', event => {
     event.stopPropagation();
     openCountryArtEventWikipedia(button.dataset.countryEventWiki, button.dataset.countryEventName);
@@ -1401,48 +1397,129 @@ function renderCountryArt(options = {}) {
     preview.querySelector('.country-art-movement-preview-close').addEventListener('click', closePreview);
     document.body.append(preview);
     const showMagnifier = image => {
-      document.querySelector('.country-art-image-magnifier')?.remove();
-      const card = image.closest('.country-art-work');
-      if (!card) return;
-      const cardRect = card.getBoundingClientRect();
-      const cardWidth = card.offsetWidth || cardRect.width;
-      const cardHeight = card.offsetHeight || cardRect.height;
+      const src = image.currentSrc || image.getAttribute('src') || image.src || '';
+      const alt = image.getAttribute('alt') || '';
+      if (!src) return;
+      const current = document.querySelector('.country-art-image-magnifier');
+      if (current?.dataset.imageSrc === src) {
+        current.remove();
+        return;
+      }
+      current?.remove();
+      const imageRect = image.getBoundingClientRect();
       const previewRect = preview.getBoundingClientRect();
       const edge = 16, gap = 12;
-      const candidates = [
-        {side:'right', maxWidth:window.innerWidth - previewRect.right - gap - edge, maxHeight:window.innerHeight - edge * 2},
-        {side:'bottom', maxWidth:window.innerWidth - edge * 2, maxHeight:window.innerHeight - previewRect.bottom - gap - edge},
-        {side:'top', maxWidth:window.innerWidth - edge * 2, maxHeight:previewRect.top - gap - edge},
-        {side:'left', maxWidth:previewRect.left - gap - edge, maxHeight:window.innerHeight - edge * 2},
-      ].map(candidate => ({...candidate, scale:Math.min(4, candidate.maxWidth / cardRect.width, candidate.maxHeight / cardRect.height)})).filter(candidate => candidate.scale > 0);
-      // Keep the magnifier beside the work whenever possible. The left side
-      // can be occupied by the country selector, so it is only a fallback.
-      const placement = (candidates.filter(candidate => candidate.side !== 'left').sort((a, b) => b.scale - a.scale)[0] || candidates.sort((a, b) => b.scale - a.scale)[0]);
-      if (!placement) return;
-      const width = Math.round(cardRect.width * placement.scale);
-      const height = Math.round(cardRect.height * placement.scale);
-      const cardCenterX = cardRect.left + cardRect.width / 2;
-      const cardCenterY = cardRect.top + cardRect.height / 2;
-      const left = placement.side === 'right' ? previewRect.right + gap : placement.side === 'left' ? previewRect.left - gap - width : cardCenterX - width / 2;
-      const top = placement.side === 'bottom' ? previewRect.bottom + gap : placement.side === 'top' ? previewRect.top - gap - height : cardCenterY - height / 2;
+      const naturalAspect = image.naturalWidth && image.naturalHeight ? image.naturalWidth / image.naturalHeight : null;
+      const aspect = naturalAspect || Math.max(.2, imageRect.width) / Math.max(.2, imageRect.height);
+      let visibleWidth = imageRect.width;
+      let visibleHeight = imageRect.height;
+      if (naturalAspect) {
+        const fit = Math.min(imageRect.width / image.naturalWidth, imageRect.height / image.naturalHeight);
+        visibleWidth = image.naturalWidth * fit;
+        visibleHeight = image.naturalHeight * fit;
+      }
+      let width = Math.max(120, visibleWidth * 3);
+      let height = width / aspect;
+      if (height < 90) {
+        height = 90;
+        width = height * aspect;
+      }
+      const maxInitialWidth = Math.max(80, window.innerWidth - edge * 2);
+      const maxInitialHeight = Math.max(80, window.innerHeight - edge * 2);
+      const viewportFit = Math.min(1, maxInitialWidth / width, maxInitialHeight / height);
+      width = Math.round(width * viewportFit);
+      height = Math.round(height * viewportFit);
+      const rightSpace = window.innerWidth - previewRect.right - gap - edge;
+      const leftSpace = previewRect.left - gap - edge;
+      const belowSpace = window.innerHeight - previewRect.bottom - gap - edge;
+      const aboveSpace = previewRect.top - gap - edge;
+      const centeredLeft = imageRect.left + imageRect.width / 2 - width / 2;
+      const centeredTop = imageRect.top + imageRect.height / 2 - height / 2;
+      const left = rightSpace >= width ? previewRect.right + gap : leftSpace >= width ? previewRect.left - gap - width : centeredLeft;
+      const top = belowSpace >= height ? previewRect.bottom + gap : aboveSpace >= height ? previewRect.top - gap - height : centeredTop;
       const magnifier = document.createElement('aside');
       magnifier.className = 'country-art-image-magnifier';
+      magnifier.dataset.imageSrc = src;
       magnifier.style.width = `${width}px`;
       magnifier.style.height = `${height}px`;
       magnifier.style.left = `${Math.max(edge, Math.min(left, window.innerWidth - width - edge))}px`;
       magnifier.style.top = `${Math.max(edge, Math.min(top, window.innerHeight - height - edge))}px`;
-      const stage = document.createElement('div');
-      stage.className = 'country-art-image-magnifier-stage';
-      stage.style.width = `${cardWidth}px`;
-      stage.style.height = `${cardHeight}px`;
-      stage.style.transform = `scale(${placement.scale * (cardRect.width / cardWidth)})`;
-      stage.append(card.cloneNode(true));
-      magnifier.append(stage);
+      magnifier.style.aspectRatio = String(aspect);
+      magnifier.innerHTML = `<img src="${esc(src)}" alt="${esc(alt)}">${['n','e','s','w','ne','nw','se','sw'].map(direction => `<i class="country-art-image-magnifier-resizer country-art-image-magnifier-resizer--${direction}" data-resize="${direction}"></i>`).join('')}`;
       document.body.append(magnifier);
+      let interaction = null;
+      const applyBox = (leftValue, topValue, widthValue, heightValue) => {
+        const minimumWidth = 80;
+        const minimumHeight = 80;
+        if (widthValue < minimumWidth) {
+          widthValue = minimumWidth;
+          heightValue = widthValue / aspect;
+        }
+        if (heightValue < minimumHeight) {
+          heightValue = minimumHeight;
+          widthValue = heightValue * aspect;
+        }
+        magnifier.style.width = `${Math.round(widthValue)}px`;
+        magnifier.style.height = `${Math.round(heightValue)}px`;
+        magnifier.style.left = `${Math.round(Math.max(0, leftValue))}px`;
+        magnifier.style.top = `${Math.round(Math.max(0, topValue))}px`;
+      };
+      magnifier.addEventListener('dblclick', event => {
+        event.preventDefault();
+        event.stopPropagation();
+        magnifier.remove();
+      });
+      magnifier.addEventListener('pointerdown', event => {
+        const handle = event.target.closest('[data-resize]');
+        if (!handle) return;
+        const rect = magnifier.getBoundingClientRect();
+        interaction = {pointerId:event.pointerId, direction:handle.dataset.resize, startX:event.clientX, startY:event.clientY, left:rect.left, top:rect.top, width:rect.width, height:rect.height};
+        magnifier.setPointerCapture(event.pointerId);
+        event.preventDefault();
+        event.stopPropagation();
+      });
+      magnifier.addEventListener('pointermove', event => {
+        if (!interaction || interaction.pointerId !== event.pointerId) return;
+        const dx = event.clientX - interaction.startX;
+        const dy = event.clientY - interaction.startY;
+        const direction = interaction.direction;
+        const west = direction.includes('w'), north = direction.includes('n'), east = direction.includes('e'), south = direction.includes('s');
+        const widthFromX = interaction.width + (east ? dx : west ? -dx : 0);
+        const heightFromY = interaction.height + (south ? dy : north ? -dy : 0);
+        let nextWidth = widthFromX;
+        let nextHeight = nextWidth / aspect;
+        if ((north || south) && !(east || west)) {
+          nextHeight = heightFromY;
+          nextWidth = nextHeight * aspect;
+        } else if ((north || south) && (east || west) && Math.abs(dy) > Math.abs(dx)) {
+          nextHeight = heightFromY;
+          nextWidth = nextHeight * aspect;
+        }
+        if (nextWidth < 80) {
+          nextWidth = 80;
+          nextHeight = nextWidth / aspect;
+        }
+        if (nextHeight < 80) {
+          nextHeight = 80;
+          nextWidth = nextHeight * aspect;
+        }
+        let nextLeft = west ? interaction.left + interaction.width - nextWidth : interaction.left;
+        let nextTop = north ? interaction.top + interaction.height - nextHeight : interaction.top;
+        if ((east || west) && !(north || south)) nextTop = interaction.top + (interaction.height - nextHeight) / 2;
+        if ((north || south) && !(east || west)) nextLeft = interaction.left + (interaction.width - nextWidth) / 2;
+        applyBox(nextLeft, nextTop, nextWidth, nextHeight);
+        event.preventDefault();
+      });
+      const stop = event => { if (interaction?.pointerId === event.pointerId) interaction = null; };
+      magnifier.addEventListener('pointerup', stop);
+      magnifier.addEventListener('pointercancel', stop);
     };
     clone.querySelectorAll('.country-art-work img').forEach(image => {
-      image.addEventListener('pointerenter', () => showMagnifier(image));
-      image.addEventListener('pointerleave', () => document.querySelector('.country-art-image-magnifier')?.remove());
+      image.addEventListener('dblclick', event => {
+        event.preventDefault();
+        event.stopPropagation();
+        showMagnifier(image);
+      });
     });
   };
   timeline.querySelectorAll('.country-art-movement').forEach(box => {
