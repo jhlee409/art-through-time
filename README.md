@@ -74,6 +74,8 @@ npm start
 
 사조 HTML의 `여러 국가에서의 전개` 표는 화가 리스트에 표시할 국가별 범주, 대표 화가 1명, 더 볼 화가 1~4명의 화면 정본입니다. 같은 `developmentId`의 카드 묶음은 표와 역할별 화가 집합 및 순서가 같아야 합니다.
 
+국가 전개 행을 바꿀 때는 HTML만 수정하지 않습니다. 같은 작업에서 `data/art-movements.json`의 국가·기간·정본 연결, `data/artists.json`의 화가·작품·활동 지역, `data/art-movement-representatives.json`의 카드 정보를 맞춥니다. `node tools/validate-cross-tab-linkage.js`는 이 연결이 국가별 미술·화가 리스트·화가 연표까지 이어지는지 전수 검사합니다.
+
 학습 길잡이 문장은 HTML에서 직접 고쳐 끝내지 않습니다.
 
 ```powershell
@@ -86,11 +88,12 @@ node tools/sync-movement-learning-guides.js --check
 - 화면 이미지는 프로젝트의 로컬 파일만 사용합니다.
 - 화가 작품은 `data/images/`에 둡니다. 고해상도 전용 `data/high-resolution/` 폴더는 사용하지 않습니다.
 - 기존 이미지 파일은 일괄 개명하지 않고 `data/image-catalog.json`에서 `legacy`로 보존합니다. 수정·교체하는 파일만 점진적으로 표준명으로 전환합니다.
-- 새 화가 작품 이미지는 `data/images/artist-id/간략이름_제목3단어_시작연도__workId.ext` 형식을 사용합니다. 작가명·작품명·연도·`workId`가 확정되지 않으면 임의 이름으로 등록하지 않고 대기 상태를 유지합니다.
+- 새 화가 작품 이미지는 `data/images/artist-*/간략이름_제목3단어_시작연도__workId.ext` 형식을 사용합니다. 여기서 `artist-*`는 실제 화가 ID 폴더입니다. 작가명·작품명·연도·`workId`가 확정되지 않으면 임의 이름으로 등록하지 않고 대기 상태를 유지합니다.
 - 이미지 연결의 기준은 파일명이 아니라 `artistId + workId`이며, 동일 파일 판정에는 SHA-256을 사용합니다. 파일명은 사람이 찾기 위한 보조 정보입니다.
 - 이미지를 추가·교체·삭제한 뒤 `node tools/build-image-catalog.js`를 실행해 전역 색인을 갱신합니다. 새 비표준 파일명이나 카탈로그와 디스크의 불일치는 `npm test`에서 실패합니다.
 - 다운로드 전에 `node tools/find-artwork-image.js`로 작가명·작품명·QID·`workId`·SHA-256을 검색합니다. 로컬 일치 파일이 있으면 외부 다운로드보다 기존 파일 연결을 복구합니다.
-- 사조 이미지는 `data/미술사조/images/`, 기법 이미지는 `data/techniques/`, 주제 이미지는 `data/topic-images/`에 둡니다.
+- 화가 연표에 등록된 작품은 사조·국가별 미술·기법·주제 화면에서도 `data/images/artist-*/`의 같은 정본 파일을 재사용합니다. `data/미술사조/images/`, `data/techniques/`, `data/topic-images/`에는 각 설명에만 쓰고 화가 작품과 연결되지 않는 전용 도판만 둡니다.
+- 같은 바이트의 이미지를 여러 자산 폴더에 중복 보관하지 않습니다. `data/미술사조/images/`에 화가 작품이 섞였는지는 `node tools/migrate-legacy-artwork-images.js`, 사조 이미지 캐시의 무효 경로는 `node tools/prune-movement-image-index.js`로 확인합니다.
 - 사용자가 "다운로드 폴더"라고 말하면 프로젝트 루트의 `다운로드용/`만 확인합니다.
 - 로컬 파일이 없으면 외부 이미지 URL을 만들지 않고 `이미지 업로드 예정` 상태를 유지합니다.
 - URL에서 이미지 파일을 찾거나 응답을 파일로 저장하는 작업은 대상 사이트와 파일을 밝히고 사용자의 명시적 승인을 받은 뒤에만 수행합니다.
@@ -129,10 +132,11 @@ node tools/build-image-catalog.js --check
 npm test
 ```
 
-OneDrive 이미지 보조 색인과 실행 중인 로컬 서버까지 확인할 때는 다음 검사를 추가합니다.
+OneDrive 이미지 보조 색인·파일 해시와 실행 중인 로컬 서버까지 확인할 때는 다음 검사를 추가합니다.
 
 ```powershell
 node tools/validate-project-linkage.js --image-indexes
+node tools/build-image-catalog.js --check --hashes
 node tools/check-app-http.js http://127.0.0.1:4173
 ```
 
@@ -143,16 +147,18 @@ node tools/validate-movement-canonical.js
 node tools/validate-movement-sync-contract.js
 node tools/validate-movement-documents-v1.js
 node tools/validate-movement-representatives.js
+node tools/validate-cross-tab-linkage.js
+node tools/validate-movement-image-paths.js
 node tools/validate-movement-sync-v1-runtime.js
 node tools/complete-movement-sync-v1.js
 node tools/sync-movement-learning-guides.js --check
 node tools/validate-movement-links.js
 ```
 
-사조 HTML 제공 경로나 서버 콘텐츠 코드를 바꾸면 서버를 재시작한 뒤 활성 36개 문서를 HTTP로 확인합니다.
+사조 HTML 제공 경로나 서버 콘텐츠 코드를 바꾸면 서버를 재시작합니다. `check-app-http.js`는 주요 탭 진입점, 활성 사조 문서 36개, 문서 안의 모든 로컬 이미지 경로를 실제 HTTP 응답으로 확인합니다.
 
 ```powershell
-node tools/check-movement-http.js http://127.0.0.1:4173
+node tools/check-app-http.js http://127.0.0.1:4173
 ```
 
 마지막으로 문서와 코드의 공백 오류를 확인합니다.

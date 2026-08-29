@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "generatedAt": "2026-08-29T08:19:43.697Z",
+  "generatedAt": "2026-08-29T09:36:38.922Z",
   "namingStandard": "shortArtist_titleFirst3Words_startYear__workId.ext",
   "stats": {
-    "images": 1630,
-    "linkedImages": 1630,
+    "images": 1666,
+    "linkedImages": 1666,
     "unlinkedImages": 0,
-    "standardNames": 3,
+    "standardNames": 39,
     "legacyNames": 1627,
     "newNonstandardNames": 0,
     "duplicateHashGroups": 0
@@ -3693,6 +3693,28 @@
       ]
     },
     {
+      "path": "data/images/artist-1786371252483/카라바조_성 마태오의 소명_1599__wikidata-Q969377.jpg",
+      "filename": "카라바조_성 마태오의 소명_1599__wikidata-Q969377.jpg",
+      "bytes": 172491,
+      "sha256": "6c724782bdc0952566471f762eeb16d603d03950143e4220d4217ca9cb1d24c7",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-1786371252483",
+          "artistQid": "Q42207",
+          "artistNameKo": "카라바조",
+          "artistNameEn": "Caravaggio",
+          "workId": "wikidata-Q969377",
+          "workQid": "Q969377",
+          "titleKo": "성 마태오의 소명",
+          "titleEn": "The Calling of Saint Matthew",
+          "year": 1599
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-1786371252483/wikidata-Q102852946.jpg",
       "filename": "wikidata-Q102852946.jpg",
       "bytes": 13634,
@@ -5096,6 +5118,28 @@
       ]
     },
     {
+      "path": "data/images/artist-art-atlas-boccioni/보초니_공간 속에서 연속하는_1913__boccioni-unique-forms.jpg",
+      "filename": "보초니_공간 속에서 연속하는_1913__boccioni-unique-forms.jpg",
+      "bytes": 222231,
+      "sha256": "eba7957f4f5c2aef6778e6f24a42efc2a032a470b6591ab10a020b65db59642c",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-art-atlas-boccioni",
+          "artistQid": "",
+          "artistNameKo": "움베르토 보초니",
+          "artistNameEn": "Umberto Boccioni",
+          "workId": "boccioni-unique-forms",
+          "workQid": "",
+          "titleKo": "공간 속에서 연속하는 유일한 형태",
+          "titleEn": "Unique Forms of Continuity in Space",
+          "year": 1913
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-art-atlas-bouguereau/bouguereau-birth-of-venus.jpg",
       "filename": "bouguereau-birth-of-venus.jpg",
       "bytes": 1544467,
@@ -5115,6 +5159,72 @@
           "titleKo": "비너스의 탄생",
           "titleEn": "The Birth of Venus",
           "year": 1879
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-art-atlas-courbet/쿠르베_오르낭의 매장_1849__courbet-burial-at-ornans.jpg",
+      "filename": "쿠르베_오르낭의 매장_1849__courbet-burial-at-ornans.jpg",
+      "bytes": 134572,
+      "sha256": "bb86ef5d677bbdb98a8c97e9ec0bc7091672cc8a9992637d983b192978249e66",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-art-atlas-courbet",
+          "artistQid": "",
+          "artistNameKo": "귀스타브 쿠르베",
+          "artistNameEn": "Gustave Courbet",
+          "workId": "courbet-burial-at-ornans",
+          "workQid": "",
+          "titleKo": "오르낭의 매장",
+          "titleEn": "A Burial at Ornans",
+          "year": 1849
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-art-atlas-dali/달리_기억의 지속_1931__dali-persistence-memory.jpg",
+      "filename": "달리_기억의 지속_1931__dali-persistence-memory.jpg",
+      "bytes": 36722,
+      "sha256": "e0b5f2f69374dfbdef51721a9ae8487254eb32ebc45466127da258d81994454c",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-art-atlas-dali",
+          "artistQid": "",
+          "artistNameKo": "살바도르 달리",
+          "artistNameEn": "Salvador Dali",
+          "workId": "dali-persistence-memory",
+          "workQid": "",
+          "titleKo": "기억의 지속",
+          "titleEn": "The Persistence of Memory",
+          "year": 1931
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-art-atlas-duchamp/뒤샹_샘_1917__duchamp-fountain.jpg",
+      "filename": "뒤샹_샘_1917__duchamp-fountain.jpg",
+      "bytes": 262659,
+      "sha256": "c43bbc1736a565152bd9de5c64b3d6cdc5b062599804aa85755af03b3401ff2e",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-art-atlas-duchamp",
+          "artistQid": "",
+          "artistNameKo": "마르셀 뒤샹",
+          "artistNameEn": "Marcel Duchamp",
+          "workId": "duchamp-fountain",
+          "workQid": "",
+          "titleKo": "샘",
+          "titleEn": "Fountain",
+          "year": 1917
         }
       ]
     },
@@ -5165,6 +5275,94 @@
       ]
     },
     {
+      "path": "data/images/artist-art-atlas-goncharova/곤차로바_자전거 타는 사람_1913__goncharova-cyclist.jpg",
+      "filename": "곤차로바_자전거 타는 사람_1913__goncharova-cyclist.jpg",
+      "bytes": 211622,
+      "sha256": "b12bf5d2e1528ffd592f4bce274169e3f645394ecdd99022ebfbaf4f9edbb49a",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-art-atlas-goncharova",
+          "artistQid": "",
+          "artistNameKo": "나탈리아 곤차로바",
+          "artistNameEn": "Natalia Goncharova",
+          "workId": "goncharova-cyclist",
+          "workQid": "",
+          "titleKo": "자전거 타는 사람",
+          "titleEn": "Cyclist",
+          "year": 1913
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-art-atlas-gris/그리스_파블로 피카소의 초상_1912__gris-portrait-picasso.jpg",
+      "filename": "그리스_파블로 피카소의 초상_1912__gris-portrait-picasso.jpg",
+      "bytes": 384054,
+      "sha256": "b3b5d700ecccbba91d81c358eb20174c52e1483b24b5f1e6f999c5d7436d7df9",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-art-atlas-gris",
+          "artistQid": "",
+          "artistNameKo": "후안 그리스",
+          "artistNameEn": "Juan Gris",
+          "workId": "gris-portrait-picasso",
+          "workQid": "",
+          "titleKo": "파블로 피카소의 초상",
+          "titleEn": "Portrait of Pablo Picasso",
+          "year": 1912
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-art-atlas-hassam/해섬_비 오는 날의_1917__hassam-avenue-in-the-rain.jpg",
+      "filename": "해섬_비 오는 날의_1917__hassam-avenue-in-the-rain.jpg",
+      "bytes": 911154,
+      "sha256": "f41a7105c40be281a9e64c10c8413885db464eeaeae224bcb024f449a0316a0f",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-art-atlas-hassam",
+          "artistQid": "",
+          "artistNameKo": "차일드 해섬",
+          "artistNameEn": "Childe Hassam",
+          "workId": "hassam-avenue-in-the-rain",
+          "workQid": "",
+          "titleKo": "비 오는 날의 대로",
+          "titleEn": "Avenue in the Rain",
+          "year": 1917
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-art-atlas-hoch/회흐_부엌칼로 자르기_1919__hoch-kitchen-knife.jpg",
+      "filename": "회흐_부엌칼로 자르기_1919__hoch-kitchen-knife.jpg",
+      "bytes": 431545,
+      "sha256": "b0f639e93d4b57ee6d9c1c3e6cd2da332d82811738d7237101c31226e2f61eac",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-art-atlas-hoch",
+          "artistQid": "",
+          "artistNameKo": "한나 회흐",
+          "artistNameEn": "Hannah Hoch",
+          "workId": "hoch-kitchen-knife",
+          "workQid": "",
+          "titleKo": "부엌칼로 자르기",
+          "titleEn": "Cut with the Kitchen Knife",
+          "year": 1919
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-art-atlas-kandinsky/kandinsky-composition-vii.jpg",
       "filename": "kandinsky-composition-vii.jpg",
       "bytes": 2737272,
@@ -5184,6 +5382,50 @@
           "titleKo": "구성 VII",
           "titleEn": "Composition VII",
           "year": 1913
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-art-atlas-kirchner/키르히너_드레스덴의 거리_1908__kirchner-street-dresden.jpg",
+      "filename": "키르히너_드레스덴의 거리_1908__kirchner-street-dresden.jpg",
+      "bytes": 258965,
+      "sha256": "84b692b3c3fa034d4b692f01a1c29a42f7813e391b664753bdf3f9d2e9ec9da3",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-art-atlas-kirchner",
+          "artistQid": "",
+          "artistNameKo": "에른스트 루트비히 키르히너",
+          "artistNameEn": "Ernst Ludwig Kirchner",
+          "workId": "kirchner-street-dresden",
+          "workQid": "",
+          "titleKo": "드레스덴의 거리",
+          "titleEn": "Street, Dresden",
+          "year": 1908
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-art-atlas-klimt/클림트_키스_1907__klimt-the-kiss.jpg",
+      "filename": "클림트_키스_1907__klimt-the-kiss.jpg",
+      "bytes": 886880,
+      "sha256": "0f48388705436c024b9606ed9c80229cd3d660a1f891e4238a978cfdeb4542ef",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-art-atlas-klimt",
+          "artistQid": "",
+          "artistNameKo": "구스타프 클림트",
+          "artistNameEn": "Gustav Klimt",
+          "workId": "klimt-the-kiss",
+          "workQid": "",
+          "titleKo": "키스",
+          "titleEn": "The Kiss",
+          "year": 1907
         }
       ]
     },
@@ -5257,6 +5499,50 @@
       ]
     },
     {
+      "path": "data/images/artist-art-atlas-matisse/마티스_모자를 쓴 여인_1905__matisse-woman-with-hat.jpg",
+      "filename": "마티스_모자를 쓴 여인_1905__matisse-woman-with-hat.jpg",
+      "bytes": 459536,
+      "sha256": "5f04e9be9f16f158d51037c977cb55cec9c4a964cb46d0a6d12b1d69fd5806aa",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-art-atlas-matisse",
+          "artistQid": "",
+          "artistNameKo": "앙리 마티스",
+          "artistNameEn": "Henri Matisse",
+          "workId": "matisse-woman-with-hat",
+          "workQid": "",
+          "titleKo": "모자를 쓴 여인",
+          "titleEn": "Woman with a Hat",
+          "year": 1905
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-art-atlas-miro/미로_어릿광대의 카니발_1924__miro-harlequins-carnival.jpg",
+      "filename": "미로_어릿광대의 카니발_1924__miro-harlequins-carnival.jpg",
+      "bytes": 100170,
+      "sha256": "1ac98351626b35f3235e4b1ecee71b7a07f13014690edc2bf35ea38535339761",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-art-atlas-miro",
+          "artistQid": "",
+          "artistNameKo": "호안 미로",
+          "artistNameEn": "Joan Miro",
+          "workId": "miro-harlequins-carnival",
+          "workQid": "",
+          "titleKo": "어릿광대의 카니발",
+          "titleEn": "Harlequin's Carnival",
+          "year": 1924
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-art-atlas-mondrian/mondrian-composition-1921.jpg",
       "filename": "mondrian-composition-1921.jpg",
       "bytes": 34575,
@@ -5326,6 +5612,28 @@
       ]
     },
     {
+      "path": "data/images/artist-art-atlas-munch/뭉크_절규_1893__munch-the-scream.jpg",
+      "filename": "뭉크_절규_1893__munch-the-scream.jpg",
+      "bytes": 151613,
+      "sha256": "6321bb5a497cef94d29c387ad2da73a17f257e47a6907e5dfe549481d67986f5",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-art-atlas-munch",
+          "artistQid": "",
+          "artistNameKo": "에드바르 뭉크",
+          "artistNameEn": "Edvard Munch",
+          "workId": "munch-the-scream",
+          "workQid": "",
+          "titleKo": "절규",
+          "titleEn": "The Scream",
+          "year": 1893
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-art-atlas-picasso/picasso-three-musicians.jpeg",
       "filename": "picasso-three-musicians.jpeg",
       "bytes": 42234,
@@ -5345,6 +5653,28 @@
           "titleKo": "세 명의 음악가",
           "titleEn": "Three Musicians",
           "year": 1921
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-art-atlas-repin/레핀_볼가강의 배 끄는_1870__repin-barge-haulers-volga.jpg",
+      "filename": "레핀_볼가강의 배 끄는_1870__repin-barge-haulers-volga.jpg",
+      "bytes": 220392,
+      "sha256": "a8fac354acc413d82852a87c190e2b83c9d5a8fea0766e8133c948b2273f3366",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-art-atlas-repin",
+          "artistQid": "",
+          "artistNameKo": "일리야 레핀",
+          "artistNameEn": "Ilya Repin",
+          "workId": "repin-barge-haulers-volga",
+          "workQid": "",
+          "titleKo": "볼가강의 배 끄는 인부들",
+          "titleEn": "Barge Haulers on the Volga",
+          "year": 1870
         }
       ]
     },
@@ -5395,6 +5725,28 @@
       ]
     },
     {
+      "path": "data/images/artist-art-atlas-seurat/쇠라_그랑드자트섬의 일요일 오후_1884__seurat-la-grande-jatte.jpg",
+      "filename": "쇠라_그랑드자트섬의 일요일 오후_1884__seurat-la-grande-jatte.jpg",
+      "bytes": 146525,
+      "sha256": "d022ad7c1904ce48533d1a21135780937423173d0f5658a87a1d0b11ee3e960f",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-art-atlas-seurat",
+          "artistQid": "",
+          "artistNameKo": "조르주 쇠라",
+          "artistNameEn": "Georges Seurat",
+          "workId": "seurat-la-grande-jatte",
+          "workQid": "",
+          "titleKo": "그랑드자트섬의 일요일 오후",
+          "titleEn": "A Sunday Afternoon on the Island of La Grande Jatte",
+          "year": 1884
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-art-atlas-shahn/shahn-sacco-vanzetti.jpg",
       "filename": "shahn-sacco-vanzetti.jpg",
       "bytes": 529648,
@@ -5414,6 +5766,28 @@
           "titleKo": "사코와 반제티의 수난",
           "titleEn": "The Passion of Sacco and Vanzetti",
           "year": 1931
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-art-atlas-taeuber-arp/토이버아르프_다다 두상_1920__taeuber-arp-dada-head.jpg",
+      "filename": "토이버아르프_다다 두상_1920__taeuber-arp-dada-head.jpg",
+      "bytes": 1056015,
+      "sha256": "e2cdc8a03437712747a283b6bc81f3df5015510df0655efa83c435464a9e8fde",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-art-atlas-taeuber-arp",
+          "artistQid": "",
+          "artistNameKo": "조피 토이버아르프",
+          "artistNameEn": "Sophie Taeuber-Arp",
+          "workId": "taeuber-arp-dada-head",
+          "workQid": "",
+          "titleKo": "다다 두상",
+          "titleEn": "Dada Head",
+          "year": 1920
         }
       ]
     },
@@ -7626,6 +8000,28 @@
       ]
     },
     {
+      "path": "data/images/artist-Q155733/카우프만_그라쿠스 형제의 어머니_1785__artist-Q155733-representative-work.jpg",
+      "filename": "카우프만_그라쿠스 형제의 어머니_1785__artist-Q155733-representative-work.jpg",
+      "bytes": 246615,
+      "sha256": "04b13c09119c93d40f21cae155a7b0c88a9cdcf7a9532982b587372c507c7903",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q155733",
+          "artistQid": "Q155733",
+          "artistNameKo": "앙겔리카 카우프만",
+          "artistNameEn": "Angelica Kauffman",
+          "workId": "artist-Q155733-representative-work",
+          "workQid": "Q155733",
+          "titleKo": "그라쿠스 형제의 어머니 코르넬리아",
+          "titleEn": "Cornelia, Mother of the Gracchi",
+          "year": 1785
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-Q160538/bernini-apollo-and-daphne-1622-1625.png",
       "filename": "bernini-apollo-and-daphne-1622-1625.png",
       "bytes": 6921017,
@@ -7760,6 +8156,28 @@
           "titleKo": "Apollo and Daphne",
           "titleEn": "Apollo and Daphne",
           "year": 1622
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q161472/앵그르_황제의 옥좌에 앉은_1806__artist-Q161472-representative-work.jpg",
+      "filename": "앵그르_황제의 옥좌에 앉은_1806__artist-Q161472-representative-work.jpg",
+      "bytes": 542740,
+      "sha256": "25b7d7d862b6c270a4bedbd9e180788a673ef67bfcf924920713924f7abd9971",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q161472",
+          "artistQid": "Q161472",
+          "artistNameKo": "장오귀스트도미니크 앵그르",
+          "artistNameEn": "Jean-Auguste-Dominique Ingres",
+          "workId": "artist-Q161472-representative-work",
+          "workQid": "Q161472",
+          "titleKo": "황제의 옥좌에 앉은 나폴레옹",
+          "titleEn": "Napoleon on His Imperial Throne",
+          "year": 1806
         }
       ]
     },
@@ -7967,6 +8385,28 @@
           "titleKo": "《템스 강의 시장 행렬과 웨스트민스터 다리》",
           "titleEn": "Westminster Bridge, with the Lord Mayor’s Procession on the Thames",
           "year": 1747
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q162048/티에폴로_아폴론과 대륙들_1752__artist-Q162048-representative-work.jpg",
+      "filename": "티에폴로_아폴론과 대륙들_1752__artist-Q162048-representative-work.jpg",
+      "bytes": 293110,
+      "sha256": "0835181e3a5ce7c4d6e7a2ef3103b7f53f03560d205a0ffb973b07ab2fb9414f",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q162048",
+          "artistQid": "Q162048",
+          "artistNameKo": "조반니 바티스타 티에폴로",
+          "artistNameEn": "Giovanni Battista Tiepolo",
+          "workId": "artist-Q162048-representative-work",
+          "workQid": "Q162048",
+          "titleKo": "아폴론과 대륙들",
+          "titleEn": "Apollo and the Continents",
+          "year": 1752
         }
       ]
     },
@@ -9568,6 +10008,28 @@
       ]
     },
     {
+      "path": "data/images/artist-Q180117/게인즈버러_파란 소년_1770__artist-Q180117-representative-work.jpg",
+      "filename": "게인즈버러_파란 소년_1770__artist-Q180117-representative-work.jpg",
+      "bytes": 741033,
+      "sha256": "7ae41ddafbd0d0cd7d59ffb7463e7d22318dce0ddabd87ff7298a2d96bb44584",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q180117",
+          "artistQid": "Q180117",
+          "artistNameKo": "토머스 게인즈버러",
+          "artistNameEn": "Thomas Gainsborough",
+          "workId": "artist-Q180117-representative-work",
+          "workQid": "Q180117",
+          "titleKo": "파란 소년",
+          "titleEn": "The Blue Boy",
+          "year": 1770
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-Q187310/wikidata-Q102251693.jpg",
       "filename": "wikidata-Q102251693.jpg",
       "bytes": 653409,
@@ -10323,6 +10785,28 @@
           "titleKo": "Rococo",
           "titleEn": "Rococo",
           "year": 1889
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q189621/호가스_결혼 계약_1743__artist-Q189621-representative-work.jpg",
+      "filename": "호가스_결혼 계약_1743__artist-Q189621-representative-work.jpg",
+      "bytes": 324512,
+      "sha256": "7bef34447b804beaa6ab9074143e95a59e328e43d8ad0269f19a4dd518375f9d",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q189621",
+          "artistQid": "Q189621",
+          "artistNameKo": "윌리엄 호가스",
+          "artistNameEn": "William Hogarth",
+          "workId": "artist-Q189621-representative-work",
+          "workQid": "Q189621",
+          "titleKo": "결혼 계약",
+          "titleEn": "Marriage Settlement",
+          "year": 1743
         }
       ]
     },
@@ -12811,6 +13295,28 @@
       ]
     },
     {
+      "path": "data/images/artist-Q235547/카리에라_자화상_1746__artist-Q235547-representative-work.jpg",
+      "filename": "카리에라_자화상_1746__artist-Q235547-representative-work.jpg",
+      "bytes": 116689,
+      "sha256": "07fde061c27652958fd1bbe2497022e8f10da6dd87cbf0d749913b9f02d0bef9",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q235547",
+          "artistQid": "Q235547",
+          "artistNameKo": "로살바 카리에라",
+          "artistNameEn": "Rosalba Carriera",
+          "workId": "artist-Q235547-representative-work",
+          "workQid": "Q235547",
+          "titleKo": "자화상",
+          "titleEn": "Self-Portrait",
+          "year": 1746
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-Q235547/local-carriera-gentleman-in-red.jpg",
       "filename": "local-carriera-gentleman-in-red.jpg",
       "bytes": 6131272,
@@ -14421,6 +14927,50 @@
       ]
     },
     {
+      "path": "data/images/artist-Q312130/멩스_파르나소스_1761__artist-Q312130-representative-work.jpg",
+      "filename": "멩스_파르나소스_1761__artist-Q312130-representative-work.jpg",
+      "bytes": 253945,
+      "sha256": "17c0c9101d09b344403555c0219027e16499ad1c77b7d2c1f2f29b6cad212906",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q312130",
+          "artistQid": "Q312130",
+          "artistNameKo": "안톤 라파엘 멩스",
+          "artistNameEn": "Anton Raphael Mengs",
+          "workId": "artist-Q312130-representative-work",
+          "workQid": "Q312130",
+          "titleKo": "파르나소스",
+          "titleEn": "Parnassus",
+          "year": 1761
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q312309/샤르댕_가오리_1728__artist-Q312309-representative-work.jpg",
+      "filename": "샤르댕_가오리_1728__artist-Q312309-representative-work.jpg",
+      "bytes": 152781,
+      "sha256": "e5aff6987fd321615fa28ce20a1795d8c4e6ac9a969f74127240beb9e703f989",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q312309",
+          "artistQid": "Q312309",
+          "artistNameKo": "장바티스트 시메옹 샤르댕",
+          "artistNameEn": "Jean-Baptiste-Siméon Chardin",
+          "workId": "artist-Q312309-representative-work",
+          "workQid": "Q312309",
+          "titleKo": "가오리",
+          "titleEn": "The Ray",
+          "year": 1728
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-Q312309/artist-Q312309-attributes-arts.jpg",
       "filename": "artist-Q312309-attributes-arts.jpg",
       "bytes": 2108416,
@@ -14647,6 +15197,28 @@
           "titleKo": "비눗방울",
           "titleEn": "Soap Bubbles",
           "year": 1734
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q312387/레이놀즈_비극의 뮤즈로 분장한_1784__artist-Q312387-representative-work.jpg",
+      "filename": "레이놀즈_비극의 뮤즈로 분장한_1784__artist-Q312387-representative-work.jpg",
+      "bytes": 490218,
+      "sha256": "c8ed37f387505b07303f214e04fdcd47dc7d7bf2183f19b754b71074b21a96b5",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q312387",
+          "artistQid": "Q312387",
+          "artistNameKo": "조슈아 레이놀즈",
+          "artistNameEn": "Joshua Reynolds",
+          "workId": "artist-Q312387-representative-work",
+          "workQid": "Q312387",
+          "titleKo": "비극의 뮤즈로 분장한 세라 시던스",
+          "titleEn": "Mrs Siddons as the Tragic Muse",
+          "year": 1784
         }
       ]
     },
@@ -15084,6 +15656,28 @@
           "titleKo": "불카누스가 비너스에게 아이네아스의 무구를 건네다",
           "titleEn": "Vulcan Presenting Venus with Arms for Aeneas",
           "year": "1732"
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q313526/웨스트_울프 장군의 죽음_1770__artist-Q313526-representative-work.jpg",
+      "filename": "웨스트_울프 장군의 죽음_1770__artist-Q313526-representative-work.jpg",
+      "bytes": 957881,
+      "sha256": "26535186d515073b878e0d0fb7d4c4ef1cfa67582a3412fb16612f8fb6fc0ce9",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q313526",
+          "artistQid": "Q313526",
+          "artistNameKo": "벤저민 웨스트",
+          "artistNameEn": "Benjamin West",
+          "workId": "artist-Q313526-representative-work",
+          "workQid": "Q313526",
+          "titleKo": "울프 장군의 죽음",
+          "titleEn": "The Death of General Wolfe",
+          "year": 1770
         }
       ]
     },
@@ -20089,6 +20683,28 @@
       ]
     },
     {
+      "path": "data/images/artist-Q47551/티치아노_성모 승천_1517__wikidata-Q1899740.jpg",
+      "filename": "티치아노_성모 승천_1517__wikidata-Q1899740.jpg",
+      "bytes": 1475547,
+      "sha256": "1359e0b25202bc9602afac3eb66165f75fea8cb14662877368e31a8ace86dd59",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q47551",
+          "artistQid": "Q47551",
+          "artistNameKo": "티치아노",
+          "artistNameEn": "Titian",
+          "workId": "wikidata-Q1899740",
+          "workQid": "Q1899740",
+          "titleKo": "성모 승천",
+          "titleEn": "Assumption of the Virgin",
+          "year": 1517
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-Q47551/manual-danae-capodimonte-1544.jpg",
       "filename": "manual-danae-capodimonte-1544.jpg",
       "bytes": 211184,
@@ -21544,6 +22160,50 @@
           "titleKo": "졸로투른 마돈나",
           "titleEn": "Solothurn Madonna",
           "year": 1522
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q49898/리고_루이 14세의 초상_1701__rigaud-louis-xiv-royal-costume-1701.jpg",
+      "filename": "리고_루이 14세의 초상_1701__rigaud-louis-xiv-royal-costume-1701.jpg",
+      "bytes": 666986,
+      "sha256": "6e4d7af2300eca1a0898e6d2f80be387a42dc7d00a1e4c0b4dc84dd164389a80",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q49898",
+          "artistQid": "Q49898",
+          "artistNameKo": "야생트 리고",
+          "artistNameEn": "Hyacinthe Rigaud",
+          "workId": "rigaud-louis-xiv-royal-costume-1701",
+          "workQid": "",
+          "titleKo": "루이 14세의 초상",
+          "titleEn": "Portrait of Louis XIV",
+          "year": 1701
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q5547/카노바_큐피드의 키스로 되살아난_1793__artist-Q5547-representative-work.jpg",
+      "filename": "카노바_큐피드의 키스로 되살아난_1793__artist-Q5547-representative-work.jpg",
+      "bytes": 188161,
+      "sha256": "08db1e4998f1320a8de8f725166037335836955454b6ec37fde94546d7948794",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q5547",
+          "artistQid": "Q5547",
+          "artistNameKo": "안토니오 카노바",
+          "artistNameEn": "Antonio Canova",
+          "workId": "artist-Q5547-representative-work",
+          "workQid": "Q5547",
+          "titleKo": "큐피드의 키스로 되살아난 프시케",
+          "titleEn": "Psyche Revived by Cupid's Kiss",
+          "year": 1793
         }
       ]
     },
@@ -28970,6 +29630,28 @@
       ]
     },
     {
+      "path": "data/images/artist-Q83155/다비드_호라티우스 형제의 맹세_1784__artist-Q83155-representative-work.jpg",
+      "filename": "다비드_호라티우스 형제의 맹세_1784__artist-Q83155-representative-work.jpg",
+      "bytes": 249768,
+      "sha256": "6a7fdaf36adebddf33866d635413d6aec434b1804ccd3d67a7ab8cdcb721c6f5",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q83155",
+          "artistQid": "Q83155",
+          "artistNameKo": "자크루이 다비드",
+          "artistNameEn": "Jacques-Louis David",
+          "workId": "artist-Q83155-representative-work",
+          "workQid": "Q83155",
+          "titleKo": "호라티우스 형제의 맹세",
+          "titleEn": "Oath of the Horatii",
+          "year": 1784
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-Q8459/wikidata-Q133503451.jpg",
       "filename": "wikidata-Q133503451.jpg",
       "bytes": 94277,
@@ -31469,6 +32151,116 @@
           "titleKo": "돌아온 탕자",
           "titleEn": "The Return of the Prodigal Son",
           "year": 1668
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-romantic-church/처치_안데스의 심장_1859__artist-romantic-church-work.jpg",
+      "filename": "처치_안데스의 심장_1859__artist-romantic-church-work.jpg",
+      "bytes": 225813,
+      "sha256": "a5ccdc076923eebe914b815d19e7d416dc4053df7e0ad4c655870f8ac64858d3",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-romantic-church",
+          "artistQid": "",
+          "artistNameKo": "프레더릭 에드윈 처치",
+          "artistNameEn": "Frederic Edwin Church",
+          "workId": "artist-romantic-church-work",
+          "workQid": "",
+          "titleKo": "안데스의 심장",
+          "titleEn": "Heart of the Andes",
+          "year": 1859
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-romantic-cole/콜_옥스보_1836__artist-romantic-cole-work.jpg",
+      "filename": "콜_옥스보_1836__artist-romantic-cole-work.jpg",
+      "bytes": 244413,
+      "sha256": "907fa976259ac201835577503beeeb15561aace647b1ee89e5822d38d9a9d311",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-romantic-cole",
+          "artistQid": "",
+          "artistNameKo": "토머스 콜",
+          "artistNameEn": "Thomas Cole",
+          "workId": "artist-romantic-cole-work",
+          "workQid": "",
+          "titleKo": "옥스보",
+          "titleEn": "The Oxbow",
+          "year": 1836
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-romantic-constable/컨스터블_건초 마차_1821__artist-romantic-constable-work.jpg",
+      "filename": "컨스터블_건초 마차_1821__artist-romantic-constable-work.jpg",
+      "bytes": 438224,
+      "sha256": "021b42a4d7fc41c9c18708de35650c718790163b16ef7f4a23c05a4b33007f7d",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-romantic-constable",
+          "artistQid": "",
+          "artistNameKo": "존 컨스터블",
+          "artistNameEn": "John Constable",
+          "workId": "artist-romantic-constable-work",
+          "workQid": "",
+          "titleKo": "건초 마차",
+          "titleEn": "The Hay Wain",
+          "year": 1821
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-romantic-delacroix/들라크루아_민중을 이끄는 자유의_1830__artist-romantic-delacroix-work.jpg",
+      "filename": "들라크루아_민중을 이끄는 자유의_1830__artist-romantic-delacroix-work.jpg",
+      "bytes": 232923,
+      "sha256": "006eb8bd02c6124184f342b2f233b418ae46fb68fd560df8ff0fc0a08fb97554",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-romantic-delacroix",
+          "artistQid": "",
+          "artistNameKo": "외젠 들라크루아",
+          "artistNameEn": "Eugène Delacroix",
+          "workId": "artist-romantic-delacroix-work",
+          "workQid": "",
+          "titleKo": "민중을 이끄는 자유의 여신",
+          "titleEn": "Liberty Leading the People",
+          "year": 1830
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-romantic-goya/고야_1808년 5월 3일_1814__artist-romantic-goya-work.jpg",
+      "filename": "고야_1808년 5월 3일_1814__artist-romantic-goya-work.jpg",
+      "bytes": 234625,
+      "sha256": "8eaf67b20fc23c66a015d6dfeb9698b813132e499ce8ce27ff47fe2edb530535",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-romantic-goya",
+          "artistQid": "",
+          "artistNameKo": "프란시스코 고야",
+          "artistNameEn": "Francisco Goya",
+          "workId": "artist-romantic-goya-work",
+          "workQid": "",
+          "titleKo": "1808년 5월 3일",
+          "titleEn": "The Third of May 1808",
+          "year": 1814
         }
       ]
     },

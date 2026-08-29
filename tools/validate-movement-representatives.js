@@ -7,6 +7,7 @@ const canonical = require('../data/art-movement-canonical.json');
 const contract = require('../data/art-movement-sync-contract.json');
 const representatives = require('../data/art-movement-representatives.json');
 const artistsData = require('../data/artists.json');
+const imageCatalog = require('../data/image-catalog.json');
 const index = require('../data/미술사조/index.json');
 const attrs = contract.attributes;
 
@@ -44,6 +45,10 @@ function textContent(source) {
   return source.replace(/<[^>]*>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
+function compactText(source) {
+  return textContent(source).normalize('NFKC').replace(/[《》<>\s–—-]+/g, '').toLowerCase();
+}
+
 function artistIds(source) {
   return openingTags(source, 'a').map(match => attr(match[0], attrs.artistId)).filter(Boolean);
 }
@@ -52,7 +57,11 @@ function localImageFile(documentFile, src) {
   return path.resolve(path.dirname(documentFile), src.split(/[?#]/)[0]);
 }
 
-function validateDocument(parent, entries, artistMap) {
+function catalogPath(file) {
+  return path.relative(root, file).replace(/\\/g, '/');
+}
+
+function validateDocument(parent, entries, artistMap, catalogByPath) {
   const relative = index.documents?.[parent.documentKey]?.['1'];
   assert(relative, `${parent.id}: indexed document is missing`);
   const documentFile = path.join(root, relative);
@@ -93,6 +102,11 @@ function validateDocument(parent, entries, artistMap) {
     const furtherCell = cells.find(match => new RegExp(`\\b${attrs.furtherArtists}=`, 'i').test(match[0]))?.[0] || '';
     assert(JSON.stringify(artistIds(representativeCell)) === JSON.stringify([entry.artist.id]), `${entry.categoryId}: table representative artist mismatch`);
     assert(JSON.stringify(artistIds(furtherCell)) === JSON.stringify(entry.furtherArtists.map(item => item.artist.id)), `${entry.categoryId}: table further artist order mismatch`);
+    for (const link of openingTags(`${representativeCell}${furtherCell}`, 'a')) {
+      const artistId = attr(link[0], attrs.artistId);
+      const linkedArtistId = decodeURIComponent(/[?&]artist=([^&"']+)/i.exec(attr(link[0], 'href'))?.[1] || '');
+      assert(artistId === linkedArtistId, `${entry.categoryId}: table timeline link target mismatch`);
+    }
     assert(textContent(row).includes(entry.feature), `${entry.categoryId}: feature text mismatch`);
 
     const groupMatch = groups[index];
@@ -115,6 +129,14 @@ function validateDocument(parent, entries, artistMap) {
       assert(attr(cardTag, attrs.artistId) === cardEntry.artist.id, `${entry.categoryId}: card artist ID mismatch`);
       assert(attr(cardTag, attrs.workId) === cardEntry.work.id, `${entry.categoryId}: card work ID mismatch`);
       assert(JSON.stringify(artistIds(card)) === JSON.stringify([cardEntry.artist.id]), `${entry.categoryId}: card artist link mismatch`);
+      const artistLink = openingTags(card, 'a').find(match => attr(match[0], attrs.artistId) === cardEntry.artist.id)?.[0] || '';
+      const linkedArtistId = decodeURIComponent(/[?&]artist=([^&"']+)/i.exec(attr(artistLink, 'href'))?.[1] || '');
+      assert(linkedArtistId === cardEntry.artist.id, `${entry.categoryId}: card timeline link target mismatch`);
+      const cardText = compactText(card);
+      const titles = [cardEntry.work.title?.ko, cardEntry.work.title?.en].filter(Boolean).map(compactText);
+      assert(titles.some(title => title && cardText.includes(title)), `${entry.categoryId}: card title differs from the timeline work`);
+      const yearLabels = [cardEntry.work.yearLabel, cardEntry.work.year].filter(value => value !== undefined && value !== null).map(value => compactText(String(value)));
+      assert(yearLabels.some(year => year && cardText.includes(year)), `${entry.categoryId}: card year differs from the timeline work`);
       assert(textContent(card).includes(cardEntry.selectionReason), `${entry.categoryId}: selection reason mismatch`);
       assert(textContent(card).includes(cardEntry.description), `${entry.categoryId}: card description mismatch`);
       (cardEntry.otherMovements || []).forEach(movement => assert(textContent(card).includes(movement), `${entry.categoryId}: cross-movement note is missing`));
@@ -134,7 +156,17 @@ function validateDocument(parent, entries, artistMap) {
         ready += 1;
         const src = attr(imageTag, 'src');
         assert(src && !/^(?:https?:)?\/\//i.test(src), `${entry.categoryId}: ready image must be local`);
-        assert(fs.existsSync(localImageFile(documentFile, src)), `${entry.categoryId}: local image is missing (${src})`);
+        const cardImageFile = localImageFile(documentFile, src);
+        const timelineImageFile = path.join(root, cardEntry.work.localImage || '');
+        assert(fs.existsSync(cardImageFile), `${entry.categoryId}: local image is missing (${src})`);
+        assert(cardEntry.work.localImage && fs.existsSync(timelineImageFile), `${entry.categoryId}: timeline representative image is missing`);
+        if (fs.existsSync(cardImageFile) && fs.existsSync(timelineImageFile)) {
+          const cardCatalogEntry = catalogByPath.get(catalogPath(cardImageFile));
+          const timelineCatalogEntry = catalogByPath.get(catalogPath(timelineImageFile));
+          assert(cardCatalogEntry?.sha256, `${entry.categoryId}: card image is absent from image-catalog.json`);
+          assert(timelineCatalogEntry?.sha256, `${entry.categoryId}: timeline image is absent from image-catalog.json`);
+          assert(cardCatalogEntry?.sha256 === timelineCatalogEntry?.sha256, `${entry.categoryId}: card image differs from the timeline work image`);
+        }
       } else {
         pending += 1;
         assert(imageState === 'pending', `${entry.categoryId}: invalid image state ${imageState}`);
@@ -152,6 +184,7 @@ function main() {
   const entries = representatives.categories.map(entry => ({...entry, category: categories.get(entry.categoryId), furtherArtists:furtherByCategory.get(entry.categoryId) || []}));
   const entryMap = new Map(entries.map(entry => [entry.categoryId, entry]));
   const artistMap = new Map(artistsData.artists.map(artist => [artist.id, artist]));
+  const catalogByPath = new Map((imageCatalog.images || []).map(image => [String(image.path || '').replace(/\\/g, '/'), image]));
   assert(entries.length === canonical.counts.beginnerCategories, `Representative count must be ${canonical.counts.beginnerCategories}`);
   assert(entryMap.size === entries.length, 'Representative category IDs must be unique');
   canonical.categories.forEach(category => assert(entryMap.has(category.id), `${category.id}: representative entry is missing`));
@@ -161,7 +194,7 @@ function main() {
   const totals = {parents: 0, categories: 0, cards: 0, ready: 0, pending: 0};
   canonical.parents.filter(parent => parent.role === 'document').forEach(parent => {
     const parentEntries = parent.categoryIds.map(categoryId => entryMap.get(categoryId));
-    const result = validateDocument(parent, parentEntries, artistMap);
+    const result = validateDocument(parent, parentEntries, artistMap, catalogByPath);
     totals.parents += 1;
     totals.categories += parentEntries.length;
     totals.cards += result.cards;

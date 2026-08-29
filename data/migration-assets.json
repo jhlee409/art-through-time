@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-08-29T07:42:21.696Z",
+  "generatedAt": "2026-08-29T09:32:45.528Z",
   "assets": [
     {
       "path": "data/images/artist-1786332007363/index.json",
@@ -315,7 +315,7 @@
     {
       "path": "data/images/artist-1786333400214/index.json",
       "type": "thumbnail",
-      "bytes": 3105
+      "bytes": 3
     },
     {
       "path": "data/images/artist-1786333400214/wikidata-Q18602436.jpg",
@@ -375,7 +375,7 @@
     {
       "path": "data/images/artist-1786343948059/index.json",
       "type": "thumbnail",
-      "bytes": 7494
+      "bytes": 3
     },
     {
       "path": "data/images/artist-1786343948059/wikidata-Q123286344.jpg",
@@ -450,12 +450,12 @@
     {
       "path": "data/images/artist-1786346958745/index.json",
       "type": "thumbnail",
-      "bytes": 558
+      "bytes": 3
     },
     {
       "path": "data/images/artist-1786347518103/index.json",
       "type": "thumbnail",
-      "bytes": 3961
+      "bytes": 4605
     },
     {
       "path": "data/images/artist-1786347518103/wikidata-Q105079097.jpg",
@@ -530,7 +530,7 @@
     {
       "path": "data/images/artist-1786369007570/index.json",
       "type": "thumbnail",
-      "bytes": 18649
+      "bytes": 17265
     },
     {
       "path": "data/images/artist-1786369007570/wikidata-Q100998017.jpg",
@@ -835,7 +835,7 @@
     {
       "path": "data/images/artist-1786371252483/index.json",
       "type": "thumbnail",
-      "bytes": 17431
+      "bytes": 17447
     },
     {
       "path": "data/images/artist-1786371252483/wikidata-Q102852946.jpg",
@@ -1133,6 +1133,11 @@
       "bytes": 15058
     },
     {
+      "path": "data/images/artist-1786371252483/카라바조_성 마태오의 소명_1599__wikidata-Q969377.jpg",
+      "type": "thumbnail",
+      "bytes": 172491
+    },
+    {
       "path": "data/images/artist-art-atlas-abramovic/abramovic-artist-present.jpg",
       "type": "thumbnail",
       "bytes": 439468
@@ -1143,9 +1148,49 @@
       "bytes": 64470
     },
     {
+      "path": "data/images/artist-art-atlas-boccioni/index.json",
+      "type": "thumbnail",
+      "bytes": 366
+    },
+    {
+      "path": "data/images/artist-art-atlas-boccioni/보초니_공간 속에서 연속하는_1913__boccioni-unique-forms.jpg",
+      "type": "thumbnail",
+      "bytes": 222231
+    },
+    {
       "path": "data/images/artist-art-atlas-bouguereau/bouguereau-birth-of-venus.jpg",
       "type": "thumbnail",
       "bytes": 1544467
+    },
+    {
+      "path": "data/images/artist-art-atlas-courbet/index.json",
+      "type": "thumbnail",
+      "bytes": 361
+    },
+    {
+      "path": "data/images/artist-art-atlas-courbet/쿠르베_오르낭의 매장_1849__courbet-burial-at-ornans.jpg",
+      "type": "thumbnail",
+      "bytes": 134572
+    },
+    {
+      "path": "data/images/artist-art-atlas-dali/index.json",
+      "type": "thumbnail",
+      "bytes": 350
+    },
+    {
+      "path": "data/images/artist-art-atlas-dali/달리_기억의 지속_1931__dali-persistence-memory.jpg",
+      "type": "thumbnail",
+      "bytes": 36722
+    },
+    {
+      "path": "data/images/artist-art-atlas-duchamp/index.json",
+      "type": "thumbnail",
+      "bytes": 326
+    },
+    {
+      "path": "data/images/artist-art-atlas-duchamp/뒤샹_샘_1917__duchamp-fountain.jpg",
+      "type": "thumbnail",
+      "bytes": 262659
     },
     {
       "path": "data/images/artist-art-atlas-dufy/dufy-beach-sainte-adresse.jpg",
@@ -1158,14 +1203,74 @@
       "bytes": 1038758
     },
     {
+      "path": "data/images/artist-art-atlas-goncharova/index.json",
+      "type": "thumbnail",
+      "bytes": 359
+    },
+    {
+      "path": "data/images/artist-art-atlas-goncharova/곤차로바_자전거 타는 사람_1913__goncharova-cyclist.jpg",
+      "type": "thumbnail",
+      "bytes": 211622
+    },
+    {
+      "path": "data/images/artist-art-atlas-gris/index.json",
+      "type": "thumbnail",
+      "bytes": 362
+    },
+    {
+      "path": "data/images/artist-art-atlas-gris/그리스_파블로 피카소의 초상_1912__gris-portrait-picasso.jpg",
+      "type": "thumbnail",
+      "bytes": 384054
+    },
+    {
+      "path": "data/images/artist-art-atlas-hassam/index.json",
+      "type": "thumbnail",
+      "bytes": 357
+    },
+    {
+      "path": "data/images/artist-art-atlas-hassam/해섬_비 오는 날의_1917__hassam-avenue-in-the-rain.jpg",
+      "type": "thumbnail",
+      "bytes": 911154
+    },
+    {
+      "path": "data/images/artist-art-atlas-hoch/index.json",
+      "type": "thumbnail",
+      "bytes": 346
+    },
+    {
+      "path": "data/images/artist-art-atlas-hoch/회흐_부엌칼로 자르기_1919__hoch-kitchen-knife.jpg",
+      "type": "thumbnail",
+      "bytes": 431545
+    },
+    {
       "path": "data/images/artist-art-atlas-kandinsky/kandinsky-composition-vii.jpg",
       "type": "thumbnail",
       "bytes": 2737272
     },
     {
+      "path": "data/images/artist-art-atlas-kirchner/index.json",
+      "type": "thumbnail",
+      "bytes": 366
+    },
+    {
+      "path": "data/images/artist-art-atlas-kirchner/키르히너_드레스덴의 거리_1908__kirchner-street-dresden.jpg",
+      "type": "thumbnail",
+      "bytes": 258965
+    },
+    {
+      "path": "data/images/artist-art-atlas-klimt/index.json",
+      "type": "thumbnail",
+      "bytes": 326
+    },
+    {
       "path": "data/images/artist-art-atlas-klimt/klimt-judith-i.jpg",
       "type": "thumbnail",
       "bytes": 3040406
+    },
+    {
+      "path": "data/images/artist-art-atlas-klimt/클림트_키스_1907__klimt-the-kiss.jpg",
+      "type": "thumbnail",
+      "bytes": 886880
     },
     {
       "path": "data/images/artist-art-atlas-malevich/malevich-black-square.jpg",
@@ -1176,6 +1281,26 @@
       "path": "data/images/artist-art-atlas-malevich/malevich-knife-grinder.jpeg",
       "type": "thumbnail",
       "bytes": 1005351
+    },
+    {
+      "path": "data/images/artist-art-atlas-matisse/index.json",
+      "type": "thumbnail",
+      "bytes": 358
+    },
+    {
+      "path": "data/images/artist-art-atlas-matisse/마티스_모자를 쓴 여인_1905__matisse-woman-with-hat.jpg",
+      "type": "thumbnail",
+      "bytes": 459536
+    },
+    {
+      "path": "data/images/artist-art-atlas-miro/index.json",
+      "type": "thumbnail",
+      "bytes": 361
+    },
+    {
+      "path": "data/images/artist-art-atlas-miro/미로_어릿광대의 카니발_1924__miro-harlequins-carnival.jpg",
+      "type": "thumbnail",
+      "bytes": 100170
     },
     {
       "path": "data/images/artist-art-atlas-mondrian/mondrian-composition-1921.jpg",
@@ -1193,9 +1318,29 @@
       "bytes": 691494
     },
     {
+      "path": "data/images/artist-art-atlas-munch/index.json",
+      "type": "thumbnail",
+      "bytes": 327
+    },
+    {
+      "path": "data/images/artist-art-atlas-munch/뭉크_절규_1893__munch-the-scream.jpg",
+      "type": "thumbnail",
+      "bytes": 151613
+    },
+    {
       "path": "data/images/artist-art-atlas-picasso/picasso-three-musicians.jpeg",
       "type": "thumbnail",
       "bytes": 42234
+    },
+    {
+      "path": "data/images/artist-art-atlas-repin/index.json",
+      "type": "thumbnail",
+      "bytes": 362
+    },
+    {
+      "path": "data/images/artist-art-atlas-repin/레핀_볼가강의 배 끄는_1870__repin-barge-haulers-volga.jpg",
+      "type": "thumbnail",
+      "bytes": 220392
     },
     {
       "path": "data/images/artist-art-atlas-rivera/rivera-detroit-industry.jpg",
@@ -1208,9 +1353,29 @@
       "bytes": 1387062
     },
     {
+      "path": "data/images/artist-art-atlas-seurat/index.json",
+      "type": "thumbnail",
+      "bytes": 372
+    },
+    {
+      "path": "data/images/artist-art-atlas-seurat/쇠라_그랑드자트섬의 일요일 오후_1884__seurat-la-grande-jatte.jpg",
+      "type": "thumbnail",
+      "bytes": 146525
+    },
+    {
       "path": "data/images/artist-art-atlas-shahn/shahn-sacco-vanzetti.jpg",
       "type": "thumbnail",
       "bytes": 529648
+    },
+    {
+      "path": "data/images/artist-art-atlas-taeuber-arp/index.json",
+      "type": "thumbnail",
+      "bytes": 362
+    },
+    {
+      "path": "data/images/artist-art-atlas-taeuber-arp/토이버아르프_다다 두상_1920__taeuber-arp-dada-head.jpg",
+      "type": "thumbnail",
+      "bytes": 1056015
     },
     {
       "path": "data/images/artist-further-botticelli/botticelli-birth-of-venus.jpg",
@@ -1585,7 +1750,7 @@
     {
       "path": "data/images/artist-Q150679/index.json",
       "type": "thumbnail",
-      "bytes": 3861
+      "bytes": 3465
     },
     {
       "path": "data/images/artist-Q150679/van-dyck-charles-i-and-henrietta-maria-with-children-1632.jpg",
@@ -1705,7 +1870,17 @@
     {
       "path": "data/images/artist-Q155151/index.json",
       "type": "thumbnail",
-      "bytes": 4940
+      "bytes": 4373
+    },
+    {
+      "path": "data/images/artist-Q155733/index.json",
+      "type": "thumbnail",
+      "bytes": 387
+    },
+    {
+      "path": "data/images/artist-Q155733/카우프만_그라쿠스 형제의 어머니_1785__artist-Q155733-representative-work.jpg",
+      "type": "thumbnail",
+      "bytes": 246615
     },
     {
       "path": "data/images/artist-Q160538/bernini-apollo-and-daphne-1622-1625.png",
@@ -1741,6 +1916,16 @@
       "path": "data/images/artist-Q160538/wikidata-Q945850.jpg",
       "type": "thumbnail",
       "bytes": 34664
+    },
+    {
+      "path": "data/images/artist-Q161472/index.json",
+      "type": "thumbnail",
+      "bytes": 378
+    },
+    {
+      "path": "data/images/artist-Q161472/앵그르_황제의 옥좌에 앉은_1806__artist-Q161472-representative-work.jpg",
+      "type": "thumbnail",
+      "bytes": 542740
     },
     {
       "path": "data/images/artist-Q161866/local-canaletto-arsenal-entrance.jpg",
@@ -1788,6 +1973,11 @@
       "bytes": 1607390
     },
     {
+      "path": "data/images/artist-Q162048/index.json",
+      "type": "thumbnail",
+      "bytes": 377
+    },
+    {
       "path": "data/images/artist-Q162048/local-tiepolo-banquet-of-cleopatra.jpg",
       "type": "thumbnail",
       "bytes": 4629935
@@ -1821,6 +2011,11 @@
       "path": "data/images/artist-Q162048/local-tiepolo-zephyr-and-flora.jpg",
       "type": "thumbnail",
       "bytes": 139247
+    },
+    {
+      "path": "data/images/artist-Q162048/티에폴로_아폴론과 대륙들_1752__artist-Q162048-representative-work.jpg",
+      "type": "thumbnail",
+      "bytes": 293110
     },
     {
       "path": "data/images/artist-Q165367/goltzius-emperor-commodus-as-hercules-1592.jpg",
@@ -1975,7 +2170,7 @@
     {
       "path": "data/images/artist-Q17169/index.json",
       "type": "thumbnail",
-      "bytes": 11017
+      "bytes": 10134
     },
     {
       "path": "data/images/artist-Q17169/manual-bellini-doge-loredan-1501.jpg",
@@ -2141,6 +2336,16 @@
       "path": "data/images/artist-Q17169/wikidata-Q726430.jpg",
       "type": "thumbnail",
       "bytes": 73867
+    },
+    {
+      "path": "data/images/artist-Q180117/index.json",
+      "type": "thumbnail",
+      "bytes": 371
+    },
+    {
+      "path": "data/images/artist-Q180117/게인즈버러_파란 소년_1770__artist-Q180117-representative-work.jpg",
+      "type": "thumbnail",
+      "bytes": 741033
     },
     {
       "path": "data/images/artist-Q187310/index.json",
@@ -2311,6 +2516,16 @@
       "path": "data/images/artist-Q187310/wikidata-Q76293120.jpg",
       "type": "thumbnail",
       "bytes": 102675
+    },
+    {
+      "path": "data/images/artist-Q189621/index.json",
+      "type": "thumbnail",
+      "bytes": 365
+    },
+    {
+      "path": "data/images/artist-Q189621/호가스_결혼 계약_1743__artist-Q189621-representative-work.jpg",
+      "type": "thumbnail",
+      "bytes": 324512
     },
     {
       "path": "data/images/artist-Q191748/cranach-apollo-diana-1530.png",
@@ -2873,6 +3088,11 @@
       "bytes": 24630
     },
     {
+      "path": "data/images/artist-Q235547/index.json",
+      "type": "thumbnail",
+      "bytes": 364
+    },
+    {
       "path": "data/images/artist-Q235547/local-carriera-gentleman-in-red.jpg",
       "type": "thumbnail",
       "bytes": 6131272
@@ -2901,6 +3121,11 @@
       "path": "data/images/artist-Q235547/local-carriera-young-girl-with-monkey.jpg",
       "type": "thumbnail",
       "bytes": 133595
+    },
+    {
+      "path": "data/images/artist-Q235547/카리에라_자화상_1746__artist-Q235547-representative-work.jpg",
+      "type": "thumbnail",
+      "bytes": 116689
     },
     {
       "path": "data/images/artist-Q297/index.json",
@@ -3233,6 +3458,16 @@
       "bytes": 57763
     },
     {
+      "path": "data/images/artist-Q312130/index.json",
+      "type": "thumbnail",
+      "bytes": 364
+    },
+    {
+      "path": "data/images/artist-Q312130/멩스_파르나소스_1761__artist-Q312130-representative-work.jpg",
+      "type": "thumbnail",
+      "bytes": 253945
+    },
+    {
       "path": "data/images/artist-Q312309/artist-Q312309-attributes-arts.jpg",
       "type": "thumbnail",
       "bytes": 2108416
@@ -3281,6 +3516,26 @@
       "path": "data/images/artist-Q312309/artist-Q312309-soap-bubbles.jpg",
       "type": "thumbnail",
       "bytes": 53466
+    },
+    {
+      "path": "data/images/artist-Q312309/index.json",
+      "type": "thumbnail",
+      "bytes": 361
+    },
+    {
+      "path": "data/images/artist-Q312309/샤르댕_가오리_1728__artist-Q312309-representative-work.jpg",
+      "type": "thumbnail",
+      "bytes": 152781
+    },
+    {
+      "path": "data/images/artist-Q312387/index.json",
+      "type": "thumbnail",
+      "bytes": 384
+    },
+    {
+      "path": "data/images/artist-Q312387/레이놀즈_비극의 뮤즈로 분장한_1784__artist-Q312387-representative-work.jpg",
+      "type": "thumbnail",
+      "bytes": 490218
     },
     {
       "path": "data/images/artist-Q312617/index.json",
@@ -3381,6 +3636,16 @@
       "path": "data/images/artist-Q313122/artist-Q313122-vulcan-venus-arms.jpg",
       "type": "thumbnail",
       "bytes": 129903
+    },
+    {
+      "path": "data/images/artist-Q313526/index.json",
+      "type": "thumbnail",
+      "bytes": 375
+    },
+    {
+      "path": "data/images/artist-Q313526/웨스트_울프 장군의 죽음_1770__artist-Q313526-representative-work.jpg",
+      "type": "thumbnail",
+      "bytes": 957881
     },
     {
       "path": "data/images/artist-Q313898/artist-Q313898-angora-cat.jfif",
@@ -4150,7 +4415,7 @@
     {
       "path": "data/images/artist-Q43270/index.json",
       "type": "thumbnail",
-      "bytes": 20042
+      "bytes": 19498
     },
     {
       "path": "data/images/artist-Q43270/wikidata-Q1087244.jpg",
@@ -4500,7 +4765,7 @@
     {
       "path": "data/images/artist-Q47551/index.json",
       "type": "thumbnail",
-      "bytes": 17351
+      "bytes": 17062
     },
     {
       "path": "data/images/artist-Q47551/manual-danae-capodimonte-1544.jpg",
@@ -4778,6 +5043,11 @@
       "bytes": 1252661
     },
     {
+      "path": "data/images/artist-Q47551/티치아노_성모 승천_1517__wikidata-Q1899740.jpg",
+      "type": "thumbnail",
+      "bytes": 1475547
+    },
+    {
       "path": "data/images/artist-Q48319/holbein-ambassadors-1533.jpg",
       "type": "thumbnail",
       "bytes": 1017265
@@ -4818,6 +5088,26 @@
       "bytes": 2915
     },
     {
+      "path": "data/images/artist-Q49898/index.json",
+      "type": "thumbnail",
+      "bytes": 368
+    },
+    {
+      "path": "data/images/artist-Q49898/리고_루이 14세의 초상_1701__rigaud-louis-xiv-royal-costume-1701.jpg",
+      "type": "thumbnail",
+      "bytes": 666986
+    },
+    {
+      "path": "data/images/artist-Q5547/index.json",
+      "type": "thumbnail",
+      "bytes": 381
+    },
+    {
+      "path": "data/images/artist-Q5547/카노바_큐피드의 키스로 되살아난_1793__artist-Q5547-representative-work.jpg",
+      "type": "thumbnail",
+      "bytes": 188161
+    },
+    {
       "path": "data/images/artist-Q5580/durer-adoration-of-the-trinity.jpg",
       "type": "thumbnail",
       "bytes": 243275
@@ -4855,12 +5145,12 @@
     {
       "path": "data/images/artist-Q5580/index.json",
       "type": "thumbnail",
-      "bytes": 3360
+      "bytes": 2920
     },
     {
       "path": "data/images/artist-Q5592/index.json",
       "type": "thumbnail",
-      "bytes": 20744
+      "bytes": 20239
     },
     {
       "path": "data/images/artist-Q5592/michelangelo-bacchus.jpg",
@@ -5515,7 +5805,7 @@
     {
       "path": "data/images/artist-Q5599/index.json",
       "type": "thumbnail",
-      "bytes": 44809
+      "bytes": 3
     },
     {
       "path": "data/images/artist-Q5599/wikidata-Q2273452.jpg",
@@ -5585,7 +5875,7 @@
     {
       "path": "data/images/artist-Q6394591/index.json",
       "type": "thumbnail",
-      "bytes": 6152
+      "bytes": 5597
     },
     {
       "path": "data/images/artist-Q6394591/wikipedia-Q6394591-0.jpg",
@@ -5670,7 +5960,7 @@
     {
       "path": "data/images/artist-Q7086/index.json",
       "type": "thumbnail",
-      "bytes": 2386
+      "bytes": 3
     },
     {
       "path": "data/images/artist-Q7751/arcimboldo-autumn-1573.jpg",
@@ -5715,7 +6005,7 @@
     {
       "path": "data/images/artist-Q7803/index.json",
       "type": "thumbnail",
-      "bytes": 373
+      "bytes": 378
     },
     {
       "path": "data/images/artist-Q7814/index.json",
@@ -5895,7 +6185,7 @@
     {
       "path": "data/images/artist-Q7824/index.json",
       "type": "thumbnail",
-      "bytes": 16479
+      "bytes": 15167
     },
     {
       "path": "data/images/artist-Q7824/manual-local-1787027323288.jpg",
@@ -6458,9 +6748,19 @@
       "bytes": 31806
     },
     {
+      "path": "data/images/artist-Q83155/index.json",
+      "type": "thumbnail",
+      "bytes": 381
+    },
+    {
+      "path": "data/images/artist-Q83155/다비드_호라티우스 형제의 맹세_1784__artist-Q83155-representative-work.jpg",
+      "type": "thumbnail",
+      "bytes": 249768
+    },
+    {
       "path": "data/images/artist-Q8459/index.json",
       "type": "thumbnail",
-      "bytes": 7773
+      "bytes": 7480
     },
     {
       "path": "data/images/artist-Q8459/wikidata-Q133503451.jpg",
@@ -6600,7 +6900,7 @@
     {
       "path": "data/images/artist-Q9319/index.json",
       "type": "thumbnail",
-      "bytes": 1935
+      "bytes": 1644
     },
     {
       "path": "data/images/artist-Q9319/tintoretto-apotheosis-of-st-roch-1564.jpg",
@@ -6700,7 +7000,7 @@
     {
       "path": "data/images/artist-Q9340/index.json",
       "type": "thumbnail",
-      "bytes": 706
+      "bytes": 1109
     },
     {
       "path": "data/images/artist-Q9340/La_campiña_romana,1639,_Claude_Lorrain.jpg",
@@ -6750,7 +7050,7 @@
     {
       "path": "data/images/artist-Q9440/index.json",
       "type": "thumbnail",
-      "bytes": 4079
+      "bytes": 3372
     },
     {
       "path": "data/images/artist-Q9440/veronese-conversion-of-mary-magdalene-1548.png",
@@ -7016,6 +7316,56 @@
       "path": "data/images/artist-rembrandt/wikidata-Q512755.jpg",
       "type": "thumbnail",
       "bytes": 469301
+    },
+    {
+      "path": "data/images/artist-romantic-church/index.json",
+      "type": "thumbnail",
+      "bytes": 362
+    },
+    {
+      "path": "data/images/artist-romantic-church/처치_안데스의 심장_1859__artist-romantic-church-work.jpg",
+      "type": "thumbnail",
+      "bytes": 225813
+    },
+    {
+      "path": "data/images/artist-romantic-cole/index.json",
+      "type": "thumbnail",
+      "bytes": 343
+    },
+    {
+      "path": "data/images/artist-romantic-cole/콜_옥스보_1836__artist-romantic-cole-work.jpg",
+      "type": "thumbnail",
+      "bytes": 244413
+    },
+    {
+      "path": "data/images/artist-romantic-constable/index.json",
+      "type": "thumbnail",
+      "bytes": 371
+    },
+    {
+      "path": "data/images/artist-romantic-constable/컨스터블_건초 마차_1821__artist-romantic-constable-work.jpg",
+      "type": "thumbnail",
+      "bytes": 438224
+    },
+    {
+      "path": "data/images/artist-romantic-delacroix/index.json",
+      "type": "thumbnail",
+      "bytes": 390
+    },
+    {
+      "path": "data/images/artist-romantic-delacroix/들라크루아_민중을 이끄는 자유의_1830__artist-romantic-delacroix-work.jpg",
+      "type": "thumbnail",
+      "bytes": 232923
+    },
+    {
+      "path": "data/images/artist-romantic-goya/index.json",
+      "type": "thumbnail",
+      "bytes": 354
+    },
+    {
+      "path": "data/images/artist-romantic-goya/고야_1808년 5월 3일_1814__artist-romantic-goya-work.jpg",
+      "type": "thumbnail",
+      "bytes": 234625
     },
     {
       "path": "data/images/artist-romantic-turner/artist-romantic-turner-work.jpg",
@@ -7820,7 +8170,7 @@
     {
       "path": "data/images/frida-kahlo/index.json",
       "type": "thumbnail",
-      "bytes": 6475
+      "bytes": 5850
     },
     {
       "path": "data/images/frida-kahlo/manual-wounded-deer.jpg",
@@ -7905,7 +8255,7 @@
     {
       "path": "data/images/vincent-van-gogh/index.json",
       "type": "thumbnail",
-      "bytes": 31448
+      "bytes": 31153
     },
     {
       "path": "data/images/vincent-van-gogh/wikidata-Q1025704.jpg",
@@ -8663,24 +9013,9 @@
       "bytes": 219100
     },
     {
-      "path": "data/미술사조/images/Bellini-Agony-in-the-Garden.jpg",
-      "type": "movement-image",
-      "bytes": 171247
-    },
-    {
-      "path": "data/미술사조/images/Benjamin-West-Death-of-General-Wolfe.jpg",
-      "type": "movement-image",
-      "bytes": 957881
-    },
-    {
       "path": "data/미술사조/images/Bernini-Ecstasy-Saint-Teresa.jpg",
       "type": "movement-image",
       "bytes": 708833
-    },
-    {
-      "path": "data/미술사조/images/Boccioni-Unique-Forms.jpg",
-      "type": "movement-image",
-      "bytes": 222231
     },
     {
       "path": "data/미술사조/images/Breton-Surrealist-Manifesto.png",
@@ -8703,21 +9038,6 @@
       "bytes": 321660
     },
     {
-      "path": "data/미술사조/images/Canova-Psyche-Revived-by-Cupids-Kiss.jpg",
-      "type": "movement-image",
-      "bytes": 188161
-    },
-    {
-      "path": "data/미술사조/images/Caravaggio-27s-The-Calling-of-St-Matthew-2068cdb551fc.jpg",
-      "type": "movement-image",
-      "bytes": 172491
-    },
-    {
-      "path": "data/미술사조/images/Caravaggio-27s-The-Calling-of-St-Matthew-3ab8156a9736.jpg",
-      "type": "movement-image",
-      "bytes": 172491
-    },
-    {
       "path": "data/미술사조/images/Caspar-David-Friedrich-Wanderer-above-the-sea-of-fog-d5966e14b524.jpg",
       "type": "movement-image",
       "bytes": 264366
@@ -8726,21 +9046,6 @@
       "path": "data/미술사조/images/Cassatt-The-Childs-Bath.jpg",
       "type": "movement-image",
       "bytes": 525146
-    },
-    {
-      "path": "data/미술사조/images/Chardin-The-Ray-WGA04738.jpg",
-      "type": "movement-image",
-      "bytes": 152781
-    },
-    {
-      "path": "data/미술사조/images/Charles-Le-Brun-Apotheosis-of-Louis-XIV-1677.jpg",
-      "type": "movement-image",
-      "bytes": 2177300
-    },
-    {
-      "path": "data/미술사조/images/Church-Heart-of-the-Andes.jpg",
-      "type": "movement-image",
-      "bytes": 225813
     },
     {
       "path": "data/미술사조/images/Cimabue-Maest-C3-A0-di-Santa-Trinita-Google-Art-Project-d9011e484d49.jpg",
@@ -8756,11 +9061,6 @@
       "path": "data/미술사조/images/Claude-Monet-Impression-soleil-levant-ffa6676be90d.jpg",
       "type": "movement-image",
       "bytes": 253676
-    },
-    {
-      "path": "data/미술사조/images/Constable-The-Hay-Wain.jpg",
-      "type": "movement-image",
-      "bytes": 438224
     },
     {
       "path": "data/미술사조/images/Cornelis-Cornelisz-van-Haarlem-Fall-of-the-Titans.jpg",
@@ -8781,16 +9081,6 @@
       "path": "data/미술사조/images/d80bc831e2e75f52782edb83-1-03-1a3708f85909.jpg",
       "type": "movement-image",
       "bytes": 166523
-    },
-    {
-      "path": "data/미술사조/images/David-Oath-of-the-Horatii-1784-0eededa85a03.jpg",
-      "type": "movement-image",
-      "bytes": 249768
-    },
-    {
-      "path": "data/미술사조/images/David-Oath-of-the-Horatii-1784-d473275ac167.jpg",
-      "type": "movement-image",
-      "bytes": 249768
     },
     {
       "path": "data/미술사조/images/David-The-Death-of-Socrates-ebacbfdd4138.jpg",
@@ -8848,19 +9138,9 @@
       "bytes": 318371
     },
     {
-      "path": "data/미술사조/images/El-Greco-Burial-of-the-Count-of-Orgaz.jpg",
-      "type": "movement-image",
-      "bytes": 38558
-    },
-    {
       "path": "data/미술사조/images/Ensor-Christ-Entry-into-Brussels.jpg",
       "type": "movement-image",
       "bytes": 456507
-    },
-    {
-      "path": "data/미술사조/images/Eug-C3-A8ne-Delacroix-Le-28-Juillet-La-Libert-C3-A9-guidant-le-peuple-808a8bab8e3b.jpg",
-      "type": "movement-image",
-      "bytes": 232923
     },
     {
       "path": "data/미술사조/images/europe-after-rain-d6203265c1a4.jpg",
@@ -8898,44 +9178,9 @@
       "bytes": 494600
     },
     {
-      "path": "data/미술사조/images/Frida-Kahlo-The-Two-Fridas.jpg",
-      "type": "movement-image",
-      "bytes": 104061
-    },
-    {
-      "path": "data/미술사조/images/Gainsborough-The-Blue-Boy-1770.jpg",
-      "type": "movement-image",
-      "bytes": 741033
-    },
-    {
-      "path": "data/미술사조/images/Georges-20Seurat-20-20Un-20dimanche-20apr-C3-A8s-midi-20-C3-A0-20l-C3-8037631ce03d.jpg",
-      "type": "movement-image",
-      "bytes": 146525
-    },
-    {
-      "path": "data/미술사조/images/Georges-Seurat-Un-dimanche-apr-C3-A8s-midi-C3-A0-l-27-C3-8Ele-de-la-Gr-8037631ce03d.jpg",
-      "type": "movement-image",
-      "bytes": 146525
-    },
-    {
-      "path": "data/미술사조/images/Giorgione-Three-Philosophers.jpg",
-      "type": "movement-image",
-      "bytes": 53559
-    },
-    {
       "path": "data/미술사조/images/Giotto-20-20Scrovegni-20-20-36-20-20Lamentation-20-The-20Mourning-20of-feb53c4a2d22.jpg",
       "type": "movement-image",
       "bytes": 317708
-    },
-    {
-      "path": "data/미술사조/images/Giovanni-20Battista-20Tiepolo-20-20Apollo-20and-20the-20Continents-20-4da05d03665b.jpg",
-      "type": "movement-image",
-      "bytes": 293110
-    },
-    {
-      "path": "data/미술사조/images/Goncharova-Cyclist.jpg",
-      "type": "movement-image",
-      "bytes": 211622
     },
     {
       "path": "data/미술사조/images/Gorky-Liver-Cocks-Comb.jpg",
@@ -8943,24 +9188,9 @@
       "bytes": 305765
     },
     {
-      "path": "data/미술사조/images/Goya-Third-of-May-1808.jpg",
-      "type": "movement-image",
-      "bytes": 234625
-    },
-    {
       "path": "data/미술사조/images/grwpCmPpSImm938JFHIaTITKJr4-6e4868fbf57e.jpg",
       "type": "movement-image",
       "bytes": 344587
-    },
-    {
-      "path": "data/미술사조/images/Gustave-20Courbet-20-20A-20Burial-20at-20Ornans-20-20Google-20Art-20Pr-133612793849.jpg",
-      "type": "movement-image",
-      "bytes": 134572
-    },
-    {
-      "path": "data/미술사조/images/Gustave-Courbet-A-Burial-at-Ornans-Google-Art-Project-2-45d9e62b27f4.jpg",
-      "type": "movement-image",
-      "bytes": 134572
     },
     {
       "path": "data/미술사조/images/Hameau-20-C3-A0-20Payennet-20pr-C3-A8s-20de-20Gardanne-20par-20Paul-20-dd2ecb68fedf.jpg",
@@ -8973,24 +9203,9 @@
       "bytes": 261913
     },
     {
-      "path": "data/미술사조/images/Hassam-Avenue-in-the-Rain.jpg",
-      "type": "movement-image",
-      "bytes": 911154
-    },
-    {
       "path": "data/미술사조/images/Hendrick-Goltzius-The-Great-Hercules.jpg",
       "type": "movement-image",
       "bytes": 2837766
-    },
-    {
-      "path": "data/미술사조/images/Hoch-Cut-With-the-Kitchen-Knife-78af8df2b81f.jpg",
-      "type": "movement-image",
-      "bytes": 431545
-    },
-    {
-      "path": "data/미술사조/images/Hogarth-Marriage-Settlement.jpg",
-      "type": "movement-image",
-      "bytes": 324512
     },
     {
       "path": "data/미술사조/images/Honor-C3-A9-20Daumier-20-French-20Marseilles-201808-E2-80-931879-20Val-d34f3d1251df.jpg",
@@ -9010,12 +9225,7 @@
     {
       "path": "data/미술사조/images/index.json",
       "type": "movement-image",
-      "bytes": 44001
-    },
-    {
-      "path": "data/미술사조/images/Ingres-Napoleon-on-Imperial-Throne.jpg",
-      "type": "movement-image",
-      "bytes": 542740
+      "bytes": 30801
     },
     {
       "path": "data/미술사조/images/Jacopo-20Pontormo-20004-2dcaf20c0708.jpg",
@@ -9036,31 +9246,6 @@
       "path": "data/미술사조/images/Jean-Fran-C3-A7ois-Millet-Gleaners-Google-Art-Project-2-2a5eac9e18cd.jpg",
       "type": "movement-image",
       "bytes": 195295
-    },
-    {
-      "path": "data/미술사조/images/Juan-20Gris-20-20Portrait-20of-20Pablo-20Picasso-20-20Google-20Art-20P-5708b16ee683.jpg",
-      "type": "movement-image",
-      "bytes": 384054
-    },
-    {
-      "path": "data/미술사조/images/Juan-Gris-Portrait-of-Pablo-Picasso-Google-Art-Project-5708b16ee683.jpg",
-      "type": "movement-image",
-      "bytes": 384054
-    },
-    {
-      "path": "data/미술사조/images/Kauffman-Cornelia-Mother-of-the-Gracchi.jpg",
-      "type": "movement-image",
-      "bytes": 246615
-    },
-    {
-      "path": "data/미술사조/images/Kirchner-Street-Dresden.jpg",
-      "type": "movement-image",
-      "bytes": 258965
-    },
-    {
-      "path": "data/미술사조/images/Klimt-The-Kiss.jpg",
-      "type": "movement-image",
-      "bytes": 886880
     },
     {
       "path": "data/미술사조/images/Kramskoi-Portrait-of-an-Unknown-Woman.jpg",
@@ -9098,19 +9283,9 @@
       "bytes": 48648
     },
     {
-      "path": "data/미술사조/images/Louis-XIV-of-France-063c4adf6cf3.jpg",
-      "type": "movement-image",
-      "bytes": 666986
-    },
-    {
       "path": "data/미술사조/images/Lucas-Cranach-Martin-Luther-1528-manual.jpg",
       "type": "movement-image",
       "bytes": 314763
-    },
-    {
-      "path": "data/미술사조/images/Marcel-Duchamp-1917-Fountain-photograph-by-Alfred-Stieglitz-17209e2773c3.jpg",
-      "type": "movement-image",
-      "bytes": 262659
     },
     {
       "path": "data/미술사조/images/Masaccio-20trinit-C3-A0-6267fffe36ee.jpg",
@@ -9118,34 +9293,14 @@
       "bytes": 475323
     },
     {
-      "path": "data/미술사조/images/Matisse-Woman-with-a-Hat-4552a63769d7.jpg",
-      "type": "movement-image",
-      "bytes": 459536
-    },
-    {
-      "path": "data/미술사조/images/Mengs-Parnassus.jpg",
-      "type": "movement-image",
-      "bytes": 253945
-    },
-    {
       "path": "data/미술사조/images/Menzel-Iron-Rolling-Mill.jpg",
       "type": "movement-image",
       "bytes": 297157
     },
     {
-      "path": "data/미술사조/images/Michelangelo-Last-Judgment.jpg",
-      "type": "movement-image",
-      "bytes": 40865
-    },
-    {
       "path": "data/미술사조/images/Morisot-The-Cradle.jpg",
       "type": "movement-image",
       "bytes": 511901
-    },
-    {
-      "path": "data/미술사조/images/Munch-The-Scream.jpg",
-      "type": "movement-image",
-      "bytes": 151613
     },
     {
       "path": "data/미술사조/images/Murillo-The-Young-Beggar-WGA16348.jpg",
@@ -9178,11 +9333,6 @@
       "bytes": 384887
     },
     {
-      "path": "data/미술사조/images/Perov-Hunters-at-Rest.jpg",
-      "type": "movement-image",
-      "bytes": 18486
-    },
-    {
       "path": "data/미술사조/images/Perov-Troika.jpg",
       "type": "movement-image",
       "bytes": 336013
@@ -9208,11 +9358,6 @@
       "bytes": 336191
     },
     {
-      "path": "data/미술사조/images/Poussin-Death-of-Germanicus.jpg",
-      "type": "movement-image",
-      "bytes": 4211370
-    },
-    {
       "path": "data/미술사조/images/Poussin-Et-in-Arcadia-Ego-WGA18305.jpg",
       "type": "movement-image",
       "bytes": 87447
@@ -9221,11 +9366,6 @@
       "path": "data/미술사조/images/Primaticcio-Ulysses-and-Penelope-WGA18409.jpg",
       "type": "movement-image",
       "bytes": 135362
-    },
-    {
-      "path": "data/미술사조/images/Pukirev-Unequal-Marriage.jpg",
-      "type": "movement-image",
-      "bytes": 1008094
     },
     {
       "path": "data/미술사조/images/Puvis-The-Poor-Fisherman.jpg",
@@ -9243,21 +9383,6 @@
       "bytes": 436875
     },
     {
-      "path": "data/미술사조/images/Rembrandt-Night-Watch.jpg",
-      "type": "movement-image",
-      "bytes": 245003
-    },
-    {
-      "path": "data/미술사조/images/Repin-Barge-Haulers-on-the-Volga.jpg",
-      "type": "movement-image",
-      "bytes": 220392
-    },
-    {
-      "path": "data/미술사조/images/Reynolds-Mrs-Siddons-as-Tragic-Muse.jpg",
-      "type": "movement-image",
-      "bytes": 490218
-    },
-    {
       "path": "data/미술사조/images/Roger-Fry-River-with-Poplars.jpg",
       "type": "movement-image",
       "bytes": 32187
@@ -9268,19 +9393,9 @@
       "bytes": 213203
     },
     {
-      "path": "data/미술사조/images/Rosalba-Carriera-Self-Portrait-WGA04503.jpg",
-      "type": "movement-image",
-      "bytes": 116689
-    },
-    {
       "path": "data/미술사조/images/Rosso-Fiorentino-Deposition-WGA20130.jpg",
       "type": "movement-image",
       "bytes": 123883
-    },
-    {
-      "path": "data/미술사조/images/Rubens-Descent-from-the-Cross-Antwerp.jpg",
-      "type": "movement-image",
-      "bytes": 756015
     },
     {
       "path": "data/미술사조/images/Rysselberghe-Portrait-of-Alice-Sethe.jpg",
@@ -9313,11 +9428,6 @@
       "bytes": 328784
     },
     {
-      "path": "data/미술사조/images/Spranger-Hercules-Deianira-Centaur-Nessus.jpg",
-      "type": "movement-image",
-      "bytes": 634692
-    },
-    {
       "path": "data/미술사조/images/Spranger-Venus-and-Adonis.jpg",
       "type": "movement-image",
       "bytes": 202250
@@ -9336,11 +9446,6 @@
       "path": "data/미술사조/images/Stuck-The-Sin.jpg",
       "type": "movement-image",
       "bytes": 113714
-    },
-    {
-      "path": "data/미술사조/images/Taeuber-Arp-Dada-Head.jpg",
-      "type": "movement-image",
-      "bytes": 1056015
     },
     {
       "path": "data/미술사조/images/Tanguy-Indefinite-Divisibility.jpg",
@@ -9363,29 +9468,9 @@
       "bytes": 176757
     },
     {
-      "path": "data/미술사조/images/The-Harlequin-27s-Carnival-a136210e2369.jpg",
-      "type": "movement-image",
-      "bytes": 100170
-    },
-    {
-      "path": "data/미술사조/images/The-Persistence-of-Memory-2ad13469edc2.jpg",
-      "type": "movement-image",
-      "bytes": 36722
-    },
-    {
-      "path": "data/미술사조/images/Thomas-Cole-The-Oxbow.jpg",
-      "type": "movement-image",
-      "bytes": 244413
-    },
-    {
       "path": "data/미술사조/images/Tintoretto-Last-Supper-WGA22649.jpg",
       "type": "movement-image",
       "bytes": 287639
-    },
-    {
-      "path": "data/미술사조/images/Tizian-041-c1f1a35ec75c.jpg",
-      "type": "movement-image",
-      "bytes": 1475547
     },
     {
       "path": "data/미술사조/images/Tom-Roberts-Shearing-the-Rams.jpg",
@@ -9403,11 +9488,6 @@
       "bytes": 136120
     },
     {
-      "path": "data/미술사조/images/Van-Eyck-Arnolfini-Portrait-997900945212.jpg",
-      "type": "movement-image",
-      "bytes": 247553
-    },
-    {
       "path": "data/미술사조/images/Van-Gogh-Starry-Night-Google-Art-Project-33e561a6a488.jpg",
       "type": "movement-image",
       "bytes": 1381879
@@ -9423,16 +9503,6 @@
       "bytes": 66384
     },
     {
-      "path": "data/미술사조/images/Veronese-Wedding-Feast-at-Cana.jpg",
-      "type": "movement-image",
-      "bytes": 4345636
-    },
-    {
-      "path": "data/미술사조/images/Vigee-Le-Brun-Self-Portrait.jpg",
-      "type": "movement-image",
-      "bytes": 24292
-    },
-    {
       "path": "data/미술사조/images/Vrubel-Demon-Seated.jpg",
       "type": "movement-image",
       "bytes": 357217
@@ -9446,11 +9516,6 @@
       "path": "data/미술사조/images/Winslow-Homer-The-Gulf-Stream.jpg",
       "type": "movement-image",
       "bytes": 333273
-    },
-    {
-      "path": "data/미술사조/images/Wolf-Huber-Lamentation-of-Christ-1524.jpg",
-      "type": "movement-image",
-      "bytes": 328694
     },
     {
       "path": "data/미술사조/images/Zurbaran-Saint-Serapion.jpg",

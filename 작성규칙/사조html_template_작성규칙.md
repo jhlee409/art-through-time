@@ -55,14 +55,17 @@
 - 선정 이유와 작품 설명은 하나의 카드 편집 동작에서 각각 비어 있지 않은 값으로 저장한다. `imageState=pending` 카드도 텍스트 편집 대상이며, 이미지가 없다는 이유로 편집기나 화가 리스트 연동에서 제외하지 않는다.
 - 한 화가는 기본적으로 한 문서의 한 `developmentId`에만 둔다. 서로 다른 작품으로 두 범주의 차이를 설명하는 데 대체 불가능해 중복할 때에는 모든 해당 카드에 `data-art-atlas-duplicate-artist-reason`으로 교육적 이유를 기록한다.
 - 카드 첫 줄은 `화가명, 《작품명》 · 사조 · 지역` 순서로 쓴다.
+- 카드의 화가 링크 대상은 `data-artist-id`와 같아야 하며, 작품명·연도·이미지는 `data-work-id`로 연결된 화가 연표 작품과 일치해야 한다. 같은 파일 여부는 경로 이름이 아니라 `data/image-catalog.json`의 SHA-256으로 검증한다.
 - 카드의 대표작은 단순히 유명한 작품이 아니라 해당 국가·세부 사조의 색채, 빛, 공간, 주제, 후원·사교 환경을 가장 잘 설명하는 작품으로 고른다. 더 적합한 작품으로 교체할 때는 이미지·대체 텍스트·고해상도 경로·작품명·연도·활동 지역·설명을 한 번에 교체한다.
 - 카드의 활동 지역은 작가의 현대 국적과 혼동하지 않는다. 작품 제작 당시의 역사적 국가·도시권을 쓸 때에는 표·카드·화가 작품 데이터의 맥락을 맞춘다.
 
 ## 이미지와 검증
 
 - 로컬 이미지 또는 기존 내장 이미지만 사용하며 외부 이미지 URL·다운로드 의존을 새로 만들지 않는다. 화가별 로컬 썸네일을 카드에 재사용할 때는 상대 경로와 `data-art-atlas-highres`가 같은 로컬 자산을 가리키는지 확인한다.
+- 화가 연표에 등록된 작품을 사조 대표작 카드나 본문 도판에 재사용할 때는 `data/images/artist-*/`의 정본 파일을 함께 사용한다. `data/미술사조/images/`에는 화가 작품 데이터와 연결되지 않는 사조 설명 전용 도판만 두며, 같은 바이트의 작품 이미지를 두 폴더에 중복 보관하지 않는다.
+- 옛 사조 이미지 폴더에 화가 작품 또는 동일 바이트 복사본이 남았는지는 `node tools/migrate-legacy-artwork-images.js`로 확인한다. 캐시 `data/미술사조/images/index.json`의 실제 파일 없는 항목은 `node tools/prune-movement-image-index.js`로 검사하며, 필요할 때만 각 도구의 `--apply`로 정리한다.
 - 사용자가 특정 작업에 한해 인터넷 이미지 다운로드를 명시적으로 승인한 경우에도 검토된 공개 라이선스 원본만 승인 목록에 작품별로 기록한 뒤 받는다. 화가마다 사조 특징을 설명할 대표작 1개를 우선하며 로컬 경로·원본 페이지·라이선스를 함께 보존한다. 공개 상태가 불명확하거나 적절한 도판을 확인하지 못한 카드는 다른 작품으로 임의 대체하지 않고 `다운로드 필요`로 남긴다.
 - 승인 다운로드 도구는 `tools/url-download-permission.js`의 `requireUrlFileDownloadApproval()`을 호출하고, 실행 전 `node tools/check-url-download-approval.js`를 통과해야 한다. 묶음 다운로드에서는 성공한 항목을 즉시 기록해 뒤 항목의 실패가 이미 받은 파일과 출처 기록을 취소하지 않게 한다.
 - `<img src="data:image/...">` 형태의 base64 인라인 이미지는 사조 HTML에 넣지 않는다. 사용해야 하는 기존 내장 이미지는 `data/미술사조/images/`의 로컬 파일로 분리한 뒤 상대 경로로 참조한다.
 - 대표작 카드는 전체 폭 3열, 작은 화면 1열을 유지한다.
-- 완료 전 `node tools/validate-movement-canonical.js`, `node tools/validate-movement-sync-contract.js`, `node tools/validate-movement-documents-v1.js`, `node tools/validate-movement-representatives.js`, `node tools/validate-movement-sync-v1-runtime.js`, `node tools/complete-movement-sync-v1.js`, `node tools/sync-movement-learning-guides.js --check`, `node tools/validate-movement-links.js`, `node --check server.js`, `node tools/check-project-health.js`, `git diff --check`를 실행한다. 사조 HTML 제공 경로나 서버 콘텐츠 서비스를 고쳤다면 서버 재시작 뒤 `index.json` 등록 문서 전체의 HTTP 200 응답도 확인한다.
+- 완료 전 `node tools/validate-movement-canonical.js`, `node tools/validate-movement-sync-contract.js`, `node tools/validate-movement-documents-v1.js`, `node tools/validate-movement-representatives.js`, `node tools/validate-cross-tab-linkage.js`, `node tools/validate-movement-image-paths.js`, `node tools/validate-movement-sync-v1-runtime.js`, `node tools/complete-movement-sync-v1.js`, `node tools/sync-movement-learning-guides.js --check`, `node tools/validate-movement-links.js`, `node --check server.js`, `npm test`, `git diff --check`를 실행한다. 사조 HTML 제공 경로나 서버 콘텐츠 서비스를 고쳤다면 서버 재시작 뒤 `node tools/check-app-http.js http://127.0.0.1:4173`으로 활성 문서와 이미지 응답을 확인한다.

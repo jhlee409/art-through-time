@@ -41,6 +41,30 @@ async function main() {
   if ((index.artists || []).some(artist => Array.isArray(artist.works))) throw new Error('/api/artists-index includes work arrays');
   if (Object.keys(movements.documents || {}).length !== 36) throw new Error('/api/movement-documents count mismatch');
 
+  const movementDocumentPaths = [...new Set(Object.values(movements.documents || {}).flatMap(document => Object.values(document || {})))];
+  const movementImagePaths = new Set();
+  for (const documentPath of movementDocumentPaths) {
+    const pathname = `/${String(documentPath).split('/').map(encodeURIComponent).join('/')}`;
+    const html = await response(pathname).then(result => result.text());
+    for (const imageTag of html.matchAll(/<img\b[^>]*>/gi)) {
+      for (const match of imageTag[0].matchAll(/\b(?:src|data-art-atlas-highres)=(?:"([^"]+)"|'([^']+)')/gi)) {
+        const source = match[1] || match[2] || '';
+        if (!source || source.startsWith('#')) continue;
+        if (/^(?:data:|https?:)?\/\//i.test(source)) throw new Error(`${documentPath}: external or inline image source (${source})`);
+        const imageUrl = new URL(source, `${origin}${pathname}`);
+        if (imageUrl.origin !== origin) throw new Error(`${documentPath}: image source leaves the local origin (${source})`);
+        movementImagePaths.add(imageUrl.pathname);
+      }
+    }
+  }
+  for (const pathname of movementImagePaths) {
+    const result = await response(pathname);
+    if (!String(result.headers.get('content-type') || '').startsWith('image/')) {
+      throw new Error(`${pathname}: movement asset is not served as an image`);
+    }
+    await result.body?.cancel();
+  }
+
   const removedRulesEndpoint = ['/api/rules', 'check-and-apply'].join('/');
   const removedRulesResponse = await fetch(`${origin}${removedRulesEndpoint}`, {
     method: 'POST',
@@ -79,6 +103,8 @@ async function main() {
     staticDataFiles: staticData.length,
     sampledArtistDetails: detailChecks.length,
     movementDocuments: Object.keys(movements.documents || {}).length,
+    movementDocumentFiles: movementDocumentPaths.length,
+    movementImages: movementImagePaths.size,
     removedEndpoints: 1,
     sampledImages: sampleIndexes.length
   }, null, 2));

@@ -591,11 +591,23 @@ function artistListArtistCountryIds(artist) {
   return countryId ? [countryId] : [];
 }
 function artistListArtistLifeSpan(artist) {
-  const birth = Number(artist?.birth);
-  if (!Number.isFinite(birth)) return null;
-  const death = Number(artist?.death);
-  const end = Number.isFinite(death) ? death : Math.min(movementAtlasEnd, birth + 80);
-  return {start:birth, end:Math.max(birth + 1, end)};
+  const numericYear = value => value === null || value === undefined || value === '' ? null : Number(value);
+  const workYears = (artist?.works || []).flatMap(work => String(work?.yearLabel ?? work?.year ?? '').match(/\d{3,4}/g) || []).map(Number).filter(Number.isFinite);
+  const birth = numericYear(artist?.birth);
+  const activeFrom = numericYear(artist?.activeFrom);
+  const firstWork = workYears.length ? Math.min(...workYears) : null;
+  const start = Number.isFinite(birth) ? birth : (Number.isFinite(activeFrom) ? activeFrom : firstWork);
+  if (!Number.isFinite(start)) return null;
+  const death = numericYear(artist?.death);
+  const activeTo = numericYear(artist?.activeTo);
+  const lastWork = workYears.length ? Math.max(...workYears) : null;
+  const unknownDeathEnd = Number.isFinite(birth)
+    ? Math.min(movementAtlasEnd, Math.max(birth + 80, Number.isFinite(lastWork) ? lastWork : birth + 80))
+    : movementAtlasEnd;
+  const end = Number.isFinite(death)
+    ? death
+    : (Number.isFinite(activeTo) ? activeTo : (artist?.death === null ? movementAtlasEnd : unknownDeathEnd));
+  return {start, end:Math.max(start + 1, end)};
 }
 function artistListLastRegisteredWorkYear(artist) {
   return Math.max(...(artist?.works || []).map(work => {
@@ -942,7 +954,7 @@ function artistListMovementEntries(countries, selectedCountryIds, start, end) {
       return;
     }
     group.start = Math.min(group.start, rowStart);
-    group.end = Math.min(group.end, rowEnd);
+    group.end = Math.max(group.end, rowEnd);
     if (rowKey === groupAnchorKey) {
       group.anchorStart = Math.min(group.anchorStart, rowStart);
       group.anchorEnd = Math.min(group.anchorEnd, rowEnd);
