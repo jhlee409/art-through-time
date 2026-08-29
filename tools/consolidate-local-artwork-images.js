@@ -75,6 +75,19 @@ function markReady(work, localPath) {
   work.migration.image.highResolution = localPath;
 }
 
+function markPending(work) {
+  work.thumbnail = '';
+  work.highResImage = '';
+  work.highResOriginal = '';
+  work.imageUploadStatus = 'pending-upload';
+  work.thumbnailValidation = 0;
+  work.migration = work.migration && typeof work.migration === 'object' ? work.migration : {schema: 1};
+  work.migration.image = work.migration.image && typeof work.migration.image === 'object' ? work.migration.image : {};
+  work.migration.image.status = 'pending-upload';
+  work.migration.image.localThumbnail = '';
+  work.migration.image.highResolution = '';
+}
+
 function artistAndWork(payload, artistId, workId) {
   const artist = (payload.artists || []).find(item => item.id === artistId);
   const work = (artist?.works || []).find(item => item.id === workId);
@@ -172,6 +185,7 @@ function main() {
     if (!current) continue;
     const orphan = item.path;
     if (item.qid === 'Q19898216') {
+      markPending(current.work);
       deletedPaths.add(orphan);
       decisions.push({workId: current.work.id, action: 'delete-invalid-icon', deleted: orphan});
       continue;
@@ -213,7 +227,7 @@ function main() {
   for (const [artistId, workId, manualPath, preferValid] of manualPairs) {
     const {work} = artistAndWork(payload, artistId, workId);
     const linked = existingLocalPathForWork(work, artistId);
-    if (!linked || linked === manualPath) continue;
+    if (!linked || linked === manualPath || !fs.existsSync(absolute(manualPath))) continue;
     const manualWins = preferValid || bytes(manualPath) > bytes(linked)
       || (bytes(manualPath) === bytes(linked) && preferredEqualSizePath([manualPath, linked]) === manualPath);
     if (manualWins && path.extname(manualPath).toLowerCase() === path.extname(linked).toLowerCase()) {
@@ -261,9 +275,14 @@ function main() {
   for (const item of additions) {
     const artist = (payload.artists || []).find(value => value.id === item.artistId);
     if (!artist) throw new Error(`Missing artist: ${item.artistId}`);
-    if (!(artist.works || []).some(work => work.id === item.workId)) artist.works.push(item.work);
-    copied.push({from: item.sourcePath, to: item.localPath});
-    deletedPaths.add(item.sourcePath);
+    const existingWork = (artist.works || []).some(work => work.id === item.workId);
+    if (!existingWork) artist.works.push(item.work);
+    if (fs.existsSync(absolute(item.sourcePath))) {
+      copied.push({from: item.sourcePath, to: item.localPath});
+      deletedPaths.add(item.sourcePath);
+    } else if (!fs.existsSync(absolute(item.localPath))) {
+      throw new Error(`Missing source and target image: ${item.workId}`);
+    }
     indexUpserts.push({artistId: item.artistId, workId: item.workId, localPath: item.localPath});
   }
 

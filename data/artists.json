@@ -13575,6 +13575,440 @@
           "highResImage": "data/images/artist-1786369007570/wikidata-Q3937378.jpg",
           "highResOriginal": "data/images/artist-1786369007570/wikidata-Q3937378.jpg",
           "imageUploadStatus": "ready"
+        },
+        {
+          "id": "wikidata-Q1105846",
+          "year": 1450,
+          "popularity": 16,
+          "title": {
+            "ko": "Codex Arundel",
+            "en": "Codex Arundel"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "",
+            "en": ""
+          },
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Codex%20arundel.jpg",
+          "description": {
+            "ko": "Codex Arundel은/는 레오나르도 다 빈치의 1450년경 제작된 작품입니다. 현재 소장처 또는 관련 기관은 대영 도서관입니다.",
+            "en": "Codex Arundel is a work by Leonardo da Vinci made around 1450. It is connected with British Library. book by Leonardo da Vinci"
+          },
+          "source": "http://www.wikidata.org/entity/Q1105846",
+          "verified": true,
+          "representative": false,
+          "detail": {
+            "schema": 2,
+            "cachedFromExistingData": true,
+            "summary": {
+              "ko": "Codex Arundel은/는 레오나르도 다 빈치의 1450년경 제작된 작품입니다. 현재 소장처 또는 관련 기관은 대영 도서관입니다.",
+              "en": "Codex Arundel is a work by Leonardo da Vinci made around 1450. It is connected with British Library. book by Leonardo da Vinci"
+            },
+            "sources": [
+              "http://www.wikidata.org/entity/Q1105846",
+              "https://www.wikidata.org/wiki/Q1105846",
+              "https://en.wikipedia.org/wiki/Codex_Arundel"
+            ],
+            "facts": {
+              "artist": {
+                "ko": "레오나르도 다 빈치",
+                "en": "Leonardo da Vinci"
+              },
+              "year": 1450,
+              "country": {
+                "ko": "",
+                "en": ""
+              },
+              "movement": {
+                "ko": "",
+                "en": ""
+              },
+              "collection": [
+                {
+                  "ko": "대영 도서관",
+                  "en": "British Library"
+                }
+              ],
+              "location": [
+                {
+                  "ko": "런던",
+                  "en": "London"
+                }
+              ],
+              "material": [
+                {
+                  "ko": "종이",
+                  "en": "paper"
+                }
+              ],
+              "genre": [],
+              "mainSubject": []
+            },
+            "enrichedOnlineAt": "2026-08-10T16:10:07.058Z",
+            "sections": {
+              "ko": [
+                {
+                  "title": "개요",
+                  "body": "Codex Arundel은/는 ����나르도 다 빈치의 1450���경 제작된 ��품입니다. 현재 소장처 또는 관련 기관은 대영 도서관입니다."
+                },
+                {
+                  "title": "배경과 의미",
+                  "body": "Codex Arundel (British Library Arundel MS 263) is a bound collection of pages of notes written by Leonardo da Vinci and dating mostly from between 1480 and 1518. The codex contains a number of treatises on a variety of subjects, including mechanics and geometry. The name of the codex came from the Earl of Arundel, who acquired it in Spain in the 1630s. It forms part of the British Library Arundel Manuscripts. 재료 또�� 기법 항목에는 ��이이/가 기���되어 있습니다. 관련 장소는 런던입니다."
+                },
+                {
+                  "title": "자료 항목",
+                  "body": "제작 연��: 1450 · 소장/관련 기관: 대영 도서관 · 재료/기법: 종이"
+                }
+              ],
+              "en": [
+                {
+                  "title": "Overview",
+                  "body": "Codex Arundel is a work by Leonardo da Vinci made around 1450. It is connected with British Library. book by Leonardo da Vinci"
+                },
+                {
+                  "title": "Context and significance",
+                  "body": "Codex Arundel (British Library Arundel MS 263) is a bound collection of pages of notes written by Leonardo da Vinci and dating mostly from between 1480 and 1518. The codex contains a number of treatises on a variety of subjects, including mechanics and geometry. The name of the codex came from the Earl of Arundel, who acquired it in Spain in the 1630s. It forms part of the British Library Arundel Manuscripts. Recorded materials or techniques include paper. The associated location is London."
+                },
+                {
+                  "title": "Data points",
+                  "body": "Year: 1450 · Collection / institution: British Library · Material / technique: paper"
+                }
+              ]
+            }
+          },
+          "thumbnail": "data/images/artist-1786369007570/wikidata-Q1105846.jpg",
+          "thumbnailCacheKey": "2026-08-16T09:35:53.781Z",
+          "thumbnailValidation": 2,
+          "metadata": {
+            "createdAt": "2026-08-10T13:50:59.717Z",
+            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "createdBy": "migration-tool",
+            "updatedBy": "jhlee409@gmail.com",
+            "yearReview": {
+              "status": "needs-review",
+              "reason": "outside-artist-lifespan",
+              "sourceYear": 1450,
+              "artistBirth": 1452,
+              "artistDeath": 1519
+            }
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-1786369007570/wikidata-Q1105846.jpg",
+              "highResolution": "data/images/artist-1786369007570/wikidata-Q1105846.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q1105846",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q1105846",
+                "http://commons.wikimedia.org/wiki/Special:FilePath/Codex%20arundel.jpg",
+                "https://www.wikidata.org/wiki/Q1105846",
+                "https://en.wikipedia.org/wiki/Codex_Arundel"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "movementContribution": true,
+          "movementContributionReason": "artist-movement-characteristic",
+          "metadataVerifiedAt": "2026-08-20T20:46:33.304Z",
+          "origin": "manual",
+          "highResImage": "data/images/artist-1786369007570/wikidata-Q1105846.jpg",
+          "highResOriginal": "data/images/artist-1786369007570/wikidata-Q1105846.jpg",
+          "imageUploadStatus": "ready"
+        },
+        {
+          "id": "wikidata-Q3492887",
+          "year": 1597,
+          "popularity": 9,
+          "title": {
+            "ko": "Medusa",
+            "en": "Medusa"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "이탈리아 르네상스",
+            "en": "이탈리아 르네상스"
+          },
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Medusa%20uffizi.jpg",
+          "description": {
+            "ko": "Medusa은/는 레오나르도 다 빈치의 1597년경 제작된 작품입니다. 이탈리아 르네상스와 관련된 작품으로 정리되어 있습니다.",
+            "en": "Medusa is a work by Leonardo da Vinci made around 1597. It is associated with Italian Renaissance. either of two lost paintings by Leonardo da Vinci"
+          },
+          "source": "http://www.wikidata.org/entity/Q3492887",
+          "verified": true,
+          "representative": false,
+          "detail": {
+            "schema": 2,
+            "cachedFromExistingData": true,
+            "summary": {
+              "ko": "Medusa은/는 레오나르도 다 빈치의 1597년경 제작된 작품입니다. 이탈리아 르네상스와 관련된 작품으로 정리되어 있습니다.",
+              "en": "Medusa is a work by Leonardo da Vinci made around 1597. It is associated with Italian Renaissance. either of two lost paintings by Leonardo da Vinci"
+            },
+            "sources": [
+              "http://www.wikidata.org/entity/Q3492887",
+              "https://www.wikidata.org/wiki/Q3492887",
+              "https://en.wikipedia.org/wiki/Medusa_(Leonardo)"
+            ],
+            "facts": {
+              "artist": {
+                "ko": "레오나르도 다 빈치",
+                "en": "Leonardo da Vinci"
+              },
+              "year": 1597,
+              "country": {
+                "ko": "",
+                "en": ""
+              },
+              "movement": {
+                "ko": "이탈리아 르네상스",
+                "en": "이탈리아 르네상스"
+              },
+              "collection": [],
+              "location": [],
+              "material": [],
+              "genre": [
+                {
+                  "ko": "신화화",
+                  "en": "mythological painting"
+                }
+              ],
+              "mainSubject": []
+            },
+            "enrichedOnlineAt": "2026-08-10T17:02:07.612Z",
+            "sections": {
+              "ko": [
+                {
+                  "title": "개요",
+                  "body": "Medusa은/는 레오나르도 다 빈치의 1597년경 제작된 작품입니다. 이탈리아 르네상스와 관련된 작품으로 정리되어 있습니다."
+                },
+                {
+                  "title": "배경과 의미",
+                  "body": "Medusa is either of two paintings described in Giorgio Vasari's Life of Leonardo da Vinci as being among Leonardo's earliest works. Neither painting survived. 장르 항목은 신화화입니다."
+                },
+                {
+                  "title": "자료 항목",
+                  "body": "제작 연도: 1597 · 사조: 이탈리아 르네상스 · 장르: 신화화"
+                }
+              ],
+              "en": [
+                {
+                  "title": "Overview",
+                  "body": "Medusa is a work by Leonardo da Vinci made around 1597. It is associated with Italian Renaissance. either of two lost paintings by Leonardo da Vinci"
+                },
+                {
+                  "title": "Context and significance",
+                  "body": "Medusa is either of two paintings described in Giorgio Vasari's Life of Leonardo da Vinci as being among Leonardo's earliest works. Neither painting survived. The recorded genre is mythological painting."
+                },
+                {
+                  "title": "Data points",
+                  "body": "Year: 1597 · Movement: Italian Renaissance · Genre: mythological painting"
+                }
+              ]
+            }
+          },
+          "thumbnail": "data/images/artist-1786369007570/wikidata-Q3492887.jpg",
+          "thumbnailCacheKey": "2026-08-16T09:36:06.880Z",
+          "thumbnailValidation": 2,
+          "metadata": {
+            "createdAt": "2026-08-10T13:50:59.717Z",
+            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "createdBy": "migration-tool",
+            "updatedBy": "jhlee409@gmail.com",
+            "yearReview": {
+              "status": "needs-review",
+              "reason": "outside-artist-lifespan",
+              "sourceYear": 1597,
+              "artistBirth": 1452,
+              "artistDeath": 1519
+            }
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-1786369007570/wikidata-Q3492887.jpg",
+              "highResolution": "data/images/artist-1786369007570/wikidata-Q3492887.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q3492887",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q3492887",
+                "http://commons.wikimedia.org/wiki/Special:FilePath/Medusa%20uffizi.jpg",
+                "https://www.wikidata.org/wiki/Q3492887",
+                "https://en.wikipedia.org/wiki/Medusa_(Leonardo)"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "movementContribution": false,
+          "metadataVerifiedAt": "2026-08-20T20:46:33.305Z",
+          "origin": "manual",
+          "highResImage": "data/images/artist-1786369007570/wikidata-Q3492887.jpg",
+          "highResOriginal": "data/images/artist-1786369007570/wikidata-Q3492887.jpg",
+          "imageUploadStatus": "ready"
+        },
+        {
+          "id": "wikidata-Q993743",
+          "year": 1569,
+          "popularity": 21,
+          "title": {
+            "ko": "Head of a Bearded Man (so-called Self-portrait)",
+            "en": "Head of a Bearded Man (so-called Self-portrait)"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "이탈리아 르네상스",
+            "en": "이탈리아 르네상스"
+          },
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20Vinci%20-%20presumed%20self-portrait%20-%20WGA12798.jpg",
+          "description": {
+            "ko": "Head of a Bearded Man (so-called Self-portrait)은/는 레오나르도 다 빈치의 1569년경 제작된 작품입니다. 이탈리아 르네상스와 관련된 작품으로 정��되어 있습니다. 현재 소장처 또는 관련 기관은 Royal Library of Turin입니다.",
+            "en": "Head of a Bearded Man (so-called Self-portrait) is a work by Leonardo da Vinci made around 1569. It is associated with Italian Renaissance. It is connected with Royal Library of Turin. drawing by Leonardo da Vinci"
+          },
+          "source": "http://www.wikidata.org/entity/Q993743",
+          "verified": true,
+          "representative": false,
+          "detail": {
+            "schema": 2,
+            "cachedFromExistingData": true,
+            "summary": {
+              "ko": "Head of a Bearded Man (so-called Self-portrait)은/는 레오나르도 다 빈치의 1569년경 제작된 작품입니다. 이탈리아 르네상스와 관련된 작품으로 정리되어 있습니다. 현재 소장처 또는 관련 기관은 Royal Library of Turin입니다.",
+              "en": "Head of a Bearded Man (so-called Self-portrait) is a work by Leonardo da Vinci made around 1569. It is associated with Italian Renaissance. It is connected with Royal Library of Turin. drawing by Leonardo da Vinci"
+            },
+            "sources": [
+              "http://www.wikidata.org/entity/Q993743",
+              "https://www.wikidata.org/wiki/Q993743",
+              "https://en.wikipedia.org/wiki/Portrait_of_a_Man_in_Red_Chalk"
+            ],
+            "facts": {
+              "artist": {
+                "ko": "레오나르도 다 빈치",
+                "en": "Leonardo da Vinci"
+              },
+              "year": 1569,
+              "country": {
+                "ko": "",
+                "en": ""
+              },
+              "movement": {
+                "ko": "이탈리아 르네상스",
+                "en": "이탈리아 르네상스"
+              },
+              "collection": [
+                {
+                  "ko": "Royal Library of Turin",
+                  "en": "Royal Library of Turin"
+                }
+              ],
+              "location": [
+                {
+                  "ko": "Royal Library of Turin",
+                  "en": "Royal Library of Turin"
+                }
+              ],
+              "material": [
+                {
+                  "ko": "다혈질",
+                  "en": "red chalk"
+                },
+                {
+                  "ko": "종이",
+                  "en": "paper"
+                }
+              ],
+              "genre": [
+                {
+                  "ko": "자화상",
+                  "en": "self-portrait"
+                }
+              ],
+              "mainSubject": [
+                {
+                  "ko": "레오나르도 다 빈치",
+                  "en": "Leonardo da Vinci"
+                }
+              ]
+            },
+            "enrichedOnlineAt": "2026-08-10T17:02:05.429Z",
+            "sections": {
+              "ko": [
+                {
+                  "title": "개요",
+                  "body": "Head of a Bearded Man (so-called Self-portrait)은/는 레오나르도 다 빈치의 1569년경 제작된 작품입니다. 이탈리아 르네상스와 관련된 작품으로 정리되어 있습니다. 현재 소장처 또는 관련 기관은 Royal Library of Turin입니다."
+                },
+                {
+                  "title": "배경과 의미",
+                  "body": "Portrait of a Man in Red Chalk (c. 1510) is a drawing currently in the collection of the Royal Library of Turin. It is widely, though not universally, accepted as a self-portrait of the Renaissance artist Leonardo da Vinci. It is thought that Leonardo drew this self-portrait at about the age of 60. 재료 또는 기법 항목에는 다혈질, 종이이/가 기록되어 있습니다. 장르 항목은 자화상입니다. 주요 주제는 레오나르도 다 빈치로 정리되어 있습니다."
+                },
+                {
+                  "title": "자료 항목",
+                  "body": "제작 연도: 1569 · 사조: 이탈리아 르네상스 · 소장/관련 기관: Royal Library of Turin · 재료/기법: 다혈질, 종이 · 장르: 자화상 · 주제: 레오나르도 다 빈치"
+                }
+              ],
+              "en": [
+                {
+                  "title": "Overview",
+                  "body": "Head of a Bearded Man (so-called Self-portrait) is a work by Leonardo da Vinci made around 1569. It is associated with Italian Renaissance. It is connected with Royal Library of Turin. drawing by Leonardo da Vinci"
+                },
+                {
+                  "title": "Context and significance",
+                  "body": "Portrait of a Man in Red Chalk (c. 1510) is a drawing currently in the collection of the Royal Library of Turin. It is widely, though not universally, accepted as a self-portrait of the Renaissance artist Leonardo da Vinci. It is thought that Leonardo drew this self-portrait at about the age of 60. Recorded materials or techniques include red chalk, paper. The recorded genre is self-portrait. Main subject entries include Leonardo da Vinci."
+                },
+                {
+                  "title": "Data points",
+                  "body": "Year: 1569 · Movement: Italian Renaissance · Collection / institution: Royal Library of Turin · Material / technique: red chalk, paper · Genre: self-portrait · Subject: Leonardo da Vinci"
+                }
+              ]
+            }
+          },
+          "thumbnail": "data/images/artist-1786369007570/wikidata-Q993743.jpg",
+          "thumbnailCacheKey": "2026-08-16T09:36:03.590Z",
+          "thumbnailValidation": 2,
+          "metadata": {
+            "createdAt": "2026-08-10T13:50:59.717Z",
+            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "createdBy": "migration-tool",
+            "updatedBy": "jhlee409@gmail.com",
+            "yearReview": {
+              "status": "needs-review",
+              "reason": "outside-artist-lifespan",
+              "sourceYear": 1569,
+              "artistBirth": 1452,
+              "artistDeath": 1519
+            }
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-1786369007570/wikidata-Q993743.jpg",
+              "highResolution": "data/images/artist-1786369007570/wikidata-Q993743.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q993743",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q993743",
+                "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20da%20Vinci%20-%20presumed%20self-portrait%20-%20WGA12798.jpg",
+                "https://www.wikidata.org/wiki/Q993743",
+                "https://en.wikipedia.org/wiki/Portrait_of_a_Man_in_Red_Chalk"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "movementContribution": false,
+          "metadataVerifiedAt": "2026-08-20T20:46:33.305Z",
+          "origin": "manual",
+          "highResImage": "data/images/artist-1786369007570/wikidata-Q993743.jpg",
+          "highResOriginal": "data/images/artist-1786369007570/wikidata-Q993743.jpg",
+          "imageUploadStatus": "ready"
         }
       ],
       "profileResolved": true,
@@ -20880,6 +21314,68 @@
           },
           "highResImage": "data/images/artist-Q5592/wikidata-Q2709726.jpg",
           "highResOriginal": "data/images/artist-Q5592/wikidata-Q2709726.jpg",
+          "imageUploadStatus": "ready"
+        },
+        {
+          "id": "wikidata-Q2342843",
+          "year": 1600,
+          "popularity": 19,
+          "title": {
+            "ko": "The Deposition",
+            "en": "The Deposition"
+          },
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "???????????? ????????????",
+            "en": "Italian Renaissance"
+          },
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Florentine%20Piet%C3%A0%2C%20Museo%20dell%27Opera%20del%20Duomo%20-%2048199237196.jpg",
+          "description": {
+            "ko": "The Deposition은/는 미켈란젤로 부오나로티의 1600년경 작품입니다.",
+            "en": "sculpture by Michelangelo"
+          },
+          "source": "https://www.wikidata.org/wiki/Q2342843",
+          "verified": true,
+          "representative": false,
+          "thumbnail": "data/images/artist-Q5592/wikidata-Q2342843.jpg",
+          "thumbnailCacheKey": "2026-08-16T13:17:47.650Z",
+          "thumbnailValidation": 2,
+          "metadata": {
+            "createdAt": "2026-08-10T22:00:49.085Z",
+            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "createdBy": "migration-tool",
+            "updatedBy": "jhlee409@gmail.com",
+            "yearReview": {
+              "status": "needs-review",
+              "reason": "outside-artist-lifespan",
+              "sourceYear": 1600,
+              "artistBirth": 1475,
+              "artistDeath": 1564
+            }
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q5592/wikidata-Q2342843.jpg",
+              "highResolution": "data/images/artist-Q5592/wikidata-Q2342843.jpg",
+              "sourceUrl": "https://www.wikidata.org/wiki/Q2342843",
+              "sourceUrls": [
+                "https://www.wikidata.org/wiki/Q2342843",
+                "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Florentine%20Piet%C3%A0%2C%20Museo%20dell%27Opera%20del%20Duomo%20-%2048199237196.jpg"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "movementContribution": false,
+          "metadataVerifiedAt": "2026-08-20T20:16:16.484Z",
+          "origin": "manual",
+          "highResImage": "data/images/artist-Q5592/wikidata-Q2342843.jpg",
+          "highResOriginal": "data/images/artist-Q5592/wikidata-Q2342843.jpg",
           "imageUploadStatus": "ready"
         }
       ],
@@ -100297,10 +100793,10 @@
           "representative": false,
           "movementContribution": false,
           "origin": "generated",
-          "thumbnail": "data/images/_placeholder/artwork-placeholder.png",
+          "thumbnail": "",
           "metadataVerifiedAt": "2026-08-22T21:07:31.668Z",
           "thumbnailCacheKey": "2026-08-16T22:47:45.400Z",
-          "thumbnailValidation": 2,
+          "thumbnailValidation": 0,
           "metadata": {
             "createdAt": "2026-08-22T21:07:25.214Z",
             "updatedAt": "2026-08-28T14:20:45.285Z",
@@ -100310,9 +100806,9 @@
           "migration": {
             "schema": 1,
             "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/_placeholder/artwork-placeholder.png",
-              "highResolution": "data/images/_placeholder/artwork-placeholder.png",
+              "status": "pending-upload",
+              "localThumbnail": "",
+              "highResolution": "",
               "sourceUrl": "http://www.wikidata.org/entity/Q19898216",
               "sourceUrls": [
                 "http://www.wikidata.org/entity/Q19898216"
@@ -100321,9 +100817,9 @@
               "institution": ""
             }
           },
-          "highResImage": "data/images/_placeholder/artwork-placeholder.png",
-          "highResOriginal": "data/images/_placeholder/artwork-placeholder.png",
-          "imageUploadStatus": "ready"
+          "highResImage": "",
+          "highResOriginal": "",
+          "imageUploadStatus": "pending-upload"
         },
         {
           "id": "wikidata-Q18343221",
@@ -109306,6 +109802,705 @@
       "artistSummary": {
         "ko": [],
         "en": []
+      }
+    },
+    {
+      "id": "artist-1786347518103",
+      "qid": "Q315237",
+      "name": {
+        "ko": "바실리 페로프",
+        "en": "Vasily Perov"
+      },
+      "birth": 1834,
+      "death": 1882,
+      "nationality": {
+        "ko": "러시아",
+        "en": "Russian"
+      },
+      "movement": {
+        "ko": "사실주의",
+        "en": "Realism"
+      },
+      "works": [
+        {
+          "id": "wikidata-Q105079097",
+          "year": 1865,
+          "popularity": 1,
+          "title": {
+            "ko": "시골의 장례식",
+            "en": "Rural funeral"
+          },
+          "country": {
+            "ko": "러시아",
+            "en": "Russia"
+          },
+          "movement": {
+            "ko": "사실주의",
+            "en": "Realism"
+          },
+          "image": "data/images/artist-1786347518103/wikidata-Q105079097.jpg",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q105079097",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:57:57.839Z",
+            "updatedAt": "2026-08-29T07:57:57.839Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "metadata-recovery"
+          },
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q105079097.jpg",
+          "highResImage": "data/images/artist-1786347518103/wikidata-Q105079097.jpg",
+          "highResOriginal": "data/images/artist-1786347518103/wikidata-Q105079097.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-1786347518103/wikidata-Q105079097.jpg",
+              "highResolution": "data/images/artist-1786347518103/wikidata-Q105079097.jpg"
+            }
+          }
+        },
+        {
+          "id": "wikidata-Q112030206",
+          "year": 1851,
+          "popularity": 1,
+          "title": {
+            "ko": "자화상",
+            "en": "Self-Portrait"
+          },
+          "country": {
+            "ko": "러시아",
+            "en": "Russia"
+          },
+          "movement": {
+            "ko": "사실주의",
+            "en": "Realism"
+          },
+          "image": "data/images/artist-1786347518103/wikidata-Q112030206.jpg",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q112030206",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:57:57.839Z",
+            "updatedAt": "2026-08-29T07:57:57.839Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "metadata-recovery"
+          },
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q112030206.jpg",
+          "highResImage": "data/images/artist-1786347518103/wikidata-Q112030206.jpg",
+          "highResOriginal": "data/images/artist-1786347518103/wikidata-Q112030206.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-1786347518103/wikidata-Q112030206.jpg",
+              "highResolution": "data/images/artist-1786347518103/wikidata-Q112030206.jpg"
+            }
+          }
+        },
+        {
+          "id": "wikidata-Q11800610",
+          "year": 1868,
+          "popularity": 1,
+          "title": {
+            "ko": "도시 성문 밖 마지막 선술집",
+            "en": "The Last Tavern at the City Gates"
+          },
+          "country": {
+            "ko": "러시아",
+            "en": "Russia"
+          },
+          "movement": {
+            "ko": "사실주의",
+            "en": "Realism"
+          },
+          "image": "data/images/artist-1786347518103/wikidata-Q11800610.jpg",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q11800610",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:57:57.839Z",
+            "updatedAt": "2026-08-29T07:57:57.839Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "metadata-recovery"
+          },
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q11800610.jpg",
+          "highResImage": "data/images/artist-1786347518103/wikidata-Q11800610.jpg",
+          "highResOriginal": "data/images/artist-1786347518103/wikidata-Q11800610.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-1786347518103/wikidata-Q11800610.jpg",
+              "highResolution": "data/images/artist-1786347518103/wikidata-Q11800610.jpg"
+            }
+          }
+        },
+        {
+          "id": "wikidata-Q119084532",
+          "year": 1862,
+          "popularity": 1,
+          "title": {
+            "ko": "미티시치에서 차를 마시는 사람들",
+            "en": "Tea Drinking in Mytishchi (The Tea Drinkers)"
+          },
+          "country": {
+            "ko": "러시아",
+            "en": "Russia"
+          },
+          "movement": {
+            "ko": "사실주의",
+            "en": "Realism"
+          },
+          "image": "data/images/artist-1786347518103/wikidata-Q119084532.jpg",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q119084532",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:57:57.839Z",
+            "updatedAt": "2026-08-29T07:57:57.839Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "metadata-recovery"
+          },
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q119084532.jpg",
+          "highResImage": "data/images/artist-1786347518103/wikidata-Q119084532.jpg",
+          "highResOriginal": "data/images/artist-1786347518103/wikidata-Q119084532.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-1786347518103/wikidata-Q119084532.jpg",
+              "highResolution": "data/images/artist-1786347518103/wikidata-Q119084532.jpg"
+            }
+          }
+        },
+        {
+          "id": "wikidata-Q124334121",
+          "year": 1862,
+          "popularity": 1,
+          "title": {
+            "ko": "모스크바 근교 미티시치의 차 마시기",
+            "en": "Tea-Party in Mytishchi near Moscow"
+          },
+          "country": {
+            "ko": "러시아",
+            "en": "Russia"
+          },
+          "movement": {
+            "ko": "사실주의",
+            "en": "Realism"
+          },
+          "image": "data/images/artist-1786347518103/wikidata-Q124334121.jpg",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q124334121",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:57:57.839Z",
+            "updatedAt": "2026-08-29T07:57:57.839Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "metadata-recovery"
+          },
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q124334121.jpg",
+          "highResImage": "data/images/artist-1786347518103/wikidata-Q124334121.jpg",
+          "highResOriginal": "data/images/artist-1786347518103/wikidata-Q124334121.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-1786347518103/wikidata-Q124334121.jpg",
+              "highResolution": "data/images/artist-1786347518103/wikidata-Q124334121.jpg"
+            }
+          }
+        },
+        {
+          "id": "wikidata-Q135822399",
+          "year": 1871,
+          "popularity": 1,
+          "title": {
+            "ko": "낚시꾼",
+            "en": "The Fisherman"
+          },
+          "country": {
+            "ko": "러시아",
+            "en": "Russia"
+          },
+          "movement": {
+            "ko": "사실주의",
+            "en": "Realism"
+          },
+          "image": "data/images/artist-1786347518103/wikidata-Q135822399.jpg",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q135822399",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:57:57.839Z",
+            "updatedAt": "2026-08-29T07:57:57.839Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "metadata-recovery"
+          },
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q135822399.jpg",
+          "highResImage": "data/images/artist-1786347518103/wikidata-Q135822399.jpg",
+          "highResOriginal": "data/images/artist-1786347518103/wikidata-Q135822399.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-1786347518103/wikidata-Q135822399.jpg",
+              "highResolution": "data/images/artist-1786347518103/wikidata-Q135822399.jpg"
+            }
+          }
+        },
+        {
+          "id": "wikidata-Q140934474",
+          "year": 1866,
+          "popularity": 1,
+          "title": {
+            "ko": "상인의 집에 도착한 가정교사",
+            "en": "A Governess Arrives at a Merchant’s Home"
+          },
+          "country": {
+            "ko": "러시아",
+            "en": "Russia"
+          },
+          "movement": {
+            "ko": "사실주의",
+            "en": "Realism"
+          },
+          "image": "data/images/artist-1786347518103/wikidata-Q140934474.jpg",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q140934474",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:57:57.839Z",
+            "updatedAt": "2026-08-29T07:57:57.839Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "metadata-recovery"
+          },
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q140934474.jpg",
+          "highResImage": "data/images/artist-1786347518103/wikidata-Q140934474.jpg",
+          "highResOriginal": "data/images/artist-1786347518103/wikidata-Q140934474.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-1786347518103/wikidata-Q140934474.jpg",
+              "highResolution": "data/images/artist-1786347518103/wikidata-Q140934474.jpg"
+            }
+          }
+        },
+        {
+          "id": "wikidata-Q16518912",
+          "year": 1866,
+          "popularity": 1,
+          "title": {
+            "ko": "트로이카",
+            "en": "Troika"
+          },
+          "country": {
+            "ko": "러시아",
+            "en": "Russia"
+          },
+          "movement": {
+            "ko": "사실주의",
+            "en": "Realism"
+          },
+          "image": "data/images/artist-1786347518103/wikidata-Q16518912.jpg",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q16518912",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:57:57.839Z",
+            "updatedAt": "2026-08-29T07:57:57.839Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "metadata-recovery"
+          },
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q16518912.jpg",
+          "highResImage": "data/images/artist-1786347518103/wikidata-Q16518912.jpg",
+          "highResOriginal": "data/images/artist-1786347518103/wikidata-Q16518912.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-1786347518103/wikidata-Q16518912.jpg",
+              "highResolution": "data/images/artist-1786347518103/wikidata-Q16518912.jpg"
+            }
+          }
+        },
+        {
+          "id": "wikidata-Q18114400",
+          "year": 1861,
+          "popularity": 1,
+          "title": {
+            "ko": "러시아 마을의 부활절 행렬",
+            "en": "An Easter procession in a Russian village"
+          },
+          "country": {
+            "ko": "러시아",
+            "en": "Russia"
+          },
+          "movement": {
+            "ko": "사실주의",
+            "en": "Realism"
+          },
+          "image": "data/images/artist-1786347518103/wikidata-Q18114400.jpg",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q18114400",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:57:57.839Z",
+            "updatedAt": "2026-08-29T07:57:57.839Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "metadata-recovery"
+          },
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q18114400.jpg",
+          "highResImage": "data/images/artist-1786347518103/wikidata-Q18114400.jpg",
+          "highResOriginal": "data/images/artist-1786347518103/wikidata-Q18114400.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-1786347518103/wikidata-Q18114400.jpg",
+              "highResolution": "data/images/artist-1786347518103/wikidata-Q18114400.jpg"
+            }
+          }
+        },
+        {
+          "id": "wikidata-Q18689408",
+          "year": 1870,
+          "popularity": 1,
+          "title": {
+            "ko": "수도원의 식당",
+            "en": "Monastic Refectory"
+          },
+          "country": {
+            "ko": "러시아",
+            "en": "Russia"
+          },
+          "movement": {
+            "ko": "사실주의",
+            "en": "Realism"
+          },
+          "image": "data/images/artist-1786347518103/wikidata-Q18689408.jpg",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q18689408",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:57:57.839Z",
+            "updatedAt": "2026-08-29T07:57:57.839Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "metadata-recovery"
+          },
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q18689408.jpg",
+          "highResImage": "data/images/artist-1786347518103/wikidata-Q18689408.jpg",
+          "highResOriginal": "data/images/artist-1786347518103/wikidata-Q18689408.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-1786347518103/wikidata-Q18689408.jpg",
+              "highResolution": "data/images/artist-1786347518103/wikidata-Q18689408.jpg"
+            }
+          }
+        },
+        {
+          "id": "wikidata-Q21723051",
+          "year": 1861,
+          "popularity": 1,
+          "title": {
+            "ko": "남자의 초상",
+            "en": "Portrait of a Man"
+          },
+          "country": {
+            "ko": "러시아",
+            "en": "Russia"
+          },
+          "movement": {
+            "ko": "사실주의",
+            "en": "Realism"
+          },
+          "image": "data/images/artist-1786347518103/wikidata-Q21723051.jpg",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q21723051",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:57:57.839Z",
+            "updatedAt": "2026-08-29T07:57:57.839Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "metadata-recovery"
+          },
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q21723051.jpg",
+          "highResImage": "data/images/artist-1786347518103/wikidata-Q21723051.jpg",
+          "highResOriginal": "data/images/artist-1786347518103/wikidata-Q21723051.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-1786347518103/wikidata-Q21723051.jpg",
+              "highResolution": "data/images/artist-1786347518103/wikidata-Q21723051.jpg"
+            }
+          }
+        },
+        {
+          "id": "wikidata-Q4340473",
+          "year": 1871,
+          "popularity": 1,
+          "title": {
+            "ko": "사냥꾼들의 휴식",
+            "en": "The Hunters at Rest"
+          },
+          "country": {
+            "ko": "러시아",
+            "en": "Russia"
+          },
+          "movement": {
+            "ko": "사실주의",
+            "en": "Realism"
+          },
+          "image": "data/images/artist-1786347518103/wikidata-Q4340473.jpg",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q4340473",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:57:57.839Z",
+            "updatedAt": "2026-08-29T07:57:57.839Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "metadata-recovery"
+          },
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q4340473.jpg",
+          "highResImage": "data/images/artist-1786347518103/wikidata-Q4340473.jpg",
+          "highResOriginal": "data/images/artist-1786347518103/wikidata-Q4340473.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-1786347518103/wikidata-Q4340473.jpg",
+              "highResolution": "data/images/artist-1786347518103/wikidata-Q4340473.jpg"
+            }
+          }
+        },
+        {
+          "id": "wikidata-Q50320975",
+          "year": 1870,
+          "popularity": 1,
+          "title": {
+            "ko": "보닛을 쓴 노년 여성의 초상",
+            "en": "Portrait of an Elderly Woman in a Bonnet"
+          },
+          "country": {
+            "ko": "러시아",
+            "en": "Russia"
+          },
+          "movement": {
+            "ko": "사실주의",
+            "en": "Realism"
+          },
+          "image": "data/images/artist-1786347518103/wikidata-Q50320975.jpg",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q50320975",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:57:57.839Z",
+            "updatedAt": "2026-08-29T07:57:57.839Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "metadata-recovery"
+          },
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q50320975.jpg",
+          "highResImage": "data/images/artist-1786347518103/wikidata-Q50320975.jpg",
+          "highResOriginal": "data/images/artist-1786347518103/wikidata-Q50320975.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-1786347518103/wikidata-Q50320975.jpg",
+              "highResolution": "data/images/artist-1786347518103/wikidata-Q50320975.jpg"
+            }
+          }
+        },
+        {
+          "id": "wikidata-Q61761762",
+          "year": 1861,
+          "popularity": 1,
+          "title": {
+            "ko": "마을의 설교",
+            "en": "A village sermon"
+          },
+          "country": {
+            "ko": "러시아",
+            "en": "Russia"
+          },
+          "movement": {
+            "ko": "사실주의",
+            "en": "Realism"
+          },
+          "image": "data/images/artist-1786347518103/wikidata-Q61761762.jpg",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q61761762",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:57:57.839Z",
+            "updatedAt": "2026-08-29T07:57:57.839Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "metadata-recovery"
+          },
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q61761762.jpg",
+          "highResImage": "data/images/artist-1786347518103/wikidata-Q61761762.jpg",
+          "highResOriginal": "data/images/artist-1786347518103/wikidata-Q61761762.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-1786347518103/wikidata-Q61761762.jpg",
+              "highResolution": "data/images/artist-1786347518103/wikidata-Q61761762.jpg"
+            }
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "wikidata-Q16518912",
+        "wikidata-Q4340473",
+        "wikidata-Q18114400",
+        "wikidata-Q11800610",
+        "wikidata-Q112030206"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "사실주의"
+      ],
+      "submovements": [
+        "러시아 사실주의",
+        "이동파"
+      ],
+      "primaryMovement": "사실주의",
+      "regions": [
+        "러시아"
+      ],
+      "activeFrom": 1856,
+      "activeTo": 1882,
+      "listName": {
+        "ko": "페로프"
+      },
+      "aliases": {
+        "ko": [
+          "바실리 그리고리예비치 페로프",
+          "페로프"
+        ],
+        "en": [
+          "Vasily Grigorevich Perov",
+          "Vasily Grigor'yevich Perov",
+          "Perov"
+        ]
+      },
+      "artistSummary": {
+        "ko": [
+          "러시아의 사회 현실과 일상생활을 도덕적·비판적 시선으로 그린 사실주의 화가입니다."
+        ],
+        "en": [
+          "A Russian Realist painter known for morally critical scenes of social conditions and everyday life."
+        ]
+      },
+      "metadata": {
+        "createdAt": "2026-08-29T00:00:00.000Z",
+        "updatedAt": "2026-08-29T00:00:00.000Z",
+        "createdBy": "local-metadata-recovery",
+        "updatedBy": "local-metadata-recovery"
       }
     },
     {

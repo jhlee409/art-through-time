@@ -174,7 +174,6 @@ function renderTimeline() {
   }
   hydrateArtistProfile(artist);
   const displayWorks = selectArtistWorks(artist.works || [], artistImportedWorkLimit, artist);
-  // Do not show a source record whose date falls outside the artist's lifetime.
   const uniqueWorks = new Map();
   displayWorks.forEach(work => {
     const key = `${work.title?.en || work.title?.ko || loc(work.title)}-${work.year || ''}`;
@@ -189,7 +188,6 @@ function renderTimeline() {
     } : work);
   });
   const works = [...uniqueWorks.values()]
-    .filter(work => !work.year || ((!artist.birth || work.year >= artist.birth) && (!artist.death || work.year <= artist.death)))
     // Keep the public timeline visual: source records without a verified local
     // image stay in the data file for later research, but do not render empty cards.
     .filter(work => Boolean(artworkPreviewImage(work)))

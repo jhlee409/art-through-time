@@ -1,97 +1,6 @@
 {
-  "createdAt": "2026-08-29T07:42:42.034Z",
-  "unlinked": [
-    {
-      "path": "data/images/artist-1786347518103/wikidata-Q105079097.jpg",
-      "folder": "artist-1786347518103",
-      "bytes": 19139
-    },
-    {
-      "path": "data/images/artist-1786347518103/wikidata-Q112030206.jpg",
-      "folder": "artist-1786347518103",
-      "bytes": 16064
-    },
-    {
-      "path": "data/images/artist-1786347518103/wikidata-Q11800610.jpg",
-      "folder": "artist-1786347518103",
-      "bytes": 17286
-    },
-    {
-      "path": "data/images/artist-1786347518103/wikidata-Q119084532.jpg",
-      "folder": "artist-1786347518103",
-      "bytes": 24466
-    },
-    {
-      "path": "data/images/artist-1786347518103/wikidata-Q124334121.jpg",
-      "folder": "artist-1786347518103",
-      "bytes": 24628
-    },
-    {
-      "path": "data/images/artist-1786347518103/wikidata-Q135822399.jpg",
-      "folder": "artist-1786347518103",
-      "bytes": 26711
-    },
-    {
-      "path": "data/images/artist-1786347518103/wikidata-Q140934474.jpg",
-      "folder": "artist-1786347518103",
-      "bytes": 22948
-    },
-    {
-      "path": "data/images/artist-1786347518103/wikidata-Q16518912.jpg",
-      "folder": "artist-1786347518103",
-      "bytes": 15838
-    },
-    {
-      "path": "data/images/artist-1786347518103/wikidata-Q18114400.jpg",
-      "folder": "artist-1786347518103",
-      "bytes": 17671
-    },
-    {
-      "path": "data/images/artist-1786347518103/wikidata-Q18689408.jpg",
-      "folder": "artist-1786347518103",
-      "bytes": 18208
-    },
-    {
-      "path": "data/images/artist-1786347518103/wikidata-Q21723051.jpg",
-      "folder": "artist-1786347518103",
-      "bytes": 14841
-    },
-    {
-      "path": "data/images/artist-1786347518103/wikidata-Q4340473.jpg",
-      "folder": "artist-1786347518103",
-      "bytes": 18486
-    },
-    {
-      "path": "data/images/artist-1786347518103/wikidata-Q50320975.jpg",
-      "folder": "artist-1786347518103",
-      "bytes": 21582
-    },
-    {
-      "path": "data/images/artist-1786347518103/wikidata-Q61761762.jpg",
-      "folder": "artist-1786347518103",
-      "bytes": 21498
-    },
-    {
-      "path": "data/images/artist-1786369007570/wikidata-Q1105846.jpg",
-      "folder": "artist-1786369007570",
-      "bytes": 36380
-    },
-    {
-      "path": "data/images/artist-1786369007570/wikidata-Q3492887.jpg",
-      "folder": "artist-1786369007570",
-      "bytes": 12595
-    },
-    {
-      "path": "data/images/artist-1786369007570/wikidata-Q993743.jpg",
-      "folder": "artist-1786369007570",
-      "bytes": 44991
-    },
-    {
-      "path": "data/images/artist-Q5592/wikidata-Q2342843.jpg",
-      "folder": "artist-Q5592",
-      "bytes": 70242
-    }
-  ],
+  "createdAt": "2026-08-29T08:00:33.092Z",
+  "unlinked": [],
   "missing": [
     {
       "key": "artist-Q7814|wikidata-Q3276180",
@@ -1903,6 +1812,18 @@
       "englishTitle": "A Few Small Nips",
       "year": 1935,
       "qid": "Q28339146",
+      "sourceUrls": [],
+      "referenceUrl": ""
+    },
+    {
+      "key": "frida-kahlo|wikidata-Q19898216",
+      "artistId": "frida-kahlo",
+      "artist": "프리다 칼로",
+      "workId": "wikidata-Q19898216",
+      "title": "What the Water Gave Me",
+      "englishTitle": "What the Water Gave Me",
+      "year": 1938,
+      "qid": "Q19898216",
       "sourceUrls": [],
       "referenceUrl": ""
     },

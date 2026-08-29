@@ -134,7 +134,7 @@
       "listName": {
         "ko": "반 에이크"
       },
-      "workCount": 35,
+      "workCount": 36,
       "_detailLoaded": false
     },
     {
@@ -212,7 +212,7 @@
       "listName": {
         "ko": "반 데르 베이던"
       },
-      "workCount": 9,
+      "workCount": 10,
       "_detailLoaded": false
     },
     {
@@ -351,7 +351,7 @@
       "featuredWorkIds": [
         "wikidata-Q1131110"
       ],
-      "workCount": 51,
+      "workCount": 55,
       "_detailLoaded": false
     },
     {
@@ -432,7 +432,7 @@
       "listName": {
         "ko": "다 빈치"
       },
-      "workCount": 50,
+      "workCount": 60,
       "_detailLoaded": false
     },
     {
@@ -686,7 +686,7 @@
       "featuredWorkIds": [
         "michelangelo-creation-of-adam"
       ],
-      "workCount": 55,
+      "workCount": 81,
       "_detailLoaded": false
     },
     {
@@ -994,7 +994,7 @@
       "listName": {
         "ko": "라파엘로"
       },
-      "workCount": 57,
+      "workCount": 61,
       "_detailLoaded": false
     },
     {
@@ -1161,7 +1161,7 @@
       "listName": {
         "ko": "티치아노"
       },
-      "workCount": 58,
+      "workCount": 64,
       "_detailLoaded": false
     },
     {
@@ -1780,7 +1780,7 @@
       "listName": {
         "ko": "틴토레토"
       },
-      "workCount": 10,
+      "workCount": 14,
       "_detailLoaded": false
     },
     {
@@ -1845,7 +1845,7 @@
       "listName": {
         "ko": "브뤼헐"
       },
-      "workCount": 48,
+      "workCount": 58,
       "_detailLoaded": false
     },
     {
@@ -2076,7 +2076,7 @@
       "listName": {
         "ko": "엘 그레코"
       },
-      "workCount": 53,
+      "workCount": 60,
       "_detailLoaded": false
     },
     {
@@ -2289,7 +2289,7 @@
       "featuredWorkIds": [
         "wikidata-Q283665"
       ],
-      "workCount": 58,
+      "workCount": 75,
       "_detailLoaded": false
     },
     {
@@ -2575,7 +2575,7 @@
       "listName": {
         "ko": "루벤스"
       },
-      "workCount": 50,
+      "workCount": 64,
       "_detailLoaded": false
     },
     {
@@ -2813,7 +2813,7 @@
       "listName": {
         "ko": "베르니니"
       },
-      "workCount": 5,
+      "workCount": 6,
       "_detailLoaded": false
     },
     {
@@ -3129,7 +3129,7 @@
       "listName": {
         "ko": "렘브란트"
       },
-      "workCount": 52,
+      "workCount": 53,
       "_detailLoaded": false
     },
     {
@@ -3433,7 +3433,7 @@
       "featuredWorkIds": [
         "wikidata-Q311243"
       ],
-      "workCount": 60,
+      "workCount": 72,
       "_detailLoaded": false
     },
     {
@@ -3560,7 +3560,7 @@
       "listName": {
         "ko": "마네"
       },
-      "workCount": 60,
+      "workCount": 74,
       "_detailLoaded": false
     },
     {
@@ -3631,7 +3631,7 @@
       "featuredWorkIds": [
         "impression-sunrise"
       ],
-      "workCount": 60,
+      "workCount": 83,
       "_detailLoaded": false
     },
     {
@@ -3702,7 +3702,7 @@
       "featuredWorkIds": [
         "wikidata-Q45585"
       ],
-      "workCount": 60,
+      "workCount": 103,
       "_detailLoaded": false
     },
     {
@@ -3770,7 +3770,7 @@
       "listName": {
         "ko": "라르손"
       },
-      "workCount": 32,
+      "workCount": 44,
       "_detailLoaded": false
     },
     {
@@ -3850,7 +3850,7 @@
       "listName": {
         "ko": "툴루즈로트레크"
       },
-      "workCount": 49,
+      "workCount": 63,
       "_detailLoaded": false
     },
     {
@@ -3920,7 +3920,7 @@
       "listName": {
         "ko": "칼로"
       },
-      "workCount": 31,
+      "workCount": 36,
       "_detailLoaded": false
     },
     {
@@ -3991,7 +3991,7 @@
       "listName": {
         "ko": "로랭"
       },
-      "workCount": 6,
+      "workCount": 8,
       "_detailLoaded": false
     },
     {
@@ -5701,6 +5701,75 @@
         "en": []
       },
       "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-1786347518103",
+      "qid": "Q315237",
+      "name": {
+        "ko": "바실리 페로프",
+        "en": "Vasily Perov"
+      },
+      "birth": 1834,
+      "death": 1882,
+      "nationality": {
+        "ko": "러시아",
+        "en": "Russian"
+      },
+      "movement": {
+        "ko": "사실주의",
+        "en": "Realism"
+      },
+      "featuredWorkIds": [
+        "wikidata-Q16518912",
+        "wikidata-Q4340473",
+        "wikidata-Q18114400",
+        "wikidata-Q11800610",
+        "wikidata-Q112030206"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "사실주의"
+      ],
+      "submovements": [
+        "러시아 사실주의",
+        "이동파"
+      ],
+      "primaryMovement": "사실주의",
+      "regions": [
+        "러시아"
+      ],
+      "activeFrom": 1856,
+      "activeTo": 1882,
+      "listName": {
+        "ko": "페로프"
+      },
+      "aliases": {
+        "ko": [
+          "바실리 그리고리예비치 페로프",
+          "페로프"
+        ],
+        "en": [
+          "Vasily Grigorevich Perov",
+          "Vasily Grigor'yevich Perov",
+          "Perov"
+        ]
+      },
+      "artistSummary": {
+        "ko": [
+          "러시아의 사회 현실과 일상생활을 도덕적·비판적 시선으로 그린 사실주의 화가입니다."
+        ],
+        "en": [
+          "A Russian Realist painter known for morally critical scenes of social conditions and everyday life."
+        ]
+      },
+      "metadata": {
+        "createdAt": "2026-08-29T00:00:00.000Z",
+        "updatedAt": "2026-08-29T00:00:00.000Z",
+        "createdBy": "local-metadata-recovery",
+        "updatedBy": "local-metadata-recovery"
+      },
+      "workCount": 14,
       "_detailLoaded": false
     },
     {

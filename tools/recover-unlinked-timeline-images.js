@@ -340,10 +340,20 @@ function historicalRestorations(locals, payload) {
       continue;
     }
     const historicalYear = Number(exact[0].work.year || 0);
-    if (historicalYear && ((targets[0].birth && historicalYear < targets[0].birth)
-      || (targets[0].death && historicalYear > targets[0].death))) {
-      unresolved.push({...local, historicalCandidates: exact.map(item => `${item.artist.id}|${item.work.id}`), reason: 'year outside artist lifespan'});
-      continue;
+    const yearNeedsReview = Boolean(historicalYear && ((targets[0].birth && historicalYear < targets[0].birth)
+      || (targets[0].death && historicalYear > targets[0].death)));
+    const restoredWork = JSON.parse(JSON.stringify(exact[0].work));
+    if (yearNeedsReview) {
+      restoredWork.metadata = restoredWork.metadata && typeof restoredWork.metadata === 'object'
+        ? restoredWork.metadata
+        : {};
+      restoredWork.metadata.yearReview = {
+        status: 'needs-review',
+        reason: 'outside-artist-lifespan',
+        sourceYear: historicalYear,
+        artistBirth: targets[0].birth || null,
+        artistDeath: targets[0].death || null
+      };
     }
     restorations.push({
       key: `${targets[0].id}|${exact[0].work.id}`,
@@ -354,8 +364,10 @@ function historicalRestorations(locals, payload) {
       year: exact[0].work.year || null,
       localPath: local.path,
       historicalArtistId: historicalArtist.id,
-      reason: 'exact historical work ID/local path',
-      work: exact[0].work
+      reason: yearNeedsReview
+        ? 'exact historical work ID/local path; source year needs review'
+        : 'exact historical work ID/local path',
+      work: restoredWork
     });
   }
   const workCounts = new Map();
@@ -402,25 +414,42 @@ function metadataRecreations(locals, payload, excludedPaths) {
     }
     const artist = targets[0];
     const year = Number(entity.year || 0) || null;
-    if (year && ((artist.birth && year < artist.birth) || (artist.death && year > artist.death))) {
-      unresolved.push({...local, reason: 'year outside artist lifespan'});
-      continue;
-    }
+    const yearNeedsReview = Boolean(year && ((artist.birth && year < artist.birth) || (artist.death && year > artist.death)));
     const now = new Date().toISOString();
     const work = {
       id: workId,
       year,
       popularity: 1,
       title: {ko: entity.labelKo || entity.labelEn || local.qid, en: entity.labelEn || entity.labelKo || local.qid},
-      country: {ko: '', en: ''},
-      movement: {ko: artist.primaryMovement || text(artist.movement), en: artist.primaryMovement || text(artist.movement)},
+      country: {
+        ko: artist.nationality?.ko || artist.regions?.[0] || '',
+        en: artist.nationality?.en || ''
+      },
+      movement: {
+        ko: artist.movement?.ko || artist.primaryMovement || '',
+        en: artist.movement?.en || ''
+      },
       image: local.path,
       description: {ko: '', en: ''},
       source: `https://www.wikidata.org/entity/${local.qid}`,
       verified: true,
       representative: false,
       movementContribution: false,
-      metadata: {createdAt: now, updatedAt: now, createdBy: 'metadata-recovery', updatedBy: 'metadata-recovery'}
+      metadata: {
+        createdAt: now,
+        updatedAt: now,
+        createdBy: 'metadata-recovery',
+        updatedBy: 'metadata-recovery',
+        ...(yearNeedsReview ? {
+          yearReview: {
+            status: 'needs-review',
+            reason: 'outside-artist-lifespan',
+            sourceYear: year,
+            artistBirth: artist.birth || null,
+            artistDeath: artist.death || null
+          }
+        } : {})
+      }
     };
     markReady(work, local.path);
     recreations.push({
@@ -431,7 +460,9 @@ function metadataRecreations(locals, payload, excludedPaths) {
       title: text(work.title),
       year,
       localPath: local.path,
-      reason: 'Wikidata QID, creator, and local image metadata',
+      reason: yearNeedsReview
+        ? 'Wikidata QID, creator, and local image metadata; source year needs review'
+        : 'Wikidata QID, creator, and local image metadata',
       work
     });
   }
@@ -507,9 +538,6 @@ function buildInventory(payload) {
   const visibleReferences = new Map();
   for (const artist of payload.artists || []) {
     for (const work of artist.works || []) {
-      const visibleByDate = !work.year
-        || ((!artist.birth || work.year >= artist.birth) && (!artist.death || work.year <= artist.death));
-      if (!visibleByDate) continue;
       for (const file of workLocalValues(work)) {
         const key = file.toLowerCase();
         visibleReferences.set(key, [...(visibleReferences.get(key) || []), `${artist.id}|${work.id}`]);
