@@ -85,21 +85,26 @@ function artistLink(artist) {
   return `<a class="art-atlas-artist-link" href="../../index.html?artist=${id}" target="_blank" rel="noopener" data-artist-id="${id}" data-uh-original="${en}" data-uh-korean="${ko}" title="${ko} 연표로 이동">${ko}</a>`;
 }
 
-function cardMarkup(entry, parent, documentFile, developmentId, countryIds, countryNames) {
+function cardMarkup(entry, parent, documentFile, developmentId, countryIds, countryNames, role) {
   const artist = entry.artist;
   const work = entry.work;
   const localFile = work.localImage ? path.join(root, work.localImage) : '';
   const ready = Boolean(localFile && fs.existsSync(localFile));
   const image = ready
     ? `<div class="movement-work-image"><img src="${escapeHtml(rootRelativeImage(documentFile, work.localImage))}" alt="${escapeHtml(`${artist.name.ko}, ${work.title.ko}`)}"></div>`
-    : '<div class="movement-work-image art-atlas-image-pending" role="img" aria-label="이미지 업로드 예정"><span>이미지 업로드 예정</span></div>';
+    : '<div class="movement-work-image art-atlas-image-pending" role="img" aria-label="다운로드 필요"><span>다운로드 필요</span></div>';
   const regions = countryIds.map(id => countryNames.get(id)?.ko || id).join('·');
-  return `<article class="movement-work-card" data-art-atlas-development-id="${escapeHtml(developmentId)}" data-art-atlas-category-id="${escapeHtml(entry.categoryId)}" data-artist-id="${escapeHtml(artist.id)}" data-work-id="${escapeHtml(work.id)}" data-art-atlas-image-state="${ready ? 'ready' : 'pending'}">` +
+  const duplicateReason = entry.duplicateArtistReason ? ` data-art-atlas-duplicate-artist-reason="${escapeHtml(entry.duplicateArtistReason)}"` : '';
+  const roleLabel = role === 'primary' ? '대표 화가' : '더 볼 화가';
+  const crossMembership = (entry.otherMovements || []).length
+    ? ` 다른 사조 연결: ${entry.otherMovements.join('·')}에도 속하며, 이 카드에서는 ${entry.category.name.ko}의 관점에서 본다.`
+    : '';
+  return `<article class="movement-work-card" data-art-atlas-development-id="${escapeHtml(developmentId)}" data-art-atlas-category-id="${escapeHtml(entry.categoryId)}" data-artist-id="${escapeHtml(artist.id)}" data-work-id="${escapeHtml(work.id)}" data-art-atlas-card-role="${role}" data-art-atlas-image-state="${ready ? 'ready' : 'pending'}"${duplicateReason}>` +
     image +
-    `<div class="movement-work-body"><h3>${artistLink(artist)}, 《${escapeHtml(work.title.ko)}》<span class="movement-card-title-tag"> · ${escapeHtml(parent.name.ko)}</span><span class="movement-card-activity-region"> · ${escapeHtml(regions)}</span></h3>` +
+    `<div class="movement-work-body"><span class="movement-card-role">${roleLabel}</span><h3>${artistLink(artist)}, 《${escapeHtml(work.title.ko)}》<span class="movement-card-title-tag"> · ${escapeHtml(parent.name.ko)}</span><span class="movement-card-activity-region"> · ${escapeHtml(regions)}</span></h3>` +
     `<p class="work-meta">${escapeHtml(work.yearLabel || work.year)}</p>` +
-    `<p class="movement-selection-reason" data-art-atlas-selection-reason=""><strong>선정 이유</strong> ${escapeHtml(entry.selectionReason)}</p>` +
-    `<p class="movement-work-description" data-art-atlas-card-description="">${escapeHtml(entry.description)}</p></div></article>`;
+    `<p class="movement-selection-reason" data-art-atlas-selection-reason=""><strong>${role === 'primary' ? '선정 이유' : '더 볼 이유'}</strong> ${escapeHtml(entry.selectionReason)}</p>` +
+    `<p class="movement-work-description" data-art-atlas-card-description="">${escapeHtml(entry.description + crossMembership)}</p></div></article>`;
 }
 
 function groupMarkup(entry, parent, documentFile, developmentId, countryIds, countryNames) {
@@ -107,7 +112,7 @@ function groupMarkup(entry, parent, documentFile, developmentId, countryIds, cou
   const regions = countryIds.map(id => countryNames.get(id)?.ko || id).join('·');
   return `<section class="art-atlas-submovement-group" data-art-atlas-development-id="${escapeHtml(developmentId)}" data-art-atlas-category-id="${escapeHtml(entry.categoryId)}" data-art-atlas-country-ids="${escapeHtml(countryIds.join(' '))}">` +
     `<h3 class="art-atlas-submovement-heading">${escapeHtml(categoryName)}<span class="movement-country-card-context"><span class="movement-country-card-context-region">${escapeHtml(regions)}</span><span class="movement-country-card-context-feature"><b>핵심 특징</b> ${escapeHtml(entry.feature)}</span></span></h3>` +
-    `<div class="movement-work-grid art-atlas-work-sortable" data-art-atlas-development-id="${escapeHtml(developmentId)}">${cardMarkup(entry, parent, documentFile, developmentId, countryIds, countryNames)}</div></section>`;
+    `<div class="movement-work-grid art-atlas-work-sortable" data-art-atlas-development-id="${escapeHtml(developmentId)}">${[entry, ...(entry.furtherArtists || [])].map((artistEntry, index) => cardMarkup(artistEntry, parent, documentFile, developmentId, countryIds, countryNames, index ? 'further' : 'primary')).join('')}</div></section>`;
 }
 
 function updateDevelopmentRows(html, entries, countryNames, attrs) {
@@ -134,7 +139,8 @@ function updateDevelopmentRows(html, entries, countryNames, attrs) {
     const regions = countryIds.map(id => countryNames.get(id)?.ko || id).join('·');
     return `${opening}<td><strong>${escapeHtml(regions)} — ${escapeHtml(entry.category.name.ko)}</strong></td>` +
       `<td><ol class="art-atlas-country-feature-list"><li><strong>핵심 특징</strong><ul><li>${escapeHtml(entry.feature)}</li></ul></li></ol></td>` +
-      `<td ${attrs.representativeArtists}="">${artistLink(entry.artist)}</td></tr>`;
+      `<td ${attrs.representativeArtists}="">${artistLink(entry.artist)}</td>` +
+      `<td ${attrs.furtherArtists}="">${entry.furtherArtists.map(item => artistLink(item.artist)).join(', ')}</td></tr>`;
   });
   entries.forEach(entry => assert(seen.has(entry.categoryId), `${entry.categoryId}: development row is missing`));
   const tbodyOpen = /<tbody\b[^>]*>/i.exec(section);
@@ -149,6 +155,7 @@ function updateDevelopmentRows(html, entries, countryNames, attrs) {
   const orderedRows = entries.map(entry => rowsByCategory.get(entry.categoryId)).join('\n');
   assert(entries.every(entry => rowsByCategory.has(entry.categoryId)), 'Country development row ordering source is incomplete');
   section = section.slice(0, tbodyStart) + `\n${orderedRows}\n` + section.slice(tbodyEnd);
+  section = section.replace(/<thead\b[^>]*>[\s\S]*?<\/thead>/i, '<thead><tr><th>국가·지역·세부 사조</th><th>지역적 특징</th><th>대표 화가·제작자</th><th>더 볼 화가</th></tr></thead>');
   return html.slice(0, sectionOpening.index) + section + html.slice(end);
 }
 
@@ -177,11 +184,11 @@ function rebuildRepresentativeSection(html, entries, parent, documentFile, count
   section = section.slice(0, close).replace(/\s*$/, '') + `\n${wrapper}\n` + section.slice(close);
   html = html.slice(0, sectionOpening.index) + section + html.slice(end);
   html = html.replace(/<style\b[^>]*\bid=["']art-atlas-representative-content-style["'][^>]*>[\s\S]*?<\/style>/gi, '');
-  const style = '<style id="art-atlas-representative-content-style">.art-atlas-representative-groups{width:min(1534px,94vw);max-width:none;margin:0 auto}.art-atlas-representative-groups .art-atlas-submovement-group{margin:34px 0}.art-atlas-representative-groups .movement-work-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.art-atlas-representative-groups .movement-work-card{border:1px solid var(--line,#3a3f44);border-radius:8px;background:var(--panel,#181b1e);overflow:hidden}.art-atlas-representative-groups .movement-work-image{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#0e1114}.art-atlas-representative-groups .movement-work-image img{width:100%;height:100%;object-fit:cover}.art-atlas-representative-groups .art-atlas-image-pending{color:var(--muted,#b8bdc2);border-bottom:1px dashed var(--line,#3a3f44)}.art-atlas-representative-groups .movement-work-body{padding:16px}.art-atlas-representative-groups .movement-work-body h3{font-size:1.08rem;line-height:1.45;margin:0 0 8px}.art-atlas-representative-groups .work-meta{color:var(--muted,#b8bdc2);margin:.25rem 0 .85rem}.art-atlas-representative-groups .movement-selection-reason{padding:.75rem;border-left:3px solid var(--accent,#e2b85f);background:rgba(226,184,95,.08)}.art-atlas-representative-groups .movement-country-card-context{display:block;margin-top:.4rem;color:var(--muted,#b8bdc2);font-size:.85em;font-weight:400}.art-atlas-representative-groups .movement-country-card-context-region{display:block;color:var(--accent,#e2b85f);font-weight:700}.art-atlas-representative-groups .movement-country-card-context-feature{display:block}@media(max-width:980px){.art-atlas-representative-groups .movement-work-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:680px){.art-atlas-representative-groups .movement-work-grid{grid-template-columns:1fr}}</style>';
+  const style = '<style id="art-atlas-representative-content-style">.art-atlas-representative-groups{width:min(1534px,94vw);max-width:none;margin:0 auto}.art-atlas-representative-groups .art-atlas-submovement-group{margin:34px 0}.art-atlas-representative-groups .movement-work-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.art-atlas-representative-groups .movement-work-card{border:1px solid var(--line,#3a3f44);border-radius:8px;background:var(--panel,#181b1e);overflow:hidden}.art-atlas-representative-groups .movement-work-card[data-art-atlas-card-role="primary"]{border-top:4px solid #b42318}.art-atlas-representative-groups .movement-card-role{display:inline-block;margin-bottom:7px;color:var(--accent,#e2b85f);font-size:.75rem;font-weight:800}.art-atlas-representative-groups .movement-work-image{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#0e1114}.art-atlas-representative-groups .movement-work-image img{width:100%;height:100%;object-fit:cover}.art-atlas-representative-groups .art-atlas-image-pending{color:var(--muted,#b8bdc2);border-bottom:1px dashed var(--line,#3a3f44)}.art-atlas-representative-groups .movement-work-body{padding:16px}.art-atlas-representative-groups .movement-work-body h3{font-size:1.08rem;line-height:1.45;margin:0 0 8px}.art-atlas-representative-groups .work-meta{color:var(--muted,#b8bdc2);margin:.25rem 0 .85rem}.art-atlas-representative-groups .movement-selection-reason{padding:.75rem;border-left:3px solid var(--accent,#e2b85f);background:rgba(226,184,95,.08)}.art-atlas-representative-groups .movement-country-card-context{display:block;margin-top:.4rem;color:var(--muted,#b8bdc2);font-size:.85em;font-weight:400}.art-atlas-representative-groups .movement-country-card-context-region{display:block;color:var(--accent,#e2b85f);font-weight:700}.art-atlas-representative-groups .movement-country-card-context-feature{display:block}@media(max-width:980px){.art-atlas-representative-groups .movement-work-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:680px){.art-atlas-representative-groups .movement-work-grid{grid-template-columns:1fr}}</style>';
   return html.replace(/<\/head>/i, `${style}</head>`);
 }
 
-function upsertArtist(artists, entry, parent) {
+function upsertArtist(artists, entry, parent, contributionReason = 'canonical-movement-representative') {
   let artist = artists.find(item => item.id === entry.artist.id);
   if (!artist) {
     artist = {
@@ -216,11 +223,15 @@ function upsertArtist(artists, entry, parent) {
   work.year = entry.work.year;
   work.popularity = Math.max(Number(work.popularity || 0), 90);
   work.country = entry.artist.nationality;
-  work.movement = parent.name;
+  const isCanonicalRepresentative = contributionReason === 'canonical-movement-representative';
+  const hasCanonicalRepresentativeRole = work.movementContributionReason === 'canonical-movement-representative';
+  if (isCanonicalRepresentative || !hasCanonicalRepresentativeRole) {
+    work.movement = parent.name;
+    work.movementContributionReason = contributionReason;
+  }
   work.description ||= {ko: entry.description, en: ''};
   work.representative = true;
   work.movementContribution = true;
-  work.movementContributionReason = 'canonical-movement-representative';
   work.verified = true;
   work.origin ||= 'art-movement-representatives';
   if (entry.work.localImage && fs.existsSync(path.join(root, entry.work.localImage))) {
@@ -236,14 +247,14 @@ function upsertArtist(artists, entry, parent) {
       status: work.thumbnail ? 'ready' : 'missing',
       localThumbnail: work.thumbnail || '',
       highResolution: work.migration?.image?.highResolution || '',
-      sourceUrl: work.migration?.image?.sourceUrl || '',
-      sourceUrls: work.migration?.image?.sourceUrls || [],
-      license: work.migration?.image?.license || '',
-      institution: work.migration?.image?.institution || ''
+      sourceUrl: entry.work.sourceUrl || work.migration?.image?.sourceUrl || '',
+      sourceUrls: [...new Set([...(work.migration?.image?.sourceUrls || []), entry.work.sourceUrl].filter(Boolean))],
+      license: entry.work.license || work.migration?.image?.license || '',
+      institution: entry.work.institution || work.migration?.image?.institution || ''
     }
   };
   artist.featuredWorkIds = [...new Set([entry.work.id, ...(artist.featuredWorkIds || [])])];
-  artist.works.forEach(candidate => {
+  if (contributionReason === 'canonical-movement-representative') artist.works.forEach(candidate => {
     if (candidate.id === entry.work.id || candidate.movementContributionReason !== 'artist-movement-characteristic') return;
     candidate.movementContribution = false;
     delete candidate.movementContributionReason;
@@ -268,7 +279,12 @@ function main() {
   const parents = canonical.parents.filter(parent => parent.role === 'document');
   const parentMap = new Map(parents.map(parent => [parent.id, parent]));
   const countryNames = new Map(movementData.countries.map(country => [country.id, country.name]));
-  const entries = representatives.categories.map(entry => ({...entry, category: categories.get(entry.categoryId)}));
+  const furtherByCategory = new Map((representatives.furtherArtists || []).map(entry => [entry.categoryId, entry.artists || []]));
+  const entries = representatives.categories.map(entry => ({
+    ...entry,
+    category: categories.get(entry.categoryId),
+    furtherArtists: (furtherByCategory.get(entry.categoryId) || []).map(item => ({...item, categoryId:entry.categoryId, category:categories.get(entry.categoryId)}))
+  }));
   const entryIds = new Set(entries.map(entry => entry.categoryId));
   assert(entries.length === canonical.counts.beginnerCategories, `Expected ${canonical.counts.beginnerCategories} representative categories, got ${entries.length}`);
   assert(entryIds.size === entries.length, 'Representative category IDs must be unique');
@@ -277,6 +293,11 @@ function main() {
     assert(entry.category, `${entry.categoryId}: unknown canonical category`);
     assert(entry.feature && entry.selectionReason && entry.description, `${entry.categoryId}: explanatory text is incomplete`);
     assert(entry.artist?.id && entry.work?.id, `${entry.categoryId}: artist or work identity is incomplete`);
+    assert(entry.furtherArtists.length >= 1 && entry.furtherArtists.length <= 4, `${entry.categoryId}: expected one to four further artists`);
+    entry.furtherArtists.forEach(item => {
+      assert(item.selectionReason && item.description, `${entry.categoryId}: further artist explanatory text is incomplete`);
+      assert(item.artist?.id && item.work?.id, `${entry.categoryId}: further artist or work identity is incomplete`);
+    });
   });
 
   const staged = [];
@@ -291,15 +312,19 @@ function main() {
     html = removeElements(html, 'section', tag => /\bart-atlas-submovement-group\b/i.test(attr(tag, 'class')));
     html = updateDevelopmentRows(html, parentEntries, countryNames, attrs);
     html = rebuildRepresentativeSection(html, parentEntries, parent, documentFile, countryNames, attrs);
-    html = html.replace(/<html\b[^>]*>/i, tag => addAttribute(tag, attrs.syncState, 'content'));
+    html = html.replace(/<html\b[^>]*>/i, tag => addAttribute(tag, attrs.syncState, 'complete'));
     staged.push({file: documentFile, html});
     parentEntries.forEach(entry => upsertArtist(artistsData.artists, entry, parentMap.get(parent.id)));
+    parentEntries.forEach(entry => entry.furtherArtists.forEach(item => upsertArtist(artistsData.artists, item, parentMap.get(parent.id), 'movement-further-study')));
   });
 
-  const ready = entries.filter(entry => entry.work.localImage && fs.existsSync(path.join(root, entry.work.localImage))).length;
-  const pending = entries.length - ready;
-  const duplicateArtists = entries.filter((entry, index, list) => list.findIndex(other => other.artist.id === entry.artist.id) !== index);
-  assert(!duplicateArtists.length, `Representative artists must be unique in phase 5: ${duplicateArtists.map(entry => entry.artist.id).join(', ')}`);
+  const cards = entries.flatMap(entry => [entry, ...entry.furtherArtists]);
+  const ready = cards.filter(entry => entry.work.localImage && fs.existsSync(path.join(root, entry.work.localImage))).length;
+  const pending = cards.length - ready;
+  const duplicateArtists = cards.filter((entry, index, list) => list.findIndex(other => other.artist.id === entry.artist.id) !== index);
+  [...new Set(duplicateArtists.map(entry => entry.artist.id))].forEach(artistId => {
+    assert(cards.filter(entry => entry.artist.id === artistId).every(entry => entry.duplicateArtistReason), `${artistId}: cross-movement cards need duplicateArtistReason`);
+  });
   staged.forEach(item => fs.writeFileSync(item.file, item.html, 'utf8'));
   artistsData.metadata ||= {};
   artistsData.metadata.updatedAt = generatedAt;
@@ -315,17 +340,18 @@ function main() {
     favoriteWorks: Array.isArray(artistsData.favoriteWorks) ? artistsData.favoriteWorks : []
   });
   fs.writeFileSync(reportFile,
-    '# 5단계 대표 화가·대표작 콘텐츠\n\n' +
+    '# 대표 화가·더 볼 화가 콘텐츠\n\n' +
     `- 정본 범주: ${entries.length}개\n` +
     `- 부모 사조 문서: ${parents.length}개\n` +
-    `- 기준점 화가·대표작 카드: ${entries.length}개\n` +
+    `- 대표 화가 카드: ${entries.length}개\n` +
+    `- 더 볼 화가 카드: ${cards.length - entries.length}개\n` +
     `- 로컬 이미지 연결: ${ready}개\n` +
     `- 이미지 업로드 예정: ${pending}개\n` +
-    '- 문서 상태: `content` (6단계 ID 기반 편집 동기화 전까지 저장 잠금)\n\n' +
-    '각 범주는 `data/art-movement-representatives.json`의 기준점 화가 1명으로 시작한다. 두 번째 화가는 첫 화가와 다른 핵심 축을 설명할 때만 이후 검토에서 추가한다. 외부 이미지 URL은 새로 만들지 않았다.\n',
+    '- 문서 상태: `complete`\n\n' +
+    '각 범주는 기준점 화가 1명과 더 볼 화가 1~4명을 둔다. 외부 이미지 URL은 새로 만들지 않았고 로컬 이미지가 없으면 `다운로드 필요`로 남겼다.\n',
     'utf8'
   );
-  console.log(JSON.stringify({parents: parents.length, categories: entries.length, ready, pending, artists: artistsData.artists.length}, null, 2));
+  console.log(JSON.stringify({parents: parents.length, categories: entries.length, cards:cards.length, furtherCards:cards.length-entries.length, ready, pending, artists: artistsData.artists.length}, null, 2));
 }
 
 main();

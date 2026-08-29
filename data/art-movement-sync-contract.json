@@ -1,6 +1,6 @@
 {
-  "schema": 1,
-  "status": "frozen-for-implementation",
+  "schema": 2,
+  "status": "implemented-with-further-artists",
   "canonicalTaxonomy": "data/art-movement-canonical.json",
   "documentSyncVersion": "1",
   "purpose": "국가 전개 표, 대표작 카드, 화가 리스트가 문자열 추측 없이 같은 분류와 대표 화가 순서를 공유하기 위한 저장·동기화 계약",
@@ -52,9 +52,11 @@
     "developmentId": "data-art-atlas-development-id",
     "countryIds": "data-art-atlas-country-ids",
     "representativeArtists": "data-art-atlas-representative-artists",
+    "furtherArtists": "data-art-atlas-further-artists",
     "representativeSection": "data-art-atlas-representative-section",
     "artistId": "data-artist-id",
     "workId": "data-work-id",
+    "cardRole": "data-art-atlas-card-role",
     "imageState": "data-art-atlas-image-state",
     "duplicateArtistReason": "data-art-atlas-duplicate-artist-reason",
     "selectionReason": "data-art-atlas-selection-reason",
@@ -75,12 +77,13 @@
     },
     "countryTable": {
       "selector": "#countries[data-art-atlas-country-feature-editor=\"country-development\"] table",
-      "columns": ["country-category", "feature", "representative-artists"]
+      "columns": ["country-category", "feature", "representative-artists", "further-artists"]
     },
     "developmentRow": {
       "selector": "#countries tbody tr[data-art-atlas-development-id][data-art-atlas-category-id][data-art-atlas-country-ids]",
       "requiredAttributes": ["developmentId", "categoryId", "countryIds"],
-      "representativeCellSelector": "td[data-art-atlas-representative-artists]"
+      "representativeCellSelector": "td[data-art-atlas-representative-artists]",
+      "furtherCellSelector": "td[data-art-atlas-further-artists]"
     },
     "representativeSection": {
       "selector": ".movement-enhancement[data-art-atlas-representative-section=\"works\"]",
@@ -92,8 +95,8 @@
       "gridSelector": ".movement-work-grid[data-art-atlas-development-id]"
     },
     "representativeCard": {
-      "selector": "article.movement-work-card[data-art-atlas-development-id][data-art-atlas-category-id][data-artist-id][data-work-id][data-art-atlas-image-state]",
-      "requiredAttributes": ["developmentId", "categoryId", "artistId", "workId", "imageState"],
+      "selector": "article.movement-work-card[data-art-atlas-development-id][data-art-atlas-category-id][data-artist-id][data-work-id][data-art-atlas-card-role][data-art-atlas-image-state]",
+      "requiredAttributes": ["developmentId", "categoryId", "artistId", "workId", "cardRole", "imageState"],
       "requiredDescendants": ["a[data-artist-id]", "[data-art-atlas-selection-reason]", "[data-art-atlas-card-description]"]
     }
   },
@@ -117,11 +120,12 @@
     "artistListEntry": {
       "source": "movement HTML developmentRow",
       "key": "developmentId",
-      "fields": ["parentId", "categoryId", "countryIds", "feature", "representativeArtistIds"],
+      "fields": ["parentId", "categoryId", "countryIds", "feature", "representativeArtistIds", "furtherArtistIds"],
       "rules": [
         "범주 제목은 categoryId로 canonical taxonomy에서 읽는다.",
-        "대표 화가는 표의 data-artist-id 순서를 그대로 사용한다.",
-        "artists.json의 국적·활동연도·사조 메타데이터 불일치는 경고로 기록하되 표에 명시된 대표 화가를 화면에서 제거하지 않는다."
+        "대표 화가는 표의 대표 화가 셀에서 1명을 읽고, 더 볼 화가는 더 볼 화가 셀에서 1~4명을 읽는다.",
+        "화가 리스트에서는 대표 화가를 먼저 배치하고 굵은 글씨와 굵은 붉은 실선으로 표시한다.",
+        "artists.json의 국적·활동연도·사조 메타데이터 불일치는 경고로 기록하되 표에 명시된 화가를 화면에서 제거하지 않는다."
       ]
     }
   },
@@ -129,8 +133,8 @@
     "parentAndCategoryNames": "data/art-movement-canonical.json",
     "parentAndCategoryOrder": "data/art-movement-canonical.json",
     "movementDatesAndColors": "data/art-movements.json",
-    "countryCategoryFeatureAndRepresentativeMembership": "movement HTML #countries developmentRow",
-    "representativeArtistOrder": "movement HTML developmentRow and cardGroup must be identical",
+    "countryCategoryFeatureAndArtistMembership": "movement HTML #countries developmentRow",
+    "artistRoleAndOrder": "대표 화가 셀·더 볼 화가 셀과 cardRole별 카드 DOM 순서가 동일해야 한다",
     "representativeWorkImageAndText": "movement HTML representativeCard",
     "artistAndWorkIdentityMetadata": "data/artists.json",
     "documentPath": "data/미술사조/index.json"
@@ -139,8 +143,9 @@
     "parents": "canonical parentDisplayOrder",
     "categoriesWithinParent": "canonical parent.categoryIds order",
     "developmentRowsWithinCategory": "country table DOM order",
-    "representativeArtistsWithinDevelopment": "card DOM order, stored identically in the table representative cell",
-    "cardsWithinDevelopment": "card DOM order"
+    "representativeArtistsWithinDevelopment": "대표 화가 1명은 첫 카드로 고정한다.",
+    "furtherArtistsWithinDevelopment": "더 볼 카드 DOM 순서를 표의 더 볼 화가 셀에 동일하게 저장한다.",
+    "cardsWithinDevelopment": "대표 카드 1개 뒤에 더 볼 카드 1~4개를 둔다."
   },
   "operations": {
     "editFeature": {
@@ -148,11 +153,11 @@
       "writes": ["developmentRow feature HTML"],
       "propagatesTo": ["card group context", "artist list feature panel"]
     },
-    "reorderRepresentativeCards": {
-      "entryPoint": "drag inside one card grid",
-      "preconditions": ["source and destination developmentId are equal", "artist membership set is unchanged"],
-      "writes": ["card DOM order", "matching table representative artist link order"],
-      "forbidden": ["cross-development drag", "cross-category drag", "implicit artist membership change"]
+    "reorderFurtherArtistCards": {
+      "entryPoint": "drag further cards inside one card grid",
+      "preconditions": ["source and destination developmentId are equal", "cardRole is further", "artist membership set is unchanged"],
+      "writes": ["further card DOM order", "matching table further artist link order"],
+      "forbidden": ["representative card drag", "cross-development drag", "cross-category drag", "implicit artist membership change"]
     },
     "moveRepresentativeArtist": {
       "entryPoint": "country table representative classification command",
@@ -184,7 +189,7 @@
   },
   "saveTransaction": [
     "편집용 DOM과 스타일을 복제본에서 제거한다.",
-    "카드 순서와 표 대표 화가 순서를 developmentId별로 동기화한다.",
+    "대표 카드를 첫 위치에 고정하고 더 볼 카드 순서와 표의 더 볼 화가 순서를 developmentId별로 동기화한다.",
     "모든 hard invariant를 저장 전에 검사한다.",
     "검증된 HTML을 한 번만 기록한다.",
     "검증 또는 저장 실패 시 화면 DOM을 저장 전 상태로 되돌린다."
@@ -212,12 +217,15 @@
       "각 developmentRow에는 art-movements 국가 ID 한 개 이상이 공백 구분 목록으로 있다.",
       "각 developmentRow에는 같은 developmentId·categoryId·countryIds를 가진 cardGroup이 정확히 하나 있다.",
       "각 cardGroup에는 같은 developmentId를 가진 grid가 정확히 하나 있다.",
-      "표의 대표 artistId 집합과 카드의 artistId 집합은 같고 순서도 같다.",
-      "한 문서에서 대표 artistId는 한 developmentId에만 존재한다. 예외 중복은 모든 해당 카드에 duplicateArtistReason을 기록해야 한다.",
+      "각 행에는 대표 화가가 정확히 1명, 더 볼 화가가 1~4명 있다.",
+      "각 카드 묶음에는 role=primary 카드가 정확히 1개이고 첫 카드이며 role=further 카드가 1~4개 있다.",
+      "표의 대표·더 볼 artistId 집합과 같은 역할 카드의 artistId 집합은 각각 같고 순서도 같다.",
+      "한 문서에서 artistId가 여러 developmentId에 속하면 모든 해당 카드에 duplicateArtistReason을 기록해야 한다.",
       "카드의 artistId와 제목의 대표 화가 링크 artistId가 같다.",
       "카드의 workId는 해당 artistId의 artists.json 작품에 존재한다.",
       "imageState=ready인 카드는 로컬 img src를 가지며 imageState=pending인 카드는 외부 URL을 만들지 않는다.",
-      "selectionReason과 cardDescription은 각각 비어 있지 않다.",
+      "selectionReason과 cardDescription은 각각 비어 있지 않으며 더 볼 화가 설명은 사조 특징과 화가 고유 특성을 함께 밝힌다.",
+      "다른 사조에도 속하는 화가는 해당 카드 설명에 다른 소속 사조를 명시한다.",
       "세부 범주 연동형 문서의 canonical categoryIds가 적어도 한 developmentRow에서 사용된다.",
       "단일 부모형 문서의 모든 developmentRow는 그 부모의 유일한 categoryId를 사용한다."
     ],
@@ -244,6 +252,7 @@
     "categoryId": "baroque--french",
     "developmentId": "dev--baroque-french-france",
     "countryIds": ["france"],
-    "representativeArtistIds": ["artist-Q41554", "artist-Q9340", "artist-Q170170", "artist-Q49898"]
+    "representativeArtistIds": ["artist-Q41554"],
+    "furtherArtistIds": ["artist-Q9340", "artist-Q170170", "artist-Q49898"]
   }
 }

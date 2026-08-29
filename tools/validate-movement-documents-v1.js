@@ -73,7 +73,9 @@ function parentDocumentAudit(parent, html, categories, countries, attrs, globalD
   });
 
   const representativeCells = [...countryBody.matchAll(/<td\b[^>]*>/gi)].filter(match => attr(match[0], attrs.representativeArtists) != null);
+  const furtherCells = [...countryBody.matchAll(/<td\b[^>]*>/gi)].filter(match => attr(match[0], attrs.furtherArtists) != null);
   assert(representativeCells.length === rowTags.length, `${parent.documentKey}: representative cell count differs from bound row count`);
+  assert(furtherCells.length === rowTags.length, `${parent.documentKey}: further artist cell count differs from bound row count`);
   parent.categoryIds.forEach(categoryId => assert(rowByCategory.has(categoryId), `${parent.documentKey}: missing row for ${categoryId}`));
 
   const groupTags = openingTags(html, 'section', 'art-atlas-submovement-group').filter(tag => attr(tag, attrs.developmentId));

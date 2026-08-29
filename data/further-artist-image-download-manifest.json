@@ -1,0 +1,2809 @@
+{
+  "schema": 1,
+  "scope": "user-approved-temporary-further-artist-image-download",
+  "sourceSite": "Wikimedia Commons",
+  "sourceApi": "https://commons.wikimedia.org/w/api.php",
+  "generatedAt": "2026-08-29T00:36:31.649Z",
+  "policy": "작가당 확정 대표작 1점만 받으며 Commons 파일 페이지의 공개 라이선스와 작품 일치를 검토한 candidate만 다운로드한다.",
+  "counts": {
+    "pending": 130,
+    "downloaded": 6,
+    "candidates": 0,
+    "unresolved": 124
+  },
+  "items": [
+    {
+      "categoryId": "renaissance--early",
+      "artistId": "artist-further-botticelli",
+      "artistName": {
+        "ko": "산드로 보티첼리",
+        "en": "Sandro Botticelli"
+      },
+      "workId": "botticelli-birth-of-venus",
+      "workTitle": {
+        "ko": "비너스의 탄생",
+        "en": "The Birth of Venus"
+      },
+      "targetPath": "data/thumbnails/artist-further-botticelli/botticelli-birth-of-venus.jpg",
+      "reviewStatus": "downloaded",
+      "selected": {
+        "score": 22,
+        "artistMatches": 2,
+        "workMatches": 2,
+        "exactWork": true,
+        "derivative": false,
+        "fileTitle": "File:The Birth of Venus by Sandro Botticelli-Uffizi.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:The_Birth_of_Venus_by_Sandro_Botticelli-Uffizi.jpg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/The_Birth_of_Venus_by_Sandro_Botticelli-Uffizi.jpg/1920px-The_Birth_of_Venus_by_Sandro_Botticelli-Uffizi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "mime": "image/jpeg",
+        "width": 1400,
+        "height": 924,
+        "license": "CC BY-SA 4.0",
+        "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "artistCredit": "<a href=\"//commons.wikimedia.org/wiki/User:Yair-haklai\" title=\"User:Yair-haklai\">Yair Haklai</a>"
+      },
+      "candidates": [
+        {
+          "score": 22,
+          "artistMatches": 2,
+          "workMatches": 2,
+          "exactWork": true,
+          "derivative": false,
+          "fileTitle": "File:The Birth of Venus by Sandro Botticelli-Uffizi.jpg",
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:The_Birth_of_Venus_by_Sandro_Botticelli-Uffizi.jpg",
+          "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/The_Birth_of_Venus_by_Sandro_Botticelli-Uffizi.jpg/1920px-The_Birth_of_Venus_by_Sandro_Botticelli-Uffizi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "mime": "image/jpeg",
+          "width": 1400,
+          "height": 924,
+          "license": "CC BY-SA 4.0",
+          "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+          "artistCredit": "<a href=\"//commons.wikimedia.org/wiki/User:Yair-haklai\" title=\"User:Yair-haklai\">Yair Haklai</a>"
+        },
+        {
+          "score": 18,
+          "artistMatches": 1,
+          "workMatches": 2,
+          "exactWork": true,
+          "derivative": false,
+          "fileTitle": "File:The Birth of Venus (Botticelli) 2015.jpg",
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:The_Birth_of_Venus_(Botticelli)_2015.jpg",
+          "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/The_Birth_of_Venus_%28Botticelli%29_2015.jpg/1920px-The_Birth_of_Venus_%28Botticelli%29_2015.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "mime": "image/jpeg",
+          "width": 1400,
+          "height": 945,
+          "license": "CC BY-SA 4.0",
+          "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+          "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Sandro_Botticelli\" class=\"extiw\" title=\"w:en:Sandro Botticelli\"><span title=\"Italian painter (1445–1510)\">Sandro Botticelli</span></a></bdi>"
+        },
+        {
+          "score": 18,
+          "artistMatches": 1,
+          "workMatches": 2,
+          "exactWork": true,
+          "derivative": false,
+          "fileTitle": "File:The Birth of Venus (Botticelli) 1.jpg",
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:The_Birth_of_Venus_(Botticelli)_1.jpg",
+          "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/The_Birth_of_Venus_%28Botticelli%29_1.jpg/1920px-The_Birth_of_Venus_%28Botticelli%29_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "mime": "image/jpeg",
+          "width": 1400,
+          "height": 835,
+          "license": "Public domain",
+          "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+          "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Sandro_Botticelli\" class=\"extiw\" title=\"w:en:Sandro Botticelli\"><span title=\"Italian painter (1445–1510)\">Sandro Botticelli</span></a></bdi>"
+        }
+      ],
+      "downloadedAt": "2026-08-29T00:43:26.475Z",
+      "bytes": 674663
+    },
+    {
+      "categoryId": "renaissance--early",
+      "artistId": "artist-mid-fra-angelico",
+      "artistName": {
+        "ko": "프라 안젤리코",
+        "en": "Fra Angelico"
+      },
+      "workId": "fra-angelico-annunciation-san-marco",
+      "workTitle": {
+        "ko": "수태고지",
+        "en": "The Annunciation"
+      },
+      "targetPath": "data/thumbnails/artist-mid-fra-angelico/fra-angelico-annunciation-san-marco.jpg",
+      "reviewStatus": "downloaded",
+      "selected": {
+        "score": 19,
+        "artistMatches": 2,
+        "workMatches": 1,
+        "exactWork": true,
+        "derivative": false,
+        "fileTitle": "File:Fra Angelico - The Annunciation - WGA0455.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Fra_Angelico_-_The_Annunciation_-_WGA0455.jpg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Fra_Angelico_-_The_Annunciation_-_WGA0455.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "mime": "image/jpeg",
+        "width": 1400,
+        "height": 1108,
+        "license": "Public domain",
+        "credit": "<a href=\"https://en.wikipedia.org/wiki/en:Web_Gallery_of_Art\" class=\"extiw\" title=\"w:en:Web Gallery of Art\"><span title=\"virtual art gallery for European fine art created before 1900\">Web Gallery of Art</span></a>:  <span typeof=\"mw:File\"><a href=\"http://www.wga.hu/art/a/angelico/01/2prado.jpg\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/20px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/40px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"60\" data-file-height=\"60\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://www.wga.hu/art/a/angelico/01/2prado.jpg\">Image</a> <span typeof=\"mw:File\"><a href=\"http://www.wga.hu/html/a/angelico/01/2prado.html\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/20px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/40px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"620\" data-file-height=\"620\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://www.wga.hu/html/a/angelico/01/2prado.html\">Info about artwork</a><div style=\"display: none;\">wga QS:P11807,\"a/angelico/01/2prado\"</div>",
+        "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Fra_Angelico\" class=\"extiw\" title=\"w:en:Fra Angelico\"><span title=\"Italian Early Renaissance painter\">Fra Angelico</span></a></bdi>"
+      },
+      "candidates": [
+        {
+          "score": 19,
+          "artistMatches": 2,
+          "workMatches": 1,
+          "exactWork": true,
+          "derivative": false,
+          "fileTitle": "File:Fra Angelico - The Annunciation - WGA0455.jpg",
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:Fra_Angelico_-_The_Annunciation_-_WGA0455.jpg",
+          "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Fra_Angelico_-_The_Annunciation_-_WGA0455.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "mime": "image/jpeg",
+          "width": 1400,
+          "height": 1108,
+          "license": "Public domain",
+          "credit": "<a href=\"https://en.wikipedia.org/wiki/en:Web_Gallery_of_Art\" class=\"extiw\" title=\"w:en:Web Gallery of Art\"><span title=\"virtual art gallery for European fine art created before 1900\">Web Gallery of Art</span></a>:  <span typeof=\"mw:File\"><a href=\"http://www.wga.hu/art/a/angelico/01/2prado.jpg\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/20px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/40px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"60\" data-file-height=\"60\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://www.wga.hu/art/a/angelico/01/2prado.jpg\">Image</a> <span typeof=\"mw:File\"><a href=\"http://www.wga.hu/html/a/angelico/01/2prado.html\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/20px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/40px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"620\" data-file-height=\"620\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://www.wga.hu/html/a/angelico/01/2prado.html\">Info about artwork</a><div style=\"display: none;\">wga QS:P11807,\"a/angelico/01/2prado\"</div>",
+          "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Fra_Angelico\" class=\"extiw\" title=\"w:en:Fra Angelico\"><span title=\"Italian Early Renaissance painter\">Fra Angelico</span></a></bdi>"
+        },
+        {
+          "score": 11,
+          "artistMatches": 2,
+          "workMatches": 1,
+          "exactWork": false,
+          "derivative": false,
+          "fileTitle": "File:ANGELICO, Fra Annunciation, 1437-46 (2236990916).jpg",
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:ANGELICO,_Fra_Annunciation,_1437-46_(2236990916).jpg",
+          "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/ANGELICO%2C_Fra_Annunciation%2C_1437-46_%282236990916%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "mime": "image/jpeg",
+          "width": 1400,
+          "height": 972,
+          "license": "CC BY 2.0",
+          "credit": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/8545333@N07/2236990916/\">carulmare ANGELICO, Fra Annunciation, 1437-46</a> Taken on 2 February 2008",
+          "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Fra_Angelico\" class=\"extiw\" title=\"w:en:Fra Angelico\"><span title=\"Italian Early Renaissance painter\">Fra Angelico</span></a></bdi>"
+        },
+        {
+          "score": 11,
+          "artistMatches": 2,
+          "workMatches": 1,
+          "exactWork": false,
+          "derivative": false,
+          "fileTitle": "File:Fra Angelico - Annunciation - WGA0474.jpg",
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:Fra_Angelico_-_Annunciation_-_WGA0474.jpg",
+          "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/7/74/Fra_Angelico_-_Annunciation_-_WGA0474.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "mime": "image/jpeg",
+          "width": 1400,
+          "height": 1184,
+          "license": "Public domain",
+          "credit": "<a href=\"https://en.wikipedia.org/wiki/en:Web_Gallery_of_Art\" class=\"extiw\" title=\"w:en:Web Gallery of Art\"><span title=\"virtual art gallery for European fine art created before 1900\">Web Gallery of Art</span></a>:  <span typeof=\"mw:File\"><a href=\"http://www.wga.hu/art/a/angelico/04/1annunc1.jpg\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/20px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/40px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"60\" data-file-height=\"60\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://www.wga.hu/art/a/angelico/04/1annunc1.jpg\">Image</a> <span typeof=\"mw:File\"><a href=\"http://www.wga.hu/html/a/angelico/04/1annunc1.html\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/20px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/40px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"620\" data-file-height=\"620\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://www.wga.hu/html/a/angelico/04/1annunc1.html\">Info about artwork</a><div style=\"display: none;\">wga QS:P11807,\"a/angelico/04/1annunc1\"</div>",
+          "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Fra_Angelico\" class=\"extiw\" title=\"w:en:Fra Angelico\"><span title=\"Italian Early Renaissance painter\">Fra Angelico</span></a></bdi>"
+        }
+      ],
+      "downloadedAt": "2026-08-29T00:43:26.478Z",
+      "bytes": 191521
+    },
+    {
+      "categoryId": "renaissance--early",
+      "artistId": "artist-mid-piero-della-francesca",
+      "artistName": {
+        "ko": "피에로 델라 프란체스카",
+        "en": "Piero della Francesca"
+      },
+      "workId": "piero-flagellation",
+      "workTitle": {
+        "ko": "그리스도의 채찍질",
+        "en": "The Flagellation of Christ"
+      },
+      "targetPath": "data/thumbnails/artist-mid-piero-della-francesca/piero-flagellation.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-piero-della-francesca: Commons API 429"
+    },
+    {
+      "categoryId": "renaissance--high",
+      "artistId": "artist-Q5592",
+      "artistName": {
+        "ko": "미켈란젤로 부오나로티",
+        "en": "Michelangelo"
+      },
+      "workId": "michelangelo-creation-of-adam",
+      "workTitle": {
+        "ko": "아담의 창조",
+        "en": "The Creation of Adam"
+      },
+      "targetPath": "data/thumbnails/artist-Q5592/michelangelo-creation-of-adam.jpg",
+      "reviewStatus": "downloaded",
+      "selected": {
+        "score": 18,
+        "artistMatches": 1,
+        "workMatches": 2,
+        "exactWork": true,
+        "derivative": false,
+        "fileTitle": "File:Michelangelo Buonarroti - The Creation of Adam, ceiling (unrestored).jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Michelangelo_Buonarroti_-_The_Creation_of_Adam,_ceiling_(unrestored).jpg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Michelangelo_Buonarroti_-_The_Creation_of_Adam%2C_ceiling_%28unrestored%29.jpg/1920px-Michelangelo_Buonarroti_-_The_Creation_of_Adam%2C_ceiling_%28unrestored%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "mime": "image/jpeg",
+        "width": 1400,
+        "height": 960,
+        "license": "Public domain",
+        "credit": "<cite class=\"book\" style=\"font-style:normal\">The Yorck Project (2002)      <i> 10.000 Meisterwerke der Malerei</i> (DVD-ROM), distributed by <a href=\"//commons.wikimedia.org/wiki/Commons:10,000_paintings_from_Directmedia\" title=\"Commons:10,000 paintings from Directmedia\">DIRECTMEDIA</a> Publishing GmbH.  <small><span lang=\"en\" dir=\"ltr\"><a href=\"https://en.wikipedia.org/wiki/ISBN\" class=\"extiw\" title=\"en:ISBN\"><span lang=\"en\" dir=\"ltr\">ISBN</span></a></span>:  <a href=\"//commons.wikimedia.org/wiki/Special:BookSources/3936122202\" title=\"Special:BookSources/3936122202\">3936122202</a>. </small></cite>",
+        "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Michelangelo\" class=\"extiw\" title=\"w:en:Michelangelo\"><span title=\"Italian artist and architect (1475-1564)\">Michelangelo</span></a></bdi>"
+      },
+      "candidates": [
+        {
+          "score": 18,
+          "artistMatches": 1,
+          "workMatches": 2,
+          "exactWork": true,
+          "derivative": false,
+          "fileTitle": "File:Michelangelo Buonarroti - The Creation of Adam, ceiling (unrestored).jpg",
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:Michelangelo_Buonarroti_-_The_Creation_of_Adam,_ceiling_(unrestored).jpg",
+          "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Michelangelo_Buonarroti_-_The_Creation_of_Adam%2C_ceiling_%28unrestored%29.jpg/1920px-Michelangelo_Buonarroti_-_The_Creation_of_Adam%2C_ceiling_%28unrestored%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "mime": "image/jpeg",
+          "width": 1400,
+          "height": 960,
+          "license": "Public domain",
+          "credit": "<cite class=\"book\" style=\"font-style:normal\">The Yorck Project (2002)      <i> 10.000 Meisterwerke der Malerei</i> (DVD-ROM), distributed by <a href=\"//commons.wikimedia.org/wiki/Commons:10,000_paintings_from_Directmedia\" title=\"Commons:10,000 paintings from Directmedia\">DIRECTMEDIA</a> Publishing GmbH.  <small><span lang=\"en\" dir=\"ltr\"><a href=\"https://en.wikipedia.org/wiki/ISBN\" class=\"extiw\" title=\"en:ISBN\"><span lang=\"en\" dir=\"ltr\">ISBN</span></a></span>:  <a href=\"//commons.wikimedia.org/wiki/Special:BookSources/3936122202\" title=\"Special:BookSources/3936122202\">3936122202</a>. </small></cite>",
+          "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Michelangelo\" class=\"extiw\" title=\"w:en:Michelangelo\"><span title=\"Italian artist and architect (1475-1564)\">Michelangelo</span></a></bdi>"
+        },
+        {
+          "score": 18,
+          "artistMatches": 1,
+          "workMatches": 2,
+          "exactWork": true,
+          "derivative": false,
+          "fileTitle": "File:Michelangelo - The Creation of Adam.jpg",
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:Michelangelo_-_The_Creation_of_Adam.jpg",
+          "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Michelangelo_-_The_Creation_of_Adam.jpg/1920px-Michelangelo_-_The_Creation_of_Adam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "mime": "image/jpeg",
+          "width": 1400,
+          "height": 1059,
+          "license": "Public domain",
+          "credit": "Michelangelo",
+          "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Michelangelo\" class=\"extiw\" title=\"w:en:Michelangelo\"><span title=\"Italian artist and architect (1475-1564)\">Michelangelo</span></a></bdi>"
+        },
+        {
+          "score": 14,
+          "artistMatches": 0,
+          "workMatches": 2,
+          "exactWork": true,
+          "derivative": false,
+          "fileTitle": "File:The Creation of Adam.jpg",
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:The_Creation_of_Adam.jpg",
+          "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/6/63/The_Creation_of_Adam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "mime": "image/jpeg",
+          "width": 1400,
+          "height": 643,
+          "license": "Public domain",
+          "credit": "<a rel=\"nofollow\" class=\"external autonumber\" href=\"http://www.kensfavorites.com/Wallpaper/Michelangelo-Creation_Of_Adam-Sistine_Chapel-1024X768-Revised.htm\">[1]</a>",
+          "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Michelangelo\" class=\"extiw\" title=\"w:en:Michelangelo\"><span title=\"Italian artist and architect (1475-1564)\">Michelangelo</span></a></bdi>"
+        }
+      ],
+      "downloadedAt": "2026-08-29T00:43:29.785Z",
+      "bytes": 647379
+    },
+    {
+      "categoryId": "northern-renaissance--early-netherlandish",
+      "artistId": "artist-mid-robert-campin",
+      "artistName": {
+        "ko": "로베르 캉팽",
+        "en": "Robert Campin"
+      },
+      "workId": "campin-merode-altarpiece",
+      "workTitle": {
+        "ko": "메로드 제단화",
+        "en": "Merode Altarpiece"
+      },
+      "targetPath": "data/thumbnails/artist-mid-robert-campin/campin-merode-altarpiece.jpg",
+      "reviewStatus": "downloaded",
+      "selected": {
+        "score": 22,
+        "artistMatches": 2,
+        "workMatches": 2,
+        "exactWork": true,
+        "derivative": false,
+        "fileTitle": "File:Robert Campin - Triptych with the Annunciation, known as the \"Merode Altarpiece\" - Google Art Project.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Robert_Campin_-_Triptych_with_the_Annunciation,_known_as_the_%22Merode_Altarpiece%22_-_Google_Art_Project.jpg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Robert_Campin_-_Triptych_with_the_Annunciation%2C_known_as_the_%22Merode_Altarpiece%22_-_Google_Art_Project.jpg/1920px-Robert_Campin_-_Triptych_with_the_Annunciation%2C_known_as_the_%22Merode_Altarpiece%22_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "mime": "image/jpeg",
+        "width": 1400,
+        "height": 709,
+        "license": "Public domain",
+        "credit": "From Google Art Project, <a rel=\"nofollow\" class=\"external text\" href=\"http://www.googleartproject.com/collection/the-cloisters-museum-and-gardens/artwork/annunciation-triptych-merode-altarpiece-robert-campin-netherlandish-ca-13751444-tournai/652013/\">artwork page</a>, maximum resolution",
+        "artistCredit": "<bdi>Workshop of <a href=\"https://en.wikipedia.org/wiki/en:Robert_Campin\" class=\"extiw\" title=\"w:en:Robert Campin\"><span title=\"Dutch painter, first great master of Flemish and Early Netherlandish painting, 1375–1444 (1375–1444)\">Robert Campin</span></a></bdi>"
+      },
+      "candidates": [
+        {
+          "score": 22,
+          "artistMatches": 2,
+          "workMatches": 2,
+          "exactWork": true,
+          "derivative": false,
+          "fileTitle": "File:Robert Campin - Triptych with the Annunciation, known as the \"Merode Altarpiece\" - Google Art Project.jpg",
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:Robert_Campin_-_Triptych_with_the_Annunciation,_known_as_the_%22Merode_Altarpiece%22_-_Google_Art_Project.jpg",
+          "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Robert_Campin_-_Triptych_with_the_Annunciation%2C_known_as_the_%22Merode_Altarpiece%22_-_Google_Art_Project.jpg/1920px-Robert_Campin_-_Triptych_with_the_Annunciation%2C_known_as_the_%22Merode_Altarpiece%22_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "mime": "image/jpeg",
+          "width": 1400,
+          "height": 709,
+          "license": "Public domain",
+          "credit": "From Google Art Project, <a rel=\"nofollow\" class=\"external text\" href=\"http://www.googleartproject.com/collection/the-cloisters-museum-and-gardens/artwork/annunciation-triptych-merode-altarpiece-robert-campin-netherlandish-ca-13751444-tournai/652013/\">artwork page</a>, maximum resolution",
+          "artistCredit": "<bdi>Workshop of <a href=\"https://en.wikipedia.org/wiki/en:Robert_Campin\" class=\"extiw\" title=\"w:en:Robert Campin\"><span title=\"Dutch painter, first great master of Flemish and Early Netherlandish painting, 1375–1444 (1375–1444)\">Robert Campin</span></a></bdi>"
+        },
+        {
+          "score": 22,
+          "artistMatches": 2,
+          "workMatches": 2,
+          "exactWork": true,
+          "derivative": false,
+          "fileTitle": "File:Robert Campin - Mérode Altarpiece - WGA14409.jpg",
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:Robert_Campin_-_M%C3%A9rode_Altarpiece_-_WGA14409.jpg",
+          "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Robert_Campin_-_M%C3%A9rode_Altarpiece_-_WGA14409.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "mime": "image/jpeg",
+          "width": 1400,
+          "height": 732,
+          "license": "CC0",
+          "credit": "<a href=\"https://en.wikipedia.org/wiki/en:Web_Gallery_of_Art\" class=\"extiw\" title=\"w:en:Web Gallery of Art\"><span title=\"virtual art gallery for European fine art created before 1900\">Web Gallery of Art</span></a>:  <span typeof=\"mw:File\"><a href=\"http://www.wga.hu/art/m/master/flemalle/merode/0merode1.jpg\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/20px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/40px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"60\" data-file-height=\"60\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://www.wga.hu/art/m/master/flemalle/merode/0merode1.jpg\">Image</a> <span typeof=\"mw:File\"><a href=\"http://www.wga.hu/html/m/master/flemalle/merode/0merode1.html\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/20px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/40px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"620\" data-file-height=\"620\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://www.wga.hu/html/m/master/flemalle/merode/0merode1.html\">Info about artwork</a><div style=\"display: none;\">wga QS:P11807,\"m/master/flemalle/merode/0merode1\"</div>",
+          "artistCredit": "<bdi>Workshop of <a href=\"https://en.wikipedia.org/wiki/en:Robert_Campin\" class=\"extiw\" title=\"w:en:Robert Campin\"><span title=\"Dutch painter, first great master of Flemish and Early Netherlandish painting, 1375–1444 (1375–1444)\">Robert Campin</span></a></bdi>"
+        },
+        {
+          "score": 18,
+          "artistMatches": 1,
+          "workMatches": 2,
+          "exactWork": true,
+          "derivative": false,
+          "fileTitle": "File:Campin merode altarpiece right panel.jpg",
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:Campin_merode_altarpiece_right_panel.jpg",
+          "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Campin_merode_altarpiece_right_panel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "mime": "image/jpeg",
+          "width": 1400,
+          "height": 3332,
+          "license": "Public domain",
+          "credit": "<a href=\"https://en.wikipedia.org/wiki/en:Web_Gallery_of_Art\" class=\"extiw\" title=\"w:en:Web Gallery of Art\"><span title=\"virtual art gallery for European fine art created before 1900\">Web Gallery of Art</span></a>:  <span typeof=\"mw:File\"><a href=\"https://www.wga.hu/art/m/master/flemalle/merode/2mero_r.jpg\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/20px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/40px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"60\" data-file-height=\"60\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"https://www.wga.hu/art/m/master/flemalle/merode/2mero_r.jpg\">Image</a> <span typeof=\"mw:File\"><a href=\"https://www.wga.hu/html/m/master/flemalle/merode/2mero_r.html\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/20px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/40px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"620\" data-file-height=\"620\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"https://www.wga.hu/html/m/master/flemalle/merode/2mero_r.html\">Info about artwork</a><div style=\"display: none;\">wga QS:P11807,\"/m/master/flemalle/merode/2mero_r\"</div>",
+          "artistCredit": "<bdi>Workshop of <a href=\"https://en.wikipedia.org/wiki/en:Robert_Campin\" class=\"extiw\" title=\"w:en:Robert Campin\"><span title=\"Dutch painter, first great master of Flemish and Early Netherlandish painting, 1375–1444 (1375–1444)\">Robert Campin</span></a></bdi>"
+        }
+      ],
+      "downloadedAt": "2026-08-29T00:43:31.809Z",
+      "bytes": 764264
+    },
+    {
+      "categoryId": "northern-renaissance--early-netherlandish",
+      "artistId": "artist-mid-hans-memling",
+      "artistName": {
+        "ko": "한스 멤링",
+        "en": "Hans Memling"
+      },
+      "workId": "memling-last-judgment",
+      "workTitle": {
+        "ko": "최후의 심판",
+        "en": "The Last Judgment"
+      },
+      "targetPath": "data/thumbnails/artist-mid-hans-memling/memling-last-judgment.jpg",
+      "reviewStatus": "downloaded",
+      "selected": {
+        "score": 22,
+        "artistMatches": 2,
+        "workMatches": 2,
+        "exactWork": true,
+        "derivative": false,
+        "fileTitle": "File:Gdansk National Museum 2019 P01 Hans Memling The Last Judgment.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Gdansk_National_Museum_2019_P01_Hans_Memling_The_Last_Judgment.jpg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Gdansk_National_Museum_2019_P01_Hans_Memling_The_Last_Judgment.jpg/1920px-Gdansk_National_Museum_2019_P01_Hans_Memling_The_Last_Judgment.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "mime": "image/jpeg",
+        "width": 1400,
+        "height": 933,
+        "license": "Public domain",
+        "credit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:National_Museum,_Gda%C5%84sk\" class=\"extiw\" title=\"w:en:National Museum, Gdańsk\"><span title=\"national museum in Gdańsk, Poland\">National Museum in Gdańsk</span></a>\n</bdi>",
+        "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Hans_Memling\" class=\"extiw\" title=\"w:en:Hans Memling\"><span title=\"German/Flemish painter (c. 1430–1494)\">Hans Memling</span></a></bdi>"
+      },
+      "candidates": [
+        {
+          "score": 22,
+          "artistMatches": 2,
+          "workMatches": 2,
+          "exactWork": true,
+          "derivative": false,
+          "fileTitle": "File:Gdansk National Museum 2019 P01 Hans Memling The Last Judgment.jpg",
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:Gdansk_National_Museum_2019_P01_Hans_Memling_The_Last_Judgment.jpg",
+          "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Gdansk_National_Museum_2019_P01_Hans_Memling_The_Last_Judgment.jpg/1920px-Gdansk_National_Museum_2019_P01_Hans_Memling_The_Last_Judgment.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "mime": "image/jpeg",
+          "width": 1400,
+          "height": 933,
+          "license": "Public domain",
+          "credit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:National_Museum,_Gda%C5%84sk\" class=\"extiw\" title=\"w:en:National Museum, Gdańsk\"><span title=\"national museum in Gdańsk, Poland\">National Museum in Gdańsk</span></a>\n</bdi>",
+          "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Hans_Memling\" class=\"extiw\" title=\"w:en:Hans Memling\"><span title=\"German/Flemish painter (c. 1430–1494)\">Hans Memling</span></a></bdi>"
+        },
+        {
+          "score": 14,
+          "artistMatches": 2,
+          "workMatches": 2,
+          "exactWork": false,
+          "derivative": false,
+          "fileTitle": "File:Hans Memling - Last Judgment Triptych (open) - WGA14829.jpg",
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:Hans_Memling_-_Last_Judgment_Triptych_(open)_-_WGA14829.jpg",
+          "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Hans_Memling_-_Last_Judgment_Triptych_%28open%29_-_WGA14829.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "mime": "image/jpeg",
+          "width": 1400,
+          "height": 944,
+          "license": "Public domain",
+          "credit": "<a href=\"https://en.wikipedia.org/wiki/en:Web_Gallery_of_Art\" class=\"extiw\" title=\"w:en:Web Gallery of Art\"><span title=\"virtual art gallery for European fine art created before 1900\">Web Gallery of Art</span></a>:  <span typeof=\"mw:File\"><a href=\"https://www.wga.hu/art/m/memling/1early3/02last00.jpg\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/20px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/40px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"60\" data-file-height=\"60\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"https://www.wga.hu/art/m/memling/1early3/02last00.jpg\">Image</a> <span typeof=\"mw:File\"><a href=\"https://www.wga.hu/html/m/memling/1early3/02last00.html\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/20px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/40px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"620\" data-file-height=\"620\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"https://www.wga.hu/html/m/memling/1early3/02last00.html\">Info about artwork</a><div style=\"display: none;\">wga QS:P11807,\"/m/memling/1early3/02last00\"</div>",
+          "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Hans_Memling\" class=\"extiw\" title=\"w:en:Hans Memling\"><span title=\"German/Flemish painter (c. 1430–1494)\">Hans Memling</span></a></bdi>"
+        },
+        {
+          "score": 8,
+          "artistMatches": 2,
+          "workMatches": 0,
+          "exactWork": false,
+          "derivative": false,
+          "fileTitle": "File:Hans Memling 016.jpg",
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:Hans_Memling_016.jpg",
+          "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/b/be/Hans_Memling_016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "mime": "image/jpeg",
+          "width": 1400,
+          "height": 4494,
+          "license": "Public domain",
+          "credit": "<cite class=\"book\" style=\"font-style:normal\">The Yorck Project (2002)      <i> 10.000 Meisterwerke der Malerei</i> (DVD-ROM), distributed by <a href=\"//commons.wikimedia.org/wiki/Commons:10,000_paintings_from_Directmedia\" title=\"Commons:10,000 paintings from Directmedia\">DIRECTMEDIA</a> Publishing GmbH.  <small><span lang=\"en\" dir=\"ltr\"><a href=\"https://en.wikipedia.org/wiki/ISBN\" class=\"extiw\" title=\"en:ISBN\"><span lang=\"en\" dir=\"ltr\">ISBN</span></a></span>:  <a href=\"//commons.wikimedia.org/wiki/Special:BookSources/3936122202\" title=\"Special:BookSources/3936122202\">3936122202</a>. </small></cite>",
+          "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Hans_Memling\" class=\"extiw\" title=\"w:en:Hans Memling\"><span title=\"German/Flemish painter (c. 1430–1494)\">Hans Memling</span></a></bdi>"
+        }
+      ],
+      "downloadedAt": "2026-08-29T00:43:41.200Z",
+      "bytes": 682981
+    },
+    {
+      "categoryId": "northern-renaissance--german",
+      "artistId": "artist-mid-grunewald",
+      "artistName": {
+        "ko": "마티아스 그뤼네발트",
+        "en": "Matthias Grunewald"
+      },
+      "workId": "grunewald-isenheim-altarpiece",
+      "workTitle": {
+        "ko": "이젠하임 제단화",
+        "en": "Isenheim Altarpiece"
+      },
+      "targetPath": "data/thumbnails/artist-mid-grunewald/grunewald-isenheim-altarpiece.jpg",
+      "reviewStatus": "unresolved",
+      "selected": {
+        "score": 22,
+        "artistMatches": 2,
+        "workMatches": 2,
+        "exactWork": true,
+        "derivative": false,
+        "fileTitle": "File:Colmar - Unterlinden Museum - The Isenheim Altarpiece 1512-16 by Matthias Grünewald (ca 1470-1528) - Details from the Crucifixion panel 06.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Colmar_-_Unterlinden_Museum_-_The_Isenheim_Altarpiece_1512-16_by_Matthias_Gr%C3%BCnewald_(ca_1470-1528)_-_Details_from_the_Crucifixion_panel_06.jpg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Colmar_-_Unterlinden_Museum_-_The_Isenheim_Altarpiece_1512-16_by_Matthias_Gr%C3%BCnewald_%28ca_1470-1528%29_-_Details_from_the_Crucifixion_panel_06.jpg/1920px-Colmar_-_Unterlinden_Museum_-_The_Isenheim_Altarpiece_1512-16_by_Matthias_Gr%C3%BCnewald_%28ca_1470-1528%29_-_Details_from_the_Crucifixion_panel_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "mime": "image/jpeg",
+        "width": 1400,
+        "height": 1050,
+        "license": "CC BY-SA 4.0",
+        "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "artistCredit": "<a href=\"//commons.wikimedia.org/wiki/User:Txllxt_TxllxT\" title=\"User:Txllxt TxllxT\">Txllxt TxllxT</a>"
+      },
+      "candidates": [
+        {
+          "score": 22,
+          "artistMatches": 2,
+          "workMatches": 2,
+          "exactWork": true,
+          "derivative": false,
+          "fileTitle": "File:Colmar - Unterlinden Museum - The Isenheim Altarpiece 1512-16 by Matthias Grünewald (ca 1470-1528) - Details from the Crucifixion panel 06.jpg",
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:Colmar_-_Unterlinden_Museum_-_The_Isenheim_Altarpiece_1512-16_by_Matthias_Gr%C3%BCnewald_(ca_1470-1528)_-_Details_from_the_Crucifixion_panel_06.jpg",
+          "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Colmar_-_Unterlinden_Museum_-_The_Isenheim_Altarpiece_1512-16_by_Matthias_Gr%C3%BCnewald_%28ca_1470-1528%29_-_Details_from_the_Crucifixion_panel_06.jpg/1920px-Colmar_-_Unterlinden_Museum_-_The_Isenheim_Altarpiece_1512-16_by_Matthias_Gr%C3%BCnewald_%28ca_1470-1528%29_-_Details_from_the_Crucifixion_panel_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "mime": "image/jpeg",
+          "width": 1400,
+          "height": 1050,
+          "license": "CC BY-SA 4.0",
+          "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+          "artistCredit": "<a href=\"//commons.wikimedia.org/wiki/User:Txllxt_TxllxT\" title=\"User:Txllxt TxllxT\">Txllxt TxllxT</a>"
+        },
+        {
+          "score": 22,
+          "artistMatches": 2,
+          "workMatches": 2,
+          "exactWork": true,
+          "derivative": false,
+          "fileTitle": "File:Colmar - Unterlinden Museum - The Isenheim Altarpiece 1512-16 by Matthias Grünewald (ca 1470-1528) - Details from the Crucifixion panel 05.jpg",
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:Colmar_-_Unterlinden_Museum_-_The_Isenheim_Altarpiece_1512-16_by_Matthias_Gr%C3%BCnewald_(ca_1470-1528)_-_Details_from_the_Crucifixion_panel_05.jpg",
+          "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Colmar_-_Unterlinden_Museum_-_The_Isenheim_Altarpiece_1512-16_by_Matthias_Gr%C3%BCnewald_%28ca_1470-1528%29_-_Details_from_the_Crucifixion_panel_05.jpg/1920px-Colmar_-_Unterlinden_Museum_-_The_Isenheim_Altarpiece_1512-16_by_Matthias_Gr%C3%BCnewald_%28ca_1470-1528%29_-_Details_from_the_Crucifixion_panel_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "mime": "image/jpeg",
+          "width": 1400,
+          "height": 3474,
+          "license": "CC BY-SA 4.0",
+          "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+          "artistCredit": "<a href=\"//commons.wikimedia.org/wiki/User:Txllxt_TxllxT\" title=\"User:Txllxt TxllxT\">Txllxt TxllxT</a>"
+        },
+        {
+          "score": 22,
+          "artistMatches": 2,
+          "workMatches": 2,
+          "exactWork": true,
+          "derivative": false,
+          "fileTitle": "File:Colmar - Unterlinden Museum - The Isenheim Altarpiece 1512-16 by Matthias Grünewald (ca 1470-1528) - Details from the Crucifixion panel 08.jpg",
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:Colmar_-_Unterlinden_Museum_-_The_Isenheim_Altarpiece_1512-16_by_Matthias_Gr%C3%BCnewald_(ca_1470-1528)_-_Details_from_the_Crucifixion_panel_08.jpg",
+          "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Colmar_-_Unterlinden_Museum_-_The_Isenheim_Altarpiece_1512-16_by_Matthias_Gr%C3%BCnewald_%28ca_1470-1528%29_-_Details_from_the_Crucifixion_panel_08.jpg/1920px-Colmar_-_Unterlinden_Museum_-_The_Isenheim_Altarpiece_1512-16_by_Matthias_Gr%C3%BCnewald_%28ca_1470-1528%29_-_Details_from_the_Crucifixion_panel_08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "mime": "image/jpeg",
+          "width": 1400,
+          "height": 1050,
+          "license": "CC BY-SA 4.0",
+          "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+          "artistCredit": "<a href=\"//commons.wikimedia.org/wiki/User:Txllxt_TxllxT\" title=\"User:Txllxt TxllxT\">Txllxt TxllxT</a>"
+        }
+      ]
+    },
+    {
+      "categoryId": "mannerism--italian",
+      "artistId": "artist-Q7803",
+      "artistName": {
+        "ko": "브론치노",
+        "en": "Bronzino"
+      },
+      "workId": "bronzino-venus-cupid-folly-and-time-1544-1545",
+      "workTitle": {
+        "ko": "비너스, 큐피드, 어리석음과 시간",
+        "en": "Venus, Cupid, Folly and Time"
+      },
+      "targetPath": "data/thumbnails/artist-Q7803/bronzino-venus-cupid-folly-and-time-1544-1545.jpg",
+      "reviewStatus": "downloaded",
+      "selected": {
+        "score": 24,
+        "artistMatches": 1,
+        "workMatches": 4,
+        "exactWork": true,
+        "derivative": false,
+        "fileTitle": "File:Angelo Bronzino - Venus, Cupid, Folly and Time - National Gallery, London.jpg",
+        "pageUrl": "https://commons.wikimedia.org/wiki/File:Angelo_Bronzino_-_Venus,_Cupid,_Folly_and_Time_-_National_Gallery,_London.jpg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Angelo_Bronzino_-_Venus%2C_Cupid%2C_Folly_and_Time_-_National_Gallery%2C_London.jpg/1920px-Angelo_Bronzino_-_Venus%2C_Cupid%2C_Folly_and_Time_-_National_Gallery%2C_London.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "mime": "image/jpeg",
+        "width": 1400,
+        "height": 1767,
+        "license": "Public domain",
+        "credit": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.nationalgallery.org.uk/paintings/bronzino-an-allegory-with-venus-and-cupid\">https://www.nationalgallery.org.uk/paintings/bronzino-an-allegory-with-venus-and-cupid</a>",
+        "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Bronzino\" class=\"extiw\" title=\"w:en:Bronzino\"><span title=\"Italian Mannerist painter (1503-1572)\">Bronzino</span></a></bdi>"
+      },
+      "candidates": [
+        {
+          "score": 24,
+          "artistMatches": 1,
+          "workMatches": 4,
+          "exactWork": true,
+          "derivative": false,
+          "fileTitle": "File:Angelo Bronzino - Venus, Cupid, Folly and Time - National Gallery, London.jpg",
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:Angelo_Bronzino_-_Venus,_Cupid,_Folly_and_Time_-_National_Gallery,_London.jpg",
+          "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Angelo_Bronzino_-_Venus%2C_Cupid%2C_Folly_and_Time_-_National_Gallery%2C_London.jpg/1920px-Angelo_Bronzino_-_Venus%2C_Cupid%2C_Folly_and_Time_-_National_Gallery%2C_London.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "mime": "image/jpeg",
+          "width": 1400,
+          "height": 1767,
+          "license": "Public domain",
+          "credit": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.nationalgallery.org.uk/paintings/bronzino-an-allegory-with-venus-and-cupid\">https://www.nationalgallery.org.uk/paintings/bronzino-an-allegory-with-venus-and-cupid</a>",
+          "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Bronzino\" class=\"extiw\" title=\"w:en:Bronzino\"><span title=\"Italian Mannerist painter (1503-1572)\">Bronzino</span></a></bdi>"
+        },
+        {
+          "score": 24,
+          "artistMatches": 1,
+          "workMatches": 4,
+          "exactWork": true,
+          "derivative": false,
+          "fileTitle": "File:Angelo Bronzino - Venus, Cupid, Folly and Time - National Gallery, LondonFXD.jpg",
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:Angelo_Bronzino_-_Venus,_Cupid,_Folly_and_Time_-_National_Gallery,_LondonFXD.jpg",
+          "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Angelo_Bronzino_-_Venus%2C_Cupid%2C_Folly_and_Time_-_National_Gallery%2C_LondonFXD.jpg/1920px-Angelo_Bronzino_-_Venus%2C_Cupid%2C_Folly_and_Time_-_National_Gallery%2C_LondonFXD.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "mime": "image/jpeg",
+          "width": 1400,
+          "height": 1767,
+          "license": "Public domain",
+          "credit": "This file was derived from:  <a href=\"//commons.wikimedia.org/wiki/File:Angelo_Bronzino_-_Venus,_Cupid,_Folly_and_Time_-_National_Gallery,_London.jpg\" title=\"File:Angelo Bronzino - Venus, Cupid, Folly and Time - National Gallery, London.jpg\">Angelo Bronzino - Venus, Cupid, Folly and Time - National Gallery, London.jpg</a>: <span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Angelo_Bronzino_-_Venus,_Cupid,_Folly_and_Time_-_National_Gallery,_London.jpg\" class=\"mw-file-description\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Angelo_Bronzino_-_Venus%2C_Cupid%2C_Folly_and_Time_-_National_Gallery%2C_London.jpg/120px-Angelo_Bronzino_-_Venus%2C_Cupid%2C_Folly_and_Time_-_National_Gallery%2C_London.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"120\" height=\"151\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Angelo_Bronzino_-_Venus%2C_Cupid%2C_Folly_and_Time_-_National_Gallery%2C_London.jpg/250px-Angelo_Bronzino_-_Venus%2C_Cupid%2C_Folly_and_Time_-_National_Gallery%2C_London.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"3349\" data-file-height=\"4226\"></a></span><br>",
+          "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Bronzino\" class=\"extiw\" title=\"w:en:Bronzino\"><span title=\"Italian Mannerist painter (1503-1572)\">Bronzino</span></a></bdi>"
+        },
+        {
+          "score": 4,
+          "artistMatches": 1,
+          "workMatches": 0,
+          "exactWork": false,
+          "derivative": false,
+          "fileTitle": "File:Angelo Bronzino 002.jpg",
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:Angelo_Bronzino_002.jpg",
+          "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Angelo_Bronzino_002.jpg/1920px-Angelo_Bronzino_002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "mime": "image/jpeg",
+          "width": 1400,
+          "height": 1709,
+          "license": "Public domain",
+          "credit": "<cite class=\"book\" style=\"font-style:normal\">The Yorck Project (2002)      <i> 10.000 Meisterwerke der Malerei</i> (DVD-ROM), distributed by <a href=\"//commons.wikimedia.org/wiki/Commons:10,000_paintings_from_Directmedia\" title=\"Commons:10,000 paintings from Directmedia\">DIRECTMEDIA</a> Publishing GmbH.  <small><span lang=\"en\" dir=\"ltr\"><a href=\"https://en.wikipedia.org/wiki/ISBN\" class=\"extiw\" title=\"en:ISBN\"><span lang=\"en\" dir=\"ltr\">ISBN</span></a></span>:  <a href=\"//commons.wikimedia.org/wiki/Special:BookSources/3936122202\" title=\"Special:BookSources/3936122202\">3936122202</a>. </small></cite>",
+          "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Bronzino\" class=\"extiw\" title=\"w:en:Bronzino\"><span title=\"Italian Mannerist painter (1503-1572)\">Bronzino</span></a></bdi>"
+        }
+      ],
+      "downloadedAt": "2026-08-29T00:43:45.283Z",
+      "bytes": 1169282
+    },
+    {
+      "categoryId": "baroque--italian",
+      "artistId": "artist-mid-artemisia-gentileschi",
+      "artistName": {
+        "ko": "아르테미시아 젠틸레스키",
+        "en": "Artemisia Gentileschi"
+      },
+      "workId": "gentileschi-judith-slaying-holofernes",
+      "workTitle": {
+        "ko": "홀로페르네스의 목을 베는 유디트",
+        "en": "Judith Slaying Holofernes"
+      },
+      "targetPath": "data/thumbnails/artist-mid-artemisia-gentileschi/gentileschi-judith-slaying-holofernes.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-artemisia-gentileschi: Commons API 429"
+    },
+    {
+      "categoryId": "baroque--flemish",
+      "artistId": "artist-mid-jacob-jordaens",
+      "artistName": {
+        "ko": "야코프 요르단스",
+        "en": "Jacob Jordaens"
+      },
+      "workId": "jordaens-king-drinks",
+      "workTitle": {
+        "ko": "왕이 마신다",
+        "en": "The King Drinks"
+      },
+      "targetPath": "data/thumbnails/artist-mid-jacob-jordaens/jordaens-king-drinks.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-jacob-jordaens: Commons API 429"
+    },
+    {
+      "categoryId": "baroque--dutch-golden-age",
+      "artistId": "artist-Q167654",
+      "artistName": {
+        "ko": "프란스 할스",
+        "en": "Frans Hals"
+      },
+      "workId": "frans-hals-laughing-cavalier-1624",
+      "workTitle": {
+        "ko": "웃는 기사",
+        "en": "The Laughing Cavalier"
+      },
+      "targetPath": "data/thumbnails/artist-Q167654/frans-hals-laughing-cavalier-1624.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-Q167654: Commons API 429"
+    },
+    {
+      "categoryId": "baroque--dutch-golden-age",
+      "artistId": "artist-mid-judith-leyster",
+      "artistName": {
+        "ko": "유디트 레이스테르",
+        "en": "Judith Leyster"
+      },
+      "workId": "leyster-self-portrait",
+      "workTitle": {
+        "ko": "자화상",
+        "en": "Self-Portrait"
+      },
+      "targetPath": "data/thumbnails/artist-mid-judith-leyster/leyster-self-portrait.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-judith-leyster: Commons API 429"
+    },
+    {
+      "categoryId": "baroque--dutch-golden-age",
+      "artistId": "artist-mid-jacob-van-ruisdael",
+      "artistName": {
+        "ko": "야코프 판 라위스달",
+        "en": "Jacob van Ruisdael"
+      },
+      "workId": "ruisdael-windmill-at-wijk",
+      "workTitle": {
+        "ko": "베이크의 풍차",
+        "en": "The Windmill at Wijk bij Duurstede"
+      },
+      "targetPath": "data/thumbnails/artist-mid-jacob-van-ruisdael/ruisdael-windmill-at-wijk.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-jacob-van-ruisdael: Commons API 429"
+    },
+    {
+      "categoryId": "baroque--spanish",
+      "artistId": "artist-mid-jusepe-de-ribera",
+      "artistName": {
+        "ko": "후세페 데 리베라",
+        "en": "Jusepe de Ribera"
+      },
+      "workId": "ribera-martyrdom-saint-philip",
+      "workTitle": {
+        "ko": "성 필립보의 순교",
+        "en": "The Martyrdom of Saint Philip"
+      },
+      "targetPath": "data/thumbnails/artist-mid-jusepe-de-ribera/ribera-martyrdom-saint-philip.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-jusepe-de-ribera: Commons API 429"
+    },
+    {
+      "categoryId": "baroque--french",
+      "artistId": "artist-mid-georges-de-la-tour",
+      "artistName": {
+        "ko": "조르주 드 라 투르",
+        "en": "Georges de La Tour"
+      },
+      "workId": "la-tour-magdalene-smoking-flame",
+      "workTitle": {
+        "ko": "연기 나는 불꽃 앞의 막달레나",
+        "en": "Magdalene with the Smoking Flame"
+      },
+      "targetPath": "data/thumbnails/artist-mid-georges-de-la-tour/la-tour-magdalene-smoking-flame.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-georges-de-la-tour: Commons API 429"
+    },
+    {
+      "categoryId": "realism--french",
+      "artistId": "artist-further-millet",
+      "artistName": {
+        "ko": "장프랑수아 밀레",
+        "en": "Jean-Francois Millet"
+      },
+      "workId": "millet-the-gleaners",
+      "workTitle": {
+        "ko": "이삭 줍는 여인들",
+        "en": "The Gleaners"
+      },
+      "targetPath": "data/thumbnails/artist-further-millet/millet-the-gleaners.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-millet: Commons API 429"
+    },
+    {
+      "categoryId": "realism--french",
+      "artistId": "artist-mid-honore-daumier",
+      "artistName": {
+        "ko": "오노레 도미에",
+        "en": "Honore Daumier"
+      },
+      "workId": "daumier-third-class-carriage",
+      "workTitle": {
+        "ko": "삼등 열차",
+        "en": "The Third-Class Carriage"
+      },
+      "targetPath": "data/thumbnails/artist-mid-honore-daumier/daumier-third-class-carriage.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-honore-daumier: Commons API 429"
+    },
+    {
+      "categoryId": "realism--russian",
+      "artistId": "artist-further-kramskoi",
+      "artistName": {
+        "ko": "이반 크람스코이",
+        "en": "Ivan Kramskoi"
+      },
+      "workId": "kramskoi-christ-in-the-desert",
+      "workTitle": {
+        "ko": "광야의 그리스도",
+        "en": "Christ in the Desert"
+      },
+      "targetPath": "data/thumbnails/artist-further-kramskoi/kramskoi-christ-in-the-desert.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-kramskoi: Commons API 429"
+    },
+    {
+      "categoryId": "realism--russian",
+      "artistId": "artist-mid-vasily-surikov",
+      "artistName": {
+        "ko": "바실리 수리코프",
+        "en": "Vasily Surikov"
+      },
+      "workId": "surikov-morning-streltsy-execution",
+      "workTitle": {
+        "ko": "스트렐치 처형의 아침",
+        "en": "The Morning of the Streltsy Execution"
+      },
+      "targetPath": "data/thumbnails/artist-mid-vasily-surikov/surikov-morning-streltsy-execution.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-vasily-surikov: Commons API 429"
+    },
+    {
+      "categoryId": "post-impressionism--core",
+      "artistId": "artist-further-cezanne",
+      "artistName": {
+        "ko": "폴 세잔",
+        "en": "Paul Cezanne"
+      },
+      "workId": "cezanne-mont-sainte-victoire",
+      "workTitle": {
+        "ko": "생트빅투아르산",
+        "en": "Mont Sainte-Victoire"
+      },
+      "targetPath": "data/thumbnails/artist-further-cezanne/cezanne-mont-sainte-victoire.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-cezanne: Commons API 429"
+    },
+    {
+      "categoryId": "post-impressionism--neo-impressionism",
+      "artistId": "artist-further-signac",
+      "artistName": {
+        "ko": "폴 시냐크",
+        "en": "Paul Signac"
+      },
+      "workId": "signac-port-saint-tropez",
+      "workTitle": {
+        "ko": "생트로페 항구",
+        "en": "The Port of Saint-Tropez"
+      },
+      "targetPath": "data/thumbnails/artist-further-signac/signac-port-saint-tropez.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-signac: Commons API 429"
+    },
+    {
+      "categoryId": "post-impressionism--pont-aven-synthetism",
+      "artistId": "artist-further-emile-bernard",
+      "artistName": {
+        "ko": "에밀 베르나르",
+        "en": "Emile Bernard"
+      },
+      "workId": "bernard-breton-women-meadow",
+      "workTitle": {
+        "ko": "목초지의 브르타뉴 여인들",
+        "en": "Breton Women in a Meadow"
+      },
+      "targetPath": "data/thumbnails/artist-further-emile-bernard/bernard-breton-women-meadow.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-emile-bernard: Commons API 429"
+    },
+    {
+      "categoryId": "post-impressionism--pont-aven-synthetism",
+      "artistId": "artist-mid-paul-serusier",
+      "artistName": {
+        "ko": "폴 세뤼지에",
+        "en": "Paul Serusier"
+      },
+      "workId": "serusier-the-talisman",
+      "workTitle": {
+        "ko": "부적",
+        "en": "The Talisman"
+      },
+      "targetPath": "data/thumbnails/artist-mid-paul-serusier/serusier-the-talisman.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-paul-serusier: Commons API 429"
+    },
+    {
+      "categoryId": "expressionism--brucke",
+      "artistId": "artist-further-heckel",
+      "artistName": {
+        "ko": "에리히 헤켈",
+        "en": "Erich Heckel"
+      },
+      "workId": "heckel-glassy-day",
+      "workTitle": {
+        "ko": "유리처럼 맑은 날",
+        "en": "Glassy Day"
+      },
+      "targetPath": "data/thumbnails/artist-further-heckel/heckel-glassy-day.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-heckel: Commons API 429"
+    },
+    {
+      "categoryId": "expressionism--brucke",
+      "artistId": "artist-mid-schmidt-rottluff",
+      "artistName": {
+        "ko": "카를 슈미트로틀루프",
+        "en": "Karl Schmidt-Rottluff"
+      },
+      "workId": "schmidt-rottluff-houses-at-night",
+      "workTitle": {
+        "ko": "밤의 집들",
+        "en": "Houses at Night"
+      },
+      "targetPath": "data/thumbnails/artist-mid-schmidt-rottluff/schmidt-rottluff-houses-at-night.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-schmidt-rottluff: Commons API 429"
+    },
+    {
+      "categoryId": "expressionism--blue-rider",
+      "artistId": "artist-further-franz-marc",
+      "artistName": {
+        "ko": "프란츠 마르크",
+        "en": "Franz Marc"
+      },
+      "workId": "marc-blue-horse-i",
+      "workTitle": {
+        "ko": "푸른 말 I",
+        "en": "Blue Horse I"
+      },
+      "targetPath": "data/thumbnails/artist-further-franz-marc/marc-blue-horse-i.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-franz-marc: Commons API 429"
+    },
+    {
+      "categoryId": "expressionism--blue-rider",
+      "artistId": "artist-mid-gabriele-munter",
+      "artistName": {
+        "ko": "가브리엘레 뮌터",
+        "en": "Gabriele Munter"
+      },
+      "workId": "munter-boating",
+      "workTitle": {
+        "ko": "보트 타기",
+        "en": "Boating"
+      },
+      "targetPath": "data/thumbnails/artist-mid-gabriele-munter/munter-boating.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-gabriele-munter: Commons API 429"
+    },
+    {
+      "categoryId": "expressionism--blue-rider",
+      "artistId": "artist-mid-august-macke",
+      "artistName": {
+        "ko": "아우구스트 마케",
+        "en": "August Macke"
+      },
+      "workId": "macke-lady-green-jacket",
+      "workTitle": {
+        "ko": "초록 재킷을 입은 여인",
+        "en": "Lady in a Green Jacket"
+      },
+      "targetPath": "data/thumbnails/artist-mid-august-macke/macke-lady-green-jacket.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-august-macke: Commons API 429"
+    },
+    {
+      "categoryId": "expressionism--austrian",
+      "artistId": "artist-further-kokoschka",
+      "artistName": {
+        "ko": "오스카 코코슈카",
+        "en": "Oskar Kokoschka"
+      },
+      "workId": "kokoschka-bride-of-wind",
+      "workTitle": {
+        "ko": "바람의 신부",
+        "en": "The Bride of the Wind"
+      },
+      "targetPath": "data/thumbnails/artist-further-kokoschka/kokoschka-bride-of-wind.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-kokoschka: Commons API 429"
+    },
+    {
+      "categoryId": "expressionism--austrian",
+      "artistId": "artist-mid-richard-gerstl",
+      "artistName": {
+        "ko": "리하르트 게르스틀",
+        "en": "Richard Gerstl"
+      },
+      "workId": "gerstl-laughing-self-portrait",
+      "workTitle": {
+        "ko": "웃는 자화상",
+        "en": "Laughing Self-Portrait"
+      },
+      "targetPath": "data/thumbnails/artist-mid-richard-gerstl/gerstl-laughing-self-portrait.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-richard-gerstl: Commons API 429"
+    },
+    {
+      "categoryId": "cubism--analytic",
+      "artistId": "artist-further-braque",
+      "artistName": {
+        "ko": "조르주 브라크",
+        "en": "Georges Braque"
+      },
+      "workId": "braque-violin-and-palette",
+      "workTitle": {
+        "ko": "바이올린과 팔레트",
+        "en": "Violin and Palette"
+      },
+      "targetPath": "data/thumbnails/artist-further-braque/braque-violin-and-palette.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-braque: Commons API 429"
+    },
+    {
+      "categoryId": "cubism--synthetic",
+      "artistId": "artist-art-atlas-picasso",
+      "artistName": {
+        "ko": "파블로 피카소",
+        "en": "Pablo Picasso"
+      },
+      "workId": "picasso-three-musicians",
+      "workTitle": {
+        "ko": "세 명의 음악가",
+        "en": "Three Musicians"
+      },
+      "targetPath": "data/thumbnails/artist-art-atlas-picasso/picasso-three-musicians.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-art-atlas-picasso: Commons API 429"
+    },
+    {
+      "categoryId": "russian-avant-garde--suprematism",
+      "artistId": "artist-further-lissitzky",
+      "artistName": {
+        "ko": "엘 리시츠키",
+        "en": "El Lissitzky"
+      },
+      "workId": "lissitzky-proun-19d",
+      "workTitle": {
+        "ko": "프로운 19D",
+        "en": "Proun 19D"
+      },
+      "targetPath": "data/thumbnails/artist-further-lissitzky/lissitzky-proun-19d.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-lissitzky: Commons API 429"
+    },
+    {
+      "categoryId": "russian-avant-garde--suprematism",
+      "artistId": "artist-mid-olga-rozanova",
+      "artistName": {
+        "ko": "올가 로자노바",
+        "en": "Olga Rozanova"
+      },
+      "workId": "rozanova-green-stripe",
+      "workTitle": {
+        "ko": "초록 줄무늬",
+        "en": "Green Stripe"
+      },
+      "targetPath": "data/thumbnails/artist-mid-olga-rozanova/rozanova-green-stripe.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-olga-rozanova: Commons API 429"
+    },
+    {
+      "categoryId": "russian-avant-garde--constructivism",
+      "artistId": "artist-further-tatlin",
+      "artistName": {
+        "ko": "블라디미르 타틀린",
+        "en": "Vladimir Tatlin"
+      },
+      "workId": "tatlin-monument-third-international",
+      "workTitle": {
+        "ko": "제3인터내셔널 기념탑 모형",
+        "en": "Monument to the Third International"
+      },
+      "targetPath": "data/thumbnails/artist-further-tatlin/tatlin-monument-third-international.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-tatlin: Commons API 429"
+    },
+    {
+      "categoryId": "russian-avant-garde--constructivism",
+      "artistId": "artist-mid-lyubov-popova",
+      "artistName": {
+        "ko": "류보프 포포바",
+        "en": "Lyubov Popova"
+      },
+      "workId": "popova-painterly-architectonic",
+      "workTitle": {
+        "ko": "회화적 건축",
+        "en": "Painterly Architectonic"
+      },
+      "targetPath": "data/thumbnails/artist-mid-lyubov-popova/popova-painterly-architectonic.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-lyubov-popova: Commons API 429"
+    },
+    {
+      "categoryId": "russian-avant-garde--constructivism",
+      "artistId": "artist-mid-varvara-stepanova",
+      "artistName": {
+        "ko": "바르바라 스테파노바",
+        "en": "Varvara Stepanova"
+      },
+      "workId": "stepanova-billiard-players",
+      "workTitle": {
+        "ko": "당구 선수들",
+        "en": "The Billiard Players"
+      },
+      "targetPath": "data/thumbnails/artist-mid-varvara-stepanova/stepanova-billiard-players.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-varvara-stepanova: Commons API 429"
+    },
+    {
+      "categoryId": "dada--zurich",
+      "artistId": "artist-further-arp",
+      "artistName": {
+        "ko": "장 아르프",
+        "en": "Jean Arp"
+      },
+      "workId": "arp-collage-squares-laws-chance",
+      "workTitle": {
+        "ko": "우연의 법칙에 따라 배열한 사각형 콜라주",
+        "en": "Collage with Squares Arranged According to the Laws of Chance"
+      },
+      "targetPath": "data/thumbnails/artist-further-arp/arp-collage-squares-laws-chance.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-arp: Commons API 429"
+    },
+    {
+      "categoryId": "dada--berlin",
+      "artistId": "artist-further-hausmann",
+      "artistName": {
+        "ko": "라울 하우스만",
+        "en": "Raoul Hausmann"
+      },
+      "workId": "hausmann-mechanical-head",
+      "workTitle": {
+        "ko": "기계적 머리",
+        "en": "Mechanical Head"
+      },
+      "targetPath": "data/thumbnails/artist-further-hausmann/hausmann-mechanical-head.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-hausmann: Commons API 429"
+    },
+    {
+      "categoryId": "dada--berlin",
+      "artistId": "artist-mid-george-grosz",
+      "artistName": {
+        "ko": "게오르게 그로스",
+        "en": "George Grosz"
+      },
+      "workId": "grosz-pillars-of-society",
+      "workTitle": {
+        "ko": "사회의 기둥들",
+        "en": "Pillars of Society"
+      },
+      "targetPath": "data/thumbnails/artist-mid-george-grosz/grosz-pillars-of-society.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-george-grosz: Commons API 429"
+    },
+    {
+      "categoryId": "dada--berlin",
+      "artistId": "artist-mid-john-heartfield",
+      "artistName": {
+        "ko": "존 하트필드",
+        "en": "John Heartfield"
+      },
+      "workId": "heartfield-adolf-superman",
+      "workTitle": {
+        "ko": "아돌프, 초인: 금을 삼키고 허튼소리를 내뱉다",
+        "en": "Adolf, the Superman: Swallows Gold and Spouts Junk"
+      },
+      "targetPath": "data/thumbnails/artist-mid-john-heartfield/heartfield-adolf-superman.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-john-heartfield: Commons API 429"
+    },
+    {
+      "categoryId": "dada--new-york",
+      "artistId": "artist-further-man-ray",
+      "artistName": {
+        "ko": "만 레이",
+        "en": "Man Ray"
+      },
+      "workId": "man-ray-gift",
+      "workTitle": {
+        "ko": "선물",
+        "en": "Gift"
+      },
+      "targetPath": "data/thumbnails/artist-further-man-ray/man-ray-gift.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-man-ray: Commons API 429"
+    },
+    {
+      "categoryId": "dada--new-york",
+      "artistId": "artist-mid-francis-picabia",
+      "artistName": {
+        "ko": "프란시스 피카비아",
+        "en": "Francis Picabia"
+      },
+      "workId": "picabia-here-is-stieglitz",
+      "workTitle": {
+        "ko": "여기, 여기가 스티글리츠다",
+        "en": "Here, This Is Stieglitz Here"
+      },
+      "targetPath": "data/thumbnails/artist-mid-francis-picabia/picabia-here-is-stieglitz.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-francis-picabia: Commons API 429"
+    },
+    {
+      "categoryId": "abstract-expressionism--action-painting",
+      "artistId": "artist-further-de-kooning",
+      "artistName": {
+        "ko": "윌럼 드 쿠닝",
+        "en": "Willem de Kooning"
+      },
+      "workId": "de-kooning-woman-i",
+      "workTitle": {
+        "ko": "여인 I",
+        "en": "Woman I"
+      },
+      "targetPath": "data/thumbnails/artist-further-de-kooning/de-kooning-woman-i.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-de-kooning: Commons API 429"
+    },
+    {
+      "categoryId": "abstract-expressionism--action-painting",
+      "artistId": "artist-mid-franz-kline",
+      "artistName": {
+        "ko": "프란츠 클라인",
+        "en": "Franz Kline"
+      },
+      "workId": "kline-chief",
+      "workTitle": {
+        "ko": "치프",
+        "en": "Chief"
+      },
+      "targetPath": "data/thumbnails/artist-mid-franz-kline/kline-chief.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-franz-kline: Commons API 429"
+    },
+    {
+      "categoryId": "abstract-expressionism--action-painting",
+      "artistId": "artist-mid-lee-krasner",
+      "artistName": {
+        "ko": "리 크래스너",
+        "en": "Lee Krasner"
+      },
+      "workId": "krasner-the-seasons",
+      "workTitle": {
+        "ko": "계절",
+        "en": "The Seasons"
+      },
+      "targetPath": "data/thumbnails/artist-mid-lee-krasner/krasner-the-seasons.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-lee-krasner: Commons API 429"
+    },
+    {
+      "categoryId": "abstract-expressionism--color-field",
+      "artistId": "artist-further-newman",
+      "artistName": {
+        "ko": "바넷 뉴먼",
+        "en": "Barnett Newman"
+      },
+      "workId": "newman-vir-heroicus-sublimis",
+      "workTitle": {
+        "ko": "비르 헤로이쿠스 수블리미스",
+        "en": "Vir Heroicus Sublimis"
+      },
+      "targetPath": "data/thumbnails/artist-further-newman/newman-vir-heroicus-sublimis.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-newman: Commons API 429"
+    },
+    {
+      "categoryId": "abstract-expressionism--color-field",
+      "artistId": "artist-mid-clyfford-still",
+      "artistName": {
+        "ko": "클리퍼드 스틸",
+        "en": "Clyfford Still"
+      },
+      "workId": "still-1957-d-no-1",
+      "workTitle": {
+        "ko": "1957-D No. 1",
+        "en": "1957-D No. 1"
+      },
+      "targetPath": "data/thumbnails/artist-mid-clyfford-still/still-1957-d-no-1.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-clyfford-still: Commons API 429"
+    },
+    {
+      "categoryId": "abstract-expressionism--color-field",
+      "artistId": "artist-mid-helen-frankenthaler",
+      "artistName": {
+        "ko": "헬렌 프랭컨탤러",
+        "en": "Helen Frankenthaler"
+      },
+      "workId": "frankenthaler-mountains-and-sea",
+      "workTitle": {
+        "ko": "산과 바다",
+        "en": "Mountains and Sea"
+      },
+      "targetPath": "data/thumbnails/artist-mid-helen-frankenthaler/frankenthaler-mountains-and-sea.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-helen-frankenthaler: Commons API 429"
+    },
+    {
+      "categoryId": "pop-art--british",
+      "artistId": "artist-further-paolozzi",
+      "artistName": {
+        "ko": "에두아르도 파올로치",
+        "en": "Eduardo Paolozzi"
+      },
+      "workId": "paolozzi-rich-man-plaything",
+      "workTitle": {
+        "ko": "나는 부자의 노리개였다",
+        "en": "I Was a Rich Man’s Plaything"
+      },
+      "targetPath": "data/thumbnails/artist-further-paolozzi/paolozzi-rich-man-plaything.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-paolozzi: Commons API 429"
+    },
+    {
+      "categoryId": "pop-art--british",
+      "artistId": "artist-mid-peter-blake",
+      "artistName": {
+        "ko": "피터 블레이크",
+        "en": "Peter Blake"
+      },
+      "workId": "blake-on-the-balcony",
+      "workTitle": {
+        "ko": "발코니에서",
+        "en": "On the Balcony"
+      },
+      "targetPath": "data/thumbnails/artist-mid-peter-blake/blake-on-the-balcony.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-peter-blake: Commons API 429"
+    },
+    {
+      "categoryId": "pop-art--british",
+      "artistId": "artist-mid-david-hockney",
+      "artistName": {
+        "ko": "데이비드 호크니",
+        "en": "David Hockney"
+      },
+      "workId": "hockney-a-bigger-splash",
+      "workTitle": {
+        "ko": "더 큰 첨벙",
+        "en": "A Bigger Splash"
+      },
+      "targetPath": "data/thumbnails/artist-mid-david-hockney/hockney-a-bigger-splash.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-david-hockney: Commons API 429"
+    },
+    {
+      "categoryId": "pop-art--american",
+      "artistId": "artist-further-lichtenstein",
+      "artistName": {
+        "ko": "로이 리히텐슈타인",
+        "en": "Roy Lichtenstein"
+      },
+      "workId": "lichtenstein-whaam",
+      "workTitle": {
+        "ko": "꽝!",
+        "en": "Whaam!"
+      },
+      "targetPath": "data/thumbnails/artist-further-lichtenstein/lichtenstein-whaam.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-lichtenstein: Commons API 429"
+    },
+    {
+      "categoryId": "pop-art--american",
+      "artistId": "artist-mid-claes-oldenburg",
+      "artistName": {
+        "ko": "클라스 올덴버그",
+        "en": "Claes Oldenburg"
+      },
+      "workId": "oldenburg-floor-burger",
+      "workTitle": {
+        "ko": "바닥 햄버거",
+        "en": "Floor Burger"
+      },
+      "targetPath": "data/thumbnails/artist-mid-claes-oldenburg/oldenburg-floor-burger.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-claes-oldenburg: Commons API 429"
+    },
+    {
+      "categoryId": "pop-art--american",
+      "artistId": "artist-mid-james-rosenquist",
+      "artistName": {
+        "ko": "제임스 로젠퀴스트",
+        "en": "James Rosenquist"
+      },
+      "workId": "rosenquist-f-111",
+      "workTitle": {
+        "ko": "F-111",
+        "en": "F-111"
+      },
+      "targetPath": "data/thumbnails/artist-mid-james-rosenquist/rosenquist-f-111.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-james-rosenquist: Commons API 429"
+    },
+    {
+      "categoryId": "postmodernism--appropriation-pictures",
+      "artistId": "artist-further-levine",
+      "artistName": {
+        "ko": "셰리 레빈",
+        "en": "Sherrie Levine"
+      },
+      "workId": "levine-after-walker-evans",
+      "workTitle": {
+        "ko": "워커 에번스 이후",
+        "en": "After Walker Evans"
+      },
+      "targetPath": "data/thumbnails/artist-further-levine/levine-after-walker-evans.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-levine: Commons API 429"
+    },
+    {
+      "categoryId": "postmodernism--appropriation-pictures",
+      "artistId": "artist-mid-barbara-kruger",
+      "artistName": {
+        "ko": "바버라 크루거",
+        "en": "Barbara Kruger"
+      },
+      "workId": "kruger-your-body-battleground",
+      "workTitle": {
+        "ko": "당신의 몸은 전쟁터다",
+        "en": "Untitled (Your Body Is a Battleground)"
+      },
+      "targetPath": "data/thumbnails/artist-mid-barbara-kruger/kruger-your-body-battleground.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-barbara-kruger: Commons API 429"
+    },
+    {
+      "categoryId": "postmodernism--neo-expressionism",
+      "artistId": "artist-further-kiefer",
+      "artistName": {
+        "ko": "안젤름 키퍼",
+        "en": "Anselm Kiefer"
+      },
+      "workId": "kiefer-margarethe",
+      "workTitle": {
+        "ko": "마르가레테",
+        "en": "Margarethe"
+      },
+      "targetPath": "data/thumbnails/artist-further-kiefer/kiefer-margarethe.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-kiefer: Commons API 429"
+    },
+    {
+      "categoryId": "postmodernism--neo-expressionism",
+      "artistId": "artist-mid-georg-baselitz",
+      "artistName": {
+        "ko": "게오르크 바젤리츠",
+        "en": "Georg Baselitz"
+      },
+      "workId": "baselitz-the-wood-on-its-head",
+      "workTitle": {
+        "ko": "거꾸로 선 숲",
+        "en": "The Wood on Its Head"
+      },
+      "targetPath": "data/thumbnails/artist-mid-georg-baselitz/baselitz-the-wood-on-its-head.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-georg-baselitz: Commons API 429"
+    },
+    {
+      "categoryId": "rococo--venetian",
+      "artistId": "artist-mid-francesco-guardi",
+      "artistName": {
+        "ko": "프란체스코 과르디",
+        "en": "Francesco Guardi"
+      },
+      "workId": "guardi-doges-palace",
+      "workTitle": {
+        "ko": "두칼레 궁전과 리바 델리 스키아보니",
+        "en": "The Doge Palace and the Riva degli Schiavoni"
+      },
+      "targetPath": "data/thumbnails/artist-mid-francesco-guardi/guardi-doges-palace.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-francesco-guardi: Commons API 429"
+    },
+    {
+      "categoryId": "romanticism--german",
+      "artistId": "artist-further-runge",
+      "artistName": {
+        "ko": "필리프 오토 룽게",
+        "en": "Philipp Otto Runge"
+      },
+      "workId": "runge-morning",
+      "workTitle": {
+        "ko": "아침",
+        "en": "Morning"
+      },
+      "targetPath": "data/thumbnails/artist-further-runge/runge-morning.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-runge: Commons API 429"
+    },
+    {
+      "categoryId": "romanticism--british",
+      "artistId": "artist-mid-william-blake",
+      "artistName": {
+        "ko": "윌리엄 블레이크",
+        "en": "William Blake"
+      },
+      "workId": "blake-ancient-of-days",
+      "workTitle": {
+        "ko": "태고의 존재",
+        "en": "The Ancient of Days"
+      },
+      "targetPath": "data/thumbnails/artist-mid-william-blake/blake-ancient-of-days.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-william-blake: Commons API 429"
+    },
+    {
+      "categoryId": "romanticism--french",
+      "artistId": "artist-romantic-gericault",
+      "artistName": {
+        "ko": "테오도르 제리코",
+        "en": "Théodore Géricault"
+      },
+      "workId": "gericault-raft-of-medusa",
+      "workTitle": {
+        "ko": "메두사호의 뗏목",
+        "en": "The Raft of the Medusa"
+      },
+      "targetPath": "data/thumbnails/artist-romantic-gericault/gericault-raft-of-medusa.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-romantic-gericault: Commons API 429"
+    },
+    {
+      "categoryId": "romanticism--spanish",
+      "artistId": "artist-further-eugenio-lucas",
+      "artistName": {
+        "ko": "에우헤니오 루카스 벨라스케스",
+        "en": "Eugenio Lucas Velazquez"
+      },
+      "workId": "lucas-condemned-inquisition",
+      "workTitle": {
+        "ko": "종교재판에서 유죄판결을 받은 사람들",
+        "en": "The Condemned by the Inquisition"
+      },
+      "targetPath": "data/thumbnails/artist-further-eugenio-lucas/lucas-condemned-inquisition.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-eugenio-lucas: Commons API 429"
+    },
+    {
+      "categoryId": "academicism--core",
+      "artistId": "artist-further-cabanel",
+      "artistName": {
+        "ko": "알렉상드르 카바넬",
+        "en": "Alexandre Cabanel"
+      },
+      "workId": "cabanel-birth-of-venus",
+      "workTitle": {
+        "ko": "비너스의 탄생",
+        "en": "The Birth of Venus"
+      },
+      "targetPath": "data/thumbnails/artist-further-cabanel/cabanel-birth-of-venus.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-cabanel: Commons API 429"
+    },
+    {
+      "categoryId": "academicism--core",
+      "artistId": "artist-mid-jean-leon-gerome",
+      "artistName": {
+        "ko": "장레옹 제롬",
+        "en": "Jean-Leon Gerome"
+      },
+      "workId": "gerome-pollice-verso",
+      "workTitle": {
+        "ko": "폴리체 베르소",
+        "en": "Pollice Verso"
+      },
+      "targetPath": "data/thumbnails/artist-mid-jean-leon-gerome/gerome-pollice-verso.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-jean-leon-gerome: Commons API 429"
+    },
+    {
+      "categoryId": "impressionism--french",
+      "artistId": "artist-further-renoir",
+      "artistName": {
+        "ko": "피에르오귀스트 르누아르",
+        "en": "Pierre-Auguste Renoir"
+      },
+      "workId": "renoir-moulin-galette",
+      "workTitle": {
+        "ko": "물랭 드 라 갈레트의 무도회",
+        "en": "Dance at Le Moulin de la Galette"
+      },
+      "targetPath": "data/thumbnails/artist-further-renoir/renoir-moulin-galette.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-renoir: Commons API 429"
+    },
+    {
+      "categoryId": "impressionism--french",
+      "artistId": "artist-mid-camille-pissarro",
+      "artistName": {
+        "ko": "카미유 피사로",
+        "en": "Camille Pissarro"
+      },
+      "workId": "pissarro-boulevard-montmartre-night",
+      "workTitle": {
+        "ko": "밤의 몽마르트르 대로",
+        "en": "The Boulevard Montmartre at Night"
+      },
+      "targetPath": "data/thumbnails/artist-mid-camille-pissarro/pissarro-boulevard-montmartre-night.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-camille-pissarro: Commons API 429"
+    },
+    {
+      "categoryId": "impressionism--french",
+      "artistId": "artist-mid-edgar-degas",
+      "artistName": {
+        "ko": "에드가 드가",
+        "en": "Edgar Degas"
+      },
+      "workId": "degas-dance-class",
+      "workTitle": {
+        "ko": "무용 수업",
+        "en": "The Dance Class"
+      },
+      "targetPath": "data/thumbnails/artist-mid-edgar-degas/degas-dance-class.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-edgar-degas: Commons API 429"
+    },
+    {
+      "categoryId": "impressionism--french",
+      "artistId": "artist-mid-berthe-morisot",
+      "artistName": {
+        "ko": "베르트 모리조",
+        "en": "Berthe Morisot"
+      },
+      "workId": "morisot-cradle",
+      "workTitle": {
+        "ko": "요람",
+        "en": "The Cradle"
+      },
+      "targetPath": "data/thumbnails/artist-mid-berthe-morisot/morisot-cradle.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-berthe-morisot: Commons API 429"
+    },
+    {
+      "categoryId": "impressionism--american",
+      "artistId": "artist-further-cassatt",
+      "artistName": {
+        "ko": "메리 카사트",
+        "en": "Mary Cassatt"
+      },
+      "workId": "cassatt-child-bath",
+      "workTitle": {
+        "ko": "아이의 목욕",
+        "en": "The Child’s Bath"
+      },
+      "targetPath": "data/thumbnails/artist-further-cassatt/cassatt-child-bath.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-cassatt: Commons API 429"
+    },
+    {
+      "categoryId": "impressionism--american",
+      "artistId": "artist-mid-william-merritt-chase",
+      "artistName": {
+        "ko": "윌리엄 메릿 체이스",
+        "en": "William Merritt Chase"
+      },
+      "workId": "chase-idle-hours",
+      "workTitle": {
+        "ko": "한가한 시간",
+        "en": "Idle Hours"
+      },
+      "targetPath": "data/thumbnails/artist-mid-william-merritt-chase/chase-idle-hours.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-william-merritt-chase: Commons API 429"
+    },
+    {
+      "categoryId": "symbolism--french-belgian",
+      "artistId": "artist-further-redon",
+      "artistName": {
+        "ko": "오딜롱 르동",
+        "en": "Odilon Redon"
+      },
+      "workId": "redon-cyclops",
+      "workTitle": {
+        "ko": "키클롭스",
+        "en": "The Cyclops"
+      },
+      "targetPath": "data/thumbnails/artist-further-redon/redon-cyclops.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-redon: Commons API 429"
+    },
+    {
+      "categoryId": "symbolism--french-belgian",
+      "artistId": "artist-mid-fernand-khnopff",
+      "artistName": {
+        "ko": "페르낭 크노프",
+        "en": "Fernand Khnopff"
+      },
+      "workId": "khnopff-caresses",
+      "workTitle": {
+        "ko": "애무",
+        "en": "The Caresses"
+      },
+      "targetPath": "data/thumbnails/artist-mid-fernand-khnopff/khnopff-caresses.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-fernand-khnopff: Commons API 429"
+    },
+    {
+      "categoryId": "symbolism--central-northern-european",
+      "artistId": "artist-art-atlas-klimt",
+      "artistName": {
+        "ko": "구스타프 클림트",
+        "en": "Gustav Klimt"
+      },
+      "workId": "klimt-judith-i",
+      "workTitle": {
+        "ko": "유디트 I",
+        "en": "Judith I"
+      },
+      "targetPath": "data/thumbnails/artist-art-atlas-klimt/klimt-judith-i.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-art-atlas-klimt: Commons API 429"
+    },
+    {
+      "categoryId": "symbolism--central-northern-european",
+      "artistId": "artist-mid-arnold-bocklin",
+      "artistName": {
+        "ko": "아르놀트 뵈클린",
+        "en": "Arnold Bocklin"
+      },
+      "workId": "bocklin-isle-of-the-dead",
+      "workTitle": {
+        "ko": "죽음의 섬",
+        "en": "Isle of the Dead"
+      },
+      "targetPath": "data/thumbnails/artist-mid-arnold-bocklin/bocklin-isle-of-the-dead.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-arnold-bocklin: Commons API 429"
+    },
+    {
+      "categoryId": "art-nouveau--french-belgian",
+      "artistId": "artist-further-guimard",
+      "artistName": {
+        "ko": "엑토르 기마르",
+        "en": "Hector Guimard"
+      },
+      "workId": "guimard-paris-metro-entrance",
+      "workTitle": {
+        "ko": "파리 메트로 입구",
+        "en": "Paris Metro Entrance"
+      },
+      "targetPath": "data/thumbnails/artist-further-guimard/guimard-paris-metro-entrance.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-guimard: Commons API 429"
+    },
+    {
+      "categoryId": "art-nouveau--french-belgian",
+      "artistId": "artist-mid-victor-horta",
+      "artistName": {
+        "ko": "빅토르 오르타",
+        "en": "Victor Horta"
+      },
+      "workId": "horta-hotel-tassel",
+      "workTitle": {
+        "ko": "호텔 타셀",
+        "en": "Hotel Tassel"
+      },
+      "targetPath": "data/thumbnails/artist-mid-victor-horta/horta-hotel-tassel.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-victor-horta: Commons API 429"
+    },
+    {
+      "categoryId": "art-nouveau--vienna-secession",
+      "artistId": "artist-further-koloman-moser",
+      "artistName": {
+        "ko": "콜로만 모저",
+        "en": "Koloman Moser"
+      },
+      "workId": "moser-secession-poster-13",
+      "workTitle": {
+        "ko": "빈 분리파 제13회 전시 포스터",
+        "en": "Poster for the 13th Vienna Secession Exhibition"
+      },
+      "targetPath": "data/thumbnails/artist-further-koloman-moser/moser-secession-poster-13.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-koloman-moser: Commons API 429"
+    },
+    {
+      "categoryId": "art-nouveau--vienna-secession",
+      "artistId": "artist-mid-josef-hoffmann",
+      "artistName": {
+        "ko": "요제프 호프만",
+        "en": "Josef Hoffmann"
+      },
+      "workId": "hoffmann-stoclet-palace",
+      "workTitle": {
+        "ko": "스토클레 저택",
+        "en": "Stoclet Palace"
+      },
+      "targetPath": "data/thumbnails/artist-mid-josef-hoffmann/hoffmann-stoclet-palace.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-josef-hoffmann: Commons API 429"
+    },
+    {
+      "categoryId": "fauvism--matisse-chatou",
+      "artistId": "artist-further-derain",
+      "artistName": {
+        "ko": "앙드레 드랭",
+        "en": "Andre Derain"
+      },
+      "workId": "derain-charing-cross-bridge",
+      "workTitle": {
+        "ko": "채링크로스 다리",
+        "en": "Charing Cross Bridge"
+      },
+      "targetPath": "data/thumbnails/artist-further-derain/derain-charing-cross-bridge.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-derain: Commons API 429"
+    },
+    {
+      "categoryId": "fauvism--matisse-chatou",
+      "artistId": "artist-mid-maurice-de-vlaminck",
+      "artistName": {
+        "ko": "모리스 드 블라맹크",
+        "en": "Maurice de Vlaminck"
+      },
+      "workId": "vlaminck-chatou-bridge",
+      "workTitle": {
+        "ko": "샤투의 다리",
+        "en": "The Chatou Bridge"
+      },
+      "targetPath": "data/thumbnails/artist-mid-maurice-de-vlaminck/vlaminck-chatou-bridge.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-maurice-de-vlaminck: Commons API 429"
+    },
+    {
+      "categoryId": "fauvism--le-havre",
+      "artistId": "artist-further-friesz",
+      "artistName": {
+        "ko": "오톤 프리에스",
+        "en": "Othon Friesz"
+      },
+      "workId": "friesz-la-ciotat",
+      "workTitle": {
+        "ko": "라 시오타",
+        "en": "La Ciotat"
+      },
+      "targetPath": "data/thumbnails/artist-further-friesz/friesz-la-ciotat.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-friesz: Commons API 429"
+    },
+    {
+      "categoryId": "futurism--italian",
+      "artistId": "artist-further-balla",
+      "artistName": {
+        "ko": "자코모 발라",
+        "en": "Giacomo Balla"
+      },
+      "workId": "balla-dynamism-dog-leash",
+      "workTitle": {
+        "ko": "목줄에 묶인 개의 역동성",
+        "en": "Dynamism of a Dog on a Leash"
+      },
+      "targetPath": "data/thumbnails/artist-further-balla/balla-dynamism-dog-leash.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-balla: Commons API 429"
+    },
+    {
+      "categoryId": "futurism--italian",
+      "artistId": "artist-mid-carlo-carra",
+      "artistName": {
+        "ko": "카를로 카라",
+        "en": "Carlo Carra"
+      },
+      "workId": "carra-funeral-anarchist-galli",
+      "workTitle": {
+        "ko": "무정부주의자 갈리의 장례식",
+        "en": "The Funeral of the Anarchist Galli"
+      },
+      "targetPath": "data/thumbnails/artist-mid-carlo-carra/carra-funeral-anarchist-galli.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-carlo-carra: Commons API 429"
+    },
+    {
+      "categoryId": "futurism--italian",
+      "artistId": "artist-mid-gino-severini",
+      "artistName": {
+        "ko": "지노 세베리니",
+        "en": "Gino Severini"
+      },
+      "workId": "severini-dynamic-hieroglyph-bal-tabarin",
+      "workTitle": {
+        "ko": "발 타바랭의 역동적 상형문자",
+        "en": "Dynamic Hieroglyph of the Bal Tabarin"
+      },
+      "targetPath": "data/thumbnails/artist-mid-gino-severini/severini-dynamic-hieroglyph-bal-tabarin.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-gino-severini: Commons API 429"
+    },
+    {
+      "categoryId": "futurism--russian-cubo",
+      "artistId": "artist-art-atlas-malevich",
+      "artistName": {
+        "ko": "카지미르 말레비치",
+        "en": "Kazimir Malevich"
+      },
+      "workId": "malevich-knife-grinder",
+      "workTitle": {
+        "ko": "칼 가는 사람",
+        "en": "The Knife Grinder"
+      },
+      "targetPath": "data/thumbnails/artist-art-atlas-malevich/malevich-knife-grinder.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-art-atlas-malevich: Commons API 429"
+    },
+    {
+      "categoryId": "futurism--russian-cubo",
+      "artistId": "artist-mid-mikhail-larionov",
+      "artistName": {
+        "ko": "미하일 라리오노프",
+        "en": "Mikhail Larionov"
+      },
+      "workId": "larionov-rayonist-sausages-mackerel",
+      "workTitle": {
+        "ko": "소시지와 고등어의 광선주의 정물",
+        "en": "Rayonist Sausages and Mackerel"
+      },
+      "targetPath": "data/thumbnails/artist-mid-mikhail-larionov/larionov-rayonist-sausages-mackerel.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-mikhail-larionov: Commons API 429"
+    },
+    {
+      "categoryId": "de-stijl--core",
+      "artistId": "artist-further-van-doesburg",
+      "artistName": {
+        "ko": "테오 판 두스뷔르흐",
+        "en": "Theo van Doesburg"
+      },
+      "workId": "van-doesburg-counter-composition-v",
+      "workTitle": {
+        "ko": "반구성 V",
+        "en": "Counter-Composition V"
+      },
+      "targetPath": "data/thumbnails/artist-further-van-doesburg/van-doesburg-counter-composition-v.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-van-doesburg: Commons API 429"
+    },
+    {
+      "categoryId": "bauhaus--core",
+      "artistId": "artist-further-klee",
+      "artistName": {
+        "ko": "파울 클레",
+        "en": "Paul Klee"
+      },
+      "workId": "klee-red-balloon",
+      "workTitle": {
+        "ko": "붉은 풍선",
+        "en": "Red Balloon"
+      },
+      "targetPath": "data/thumbnails/artist-further-klee/klee-red-balloon.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-klee: Commons API 429"
+    },
+    {
+      "categoryId": "bauhaus--core",
+      "artistId": "artist-art-atlas-kandinsky",
+      "artistName": {
+        "ko": "바실리 칸딘스키",
+        "en": "Wassily Kandinsky"
+      },
+      "workId": "kandinsky-composition-vii",
+      "workTitle": {
+        "ko": "구성 VII",
+        "en": "Composition VII"
+      },
+      "targetPath": "data/thumbnails/artist-art-atlas-kandinsky/kandinsky-composition-vii.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-art-atlas-kandinsky: Commons API 429"
+    },
+    {
+      "categoryId": "bauhaus--core",
+      "artistId": "artist-mid-laszlo-moholy-nagy",
+      "artistName": {
+        "ko": "라슬로 모호이너지",
+        "en": "Laszlo Moholy-Nagy"
+      },
+      "workId": "moholy-nagy-light-space-modulator",
+      "workTitle": {
+        "ko": "빛-공간 변조기",
+        "en": "Light-Space Modulator"
+      },
+      "targetPath": "data/thumbnails/artist-mid-laszlo-moholy-nagy/moholy-nagy-light-space-modulator.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-laszlo-moholy-nagy: Commons API 429"
+    },
+    {
+      "categoryId": "bauhaus--core",
+      "artistId": "artist-mid-anni-albers",
+      "artistName": {
+        "ko": "아니 알버스",
+        "en": "Anni Albers"
+      },
+      "workId": "albers-wall-hanging",
+      "workTitle": {
+        "ko": "벽걸이",
+        "en": "Wall Hanging"
+      },
+      "targetPath": "data/thumbnails/artist-mid-anni-albers/albers-wall-hanging.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-anni-albers: Commons API 429"
+    },
+    {
+      "categoryId": "surrealism--automatist",
+      "artistId": "artist-further-masson",
+      "artistName": {
+        "ko": "앙드레 마송",
+        "en": "Andre Masson"
+      },
+      "workId": "masson-automatic-drawing",
+      "workTitle": {
+        "ko": "자동기술 드로잉",
+        "en": "Automatic Drawing"
+      },
+      "targetPath": "data/thumbnails/artist-further-masson/masson-automatic-drawing.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-masson: Commons API 429"
+    },
+    {
+      "categoryId": "surrealism--automatist",
+      "artistId": "artist-mid-max-ernst",
+      "artistName": {
+        "ko": "막스 에른스트",
+        "en": "Max Ernst"
+      },
+      "workId": "ernst-two-children-threatened-nightingale",
+      "workTitle": {
+        "ko": "나이팅게일에게 위협받는 두 아이",
+        "en": "Two Children Are Threatened by a Nightingale"
+      },
+      "targetPath": "data/thumbnails/artist-mid-max-ernst/ernst-two-children-threatened-nightingale.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-max-ernst: Commons API 429"
+    },
+    {
+      "categoryId": "surrealism--automatist",
+      "artistId": "artist-mid-roberto-matta",
+      "artistName": {
+        "ko": "로베르토 마타",
+        "en": "Roberto Matta"
+      },
+      "workId": "matta-inscape-psychological-morphology",
+      "workTitle": {
+        "ko": "심리적 형태학",
+        "en": "Inscape: Psychological Morphology"
+      },
+      "targetPath": "data/thumbnails/artist-mid-roberto-matta/matta-inscape-psychological-morphology.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-roberto-matta: Commons API 429"
+    },
+    {
+      "categoryId": "surrealism--illusionistic",
+      "artistId": "artist-further-magritte",
+      "artistName": {
+        "ko": "르네 마그리트",
+        "en": "Rene Magritte"
+      },
+      "workId": "magritte-treachery-images",
+      "workTitle": {
+        "ko": "이미지의 배반",
+        "en": "The Treachery of Images"
+      },
+      "targetPath": "data/thumbnails/artist-further-magritte/magritte-treachery-images.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-magritte: Commons API 429"
+    },
+    {
+      "categoryId": "surrealism--illusionistic",
+      "artistId": "artist-mid-yves-tanguy",
+      "artistName": {
+        "ko": "이브 탕기",
+        "en": "Yves Tanguy"
+      },
+      "workId": "tanguy-indefinite-divisibility",
+      "workTitle": {
+        "ko": "무한한 분할 가능성",
+        "en": "Indefinite Divisibility"
+      },
+      "targetPath": "data/thumbnails/artist-mid-yves-tanguy/tanguy-indefinite-divisibility.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-yves-tanguy: Commons API 429"
+    },
+    {
+      "categoryId": "surrealism--illusionistic",
+      "artistId": "artist-mid-leonora-carrington",
+      "artistName": {
+        "ko": "레오노라 캐링턴",
+        "en": "Leonora Carrington"
+      },
+      "workId": "carrington-self-portrait-inn-dawn-horse",
+      "workTitle": {
+        "ko": "자화상: 여명의 말 여관",
+        "en": "Self-Portrait (Inn of the Dawn Horse)"
+      },
+      "targetPath": "data/thumbnails/artist-mid-leonora-carrington/carrington-self-portrait-inn-dawn-horse.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-leonora-carrington: Commons API 429"
+    },
+    {
+      "categoryId": "mexican-muralism--core",
+      "artistId": "artist-further-orozco",
+      "artistName": {
+        "ko": "호세 클레멘테 오로스코",
+        "en": "Jose Clemente Orozco"
+      },
+      "workId": "orozco-epic-american-civilization",
+      "workTitle": {
+        "ko": "아메리카 문명의 서사",
+        "en": "The Epic of American Civilization"
+      },
+      "targetPath": "data/thumbnails/artist-further-orozco/orozco-epic-american-civilization.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-orozco: Commons API 429"
+    },
+    {
+      "categoryId": "mexican-muralism--core",
+      "artistId": "artist-mid-siqueiros",
+      "artistName": {
+        "ko": "다비드 알파로 시케이로스",
+        "en": "David Alfaro Siqueiros"
+      },
+      "workId": "siqueiros-portrait-bourgeoisie",
+      "workTitle": {
+        "ko": "부르주아지의 초상",
+        "en": "Portrait of the Bourgeoisie"
+      },
+      "targetPath": "data/thumbnails/artist-mid-siqueiros/siqueiros-portrait-bourgeoisie.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-siqueiros: Commons API 429"
+    },
+    {
+      "categoryId": "social-realism--core",
+      "artistId": "artist-further-reginald-marsh",
+      "artistName": {
+        "ko": "레지널드 마시",
+        "en": "Reginald Marsh"
+      },
+      "workId": "marsh-twenty-cent-movie",
+      "workTitle": {
+        "ko": "20센트 영화",
+        "en": "Twenty Cent Movie"
+      },
+      "targetPath": "data/thumbnails/artist-further-reginald-marsh/marsh-twenty-cent-movie.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-reginald-marsh: Commons API 429"
+    },
+    {
+      "categoryId": "social-realism--core",
+      "artistId": "artist-mid-jacob-lawrence",
+      "artistName": {
+        "ko": "제이컵 로런스",
+        "en": "Jacob Lawrence"
+      },
+      "workId": "lawrence-migration-series-panel-1",
+      "workTitle": {
+        "ko": "이주 연작 1번",
+        "en": "The Migration Series, Panel 1"
+      },
+      "targetPath": "data/thumbnails/artist-mid-jacob-lawrence/lawrence-migration-series-panel-1.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-jacob-lawrence: Commons API 429"
+    },
+    {
+      "categoryId": "socialist-realism--core",
+      "artistId": "artist-further-mukhina",
+      "artistName": {
+        "ko": "베라 무히나",
+        "en": "Vera Mukhina"
+      },
+      "workId": "mukhina-worker-kolkhoz-woman",
+      "workTitle": {
+        "ko": "노동자와 집단농장 여성",
+        "en": "Worker and Kolkhoz Woman"
+      },
+      "targetPath": "data/thumbnails/artist-further-mukhina/mukhina-worker-kolkhoz-woman.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-mukhina: Commons API 429"
+    },
+    {
+      "categoryId": "socialist-realism--core",
+      "artistId": "artist-mid-isaak-brodsky",
+      "artistName": {
+        "ko": "이사크 브로츠키",
+        "en": "Isaak Brodsky"
+      },
+      "workId": "brodsky-lenin-smolny",
+      "workTitle": {
+        "ko": "스몰니의 레닌",
+        "en": "Lenin in Smolny"
+      },
+      "targetPath": "data/thumbnails/artist-mid-isaak-brodsky/brodsky-lenin-smolny.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-isaak-brodsky: Commons API 429"
+    },
+    {
+      "categoryId": "art-informel--core",
+      "artistId": "artist-further-wols",
+      "artistName": {
+        "ko": "볼스",
+        "en": "Wols"
+      },
+      "workId": "wols-its-all-over",
+      "workTitle": {
+        "ko": "모든 것은 끝났다",
+        "en": "It’s All Over"
+      },
+      "targetPath": "data/thumbnails/artist-further-wols/wols-its-all-over.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-wols: Commons API 429"
+    },
+    {
+      "categoryId": "art-informel--core",
+      "artistId": "artist-mid-hans-hartung",
+      "artistName": {
+        "ko": "한스 아르퉁",
+        "en": "Hans Hartung"
+      },
+      "workId": "hartung-t1947-20",
+      "workTitle": {
+        "ko": "T1947-20",
+        "en": "T1947-20"
+      },
+      "targetPath": "data/thumbnails/artist-mid-hans-hartung/hartung-t1947-20.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-hans-hartung: Commons API 429"
+    },
+    {
+      "categoryId": "art-informel--core",
+      "artistId": "artist-mid-pierre-soulages",
+      "artistName": {
+        "ko": "피에르 술라주",
+        "en": "Pierre Soulages"
+      },
+      "workId": "soulages-painting-195-130-1953",
+      "workTitle": {
+        "ko": "회화 195 x 130 cm, 1953",
+        "en": "Painting 195 x 130 cm, 1953"
+      },
+      "targetPath": "data/thumbnails/artist-mid-pierre-soulages/soulages-painting-195-130-1953.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-pierre-soulages: Commons API 429"
+    },
+    {
+      "categoryId": "nouveau-realisme--core",
+      "artistId": "artist-further-arman",
+      "artistName": {
+        "ko": "아르망",
+        "en": "Arman"
+      },
+      "workId": "arman-poubelle",
+      "workTitle": {
+        "ko": "쓰레기통",
+        "en": "Poubelle"
+      },
+      "targetPath": "data/thumbnails/artist-further-arman/arman-poubelle.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-arman: Commons API 429"
+    },
+    {
+      "categoryId": "nouveau-realisme--core",
+      "artistId": "artist-mid-jean-tinguely",
+      "artistName": {
+        "ko": "장 팅겔리",
+        "en": "Jean Tinguely"
+      },
+      "workId": "tinguely-homage-new-york",
+      "workTitle": {
+        "ko": "뉴욕에 바치는 경의",
+        "en": "Homage to New York"
+      },
+      "targetPath": "data/thumbnails/artist-mid-jean-tinguely/tinguely-homage-new-york.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-jean-tinguely: Commons API 429"
+    },
+    {
+      "categoryId": "nouveau-realisme--core",
+      "artistId": "artist-mid-niki-de-saint-phalle",
+      "artistName": {
+        "ko": "니키 드 생팔",
+        "en": "Niki de Saint Phalle"
+      },
+      "workId": "saint-phalle-shooting-picture",
+      "workTitle": {
+        "ko": "사격 회화",
+        "en": "Shooting Picture"
+      },
+      "targetPath": "data/thumbnails/artist-mid-niki-de-saint-phalle/saint-phalle-shooting-picture.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-niki-de-saint-phalle: Commons API 429"
+    },
+    {
+      "categoryId": "minimalism--core",
+      "artistId": "artist-further-flavin",
+      "artistName": {
+        "ko": "댄 플래빈",
+        "en": "Dan Flavin"
+      },
+      "workId": "flavin-monument-tatlin",
+      "workTitle": {
+        "ko": "V. 타틀린을 위한 기념비",
+        "en": "Monument for V. Tatlin"
+      },
+      "targetPath": "data/thumbnails/artist-further-flavin/flavin-monument-tatlin.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-flavin: Commons API 429"
+    },
+    {
+      "categoryId": "minimalism--core",
+      "artistId": "artist-mid-carl-andre",
+      "artistName": {
+        "ko": "칼 안드레",
+        "en": "Carl Andre"
+      },
+      "workId": "andre-equivalent-viii",
+      "workTitle": {
+        "ko": "등가물 VIII",
+        "en": "Equivalent VIII"
+      },
+      "targetPath": "data/thumbnails/artist-mid-carl-andre/andre-equivalent-viii.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-carl-andre: Commons API 429"
+    },
+    {
+      "categoryId": "minimalism--core",
+      "artistId": "artist-mid-robert-morris",
+      "artistName": {
+        "ko": "로버트 모리스",
+        "en": "Robert Morris"
+      },
+      "workId": "morris-untitled-l-beams",
+      "workTitle": {
+        "ko": "무제(L자 빔)",
+        "en": "Untitled (L-Beams)"
+      },
+      "targetPath": "data/thumbnails/artist-mid-robert-morris/morris-untitled-l-beams.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-robert-morris: Commons API 429"
+    },
+    {
+      "categoryId": "minimalism--core",
+      "artistId": "artist-mid-agnes-martin",
+      "artistName": {
+        "ko": "애그니스 마틴",
+        "en": "Agnes Martin"
+      },
+      "workId": "martin-the-tree",
+      "workTitle": {
+        "ko": "나무",
+        "en": "The Tree"
+      },
+      "targetPath": "data/thumbnails/artist-mid-agnes-martin/martin-the-tree.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-agnes-martin: Commons API 429"
+    },
+    {
+      "categoryId": "conceptual-art--idea-language",
+      "artistId": "artist-further-weiner",
+      "artistName": {
+        "ko": "로런스 와이너",
+        "en": "Lawrence Weiner"
+      },
+      "workId": "weiner-removal-36-square",
+      "workTitle": {
+        "ko": "36×36인치 벽 제거",
+        "en": "A 36 x 36 Removal to the Lathing or Support Wall of Plaster or Wallboard from a Wall"
+      },
+      "targetPath": "data/thumbnails/artist-further-weiner/weiner-removal-36-square.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-weiner: Commons API 429"
+    },
+    {
+      "categoryId": "conceptual-art--idea-language",
+      "artistId": "artist-mid-sol-lewitt",
+      "artistName": {
+        "ko": "솔 르윗",
+        "en": "Sol LeWitt"
+      },
+      "workId": "lewitt-wall-drawing-51",
+      "workTitle": {
+        "ko": "벽 드로잉 51",
+        "en": "Wall Drawing 51"
+      },
+      "targetPath": "data/thumbnails/artist-mid-sol-lewitt/lewitt-wall-drawing-51.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-sol-lewitt: Commons API 429"
+    },
+    {
+      "categoryId": "conceptual-art--idea-language",
+      "artistId": "artist-mid-on-kawara",
+      "artistName": {
+        "ko": "온 가와라",
+        "en": "On Kawara"
+      },
+      "workId": "kawara-today-series",
+      "workTitle": {
+        "ko": "오늘 연작",
+        "en": "Today Series"
+      },
+      "targetPath": "data/thumbnails/artist-mid-on-kawara/kawara-today-series.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-on-kawara: Commons API 429"
+    },
+    {
+      "categoryId": "conceptual-art--fluxus",
+      "artistId": "artist-further-yoko-ono",
+      "artistName": {
+        "ko": "오노 요코",
+        "en": "Yoko Ono"
+      },
+      "workId": "ono-cut-piece",
+      "workTitle": {
+        "ko": "컷 피스",
+        "en": "Cut Piece"
+      },
+      "targetPath": "data/thumbnails/artist-further-yoko-ono/ono-cut-piece.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-yoko-ono: Commons API 429"
+    },
+    {
+      "categoryId": "conceptual-art--fluxus",
+      "artistId": "artist-mid-george-maciunas",
+      "artistName": {
+        "ko": "조지 마치우나스",
+        "en": "George Maciunas"
+      },
+      "workId": "maciunas-fluxus-manifesto",
+      "workTitle": {
+        "ko": "플럭서스 선언",
+        "en": "Fluxus Manifesto"
+      },
+      "targetPath": "data/thumbnails/artist-mid-george-maciunas/maciunas-fluxus-manifesto.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-george-maciunas: Commons API 429"
+    },
+    {
+      "categoryId": "op-art--core",
+      "artistId": "artist-further-riley",
+      "artistName": {
+        "ko": "브리짓 라일리",
+        "en": "Bridget Riley"
+      },
+      "workId": "riley-current",
+      "workTitle": {
+        "ko": "커런트",
+        "en": "Current"
+      },
+      "targetPath": "data/thumbnails/artist-further-riley/riley-current.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-riley: Commons API 429"
+    },
+    {
+      "categoryId": "contemporary-art--installation-performance",
+      "artistId": "artist-further-beuys",
+      "artistName": {
+        "ko": "요제프 보이스",
+        "en": "Joseph Beuys"
+      },
+      "workId": "beuys-i-like-america",
+      "workTitle": {
+        "ko": "나는 미국을 좋아하고 미국도 나를 좋아한다",
+        "en": "I Like America and America Likes Me"
+      },
+      "targetPath": "data/thumbnails/artist-further-beuys/beuys-i-like-america.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-beuys: Commons API 429"
+    },
+    {
+      "categoryId": "contemporary-art--installation-performance",
+      "artistId": "artist-mid-allan-kaprow",
+      "artistName": {
+        "ko": "앨런 캐프로",
+        "en": "Allan Kaprow"
+      },
+      "workId": "kaprow-18-happenings-6-parts",
+      "workTitle": {
+        "ko": "여섯 부분으로 된 18개의 해프닝",
+        "en": "18 Happenings in 6 Parts"
+      },
+      "targetPath": "data/thumbnails/artist-mid-allan-kaprow/kaprow-18-happenings-6-parts.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-allan-kaprow: Commons API 429"
+    },
+    {
+      "categoryId": "contemporary-art--installation-performance",
+      "artistId": "artist-mid-yayoi-kusama",
+      "artistName": {
+        "ko": "구사마 야요이",
+        "en": "Yayoi Kusama"
+      },
+      "workId": "kusama-infinity-mirror-room",
+      "workTitle": {
+        "ko": "무한 거울 방",
+        "en": "Infinity Mirror Room"
+      },
+      "targetPath": "data/thumbnails/artist-mid-yayoi-kusama/kusama-infinity-mirror-room.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-yayoi-kusama: Commons API 429"
+    },
+    {
+      "categoryId": "contemporary-art--new-media-digital",
+      "artistId": "artist-art-atlas-paik",
+      "artistName": {
+        "ko": "백남준",
+        "en": "Nam June Paik"
+      },
+      "workId": "paik-electronic-superhighway",
+      "workTitle": {
+        "ko": "전자 초고속도로: 미국 대륙, 알래스카, 하와이",
+        "en": "Electronic Superhighway: Continental U.S., Alaska, Hawaii"
+      },
+      "targetPath": "data/thumbnails/artist-art-atlas-paik/paik-electronic-superhighway.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-art-atlas-paik: Commons API 429"
+    },
+    {
+      "categoryId": "contemporary-art--new-media-digital",
+      "artistId": "artist-mid-bill-viola",
+      "artistName": {
+        "ko": "빌 비올라",
+        "en": "Bill Viola"
+      },
+      "workId": "viola-the-crossing",
+      "workTitle": {
+        "ko": "교차",
+        "en": "The Crossing"
+      },
+      "targetPath": "data/thumbnails/artist-mid-bill-viola/viola-the-crossing.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-bill-viola: Commons API 429"
+    },
+    {
+      "categoryId": "contemporary-art--new-media-digital",
+      "artistId": "artist-mid-lynn-hershman-leeson",
+      "artistName": {
+        "ko": "린 허시먼 리슨",
+        "en": "Lynn Hershman Leeson"
+      },
+      "workId": "hershman-robberta-breitmore",
+      "workTitle": {
+        "ko": "로버타 브라이트모어",
+        "en": "Roberta Breitmore"
+      },
+      "targetPath": "data/thumbnails/artist-mid-lynn-hershman-leeson/hershman-robberta-breitmore.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-lynn-hershman-leeson: Commons API 429"
+    },
+    {
+      "categoryId": "contemporary-art--street-participatory",
+      "artistId": "artist-further-jr",
+      "artistName": {
+        "ko": "JR",
+        "en": "JR"
+      },
+      "workId": "jr-women-are-heroes",
+      "workTitle": {
+        "ko": "여성들은 영웅이다",
+        "en": "Women Are Heroes"
+      },
+      "targetPath": "data/thumbnails/artist-further-jr/jr-women-are-heroes.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-further-jr: Commons API 429"
+    },
+    {
+      "categoryId": "contemporary-art--street-participatory",
+      "artistId": "artist-mid-keith-haring",
+      "artistName": {
+        "ko": "키스 해링",
+        "en": "Keith Haring"
+      },
+      "workId": "haring-crack-is-wack",
+      "workTitle": {
+        "ko": "크랙은 끝장이다",
+        "en": "Crack Is Wack"
+      },
+      "targetPath": "data/thumbnails/artist-mid-keith-haring/haring-crack-is-wack.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-keith-haring: Commons API 429"
+    },
+    {
+      "categoryId": "contemporary-art--street-participatory",
+      "artistId": "artist-mid-ai-weiwei",
+      "artistName": {
+        "ko": "아이 웨이웨이",
+        "en": "Ai Weiwei"
+      },
+      "workId": "ai-sunflower-seeds",
+      "workTitle": {
+        "ko": "해바라기 씨",
+        "en": "Sunflower Seeds"
+      },
+      "targetPath": "data/thumbnails/artist-mid-ai-weiwei/ai-sunflower-seeds.jpg",
+      "reviewStatus": "unresolved",
+      "selected": null,
+      "candidates": [],
+      "error": "artist-mid-ai-weiwei: Commons API 429"
+    }
+  ]
+}

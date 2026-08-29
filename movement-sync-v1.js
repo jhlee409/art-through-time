@@ -75,7 +75,11 @@ function parseMovementDocument(html) {
       const tag = /^<tr\b[^>]*>/i.exec(markup)?.[0] || '';
       const cellMatches = [...markup.matchAll(/<td\b[^>]*>[\s\S]*?<\/td>/gi)];
       const representativeCell = cellMatches.find(cell => attribute(/^<td\b[^>]*>/i.exec(cell[0])?.[0], attrs.representativeArtists) !== undefined);
+      const furtherCell = cellMatches.find(cell => attribute(/^<td\b[^>]*>/i.exec(cell[0])?.[0], attrs.furtherArtists) !== undefined);
       assert(representativeCell, `${attribute(tag, attrs.developmentId)}: representative artist cell is missing`);
+      assert(furtherCell, `${attribute(tag, attrs.developmentId)}: further artist cell is missing`);
+      const representativeArtistIds = idsFromLinks(representativeCell[0]);
+      const furtherArtistIds = idsFromLinks(furtherCell[0]);
       return {
         start: countryMatch.index + match.index,
         markup,
@@ -83,10 +87,16 @@ function parseMovementDocument(html) {
         developmentId: attribute(tag, attrs.developmentId),
         categoryId: attribute(tag, attrs.categoryId),
         countryIds: (attribute(tag, attrs.countryIds) || '').split(/\s+/).filter(Boolean),
-        artistIds: idsFromLinks(representativeCell[0]),
+        artistIds: [...representativeArtistIds, ...furtherArtistIds],
+        representativeArtistIds,
+        furtherArtistIds,
         representativeCell: {
           start: countryMatch.index + match.index + representativeCell.index,
           markup: representativeCell[0]
+        },
+        furtherCell: {
+          start: countryMatch.index + match.index + furtherCell.index,
+          markup: furtherCell[0]
         }
       };
     });
@@ -105,6 +115,7 @@ function parseMovementDocument(html) {
         categoryId: attribute(cardMatch[0], attrs.categoryId),
         artistId: attribute(cardMatch[0], attrs.artistId),
         workId: attribute(cardMatch[0], attrs.workId),
+        role: attribute(cardMatch[0], attrs.cardRole),
         imageState: attribute(cardMatch[0], attrs.imageState),
         duplicateArtistReason: attribute(cardMatch[0], attrs.duplicateArtistReason) || '',
         selectionReason: contentBoundTo(cardMarkup, attrs.selectionReason),
@@ -161,13 +172,14 @@ function assertStableEditableStructure(currentHtml, submittedHtml) {
   submitted.groups.forEach(group => {
     const before = currentGroups.get(group.developmentId);
     assert(before, `${group.developmentId}: existing card group is missing`);
-    const identity = card => `${card.developmentId}|${card.categoryId}|${card.artistId}|${card.workId}`;
+    const identity = card => `${card.developmentId}|${card.categoryId}|${card.artistId}|${card.workId}|${card.role}`;
     assert(sameValues(sorted(before.cards.map(identity)), sorted(group.cards.map(identity))), `${group.developmentId}: representative membership or work identity changed without a classification command`);
   });
   const currentRows = new Map(current.rows.map(row => [row.developmentId, row]));
   submitted.rows.forEach(row => {
     const before = currentRows.get(row.developmentId);
-    assert(sameValues(sorted(before.artistIds), sorted(row.artistIds)), `${row.developmentId}: table representative membership changed without a classification command`);
+    assert(sameValues(sorted(before.representativeArtistIds), sorted(row.representativeArtistIds)), `${row.developmentId}: table representative membership changed without a classification command`);
+    assert(sameValues(sorted(before.furtherArtistIds), sorted(row.furtherArtistIds)), `${row.developmentId}: table further artist membership changed without a classification command`);
   });
   return submitted;
 }
@@ -199,8 +211,13 @@ function validateCompleteDocument(html, options = {}) {
     assert(group.categoryId === row.categoryId, `${row.developmentId}: row and group category IDs differ`);
     assert(sameValues(group.countryIds, row.countryIds), `${row.developmentId}: row and group country IDs differ`);
     assert(group.gridDevelopmentId === row.developmentId, `${row.developmentId}: grid development ID differs`);
+    const primaryCards = group.cards.filter(card => card.role === 'primary');
+    const furtherCards = group.cards.filter(card => card.role === 'further');
     const cardIds = group.cards.map(card => card.artistId);
-    assert(sameValues(row.artistIds, cardIds), `${row.developmentId}: table and card representative order differs`);
+    assert(primaryCards.length === 1 && group.cards[0] === primaryCards[0], `${row.developmentId}: expected one fixed primary card first`);
+    assert(furtherCards.length >= 1 && furtherCards.length <= 4, `${row.developmentId}: expected one to four further artist cards`);
+    assert(sameValues(row.representativeArtistIds, primaryCards.map(card => card.artistId)), `${row.developmentId}: table and primary card order differs`);
+    assert(sameValues(row.furtherArtistIds, furtherCards.map(card => card.artistId)), `${row.developmentId}: table and further card order differs`);
     assert(new Set(cardIds).size === cardIds.length, `${row.developmentId}: representative artist is duplicated inside one group`);
 
     group.cards.forEach(card => {
@@ -240,16 +257,22 @@ function synchronizeTableArtistOrder(html) {
   const replacements = [];
   const linkPattern = /<a\b(?=[^>]*\bdata-artist-id=(?:"[^"]+"|'[^']+'))[^>]*>[\s\S]*?<\/a>/gi;
   parsed.rows.forEach(row => {
-    const cardOrder = groups.get(row.developmentId)?.cards.map(card => card.artistId) || [];
-    assert(sameValues(sorted(row.artistIds), sorted(cardOrder)), `${row.developmentId}: representative membership differs between table and cards`);
-    const links = [...row.representativeCell.markup.matchAll(linkPattern)].map(match => ({
-      id: attribute(/^<a\b[^>]*>/i.exec(match[0])?.[0], attrs.artistId),
-      markup: match[0]
-    }));
-    const byId = new Map(links.map(link => [link.id, link.markup]));
-    let index = 0;
-    const orderedMarkup = row.representativeCell.markup.replace(linkPattern, () => byId.get(cardOrder[index++]) || '');
-    replacements.push({start: row.representativeCell.start, length: row.representativeCell.markup.length, value: orderedMarkup});
+    const cards = groups.get(row.developmentId)?.cards || [];
+    const primaryOrder = cards.filter(card => card.role === 'primary').map(card => card.artistId);
+    const furtherOrder = cards.filter(card => card.role === 'further').map(card => card.artistId);
+    const synchronizeCell = (cell, currentIds, cardOrder, label) => {
+      assert(sameValues(sorted(currentIds), sorted(cardOrder)), `${row.developmentId}: ${label} membership differs between table and cards`);
+      const links = [...cell.markup.matchAll(linkPattern)].map(match => ({
+        id: attribute(/^<a\b[^>]*>/i.exec(match[0])?.[0], attrs.artistId),
+        markup: match[0]
+      }));
+      const byId = new Map(links.map(link => [link.id, link.markup]));
+      let index = 0;
+      const orderedMarkup = cell.markup.replace(linkPattern, () => byId.get(cardOrder[index++]) || '');
+      replacements.push({start: cell.start, length: cell.markup.length, value: orderedMarkup});
+    };
+    synchronizeCell(row.representativeCell, row.representativeArtistIds, primaryOrder, 'representative');
+    synchronizeCell(row.furtherCell, row.furtherArtistIds, furtherOrder, 'further artist');
   });
   return replacements.sort((left, right) => right.start - left.start).reduce((source, change) =>
     source.slice(0, change.start) + change.value + source.slice(change.start + change.length), parsed.source);

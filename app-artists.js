@@ -2,9 +2,9 @@
 function renderText() {
   document.documentElement.lang = language;
   document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n); });
-  if (isMovementPage || isCountryArtPage || isPainterListPage || isArtistRelationsPage) {
+  if (isMovementPage || isCountryArtPage || isPainterListPage) {
     const title = document.querySelector('.sidebar-page-title');
-    if (title) title.textContent = isArtistRelationsPage ? (language === 'ko' ? '화가 관계도' : 'Artist Relations') : (isPainterListPage ? (language === 'ko' ? '화가 리스트' : 'Artist List') : (isCountryArtPage ? (language === 'ko' ? '국가별 미술' : 'Art by Country') : t('movementAtlas')));
+    if (title) title.textContent = isPainterListPage ? (language === 'ko' ? '화가 리스트' : 'Artist List') : (isCountryArtPage ? (language === 'ko' ? '국가별 미술' : 'Art by Country') : t('movementAtlas'));
   }
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => { el.placeholder = t(el.dataset.i18nPlaceholder); });
   document.querySelectorAll('[data-display-mode]').forEach(button => {
@@ -244,12 +244,16 @@ function renderTimeline() {
   const card = w => {
     const imageInfo = artworkImageDisplay(w);
     const image = imageInfo.src;
-    const movementContribution = Boolean(w.movementContribution);
+    const primaryMovementArtwork = Boolean(
+      w.movementContribution && w.movementContributionReason === 'canonical-movement-representative'
+    );
     const highResSource = w.highResImage && !isExternalImageSource(w.highResImage) ? w.highResImage : '';
     const highRes = Boolean(highResSource);
     const featured = isLeonardoTimeline && leonardoFeaturedWorkIds.has(String(w.id || ''));
     const replaceLabel = language === 'ko' ? '로컬 이미지 교체' : 'Replace with local image';
-    const contributionLabel = language === 'ko' ? '화가가 속한 사조의 특성을 잘 보여주는 기여 작품' : 'Work that strongly expresses the artist’s movement contribution';
+    const primaryMovementArtworkLabel = language === 'ko'
+      ? '사조 설명의 대표 화가·대표작'
+      : 'Primary artist and representative work in the movement guide';
     const collection = artworkCollectionLabel(w);
     const collectionMarkup = collection && collection !== t('unknown') ? `<small class="art-country art-collection" title="${esc(collection)}">${esc(collection)}</small>` : '';
     const workTitle = artworkThumbnailTitle(w, artist);
@@ -278,7 +282,7 @@ function renderTimeline() {
     const titleMarkup = `<span class="art-title-row"><span class="art-title-with-links">${titleLink}${artworkLinkControls}</span>${highResBadge}</span>${artworkLinkEntry}`;
     const footerMarkup = collectionMarkup ? `<span class="art-card-footer">${collectionMarkup}</span>` : '';
     const controls = currentUserIsAdmin ? `<button class="delete-artwork" data-work="${esc(w.id)}" title="${esc(t('delete'))}" aria-label="${esc(t('delete'))}">×</button><button class="replace-local-image" data-work="${esc(w.id)}" title="${esc(replaceLabel)}" aria-label="${esc(replaceLabel)}">↗</button>` : '';
-    return `<div class="art-card${movementContribution ? ' movement-contribution-artwork' : ''}" data-work="${esc(w.id)}" data-preview-artist="${esc(previewArtist)}" data-preview-title="${esc(workTitle)}" data-preview-year="${esc(previewYear)}" data-preview-collection="${collection && collection !== t('unknown') ? esc(collection) : ''}" title="${movementContribution ? esc(contributionLabel) : ''}"><span class="art-thumb">${featuredToggle}${image ? `<img src="${esc(image)}" alt="${esc(workTitle)}" loading="lazy"${fallbackImage ? ` data-fallback-src="${esc(fallbackImage)}"` : ''} />${urlBadge}` : `<span class="art-thumb-empty">${esc(unavailableImageLabel(work))}</span>`}${previewButton}${controls}</span><span class="art-meta">${titleMarkup}${footerMarkup}</span></div>`;
+    return `<div class="art-card${primaryMovementArtwork ? ' primary-movement-artwork' : ''}" data-work="${esc(w.id)}" data-preview-artist="${esc(previewArtist)}" data-preview-title="${esc(workTitle)}" data-preview-year="${esc(previewYear)}" data-preview-collection="${collection && collection !== t('unknown') ? esc(collection) : ''}" title="${primaryMovementArtwork ? esc(primaryMovementArtworkLabel) : ''}"><span class="art-thumb">${featuredToggle}${image ? `<img src="${esc(image)}" alt="${esc(workTitle)}" loading="lazy"${fallbackImage ? ` data-fallback-src="${esc(fallbackImage)}"` : ''} />${urlBadge}` : `<span class="art-thumb-empty">${esc(unavailableImageLabel(work))}</span>`}${previewButton}${controls}</span><span class="art-meta">${titleMarkup}${footerMarkup}</span></div>`;
   };
   const koreanName = artist.name?.ko || '', originalName = artist.name?.en || '';
   const savedLinks = artistLinks(artist);
@@ -296,8 +300,7 @@ function renderTimeline() {
     ? `<button class="artist-movement-link" type="button" data-movement-document="${esc(artistMovementDocument)}">${esc(artistMovement)}</button>`
     : `<span class="artist-movement-label">${esc(artistMovement)}</span>`;
   const timelineArtistName = artistDisplayName(artist);
-  const artistRelationsLabel = language === 'ko' ? `${timelineArtistName} 관계도 열기` : `Open ${timelineArtistName} relationship map`;
-  const timelineArtistNameMarkup = `<button class="timeline-artist-name timeline-artist-relations-link" type="button" title="${esc(artistRelationsLabel)}" aria-label="${esc(artistRelationsLabel)}"${uHangulArtistAttributes(artist, timelineArtistName)}>${esc(timelineArtistName)}</button>`;
+  const timelineArtistNameMarkup = `<span class="timeline-artist-name"${uHangulArtistAttributes(artist, timelineArtistName)}>${esc(timelineArtistName)}</span>`;
   const originalArtistWikipediaUrl = artistWikipediaUrl(artist, originalName);
   const displayName = language === 'ko' && koreanName
     ? `${timelineArtistNameMarkup}${originalName && originalName !== koreanName ? ` <a class="original-artist-name" data-uh-ignore="true" href="${esc(originalArtistWikipediaUrl)}" data-artist-wiki="${esc(artist.qid || '')}">${esc(originalName)}</a>` : ''}${linkControls}`
@@ -361,7 +364,6 @@ function renderTimeline() {
     return `<div class="leonardo-timeline">${summaryBox}${featured}${layoutControls}<section class="leonardo-all-works"><div class="leonardo-section-heading"><p class="eyebrow">${esc(leonardoLayout === 'gallery' ? galleryLabel : chronologyLabel)}</p><div class="leonardo-section-actions">${allWorksAction}</div><p>${esc(language === 'ko' ? `${works.length}점 · 왼쪽 위에서 오른쪽 아래로 갈수록 뒤의 작품입니다.` : `${works.length} works · Earlier works begin at the upper left.`)}</p></div>${leonardoLayout === 'gallery' ? gallery : chronology}</section></div>`;
   })();
   timeline.innerHTML = `${timelineHeader}${leonardoTimelineMarkup}`;
-  timeline.querySelector('.timeline-artist-relations-link')?.addEventListener('click', () => openArtistRelationsPage(artist));
   setupArtistSummaryEditor(artist);
   timeline.querySelector('.add-artwork-button')?.addEventListener('click', () => openAddArtworkDialog(artist));
   timeline.querySelectorAll('.start-slideshow').forEach(button => button.onclick = () => startSlideshow(artist, button.dataset.slideshowScope === 'featured' ? leonardoFeaturedWorks : works));

@@ -1,6 +1,6 @@
 /* Wikidata access, artist persistence, and thumbnail storage services. */
 module.exports = function createArtistDataService(deps) {
-  const { https, fs, path, URL, createHash, randomBytes, execFileAsync, ffmpegPath, root, dataDir, highResolutionDir, imageStagingDir, artistsFile, backupsDir, auditLogFile, adminEmail, artistImportedWorkLimit, highResolutionStoredLimit, sourceImageInputLimit, normalizeArtistsPayload, validateArtistsPayload, invalidArtworkThumbnail, buildArtistMap, writeUHangulArtistMap, syncPersonNameDictionary, recordArtistRelationImpactAudit } = deps;
+  const { https, fs, path, URL, createHash, randomBytes, execFileAsync, ffmpegPath, root, dataDir, highResolutionDir, imageStagingDir, artistsFile, backupsDir, auditLogFile, adminEmail, artistImportedWorkLimit, highResolutionStoredLimit, sourceImageInputLimit, normalizeArtistsPayload, validateArtistsPayload, invalidArtworkThumbnail, buildArtistMap, writeUHangulArtistMap, syncPersonNameDictionary } = deps;
   const uploadTypes = {'image/jpeg':'jpg','image/jpg':'jpg','image/pjpeg':'jpg','image/png':'png','image/webp':'webp','image/gif':'gif'};
   const safeUploadId = value => { if (!/^[A-Za-z0-9_-]{1,140}$/.test(String(value || ''))) throw new Error('Invalid artwork identifier'); return String(value); };
   const uploadExtension = file => { const ext=path.extname(String(file?.filename || '')).toLowerCase(); return uploadTypes[file?.contentType] || ({'.jpg':'jpg','.jpeg':'jpg','.jfif':'jpg','.png':'png','.webp':'webp','.gif':'gif'}[ext]); };

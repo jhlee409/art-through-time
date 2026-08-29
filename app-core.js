@@ -48,8 +48,6 @@ const countryArtDensityMaximum = 1;
 const artistListDensityMinimum = .03;
 const artistListDensityMaximum = 2.25;
 const artistListVerticalZoomBoost = 3;
-const artistListDefaultViewScale = 1.68;
-const artistListDefaultVisibleMovementRows = 5;
 const countryArtLabelColumnWidth = 211;
 const countryArtEventRailHeight = 216;
 const highResolutionMinimumWidth = 1600;
@@ -58,7 +56,6 @@ const sharedMovementId = 'global-contemporary';
 const artistMovementFallbacks = { Q104884:{ko:'독일 낭만주의',en:'German Romanticism'} };
 const isMovementPopup = startupParams.get('movementPopup') === '1';
 const isCountryArtPage = startupParams.get('countryArt') === '1';
-const isArtistRelationsPage = startupParams.get('artistRelations') === '1';
 const isPainterListPage = startupParams.get('artistList') === '1';
 const forceLogin = startupParams.get('login') === '1';
 if (forceLogin) {
@@ -78,14 +75,13 @@ const requestedUHangulMode = startupParams.get('uhangul');
 const initialUHangulMode = ['uhangul','korean','original'].includes(requestedUHangulMode) ? requestedUHangulMode : 'korean';
 const requestedArtistId = startupParams.get('artist') || startupParams.get('artistId');
 const isArtistListPage = startupParams.get('artists') === '1';
-const isDefaultMovementPage = !isMovementPopup && !isCountryArtPage && !isArtistRelationsPage && !isPainterListPage && !isArtistListPage && !requestedArtistId;
-const isExplicitMovementPage = isMovementPopup && !isCountryArtPage && !isArtistRelationsPage && !isPainterListPage;
+const isDefaultMovementPage = !isMovementPopup && !isCountryArtPage && !isPainterListPage && !isArtistListPage && !requestedArtistId;
+const isExplicitMovementPage = isMovementPopup && !isCountryArtPage && !isPainterListPage;
 const isMovementPage = isExplicitMovementPage || isDefaultMovementPage;
-window.name = isArtistRelationsPage ? 'artThroughTimeArtistRelations' : (isPainterListPage ? 'artThroughTimeArtistList' : (isCountryArtPage ? 'artThroughTimeCountryArt' : (isMovementPage ? 'artThroughTimeMovements' : 'artThroughTimeArtists')));
+window.name = isPainterListPage ? 'artThroughTimeArtistList' : (isCountryArtPage ? 'artThroughTimeCountryArt' : (isMovementPage ? 'artThroughTimeMovements' : 'artThroughTimeArtists'));
 if (isMovementPage) document.body.classList.add('movement-popup');
 if (isCountryArtPage) document.body.classList.add('country-art-page');
 if (isPainterListPage) document.body.classList.add('country-art-page', 'artist-list-page');
-if (isArtistRelationsPage) document.body.classList.add('artist-relations-page');
 const legacyMovementCountryIds = ['france','germany','netherlands','italy','united-kingdom','spain','russia','sweden','denmark','greece','united-states'];
 const preExpansionMovementCountryIds = ['france','germany','switzerland','netherlands','italy','united-kingdom','spain','russia','sweden','denmark','greece','united-states'];
 const allMovementCountryIds = ['france','germany','austria','belgium','switzerland','netherlands','italy','united-kingdom','spain','russia','norway','sweden','denmark','greece','mexico','united-states'];
@@ -98,9 +94,9 @@ let uHangulMode = initialUHangulMode;
 let artists = [];
 let selectedId = localStorage.getItem('art-atlas-selected');
 let requestedArtistMissing = false;
-// The root screen opens with the movement atlas. Explicit artist, relation,
-// country, and movement-popup URLs still select their requested view later.
-let viewMode = isArtistRelationsPage ? 'artist-relations' : (isPainterListPage ? 'artist-list' : (isCountryArtPage ? 'country-art' : (isMovementPage ? 'movements' : 'timeline')));
+// The root screen opens with the movement atlas. Explicit artist, country, and
+// movement-popup URLs still select their requested view later.
+let viewMode = isPainterListPage ? 'artist-list' : (isCountryArtPage ? 'country-art' : (isMovementPage ? 'movements' : 'timeline'));
 let movementCountries = [];
 let movementContextOnlyNames = new Set();
 let artMovementCanonical = {parents:[],categories:[]};
@@ -116,7 +112,6 @@ let artistListCountryDevelopmentRepresentativesReady = false;
 let artistListCountryDevelopmentRepresentativesRequest = null;
 let countryArtEvents = {schema:1,countries:{}};
 let countryMovementBackgrounds = {schema:1,countries:{},mechanisms:{}};
-let artistRelations = {schema:1,artists:{}};
 if (localStorage.getItem(movementCountryMigrationKey) !== 'v1') {
   if (legacyMovementCountryIds.every(id => movementView.countries.includes(id)) && !movementView.countries.includes('switzerland')) {
     movementView.countries = [...movementView.countries, 'switzerland'];
@@ -663,7 +658,6 @@ function openArtistListPage() {
   pageUrl.searchParams.delete('artistList');
   pageUrl.searchParams.delete('countryArt');
   pageUrl.searchParams.delete('movementPopup');
-  pageUrl.searchParams.delete('artistRelations');
   pageUrl.searchParams.set('artists', '1');
   openNamedPage(uHangulModeUrl(pageUrl.href), 'artThroughTimeArtists');
 }
@@ -673,7 +667,6 @@ function openArtistTimelinePage(artistId) {
   pageUrl.searchParams.delete('artistList');
   pageUrl.searchParams.delete('countryArt');
   pageUrl.searchParams.delete('movementPopup');
-  pageUrl.searchParams.delete('artistRelations');
   pageUrl.searchParams.set('artists', '1');
   pageUrl.searchParams.set('artist', artistId);
   openNamedPage(uHangulModeUrl(pageUrl.href), 'artThroughTimeArtists');
@@ -686,7 +679,6 @@ function openPainterListPage() {
     pageUrl.searchParams.delete('artistId');
     pageUrl.searchParams.delete('countryArt');
     pageUrl.searchParams.delete('movementPopup');
-    pageUrl.searchParams.delete('artistRelations');
     pageUrl.searchParams.set('artistList', '1');
     openNamedPage(uHangulModeUrl(pageUrl.href), 'artThroughTimeArtistList');
     return;
@@ -697,17 +689,6 @@ function openPainterListPage() {
   viewMode = 'artist-list';
   closeDetail();
   render();
-}
-function openArtistRelationsPage(artist) {
-  if (!artist?.id) return;
-  const pageUrl = new URL('index.html', location.href);
-  pageUrl.searchParams.delete('artists');
-  pageUrl.searchParams.delete('artistList');
-  pageUrl.searchParams.delete('countryArt');
-  pageUrl.searchParams.delete('movementPopup');
-  pageUrl.searchParams.set('artistRelations', '1');
-  pageUrl.searchParams.set('artist', artist.id);
-  openNamedPage(uHangulModeUrl(pageUrl.href), 'artThroughTimeArtistRelations');
 }
 function openTechniquesPage() {
   openNamedPage(uHangulModeUrl('techniques.html'), 'artThroughTimeTechniques');
@@ -723,7 +704,6 @@ function openCountryArtPage() {
     pageUrl.searchParams.delete('artist');
     pageUrl.searchParams.delete('artistId');
     pageUrl.searchParams.delete('movementPopup');
-    pageUrl.searchParams.delete('artistRelations');
     pageUrl.searchParams.set('countryArt', '1');
     openNamedPage(uHangulModeUrl(pageUrl.href), 'artThroughTimeCountryArt');
     return;
@@ -1407,17 +1387,16 @@ async function loadData() {
   }
   try { countryArtEvents = await (await fetch('data/country-art-events.json', {cache:'no-store'})).json(); } catch (_) { countryArtEvents = {schema:1,countries:{}}; }
   try { countryMovementBackgrounds = await (await fetch('data/country-movement-backgrounds.json', {cache:'no-store'})).json(); } catch (_) { countryMovementBackgrounds = {schema:1,countries:{},mechanisms:{}}; }
-  try { artistRelations = await (await fetch('data/artist-relations.json', {cache:'no-store'})).json(); } catch (_) { artistRelations = {schema:1,artists:{}}; }
   try { movementDocuments = (await (await fetch(apiUrl('/api/movement-documents'))).json()).documents || {}; } catch (_) { movementDocuments = {}; }
   const requestedArtist = requestedArtistId ? artists.find(a => a.id === requestedArtistId) : null;
   if (requestedArtist) {
     selectedId = requestedArtistId;
-    if (!isArtistRelationsPage && !isCountryArtPage && !isPainterListPage && !isMovementPage) viewMode = 'timeline';
+    if (!isCountryArtPage && !isPainterListPage && !isMovementPage) viewMode = 'timeline';
     localStorage.setItem('art-atlas-selected', selectedId);
   } else if (requestedArtistId) {
     requestedArtistMissing = true;
     selectedId = null;
-    if (!isArtistRelationsPage && !isCountryArtPage && !isPainterListPage && !isMovementPage) viewMode = 'timeline';
+    if (!isCountryArtPage && !isPainterListPage && !isMovementPage) viewMode = 'timeline';
     localStorage.removeItem('art-atlas-selected');
   }
   if (!requestedArtistMissing && (!selectedId || !artists.some(a => a.id === selectedId))) selectedId = artists[0]?.id;

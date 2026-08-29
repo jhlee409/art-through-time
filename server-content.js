@@ -1,7 +1,7 @@
 /* Movement documents, local image uploads, and public static-file services. */
 const {assertStableEditableStructure, synchronizeTableArtistOrder, validateCompleteDocument} = require('./movement-sync-v1');
 module.exports = function createContentService(deps) {
-  const { fs, path, URL, createHash, randomBytes, execFileAsync, ffmpegPath, root, dataDir, highResolutionDir, imageStagingDir, techniquesFile, topicsFile, topicImageDir, movementSectionLinksFile, migrationAssetManifestFile, adminEmail, highResolutionStoredLimit, sourceImageInputLimit, jsonRequestBodyLimit, normalizeArtistsPayload, validateArtistsPayload, firebaseExport, invalidArtworkThumbnail, syncPersonNameDictionary, recordArtistRelationImpactAudit, readAccessControl, readArtistsFile, writeArtistsFile, saveThumbnailBuffer, highResolutionPathExists } = deps;
+  const { fs, path, URL, createHash, randomBytes, execFileAsync, ffmpegPath, root, dataDir, highResolutionDir, imageStagingDir, techniquesFile, topicsFile, topicImageDir, movementSectionLinksFile, migrationAssetManifestFile, adminEmail, highResolutionStoredLimit, sourceImageInputLimit, jsonRequestBodyLimit, normalizeArtistsPayload, validateArtistsPayload, firebaseExport, invalidArtworkThumbnail, syncPersonNameDictionary, readAccessControl, readArtistsFile, writeArtistsFile, saveThumbnailBuffer, highResolutionPathExists } = deps;
 function highResolutionLocation(email, artistId) {
   return {folder:path.join(highResolutionDir,artistId), relativePrefix:`data/high-resolution/${artistId}`};
 }
@@ -52,7 +52,6 @@ const publicRootFiles = new Set([
 const publicDataFiles = new Set([
   'data/artists.json',
   'data/artists-index.json',
-  'data/artist-relations.json',
   'data/art-taxonomy.json',
   'data/art-movement-canonical.json',
   'data/art-movements.json',
@@ -794,8 +793,7 @@ async function saveLocalArtworkImage(form) {
     await removeHighResolutionFiles(location.folder,workId);
     await fs.rename(display,path.join(location.folder,`${fileBase}.display.png`));
     const image=`${location.relativePrefix}/${fileBase}.display.png`;
-    const relationImpactAudit=recordArtistRelationImpactAudit({artistId,workId,trigger:'timeline-high-resolution-image-added'});
-    return {image,thumbnail,relationImpactAudit};
+    return {image,thumbnail};
   } finally { await fs.rm(staging,{recursive:true,force:true}).catch(()=>{}); }
 }
 async function saveTopicArtwork(form) {

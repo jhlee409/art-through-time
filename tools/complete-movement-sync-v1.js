@@ -80,11 +80,47 @@ function resolveParent(movement, aliases) {
   return matches.sort((left, right) => right.score - left.score)[0]?.parent || null;
 }
 
-function canonicalBinding(parent, countryId, parentMap, migration) {
+function exactCategoryIdsForMovement(movement, owner) {
+  const compactName = compact(movement.name?.ko || movement.name?.en);
+  const ownerCategoryIds = owner.categoryIds || [];
+  const canonical = readJson(files.canonical);
+  const categoryMap = new Map(canonical.categories.map(category => [category.id, category]));
+  const exact = ownerCategoryIds.filter(categoryId => {
+    const category = categoryMap.get(categoryId);
+    return compactName && [category?.name?.ko, category?.name?.en].map(compact).includes(compactName);
+  });
+  return exact;
+}
+
+function canonicalBinding(parent, countryId, parentMap, migration, movement = null) {
   const ownerId = parent.role === 'document' ? parent.id : parent.documentOwnerId;
   const owner = parentMap.get(ownerId);
   assert(owner?.role === 'document', `${parent.id}: document owner ${ownerId} is invalid`);
-  const candidates = parent.categoryId ? [parent.categoryId] : owner.categoryIds;
+  const hasExplicitEmptyBinding = movement?.canonical
+    && Array.isArray(movement.canonical.categoryIds)
+    && Array.isArray(movement.canonical.developmentIds)
+    && movement.canonical.categoryIds.length === 0
+    && movement.canonical.developmentIds.length === 0;
+  if (hasExplicitEmptyBinding) {
+    return {
+      parentId: movement.canonical.parentId || parent.id,
+      documentOwnerId: movement.canonical.documentOwnerId || ownerId,
+      categoryIds: [],
+      developmentIds: []
+    };
+  }
+  if (parent.role === 'absorbed' && !parent.categoryId) {
+    return {
+      parentId: parent.id,
+      documentOwnerId: ownerId,
+      categoryIds: [],
+      developmentIds: []
+    };
+  }
+  const existingCategoryIds = Array.isArray(movement?.canonical?.categoryIds) ? movement.canonical.categoryIds : [];
+  const explicitCategoryIds = existingCategoryIds.filter(categoryId => (owner.categoryIds || []).includes(categoryId));
+  const exactCategoryIds = movement ? exactCategoryIdsForMovement(movement, owner) : [];
+  const candidates = explicitCategoryIds.length ? explicitCategoryIds : (exactCategoryIds.length ? exactCategoryIds : (parent.categoryId ? [parent.categoryId] : owner.categoryIds));
   const categoryIds = candidates.filter(categoryId => migration.categoryCountries[categoryId]?.includes(countryId));
   return {
     parentId: parent.id,
@@ -142,7 +178,7 @@ function build(write) {
       delete movement.canonical;
       return;
     }
-    movement.canonical = canonicalBinding(parent, country.id, parentMap, migration);
+    movement.canonical = canonicalBinding(parent, country.id, parentMap, migration, movement);
     boundBars += 1;
     parentCounts.set(parent.id, (parentCounts.get(parent.id) || 0) + 1);
     if (movement.canonical.categoryIds.length) categoryBars += 1;

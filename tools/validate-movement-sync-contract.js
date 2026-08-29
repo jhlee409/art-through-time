@@ -27,8 +27,8 @@ function unique(values, label) {
 }
 
 function validate(contract, canonical, movementData, artistsData) {
-  assert(contract.schema === 1, 'sync contract schema must be 1');
-  assert(contract.status === 'frozen-for-implementation', 'sync contract status must be frozen-for-implementation');
+  assert(contract.schema === 2, 'sync contract schema must be 2');
+  assert(contract.status === 'implemented-with-further-artists', 'sync contract status must include further artists');
   assert(contract.canonicalTaxonomy === 'data/art-movement-canonical.json', 'canonical taxonomy path differs');
   assert(contract.documentSyncVersion === '1', 'document sync version must be 1');
 
@@ -38,7 +38,7 @@ function validate(contract, canonical, movementData, artistsData) {
   const countries = new Set((movementData.countries || []).map(country => country.id));
   const artists = new Set((artistsData.artists || []).map(artist => artist.id));
   const attributes = contract.attributes || {};
-  const requiredAttributeKeys = ['syncVersion', 'syncState', 'parentId', 'contextId', 'categoryId', 'developmentId', 'countryIds', 'representativeArtists', 'representativeSection', 'artistId', 'workId', 'imageState', 'duplicateArtistReason', 'selectionReason', 'cardDescription'];
+  const requiredAttributeKeys = ['syncVersion', 'syncState', 'parentId', 'contextId', 'categoryId', 'developmentId', 'countryIds', 'representativeArtists', 'furtherArtists', 'representativeSection', 'artistId', 'workId', 'cardRole', 'imageState', 'duplicateArtistReason', 'selectionReason', 'cardDescription'];
   requiredAttributeKeys.forEach(key => assert(attributes[key], `missing contract attribute: ${key}`));
   unique(Object.values(attributes), 'contract attributes');
   Object.values(attributes).forEach(attribute => assert(/^data-[a-z0-9-]+$/.test(attribute), `invalid data attribute: ${attribute}`));
@@ -67,7 +67,7 @@ function validate(contract, canonical, movementData, artistsData) {
   assert(contract.dataBindings?.artistListEntry?.key === 'developmentId', 'artist list binding key must be developmentId');
 
   const authority = contract.authority || {};
-  ['parentAndCategoryNames', 'parentAndCategoryOrder', 'movementDatesAndColors', 'countryCategoryFeatureAndRepresentativeMembership', 'representativeArtistOrder', 'representativeWorkImageAndText', 'artistAndWorkIdentityMetadata', 'documentPath'].forEach(key => assert(authority[key], `missing authority rule: ${key}`));
+  ['parentAndCategoryNames', 'parentAndCategoryOrder', 'movementDatesAndColors', 'countryCategoryFeatureAndArtistMembership', 'artistRoleAndOrder', 'representativeWorkImageAndText', 'artistAndWorkIdentityMetadata', 'documentPath'].forEach(key => assert(authority[key], `missing authority rule: ${key}`));
   assert(Object.keys(contract.operations || {}).length === 7, 'sync contract must define seven editing operations');
   assert((contract.saveTransaction || []).length >= 5, 'save transaction is incomplete');
   assert((contract.invariants?.hard || []).length >= 14, 'hard invariants are incomplete');
@@ -85,7 +85,9 @@ function validate(contract, canonical, movementData, artistsData) {
   assert(developmentPattern.test(example.developmentId), 'example developmentId is invalid');
   assert((example.countryIds || []).length > 0 && example.countryIds.every(id => countries.has(id)), 'example has invalid countries');
   assert((example.representativeArtistIds || []).length > 0 && example.representativeArtistIds.every(id => artists.has(id)), 'example has invalid artists');
+  assert((example.furtherArtistIds || []).length > 0 && example.furtherArtistIds.length <= 4 && example.furtherArtistIds.every(id => artists.has(id)), 'example has invalid further artists');
   unique(example.representativeArtistIds, 'example representative artists');
+  unique(example.furtherArtistIds, 'example further artists');
 
   return {
     version: contract.documentSyncVersion,
@@ -101,7 +103,7 @@ function validate(contract, canonical, movementData, artistsData) {
 function labelForOperation(key) {
   return ({
     editFeature: '지역 특징 편집',
-    reorderRepresentativeCards: '대표작 카드 순서 변경',
+    reorderFurtherArtistCards: '더 볼 화가 카드 순서 변경',
     moveRepresentativeArtist: '대표 화가 범주 이동',
     addRepresentativeArtist: '대표 화가 추가',
     removeRepresentativeArtist: '대표 화가 제거',
@@ -114,18 +116,24 @@ function makeExampleMarkup(contract) {
   const a = contract.attributes;
   const e = contract.example;
   const artist = e.representativeArtistIds[0];
+  const furtherArtist = e.furtherArtistIds[0];
   return `<html ${a.syncVersion}="${contract.documentSyncVersion}" ${a.syncState}="complete" ${a.parentId}="${e.parentId}">\n` +
     `  <tr ${a.developmentId}="${e.developmentId}" ${a.categoryId}="${e.categoryId}" ${a.countryIds}="${e.countryIds.join(' ')}">\n` +
     `    <td>프랑스 — 프랑스 바로크</td>\n` +
     `    <td>지역적 특징</td>\n` +
     `    <td ${a.representativeArtists}><a ${a.artistId}="${artist}">푸생</a></td>\n` +
+    `    <td ${a.furtherArtists}><a ${a.artistId}="${furtherArtist}">클로드 로랭</a></td>\n` +
     `  </tr>\n` +
     `  <section class="movement-enhancement" ${a.representativeSection}="works">\n` +
     `   <section class="art-atlas-submovement-group" ${a.developmentId}="${e.developmentId}" ${a.categoryId}="${e.categoryId}" ${a.countryIds}="${e.countryIds.join(' ')}">\n` +
     `    <div class="movement-work-grid" ${a.developmentId}="${e.developmentId}">\n` +
-    `      <article class="movement-work-card" ${a.developmentId}="${e.developmentId}" ${a.categoryId}="${e.categoryId}" ${a.artistId}="${artist}" ${a.workId}="work-id" ${a.imageState}="ready">\n` +
+    `      <article class="movement-work-card" ${a.developmentId}="${e.developmentId}" ${a.categoryId}="${e.categoryId}" ${a.artistId}="${artist}" ${a.workId}="work-id" ${a.cardRole}="primary" ${a.imageState}="ready">\n` +
     `        <p ${a.selectionReason}>선정 이유</p>\n` +
     `        <p ${a.cardDescription}>작품에서 확인할 특징</p>\n` +
+    `      </article>\n` +
+    `      <article class="movement-work-card" ${a.developmentId}="${e.developmentId}" ${a.categoryId}="${e.categoryId}" ${a.artistId}="${furtherArtist}" ${a.workId}="further-work-id" ${a.cardRole}="further" ${a.imageState}="pending">\n` +
+    `        <p ${a.selectionReason}>더 볼 이유</p>\n` +
+    `        <p ${a.cardDescription}>사조 특징과 화가 고유 특성</p>\n` +
     `      </article>\n` +
     `    </div>\n` +
     `   </section>\n` +
@@ -144,8 +152,8 @@ function makeReport(contract) {
     `이 문서는 \`data/art-movement-sync-contract.json\`에서 자동 생성된다. 문서 동기화 버전은 \`${contract.documentSyncVersion}\`이며, 4단계 HTML 이관과 런타임 구현의 기준이다.\n\n` +
     `## 핵심 원칙\n\n` +
     `- \`categoryId\`는 68개 정본 범주의 신분이고, \`developmentId\`는 국가 전개 표 한 행과 카드 한 묶음을 연결하는 신분이다.\n` +
-    `- 표는 국가·범주·특징·대표 화가 구성을 책임지고, 카드는 작품·이미지·선정 이유·설명을 책임진다.\n` +
-    `- 대표 화가 순서는 표와 카드에 동일하게 저장한다. 같은 묶음 안의 카드 드래그만 이 순서를 바꿀 수 있다.\n` +
+    `- 표는 국가·범주·특징·대표 화가·더 볼 화가 구성을 책임지고, 카드는 작품·이미지·선정 이유·설명을 책임진다.\n` +
+    `- 대표 화가 카드는 첫 위치에 고정한다. 더 볼 화가끼리 드래그한 순서는 표의 더 볼 화가 셀에 동일하게 저장한다.\n` +
     `- 한 화가는 기본적으로 한 문서의 한 범주에만 둔다. 두 범주에 꼭 필요하면 각 카드에 중복의 교육적 이유를 기록한다.\n` +
     `- \`syncState=structure\`는 4단계 구조 이관 상태이고, \`syncState=complete\`는 대표 화가·작품까지 검증한 최종 동기화 상태다. 구조 상태에서는 콘텐츠 편집 연동을 잠근다.\n` +
     `- 버전 1 문서는 이름 부분일치나 국가 별칭으로 연결하지 않는다. 기존 무버전 문서만 읽기 전용 fallback을 사용한다.\n\n` +
@@ -184,7 +192,7 @@ function auditHtml(contract) {
     counts.boundGroups += groups.filter(match => [attribute.developmentId, attribute.categoryId, attribute.countryIds].every(name => new RegExp(`${name}=["'][^"']+["']`, 'i').test(match[0]))).length;
     const cards = [...html.matchAll(/<article\b(?=[^>]*\bclass=["'][^"']*movement-work-card)[^>]*>/gi)];
     counts.representativeCards += cards.length;
-    counts.boundCards += cards.filter(match => [attribute.developmentId, attribute.categoryId, attribute.artistId, attribute.workId, attribute.imageState].every(name => new RegExp(`${name}=["'][^"']+["']`, 'i').test(match[0]))).length;
+    counts.boundCards += cards.filter(match => [attribute.developmentId, attribute.categoryId, attribute.artistId, attribute.workId, attribute.cardRole, attribute.imageState].every(name => new RegExp(`${name}=["'][^"']+["']`, 'i').test(match[0]))).length;
   });
   return counts;
 }

@@ -1,4 +1,4 @@
-/* Movement atlas, country art, artist list, and relations views. */
+/* Movement atlas, country art, and artist list views. */
 function atlasEventGroups(start, end, category) {
   const groups = new Map();
   [...atlasHistoricalEvents, ...customHistoricalEvents].filter(event => event.start <= end && (event.end || event.start) >= start && historicalEventCategory(event) === category).forEach(event => {
@@ -88,10 +88,15 @@ function renderMovementAtlas() {
     const years = `${yearLabel(item.sourceStart ?? item.start)}–${yearLabel(item.sourceEnd ?? item.end)}`;
     const rawMovementName = item.name.en || item.name.ko || '';
     const movementName = movementDocumentKey(rawMovementName) || rawMovementName;
+    const hasOwnDocument = [item.name?.en, item.name?.ko].some(name => {
+      const compact = compactMovementName(name);
+      return compact && Object.keys(movementDocuments || {}).some(documentName => compactMovementName(documentName) === compact && movementDocuments?.[documentName]?.['1']);
+    });
     const contextOnly = movementIsContextOnly(item);
     const kind = contextOnly ? (language === 'ko' ? '이전 미술 참고' : 'Earlier-art context') : loc(item.kind);
     const detail = kind ? `${years} · ${kind}` : years;
-    return `<div class="movement-bar${kind ? ' movement-bar--typed' : ''}${contextOnly ? ' movement-bar--context' : ''}" title="${esc(`${loc(item.name)} · ${detail}`)}" data-movement-explanation="${esc(movementName)}" data-movement-label="${esc(loc(item.name))}" style="top:${top}px;height:${barHeight}px;left:${left}px;width:90px;--movement-color:${esc(item.color)}"><span>${esc(loc(item.name))}</span><small>${esc(years)}${kind ? `<b>${esc(kind)}</b>` : ''}</small></div>`;
+    const documentMarker = hasOwnDocument ? '<b class="movement-document-marker" aria-hidden="true">*</b>' : '';
+    return `<div class="movement-bar${kind ? ' movement-bar--typed' : ''}${contextOnly ? ' movement-bar--context' : ''}${hasOwnDocument ? ' movement-bar--has-document' : ''}" title="${esc(`${loc(item.name)} · ${detail}`)}" data-movement-explanation="${esc(movementName)}" data-movement-label="${esc(loc(item.name))}" style="top:${top}px;height:${barHeight}px;left:${left}px;width:90px;--movement-color:${esc(item.color)}">${documentMarker}<span>${esc(loc(item.name))}</span><small>${esc(years)}${kind ? `<b>${esc(kind)}</b>` : ''}</small></div>`;
   };
   const countryColumns = start < countryEnd ? movementView.countries.map(id => countryById.get(id)).filter(Boolean).map(country => ({
     ...country,
@@ -257,11 +262,47 @@ function countryArtCardBelongs(card, countryId) {
   const artist = artists.find(item => item.id === artistId);
   return countryArtTextMatches(`${artist?.nationality?.ko || ''} ${artist?.nationality?.en || ''}`, countryId);
 }
+function countryArtCleanText(value) {
+  return String(value || '').replace(/\s+/g, ' ').trim();
+}
+function countryArtBriefArtistName(card) {
+  const artistLink = card.querySelector('h3 .art-atlas-artist-link, .art-atlas-artist-link');
+  if (artistLink) {
+    const listName = language === 'ko' ? artistLink.dataset.uhListKorean : '';
+    const originalName = language !== 'ko' ? artistLink.dataset.uhOriginal : '';
+    return countryArtCleanText(listName || originalName || artistLink.textContent);
+  }
+  return countryArtCleanText(card.querySelector('h3 .movement-card-artist-name, .movement-card-artist-name')?.textContent);
+}
+function countryArtWorkTitle(card, image) {
+  const heading = card.querySelector('h3');
+  if (!heading) return countryArtCleanText(image.alt) || (language === 'ko' ? '대표작' : 'Representative work');
+  const copy = heading.cloneNode(true);
+  copy.querySelectorAll('.movement-card-title-tag, .movement-card-activity-region, .movement-country-card-context').forEach(node => node.remove());
+  const artistNode = copy.querySelector('.art-atlas-artist-link, .movement-card-artist-name');
+  const artistText = countryArtCleanText(artistNode?.textContent);
+  if (artistNode) artistNode.remove();
+  const title = countryArtCleanText(copy.textContent).replace(/^[-–—,·:;\s]+/, '');
+  return title || countryArtCleanText(heading.textContent).replace(artistText, '').replace(/^[-–—,·:;\s]+/, '') || countryArtCleanText(image.alt) || (language === 'ko' ? '대표작' : 'Representative work');
+}
+function countryArtBriefYear(card) {
+  const meta = countryArtCleanText(card.querySelector('.work-meta, small')?.textContent);
+  return countryArtCleanText(meta.split(/\s*·\s*|\s*\|\s*|;\s*/)[0]);
+}
+function countryArtMovementDocumentName(movement) {
+  const ownerId = movement?.canonical?.documentOwnerId;
+  const owner = ownerId && (artMovementCanonical.parents || []).find(parent => parent.id === ownerId);
+  const ownerDocument = owner?.documentKey;
+  if (ownerDocument && movementDocuments?.[ownerDocument]?.['1']) return ownerDocument;
+  return movementDocumentKey(movement?.name?.en || movement?.name?.ko || '');
+}
 function countryArtWorksFor(country, movement) {
-  const documentName = movementDocumentKey(movement.name?.en || movement.name?.ko || '');
+  const documentName = countryArtMovementDocumentName(movement);
   const documentUrl = documentName && movementDocuments?.[documentName]?.['1'];
   if (!documentUrl) return {state:'missing',works:[]};
-  const cacheKey = `${country.id}::${documentName}`;
+  const developmentIds = new Set(movement?.canonical?.developmentIds || []);
+  const developmentKey = developmentIds.size ? [...developmentIds].join(',') : 'all';
+  const cacheKey = `${country.id}::${documentName}::${developmentKey}`;
   if (countryArtWorkCache.has(cacheKey)) return {state:'ready',works:countryArtWorkCache.get(cacheKey)};
   if (!countryArtWorkRequests.has(cacheKey)) {
     countryArtWorkRequests.set(cacheKey, fetch(documentUrl).then(response => response.ok ? response.text() : '').then(html => {
@@ -275,14 +316,18 @@ function countryArtWorksFor(country, movement) {
       // The final enhancement section is the canonical representative-work card collection.
       const enhancementSections = [...source.querySelectorAll('.movement-enhancement')];
       const representativeSection = source.querySelector('.movement-enhancement[data-art-atlas-representative-section="works"]') || enhancementSections.at(-1);
-      const works = [...(representativeSection?.querySelectorAll('article.movement-work-card, article.card') || [])].filter(card => countryArtCardBelongs(card, country.id)).map(card => {
+      const works = [...(representativeSection?.querySelectorAll('article.movement-work-card, article.card') || [])].filter(card => {
+        const developmentId = card.dataset.artAtlasDevelopmentId || card.closest('[data-art-atlas-development-id]')?.dataset.artAtlasDevelopmentId || '';
+        return (!developmentIds.size || developmentIds.has(developmentId)) && countryArtCardBelongs(card, country.id);
+      }).map(card => {
         const image = card.querySelector('img');
         if (!image?.getAttribute('src')) return null;
-        const title = card.querySelector('h3')?.textContent?.replace(/\s+/g, ' ').trim() || image.alt || (language === 'ko' ? '대표작' : 'Representative work');
-        const year = card.querySelector('small')?.textContent?.trim() || '';
+        const artistName = countryArtBriefArtistName(card);
+        const title = countryArtWorkTitle(card, image);
+        const year = countryArtBriefYear(card);
         const sortYear = Number((year.match(/-?\d{3,4}/) || [])[0]) || 9999;
         const description = (card.querySelector('[data-art-atlas-card-description]') || card.querySelector('.movement-work-body p, .card-body p, p'))?.textContent?.replace(/\s+/g, ' ').trim() || '';
-        return {src:new URL(image.getAttribute('src'), new URL(documentUrl, location.href)).href, alt:image.alt || title, title, year, sortYear, descriptionLength:description.length};
+        return {src:new URL(image.getAttribute('src'), new URL(documentUrl, location.href)).href, alt:image.alt || title, artistName, title, year, sortYear, descriptionLength:description.length};
       }).filter(Boolean);
       countryArtWorkCache.set(cacheKey, works);
     }).catch(() => countryArtWorkCache.set(cacheKey, [])).finally(() => {
@@ -324,6 +369,12 @@ function countryArtEventMode(density) {
   if (density >= .5) return 'labels';
   if (density >= .34) return 'key';
   return 'dots';
+}
+function countryArtMeasureTextWidth(text, font='700 14px "Noto Sans KR", sans-serif') {
+  const context = document.createElement('canvas').getContext('2d');
+  if (!context) return String(text || '').length * 14;
+  context.font = font;
+  return context.measureText(String(text || '')).width;
 }
 function openCountryArtEventWikipedia(wiki, fallback) {
   const url = String(wiki || '').trim();
@@ -573,6 +624,7 @@ function artistListArtistsForMovement(entry) {
   const canonicalRow = entry.developmentId && artistListCountryDevelopmentRepresentatives.get(`development::${entry.developmentId}`);
   const representativeRows=canonicalRow ? [canonicalRow] : [...countryIds].flatMap(countryId => artistListCountryDevelopmentRepresentatives.get(`${documentName}::${countryId}`) || []).filter(row => !entry.countryDevelopmentDetail || row.label === entry.countryDevelopmentDetail);
   const representativeIds=representativeRows.flatMap(row => row.artistIds || []);
+  const primaryIds=new Set(representativeRows.flatMap(row => row.primaryArtistIds || []));
   if (!artistListCountryDevelopmentRepresentativesReady) {
     loadArtistListCountryDevelopmentRepresentatives();
     return [];
@@ -590,8 +642,18 @@ function artistListArtistsForMovement(entry) {
       if (!movementEntries.some(artistEntry => artistListMovementKeyMatchesArtistEntry(movementKey, artistEntry))) return null;
     }
     const countryLabel = artistCountryIds.filter(countryId => countryIds.has(countryId)).map(countryId => loc(movementCountries.find(country => country.id === countryId)?.name)).filter(Boolean).join(', ');
-    return {artist, life, countryLabel};
+    return {artist, life, countryLabel, artistRole:primaryIds.has(artist.id) ? 'primary' : 'further'};
   }).filter(Boolean);
+}
+function artistListFallbackDevelopmentDetails(canonicalBinding, countryId) {
+  const categoryById = new Map((artMovementCanonical.categories || []).map(category => [category.id, category]));
+  const developmentIds = Array.isArray(canonicalBinding?.developmentIds) ? canonicalBinding.developmentIds : [];
+  const categoryIds = Array.isArray(canonicalBinding?.categoryIds) ? canonicalBinding.categoryIds : [];
+  return developmentIds.map((developmentId, index) => {
+    const categoryId = categoryIds[index] || categoryIds[0] || '';
+    const category = categoryById.get(categoryId);
+    return {developmentId, categoryId, countryIds:[countryId], label:loc(category?.name) || '', artistIds:[], primaryArtistIds:[], furtherArtistIds:[], featureHtml:'', feature:''};
+  }).filter(detail => detail.developmentId || detail.categoryId);
 }
 function loadArtistListCountryDevelopmentRepresentatives() {
   if (artistListCountryDevelopmentRepresentativesRequest) return artistListCountryDevelopmentRepresentativesRequest;
@@ -606,6 +668,7 @@ function loadArtistListCountryDevelopmentRepresentatives() {
     if (!table) return;
     const headers=[...table.querySelectorAll('thead th')].map(cell => cell.textContent.replace(/\s+/g,' ').trim());
     const representativeIndex=headers.findIndex(header => /(대표.*(?:화가|제작)|(?:화가|제작).*대표)/.test(header));
+    const furtherIndex=headers.findIndex(header => /더\s*볼\s*화가/.test(header));
     if (representativeIndex < 0) return;
     const parentId=source.documentElement.dataset.artAtlasParentId || '';
     const categoryNames=new Map((artMovementCanonical.categories || []).map(category => [category.id,category.name]));
@@ -618,8 +681,9 @@ function loadArtistListCountryDevelopmentRepresentatives() {
       const countryParts=(cells[0]?.textContent || '').replace(/\s+/g,' ').trim().split(/\s*[—–-]\s*/,2);
       const canonicalName=categoryNames.get(categoryId);
       const detailLabel=loc(canonicalName) || (countryParts.length > 1 ? countryParts[1] : '');
-      const ids=[...(cells[representativeIndex]?.querySelectorAll('[data-artist-id]') || [])].map(link => link.dataset.artistId).filter(Boolean);
-      const detail={parentId,developmentId,categoryId,countryIds:canonicalCountries,label:detailLabel,artistIds:ids,featureHtml:cells[1]?.innerHTML.trim() || '',feature:(cells[1]?.textContent || '').replace(/\s+/g,' ').trim()};
+      const primaryArtistIds=[...(cells[representativeIndex]?.querySelectorAll('[data-artist-id]') || [])].map(link => link.dataset.artistId).filter(Boolean);
+      const furtherArtistIds=furtherIndex < 0 ? [] : [...(cells[furtherIndex]?.querySelectorAll('[data-artist-id]') || [])].map(link => link.dataset.artistId).filter(Boolean);
+      const detail={parentId,developmentId,categoryId,countryIds:canonicalCountries,label:detailLabel,artistIds:[...primaryArtistIds,...furtherArtistIds],primaryArtistIds,furtherArtistIds,featureHtml:cells[1]?.innerHTML.trim() || '',feature:(cells[1]?.textContent || '').replace(/\s+/g,' ').trim()};
       if (developmentId && canonicalCountries.length) {
         artistListCountryDevelopmentRepresentatives.set(`development::${developmentId}`,detail);
         canonicalCountries.forEach(countryId => {
@@ -645,12 +709,12 @@ function loadArtistListCountryDevelopmentRepresentatives() {
   });
   return artistListCountryDevelopmentRepresentativesRequest;
 }
-// Keep the established visual geometry independent of how many country-table
-// rows are present: 139.968px source boxes become the fixed 80% (111.974px) display.
-const artistListPillBaseHeight = 139.968;
-const artistListPillGap = 1;
-const artistListSubmovementTopPadding = 12;
-const artistListSubmovementBottomPadding = 12;
+function artistListPillBaseHeight() {
+  return Math.max(12, Math.round((window.innerHeight || window.screen?.height || 900) / 60));
+}
+const artistListSubmovementTopPadding = 6;
+const artistListSubmovementBottomPadding = 6;
+const artistListPillGap = Math.min(artistListSubmovementTopPadding, artistListSubmovementBottomPadding) * .6;
 const artistListParentMovementPalette = ['#8cbfd6','#d9ab69','#9cbd91','#bc9ac7','#d48c83','#8dbab2'];
 let artistListRegionFeaturePanel = null;
 function artistListRegionFeatureText(html, countryId) {
@@ -743,7 +807,8 @@ function artistListPackedArtistLayout(entry, chartStart, chartEnd, yearScale) {
     if (boxEnd <= boxStart) return null;
     return {...item, boxStart, boxEnd, exceedsMovement};
   }).filter(Boolean).sort((a, b) =>
-    a.boxStart - b.boxStart
+    (a.artistRole === 'primary' ? 0 : 1) - (b.artistRole === 'primary' ? 0 : 1)
+    || a.boxStart - b.boxStart
     || (b.boxEnd - b.boxStart) - (a.boxEnd - a.boxStart)
     || artistListKoreanName(a.artist).localeCompare(artistListKoreanName(b.artist), 'ko')
   );
@@ -761,7 +826,7 @@ function artistListPackedArtistMarkup(entry, chartStart, chartEnd, yearScale, to
   if (!layout.packed.length) return '';
   const movementStart=Number(entry.sourceStart ?? entry.start);
   const movementEnd=Number(entry.sourceEnd ?? entry.end);
-  const boxHeight=artistListPillBaseHeight;
+  const boxHeight=artistListPillBaseHeight();
   const baseFontSize=Math.max(7,boxHeight*.62);
   const topBase=artistListSubmovementTopPadding;
   return layout.packed.map(item => {
@@ -773,7 +838,7 @@ function artistListPackedArtistMarkup(entry, chartStart, chartEnd, yearScale, to
     const yearsText = `${item.life.start}–${item.life.end}`;
     const countryText = item.countryLabel ? ` · ${item.countryLabel}` : '';
     const title = `${name}${countryText} · ${yearsText} · ${loc(entry.name)}`;
-    const className = item.exceedsMovement ? ' artist-life-pill--extended' : '';
+    const className = `${item.exceedsMovement ? ' artist-life-pill--extended' : ''}${item.artistRole === 'primary' ? ' artist-life-pill--primary' : ' artist-life-pill--further'}`;
     // A lifetime box may extend outside its country-development box.  The blue
     // activity segment must nevertheless remain inside that box's time span.
     const activity=artistListIndependentActivitySpan(item.artist,item.boxStart,item.boxEnd,movementStart,movementEnd);
@@ -794,6 +859,7 @@ function artistListParentMovementName(groupKey, rows) {
 }
 function artistListSubmovementLayout(entry, chartStart, chartEnd, yearScale) {
   const children = entry.children || [];
+  const pillHeight=artistListPillBaseHeight();
   const lanes = [];
   const laneHeights=[];
   const packed = [...children].sort((a,b) => artistListMovementSortStart(a) - artistListMovementSortStart(b) || artistListMovementSortEnd(a) - artistListMovementSortEnd(b)).map(child => {
@@ -803,19 +869,19 @@ function artistListSubmovementLayout(entry, chartStart, chartEnd, yearScale) {
     if (lane < 0) { lane=lanes.length; lanes.push(childEnd); laneHeights.push(0); }
     else lanes[lane]=childEnd;
     const artistLayout=artistListPackedArtistLayout(child,chartStart,chartEnd,yearScale);
-    const childHeight=artistListSubmovementTopPadding + artistListSubmovementBottomPadding + Math.max(1,artistLayout.laneCount) * artistListPillBaseHeight + Math.max(0,artistLayout.laneCount-1) * artistListPillGap;
+    const childHeight=artistListSubmovementTopPadding + artistListSubmovementBottomPadding + Math.max(1,artistLayout.laneCount) * pillHeight + Math.max(0,artistLayout.laneCount-1) * artistListPillGap;
     laneHeights[lane]=Math.max(laneHeights[lane],childHeight);
     return {...child, submovementLane:lane, artistLayout, submovementHeight:childHeight};
   });
   const hasArtists=packed.some(child => child.artistLayout.laneCount > 0);
-  if (!hasArtists) return {submovements:[], rowHeight:artistListSubmovementTopPadding + artistListSubmovementBottomPadding + 3 * artistListPillBaseHeight + 2 * artistListPillGap};
-  const laneGap=18;
+  if (!hasArtists && artistListCountryDevelopmentRepresentativesReady) return {submovements:[], rowHeight:artistListSubmovementTopPadding + artistListSubmovementBottomPadding + 3 * pillHeight + 2 * artistListPillGap};
+  const laneGap=4.5;
   const laneOffsets=[];
   let cursor=artistListSubmovementTopPadding;
   laneHeights.forEach(height => { laneOffsets.push(cursor); cursor += height + laneGap; });
   return {
     submovements:packed.map(child => ({...child, submovementTop:laneOffsets[child.submovementLane], submovementHeight:laneHeights[child.submovementLane]})),
-    rowHeight:Math.max(artistListSubmovementTopPadding + artistListSubmovementBottomPadding + 3 * artistListPillBaseHeight + 2 * artistListPillGap, cursor - laneGap + artistListSubmovementBottomPadding)
+    rowHeight:Math.max(artistListSubmovementTopPadding + artistListSubmovementBottomPadding + 3 * pillHeight + 2 * artistListPillGap, cursor - laneGap + artistListSubmovementBottomPadding)
   };
 }
 function artistListMovementEntries(countries, selectedCountryIds, start, end) {
@@ -823,7 +889,6 @@ function artistListMovementEntries(countries, selectedCountryIds, start, end) {
   const rows = [];
   if (!artistListCountryDevelopmentRepresentativesReady) {
     loadArtistListCountryDevelopmentRepresentatives();
-    return rows;
   }
   countries.filter(country => selected.has(country.id)).forEach((country, countryOrder) => {
     (country.movements || []).forEach((movement, movementOrder) => {
@@ -834,7 +899,9 @@ function artistListMovementEntries(countries, selectedCountryIds, start, end) {
       const owner=canonicalBinding && (artMovementCanonical.parents || []).find(parent => parent.id === canonicalBinding.documentOwnerId);
       const parentDocumentName=owner?.documentKey || movementDocumentKey(clipped.name?.en || clipped.name?.ko || loc(clipped.name));
       const canonicalDetails=(canonicalBinding?.developmentIds || []).map(developmentId => artistListCountryDevelopmentRepresentatives.get(`development::${developmentId}`)).filter(detail => detail?.countryIds?.includes(country.id));
-      const details=canonicalBinding ? canonicalDetails : (artistListCountryDevelopmentRepresentatives.get(`${parentDocumentName}::${country.id}`) || []);
+      const details=canonicalBinding
+        ? (artistListCountryDevelopmentRepresentativesReady ? canonicalDetails : artistListFallbackDevelopmentDetails(canonicalBinding, country.id))
+        : (artistListCountryDevelopmentRepresentativesReady ? (artistListCountryDevelopmentRepresentatives.get(`${parentDocumentName}::${country.id}`) || []) : []);
       details.forEach((detail, detailOrder) => rows.push({
         ...clipped,
         name:(artMovementCanonical.categories || []).find(category => category.id === detail.categoryId)?.name || {ko:detail.label || loc(clipped.name),en:detail.label || loc(clipped.name)},
@@ -972,13 +1039,20 @@ function renderCountryArt(options = {}) {
       artistListParentColor:artistListParentMovementPalette[index % artistListParentMovementPalette.length]
     }));
   }
+  const selectedCountryCount = artistListMode ? artistListView.countries.length : 1;
+  const chartHeading = artistListMode
+    ? (selectedCountryCount === countryOptions.length ? (language === 'ko' ? '전체 국가' : 'All countries') : (language === 'ko' ? `선택 국가 ${selectedCountryCount}개` : `${selectedCountryCount} countries`))
+    : loc(country.name);
+  const axisHeading = artistListMode
+    ? (language === 'ko' ? `사조(${chartHeading})` : `Movements (${chartHeading})`)
+    : (language === 'ko' ? '사조' : 'Movement');
   const yearLabel = year => Number(year) < 0 ? `${Math.abs(year)} BCE` : String(year);
   // The row and bar match the standardized card's maximum height, including list padding and bar borders.
   const movementRowHeight = artistListMode ? 58 : Math.ceil((window.innerWidth / 14) * .8) + 54;
   const axisHeight = artistListMode ? 38 : 76;
-  // The artist-list's fixed movement column is deliberately narrower than the
-  // country-art view, while the rest of that view keeps its existing width.
-  const labelColumnWidth = artistListMode ? Math.round(countryArtLabelColumnWidth * .6) : countryArtLabelColumnWidth;
+  const labelColumnWidth = artistListMode
+    ? Math.max(Math.round(countryArtLabelColumnWidth * .6), Math.ceil(countryArtMeasureTextWidth(axisHeading) + 20))
+    : countryArtLabelColumnWidth;
   // Country heading (about 37px) plus the time axis and all movement rows.
   const eventRailHeight = artistListMode ? 0 : countryArtEventRailHeight;
   let chartContentHeight = axisHeight + eventRailHeight + entries.length * movementRowHeight;
@@ -988,23 +1062,17 @@ function renderCountryArt(options = {}) {
   const timelineVerticalPadding = parseFloat(timelineStyle.paddingTop || 0) + parseFloat(timelineStyle.paddingBottom || 0);
   const visibleChartWidth = Math.max(360, Math.floor((timelineRect.width || window.innerWidth) - timelineHorizontalPadding - 4));
   const visibleChartHeight = Math.max(220, Math.floor((timelineRect.height || window.innerHeight) - timelineVerticalPadding - 4));
-  // Fit the vertical set of rows first. The artist-list default then applies
-  // its deliberate overview enlargement while preserving this base geometry.
+  // Country-art fits the vertical rows into the view. Artist-list starts from
+  // its fixed artist-name box height, so row height grows from stacked boxes.
   const defaultCountryArtDensity = Math.max(densityMinimum, Math.min(
     densityMaximum,
     (visibleChartHeight / chartContentHeight),
   ));
-  const defaultViewScale = artistListMode ? artistListDefaultViewScale : 1;
   const defaultFitDensity = Math.max(densityMinimum, Math.min(
     densityMaximum,
-    Math.floor(defaultCountryArtDensity * defaultViewScale * 1000) / 1000
+    artistListMode ? 1 : Math.floor(defaultCountryArtDensity * 1000) / 1000
   ));
-  // Keep the established horizontal fit. In artist-list mode only, set the
-  // default vertical scale from a readable fixed count of movement rows.
-  let defaultArtistListVerticalDensity = artistListMode ? Math.max(
-    densityMinimum,
-    Math.min(densityMaximum, visibleChartHeight / (axisHeight + artistListDefaultVisibleMovementRows * movementRowHeight))
-  ) : defaultFitDensity;
+  let defaultArtistListVerticalDensity = artistListMode ? 1 : defaultFitDensity;
   if (countryArtResetZoomOnRender) {
     density = defaultFitDensity;
     activeView.density = density;
@@ -1018,19 +1086,15 @@ function renderCountryArt(options = {}) {
     return defaultArtistListVerticalDensity * (1 + (ratio * ratio - 1) * artistListVerticalZoomBoost);
   };
   let verticalDensity = verticalDensityFor(density);
-  // The artist-list overview intentionally starts taller than the viewport.
-  // Keep scrolling available; the fitted base width prevents default x overflow.
+  // Keep scrolling available after user zoom or narrow viewport constraints.
   const hideDefaultScrollbars = false;
-  // The artist-list defaults to its enlarged vertical view, but its horizontal
-  // time range stays fitted. Reserve room for the visible vertical scrollbar.
+  // The default time range stays fitted; user zoom can expand it later.
   const horizontalFitDensity = artistListMode ? defaultFitDensity : defaultCountryArtDensity;
   const horizontalScrollbarReserve = artistListMode ? 20 : 0;
   const baseTimeWidth = artistListMode
     ? Math.max(1, Math.floor((visibleChartWidth - horizontalScrollbarReserve) / horizontalFitDensity - labelColumnWidth))
     : Math.max(1, Math.ceil(visibleChartWidth / horizontalFitDensity - labelColumnWidth));
-  // Artist-list centuries deliberately use more horizontal room. Any area
-  // beyond the viewport remains available through the existing scroll/pan.
-  const chartWidth = artistListMode ? Math.ceil(baseTimeWidth * 1.3) : baseTimeWidth;
+  const chartWidth = artistListMode ? Math.ceil(baseTimeWidth * 2) : baseTimeWidth;
   const yearScale = chartWidth / (end - start);
   if (artistListMode) {
     entries=entries.map(entry => {
@@ -1040,11 +1104,7 @@ function renderCountryArt(options = {}) {
     // The century header is screen-fixed at 38px. Its unscaled source height
     // is therefore inverse-compensated here, just like the frozen left cell.
     chartContentHeight=(axisHeight / Math.max(verticalDensity,.001)) + entries.reduce((sum,entry) => sum + entry.artistListRowHeight,0);
-    const defaultRowsHeight=entries.slice(0,artistListDefaultVisibleMovementRows).reduce((sum,entry) => sum + entry.artistListRowHeight,0);
-    defaultArtistListVerticalDensity=Math.max(
-      densityMinimum,
-      Math.min(densityMaximum,visibleChartHeight / (axisHeight + defaultRowsHeight))
-    );
+    defaultArtistListVerticalDensity=1;
     verticalDensity=verticalDensityFor(density);
   }
   const chartContentWidth = labelColumnWidth + chartWidth;
@@ -1057,13 +1117,6 @@ function renderCountryArt(options = {}) {
     });
   });
   const displayedWorksByEntry = artistListMode ? new Map() : new Map(entries.map(entry => [entry, workSources.get(entry).works.filter(work => preferredWorksByImage.get(work.src)?.entry === entry)]));
-  const selectedCountryCount = artistListMode ? artistListView.countries.length : 1;
-  const chartHeading = artistListMode
-    ? (selectedCountryCount === countryOptions.length ? (language === 'ko' ? '전체 국가' : 'All countries') : (language === 'ko' ? `선택 국가 ${selectedCountryCount}개` : `${selectedCountryCount} countries`))
-    : loc(country.name);
-  const axisHeading = artistListMode
-    ? (language === 'ko' ? `사조(${chartHeading})` : `Movements (${chartHeading})`)
-    : (language === 'ko' ? '사조' : 'Movement');
   // In artist-list mode the complete chart is vertically scaled, whereas its
   // fixed century band is not. Use an inverse source height for both sides of
   // the chart so their screen-space boundary stays aligned at every zoom.
@@ -1122,7 +1175,7 @@ function renderCountryArt(options = {}) {
       return `${movementLabelMarkup(entry)}<div class="country-art-time-row artist-list-time-row" style="width:${chartWidth}px;height:${rowHeight}px">${parentMovementBox}${submovementBoxes}${artistPills}</div>`;
     }
     const source = workSources.get(entry);
-    const works = displayedWorksByEntry.get(entry).map(work => `<figure class="country-art-work"><img src="${esc(work.src)}" alt="${esc(work.alt)}" loading="lazy"><figcaption>${esc(work.title)}${work.year ? `<small>${esc(work.year)}</small>` : ''}</figcaption></figure>`).join('');
+    const works = displayedWorksByEntry.get(entry).map(work => `<figure class="country-art-work"><img src="${esc(work.src)}" alt="${esc(work.alt)}" loading="lazy"><figcaption>${work.artistName ? `<strong class="country-art-work-artist">${esc(work.artistName)}</strong>` : ''}<span class="country-art-work-title">${esc(work.title)}</span>${work.year ? `<small>${esc(work.year)}</small>` : ''}</figcaption></figure>`).join('');
     const empty = source.state === 'loading' ? (language === 'ko' ? '대표작 자료를 불러오는 중' : 'Loading representative works') : (language === 'ko' ? '대표작 자료 없음' : 'No representative work available');
     const backgroundButton = renderCountryMovementBackgroundButton(country.id, entry);
     return `${movementLabelMarkup(entry)}<div class="country-art-time-row" style="width:${chartWidth}px;height:${rowHeight}px"><article class="country-art-movement" style="left:${left}px;width:${barWidth}px;height:${rowHeight}px;--movement-color:${esc(entry.color)}">${backgroundButton}<div class="country-art-work-list">${works || `<p>${empty}</p>`}</div></article></div>`;
@@ -1188,12 +1241,9 @@ function renderCountryArt(options = {}) {
             + baseOffset * pillHeightZoomRatio
           : sourceTop;
         const pillHeight = commonPillHeight * pillHeightZoomRatio;
-        // Reduce every shared-height pill about its own center. This preserves
-        // the lifespan position while restoring a consistent gap between lanes.
-        const reducedPillHeight = pillHeight * .94;
-        clone.style.top = `${rowTop + (pillHeight - reducedPillHeight) / 2}px`;
+        clone.style.top = `${rowTop}px`;
         clone.style.width = `${sourceRect.width}px`;
-        clone.style.height = `${reducedPillHeight}px`;
+        clone.style.height = `${pillHeight}px`;
         clone.style.fontSize = `${smallestFontSize * pillHeightZoomRatio * .8}px`;
         overlay.append(clone);
         bindArtistLifePill(clone);
@@ -1475,65 +1525,6 @@ function renderCountryArt(options = {}) {
   countryArtScroll?.addEventListener('pointerup', stopCountryArtPan);
   countryArtScroll?.addEventListener('pointercancel', stopCountryArtPan);
 }
-function renderArtistRelations() {
-  const artist = artists.find(item => item.id === selectedId);
-  const pageNav = `<nav class="page-nav-actions" aria-label="${language === 'ko' ? '탭 이동' : 'Tab navigation'}"><button class="atlas-nav-button artist-relations-nav-artists" type="button">${language === 'ko' ? '화가' : 'Artists'}</button><button class="atlas-nav-button artist-relations-nav-movements" type="button">${language === 'ko' ? '사조' : 'Movements'}</button><button class="atlas-nav-button artist-relations-nav-country" type="button">${language === 'ko' ? '국가별 미술' : 'Art by Country'}</button><button class="atlas-nav-button artist-relations-nav-artist-list" type="button">${language === 'ko' ? '화가 리스트' : 'Artist List'}</button><button class="atlas-nav-button artist-relations-nav-techniques" type="button">${language === 'ko' ? '기법·용어' : 'Techniques'}</button><button class="atlas-nav-button artist-relations-nav-topics" type="button">${language === 'ko' ? '주제-사건' : 'Topics & Events'}</button></nav>`;
-  if (!artist) {
-    timeline.innerHTML = `${pageNav}<section class="artist-relations-empty"><h1>${esc(language === 'ko' ? '화가를 찾을 수 없습니다.' : 'Artist not found.')}</h1><p>${esc(language === 'ko' ? '화가 목록에서 연표 제목의 이름을 눌러 관계도를 다시 열어 주세요.' : 'Open the relationship map again from an artist timeline title.')}</p></section>`;
-  } else {
-    const relation = artistRelations?.artists?.[artist.id] || artistRelations?.artists?.[artist.qid] || {};
-    const relationGroups = [
-      {key:'study', label:language === 'ko' ? '연구·모사·학습한 선행 화가' : 'Earlier artists studied or copied', position:'study'},
-      {key:'teachers', label:language === 'ko' ? '성장기에 사사 받은 스승' : 'Teachers and mentors', position:'teachers'},
-      {key:'exchanges', label:language === 'ko' ? '교류한 미술가' : 'Artists in exchange', position:'exchanges'},
-      {key:'rivals', label:language === 'ko' ? '대립·경쟁한 미술가' : 'Rivals and competitors', position:'rivals'}
-    ];
-    const relationNodes = group => {
-      const nodes = (Array.isArray(relation[group.key]) ? relation[group.key] : [])
-      .map(entry => {
-        const id = typeof entry === 'string' ? entry : entry?.id;
-        const registeredArtist = id ? artists.find(item => item.id === id || item.qid === id) : null;
-        const name = registeredArtist ? (language === 'ko' ? artistListKoreanName(registeredArtist) : loc(registeredArtist.name)) : loc(entry?.name || entry?.label);
-        if (!name) return '';
-        const classes = `artist-relation-node artist-relation-node--${group.position}`;
-        if (registeredArtist) {
-          const title = language === 'ko' ? `${name} 화가 연표 보기` : `Open ${name} artist timeline`;
-          const href = uHangulModeUrl(`index.html?artist=${encodeURIComponent(registeredArtist.id)}`);
-          return `<a class="${classes} artist-relation-artist-link" href="${esc(href)}" target="artThroughTimeArtists" title="${esc(title)}"${uHangulArtistAttributes(registeredArtist, name)}>${esc(name)}</a>`;
-        }
-        const wikipedia = typeof entry?.wikipedia === 'string' ? entry.wikipedia.trim() : '';
-        if (wikipedia) return `<a class="${classes} artist-relation-wikipedia-link" href="${esc(wikipedia)}" target="artAtlasArtistWikipedia" rel="noopener" title="${esc(language === 'ko' ? `${name} 영문 위키피디아 열기` : `Open ${name} on English Wikipedia`)}">${esc(name)}</a>`;
-        const answer = entry?.agentAnswer || (language === 'ko' ? `${name}에 관한 확인 가능한 외부 링크가 아직 등록되지 않았습니다. 관계 데이터에 출처와 설명을 추가해 주세요.` : `No verified external link is recorded for ${name}. Add a source and explanation to the relationship data.`);
-        return `<button class="${classes} artist-relation-agent-link" type="button" data-relation-agent-name="${esc(name)}" data-relation-agent-answer="${esc(answer)}" title="${esc(language === 'ko' ? `${name} AI 에이전트 안내 보기` : `View AI agent note for ${name}`)}">${esc(name)}</button>`;
-      })
-      .filter(Boolean);
-      return nodes.length ? nodes.join('<span class="artist-relation-separator" aria-hidden="true">,</span>') : `<p class="artist-relation-none">${esc(language === 'ko' ? '등록된 관계 없음' : 'No relation recorded')}</p>`;
-    };
-    const lanes = relationGroups.map(group => `<section class="artist-relation-lane artist-relation-lane--${group.position}"><h2>${esc(group.label)}</h2><div>${relationNodes(group)}</div></section>`).join('');
-    const impactEvents = Array.isArray(relation.impactEvents) ? relation.impactEvents : [];
-    const impactEventsMarkup = impactEvents.length ? `<section class="artist-impact-events" aria-labelledby="artist-impact-events-title"><div class="artist-impact-events-heading"><p>${esc(language === 'ko' ? 'Artist timeline' : 'Artist timeline')}</p><h2 id="artist-impact-events-title">${esc(language === 'ko' ? '영향을 준 event' : 'Influential events')}</h2></div><div class="artist-impact-events-table" role="table"><div class="artist-impact-events-row artist-impact-events-row--head" role="row"><span role="columnheader">${esc(language === 'ko' ? '연도' : 'Year')}</span><span role="columnheader">${esc(language === 'ko' ? '사건' : 'Event')}</span><span role="columnheader">${esc(language === 'ko' ? '영향' : 'Impact')}</span></div>${impactEvents.map(event => `<div class="artist-impact-events-row" role="row"><time role="cell">${esc(event?.year || '')}</time><strong role="cell">${esc(loc(event?.title))}</strong><div role="cell"><p>${esc(loc(event?.impact))}</p></div></div>`).join('')}</div></section>` : '';
-    const subtitle = language === 'ko'
-      ? '검증된 관계만 표시합니다. 관계 정보가 없는 방향은 비워 둡니다.'
-      : 'Only verified relationships are shown; directions without records remain empty.';
-    timeline.innerHTML = `${pageNav}<header class="artist-relations-header"><p class="eyebrow">${esc(language === 'ko' ? '화가 관계도' : 'Artist Relationship Map')}</p><h1>${esc(artistDisplayName(artist))}</h1><p>${esc(subtitle)}</p></header><section class="artist-relation-map" aria-label="${esc(language === 'ko' ? `${artistDisplayName(artist)} 관계도` : `${artistDisplayName(artist)} relationship map`)}"><span class="artist-relation-connector artist-relation-connector--up" aria-hidden="true"></span><span class="artist-relation-connector artist-relation-connector--down" aria-hidden="true"></span><span class="artist-relation-connector artist-relation-connector--left" aria-hidden="true"></span><span class="artist-relation-connector artist-relation-connector--right" aria-hidden="true"></span>${lanes}<div class="artist-relation-center"><span class="artist-relation-node artist-relation-node--center"${uHangulArtistAttributes(artist, artistDisplayName(artist))}>${esc(artistDisplayName(artist))}</span></div></section>${impactEventsMarkup}`;
-    timeline.querySelectorAll('[data-relation-agent-name]').forEach(button => button.addEventListener('click', () => showRelationAgentAnswer(button.dataset.relationAgentName, button.dataset.relationAgentAnswer)));
-  }
-  timeline.querySelector('.artist-relations-nav-artists')?.addEventListener('click', openArtistListPage);
-  timeline.querySelector('.artist-relations-nav-movements')?.addEventListener('click', openMovementAtlas);
-  timeline.querySelector('.artist-relations-nav-country')?.addEventListener('click', openCountryArtPage);
-  timeline.querySelector('.artist-relations-nav-artist-list')?.addEventListener('click', openPainterListPage);
-  timeline.querySelector('.artist-relations-nav-techniques')?.addEventListener('click', openTechniquesPage);
-  timeline.querySelector('.artist-relations-nav-topics')?.addEventListener('click', openTopicsPage);
-}
-function showRelationAgentAnswer(name='', answer='') {
-  document.querySelector('.artist-relation-agent-answer')?.remove();
-  const panel = document.createElement('aside');
-  panel.className = 'artist-relation-agent-answer';
-  panel.setAttribute('role', 'status');
-  panel.innerHTML = `<button type="button" aria-label="${esc(language === 'ko' ? '안내 닫기' : 'Close note')}">×</button><p>${esc(language === 'ko' ? 'AI 에이전트 안내' : 'AI agent note')}</p><h2>${esc(name)}</h2><div>${esc(answer)}</div>`;
-  panel.querySelector('button')?.addEventListener('click', () => panel.remove());
-  document.body.append(panel);
-}
 function openMovementAtlas() {
   if (!isMovementPage) {
     const pageUrl = new URL('index.html', location.href);
@@ -1541,7 +1532,6 @@ function openMovementAtlas() {
     pageUrl.searchParams.delete('artistList');
     pageUrl.searchParams.delete('artist');
     pageUrl.searchParams.delete('artistId');
-    pageUrl.searchParams.delete('artistRelations');
     pageUrl.searchParams.delete('countryArt');
     pageUrl.searchParams.set('movementPopup', '1');
     openNamedPage(uHangulModeUrl(pageUrl.href), 'artThroughTimeMovements');

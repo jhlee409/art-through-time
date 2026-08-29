@@ -8,7 +8,7 @@ Firebase support is deliberately dormant: the application does not show an expor
 
 ## Current contract
 
-Before exporting artist data, review any generated `data/artist-relation-impact-audits.json` entries with `pending-source-review`. This local audit file is not migration source data; it is an operational checklist that helps ensure relationship and historically significant impact-event records were reviewed after timeline images were added.
+Before exporting artist data, review local JSON source files and image provenance. Relationship-map audit files are no longer part of the current app workflow.
 
 - Artist and artwork IDs are stable and must never be changed during migration.
 - `metadata` records creation and update timestamps plus the local editor identifier.
