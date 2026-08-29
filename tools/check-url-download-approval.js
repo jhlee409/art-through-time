@@ -32,6 +32,7 @@ function looksLikeNetworkFileDownload(source) {
 }
 
 const violations = [];
+const localSearchViolations = [];
 for (const dirName of scanDirs) {
   const dir = path.join(root, dirName);
   if (!fs.existsSync(dir)) continue;
@@ -43,12 +44,22 @@ for (const dirName of scanDirs) {
     if (looksLikeNetworkFileDownload(source) && !source.includes('requireUrlFileDownloadApproval')) {
       violations.push(rel);
     }
+    if (looksLikeNetworkFileDownload(source)
+      && !/(?:existingLocalPathForWork|findCatalogImageForWork|buildInventory)\s*\(/.test(source)) {
+      localSearchViolations.push(rel);
+    }
   }
 }
 
 if (violations.length) {
   console.error('URL file download code must call tools/url-download-permission.js before saving files.');
   violations.forEach(file => console.error(`- ${file}`));
+  process.exit(1);
+}
+
+if (localSearchViolations.length) {
+  console.error('URL image download code must search the local image catalog or recovery inventory before downloading.');
+  localSearchViolations.forEach(file => console.error(`- ${file}`));
   process.exit(1);
 }
 

@@ -37,7 +37,7 @@ function checkCommand(label, command, args) {
 function summarizeOversizedImages() {
   const files = imageDirectories.flatMap(directory => {
     const absolute = path.join(root, directory);
-    return fs.existsSync(absolute) ? walk(absolute, name => /\.(?:jpe?g|png|webp|gif)$/i.test(name)) : [];
+    return fs.existsSync(absolute) ? walk(absolute, name => /\.(?:jpe?g|jfif|png|webp|gif)$/i.test(name)) : [];
   });
   const inspected = files.map(file => {
     try {
@@ -130,6 +130,7 @@ function main() {
     ['movement phase 6 completion', 'tools/complete-movement-sync-v1.js'],
     ['movement learning guides', 'tools/sync-movement-learning-guides.js', '--check'],
     ['country art data', 'tools/validate-country-art-data.js'],
+    ['image catalog', 'tools/build-image-catalog.js', '--check'],
     ['Renaissance country table', 'tools/verify-renaissance-country-table.js'],
     ['URL download approval guard', 'tools/check-url-download-approval.js']
   ].forEach(([label, script, ...args]) => checked.push(checkCommand(label, process.execPath, [script,...args])));

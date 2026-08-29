@@ -102863,6 +102863,65 @@
               "highResolution": "data/images/artist-Q9340/로랭_아키스와 갈라테이아_1657__claude-lorrain-acis-galatea-1657.jpg"
             }
           }
+        },
+        {
+          "id": "claude-lorrain-landscape-piping-shepherd-1629",
+          "year": 1629,
+          "yearEnd": 1632,
+          "popularity": 1,
+          "title": {
+            "ko": "피리 부는 목동이 있는 풍경",
+            "en": "Landscape with a Piping Shepherd"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "바로크",
+            "en": "Baroque"
+          },
+          "image": "data/images/artist-Q9340/'Landscape_with_a_Piping_Shepherd'_by_Claude_Lorrain,_c._1629-32,_Norton_Simon_Museum.jfif",
+          "thumbnail": "data/images/artist-Q9340/'Landscape_with_a_Piping_Shepherd'_by_Claude_Lorrain,_c._1629-32,_Norton_Simon_Museum.jfif",
+          "highResImage": "data/images/artist-Q9340/'Landscape_with_a_Piping_Shepherd'_by_Claude_Lorrain,_c._1629-32,_Norton_Simon_Museum.jfif",
+          "highResOriginal": "data/images/artist-Q9340/'Landscape_with_a_Piping_Shepherd'_by_Claude_Lorrain,_c._1629-32,_Norton_Simon_Museum.jfif",
+          "description": {
+            "ko": "아침 햇빛 속에서 피리를 부는 목동과 양 떼를 배치해 로랭 초기 풍경화의 빛과 대기 표현을 보여주는 작품입니다.",
+            "en": "An early landscape in which morning light illuminates a piping shepherd and his flock."
+          },
+          "collection": [
+            {
+              "ko": "노턴 사이먼 미술관",
+              "en": "Norton Simon Museum"
+            }
+          ],
+          "source": "https://www.nortonsimon.org/art/detail/M.2007.3.P",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "origin": "manual",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "metadata": {
+            "createdAt": "2026-08-29T00:00:00.000Z",
+            "updatedAt": "2026-08-29T00:00:00.000Z",
+            "createdBy": "local-image-catalog-recovery",
+            "updatedBy": "local-image-catalog-recovery"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q9340/'Landscape_with_a_Piping_Shepherd'_by_Claude_Lorrain,_c._1629-32,_Norton_Simon_Museum.jfif",
+              "highResolution": "data/images/artist-Q9340/'Landscape_with_a_Piping_Shepherd'_by_Claude_Lorrain,_c._1629-32,_Norton_Simon_Museum.jfif",
+              "sourceUrl": "https://www.nortonsimon.org/art/detail/M.2007.3.P",
+              "sourceUrls": [
+                "https://www.nortonsimon.org/art/detail/M.2007.3.P"
+              ],
+              "license": "",
+              "institution": "Norton Simon Museum"
+            }
+          }
         }
       ],
       "featuredWorkIds": [

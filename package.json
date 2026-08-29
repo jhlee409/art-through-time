@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node server.js",
     "health": "node tools/check-project-health.js",
-    "test": "node tools/check-project-health.js"
+    "test": "node tools/check-project-health.js",
+    "images:catalog": "node tools/build-image-catalog.js",
+    "images:check": "node tools/build-image-catalog.js --check"
   },
   "engines": {
     "node": ">=20"

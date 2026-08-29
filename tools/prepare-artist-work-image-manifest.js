@@ -2,7 +2,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const {requireUrlFileDownloadApproval} = require('./url-download-permission');
-const {workHasLocalImage} = require('./image-path-utils');
+const {workHasLocalImage, canonicalArtworkPath} = require('./image-path-utils');
 
 const root = path.resolve(__dirname, '..');
 const artistsFile = path.join(root, 'data', 'artists.json');
@@ -153,7 +153,11 @@ async function main() {
     const extension = top ? extensionFor(top.mime, top.fileTitle) : '.jpg';
     return {
       ...item,
-      targetPath: `data/images/${item.artistId}/${item.workId}${extension}`,
+      targetPath: canonicalArtworkPath(
+        {id: item.artistId, name: item.artistName},
+        {id: item.workId, title: item.workTitle, year: item.year},
+        extension
+      ),
       reviewStatus: confident ? 'candidate' : 'unresolved',
       selected: confident ? top : null,
       candidates: candidates.slice(0, 3),

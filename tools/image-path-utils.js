@@ -1,9 +1,10 @@
 const fs = require('node:fs');
 const path = require('node:path');
+const {catalogFile, readJson, normalizeLocalPath, canonicalArtworkFilename, canonicalArtworkPath} = require('./image-catalog');
 
 const root = path.resolve(__dirname, '..');
-const imageExtensions = ['.jpg', '.jpeg', '.png', '.webp', '.gif'];
-const imageExtensionPattern = /\.(?:jpe?g|png|webp|gif)$/i;
+const imageExtensions = ['.jpg', '.jpeg', '.jfif', '.png', '.webp', '.gif'];
+const imageExtensionPattern = /\.(?:jpe?g|jfif|png|webp|gif)$/i;
 
 function cleanLocalImagePath(value) {
   const clean = String(value || '').trim().replace(/[?#].*$/, '').replace(/\\/g, '/');
@@ -80,6 +81,21 @@ function findExistingWorkImageById(artistId, workId) {
   return prefixName ? `${folder}/${prefixName}` : '';
 }
 
+function findCatalogImageForWork(artistId, work) {
+  if (!artistId || !work?.id) return '';
+  const catalog = readJson(catalogFile, {images: []});
+  for (const image of catalog.images || []) {
+    const matches = (image.works || []).some(reference => (
+      String(reference.artistId) === String(artistId)
+      && String(reference.workId) === String(work.id)
+    ));
+    if (!matches) continue;
+    const existing = existingLocalPath(normalizeLocalPath(image.path));
+    if (existing) return existing;
+  }
+  return '';
+}
+
 function existingLocalPathForWork(work, artistId = '') {
   if (!work) return '';
   const direct = [
@@ -91,7 +107,7 @@ function existingLocalPathForWork(work, artistId = '') {
     work.migration?.image?.localThumbnail,
     work.migration?.image?.highResolution
   ].map(resolveExistingLocalImagePath).find(Boolean);
-  return direct || findExistingWorkImageById(artistId, work.id);
+  return direct || findExistingWorkImageById(artistId, work.id) || findCatalogImageForWork(artistId, work);
 }
 
 function workHasLocalImage(work, artistId = '') {
@@ -103,6 +119,9 @@ module.exports = {
   existingLocalPath,
   resolveExistingLocalImagePath,
   findExistingWorkImageById,
+  findCatalogImageForWork,
   existingLocalPathForWork,
-  workHasLocalImage
+  workHasLocalImage,
+  canonicalArtworkFilename,
+  canonicalArtworkPath
 };

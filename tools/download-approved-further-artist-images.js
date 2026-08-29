@@ -2,7 +2,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const {requireUrlFileDownloadApproval} = require('./url-download-permission');
-const {existingLocalPathForWork, resolveExistingLocalImagePath} = require('./image-path-utils');
+const {existingLocalPathForWork, resolveExistingLocalImagePath, canonicalArtworkPath} = require('./image-path-utils');
 
 const root = path.resolve(__dirname, '..');
 const manifestFile = path.join(root, 'data', 'further-artist-image-download-manifest.json');
@@ -54,6 +54,11 @@ async function main() {
     try {
       const work = workMap.get(`${item.artistId}|${item.workId}`);
       if (!work) throw new Error(`${item.artistId}: representative work is missing`);
+      const canonicalTarget = canonicalArtworkPath(
+        {id:item.artistId, name:item.artistName},
+        work,
+        path.extname(item.targetPath) || '.jpg'
+      );
       let localPath = existingLocalPathForWork(work, item.artistId) || resolveExistingLocalImagePath(item.targetPath);
       let absolute = localPath ? path.join(root, localPath) : path.join(root, item.targetPath);
       let buffer;
@@ -84,7 +89,7 @@ async function main() {
         if (declaredBytes > maxBytes) throw new Error(`${item.artistId}: image exceeds ${maxBytes} bytes`);
         buffer = Buffer.from(await response.arrayBuffer());
         if (!buffer.length || buffer.length > maxBytes) throw new Error(`${item.artistId}: invalid image size ${buffer.length}`);
-        localPath = item.targetPath;
+        localPath = canonicalTarget;
         absolute = path.join(root, localPath);
         fs.mkdirSync(path.dirname(absolute), {recursive:true});
         fs.writeFileSync(absolute, buffer);

@@ -3,7 +3,7 @@ const path = require('node:path');
 
 const root = path.resolve(__dirname, '..');
 const configFile = path.join(root, 'data', 'local-image-sources.json');
-const imageFilePattern = /\.(?:jpe?g|png|webp|gif)$/i;
+const imageFilePattern = /\.(?:jpe?g|jfif|png|webp|gif)$/i;
 
 function readConfig() {
   try { return JSON.parse(fs.readFileSync(configFile, 'utf8')); }

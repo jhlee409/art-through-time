@@ -2,7 +2,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const {requireUrlFileDownloadApproval} = require('./url-download-permission');
-const {workHasLocalImage} = require('./image-path-utils');
+const {workHasLocalImage, canonicalArtworkPath} = require('./image-path-utils');
 
 const root = path.resolve(__dirname, '..');
 const representativesFile = path.join(root, 'data', 'art-movement-representatives.json');
@@ -127,7 +127,7 @@ async function main() {
       artistName:item.artist.name,
       workId:item.work.id,
       workTitle:item.work.title,
-      targetPath:`data/images/${item.artist.id}/${item.work.id}${extension}`,
+      targetPath:canonicalArtworkPath(item.artist, item.work, extension),
       reviewStatus:confident ? 'candidate' : 'unresolved',
       selected:confident ? top : null,
       candidates:candidates.slice(0,3),

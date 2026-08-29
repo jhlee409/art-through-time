@@ -20,7 +20,7 @@ async function removeHighResolutionFiles(folder, workId) {
   const directNames=[...new Set(Object.values(uploadTypes))].flatMap(ext => [`${safeWorkId}.${ext}`,`${safeWorkId}.display.jpg`,`${safeWorkId}.display.png`]);
   await Promise.all(directNames.map(name => fs.unlink(path.join(folder,name)).catch(()=>{})));
   const entries=await fs.readdir(folder).catch(()=>[]);
-  await Promise.all(entries.filter(name => name.startsWith(`${safeWorkId}_`) && /\.(?:jpe?g|png|webp|gif)$/i.test(name)).map(name => fs.unlink(path.join(folder,name)).catch(()=>{})));
+  await Promise.all(entries.filter(name => name.startsWith(`${safeWorkId}_`) && /\.(?:jpe?g|jfif|png|webp|gif)$/i.test(name)).map(name => fs.unlink(path.join(folder,name)).catch(()=>{})));
 }
 async function migrationExport() {
   const artists=normalizeArtistsPayload(await readArtistsFile(),{touch:false});

@@ -546,7 +546,7 @@ async function displayDataImageIssues() {
 }
 async function oversizedLocalImageIssues() {
   const issues=[];
-  const imagePattern=/\.(?:jpe?g|png|webp|gif)$/i;
+  const imagePattern=/\.(?:jpe?g|jfif|png|webp|gif)$/i;
   const walk=async folder => {
     const entries=await fs.readdir(folder,{withFileTypes:true}).catch(()=>[]);
     for(const entry of entries) {

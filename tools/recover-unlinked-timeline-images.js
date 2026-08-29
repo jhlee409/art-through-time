@@ -17,7 +17,7 @@ const inventoryFile = path.join(generatedDir, 'unlinked-timeline-image-inventory
 const matchFile = path.join(generatedDir, 'unlinked-timeline-image-matches.json');
 const metadataFile = path.join(generatedDir, 'unlinked-timeline-image-metadata.json');
 const temporaryDir = path.join(generatedDir, 'tmp-image-match-references');
-const imageExtensionPattern = /\.(?:jpe?g|png|webp|gif)$/i;
+const imageExtensionPattern = /\.(?:jpe?g|jfif|png|webp|gif)$/i;
 const imageUrlPattern = /(?:special:filepath|special:redirect\/file|upload\.wikimedia|commons\.wikimedia\.org\/wiki\/file:|\.(?:jpe?g|png|webp|gif)(?:[?#/]|$))/i;
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 

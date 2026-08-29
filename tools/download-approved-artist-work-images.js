@@ -2,7 +2,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const {requireUrlFileDownloadApproval} = require('./url-download-permission');
-const {existingLocalPathForWork, resolveExistingLocalImagePath} = require('./image-path-utils');
+const {existingLocalPathForWork, resolveExistingLocalImagePath, canonicalArtworkPath} = require('./image-path-utils');
 
 const root = path.resolve(__dirname, '..');
 const manifestFile = path.join(root, 'data', 'artist-work-image-download-manifest.json');
@@ -121,6 +121,7 @@ async function main() {
       const artist = artistMap.get(item.artistId);
       const work = (artist?.works || []).find(candidate => candidate.id === item.workId);
       if (!work) throw new Error(`${item.artistId}: artist work is missing`);
+      const canonicalTarget = canonicalArtworkPath(artist, work, path.extname(item.targetPath) || '.jpg');
       let localPath = existingLocalPathForWork(work, item.artistId) || resolveExistingLocalImagePath(item.targetPath);
       let absolute = localPath ? path.join(root, localPath) : path.join(root, item.targetPath);
       let buffer;
@@ -129,7 +130,7 @@ async function main() {
       } else {
         const url = approvedDownloadUrl(item);
         buffer = await fetchImage(url, item.artistId);
-        localPath = item.targetPath;
+        localPath = canonicalTarget;
         absolute = path.join(root, localPath);
         fs.mkdirSync(path.dirname(absolute), {recursive: true});
         fs.writeFileSync(absolute, buffer);

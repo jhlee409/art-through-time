@@ -66,6 +66,7 @@ npm start
 | `data/미술사조/*.html` | 국가 전개 표, 지역 특징, 대표·더 볼 화가 링크와 작품 카드 |
 | `data/artists.json` | 화가와 작품의 전체 원본 |
 | `data/artists-index.json` | 화면 로딩용 화가 색인 |
+| `data/image-catalog.json` | 이미지 경로, 작품 ID·QID, 제목·연도, SHA-256과 이전 경로 별칭을 모은 전역 검색 색인 |
 | `data/country-art-events.json` | 국가별 미술 사건 |
 | `data/country-movement-backgrounds.json` | 국가별 사조 태동 배경과 사건 ID 연결 |
 | `data/techniques.json` | 기법·용어와 대표 사례 |
@@ -84,7 +85,11 @@ node tools/sync-movement-learning-guides.js --check
 
 - 화면 이미지는 프로젝트의 로컬 파일만 사용합니다.
 - 화가 작품은 `data/images/`에 둡니다. 고해상도 전용 `data/high-resolution/` 폴더는 사용하지 않습니다.
-- 별도 원본 보관 파일을 정리할 때는 `간략이름_제목3단어_시작연도__workId.ext` 형식을 표준 파일명으로 사용하되, 앱 표시용 경로는 `data/images/artist-id/workId.ext` 구조를 유지할 수 있습니다.
+- 기존 이미지 파일은 일괄 개명하지 않고 `data/image-catalog.json`에서 `legacy`로 보존합니다. 수정·교체하는 파일만 점진적으로 표준명으로 전환합니다.
+- 새 화가 작품 이미지는 `data/images/artist-id/간략이름_제목3단어_시작연도__workId.ext` 형식을 사용합니다. 작가명·작품명·연도·`workId`가 확정되지 않으면 임의 이름으로 등록하지 않고 대기 상태를 유지합니다.
+- 이미지 연결의 기준은 파일명이 아니라 `artistId + workId`이며, 동일 파일 판정에는 SHA-256을 사용합니다. 파일명은 사람이 찾기 위한 보조 정보입니다.
+- 이미지를 추가·교체·삭제한 뒤 `node tools/build-image-catalog.js`를 실행해 전역 색인을 갱신합니다. 새 비표준 파일명이나 카탈로그와 디스크의 불일치는 `npm test`에서 실패합니다.
+- 다운로드 전에 `node tools/find-artwork-image.js`로 작가명·작품명·QID·`workId`·SHA-256을 검색합니다. 로컬 일치 파일이 있으면 외부 다운로드보다 기존 파일 연결을 복구합니다.
 - 사조 이미지는 `data/미술사조/images/`, 기법 이미지는 `data/techniques/`, 주제 이미지는 `data/topic-images/`에 둡니다.
 - 사용자가 "다운로드 폴더"라고 말하면 프로젝트 루트의 `다운로드용/`만 확인합니다.
 - 로컬 파일이 없으면 외부 이미지 URL을 만들지 않고 `이미지 업로드 예정` 상태를 유지합니다.
@@ -97,6 +102,15 @@ node tools/sync-movement-learning-guides.js --check
 ```powershell
 node tools/check-pending-local-images.js
 node tools/import-pending-local-images.js
+```
+
+이미지 카탈로그를 검색하고 갱신하는 기본 명령은 다음과 같습니다.
+
+```powershell
+node tools/find-artwork-image.js --artist "미켈란젤로" --title "최후의 심판"
+node tools/find-artwork-image.js --qid Q4340473
+node tools/build-image-catalog.js
+node tools/build-image-catalog.js --check
 ```
 
 ## 로그인과 권한
