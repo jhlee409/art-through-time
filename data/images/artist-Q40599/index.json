@@ -431,20 +431,20 @@
   },
   "wikidata-Q4373335": {
     "thumbnail": "data/images/artist-Q40599/wikidata-Q4373335.jpg",
-    "checkedAt": "2026-08-16T23:17:10.479Z",
-    "verifiedBy": "Openverse fallback after image download retry",
+    "checkedAt": "2026-08-29T07:37:20.024Z",
+    "verifiedBy": "Matched from local artist and artwork metadata",
     "imageHash": "dfd74ba6117ee0c39f6898ae8de1d461c1ffefa8ddc8a2f06ac12fd4ac729138"
   },
   "wikidata-Q2494850": {
     "thumbnail": "data/images/artist-Q40599/wikidata-Q2494850.jpg",
-    "checkedAt": "2026-08-16T23:26:39.585Z",
-    "verifiedBy": "Openverse fallback after image download retry",
+    "checkedAt": "2026-08-29T07:37:20.023Z",
+    "verifiedBy": "Matched from local artist and artwork metadata",
     "imageHash": "c2a6a591f82700d17bbaa39fa4ddfeeab9d6f94686ac8ed7e81986e1f29d39b9"
   },
   "wikidata-Q17495108": {
     "thumbnail": "data/images/artist-Q40599/wikidata-Q17495108.jpg",
-    "checkedAt": "2026-08-16T23:28:16.064Z",
-    "verifiedBy": "Openverse fallback after image download retry",
+    "checkedAt": "2026-08-29T07:37:20.022Z",
+    "verifiedBy": "Matched from local artist and artwork metadata",
     "imageHash": "f4a72ef9bf2632be0085c9449932a1aa870b39f41c6e0a99ef29dce01bf4945a"
   },
   "wikidata-Q26250": {
@@ -458,5 +458,89 @@
     "checkedAt": "2026-08-22T07:57:22.584Z",
     "verifiedBy": "Wikidata image statement",
     "imageHash": "e32f0e1c259dc788cd20d3a082e660ec8e2f63d08e3d7a59182d0e5a3aa34019"
+  },
+  "wikidata-Q123286344": {
+    "thumbnail": "data/images/artist-1786343948059/wikidata-Q123286344.jpg",
+    "checkedAt": "2026-08-29T07:18:54.999Z",
+    "verifiedBy": "Recovered by metadata: Wikidata QID, creator, and local image metadata",
+    "imageHash": "623674044cac0ff85b2559a3da323194fe83fedaa4614dcf7d70559c6e7b2a41"
+  },
+  "wikidata-Q124704977": {
+    "thumbnail": "data/images/artist-1786343948059/wikidata-Q124704977.jpg",
+    "checkedAt": "2026-08-29T07:18:55.000Z",
+    "verifiedBy": "Recovered by metadata: Wikidata QID, creator, and local image metadata",
+    "imageHash": "5a50bdf0f79395dacc91ff0e3e97d507dd232f21994a30efe7cd8c934f60ec8d"
+  },
+  "wikidata-Q16648934": {
+    "thumbnail": "data/images/artist-1786343948059/wikidata-Q16648934.jpg",
+    "checkedAt": "2026-08-29T07:18:55.001Z",
+    "verifiedBy": "Recovered by metadata: Wikidata QID, creator, and local image metadata",
+    "imageHash": "9b26035633a43aa674adf8146504ad5c108c310c6f69a9b543a3ac5c0a0e5873"
+  },
+  "wikidata-Q18413043": {
+    "thumbnail": "data/images/artist-1786343948059/wikidata-Q18413043.jpg",
+    "checkedAt": "2026-08-29T07:18:55.002Z",
+    "verifiedBy": "Recovered by metadata: Wikidata QID, creator, and local image metadata",
+    "imageHash": "73015baad145c9348f7484ab2704d51c18f9a6ab379181fcb92e750e669b9d29"
+  },
+  "wikidata-Q20198758": {
+    "thumbnail": "data/images/artist-1786343948059/wikidata-Q20198758.jpg",
+    "checkedAt": "2026-08-29T07:18:55.003Z",
+    "verifiedBy": "Recovered by metadata: Wikidata QID, creator, and local image metadata",
+    "imageHash": "a90b5300800996b9727a1926bb131073eef8b51bc19eca37cf082c6327588d6a"
+  },
+  "wikidata-Q2105269": {
+    "thumbnail": "data/images/artist-1786343948059/wikidata-Q2105269.jpg",
+    "checkedAt": "2026-08-29T07:18:55.004Z",
+    "verifiedBy": "Recovered by metadata: Wikidata QID, creator, and local image metadata",
+    "imageHash": "378bf5899dbbdc0d966ff562cd8839e640a5600446f7f94f34dea9a16304dea2"
+  },
+  "wikidata-Q2997933": {
+    "thumbnail": "data/images/artist-1786343948059/wikidata-Q2997933.jpg",
+    "checkedAt": "2026-08-29T07:18:55.005Z",
+    "verifiedBy": "Recovered by metadata: Wikidata QID, creator, and local image metadata",
+    "imageHash": "c1f22447232f65acad94bcfc59503d44256c46c719cc2a2559d9e3e2ab310c87"
+  },
+  "wikidata-Q3207826": {
+    "thumbnail": "data/images/artist-1786343948059/wikidata-Q3207826.jpg",
+    "checkedAt": "2026-08-29T07:18:55.006Z",
+    "verifiedBy": "Recovered by metadata: Wikidata QID, creator, and local image metadata",
+    "imageHash": "f67352bc1a1a4bfdfae02e66cc8eff5438d45ee42c20598aa49b89a399a09236"
+  },
+  "wikidata-Q43325424": {
+    "thumbnail": "data/images/artist-1786343948059/wikidata-Q43325424.jpg",
+    "checkedAt": "2026-08-29T07:18:55.007Z",
+    "verifiedBy": "Recovered by metadata: Wikidata QID, creator, and local image metadata",
+    "imageHash": "94206ba9c294b4392c3ee877968d11e864327a0d0a8d29424e076193bca49bd4"
+  },
+  "wikidata-Q66763675": {
+    "thumbnail": "data/images/artist-1786343948059/wikidata-Q66763675.jpg",
+    "checkedAt": "2026-08-29T07:18:55.008Z",
+    "verifiedBy": "Recovered by metadata: Wikidata QID, creator, and local image metadata",
+    "imageHash": "2321dd3a910337428fa657862deb610fb086816baaf996d01e8aee1142fc61fd"
+  },
+  "wikidata-Q67089144": {
+    "thumbnail": "data/images/artist-1786343948059/wikidata-Q67089144.jpg",
+    "checkedAt": "2026-08-29T07:18:55.009Z",
+    "verifiedBy": "Recovered by metadata: Wikidata QID, creator, and local image metadata",
+    "imageHash": "f2f51affb5462f71e4b3579a5b7d1b8d64460b737a96ad270dd9fa5d162f3196"
+  },
+  "wikidata-Q71715445": {
+    "thumbnail": "data/images/artist-1786343948059/wikidata-Q71715445.jpg",
+    "checkedAt": "2026-08-29T07:18:55.011Z",
+    "verifiedBy": "Recovered by metadata: Wikidata QID, creator, and local image metadata",
+    "imageHash": "f0b6b28b21ccedbdbba0f14a361860fd282e68544ab34f00c0938d2027cc2be4"
+  },
+  "wikidata-Q96216689": {
+    "thumbnail": "data/images/artist-1786343948059/wikidata-Q96216689.jpg",
+    "checkedAt": "2026-08-29T07:18:55.012Z",
+    "verifiedBy": "Recovered by metadata: Wikidata QID, creator, and local image metadata",
+    "imageHash": "e7dedff2faa1ea8fae44cc11d3141a24e57758ebc41fa1e8cacc172ae6a512e0"
+  },
+  "wikidata-Q978841": {
+    "thumbnail": "data/images/artist-1786343948059/wikidata-Q978841.jpg",
+    "checkedAt": "2026-08-29T07:18:55.013Z",
+    "verifiedBy": "Recovered by metadata: Wikidata QID, creator, and local image metadata",
+    "imageHash": "22745c4f19c569b21d886f2b07ec95d6a7c13e2d7274045006818e8a04e7c8f3"
   }
 }

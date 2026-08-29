@@ -1,10 +1,4 @@
 {
-  "frans-hals-laughing-cavalier-1624": {
-    "thumbnail": "data/images/artist-Q167654/frans-hals-laughing-cavalier-1624.jpg",
-    "checkedAt": "2026-08-23T09:29:08.209Z",
-    "verifiedBy": "Frans Hals local file import; https://en.wikipedia.org/wiki/Frans_Hals",
-    "imageHash": "87e7e94d07600eec73e7defc09c9560375261cea119021749f577df03e6fc664"
-  },
   "frans-hals-banquet-st-george-1616": {
     "thumbnail": "data/images/artist-Q167654/frans-hals-banquet-st-george-1616.jpg",
     "checkedAt": "2026-08-23T09:29:08.209Z",
@@ -40,5 +34,11 @@
     "checkedAt": "2026-08-23T09:29:08.209Z",
     "verifiedBy": "Frans Hals local file import; https://en.wikipedia.org/wiki/Frans_Hals",
     "imageHash": "5ef26d4f4261d1ac6c7ce01e9d2b93c455e6303ff3ae16c3e9fdd3cdcbf7a633"
+  },
+  "frans-hals-laughing-cavalier-1624": {
+    "thumbnail": "data/images/artist-Q167654/frans-hals-laughing-cavalier-1624.png",
+    "checkedAt": "2026-08-29T07:37:20.037Z",
+    "verifiedBy": "Matched from local artist and artwork metadata",
+    "imageHash": "8e9a0174056e4a34e4b1e2fe156d7ca58ffeaee57c13596bec422b45d04d632a"
   }
 }

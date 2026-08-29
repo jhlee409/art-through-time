@@ -10,6 +10,7 @@ const movementsFile = path.join(dataDir, 'art-movements.json');
 const manifestFile = path.join(dataDir, 'migration-assets.json');
 const exportFile = path.join(root, 'exports', 'firebase-import-latest.json');
 const write = process.argv.includes('--write');
+const assetsOnly = process.argv.includes('--assets-only');
 
 async function readJson(file, fallback) {
   try { return JSON.parse(await fs.readFile(file, 'utf8')); }
@@ -39,6 +40,17 @@ async function assetManifest() {
 }
 
 async function main() {
+  if (assetsOnly) {
+    const manifest = await assetManifest();
+    await fs.writeFile(manifestFile, `${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
+    console.log(JSON.stringify({
+      assetsOnly: true,
+      assetCount: manifest.assets.length,
+      manifestFile: path.relative(root, manifestFile).replace(/\\/g, '/')
+    }, null, 2));
+    return;
+  }
+
   const original = await readJson(artistsFile, {artists:[]});
   const normalized = normalizeArtistsPayload(original, {touch:write, actor:'migration-tool'});
   const validation = validateArtistsPayload(normalized);

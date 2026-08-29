@@ -1,95 +1,1080 @@
 {
-  "createdAt": "2026-08-29T07:42:42.034Z",
-  "unlinked": [
+  "createdAt": "2026-08-29T07:42:52.478Z",
+  "stats": {
+    "unlinked": 18,
+    "missing": 237,
+    "localQids": 18,
+    "indexedLocalFiles": 18,
+    "confirmed": 0,
+    "ambiguous": 0,
+    "historicalRestorations": 0,
+    "metadataRecreations": 0,
+    "unresolvedLocalFiles": 18
+  },
+  "confirmed": [],
+  "ambiguous": [],
+  "historicalRestorations": [],
+  "metadataRecreations": [],
+  "unresolvedLocalFiles": [
     {
       "path": "data/images/artist-1786347518103/wikidata-Q105079097.jpg",
       "folder": "artist-1786347518103",
-      "bytes": 19139
+      "bytes": 19139,
+      "qid": "Q105079097",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q105079097",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q105079097.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q105079097",
+        "labelKo": "",
+        "labelEn": "Rural funeral",
+        "year": 1865,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q183334"
+        ],
+        "imageFilename": "Vasilij Perov. Rural funeral.jpg"
+      },
+      "reason": "creator does not map to one current artist"
     },
     {
       "path": "data/images/artist-1786347518103/wikidata-Q112030206.jpg",
       "folder": "artist-1786347518103",
-      "bytes": 16064
+      "bytes": 16064,
+      "qid": "Q112030206",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q112030206",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q112030206.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q112030206",
+        "labelKo": "",
+        "labelEn": "self portrait",
+        "year": 1851,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q3398581"
+        ],
+        "imageFilename": "Перов Автопортрет.jpg"
+      },
+      "reason": "creator does not map to one current artist"
     },
     {
       "path": "data/images/artist-1786347518103/wikidata-Q11800610.jpg",
       "folder": "artist-1786347518103",
-      "bytes": 17286
+      "bytes": 17286,
+      "qid": "Q11800610",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q11800610",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q11800610.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q11800610",
+        "labelKo": "",
+        "labelEn": "The Last Tavern at the City Gates",
+        "year": 1868,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q183334"
+        ],
+        "imageFilename": "Last Tavern at Town Gate (Perov, 1868) - Google Art Project.jpg"
+      },
+      "reason": "creator does not map to one current artist"
     },
     {
       "path": "data/images/artist-1786347518103/wikidata-Q119084532.jpg",
       "folder": "artist-1786347518103",
-      "bytes": 24466
+      "bytes": 24466,
+      "qid": "Q119084532",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q119084532",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q119084532.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q119084532",
+        "labelKo": "",
+        "labelEn": "Tea Drinking in Mytishchi (The Tea Drinkers)",
+        "year": 1862,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q43861644"
+        ],
+        "imageFilename": "Vasily Perov (1834-1882) (copy of) - Tea Drinking in Mytishchi (The Tea Drinkers) - CC0086 - Dorich House Museum.jpg"
+      },
+      "reason": "creator does not map to one current artist"
     },
     {
       "path": "data/images/artist-1786347518103/wikidata-Q124334121.jpg",
       "folder": "artist-1786347518103",
-      "bytes": 24628
+      "bytes": 24628,
+      "qid": "Q124334121",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q124334121",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q124334121.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q124334121",
+        "labelKo": "",
+        "labelEn": "Tea-Party in Mytishchi near Moscow",
+        "year": 1862,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q183334"
+        ],
+        "imageFilename": "Чаепитие в Мытищах, близ Москвы.jpg"
+      },
+      "reason": "creator does not map to one current artist"
     },
     {
       "path": "data/images/artist-1786347518103/wikidata-Q135822399.jpg",
       "folder": "artist-1786347518103",
-      "bytes": 26711
+      "bytes": 26711,
+      "qid": "Q135822399",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q135822399",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q135822399.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q135822399",
+        "labelKo": "",
+        "labelEn": "",
+        "year": 1871,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q183334"
+        ],
+        "imageFilename": "Перов Рыболов.jpg"
+      },
+      "reason": "creator does not map to one current artist"
     },
     {
       "path": "data/images/artist-1786347518103/wikidata-Q140934474.jpg",
       "folder": "artist-1786347518103",
-      "bytes": 22948
+      "bytes": 22948,
+      "qid": "Q140934474",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q140934474",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q140934474.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q140934474",
+        "labelKo": "",
+        "labelEn": "A Governess Arrives at a Merchant’s Home",
+        "year": 1866,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q183334"
+        ],
+        "imageFilename": "Perov guvernanka kupe.jpg"
+      },
+      "reason": "creator does not map to one current artist"
     },
     {
       "path": "data/images/artist-1786347518103/wikidata-Q16518912.jpg",
       "folder": "artist-1786347518103",
-      "bytes": 15838
+      "bytes": 15838,
+      "qid": "Q16518912",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q16518912",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q16518912.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q16518912",
+        "labelKo": "",
+        "labelEn": "Triplet (Troyka)",
+        "year": 1866,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q183334"
+        ],
+        "imageFilename": "Тройка - Василий Григорьевич Перов (1866).jpg"
+      },
+      "reason": "creator does not map to one current artist"
     },
     {
       "path": "data/images/artist-1786347518103/wikidata-Q18114400.jpg",
       "folder": "artist-1786347518103",
-      "bytes": 17671
+      "bytes": 17671,
+      "qid": "Q18114400",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q18114400",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q18114400.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q18114400",
+        "labelKo": "",
+        "labelEn": "An Easter procession in a Russian village",
+        "year": 1861,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q183334"
+        ],
+        "imageFilename": "Wassilij Grigorjewitsch Perow 006.jpg"
+      },
+      "reason": "creator does not map to one current artist"
     },
     {
       "path": "data/images/artist-1786347518103/wikidata-Q18689408.jpg",
       "folder": "artist-1786347518103",
-      "bytes": 18208
+      "bytes": 18208,
+      "qid": "Q18689408",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q18689408",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q18689408.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q18689408",
+        "labelKo": "",
+        "labelEn": "Monastic Refectory",
+        "year": 1870,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q211043"
+        ],
+        "imageFilename": "Перов В. Г. (1865) Трапеза.jpg"
+      },
+      "reason": "creator does not map to one current artist"
     },
     {
       "path": "data/images/artist-1786347518103/wikidata-Q21723051.jpg",
       "folder": "artist-1786347518103",
-      "bytes": 14841
+      "bytes": 14841,
+      "qid": "Q21723051",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q21723051",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q21723051.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q21723051",
+        "labelKo": "",
+        "labelEn": "Portrait of a Man",
+        "year": 1861,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q132783"
+        ],
+        "imageFilename": "Portrait of a Man Vasily Perov.jpg"
+      },
+      "reason": "creator does not map to one current artist"
     },
     {
       "path": "data/images/artist-1786347518103/wikidata-Q4340473.jpg",
       "folder": "artist-1786347518103",
-      "bytes": 18486
+      "bytes": 18486,
+      "qid": "Q4340473",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q4340473",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q4340473.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q4340473",
+        "labelKo": "",
+        "labelEn": "The Hunters at Rest",
+        "year": 1871,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q183334"
+        ],
+        "imageFilename": "Wassili Grigorjewitsch Perow - Hunters resting.jpg"
+      },
+      "reason": "creator does not map to one current artist"
     },
     {
       "path": "data/images/artist-1786347518103/wikidata-Q50320975.jpg",
       "folder": "artist-1786347518103",
-      "bytes": 21582
+      "bytes": 21582,
+      "qid": "Q50320975",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q50320975",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q50320975.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q50320975",
+        "labelKo": "",
+        "labelEn": "",
+        "year": 1870,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q4174318"
+        ],
+        "imageFilename": "Портрет пожилой женщины в чепце (Перов).jpg"
+      },
+      "reason": "creator does not map to one current artist"
     },
     {
       "path": "data/images/artist-1786347518103/wikidata-Q61761762.jpg",
       "folder": "artist-1786347518103",
-      "bytes": 21498
+      "bytes": 21498,
+      "qid": "Q61761762",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q61761762",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q61761762.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q61761762",
+        "labelKo": "",
+        "labelEn": "A village sermon",
+        "year": 1861,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q183334",
+          "Q948457"
+        ],
+        "imageFilename": "Перов Проповедь.jpg"
+      },
+      "reason": "creator does not map to one current artist"
     },
     {
       "path": "data/images/artist-1786369007570/wikidata-Q1105846.jpg",
       "folder": "artist-1786369007570",
-      "bytes": 36380
+      "bytes": 36380,
+      "qid": "Q1105846",
+      "folderArtist": {
+        "id": "artist-1786369007570",
+        "qid": "Q762",
+        "name": "레오나르도 다 빈치"
+      },
+      "indexEntries": [
+        {
+          "folder": "artist-1786369007570",
+          "workId": "wikidata-Q1105846",
+          "verifiedBy": "Artwork image cached for offline use",
+          "thumbnail": "data/images/artist-1786369007570/wikidata-Q1105846.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q1105846",
+        "labelKo": "",
+        "labelEn": "Codex Arundel",
+        "year": 1450,
+        "creatorQids": [
+          "Q762"
+        ],
+        "collectionQids": [
+          "Q23308"
+        ],
+        "imageFilename": "Codex arundel.jpg"
+      },
+      "reason": "year outside artist lifespan"
     },
     {
       "path": "data/images/artist-1786369007570/wikidata-Q3492887.jpg",
       "folder": "artist-1786369007570",
-      "bytes": 12595
+      "bytes": 12595,
+      "qid": "Q3492887",
+      "folderArtist": {
+        "id": "artist-1786369007570",
+        "qid": "Q762",
+        "name": "레오나르도 다 빈치"
+      },
+      "indexEntries": [
+        {
+          "folder": "artist-1786369007570",
+          "workId": "wikidata-Q3492887",
+          "verifiedBy": "Artwork image cached for offline use",
+          "thumbnail": "data/images/artist-1786369007570/wikidata-Q3492887.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q3492887",
+        "labelKo": "",
+        "labelEn": "Medusa",
+        "year": 1597,
+        "creatorQids": [
+          "Q762"
+        ],
+        "collectionQids": [],
+        "imageFilename": "Medusa uffizi.jpg"
+      },
+      "reason": "year outside artist lifespan"
     },
     {
       "path": "data/images/artist-1786369007570/wikidata-Q993743.jpg",
       "folder": "artist-1786369007570",
-      "bytes": 44991
+      "bytes": 44991,
+      "qid": "Q993743",
+      "folderArtist": {
+        "id": "artist-1786369007570",
+        "qid": "Q762",
+        "name": "레오나르도 다 빈치"
+      },
+      "indexEntries": [
+        {
+          "folder": "artist-1786369007570",
+          "workId": "wikidata-Q993743",
+          "verifiedBy": "Artwork image cached for offline use",
+          "thumbnail": "data/images/artist-1786369007570/wikidata-Q993743.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q993743",
+        "labelKo": "",
+        "labelEn": "Head of a Bearded Man (so-called Self-portrait)",
+        "year": 1569,
+        "creatorQids": [
+          "Q762"
+        ],
+        "collectionQids": [
+          "Q856408"
+        ],
+        "imageFilename": "Leonardo da Vinci - presumed self-portrait - WGA12798.jpg"
+      },
+      "reason": "year outside artist lifespan"
     },
     {
       "path": "data/images/artist-Q5592/wikidata-Q2342843.jpg",
       "folder": "artist-Q5592",
-      "bytes": 70242
+      "bytes": 70242,
+      "qid": "Q2342843",
+      "folderArtist": {
+        "id": "artist-Q5592",
+        "qid": "Q5592",
+        "name": "미켈란젤로 부오나로티"
+      },
+      "indexEntries": [
+        {
+          "folder": "artist-Q5592",
+          "workId": "wikidata-Q2342843",
+          "verifiedBy": "Openverse fallback after image download retry",
+          "thumbnail": "data/images/artist-Q5592/wikidata-Q2342843.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q2342843",
+        "labelKo": "",
+        "labelEn": "The Deposition",
+        "year": 1600,
+        "creatorQids": [
+          "Q5592",
+          "Q3528076"
+        ],
+        "collectionQids": [
+          "Q1200696"
+        ],
+        "imageFilename": "The Florentine Pietà, Museo dell'Opera del Duomo - 48199237196.jpg"
+      },
+      "reason": "year outside artist lifespan"
+    }
+  ],
+  "locals": [
+    {
+      "path": "data/images/artist-1786347518103/wikidata-Q105079097.jpg",
+      "folder": "artist-1786347518103",
+      "bytes": 19139,
+      "qid": "Q105079097",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q105079097",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q105079097.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q105079097",
+        "labelKo": "",
+        "labelEn": "Rural funeral",
+        "year": 1865,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q183334"
+        ],
+        "imageFilename": "Vasilij Perov. Rural funeral.jpg"
+      }
+    },
+    {
+      "path": "data/images/artist-1786347518103/wikidata-Q112030206.jpg",
+      "folder": "artist-1786347518103",
+      "bytes": 16064,
+      "qid": "Q112030206",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q112030206",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q112030206.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q112030206",
+        "labelKo": "",
+        "labelEn": "self portrait",
+        "year": 1851,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q3398581"
+        ],
+        "imageFilename": "Перов Автопортрет.jpg"
+      }
+    },
+    {
+      "path": "data/images/artist-1786347518103/wikidata-Q11800610.jpg",
+      "folder": "artist-1786347518103",
+      "bytes": 17286,
+      "qid": "Q11800610",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q11800610",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q11800610.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q11800610",
+        "labelKo": "",
+        "labelEn": "The Last Tavern at the City Gates",
+        "year": 1868,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q183334"
+        ],
+        "imageFilename": "Last Tavern at Town Gate (Perov, 1868) - Google Art Project.jpg"
+      }
+    },
+    {
+      "path": "data/images/artist-1786347518103/wikidata-Q119084532.jpg",
+      "folder": "artist-1786347518103",
+      "bytes": 24466,
+      "qid": "Q119084532",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q119084532",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q119084532.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q119084532",
+        "labelKo": "",
+        "labelEn": "Tea Drinking in Mytishchi (The Tea Drinkers)",
+        "year": 1862,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q43861644"
+        ],
+        "imageFilename": "Vasily Perov (1834-1882) (copy of) - Tea Drinking in Mytishchi (The Tea Drinkers) - CC0086 - Dorich House Museum.jpg"
+      }
+    },
+    {
+      "path": "data/images/artist-1786347518103/wikidata-Q124334121.jpg",
+      "folder": "artist-1786347518103",
+      "bytes": 24628,
+      "qid": "Q124334121",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q124334121",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q124334121.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q124334121",
+        "labelKo": "",
+        "labelEn": "Tea-Party in Mytishchi near Moscow",
+        "year": 1862,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q183334"
+        ],
+        "imageFilename": "Чаепитие в Мытищах, близ Москвы.jpg"
+      }
+    },
+    {
+      "path": "data/images/artist-1786347518103/wikidata-Q135822399.jpg",
+      "folder": "artist-1786347518103",
+      "bytes": 26711,
+      "qid": "Q135822399",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q135822399",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q135822399.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q135822399",
+        "labelKo": "",
+        "labelEn": "",
+        "year": 1871,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q183334"
+        ],
+        "imageFilename": "Перов Рыболов.jpg"
+      }
+    },
+    {
+      "path": "data/images/artist-1786347518103/wikidata-Q140934474.jpg",
+      "folder": "artist-1786347518103",
+      "bytes": 22948,
+      "qid": "Q140934474",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q140934474",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q140934474.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q140934474",
+        "labelKo": "",
+        "labelEn": "A Governess Arrives at a Merchant’s Home",
+        "year": 1866,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q183334"
+        ],
+        "imageFilename": "Perov guvernanka kupe.jpg"
+      }
+    },
+    {
+      "path": "data/images/artist-1786347518103/wikidata-Q16518912.jpg",
+      "folder": "artist-1786347518103",
+      "bytes": 15838,
+      "qid": "Q16518912",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q16518912",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q16518912.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q16518912",
+        "labelKo": "",
+        "labelEn": "Triplet (Troyka)",
+        "year": 1866,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q183334"
+        ],
+        "imageFilename": "Тройка - Василий Григорьевич Перов (1866).jpg"
+      }
+    },
+    {
+      "path": "data/images/artist-1786347518103/wikidata-Q18114400.jpg",
+      "folder": "artist-1786347518103",
+      "bytes": 17671,
+      "qid": "Q18114400",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q18114400",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q18114400.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q18114400",
+        "labelKo": "",
+        "labelEn": "An Easter procession in a Russian village",
+        "year": 1861,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q183334"
+        ],
+        "imageFilename": "Wassilij Grigorjewitsch Perow 006.jpg"
+      }
+    },
+    {
+      "path": "data/images/artist-1786347518103/wikidata-Q18689408.jpg",
+      "folder": "artist-1786347518103",
+      "bytes": 18208,
+      "qid": "Q18689408",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q18689408",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q18689408.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q18689408",
+        "labelKo": "",
+        "labelEn": "Monastic Refectory",
+        "year": 1870,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q211043"
+        ],
+        "imageFilename": "Перов В. Г. (1865) Трапеза.jpg"
+      }
+    },
+    {
+      "path": "data/images/artist-1786347518103/wikidata-Q21723051.jpg",
+      "folder": "artist-1786347518103",
+      "bytes": 14841,
+      "qid": "Q21723051",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q21723051",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q21723051.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q21723051",
+        "labelKo": "",
+        "labelEn": "Portrait of a Man",
+        "year": 1861,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q132783"
+        ],
+        "imageFilename": "Portrait of a Man Vasily Perov.jpg"
+      }
+    },
+    {
+      "path": "data/images/artist-1786347518103/wikidata-Q4340473.jpg",
+      "folder": "artist-1786347518103",
+      "bytes": 18486,
+      "qid": "Q4340473",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q4340473",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q4340473.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q4340473",
+        "labelKo": "",
+        "labelEn": "The Hunters at Rest",
+        "year": 1871,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q183334"
+        ],
+        "imageFilename": "Wassili Grigorjewitsch Perow - Hunters resting.jpg"
+      }
+    },
+    {
+      "path": "data/images/artist-1786347518103/wikidata-Q50320975.jpg",
+      "folder": "artist-1786347518103",
+      "bytes": 21582,
+      "qid": "Q50320975",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q50320975",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q50320975.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q50320975",
+        "labelKo": "",
+        "labelEn": "",
+        "year": 1870,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q4174318"
+        ],
+        "imageFilename": "Портрет пожилой женщины в чепце (Перов).jpg"
+      }
+    },
+    {
+      "path": "data/images/artist-1786347518103/wikidata-Q61761762.jpg",
+      "folder": "artist-1786347518103",
+      "bytes": 21498,
+      "qid": "Q61761762",
+      "folderArtist": null,
+      "indexEntries": [
+        {
+          "folder": "artist-1786347518103",
+          "workId": "wikidata-Q61761762",
+          "verifiedBy": "Wikidata image statement",
+          "thumbnail": "data/images/artist-1786347518103/wikidata-Q61761762.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q61761762",
+        "labelKo": "",
+        "labelEn": "A village sermon",
+        "year": 1861,
+        "creatorQids": [
+          "Q315237"
+        ],
+        "collectionQids": [
+          "Q183334",
+          "Q948457"
+        ],
+        "imageFilename": "Перов Проповедь.jpg"
+      }
+    },
+    {
+      "path": "data/images/artist-1786369007570/wikidata-Q1105846.jpg",
+      "folder": "artist-1786369007570",
+      "bytes": 36380,
+      "qid": "Q1105846",
+      "folderArtist": {
+        "id": "artist-1786369007570",
+        "qid": "Q762",
+        "name": "레오나르도 다 빈치"
+      },
+      "indexEntries": [
+        {
+          "folder": "artist-1786369007570",
+          "workId": "wikidata-Q1105846",
+          "verifiedBy": "Artwork image cached for offline use",
+          "thumbnail": "data/images/artist-1786369007570/wikidata-Q1105846.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q1105846",
+        "labelKo": "",
+        "labelEn": "Codex Arundel",
+        "year": 1450,
+        "creatorQids": [
+          "Q762"
+        ],
+        "collectionQids": [
+          "Q23308"
+        ],
+        "imageFilename": "Codex arundel.jpg"
+      }
+    },
+    {
+      "path": "data/images/artist-1786369007570/wikidata-Q3492887.jpg",
+      "folder": "artist-1786369007570",
+      "bytes": 12595,
+      "qid": "Q3492887",
+      "folderArtist": {
+        "id": "artist-1786369007570",
+        "qid": "Q762",
+        "name": "레오나르도 다 빈치"
+      },
+      "indexEntries": [
+        {
+          "folder": "artist-1786369007570",
+          "workId": "wikidata-Q3492887",
+          "verifiedBy": "Artwork image cached for offline use",
+          "thumbnail": "data/images/artist-1786369007570/wikidata-Q3492887.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q3492887",
+        "labelKo": "",
+        "labelEn": "Medusa",
+        "year": 1597,
+        "creatorQids": [
+          "Q762"
+        ],
+        "collectionQids": [],
+        "imageFilename": "Medusa uffizi.jpg"
+      }
+    },
+    {
+      "path": "data/images/artist-1786369007570/wikidata-Q993743.jpg",
+      "folder": "artist-1786369007570",
+      "bytes": 44991,
+      "qid": "Q993743",
+      "folderArtist": {
+        "id": "artist-1786369007570",
+        "qid": "Q762",
+        "name": "레오나르도 다 빈치"
+      },
+      "indexEntries": [
+        {
+          "folder": "artist-1786369007570",
+          "workId": "wikidata-Q993743",
+          "verifiedBy": "Artwork image cached for offline use",
+          "thumbnail": "data/images/artist-1786369007570/wikidata-Q993743.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q993743",
+        "labelKo": "",
+        "labelEn": "Head of a Bearded Man (so-called Self-portrait)",
+        "year": 1569,
+        "creatorQids": [
+          "Q762"
+        ],
+        "collectionQids": [
+          "Q856408"
+        ],
+        "imageFilename": "Leonardo da Vinci - presumed self-portrait - WGA12798.jpg"
+      }
+    },
+    {
+      "path": "data/images/artist-Q5592/wikidata-Q2342843.jpg",
+      "folder": "artist-Q5592",
+      "bytes": 70242,
+      "qid": "Q2342843",
+      "folderArtist": {
+        "id": "artist-Q5592",
+        "qid": "Q5592",
+        "name": "미켈란젤로 부오나로티"
+      },
+      "indexEntries": [
+        {
+          "folder": "artist-Q5592",
+          "workId": "wikidata-Q2342843",
+          "verifiedBy": "Openverse fallback after image download retry",
+          "thumbnail": "data/images/artist-Q5592/wikidata-Q2342843.jpg"
+        }
+      ],
+      "entity": {
+        "qid": "Q2342843",
+        "labelKo": "",
+        "labelEn": "The Deposition",
+        "year": 1600,
+        "creatorQids": [
+          "Q5592",
+          "Q3528076"
+        ],
+        "collectionQids": [
+          "Q1200696"
+        ],
+        "imageFilename": "The Florentine Pietà, Museo dell'Opera del Duomo - 48199237196.jpg"
+      }
     }
   ],
   "missing": [
@@ -106,7 +1091,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%2C%20madonna%20col%20bambino%20ridente%2C%20assisi.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%2C%20madonna%20col%20bambino%20ridente%2C%20assisi.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giotto%2C%20madonna%20col%20bambino%20ridente%2C%20assisi.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giotto%2C%20madonna%20col%20bambino%20ridente%2C%20assisi.jpg?width=512",
+      "entity": {
+        "qid": "Q3276180",
+        "labelKo": "",
+        "labelEn": "Madonna with the laughing Child",
+        "year": 1291,
+        "creatorQids": [
+          "Q7814"
+        ],
+        "collectionQids": [
+          "Q207486"
+        ],
+        "imageFilename": "Giotto, madonna col bambino ridente, assisi.jpg"
+      }
     },
     {
       "key": "artist-Q7814|wikidata-Q3618182",
@@ -121,7 +1119,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2014%20Annunciation%20-%20The%20Angel%20Gabriel%20Sent%20by%20God%20-%20WGA09190.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2014%20Annunciation%20-%20The%20Angel%20Gabriel%20Sent%20by%20God%20-%20WGA09190.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2014%20Annunciation%20-%20The%20Angel%20Gabriel%20Sent%20by%20God%20-%20WGA09190.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2014%20Annunciation%20-%20The%20Angel%20Gabriel%20Sent%20by%20God%20-%20WGA09190.jpg?width=512",
+      "entity": {
+        "qid": "Q3618182",
+        "labelKo": "",
+        "labelEn": "The Annunciation",
+        "year": 1306,
+        "creatorQids": [
+          "Q7814"
+        ],
+        "collectionQids": [
+          "Q963954"
+        ],
+        "imageFilename": "Giotto di Bondone - No. 14 Annunciation - The Angel Gabriel Sent by God - WGA09190.jpg"
+      }
     },
     {
       "key": "artist-Q7814|wikidata-Q3618200",
@@ -136,7 +1147,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20-%2003.%20Annunciation%20to%20St%20Anne%20-%20Cappella%20degli%20Scrovegni%20-%20gallerix%20cropped.jpeg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20-%2003.%20Annunciation%20to%20St%20Anne%20-%20Cappella%20degli%20Scrovegni%20-%20gallerix%20cropped.jpeg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20-%2003.%20Annunciation%20to%20St%20Anne%20-%20Cappella%20degli%20Scrovegni%20-%20gallerix%20cropped.jpeg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20-%2003.%20Annunciation%20to%20St%20Anne%20-%20Cappella%20degli%20Scrovegni%20-%20gallerix%20cropped.jpeg?width=512",
+      "entity": {
+        "qid": "Q3618200",
+        "labelKo": "",
+        "labelEn": "Annunciation to Saint Anne",
+        "year": 1300,
+        "creatorQids": [
+          "Q7814"
+        ],
+        "collectionQids": [
+          "Q963954"
+        ],
+        "imageFilename": "Giotto - 03. Annunciation to St Anne - Cappella degli Scrovegni - gallerix cropped.jpeg"
+      }
     },
     {
       "key": "artist-Q7814|wikidata-Q3933580",
@@ -151,7 +1175,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2037%20Scenes%20from%20the%20Life%20of%20Christ%20-%2021.%20Resurrection%20%28Noli%20me%20tangere%29%20-%20WGA09224.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2037%20Scenes%20from%20the%20Life%20of%20Christ%20-%2021.%20Resurrection%20%28Noli%20me%20tangere%29%20-%20WGA09224.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2037%20Scenes%20from%20the%20Life%20of%20Christ%20-%2021.%20Resurrection%20%28Noli%20me%20tangere%29%20-%20WGA09224.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2037%20Scenes%20from%20the%20Life%20of%20Christ%20-%2021.%20Resurrection%20%28Noli%20me%20tangere%29%20-%20WGA09224.jpg?width=512",
+      "entity": {
+        "qid": "Q3933580",
+        "labelKo": "",
+        "labelEn": "Resurrection",
+        "year": 1303,
+        "creatorQids": [
+          "Q7814"
+        ],
+        "collectionQids": [
+          "Q963954"
+        ],
+        "imageFilename": "Giotto di Bondone - No. 37 Scenes from the Life of Christ - 21. Resurrection (Noli me tangere) - WGA09224.jpg"
+      }
     },
     {
       "key": "artist-Q7814|wikidata-Q3697612",
@@ -166,7 +1203,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2033%20Scenes%20from%20the%20Life%20of%20Christ%20-%2017.%20Flagellation%20-%20WGA09218.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2033%20Scenes%20from%20the%20Life%20of%20Christ%20-%2017.%20Flagellation%20-%20WGA09218.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2033%20Scenes%20from%20the%20Life%20of%20Christ%20-%2017.%20Flagellation%20-%20WGA09218.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2033%20Scenes%20from%20the%20Life%20of%20Christ%20-%2017.%20Flagellation%20-%20WGA09218.jpg?width=512",
+      "entity": {
+        "qid": "Q3697612",
+        "labelKo": "",
+        "labelEn": "Flagellation",
+        "year": 1303,
+        "creatorQids": [
+          "Q7814"
+        ],
+        "collectionQids": [
+          "Q963954"
+        ],
+        "imageFilename": "Giotto di Bondone - No. 33 Scenes from the Life of Christ - 17. Flagellation - WGA09218.jpg"
+      }
     },
     {
       "key": "artist-Q7814|wikidata-Q4003125",
@@ -181,7 +1231,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Last%20Supper%20%28by%20Giotto%20di%20Bondone%29%20-%20Capella%20degli%20Scrovegni%20%28Padova%29.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Last%20Supper%20%28by%20Giotto%20di%20Bondone%29%20-%20Capella%20degli%20Scrovegni%20%28Padova%29.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Last%20Supper%20%28by%20Giotto%20di%20Bondone%29%20-%20Capella%20degli%20Scrovegni%20%28Padova%29.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Last%20Supper%20%28by%20Giotto%20di%20Bondone%29%20-%20Capella%20degli%20Scrovegni%20%28Padova%29.jpg?width=512",
+      "entity": {
+        "qid": "Q4003125",
+        "labelKo": "",
+        "labelEn": "Last Supper",
+        "year": 1303,
+        "creatorQids": [
+          "Q7814"
+        ],
+        "collectionQids": [
+          "Q963954"
+        ],
+        "imageFilename": "Last Supper (by Giotto di Bondone) - Capella degli Scrovegni (Padova).jpg"
+      }
     },
     {
       "key": "artist-Q7814|wikidata-Q3910923",
@@ -196,7 +1259,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2019%20Scenes%20from%20the%20Life%20of%20Christ%20-%203.%20Presentation%20of%20Christ%20at%20the%20Temple%20-%20WGA09197.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2019%20Scenes%20from%20the%20Life%20of%20Christ%20-%203.%20Presentation%20of%20Christ%20at%20the%20Temple%20-%20WGA09197.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2019%20Scenes%20from%20the%20Life%20of%20Christ%20-%203.%20Presentation%20of%20Christ%20at%20the%20Temple%20-%20WGA09197.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2019%20Scenes%20from%20the%20Life%20of%20Christ%20-%203.%20Presentation%20of%20Christ%20at%20the%20Temple%20-%20WGA09197.jpg?width=512",
+      "entity": {
+        "qid": "Q3910923",
+        "labelKo": "",
+        "labelEn": "Presentation at the Temple",
+        "year": 1303,
+        "creatorQids": [
+          "Q7814"
+        ],
+        "collectionQids": [
+          "Q963954"
+        ],
+        "imageFilename": "Giotto di Bondone - No. 19 Scenes from the Life of Christ - 3. Presentation of Christ at the Temple - WGA09197.jpg"
+      }
     },
     {
       "key": "artist-Q7814|wikidata-Q650189",
@@ -211,7 +1287,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2018%20Scenes%20from%20the%20Life%20of%20Christ%20-%202.%20Adoration%20of%20the%20Magi%20-%20WGA09195.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2018%20Scenes%20from%20the%20Life%20of%20Christ%20-%202.%20Adoration%20of%20the%20Magi%20-%20WGA09195.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2018%20Scenes%20from%20the%20Life%20of%20Christ%20-%202.%20Adoration%20of%20the%20Magi%20-%20WGA09195.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2018%20Scenes%20from%20the%20Life%20of%20Christ%20-%202.%20Adoration%20of%20the%20Magi%20-%20WGA09195.jpg?width=512",
+      "entity": {
+        "qid": "Q650189",
+        "labelKo": "",
+        "labelEn": "Adoration of the Magi",
+        "year": 1890,
+        "creatorQids": [
+          "Q7814"
+        ],
+        "collectionQids": [
+          "Q963954"
+        ],
+        "imageFilename": "Giotto di Bondone - No. 18 Scenes from the Life of Christ - 2. Adoration of the Magi - WGA09195.jpg"
+      }
     },
     {
       "key": "artist-Q7814|wikidata-Q734197",
@@ -226,7 +1315,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2016%20Scenes%20from%20the%20Life%20of%20the%20Virgin%20-%207.%20Visitation%20-%20WGA09192.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2016%20Scenes%20from%20the%20Life%20of%20the%20Virgin%20-%207.%20Visitation%20-%20WGA09192.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2016%20Scenes%20from%20the%20Life%20of%20the%20Virgin%20-%207.%20Visitation%20-%20WGA09192.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2016%20Scenes%20from%20the%20Life%20of%20the%20Virgin%20-%207.%20Visitation%20-%20WGA09192.jpg?width=512",
+      "entity": {
+        "qid": "Q734197",
+        "labelKo": "",
+        "labelEn": "Visitation",
+        "year": 1306,
+        "creatorQids": [
+          "Q7814"
+        ],
+        "collectionQids": [
+          "Q963954"
+        ],
+        "imageFilename": "Giotto di Bondone - No. 16 Scenes from the Life of the Virgin - 7. Visitation - WGA09192.jpg"
+      }
     },
     {
       "key": "artist-Q7814|wikidata-Q3997179",
@@ -241,7 +1343,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2028%20Scenes%20from%20the%20Life%20of%20Christ%20-%2012.%20Judas%27%20Betrayal%20-%20WGA09213.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2028%20Scenes%20from%20the%20Life%20of%20Christ%20-%2012.%20Judas%27%20Betrayal%20-%20WGA09213.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2028%20Scenes%20from%20the%20Life%20of%20Christ%20-%2012.%20Judas%27%20Betrayal%20-%20WGA09213.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giotto%20di%20Bondone%20-%20No.%2028%20Scenes%20from%20the%20Life%20of%20Christ%20-%2012.%20Judas%27%20Betrayal%20-%20WGA09213.jpg?width=512",
+      "entity": {
+        "qid": "Q3997179",
+        "labelKo": "",
+        "labelEn": "Judas' Betrayal",
+        "year": 1306,
+        "creatorQids": [
+          "Q7814"
+        ],
+        "collectionQids": [
+          "Q963954"
+        ],
+        "imageFilename": "Giotto di Bondone - No. 28 Scenes from the Life of Christ - 12. Judas' Betrayal - WGA09213.jpg"
+      }
     },
     {
       "key": "artist-Q7814|wikidata-Q3698217",
@@ -256,7 +1371,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Die%20Kreuzigung%20Christi%20-%20Gem%C3%A4ldegalerie%20Berlin%20-%203817331.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Die%20Kreuzigung%20Christi%20-%20Gem%C3%A4ldegalerie%20Berlin%20-%203817331.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Die%20Kreuzigung%20Christi%20-%20Gem%C3%A4ldegalerie%20Berlin%20-%203817331.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Die%20Kreuzigung%20Christi%20-%20Gem%C3%A4ldegalerie%20Berlin%20-%203817331.jpg?width=512",
+      "entity": {
+        "qid": "Q3698217",
+        "labelKo": "",
+        "labelEn": "The Crucifixion of Christ",
+        "year": 1317,
+        "creatorQids": [
+          "Q7814"
+        ],
+        "collectionQids": [
+          "Q165631"
+        ],
+        "imageFilename": "Die Kreuzigung Christi - Gemäldegalerie Berlin - 3817331.jpg"
+      }
     },
     {
       "key": "artist-Q7814|wikidata-Q3958341",
@@ -271,7 +1399,18 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto.%20Last%20Supper%20and%20Crucifixion.%20Alte%20Pinakothek%2C%20Munich.%20c.%201320-25..jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giotto.%20Last%20Supper%20and%20Crucifixion.%20Alte%20Pinakothek%2C%20Munich.%20c.%201320-25..jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giotto.%20Last%20Supper%20and%20Crucifixion.%20Alte%20Pinakothek%2C%20Munich.%20c.%201320-25..jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giotto.%20Last%20Supper%20and%20Crucifixion.%20Alte%20Pinakothek%2C%20Munich.%20c.%201320-25..jpg?width=512",
+      "entity": {
+        "qid": "Q3958341",
+        "labelKo": "",
+        "labelEn": "Seven panels with scenes from the Life of Christ",
+        "year": 1320,
+        "creatorQids": [
+          "Q7814"
+        ],
+        "collectionQids": [],
+        "imageFilename": "Giotto. Last Supper and Crucifixion. Alte Pinakothek, Munich. c. 1320-25..jpg"
+      }
     },
     {
       "key": "artist-Q7814|wikidata-Q3907474",
@@ -286,7 +1425,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Baroncelli%20Polyptych%20c.1334%20Baroncelli%20Chapel%2C%20Santa%20Croce%2C%20Florence%20185x323cm..jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Baroncelli%20Polyptych%20c.1334%20Baroncelli%20Chapel%2C%20Santa%20Croce%2C%20Florence%20185x323cm..jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Baroncelli%20Polyptych%20c.1334%20Baroncelli%20Chapel%2C%20Santa%20Croce%2C%20Florence%20185x323cm..jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Baroncelli%20Polyptych%20c.1334%20Baroncelli%20Chapel%2C%20Santa%20Croce%2C%20Florence%20185x323cm..jpg?width=512",
+      "entity": {
+        "qid": "Q3907474",
+        "labelKo": "",
+        "labelEn": "Baroncelli Polyptych",
+        "year": 1328,
+        "creatorQids": [
+          "Q7814"
+        ],
+        "collectionQids": [
+          "Q51177"
+        ],
+        "imageFilename": "Baroncelli Polyptych c.1334 Baroncelli Chapel, Santa Croce, Florence 185x323cm..jpg"
+      }
     },
     {
       "key": "artist-Q102272|wikidata-Q9362336",
@@ -301,7 +1453,22 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Hubert%20van%20Eyck%20or%20Jan%20van%20Eyck%20or%20both%20-%20The%20Three%20Marys%20at%20the%20Tomb%20-%20Google%20Art%20Project.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Hubert%20van%20Eyck%20or%20Jan%20van%20Eyck%20or%20both%20-%20The%20Three%20Marys%20at%20the%20Tomb%20-%20Google%20Art%20Project.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Hubert%20van%20Eyck%20or%20Jan%20van%20Eyck%20or%20both%20-%20The%20Three%20Marys%20at%20the%20Tomb%20-%20Google%20Art%20Project.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Hubert%20van%20Eyck%20or%20Jan%20van%20Eyck%20or%20both%20-%20The%20Three%20Marys%20at%20the%20Tomb%20-%20Google%20Art%20Project.jpg?width=512",
+      "entity": {
+        "qid": "Q9362336",
+        "labelKo": "",
+        "labelEn": "The three Marys at the Tomb",
+        "year": 1430,
+        "creatorQids": [
+          "Q102272",
+          "Q364350"
+        ],
+        "collectionQids": [
+          "Q679527",
+          "Q74149551"
+        ],
+        "imageFilename": "Hubert van Eyck or Jan van Eyck or both - The Three Marys at the Tomb - Google Art Project.jpg"
+      }
     },
     {
       "key": "artist-Q102272|wikidata-Q107438391",
@@ -316,7 +1483,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Bildnis%20eines%20Mannes%2C%201420%20-%201440%2C%20523C.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Bildnis%20eines%20Mannes%2C%201420%20-%201440%2C%20523C.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Bildnis%20eines%20Mannes%2C%201420%20-%201440%2C%20523C.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Bildnis%20eines%20Mannes%2C%201420%20-%201440%2C%20523C.jpg?width=512",
+      "entity": {
+        "qid": "Q107438391",
+        "labelKo": "",
+        "labelEn": "Portrait of a man",
+        "year": 1430,
+        "creatorQids": [
+          "Q102272"
+        ],
+        "collectionQids": [
+          "Q165631"
+        ],
+        "imageFilename": "Jan van Eyck - Bildnis eines Mannes, 1420 - 1440, 523C.jpg"
+      }
     },
     {
       "key": "artist-Q102272|wikidata-Q3605033",
@@ -331,7 +1511,21 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Hubert%20van%20Eyck%20015.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Hubert%20van%20Eyck%20015.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Hubert%20van%20Eyck%20015.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Hubert%20van%20Eyck%20015.jpg?width=512",
+      "entity": {
+        "qid": "Q3605033",
+        "labelKo": "",
+        "labelEn": "Adam",
+        "year": 1432,
+        "creatorQids": [
+          "Q102272",
+          "Q364350"
+        ],
+        "collectionQids": [
+          "Q938154"
+        ],
+        "imageFilename": "Hubert van Eyck 015.jpg"
+      }
     },
     {
       "key": "artist-Q102272|wikidata-Q20050620",
@@ -346,7 +1540,21 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Ghent%20Altarpiece%20-%20Eve.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Ghent%20Altarpiece%20-%20Eve.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Ghent%20Altarpiece%20-%20Eve.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Ghent%20Altarpiece%20-%20Eve.jpg?width=512",
+      "entity": {
+        "qid": "Q20050620",
+        "labelKo": "",
+        "labelEn": "Eve",
+        "year": 1432,
+        "creatorQids": [
+          "Q102272",
+          "Q364350"
+        ],
+        "collectionQids": [
+          "Q938154"
+        ],
+        "imageFilename": "Ghent Altarpiece - Eve.jpg"
+      }
     },
     {
       "key": "artist-Q102272|wikidata-Q28056879",
@@ -361,7 +1569,21 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Hubert%20van%20Eyck%20017.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Hubert%20van%20Eyck%20017.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Hubert%20van%20Eyck%20017.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Hubert%20van%20Eyck%20017.jpg?width=512",
+      "entity": {
+        "qid": "Q28056879",
+        "labelKo": "",
+        "labelEn": "Singing Angels",
+        "year": 1432,
+        "creatorQids": [
+          "Q102272",
+          "Q364350"
+        ],
+        "collectionQids": [
+          "Q938154"
+        ],
+        "imageFilename": "Hubert van Eyck 017.jpg"
+      }
     },
     {
       "key": "artist-Q102272|wikidata-Q536203",
@@ -376,7 +1598,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Saint%20Jerome%20in%20His%20Study%20DIA.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Saint%20Jerome%20in%20His%20Study%20DIA.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Saint%20Jerome%20in%20His%20Study%20DIA.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Saint%20Jerome%20in%20His%20Study%20DIA.jpg?width=512",
+      "entity": {
+        "qid": "Q536203",
+        "labelKo": "",
+        "labelEn": "Saint Jerome in His Study",
+        "year": 1435,
+        "creatorQids": [
+          "Q102272"
+        ],
+        "collectionQids": [
+          "Q1201549"
+        ],
+        "imageFilename": "Jan van Eyck - Saint Jerome in His Study DIA.jpg"
+      }
     },
     {
       "key": "artist-Q102272|wikidata-Q115624243",
@@ -388,7 +1623,20 @@
       "year": 1435,
       "qid": "Q115624243",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q115624243",
+        "labelKo": "",
+        "labelEn": "Portrait of an unknown praying man",
+        "year": 1435,
+        "creatorQids": [
+          "Q102272"
+        ],
+        "collectionQids": [
+          "Q566661"
+        ],
+        "imageFilename": ""
+      }
     },
     {
       "key": "artist-Q102272|wikidata-Q574004",
@@ -403,7 +1651,21 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Diptych%20-%20WGA07587.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Diptych%20-%20WGA07587.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Diptych%20-%20WGA07587.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jan%20van%20Eyck%20-%20Diptych%20-%20WGA07587.jpg?width=512",
+      "entity": {
+        "qid": "Q574004",
+        "labelKo": "예수 책형 및 최후의 심판",
+        "labelEn": "Crucifixion and Last Judgement diptych",
+        "year": 1437,
+        "creatorQids": [
+          "Q102272"
+        ],
+        "collectionQids": [
+          "Q160236",
+          "Q132783"
+        ],
+        "imageFilename": "Jan van Eyck - Diptych - WGA07587.jpg"
+      }
     },
     {
       "key": "artist-url-1787307872488|wikidata-Q3889198",
@@ -418,7 +1680,19 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Colonna%20Masolino%20Philadelphia%2001.JPG",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Colonna%20Masolino%20Philadelphia%2001.JPG"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Colonna%20Masolino%20Philadelphia%2001.JPG?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Colonna%20Masolino%20Philadelphia%2001.JPG?width=512",
+      "entity": {
+        "qid": "Q3889198",
+        "labelKo": "",
+        "labelEn": "Santa Maria Maggiore Altarpiece",
+        "year": null,
+        "creatorQids": [
+          "Q318117",
+          "Q5811"
+        ],
+        "collectionQids": [],
+        "imageFilename": "Colonna Masolino Philadelphia 01.JPG"
+      }
     },
     {
       "key": "artist-url-1787307872488|wikidata-Q3948886",
@@ -430,7 +1704,20 @@
       "year": 1426,
       "qid": "Q3948886",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q3948886",
+        "labelKo": "",
+        "labelEn": "Saint Yves",
+        "year": null,
+        "creatorQids": [
+          "Q5811"
+        ],
+        "collectionQids": [
+          "Q799026"
+        ],
+        "imageFilename": ""
+      }
     },
     {
       "key": "artist-url-1787307872488|wikidata-Q111244447",
@@ -442,7 +1729,18 @@
       "year": 1426,
       "qid": "Q111244447",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q111244447",
+        "labelKo": "",
+        "labelEn": "St. Catherine's life",
+        "year": null,
+        "creatorQids": [
+          "Q5811"
+        ],
+        "collectionQids": [],
+        "imageFilename": ""
+      }
     },
     {
       "key": "artist-url-1787307872488|wikidata-Q1759631",
@@ -457,7 +1755,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Tribute%20Money%20by%20Masaccio.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Tribute%20Money%20by%20Masaccio.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Tribute%20Money%20by%20Masaccio.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Tribute%20Money%20by%20Masaccio.jpg?width=512",
+      "entity": {
+        "qid": "Q1759631",
+        "labelKo": "",
+        "labelEn": "Coin in the fish's mouth",
+        "year": 1424,
+        "creatorQids": [
+          "Q5811"
+        ],
+        "collectionQids": [
+          "Q1042634"
+        ],
+        "imageFilename": "The Tribute Money Masaccio Cappella Brancacci.jpg"
+      }
     },
     {
       "key": "artist-url-1787307872488|wikidata-Q3947757",
@@ -469,7 +1780,18 @@
       "year": 1424,
       "qid": "Q3947757",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q3947757",
+        "labelKo": "",
+        "labelEn": "Saint Paul",
+        "year": 1424,
+        "creatorQids": [
+          "Q5811"
+        ],
+        "collectionQids": [],
+        "imageFilename": ""
+      }
     },
     {
       "key": "artist-url-1787307872488|wikidata-Q116898418",
@@ -481,7 +1803,20 @@
       "year": 1424,
       "qid": "Q116898418",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q116898418",
+        "labelKo": "",
+        "labelEn": "The agony of Christ in the garden of Gethsemane, St. Jerome as penitent",
+        "year": 1424,
+        "creatorQids": [
+          "Q5811"
+        ],
+        "collectionQids": [
+          "Q878678"
+        ],
+        "imageFilename": ""
+      }
     },
     {
       "key": "artist-url-1787307872488|wikidata-Q3899272",
@@ -496,7 +1831,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20sinopia%20del%20pentimento%20di%20san%20pietro%2C%20cappella%20brancacci.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20sinopia%20del%20pentimento%20di%20san%20pietro%2C%20cappella%20brancacci.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20sinopia%20del%20pentimento%20di%20san%20pietro%2C%20cappella%20brancacci.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20sinopia%20del%20pentimento%20di%20san%20pietro%2C%20cappella%20brancacci.jpg?width=512",
+      "entity": {
+        "qid": "Q3899272",
+        "labelKo": "",
+        "labelEn": "Repentance of Saint Peter",
+        "year": 1425,
+        "creatorQids": [
+          "Q5811"
+        ],
+        "collectionQids": [
+          "Q1042634"
+        ],
+        "imageFilename": "Masaccio, sinopia del pentimento di san pietro, cappella brancacci.jpg"
+      }
     },
     {
       "key": "artist-url-1787307872488|wikidata-Q3944858",
@@ -508,7 +1856,18 @@
       "year": 1425,
       "qid": "Q3944858",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q3944858",
+        "labelKo": "",
+        "labelEn": "",
+        "year": 1425,
+        "creatorQids": [
+          "Q5811"
+        ],
+        "collectionQids": [],
+        "imageFilename": ""
+      }
     },
     {
       "key": "artist-url-1787307872488|wikidata-Q3698230",
@@ -523,7 +1882,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20Crucifixion%20of%20St%20Peter%2C%20predella%20of%20the%20altar%20for%20St%20Maria%20del%20Carmine%2C%20Pisa%2C%20c1426%2C%20tempera%2C%20Berlin%2C%20Gem%C3%A4ldegalerie.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20Crucifixion%20of%20St%20Peter%2C%20predella%20of%20the%20altar%20for%20St%20Maria%20del%20Carmine%2C%20Pisa%2C%20c1426%2C%20tempera%2C%20Berlin%2C%20Gem%C3%A4ldegalerie.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20Crucifixion%20of%20St%20Peter%2C%20predella%20of%20the%20altar%20for%20St%20Maria%20del%20Carmine%2C%20Pisa%2C%20c1426%2C%20tempera%2C%20Berlin%2C%20Gem%C3%A4ldegalerie.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20Crucifixion%20of%20St%20Peter%2C%20predella%20of%20the%20altar%20for%20St%20Maria%20del%20Carmine%2C%20Pisa%2C%20c1426%2C%20tempera%2C%20Berlin%2C%20Gem%C3%A4ldegalerie.jpg?width=512",
+      "entity": {
+        "qid": "Q3698230",
+        "labelKo": "",
+        "labelEn": "The Crucifixion of Saint Peter",
+        "year": 1426,
+        "creatorQids": [
+          "Q5811"
+        ],
+        "collectionQids": [
+          "Q165631"
+        ],
+        "imageFilename": "Masaccio, Crucifixion of St Peter, predella of the altar for St Maria del Carmine, Pisa, c1426, tempera, Berlin, Gemäldegalerie.jpg"
+      }
     },
     {
       "key": "artist-url-1787307872488|wikidata-Q3842642",
@@ -538,7 +1910,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20Madonna-del-Solletico.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20Madonna-del-Solletico.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20Madonna-del-Solletico.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20Madonna-del-Solletico.jpg?width=512",
+      "entity": {
+        "qid": "Q3842642",
+        "labelKo": "",
+        "labelEn": "Madonna Casini",
+        "year": 1426,
+        "creatorQids": [
+          "Q5811"
+        ],
+        "collectionQids": [
+          "Q51252"
+        ],
+        "imageFilename": "Masaccio, Madonna-del-Solletico.jpg"
+      }
     },
     {
       "key": "artist-url-1787307872488|wikidata-Q3947289",
@@ -553,7 +1938,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%20%281401%20-%201428%29%20-%20St.%20Jerome%20-%2058D-1%20-%20Gem%C3%A4ldegalerie.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%20%281401%20-%201428%29%20-%20St.%20Jerome%20-%2058D-1%20-%20Gem%C3%A4ldegalerie.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%20%281401%20-%201428%29%20-%20St.%20Jerome%20-%2058D-1%20-%20Gem%C3%A4ldegalerie.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%20%281401%20-%201428%29%20-%20St.%20Jerome%20-%2058D-1%20-%20Gem%C3%A4ldegalerie.jpg?width=512",
+      "entity": {
+        "qid": "Q3947289",
+        "labelKo": "",
+        "labelEn": "Saint Jerome",
+        "year": 1426,
+        "creatorQids": [
+          "Q5811"
+        ],
+        "collectionQids": [
+          "Q165631"
+        ],
+        "imageFilename": "Masaccio, polittico di pisa, san girolamo, berlino, 38x12 cm.jpg"
+      }
     },
     {
       "key": "artist-url-1787307872488|wikidata-Q3948660",
@@ -568,7 +1966,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%20%281401%20-%201428%29%20-%20St.%20August%20-%2058D-2%20-%20Gem%C3%A4ldegalerie.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%20%281401%20-%201428%29%20-%20St.%20August%20-%2058D-2%20-%20Gem%C3%A4ldegalerie.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%20%281401%20-%201428%29%20-%20St.%20August%20-%2058D-2%20-%20Gem%C3%A4ldegalerie.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%20%281401%20-%201428%29%20-%20St.%20August%20-%2058D-2%20-%20Gem%C3%A4ldegalerie.jpg?width=512",
+      "entity": {
+        "qid": "Q3948660",
+        "labelKo": "",
+        "labelEn": "Saint Augustine",
+        "year": 1426,
+        "creatorQids": [
+          "Q5811"
+        ],
+        "collectionQids": [
+          "Q165631"
+        ],
+        "imageFilename": "Masaccio, polittico di pisa, sant'agostino, berlino, 38x12 cm.jpg"
+      }
     },
     {
       "key": "artist-url-1787307872488|wikidata-Q107436009",
@@ -580,7 +1991,20 @@
       "year": 1426,
       "qid": "Q107436009",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q107436009",
+        "labelKo": "",
+        "labelEn": "",
+        "year": 1426,
+        "creatorQids": [
+          "Q5811"
+        ],
+        "collectionQids": [
+          "Q165631"
+        ],
+        "imageFilename": ""
+      }
     },
     {
       "key": "artist-url-1787307872488|wikidata-Q3933568",
@@ -595,7 +2019,21 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Cappella%20brancacci%2C%20Resurrezione%20del%20figlio%20di%20Teofilo%20e%20San%20Pietro%20in%20cattedra%20%28restaurato%29%2C%20Masaccio.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Cappella%20brancacci%2C%20Resurrezione%20del%20figlio%20di%20Teofilo%20e%20San%20Pietro%20in%20cattedra%20%28restaurato%29%2C%20Masaccio.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cappella%20brancacci%2C%20Resurrezione%20del%20figlio%20di%20Teofilo%20e%20San%20Pietro%20in%20cattedra%20%28restaurato%29%2C%20Masaccio.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cappella%20brancacci%2C%20Resurrezione%20del%20figlio%20di%20Teofilo%20e%20San%20Pietro%20in%20cattedra%20%28restaurato%29%2C%20Masaccio.jpg?width=512",
+      "entity": {
+        "qid": "Q3933568",
+        "labelKo": "",
+        "labelEn": "Raising of the Son of Teophilus and St. Peter Enthroned",
+        "year": 1427,
+        "creatorQids": [
+          "Q296265",
+          "Q5811"
+        ],
+        "collectionQids": [
+          "Q1042634"
+        ],
+        "imageFilename": "Cappella brancacci, Resurrezione del figlio di Teofilo e San Pietro in cattedra (restaurato), Masaccio.jpg"
+      }
     },
     {
       "key": "artist-url-1787307872488|wikidata-Q3949351",
@@ -610,7 +2048,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20pala%20colonna%2C%20santi%20girolamo%20e%20giovanni%20battista.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20pala%20colonna%2C%20santi%20girolamo%20e%20giovanni%20battista.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20pala%20colonna%2C%20santi%20girolamo%20e%20giovanni%20battista.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Masaccio%2C%20pala%20colonna%2C%20santi%20girolamo%20e%20giovanni%20battista.jpg?width=512",
+      "entity": {
+        "qid": "Q3949351",
+        "labelKo": "",
+        "labelEn": "Saints Jerome and John the Baptist",
+        "year": 1428,
+        "creatorQids": [
+          "Q5811"
+        ],
+        "collectionQids": [
+          "Q180788"
+        ],
+        "imageFilename": "Masaccio, pala colonna, santi girolamo e giovanni battista.jpg"
+      }
     },
     {
       "key": "artist-url-1787307872488|wikidata-Q118630274",
@@ -622,7 +2073,20 @@
       "year": 1430,
       "qid": "Q118630274",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q118630274",
+        "labelKo": "",
+        "labelEn": "The Martyrdom of St Dionysius",
+        "year": 1430,
+        "creatorQids": [
+          "Q5811"
+        ],
+        "collectionQids": [
+          "Q1251321"
+        ],
+        "imageFilename": ""
+      }
     },
     {
       "key": "artist-url-1787307872488|wikidata-Q3705918",
@@ -637,7 +2101,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Desco%20da%20parto%20%28Geburtsteller%29%20-%20Gem%C3%A4ldegalerie%20Berlin%20-%202679259.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Desco%20da%20parto%20%28Geburtsteller%29%20-%20Gem%C3%A4ldegalerie%20Berlin%20-%202679259.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Desco%20da%20parto%20%28Geburtsteller%29%20-%20Gem%C3%A4ldegalerie%20Berlin%20-%202679259.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Desco%20da%20parto%20%28Geburtsteller%29%20-%20Gem%C3%A4ldegalerie%20Berlin%20-%202679259.jpg?width=512",
+      "entity": {
+        "qid": "Q3705918",
+        "labelKo": "",
+        "labelEn": "Desco da parto",
+        "year": 1427,
+        "creatorQids": [
+          "Q5811"
+        ],
+        "collectionQids": [
+          "Q165631"
+        ],
+        "imageFilename": "Masaccio - Desco da parto.jpg"
+      }
     },
     {
       "key": "artist-url-1787307872488|wikidata-Q123528970",
@@ -649,7 +2126,21 @@
       "year": 1425,
       "qid": "Q123528970",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q123528970",
+        "labelKo": "",
+        "labelEn": "",
+        "year": 1788,
+        "creatorQids": [
+          "Q938058",
+          "Q5811"
+        ],
+        "collectionQids": [
+          "Q3098373"
+        ],
+        "imageFilename": ""
+      }
     },
     {
       "key": "artist-Q17169|wikidata-Q65057453",
@@ -664,7 +2155,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20-%20San%20Girolamo%20nel%20deserto.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20-%20San%20Girolamo%20nel%20deserto.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20-%20San%20Girolamo%20nel%20deserto.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20-%20San%20Girolamo%20nel%20deserto.jpg?width=512",
+      "entity": {
+        "qid": "Q65057453",
+        "labelKo": "",
+        "labelEn": "Saint Jerome in the Desert",
+        "year": 1450,
+        "creatorQids": [
+          "Q17169"
+        ],
+        "collectionQids": [
+          "Q4859590"
+        ],
+        "imageFilename": "Giovanni Bellini - San Girolamo nel deserto.jpg"
+      }
     },
     {
       "key": "artist-Q17169|wikidata-Q3904392",
@@ -679,7 +2183,21 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Giovanni%20-%20Piet%C3%A0%20with%20Madonna%20and%20St.%20John%20the%20Evangelist%20-%20Accademia%20Carrara%20Bergamo.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Giovanni%20-%20Piet%C3%A0%20with%20Madonna%20and%20St.%20John%20the%20Evangelist%20-%20Accademia%20Carrara%20Bergamo.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Giovanni%20-%20Piet%C3%A0%20with%20Madonna%20and%20St.%20John%20the%20Evangelist%20-%20Accademia%20Carrara%20Bergamo.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Giovanni%20-%20Piet%C3%A0%20with%20Madonna%20and%20St.%20John%20the%20Evangelist%20-%20Accademia%20Carrara%20Bergamo.jpg?width=512",
+      "entity": {
+        "qid": "Q3904392",
+        "labelKo": "",
+        "labelEn": "Pietà with Madonna and St. John the Evangelist",
+        "year": 1455,
+        "creatorQids": [
+          "Q17169"
+        ],
+        "collectionQids": [
+          "Q338367",
+          "Q126919217"
+        ],
+        "imageFilename": "Bellini, Giovanni - Pietà with Madonna and St. John the Evangelist - Accademia Carrara Bergamo.jpg"
+      }
     },
     {
       "key": "artist-Q17169|wikidata-Q3221336",
@@ -694,7 +2212,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Blessing%20Christ%20by%20Giovanni%20Bellini%20%28Louvre%20RF%202039%29.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Blessing%20Christ%20by%20Giovanni%20Bellini%20%28Louvre%20RF%202039%29.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Blessing%20Christ%20by%20Giovanni%20Bellini%20%28Louvre%20RF%202039%29.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Blessing%20Christ%20by%20Giovanni%20Bellini%20%28Louvre%20RF%202039%29.jpg?width=512",
+      "entity": {
+        "qid": "Q3221336",
+        "labelKo": "",
+        "labelEn": "Blessing Christ",
+        "year": 1464,
+        "creatorQids": [
+          "Q17169"
+        ],
+        "collectionQids": [
+          "Q3044768"
+        ],
+        "imageFilename": "Blessing Christ by Giovanni Bellini (Louvre RF 2039).jpg"
+      }
     },
     {
       "key": "artist-Q17169|manual-bellini-rimini-pieta-1470",
@@ -706,7 +2237,8 @@
       "year": 1470,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-Q17169|wikidata-Q3889247",
@@ -721,7 +2253,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Pala%20di%20pesaro%2001.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Pala%20di%20pesaro%2001.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pala%20di%20pesaro%2001.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pala%20di%20pesaro%2001.jpg?width=512",
+      "entity": {
+        "qid": "Q3889247",
+        "labelKo": "",
+        "labelEn": "Pesaro Altarpiece",
+        "year": 1471,
+        "creatorQids": [
+          "Q17169"
+        ],
+        "collectionQids": [
+          "Q3867515"
+        ],
+        "imageFilename": "Pala di pesaro 01.jpg"
+      }
     },
     {
       "key": "artist-Q17169|wikidata-Q48383869",
@@ -736,7 +2281,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Die%20Auferstehung%20Christi%20-%20Gem%C3%A4ldegalerie%20Berlin%20-%205193421.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Die%20Auferstehung%20Christi%20-%20Gem%C3%A4ldegalerie%20Berlin%20-%205193421.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Die%20Auferstehung%20Christi%20-%20Gem%C3%A4ldegalerie%20Berlin%20-%205193421.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Die%20Auferstehung%20Christi%20-%20Gem%C3%A4ldegalerie%20Berlin%20-%205193421.jpg?width=512",
+      "entity": {
+        "qid": "Q48383869",
+        "labelKo": "",
+        "labelEn": "Resurrection of Christ",
+        "year": 1475,
+        "creatorQids": [
+          "Q17169"
+        ],
+        "collectionQids": [
+          "Q165631"
+        ],
+        "imageFilename": "Die Auferstehung Christi - Gemäldegalerie Berlin - 5193421.jpg"
+      }
     },
     {
       "key": "artist-Q17169|wikidata-Q3842412",
@@ -751,7 +2309,21 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Giovanni%20-%20Madonna%20and%20Child%20-%20Madonna%20Lochis%20-%20Accademia%20Carrara%2C%20Bergamo.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Giovanni%20-%20Madonna%20and%20Child%20-%20Madonna%20Lochis%20-%20Accademia%20Carrara%2C%20Bergamo.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Giovanni%20-%20Madonna%20and%20Child%20-%20Madonna%20Lochis%20-%20Accademia%20Carrara%2C%20Bergamo.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Giovanni%20-%20Madonna%20and%20Child%20-%20Madonna%20Lochis%20-%20Accademia%20Carrara%2C%20Bergamo.jpg?width=512",
+      "entity": {
+        "qid": "Q3842412",
+        "labelKo": "",
+        "labelEn": "Lochis Madonna",
+        "year": 1476,
+        "creatorQids": [
+          "Q17169"
+        ],
+        "collectionQids": [
+          "Q338367",
+          "Q126919217"
+        ],
+        "imageFilename": "Bellini, Giovanni - Madonna and Child - Madonna Lochis - Accademia Carrara, Bergamo.jpg"
+      }
     },
     {
       "key": "artist-Q17169|wikidata-Q3997723",
@@ -766,7 +2338,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Paris%201er%20-%20Mus%C3%A9e%20du%20Louvre%20-%20Exposition%20Naples%20%C3%A0%20Paris%20-%20La%20Transfiguration%20%28Giovanni%20Bellini%29.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Paris%201er%20-%20Mus%C3%A9e%20du%20Louvre%20-%20Exposition%20Naples%20%C3%A0%20Paris%20-%20La%20Transfiguration%20%28Giovanni%20Bellini%29.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Paris%201er%20-%20Mus%C3%A9e%20du%20Louvre%20-%20Exposition%20Naples%20%C3%A0%20Paris%20-%20La%20Transfiguration%20%28Giovanni%20Bellini%29.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Paris%201er%20-%20Mus%C3%A9e%20du%20Louvre%20-%20Exposition%20Naples%20%C3%A0%20Paris%20-%20La%20Transfiguration%20%28Giovanni%20Bellini%29.jpg?width=512",
+      "entity": {
+        "qid": "Q3997723",
+        "labelKo": "",
+        "labelEn": "Transfiguration of Christ",
+        "year": 1478,
+        "creatorQids": [
+          "Q17169"
+        ],
+        "collectionQids": [
+          "Q290549"
+        ],
+        "imageFilename": "Paris 1er - Musée du Louvre - Exposition Naples à Paris - La Transfiguration (Giovanni Bellini).jpg"
+      }
     },
     {
       "key": "artist-Q17169|wikidata-Q3842590",
@@ -781,7 +2366,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/La%20Virgen%20y%20el%20Ni%C3%B1o%20entre%20dos%20santas%20%28Giovanni%20Bellini%29.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/La%20Virgen%20y%20el%20Ni%C3%B1o%20entre%20dos%20santas%20%28Giovanni%20Bellini%29.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/La%20Virgen%20y%20el%20Ni%C3%B1o%20entre%20dos%20santas%20%28Giovanni%20Bellini%29.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/La%20Virgen%20y%20el%20Ni%C3%B1o%20entre%20dos%20santas%20%28Giovanni%20Bellini%29.jpg?width=512",
+      "entity": {
+        "qid": "Q3842590",
+        "labelKo": "",
+        "labelEn": "The Virgin and Child between two Saints",
+        "year": 1490,
+        "creatorQids": [
+          "Q17169"
+        ],
+        "collectionQids": [
+          "Q160112"
+        ],
+        "imageFilename": "La Virgen y el Niño entre dos santas (Giovanni Bellini).jpg"
+      }
     },
     {
       "key": "artist-Q17169|wikidata-Q3842594",
@@ -796,7 +2394,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Accademia%20-%20Madonna%20con%20Bambino%20tra%20le%20sante%20Caterina%20e%20Maria%20Maddalena%20-%20Giovanni%20Bellini%20-%20Cat%20613.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Accademia%20-%20Madonna%20con%20Bambino%20tra%20le%20sante%20Caterina%20e%20Maria%20Maddalena%20-%20Giovanni%20Bellini%20-%20Cat%20613.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Accademia%20-%20Madonna%20con%20Bambino%20tra%20le%20sante%20Caterina%20e%20Maria%20Maddalena%20-%20Giovanni%20Bellini%20-%20Cat%20613.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Accademia%20-%20Madonna%20con%20Bambino%20tra%20le%20sante%20Caterina%20e%20Maria%20Maddalena%20-%20Giovanni%20Bellini%20-%20Cat%20613.jpg?width=512",
+      "entity": {
+        "qid": "Q3842594",
+        "labelKo": "",
+        "labelEn": "Madonna and Child between Saints Catherine and Mary Magdalene",
+        "year": 1490,
+        "creatorQids": [
+          "Q17169"
+        ],
+        "collectionQids": [
+          "Q338330"
+        ],
+        "imageFilename": "Accademia - Madonna con Bambino tra le sante Caterina e Maria Maddalena - Giovanni Bellini - Cat 613.jpg"
+      }
     },
     {
       "key": "artist-Q17169|wikidata-Q1115613",
@@ -811,7 +2422,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Giovanni%20-%20Madonna%20of%20the%20Meadow.jpeg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Giovanni%20-%20Madonna%20of%20the%20Meadow.jpeg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Giovanni%20-%20Madonna%20of%20the%20Meadow.jpeg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Giovanni%20-%20Madonna%20of%20the%20Meadow.jpeg?width=512",
+      "entity": {
+        "qid": "Q1115613",
+        "labelKo": "",
+        "labelEn": "Madonna del Prato",
+        "year": 1500,
+        "creatorQids": [
+          "Q17169"
+        ],
+        "collectionQids": [
+          "Q180788"
+        ],
+        "imageFilename": "Bellini, Giovanni - Madonna of the Meadow.jpeg"
+      }
     },
     {
       "key": "artist-Q17169|wikidata-Q3220282",
@@ -826,7 +2450,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20battesimo%20di%20cristo.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20battesimo%20di%20cristo.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20battesimo%20di%20cristo.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20battesimo%20di%20cristo.jpg?width=512",
+      "entity": {
+        "qid": "Q3220282",
+        "labelKo": "",
+        "labelEn": "Baptism of Christ",
+        "year": 1500,
+        "creatorQids": [
+          "Q17169"
+        ],
+        "collectionQids": [
+          "Q2957156"
+        ],
+        "imageFilename": "Bellini, battesimo di cristo.jpg"
+      }
     },
     {
       "key": "artist-Q17169|wikidata-Q1122002",
@@ -841,7 +2478,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Polittico%20di%20san%20vincenzo%20ferrer%2001.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Polittico%20di%20san%20vincenzo%20ferrer%2001.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Polittico%20di%20san%20vincenzo%20ferrer%2001.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Polittico%20di%20san%20vincenzo%20ferrer%2001.jpg?width=512",
+      "entity": {
+        "qid": "Q1122002",
+        "labelKo": "",
+        "labelEn": "Altarpiece of St. Vincent Ferrer",
+        "year": 1500,
+        "creatorQids": [
+          "Q17169"
+        ],
+        "collectionQids": [
+          "Q155225"
+        ],
+        "imageFilename": "Polittico di san vincenzo ferrer 01.jpg"
+      }
     },
     {
       "key": "artist-Q17169|wikidata-Q658825",
@@ -856,7 +2506,22 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20-%20Un%20episodio%20della%20vita%20di%20Publio%20Cornelio%20Scipione.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20-%20Un%20episodio%20della%20vita%20di%20Publio%20Cornelio%20Scipione.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20-%20Un%20episodio%20della%20vita%20di%20Publio%20Cornelio%20Scipione.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20-%20Un%20episodio%20della%20vita%20di%20Publio%20Cornelio%20Scipione.jpg?width=512",
+      "entity": {
+        "qid": "Q658825",
+        "labelKo": "",
+        "labelEn": "The Clemency of Scipio",
+        "year": 1506,
+        "creatorQids": [
+          "Q17169"
+        ],
+        "collectionQids": [
+          "Q214867",
+          "Q2074027",
+          "Q74149551"
+        ],
+        "imageFilename": "Giovanni Bellini - Un episodio della vita di Publio Cornelio Scipione.jpg"
+      }
     },
     {
       "key": "artist-Q17169|wikidata-Q21712112",
@@ -871,7 +2536,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20-%20Nunc%20Dimittis%20-%20Madrid%20Thyssen.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20-%20Nunc%20Dimittis%20-%20Madrid%20Thyssen.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20-%20Nunc%20Dimittis%20-%20Madrid%20Thyssen.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giovanni%20Bellini%20-%20Nunc%20Dimittis%20-%20Madrid%20Thyssen.jpg?width=512",
+      "entity": {
+        "qid": "Q21712112",
+        "labelKo": "",
+        "labelEn": "Sacred conversation",
+        "year": 1507,
+        "creatorQids": [
+          "Q17169"
+        ],
+        "collectionQids": [
+          "Q176251"
+        ],
+        "imageFilename": "Giovanni Bellini - Nunc Dimittis - Madrid Thyssen.jpg"
+      }
     },
     {
       "key": "artist-Q17169|wikidata-Q3949347",
@@ -886,7 +2564,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Sts%20Christopher%2C%20Jerome%20and%20Louis%20of%20Toulouse.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Sts%20Christopher%2C%20Jerome%20and%20Louis%20of%20Toulouse.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Sts%20Christopher%2C%20Jerome%20and%20Louis%20of%20Toulouse.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bellini%2C%20Sts%20Christopher%2C%20Jerome%20and%20Louis%20of%20Toulouse.jpg?width=512",
+      "entity": {
+        "qid": "Q3949347",
+        "labelKo": "",
+        "labelEn": "Saints Christopher, Jerome and Louis of Toulouse",
+        "year": 1513,
+        "creatorQids": [
+          "Q17169"
+        ],
+        "collectionQids": [
+          "Q915746"
+        ],
+        "imageFilename": "Bellini, Sts Christopher, Jerome and Louis of Toulouse.jpg"
+      }
     },
     {
       "key": "artist-Q5580|durer-adoration-of-the-magi",
@@ -898,7 +2589,8 @@
       "year": 1504,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-Q8459|wikidata-Q3752977",
@@ -913,7 +2605,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20035.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20035.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20035.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20035.jpg?width=512",
+      "entity": {
+        "qid": "Q3752977",
+        "labelKo": "",
+        "labelEn": "Frieze of the Liberal and Mechanical Arts",
+        "year": 1496,
+        "creatorQids": [
+          "Q8459"
+        ],
+        "collectionQids": [
+          "Q3661110"
+        ],
+        "imageFilename": "Giorgione 035.jpg"
+      }
     },
     {
       "key": "artist-Q8459|wikidata-Q3937532",
@@ -928,7 +2633,22 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Bildnis%20des%20Francesco%20Maria%20I.%20della%20Rovere%2C%20um%201502.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Bildnis%20des%20Francesco%20Maria%20I.%20della%20Rovere%2C%20um%201502.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Bildnis%20des%20Francesco%20Maria%20I.%20della%20Rovere%2C%20um%201502.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Bildnis%20des%20Francesco%20Maria%20I.%20della%20Rovere%2C%20um%201502.jpg?width=512",
+      "entity": {
+        "qid": "Q3937532",
+        "labelKo": "",
+        "labelEn": "Portrait of Francesco Maria della Rovere",
+        "year": 1502,
+        "creatorQids": [
+          "Q8459"
+        ],
+        "collectionQids": [
+          "Q95569",
+          "Q120197349",
+          "Q111010482"
+        ],
+        "imageFilename": "Giorgione - Bildnis des Francesco Maria I. della Rovere, um 1502.jpg"
+      }
     },
     {
       "key": "artist-Q8459|wikidata-Q3937736",
@@ -943,7 +2663,21 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%2C%20Portrait%20of%20Warrior%20with%20his%20Equerry.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%2C%20Portrait%20of%20Warrior%20with%20his%20Equerry.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%2C%20Portrait%20of%20Warrior%20with%20his%20Equerry.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%2C%20Portrait%20of%20Warrior%20with%20his%20Equerry.jpg?width=512",
+      "entity": {
+        "qid": "Q3937736",
+        "labelKo": "",
+        "labelEn": "Portrait of a soldier with his squire",
+        "year": 1502,
+        "creatorQids": [
+          "Q8459",
+          "Q2382158"
+        ],
+        "collectionQids": [
+          "Q51252"
+        ],
+        "imageFilename": "Giorgione, Portrait of Warrior with his Equerry.jpg"
+      }
     },
     {
       "key": "artist-Q8459|wikidata-Q1720631",
@@ -958,7 +2692,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Pala%20di%20Castelfranco.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Pala%20di%20Castelfranco.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Pala%20di%20Castelfranco.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Pala%20di%20Castelfranco.jpg?width=512",
+      "entity": {
+        "qid": "Q1720631",
+        "labelKo": "",
+        "labelEn": "Castelfranco Madonna",
+        "year": 1503,
+        "creatorQids": [
+          "Q8459"
+        ],
+        "collectionQids": [
+          "Q1236579"
+        ],
+        "imageFilename": "Giorgione - Pala di Castelfranco.jpg"
+      }
     },
     {
       "key": "artist-Q8459|wikidata-Q3937389",
@@ -973,7 +2720,21 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Portrait%20of%20a%20young%20man%2C%2016th%20century%20-Gem%C3%A4ldegalerie%20Berlin.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Portrait%20of%20a%20young%20man%2C%2016th%20century%20-Gem%C3%A4ldegalerie%20Berlin.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Portrait%20of%20a%20young%20man%2C%2016th%20century%20-Gem%C3%A4ldegalerie%20Berlin.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Portrait%20of%20a%20young%20man%2C%2016th%20century%20-Gem%C3%A4ldegalerie%20Berlin.jpg?width=512",
+      "entity": {
+        "qid": "Q3937389",
+        "labelKo": "",
+        "labelEn": "Giustiniani Portrait",
+        "year": 1503,
+        "creatorQids": [
+          "Q8459",
+          "Q47551"
+        ],
+        "collectionQids": [
+          "Q165631"
+        ],
+        "imageFilename": "Giorgione - Portrait of a young man, 16th century -Gemäldegalerie Berlin.jpg"
+      }
     },
     {
       "key": "artist-Q8459|wikidata-Q121547247",
@@ -985,7 +2746,18 @@
       "year": 1504,
       "qid": "Q121547247",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q121547247",
+        "labelKo": "",
+        "labelEn": "Mary with the Christ-child, Saint Francis and another saint",
+        "year": 1504,
+        "creatorQids": [
+          "Q8459"
+        ],
+        "collectionQids": [],
+        "imageFilename": ""
+      }
     },
     {
       "key": "artist-Q8459|wikidata-Q3924389",
@@ -1000,7 +2772,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Mos%C3%A8%20alla%20prova%20del%20fuoco%20-%20Google%20Art%20Project.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Mos%C3%A8%20alla%20prova%20del%20fuoco%20-%20Google%20Art%20Project.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Mos%C3%A8%20alla%20prova%20del%20fuoco%20-%20Google%20Art%20Project.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Mos%C3%A8%20alla%20prova%20del%20fuoco%20-%20Google%20Art%20Project.jpg?width=512",
+      "entity": {
+        "qid": "Q3924389",
+        "labelKo": "",
+        "labelEn": "The Test of Fire of Moses",
+        "year": 1505,
+        "creatorQids": [
+          "Q8459"
+        ],
+        "collectionQids": [
+          "Q51252"
+        ],
+        "imageFilename": "Giorgione - Mosè alla prova del fuoco - Google Art Project.jpg"
+      }
     },
     {
       "key": "artist-Q8459|wikidata-Q3098667",
@@ -1015,7 +2800,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgio%20da%20Castelfranco%2C%20gen.%20Giorgione%2C%20Kunsthistorisches%20Museum%20Wien%2C%20Gem%C3%A4ldegalerie%20-%20Knabe%20mit%20Pfeil%20-%20GG%20323%20-%20Kunsthistorisches%20Museum.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgio%20da%20Castelfranco%2C%20gen.%20Giorgione%2C%20Kunsthistorisches%20Museum%20Wien%2C%20Gem%C3%A4ldegalerie%20-%20Knabe%20mit%20Pfeil%20-%20GG%20323%20-%20Kunsthistorisches%20Museum.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giorgio%20da%20Castelfranco%2C%20gen.%20Giorgione%2C%20Kunsthistorisches%20Museum%20Wien%2C%20Gem%C3%A4ldegalerie%20-%20Knabe%20mit%20Pfeil%20-%20GG%20323%20-%20Kunsthistorisches%20Museum.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giorgio%20da%20Castelfranco%2C%20gen.%20Giorgione%2C%20Kunsthistorisches%20Museum%20Wien%2C%20Gem%C3%A4ldegalerie%20-%20Knabe%20mit%20Pfeil%20-%20GG%20323%20-%20Kunsthistorisches%20Museum.jpg?width=512",
+      "entity": {
+        "qid": "Q3098667",
+        "labelKo": "",
+        "labelEn": "Young Man with Arrow",
+        "year": 1505,
+        "creatorQids": [
+          "Q8459"
+        ],
+        "collectionQids": [
+          "Q95569"
+        ],
+        "imageFilename": "Giorgio da Castelfranco, gen. Giorgione, Kunsthistorisches Museum Wien, Gemäldegalerie - Knabe mit Pfeil - GG 323 - Kunsthistorisches Museum.jpg"
+      }
     },
     {
       "key": "artist-Q8459|wikidata-Q137594811",
@@ -1030,7 +2828,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Sacra%20Conversazione%20-%20WGA21123.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Sacra%20Conversazione%20-%20WGA21123.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Sacra%20Conversazione%20-%20WGA21123.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Sacra%20Conversazione%20-%20WGA21123.jpg?width=512",
+      "entity": {
+        "qid": "Q137594811",
+        "labelKo": "",
+        "labelEn": "",
+        "year": 1505,
+        "creatorQids": [
+          "Q8459"
+        ],
+        "collectionQids": [
+          "Q338330"
+        ],
+        "imageFilename": "Giorgione - Sacra Conversazione - WGA21123.jpg"
+      }
     },
     {
       "key": "artist-Q8459|wikidata-Q3605531",
@@ -1045,7 +2856,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Adorazione%20dei%20Magi%20%281506-1507%29.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Adorazione%20dei%20Magi%20%281506-1507%29.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Adorazione%20dei%20Magi%20%281506-1507%29.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20-%20Adorazione%20dei%20Magi%20%281506-1507%29.jpg?width=512",
+      "entity": {
+        "qid": "Q3605531",
+        "labelKo": "",
+        "labelEn": "Adoration of the Magi",
+        "year": 1506,
+        "creatorQids": [
+          "Q8459"
+        ],
+        "collectionQids": [
+          "Q180788"
+        ],
+        "imageFilename": "Giorgione - Adorazione dei Magi (1506-1507).jpg"
+      }
     },
     {
       "key": "artist-Q8459|wikidata-Q3977127",
@@ -1060,7 +2884,21 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%2C%20suonatore%20di%20flauto%202.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%2C%20suonatore%20di%20flauto%202.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%2C%20suonatore%20di%20flauto%202.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%2C%20suonatore%20di%20flauto%202.jpg?width=512",
+      "entity": {
+        "qid": "Q3977127",
+        "labelKo": "",
+        "labelEn": "",
+        "year": 1508,
+        "creatorQids": [
+          "Q8459"
+        ],
+        "collectionQids": [
+          "Q841506",
+          "Q683074"
+        ],
+        "imageFilename": "Giorgione, suonatore di flauto 2.jpg"
+      }
     },
     {
       "key": "artist-Q8459|wikidata-Q3948603",
@@ -1075,7 +2913,18 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/%28Venice%29%20Il%20Concerto%20-%20Giorgione.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/%28Venice%29%20Il%20Concerto%20-%20Giorgione.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/%28Venice%29%20Il%20Concerto%20-%20Giorgione.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/%28Venice%29%20Il%20Concerto%20-%20Giorgione.jpg?width=512",
+      "entity": {
+        "qid": "Q3948603",
+        "labelKo": "",
+        "labelEn": "",
+        "year": 1508,
+        "creatorQids": [
+          "Q8459"
+        ],
+        "collectionQids": [],
+        "imageFilename": "(Venice) Il Concerto - Giorgione.jpg"
+      }
     },
     {
       "key": "artist-Q8459|wikidata-Q27968196",
@@ -1090,7 +2939,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20%28attrib.%29%20-%20Portrait%20of%20An%20Archer.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20%28attrib.%29%20-%20Portrait%20of%20An%20Archer.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20%28attrib.%29%20-%20Portrait%20of%20An%20Archer.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giorgione%20%28attrib.%29%20-%20Portrait%20of%20An%20Archer.jpg?width=512",
+      "entity": {
+        "qid": "Q27968196",
+        "labelKo": "",
+        "labelEn": "Portrait of An Archer",
+        "year": 1508,
+        "creatorQids": [
+          "Q8459"
+        ],
+        "collectionQids": [
+          "Q2051997"
+        ],
+        "imageFilename": "Giorgione (attrib.) - Portrait of An Archer.jpg"
+      }
     },
     {
       "key": "artist-Q47551|wikidata-Q3842778",
@@ -1105,7 +2967,22 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Tiziano%20Vecellio%2C%20called%20Titian%20-%20Gipsy%20Madonna%20-%20Google%20Art%20Project.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Tiziano%20Vecellio%2C%20called%20Titian%20-%20Gipsy%20Madonna%20-%20Google%20Art%20Project.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Tiziano%20Vecellio%2C%20called%20Titian%20-%20Gipsy%20Madonna%20-%20Google%20Art%20Project.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Tiziano%20Vecellio%2C%20called%20Titian%20-%20Gipsy%20Madonna%20-%20Google%20Art%20Project.jpg?width=512",
+      "entity": {
+        "qid": "Q3842778",
+        "labelKo": "",
+        "labelEn": "The Gypsy Madonna",
+        "year": 1510,
+        "creatorQids": [
+          "Q47551"
+        ],
+        "collectionQids": [
+          "Q95569",
+          "Q120197349",
+          "Q111010482"
+        ],
+        "imageFilename": "Tiziano Vecellio, called Titian - Gipsy Madonna - Google Art Project.jpg"
+      }
     },
     {
       "key": "artist-Q47551|wikidata-Q2046100",
@@ -1120,7 +2997,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Tiziano%20-%20Flora%20-%20Google%20Art%20Project.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Tiziano%20-%20Flora%20-%20Google%20Art%20Project.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Tiziano%20-%20Flora%20-%20Google%20Art%20Project.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Tiziano%20-%20Flora%20-%20Google%20Art%20Project.jpg?width=512",
+      "entity": {
+        "qid": "Q2046100",
+        "labelKo": "",
+        "labelEn": "Flora",
+        "year": 1517,
+        "creatorQids": [
+          "Q47551"
+        ],
+        "collectionQids": [
+          "Q51252"
+        ],
+        "imageFilename": "Tiziano - Flora - Google Art Project.jpg"
+      }
     },
     {
       "key": "artist-Q47551|wikidata-Q19798137",
@@ -1135,7 +3025,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Tizian%20081.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Tizian%20081.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Tizian%20081.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Tizian%20081.jpg?width=512",
+      "entity": {
+        "qid": "Q19798137",
+        "labelKo": "",
+        "labelEn": "Portrait of Charles V with a Dog",
+        "year": 1533,
+        "creatorQids": [
+          "Q47551"
+        ],
+        "collectionQids": [
+          "Q160112"
+        ],
+        "imageFilename": "Tizian 081.jpg"
+      }
     },
     {
       "key": "artist-Q47551|wikidata-Q3853901",
@@ -1150,7 +3053,21 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Tizian%20-%20Portr%C3%A4t%20der%20Isabella%20d%27Este.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Tizian%20-%20Portr%C3%A4t%20der%20Isabella%20d%27Este.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Tizian%20-%20Portr%C3%A4t%20der%20Isabella%20d%27Este.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Tizian%20-%20Portr%C3%A4t%20der%20Isabella%20d%27Este.jpg?width=512",
+      "entity": {
+        "qid": "Q3853901",
+        "labelKo": "",
+        "labelEn": "Portrait of Isabella d'Este",
+        "year": 1535,
+        "creatorQids": [
+          "Q47551"
+        ],
+        "collectionQids": [
+          "Q95569",
+          "Q111010482"
+        ],
+        "imageFilename": "Tizian - Porträt der Isabella d'Este.jpg"
+      }
     },
     {
       "key": "artist-Q47551|wikidata-Q5128805",
@@ -1165,7 +3082,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Clarissa%20Strozzi%20%281540-1581%29%20im%20Alter%20von%20zwei%20Jahren%20-%20Gem%C3%A4ldegalerie%20Berlin%20-%205416289.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Clarissa%20Strozzi%20%281540-1581%29%20im%20Alter%20von%20zwei%20Jahren%20-%20Gem%C3%A4ldegalerie%20Berlin%20-%205416289.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Clarissa%20Strozzi%20%281540-1581%29%20im%20Alter%20von%20zwei%20Jahren%20-%20Gem%C3%A4ldegalerie%20Berlin%20-%205416289.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Clarissa%20Strozzi%20%281540-1581%29%20im%20Alter%20von%20zwei%20Jahren%20-%20Gem%C3%A4ldegalerie%20Berlin%20-%205416289.jpg?width=512",
+      "entity": {
+        "qid": "Q5128805",
+        "labelKo": "",
+        "labelEn": "Portrait of Clarissa Strozzi",
+        "year": 1542,
+        "creatorQids": [
+          "Q47551"
+        ],
+        "collectionQids": [
+          "Q165631"
+        ],
+        "imageFilename": "Clarissa Strozzi (1540-1581) im Alter von zwei Jahren - Gemäldegalerie Berlin - 5416289.jpg"
+      }
     },
     {
       "key": "artist-Q47551|wikidata-Q2665840",
@@ -1180,7 +3110,21 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Accademia%20-%20Piet%C3%A0%20by%20Titian.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Accademia%20-%20Piet%C3%A0%20by%20Titian.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Accademia%20-%20Piet%C3%A0%20by%20Titian.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Accademia%20-%20Piet%C3%A0%20by%20Titian.jpg?width=512",
+      "entity": {
+        "qid": "Q2665840",
+        "labelKo": "",
+        "labelEn": "Pietà",
+        "year": 1575,
+        "creatorQids": [
+          "Q47551",
+          "Q651795"
+        ],
+        "collectionQids": [
+          "Q338330"
+        ],
+        "imageFilename": "Accademia - Pietà by Titian.jpg"
+      }
     },
     {
       "key": "artist-Q7824|wikidata-Q1091213",
@@ -1195,7 +3139,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20carracci%2C%20salma%20di%20cristo.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20carracci%2C%20salma%20di%20cristo.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20carracci%2C%20salma%20di%20cristo.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20carracci%2C%20salma%20di%20cristo.jpg?width=512",
+      "entity": {
+        "qid": "Q1091213",
+        "labelKo": "그리스도의 시신",
+        "labelEn": "Corpse of Christ",
+        "year": 1582,
+        "creatorQids": [
+          "Q7824"
+        ],
+        "collectionQids": [
+          "Q14917275"
+        ],
+        "imageFilename": "Annibale carracci, salma di cristo.jpg"
+      }
     },
     {
       "key": "artist-Q7824|wikidata-Q60477093",
@@ -1210,7 +3167,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20Boy%20Drinking%20-%201994.4%20-%20Cleveland%20Museum%20of%20Art.tiff",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20Boy%20Drinking%20-%201994.4%20-%20Cleveland%20Museum%20of%20Art.tiff"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20Boy%20Drinking%20-%201994.4%20-%20Cleveland%20Museum%20of%20Art.tiff?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20Boy%20Drinking%20-%201994.4%20-%20Cleveland%20Museum%20of%20Art.tiff?width=512",
+      "entity": {
+        "qid": "Q60477093",
+        "labelKo": "",
+        "labelEn": "Boy Drinking",
+        "year": 1582,
+        "creatorQids": [
+          "Q7824"
+        ],
+        "collectionQids": [
+          "Q657415"
+        ],
+        "imageFilename": "Annibale Carracci - Boy Drinking - 1994.4 - Cleveland Museum of Art.tiff"
+      }
     },
     {
       "key": "artist-Q7824|wikidata-Q12060616",
@@ -1225,7 +3195,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/La%20Chasse%20-%20Annibale%20Carracci%20-%20Mus%C3%A9e%20du%20Louvre%20Peintures%20INV%20210%20%3B%20MR%20127.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/La%20Chasse%20-%20Annibale%20Carracci%20-%20Mus%C3%A9e%20du%20Louvre%20Peintures%20INV%20210%20%3B%20MR%20127.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/La%20Chasse%20-%20Annibale%20Carracci%20-%20Mus%C3%A9e%20du%20Louvre%20Peintures%20INV%20210%20%3B%20MR%20127.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/La%20Chasse%20-%20Annibale%20Carracci%20-%20Mus%C3%A9e%20du%20Louvre%20Peintures%20INV%20210%20%3B%20MR%20127.jpg?width=512",
+      "entity": {
+        "qid": "Q12060616",
+        "labelKo": "",
+        "labelEn": "Hunting",
+        "year": 1585,
+        "creatorQids": [
+          "Q7824"
+        ],
+        "collectionQids": [
+          "Q3044768"
+        ],
+        "imageFilename": "La Chasse - Annibale Carracci - Musée du Louvre Peintures INV 210 ; MR 127.jpg"
+      }
     },
     {
       "key": "artist-Q7824|wikidata-Q19966591",
@@ -1240,7 +3223,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20carracci%20piet%C3%A0%20parma.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20carracci%20piet%C3%A0%20parma.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20carracci%20piet%C3%A0%20parma.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20carracci%20piet%C3%A0%20parma.jpg?width=512",
+      "entity": {
+        "qid": "Q19966591",
+        "labelKo": "",
+        "labelEn": "Deposition, with Saints Claire, Francis, Magdalene and John",
+        "year": 1585,
+        "creatorQids": [
+          "Q7824"
+        ],
+        "collectionQids": [
+          "Q772890"
+        ],
+        "imageFilename": "Annibale carracci pietà parma.jpg"
+      }
     },
     {
       "key": "artist-Q7824|wikidata-Q21234110",
@@ -1255,7 +3251,18 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Spazzacamino%20Annibale%20Carracci.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Spazzacamino%20Annibale%20Carracci.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Spazzacamino%20Annibale%20Carracci.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Spazzacamino%20Annibale%20Carracci.jpg?width=512",
+      "entity": {
+        "qid": "Q21234110",
+        "labelKo": "",
+        "labelEn": "",
+        "year": 1585,
+        "creatorQids": [
+          "Q7824"
+        ],
+        "collectionQids": [],
+        "imageFilename": "Spazzacamino Annibale Carracci.jpg"
+      }
     },
     {
       "key": "artist-Q7824|wikidata-Q97704183",
@@ -1270,7 +3277,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20The%20Mystic%20Marriage%20of%20St%20Catherine%20-%20WGA4423.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20The%20Mystic%20Marriage%20of%20St%20Catherine%20-%20WGA4423.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20The%20Mystic%20Marriage%20of%20St%20Catherine%20-%20WGA4423.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20The%20Mystic%20Marriage%20of%20St%20Catherine%20-%20WGA4423.jpg?width=512",
+      "entity": {
+        "qid": "Q97704183",
+        "labelKo": "",
+        "labelEn": "The Mystic Marriage of St Catherine",
+        "year": 1587,
+        "creatorQids": [
+          "Q7824"
+        ],
+        "collectionQids": [
+          "Q290549"
+        ],
+        "imageFilename": "Annibale Carracci - The Mystic Marriage of St Catherine - WGA4423.jpg"
+      }
     },
     {
       "key": "artist-Q7824|wikidata-Q26767075",
@@ -1285,7 +3305,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Madonna%20Enthroned%20with%20Saint%20Matthew%2C%20Annibale%20Carracci%2C%201588.png",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Madonna%20Enthroned%20with%20Saint%20Matthew%2C%20Annibale%20Carracci%2C%201588.png"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Madonna%20Enthroned%20with%20Saint%20Matthew%2C%20Annibale%20Carracci%2C%201588.png?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Madonna%20Enthroned%20with%20Saint%20Matthew%2C%20Annibale%20Carracci%2C%201588.png?width=512",
+      "entity": {
+        "qid": "Q26767075",
+        "labelKo": "",
+        "labelEn": "Madonna Enthroned with Saint Matthew",
+        "year": 1588,
+        "creatorQids": [
+          "Q7824"
+        ],
+        "collectionQids": [
+          "Q653002"
+        ],
+        "imageFilename": "Madonna Enthroned with Saint Matthew, Annibale Carracci, 1588.png"
+      }
     },
     {
       "key": "artist-Q7824|wikidata-Q19966609",
@@ -1300,7 +3333,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Salone%20Carracci%20Palazzo%20Magnani.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Salone%20Carracci%20Palazzo%20Magnani.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Salone%20Carracci%20Palazzo%20Magnani.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Salone%20Carracci%20Palazzo%20Magnani.jpg?width=512",
+      "entity": {
+        "qid": "Q19966609",
+        "labelKo": "",
+        "labelEn": "Stories of the foundation of Rome",
+        "year": 1590,
+        "creatorQids": [
+          "Q7824",
+          "Q316269",
+          "Q380553"
+        ],
+        "collectionQids": [],
+        "imageFilename": "Salone Carracci Palazzo Magnani.jpg"
+      }
     },
     {
       "key": "artist-Q7824|wikidata-Q126127672",
@@ -1315,7 +3361,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20Madonna%20e%20Santi%20-%20Pinacoteca%20Nazionale%20Bologna.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20Madonna%20e%20Santi%20-%20Pinacoteca%20Nazionale%20Bologna.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20Madonna%20e%20Santi%20-%20Pinacoteca%20Nazionale%20Bologna.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20Madonna%20e%20Santi%20-%20Pinacoteca%20Nazionale%20Bologna.jpg?width=512",
+      "entity": {
+        "qid": "Q126127672",
+        "labelKo": "",
+        "labelEn": "Madonna in Glory with Saints",
+        "year": 1550,
+        "creatorQids": [
+          "Q7824"
+        ],
+        "collectionQids": [
+          "Q1103550"
+        ],
+        "imageFilename": "Annibale Carracci Madonna e Santi - Pinacoteca Nazionale Bologna.jpg"
+      }
     },
     {
       "key": "artist-Q7824|wikidata-Q18572292",
@@ -1330,7 +3389,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20The%20Virgin%20Appears%20to%20Sts%20Luke%20and%20Catherine%20-%20WGA4431.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20The%20Virgin%20Appears%20to%20Sts%20Luke%20and%20Catherine%20-%20WGA4431.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20The%20Virgin%20Appears%20to%20Sts%20Luke%20and%20Catherine%20-%20WGA4431.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20The%20Virgin%20Appears%20to%20Sts%20Luke%20and%20Catherine%20-%20WGA4431.jpg?width=512",
+      "entity": {
+        "qid": "Q18572292",
+        "labelKo": "",
+        "labelEn": "Madonna Appearing to St. Luke and St. Catherine",
+        "year": 1592,
+        "creatorQids": [
+          "Q7824"
+        ],
+        "collectionQids": [
+          "Q3044768"
+        ],
+        "imageFilename": "Annibale Carracci - The Virgin Appears to Sts Luke and Catherine - WGA4431.jpg"
+      }
     },
     {
       "key": "artist-Q7824|wikidata-Q28668013",
@@ -1345,7 +3417,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Caco%20%28studio%29%20-%20Annibale%20Carracci.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Caco%20%28studio%29%20-%20Annibale%20Carracci.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Caco%20%28studio%29%20-%20Annibale%20Carracci.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Caco%20%28studio%29%20-%20Annibale%20Carracci.jpg?width=512",
+      "entity": {
+        "qid": "Q28668013",
+        "labelKo": "",
+        "labelEn": "Palazzo Sampieri frescoes",
+        "year": 1593,
+        "creatorQids": [
+          "Q7824",
+          "Q316269",
+          "Q380553"
+        ],
+        "collectionQids": [],
+        "imageFilename": "Caco (studio) - Annibale Carracci.jpg"
+      }
     },
     {
       "key": "artist-Q7824|wikidata-Q28668136",
@@ -1360,7 +3445,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20Madonna%20in%20gloria%20sulla%20Citt%C3%A0%20di%20Bologna.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20Madonna%20in%20gloria%20sulla%20Citt%C3%A0%20di%20Bologna.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20Madonna%20in%20gloria%20sulla%20Citt%C3%A0%20di%20Bologna.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20Madonna%20in%20gloria%20sulla%20Citt%C3%A0%20di%20Bologna.jpg?width=512",
+      "entity": {
+        "qid": "Q28668136",
+        "labelKo": "",
+        "labelEn": "Madonna and Child in Glory over the City of Bologna",
+        "year": 1593,
+        "creatorQids": [
+          "Q7824"
+        ],
+        "collectionQids": [
+          "Q3675590"
+        ],
+        "imageFilename": "Annibale Carracci Madonna in gloria sulla Città di Bologna.jpg"
+      }
     },
     {
       "key": "artist-Q7824|wikidata-Q19966583",
@@ -1375,7 +3473,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20Pala%20di%20san%20Giorgio.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20Pala%20di%20san%20Giorgio.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20Pala%20di%20san%20Giorgio.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20Pala%20di%20san%20Giorgio.jpg?width=512",
+      "entity": {
+        "qid": "Q19966583",
+        "labelKo": "",
+        "labelEn": "Madonna and Child with Saints John the Baptist, John the Evangelist, and St. Catherine",
+        "year": 1593,
+        "creatorQids": [
+          "Q7824"
+        ],
+        "collectionQids": [
+          "Q1103550"
+        ],
+        "imageFilename": "Annibale Carracci Pala di san Giorgio.jpg"
+      }
     },
     {
       "key": "artist-Q7824|wikidata-Q50323648",
@@ -1390,7 +3501,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20a%20Lute%20Player%20by%20Annibale%20Carracci%20-%20Staatliche%20Kunstsammlung%20Dresden.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20a%20Lute%20Player%20by%20Annibale%20Carracci%20-%20Staatliche%20Kunstsammlung%20Dresden.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20a%20Lute%20Player%20by%20Annibale%20Carracci%20-%20Staatliche%20Kunstsammlung%20Dresden.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20a%20Lute%20Player%20by%20Annibale%20Carracci%20-%20Staatliche%20Kunstsammlung%20Dresden.jpg?width=512",
+      "entity": {
+        "qid": "Q50323648",
+        "labelKo": "",
+        "labelEn": "Portrait of the lute player Giulio Mascheroni",
+        "year": 1593,
+        "creatorQids": [
+          "Q7824"
+        ],
+        "collectionQids": [
+          "Q653002"
+        ],
+        "imageFilename": "Portrait of a Lute Player by Annibale Carracci - Staatliche Kunstsammlung Dresden.jpg"
+      }
     },
     {
       "key": "artist-Q7824|wikidata-Q22337539",
@@ -1405,7 +3529,18 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Morte%20di%20San%20Francesco%20-%20Annibale%20Carracci.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Morte%20di%20San%20Francesco%20-%20Annibale%20Carracci.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Morte%20di%20San%20Francesco%20-%20Annibale%20Carracci.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Morte%20di%20San%20Francesco%20-%20Annibale%20Carracci.jpg?width=512",
+      "entity": {
+        "qid": "Q22337539",
+        "labelKo": "",
+        "labelEn": "The Death of Saint Francis",
+        "year": 1597,
+        "creatorQids": [
+          "Q7824"
+        ],
+        "collectionQids": [],
+        "imageFilename": "Morte di San Francesco - Annibale Carracci.jpg"
+      }
     },
     {
       "key": "artist-Q7824|wikidata-Q16268699",
@@ -1420,7 +3555,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20carracci%2C%20rinaldo%20e%20armida%2C%20Q360%2C%2001.JPG",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20carracci%2C%20rinaldo%20e%20armida%2C%20Q360%2C%2001.JPG"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20carracci%2C%20rinaldo%20e%20armida%2C%20Q360%2C%2001.JPG?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20carracci%2C%20rinaldo%20e%20armida%2C%20Q360%2C%2001.JPG?width=512",
+      "entity": {
+        "qid": "Q16268699",
+        "labelKo": "",
+        "labelEn": "Rinaldo and Armida",
+        "year": 1601,
+        "creatorQids": [
+          "Q7824"
+        ],
+        "collectionQids": [
+          "Q290549"
+        ],
+        "imageFilename": "Annibale carracci, rinaldo e armida, Q360, 01.JPG"
+      }
     },
     {
       "key": "artist-Q7824|wikidata-Q16912528",
@@ -1435,7 +3583,18 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%2C%20San%20Gregorio%20in%20preghiera%20%28Opera%20perduta%29.png",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%2C%20San%20Gregorio%20in%20preghiera%20%28Opera%20perduta%29.png"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%2C%20San%20Gregorio%20in%20preghiera%20%28Opera%20perduta%29.png?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%2C%20San%20Gregorio%20in%20preghiera%20%28Opera%20perduta%29.png?width=512",
+      "entity": {
+        "qid": "Q16912528",
+        "labelKo": "",
+        "labelEn": "Saint Gregory at Prayer",
+        "year": 1601,
+        "creatorQids": [
+          "Q7824"
+        ],
+        "collectionQids": [],
+        "imageFilename": "Annibale Carracci, San Gregorio in preghiera (Opera perduta).png"
+      }
     },
     {
       "key": "artist-Q7824|wikidata-Q17651291",
@@ -1450,7 +3609,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20Piet%C3%A0%20-%20GG%20230%20-%20Kunsthistorisches%20Museum.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20Piet%C3%A0%20-%20GG%20230%20-%20Kunsthistorisches%20Museum.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20Piet%C3%A0%20-%20GG%20230%20-%20Kunsthistorisches%20Museum.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20Piet%C3%A0%20-%20GG%20230%20-%20Kunsthistorisches%20Museum.jpg?width=512",
+      "entity": {
+        "qid": "Q17651291",
+        "labelKo": "",
+        "labelEn": "Pietà",
+        "year": 1603,
+        "creatorQids": [
+          "Q7824"
+        ],
+        "collectionQids": [
+          "Q95569"
+        ],
+        "imageFilename": "Annibale Carracci, Pietà, Kunsthistorichen, Vienna.jpg"
+      }
     },
     {
       "key": "artist-Q7824|wikidata-Q19966598",
@@ -1465,7 +3637,21 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Domenichino%20-%20Portrait%20of%20Monsignor%20Giovanni%20Battista%20Agucchi%20-%20YORAG%20787.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Domenichino%20-%20Portrait%20of%20Monsignor%20Giovanni%20Battista%20Agucchi%20-%20YORAG%20787.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Domenichino%20-%20Portrait%20of%20Monsignor%20Giovanni%20Battista%20Agucchi%20-%20YORAG%20787.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Domenichino%20-%20Portrait%20of%20Monsignor%20Giovanni%20Battista%20Agucchi%20-%20YORAG%20787.jpg?width=512",
+      "entity": {
+        "qid": "Q19966598",
+        "labelKo": "",
+        "labelEn": "Giovanni Battista Agucchi",
+        "year": 1603,
+        "creatorQids": [
+          "Q320118",
+          "Q7824"
+        ],
+        "collectionQids": [
+          "Q8055361"
+        ],
+        "imageFilename": "Domenichino - Portrait of Monsignor Giovanni Battista Agucchi - YORAG 787.jpg"
+      }
     },
     {
       "key": "artist-Q7824|wikidata-Q97704145",
@@ -1480,7 +3666,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Palazzo%20Barberini%20%28Rome%29%20Annibale%20Caracci%20Hausaltar.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Palazzo%20Barberini%20%28Rome%29%20Annibale%20Caracci%20Hausaltar.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Palazzo%20Barberini%20%28Rome%29%20Annibale%20Caracci%20Hausaltar.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Palazzo%20Barberini%20%28Rome%29%20Annibale%20Caracci%20Hausaltar.jpg?width=512",
+      "entity": {
+        "qid": "Q97704145",
+        "labelKo": "",
+        "labelEn": "Portable Altarpiece with Pietà and Saints",
+        "year": 1603,
+        "creatorQids": [
+          "Q7824"
+        ],
+        "collectionQids": [
+          "Q2266081"
+        ],
+        "imageFilename": "Palazzo Barberini (Rome) Annibale Caracci Hausaltar.jpg"
+      }
     },
     {
       "key": "artist-Q7824|wikidata-Q21722833",
@@ -1495,7 +3694,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20La%20Santa%20Famiglia%20%28Riposo%20durante%20la%20fuga%20in%20Egitto%29.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20La%20Santa%20Famiglia%20%28Riposo%20durante%20la%20fuga%20in%20Egitto%29.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20La%20Santa%20Famiglia%20%28Riposo%20durante%20la%20fuga%20in%20Egitto%29.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20La%20Santa%20Famiglia%20%28Riposo%20durante%20la%20fuga%20in%20Egitto%29.jpg?width=512",
+      "entity": {
+        "qid": "Q21722833",
+        "labelKo": "",
+        "labelEn": "Rest on the Flight into Egypt",
+        "year": 1604,
+        "creatorQids": [
+          "Q7824"
+        ],
+        "collectionQids": [
+          "Q132783"
+        ],
+        "imageFilename": "Annibale Carracci - La Santa Famiglia (Riposo durante la fuga in Egitto).jpg"
+      }
     },
     {
       "key": "artist-Q7824|wikidata-Q3815283",
@@ -1510,7 +3722,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20Mural%20paintings%20from%20the%20Herrera%20Chapel%20-%20Google%20Art%20Project.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20Mural%20paintings%20from%20the%20Herrera%20Chapel%20-%20Google%20Art%20Project.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20Mural%20paintings%20from%20the%20Herrera%20Chapel%20-%20Google%20Art%20Project.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20-%20Mural%20paintings%20from%20the%20Herrera%20Chapel%20-%20Google%20Art%20Project.jpg?width=512",
+      "entity": {
+        "qid": "Q3815283",
+        "labelKo": "",
+        "labelEn": "mural paintings from the Herrera Chapel",
+        "year": 1604,
+        "creatorQids": [
+          "Q7824"
+        ],
+        "collectionQids": [
+          "Q861252"
+        ],
+        "imageFilename": "Annibale Carracci - Mural paintings from the Herrera Chapel - Google Art Project.jpg"
+      }
     },
     {
       "key": "artist-Q7824|wikidata-Q17628493",
@@ -1525,7 +3750,18 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20Danae.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20Danae.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20Danae.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20Danae.jpg?width=512",
+      "entity": {
+        "qid": "Q17628493",
+        "labelKo": "",
+        "labelEn": "Danaë",
+        "year": 1605,
+        "creatorQids": [
+          "Q7824"
+        ],
+        "collectionQids": [],
+        "imageFilename": "Annibale Carracci Danae.jpg"
+      }
     },
     {
       "key": "artist-Q7824|wikidata-Q16268730",
@@ -1540,7 +3776,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20San%20Diego%20Alcal%C3%A0.JPG",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20San%20Diego%20Alcal%C3%A0.JPG"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20San%20Diego%20Alcal%C3%A0.JPG?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Annibale%20Carracci%20San%20Diego%20Alcal%C3%A0.JPG?width=512",
+      "entity": {
+        "qid": "Q16268730",
+        "labelKo": "",
+        "labelEn": "Saint Diego of Alcalá presents the son of Juan de Herrera to Christ",
+        "year": 1606,
+        "creatorQids": [
+          "Q7824"
+        ],
+        "collectionQids": [
+          "Q1887973"
+        ],
+        "imageFilename": "Annibale Carracci San Diego Alcalà.JPG"
+      }
     },
     {
       "key": "artist-Q150679|van-dyck-princess-mary-daughter-of-charles-i-1637",
@@ -1556,7 +3805,20 @@
         "https://commons.wikimedia.org/wiki/File:Anthony_van_Dyck_-_Princess_Mary,_Daughter_of_Charles_I_-_Google_Art_Project.jpg",
         "https://commons.wikimedia.org/wiki/File:Anthony_van_Dyck_-_Princess_Mary,_Daughter_of_Charles_I_-_Google_Art_Project.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Anthony_van_Dyck_-_Princess_Mary%2C_Daughter_of_Charles_I_-_Google_Art_Project.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Anthony_van_Dyck_-_Princess_Mary%2C_Daughter_of_Charles_I_-_Google_Art_Project.jpg?width=512",
+      "entity": {
+        "qid": "Q20537525",
+        "labelKo": "",
+        "labelEn": "Princess Mary, Daughter of Charles I",
+        "year": 1637,
+        "creatorQids": [
+          "Q150679"
+        ],
+        "collectionQids": [
+          "Q49133"
+        ],
+        "imageFilename": "Anthony van Dyck - Princess Mary, Daughter of Charles I - Google Art Project.jpg"
+      }
     },
     {
       "key": "artist-rembrandt|wikidata-Q2646680",
@@ -1571,7 +3833,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt%20Harmensz.%20van%20Rijn%20150.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt%20Harmensz.%20van%20Rijn%20150.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt%20Harmensz.%20van%20Rijn%20150.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt%20Harmensz.%20van%20Rijn%20150.jpg?width=512",
+      "entity": {
+        "qid": "Q2646680",
+        "labelKo": "",
+        "labelEn": "The Stoning of Saint Stephen",
+        "year": 1624,
+        "creatorQids": [
+          "Q5598"
+        ],
+        "collectionQids": [
+          "Q511"
+        ],
+        "imageFilename": "Rembrandt Harmensz. van Rijn 150.jpg"
+      }
     },
     {
       "key": "artist-rembrandt|wikidata-Q650086",
@@ -1586,7 +3861,21 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/P1150002%20Cognacq-Jay%20Rembrandt%20anesse%20de%20Balaam%20rwk.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/P1150002%20Cognacq-Jay%20Rembrandt%20anesse%20de%20Balaam%20rwk.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/P1150002%20Cognacq-Jay%20Rembrandt%20anesse%20de%20Balaam%20rwk.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/P1150002%20Cognacq-Jay%20Rembrandt%20anesse%20de%20Balaam%20rwk.jpg?width=512",
+      "entity": {
+        "qid": "Q650086",
+        "labelKo": "",
+        "labelEn": "Balaam and the Ass",
+        "year": 1626,
+        "creatorQids": [
+          "Q5598"
+        ],
+        "collectionQids": [
+          "Q1572452",
+          "Q2284748"
+        ],
+        "imageFilename": "P1150002 Cognacq-Jay Rembrandt anesse de Balaam rwk.jpg"
+      }
     },
     {
       "key": "artist-rembrandt|wikidata-Q1130734",
@@ -1601,7 +3890,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Andromeda%2C%20Rembrandt%20van%20Rijn%2C%201630-1631%2C%20Mauritshuis%2C%20The%20Hague.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Andromeda%2C%20Rembrandt%20van%20Rijn%2C%201630-1631%2C%20Mauritshuis%2C%20The%20Hague.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Andromeda%2C%20Rembrandt%20van%20Rijn%2C%201630-1631%2C%20Mauritshuis%2C%20The%20Hague.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Andromeda%2C%20Rembrandt%20van%20Rijn%2C%201630-1631%2C%20Mauritshuis%2C%20The%20Hague.jpg?width=512",
+      "entity": {
+        "qid": "Q1130734",
+        "labelKo": "",
+        "labelEn": "Andromeda Chained to the Rocks",
+        "year": 1630,
+        "creatorQids": [
+          "Q5598"
+        ],
+        "collectionQids": [
+          "Q221092"
+        ],
+        "imageFilename": "Andromeda, Rembrandt van Rijn, 1630-1631, Mauritshuis, The Hague.jpg"
+      }
     },
     {
       "key": "artist-rembrandt|wikidata-Q2479220",
@@ -1616,7 +3918,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Judith%20at%20the%20Banquet%20of%20Holofernes%20%28previously%20known%20as%20Artemisia%29%2C%20by%20Rembrandt%2C%20from%20Prado%20in%20Google%20Earth.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Judith%20at%20the%20Banquet%20of%20Holofernes%20%28previously%20known%20as%20Artemisia%29%2C%20by%20Rembrandt%2C%20from%20Prado%20in%20Google%20Earth.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Judith%20at%20the%20Banquet%20of%20Holofernes%20%28previously%20known%20as%20Artemisia%29%2C%20by%20Rembrandt%2C%20from%20Prado%20in%20Google%20Earth.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Judith%20at%20the%20Banquet%20of%20Holofernes%20%28previously%20known%20as%20Artemisia%29%2C%20by%20Rembrandt%2C%20from%20Prado%20in%20Google%20Earth.jpg?width=512",
+      "entity": {
+        "qid": "Q2479220",
+        "labelKo": "",
+        "labelEn": "Judith at the Banquet of Holofernes",
+        "year": 1634,
+        "creatorQids": [
+          "Q5598"
+        ],
+        "collectionQids": [
+          "Q160112"
+        ],
+        "imageFilename": "Judith at the Banquet of Holofernes (previously known as Artemisia), by Rembrandt, from Prado in Google Earth.jpg"
+      }
     },
     {
       "key": "artist-rembrandt|wikidata-Q1167932",
@@ -1631,7 +3946,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt-Belsazar.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt-Belsazar.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt-Belsazar.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt-Belsazar.jpg?width=512",
+      "entity": {
+        "qid": "Q1167932",
+        "labelKo": "",
+        "labelEn": "Belshazzar's Feast",
+        "year": 1636,
+        "creatorQids": [
+          "Q5598"
+        ],
+        "collectionQids": [
+          "Q180788"
+        ],
+        "imageFilename": "Rembrandt-Belsazar.jpg"
+      }
     },
     {
       "key": "artist-rembrandt|wikidata-Q3630751",
@@ -1646,7 +3974,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt%2C%20Self%20Portrait%20at%20the%20Age%20of%2034.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt%2C%20Self%20Portrait%20at%20the%20Age%20of%2034.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt%2C%20Self%20Portrait%20at%20the%20Age%20of%2034.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt%2C%20Self%20Portrait%20at%20the%20Age%20of%2034.jpg?width=512",
+      "entity": {
+        "qid": "Q3630751",
+        "labelKo": "",
+        "labelEn": "Self-Portrait at the Age of 34",
+        "year": 1640,
+        "creatorQids": [
+          "Q5598"
+        ],
+        "collectionQids": [
+          "Q180788"
+        ],
+        "imageFilename": "Rembrandt, Self Portrait at the Age of 34.jpg"
+      }
     },
     {
       "key": "artist-rembrandt|wikidata-Q325267",
@@ -1661,7 +4002,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt%20-%20Moses%20with%20the%20Ten%20Commandments%20-%20Google%20Art%20Project.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt%20-%20Moses%20with%20the%20Ten%20Commandments%20-%20Google%20Art%20Project.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt%20-%20Moses%20with%20the%20Ten%20Commandments%20-%20Google%20Art%20Project.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt%20-%20Moses%20with%20the%20Ten%20Commandments%20-%20Google%20Art%20Project.jpg?width=512",
+      "entity": {
+        "qid": "Q325267",
+        "labelKo": "",
+        "labelEn": "Moses Smashing the Tablets of the Law",
+        "year": 1659,
+        "creatorQids": [
+          "Q5598"
+        ],
+        "collectionQids": [
+          "Q165631"
+        ],
+        "imageFilename": "Rembrandt - Moses with the Ten Commandments - Google Art Project.jpg"
+      }
     },
     {
       "key": "claude-monet|wikidata-Q3952498",
@@ -1676,7 +4030,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/%27The%20Pyramids%20at%20Port-Coton%27%20by%20Claude%20Monet%2C%201886%2C%20Pushkin%20Museum.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/%27The%20Pyramids%20at%20Port-Coton%27%20by%20Claude%20Monet%2C%201886%2C%20Pushkin%20Museum.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/%27The%20Pyramids%20at%20Port-Coton%27%20by%20Claude%20Monet%2C%201886%2C%20Pushkin%20Museum.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/%27The%20Pyramids%20at%20Port-Coton%27%20by%20Claude%20Monet%2C%201886%2C%20Pushkin%20Museum.jpg?width=512",
+      "entity": {
+        "qid": "Q3952498",
+        "labelKo": "포르코통의 뾰족바위, 거친 바다",
+        "labelEn": "Belle-Île Rocks",
+        "year": 1886,
+        "creatorQids": [
+          "Q296"
+        ],
+        "collectionQids": [
+          "Q4872"
+        ],
+        "imageFilename": "Scogli a Belle-Île.jpg"
+      }
     },
     {
       "key": "artist-Q187310|wikidata-Q108741509",
@@ -1688,7 +4055,20 @@
       "year": 1874,
       "qid": "Q108741509",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q108741509",
+        "labelKo": "",
+        "labelEn": "En dörr på Gripsholm, Gustav Vasas tid",
+        "year": 1874,
+        "creatorQids": [
+          "Q187310"
+        ],
+        "collectionQids": [
+          "Q842858"
+        ],
+        "imageFilename": ""
+      }
     },
     {
       "key": "artist-Q187310|wikidata-Q136698761",
@@ -1703,7 +4083,18 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Fr%C3%A4mmande%20II%201886-1889.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Fr%C3%A4mmande%20II%201886-1889.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Fr%C3%A4mmande%20II%201886-1889.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Fr%C3%A4mmande%20II%201886-1889.jpg?width=512",
+      "entity": {
+        "qid": "Q136698761",
+        "labelKo": "",
+        "labelEn": "Guests II",
+        "year": 1886,
+        "creatorQids": [
+          "Q187310"
+        ],
+        "collectionQids": [],
+        "imageFilename": "Carl Larsson - Främmande II 1886-1889.jpg"
+      }
     },
     {
       "key": "artist-Q187310|wikidata-Q130781496",
@@ -1718,7 +4109,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/G%C3%B6thilda%20F%C3%BCrstenberg%20%28Carl%20Larsson%29%20-%20Gothenburg%20Museum%20of%20Art%20-%20F%2071.tif",
         "http://commons.wikimedia.org/wiki/Special:FilePath/G%C3%B6thilda%20F%C3%BCrstenberg%20%28Carl%20Larsson%29%20-%20Gothenburg%20Museum%20of%20Art%20-%20F%2071.tif"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/G%C3%B6thilda%20F%C3%BCrstenberg%20%28Carl%20Larsson%29%20-%20Gothenburg%20Museum%20of%20Art%20-%20F%2071.tif?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/G%C3%B6thilda%20F%C3%BCrstenberg%20%28Carl%20Larsson%29%20-%20Gothenburg%20Museum%20of%20Art%20-%20F%2071.tif?width=512",
+      "entity": {
+        "qid": "Q130781496",
+        "labelKo": "",
+        "labelEn": "Göthilda Fürstenberg",
+        "year": 1891,
+        "creatorQids": [
+          "Q187310"
+        ],
+        "collectionQids": [
+          "Q1992004"
+        ],
+        "imageFilename": "Göthilda Fürstenberg (Carl Larsson) - Gothenburg Museum of Art - F 71.tif"
+      }
     },
     {
       "key": "artist-Q187310|wikidata-Q130870450",
@@ -1733,7 +4137,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Magnus%20Olsson%20%28Carl%20Larsson%29%20-%20Gothenburg%20Museum%20of%20Art%20-%20GKM%200976.tif",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Magnus%20Olsson%20%28Carl%20Larsson%29%20-%20Gothenburg%20Museum%20of%20Art%20-%20GKM%200976.tif"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Magnus%20Olsson%20%28Carl%20Larsson%29%20-%20Gothenburg%20Museum%20of%20Art%20-%20GKM%200976.tif?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Magnus%20Olsson%20%28Carl%20Larsson%29%20-%20Gothenburg%20Museum%20of%20Art%20-%20GKM%200976.tif?width=512",
+      "entity": {
+        "qid": "Q130870450",
+        "labelKo": "",
+        "labelEn": "Magnus Olsson",
+        "year": 1893,
+        "creatorQids": [
+          "Q187310"
+        ],
+        "collectionQids": [
+          "Q1992004"
+        ],
+        "imageFilename": "Magnus Olsson (Carl Larsson) - Gothenburg Museum of Art - GKM 0976.tif"
+      }
     },
     {
       "key": "artist-Q187310|wikidata-Q106368926",
@@ -1745,7 +4162,20 @@
       "year": 1895,
       "qid": "Q106368926",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q106368926",
+        "labelKo": "",
+        "labelEn": "The Art of Painting: Ehrenstrahl and Karl XI. Cartoon for the Fresco in the Lower Hall of the NM",
+        "year": 1895,
+        "creatorQids": [
+          "Q187310"
+        ],
+        "collectionQids": [
+          "Q842858"
+        ],
+        "imageFilename": ""
+      }
     },
     {
       "key": "artist-Q187310|wikidata-Q106368930",
@@ -1757,7 +4187,20 @@
       "year": 1895,
       "qid": "Q106368930",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q106368930",
+        "labelKo": "",
+        "labelEn": "The Art of Architecture: Tessin the Younger and Hårleman. Cartoon for the Fresco in the Lower Hall of the NM",
+        "year": 1895,
+        "creatorQids": [
+          "Q187310"
+        ],
+        "collectionQids": [
+          "Q842858"
+        ],
+        "imageFilename": ""
+      }
     },
     {
       "key": "artist-Q187310|wikidata-Q106368934",
@@ -1769,7 +4212,20 @@
       "year": 1895,
       "qid": "Q106368934",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q106368934",
+        "labelKo": "",
+        "labelEn": "The Founders of the Art Collections: Lovisa Ulrika and C.G. Tessin Cartoon for the Fresco in the Lower Hall of the NM",
+        "year": 1895,
+        "creatorQids": [
+          "Q187310"
+        ],
+        "collectionQids": [
+          "Q842858"
+        ],
+        "imageFilename": ""
+      }
     },
     {
       "key": "artist-Q187310|wikidata-Q111821710",
@@ -1784,7 +4240,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20Slottsbygget%201896.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20Slottsbygget%201896.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20Slottsbygget%201896.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20Slottsbygget%201896.jpg?width=512",
+      "entity": {
+        "qid": "Q111821710",
+        "labelKo": "",
+        "labelEn": "Christ and Nicodemus",
+        "year": 1896,
+        "creatorQids": [
+          "Q187310"
+        ],
+        "collectionQids": [
+          "Q842858"
+        ],
+        "imageFilename": "Carl Larsson Slottsbygget 1896.jpg"
+      }
     },
     {
       "key": "artist-Q187310|wikidata-Q136706040",
@@ -1796,7 +4265,20 @@
       "year": 1900,
       "qid": "Q136706040",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q136706040",
+        "labelKo": "",
+        "labelEn": "Porträt der Inga-Maria Thiel",
+        "year": 1900,
+        "creatorQids": [
+          "Q187310"
+        ],
+        "collectionQids": [
+          "Q252259"
+        ],
+        "imageFilename": ""
+      }
     },
     {
       "key": "artist-Q187310|wikidata-Q10543635",
@@ -1811,7 +4293,18 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Karin%20skalar%20%C3%A4pplen%20%28Karin%20Peeling%20Apples%29.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Karin%20skalar%20%C3%A4pplen%20%28Karin%20Peeling%20Apples%29.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Karin%20skalar%20%C3%A4pplen%20%28Karin%20Peeling%20Apples%29.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Karin%20skalar%20%C3%A4pplen%20%28Karin%20Peeling%20Apples%29.jpg?width=512",
+      "entity": {
+        "qid": "Q10543635",
+        "labelKo": "",
+        "labelEn": "Karin Peeling Apples",
+        "year": 1904,
+        "creatorQids": [
+          "Q187310"
+        ],
+        "collectionQids": [],
+        "imageFilename": "Karin skalar äpplen (Karin Peeling Apples).jpg"
+      }
     },
     {
       "key": "artist-Q187310|wikidata-Q20064873",
@@ -1826,7 +4319,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Karin%20by%20the%20shore%20-%20Google%20Art%20Project.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Karin%20by%20the%20shore%20-%20Google%20Art%20Project.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Karin%20by%20the%20shore%20-%20Google%20Art%20Project.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Carl%20Larsson%20-%20Karin%20by%20the%20shore%20-%20Google%20Art%20Project.jpg?width=512",
+      "entity": {
+        "qid": "Q20064873",
+        "labelKo": "",
+        "labelEn": "Karin by the shore",
+        "year": 1908,
+        "creatorQids": [
+          "Q187310"
+        ],
+        "collectionQids": [
+          "Q2791306"
+        ],
+        "imageFilename": "Carl Larsson - Karin by the shore - Google Art Project.jpg"
+      }
     },
     {
       "key": "artist-Q82445|wikidata-Q19883438",
@@ -1841,7 +4347,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Toulouse-Lautrec%20-%20La%20Goulue%20at%20the%20Moulin%20Rouge%2C%201891-92.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Toulouse-Lautrec%20-%20La%20Goulue%20at%20the%20Moulin%20Rouge%2C%201891-92.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Toulouse-Lautrec%20-%20La%20Goulue%20at%20the%20Moulin%20Rouge%2C%201891-92.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Toulouse-Lautrec%20-%20La%20Goulue%20at%20the%20Moulin%20Rouge%2C%201891-92.jpg?width=512",
+      "entity": {
+        "qid": "Q19883438",
+        "labelKo": "",
+        "labelEn": "La Goulue at the Moulin Rouge",
+        "year": null,
+        "creatorQids": [
+          "Q82445"
+        ],
+        "collectionQids": [
+          "Q188740"
+        ],
+        "imageFilename": "Toulouse-Lautrec - La Goulue at the Moulin Rouge, 1891-92.jpg"
+      }
     },
     {
       "key": "artist-Q82445|wikidata-Q18685999",
@@ -1856,7 +4375,20 @@
         "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20R.%20de%20Toulouse-Lautrec%20-%20Two%20Friends%20-%20Google%20Art%20Project.jpg",
         "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20R.%20de%20Toulouse-Lautrec%20-%20Two%20Friends%20-%20Google%20Art%20Project.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Henri%20R.%20de%20Toulouse-Lautrec%20-%20Two%20Friends%20-%20Google%20Art%20Project.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Henri%20R.%20de%20Toulouse-Lautrec%20-%20Two%20Friends%20-%20Google%20Art%20Project.jpg?width=512",
+      "entity": {
+        "qid": "Q18685999",
+        "labelKo": "",
+        "labelEn": "Two Friends",
+        "year": 1895,
+        "creatorQids": [
+          "Q82445"
+        ],
+        "collectionQids": [
+          "Q653002"
+        ],
+        "imageFilename": "Henri R. de Toulouse-Lautrec - Two Friends - Google Art Project.jpg"
+      }
     },
     {
       "key": "frida-kahlo|wikidata-Q109930455",
@@ -1868,7 +4400,18 @@
       "year": 1928,
       "qid": "Q109930455",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q109930455",
+        "labelKo": "",
+        "labelEn": "Portrait of Cristina, My Sister",
+        "year": 1928,
+        "creatorQids": [
+          "Q5588"
+        ],
+        "collectionQids": [],
+        "imageFilename": ""
+      }
     },
     {
       "key": "frida-kahlo|wikidata-Q111207414",
@@ -1880,7 +4423,18 @@
       "year": 1932,
       "qid": "Q111207414",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q111207414",
+        "labelKo": "",
+        "labelEn": "Self Portrait Along the Border Line Between Mexico and the United States",
+        "year": 1932,
+        "creatorQids": [
+          "Q5588"
+        ],
+        "collectionQids": [],
+        "imageFilename": ""
+      }
     },
     {
       "key": "frida-kahlo|wikidata-Q16488383",
@@ -1892,7 +4446,18 @@
       "year": 1933,
       "qid": "Q16488383",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q16488383",
+        "labelKo": "",
+        "labelEn": "My Dress Hangs There",
+        "year": 1933,
+        "creatorQids": [
+          "Q5588"
+        ],
+        "collectionQids": [],
+        "imageFilename": ""
+      }
     },
     {
       "key": "frida-kahlo|wikidata-Q28339146",
@@ -1904,7 +4469,20 @@
       "year": 1935,
       "qid": "Q28339146",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q28339146",
+        "labelKo": "",
+        "labelEn": "A Few Small Nips",
+        "year": 1935,
+        "creatorQids": [
+          "Q5588"
+        ],
+        "collectionQids": [
+          "Q1744258"
+        ],
+        "imageFilename": ""
+      }
     },
     {
       "key": "frida-kahlo|wikidata-Q18343221",
@@ -1916,7 +4494,20 @@
       "year": 1938,
       "qid": "Q18343221",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q18343221",
+        "labelKo": "",
+        "labelEn": "Still Life: Pitahayas",
+        "year": 1938,
+        "creatorQids": [
+          "Q5588"
+        ],
+        "collectionQids": [
+          "Q6728060"
+        ],
+        "imageFilename": ""
+      }
     },
     {
       "key": "frida-kahlo|wikidata-Q63341526",
@@ -1928,7 +4519,18 @@
       "year": 1939,
       "qid": "Q63341526",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q63341526",
+        "labelKo": "",
+        "labelEn": "Two Nudes in a Forest",
+        "year": 1939,
+        "creatorQids": [
+          "Q5588"
+        ],
+        "collectionQids": [],
+        "imageFilename": ""
+      }
     },
     {
       "key": "frida-kahlo|wikidata-Q19897995",
@@ -1940,7 +4542,18 @@
       "year": 1940,
       "qid": "Q19897995",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q19897995",
+        "labelKo": "",
+        "labelEn": "The Wounded Table",
+        "year": 1940,
+        "creatorQids": [
+          "Q5588"
+        ],
+        "collectionQids": [],
+        "imageFilename": ""
+      }
     },
     {
       "key": "frida-kahlo|wikidata-Q136892338",
@@ -1952,7 +4565,18 @@
       "year": 1940,
       "qid": "Q136892338",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q136892338",
+        "labelKo": "",
+        "labelEn": "The Dream (The Bed)",
+        "year": 1940,
+        "creatorQids": [
+          "Q5588"
+        ],
+        "collectionQids": [],
+        "imageFilename": ""
+      }
     },
     {
       "key": "frida-kahlo|wikidata-Q136891708",
@@ -1964,7 +4588,18 @@
       "year": 1940,
       "qid": "Q136891708",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q136891708",
+        "labelKo": "",
+        "labelEn": "",
+        "year": 1940,
+        "creatorQids": [
+          "Q5588"
+        ],
+        "collectionQids": [],
+        "imageFilename": ""
+      }
     },
     {
       "key": "frida-kahlo|wikidata-Q5943279",
@@ -1976,7 +4611,20 @@
       "year": 1946,
       "qid": "Q5943279",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q5943279",
+        "labelKo": "",
+        "labelEn": "Arbol de la Esperanza, Mantente Firme",
+        "year": 1946,
+        "creatorQids": [
+          "Q5588"
+        ],
+        "collectionQids": [
+          "Q1160659"
+        ],
+        "imageFilename": ""
+      }
     },
     {
       "key": "frida-kahlo|wikidata-Q118901053",
@@ -1988,7 +4636,18 @@
       "year": 1947,
       "qid": "Q118901053",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q118901053",
+        "labelKo": "",
+        "labelEn": "Self Portrait with Loose Hair",
+        "year": 1947,
+        "creatorQids": [
+          "Q5588"
+        ],
+        "collectionQids": [],
+        "imageFilename": ""
+      }
     },
     {
       "key": "frida-kahlo|wikidata-Q20879937",
@@ -2000,7 +4659,20 @@
       "year": 1951,
       "qid": "Q20879937",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q20879937",
+        "labelKo": "",
+        "labelEn": "Weeping Coconuts",
+        "year": 1951,
+        "creatorQids": [
+          "Q5588"
+        ],
+        "collectionQids": [
+          "Q1641836"
+        ],
+        "imageFilename": ""
+      }
     },
     {
       "key": "frida-kahlo|wikidata-Q8773940",
@@ -2012,7 +4684,20 @@
       "year": 1954,
       "qid": "Q8773940",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q8773940",
+        "labelKo": "",
+        "labelEn": "Marxism Will Give Health to the Sick",
+        "year": 1954,
+        "creatorQids": [
+          "Q5588"
+        ],
+        "collectionQids": [
+          "Q2663377"
+        ],
+        "imageFilename": ""
+      }
     },
     {
       "key": "frida-kahlo|wikidata-Q17629443",
@@ -2024,7 +4709,20 @@
       "year": 1954,
       "qid": "Q17629443",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q17629443",
+        "labelKo": "",
+        "labelEn": "Viva la Vida, Watermelons",
+        "year": 1954,
+        "creatorQids": [
+          "Q5588"
+        ],
+        "collectionQids": [
+          "Q2663377"
+        ],
+        "imageFilename": ""
+      }
     },
     {
       "key": "frida-kahlo|wikidata-Q106811218",
@@ -2036,7 +4734,20 @@
       "year": 1954,
       "qid": "Q106811218",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": {
+        "qid": "Q106811218",
+        "labelKo": "",
+        "labelEn": "Self portrait with Stalin",
+        "year": 1954,
+        "creatorQids": [
+          "Q5588"
+        ],
+        "collectionQids": [
+          "Q2663377"
+        ],
+        "imageFilename": ""
+      }
     },
     {
       "key": "artist-Q155151|artist-Q155151-pleasures-of-love",
@@ -2051,7 +4762,8 @@
         "https://commons.wikimedia.org/wiki/File:Antoine_Watteau_-_Pleasures_of_Love_-_Google_Art_Project.jpg",
         "https://commons.wikimedia.org/wiki/File:Antoine_Watteau_-_Pleasures_of_Love_-_Google_Art_Project.jpg"
       ],
-      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Antoine_Watteau_-_Pleasures_of_Love_-_Google_Art_Project.jpg?width=512"
+      "referenceUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Antoine_Watteau_-_Pleasures_of_Love_-_Google_Art_Project.jpg?width=512",
+      "entity": null
     },
     {
       "key": "artist-Q162048|local-tiepolo-glory-of-pisani-family",
@@ -2063,7 +4775,8 @@
       "year": 1762,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-Q235547|local-carriera-watteau-portrait",
@@ -2075,7 +4788,8 @@
       "year": 1720,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-romantic-gericault|artist-romantic-gericault-work",
@@ -2087,7 +4801,8 @@
       "year": 1819,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-romantic-gericault|gericault-raft-of-medusa",
@@ -2099,7 +4814,8 @@
       "year": 1819,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-Q49898|rigaud-louis-xiv-royal-costume-1701",
@@ -2111,7 +4827,8 @@
       "year": 1701,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-art-atlas-kandinsky|kandinsky-yellow-red-blue",
@@ -2123,7 +4840,8 @@
       "year": 1925,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-art-atlas-picasso|picasso-ma-jolie",
@@ -2135,7 +4853,8 @@
       "year": 1911,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-art-atlas-rodchenko|rodchenko-pure-colors",
@@ -2147,7 +4866,8 @@
       "year": 1921,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-art-atlas-pollock|pollock-autumn-rhythm-30",
@@ -2159,7 +4879,8 @@
       "year": 1950,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-art-atlas-rothko|rothko-no-14-1960",
@@ -2171,7 +4892,8 @@
       "year": 1960,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-art-atlas-hamilton|hamilton-just-what-is-it",
@@ -2183,7 +4905,8 @@
       "year": 1956,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-art-atlas-warhol|warhol-marilyn-diptych",
@@ -2195,7 +4918,8 @@
       "year": 1962,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-art-atlas-sherman|sherman-untitled-film-still-21",
@@ -2207,7 +4931,8 @@
       "year": 1978,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-art-atlas-gropius|gropius-bauhaus-dessau",
@@ -2219,7 +4944,8 @@
       "year": 1926,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-art-atlas-deyneka|deyneka-defence-petrograd",
@@ -2231,7 +4957,8 @@
       "year": 1928,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-art-atlas-dubuffet|dubuffet-corps-de-dame",
@@ -2243,7 +4970,8 @@
       "year": 1950,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-art-atlas-klein|klein-anthropometry-blue-epoch",
@@ -2255,7 +4983,8 @@
       "year": 1960,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-art-atlas-judd|judd-untitled-stack-1967",
@@ -2267,7 +4996,8 @@
       "year": 1967,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-art-atlas-kosuth|kosuth-one-three-chairs",
@@ -2279,7 +5009,8 @@
       "year": 1965,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-art-atlas-paik|paik-tv-buddha",
@@ -2291,7 +5022,8 @@
       "year": 1974,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-art-atlas-paik|paik-electronic-superhighway",
@@ -2303,7 +5035,8 @@
       "year": 1995,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-art-atlas-vasarely|vasarely-vega-nor",
@@ -2315,7 +5048,8 @@
       "year": 1969,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-art-atlas-steyerl|steyerl-how-not-seen",
@@ -2327,7 +5061,8 @@
       "year": 2013,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-art-atlas-banksy|banksy-girl-balloon",
@@ -2339,7 +5074,8 @@
       "year": 2002,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-emile-bernard|bernard-breton-women-meadow",
@@ -2351,7 +5087,8 @@
       "year": 1888,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-heckel|heckel-glassy-day",
@@ -2363,7 +5100,8 @@
       "year": 1913,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-franz-marc|marc-blue-horse-i",
@@ -2375,7 +5113,8 @@
       "year": 1911,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-kokoschka|kokoschka-bride-of-wind",
@@ -2387,7 +5126,8 @@
       "year": 1914,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-braque|braque-violin-and-palette",
@@ -2399,7 +5139,8 @@
       "year": 1909,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-lissitzky|lissitzky-proun-19d",
@@ -2411,7 +5152,8 @@
       "year": 1922,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-arp|arp-collage-squares-laws-chance",
@@ -2423,7 +5165,8 @@
       "year": 1917,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-hausmann|hausmann-mechanical-head",
@@ -2435,7 +5178,8 @@
       "year": 1920,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-newman|newman-vir-heroicus-sublimis",
@@ -2447,7 +5191,8 @@
       "year": 1951,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-paolozzi|paolozzi-rich-man-plaything",
@@ -2459,7 +5204,8 @@
       "year": 1947,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-lichtenstein|lichtenstein-whaam",
@@ -2471,7 +5217,8 @@
       "year": 1963,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-levine|levine-after-walker-evans",
@@ -2483,7 +5230,8 @@
       "year": 1981,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-kiefer|kiefer-margarethe",
@@ -2495,7 +5243,8 @@
       "year": 1981,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-runge|runge-morning",
@@ -2507,7 +5256,8 @@
       "year": 1808,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-eugenio-lucas|lucas-condemned-inquisition",
@@ -2519,7 +5269,8 @@
       "year": 1860,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-koloman-moser|moser-secession-poster-13",
@@ -2531,7 +5282,8 @@
       "year": 1902,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-friesz|friesz-la-ciotat",
@@ -2543,7 +5295,8 @@
       "year": 1907,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-balla|balla-dynamism-dog-leash",
@@ -2555,7 +5308,8 @@
       "year": 1912,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-van-doesburg|van-doesburg-counter-composition-v",
@@ -2567,7 +5321,8 @@
       "year": 1924,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-masson|masson-automatic-drawing",
@@ -2579,7 +5334,8 @@
       "year": 1924,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-magritte|magritte-treachery-images",
@@ -2591,7 +5347,8 @@
       "year": 1929,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-orozco|orozco-epic-american-civilization",
@@ -2603,7 +5360,8 @@
       "year": 1934,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-reginald-marsh|marsh-twenty-cent-movie",
@@ -2615,7 +5373,8 @@
       "year": 1936,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-mukhina|mukhina-worker-kolkhoz-woman",
@@ -2627,7 +5386,8 @@
       "year": 1937,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-wols|wols-its-all-over",
@@ -2639,7 +5399,8 @@
       "year": 1947,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-arman|arman-poubelle",
@@ -2651,7 +5412,8 @@
       "year": 1960,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-flavin|flavin-monument-tatlin",
@@ -2663,7 +5425,8 @@
       "year": 1964,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-weiner|weiner-removal-36-square",
@@ -2675,7 +5438,8 @@
       "year": 1968,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-riley|riley-current",
@@ -2687,7 +5451,8 @@
       "year": 1964,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-beuys|beuys-i-like-america",
@@ -2699,7 +5464,8 @@
       "year": 1974,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-further-jr|jr-women-are-heroes",
@@ -2711,7 +5477,8 @@
       "year": 2008,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-schmidt-rottluff|schmidt-rottluff-houses-at-night",
@@ -2723,7 +5490,8 @@
       "year": 1912,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-gabriele-munter|munter-boating",
@@ -2735,7 +5503,8 @@
       "year": 1910,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-august-macke|macke-lady-green-jacket",
@@ -2747,7 +5516,8 @@
       "year": 1913,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-george-grosz|grosz-pillars-of-society",
@@ -2759,7 +5529,8 @@
       "year": 1926,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-john-heartfield|heartfield-adolf-superman",
@@ -2771,7 +5542,8 @@
       "year": 1932,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-francis-picabia|picabia-here-is-stieglitz",
@@ -2783,7 +5555,8 @@
       "year": 1915,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-franz-kline|kline-chief",
@@ -2795,7 +5568,8 @@
       "year": 1950,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-lee-krasner|krasner-the-seasons",
@@ -2807,7 +5581,8 @@
       "year": 1957,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-clyfford-still|still-1957-d-no-1",
@@ -2819,7 +5594,8 @@
       "year": 1957,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-helen-frankenthaler|frankenthaler-mountains-and-sea",
@@ -2831,7 +5607,8 @@
       "year": 1952,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-peter-blake|blake-on-the-balcony",
@@ -2843,7 +5620,8 @@
       "year": 1957,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-david-hockney|hockney-a-bigger-splash",
@@ -2855,7 +5633,8 @@
       "year": 1967,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-claes-oldenburg|oldenburg-floor-burger",
@@ -2867,7 +5646,8 @@
       "year": 1962,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-james-rosenquist|rosenquist-f-111",
@@ -2879,7 +5659,8 @@
       "year": 1965,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-barbara-kruger|kruger-your-body-battleground",
@@ -2891,7 +5672,8 @@
       "year": 1989,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-georg-baselitz|baselitz-the-wood-on-its-head",
@@ -2903,7 +5685,8 @@
       "year": 1969,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-victor-horta|horta-hotel-tassel",
@@ -2915,7 +5698,8 @@
       "year": 1893,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-josef-hoffmann|hoffmann-stoclet-palace",
@@ -2927,7 +5711,8 @@
       "year": 1911,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-maurice-de-vlaminck|vlaminck-chatou-bridge",
@@ -2939,7 +5724,8 @@
       "year": 1906,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-carlo-carra|carra-funeral-anarchist-galli",
@@ -2951,7 +5737,8 @@
       "year": 1911,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-gino-severini|severini-dynamic-hieroglyph-bal-tabarin",
@@ -2963,7 +5750,8 @@
       "year": 1912,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-mikhail-larionov|larionov-rayonist-sausages-mackerel",
@@ -2975,7 +5763,8 @@
       "year": 1912,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-anni-albers|albers-wall-hanging",
@@ -2987,7 +5776,8 @@
       "year": 1926,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-max-ernst|ernst-two-children-threatened-nightingale",
@@ -2999,7 +5789,8 @@
       "year": 1924,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-roberto-matta|matta-inscape-psychological-morphology",
@@ -3011,7 +5802,8 @@
       "year": 1938,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-yves-tanguy|tanguy-indefinite-divisibility",
@@ -3023,7 +5815,8 @@
       "year": 1942,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-leonora-carrington|carrington-self-portrait-inn-dawn-horse",
@@ -3035,7 +5828,8 @@
       "year": 1938,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-siqueiros|siqueiros-portrait-bourgeoisie",
@@ -3047,7 +5841,8 @@
       "year": 1940,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-jacob-lawrence|lawrence-migration-series-panel-1",
@@ -3059,7 +5854,8 @@
       "year": 1941,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-isaak-brodsky|brodsky-lenin-smolny",
@@ -3071,7 +5867,8 @@
       "year": 1930,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-hans-hartung|hartung-t1947-20",
@@ -3083,7 +5880,8 @@
       "year": 1947,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-pierre-soulages|soulages-painting-195-130-1953",
@@ -3095,7 +5893,8 @@
       "year": 1953,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-jean-tinguely|tinguely-homage-new-york",
@@ -3107,7 +5906,8 @@
       "year": 1960,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-niki-de-saint-phalle|saint-phalle-shooting-picture",
@@ -3119,7 +5919,8 @@
       "year": 1961,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-carl-andre|andre-equivalent-viii",
@@ -3131,7 +5932,8 @@
       "year": 1966,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-robert-morris|morris-untitled-l-beams",
@@ -3143,7 +5945,8 @@
       "year": 1965,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-agnes-martin|martin-the-tree",
@@ -3155,7 +5958,8 @@
       "year": 1964,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-sol-lewitt|lewitt-wall-drawing-51",
@@ -3167,7 +5971,8 @@
       "year": 1970,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-on-kawara|kawara-today-series",
@@ -3179,7 +5984,8 @@
       "year": 1966,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-george-maciunas|maciunas-fluxus-manifesto",
@@ -3191,7 +5997,8 @@
       "year": 1963,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-allan-kaprow|kaprow-18-happenings-6-parts",
@@ -3203,7 +6010,8 @@
       "year": 1959,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-yayoi-kusama|kusama-infinity-mirror-room",
@@ -3215,7 +6023,8 @@
       "year": 1965,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-bill-viola|viola-the-crossing",
@@ -3227,7 +6036,8 @@
       "year": 1996,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-lynn-hershman-leeson|hershman-robberta-breitmore",
@@ -3239,7 +6049,8 @@
       "year": 1974,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     },
     {
       "key": "artist-mid-keith-haring|haring-crack-is-wack",
@@ -3251,7 +6062,8 @@
       "year": 1986,
       "qid": "",
       "sourceUrls": [],
-      "referenceUrl": ""
+      "referenceUrl": "",
+      "entity": null
     }
   ]
 }

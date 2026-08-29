@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "generatedAt": "2026-08-16T22:05:42.783Z",
+  "generatedAt": "2026-08-29T07:42:21.696Z",
   "assets": [
     {
       "path": "data/images/artist-1786332007363/index.json",
       "type": "thumbnail",
-      "bytes": 12214
+      "bytes": 24996
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q11753188.jpg",
@@ -13,9 +13,9 @@
       "bytes": 11580
     },
     {
-      "path": "data/images/artist-1786332007363/wikidata-Q1197913.png",
+      "path": "data/images/artist-1786332007363/wikidata-Q1197913.jpg",
       "type": "thumbnail",
-      "bytes": 1562
+      "bytes": 36673
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q1198515.jpg",
@@ -28,9 +28,9 @@
       "bytes": 12030
     },
     {
-      "path": "data/images/artist-1786332007363/wikidata-Q1423223.png",
+      "path": "data/images/artist-1786332007363/wikidata-Q1423223.jpg",
       "type": "thumbnail",
-      "bytes": 1610
+      "bytes": 14754
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q1451490.jpg",
@@ -38,14 +38,14 @@
       "bytes": 76060
     },
     {
-      "path": "data/images/artist-1786332007363/wikidata-Q1545495.png",
+      "path": "data/images/artist-1786332007363/wikidata-Q1545495.jpg",
       "type": "thumbnail",
-      "bytes": 1562
+      "bytes": 34835
     },
     {
-      "path": "data/images/artist-1786332007363/wikidata-Q1587929.png",
+      "path": "data/images/artist-1786332007363/wikidata-Q1587929.jpg",
       "type": "thumbnail",
-      "bytes": 4802
+      "bytes": 107733
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q15971584.jpg",
@@ -83,14 +83,24 @@
       "bytes": 20628
     },
     {
+      "path": "data/images/artist-1786332007363/wikidata-Q17321856.jpg",
+      "type": "thumbnail",
+      "bytes": 1472866
+    },
+    {
       "path": "data/images/artist-1786332007363/wikidata-Q17325449.jpg",
       "type": "thumbnail",
       "bytes": 20693
     },
     {
-      "path": "data/images/artist-1786332007363/wikidata-Q17493547.png",
+      "path": "data/images/artist-1786332007363/wikidata-Q17422064.jpg",
       "type": "thumbnail",
-      "bytes": 1562
+      "bytes": 207065
+    },
+    {
+      "path": "data/images/artist-1786332007363/wikidata-Q17493547.jpg",
+      "type": "thumbnail",
+      "bytes": 191007
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q1787143.jpg",
@@ -103,9 +113,9 @@
       "bytes": 13936
     },
     {
-      "path": "data/images/artist-1786332007363/wikidata-Q18202267.png",
+      "path": "data/images/artist-1786332007363/wikidata-Q18202267.jpg",
       "type": "thumbnail",
-      "bytes": 2450
+      "bytes": 43188
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q18602442.jpg",
@@ -118,9 +128,9 @@
       "bytes": 15545
     },
     {
-      "path": "data/images/artist-1786332007363/wikidata-Q18602446.png",
+      "path": "data/images/artist-1786332007363/wikidata-Q18602446.jpg",
       "type": "thumbnail",
-      "bytes": 4802
+      "bytes": 48063
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q18602448.jpg",
@@ -141,6 +151,11 @@
       "path": "data/images/artist-1786332007363/wikidata-Q18602473.jpg",
       "type": "thumbnail",
       "bytes": 47999
+    },
+    {
+      "path": "data/images/artist-1786332007363/wikidata-Q18602479.jpg",
+      "type": "thumbnail",
+      "bytes": 11915
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q18602483.jpg",
@@ -178,9 +193,9 @@
       "bytes": 24663
     },
     {
-      "path": "data/images/artist-1786332007363/wikidata-Q18603131.png",
+      "path": "data/images/artist-1786332007363/wikidata-Q18603131.jpg",
       "type": "thumbnail",
-      "bytes": 1610
+      "bytes": 33672
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q18603190.jpg",
@@ -193,14 +208,14 @@
       "bytes": 61217
     },
     {
-      "path": "data/images/artist-1786332007363/wikidata-Q232084.png",
+      "path": "data/images/artist-1786332007363/wikidata-Q232084.jpg",
       "type": "thumbnail",
-      "bytes": 1562
+      "bytes": 27883
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q232087.jpg",
       "type": "thumbnail",
-      "bytes": 60027
+      "bytes": 377065
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q24213.jpg",
@@ -208,19 +223,19 @@
       "bytes": 78380
     },
     {
-      "path": "data/images/artist-1786332007363/wikidata-Q2517970.png",
+      "path": "data/images/artist-1786332007363/wikidata-Q2517970.jpg",
       "type": "thumbnail",
-      "bytes": 1562
+      "bytes": 165815
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q311243.jpg",
       "type": "thumbnail",
-      "bytes": 74847
+      "bytes": 61996
     },
     {
-      "path": "data/images/artist-1786332007363/wikidata-Q3139782.png",
+      "path": "data/images/artist-1786332007363/wikidata-Q3139782.jpg",
       "type": "thumbnail",
-      "bytes": 476
+      "bytes": 34931
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q334360.jpg",
@@ -228,9 +243,29 @@
       "bytes": 33229
     },
     {
+      "path": "data/images/artist-1786332007363/wikidata-Q3649324.jpg",
+      "type": "thumbnail",
+      "bytes": 165438
+    },
+    {
+      "path": "data/images/artist-1786332007363/wikidata-Q3822640.jpg",
+      "type": "thumbnail",
+      "bytes": 152236
+    },
+    {
+      "path": "data/images/artist-1786332007363/wikidata-Q4126323.jpg",
+      "type": "thumbnail",
+      "bytes": 149862
+    },
+    {
       "path": "data/images/artist-1786332007363/wikidata-Q4292427.jpg",
       "type": "thumbnail",
       "bytes": 29636
+    },
+    {
+      "path": "data/images/artist-1786332007363/wikidata-Q4310993.jpg",
+      "type": "thumbnail",
+      "bytes": 22177
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q4346085.jpg",
@@ -260,7 +295,7 @@
     {
       "path": "data/images/artist-1786332007363/wikidata-Q693746.jpg",
       "type": "thumbnail",
-      "bytes": 8908
+      "bytes": 2140479
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q745415.jpg",
@@ -273,14 +308,14 @@
       "bytes": 21998
     },
     {
-      "path": "data/images/artist-1786332007363/wikidata-Q999836.png",
+      "path": "data/images/artist-1786332007363/wikidata-Q999836.jpg",
       "type": "thumbnail",
-      "bytes": 1562
+      "bytes": 87215
     },
     {
       "path": "data/images/artist-1786333400214/index.json",
       "type": "thumbnail",
-      "bytes": 2810
+      "bytes": 3105
     },
     {
       "path": "data/images/artist-1786333400214/wikidata-Q18602436.jpg",
@@ -328,11 +363,6 @@
       "bytes": 21924
     },
     {
-      "path": "data/images/artist-1786333400214/wikidata-Q18602616.jpg",
-      "type": "thumbnail",
-      "bytes": 28261
-    },
-    {
       "path": "data/images/artist-1786333400214/wikidata-Q18602618.jpg",
       "type": "thumbnail",
       "bytes": 14152
@@ -343,29 +373,9 @@
       "bytes": 36693
     },
     {
-      "path": "data/images/artist-1786333400214/wikidata-Q2517970.jpg",
-      "type": "thumbnail",
-      "bytes": 44775
-    },
-    {
-      "path": "data/images/artist-1786333400214/wikidata-Q999836.jpg",
-      "type": "thumbnail",
-      "bytes": 14243
-    },
-    {
       "path": "data/images/artist-1786343948059/index.json",
       "type": "thumbnail",
-      "bytes": 5996
-    },
-    {
-      "path": "data/images/artist-1786343948059/wikidata-Q113262.jpg",
-      "type": "thumbnail",
-      "bytes": 23342
-    },
-    {
-      "path": "data/images/artist-1786343948059/wikidata-Q1192090.jpg",
-      "type": "thumbnail",
-      "bytes": 34580
+      "bytes": 7494
     },
     {
       "path": "data/images/artist-1786343948059/wikidata-Q123286344.jpg",
@@ -378,49 +388,14 @@
       "bytes": 19467
     },
     {
-      "path": "data/images/artist-1786343948059/wikidata-Q126467.jpg",
-      "type": "thumbnail",
-      "bytes": 42304
-    },
-    {
-      "path": "data/images/artist-1786343948059/wikidata-Q1551926.jpg",
-      "type": "thumbnail",
-      "bytes": 12367
-    },
-    {
       "path": "data/images/artist-1786343948059/wikidata-Q16648934.jpg",
       "type": "thumbnail",
       "bytes": 24246
     },
     {
-      "path": "data/images/artist-1786343948059/wikidata-Q17495108.jpg",
-      "type": "thumbnail",
-      "bytes": 18930
-    },
-    {
-      "path": "data/images/artist-1786343948059/wikidata-Q1810341.jpg",
-      "type": "thumbnail",
-      "bytes": 24834
-    },
-    {
-      "path": "data/images/artist-1786343948059/wikidata-Q18208688.jpg",
-      "type": "thumbnail",
-      "bytes": 16835
-    },
-    {
       "path": "data/images/artist-1786343948059/wikidata-Q18413043.jpg",
       "type": "thumbnail",
       "bytes": 47560
-    },
-    {
-      "path": "data/images/artist-1786343948059/wikidata-Q18620351.jpg",
-      "type": "thumbnail",
-      "bytes": 39742
-    },
-    {
-      "path": "data/images/artist-1786343948059/wikidata-Q18625546.jpg",
-      "type": "thumbnail",
-      "bytes": 34010
     },
     {
       "path": "data/images/artist-1786343948059/wikidata-Q20198758.jpg",
@@ -433,16 +408,6 @@
       "bytes": 15870
     },
     {
-      "path": "data/images/artist-1786343948059/wikidata-Q2494850.jpg",
-      "type": "thumbnail",
-      "bytes": 19088
-    },
-    {
-      "path": "data/images/artist-1786343948059/wikidata-Q2899286.jpg",
-      "type": "thumbnail",
-      "bytes": 18564
-    },
-    {
       "path": "data/images/artist-1786343948059/wikidata-Q2997933.jpg",
       "type": "thumbnail",
       "bytes": 22142
@@ -453,29 +418,9 @@
       "bytes": 9060
     },
     {
-      "path": "data/images/artist-1786343948059/wikidata-Q3224381.jpg",
-      "type": "thumbnail",
-      "bytes": 21556
-    },
-    {
-      "path": "data/images/artist-1786343948059/wikidata-Q3227448.jpg",
-      "type": "thumbnail",
-      "bytes": 21524
-    },
-    {
       "path": "data/images/artist-1786343948059/wikidata-Q43325424.jpg",
       "type": "thumbnail",
       "bytes": 21567
-    },
-    {
-      "path": "data/images/artist-1786343948059/wikidata-Q4373335.jpg",
-      "type": "thumbnail",
-      "bytes": 13913
-    },
-    {
-      "path": "data/images/artist-1786343948059/wikidata-Q665028.jpg",
-      "type": "thumbnail",
-      "bytes": 38993
     },
     {
       "path": "data/images/artist-1786343948059/wikidata-Q66763675.jpg",
@@ -493,11 +438,6 @@
       "bytes": 7593
     },
     {
-      "path": "data/images/artist-1786343948059/wikidata-Q7720924.jpg",
-      "type": "thumbnail",
-      "bytes": 32688
-    },
-    {
       "path": "data/images/artist-1786343948059/wikidata-Q96216689.jpg",
       "type": "thumbnail",
       "bytes": 19207
@@ -510,22 +450,12 @@
     {
       "path": "data/images/artist-1786346958745/index.json",
       "type": "thumbnail",
-      "bytes": 404
-    },
-    {
-      "path": "data/images/artist-1786346958745/wikidata-Q113764391.jpg",
-      "type": "thumbnail",
-      "bytes": 16912
-    },
-    {
-      "path": "data/images/artist-1786346958745/wikidata-Q3918079.jpg",
-      "type": "thumbnail",
-      "bytes": 24456
+      "bytes": 558
     },
     {
       "path": "data/images/artist-1786347518103/index.json",
       "type": "thumbnail",
-      "bytes": 2826
+      "bytes": 3961
     },
     {
       "path": "data/images/artist-1786347518103/wikidata-Q105079097.jpg",
@@ -600,7 +530,7 @@
     {
       "path": "data/images/artist-1786369007570/index.json",
       "type": "thumbnail",
-      "bytes": 13123
+      "bytes": 18649
     },
     {
       "path": "data/images/artist-1786369007570/wikidata-Q100998017.jpg",
@@ -670,7 +600,7 @@
     {
       "path": "data/images/artist-1786369007570/wikidata-Q128910.jpg",
       "type": "thumbnail",
-      "bytes": 13242
+      "bytes": 6825122
     },
     {
       "path": "data/images/artist-1786369007570/wikidata-Q131841258.jpg",
@@ -741,6 +671,16 @@
       "path": "data/images/artist-1786369007570/wikidata-Q2471531.jpg",
       "type": "thumbnail",
       "bytes": 21994
+    },
+    {
+      "path": "data/images/artist-1786369007570/wikidata-Q28497182.jpg",
+      "type": "thumbnail",
+      "bytes": 76342
+    },
+    {
+      "path": "data/images/artist-1786369007570/wikidata-Q29384842.jpg",
+      "type": "thumbnail",
+      "bytes": 572407
     },
     {
       "path": "data/images/artist-1786369007570/wikidata-Q29384852.jpg",
@@ -895,7 +835,7 @@
     {
       "path": "data/images/artist-1786371252483/index.json",
       "type": "thumbnail",
-      "bytes": 12515
+      "bytes": 17431
     },
     {
       "path": "data/images/artist-1786371252483/wikidata-Q102852946.jpg",
@@ -1085,7 +1025,7 @@
     {
       "path": "data/images/artist-1786371252483/wikidata-Q2627056.jpg",
       "type": "thumbnail",
-      "bytes": 15821
+      "bytes": 6593605
     },
     {
       "path": "data/images/artist-1786371252483/wikidata-Q2713203.jpg",
@@ -1193,19 +1133,1024 @@
       "bytes": 15058
     },
     {
-      "path": "data/images/artist-1786371252483/wikidata-Q969377.jpg",
+      "path": "data/images/artist-art-atlas-abramovic/abramovic-artist-present.jpg",
       "type": "thumbnail",
-      "bytes": 14765
+      "bytes": 439468
+    },
+    {
+      "path": "data/images/artist-art-atlas-basquiat/basquiat-untitled-1981.webp",
+      "type": "thumbnail",
+      "bytes": 64470
+    },
+    {
+      "path": "data/images/artist-art-atlas-bouguereau/bouguereau-birth-of-venus.jpg",
+      "type": "thumbnail",
+      "bytes": 1544467
+    },
+    {
+      "path": "data/images/artist-art-atlas-dufy/dufy-beach-sainte-adresse.jpg",
+      "type": "thumbnail",
+      "bytes": 1295578
+    },
+    {
+      "path": "data/images/artist-art-atlas-gauguin/gauguin-vision-after-sermon.jpg",
+      "type": "thumbnail",
+      "bytes": 1038758
+    },
+    {
+      "path": "data/images/artist-art-atlas-kandinsky/kandinsky-composition-vii.jpg",
+      "type": "thumbnail",
+      "bytes": 2737272
+    },
+    {
+      "path": "data/images/artist-art-atlas-klimt/klimt-judith-i.jpg",
+      "type": "thumbnail",
+      "bytes": 3040406
+    },
+    {
+      "path": "data/images/artist-art-atlas-malevich/malevich-black-square.jpg",
+      "type": "thumbnail",
+      "bytes": 889057
+    },
+    {
+      "path": "data/images/artist-art-atlas-malevich/malevich-knife-grinder.jpeg",
+      "type": "thumbnail",
+      "bytes": 1005351
+    },
+    {
+      "path": "data/images/artist-art-atlas-mondrian/mondrian-composition-1921.jpg",
+      "type": "thumbnail",
+      "bytes": 34575
+    },
+    {
+      "path": "data/images/artist-art-atlas-moreau/moreau-oedipus-sphinx.jpg",
+      "type": "thumbnail",
+      "bytes": 85787
+    },
+    {
+      "path": "data/images/artist-art-atlas-mucha/mucha-the-seasons.jpg",
+      "type": "thumbnail",
+      "bytes": 691494
+    },
+    {
+      "path": "data/images/artist-art-atlas-picasso/picasso-three-musicians.jpeg",
+      "type": "thumbnail",
+      "bytes": 42234
+    },
+    {
+      "path": "data/images/artist-art-atlas-rivera/rivera-detroit-industry.jpg",
+      "type": "thumbnail",
+      "bytes": 646870
+    },
+    {
+      "path": "data/images/artist-art-atlas-schiele/schiele-self-portrait-physalis.jpg",
+      "type": "thumbnail",
+      "bytes": 1387062
+    },
+    {
+      "path": "data/images/artist-art-atlas-shahn/shahn-sacco-vanzetti.jpg",
+      "type": "thumbnail",
+      "bytes": 529648
+    },
+    {
+      "path": "data/images/artist-further-botticelli/botticelli-birth-of-venus.jpg",
+      "type": "thumbnail",
+      "bytes": 674663
+    },
+    {
+      "path": "data/images/artist-further-cabanel/cabanel-birth-of-venus.jpg",
+      "type": "thumbnail",
+      "bytes": 369920
+    },
+    {
+      "path": "data/images/artist-further-cassatt/cassatt-child-bath.jpeg",
+      "type": "thumbnail",
+      "bytes": 1887502
+    },
+    {
+      "path": "data/images/artist-further-cezanne/cezanne-mont-sainte-victoire.jpg",
+      "type": "thumbnail",
+      "bytes": 1166547
+    },
+    {
+      "path": "data/images/artist-further-de-kooning/de-kooning-woman-i.jpg",
+      "type": "thumbnail",
+      "bytes": 606169
+    },
+    {
+      "path": "data/images/artist-further-derain/derain-charing-cross-bridge.jpg",
+      "type": "thumbnail",
+      "bytes": 918258
+    },
+    {
+      "path": "data/images/artist-further-guimard/guimard-paris-metro-entrance.jpg",
+      "type": "thumbnail",
+      "bytes": 918988
+    },
+    {
+      "path": "data/images/artist-further-klee/klee-red-balloon.jpg",
+      "type": "thumbnail",
+      "bytes": 1919435
+    },
+    {
+      "path": "data/images/artist-further-kramskoi/kramskoi-christ-in-the-desert.jpg",
+      "type": "thumbnail",
+      "bytes": 231797
+    },
+    {
+      "path": "data/images/artist-further-man-ray/man-ray-gift.jpg",
+      "type": "thumbnail",
+      "bytes": 280591
+    },
+    {
+      "path": "data/images/artist-further-millet/millet-the-gleaners.jpg",
+      "type": "thumbnail",
+      "bytes": 170469
+    },
+    {
+      "path": "data/images/artist-further-redon/redon-cyclops.jpg",
+      "type": "thumbnail",
+      "bytes": 2067483
+    },
+    {
+      "path": "data/images/artist-further-renoir/renoir-moulin-galette.jpg",
+      "type": "thumbnail",
+      "bytes": 937418
+    },
+    {
+      "path": "data/images/artist-further-signac/signac-port-saint-tropez.jpg",
+      "type": "thumbnail",
+      "bytes": 1392691
+    },
+    {
+      "path": "data/images/artist-further-tatlin/tatlin-monument-third-international.jpg",
+      "type": "thumbnail",
+      "bytes": 219495
+    },
+    {
+      "path": "data/images/artist-further-yoko-ono/ono-cut-piece.jpg",
+      "type": "thumbnail",
+      "bytes": 512175
+    },
+    {
+      "path": "data/images/artist-mid-ai-weiwei/ai-sunflower-seeds.jpg",
+      "type": "thumbnail",
+      "bytes": 971139
+    },
+    {
+      "path": "data/images/artist-mid-arnold-bocklin/bocklin-isle-of-the-dead.jpg",
+      "type": "thumbnail",
+      "bytes": 135793
+    },
+    {
+      "path": "data/images/artist-mid-artemisia-gentileschi/gentileschi-judith-slaying-holofernes.jpg",
+      "type": "thumbnail",
+      "bytes": 711545
+    },
+    {
+      "path": "data/images/artist-mid-berthe-morisot/morisot-cradle.jpg",
+      "type": "thumbnail",
+      "bytes": 239603
+    },
+    {
+      "path": "data/images/artist-mid-camille-pissarro/pissarro-boulevard-montmartre-night.jpg",
+      "type": "thumbnail",
+      "bytes": 1224142
+    },
+    {
+      "path": "data/images/artist-mid-edgar-degas/degas-dance-class.jpg",
+      "type": "thumbnail",
+      "bytes": 1133527
+    },
+    {
+      "path": "data/images/artist-mid-fernand-khnopff/khnopff-caresses.jpg",
+      "type": "thumbnail",
+      "bytes": 318140
+    },
+    {
+      "path": "data/images/artist-mid-fra-angelico/fra-angelico-annunciation-san-marco.jpg",
+      "type": "thumbnail",
+      "bytes": 191521
+    },
+    {
+      "path": "data/images/artist-mid-francesco-guardi/guardi-doges-palace.jpg",
+      "type": "thumbnail",
+      "bytes": 2658923
+    },
+    {
+      "path": "data/images/artist-mid-georges-de-la-tour/la-tour-magdalene-smoking-flame.jpg",
+      "type": "thumbnail",
+      "bytes": 798908
+    },
+    {
+      "path": "data/images/artist-mid-grunewald/grunewald-isenheim-altarpiece.jpg",
+      "type": "thumbnail",
+      "bytes": 1126024
+    },
+    {
+      "path": "data/images/artist-mid-hans-memling/memling-last-judgment.jpg",
+      "type": "thumbnail",
+      "bytes": 682981
+    },
+    {
+      "path": "data/images/artist-mid-honore-daumier/daumier-third-class-carriage.jpg",
+      "type": "thumbnail",
+      "bytes": 878440
+    },
+    {
+      "path": "data/images/artist-mid-jacob-jordaens/jordaens-king-drinks.jpg",
+      "type": "thumbnail",
+      "bytes": 188995
+    },
+    {
+      "path": "data/images/artist-mid-jacob-van-ruisdael/ruisdael-windmill-at-wijk.jpg",
+      "type": "thumbnail",
+      "bytes": 905205
+    },
+    {
+      "path": "data/images/artist-mid-jean-leon-gerome/gerome-pollice-verso.jpg",
+      "type": "thumbnail",
+      "bytes": 977459
+    },
+    {
+      "path": "data/images/artist-mid-judith-leyster/leyster-self-portrait.jpg",
+      "type": "thumbnail",
+      "bytes": 1509495
+    },
+    {
+      "path": "data/images/artist-mid-jusepe-de-ribera/ribera-martyrdom-saint-philip.jpg",
+      "type": "thumbnail",
+      "bytes": 170174
+    },
+    {
+      "path": "data/images/artist-mid-laszlo-moholy-nagy/moholy-nagy-light-space-modulator.jpg",
+      "type": "thumbnail",
+      "bytes": 1060946
+    },
+    {
+      "path": "data/images/artist-mid-lyubov-popova/popova-painterly-architectonic.jpg",
+      "type": "thumbnail",
+      "bytes": 1531979
+    },
+    {
+      "path": "data/images/artist-mid-olga-rozanova/rozanova-green-stripe.jpg",
+      "type": "thumbnail",
+      "bytes": 1083076
+    },
+    {
+      "path": "data/images/artist-mid-paul-serusier/serusier-the-talisman.jpg",
+      "type": "thumbnail",
+      "bytes": 1060059
+    },
+    {
+      "path": "data/images/artist-mid-piero-della-francesca/piero-flagellation.jpg",
+      "type": "thumbnail",
+      "bytes": 918320
+    },
+    {
+      "path": "data/images/artist-mid-richard-gerstl/gerstl-laughing-self-portrait.jpg",
+      "type": "thumbnail",
+      "bytes": 123700
+    },
+    {
+      "path": "data/images/artist-mid-robert-campin/campin-merode-altarpiece.jpg",
+      "type": "thumbnail",
+      "bytes": 764264
+    },
+    {
+      "path": "data/images/artist-mid-varvara-stepanova/stepanova-billiard-players.jpg",
+      "type": "thumbnail",
+      "bytes": 687977
+    },
+    {
+      "path": "data/images/artist-mid-vasily-surikov/surikov-morning-streltsy-execution.jpg",
+      "type": "thumbnail",
+      "bytes": 897573
+    },
+    {
+      "path": "data/images/artist-mid-william-blake/blake-ancient-of-days.jpg",
+      "type": "thumbnail",
+      "bytes": 1252499
+    },
+    {
+      "path": "data/images/artist-mid-william-merritt-chase/chase-idle-hours.jpg",
+      "type": "thumbnail",
+      "bytes": 802133
+    },
+    {
+      "path": "data/images/artist-Q102272/index.json",
+      "type": "thumbnail",
+      "bytes": 5686
+    },
+    {
+      "path": "data/images/artist-Q102272/local-virgin-with-chancellor-rolin.jpg",
+      "type": "thumbnail",
+      "bytes": 442080
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q1150782.jpg",
+      "type": "thumbnail",
+      "bytes": 555036
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q122374966.jpg",
+      "type": "thumbnail",
+      "bytes": 180032
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q131705570.jpg",
+      "type": "thumbnail",
+      "bytes": 176215
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q137599158.jpg",
+      "type": "thumbnail",
+      "bytes": 622195
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q1747569.jpg",
+      "type": "thumbnail",
+      "bytes": 1316653
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q18683180.jpg",
+      "type": "thumbnail",
+      "bytes": 941610
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q19186089.jpg",
+      "type": "thumbnail",
+      "bytes": 1020908
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q19898150.jpg",
+      "type": "thumbnail",
+      "bytes": 90020
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q2157202.jpg",
+      "type": "thumbnail",
+      "bytes": 171612
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q220859.jpg",
+      "type": "thumbnail",
+      "bytes": 247553
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q2308135.jpg",
+      "type": "thumbnail",
+      "bytes": 199582
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q2392901.jpg",
+      "type": "thumbnail",
+      "bytes": 34545
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q2480921.jpg",
+      "type": "thumbnail",
+      "bytes": 325297
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q2734881.jpg",
+      "type": "thumbnail",
+      "bytes": 1401213
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q28057385.jpg",
+      "type": "thumbnail",
+      "bytes": 150015
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q323079.jpg",
+      "type": "thumbnail",
+      "bytes": 450205
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q3399413.jpg",
+      "type": "thumbnail",
+      "bytes": 79521
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q3399452.jpg",
+      "type": "thumbnail",
+      "bytes": 462207
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q3399498.jpg",
+      "type": "thumbnail",
+      "bytes": 67082
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q3553389.jpg",
+      "type": "thumbnail",
+      "bytes": 679933
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q3937546.jpg",
+      "type": "thumbnail",
+      "bytes": 3244930
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q3973522.jpg",
+      "type": "thumbnail",
+      "bytes": 984043
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q474409.jpg",
+      "type": "thumbnail",
+      "bytes": 97089
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q67123638.jpg",
+      "type": "thumbnail",
+      "bytes": 202637
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q7232279.jpg",
+      "type": "thumbnail",
+      "bytes": 57401
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q734834.jpg",
+      "type": "thumbnail",
+      "bytes": 479754
+    },
+    {
+      "path": "data/images/artist-Q102272/wikidata-Q838074.jpg",
+      "type": "thumbnail",
+      "bytes": 1637038
+    },
+    {
+      "path": "data/images/artist-Q150679/index.json",
+      "type": "thumbnail",
+      "bytes": 3861
+    },
+    {
+      "path": "data/images/artist-Q150679/van-dyck-charles-i-and-henrietta-maria-with-children-1632.jpg",
+      "type": "thumbnail",
+      "bytes": 5088923
+    },
+    {
+      "path": "data/images/artist-Q150679/van-dyck-charles-i-at-the-hunt-1635.jpg",
+      "type": "thumbnail",
+      "bytes": 3522567
+    },
+    {
+      "path": "data/images/artist-Q150679/van-dyck-charles-i-with-m-de-st-antoine-1633.jpg",
+      "type": "thumbnail",
+      "bytes": 5704145
+    },
+    {
+      "path": "data/images/artist-Q150679/van-dyck-christ-crowned-with-thorns-1620.jpg",
+      "type": "thumbnail",
+      "bytes": 6245911
+    },
+    {
+      "path": "data/images/artist-Q150679/van-dyck-equestrian-portrait-of-charles-i-1638-1639.jpg",
+      "type": "thumbnail",
+      "bytes": 7057035
+    },
+    {
+      "path": "data/images/artist-Q150679/van-dyck-lamentation-over-dead-christ-1635.jpg",
+      "type": "thumbnail",
+      "bytes": 3286601
+    },
+    {
+      "path": "data/images/artist-Q150679/van-dyck-mary-stuart-and-william-ii-1641.jpg",
+      "type": "thumbnail",
+      "bytes": 3005319
+    },
+    {
+      "path": "data/images/artist-Q150679/van-dyck-samson-and-delilah-1628-1630.jpg",
+      "type": "thumbnail",
+      "bytes": 8100246
+    },
+    {
+      "path": "data/images/artist-Q150679/van-dyck-self-portrait-with-a-sunflower-1632.jpg",
+      "type": "thumbnail",
+      "bytes": 1824141
+    },
+    {
+      "path": "data/images/artist-Q153746/altdorfer-battle-alexander-issus-1529-google-art-project.jpg",
+      "type": "thumbnail",
+      "bytes": 4517840
+    },
+    {
+      "path": "data/images/artist-Q153746/altdorfer-battle-alexander-issus-1529.jpg",
+      "type": "thumbnail",
+      "bytes": 4053244
+    },
+    {
+      "path": "data/images/artist-Q153746/altdorfer-christ-taking-leave-of-his-mother-1515-1520.jpg",
+      "type": "thumbnail",
+      "bytes": 4622885
+    },
+    {
+      "path": "data/images/artist-Q153746/altdorfer-martyrdom-saint-sebastian-1509-1516.jpg",
+      "type": "thumbnail",
+      "bytes": 770731
+    },
+    {
+      "path": "data/images/artist-Q153746/altdorfer-resurrection-of-christ-1518.jpg",
+      "type": "thumbnail",
+      "bytes": 3164315
+    },
+    {
+      "path": "data/images/artist-Q153746/altdorfer-saint-george-in-the-forest-1510.jpg",
+      "type": "thumbnail",
+      "bytes": 1462491
+    },
+    {
+      "path": "data/images/artist-Q155151/antoine-bateau-feast-of-love.jpg",
+      "type": "thumbnail",
+      "bytes": 3107061
+    },
+    {
+      "path": "data/images/artist-Q155151/antoine-bateau-fetes-venitiennes.jpg",
+      "type": "thumbnail",
+      "bytes": 2163509
+    },
+    {
+      "path": "data/images/artist-Q155151/antoine-bateau-la-perspective.jpg",
+      "type": "thumbnail",
+      "bytes": 73910
+    },
+    {
+      "path": "data/images/artist-Q155151/antoine-bateau-marriage-contract-country-dancing.jpg",
+      "type": "thumbnail",
+      "bytes": 1348449
+    },
+    {
+      "path": "data/images/artist-Q155151/antoine-bateau-pierrot-content.jpg",
+      "type": "thumbnail",
+      "bytes": 3504412
+    },
+    {
+      "path": "data/images/artist-Q155151/antoine-bateau-pleasures-of-the-ball.jpg",
+      "type": "thumbnail",
+      "bytes": 478013
+    },
+    {
+      "path": "data/images/artist-Q155151/antoine-bateau-robber-of-sparrows-nest.jpg",
+      "type": "thumbnail",
+      "bytes": 432345
+    },
+    {
+      "path": "data/images/artist-Q155151/artist-Q155151-representative-work.jpg",
+      "type": "thumbnail",
+      "bytes": 3823997
+    },
+    {
+      "path": "data/images/artist-Q155151/index.json",
+      "type": "thumbnail",
+      "bytes": 4940
+    },
+    {
+      "path": "data/images/artist-Q160538/bernini-apollo-and-daphne-1622-1625.png",
+      "type": "thumbnail",
+      "bytes": 6921017
+    },
+    {
+      "path": "data/images/artist-Q160538/bernini-blessed-ludovica-albertoni-1671-1674.jpg",
+      "type": "thumbnail",
+      "bytes": 8228375
+    },
+    {
+      "path": "data/images/artist-Q160538/bernini-david-1623-1624.png",
+      "type": "thumbnail",
+      "bytes": 6355386
+    },
+    {
+      "path": "data/images/artist-Q160538/bernini-ecstasy-of-saint-teresa-1647-1652.jpg",
+      "type": "thumbnail",
+      "bytes": 7167338
+    },
+    {
+      "path": "data/images/artist-Q160538/bernini-rape-of-proserpina-1621-1622.jpg",
+      "type": "thumbnail",
+      "bytes": 5839796
+    },
+    {
+      "path": "data/images/artist-Q160538/index.json",
+      "type": "thumbnail",
+      "bytes": 2144
+    },
+    {
+      "path": "data/images/artist-Q160538/wikidata-Q945850.jpg",
+      "type": "thumbnail",
+      "bytes": 34664
+    },
+    {
+      "path": "data/images/artist-Q161866/local-canaletto-arsenal-entrance.jpg",
+      "type": "thumbnail",
+      "bytes": 174996
+    },
+    {
+      "path": "data/images/artist-Q161866/local-canaletto-grand-canal-entrance.jpg",
+      "type": "thumbnail",
+      "bytes": 3619781
+    },
+    {
+      "path": "data/images/artist-Q161866/local-canaletto-rialto-bridge-north.jpg",
+      "type": "thumbnail",
+      "bytes": 998886
+    },
+    {
+      "path": "data/images/artist-Q161866/local-canaletto-st-pauls-cathedral.jpg",
+      "type": "thumbnail",
+      "bytes": 3829061
+    },
+    {
+      "path": "data/images/artist-Q161866/local-canaletto-stonemasons-yard.jpg",
+      "type": "thumbnail",
+      "bytes": 3853357
+    },
+    {
+      "path": "data/images/artist-Q161866/local-canaletto-thames-from-richmond-house.jpg",
+      "type": "thumbnail",
+      "bytes": 130728
+    },
+    {
+      "path": "data/images/artist-Q161866/local-canaletto-warwick-castle.jpg",
+      "type": "thumbnail",
+      "bytes": 1419247
+    },
+    {
+      "path": "data/images/artist-Q161866/local-canaletto-westminster-abbey.jpg",
+      "type": "thumbnail",
+      "bytes": 108012
+    },
+    {
+      "path": "data/images/artist-Q161866/local-canaletto-westminster-bridge-procession.jpg",
+      "type": "thumbnail",
+      "bytes": 1607390
+    },
+    {
+      "path": "data/images/artist-Q162048/local-tiepolo-banquet-of-cleopatra.jpg",
+      "type": "thumbnail",
+      "bytes": 4629935
+    },
+    {
+      "path": "data/images/artist-Q162048/local-tiepolo-glory-of-pisani-family-detail.jpg",
+      "type": "thumbnail",
+      "bytes": 171723
+    },
+    {
+      "path": "data/images/artist-Q162048/local-tiepolo-nuptial-allegory.jpg",
+      "type": "thumbnail",
+      "bytes": 416251
+    },
+    {
+      "path": "data/images/artist-Q162048/local-tiepolo-perseus-and-andromeda.jpg",
+      "type": "thumbnail",
+      "bytes": 4868616
+    },
+    {
+      "path": "data/images/artist-Q162048/local-tiepolo-san-domenico-in-glory.jpg",
+      "type": "thumbnail",
+      "bytes": 4343820
+    },
+    {
+      "path": "data/images/artist-Q162048/local-tiepolo-scipio-freeing-massiva.jpg",
+      "type": "thumbnail",
+      "bytes": 2389776
+    },
+    {
+      "path": "data/images/artist-Q162048/local-tiepolo-zephyr-and-flora.jpg",
+      "type": "thumbnail",
+      "bytes": 139247
+    },
+    {
+      "path": "data/images/artist-Q165367/goltzius-emperor-commodus-as-hercules-1592.jpg",
+      "type": "thumbnail",
+      "bytes": 198549
+    },
+    {
+      "path": "data/images/artist-Q165367/goltzius-fall-of-man-1616.jpg",
+      "type": "thumbnail",
+      "bytes": 349827
+    },
+    {
+      "path": "data/images/artist-Q165367/goltzius-farnese-hercules-1592.jpg",
+      "type": "thumbnail",
+      "bytes": 62387
+    },
+    {
+      "path": "data/images/artist-Q165367/goltzius-great-hercules-1589.jpg",
+      "type": "thumbnail",
+      "bytes": 123407
+    },
+    {
+      "path": "data/images/artist-Q165367/goltzius-hercules-killing-cacus-1588.jpg",
+      "type": "thumbnail",
+      "bytes": 148321
+    },
+    {
+      "path": "data/images/artist-Q165367/goltzius-icarus-1588.jpg",
+      "type": "thumbnail",
+      "bytes": 66031
+    },
+    {
+      "path": "data/images/artist-Q165367/goltzius-jupiter-and-antiope-1612.jpg",
+      "type": "thumbnail",
+      "bytes": 303632
+    },
+    {
+      "path": "data/images/artist-Q165367/goltzius-lot-and-his-daughters-1616.jpg",
+      "type": "thumbnail",
+      "bytes": 50471
+    },
+    {
+      "path": "data/images/artist-Q165367/goltzius-portrait-shell-collector-1603.jpg",
+      "type": "thumbnail",
+      "bytes": 6572068
+    },
+    {
+      "path": "data/images/artist-Q165367/index.json",
+      "type": "thumbnail",
+      "bytes": 2526
+    },
+    {
+      "path": "data/images/artist-Q167654/frans-hals-banquet-st-george-1616.jpg",
+      "type": "thumbnail",
+      "bytes": 1620904
+    },
+    {
+      "path": "data/images/artist-Q167654/frans-hals-banquet-st-hadrian-1627.jpg",
+      "type": "thumbnail",
+      "bytes": 1262011
+    },
+    {
+      "path": "data/images/artist-Q167654/frans-hals-jester-with-lute-1623.jpg",
+      "type": "thumbnail",
+      "bytes": 1714833
+    },
+    {
+      "path": "data/images/artist-Q167654/frans-hals-laughing-cavalier-1624.png",
+      "type": "thumbnail",
+      "bytes": 7881374
+    },
+    {
+      "path": "data/images/artist-Q167654/frans-hals-merry-drinker-1628.jpg",
+      "type": "thumbnail",
+      "bytes": 3827007
+    },
+    {
+      "path": "data/images/artist-Q167654/frans-hals-portrait-rene-descartes-1649.jpg",
+      "type": "thumbnail",
+      "bytes": 155042
+    },
+    {
+      "path": "data/images/artist-Q167654/frans-hals-regentesses-old-mens-almshouse-1664.jpg",
+      "type": "thumbnail",
+      "bytes": 1954985
+    },
+    {
+      "path": "data/images/artist-Q167654/index.json",
+      "type": "thumbnail",
+      "bytes": 2473
+    },
+    {
+      "path": "data/images/artist-Q170170/le-brun-alexander-and-porus-1673.jpg",
+      "type": "thumbnail",
+      "bytes": 458577
+    },
+    {
+      "path": "data/images/artist-Q170170/le-brun-apotheosis-of-louis-xiv-1677.jpg",
+      "type": "thumbnail",
+      "bytes": 2177300
+    },
+    {
+      "path": "data/images/artist-Q170170/le-brun-capture-of-ghent-1678.jpg",
+      "type": "thumbnail",
+      "bytes": 6285389
+    },
+    {
+      "path": "data/images/artist-Q170170/le-brun-chancellor-seguier-1660.jpg",
+      "type": "thumbnail",
+      "bytes": 3848518
+    },
+    {
+      "path": "data/images/artist-Q170170/le-brun-daedalus-and-icarus-1645.jpg",
+      "type": "thumbnail",
+      "bytes": 91868
+    },
+    {
+      "path": "data/images/artist-Q170170/le-brun-entry-of-alexander-into-babylon-1665.jpg",
+      "type": "thumbnail",
+      "bytes": 2400273
+    },
+    {
+      "path": "data/images/artist-Q170170/le-brun-equestrian-portrait-of-louis-xiv-1650.jpg",
+      "type": "thumbnail",
+      "bytes": 894742
+    },
+    {
+      "path": "data/images/artist-Q170170/le-brun-queens-of-persia-at-the-feet-of-alexander-1660-1661.jpg",
+      "type": "thumbnail",
+      "bytes": 3074029
+    },
+    {
+      "path": "data/images/artist-Q170170/le-brun-venus-clipping-cupids-wings-1650.jpg",
+      "type": "thumbnail",
+      "bytes": 339655
+    },
+    {
+      "path": "data/images/artist-Q17169/bellini-agony-garden.jpg",
+      "type": "thumbnail",
+      "bytes": 171247
+    },
+    {
+      "path": "data/images/artist-Q17169/bellini-sacred-allegory.jpg",
+      "type": "thumbnail",
+      "bytes": 344683
+    },
+    {
+      "path": "data/images/artist-Q17169/bellini-st-francis-desert.jpg",
+      "type": "thumbnail",
+      "bytes": 520167
+    },
+    {
+      "path": "data/images/artist-Q17169/index.json",
+      "type": "thumbnail",
+      "bytes": 11017
+    },
+    {
+      "path": "data/images/artist-Q17169/manual-bellini-doge-loredan-1501.jpg",
+      "type": "thumbnail",
+      "bytes": 91082
+    },
+    {
+      "path": "data/images/artist-Q17169/manual-bellini-feast-gods-1514.jpg",
+      "type": "thumbnail",
+      "bytes": 67147
+    },
+    {
+      "path": "data/images/artist-Q17169/manual-bellini-san-giobbe-altarpiece-1487.jpg",
+      "type": "thumbnail",
+      "bytes": 42824
+    },
+    {
+      "path": "data/images/artist-Q17169/manual-bellini-san-zaccaria-altarpiece-1505.jpg",
+      "type": "thumbnail",
+      "bytes": 52736
+    },
+    {
+      "path": "data/images/artist-Q17169/manual-bellini-vatican-lamentation-1475.jpg",
+      "type": "thumbnail",
+      "bytes": 74344
+    },
+    {
+      "path": "data/images/artist-Q17169/manual-local-1787209918197.png",
+      "type": "thumbnail",
+      "bytes": 1318898
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q1762826.jpg",
+      "type": "thumbnail",
+      "bytes": 55304
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q20184408.jpg",
+      "type": "thumbnail",
+      "bytes": 51032
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q3697653.jpg",
+      "type": "thumbnail",
+      "bytes": 688349
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q3697654.jpg",
+      "type": "thumbnail",
+      "bytes": 48666
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q3766167.jpg",
+      "type": "thumbnail",
+      "bytes": 42684
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q3842483.jpg",
+      "type": "thumbnail",
+      "bytes": 106883
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q3842596.jpg",
+      "type": "thumbnail",
+      "bytes": 40233
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q3842597.jpg",
+      "type": "thumbnail",
+      "bytes": 60755
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q3842705.jpg",
+      "type": "thumbnail",
+      "bytes": 68256
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q3904393.jpg",
+      "type": "thumbnail",
+      "bytes": 400914
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q3904404.jpg",
+      "type": "thumbnail",
+      "bytes": 738230
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q3910087.jpg",
+      "type": "thumbnail",
+      "bytes": 247520
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q3910910.jpg",
+      "type": "thumbnail",
+      "bytes": 53005
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q3937589.jpg",
+      "type": "thumbnail",
+      "bytes": 92989
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q3937676.jpg",
+      "type": "thumbnail",
+      "bytes": 106167
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q3937688.jpg",
+      "type": "thumbnail",
+      "bytes": 79086
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q3944517.jpg",
+      "type": "thumbnail",
+      "bytes": 498094
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q3997716.jpg",
+      "type": "thumbnail",
+      "bytes": 196786
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q3999107.jpg",
+      "type": "thumbnail",
+      "bytes": 70751
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q47818848.jpg",
+      "type": "thumbnail",
+      "bytes": 3349263
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q47870920.jpg",
+      "type": "thumbnail",
+      "bytes": 1036947
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q48388241.jpg",
+      "type": "thumbnail",
+      "bytes": 48562
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q5189807.jpg",
+      "type": "thumbnail",
+      "bytes": 64192
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q633587.jpg",
+      "type": "thumbnail",
+      "bytes": 51484
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q65068185.jpg",
+      "type": "thumbnail",
+      "bytes": 58154
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q6728393.jpg",
+      "type": "thumbnail",
+      "bytes": 2516442
+    },
+    {
+      "path": "data/images/artist-Q17169/wikidata-Q726430.jpg",
+      "type": "thumbnail",
+      "bytes": 73867
     },
     {
       "path": "data/images/artist-Q187310/index.json",
       "type": "thumbnail",
-      "bytes": 6433
+      "bytes": 12271
     },
     {
       "path": "data/images/artist-Q187310/wikidata-Q102251693.jpg",
       "type": "thumbnail",
-      "bytes": 16623
+      "bytes": 653409
     },
     {
       "path": "data/images/artist-Q187310/wikidata-Q10541152.jpg",
@@ -1213,54 +2158,69 @@
       "bytes": 22392
     },
     {
+      "path": "data/images/artist-Q187310/wikidata-Q10577856.jpg",
+      "type": "thumbnail",
+      "bytes": 17630
+    },
+    {
+      "path": "data/images/artist-Q187310/wikidata-Q106368938.jpg",
+      "type": "thumbnail",
+      "bytes": 927784
+    },
+    {
       "path": "data/images/artist-Q187310/wikidata-Q10665407.jpg",
       "type": "thumbnail",
       "bytes": 24215
     },
     {
+      "path": "data/images/artist-Q187310/wikidata-Q10697904.jpg",
+      "type": "thumbnail",
+      "bytes": 893806
+    },
+    {
       "path": "data/images/artist-Q187310/wikidata-Q110763117.jpg",
       "type": "thumbnail",
-      "bytes": 8817
+      "bytes": 52416
     },
     {
       "path": "data/images/artist-Q187310/wikidata-Q110763548.jpg",
       "type": "thumbnail",
-      "bytes": 6784
+      "bytes": 69694
     },
     {
       "path": "data/images/artist-Q187310/wikidata-Q110787624.jpg",
       "type": "thumbnail",
-      "bytes": 39417
-    },
-    {
-      "path": "data/images/artist-Q187310/wikidata-Q110788270.jpg",
-      "type": "thumbnail",
-      "bytes": 19009
+      "bytes": 150383
     },
     {
       "path": "data/images/artist-Q187310/wikidata-Q110800213.jpg",
       "type": "thumbnail",
-      "bytes": 5856
+      "bytes": 50152
     },
     {
       "path": "data/images/artist-Q187310/wikidata-Q110800215.jpg",
       "type": "thumbnail",
-      "bytes": 6320
+      "bytes": 52853
     },
     {
-      "path": "data/images/artist-Q187310/wikidata-Q110805030.jpg",
+      "path": "data/images/artist-Q187310/wikidata-Q117462291.jpg",
       "type": "thumbnail",
-      "bytes": 27348
+      "bytes": 41905
     },
     {
-      "path": "data/images/artist-Q187310/wikidata-Q110805667.jpg",
+      "path": "data/images/artist-Q187310/wikidata-Q125998277.jpg",
       "type": "thumbnail",
-      "bytes": 15459
+      "bytes": 73814
     },
     {
       "path": "data/images/artist-Q187310/wikidata-Q130538305.jpg",
       "type": "thumbnail",
       "bytes": 11174
+    },
+    {
+      "path": "data/images/artist-Q187310/wikidata-Q130730389.jpg",
+      "type": "thumbnail",
+      "bytes": 207501
     },
     {
       "path": "data/images/artist-Q187310/wikidata-Q132147268.jpg",
@@ -1273,19 +2233,54 @@
       "bytes": 42351
     },
     {
+      "path": "data/images/artist-Q187310/wikidata-Q136498397.jpg",
+      "type": "thumbnail",
+      "bytes": 66345
+    },
+    {
       "path": "data/images/artist-Q187310/wikidata-Q136698141.jpg",
       "type": "thumbnail",
       "bytes": 44107
     },
     {
-      "path": "data/images/artist-Q187310/wikidata-Q136698651.jpg",
-      "type": "thumbnail",
-      "bytes": 35653
-    },
-    {
       "path": "data/images/artist-Q187310/wikidata-Q136698715.jpg",
       "type": "thumbnail",
       "bytes": 29902
+    },
+    {
+      "path": "data/images/artist-Q187310/wikidata-Q136708665.jpg",
+      "type": "thumbnail",
+      "bytes": 46817
+    },
+    {
+      "path": "data/images/artist-Q187310/wikidata-Q136708674.jpg",
+      "type": "thumbnail",
+      "bytes": 95070
+    },
+    {
+      "path": "data/images/artist-Q187310/wikidata-Q138529729.jpg",
+      "type": "thumbnail",
+      "bytes": 68985
+    },
+    {
+      "path": "data/images/artist-Q187310/wikidata-Q17189257.jpg",
+      "type": "thumbnail",
+      "bytes": 1092240
+    },
+    {
+      "path": "data/images/artist-Q187310/wikidata-Q1800916.jpg",
+      "type": "thumbnail",
+      "bytes": 892828
+    },
+    {
+      "path": "data/images/artist-Q187310/wikidata-Q25407981.jpg",
+      "type": "thumbnail",
+      "bytes": 128969
+    },
+    {
+      "path": "data/images/artist-Q187310/wikidata-Q28052734.jpg",
+      "type": "thumbnail",
+      "bytes": 61286
     },
     {
       "path": "data/images/artist-Q187310/wikidata-Q52157977.jpg",
@@ -1298,6 +2293,11 @@
       "bytes": 27537
     },
     {
+      "path": "data/images/artist-Q187310/wikidata-Q761681.jpg",
+      "type": "thumbnail",
+      "bytes": 257914
+    },
+    {
       "path": "data/images/artist-Q187310/wikidata-Q76290647.jpg",
       "type": "thumbnail",
       "bytes": 26939
@@ -1308,9 +2308,269 @@
       "bytes": 56630
     },
     {
+      "path": "data/images/artist-Q187310/wikidata-Q76293120.jpg",
+      "type": "thumbnail",
+      "bytes": 102675
+    },
+    {
+      "path": "data/images/artist-Q191748/cranach-apollo-diana-1530.png",
+      "type": "thumbnail",
+      "bytes": 7425935
+    },
+    {
+      "path": "data/images/artist-Q191748/cranach-duke-heinrich-katharina-1514.jpg",
+      "type": "thumbnail",
+      "bytes": 6274145
+    },
+    {
+      "path": "data/images/artist-Q191748/cranach-fountain-of-youth.png",
+      "type": "thumbnail",
+      "bytes": 7174412
+    },
+    {
+      "path": "data/images/artist-Q191748/cranach-golden-age-1530.jpg",
+      "type": "thumbnail",
+      "bytes": 1900305
+    },
+    {
+      "path": "data/images/artist-Q191748/cranach-holy-kinship-torgau.jpg",
+      "type": "thumbnail",
+      "bytes": 561452
+    },
+    {
+      "path": "data/images/artist-Q191748/cranach-hunt-hartenfels.png",
+      "type": "thumbnail",
+      "bytes": 8115742
+    },
+    {
+      "path": "data/images/artist-Q191748/cranach-johannes-anna-cuspinian.png",
+      "type": "thumbnail",
+      "bytes": 7016420
+    },
+    {
+      "path": "data/images/artist-Q191748/cranach-judgement-of-paris-1528.jpg",
+      "type": "thumbnail",
+      "bytes": 1125334
+    },
+    {
+      "path": "data/images/artist-Q191748/cranach-lamentation-1503.jpg",
+      "type": "thumbnail",
+      "bytes": 5953563
+    },
+    {
+      "path": "data/images/artist-Q191748/cranach-law-and-grace-1529.png",
+      "type": "thumbnail",
+      "bytes": 6347904
+    },
+    {
+      "path": "data/images/artist-Q191748/cranach-madonna-under-fir-tree.jpg",
+      "type": "thumbnail",
+      "bytes": 4614314
+    },
+    {
+      "path": "data/images/artist-Q191748/cranach-mariahilf-madonna.jpg",
+      "type": "thumbnail",
+      "bytes": 812403
+    },
+    {
+      "path": "data/images/artist-Q191748/cranach-martin-luther-1528.jpg",
+      "type": "thumbnail",
+      "bytes": 248481
+    },
+    {
+      "path": "data/images/artist-Q191748/cranach-martin-luther-1543.jpg",
+      "type": "thumbnail",
+      "bytes": 4861302
+    },
+    {
+      "path": "data/images/artist-Q191748/cranach-martin-luther-met.jpg",
+      "type": "thumbnail",
+      "bytes": 1859514
+    },
+    {
+      "path": "data/images/artist-Q191748/cranach-martin-luther-restoration.jpg",
+      "type": "thumbnail",
+      "bytes": 452584
+    },
+    {
+      "path": "data/images/artist-Q191748/cranach-martyrdom-saint-barbara.jpg",
+      "type": "thumbnail",
+      "bytes": 3719153
+    },
+    {
+      "path": "data/images/artist-Q191748/cranach-portrait-of-cranach-1550.jpg",
+      "type": "thumbnail",
+      "bytes": 1941321
+    },
+    {
+      "path": "data/images/artist-Q191748/cranach-prince-johann-anhalt.jpg",
+      "type": "thumbnail",
+      "bytes": 310594
+    },
+    {
+      "path": "data/images/artist-Q191748/cranach-religious-image-skokloster.jpg",
+      "type": "thumbnail",
+      "bytes": 1081644
+    },
+    {
+      "path": "data/images/artist-Q191748/cranach-three-graces-1531.jpg",
+      "type": "thumbnail",
+      "bytes": 2029035
+    },
+    {
+      "path": "data/images/artist-Q191748/cranach-weimar-altarpiece.jpg",
+      "type": "thumbnail",
+      "bytes": 251607
+    },
+    {
+      "path": "data/images/artist-Q191748/index.json",
+      "type": "thumbnail",
+      "bytes": 9709
+    },
+    {
+      "path": "data/images/artist-Q192062/index.json",
+      "type": "thumbnail",
+      "bytes": 4117
+    },
+    {
+      "path": "data/images/artist-Q192062/murillo-adoration-of-the-magi-1655-1660.jpg",
+      "type": "thumbnail",
+      "bytes": 2849105
+    },
+    {
+      "path": "data/images/artist-Q192062/murillo-adoration-of-the-shepherds-1650.jpg",
+      "type": "thumbnail",
+      "bytes": 1810728
+    },
+    {
+      "path": "data/images/artist-Q192062/murillo-annunciation-1660.jpg",
+      "type": "thumbnail",
+      "bytes": 379501
+    },
+    {
+      "path": "data/images/artist-Q192062/murillo-grape-and-melon-eaters-1645-1650.jpg",
+      "type": "thumbnail",
+      "bytes": 621827
+    },
+    {
+      "path": "data/images/artist-Q192062/murillo-healing-of-the-paralytic-1670.jpg",
+      "type": "thumbnail",
+      "bytes": 1926859
+    },
+    {
+      "path": "data/images/artist-Q192062/murillo-holy-family-with-little-bird-1650.jpg",
+      "type": "thumbnail",
+      "bytes": 1106078
+    },
+    {
+      "path": "data/images/artist-Q192062/murillo-madonna-del-latte-1670.jpg",
+      "type": "thumbnail",
+      "bytes": 3893261
+    },
+    {
+      "path": "data/images/artist-Q192062/murillo-saint-ildefonso-1660.jpg",
+      "type": "thumbnail",
+      "bytes": 2007019
+    },
+    {
+      "path": "data/images/artist-Q192062/murillo-saint-peter-in-tears-1650-1655.jpg",
+      "type": "thumbnail",
+      "bytes": 2739750
+    },
+    {
+      "path": "data/images/artist-Q192062/murillo-the-young-beggar-1645-1650.jpeg",
+      "type": "thumbnail",
+      "bytes": 883534
+    },
+    {
+      "path": "data/images/artist-Q192062/murillo-two-women-at-a-window-1655-1660.jpg",
+      "type": "thumbnail",
+      "bytes": 4258797
+    },
+    {
+      "path": "data/images/artist-Q207929/pontormo-annunciation-1527-1528.jpg",
+      "type": "thumbnail",
+      "bytes": 115074
+    },
+    {
+      "path": "data/images/artist-Q207929/pontormo-deposition-from-the-cross-1525-1528.png",
+      "type": "thumbnail",
+      "bytes": 8327268
+    },
+    {
+      "path": "data/images/artist-Q207929/pontormo-joseph-in-egypt-1515-1518.jpg",
+      "type": "thumbnail",
+      "bytes": 319404
+    },
+    {
+      "path": "data/images/artist-Q207929/pontormo-madonna-and-child-young-john-1534.jpg",
+      "type": "thumbnail",
+      "bytes": 7790132
+    },
+    {
+      "path": "data/images/artist-Q207929/pontormo-portrait-maria-salviati-1543-1545.jpg",
+      "type": "thumbnail",
+      "bytes": 181806
+    },
+    {
+      "path": "data/images/artist-Q207929/pontormo-supper-at-emmaus-1525.jpg",
+      "type": "thumbnail",
+      "bytes": 7757528
+    },
+    {
+      "path": "data/images/artist-Q207929/pontormo-vertumnus-and-pomona-1520-1521.jpg",
+      "type": "thumbnail",
+      "bytes": 64319
+    },
+    {
+      "path": "data/images/artist-Q207929/pontormo-visitation-1514-1516.png",
+      "type": "thumbnail",
+      "bytes": 5473298
+    },
+    {
+      "path": "data/images/artist-Q207929/pontormo-visitation-carmignano-1528-1529.jpg",
+      "type": "thumbnail",
+      "bytes": 1981981
+    },
+    {
+      "path": "data/images/artist-Q209615/index.json",
+      "type": "thumbnail",
+      "bytes": 2185
+    },
+    {
+      "path": "data/images/artist-Q209615/zurbaran-body-of-saint-bonaventure.jpg",
+      "type": "thumbnail",
+      "bytes": 814653
+    },
+    {
+      "path": "data/images/artist-Q209615/zurbaran-crucifixion-with-a-painter.jpg",
+      "type": "thumbnail",
+      "bytes": 7168620
+    },
+    {
+      "path": "data/images/artist-Q209615/zurbaran-saint-bonaventure.jpg",
+      "type": "thumbnail",
+      "bytes": 161390
+    },
+    {
+      "path": "data/images/artist-Q209615/zurbaran-saint-francis-in-meditation.jpg",
+      "type": "thumbnail",
+      "bytes": 2735266
+    },
+    {
+      "path": "data/images/artist-Q209615/zurbaran-saint-francis-of-assisi.jpg",
+      "type": "thumbnail",
+      "bytes": 433621
+    },
+    {
+      "path": "data/images/artist-Q209615/zurbaran-saint-serapion-1628.jpg",
+      "type": "thumbnail",
+      "bytes": 2641397
+    },
+    {
       "path": "data/images/artist-Q213163/index.json",
       "type": "thumbnail",
-      "bytes": 11332
+      "bytes": 16312
     },
     {
       "path": "data/images/artist-Q213163/wikidata-Q104773738.jpg",
@@ -1390,7 +2650,7 @@
     {
       "path": "data/images/artist-Q213163/wikidata-Q18719540.jpg",
       "type": "thumbnail",
-      "bytes": 21715
+      "bytes": 3734330
     },
     {
       "path": "data/images/artist-Q213163/wikidata-Q18923677.jpg",
@@ -1411,6 +2671,11 @@
       "path": "data/images/artist-Q213163/wikidata-Q19005202.JPG",
       "type": "thumbnail",
       "bytes": 16995
+    },
+    {
+      "path": "data/images/artist-Q213163/wikidata-Q19005301.jpg",
+      "type": "thumbnail",
+      "bytes": 554833
     },
     {
       "path": "data/images/artist-Q213163/wikidata-Q19006513.jpg",
@@ -1578,6 +2843,11 @@
       "bytes": 17709
     },
     {
+      "path": "data/images/artist-Q213163/wikidata-Q81759330.jpg",
+      "type": "thumbnail",
+      "bytes": 371296
+    },
+    {
       "path": "data/images/artist-Q213163/wikidata-Q83507891.jpg",
       "type": "thumbnail",
       "bytes": 26957
@@ -1603,9 +2873,64 @@
       "bytes": 24630
     },
     {
+      "path": "data/images/artist-Q235547/local-carriera-gentleman-in-red.jpg",
+      "type": "thumbnail",
+      "bytes": 6131272
+    },
+    {
+      "path": "data/images/artist-Q235547/local-carriera-lady-in-turkish-costume.jpeg",
+      "type": "thumbnail",
+      "bytes": 3998339
+    },
+    {
+      "path": "data/images/artist-Q235547/local-carriera-maria-theresa.jpg",
+      "type": "thumbnail",
+      "bytes": 4957754
+    },
+    {
+      "path": "data/images/artist-Q235547/local-carriera-venetian-lady-barbarigo.jpg",
+      "type": "thumbnail",
+      "bytes": 3009165
+    },
+    {
+      "path": "data/images/artist-Q235547/local-carriera-woman-with-mask.jpg",
+      "type": "thumbnail",
+      "bytes": 148899
+    },
+    {
+      "path": "data/images/artist-Q235547/local-carriera-young-girl-with-monkey.jpg",
+      "type": "thumbnail",
+      "bytes": 133595
+    },
+    {
+      "path": "data/images/artist-Q297/index.json",
+      "type": "thumbnail",
+      "bytes": 1421
+    },
+    {
+      "path": "data/images/artist-Q297/velazquez-las-meninas-1656.jpg",
+      "type": "thumbnail",
+      "bytes": 4209608
+    },
+    {
+      "path": "data/images/artist-Q297/velazquez-portrait-pope-innocent-x-1650.jpg",
+      "type": "thumbnail",
+      "bytes": 2106113
+    },
+    {
+      "path": "data/images/artist-Q297/velazquez-rokeby-venus-1647-1651.png",
+      "type": "thumbnail",
+      "bytes": 6258661
+    },
+    {
+      "path": "data/images/artist-Q297/velazquez-surrender-of-breda-1634-1635.png",
+      "type": "thumbnail",
+      "bytes": 6525966
+    },
+    {
       "path": "data/images/artist-Q301/index.json",
       "type": "thumbnail",
-      "bytes": 13456
+      "bytes": 18303
     },
     {
       "path": "data/images/artist-Q301/wikidata-Q1114913.jpg",
@@ -1848,6 +3173,11 @@
       "bytes": 32447
     },
     {
+      "path": "data/images/artist-Q301/wikidata-Q6163991.jpg",
+      "type": "thumbnail",
+      "bytes": 44286
+    },
+    {
       "path": "data/images/artist-Q301/wikidata-Q617629.jpg",
       "type": "thumbnail",
       "bytes": 53599
@@ -1870,7 +3200,7 @@
     {
       "path": "data/images/artist-Q301/wikidata-Q883994.jpg",
       "type": "thumbnail",
-      "bytes": 23338
+      "bytes": 3154421
     },
     {
       "path": "data/images/artist-Q301/wikidata-Q9026835.jpg",
@@ -1903,9 +3233,314 @@
       "bytes": 57763
     },
     {
+      "path": "data/images/artist-Q312309/artist-Q312309-attributes-arts.jpg",
+      "type": "thumbnail",
+      "bytes": 2108416
+    },
+    {
+      "path": "data/images/artist-Q312309/artist-Q312309-attributes-sciences.jpg",
+      "type": "thumbnail",
+      "bytes": 410246
+    },
+    {
+      "path": "data/images/artist-Q312309/artist-Q312309-basket-peaches.jpg",
+      "type": "thumbnail",
+      "bytes": 152131
+    },
+    {
+      "path": "data/images/artist-Q312309/artist-Q312309-basket-plums.jpg",
+      "type": "thumbnail",
+      "bytes": 303769
+    },
+    {
+      "path": "data/images/artist-Q312309/artist-Q312309-good-education.jpg",
+      "type": "thumbnail",
+      "bytes": 2583264
+    },
+    {
+      "path": "data/images/artist-Q312309/artist-Q312309-governess.jpg",
+      "type": "thumbnail",
+      "bytes": 177520
+    },
+    {
+      "path": "data/images/artist-Q312309/artist-Q312309-jar-apricots.jpg",
+      "type": "thumbnail",
+      "bytes": 4144622
+    },
+    {
+      "path": "data/images/artist-Q312309/artist-Q312309-portrait-godefroy.jpg",
+      "type": "thumbnail",
+      "bytes": 2317416
+    },
+    {
+      "path": "data/images/artist-Q312309/artist-Q312309-prayer-before-meal.jpg",
+      "type": "thumbnail",
+      "bytes": 172985
+    },
+    {
+      "path": "data/images/artist-Q312309/artist-Q312309-soap-bubbles.jpg",
+      "type": "thumbnail",
+      "bytes": 53466
+    },
+    {
+      "path": "data/images/artist-Q312617/index.json",
+      "type": "thumbnail",
+      "bytes": 351
+    },
+    {
+      "path": "data/images/artist-Q312617/rosso-fiorentino-allegory-of-salvation-1522.png",
+      "type": "thumbnail",
+      "bytes": 8151005
+    },
+    {
+      "path": "data/images/artist-Q312617/rosso-fiorentino-angel-playing-the-lute-1521.jpg",
+      "type": "thumbnail",
+      "bytes": 8180566
+    },
+    {
+      "path": "data/images/artist-Q312617/rosso-fiorentino-bacchus-venus-cupid-1530s.jpg",
+      "type": "thumbnail",
+      "bytes": 578138
+    },
+    {
+      "path": "data/images/artist-Q312617/rosso-fiorentino-descent-from-cross-1521.jpg",
+      "type": "thumbnail",
+      "bytes": 328318
+    },
+    {
+      "path": "data/images/artist-Q312617/rosso-fiorentino-elephant-fontainebleau-1533-1539.jpg",
+      "type": "thumbnail",
+      "bytes": 270915
+    },
+    {
+      "path": "data/images/artist-Q312617/rosso-fiorentino-holy-family-infant-saint-john-1521.jpg",
+      "type": "thumbnail",
+      "bytes": 3162100
+    },
+    {
+      "path": "data/images/artist-Q312617/rosso-fiorentino-infant-saint-john-1521.jpg",
+      "type": "thumbnail",
+      "bytes": 2765886
+    },
+    {
+      "path": "data/images/artist-Q312617/rosso-fiorentino-marriage-virgin-saints-1523.jpg",
+      "type": "thumbnail",
+      "bytes": 2519900
+    },
+    {
+      "path": "data/images/artist-Q312617/rosso-fiorentino-moses-daughters-jethro-1523.jpg",
+      "type": "thumbnail",
+      "bytes": 384298
+    },
+    {
+      "path": "data/images/artist-Q312617/rosso-fiorentino-pieta-1537-1540.jpg",
+      "type": "thumbnail",
+      "bytes": 185433
+    },
+    {
+      "path": "data/images/artist-Q313122/artist-Q313122-diana-leaving-bath.jpg",
+      "type": "thumbnail",
+      "bytes": 3038618
+    },
+    {
+      "path": "data/images/artist-Q313122/artist-Q313122-pastoral-landscape.jpg",
+      "type": "thumbnail",
+      "bytes": 394509
+    },
+    {
+      "path": "data/images/artist-Q313122/artist-Q313122-pompadour-1756.jpg",
+      "type": "thumbnail",
+      "bytes": 2601187
+    },
+    {
+      "path": "data/images/artist-Q313122/artist-Q313122-pompadour-1759.jpg",
+      "type": "thumbnail",
+      "bytes": 1445827
+    },
+    {
+      "path": "data/images/artist-Q313122/artist-Q313122-representative-work.jpg",
+      "type": "thumbnail",
+      "bytes": 3492819
+    },
+    {
+      "path": "data/images/artist-Q313122/artist-Q313122-resting-girl.png",
+      "type": "thumbnail",
+      "bytes": 7406424
+    },
+    {
+      "path": "data/images/artist-Q313122/artist-Q313122-triumph-of-venus.jpg",
+      "type": "thumbnail",
+      "bytes": 3036460
+    },
+    {
+      "path": "data/images/artist-Q313122/artist-Q313122-venus-consoling-love.jpg",
+      "type": "thumbnail",
+      "bytes": 5284150
+    },
+    {
+      "path": "data/images/artist-Q313122/artist-Q313122-vulcan-venus-arms.jpg",
+      "type": "thumbnail",
+      "bytes": 129903
+    },
+    {
+      "path": "data/images/artist-Q313898/artist-Q313898-angora-cat.jfif",
+      "type": "thumbnail",
+      "bytes": 2172358
+    },
+    {
+      "path": "data/images/artist-Q313898/artist-Q313898-aurora-over-night.jpg",
+      "type": "thumbnail",
+      "bytes": 459733
+    },
+    {
+      "path": "data/images/artist-Q313898/artist-Q313898-bathers.jfif",
+      "type": "thumbnail",
+      "bytes": 2674322
+    },
+    {
+      "path": "data/images/artist-Q313898/artist-Q313898-blind-mans-bluff.jpg",
+      "type": "thumbnail",
+      "bytes": 3173740
+    },
+    {
+      "path": "data/images/artist-Q313898/artist-Q313898-coresus-callirhoe.jpg",
+      "type": "thumbnail",
+      "bytes": 2299411
+    },
+    {
+      "path": "data/images/artist-Q313898/artist-Q313898-girl-with-dog.jpg",
+      "type": "thumbnail",
+      "bytes": 3220845
+    },
+    {
+      "path": "data/images/artist-Q313898/artist-Q313898-musical-contest.jpg",
+      "type": "thumbnail",
+      "bytes": 708574
+    },
+    {
+      "path": "data/images/artist-Q313898/artist-Q313898-progress-of-love-meeting.jpg",
+      "type": "thumbnail",
+      "bytes": 5373719
+    },
+    {
+      "path": "data/images/artist-Q313898/artist-Q313898-representative-work.jpg",
+      "type": "thumbnail",
+      "bytes": 2978681
+    },
+    {
+      "path": "data/images/artist-Q313898/artist-Q313898-see-saw.jpg",
+      "type": "thumbnail",
+      "bytes": 2303196
+    },
+    {
+      "path": "data/images/artist-Q313898/artist-Q313898-stolen-kiss.jpg",
+      "type": "thumbnail",
+      "bytes": 3173937
+    },
+    {
+      "path": "data/images/artist-Q329811/bloemaert-apollo-diana-niobe-1591.jpg",
+      "type": "thumbnail",
+      "bytes": 47756
+    },
+    {
+      "path": "data/images/artist-Q329811/bloemaert-expulsion-of-hagar-and-ishmael.jpg",
+      "type": "thumbnail",
+      "bytes": 1277767
+    },
+    {
+      "path": "data/images/artist-Q329811/bloemaert-john-the-baptist-preaching-1620.jpg",
+      "type": "thumbnail",
+      "bytes": 66720
+    },
+    {
+      "path": "data/images/artist-Q329811/bloemaert-landscape-vegetables-foreground.jpg",
+      "type": "thumbnail",
+      "bytes": 69332
+    },
+    {
+      "path": "data/images/artist-Q329811/bloemaert-landscape-with-peasants-resting-1650.jpg",
+      "type": "thumbnail",
+      "bytes": 84786
+    },
+    {
+      "path": "data/images/artist-Q329811/bloemaert-moses-striking-the-rock-1596.jpg",
+      "type": "thumbnail",
+      "bytes": 45873
+    },
+    {
+      "path": "data/images/artist-Q329811/bloemaert-parable-wheat-and-tares-1624.jpg",
+      "type": "thumbnail",
+      "bytes": 381714
+    },
+    {
+      "path": "data/images/artist-Q329811/index.json",
+      "type": "thumbnail",
+      "bytes": 1663
+    },
+    {
+      "path": "data/images/artist-Q333366/primaticcio-holy-family-st-elizabeth-john-baptist-1541-1543.jpg",
+      "type": "thumbnail",
+      "bytes": 2072435
+    },
+    {
+      "path": "data/images/artist-Q333366/primaticcio-rape-of-helen-1530-1539.jpg",
+      "type": "thumbnail",
+      "bytes": 1137372
+    },
+    {
+      "path": "data/images/artist-Q333366/primaticcio-ulysses-and-penelope-1545.jpg",
+      "type": "thumbnail",
+      "bytes": 187554
+    },
+    {
+      "path": "data/images/artist-Q336747/francois-clouet-a-lady-in-her-bath-1571.jpg",
+      "type": "thumbnail",
+      "bytes": 1197988
+    },
+    {
+      "path": "data/images/artist-Q336747/francois-clouet-elisabeth-of-austria-1571.png",
+      "type": "thumbnail",
+      "bytes": 5895233
+    },
+    {
+      "path": "data/images/artist-Q336747/francois-clouet-equestrian-portrait-francis-i-ca-1540.jpg",
+      "type": "thumbnail",
+      "bytes": 190122
+    },
+    {
+      "path": "data/images/artist-Q336747/francois-clouet-le-billet-doux-ca-1570.jpg",
+      "type": "thumbnail",
+      "bytes": 7984618
+    },
+    {
+      "path": "data/images/artist-Q336747/francois-clouet-portrait-charles-ix-ca-1560.jpg",
+      "type": "thumbnail",
+      "bytes": 1128630
+    },
+    {
+      "path": "data/images/artist-Q378800/clouet-dauphin-francois-1520-1525.jpg",
+      "type": "thumbnail",
+      "bytes": 257724
+    },
+    {
+      "path": "data/images/artist-Q378800/clouet-portrait-francis-i-1525-1550.jpg",
+      "type": "thumbnail",
+      "bytes": 1670833
+    },
+    {
+      "path": "data/images/artist-Q378800/clouet-portrait-of-a-banker-1522.jpg",
+      "type": "thumbnail",
+      "bytes": 213798
+    },
+    {
+      "path": "data/images/artist-Q378800/clouet-school-portrait-claude-of-france-ca-1520.jpg",
+      "type": "thumbnail",
+      "bytes": 5054462
+    },
+    {
       "path": "data/images/artist-Q40599/index.json",
       "type": "thumbnail",
-      "bytes": 15125
+      "bytes": 30696
     },
     {
       "path": "data/images/artist-Q40599/wikidata-Q113262.jpg",
@@ -1935,7 +3570,12 @@
     {
       "path": "data/images/artist-Q40599/wikidata-Q1245354.jpg",
       "type": "thumbnail",
-      "bytes": 33929
+      "bytes": 777829
+    },
+    {
+      "path": "data/images/artist-Q40599/wikidata-Q1245431.jpg",
+      "type": "thumbnail",
+      "bytes": 296256
     },
     {
       "path": "data/images/artist-Q40599/wikidata-Q126467.jpg",
@@ -1953,6 +3593,21 @@
       "bytes": 18475
     },
     {
+      "path": "data/images/artist-Q40599/wikidata-Q154653.jpg",
+      "type": "thumbnail",
+      "bytes": 423898
+    },
+    {
+      "path": "data/images/artist-Q40599/wikidata-Q1551926.jpg",
+      "type": "thumbnail",
+      "bytes": 895589
+    },
+    {
+      "path": "data/images/artist-Q40599/wikidata-Q15917726.jpg",
+      "type": "thumbnail",
+      "bytes": 199696
+    },
+    {
       "path": "data/images/artist-Q40599/wikidata-Q15973357.jpg",
       "type": "thumbnail",
       "bytes": 12741
@@ -1961,6 +3616,11 @@
       "path": "data/images/artist-Q40599/wikidata-Q1632817.jpg",
       "type": "thumbnail",
       "bytes": 274638
+    },
+    {
+      "path": "data/images/artist-Q40599/wikidata-Q17495108.jpg",
+      "type": "thumbnail",
+      "bytes": 82354
     },
     {
       "path": "data/images/artist-Q40599/wikidata-Q1810341.jpg",
@@ -2003,9 +3663,19 @@
       "bytes": 20224
     },
     {
+      "path": "data/images/artist-Q40599/wikidata-Q2494850.jpg",
+      "type": "thumbnail",
+      "bytes": 52491
+    },
+    {
       "path": "data/images/artist-Q40599/wikidata-Q2529703.jpg",
       "type": "thumbnail",
       "bytes": 24894
+    },
+    {
+      "path": "data/images/artist-Q40599/wikidata-Q26250.jpg",
+      "type": "thumbnail",
+      "bytes": 507118
     },
     {
       "path": "data/images/artist-Q40599/wikidata-Q26689493.jpg",
@@ -2028,6 +3698,11 @@
       "bytes": 18564
     },
     {
+      "path": "data/images/artist-Q40599/wikidata-Q2974978.jpg",
+      "type": "thumbnail",
+      "bytes": 57715
+    },
+    {
       "path": "data/images/artist-Q40599/wikidata-Q2977843.jpg",
       "type": "thumbnail",
       "bytes": 19721
@@ -2048,6 +3723,21 @@
       "bytes": 7684
     },
     {
+      "path": "data/images/artist-Q40599/wikidata-Q3205630.jpg",
+      "type": "thumbnail",
+      "bytes": 983296
+    },
+    {
+      "path": "data/images/artist-Q40599/wikidata-Q3222563.jpg",
+      "type": "thumbnail",
+      "bytes": 118320
+    },
+    {
+      "path": "data/images/artist-Q40599/wikidata-Q3224381.jpg",
+      "type": "thumbnail",
+      "bytes": 439290
+    },
+    {
       "path": "data/images/artist-Q40599/wikidata-Q3227448.jpg",
       "type": "thumbnail",
       "bytes": 21524
@@ -2058,9 +3748,19 @@
       "bytes": 61000
     },
     {
+      "path": "data/images/artist-Q40599/wikidata-Q3505997.jpg",
+      "type": "thumbnail",
+      "bytes": 313421
+    },
+    {
       "path": "data/images/artist-Q40599/wikidata-Q39226.jpg",
       "type": "thumbnail",
       "bytes": 34145
+    },
+    {
+      "path": "data/images/artist-Q40599/wikidata-Q4373335.jpg",
+      "type": "thumbnail",
+      "bytes": 45185
     },
     {
       "path": "data/images/artist-Q40599/wikidata-Q44124.jpg",
@@ -2086,6 +3786,11 @@
       "path": "data/images/artist-Q40599/wikidata-Q661803.jpg",
       "type": "thumbnail",
       "bytes": 22116
+    },
+    {
+      "path": "data/images/artist-Q40599/wikidata-Q665028.jpg",
+      "type": "thumbnail",
+      "bytes": 1323773
     },
     {
       "path": "data/images/artist-Q40599/wikidata-Q72650.jpg",
@@ -2118,6 +3823,11 @@
       "bytes": 30849
     },
     {
+      "path": "data/images/artist-Q40599/wikidata-Q7759156.jpg",
+      "type": "thumbnail",
+      "bytes": 314006
+    },
+    {
       "path": "data/images/artist-Q40599/wikidata-Q942276.jpg",
       "type": "thumbnail",
       "bytes": 35666
@@ -2125,12 +3835,17 @@
     {
       "path": "data/images/artist-Q40599/wikidata-Q942523.jpg",
       "type": "thumbnail",
-      "bytes": 77398
+      "bytes": 1997839
+    },
+    {
+      "path": "data/images/artist-Q40599/wikidata-Q957664.jpg",
+      "type": "thumbnail",
+      "bytes": 207472
     },
     {
       "path": "data/images/artist-Q41264/index.json",
       "type": "thumbnail",
-      "bytes": 6854
+      "bytes": 9776
     },
     {
       "path": "data/images/artist-Q41264/wikidata-Q1169395.jpg",
@@ -2168,9 +3883,9 @@
       "bytes": 20789
     },
     {
-      "path": "data/images/artist-Q41264/wikidata-Q185372.jpg",
+      "path": "data/images/artist-Q41264/wikidata-Q185372.png",
       "type": "thumbnail",
-      "bytes": 20185
+      "bytes": 7898294
     },
     {
       "path": "data/images/artist-Q41264/wikidata-Q2267440.jpg",
@@ -2313,9 +4028,129 @@
       "bytes": 17170
     },
     {
+      "path": "data/images/artist-Q41554/index.json",
+      "type": "thumbnail",
+      "bytes": 8208
+    },
+    {
+      "path": "data/images/artist-Q41554/poussin-acis-and-galatea-1629.jpg",
+      "type": "thumbnail",
+      "bytes": 1266618
+    },
+    {
+      "path": "data/images/artist-Q41554/poussin-apollo-and-daphne-1664.jpg",
+      "type": "thumbnail",
+      "bytes": 158637
+    },
+    {
+      "path": "data/images/artist-Q41554/poussin-bacchanal-1631-1633.jpg",
+      "type": "thumbnail",
+      "bytes": 1113422
+    },
+    {
+      "path": "data/images/artist-Q41554/poussin-birth-of-venus-1635-1636.jpg",
+      "type": "thumbnail",
+      "bytes": 6591445
+    },
+    {
+      "path": "data/images/artist-Q41554/poussin-cephalus-and-aurora-1627-1630.jpg",
+      "type": "thumbnail",
+      "bytes": 154187
+    },
+    {
+      "path": "data/images/artist-Q41554/poussin-death-of-germanicus-1627.jpg",
+      "type": "thumbnail",
+      "bytes": 4211370
+    },
+    {
+      "path": "data/images/artist-Q41554/poussin-death-of-sapphira-1653.jpg",
+      "type": "thumbnail",
+      "bytes": 214007
+    },
+    {
+      "path": "data/images/artist-Q41554/poussin-discovery-of-achilles-on-skyros-1656.jpg",
+      "type": "thumbnail",
+      "bytes": 142321
+    },
+    {
+      "path": "data/images/artist-Q41554/poussin-et-in-arcadia-ego-1637-1638.jpg",
+      "type": "thumbnail",
+      "bytes": 5011116
+    },
+    {
+      "path": "data/images/artist-Q41554/poussin-holy-family-1649.jpg",
+      "type": "thumbnail",
+      "bytes": 880171
+    },
+    {
+      "path": "data/images/artist-Q41554/poussin-judgment-of-solomon-1649.jpg",
+      "type": "thumbnail",
+      "bytes": 131443
+    },
+    {
+      "path": "data/images/artist-Q41554/poussin-landscape-with-a-calm-1650-1651.jpg",
+      "type": "thumbnail",
+      "bytes": 3846048
+    },
+    {
+      "path": "data/images/artist-Q41554/poussin-mars-and-venus-1630.jpg",
+      "type": "thumbnail",
+      "bytes": 6052302
+    },
+    {
+      "path": "data/images/artist-Q41554/poussin-martyrdom-of-saint-erasmus-1628-1629.jpg",
+      "type": "thumbnail",
+      "bytes": 272497
+    },
+    {
+      "path": "data/images/artist-Q41554/poussin-massacre-of-the-innocents-1630.jpg",
+      "type": "thumbnail",
+      "bytes": 7077246
+    },
+    {
+      "path": "data/images/artist-Q41554/poussin-miracle-of-saint-francis-xavier-1641-1642.jpg",
+      "type": "thumbnail",
+      "bytes": 308855
+    },
+    {
+      "path": "data/images/artist-Q41554/poussin-rape-of-the-sabine-women-1637-1638.jpg",
+      "type": "thumbnail",
+      "bytes": 2770652
+    },
+    {
+      "path": "data/images/artist-Q41554/poussin-sacrament-of-ordination-1636-1640.jpg",
+      "type": "thumbnail",
+      "bytes": 1698964
+    },
+    {
+      "path": "data/images/artist-Q41554/poussin-spring-1660-1664.jpg",
+      "type": "thumbnail",
+      "bytes": 275895
+    },
+    {
+      "path": "data/images/artist-Q41554/poussin-summer-ruth-and-boaz-1660-1664.jpg",
+      "type": "thumbnail",
+      "bytes": 798251
+    },
+    {
+      "path": "data/images/artist-Q41554/poussin-time-rescuing-truth-1641.jpg",
+      "type": "thumbnail",
+      "bytes": 409149
+    },
+    {
+      "path": "data/images/artist-Q41554/poussin-triumph-of-pan-1636.jpg",
+      "type": "thumbnail",
+      "bytes": 4253539
+    },
+    {
+      "path": "data/images/artist-Q41554/poussin-victory-of-joshua-over-amorites-1625-1626.jpg",
+      "type": "thumbnail",
+      "bytes": 182337
+    },
+    {
       "path": "data/images/artist-Q43270/index.json",
       "type": "thumbnail",
-      "bytes": 11338
+      "bytes": 20042
     },
     {
       "path": "data/images/artist-Q43270/wikidata-Q1087244.jpg",
@@ -2443,19 +4278,9 @@
       "bytes": 19079
     },
     {
-      "path": "data/images/artist-Q43270/wikidata-Q375216.jpg",
-      "type": "thumbnail",
-      "bytes": 18346
-    },
-    {
       "path": "data/images/artist-Q43270/wikidata-Q3772184.jpg",
       "type": "thumbnail",
       "bytes": 22752
-    },
-    {
-      "path": "data/images/artist-Q43270/wikidata-Q3855265.jpg",
-      "type": "thumbnail",
-      "bytes": 24067
     },
     {
       "path": "data/images/artist-Q43270/wikidata-Q3863232.jpg",
@@ -2476,6 +4301,11 @@
       "path": "data/images/artist-Q43270/wikidata-Q4009224.jpg",
       "type": "thumbnail",
       "bytes": 14336
+    },
+    {
+      "path": "data/images/artist-Q43270/wikidata-Q4258682.jpg",
+      "type": "thumbnail",
+      "bytes": 632598
     },
     {
       "path": "data/images/artist-Q43270/wikidata-Q4680634.jpg",
@@ -2563,9 +4393,9 @@
       "bytes": 19121
     },
     {
-      "path": "data/images/artist-Q43270/wikidata-Q699091.jpg",
+      "path": "data/images/artist-Q43270/wikidata-Q699091.png",
       "type": "thumbnail",
-      "bytes": 22417
+      "bytes": 7862054
     },
     {
       "path": "data/images/artist-Q43270/wikidata-Q776175.jpg",
@@ -2590,32 +4420,447 @@
     {
       "path": "data/images/artist-Q43270/wikipedia-Q43270-0.jpg",
       "type": "thumbnail",
-      "bytes": 25142
-    },
-    {
-      "path": "data/images/artist-Q43270/wikipedia-Q43270-1.jpg",
-      "type": "thumbnail",
-      "bytes": 25142
-    },
-    {
-      "path": "data/images/artist-Q43270/wikipedia-Q43270-2.jpg",
-      "type": "thumbnail",
-      "bytes": 25142
-    },
-    {
-      "path": "data/images/artist-Q43270/wikipedia-Q43270-3.jpg",
-      "type": "thumbnail",
-      "bytes": 25142
+      "bytes": 23267
     },
     {
       "path": "data/images/artist-Q43270/wikipedia-Q43270-4.jpg",
       "type": "thumbnail",
-      "bytes": 25142
+      "bytes": 18346
+    },
+    {
+      "path": "data/images/artist-Q442484/cornelis-van-haarlem-fall-of-ixion-1588.jpg",
+      "type": "thumbnail",
+      "bytes": 48047
+    },
+    {
+      "path": "data/images/artist-Q442484/cornelis-van-haarlem-fall-of-man-1592.jpg",
+      "type": "thumbnail",
+      "bytes": 67261
+    },
+    {
+      "path": "data/images/artist-Q442484/cornelis-van-haarlem-fall-of-the-titans-1588-1590.jpg",
+      "type": "thumbnail",
+      "bytes": 336686
+    },
+    {
+      "path": "data/images/artist-Q442484/cornelis-van-haarlem-first-family-1582-1592.jpg",
+      "type": "thumbnail",
+      "bytes": 46176
+    },
+    {
+      "path": "data/images/artist-Q442484/cornelis-van-haarlem-hercules-and-achelous-1590.jpg",
+      "type": "thumbnail",
+      "bytes": 256143
+    },
+    {
+      "path": "data/images/artist-Q442484/cornelis-van-haarlem-massacre-of-the-innocents-1590.jpg",
+      "type": "thumbnail",
+      "bytes": 55489
+    },
+    {
+      "path": "data/images/artist-Q442484/cornelis-van-haarlem-wedding-of-peleus-and-thetis-1592-1593.jpg",
+      "type": "thumbnail",
+      "bytes": 469941
+    },
+    {
+      "path": "data/images/artist-Q442484/index.json",
+      "type": "thumbnail",
+      "bytes": 2056
+    },
+    {
+      "path": "data/images/artist-Q447682/index.json",
+      "type": "thumbnail",
+      "bytes": 676
+    },
+    {
+      "path": "data/images/artist-Q447682/spranger-hercules-deianira-centaur-nessus-1580-1585.jpg",
+      "type": "thumbnail",
+      "bytes": 634692
+    },
+    {
+      "path": "data/images/artist-Q447682/spranger-mercury-carries-psyche-to-mount-olympus-1576.jpg",
+      "type": "thumbnail",
+      "bytes": 5770301
+    },
+    {
+      "path": "data/images/artist-Q447682/spranger-minerva-victorious-over-ignorance-1591.jpg",
+      "type": "thumbnail",
+      "bytes": 3271843
+    },
+    {
+      "path": "data/images/artist-Q447682/spranger-venus-and-adonis-1585-1590.jpg",
+      "type": "thumbnail",
+      "bytes": 100983
+    },
+    {
+      "path": "data/images/artist-Q447682/spranger-venus-in-vulcans-forge-1610.jpg",
+      "type": "thumbnail",
+      "bytes": 4725795
+    },
+    {
+      "path": "data/images/artist-Q47551/index.json",
+      "type": "thumbnail",
+      "bytes": 17351
+    },
+    {
+      "path": "data/images/artist-Q47551/manual-danae-capodimonte-1544.jpg",
+      "type": "thumbnail",
+      "bytes": 211184
+    },
+    {
+      "path": "data/images/artist-Q47551/manual-danae-hermitage-1554.jpg",
+      "type": "thumbnail",
+      "bytes": 292001
+    },
+    {
+      "path": "data/images/artist-Q47551/manual-danae-wellington-1553.jpg",
+      "type": "thumbnail",
+      "bytes": 327885
+    },
+    {
+      "path": "data/images/artist-Q47551/manual-local-1787195653407.jpg",
+      "type": "thumbnail",
+      "bytes": 6835472
+    },
+    {
+      "path": "data/images/artist-Q47551/manual-local-1787199069405.png",
+      "type": "thumbnail",
+      "bytes": 6825894
+    },
+    {
+      "path": "data/images/artist-Q47551/manual-local-1787199178627.jpg",
+      "type": "thumbnail",
+      "bytes": 100400
+    },
+    {
+      "path": "data/images/artist-Q47551/manual-local-1787200079077.jpg",
+      "type": "thumbnail",
+      "bytes": 416715
+    },
+    {
+      "path": "data/images/artist-Q47551/manual-local-1787200303226.jpg",
+      "type": "thumbnail",
+      "bytes": 180298
+    },
+    {
+      "path": "data/images/artist-Q47551/manual-rustic-idyll-1507.jpg",
+      "type": "thumbnail",
+      "bytes": 274033
+    },
+    {
+      "path": "data/images/artist-Q47551/manual-saint-jerome-1556.jpg",
+      "type": "thumbnail",
+      "bytes": 165896
+    },
+    {
+      "path": "data/images/artist-Q47551/manual-the-glory-1551.jpg",
+      "type": "thumbnail",
+      "bytes": 2152057
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q10296499.jpg",
+      "type": "thumbnail",
+      "bytes": 121092
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q1123378.jpg",
+      "type": "thumbnail",
+      "bytes": 1285394
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q1206860.jpg",
+      "type": "thumbnail",
+      "bytes": 429143
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q1238886.jpg",
+      "type": "thumbnail",
+      "bytes": 51066
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q14425553.jpg",
+      "type": "thumbnail",
+      "bytes": 304679
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q15008032.jpg",
+      "type": "thumbnail",
+      "bytes": 51783
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q15974339.jpg",
+      "type": "thumbnail",
+      "bytes": 66125
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q1633898.jpg",
+      "type": "thumbnail",
+      "bytes": 42555
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q1652981.jpg",
+      "type": "thumbnail",
+      "bytes": 713175
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q18002417.jpg",
+      "type": "thumbnail",
+      "bytes": 60162
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q180632.jpg",
+      "type": "thumbnail",
+      "bytes": 318869
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q1848811.jpg",
+      "type": "thumbnail",
+      "bytes": 43919
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q23922.jpg",
+      "type": "thumbnail",
+      "bytes": 534599
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q24090.jpg",
+      "type": "thumbnail",
+      "bytes": 238392
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q24249.jpg",
+      "type": "thumbnail",
+      "bytes": 55887
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q2459887.jpg",
+      "type": "thumbnail",
+      "bytes": 77800
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q2466780.jpg",
+      "type": "thumbnail",
+      "bytes": 735695
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q2528145.jpg",
+      "type": "thumbnail",
+      "bytes": 470250
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q2528177.jpg",
+      "type": "thumbnail",
+      "bytes": 55645
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q2609585.jpg",
+      "type": "thumbnail",
+      "bytes": 125323
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q2898121.jpg",
+      "type": "thumbnail",
+      "bytes": 83531
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q2920183.jpg",
+      "type": "thumbnail",
+      "bytes": 162798
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q3495790.jpg",
+      "type": "thumbnail",
+      "bytes": 1488330
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q3632485.jpg",
+      "type": "thumbnail",
+      "bytes": 60361
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q3686086.jpg",
+      "type": "thumbnail",
+      "bytes": 447410
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q3743879.jpg",
+      "type": "thumbnail",
+      "bytes": 71666
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q3784247.jpg",
+      "type": "thumbnail",
+      "bytes": 72493
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q3877895.jpg",
+      "type": "thumbnail",
+      "bytes": 63777
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q3925598.jpg",
+      "type": "thumbnail",
+      "bytes": 431818
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q3937410.jpg",
+      "type": "thumbnail",
+      "bytes": 42206
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q3937643.jpg",
+      "type": "thumbnail",
+      "bytes": 62054
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q3998115.jpg",
+      "type": "thumbnail",
+      "bytes": 45374
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q4008601.jpg",
+      "type": "thumbnail",
+      "bytes": 67456
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q4161055.jpg",
+      "type": "thumbnail",
+      "bytes": 69853
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q500812.jpg",
+      "type": "thumbnail",
+      "bytes": 337681
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q572697.jpg",
+      "type": "thumbnail",
+      "bytes": 773673
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q603703.jpg",
+      "type": "thumbnail",
+      "bytes": 5110901
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q653930.jpg",
+      "type": "thumbnail",
+      "bytes": 169707
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q698993.jpg",
+      "type": "thumbnail",
+      "bytes": 64676
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q727875.jpg",
+      "type": "thumbnail",
+      "bytes": 1029828
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q7401482.jpg",
+      "type": "thumbnail",
+      "bytes": 89887
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q7920648.jpg",
+      "type": "thumbnail",
+      "bytes": 574631
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q794077.jpg",
+      "type": "thumbnail",
+      "bytes": 197270
+    },
+    {
+      "path": "data/images/artist-Q47551/wikidata-Q973260.jpg",
+      "type": "thumbnail",
+      "bytes": 1252661
+    },
+    {
+      "path": "data/images/artist-Q48319/holbein-ambassadors-1533.jpg",
+      "type": "thumbnail",
+      "bytes": 1017265
+    },
+    {
+      "path": "data/images/artist-Q48319/holbein-darmstadt-madonna.jpg",
+      "type": "thumbnail",
+      "bytes": 5985823
+    },
+    {
+      "path": "data/images/artist-Q48319/holbein-dead-christ-tomb.jpeg",
+      "type": "thumbnail",
+      "bytes": 2046573
+    },
+    {
+      "path": "data/images/artist-Q48319/holbein-erasmus-1523.jpg",
+      "type": "thumbnail",
+      "bytes": 2749352
+    },
+    {
+      "path": "data/images/artist-Q48319/holbein-georg-gisze-1532.jpg",
+      "type": "thumbnail",
+      "bytes": 1202955
+    },
+    {
+      "path": "data/images/artist-Q48319/holbein-self-portrait.jpg",
+      "type": "thumbnail",
+      "bytes": 3809476
+    },
+    {
+      "path": "data/images/artist-Q48319/holbein-solothurn-madonna.jpg",
+      "type": "thumbnail",
+      "bytes": 450800
+    },
+    {
+      "path": "data/images/artist-Q48319/index.json",
+      "type": "thumbnail",
+      "bytes": 2915
+    },
+    {
+      "path": "data/images/artist-Q5580/durer-adoration-of-the-trinity.jpg",
+      "type": "thumbnail",
+      "bytes": 243275
+    },
+    {
+      "path": "data/images/artist-Q5580/durer-four-horsemen.jpg",
+      "type": "thumbnail",
+      "bytes": 2855855
+    },
+    {
+      "path": "data/images/artist-Q5580/durer-hieronymus-holzschuher.png",
+      "type": "thumbnail",
+      "bytes": 6947807
+    },
+    {
+      "path": "data/images/artist-Q5580/durer-knight-death-and-the-devil.png",
+      "type": "thumbnail",
+      "bytes": 6562112
+    },
+    {
+      "path": "data/images/artist-Q5580/durer-praying-hands.jpg",
+      "type": "thumbnail",
+      "bytes": 1440736
+    },
+    {
+      "path": "data/images/artist-Q5580/durer-self-portrait-1498.jpg",
+      "type": "thumbnail",
+      "bytes": 5397840
+    },
+    {
+      "path": "data/images/artist-Q5580/durer-self-portrait-1500.jpg",
+      "type": "thumbnail",
+      "bytes": 646518
+    },
+    {
+      "path": "data/images/artist-Q5580/index.json",
+      "type": "thumbnail",
+      "bytes": 3360
     },
     {
       "path": "data/images/artist-Q5592/index.json",
       "type": "thumbnail",
-      "bytes": 14178
+      "bytes": 20744
     },
     {
       "path": "data/images/artist-Q5592/michelangelo-bacchus.jpg",
@@ -2631,6 +4876,11 @@
       "path": "data/images/artist-Q5592/michelangelo-creation-adam.jpg",
       "type": "thumbnail",
       "bytes": 12518
+    },
+    {
+      "path": "data/images/artist-Q5592/michelangelo-creation-of-adam.jpg",
+      "type": "thumbnail",
+      "bytes": 647379
     },
     {
       "path": "data/images/artist-Q5592/michelangelo-crucifixion-st-peter.jpg",
@@ -2698,6 +4948,11 @@
       "bytes": 20754
     },
     {
+      "path": "data/images/artist-Q5592/wikidata-Q1985071.jpg",
+      "type": "thumbnail",
+      "bytes": 232828
+    },
+    {
       "path": "data/images/artist-Q5592/wikidata-Q1985154.jpg",
       "type": "thumbnail",
       "bytes": 17329
@@ -2726,6 +4981,11 @@
       "path": "data/images/artist-Q5592/wikidata-Q2280603.JPG",
       "type": "thumbnail",
       "bytes": 22474
+    },
+    {
+      "path": "data/images/artist-Q5592/wikidata-Q2313006.jpg",
+      "type": "thumbnail",
+      "bytes": 485667
     },
     {
       "path": "data/images/artist-Q5592/wikidata-Q2327759.jpg",
@@ -2791,11 +5051,6 @@
       "path": "data/images/artist-Q5592/wikidata-Q2500541.jpg",
       "type": "thumbnail",
       "bytes": 15133
-    },
-    {
-      "path": "data/images/artist-Q5592/wikidata-Q2500548.JPG",
-      "type": "thumbnail",
-      "bytes": 24949
     },
     {
       "path": "data/images/artist-Q5592/wikidata-Q2626926.jpg",
@@ -2888,6 +5143,11 @@
       "bytes": 12431
     },
     {
+      "path": "data/images/artist-Q5592/wikidata-Q596683.jpg",
+      "type": "thumbnail",
+      "bytes": 187752
+    },
+    {
       "path": "data/images/artist-Q5592/wikidata-Q651551.jpg",
       "type": "thumbnail",
       "bytes": 30013
@@ -2908,19 +5168,9 @@
       "bytes": 23178
     },
     {
-      "path": "data/images/artist-Q5592/wikipedia-Q5592-0.jpg",
-      "type": "thumbnail",
-      "bytes": 25427
-    },
-    {
       "path": "data/images/artist-Q5592/wikipedia-Q5592-1.jpg",
       "type": "thumbnail",
-      "bytes": 25427
-    },
-    {
-      "path": "data/images/artist-Q5592/wikipedia-Q5592-10.jpg",
-      "type": "thumbnail",
-      "bytes": 25427
+      "bytes": 24949
     },
     {
       "path": "data/images/artist-Q5592/wikipedia-Q5592-11.jpg",
@@ -2928,64 +5178,39 @@
       "bytes": 25427
     },
     {
-      "path": "data/images/artist-Q5592/wikipedia-Q5592-12.jpg",
-      "type": "thumbnail",
-      "bytes": 25427
-    },
-    {
-      "path": "data/images/artist-Q5592/wikipedia-Q5592-13.jpg",
-      "type": "thumbnail",
-      "bytes": 25427
-    },
-    {
-      "path": "data/images/artist-Q5592/wikipedia-Q5592-14.jpg",
-      "type": "thumbnail",
-      "bytes": 25427
-    },
-    {
-      "path": "data/images/artist-Q5592/wikipedia-Q5592-15.jpg",
-      "type": "thumbnail",
-      "bytes": 25427
-    },
-    {
       "path": "data/images/artist-Q5592/wikipedia-Q5592-2.jpg",
       "type": "thumbnail",
-      "bytes": 25427
-    },
-    {
-      "path": "data/images/artist-Q5592/wikipedia-Q5592-3.jpg",
-      "type": "thumbnail",
-      "bytes": 25427
+      "bytes": 33359
     },
     {
       "path": "data/images/artist-Q5592/wikipedia-Q5592-4.jpg",
       "type": "thumbnail",
-      "bytes": 25427
+      "bytes": 30153
     },
     {
-      "path": "data/images/artist-Q5592/wikipedia-Q5592-5.jpg",
+      "path": "data/images/artist-Q5592/wikipedia-Q5592-6.jpg",
       "type": "thumbnail",
-      "bytes": 25427
-    },
-    {
-      "path": "data/images/artist-Q5592/wikipedia-Q5592-7.jpg",
-      "type": "thumbnail",
-      "bytes": 25427
+      "bytes": 12538
     },
     {
       "path": "data/images/artist-Q5592/wikipedia-Q5592-8.jpg",
       "type": "thumbnail",
-      "bytes": 25427
+      "bytes": 47771
     },
     {
       "path": "data/images/artist-Q5592/wikipedia-Q5592-9.jpg",
       "type": "thumbnail",
-      "bytes": 25427
+      "bytes": 32829
     },
     {
       "path": "data/images/artist-Q5597/index.json",
       "type": "thumbnail",
-      "bytes": 11237
+      "bytes": 16745
+    },
+    {
+      "path": "data/images/artist-Q5597/manual-local-1787052902899.png",
+      "type": "thumbnail",
+      "bytes": 955480
     },
     {
       "path": "data/images/artist-Q5597/wikidata-Q1245388.jpg",
@@ -3005,7 +5230,7 @@
     {
       "path": "data/images/artist-Q5597/wikidata-Q186953.jpg",
       "type": "thumbnail",
-      "bytes": 23871
+      "bytes": 2747327
     },
     {
       "path": "data/images/artist-Q5597/wikidata-Q2030685.jpg",
@@ -3026,6 +5251,11 @@
       "path": "data/images/artist-Q5597/wikidata-Q2275653.jpg",
       "type": "thumbnail",
       "bytes": 16013
+    },
+    {
+      "path": "data/images/artist-Q5597/wikidata-Q2276546.jpg",
+      "type": "thumbnail",
+      "bytes": 99449
     },
     {
       "path": "data/images/artist-Q5597/wikidata-Q2294201.jpg",
@@ -3285,37 +5515,17 @@
     {
       "path": "data/images/artist-Q5599/index.json",
       "type": "thumbnail",
-      "bytes": 41756
-    },
-    {
-      "path": "data/images/artist-Q5599/wikidata-Q1247103.JPG",
-      "type": "thumbnail",
-      "bytes": 279828
-    },
-    {
-      "path": "data/images/artist-Q5599/wikidata-Q2268524.jpg",
-      "type": "thumbnail",
-      "bytes": 30423
+      "bytes": 44809
     },
     {
       "path": "data/images/artist-Q5599/wikidata-Q2273452.jpg",
       "type": "thumbnail",
-      "bytes": 15163
-    },
-    {
-      "path": "data/images/artist-Q5599/wikidata-Q2594673.jpg",
-      "type": "thumbnail",
-      "bytes": 20670
+      "bytes": 52620
     },
     {
       "path": "data/images/artist-Q5599/wikidata-Q2653851.jpg",
       "type": "thumbnail",
       "bytes": 171890
-    },
-    {
-      "path": "data/images/artist-Q5599/wikidata-Q2667782.jpg",
-      "type": "thumbnail",
-      "bytes": 14990
     },
     {
       "path": "data/images/artist-Q5599/wikidata-Q3605057.jpg",
@@ -3330,32 +5540,7 @@
     {
       "path": "data/images/artist-Q5599/wikidata-Q3940915.jpg",
       "type": "thumbnail",
-      "bytes": 25206
-    },
-    {
-      "path": "data/images/artist-Q5599/wikidata-Q571416.jpg",
-      "type": "thumbnail",
-      "bytes": 27896
-    },
-    {
-      "path": "data/images/artist-Q5599/wikidata-Q644936.jpg",
-      "type": "thumbnail",
-      "bytes": 23849
-    },
-    {
-      "path": "data/images/artist-Q5599/wikidata-Q647202.jpg",
-      "type": "thumbnail",
-      "bytes": 12011
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-1.jpg",
-      "type": "thumbnail",
-      "bytes": 36868
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-10.jpg",
-      "type": "thumbnail",
-      "bytes": 14199
+      "bytes": 156634
     },
     {
       "path": "data/images/artist-Q5599/wikipedia-Q5599-11.jpg",
@@ -3363,144 +5548,9 @@
       "bytes": 18967
     },
     {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-12.jpg",
-      "type": "thumbnail",
-      "bytes": 25702
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-13.jpg",
-      "type": "thumbnail",
-      "bytes": 14199
-    },
-    {
       "path": "data/images/artist-Q5599/wikipedia-Q5599-15.jpg",
       "type": "thumbnail",
       "bytes": 15041
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-16.jpg",
-      "type": "thumbnail",
-      "bytes": 18324
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-17.jpg",
-      "type": "thumbnail",
-      "bytes": 14199
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-18.jpg",
-      "type": "thumbnail",
-      "bytes": 18772
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-19.jpg",
-      "type": "thumbnail",
-      "bytes": 16103
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-2.jpg",
-      "type": "thumbnail",
-      "bytes": 38198
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-20.jpg",
-      "type": "thumbnail",
-      "bytes": 14001
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-22.jpg",
-      "type": "thumbnail",
-      "bytes": 20820
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-23.jpg",
-      "type": "thumbnail",
-      "bytes": 13854
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-24.jpg",
-      "type": "thumbnail",
-      "bytes": 14699
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-25.jpg",
-      "type": "thumbnail",
-      "bytes": 14199
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-26.jpg",
-      "type": "thumbnail",
-      "bytes": 14199
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-27.jpg",
-      "type": "thumbnail",
-      "bytes": 14199
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-28.jpg",
-      "type": "thumbnail",
-      "bytes": 37173
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-29.jpg",
-      "type": "thumbnail",
-      "bytes": 21447
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-3.jpg",
-      "type": "thumbnail",
-      "bytes": 14199
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-30.jpg",
-      "type": "thumbnail",
-      "bytes": 30173
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-32.jpg",
-      "type": "thumbnail",
-      "bytes": 23415
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-33.jpg",
-      "type": "thumbnail",
-      "bytes": 17580
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-36.jpg",
-      "type": "thumbnail",
-      "bytes": 23703
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-37.jpg",
-      "type": "thumbnail",
-      "bytes": 7825
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-38.jpg",
-      "type": "thumbnail",
-      "bytes": 31174
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-39.jpg",
-      "type": "thumbnail",
-      "bytes": 22371
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-4.jpg",
-      "type": "thumbnail",
-      "bytes": 23079
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-40.jpg",
-      "type": "thumbnail",
-      "bytes": 16087
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-42.jpg",
-      "type": "thumbnail",
-      "bytes": 21453
     },
     {
       "path": "data/images/artist-Q5599/wikipedia-Q5599-43.jpg",
@@ -3513,84 +5563,29 @@
       "bytes": 18225
     },
     {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-45.jpg",
-      "type": "thumbnail",
-      "bytes": 14199
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-46.jpg",
-      "type": "thumbnail",
-      "bytes": 14199
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-47.jpg",
-      "type": "thumbnail",
-      "bytes": 17593
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-49.jpg",
-      "type": "thumbnail",
-      "bytes": 14199
-    },
-    {
       "path": "data/images/artist-Q5599/wikipedia-Q5599-5.jpg",
       "type": "thumbnail",
       "bytes": 25691
     },
     {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-50.jpg",
+      "path": "data/images/artist-Q610556/huber-allegory-of-salvation-after-1543.jpg",
       "type": "thumbnail",
-      "bytes": 14199
+      "bytes": 5570548
     },
     {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-51.jpg",
+      "path": "data/images/artist-Q610556/huber-lamentation-of-christ-1524.jpg",
       "type": "thumbnail",
-      "bytes": 14199
+      "bytes": 328694
     },
     {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-52.jpg",
+      "path": "data/images/artist-Q6394591/featured-Q3918079.jpg",
       "type": "thumbnail",
-      "bytes": 14199
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-53.jpg",
-      "type": "thumbnail",
-      "bytes": 14199
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-54.jpg",
-      "type": "thumbnail",
-      "bytes": 14199
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-6.jpg",
-      "type": "thumbnail",
-      "bytes": 29845
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-8.jpg",
-      "type": "thumbnail",
-      "bytes": 14199
-    },
-    {
-      "path": "data/images/artist-Q5599/wikipedia-Q5599-9.jpg",
-      "type": "thumbnail",
-      "bytes": 14199
+      "bytes": 1008094
     },
     {
       "path": "data/images/artist-Q6394591/index.json",
       "type": "thumbnail",
-      "bytes": 5102
-    },
-    {
-      "path": "data/images/artist-Q6394591/wikidata-Q113764391.jpg",
-      "type": "thumbnail",
-      "bytes": 16912
-    },
-    {
-      "path": "data/images/artist-Q6394591/wikidata-Q3918079.jpg",
-      "type": "thumbnail",
-      "bytes": 24456
+      "bytes": 6152
     },
     {
       "path": "data/images/artist-Q6394591/wikipedia-Q6394591-0.jpg",
@@ -3608,9 +5603,549 @@
       "bytes": 27313
     },
     {
+      "path": "data/images/artist-Q6394591/wikipedia-Q6394591-3.jpg",
+      "type": "thumbnail",
+      "bytes": 281101
+    },
+    {
       "path": "data/images/artist-Q6394591/wikipedia-Q6394591-4.jpg",
       "type": "thumbnail",
       "bytes": 32120
+    },
+    {
+      "path": "data/images/artist-Q68631/index.json",
+      "type": "thumbnail",
+      "bytes": 4169
+    },
+    {
+      "path": "data/images/artist-Q68631/rogier-beaune-altarpiece.png",
+      "type": "thumbnail",
+      "bytes": 2799322
+    },
+    {
+      "path": "data/images/artist-Q68631/rogier-braque-triptych.jpg",
+      "type": "thumbnail",
+      "bytes": 271755
+    },
+    {
+      "path": "data/images/artist-Q68631/rogier-christ-on-cross-mary-st-john.jpg",
+      "type": "thumbnail",
+      "bytes": 2908527
+    },
+    {
+      "path": "data/images/artist-Q68631/rogier-crucifixion-triptych.png",
+      "type": "thumbnail",
+      "bytes": 6988466
+    },
+    {
+      "path": "data/images/artist-Q68631/rogier-crucifixion-virgin-st-john.jpg",
+      "type": "thumbnail",
+      "bytes": 5481441
+    },
+    {
+      "path": "data/images/artist-Q68631/rogier-deposition-follower.jpg",
+      "type": "thumbnail",
+      "bytes": 6496826
+    },
+    {
+      "path": "data/images/artist-Q68631/rogier-descent-from-cross.jpg",
+      "type": "thumbnail",
+      "bytes": 2924611
+    },
+    {
+      "path": "data/images/artist-Q68631/rogier-portrait-of-a-lady.png",
+      "type": "thumbnail",
+      "bytes": 6291044
+    },
+    {
+      "path": "data/images/artist-Q68631/rogier-portrait-young-woman-white-headdress.jpg",
+      "type": "thumbnail",
+      "bytes": 3388419
+    },
+    {
+      "path": "data/images/artist-Q68631/rogier-seven-sacraments-altarpiece.png",
+      "type": "thumbnail",
+      "bytes": 6756654
+    },
+    {
+      "path": "data/images/artist-Q7086/index.json",
+      "type": "thumbnail",
+      "bytes": 2386
+    },
+    {
+      "path": "data/images/artist-Q7751/arcimboldo-autumn-1573.jpg",
+      "type": "thumbnail",
+      "bytes": 56711
+    },
+    {
+      "path": "data/images/artist-Q7751/arcimboldo-flora-1591.jpg",
+      "type": "thumbnail",
+      "bytes": 456602
+    },
+    {
+      "path": "data/images/artist-Q7751/arcimboldo-spring-1563.jpg",
+      "type": "thumbnail",
+      "bytes": 84238
+    },
+    {
+      "path": "data/images/artist-Q7751/arcimboldo-summer-1563.jpg",
+      "type": "thumbnail",
+      "bytes": 97965
+    },
+    {
+      "path": "data/images/artist-Q7751/arcimboldo-vertumnus-1590.jpg",
+      "type": "thumbnail",
+      "bytes": 109580
+    },
+    {
+      "path": "data/images/artist-Q7751/arcimboldo-winter-1563.jpg",
+      "type": "thumbnail",
+      "bytes": 54346
+    },
+    {
+      "path": "data/images/artist-Q7751/index.json",
+      "type": "thumbnail",
+      "bytes": 1524
+    },
+    {
+      "path": "data/images/artist-Q7803/bronzino-venus-cupid-folly-and-time-1544-1545.10mb.png",
+      "type": "thumbnail",
+      "bytes": 7586672
+    },
+    {
+      "path": "data/images/artist-Q7803/index.json",
+      "type": "thumbnail",
+      "bytes": 373
+    },
+    {
+      "path": "data/images/artist-Q7814/index.json",
+      "type": "thumbnail",
+      "bytes": 5809
+    },
+    {
+      "path": "data/images/artist-Q7814/manual-local-1787290551889.jpg",
+      "type": "thumbnail",
+      "bytes": 112679
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q1133664.jpg",
+      "type": "thumbnail",
+      "bytes": 31960
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q1197593.jpg",
+      "type": "thumbnail",
+      "bytes": 103535
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q1311080.jpg",
+      "type": "thumbnail",
+      "bytes": 111053
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q2016193.jpg",
+      "type": "thumbnail",
+      "bytes": 47696
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q2067212.jpg",
+      "type": "thumbnail",
+      "bytes": 58557
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q23904.jpg",
+      "type": "thumbnail",
+      "bytes": 52729
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q3005514.jpg",
+      "type": "thumbnail",
+      "bytes": 449633
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q3005520.jpg",
+      "type": "thumbnail",
+      "bytes": 90912
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q3044873.jpg",
+      "type": "thumbnail",
+      "bytes": 119209
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q3087564.jpg",
+      "type": "thumbnail",
+      "bytes": 208323
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q3276171.jpg",
+      "type": "thumbnail",
+      "bytes": 1424455
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q3472935.jpg",
+      "type": "thumbnail",
+      "bytes": 2935409
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q3504778.jpg",
+      "type": "thumbnail",
+      "bytes": 77947
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q3539575.jpg",
+      "type": "thumbnail",
+      "bytes": 96341
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q3649309.jpg",
+      "type": "thumbnail",
+      "bytes": 111706
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q3698227.jpg",
+      "type": "thumbnail",
+      "bytes": 111382
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q3769209.jpg",
+      "type": "thumbnail",
+      "bytes": 66716
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q3798718.jpg",
+      "type": "thumbnail",
+      "bytes": 202150
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q3907498.jpg",
+      "type": "thumbnail",
+      "bytes": 468672
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q3910084.jpg",
+      "type": "thumbnail",
+      "bytes": 116234
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q3910232.jpg",
+      "type": "thumbnail",
+      "bytes": 173974
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q3910927.jpg",
+      "type": "thumbnail",
+      "bytes": 171148
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q3910951.jpg",
+      "type": "thumbnail",
+      "bytes": 185449
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q3937289.jpg",
+      "type": "thumbnail",
+      "bytes": 153446
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q3944650.jpg",
+      "type": "thumbnail",
+      "bytes": 104564
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q3947106.jpg",
+      "type": "thumbnail",
+      "bytes": 87736
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q3947110.jpg",
+      "type": "thumbnail",
+      "bytes": 71410
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q3967208.jpg",
+      "type": "thumbnail",
+      "bytes": 201100
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q3975688.jpg",
+      "type": "thumbnail",
+      "bytes": 601643
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q547923.jpg",
+      "type": "thumbnail",
+      "bytes": 64378
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q549172.jpg",
+      "type": "thumbnail",
+      "bytes": 75417
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q952482.jpg",
+      "type": "thumbnail",
+      "bytes": 93209
+    },
+    {
+      "path": "data/images/artist-Q7814/wikidata-Q962065.jpg",
+      "type": "thumbnail",
+      "bytes": 109165
+    },
+    {
+      "path": "data/images/artist-Q7824/index.json",
+      "type": "thumbnail",
+      "bytes": 16479
+    },
+    {
+      "path": "data/images/artist-Q7824/manual-local-1787027323288.jpg",
+      "type": "thumbnail",
+      "bytes": 687217
+    },
+    {
+      "path": "data/images/artist-Q7824/manual-local-1787030435264.png",
+      "type": "thumbnail",
+      "bytes": 1799190
+    },
+    {
+      "path": "data/images/artist-Q7824/manual-local-1787031151941.png",
+      "type": "thumbnail",
+      "bytes": 1646252
+    },
+    {
+      "path": "data/images/artist-Q7824/manual-local-1787031331308.png",
+      "type": "thumbnail",
+      "bytes": 2284655
+    },
+    {
+      "path": "data/images/artist-Q7824/manual-local-1787032685507.jpg",
+      "type": "thumbnail",
+      "bytes": 116992
+    },
+    {
+      "path": "data/images/artist-Q7824/manual-local-1787032989070.png",
+      "type": "thumbnail",
+      "bytes": 1978078
+    },
+    {
+      "path": "data/images/artist-Q7824/manual-local-1787040641636.png",
+      "type": "thumbnail",
+      "bytes": 3884754
+    },
+    {
+      "path": "data/images/artist-Q7824/manual-local-1787048553274.png",
+      "type": "thumbnail",
+      "bytes": 925026
+    },
+    {
+      "path": "data/images/artist-Q7824/manual-local-1787049812001.png",
+      "type": "thumbnail",
+      "bytes": 1105028
+    },
+    {
+      "path": "data/images/artist-Q7824/manual-local-1787050338593.png",
+      "type": "thumbnail",
+      "bytes": 862579
+    },
+    {
+      "path": "data/images/artist-Q7824/manual-local-1787051737273.jpg",
+      "type": "thumbnail",
+      "bytes": 2816825
+    },
+    {
+      "path": "data/images/artist-Q7824/manual-local-1787053106653.jpg",
+      "type": "thumbnail",
+      "bytes": 318627
+    },
+    {
+      "path": "data/images/artist-Q7824/manual-local-1787126157489.png",
+      "type": "thumbnail",
+      "bytes": 1785331
+    },
+    {
+      "path": "data/images/artist-Q7824/manual-local-1787126356286.png",
+      "type": "thumbnail",
+      "bytes": 1028806
+    },
+    {
+      "path": "data/images/artist-Q7824/manual-local-1787126509878.jpg",
+      "type": "thumbnail",
+      "bytes": 7996509
+    },
+    {
+      "path": "data/images/artist-Q7824/manual-local-1787127318017.png",
+      "type": "thumbnail",
+      "bytes": 839026
+    },
+    {
+      "path": "data/images/artist-Q7824/manual-local-1787127523094.jpg",
+      "type": "thumbnail",
+      "bytes": 1378993
+    },
+    {
+      "path": "data/images/artist-Q7824/manual-local-1787127818034.jpg",
+      "type": "thumbnail",
+      "bytes": 3381464
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q1115595.jpg",
+      "type": "thumbnail",
+      "bytes": 36258
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q1221070.jpg",
+      "type": "thumbnail",
+      "bytes": 152629
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q1227679.jpg",
+      "type": "thumbnail",
+      "bytes": 715681
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q1232131.jpg",
+      "type": "thumbnail",
+      "bytes": 21138
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q16268861.jpg",
+      "type": "thumbnail",
+      "bytes": 58361
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q17629102.jpg",
+      "type": "thumbnail",
+      "bytes": 30708
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q17651293.jpg",
+      "type": "thumbnail",
+      "bytes": 51087
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q17652120.jpg",
+      "type": "thumbnail",
+      "bytes": 131962
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q18170299.jpg",
+      "type": "thumbnail",
+      "bytes": 339845
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q18222731.jpg",
+      "type": "thumbnail",
+      "bytes": 90996
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q18223127.jpg",
+      "type": "thumbnail",
+      "bytes": 233432
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q18224327.jpg",
+      "type": "thumbnail",
+      "bytes": 712233
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q18420689.jpg",
+      "type": "thumbnail",
+      "bytes": 244191
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q18572400.jpg",
+      "type": "thumbnail",
+      "bytes": 172268
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q18572448.jpg",
+      "type": "thumbnail",
+      "bytes": 118134
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q18590147.jpg",
+      "type": "thumbnail",
+      "bytes": 309829
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q18613324.jpg",
+      "type": "thumbnail",
+      "bytes": 40112
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q19966612.jpg",
+      "type": "thumbnail",
+      "bytes": 88880
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q20176833.jpg",
+      "type": "thumbnail",
+      "bytes": 47285
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q21121883.jpg",
+      "type": "thumbnail",
+      "bytes": 87539
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q21121936.jpg",
+      "type": "thumbnail",
+      "bytes": 651195
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q21727777.jpg",
+      "type": "thumbnail",
+      "bytes": 83912
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q26767069.jpg",
+      "type": "thumbnail",
+      "bytes": 201414
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q28031091.jpg",
+      "type": "thumbnail",
+      "bytes": 217615
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q283665.jpg",
+      "type": "thumbnail",
+      "bytes": 131883
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q4245125.jpg",
+      "type": "thumbnail",
+      "bytes": 54828
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q4810381.jpg",
+      "type": "thumbnail",
+      "bytes": 52745
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q52337780.jpg",
+      "type": "thumbnail",
+      "bytes": 64850
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q5454994.jpg",
+      "type": "thumbnail",
+      "bytes": 47676
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q7721087.jpg",
+      "type": "thumbnail",
+      "bytes": 93960
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q935815.jpg",
+      "type": "thumbnail",
+      "bytes": 105249
+    },
+    {
+      "path": "data/images/artist-Q7824/wikidata-Q97704181.jpg",
+      "type": "thumbnail",
+      "bytes": 100665
     },
     {
       "path": "data/images/artist-Q82445/curated-jane-avril-1899.jpg",
@@ -3630,7 +6165,7 @@
     {
       "path": "data/images/artist-Q82445/index.json",
       "type": "thumbnail",
-      "bytes": 12602
+      "bytes": 17978
     },
     {
       "path": "data/images/artist-Q82445/wikidata-Q108333700.jpg",
@@ -3923,9 +6458,594 @@
       "bytes": 31806
     },
     {
+      "path": "data/images/artist-Q8459/index.json",
+      "type": "thumbnail",
+      "bytes": 7773
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q133503451.jpg",
+      "type": "thumbnail",
+      "bytes": 94277
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q17335702.jpg",
+      "type": "thumbnail",
+      "bytes": 73058
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q20440585.jpg",
+      "type": "thumbnail",
+      "bytes": 105728
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q20547967.jpg",
+      "type": "thumbnail",
+      "bytes": 264260
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q2452374.jpg",
+      "type": "thumbnail",
+      "bytes": 197081
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q2537695.jpg",
+      "type": "thumbnail",
+      "bytes": 96809
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q2872711.jpg",
+      "type": "thumbnail",
+      "bytes": 52034
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q29916352.jpg",
+      "type": "thumbnail",
+      "bytes": 1423314
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q3605563.jpg",
+      "type": "thumbnail",
+      "bytes": 396045
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q3656034.jpg",
+      "type": "thumbnail",
+      "bytes": 36442
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q3656454.jpg",
+      "type": "thumbnail",
+      "bytes": 830548
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q3697665.jpg",
+      "type": "thumbnail",
+      "bytes": 59116
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q3714154.jpg",
+      "type": "thumbnail",
+      "bytes": 58678
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q3766873.jpg",
+      "type": "thumbnail",
+      "bytes": 42989
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q3842552.jpg",
+      "type": "thumbnail",
+      "bytes": 54777
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q3879242.jpg",
+      "type": "thumbnail",
+      "bytes": 838659
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q3937411.jpg",
+      "type": "thumbnail",
+      "bytes": 61631
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q3937417.jpg",
+      "type": "thumbnail",
+      "bytes": 64420
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q3944458.jpg",
+      "type": "thumbnail",
+      "bytes": 53183
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q3997388.jpg",
+      "type": "thumbnail",
+      "bytes": 49385
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q3998112.jpg",
+      "type": "thumbnail",
+      "bytes": 36420
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q3998923.jpg",
+      "type": "thumbnail",
+      "bytes": 1504910
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q4009159.jpg",
+      "type": "thumbnail",
+      "bytes": 50059
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q595707.jpg",
+      "type": "thumbnail",
+      "bytes": 610776
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q87534049.jpg",
+      "type": "thumbnail",
+      "bytes": 43973
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q877191.jpg",
+      "type": "thumbnail",
+      "bytes": 53559
+    },
+    {
+      "path": "data/images/artist-Q8459/wikidata-Q930137.jpg",
+      "type": "thumbnail",
+      "bytes": 38580
+    },
+    {
+      "path": "data/images/artist-Q9319/index.json",
+      "type": "thumbnail",
+      "bytes": 1935
+    },
+    {
+      "path": "data/images/artist-Q9319/tintoretto-apotheosis-of-st-roch-1564.jpg",
+      "type": "thumbnail",
+      "bytes": 222799
+    },
+    {
+      "path": "data/images/artist-Q9319/tintoretto-baptism-of-jesus-c1580.png",
+      "type": "thumbnail",
+      "bytes": 5556731
+    },
+    {
+      "path": "data/images/artist-Q9319/tintoretto-christ-at-the-sea-of-galilee-c1570s.jpg",
+      "type": "thumbnail",
+      "bytes": 4427214
+    },
+    {
+      "path": "data/images/artist-Q9319/tintoretto-crucifixion-1565.jpg",
+      "type": "thumbnail",
+      "bytes": 2947584
+    },
+    {
+      "path": "data/images/artist-Q9319/tintoretto-finding-of-the-body-of-st-mark-1562-1566.10mb.png",
+      "type": "thumbnail",
+      "bytes": 6921904
+    },
+    {
+      "path": "data/images/artist-Q9319/tintoretto-last-supper-1592-1594.jpg",
+      "type": "thumbnail",
+      "bytes": 771329
+    },
+    {
+      "path": "data/images/artist-Q9319/tintoretto-miracle-of-the-slave-1548.png",
+      "type": "thumbnail",
+      "bytes": 8097076
+    },
+    {
+      "path": "data/images/artist-Q9319/tintoretto-paradise-1588-1592.png",
+      "type": "thumbnail",
+      "bytes": 6303311
+    },
+    {
+      "path": "data/images/artist-Q9319/tintoretto-st-marks-body-brought-to-venice-1562-1566.10mb.png",
+      "type": "thumbnail",
+      "bytes": 7623455
+    },
+    {
+      "path": "data/images/artist-Q9319/tintoretto-washing-of-the-feet-1548-1549.jpg",
+      "type": "thumbnail",
+      "bytes": 5308901
+    },
+    {
+      "path": "data/images/artist-Q9319/wikidata-Q2274267.jpg",
+      "type": "thumbnail",
+      "bytes": 559060
+    },
+    {
+      "path": "data/images/artist-Q9319/wikidata-Q2393412.jpg",
+      "type": "thumbnail",
+      "bytes": 59865
+    },
+    {
+      "path": "data/images/artist-Q9319/wikidata-Q2472983.jpg",
+      "type": "thumbnail",
+      "bytes": 51244
+    },
+    {
+      "path": "data/images/artist-Q9319/wikidata-Q85860172.jpg",
+      "type": "thumbnail",
+      "bytes": 164624
+    },
+    {
+      "path": "data/images/artist-Q9340/'Landscape_with_a_Piping_Shepherd'_by_Claude_Lorrain,_c._1629-32,_Norton_Simon_Museum.jfif",
+      "type": "thumbnail",
+      "bytes": 928847
+    },
+    {
+      "path": "data/images/artist-Q9340/3840px-Claude_Lorrain_008.jpg",
+      "type": "thumbnail",
+      "bytes": 3614103
+    },
+    {
+      "path": "data/images/artist-Q9340/Ascanius_Shooting_the_Stag_of_Sylvia_1682_Claude_Lorrain.jpg",
+      "type": "thumbnail",
+      "bytes": 483366
+    },
+    {
+      "path": "data/images/artist-Q9340/Claude_Lorrain_-_An_Artist_Studying_from_Nature_-_Google_Art_Project.jpg",
+      "type": "thumbnail",
+      "bytes": 2892103
+    },
+    {
+      "path": "data/images/artist-Q9340/F0087_Louvre_Gellee_port_au_soleil_couchant-_INV4715_rwk.jpg",
+      "type": "thumbnail",
+      "bytes": 4943807
+    },
+    {
+      "path": "data/images/artist-Q9340/index.json",
+      "type": "thumbnail",
+      "bytes": 706
+    },
+    {
+      "path": "data/images/artist-Q9340/La_campiña_romana,1639,_Claude_Lorrain.jpg",
+      "type": "thumbnail",
+      "bytes": 1597496
+    },
+    {
+      "path": "data/images/artist-Q9340/Worship_of_the_Golden_Calf_-_Claude_Gellée,_called_Le_Lorrain_-_Google_Cultural_Institute.jpg",
+      "type": "thumbnail",
+      "bytes": 6690149
+    },
+    {
+      "path": "data/images/artist-Q9340/로랭_아키스와 갈라테이아_1657__claude-lorrain-acis-galatea-1657.jpg",
+      "type": "thumbnail",
+      "bytes": 737974
+    },
+    {
+      "path": "data/images/artist-Q9340/로랭_해돋이_1646__claude-lorrain-sunrise-1646.jpg",
+      "type": "thumbnail",
+      "bytes": 2127274
+    },
+    {
+      "path": "data/images/artist-Q9348/parmigianino-lovers-1527-1530.jpg",
+      "type": "thumbnail",
+      "bytes": 5587109
+    },
+    {
+      "path": "data/images/artist-Q9348/parmigianino-madonna-long-neck-1534-1540.jpg",
+      "type": "thumbnail",
+      "bytes": 2623966
+    },
+    {
+      "path": "data/images/artist-Q9348/parmigianino-saint-barbara-1522.jpg",
+      "type": "thumbnail",
+      "bytes": 3855563
+    },
+    {
+      "path": "data/images/artist-Q9348/parmigianino-self-portrait-convex-mirror-1524.jpg",
+      "type": "thumbnail",
+      "bytes": 977103
+    },
+    {
+      "path": "data/images/artist-Q9348/parmigianino-vision-of-saint-jerome-1526-1527.png",
+      "type": "thumbnail",
+      "bytes": 4991324
+    },
+    {
+      "path": "data/images/artist-Q9440/index.json",
+      "type": "thumbnail",
+      "bytes": 4079
+    },
+    {
+      "path": "data/images/artist-Q9440/veronese-conversion-of-mary-magdalene-1548.png",
+      "type": "thumbnail",
+      "bytes": 7614147
+    },
+    {
+      "path": "data/images/artist-Q9440/veronese-feast-in-the-house-of-levi-1573.png",
+      "type": "thumbnail",
+      "bytes": 5575473
+    },
+    {
+      "path": "data/images/artist-Q9440/veronese-juno-showering-gifts-on-venice-1554-1556.png",
+      "type": "thumbnail",
+      "bytes": 1880574
+    },
+    {
+      "path": "data/images/artist-Q9440/veronese-lamentation-over-the-dead-christ-1547.png",
+      "type": "thumbnail",
+      "bytes": 1709900
+    },
+    {
+      "path": "data/images/artist-Q9440/veronese-perseus-freeing-andromeda-1576-1578.png",
+      "type": "thumbnail",
+      "bytes": 4097388
+    },
+    {
+      "path": "data/images/artist-Q9440/veronese-sacrificial-death-of-marcus-curtius-1550-1552.10mb.png",
+      "type": "thumbnail",
+      "bytes": 8356987
+    },
+    {
+      "path": "data/images/artist-Q9440/veronese-saint-jerome-in-penance-1570-1580.10mb.png",
+      "type": "thumbnail",
+      "bytes": 6702251
+    },
+    {
+      "path": "data/images/artist-Q9440/veronese-st-mark-crowning-the-virtues-1554.jpg",
+      "type": "thumbnail",
+      "bytes": 6540842
+    },
+    {
+      "path": "data/images/artist-Q9440/veronese-wedding-feast-at-cana-1562-1563.jpg",
+      "type": "thumbnail",
+      "bytes": 4345636
+    },
+    {
+      "path": "data/images/artist-rembrandt/agnes-portrait-man-arms-akimbo.jpg",
+      "type": "thumbnail",
+      "bytes": 1238622
+    },
+    {
+      "path": "data/images/artist-rembrandt/commons-blinding-samson.jpg",
+      "type": "thumbnail",
+      "bytes": 187094
+    },
+    {
+      "path": "data/images/artist-rembrandt/commons-return-prodigal-son.jpg",
+      "type": "thumbnail",
+      "bytes": 1568706
+    },
+    {
+      "path": "data/images/artist-rembrandt/dresden-1559-rembrandt-saskia-prodigal-son.jpg",
+      "type": "thumbnail",
+      "bytes": 1610194
+    },
+    {
+      "path": "data/images/artist-rembrandt/frick-polish-rider-1655.jpg",
+      "type": "thumbnail",
+      "bytes": 1023348
+    },
+    {
+      "path": "data/images/artist-rembrandt/hermitage-732-saskia-as-flora.jpg",
+      "type": "thumbnail",
+      "bytes": 1618350
+    },
+    {
+      "path": "data/images/artist-rembrandt/hermitage-GE-723-danae.jpg",
+      "type": "thumbnail",
+      "bytes": 562957
+    },
+    {
+      "path": "data/images/artist-rembrandt/hermitage-sacrifice-isaac-1635.jpg",
+      "type": "thumbnail",
+      "bytes": 1339889
+    },
+    {
+      "path": "data/images/artist-rembrandt/index.json",
+      "type": "thumbnail",
+      "bytes": 23019
+    },
+    {
+      "path": "data/images/artist-rembrandt/kassel-236-saskia-red-hat.jpg",
+      "type": "thumbnail",
+      "bytes": 625648
+    },
+    {
+      "path": "data/images/artist-rembrandt/leiden-RR-100-young-lion-resting.jpg",
+      "type": "thumbnail",
+      "bytes": 1055988
+    },
+    {
+      "path": "data/images/artist-rembrandt/louvre-inv-1736-raphael-leaving-tobit.jpg",
+      "type": "thumbnail",
+      "bytes": 137007
+    },
+    {
+      "path": "data/images/artist-rembrandt/louvre-inv-1740-philosopher-meditation.jpg",
+      "type": "thumbnail",
+      "bytes": 114202
+    },
+    {
+      "path": "data/images/artist-rembrandt/louvre-inv-1742-holy-family-st-anne.jpg",
+      "type": "thumbnail",
+      "bytes": 1214428
+    },
+    {
+      "path": "data/images/artist-rembrandt/louvre-inv-1745-self-portrait-beret-gold-chain.jpg",
+      "type": "thumbnail",
+      "bytes": 82679
+    },
+    {
+      "path": "data/images/artist-rembrandt/louvre-MI-169-slaughtered-ox.jpg",
+      "type": "thumbnail",
+      "bytes": 1045808
+    },
+    {
+      "path": "data/images/artist-rembrandt/louvre-MI-957-bathsheba.jpg",
+      "type": "thumbnail",
+      "bytes": 826637
+    },
+    {
+      "path": "data/images/artist-rembrandt/mauritshuis-146-anatomy-tulp.jpg",
+      "type": "thumbnail",
+      "bytes": 568168
+    },
+    {
+      "path": "data/images/artist-rembrandt/met-437385.jpg",
+      "type": "thumbnail",
+      "bytes": 48128
+    },
+    {
+      "path": "data/images/artist-rembrandt/met-437389.jpg",
+      "type": "thumbnail",
+      "bytes": 69612
+    },
+    {
+      "path": "data/images/artist-rembrandt/met-437392.jpg",
+      "type": "thumbnail",
+      "bytes": 36320
+    },
+    {
+      "path": "data/images/artist-rembrandt/met-437393.jpg",
+      "type": "thumbnail",
+      "bytes": 71221
+    },
+    {
+      "path": "data/images/artist-rembrandt/met-437394.jpg",
+      "type": "thumbnail",
+      "bytes": 73306
+    },
+    {
+      "path": "data/images/artist-rembrandt/met-437395.jpg",
+      "type": "thumbnail",
+      "bytes": 53542
+    },
+    {
+      "path": "data/images/artist-rembrandt/met-437396.jpg",
+      "type": "thumbnail",
+      "bytes": 59604
+    },
+    {
+      "path": "data/images/artist-rembrandt/met-437397.jpg",
+      "type": "thumbnail",
+      "bytes": 84655
+    },
+    {
+      "path": "data/images/artist-rembrandt/met-437398.jpg",
+      "type": "thumbnail",
+      "bytes": 258329
+    },
+    {
+      "path": "data/images/artist-rembrandt/met-437401.jpg",
+      "type": "thumbnail",
+      "bytes": 202994
+    },
+    {
+      "path": "data/images/artist-rembrandt/met-437402.jpg",
+      "type": "thumbnail",
+      "bytes": 77133
+    },
+    {
+      "path": "data/images/artist-rembrandt/met-437420.jpg",
+      "type": "thumbnail",
+      "bytes": 56265
+    },
+    {
+      "path": "data/images/artist-rembrandt/met-459082.jpg",
+      "type": "thumbnail",
+      "bytes": 55688
+    },
+    {
+      "path": "data/images/artist-rembrandt/national-gallery-NG221-self-portrait-1669.jpg",
+      "type": "thumbnail",
+      "bytes": 755867
+    },
+    {
+      "path": "data/images/artist-rembrandt/national-gallery-NG54-woman-bathing-stream.jpg",
+      "type": "thumbnail",
+      "bytes": 124778
+    },
+    {
+      "path": "data/images/artist-rembrandt/nga-saskia-1210.jpg",
+      "type": "thumbnail",
+      "bytes": 244580
+    },
+    {
+      "path": "data/images/artist-rembrandt/rijksmuseum-RP-P-1962-1-christ-healing-sick.jpg",
+      "type": "thumbnail",
+      "bytes": 538363
+    },
+    {
+      "path": "data/images/artist-rembrandt/rijksmuseum-SK-A-5033-marten-soolmans.jpg",
+      "type": "thumbnail",
+      "bytes": 135160
+    },
+    {
+      "path": "data/images/artist-rembrandt/rijksmuseum-SK-C-1768-oopjen-coppit.jpg",
+      "type": "thumbnail",
+      "bytes": 105192
+    },
+    {
+      "path": "data/images/artist-rembrandt/rijksmuseum-SK-C-216-jewish-bride.jpg",
+      "type": "thumbnail",
+      "bytes": 703147
+    },
+    {
+      "path": "data/images/artist-rembrandt/rijksmuseum-SK-C-5.jpg",
+      "type": "thumbnail",
+      "bytes": 245003
+    },
+    {
+      "path": "data/images/artist-rembrandt/rijksmuseum-SK-C-6-syndics.jpg",
+      "type": "thumbnail",
+      "bytes": 583307
+    },
+    {
+      "path": "data/images/artist-rembrandt/wikidata-Q1243299.jpg",
+      "type": "thumbnail",
+      "bytes": 377420
+    },
+    {
+      "path": "data/images/artist-rembrandt/wikidata-Q17343012.jpg",
+      "type": "thumbnail",
+      "bytes": 420896
+    },
+    {
+      "path": "data/images/artist-rembrandt/wikidata-Q2246489.jpg",
+      "type": "thumbnail",
+      "bytes": 388048
+    },
+    {
+      "path": "data/images/artist-rembrandt/wikidata-Q512755.jpg",
+      "type": "thumbnail",
+      "bytes": 469301
+    },
+    {
+      "path": "data/images/artist-romantic-turner/artist-romantic-turner-work.jpg",
+      "type": "thumbnail",
+      "bytes": 681676
+    },
+    {
       "path": "data/images/artist-url-1786879941678/index.json",
       "type": "thumbnail",
-      "bytes": 12188
+      "bytes": 19682
+    },
+    {
+      "path": "data/images/artist-url-1786879941678/rubens-descent-antwerp-1612.jpg",
+      "type": "thumbnail",
+      "bytes": 756015
+    },
+    {
+      "path": "data/images/artist-url-1786879941678/webpage-x9jtij.jpg",
+      "type": "thumbnail",
+      "bytes": 65328
+    },
+    {
+      "path": "data/images/artist-url-1786879941678/webpage-zz5whq.jpg",
+      "type": "thumbnail",
+      "bytes": 155246
+    },
+    {
+      "path": "data/images/artist-url-1786879941678/wikidata-Q1247103.jpg",
+      "type": "thumbnail",
+      "bytes": 368635
     },
     {
       "path": "data/images/artist-url-1786879941678/wikidata-Q2268524.jpg",
@@ -3933,29 +7053,14 @@
       "bytes": 84259
     },
     {
-      "path": "data/images/artist-url-1786879941678/wikidata-Q2273452.jpg",
-      "type": "thumbnail",
-      "bytes": 52620
-    },
-    {
       "path": "data/images/artist-url-1786879941678/wikidata-Q2594673.jpg",
       "type": "thumbnail",
-      "bytes": 63419
-    },
-    {
-      "path": "data/images/artist-url-1786879941678/wikidata-Q2667782.jpg",
-      "type": "thumbnail",
-      "bytes": 44158
-    },
-    {
-      "path": "data/images/artist-url-1786879941678/wikidata-Q3605057.jpg",
-      "type": "thumbnail",
-      "bytes": 59966
+      "bytes": 312707
     },
     {
       "path": "data/images/artist-url-1786879941678/wikidata-Q571416.jpg",
       "type": "thumbnail",
-      "bytes": 97270
+      "bytes": 105420
     },
     {
       "path": "data/images/artist-url-1786879941678/wikidata-Q644936.jpg",
@@ -3978,11 +7083,6 @@
       "bytes": 30057
     },
     {
-      "path": "data/images/artist-url-1786879941678/wikipedia-Q5599-11.jpg",
-      "type": "thumbnail",
-      "bytes": 18967
-    },
-    {
       "path": "data/images/artist-url-1786879941678/wikipedia-Q5599-12.jpg",
       "type": "thumbnail",
       "bytes": 25702
@@ -3991,11 +7091,6 @@
       "path": "data/images/artist-url-1786879941678/wikipedia-Q5599-13.jpg",
       "type": "thumbnail",
       "bytes": 24304
-    },
-    {
-      "path": "data/images/artist-url-1786879941678/wikipedia-Q5599-15.JPG",
-      "type": "thumbnail",
-      "bytes": 15041
     },
     {
       "path": "data/images/artist-url-1786879941678/wikipedia-Q5599-16.jpg",
@@ -4133,16 +7228,6 @@
       "bytes": 21453
     },
     {
-      "path": "data/images/artist-url-1786879941678/wikipedia-Q5599-43.jpg",
-      "type": "thumbnail",
-      "bytes": 22479
-    },
-    {
-      "path": "data/images/artist-url-1786879941678/wikipedia-Q5599-44.jpg",
-      "type": "thumbnail",
-      "bytes": 18225
-    },
-    {
       "path": "data/images/artist-url-1786879941678/wikipedia-Q5599-45.jpg",
       "type": "thumbnail",
       "bytes": 34683
@@ -4161,11 +7246,6 @@
       "path": "data/images/artist-url-1786879941678/wikipedia-Q5599-49.jpg",
       "type": "thumbnail",
       "bytes": 26319
-    },
-    {
-      "path": "data/images/artist-url-1786879941678/wikipedia-Q5599-5.jpg",
-      "type": "thumbnail",
-      "bytes": 25691
     },
     {
       "path": "data/images/artist-url-1786879941678/wikipedia-Q5599-50.jpg",
@@ -4208,6 +7288,121 @@
       "bytes": 19104
     },
     {
+      "path": "data/images/artist-url-1786879941678/루벤스_모자를 쓴 자화상_1623__rubens-self-portrait-1623.jpg",
+      "type": "thumbnail",
+      "bytes": 14199
+    },
+    {
+      "path": "data/images/artist-url-1787307872488/index.json",
+      "type": "thumbnail",
+      "bytes": 3519
+    },
+    {
+      "path": "data/images/artist-url-1787307872488/wikidata-Q1054459.jpg",
+      "type": "thumbnail",
+      "bytes": 70061
+    },
+    {
+      "path": "data/images/artist-url-1787307872488/wikidata-Q2736379.jpg",
+      "type": "thumbnail",
+      "bytes": 968037
+    },
+    {
+      "path": "data/images/artist-url-1787307872488/wikidata-Q2884282.jpg",
+      "type": "thumbnail",
+      "bytes": 166633
+    },
+    {
+      "path": "data/images/artist-url-1787307872488/wikidata-Q3220280.jpg",
+      "type": "thumbnail",
+      "bytes": 51422
+    },
+    {
+      "path": "data/images/artist-url-1787307872488/wikidata-Q32381.jpg",
+      "type": "thumbnail",
+      "bytes": 2224738
+    },
+    {
+      "path": "data/images/artist-url-1787307872488/wikidata-Q3395785.jpg",
+      "type": "thumbnail",
+      "bytes": 75783
+    },
+    {
+      "path": "data/images/artist-url-1787307872488/wikidata-Q3605535.jpg",
+      "type": "thumbnail",
+      "bytes": 471723
+    },
+    {
+      "path": "data/images/artist-url-1787307872488/wikidata-Q369582.jpg",
+      "type": "thumbnail",
+      "bytes": 822671
+    },
+    {
+      "path": "data/images/artist-url-1787307872488/wikidata-Q3711791.jpg",
+      "type": "thumbnail",
+      "bytes": 62823
+    },
+    {
+      "path": "data/images/artist-url-1787307872488/wikidata-Q3842651.jpg",
+      "type": "thumbnail",
+      "bytes": 1222996
+    },
+    {
+      "path": "data/images/artist-url-1787307872488/wikidata-Q3850304.jpg",
+      "type": "thumbnail",
+      "bytes": 535199
+    },
+    {
+      "path": "data/images/artist-url-1787307872488/wikidata-Q3947827.jpg",
+      "type": "thumbnail",
+      "bytes": 57322
+    },
+    {
+      "path": "data/images/artist-url-1787307872488/wikidata-Q3948700.jpg",
+      "type": "thumbnail",
+      "bytes": 2349817
+    },
+    {
+      "path": "data/images/artist-url-1787307872488/wikidata-Q3949530.jpg",
+      "type": "thumbnail",
+      "bytes": 140045
+    },
+    {
+      "path": "data/images/artist-url-1787307872488/wikidata-Q3949531.jpg",
+      "type": "thumbnail",
+      "bytes": 200622
+    },
+    {
+      "path": "data/images/artist-url-1787307872488/wikidata-Q3974493.jpg",
+      "type": "thumbnail",
+      "bytes": 520880
+    },
+    {
+      "path": "data/images/artist-url-1787307872488/wikidata-Q3999092.jpg",
+      "type": "thumbnail",
+      "bytes": 98751
+    },
+    {
+      "path": "data/images/artist-url-1787307872488/wikidata-Q3999132.jpg",
+      "type": "thumbnail",
+      "bytes": 1364181
+    },
+    {
+      "path": "data/images/artist-url-1787307872488/wikidata-Q66377761.jpg",
+      "type": "thumbnail",
+      "bytes": 3275263
+    },
+    {
+      "path": "data/images/artist-url-1787307872488/wikidata-Q97378130.jpg",
+      "type": "thumbnail",
+      "bytes": 65081
+    },
+    {
+      "path": "data/images/artist-url-1787307872488/wikidata-Q977200.jpg",
+      "type": "thumbnail",
+      "bytes": 740278
+    },
+    {
       "path": "data/images/claude-monet/impression-sunrise.jpg",
       "type": "thumbnail",
       "bytes": 15232
@@ -4215,7 +7410,7 @@
     {
       "path": "data/images/claude-monet/index.json",
       "type": "thumbnail",
-      "bytes": 24146
+      "bytes": 31844
     },
     {
       "path": "data/images/claude-monet/monet-haystacks.jpg",
@@ -4328,11 +7523,6 @@
       "bytes": 47847
     },
     {
-      "path": "data/images/claude-monet/wikidata-Q1189907.jpg",
-      "type": "thumbnail",
-      "bytes": 44924
-    },
-    {
       "path": "data/images/claude-monet/wikidata-Q1212084.jpg",
       "type": "thumbnail",
       "bytes": 17348
@@ -4416,11 +7606,6 @@
       "path": "data/images/claude-monet/wikidata-Q2381272.JPG",
       "type": "thumbnail",
       "bytes": 32897
-    },
-    {
-      "path": "data/images/claude-monet/wikidata-Q2395218.jpg",
-      "type": "thumbnail",
-      "bytes": 31364
     },
     {
       "path": "data/images/claude-monet/wikidata-Q24046494.jpg",
@@ -4633,14 +7818,9 @@
       "bytes": 43084
     },
     {
-      "path": "data/images/frida-kahlo/frida-wounded-deer.jpg",
-      "type": "thumbnail",
-      "bytes": 43777
-    },
-    {
       "path": "data/images/frida-kahlo/index.json",
       "type": "thumbnail",
-      "bytes": 4067
+      "bytes": 6475
     },
     {
       "path": "data/images/frida-kahlo/manual-wounded-deer.jpg",
@@ -4653,9 +7833,19 @@
       "bytes": 104061
     },
     {
-      "path": "data/images/frida-kahlo/wikidata-Q18343221.jpg",
+      "path": "data/images/frida-kahlo/wikidata-Q109620518.jpg",
       "type": "thumbnail",
-      "bytes": 42292
+      "bytes": 26031
+    },
+    {
+      "path": "data/images/frida-kahlo/wikidata-Q118190557.jpg",
+      "type": "thumbnail",
+      "bytes": 38165
+    },
+    {
+      "path": "data/images/frida-kahlo/wikidata-Q131841200.jpg",
+      "type": "thumbnail",
+      "bytes": 69605
     },
     {
       "path": "data/images/frida-kahlo/wikidata-Q19884325.jpg",
@@ -4668,21 +7858,6 @@
       "bytes": 64126
     },
     {
-      "path": "data/images/frida-kahlo/wikidata-Q19898216.png",
-      "type": "thumbnail",
-      "bytes": 867
-    },
-    {
-      "path": "data/images/frida-kahlo/wikidata-Q21010270.jpg",
-      "type": "thumbnail",
-      "bytes": 43777
-    },
-    {
-      "path": "data/images/frida-kahlo/wikidata-Q21056477.jpg",
-      "type": "thumbnail",
-      "bytes": 43084
-    },
-    {
       "path": "data/images/frida-kahlo/wikidata-Q23663690.jpg",
       "type": "thumbnail",
       "bytes": 112612
@@ -4693,19 +7868,14 @@
       "bytes": 64744
     },
     {
-      "path": "data/images/frida-kahlo/wikidata-Q3232010.jpg",
-      "type": "thumbnail",
-      "bytes": 104061
-    },
-    {
       "path": "data/images/frida-kahlo/wikidata-Q43281370.jpg",
       "type": "thumbnail",
-      "bytes": 30986
+      "bytes": 36690
     },
     {
       "path": "data/images/frida-kahlo/wikidata-Q45895679.jpg",
       "type": "thumbnail",
-      "bytes": 20052
+      "bytes": 83386
     },
     {
       "path": "data/images/frida-kahlo/wikidata-Q5712848.jpg",
@@ -4723,9 +7893,9 @@
       "bytes": 19115
     },
     {
-      "path": "data/images/frida-kahlo/wikidata-Q63341526.JPG",
+      "path": "data/images/frida-kahlo/wikidata-Q8471027.jpg",
       "type": "thumbnail",
-      "bytes": 46855
+      "bytes": 12452
     },
     {
       "path": "data/images/frida-kahlo/wikidata-Q97164416.jpg",
@@ -4735,17 +7905,7 @@
     {
       "path": "data/images/vincent-van-gogh/index.json",
       "type": "thumbnail",
-      "bytes": 21369
-    },
-    {
-      "path": "data/images/vincent-van-gogh/starry-night.jpg",
-      "type": "thumbnail",
-      "bytes": 19060
-    },
-    {
-      "path": "data/images/vincent-van-gogh/sunflowers.jpg",
-      "type": "thumbnail",
-      "bytes": 30478
+      "bytes": 31448
     },
     {
       "path": "data/images/vincent-van-gogh/wikidata-Q1025704.jpg",
@@ -4761,11 +7921,6 @@
       "path": "data/images/vincent-van-gogh/wikidata-Q1132723.jpg",
       "type": "thumbnail",
       "bytes": 40424
-    },
-    {
-      "path": "data/images/vincent-van-gogh/wikidata-Q114708084.jpg",
-      "type": "thumbnail",
-      "bytes": 30172
     },
     {
       "path": "data/images/vincent-van-gogh/wikidata-Q1171740.jpg",
@@ -4810,7 +7965,7 @@
     {
       "path": "data/images/vincent-van-gogh/wikidata-Q157541.jpg",
       "type": "thumbnail",
-      "bytes": 28622
+      "bytes": 30478
     },
     {
       "path": "data/images/vincent-van-gogh/wikidata-Q16589468.jpg",
@@ -5130,7 +8285,7 @@
     {
       "path": "data/images/vincent-van-gogh/wikidata-Q45585.jpg",
       "type": "thumbnail",
-      "bytes": 26647
+      "bytes": 19060
     },
     {
       "path": "data/images/vincent-van-gogh/wikidata-Q4657634.jpg",
@@ -5275,7 +8430,37 @@
     {
       "path": "data/images/_placeholder/artwork-placeholder.svg",
       "type": "thumbnail",
-      "bytes": 1022
+      "bytes": 1033
+    },
+    {
+      "path": "data/미술사조/images/080336f866ce0c573e6c2b7f-1-01-a6552800572f.jpg",
+      "type": "movement-image",
+      "bytes": 52500
+    },
+    {
+      "path": "data/미술사조/images/080336f866ce0c573e6c2b7f-1-02-276fedc55702.jpg",
+      "type": "movement-image",
+      "bytes": 91809
+    },
+    {
+      "path": "data/미술사조/images/080336f866ce0c573e6c2b7f-1-03-b044f98e0076.jpg",
+      "type": "movement-image",
+      "bytes": 110101
+    },
+    {
+      "path": "data/미술사조/images/12f4e943b63665f4725c9024-1-01-29142d26c3a9.jpg",
+      "type": "movement-image",
+      "bytes": 220760
+    },
+    {
+      "path": "data/미술사조/images/12f4e943b63665f4725c9024-1-02-9b0988127936.jpg",
+      "type": "movement-image",
+      "bytes": 78990
+    },
+    {
+      "path": "data/미술사조/images/12f4e943b63665f4725c9024-1-03-e9d1eae3ff3d.jpg",
+      "type": "movement-image",
+      "bytes": 321359
     },
     {
       "path": "data/미술사조/images/1914-20Gris-20Le-20Petit-20D-C3-A9jeuner-b84d34a4a263.jpg",
@@ -5283,9 +8468,149 @@
       "bytes": 59254
     },
     {
+      "path": "data/미술사조/images/27cd7106c6176211c4e94b56-1-01-850e6ed2900d.jpg",
+      "type": "movement-image",
+      "bytes": 172709
+    },
+    {
+      "path": "data/미술사조/images/27cd7106c6176211c4e94b56-1-02-273b260859de.jpg",
+      "type": "movement-image",
+      "bytes": 219645
+    },
+    {
+      "path": "data/미술사조/images/27cd7106c6176211c4e94b56-1-03-d13f2e017f8b.jpg",
+      "type": "movement-image",
+      "bytes": 400983
+    },
+    {
+      "path": "data/미술사조/images/27cd7106c6176211c4e94b56-1-04-ab6389595e65.jpg",
+      "type": "movement-image",
+      "bytes": 415236
+    },
+    {
+      "path": "data/미술사조/images/4e7a664301ed396184c3cb5d-1-01-43e6bf21f28c.jpg",
+      "type": "movement-image",
+      "bytes": 132855
+    },
+    {
+      "path": "data/미술사조/images/4e7a664301ed396184c3cb5d-1-02-8b31a51902f7.jpg",
+      "type": "movement-image",
+      "bytes": 79294
+    },
+    {
+      "path": "data/미술사조/images/4e7a664301ed396184c3cb5d-1-03-5654717d29f0.jpg",
+      "type": "movement-image",
+      "bytes": 140296
+    },
+    {
+      "path": "data/미술사조/images/4e7a664301ed396184c3cb5d-1-04-e94352eb691b.jpg",
+      "type": "movement-image",
+      "bytes": 240751
+    },
+    {
+      "path": "data/미술사조/images/69d074f0099b13691bf428c4-1-01-7ef8800afdc4.jpg",
+      "type": "movement-image",
+      "bytes": 101601
+    },
+    {
+      "path": "data/미술사조/images/69d074f0099b13691bf428c4-1-02-bd0d4952c78e.jpg",
+      "type": "movement-image",
+      "bytes": 411491
+    },
+    {
+      "path": "data/미술사조/images/69d074f0099b13691bf428c4-1-03-07a255a6c4ca.jpg",
+      "type": "movement-image",
+      "bytes": 285861
+    },
+    {
+      "path": "data/미술사조/images/69d074f0099b13691bf428c4-1-04-67631b0c3b70.jpg",
+      "type": "movement-image",
+      "bytes": 404309
+    },
+    {
+      "path": "data/미술사조/images/7792df2f1b12ffedf6954a68-1-01-db70c25a1d64.jpg",
+      "type": "movement-image",
+      "bytes": 409881
+    },
+    {
+      "path": "data/미술사조/images/7792df2f1b12ffedf6954a68-1-02-7d4736d20808.jpg",
+      "type": "movement-image",
+      "bytes": 867878
+    },
+    {
+      "path": "data/미술사조/images/7792df2f1b12ffedf6954a68-1-03-66cdd04b0e48.jpg",
+      "type": "movement-image",
+      "bytes": 122514
+    },
+    {
+      "path": "data/미술사조/images/7792df2f1b12ffedf6954a68-1-04-c9cdde07ba14.jpg",
+      "type": "movement-image",
+      "bytes": 665819
+    },
+    {
+      "path": "data/미술사조/images/813ce956e2554f3fba756eaa-1-01-f7e60281dabd.jpg",
+      "type": "movement-image",
+      "bytes": 251154
+    },
+    {
+      "path": "data/미술사조/images/813ce956e2554f3fba756eaa-1-02-45577fb91ef7.jpg",
+      "type": "movement-image",
+      "bytes": 40291
+    },
+    {
+      "path": "data/미술사조/images/813ce956e2554f3fba756eaa-1-03-6f31057598c7.jpg",
+      "type": "movement-image",
+      "bytes": 48487
+    },
+    {
+      "path": "data/미술사조/images/8d49878ffcd14be08ced07c5-1-01-9fc8b3bc5832.jpg",
+      "type": "movement-image",
+      "bytes": 338640
+    },
+    {
+      "path": "data/미술사조/images/8d49878ffcd14be08ced07c5-1-02-565982a1f90a.jpg",
+      "type": "movement-image",
+      "bytes": 220676
+    },
+    {
+      "path": "data/미술사조/images/8d49878ffcd14be08ced07c5-1-03-72c27f11908e.jpg",
+      "type": "movement-image",
+      "bytes": 281797
+    },
+    {
+      "path": "data/미술사조/images/97a11ca32a8d272b2be7e303-1-01-ed1dcc61c50e.jpg",
+      "type": "movement-image",
+      "bytes": 328309
+    },
+    {
+      "path": "data/미술사조/images/97a11ca32a8d272b2be7e303-1-02-1ddcef8f5093.jpg",
+      "type": "movement-image",
+      "bytes": 249996
+    },
+    {
+      "path": "data/미술사조/images/97a11ca32a8d272b2be7e303-1-03-2f03c0578aef.jpg",
+      "type": "movement-image",
+      "bytes": 172177
+    },
+    {
+      "path": "data/미술사조/images/Abraham-Bloemaert-Apollo-Diana-Niobe.jpg",
+      "type": "movement-image",
+      "bytes": 1360351
+    },
+    {
       "path": "data/미술사조/images/Albert-20Gleizes-20l-Homme-20au-20Balcon-201912-20oil-20on-20canvas-20-47ac16bbe59c.jpg",
       "type": "movement-image",
       "bytes": 928375
+    },
+    {
+      "path": "data/미술사조/images/Albrecht-Altdorfer-Battle-of-Alexander-at-Issus-from-danube.jpg",
+      "type": "movement-image",
+      "bytes": 91809
+    },
+    {
+      "path": "data/미술사조/images/Albrecht-D-C3-BCrer-1500-self-portrait-High-resolution-and-detail-7a84b8f5db25.jpg",
+      "type": "movement-image",
+      "bytes": 279565
     },
     {
       "path": "data/미술사조/images/Angelo-20Bronzino-20-20Venus-20Cupid-20Folly-20and-20Time-20-20Nationa-72f45c00b9b9.jpg",
@@ -5298,9 +8623,69 @@
       "bytes": 88353
     },
     {
+      "path": "data/미술사조/images/Arcimboldo-Rudolf-II-as-Vertumnus.jpg",
+      "type": "movement-image",
+      "bytes": 886777
+    },
+    {
       "path": "data/미술사조/images/Artemisia-Gentileschi-Judith-Beheading-Holofernes-WGA8563-822bc56fc2a3.jpg",
       "type": "movement-image",
       "bytes": 205541
+    },
+    {
+      "path": "data/미술사조/images/b46bfdbe92e0d5deb9173151-1-01-9b0988127936.jpg",
+      "type": "movement-image",
+      "bytes": 78990
+    },
+    {
+      "path": "data/미술사조/images/b46bfdbe92e0d5deb9173151-1-02-c00ba8bfbc12.jpg",
+      "type": "movement-image",
+      "bytes": 369649
+    },
+    {
+      "path": "data/미술사조/images/b46bfdbe92e0d5deb9173151-1-03-7939d756a9fc.jpg",
+      "type": "movement-image",
+      "bytes": 527561
+    },
+    {
+      "path": "data/미술사조/images/be9a35cdca8c52adb73b06c7-1-01-69fc8cc7bec3.jpg",
+      "type": "movement-image",
+      "bytes": 437367
+    },
+    {
+      "path": "data/미술사조/images/be9a35cdca8c52adb73b06c7-1-02-c2776fdfce0e.jpg",
+      "type": "movement-image",
+      "bytes": 400728
+    },
+    {
+      "path": "data/미술사조/images/be9a35cdca8c52adb73b06c7-1-03-fb657a74cadf.jpg",
+      "type": "movement-image",
+      "bytes": 219100
+    },
+    {
+      "path": "data/미술사조/images/Bellini-Agony-in-the-Garden.jpg",
+      "type": "movement-image",
+      "bytes": 171247
+    },
+    {
+      "path": "data/미술사조/images/Benjamin-West-Death-of-General-Wolfe.jpg",
+      "type": "movement-image",
+      "bytes": 957881
+    },
+    {
+      "path": "data/미술사조/images/Bernini-Ecstasy-Saint-Teresa.jpg",
+      "type": "movement-image",
+      "bytes": 708833
+    },
+    {
+      "path": "data/미술사조/images/Boccioni-Unique-Forms.jpg",
+      "type": "movement-image",
+      "bytes": 222231
+    },
+    {
+      "path": "data/미술사조/images/Breton-Surrealist-Manifesto.png",
+      "type": "movement-image",
+      "bytes": 254635
     },
     {
       "path": "data/미술사조/images/Cabaret-20Voltaire-748ab748664a.jpg",
@@ -5311,6 +8696,16 @@
       "path": "data/미술사조/images/Camille-20Pissarro-20-20Boulevard-20Montmartre-20Spring-20-20Google-20-7cc6d722c418.jpg",
       "type": "movement-image",
       "bytes": 336312
+    },
+    {
+      "path": "data/미술사조/images/Canaletto-Stonemasons-Yard.jpg",
+      "type": "movement-image",
+      "bytes": 321660
+    },
+    {
+      "path": "data/미술사조/images/Canova-Psyche-Revived-by-Cupids-Kiss.jpg",
+      "type": "movement-image",
+      "bytes": 188161
     },
     {
       "path": "data/미술사조/images/Caravaggio-27s-The-Calling-of-St-Matthew-2068cdb551fc.jpg",
@@ -5328,14 +8723,64 @@
       "bytes": 264366
     },
     {
+      "path": "data/미술사조/images/Cassatt-The-Childs-Bath.jpg",
+      "type": "movement-image",
+      "bytes": 525146
+    },
+    {
+      "path": "data/미술사조/images/Chardin-The-Ray-WGA04738.jpg",
+      "type": "movement-image",
+      "bytes": 152781
+    },
+    {
+      "path": "data/미술사조/images/Charles-Le-Brun-Apotheosis-of-Louis-XIV-1677.jpg",
+      "type": "movement-image",
+      "bytes": 2177300
+    },
+    {
+      "path": "data/미술사조/images/Church-Heart-of-the-Andes.jpg",
+      "type": "movement-image",
+      "bytes": 225813
+    },
+    {
       "path": "data/미술사조/images/Cimabue-Maest-C3-A0-di-Santa-Trinita-Google-Art-Project-d9011e484d49.jpg",
       "type": "movement-image",
       "bytes": 998300
     },
     {
+      "path": "data/미술사조/images/Claude-Lorrain-Embarkation-Queen-of-Sheba-WGA05002.jpg",
+      "type": "movement-image",
+      "bytes": 359539
+    },
+    {
       "path": "data/미술사조/images/Claude-Monet-Impression-soleil-levant-ffa6676be90d.jpg",
       "type": "movement-image",
       "bytes": 253676
+    },
+    {
+      "path": "data/미술사조/images/Constable-The-Hay-Wain.jpg",
+      "type": "movement-image",
+      "bytes": 438224
+    },
+    {
+      "path": "data/미술사조/images/Cornelis-Cornelisz-van-Haarlem-Fall-of-the-Titans.jpg",
+      "type": "movement-image",
+      "bytes": 2542353
+    },
+    {
+      "path": "data/미술사조/images/d80bc831e2e75f52782edb83-1-01-fd115297ff9a.jpg",
+      "type": "movement-image",
+      "bytes": 215430
+    },
+    {
+      "path": "data/미술사조/images/d80bc831e2e75f52782edb83-1-02-35f9d8573c05.jpg",
+      "type": "movement-image",
+      "bytes": 155008
+    },
+    {
+      "path": "data/미술사조/images/d80bc831e2e75f52782edb83-1-03-1a3708f85909.jpg",
+      "type": "movement-image",
+      "bytes": 166523
     },
     {
       "path": "data/미술사조/images/David-Oath-of-the-Horatii-1784-0eededa85a03.jpg",
@@ -5358,9 +8803,29 @@
       "bytes": 1337010
     },
     {
+      "path": "data/미술사조/images/de537ba74c4bee89423120bc-1-01-b0045c08a23c.jpg",
+      "type": "movement-image",
+      "bytes": 244612
+    },
+    {
+      "path": "data/미술사조/images/de537ba74c4bee89423120bc-1-02-cf9db48a3cb5.jpg",
+      "type": "movement-image",
+      "bytes": 248842
+    },
+    {
+      "path": "data/미술사조/images/de537ba74c4bee89423120bc-1-03-601333e61185.jpg",
+      "type": "movement-image",
+      "bytes": 171024
+    },
+    {
       "path": "data/미술사조/images/Death-of-Marat-by-David-a6625a3ca21b.jpg",
       "type": "movement-image",
       "bytes": 429335
+    },
+    {
+      "path": "data/미술사조/images/Delaunay-Eiffel-Tower.jpg",
+      "type": "movement-image",
+      "bytes": 284129
     },
     {
       "path": "data/미술사조/images/dellibwholesm-2d54e3a322c8.jpg",
@@ -5373,9 +8838,24 @@
       "bytes": 1402825
     },
     {
+      "path": "data/미술사조/images/Eakins-The-Gross-Clinic.jpg",
+      "type": "movement-image",
+      "bytes": 409445
+    },
+    {
       "path": "data/미술사조/images/Edgar-20Degas-20-20The-20Ballet-20Class-20-20Google-20Art-20Project-842d02fde04d.jpg",
       "type": "movement-image",
       "bytes": 318371
+    },
+    {
+      "path": "data/미술사조/images/El-Greco-Burial-of-the-Count-of-Orgaz.jpg",
+      "type": "movement-image",
+      "bytes": 38558
+    },
+    {
+      "path": "data/미술사조/images/Ensor-Christ-Entry-into-Brussels.jpg",
+      "type": "movement-image",
+      "bytes": 456507
     },
     {
       "path": "data/미술사조/images/Eug-C3-A8ne-Delacroix-Le-28-Juillet-La-Libert-C3-A9-guidant-le-peuple-808a8bab8e3b.jpg",
@@ -5388,6 +8868,16 @@
       "bytes": 100475
     },
     {
+      "path": "data/미술사조/images/fb0c60537b81544f0e8cb57f-1-01-e9d1eae3ff3d.jpg",
+      "type": "movement-image",
+      "bytes": 321359
+    },
+    {
+      "path": "data/미술사조/images/fb0c60537b81544f0e8cb57f-1-02-bfbf52120368.jpg",
+      "type": "movement-image",
+      "bytes": 137843
+    },
+    {
       "path": "data/미술사조/images/Fragonard-20The-20Swing-93c60ad2bfcf.jpg",
       "type": "movement-image",
       "bytes": 394381
@@ -5396,6 +8886,26 @@
       "path": "data/미술사조/images/Fragonard-The-Swing-af227c46d654.jpg",
       "type": "movement-image",
       "bytes": 683079
+    },
+    {
+      "path": "data/미술사조/images/Francois-Clouet-Elisabeth-of-Austria-WGA.jpg",
+      "type": "movement-image",
+      "bytes": 109505
+    },
+    {
+      "path": "data/미술사조/images/Frans-Hals-Laughing-Cavalier.jpg",
+      "type": "movement-image",
+      "bytes": 494600
+    },
+    {
+      "path": "data/미술사조/images/Frida-Kahlo-The-Two-Fridas.jpg",
+      "type": "movement-image",
+      "bytes": 104061
+    },
+    {
+      "path": "data/미술사조/images/Gainsborough-The-Blue-Boy-1770.jpg",
+      "type": "movement-image",
+      "bytes": 741033
     },
     {
       "path": "data/미술사조/images/Georges-20Seurat-20-20Un-20dimanche-20apr-C3-A8s-midi-20-C3-A0-20l-C3-8037631ce03d.jpg",
@@ -5408,6 +8918,11 @@
       "bytes": 146525
     },
     {
+      "path": "data/미술사조/images/Giorgione-Three-Philosophers.jpg",
+      "type": "movement-image",
+      "bytes": 53559
+    },
+    {
       "path": "data/미술사조/images/Giotto-20-20Scrovegni-20-20-36-20-20Lamentation-20-The-20Mourning-20of-feb53c4a2d22.jpg",
       "type": "movement-image",
       "bytes": 317708
@@ -5416,6 +8931,21 @@
       "path": "data/미술사조/images/Giovanni-20Battista-20Tiepolo-20-20Apollo-20and-20the-20Continents-20-4da05d03665b.jpg",
       "type": "movement-image",
       "bytes": 293110
+    },
+    {
+      "path": "data/미술사조/images/Goncharova-Cyclist.jpg",
+      "type": "movement-image",
+      "bytes": 211622
+    },
+    {
+      "path": "data/미술사조/images/Gorky-Liver-Cocks-Comb.jpg",
+      "type": "movement-image",
+      "bytes": 305765
+    },
+    {
+      "path": "data/미술사조/images/Goya-Third-of-May-1808.jpg",
+      "type": "movement-image",
+      "bytes": 234625
     },
     {
       "path": "data/미술사조/images/grwpCmPpSImm938JFHIaTITKJr4-6e4868fbf57e.jpg",
@@ -5438,9 +8968,29 @@
       "bytes": 239335
     },
     {
+      "path": "data/미술사조/images/Hans-Holbein-the-Younger-The-Ambassadors-Google-Art-Project-7d9a2de194ef.jpg",
+      "type": "movement-image",
+      "bytes": 261913
+    },
+    {
+      "path": "data/미술사조/images/Hassam-Avenue-in-the-Rain.jpg",
+      "type": "movement-image",
+      "bytes": 911154
+    },
+    {
+      "path": "data/미술사조/images/Hendrick-Goltzius-The-Great-Hercules.jpg",
+      "type": "movement-image",
+      "bytes": 2837766
+    },
+    {
       "path": "data/미술사조/images/Hoch-Cut-With-the-Kitchen-Knife-78af8df2b81f.jpg",
       "type": "movement-image",
       "bytes": 431545
+    },
+    {
+      "path": "data/미술사조/images/Hogarth-Marriage-Settlement.jpg",
+      "type": "movement-image",
+      "bytes": 324512
     },
     {
       "path": "data/미술사조/images/Honor-C3-A9-20Daumier-20-French-20Marseilles-201808-E2-80-931879-20Val-d34f3d1251df.jpg",
@@ -5448,14 +8998,39 @@
       "bytes": 189368
     },
     {
+      "path": "data/미술사조/images/Hugo-Ball-Karawane.png",
+      "type": "movement-image",
+      "bytes": 98832
+    },
+    {
+      "path": "data/미술사조/images/Hyacinthe-Rigaud-Louis-XIV-1701.png",
+      "type": "movement-image",
+      "bytes": 7424974
+    },
+    {
       "path": "data/미술사조/images/index.json",
       "type": "movement-image",
-      "bytes": 39801
+      "bytes": 44001
+    },
+    {
+      "path": "data/미술사조/images/Ingres-Napoleon-on-Imperial-Throne.jpg",
+      "type": "movement-image",
+      "bytes": 542740
     },
     {
       "path": "data/미술사조/images/Jacopo-20Pontormo-20004-2dcaf20c0708.jpg",
       "type": "movement-image",
       "bytes": 398653
+    },
+    {
+      "path": "data/미술사조/images/Janak-Cubist-Chair.jpg",
+      "type": "movement-image",
+      "bytes": 238186
+    },
+    {
+      "path": "data/미술사조/images/Jean-Clouet-Francis-I-WGA.jpg",
+      "type": "movement-image",
+      "bytes": 155134
     },
     {
       "path": "data/미술사조/images/Jean-Fran-C3-A7ois-Millet-Gleaners-Google-Art-Project-2-2a5eac9e18cd.jpg",
@@ -5473,6 +9048,26 @@
       "bytes": 384054
     },
     {
+      "path": "data/미술사조/images/Kauffman-Cornelia-Mother-of-the-Gracchi.jpg",
+      "type": "movement-image",
+      "bytes": 246615
+    },
+    {
+      "path": "data/미술사조/images/Kirchner-Street-Dresden.jpg",
+      "type": "movement-image",
+      "bytes": 258965
+    },
+    {
+      "path": "data/미술사조/images/Klimt-The-Kiss.jpg",
+      "type": "movement-image",
+      "bytes": 886880
+    },
+    {
+      "path": "data/미술사조/images/Kramskoi-Portrait-of-an-Unknown-Woman.jpg",
+      "type": "movement-image",
+      "bytes": 311714
+    },
+    {
       "path": "data/미술사조/images/Kurt-Schwitters-22Merz-50-22-Composition-Google-Art-Project-78373d57277d.jpg",
       "type": "movement-image",
       "bytes": 400433
@@ -5488,9 +9083,29 @@
       "bytes": 55529
     },
     {
+      "path": "data/미술사조/images/Larionov-Red-Blue-Rayonism.jpg",
+      "type": "movement-image",
+      "bytes": 1167583
+    },
+    {
+      "path": "data/미술사조/images/Le-Brun-Chancellor-Seguier-WGA12547.jpg",
+      "type": "movement-image",
+      "bytes": 168332
+    },
+    {
+      "path": "data/미술사조/images/Leonardo-Last-Supper.jpg",
+      "type": "movement-image",
+      "bytes": 48648
+    },
+    {
       "path": "data/미술사조/images/Louis-XIV-of-France-063c4adf6cf3.jpg",
       "type": "movement-image",
       "bytes": 666986
+    },
+    {
+      "path": "data/미술사조/images/Lucas-Cranach-Martin-Luther-1528-manual.jpg",
+      "type": "movement-image",
+      "bytes": 314763
     },
     {
       "path": "data/미술사조/images/Marcel-Duchamp-1917-Fountain-photograph-by-Alfred-Stieglitz-17209e2773c3.jpg",
@@ -5506,6 +9121,36 @@
       "path": "data/미술사조/images/Matisse-Woman-with-a-Hat-4552a63769d7.jpg",
       "type": "movement-image",
       "bytes": 459536
+    },
+    {
+      "path": "data/미술사조/images/Mengs-Parnassus.jpg",
+      "type": "movement-image",
+      "bytes": 253945
+    },
+    {
+      "path": "data/미술사조/images/Menzel-Iron-Rolling-Mill.jpg",
+      "type": "movement-image",
+      "bytes": 297157
+    },
+    {
+      "path": "data/미술사조/images/Michelangelo-Last-Judgment.jpg",
+      "type": "movement-image",
+      "bytes": 40865
+    },
+    {
+      "path": "data/미술사조/images/Morisot-The-Cradle.jpg",
+      "type": "movement-image",
+      "bytes": 511901
+    },
+    {
+      "path": "data/미술사조/images/Munch-The-Scream.jpg",
+      "type": "movement-image",
+      "bytes": 151613
+    },
+    {
+      "path": "data/미술사조/images/Murillo-The-Young-Beggar-WGA16348.jpg",
+      "type": "movement-image",
+      "bytes": 116298
     },
     {
       "path": "data/미술사조/images/Open-Window-Collioure-1905-Henri-Matisse-9eef9b5e61ba.jpg",
@@ -5533,14 +9178,59 @@
       "bytes": 384887
     },
     {
+      "path": "data/미술사조/images/Perov-Hunters-at-Rest.jpg",
+      "type": "movement-image",
+      "bytes": 18486
+    },
+    {
+      "path": "data/미술사조/images/Perov-Troika.jpg",
+      "type": "movement-image",
+      "bytes": 336013
+    },
+    {
+      "path": "data/미술사조/images/Picabia-Machine-Turn-Quickly.jpg",
+      "type": "movement-image",
+      "bytes": 132254
+    },
+    {
       "path": "data/미술사조/images/Pierre-Auguste-Renoir-Le-Moulin-de-la-Galette-a1377b95cdef.jpg",
       "type": "movement-image",
       "bytes": 779672
     },
     {
+      "path": "data/미술사조/images/Popova-Portrait-of-a-Lady.jpg",
+      "type": "movement-image",
+      "bytes": 593258
+    },
+    {
       "path": "data/미술사조/images/Portrait-20of-20Maurice-20de-20Vlaminck-20-by-20Andr-C3-A9-20Derain-20-eef65c6c0de8.jpg",
       "type": "movement-image",
       "bytes": 336191
+    },
+    {
+      "path": "data/미술사조/images/Poussin-Death-of-Germanicus.jpg",
+      "type": "movement-image",
+      "bytes": 4211370
+    },
+    {
+      "path": "data/미술사조/images/Poussin-Et-in-Arcadia-Ego-WGA18305.jpg",
+      "type": "movement-image",
+      "bytes": 87447
+    },
+    {
+      "path": "data/미술사조/images/Primaticcio-Ulysses-and-Penelope-WGA18409.jpg",
+      "type": "movement-image",
+      "bytes": 135362
+    },
+    {
+      "path": "data/미술사조/images/Pukirev-Unequal-Marriage.jpg",
+      "type": "movement-image",
+      "bytes": 1008094
+    },
+    {
+      "path": "data/미술사조/images/Puvis-The-Poor-Fisherman.jpg",
+      "type": "movement-image",
+      "bytes": 335468
     },
     {
       "path": "data/미술사조/images/Raffael-058-a68f7cff3330.jpg",
@@ -5553,9 +9243,109 @@
       "bytes": 436875
     },
     {
+      "path": "data/미술사조/images/Rembrandt-Night-Watch.jpg",
+      "type": "movement-image",
+      "bytes": 245003
+    },
+    {
+      "path": "data/미술사조/images/Repin-Barge-Haulers-on-the-Volga.jpg",
+      "type": "movement-image",
+      "bytes": 220392
+    },
+    {
+      "path": "data/미술사조/images/Reynolds-Mrs-Siddons-as-Tragic-Muse.jpg",
+      "type": "movement-image",
+      "bytes": 490218
+    },
+    {
+      "path": "data/미술사조/images/Roger-Fry-River-with-Poplars.jpg",
+      "type": "movement-image",
+      "bytes": 32187
+    },
+    {
+      "path": "data/미술사조/images/Rogier-van-der-Weyden-Descent-from-the-Cross-manual.jpg",
+      "type": "movement-image",
+      "bytes": 213203
+    },
+    {
+      "path": "data/미술사조/images/Rosalba-Carriera-Self-Portrait-WGA04503.jpg",
+      "type": "movement-image",
+      "bytes": 116689
+    },
+    {
+      "path": "data/미술사조/images/Rosso-Fiorentino-Deposition-WGA20130.jpg",
+      "type": "movement-image",
+      "bytes": 123883
+    },
+    {
+      "path": "data/미술사조/images/Rubens-Descent-from-the-Cross-Antwerp.jpg",
+      "type": "movement-image",
+      "bytes": 756015
+    },
+    {
+      "path": "data/미술사조/images/Rysselberghe-Portrait-of-Alice-Sethe.jpg",
+      "type": "movement-image",
+      "bytes": 1221629
+    },
+    {
+      "path": "data/미술사조/images/Sargent-Carnation-Lily-Lily-Rose.jpg",
+      "type": "movement-image",
+      "bytes": 689027
+    },
+    {
+      "path": "data/미술사조/images/Severini-Blue-Dancer.jpg",
+      "type": "movement-image",
+      "bytes": 290334
+    },
+    {
+      "path": "data/미술사조/images/Sickert-Ennui.jpg",
+      "type": "movement-image",
+      "bytes": 471583
+    },
+    {
+      "path": "data/미술사조/images/Sisley-Bridge-at-Villeneuve-la-Garenne.jpg",
+      "type": "movement-image",
+      "bytes": 409860
+    },
+    {
       "path": "data/미술사조/images/Slave-ship-7b5afac07e61.jpg",
       "type": "movement-image",
       "bytes": 328784
+    },
+    {
+      "path": "data/미술사조/images/Spranger-Hercules-Deianira-Centaur-Nessus.jpg",
+      "type": "movement-image",
+      "bytes": 634692
+    },
+    {
+      "path": "data/미술사조/images/Spranger-Venus-and-Adonis.jpg",
+      "type": "movement-image",
+      "bytes": 202250
+    },
+    {
+      "path": "data/미술사조/images/Steer-Girls-Running-Walberswick-Pier.jpg",
+      "type": "movement-image",
+      "bytes": 40702
+    },
+    {
+      "path": "data/미술사조/images/Streeton-Golden-Summer-Eaglemont.jpg",
+      "type": "movement-image",
+      "bytes": 47739
+    },
+    {
+      "path": "data/미술사조/images/Stuck-The-Sin.jpg",
+      "type": "movement-image",
+      "bytes": 113714
+    },
+    {
+      "path": "data/미술사조/images/Taeuber-Arp-Dada-Head.jpg",
+      "type": "movement-image",
+      "bytes": 1056015
+    },
+    {
+      "path": "data/미술사조/images/Tanguy-Indefinite-Divisibility.jpg",
+      "type": "movement-image",
+      "bytes": 1128965
     },
     {
       "path": "data/미술사조/images/Th-C3-A9odore-G-C3-A9ricault-The-Raft-of-the-Medusa-WGA08630-849f4ffd1efd.jpg",
@@ -5583,9 +9373,34 @@
       "bytes": 36722
     },
     {
+      "path": "data/미술사조/images/Thomas-Cole-The-Oxbow.jpg",
+      "type": "movement-image",
+      "bytes": 244413
+    },
+    {
+      "path": "data/미술사조/images/Tintoretto-Last-Supper-WGA22649.jpg",
+      "type": "movement-image",
+      "bytes": 287639
+    },
+    {
       "path": "data/미술사조/images/Tizian-041-c1f1a35ec75c.jpg",
       "type": "movement-image",
       "bytes": 1475547
+    },
+    {
+      "path": "data/미술사조/images/Tom-Roberts-Shearing-the-Rams.jpg",
+      "type": "movement-image",
+      "bytes": 417694
+    },
+    {
+      "path": "data/미술사조/images/Toulouse-Lautrec-At-the-Moulin-Rouge.jpg",
+      "type": "movement-image",
+      "bytes": 264964
+    },
+    {
+      "path": "data/미술사조/images/Van-Dyck-Charles-I-at-the-Hunt-WGA07382.jpg",
+      "type": "movement-image",
+      "bytes": 136120
     },
     {
       "path": "data/미술사조/images/Van-Eyck-Arnolfini-Portrait-997900945212.jpg",
@@ -5596,6 +9411,51 @@
       "path": "data/미술사조/images/Van-Gogh-Starry-Night-Google-Art-Project-33e561a6a488.jpg",
       "type": "movement-image",
       "bytes": 1381879
+    },
+    {
+      "path": "data/미술사조/images/Velazquez-Las-Meninas.jpg",
+      "type": "movement-image",
+      "bytes": 591554
+    },
+    {
+      "path": "data/미술사조/images/Vermeer-Girl-with-a-Pearl-Earring.jpg",
+      "type": "movement-image",
+      "bytes": 66384
+    },
+    {
+      "path": "data/미술사조/images/Veronese-Wedding-Feast-at-Cana.jpg",
+      "type": "movement-image",
+      "bytes": 4345636
+    },
+    {
+      "path": "data/미술사조/images/Vigee-Le-Brun-Self-Portrait.jpg",
+      "type": "movement-image",
+      "bytes": 24292
+    },
+    {
+      "path": "data/미술사조/images/Vrubel-Demon-Seated.jpg",
+      "type": "movement-image",
+      "bytes": 357217
+    },
+    {
+      "path": "data/미술사조/images/Wadsworth-Dazzle-Ships.jpg",
+      "type": "movement-image",
+      "bytes": 320176
+    },
+    {
+      "path": "data/미술사조/images/Winslow-Homer-The-Gulf-Stream.jpg",
+      "type": "movement-image",
+      "bytes": 333273
+    },
+    {
+      "path": "data/미술사조/images/Wolf-Huber-Lamentation-of-Christ-1524.jpg",
+      "type": "movement-image",
+      "bytes": 328694
+    },
+    {
+      "path": "data/미술사조/images/Zurbaran-Saint-Serapion.jpg",
+      "type": "movement-image",
+      "bytes": 490822
     }
   ]
 }
