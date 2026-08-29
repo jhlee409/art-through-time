@@ -2455,11 +2455,6 @@
         "fetchedAt": "2026-08-21T05:20:11.153Z"
       },
       "featuredWorkIds": [
-        "wikidata-Q1217213",
-        "wikidata-Q215486",
-        "wikidata-Q128910",
-        "wikidata-Q12418",
-        "wikidata-Q563727",
         "manual-local-1787290551889"
       ],
       "artistSummary": {
@@ -4921,7 +4916,7 @@
             "ko": "플랑드르파",
             "en": "Early Netherlandish painting"
           },
-          "image": "data/thumbnails/artist-Q68631/rogier-deposition-follower.jpg",
+          "image": "data/images/artist-Q68631/rogier-deposition-follower.jpg",
           "thumbnail": "data/images/artist-Q68631/rogier-deposition-follower.jpg",
           "thumbnailValidation": 2,
           "thumbnailCacheKey": "2026-08-21T12:17:10.569Z",
@@ -14838,7 +14833,7 @@
       ],
       "featuredWorkIds": [
         "durer-four-horsemen",
-        "durer-knight-death-and-the-devil",
+        "durer-knight-death-devil",
         "durer-adoration-of-the-magi",
         "durer-hieronymus-holzschuher"
       ],
@@ -27983,11 +27978,6 @@
       },
       "featuredWorkIds": [
         "wikidata-Q186953",
-        "wikidata-Q1217213",
-        "wikidata-Q215486",
-        "wikidata-Q128910",
-        "wikidata-Q12418",
-        "wikidata-Q563727",
         "wikidata-Q2343778"
       ],
       "artistSummary": {
@@ -40659,7 +40649,7 @@
             "ko": "",
             "en": ""
           },
-          "image": "data/thumbnails/artist-Q43270/wikidata-Q4258682.jpg",
+          "image": "data/images/artist-Q43270/wikidata-Q4258682.jpg",
           "description": {
             "ko": "print by Pieter van der Heyden after Pieter Bruegel (I) from the series 'The Seven Deadly Sins'",
             "en": "print by Pieter van der Heyden after Pieter Bruegel (I) from the series 'The Seven Deadly Sins'"
@@ -59467,7 +59457,7 @@
             "ko": "",
             "en": ""
           },
-          "image": "data/thumbnails/artist-url-1786879941678/webpage-x9jtij.jpg",
+          "image": "data/images/artist-url-1786879941678/webpage-x9jtij.jpg",
           "thumbnail": "data/images/artist-url-1786879941678/webpage-x9jtij.jpg",
           "description": {
             "ko": "ory1. daumcdn. net/tistory_admin/userblog/userblog-d748cfd5e0a0f73a4f05afc297a1e4fc6364eea5/static/style/tistory. css\"/> 관리 글쓰기 로그인 로그아웃 AutoGPT - AI가 그려주는 명화 이야기 홈",
@@ -69079,7 +69069,7 @@
             "ko": "",
             "en": ""
           },
-          "image": "data/thumbnails/artist-rembrandt/wikidata-Q512755.jpg",
+          "image": "data/images/artist-rembrandt/wikidata-Q512755.jpg",
           "description": {
             "ko": "painting by Rembrandt",
             "en": "painting by Rembrandt"

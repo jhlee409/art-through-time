@@ -1,13 +1,16 @@
 #!/usr/bin/env node
 const canonical = require('../data/art-movement-canonical.json');
+const representatives = require('../data/art-movement-representatives.json');
 const index = require('../data/미술사조/index.json');
 
 const origin = process.argv[2] || 'http://127.0.0.1:4173';
+const furtherArtistCount = new Map((representatives.furtherArtists || []).map(entry => [entry.categoryId, (entry.artists || []).length]));
+const cardCount = categoryIds => categoryIds.reduce((sum, categoryId) => sum + 1 + (furtherArtistCount.get(categoryId) || 0), 0);
 const documents = [
   ...canonical.parents.filter(parent => parent.role === 'document').map(parent => ({
     key: parent.documentKey,
     state: 'complete',
-    cards: parent.categoryIds.length
+    cards: cardCount(parent.categoryIds)
   })),
   ...canonical.contextReferences.map(context => ({key: context.documentKey, state: 'structure', cards: null}))
 ];

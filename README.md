@@ -129,6 +129,13 @@ node tools/build-image-catalog.js --check
 npm test
 ```
 
+OneDrive 이미지 보조 색인과 실행 중인 로컬 서버까지 확인할 때는 다음 검사를 추가합니다.
+
+```powershell
+node tools/validate-project-linkage.js --image-indexes
+node tools/check-app-http.js http://127.0.0.1:4173
+```
+
 사조 정본이나 설명 문서를 바꾼 작업에서는 필요한 경우 아래 검사를 개별 실행합니다.
 
 ```powershell

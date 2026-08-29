@@ -108,10 +108,11 @@ function artistLinks(source) {
 
 function countryRows(section) {
   const table = firstElement(section, 'table', () => true);
-  if (!table) return {headers: [], rows: [], representativeIndex: -1};
+  if (!table) return {headers: [], rows: [], representativeIndex: -1, furtherIndex: -1};
   const headerRow = elements(table, 'tr').find(row => /<th\b/i.test(row.html))?.html || '';
   const headers = elements(headerRow, 'th').map(cell => plainText(cell.html));
   const representativeIndex = headers.findIndex(header => /(대표.*(?:화가|제작)|(?:화가|제작).*대표)/.test(header));
+  const furtherIndex = headers.findIndex(header => /더\s*볼\s*(?:화가|제작)/.test(header));
   const rows = elements(table, 'tr')
     .filter(row => /<td\b/i.test(row.html))
     .map(row => {
@@ -119,19 +120,26 @@ function countryRows(section) {
       const label = plainText(cells[0]);
       const parts = label.split(/\s*(?:—|–)\s*/, 2);
       const representativeCell = representativeIndex >= 0 ? cells[representativeIndex] : '';
+      const furtherCell = furtherIndex >= 0 ? cells[furtherIndex] : '';
+      const representativeArtists = artistLinks(representativeCell);
+      const furtherArtists = artistLinks(furtherCell);
       return {
         label,
         country: parts[0] || '',
         detail: parts[1] || '',
         feature: plainText(cells[1]),
-        artists: artistLinks(representativeCell)
+        developmentId: attribute(row.open, 'data-art-atlas-development-id'),
+        categoryId: attribute(row.open, 'data-art-atlas-category-id'),
+        representativeArtists,
+        furtherArtists,
+        artists: [...representativeArtists, ...furtherArtists]
       };
     });
-  return {headers, rows, representativeIndex};
+  return {headers, rows, representativeIndex, furtherIndex};
 }
 
 function workCards(section) {
-  return elements(section, 'article', tag => hasClass(tag, 'movement-work-card') || hasClass(tag, 'card')).filter(card => /<img\b/i.test(card.html)).map((card, order) => {
+  return elements(section, 'article', tag => hasClass(tag, 'movement-work-card')).map((card, order) => {
     const imageTag = card.html.match(/<img\b[^>]*>/i)?.[0] || '';
     const heading = card.html.match(/<h3\b[^>]*>([\s\S]*?)<\/h3>/i)?.[1] || '';
     const description = card.html.match(/<p\b[^>]*>([\s\S]*?)<\/p>/i)?.[1] || '';
@@ -140,6 +148,10 @@ function workCards(section) {
     return {
       order,
       artistId,
+      developmentId: attribute(card.open, 'data-art-atlas-development-id'),
+      categoryId: attribute(card.open, 'data-art-atlas-category-id'),
+      cardRole: attribute(card.open, 'data-art-atlas-card-role'),
+      imageState: attribute(card.open, 'data-art-atlas-image-state'),
       title: plainText(heading),
       image: attribute(imageTag, 'src'),
       reuseImage: attribute(imageTag, 'data-art-atlas-reuse-image'),
@@ -154,7 +166,13 @@ function cardGroups(section, cards) {
   const groups = elements(section, 'section', tag => hasClass(tag, 'art-atlas-submovement-group')).map(group => {
     const heading = group.html.match(/<h3\b(?=[^>]*\bclass=["'][^"']*art-atlas-submovement-heading)[^>]*>([\s\S]*?)<\/h3>/i)?.[1] || '';
     const name = attribute(group.open, 'data-art-atlas-submovement') || plainText(heading);
-    return {name, source: 'section', cards: workCards(group.html)};
+    return {
+      name,
+      source: 'section',
+      developmentId: attribute(group.open, 'data-art-atlas-development-id'),
+      categoryId: attribute(group.open, 'data-art-atlas-category-id'),
+      cards: workCards(group.html)
+    };
   });
   if (groups.length) return groups;
 
@@ -184,6 +202,9 @@ function sameOrder(first, second) {
 }
 
 function matchingGroup(row, groups) {
+  if (row.developmentId) {
+    return groups.find(group => group.developmentId === row.developmentId);
+  }
   const keys = [row.detail, row.label, row.country].map(labelKey).filter(Boolean);
   return groups.find(group => {
     const groupKey = labelKey(group.name);
@@ -191,7 +212,7 @@ function matchingGroup(row, groups) {
   });
 }
 
-function auditDocument(key, slot, relative) {
+function auditDocument(key, slot, relative, profile = 'complete') {
   const absolute = path.join(root, relative);
   if (!fs.existsSync(absolute)) return {key, slot, file: relative, missingFile: true, issues: ['등록 경로에 HTML 파일이 없음']};
   const html = fs.readFileSync(absolute, 'utf8');
@@ -220,20 +241,25 @@ function auditDocument(key, slot, relative) {
   });
   const title = plainText(html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || '');
   const issues = [];
-  if (!countrySection) issues.push('국가 전개 표 구역 없음');
-  if (table.representativeIndex < 0) issues.push('대표 화가 열을 찾지 못함');
-  if (!representativeSection) issues.push('대표작 심화 구역 없음');
-  if (!cards.length) issues.push('대표작 카드 없음');
-  if (cards.some(card => !card.artistId)) issues.push(`화가 ID 없는 카드 ${cards.filter(card => !card.artistId).length}개`);
-  if (cards.some(card => !card.hasImageElement)) issues.push(`이미지 요소 없는 카드 ${cards.filter(card => !card.hasImageElement).length}개`);
-  if (tableOnlyArtistIds.length) issues.push(`표에만 있는 화가 ${tableOnlyArtistIds.length}명`);
-  if (cardOnlyArtistIds.length) issues.push(`카드에만 있는 화가 ${cardOnlyArtistIds.length}명`);
-  if (rowGroupChecks.some(check => !check.matched)) issues.push(`표-카드 범주 연결 실패 ${rowGroupChecks.filter(check => !check.matched).length}행`);
-  if (rowGroupChecks.some(check => check.matched && !check.artistOrderMatches)) issues.push(`표-카드 범주별 화가 순서 불일치 ${rowGroupChecks.filter(check => check.matched && !check.artistOrderMatches).length}행`);
+  if (profile === 'complete') {
+    if (!countrySection) issues.push('국가 전개 표 구역 없음');
+    if (table.representativeIndex < 0) issues.push('대표 화가 열을 찾지 못함');
+    if (table.furtherIndex < 0) issues.push('더 볼 화가 열을 찾지 못함');
+    if (table.rows.length && !representativeSection) issues.push('대표작 심화 구역 없음');
+    if (table.rows.length && !cards.length) issues.push('대표작 카드 없음');
+    if (cards.some(card => !card.artistId)) issues.push(`화가 ID 없는 카드 ${cards.filter(card => !card.artistId).length}개`);
+    const invalidReadyImages = cards.filter(card => card.imageState === 'ready' && !card.hasImageElement);
+    if (invalidReadyImages.length) issues.push(`ready 상태이나 이미지 요소 없는 카드 ${invalidReadyImages.length}개`);
+    if (tableOnlyArtistIds.length) issues.push(`표에만 있는 화가 ${tableOnlyArtistIds.length}명`);
+    if (cardOnlyArtistIds.length) issues.push(`카드에만 있는 화가 ${cardOnlyArtistIds.length}명`);
+    if (rowGroupChecks.some(check => !check.matched)) issues.push(`표-카드 범주 연결 실패 ${rowGroupChecks.filter(check => !check.matched).length}행`);
+    if (rowGroupChecks.some(check => check.matched && !check.artistOrderMatches)) issues.push(`표-카드 범주별 화가 순서 불일치 ${rowGroupChecks.filter(check => check.matched && !check.artistOrderMatches).length}행`);
+  }
   return {
     key,
     slot,
     file: relative,
+    profile,
     title,
     missingFile: false,
     countryTable: {...table, rowCount: table.rows.length},
@@ -260,12 +286,18 @@ function movementNameMap(countries) {
 function makeAudit() {
   const taxonomy = readJson('data/art-taxonomy.json');
   const movementData = readJson('data/art-movements.json');
+  const canonical = readJson('data/art-movement-canonical.json');
   const index = readJson('data/미술사조/index.json');
+  const legacyIndex = readJson('data/미술사조/legacy-index.json');
   const registered = Object.entries(index.documents || {}).flatMap(([key, slots]) =>
     Object.entries(slots || {}).map(([slot, file]) => ({key, slot, file: normalizePath(file)}))
   );
-  const documents = registered.map(item => auditDocument(item.key, item.slot, item.file));
-  const registeredFiles = new Set(registered.map(item => item.file));
+  const contextKeys = new Set((canonical.contextReferences || []).map(item => item.documentKey));
+  const documents = registered.map(item => auditDocument(item.key, item.slot, item.file, contextKeys.has(item.key) ? 'structure' : 'complete'));
+  const legacyRegistered = Object.entries(legacyIndex.documents || {}).flatMap(([key, slots]) =>
+    Object.entries(slots || {}).filter(([slot, value]) => /^\d+$/.test(slot) && typeof value === 'string').map(([slot, file]) => ({key, slot, file: normalizePath(file)}))
+  );
+  const registeredFiles = new Set([...registered, ...legacyRegistered].map(item => item.file));
   const movementDir = path.join(root, 'data', '미술사조');
   const physicalFiles = fs.readdirSync(movementDir).filter(file => /\.html?$/i.test(file)).map(file => `data/미술사조/${file}`).sort();
   const unregisteredFiles = physicalFiles.filter(file => !registeredFiles.has(file));
@@ -288,8 +320,8 @@ function makeAudit() {
     countryRows: documents.reduce((sum, doc) => sum + (doc.countryTable?.rowCount || 0), 0),
     tableArtistReferences: documents.reduce((sum, doc) => sum + (doc.countryTable?.rows || []).flatMap(row => row.artists).length, 0),
     representativeCards: documents.reduce((sum, doc) => sum + (doc.representativeCards?.length || 0), 0),
-    cardsWithoutArtistId: documents.reduce((sum, doc) => sum + (doc.representativeCards || []).filter(card => !card.artistId).length, 0),
-    cardsWithoutImage: documents.reduce((sum, doc) => sum + (doc.representativeCards || []).filter(card => !card.hasImageElement).length, 0),
+    cardsWithoutArtistId: documents.filter(doc => doc.profile === 'complete').reduce((sum, doc) => sum + (doc.representativeCards || []).filter(card => !card.artistId).length, 0),
+    cardsWithoutImage: documents.filter(doc => doc.profile === 'complete').reduce((sum, doc) => sum + (doc.representativeCards || []).filter(card => card.imageState === 'ready' && !card.hasImageElement).length, 0),
     reusedImageCards: documents.reduce((sum, doc) => sum + (doc.representativeCards || []).filter(card => card.reuseImage !== '').length, 0),
     documentsWithIssues: documents.filter(doc => doc.issues?.length).length
   };
@@ -298,6 +330,7 @@ function makeAudit() {
     taxonomyParentsWithChildren: (taxonomy.movements || []).filter(item => item.submovements?.length).length,
     taxonomySubmovementEntries: (taxonomy.movements || []).reduce((sum, item) => sum + (item.submovements?.length || 0), 0),
     registeredDocuments: registered.length,
+    legacyDocuments: legacyRegistered.length,
     physicalHtmlFiles: physicalFiles.length,
     unregisteredHtmlFiles: unregisteredFiles.length,
     missingRegisteredFiles: missingRegisteredFiles.length,

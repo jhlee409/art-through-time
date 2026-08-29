@@ -8,7 +8,7 @@ Firebase support is deliberately dormant: the application does not show an expor
 
 ## Current contract
 
-Before exporting artist data, review local JSON source files and image provenance. Relationship-map audit files are no longer part of the current app workflow.
+Before exporting artist data, review local JSON source files and image provenance. Deprecated relationship-map audit files have been removed.
 
 - Artist and artwork IDs are stable and must never be changed during migration.
 - `metadata` records creation and update timestamps plus the local editor identifier.

@@ -76,12 +76,42 @@ function checkApplicationModuleSplit() {
     if (!contentSource.includes(`'${file}'`)) throw new Error(`server-content.js does not allow public application module: ${file}`);
   }
 
-  const serverSource = fs.readFileSync(path.join(root, 'server.js'), 'utf8');
-  if (!serverSource.includes('readAppSourceText()')) throw new Error('server rule checks do not read split application sources');
-  for (const file of appModules) {
-    if (!serverSource.includes(`'${file}'`)) throw new Error(`server rule checks do not include application module: ${file}`);
-  }
   return 'application module split';
+}
+
+function checkRemovedFeatureRemnants() {
+  const obsoleteFiles = [
+    'tools/consolidate-high-resolution-into-thumbnails.js',
+    'tools/rename-thumbnails-folder-to-images.js'
+  ];
+  for (const file of obsoleteFiles) {
+    if (fs.existsSync(path.join(root, file))) throw new Error(`obsolete migration tool still exists: ${file}`);
+  }
+  if (fs.existsSync(path.join(root, 'data', 'high-resolution'))) {
+    throw new Error('obsolete data/high-resolution directory still exists');
+  }
+
+  const relationshipUpdates = fs.readdirSync(path.join(root, 'data'))
+    .filter(name => /^relationship-updates-.*\.json$/i.test(name));
+  if (relationshipUpdates.length) {
+    throw new Error(`obsolete relationship-map data still exists: ${relationshipUpdates.join(', ')}`);
+  }
+
+  const removedRulesEndpoint = ['/api/rules', 'check-and-apply'].join('/');
+  const serverSource = fs.readFileSync(path.join(root, 'server.js'), 'utf8');
+  if (serverSource.includes(removedRulesEndpoint)) {
+    throw new Error(`removed rules endpoint still exists: ${removedRulesEndpoint}`);
+  }
+
+  const interfaceSource = [
+    'index.html', 'app-core.js', 'app-artists.js', 'app-atlas.js',
+    'app-detail.js', 'app.js', 'styles.css', 'extras.css'
+  ].map(file => fs.readFileSync(path.join(root, file), 'utf8')).join('\n');
+  for (const fragment of ['relationship-map', 'rule-check-button', 'rules-check-button']) {
+    if (interfaceSource.includes(fragment)) throw new Error(`removed interface fragment still exists: ${fragment}`);
+  }
+
+  return 'removed feature remnants';
 }
 
 function checkArtistPersistenceGuards() {
@@ -111,6 +141,7 @@ function main() {
   for (const file of javascript) checked.push(checkCommand(`syntax ${relative(file)}`, process.execPath, ['--check', file]));
   for (const file of jsonFiles) JSON.parse(fs.readFileSync(file, 'utf8'));
   checked.push(checkApplicationModuleSplit());
+  checked.push(checkRemovedFeatureRemnants());
   checked.push(checkArtistPersistenceGuards());
 
   const artists = JSON.parse(fs.readFileSync(path.join(root, 'data', 'artists.json'), 'utf8'));
@@ -130,6 +161,7 @@ function main() {
     ['movement phase 6 completion', 'tools/complete-movement-sync-v1.js'],
     ['movement learning guides', 'tools/sync-movement-learning-guides.js', '--check'],
     ['country art data', 'tools/validate-country-art-data.js'],
+    ['project linkage', 'tools/validate-project-linkage.js'],
     ['image catalog', 'tools/build-image-catalog.js', '--check'],
     ['Renaissance country table', 'tools/verify-renaissance-country-table.js'],
     ['URL download approval guard', 'tools/check-url-download-approval.js']
