@@ -403,12 +403,15 @@ body {
 .technique-link-controls.link-renumber-pending { pointer-events:none; }
 .technique-link-button.link-dragging { border-color:var(--orange); background:#fff5e9; color:var(--orange); box-shadow:0 4px 10px #18221e24; transform:translateY(-1px); }
 .technique-link-add:hover, .technique-link-add:focus-visible, .technique-link-button:hover, .technique-link-button:focus-visible { border-color:var(--orange); background:#fffaf3; color:var(--orange); outline:0; }
+.technique-link-button.link-emphasized { width:48px; height:48px; font-size:26px; }
 .technique-link-menu { position:fixed; z-index:3000; min-width:92px; padding:4px; border:1px solid var(--line); border-radius:5px; background:#fffdf8; box-shadow:0 8px 24px #18221e2b; }
 .technique-link-menu button { width:100%; border:0; border-radius:3px; background:transparent; color:#a43d27; padding:7px 10px; text-align:left; font-size:12px; }
 .technique-link-menu button:hover,.technique-link-menu button:focus-visible { background:#f6e4dc; outline:0; }
 .technique-link-entry { display:flex; align-items:center; gap:7px; margin:12px 0 -2px; }
 .technique-link-entry.hidden { display:none; }
-.technique-link-entry input { width:min(430px,100%); border:1px solid var(--line); border-radius:4px; background:white; padding:8px 10px; color:var(--ink); font-size:12px; outline-color:#aebba8; }
+.technique-link-entry input[type="url"] { width:min(430px,100%); border:1px solid var(--line); border-radius:4px; background:white; padding:8px 10px; color:var(--ink); font-size:12px; outline-color:#aebba8; }
+.technique-link-entry .link-emphasis-field { display:inline-flex; flex:none; align-items:center; gap:5px; color:var(--muted); font:600 12px/1 var(--sans); white-space:nowrap; cursor:pointer; }
+.technique-link-entry .link-emphasis-field input { width:16px; height:16px; margin:0; accent-color:var(--orange); cursor:pointer; }
 .technique-link-entry button { border:1px solid var(--ink); border-radius:4px; background:var(--ink); color:white; padding:8px 11px; font-size:12px; white-space:nowrap; }
 
 /* Compact technique navigation: no dates in the list, half-width sidebar. */

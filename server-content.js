@@ -92,7 +92,7 @@ function techniqueLinks(value) {
   return value.map(link => {
     const raw=String(link?.url || link || '').trim(), parsed=new URL(raw);
     if (!['http:','https:'].includes(parsed.protocol)) throw new Error('Technique links must use HTTP or HTTPS');
-    return {url:parsed.href};
+    return {url:parsed.href,...(link?.emphasized===true?{emphasized:true}:{})};
   });
 }
 const comparisonTechniqueIds = new Set(['disegno-colorito','fresco-oil','tempera-oil','chiaroscuro-sfumato','linear-aerial-perspective','glazing-impasto']);
@@ -854,7 +854,7 @@ function normalizedMovementSectionLinks(value) {
   return links.slice(0,40).flatMap(item => {
     try {
       const url = new URL(String(item?.url || item || '').trim());
-      return ['http:','https:'].includes(url.protocol) ? [{url:url.href}] : [];
+      return ['http:','https:'].includes(url.protocol) ? [{url:url.href,...(item?.emphasized===true?{emphasized:true}:{})}] : [];
     } catch (_) { return []; }
   });
 }

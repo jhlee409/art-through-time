@@ -942,6 +942,16 @@ function artistLinks(artist) {
     catch (_) { return false; }
   }).map(link => typeof link === 'string' ? {url:link} : link) : [];
 }
+function linkEmphasisField() {
+  const label=language==='ko'?'강조':'Emphasize';
+  return `<label class="link-emphasis-field"><input type="checkbox" data-link-emphasis><span>${esc(label)}</span></label>`;
+}
+function savedLinkFromEntry(url, form) {
+  return {url:url.href,...(form?.querySelector('[data-link-emphasis]')?.checked?{emphasized:true}:{})};
+}
+function linkEmphasisClass(link) {
+  return link?.emphasized===true?' link-emphasized':'';
+}
 function artistWikipediaUrl(artist, originalName = '') {
   const direct = typeof artist?.links?.wikipedia === 'string' ? artist.links.wikipedia : '';
   try {

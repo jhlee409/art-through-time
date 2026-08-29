@@ -244,8 +244,11 @@
 .artist-link-button.artist-link-youtube, .artwork-link-button.artwork-link-youtube { border-color: #b91c16; background: #d2251e; color: #fffdf8; }
 .artist-link-button.artist-link-youtube:hover, .artist-link-button.artist-link-youtube:focus-visible, .artwork-link-button.artwork-link-youtube:hover, .artwork-link-button.artwork-link-youtube:focus-visible { border-color: #8f120e; background: #b91c16; color: white; }
 .artist-link-add:hover, .artist-link-add:focus-visible, .artist-link-button:hover, .artist-link-button:focus-visible, .artwork-link-add:hover, .artwork-link-add:focus-visible, .artwork-link-button:hover, .artwork-link-button:focus-visible { border-color: #8e9b8b; background: #eef4ea; color: #334334; outline: none; }
+.artist-link-button.link-emphasized, .artwork-link-button.link-emphasized { width: 48px; height: 48px; font-size: 26px; }
 .artist-link-entry, .artwork-link-entry { display: flex; align-items: center; gap: 7px; margin: 12px 0 -2px; }
-.artist-link-entry input, .artwork-link-entry input { width: min(430px, 100%); border: 1px solid var(--line); border-radius: 4px; background: white; padding: 8px 10px; color: var(--ink); font-size: 12px; outline-color: #aebba8; }
+.artist-link-entry input[type="url"], .artwork-link-entry input[type="url"] { width: min(430px, 100%); border: 1px solid var(--line); border-radius: 4px; background: white; padding: 8px 10px; color: var(--ink); font-size: 12px; outline-color: #aebba8; }
+.link-emphasis-field { display: inline-flex; flex: none; align-items: center; gap: 5px; color: var(--muted); font: 600 12px/1 var(--sans); white-space: nowrap; cursor: pointer; }
+.link-emphasis-field input { width: 16px; height: 16px; margin: 0; accent-color: var(--orange); cursor: pointer; }
 .artist-link-entry button, .artwork-link-entry button { border: 1px solid var(--ink); border-radius: 4px; background: var(--ink); color: white; padding: 8px 11px; font-size: 12px; white-space: nowrap; }
 .artwork-source-section { padding: 2px 0 18px; }
 .artwork-source-section + .artwork-source-section { padding-top: 18px; border-top: 1px solid var(--line); }
@@ -263,8 +266,11 @@
 .art-card .artwork-link-controls { flex: none; gap: 3px; margin-left: 0; }
 .art-card .artwork-link-add, .art-card .artwork-link-button { width: 19px; height: 19px; font-size: 10px; }
 .art-card .artwork-link-add { font-size: 15px; }
-.thumbnail-artwork-link-entry { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 5px; margin: 7px 0 0; }
-.thumbnail-artwork-link-entry input { width: 100%; min-width: 0; padding: 6px 7px; font-size: 10px; }
+.art-card .artwork-link-button.link-emphasized { width: 38px; height: 38px; font-size: 20px; }
+.thumbnail-artwork-link-entry { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 5px; margin: 7px 0 0; }
+.thumbnail-artwork-link-entry input[type="url"] { width: 100%; min-width: 0; padding: 6px 7px; font-size: 10px; }
+.thumbnail-artwork-link-entry .link-emphasis-field { gap: 3px; font-size: 10px; }
+.thumbnail-artwork-link-entry .link-emphasis-field input { width: 14px; height: 14px; padding: 0; }
 .thumbnail-artwork-link-entry button { padding: 6px 7px; font-size: 10px; }
 .artist-movement-link { padding: 0; border: 0; background: transparent; color: #395b4d; font: inherit; text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
 .artist-movement-link:hover, .artist-movement-link:focus-visible { color: var(--orange); outline: none; }

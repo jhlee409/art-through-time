@@ -18,6 +18,7 @@
 - 독자적 조형 언어, 제도·집단, 선언 또는 분명한 내부 분화가 있는 항목만 별도 설명 HTML로 만든다. 한 국가에서 상위 사조를 수용·변형한 지역적 전개는 국가별 막대는 유지할 수 있지만, 별도 HTML을 복제하지 않고 상위 사조 문서의 `여러 국가에서의 전개`에서 설명한다.
 - `<section id="countries">`, `<section class="movement-enhancement" id="movement-deepening">`를 둔다. 상단 고정 바는 서버가 문서의 사조명을 기본 내비게이션 글자 크기의 두 배(`2em`)로, 문서 폭 중앙에 표시하므로 목차 링크를 고정 내비게이션으로 사용하지 않는다.
 - 사조 막대는 더블클릭으로 설명 HTML을 새 탭에 열며 별도 원문자 설명 아이콘을 넣지 않는다.
+- 설명 제목 옆 `+`로 자료 주소를 추가하는 문서는 URL 입력창과 확인 버튼 사이에 `강조` 체크박스를 둔다. 강조 링크는 `{url, emphasized:true}`로 저장하고 원형 번호 버튼의 지름과 숫자 크기를 기본의 정확히 두 배로 표시하며, 기존 `{url}` 링크는 기본 크기를 유지한다.
 - uHangul v0.7 스타일시트와 런타임을 각각 한 번 포함한다.
 - 화가 링크는 정식 한국어 이름(`data-uh-korean`), uHangul 표시명(`data-uh-display-korean`), 짧은 통용명(`data-uh-list-korean`)을 분리한다. `node tools/sync-artist-link-display-names.js`로 동기화한다.
 - 공통 레이아웃 규칙(상단 고정 사조명, 심화 카드 제목의 국가별 지역·특징 설명, 해당 글자 크기·중복 레이블 제거)을 바꾸면 같은 작업에서 `node tools/sync-all-movement-html-rules.js`를 실행해 모든 저장 HTML에 반영한다. 서버의 화면 주입만으로 끝내지 않는다.

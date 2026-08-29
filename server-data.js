@@ -512,7 +512,7 @@ function presentationLinks(value, label) {
   return value.map(link=>{
     const parsed=new URL(String(link?.url || link || '').trim());
     if(!['http:','https:'].includes(parsed.protocol)) throw new Error(`${label} must use HTTP or HTTPS`);
-    return {url:parsed.href};
+    return {url:parsed.href,...(link?.emphasized===true?{emphasized:true}:{})};
   });
 }
 async function updateArtistPresentationNow(patch, actor='') {
