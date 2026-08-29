@@ -6,7 +6,7 @@ const indexPath = path.join(root, 'data', '미술사조', 'index.json');
 const markerStart = '<!-- art-atlas-enhancement:start -->';
 const markerEnd = '<!-- art-atlas-enhancement:end -->';
 
-const img = src => src && src.startsWith('data/thumbnails/')
+const img = src => src && src.startsWith('data/images/')
   ? `../${src.replace(/^data\//, '')}`
   : src;
 
@@ -46,7 +46,7 @@ const data = {
       {artist:'폰토르모', title:'《십자가에서 내려짐》', date:'1525–1528 · 피렌체 산타 펠리치타', src:'images/Jacopo-20Pontormo-20004-2dcaf20c0708.jpg', note:'중심을 붙잡는 안정된 축이 약하고, 인물들은 떠 있는 듯 얽힌다. 매너리즘의 불안한 공간과 비현실적 색채를 직접 보여준다.'},
       {artist:'파르미자니노', title:'《긴 목의 성모》', date:'1534–1540 · 우피치', src:'images/Parmigianino-Madonna-dal-collo-lungo-Google-Art-Project-0558c795727f.jpg', note:'성모의 목과 손, 아기 예수의 몸이 의도적으로 늘어나 우아하지만 비자연적인 아름다움을 만든다.'},
       {artist:'브론치노', title:'《비너스, 큐피드, 어리석음과 시간》', date:'1540년대 · 런던 내셔널 갤러리', src:'images/Angelo-20Bronzino-20-20Venus-20Cupid-20Folly-20and-20Time-20-20Nationa-72f45c00b9b9.jpg', note:'차갑고 매끈한 표면, 수수께끼 같은 알레고리, 복잡한 신체 얽힘이 궁정 매너리즘의 지적 성격을 드러낸다.'},
-      {artist:'엘 그레코', title:'《오르가스 백작의 매장》', date:'1586–1588 · 톨레도 산토 토메 성당', src:'../thumbnails/artist-Q301/wikidata-Q883994.jpg', note:'길어진 인체와 번쩍이는 색, 지상과 천상의 급격한 분리가 스페인 종교적 매너리즘의 정점을 이룬다.'}
+      {artist:'엘 그레코', title:'《오르가스 백작의 매장》', date:'1586–1588 · 톨레도 산토 토메 성당', src:'../images/artist-Q301/wikidata-Q883994.jpg', note:'길어진 인체와 번쩍이는 색, 지상과 천상의 급격한 분리가 스페인 종교적 매너리즘의 정점을 이룬다.'}
     ]
   },
   Baroque: {
@@ -67,7 +67,7 @@ const data = {
       {artist:'카라바조', title:'《성 마태오의 소명》', date:'1599–1600 · 로마 산 루이지 데이 프란체지', src:'images/Caravaggio-27s-The-Calling-of-St-Matthew-2068cdb551fc.jpg', note:'어둠 속 한 줄기 빛이 선택의 순간을 만든다. 바로크적 극장성과 현실주의가 동시에 작동한다.'},
       {artist:'안니발레 카라치', title:'《바쿠스와 아리아드네의 승리》', date:'1597–1600년대 초 · 파르네세 궁전', src:'images/The-20Triumph-20of-20Bacchus-20and-20Ariadne-20-20Annibale-20Carracci-fd287b491bf5.jpg', note:'격렬한 운동을 고전적 구도 안에 정리해 “질서 있는 에너지”라는 또 다른 바로크를 보여준다.'},
       {artist:'아르테미시아 젠틸레스키', title:'《홀로페르네스의 목을 베는 유디트》', date:'약 1612–1613 · 카포디몬테', src:'images/Artemisia-Gentileschi-Judith-Beheading-Holofernes-WGA8563-822bc56fc2a3.jpg', note:'카라바조주의의 강한 명암을 여성 주체의 힘과 물리적 긴장으로 재해석한다.'},
-      {artist:'렘브란트', title:'《호메로스 흉상을 든 아리스토텔레스》', date:'1653 · 메트로폴리탄 미술관', src:'../thumbnails/artist-rembrandt/met-437394.jpg', note:'네덜란드 바로크는 외적 폭발보다 빛 속에서 드러나는 내면과 역사적 성찰을 중시했다.'}
+      {artist:'렘브란트', title:'《호메로스 흉상을 든 아리스토텔레스》', date:'1653 · 메트로폴리탄 미술관', src:'../images/artist-rembrandt/met-437394.jpg', note:'네덜란드 바로크는 외적 폭발보다 빛 속에서 드러나는 내면과 역사적 성찰을 중시했다.'}
     ]
   },
   Rococo: {
@@ -107,7 +107,7 @@ const data = {
       {artist:'자크루이 다비드', title:'《호라티우스 형제의 맹세》', date:'1784 · 루브르', src:'images/David-Oath-of-the-Horatii-1784-d473275ac167.jpg', note:'직선적 구도와 조각 같은 인체가 사적 감정보다 시민적 의무를 앞세운다.'},
       {artist:'자크루이 다비드', title:'《소크라테스의 죽음》', date:'1787 · 메트로폴리탄 미술관', src:'images/David-The-Death-of-Socrates-ebacbfdd4138.jpg', note:'고대 철학자의 죽음을 혁명 전야의 도덕적 결단 이미지로 바꾼다.'},
       {artist:'자크루이 다비드', title:'《마라의 죽음》', date:'1793 · 벨기에 왕립미술관', src:'images/Death-of-Marat-by-David-a6625a3ca21b.jpg', note:'동시대 정치 사건을 고대 순교자처럼 단순하고 장엄한 화면으로 조직한다.'},
-      {artist:'비제 르 브룅', title:'《자화상》', date:'1770년대 · 개인·궁정 초상 전통', src:'../thumbnails/artist-Q213163/wikidata-Q23037740.jpg', note:'궁정 초상화에서도 고전적 절제와 우아한 자기표현이 결합되며 신고전주의의 사회적 범위를 넓힌다.'}
+      {artist:'비제 르 브룅', title:'《자화상》', date:'1770년대 · 개인·궁정 초상 전통', src:'../images/artist-Q213163/wikidata-Q23037740.jpg', note:'궁정 초상화에서도 고전적 절제와 우아한 자기표현이 결합되며 신고전주의의 사회적 범위를 넓힌다.'}
     ]
   },
   Romanticism: {
@@ -149,7 +149,7 @@ const data = {
       {artist:'귀스타브 쿠르베', title:'《오르낭의 매장》', date:'1849–1850 · 오르세', src:'images/Gustave-Courbet-A-Burial-at-Ornans-Google-Art-Project-2-45d9e62b27f4.jpg', note:'지방 장례를 역사화 크기로 그려 “평범한 현실도 거대한 회화의 주제”라고 선언한다.'},
       {artist:'장프랑수아 밀레', title:'《이삭 줍는 여인들》', date:'1857 · 오르세', src:'images/Jean-Fran-C3-A7ois-Millet-Gleaners-Google-Art-Project-2-2a5eac9e18cd.jpg', note:'농민의 몸과 반복 노동을 조용하지만 무게 있는 기념비적 이미지로 만든다.'},
       {artist:'오노레 도미에', title:'《삼등열차》', date:'1860년대 · 메트로폴리탄 미술관', src:'images/Honor-C3-A9-20Daumier-20-French-20Marseilles-201808-E2-80-931879-20Val-d34f3d1251df.jpg', note:'근대 도시의 이동 수단 안에서 계급, 피로, 익명의 군중을 포착한다.'},
-      {artist:'바실리 푸키레프', title:'《불평등한 결혼》', date:'1862–1863 · 트레티야코프 미술관', src:'../thumbnails/artist-Q6394591/featured-Q3918079.jpg', note:'러시아 사실주의는 개인의 비극을 사회 제도 비판으로 확장했다.'}
+      {artist:'바실리 푸키레프', title:'《불평등한 결혼》', date:'1862–1863 · 트레티야코프 미술관', src:'../images/artist-Q6394591/featured-Q3918079.jpg', note:'러시아 사실주의는 개인의 비극을 사회 제도 비판으로 확장했다.'}
     ]
   },
   Impressionism: {
@@ -410,7 +410,7 @@ const data = {
       '프랑스·영국·덴마크·스웨덴은 왕실 초상, 궁정 장식, 건축을 통해 르네상스를 점진적으로 받아들였다.'
     ],
     works: [
-      {artist:'레오나르도 다 빈치', title:'《최후의 만찬》', date:'1495–1498 · 밀라노', src:'../thumbnails/artist-1786369007570/wikidata-Q128910.jpg', note:'원근법과 심리적 반응이 하나의 드라마로 결합되어 전성기 르네상스의 인간 중심적 서사를 보여준다.'},
+      {artist:'레오나르도 다 빈치', title:'《최후의 만찬》', date:'1495–1498 · 밀라노', src:'../images/artist-1786369007570/wikidata-Q128910.jpg', note:'원근법과 심리적 반응이 하나의 드라마로 결합되어 전성기 르네상스의 인간 중심적 서사를 보여준다.'},
       {artist:'라파엘로', title:'《아테네 학당》', date:'1509–1511 · 바티칸', src:'images/Raffael-058-d7bc21cf0bca.jpg', note:'고대 철학, 수학적 공간, 조화로운 인체가 르네상스 인문주의의 이상적 이미지가 된다.'},
       {artist:'티치아노', title:'《성모 승천》', date:'1516–1518 · 베네치아 프라리 성당', src:'images/Tizian-041-c1f1a35ec75c.jpg', note:'베네치아 화파는 색과 빛의 층으로 상승 운동과 감각적 신성을 만든다.'},
       {artist:'얀 반 에이크', title:'《아르놀피니 부부의 초상》', date:'1434 · 런던 내셔널 갤러리', src:'images/Van-Eyck-Arnolfini-Portrait-997900945212.jpg', note:'북유럽 르네상스는 유화의 광택과 세부 관찰로 사물의 현실감을 극대화했다.'}
@@ -454,8 +454,8 @@ const data = {
       '서유럽 사실주의와 달리 러시아에서는 예술의 사회적 책임과 도덕적 질문이 특히 강했다.'
     ],
     works: [
-      {artist:'바실리 페로프', title:'《사냥꾼들의 휴식》', date:'1871 · 트레티야코프 미술관', src:'../thumbnails/artist-1786347518103/wikidata-Q4340473.jpg', note:'일상 인물의 말투와 성격까지 포착해 러시아 풍속 리얼리즘의 관찰력을 보여준다.'},
-      {artist:'바실리 푸키레프', title:'《불평등한 결혼》', date:'1862–1863 · 트레티야코프 미술관', src:'../thumbnails/artist-Q6394591/featured-Q3918079.jpg', note:'결혼 제도와 계급 권력을 한 장면의 심리적 긴장으로 압축한다.'},
+      {artist:'바실리 페로프', title:'《사냥꾼들의 휴식》', date:'1871 · 트레티야코프 미술관', src:'../images/artist-1786347518103/wikidata-Q4340473.jpg', note:'일상 인물의 말투와 성격까지 포착해 러시아 풍속 리얼리즘의 관찰력을 보여준다.'},
+      {artist:'바실리 푸키레프', title:'《불평등한 결혼》', date:'1862–1863 · 트레티야코프 미술관', src:'../images/artist-Q6394591/featured-Q3918079.jpg', note:'결혼 제도와 계급 권력을 한 장면의 심리적 긴장으로 압축한다.'},
       {artist:'일리야 레핀', title:'《볼가 강의 배 끄는 인부들》', date:'1870–1873 · 러시아 미술관', reuse:0, note:'민중의 고통을 영웅화하지 않고 육체적 노동과 사회 현실로 제시한다.'}
     ]
   },
@@ -476,7 +476,7 @@ const data = {
       {artist:'일리야 레핀', title:'《볼가 강의 배 끄는 인부들》', date:'1870–1873 · 러시아 미술관', reuse:0, note:'러시아 민중의 육체 노동을 국가적 현실의 중심 주제로 끌어올렸다.'},
       {artist:'바실리 수리코프', title:'《스트렐치 처형의 아침》', date:'1881 · 트레티야코프 미술관', reuse:1, note:'역사화가 영웅 찬양보다 군중 심리와 국가 폭력의 긴장으로 바뀐다.'},
       {artist:'이반 시시킨', title:'《소나무 숲의 아침》', date:'1889 · 러시아 풍경', reuse:2, note:'러시아 자연을 민족적 정서와 연결한 이동파 풍경화의 대표적 방향이다.'},
-      {artist:'바실리 페로프', title:'《사냥꾼들의 휴식》', date:'1871 · 트레티야코프 미술관', src:'../thumbnails/artist-1786347518103/wikidata-Q4340473.jpg', note:'이동파의 현실 관찰은 정치적 대작뿐 아니라 일상 대화와 성격 묘사에서도 나타난다.'}
+      {artist:'바실리 페로프', title:'《사냥꾼들의 휴식》', date:'1871 · 트레티야코프 미술관', src:'../images/artist-1786347518103/wikidata-Q4340473.jpg', note:'이동파의 현실 관찰은 정치적 대작뿐 아니라 일상 대화와 성격 묘사에서도 나타난다.'}
     ]
   },
   'Russian Baroque': {

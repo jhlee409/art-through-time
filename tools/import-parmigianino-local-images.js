@@ -6,7 +6,7 @@ const downloadDir = path.join(root, '다운로드용');
 const artistId = 'artist-Q9348';
 const qid = 'Q9348';
 const fetchedAt = new Date().toISOString();
-const thumbnailDir = path.join(root, 'data', 'thumbnails', artistId);
+const thumbnailDir = path.join(root, 'data', 'images', artistId);
 const generatedFile = path.join(root, 'data', 'generated', `qid-${qid}.json`);
 
 const wiki = 'https://en.wikipedia.org/wiki/Parmigianino';
@@ -103,7 +103,7 @@ const works = [
 ];
 
 function workEntry(work) {
-  const image = `data/thumbnails/${artistId}/${work.out}`;
+  const image = `data/images/${artistId}/${work.out}`;
   const source = `${wiki}; local file: ${path.join(downloadDir, work.file)}`;
   return {
     id: work.id,

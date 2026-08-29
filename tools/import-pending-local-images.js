@@ -21,7 +21,7 @@ for (const artist of data.artists || []) {
       pending.push({artistId:artist.id, workId:work.id, reason:!allowedExtensions.has(extension) ? 'unsupported image type' : 'image exceeds 10 MB', source});
       continue;
     }
-    const destinationDir = path.join(root, 'data', 'thumbnails', artist.id);
+    const destinationDir = path.join(root, 'data', 'images', artist.id);
     const destinationName = `${work.id}${extension === '.jpeg' ? '.jpg' : extension}`;
     const destination = path.join(destinationDir, destinationName);
     fs.mkdirSync(destinationDir, {recursive:true});

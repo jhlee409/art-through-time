@@ -3,7 +3,7 @@ const {assertStableEditableStructure, synchronizeTableArtistOrder, validateCompl
 module.exports = function createContentService(deps) {
   const { fs, path, URL, createHash, randomBytes, execFileAsync, ffmpegPath, root, dataDir, highResolutionDir, imageStagingDir, techniquesFile, topicsFile, topicImageDir, movementSectionLinksFile, migrationAssetManifestFile, adminEmail, highResolutionStoredLimit, sourceImageInputLimit, jsonRequestBodyLimit, normalizeArtistsPayload, validateArtistsPayload, firebaseExport, invalidArtworkThumbnail, syncPersonNameDictionary, readAccessControl, readArtistsFile, writeArtistsFile, saveThumbnailBuffer, highResolutionPathExists } = deps;
 function highResolutionLocation(email, artistId) {
-  return {folder:path.join(highResolutionDir,artistId), relativePrefix:`data/high-resolution/${artistId}`};
+  return {folder:path.join(highResolutionDir,artistId), relativePrefix:`data/images/${artistId}`};
 }
 const highResolutionArtistNameOverrides = {Q5592:'미켈란젤로',Q5597:'라파엘로',Q301:'엘그레코',Q43270:'브뤼헐',Q213163:'비제르브룅',Q82445:'툴루즈로트레크'};
 function commonHighResolutionArtistName(name='', qid='') {
@@ -66,9 +66,8 @@ const publicDataFiles = new Set([
 ]);
 const publicPathPrefixes = [
   'data/generated/',
-  'data/high-resolution/',
   'data/techniques/',
-  'data/thumbnails/',
+  'data/images/',
   'data/topic-images/',
   'uhangul/uhangul-runtime.css',
   'uhangul/uhangul-runtime.js'

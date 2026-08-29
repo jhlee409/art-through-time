@@ -4,7 +4,7 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const artistsFile = path.join(root, 'data', 'artists.json');
 const sourceDir = path.join(root, '다운로드용');
-const targetDir = path.join(root, 'data', 'thumbnails', 'artist-Q313898');
+const targetDir = path.join(root, 'data', 'images', 'artist-Q313898');
 const artistId = 'artist-Q313898';
 
 // 작품명과 연도는 소장처·미술관 자료를 대조했다. 같은 작품의 중복 파일은 해상도가 큰 파일 하나만 사용한다.

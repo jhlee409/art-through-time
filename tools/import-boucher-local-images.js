@@ -4,7 +4,7 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const artistsFile = path.join(root, 'data', 'artists.json');
 const sourceDir = path.join(root, '다운로드용');
-const targetDir = path.join(root, 'data', 'thumbnails', 'artist-Q313122');
+const targetDir = path.join(root, 'data', 'images', 'artist-Q313122');
 const artistId = 'artist-Q313122';
 const works = [
   ['triumph-of-venus', '3840px-The_Triumph_of_Venus,_by_François_Boucher.jpg', '비너스의 승리', 'The Triumph of Venus', '1740', '바다에서 떠오른 비너스를 중심에 둔 신화 장면으로, 부셰 특유의 밝은 색과 관능적 장식을 보여준다.', 'A mythological scene centred on Venus rising from the sea, showing Boucher’s luminous colour and sensual decoration.'],

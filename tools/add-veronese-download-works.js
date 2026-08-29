@@ -7,8 +7,8 @@ const artistsFile = path.join(root, 'data', 'artists.json');
 const downloadDir = path.join(root, '다운로드용');
 const artistId = 'artist-Q9440';
 const qid = 'Q9440';
-const thumbnailDir = path.join(root, 'data', 'thumbnails', artistId);
-const relativeThumbnailDir = `data/thumbnails/${artistId}`;
+const thumbnailDir = path.join(root, 'data', 'images', artistId);
+const relativeThumbnailDir = `data/images/${artistId}`;
 const now = new Date().toISOString();
 
 const worksToAdd = [

@@ -65,7 +65,7 @@ ${style}
   <p class="enhancement-intro">아래 카드는 앞부분에서 이미 크게 보여준 폰토르모, 파르미자니노, 브론치노, 카라바조를 반복하지 않고, 매너리즘의 확장과 변형을 이해하는 데 필요한 작품만 골랐다.</p>
   <div class="movement-work-grid">
     <article class="movement-work-card">
-      <div class="movement-work-image"><img src="../thumbnails/artist-Q5592/michelangelo-last-judgment.jpg" alt="미켈란젤로, 최후의 심판"></div>
+      <div class="movement-work-image"><img src="../images/artist-Q5592/michelangelo-last-judgment.jpg" alt="미켈란젤로, 최후의 심판"></div>
       <div class="movement-work-body"><span class="mini-label">${a.michelangelo}</span><h3>${a.michelangelo}, 《최후의 심판》</h3><p class="work-meta">1536-1541, 시스티나 성당</p><p>르네상스의 안정된 인체가 거대한 소용돌이 속으로 빨려 들어간다. 영웅적인 몸은 남아 있지만 화면 전체가 균형보다 심판의 압력과 불안을 향해 움직여, 매너리즘이 어디에서 출발했는지 보여준다.</p></div>
     </article>
     <article class="movement-work-card">
@@ -77,7 +77,7 @@ ${style}
       <div class="movement-work-body"><span class="mini-label">틴토레토</span><h3>틴토레토, 《최후의 만찬》</h3><p class="work-meta">1592-1594, 산 조르조 마조레, 베네치아</p><p>식탁을 정면에 놓는 전통을 버리고 사선으로 깊숙이 밀어 넣는다. 연기, 빛, 천사의 움직임이 현실 공간을 흔들어 베네치아 매너리즘이 바로크적 역동성으로 넘어가는 지점을 보여준다.</p></div>
     </article>
     <article class="movement-work-card">
-      <div class="movement-work-image"><img src="../thumbnails/artist-Q301/wikidata-Q883994.jpg" alt="엘 그레코, 오르가스 백작의 매장"></div>
+      <div class="movement-work-image"><img src="../images/artist-Q301/wikidata-Q883994.jpg" alt="엘 그레코, 오르가스 백작의 매장"></div>
       <div class="movement-work-body"><span class="mini-label">${a.elgreco}</span><h3>${a.elgreco}, 《오르가스 백작의 매장》</h3><p class="work-meta">1586-1588, 산토 토메 성당, 톨레도</p><p>아래의 장례 장면과 위의 천상 장면이 서로 다른 현실처럼 맞물린다. 길어진 인체와 차가운 빛은 스페인 매너리즘이 종교적 환시로 변한 모습을 선명하게 보여준다.</p></div>
     </article>
     <article class="movement-work-card">
@@ -138,15 +138,15 @@ ${style}
       <div class="movement-work-body"><span class="mini-label">안니발레 카라치</span><h3>카라치, 《바쿠스와 아리아드네의 승리》</h3><p class="work-meta">1597년경-1600년대 초, 로마 파르네세 궁전</p><p>자연 관찰을 바탕으로 하되 고대 조각과 르네상스의 균형을 결합해, 화면을 고전적 리듬과 안정된 서사로 조직한다. 카라바조와 다른 바로크의 두 번째 출발점을 명확히 보여 준다.</p></div>
     </article>
     <article class="movement-work-card">
-      <div class="movement-work-image"><img src="../thumbnails/artist-url-1786879941678/rubens-descent-antwerp-1612.jpg" alt="루벤스, 십자가에서 내려짐"></div>
+      <div class="movement-work-image"><img src="../images/artist-url-1786879941678/rubens-descent-antwerp-1612.jpg" alt="루벤스, 십자가에서 내려짐"></div>
       <div class="movement-work-body"><span class="mini-label">${a.rubens}</span><h3>${a.rubens}, 《십자가에서 내려짐》</h3><p class="work-meta">1612-1614, 안트베르펜 성모 대성당</p><p>인물들이 십자가에서 사선으로 쏟아져 내려오며 화면 전체가 하나의 몸짓이 된다. 풍부한 색채와 육체적 무게, 집단적 감정이 플랑드르 바로크의 핵심을 압축한다.</p></div>
     </article>
     <article class="movement-work-card">
-      <div class="movement-work-image"><img src="../thumbnails/artist-rembrandt/rijksmuseum-SK-C-5.jpg" alt="렘브란트, 야경"></div>
+      <div class="movement-work-image"><img src="../images/artist-rembrandt/rijksmuseum-SK-C-5.jpg" alt="렘브란트, 야경"></div>
       <div class="movement-work-body"><span class="mini-label">${a.rembrandt}</span><h3>${a.rembrandt}, 《야경》</h3><p class="work-meta">1642, 암스테르담 국립미술관</p><p>집단 초상을 행진 직전의 사건처럼 만들었다. 빛은 인물을 단순히 밝히는 장치가 아니라 시민 공동체의 활력과 심리적 긴장을 조직하는 힘으로 작동한다.</p></div>
     </article>
     <article class="movement-work-card">
-      <div class="movement-work-image"><img src="../thumbnails/artist-Q41264/wikidata-Q185372.jpg" alt="베르메르, 진주 귀걸이를 한 소녀"></div>
+      <div class="movement-work-image"><img src="../images/artist-Q41264/wikidata-Q185372.jpg" alt="베르메르, 진주 귀걸이를 한 소녀"></div>
       <div class="movement-work-body"><span class="mini-label">${a.vermeer}</span><h3>${a.vermeer}, 《진주 귀걸이를 한 소녀》</h3><p class="work-meta">1665년경, 마우리츠하위스</p><p>거대한 사건은 없지만, 어둠 속에서 얼굴과 진주가 떠오르는 순간이 강한 집중을 만든다. 네덜란드 바로크가 일상의 고요함 속에서도 빛의 드라마를 만들 수 있음을 보여준다.</p></div>
     </article>
     <article class="movement-work-card">
@@ -272,7 +272,7 @@ ${style}
   <p class="enhancement-intro">아래 카드는 앞부분에서 이미 보여준 다비드의 세 작품과 프라고나르를 반복하지 않고, 신고전주의가 제국 초상, 여성 초상, 조각, 국제 역사화로 확장되는 방식을 보여준다.</p>
   <div class="movement-work-grid">
     <article class="movement-work-card">
-      <div class="movement-work-image"><img src="../thumbnails/artist-Q213163/wikidata-Q23037740.jpg" alt="비제 르 브룅, 자화상"></div>
+      <div class="movement-work-image"><img src="../images/artist-Q213163/wikidata-Q23037740.jpg" alt="비제 르 브룅, 자화상"></div>
       <div class="movement-work-body"><span class="mini-label">${a.vigee}</span><h3>${a.vigee}, 《자화상》</h3><p class="work-meta">1790년경, 우피치 미술관</p><p>부드러운 표정과 자연스러운 몸짓 속에서도 윤곽과 자세가 명료하다. 로코코 궁정 초상의 우아함이 신고전주의의 절제와 결합하는 과도기를 보여준다.</p></div>
     </article>
     <article class="movement-work-card">

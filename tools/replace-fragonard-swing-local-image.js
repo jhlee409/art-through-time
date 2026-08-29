@@ -5,7 +5,7 @@ const root = path.resolve(__dirname, '..');
 const artistId = 'artist-Q313898';
 const workId = `${artistId}-representative-work`;
 const source = path.join(root, '다운로드용', 'The_Swing_(P430).jpg');
-const destination = path.join(root, 'data', 'thumbnails', artistId, `${workId}.jpg`);
+const destination = path.join(root, 'data', 'images', artistId, `${workId}.jpg`);
 const artistsFile = path.join(root, 'data', 'artists.json');
 
 if (!fs.existsSync(source)) throw new Error(`Missing local image: ${source}`);

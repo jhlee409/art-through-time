@@ -19,7 +19,7 @@ process.once('uncaughtException', error => {
   }
   throw error;
 });
-const root = __dirname, dataDir = path.join(root, 'data'), highResolutionDir = path.join(dataDir, 'high-resolution'), imageStagingDir = path.join(dataDir, '.image-staging'), artistsFile = path.join(dataDir, 'artists.json'), techniquesFile = path.join(dataDir, 'techniques.json'), topicsFile = path.join(dataDir, 'topics.json'), topicImageDir = path.join(dataDir, 'topic-images'), movementSectionLinksFile = path.join(dataDir, 'movement-section-links.json'), backupsDir = path.join(dataDir, 'backups'), accessControlFile = path.join(dataDir, 'access-control.json'), migrationAssetManifestFile = path.join(dataDir, 'migration-assets.json'), auditLogFile = path.join(dataDir, 'audit-log.jsonl');
+const root = __dirname, dataDir = path.join(root, 'data'), highResolutionDir = path.join(dataDir, 'images'), imageStagingDir = path.join(dataDir, '.image-staging'), artistsFile = path.join(dataDir, 'artists.json'), techniquesFile = path.join(dataDir, 'techniques.json'), topicsFile = path.join(dataDir, 'topics.json'), topicImageDir = path.join(dataDir, 'topic-images'), movementSectionLinksFile = path.join(dataDir, 'movement-section-links.json'), backupsDir = path.join(dataDir, 'backups'), accessControlFile = path.join(dataDir, 'access-control.json'), migrationAssetManifestFile = path.join(dataDir, 'migration-assets.json'), auditLogFile = path.join(dataDir, 'audit-log.jsonl');
 function loadLocalEnvironment() {
   try {
     for (const line of fsSync.readFileSync(path.join(root,'.env'),'utf8').split(/\r?\n/)) {
@@ -269,7 +269,7 @@ function thumbnailTitleExtraItems(artists) {
 }
 function localImageFileForDuplicateCheck(value) {
   const src=String(value || '').trim().replace(/[?#].*$/,'').replace(/\\/g,'/');
-  if(!/^data\/(?:thumbnails|high-resolution)\//.test(src) || src === offlineArtworkPlaceholder) return null;
+  if(!/^data\/images\//.test(src) || src === offlineArtworkPlaceholder) return null;
   const target=path.resolve(root,src);
   const relative=path.relative(root,target).replace(/\\/g,'/');
   if(!relative || relative.startsWith('..') || path.isAbsolute(relative)) return null;
@@ -495,7 +495,7 @@ async function movementDocumentImageIssues() {
       const relative=path.relative(root,target).replace(/\\/g,'/');
       const outside=!relative || relative.startsWith('..') || path.isAbsolute(relative);
       const missing=outside || !await readable(target);
-      const unstable=/^(?:\.\.\/)?(?:thumbnails|high-resolution)\//.test(clean) || /^data\/(?:thumbnails|high-resolution)\//.test(clean);
+      const unstable=false;
       if(missing || unstable) {
         const reason=missing ? '이미지 파일 누락 또는 읽기 불가' : 'Git에 올리지 않는 이미지 폴더 직접 참조';
         issues.push({artist:'미술사조 HTML',artistId:entry.name,work:`${reason}: ${src}`,workId:`data/미술사조/${entry.name}`});
@@ -521,7 +521,7 @@ async function displayDataImageIssues() {
         const src=value.trim();
         const external=/^(?:https?:)?\/\//i.test(src);
         const clean=src.replace(/[?#].*$/,'').replace(/\\/g,'/');
-        const unstable=/^data\/(?:thumbnails|high-resolution)\//.test(clean) || /^(?:\.\.\/)?(?:thumbnails|high-resolution)\//.test(clean);
+        const unstable=false;
         let missing=false;
         if(!external && !/^data:/i.test(src)) {
           const target=path.resolve(root,clean);

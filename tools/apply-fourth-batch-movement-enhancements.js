@@ -111,7 +111,7 @@ ${style}
       ${card({artist:'앙드레 브르통', title:'브르통, 《초현실주의 선언》 표지', meta:'1924, 초현실주의 이론의 출발점', src:'images/Breton-Surrealist-Manifesto.png', alt:'앙드레 브르통, 초현실주의 선언 표지', body:'브르통은 화가가 아니지만 이 선언은 초현실주의의 방법과 목표를 규정한 핵심 자료다. 꿈과 자동기술, 이성의 통제를 벗어난 사고가 회화와 문학을 묶는 공통 원리가 되었다.'})}
       ${card({artist:'이브 탕기', title:'탕기, 《Indefinite Divisibility》', meta:'1942, 망명기 초현실주의', src:'images/Tanguy-Indefinite-Divisibility.jpg', alt:'이브 탕기, Indefinite Divisibility', body:'불명확한 생물체 같은 형태가 사막도 바다도 아닌 공간에 떠 있다. 탕기는 달리식 정밀 묘사를 쓰면서도 서사보다 낯선 공간감과 무의식적 사물의 고독을 강조했다.'})}
       ${card({artist:'아쉴 고키', title:'고키, 《The Liver is the Cock’s Comb》', meta:'1944, 초현실주의와 추상표현주의의 연결', src:'images/Gorky-Liver-Cocks-Comb.jpg', alt:'아쉴 고키, The Liver is the Cock’s Comb', body:'유기적 형태, 자동적인 선, 강한 색면이 구체적 사물과 추상 사이에서 흔들린다. 고키는 유럽 초현실주의의 자동성과 뉴욕 추상표현주의의 제스처를 이어 주는 핵심 연결점이다.'})}
-      ${card({artist:'프리다 칼로', title:'칼로, 《두 명의 프리다》', meta:'1939, 멕시코의 자전적 상징', src:'../thumbnails/frida-kahlo/wikidata-Q3232010.jpg', alt:'프리다 칼로, 두 명의 프리다', body:'두 자아, 노출된 심장, 혈관은 꿈의 장면처럼 보이지만 칼로에게는 개인사와 신체의 현실이었다. 이 작품은 초현실주의라는 분류가 유럽 밖에서 어떻게 논쟁적으로 확장되는지 보여준다.'})}
+      ${card({artist:'프리다 칼로', title:'칼로, 《두 명의 프리다》', meta:'1939, 멕시코의 자전적 상징', src:'../images/frida-kahlo/wikidata-Q3232010.jpg', alt:'프리다 칼로, 두 명의 프리다', body:'두 자아, 노출된 심장, 혈관은 꿈의 장면처럼 보이지만 칼로에게는 개인사와 신체의 현실이었다. 이 작품은 초현실주의라는 분류가 유럽 밖에서 어떻게 논쟁적으로 확장되는지 보여준다.'})}
     </div>
   </div>
 </section>`

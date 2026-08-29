@@ -32,8 +32,7 @@ async function filesBelow(folder, type) {
 
 async function assetManifest() {
   const assets = [
-    ...await filesBelow(path.join(dataDir, 'thumbnails'), 'thumbnail'),
-    ...await filesBelow(path.join(dataDir, 'high-resolution'), 'high-resolution'),
+    ...await filesBelow(path.join(dataDir, 'images'), 'thumbnail'),
     ...await filesBelow(path.join(dataDir, '미술사조', 'images'), 'movement-image')
   ];
   return {schema:1, generatedAt:new Date().toISOString(), assets};

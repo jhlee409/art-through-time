@@ -128,7 +128,7 @@ async function main() {
       artistName:item.artist.name,
       workId:item.work.id,
       workTitle:item.work.title,
-      targetPath:`data/thumbnails/${item.artist.id}/${item.work.id}${extension}`,
+      targetPath:`data/images/${item.artist.id}/${item.work.id}${extension}`,
       reviewStatus:confident ? 'candidate' : 'unresolved',
       selected:confident ? top : null,
       candidates:candidates.slice(0,3),

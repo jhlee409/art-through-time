@@ -7,7 +7,7 @@ const {normalizeArtistsPayload, validateArtistsPayload} = require('../data-contr
 
 const root = path.resolve(__dirname, '..');
 const ignoredDirectories = new Set(['.git', 'node_modules', 'delivery', 'logs']);
-const imageDirectories = ['data/thumbnails', 'data/high-resolution', 'data/topic-images', 'data/미술사조/images', 'data/techniques'];
+const imageDirectories = ['data/images', 'data/topic-images', 'data/미술사조/images', 'data/techniques'];
 const oversizedImageLimit = 10 * 1024 * 1024;
 
 function walk(directory, predicate, result = []) {

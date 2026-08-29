@@ -4,7 +4,7 @@ const {imageDimensions, invalidArtworkThumbnail} = require('../thumbnail-validat
 
 const root = path.resolve(__dirname, '..');
 const artistsFile = path.join(root, 'data', 'artists.json');
-const placeholder = 'data/thumbnails/_placeholder/artwork-placeholder.png';
+const placeholder = 'data/images/_placeholder/artwork-placeholder.png';
 const artistId = process.argv.find(value => value.startsWith('--artist='))?.slice('--artist='.length);
 
 async function main() {
@@ -13,7 +13,7 @@ async function main() {
   if (!artists.length) throw new Error(`No matching artist: ${artistId || 'all'}`);
   const repaired = [];
   for (const artist of artists) {
-    const indexFile = path.join(root, 'data', 'thumbnails', artist.id, 'index.json');
+    const indexFile = path.join(root, 'data', 'images', artist.id, 'index.json');
     let index = {};
     try { index = JSON.parse(await fs.readFile(indexFile, 'utf8')); } catch (_) { continue; }
     let changed = false;

@@ -175,7 +175,7 @@ const manualPersonOverrides = [
   {id:'arthur-streeton', original:'Arthur Streeton', korean:'아서 스트리튼'}
 ];
 const textExtensions = new Set(['.html', '.htm', '.json', '.js', '.md', '.txt']);
-const skippedDirectories = new Set(['.git', 'node_modules', 'logs', 'backups', 'thumbnails', 'high-resolution', 'images', 'generated', 'delivery', '.uhangul-backup']);
+const skippedDirectories = new Set(['.git', 'node_modules', 'logs', 'backups', 'images', 'high-resolution', 'generated', 'delivery', '.uhangul-backup']);
 const koreanName = '[가-힣]{2,}(?:\\s+[가-힣]{1,}){0,5}';
 const foreignWord = "[A-ZÀ-ÖØ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'’.-]*";
 const foreignJoiner = "(?:de|del|della|da|di|du|van|von|der|den|ten|ter|la|le|st\\.)";

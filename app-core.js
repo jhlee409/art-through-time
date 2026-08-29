@@ -1117,7 +1117,7 @@ function setupSortableLinkButtons(root, options) {
 }
 function thumbnail(url, width = 240) { return ''; }
 function isExternalImageSource(value) { return /^https?:\/\//i.test(String(value || '')); }
-const offlineArtworkPlaceholder = 'data/thumbnails/_placeholder/artwork-placeholder.png';
+const offlineArtworkPlaceholder = 'data/images/_placeholder/artwork-placeholder.png';
 function localArtworkImage(work) {
   const image = work?.thumbnail || '';
   if (!image || isExternalImageSource(image)) return offlineArtworkPlaceholder;

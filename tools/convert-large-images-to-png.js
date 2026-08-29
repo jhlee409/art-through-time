@@ -39,7 +39,7 @@ async function walk(folder, predicate, output = []) {
 }
 
 async function largeImages() {
-  const roots = ['high-resolution', 'thumbnails', 'topic-images', path.join('미술사조', 'images')]
+  const roots = ['images', 'topic-images', path.join('미술사조', 'images')]
     .map(folder => path.join(dataDir, folder))
     .filter(folder => fsSync.existsSync(folder));
   const files = [];
@@ -110,7 +110,7 @@ async function replaceReferences(changes) {
 async function refreshThumbnailHashes(changes) {
   if (!changes.length) return 0;
   const byNewRel = new Map(changes.map(change => [change.newRel, change.newFile]));
-  const indexes = await walk(path.join(dataDir, 'thumbnails'), file => path.basename(file) === 'index.json');
+  const indexes = await walk(path.join(dataDir, 'images'), file => path.basename(file) === 'index.json');
   let updated = 0;
   for (const file of indexes) {
     const index = JSON.parse(await fs.readFile(file, 'utf8'));
@@ -132,7 +132,7 @@ async function refreshThumbnailHashes(changes) {
 
 async function repairMissingPngReferences() {
   const files = await walk(root, file => textPattern.test(file));
-  const localImageReference = /data\/(?:high-resolution|thumbnails|topic-images|미술사조\/images)\/[^"'\s)]+?\.(?:jpe?g|webp)/g;
+  const localImageReference = /data\/(?:images|topic-images|미술사조\/images)\/[^"'\s)]+?\.(?:jpe?g|webp)/g;
   let editedFiles = 0;
   let replacements = 0;
   for (const file of files) {
@@ -156,7 +156,7 @@ async function repairMissingPngReferences() {
 }
 
 async function refreshAllThumbnailHashes() {
-  const indexes = await walk(path.join(dataDir, 'thumbnails'), file => path.basename(file) === 'index.json');
+  const indexes = await walk(path.join(dataDir, 'images'), file => path.basename(file) === 'index.json');
   let updated = 0;
   for (const file of indexes) {
     const index = await fs.readFile(file, 'utf8').then(JSON.parse).catch(() => null);

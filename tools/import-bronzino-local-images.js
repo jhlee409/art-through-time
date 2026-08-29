@@ -9,7 +9,7 @@ const downloadDir = path.join(root, '다운로드용');
 const artistId = 'artist-Q7803';
 const qid = 'Q7803';
 const fetchedAt = new Date().toISOString();
-const thumbnailDir = path.join(root, 'data', 'thumbnails', artistId);
+const thumbnailDir = path.join(root, 'data', 'images', artistId);
 const generatedFile = path.join(root, 'data', 'generated', `qid-${qid}.json`);
 const indexFile = path.join(thumbnailDir, 'index.json');
 const imageLimit = 10 * 1024 * 1024;
@@ -68,7 +68,7 @@ function pngUnderLimit(source, target) {
 }
 
 function workEntry(work) {
-  const image = `data/thumbnails/${artistId}/${work.out}`;
+  const image = `data/images/${artistId}/${work.out}`;
   const source = `${wiki}; local file: ${path.join(downloadDir, work.file)}`;
   return {
     id: work.id,
@@ -132,7 +132,7 @@ for (const work of works) {
   const target = path.join(thumbnailDir, work.out);
   if (!fs.existsSync(source)) throw new Error(`Missing download image: ${source}`);
   pngUnderLimit(source, target);
-  const relative = `data/thumbnails/${artistId}/${work.out}`;
+  const relative = `data/images/${artistId}/${work.out}`;
   index[work.id] = {
     thumbnail: relative,
     checkedAt: fetchedAt,

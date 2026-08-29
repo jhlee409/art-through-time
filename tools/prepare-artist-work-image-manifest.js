@@ -168,7 +168,7 @@ async function main() {
     const extension = top ? extensionFor(top.mime, top.fileTitle) : '.jpg';
     return {
       ...item,
-      targetPath: `data/thumbnails/${item.artistId}/${item.workId}${extension}`,
+      targetPath: `data/images/${item.artistId}/${item.workId}${extension}`,
       reviewStatus: confident ? 'candidate' : 'unresolved',
       selected: confident ? top : null,
       candidates: candidates.slice(0, 3),

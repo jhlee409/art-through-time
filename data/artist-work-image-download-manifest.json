@@ -7,10 +7,10 @@
   "policy": "전체 화가 작품 중 로컬 이미지가 없는 작품을 대상으로 하며, Commons 후보에서 작가명과 작품명이 충분히 일치한 candidate만 다운로드한다.",
   "counts": {
     "pending": 308,
-    "downloaded": 14,
-    "candidates": 100,
+    "downloaded": 50,
+    "candidates": 40,
     "unresolved": 187,
-    "failed": 7,
+    "failed": 31,
     "skippedNoSearchTokens": 8
   },
   "items": [
@@ -30,7 +30,7 @@
         "ko": "선르네상스",
         "en": "선르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q3044873.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q3044873.jpg",
       "reviewStatus": "downloaded",
       "selected": {
         "score": 24,
@@ -117,7 +117,7 @@
         "ko": "선르네상스",
         "en": "선르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q3276180.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q3276180.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -187,7 +187,7 @@
         "ko": "선르네상스",
         "en": "선르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q3910951.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q3910951.jpg",
       "reviewStatus": "downloaded",
       "selected": {
         "score": 21,
@@ -274,7 +274,7 @@
         "ko": "선르네상스",
         "en": "선르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q3947106.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q3947106.jpg",
       "reviewStatus": "downloaded",
       "selected": {
         "score": 18,
@@ -361,7 +361,7 @@
         "ko": "선르네상스",
         "en": "선르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q3276171.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q3276171.jpg",
       "reviewStatus": "downloaded",
       "selected": {
         "score": 22,
@@ -448,7 +448,7 @@
         "ko": "선르네상스",
         "en": "선르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q3907498.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q3907498.jpg",
       "reviewStatus": "downloaded",
       "selected": {
         "score": 18,
@@ -535,7 +535,7 @@
         "ko": "선르네상스",
         "en": "선르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q3967208.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q3967208.jpg",
       "reviewStatus": "downloaded",
       "selected": {
         "score": 18,
@@ -622,7 +622,7 @@
         "ko": "선르네상스",
         "en": "선르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q3910927.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q3910927.jpg",
       "reviewStatus": "downloaded",
       "selected": {
         "score": 21,
@@ -709,7 +709,7 @@
         "ko": "선르네상스",
         "en": "선르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q1197593.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q1197593.jpg",
       "reviewStatus": "downloaded",
       "selected": {
         "score": 18,
@@ -796,7 +796,7 @@
         "ko": "선르네상스",
         "en": "선르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q3944650.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q3944650.jpg",
       "reviewStatus": "downloaded",
       "selected": {
         "score": 21,
@@ -883,7 +883,7 @@
         "ko": "선르네상스",
         "en": "선르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q3937289.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q3937289.jpg",
       "reviewStatus": "downloaded",
       "selected": {
         "score": 21,
@@ -970,7 +970,7 @@
         "ko": "선르네상스",
         "en": "선르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q3910232.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q3910232.jpg",
       "reviewStatus": "downloaded",
       "selected": {
         "score": 18,
@@ -1057,7 +1057,7 @@
         "ko": "선르네상스",
         "en": "선르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q3618182.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q3618182.jpg",
       "reviewStatus": "failed",
       "selected": {
         "score": 7,
@@ -1143,7 +1143,7 @@
         "ko": "선르네상스",
         "en": "선르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q3618200.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q3618200.jpg",
       "reviewStatus": "failed",
       "selected": {
         "score": 10,
@@ -1229,7 +1229,7 @@
         "ko": "선르네상스",
         "en": "선르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q3975688.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q3975688.jpg",
       "reviewStatus": "downloaded",
       "selected": {
         "score": 18,
@@ -1316,7 +1316,7 @@
         "ko": "선르네상스",
         "en": "선르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q3933580.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q3933580.jpg",
       "reviewStatus": "failed",
       "selected": {
         "score": 15,
@@ -1402,7 +1402,7 @@
         "ko": "선르네상스",
         "en": "선르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q3649309.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q3649309.jpg",
       "reviewStatus": "downloaded",
       "selected": {
         "score": 24,
@@ -1489,7 +1489,7 @@
         "ko": "선르네상스",
         "en": "선르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q3697612.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q3697612.jpg",
       "reviewStatus": "failed",
       "selected": {
         "score": 15,
@@ -1575,7 +1575,7 @@
         "ko": "선르네상스",
         "en": "선르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q4003125.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q4003125.jpg",
       "reviewStatus": "failed",
       "selected": {
         "score": 18,
@@ -1661,7 +1661,7 @@
         "ko": "선르네상스",
         "en": "선르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q3910923.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q3910923.jpg",
       "reviewStatus": "failed",
       "selected": {
         "score": 18,
@@ -1747,7 +1747,7 @@
         "ko": "이탈리아 르네상스",
         "en": "이탈리아 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q650189.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q650189.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -1769,7 +1769,7 @@
         "ko": "선르네상스",
         "en": "선르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q734197.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q734197.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -1791,7 +1791,7 @@
         "ko": "선르네상스",
         "en": "선르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q3997179.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q3997179.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -1813,7 +1813,7 @@
         "ko": "선르네상스",
         "en": "선르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q3698217.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q3698217.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -1883,7 +1883,7 @@
         "ko": "선르네상스",
         "en": "선르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q3472935.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q3472935.jpg",
       "reviewStatus": "downloaded",
       "selected": {
         "score": 18,
@@ -1970,7 +1970,7 @@
         "ko": "선르네상스",
         "en": "선르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q3958341.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q3958341.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -2040,7 +2040,7 @@
         "ko": "선르네상스",
         "en": "선르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q7814/wikidata-Q3907474.jpg",
+      "targetPath": "data/images/artist-Q7814/wikidata-Q3907474.jpg",
       "reviewStatus": "failed",
       "selected": {
         "score": 18,
@@ -2126,8 +2126,8 @@
         "ko": "플랑드르파",
         "en": "플랑드르파"
       },
-      "targetPath": "data/thumbnails/artist-Q102272/wikidata-Q3973522.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q102272/wikidata-Q3973522.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 24,
         "artistMatches": 3,
@@ -2193,7 +2193,9 @@
           "credit": "<a rel=\"nofollow\" class=\"external free\" href=\"http://www.philamuseum.org/collections/permanent/102076.html\">http://www.philamuseum.org/collections/permanent/102076.html</a>",
           "artistCredit": "<div class=\"fn value\">\nJan van Eyck</div>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T03:52:33.899Z",
+      "bytes": 984043
     },
     {
       "artistId": "artist-Q102272",
@@ -2211,7 +2213,7 @@
         "ko": "플랑드르파",
         "en": "플랑드르파"
       },
-      "targetPath": "data/thumbnails/artist-Q102272/wikidata-Q9362336.jpg",
+      "targetPath": "data/images/artist-Q102272/wikidata-Q9362336.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -2281,8 +2283,8 @@
         "ko": "플랑드르파",
         "en": "플랑드르파"
       },
-      "targetPath": "data/thumbnails/artist-Q102272/wikidata-Q122374966.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q102272/wikidata-Q122374966.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 23,
         "artistMatches": 3,
@@ -2348,7 +2350,9 @@
           "credit": "Crop of 5190x12929 from <a rel=\"nofollow\" class=\"external free\" href=\"http://data.closertovaneyck.be/verona/tiles/32a-VIS-UH/17/0_0.jpg\">http://data.closertovaneyck.be/verona/tiles/32a-VIS-UH/17/0_0.jpg</a>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Jan_van_Eyck\" class=\"extiw\" title=\"w:en:Jan van Eyck\"><span title=\"Flemish painter (c.1390–1441)\">Jan van Eyck</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T03:52:42.783Z",
+      "bytes": 180032
     },
     {
       "artistId": "artist-Q102272",
@@ -2366,7 +2370,7 @@
         "ko": "플랑드르파",
         "en": "플랑드르파"
       },
-      "targetPath": "data/thumbnails/artist-Q102272/wikidata-Q107438391.jpg",
+      "targetPath": "data/images/artist-Q102272/wikidata-Q107438391.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -2436,8 +2440,8 @@
         "ko": "플랑드르파",
         "en": "플랑드르파"
       },
-      "targetPath": "data/thumbnails/artist-Q102272/wikidata-Q2157202.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q102272/wikidata-Q2157202.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 26,
         "artistMatches": 3,
@@ -2503,7 +2507,9 @@
           "credit": "<a href=\"https://en.wikipedia.org/wiki/en:Web_Gallery_of_Art\" class=\"extiw\" title=\"w:en:Web Gallery of Art\"><span title=\"virtual art gallery for European fine art created before 1900\">Web Gallery of Art</span></a>:  <span typeof=\"mw:File\"><a href=\"http://www.wga.hu/art/e/eyck_van/jan/09ghent/1open.jpg\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/20px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/40px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"60\" data-file-height=\"60\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://www.wga.hu/art/e/eyck_van/jan/09ghent/1open.jpg\">Image</a> <span typeof=\"mw:File\"><a href=\"http://www.wga.hu/html/e/eyck_van/jan/09ghent/1open.html\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/20px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/40px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"620\" data-file-height=\"620\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://www.wga.hu/html/e/eyck_van/jan/09ghent/1open.html\">Info about artwork</a><div style=\"display: none;\">wga QS:P11807,\"e/eyck_van/jan/09ghent/1open\"</div>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Jan_van_Eyck\" class=\"extiw\" title=\"w:en:Jan van Eyck\"><span title=\"Flemish painter (c.1390–1441)\">Jan van Eyck</span></a></bdi> / <bdi><a href=\"https://en.wikipedia.org/wiki/en:Hubert_van_Eyck\" class=\"extiw\" title=\"w:en:Hubert van Eyck\"><span title=\"Early Netherlandish painter (1366-1426)\">Hubert van Eyck</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T03:52:51.910Z",
+      "bytes": 171612
     },
     {
       "artistId": "artist-Q102272",
@@ -2521,8 +2527,8 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q102272/wikidata-Q67123638.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q102272/wikidata-Q67123638.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 24,
         "artistMatches": 3,
@@ -2588,7 +2594,9 @@
           "credit": "<a href=\"https://en.wikipedia.org/wiki/en:Web_Gallery_of_Art\" class=\"extiw\" title=\"w:en:Web Gallery of Art\"><span title=\"virtual art gallery for European fine art created before 1900\">Web Gallery of Art</span></a>:  <span typeof=\"mw:File\"><a href=\"http://www.wga.hu/art/e/eyck_van/jan/09ghent/1open3/l3adora1.jpg\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/20px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/40px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"60\" data-file-height=\"60\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://www.wga.hu/art/e/eyck_van/jan/09ghent/1open3/l3adora1.jpg\">Image</a> <span typeof=\"mw:File\"><a href=\"http://www.wga.hu/html/e/eyck_van/jan/09ghent/1open3/l3adora1.html\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/20px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/40px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"620\" data-file-height=\"620\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://www.wga.hu/html/e/eyck_van/jan/09ghent/1open3/l3adora1.html\">Info about artwork</a><div style=\"display: none;\">wga QS:P11807,\"e/eyck_van/jan/09ghent/1open3/l3adora1\"</div>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Jan_van_Eyck\" class=\"extiw\" title=\"w:en:Jan van Eyck\"><span title=\"Flemish painter (c.1390–1441)\">Jan van Eyck</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T03:53:00.831Z",
+      "bytes": 202637
     },
     {
       "artistId": "artist-Q102272",
@@ -2606,7 +2614,7 @@
         "ko": "플랑드르파",
         "en": "플랑드르파"
       },
-      "targetPath": "data/thumbnails/artist-Q102272/wikidata-Q3605033.jpg",
+      "targetPath": "data/images/artist-Q102272/wikidata-Q3605033.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -2628,7 +2636,7 @@
         "ko": "플랑드르파",
         "en": "플랑드르파"
       },
-      "targetPath": "data/thumbnails/artist-Q102272/wikidata-Q20050620.jpg",
+      "targetPath": "data/images/artist-Q102272/wikidata-Q20050620.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -2650,7 +2658,7 @@
         "ko": "플랑드르파",
         "en": "플랑드르파"
       },
-      "targetPath": "data/thumbnails/artist-Q102272/wikidata-Q28056879.jpg",
+      "targetPath": "data/images/artist-Q102272/wikidata-Q28056879.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -2672,8 +2680,8 @@
         "ko": "플랑드르파",
         "en": "플랑드르파"
       },
-      "targetPath": "data/thumbnails/artist-Q102272/wikidata-Q28057385.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q102272/wikidata-Q28057385.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 18,
         "artistMatches": 3,
@@ -2739,7 +2747,9 @@
           "credit": "<a rel=\"nofollow\" class=\"external text\" href=\"https://kmska.be/nl/meesterwerk/musicerende-engelen-en-eva\">Royal Museum of Fine Arts Antwerp</a> <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"//commons.wikimedia.org/wiki/File:OOjs_UI_icon_edit-ltr-progressive.svg\" class=\"mw-file-description\" title=\"Edit this at Structured Data on Commons\"><img alt=\"Edit this at Structured Data on Commons\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>",
           "artistCredit": "<bdi>After <a href=\"https://en.wikipedia.org/wiki/en:Jan_van_Eyck\" class=\"extiw\" title=\"w:en:Jan van Eyck\"><span title=\"Flemish painter (c.1390–1441)\">Jan van Eyck</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T03:53:09.449Z",
+      "bytes": 150015
     },
     {
       "artistId": "artist-Q102272",
@@ -2757,7 +2767,7 @@
         "ko": "플랑드르파",
         "en": "플랑드르파"
       },
-      "targetPath": "data/thumbnails/artist-Q102272/wikidata-Q536203.jpg",
+      "targetPath": "data/images/artist-Q102272/wikidata-Q536203.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -2827,8 +2837,8 @@
         "ko": "플랑드르파",
         "en": "플랑드르파"
       },
-      "targetPath": "data/thumbnails/artist-Q102272/wikidata-Q18683180.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q102272/wikidata-Q18683180.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 18,
         "artistMatches": 3,
@@ -2894,7 +2904,9 @@
           "credit": "<a href=\"https://en.wikipedia.org/wiki/en:Google_Arts_%26_Culture\" class=\"extiw\" title=\"w:en:Google Arts &amp; Culture\"><span title=\"app and website exploring partner museums\">Google Arts &amp; Culture</span></a>  — <a rel=\"nofollow\" class=\"external text\" href=\"//www.google.com/culturalinstitute/asset-viewer/2QHggYD4Tgsdkg\">2QHggYD4Tgsdkg</a>",
           "artistCredit": "<bdi>Follower of <a href=\"https://en.wikipedia.org/wiki/en:Jan_van_Eyck\" class=\"extiw\" title=\"w:en:Jan van Eyck\"><span title=\"Flemish painter (c.1390–1441)\">Jan van Eyck</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T03:53:21.132Z",
+      "bytes": 941610
     },
     {
       "artistId": "artist-Q102272",
@@ -2912,7 +2924,7 @@
         "ko": "플랑드르파",
         "en": "플랑드르파"
       },
-      "targetPath": "data/thumbnails/artist-Q102272/wikidata-Q115624243.jpg",
+      "targetPath": "data/images/artist-Q102272/wikidata-Q115624243.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -2950,8 +2962,8 @@
         "ko": "플랑드르파",
         "en": "플랑드르파"
       },
-      "targetPath": "data/thumbnails/artist-Q102272/wikidata-Q19186089.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q102272/wikidata-Q19186089.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 18,
         "artistMatches": 3,
@@ -3017,7 +3029,9 @@
           "credit": "<cite class=\"book\" style=\"font-style:normal\">The Yorck Project (2002)      <i> 10.000 Meisterwerke der Malerei</i> (DVD-ROM), distributed by <a href=\"//commons.wikimedia.org/wiki/Commons:10,000_paintings_from_Directmedia\" title=\"Commons:10,000 paintings from Directmedia\">DIRECTMEDIA</a> Publishing GmbH.  <small><span lang=\"en\" dir=\"ltr\"><a href=\"https://en.wikipedia.org/wiki/ISBN\" class=\"extiw\" title=\"en:ISBN\"><span lang=\"en\" dir=\"ltr\">ISBN</span></a></span>:  <a href=\"//commons.wikimedia.org/wiki/Special:BookSources/3936122202\" title=\"Special:BookSources/3936122202\">3936122202</a>. </small></cite>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Jan_van_Eyck\" class=\"extiw\" title=\"w:en:Jan van Eyck\"><span title=\"Flemish painter (c.1390–1441)\">Jan van Eyck</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T03:53:32.437Z",
+      "bytes": 1020908
     },
     {
       "artistId": "artist-Q102272",
@@ -3035,8 +3049,8 @@
         "ko": "플랑드르파",
         "en": "플랑드르파"
       },
-      "targetPath": "data/thumbnails/artist-Q102272/wikidata-Q3937546.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q102272/wikidata-Q3937546.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 18,
         "artistMatches": 3,
@@ -3102,7 +3116,9 @@
           "credit": "<a rel=\"nofollow\" class=\"external text\" href=\"http://www.nationalgallery.org.uk/paintings/jan-van-eyck-the-arnolfini-portrait\">Web site of National Gallery, London</a>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Jan_van_Eyck\" class=\"extiw\" title=\"w:en:Jan van Eyck\"><span title=\"Flemish painter (c.1390–1441)\">Jan van Eyck</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T03:53:43.029Z",
+      "bytes": 3244930
     },
     {
       "artistId": "artist-Q102272",
@@ -3120,8 +3136,8 @@
         "ko": "플랑드르파",
         "en": "플랑드르파"
       },
-      "targetPath": "data/thumbnails/artist-Q102272/wikidata-Q838074.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q102272/wikidata-Q838074.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 18,
         "artistMatches": 3,
@@ -3187,7 +3203,9 @@
           "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
           "artistCredit": "<a href=\"//commons.wikimedia.org/wiki/User:Sailko\" title=\"User:Sailko\">Sailko</a>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T03:53:52.484Z",
+      "bytes": 1637038
     },
     {
       "artistId": "artist-Q102272",
@@ -3205,8 +3223,8 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q102272/wikidata-Q137599158.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q102272/wikidata-Q137599158.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 26,
         "artistMatches": 3,
@@ -3256,7 +3274,9 @@
           "credit": "<a rel=\"nofollow\" class=\"external free\" href=\"https://musees-occitanie.fr/musees/musee-ingres/collections/la-peinture-ancienne/jan-van-eyck/portrait-d-un-moine/\">https://musees-occitanie.fr/musees/musee-ingres/collections/la-peinture-ancienne/jan-van-eyck/portrait-d-un-moine/</a>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Jan_van_Eyck\" class=\"extiw\" title=\"w:en:Jan van Eyck\"><span title=\"Flemish painter (c.1390–1441)\">Jan van Eyck</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T03:54:01.828Z",
+      "bytes": 622195
     },
     {
       "artistId": "artist-Q68631",
@@ -3274,7 +3294,7 @@
         "ko": "플랑드르파",
         "en": "Early Netherlandish painting"
       },
-      "targetPath": "data/thumbnails/artist-Q68631/rogier-portrait-of-a-lady.jpg",
+      "targetPath": "data/images/artist-Q68631/rogier-portrait-of-a-lady.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -3344,7 +3364,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q3889198.jpg",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q3889198.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -3414,7 +3434,7 @@
         "ko": "이탈리아 르네상스",
         "en": "이탈리아 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q3948886.jpg",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q3948886.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -3436,7 +3456,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q111244447.jpg",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q111244447.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -3458,7 +3478,7 @@
         "ko": "이탈리아 르네상스",
         "en": "이탈리아 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q1759631.jpg",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q1759631.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -3480,8 +3500,8 @@
         "ko": "이탈리아 르네상스",
         "en": "이탈리아 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q3999132.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q3999132.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 21,
         "artistMatches": 1,
@@ -3547,7 +3567,9 @@
           "credit": "Self-scanned",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Masaccio\" class=\"extiw\" title=\"w:en:Masaccio\"><span title=\"Italian painter (1401-1428)\">Masaccio</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T03:54:11.200Z",
+      "bytes": 1364181
     },
     {
       "artistId": "artist-url-1787307872488",
@@ -3565,8 +3587,8 @@
         "ko": "초기 르네상스",
         "en": "초기 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q2736379.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q2736379.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 21,
         "artistMatches": 1,
@@ -3632,7 +3654,9 @@
           "credit": "<a href=\"https://en.wikipedia.org/wiki/en:Web_Gallery_of_Art\" class=\"extiw\" title=\"w:en:Web Gallery of Art\"><span title=\"virtual art gallery for European fine art created before 1900\">Web Gallery of Art</span></a>:  <span typeof=\"mw:File\"><a href=\"http://www.wga.hu/art/m/masaccio/brancacc/expulsio/old_expu.jpg\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/20px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/40px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"60\" data-file-height=\"60\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://www.wga.hu/art/m/masaccio/brancacc/expulsio/old_expu.jpg\">Image</a> <span typeof=\"mw:File\"><a href=\"http://www.wga.hu/html/m/masaccio/brancacc/expulsio/old_expu.html\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/20px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/40px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"620\" data-file-height=\"620\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://www.wga.hu/html/m/masaccio/brancacc/expulsio/old_expu.html\">Info about artwork</a><div style=\"display: none;\">wga QS:P11807,\"m/masaccio/brancacc/expulsio/old_expu\"</div>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Masaccio\" class=\"extiw\" title=\"w:en:Masaccio\"><span title=\"Italian painter (1401-1428)\">Masaccio</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T03:54:20.494Z",
+      "bytes": 968037
     },
     {
       "artistId": "artist-url-1787307872488",
@@ -3650,8 +3674,8 @@
         "ko": "이탈리아 르네상스",
         "en": "이탈리아 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q32381.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q32381.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 24,
         "artistMatches": 1,
@@ -3717,7 +3741,9 @@
           "credit": "Self-scanned",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Masolino_da_Panicale\" class=\"extiw\" title=\"w:en:Masolino da Panicale\"><span title=\"Italian painter between Late Gothic and Renaissance (1383-1447)\">Masolino da Panicale</span></a></bdi> / <bdi><a href=\"https://en.wikipedia.org/wiki/en:Masaccio\" class=\"extiw\" title=\"w:en:Masaccio\"><span title=\"Italian painter (1401-1428)\">Masaccio</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T03:54:30.289Z",
+      "bytes": 2224738
     },
     {
       "artistId": "artist-url-1787307872488",
@@ -3735,8 +3761,8 @@
         "ko": "이탈리아 르네상스",
         "en": "이탈리아 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q3842651.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q3842651.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 21,
         "artistMatches": 1,
@@ -3802,7 +3828,9 @@
           "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
           "artistCredit": "<a href=\"//commons.wikimedia.org/wiki/User:Sailko\" title=\"User:Sailko\">Francesco Bini</a>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T03:54:50.012Z",
+      "bytes": 1222996
     },
     {
       "artistId": "artist-url-1787307872488",
@@ -3820,7 +3848,7 @@
         "ko": "이탈리아 르네상스",
         "en": "이탈리아 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q3947757.jpg",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q3947757.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -3890,7 +3918,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q116898418.jpg",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q116898418.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -3911,7 +3939,7 @@
         "ko": "이탈리아 르네상스",
         "en": "이탈리아 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q3899272.jpg",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q3899272.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -3949,7 +3977,7 @@
         "ko": "이탈리아 르네상스",
         "en": "이탈리아 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q3944858.jpg",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q3944858.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -4003,8 +4031,8 @@
         "ko": "이탈리아 르네상스",
         "en": "이탈리아 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q3850304.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q3850304.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 13,
         "artistMatches": 1,
@@ -4070,7 +4098,9 @@
           "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Masaccio\" class=\"extiw\" title=\"w:en:Masaccio\"><span title=\"Italian painter (1401-1428)\">Masaccio</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T03:54:59.442Z",
+      "bytes": 535199
     },
     {
       "artistId": "artist-url-1787307872488",
@@ -4088,8 +4118,8 @@
         "ko": "이탈리아 르네상스",
         "en": "이탈리아 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q3605535.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q3605535.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 10,
         "artistMatches": 1,
@@ -4155,7 +4185,9 @@
           "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
           "artistCredit": "<a href=\"//commons.wikimedia.org/wiki/User:Sailko\" title=\"User:Sailko\">Sailko</a>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T03:55:19.406Z",
+      "bytes": 471723
     },
     {
       "artistId": "artist-url-1787307872488",
@@ -4173,7 +4205,7 @@
         "ko": "이탈리아 르네상스",
         "en": "이탈리아 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q3698230.jpg",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q3698230.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -4195,7 +4227,7 @@
         "ko": "이탈리아 르네상스",
         "en": "이탈리아 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q3842642.jpg",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q3842642.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -4217,7 +4249,7 @@
         "ko": "이탈리아 르네상스",
         "en": "이탈리아 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q3947289.jpg",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q3947289.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -4239,7 +4271,7 @@
         "ko": "이탈리아 르네상스",
         "en": "이탈리아 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q3948660.jpg",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q3948660.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -4309,8 +4341,8 @@
         "ko": "이탈리아 르네상스",
         "en": "이탈리아 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q3948700.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q3948700.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 18,
         "artistMatches": 1,
@@ -4376,7 +4408,9 @@
           "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
           "artistCredit": "<a href=\"//commons.wikimedia.org/wiki/User:Tournasol7\" title=\"User:Tournasol7\">Krzysztof Golik</a>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T03:55:39.503Z",
+      "bytes": 2349817
     },
     {
       "artistId": "artist-url-1787307872488",
@@ -4394,8 +4428,8 @@
         "ko": "이탈리아 르네상스",
         "en": "이탈리아 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q3974493.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q3974493.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 19,
         "artistMatches": 1,
@@ -4461,7 +4495,9 @@
           "credit": "Self-scanned",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Masaccio\" class=\"extiw\" title=\"w:en:Masaccio\"><span title=\"Italian painter (1401-1428)\">Masaccio</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T03:55:58.845Z",
+      "bytes": 520880
     },
     {
       "artistId": "artist-url-1787307872488",
@@ -4479,8 +4515,8 @@
         "ko": "이탈리아 르네상스",
         "en": "이탈리아 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q99227759.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q99227759.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 19,
         "artistMatches": 1,
@@ -4546,7 +4582,9 @@
           "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Masaccio\" class=\"extiw\" title=\"w:en:Masaccio\"><span title=\"Italian painter (1401-1428)\">Masaccio</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T03:56:07.686Z",
+      "bytes": 535199
     },
     {
       "artistId": "artist-url-1787307872488",
@@ -4564,8 +4602,8 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q66377761.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q66377761.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 24,
         "artistMatches": 1,
@@ -4615,7 +4653,9 @@
           "credit": "<a rel=\"nofollow\" class=\"external autonumber\" href=\"http://zeus.sai.msu.ru/cjackson/masaccio/p-masaccio2.htm\">[1]</a>",
           "artistCredit": "<bdi>Attributed to <a href=\"https://en.wikipedia.org/wiki/en:Masaccio\" class=\"extiw\" title=\"w:en:Masaccio\"><span title=\"Italian painter (1401-1428)\">Masaccio</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T03:56:28.187Z",
+      "bytes": 3275263
     },
     {
       "artistId": "artist-url-1787307872488",
@@ -4633,7 +4673,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q107436009.jpg",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q107436009.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -4654,8 +4694,8 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q3933568.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q3933568.jpg",
+      "reviewStatus": "failed",
       "selected": {
         "score": 27,
         "artistMatches": 1,
@@ -4721,7 +4761,8 @@
           "credit": "Self-scanned",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Filippino_Lippi\" class=\"extiw\" title=\"w:en:Filippino Lippi\"><span title=\"Italian painter (1457–1504)\">Filippino Lippi</span></a></bdi> / <bdi><a href=\"https://en.wikipedia.org/wiki/en:Masaccio\" class=\"extiw\" title=\"w:en:Masaccio\"><span title=\"Italian painter (1401-1428)\">Masaccio</span></a></bdi>"
         }
-      ]
+      ],
+      "error": "artist-url-1787307872488: image download 429"
     },
     {
       "artistId": "artist-url-1787307872488",
@@ -4739,8 +4780,8 @@
         "ko": "이탈리아 르네상스",
         "en": "이탈리아 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q3949351.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q3949351.jpg",
+      "reviewStatus": "failed",
       "selected": {
         "score": 13,
         "artistMatches": 1,
@@ -4806,7 +4847,8 @@
           "credit": "book: John T. Spike, Masaccio, Rizzoli libri illustrati, Milano 2002",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Masaccio\" class=\"extiw\" title=\"w:en:Masaccio\"><span title=\"Italian painter (1401-1428)\">Masaccio</span></a></bdi>"
         }
-      ]
+      ],
+      "error": "artist-url-1787307872488: image download 429"
     },
     {
       "artistId": "artist-url-1787307872488",
@@ -4824,7 +4866,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q118630274.jpg",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q118630274.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -4845,8 +4887,8 @@
         "ko": "이탈리아 르네상스",
         "en": "이탈리아 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q3705918.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q3705918.jpg",
+      "reviewStatus": "failed",
       "selected": {
         "score": 18,
         "artistMatches": 1,
@@ -4912,7 +4954,8 @@
           "credit": "book: John T. Spike, <i>Masaccio</i>, Rizzoli libri illustrati, Milano 2002",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Masaccio\" class=\"extiw\" title=\"w:en:Masaccio\"><span title=\"Italian painter (1401-1428)\">Masaccio</span></a></bdi>"
         }
-      ]
+      ],
+      "error": "artist-url-1787307872488: image download 429"
     },
     {
       "artistId": "artist-url-1787307872488",
@@ -4930,7 +4973,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-url-1787307872488/wikidata-Q123528970.jpg",
+      "targetPath": "data/images/artist-url-1787307872488/wikidata-Q123528970.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -4952,7 +4995,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q17169/wikidata-Q65057453.jpg",
+      "targetPath": "data/images/artist-Q17169/wikidata-Q65057453.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -4974,7 +5017,7 @@
         "ko": "베네치아 화파",
         "en": "베네치아 화파"
       },
-      "targetPath": "data/thumbnails/artist-Q17169/wikidata-Q3904392.jpg",
+      "targetPath": "data/images/artist-Q17169/wikidata-Q3904392.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -4996,8 +5039,8 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q17169/wikidata-Q3221336.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q17169/wikidata-Q3221336.jpg",
+      "reviewStatus": "failed",
       "selected": {
         "score": 22,
         "artistMatches": 2,
@@ -5063,7 +5106,8 @@
           "credit": "Kimbell Art Museum",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Giovanni_Bellini\" class=\"extiw\" title=\"w:en:Giovanni Bellini\"><span title=\"15th- and 16th-century Italian Renaissance painter (1430–1516)\">Giovanni Bellini</span></a></bdi>"
         }
-      ]
+      ],
+      "error": "artist-Q17169: image download 429"
     },
     {
       "artistId": "artist-Q17169",
@@ -5081,8 +5125,8 @@
         "ko": "르네상스",
         "en": "Renaissance"
       },
-      "targetPath": "data/thumbnails/artist-Q17169/manual-bellini-rimini-pieta-1470.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q17169/manual-bellini-rimini-pieta-1470.jpg",
+      "reviewStatus": "failed",
       "selected": {
         "score": 23,
         "artistMatches": 2,
@@ -5148,7 +5192,8 @@
           "credit": "<a rel=\"nofollow\" class=\"external text\" href=\"https://id.smb.museum/object/864606/der-tote-christus-von-zwei-engeln-gestutzt\">Staatliche Museen zu Berlin</a> <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"//commons.wikimedia.org/wiki/File:OOjs_UI_icon_edit-ltr-progressive.svg\" class=\"mw-file-description\" title=\"Edit this at Structured Data on Commons\"><img alt=\"Edit this at Structured Data on Commons\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Giovanni_Bellini\" class=\"extiw\" title=\"w:en:Giovanni Bellini\"><span title=\"15th- and 16th-century Italian Renaissance painter (1430–1516)\">Giovanni Bellini</span></a></bdi>"
         }
-      ]
+      ],
+      "error": "artist-Q17169: image download 429"
     },
     {
       "artistId": "artist-Q17169",
@@ -5166,8 +5211,8 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q17169/wikidata-Q47870920.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q17169/wikidata-Q47870920.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 14,
         "artistMatches": 2,
@@ -5233,7 +5278,9 @@
           "credit": "<a href=\"https://en.wikipedia.org/wiki/en:Web_Gallery_of_Art\" class=\"extiw\" title=\"w:en:Web Gallery of Art\"><span title=\"virtual art gallery for European fine art created before 1900\">Web Gallery of Art</span></a>:  <span typeof=\"mw:File\"><a href=\"http://www.wga.hu/art/b/bellini/giovanni/1460-69/034madon.jpg\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/20px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/40px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"60\" data-file-height=\"60\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://www.wga.hu/art/b/bellini/giovanni/1460-69/034madon.jpg\">Image</a> <span typeof=\"mw:File\"><a href=\"http://www.wga.hu/html/b/bellini/giovanni/1460-69/034madon.html\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/20px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/40px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"620\" data-file-height=\"620\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://www.wga.hu/html/b/bellini/giovanni/1460-69/034madon.html\">Info about artwork</a><div style=\"display: none;\">wga QS:P11807,\"b/bellini/giovanni/1460-69/034madon\"</div>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Giovanni_Bellini\" class=\"extiw\" title=\"w:en:Giovanni Bellini\"><span title=\"15th- and 16th-century Italian Renaissance painter (1430–1516)\">Giovanni Bellini</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T04:06:43.839Z",
+      "bytes": 1036947
     },
     {
       "artistId": "artist-Q17169",
@@ -5251,8 +5298,8 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q17169/wikidata-Q3889247.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q17169/wikidata-Q3889247.jpg",
+      "reviewStatus": "failed",
       "selected": {
         "score": 22,
         "artistMatches": 2,
@@ -5318,7 +5365,8 @@
           "credit": "<a rel=\"nofollow\" class=\"external free\" href=\"http://www.famous-painters.org/B-Painters/Giovanni-Bellini-paintings/paintings/Giovanni-Bellini-25.jpg\">http://www.famous-painters.org/B-Painters/Giovanni-Bellini-paintings/paintings/Giovanni-Bellini-25.jpg</a>",
           "artistCredit": "<div class=\"fn value\">\n<a rel=\"nofollow\" class=\"external free\" href=\"http://www.famous-painters.org/B-Painters/Giovanni-Bellini-paintings/paintings/Giovanni-Bellini-25.jpg\">http://www.famous-painters.org/B-Painters/Giovanni-Bellini-paintings/paintings/Giovanni-Bellini-25.jpg</a></div>"
         }
-      ]
+      ],
+      "error": "artist-Q17169: image download 429"
     },
     {
       "artistId": "artist-Q17169",
@@ -5336,8 +5384,8 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q17169/wikidata-Q48383869.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q17169/wikidata-Q48383869.jpg",
+      "reviewStatus": "failed",
       "selected": {
         "score": 22,
         "artistMatches": 2,
@@ -5403,7 +5451,8 @@
           "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
           "artistCredit": "<a href=\"//commons.wikimedia.org/wiki/User:Sailko\" title=\"User:Sailko\">Sailko</a>"
         }
-      ]
+      ],
+      "error": "artist-Q17169: image download 429"
     },
     {
       "artistId": "artist-Q17169",
@@ -5421,8 +5470,8 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q17169/wikidata-Q47818848.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q17169/wikidata-Q47818848.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 30,
         "artistMatches": 1,
@@ -5488,7 +5537,9 @@
           "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
           "artistCredit": "<a href=\"//commons.wikimedia.org/wiki/User:M0tty\" title=\"User:M0tty\">M0tty</a>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T04:10:56.506Z",
+      "bytes": 3349263
     },
     {
       "artistId": "artist-Q17169",
@@ -5506,8 +5557,8 @@
         "ko": "베네치아 화파",
         "en": "베네치아 화파"
       },
-      "targetPath": "data/thumbnails/artist-Q17169/wikidata-Q3842412.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q17169/wikidata-Q3842412.jpg",
+      "reviewStatus": "failed",
       "selected": {
         "score": 22,
         "artistMatches": 2,
@@ -5573,7 +5624,8 @@
           "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
           "artistCredit": "<a href=\"//commons.wikimedia.org/wiki/User:Sailko\" title=\"User:Sailko\">Francesco Bini</a>"
         }
-      ]
+      ],
+      "error": "artist-Q17169: image download 429"
     },
     {
       "artistId": "artist-Q17169",
@@ -5591,8 +5643,8 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q17169/wikidata-Q3997723.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q17169/wikidata-Q3997723.jpg",
+      "reviewStatus": "failed",
       "selected": {
         "score": 22,
         "artistMatches": 2,
@@ -5658,7 +5710,8 @@
           "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
           "artistCredit": "<a href=\"//commons.wikimedia.org/wiki/User:Romainbehar\" title=\"User:Romainbehar\">Romainbehar</a>"
         }
-      ]
+      ],
+      "error": "artist-Q17169: image download 429"
     },
     {
       "artistId": "artist-Q17169",
@@ -5676,8 +5729,8 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q17169/wikidata-Q6728393.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q17169/wikidata-Q6728393.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 14,
         "artistMatches": 2,
@@ -5743,7 +5796,9 @@
           "credit": "<a rel=\"nofollow\" class=\"external autonumber\" href=\"http://www.masp.art.br/masp2010/acervo_detalheobra.php?id=62\">[1]</a>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Giovanni_Bellini\" class=\"extiw\" title=\"w:en:Giovanni Bellini\"><span title=\"15th- and 16th-century Italian Renaissance painter (1430–1516)\">Giovanni Bellini</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T04:15:08.580Z",
+      "bytes": 2516442
     },
     {
       "artistId": "artist-Q17169",
@@ -5761,8 +5816,8 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q17169/wikidata-Q3842590.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q17169/wikidata-Q3842590.jpg",
+      "reviewStatus": "failed",
       "selected": {
         "score": 17,
         "artistMatches": 2,
@@ -5828,7 +5883,8 @@
           "credit": "<a href=\"https://en.wikipedia.org/wiki/en:Walters_Art_Museum\" class=\"extiw\" title=\"w:en:Walters Art Museum\"><span title=\"art museum in Baltimore, Maryland, US\">Walters Art Museum</span></a>: <span typeof=\"mw:File\"><a href=\"https://thewalters.org/\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Nuvola_filesystems_folder_home.svg/20px-Nuvola_filesystems_folder_home.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Nuvola_filesystems_folder_home.svg/40px-Nuvola_filesystems_folder_home.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"128\" data-file-height=\"128\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"https://thewalters.org/\">Home page</a> <span typeof=\"mw:File\"><a href=\"https://art.thewalters.org/detail/40308\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/20px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/40px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"620\" data-file-height=\"620\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"https://art.thewalters.org/detail/40308\">Info about artwork</a>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Giovanni_Bellini\" class=\"extiw\" title=\"w:en:Giovanni Bellini\"><span title=\"15th- and 16th-century Italian Renaissance painter (1430–1516)\">Giovanni Bellini</span></a> and workshop</bdi>"
         }
-      ]
+      ],
+      "error": "artist-Q17169: image download 429"
     },
     {
       "artistId": "artist-Q17169",
@@ -5846,7 +5902,7 @@
         "ko": "베네치아 화파",
         "en": "베네치아 화파"
       },
-      "targetPath": "data/thumbnails/artist-Q17169/wikidata-Q3842594.jpg",
+      "targetPath": "data/images/artist-Q17169/wikidata-Q3842594.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -5868,7 +5924,7 @@
         "ko": "베네치아 화파",
         "en": "베네치아 화파"
       },
-      "targetPath": "data/thumbnails/artist-Q17169/wikidata-Q1115613.jpg",
+      "targetPath": "data/images/artist-Q17169/wikidata-Q1115613.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -5890,7 +5946,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q17169/wikidata-Q3220282.jpg",
+      "targetPath": "data/images/artist-Q17169/wikidata-Q3220282.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -5912,8 +5968,8 @@
         "ko": "이탈리아 르네상스 회화",
         "en": "이탈리아 르네상스 회화"
       },
-      "targetPath": "data/thumbnails/artist-Q17169/wikidata-Q1122002.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q17169/wikidata-Q1122002.jpg",
+      "reviewStatus": "failed",
       "selected": {
         "score": 14,
         "artistMatches": 2,
@@ -5979,7 +6035,8 @@
           "credit": "<p><a rel=\"nofollow\" class=\"external free\" href=\"https://web.archive.org/web/20070706105038/http://gallery.euroweb.hu/html/b/bellini/giovanni/1460-69/ferreri/057ferr.html\">https://web.archive.org/web/20070706105038/http://gallery.euroweb.hu/html/b/bellini/giovanni/1460-69/ferreri/057ferr.html</a>\n</p>\n<a rel=\"nofollow\" class=\"external free\" href=\"https://web.archive.org/web/20110818050215/http://bode.diee.unica.it/~giua/SEBASTIAN/PICS/bellini1.jpg\">https://web.archive.org/web/20110818050215/http://bode.diee.unica.it/~giua/SEBASTIAN/PICS/bellini1.jpg</a>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Giovanni_Bellini\" class=\"extiw\" title=\"w:en:Giovanni Bellini\"><span title=\"15th- and 16th-century Italian Renaissance painter (1430–1516)\">Giovanni Bellini</span></a></bdi>"
         }
-      ]
+      ],
+      "error": "artist-Q17169: image download 429"
     },
     {
       "artistId": "artist-Q17169",
@@ -5997,8 +6054,8 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q17169/wikidata-Q3944517.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q17169/wikidata-Q3944517.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 29,
         "artistMatches": 2,
@@ -6064,7 +6121,9 @@
           "credit": "<a rel=\"nofollow\" class=\"external autonumber\" href=\"http://bode.diee.unica.it/~giua/SEBASTIAN/\">[2]</a>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Giovanni_Bellini\" class=\"extiw\" title=\"w:en:Giovanni Bellini\"><span title=\"15th- and 16th-century Italian Renaissance painter (1430–1516)\">Giovanni Bellini</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T04:19:23.922Z",
+      "bytes": 498094
     },
     {
       "artistId": "artist-Q17169",
@@ -6082,8 +6141,8 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q17169/wikidata-Q3904404.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q17169/wikidata-Q3904404.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 11,
         "artistMatches": 2,
@@ -6149,7 +6208,9 @@
           "credit": "<a rel=\"nofollow\" class=\"external free\" href=\"http://www.terminartors.com/bellini-giovanni/dead-christ-supported-by-the-10710-p\">http://www.terminartors.com/bellini-giovanni/dead-christ-supported-by-the-10710-p</a>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Giovanni_Bellini\" class=\"extiw\" title=\"w:en:Giovanni Bellini\"><span title=\"15th- and 16th-century Italian Renaissance painter (1430–1516)\">Giovanni Bellini</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T04:19:33.892Z",
+      "bytes": 738230
     },
     {
       "artistId": "artist-Q17169",
@@ -6167,7 +6228,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q17169/wikidata-Q658825.jpg",
+      "targetPath": "data/images/artist-Q17169/wikidata-Q658825.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -6237,7 +6298,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q17169/wikidata-Q21712112.jpg",
+      "targetPath": "data/images/artist-Q17169/wikidata-Q21712112.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -6307,8 +6368,8 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q17169/wikidata-Q3949347.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q17169/wikidata-Q3949347.jpg",
+      "reviewStatus": "failed",
       "selected": {
         "score": 16,
         "artistMatches": 1,
@@ -6358,7 +6419,8 @@
           "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
           "artistCredit": "<table class=\"toccolours\" style=\"width:100%; margin-top:10px;\" cellpadding=\"2\">\n\n<tbody><tr class=\"plainlinks\">\n<td><span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Emblem-camera.svg\" class=\"mw-file-description\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Emblem-camera.svg/40px-Emblem-camera.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"25\" height=\"25\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Emblem-camera.svg/60px-Emblem-camera.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"64\" data-file-height=\"64\"></a></span>  <a href=\"https://upload.wikimedia.org/wikipedia/commons/a/a0/Chiesa_San_Giovanni_Grisostomo_Santi_Cristoforo_Girolamo_Ludovico_di_Tolosa_Bellini_aVenezia.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=index&amp;utm_content=original\" class=\"internal\" title=\"Chiesa San Giovanni Grisostomo Santi Cristoforo Girolamo Ludovico di Tolosa Bellini aVenezia.jpg\">This Photo</a> was taken by <i><b><a href=\"//commons.wikimedia.org/wiki/User:Moroder\" title=\"User:Moroder\">Wolfgang Moroder</a></b></i>.  <span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:User_with_smile.svg\" class=\"mw-file-description\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/User_with_smile.svg/40px-User_with_smile.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"25\" height=\"25\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/User_with_smile.svg/60px-User_with_smile.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"128\" data-file-height=\"128\"></a></span>\n</td>\n<td align=\"right\">Feel free to use my photos, but please mention me as the author and send me a  <a class=\"external text\" data-mw-original-href=\"http://commons.wikimedia.org/w/index.php?title=User_talk:Moroder&amp;action=edit&amp;section=new\" href=\"https://commons.wikimedia.org/w/index.php?title=User_talk:Moroder&amp;action=edit&amp;section=new\">message</a>. <span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Crystal_128_mail.png\" class=\"mw-file-description\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Crystal_128_mail.png/40px-Crystal_128_mail.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"25\" height=\"25\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Crystal_128_mail.png/60px-Crystal_128_mail.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"128\" data-file-height=\"128\"></a></span>\n</td></tr></tbody></table>\n<div style=\"clear:both; border:2px solid #cc0000; background-color:#f7f7f7; margin-top:6px;\">\n<table><tbody><tr><td style=\"padding:4px;\"><span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Control_copyright_icon.svg\" class=\"mw-file-description\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Control_copyright_icon.svg/120px-Control_copyright_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"61\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Control_copyright_icon.svg/250px-Control_copyright_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"171\" data-file-height=\"163\"></a></span>\n</td><td style=\"padding:4px;\"><div style=\"margin-top:0.5em;\">This image is <b>not in the <a href=\"https://en.wikipedia.org/wiki/Public_domain\" class=\"extiw\" title=\"en:Public domain\">public domain</a></b>. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically <b>excludes use in social media</b>, if applicable terms of the licenses listed here not appropriate.</div>\n</td></tr></tbody></table></div>\n<div style=\"clear:both; border:2px solid #00cc00; background-color:#f7f7f7; margin-top:6px;\">\n<table><tbody><tr><td style=\"padding:4px;\"><span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Upload-problem2.svg\" class=\"mw-file-description\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Upload-problem2.svg/120px-Upload-problem2.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"57\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Upload-problem2.svg/250px-Upload-problem2.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"159\" data-file-height=\"142\"></a></span>\n</td><td style=\"padding:4px;\"><div style=\"margin-top:0.5em;\">Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.<br>Please if you think that any changes should be required, please inform the author.<br>Otherwise you can upload a new image with a new name. Please use one of the templates <a href=\"//commons.wikimedia.org/wiki/Template:Derived_from\" title=\"Template:Derived from\">derivative</a> or <a href=\"//commons.wikimedia.org/wiki/Template:Extracted_from\" title=\"Template:Extracted from\">extract</a>.</div>\n</td></tr></tbody></table></div>"
         }
-      ]
+      ],
+      "error": "artist-Q17169: image download 429"
     },
     {
       "artistId": "artist-Q5580",
@@ -6376,8 +6438,8 @@
         "ko": "북유럽 르네상스",
         "en": "Northern Renaissance"
       },
-      "targetPath": "data/thumbnails/artist-Q5580/durer-adoration-of-the-magi.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q5580/durer-adoration-of-the-magi.jpg",
+      "reviewStatus": "failed",
       "selected": {
         "score": 22,
         "artistMatches": 2,
@@ -6443,7 +6505,8 @@
           "credit": "<a rel=\"nofollow\" class=\"external free\" href=\"https://clevelandart.org/art/1959.99.12\">https://clevelandart.org/art/1959.99.12</a>",
           "artistCredit": "<div class=\"fn value\">\nAlbrecht Dürer</div>"
         }
-      ]
+      ],
+      "error": "artist-Q5580: image download 429"
     },
     {
       "artistId": "artist-Q191748",
@@ -6461,7 +6524,7 @@
         "ko": "독일 르네상스",
         "en": "German Renaissance"
       },
-      "targetPath": "data/thumbnails/artist-Q191748/cranach-hunt-hartenfels.jpg",
+      "targetPath": "data/images/artist-Q191748/cranach-hunt-hartenfels.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -6499,8 +6562,8 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q5592/wikipedia-Q5592-11.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q5592/wikipedia-Q5592-11.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 15,
         "artistMatches": 1,
@@ -6566,7 +6629,9 @@
           "credit": "<a rel=\"nofollow\" class=\"external free\" href=\"http://www.wga.hu/index1.html\">http://www.wga.hu/index1.html</a>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Michelangelo\" class=\"extiw\" title=\"w:en:Michelangelo\"><span title=\"Italian artist and architect (1475-1564)\">Michelangelo</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T04:23:41.298Z",
+      "bytes": 25427
     },
     {
       "artistId": "artist-Q5592",
@@ -6584,8 +6649,8 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q5592/wikipedia-Q5592-12.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q5592/wikipedia-Q5592-12.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 18,
         "artistMatches": 1,
@@ -6651,7 +6716,9 @@
           "credit": "<p>Illustrations from <i>The Life of Michael Angelo</i> by Romain Rolland, translated by Frederic Lees:\n</p>\nThe Battle of the Centaurs, <a rel=\"nofollow\" class=\"external free\" href=\"https://archive.org/details/lifeofmichaelang00roll\">https://archive.org/details/lifeofmichaelang00roll</a> (from JP2 files)",
           "artistCredit": ""
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T04:23:46.360Z",
+      "bytes": 25427
     },
     {
       "artistId": "artist-Q5592",
@@ -6669,7 +6736,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q5592/wikipedia-Q5592-13.jpg",
+      "targetPath": "data/images/artist-Q5592/wikipedia-Q5592-13.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -6691,7 +6758,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q5592/wikipedia-Q5592-14.jpg",
+      "targetPath": "data/images/artist-Q5592/wikipedia-Q5592-14.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -6713,7 +6780,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q5592/wikipedia-Q5592-15.jpg",
+      "targetPath": "data/images/artist-Q5592/wikipedia-Q5592-15.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -6735,8 +6802,8 @@
         "ko": "이탈리아 르네상스",
         "en": "이탈리아 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q5592/wikidata-Q2313006.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q5592/wikidata-Q2313006.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 18,
         "artistMatches": 1,
@@ -6802,7 +6869,9 @@
           "credit": "<p>Illustrations from <i>The Life of Michael Angelo</i> by Romain Rolland, translated by Frederic Lees:\n</p>\nThe Battle of the Centaurs, <a rel=\"nofollow\" class=\"external free\" href=\"https://archive.org/details/lifeofmichaelang00roll\">https://archive.org/details/lifeofmichaelang00roll</a> (from JP2 files)",
           "artistCredit": ""
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T04:23:58.041Z",
+      "bytes": 485667
     },
     {
       "artistId": "artist-Q5592",
@@ -6820,7 +6889,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q5592/wikipedia-Q5592-10.jpg",
+      "targetPath": "data/images/artist-Q5592/wikipedia-Q5592-10.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -6890,7 +6959,7 @@
         "ko": "전성기 르네상스",
         "en": "전성기 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q5592/wikidata-Q1886263.jpg",
+      "targetPath": "data/images/artist-Q5592/wikidata-Q1886263.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -6960,8 +7029,8 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q8459/wikidata-Q3752977.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q8459/wikidata-Q3752977.jpg",
+      "reviewStatus": "failed",
       "selected": {
         "score": 13,
         "artistMatches": 1,
@@ -7027,7 +7096,8 @@
           "credit": "<a rel=\"nofollow\" class=\"external free\" href=\"https://arthive.com/artists/1005~Giorgione/works/568057~Frieze_Free_arts_and_mechanical_arts_Medicine_and_Astrology\">https://arthive.com/artists/1005~Giorgione/works/568057~Frieze_Free_arts_and_mechanical_arts_Medicine_and_Astrology</a>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Giorgione\" class=\"extiw\" title=\"w:en:Giorgione\"><span title=\"Venetian Renaissance painter (1478–1510)\">Giorgione</span></a></bdi>"
         }
-      ]
+      ],
+      "error": "artist-Q8459: image download 429"
     },
     {
       "artistId": "artist-Q8459",
@@ -7045,8 +7115,8 @@
         "ko": "베네치아 화파",
         "en": "베네치아 화파"
       },
-      "targetPath": "data/thumbnails/artist-Q8459/wikidata-Q3937532.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q8459/wikidata-Q3937532.jpg",
+      "reviewStatus": "failed",
       "selected": {
         "score": 16,
         "artistMatches": 1,
@@ -7112,7 +7182,8 @@
           "credit": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.khm.at/objektdb/detail/2038\">Kunsthistorisches Museum Wien, Bilddatenbank</a>.<br>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Giorgione\" class=\"extiw\" title=\"w:en:Giorgione\"><span title=\"Venetian Renaissance painter (1478–1510)\">Giorgione</span></a></bdi>"
         }
-      ]
+      ],
+      "error": "artist-Q8459: image download 429"
     },
     {
       "artistId": "artist-Q8459",
@@ -7130,7 +7201,7 @@
         "ko": "전성기 르네상스",
         "en": "전성기 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q8459/wikidata-Q3937736.jpg",
+      "targetPath": "data/images/artist-Q8459/wikidata-Q3937736.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -7200,7 +7271,7 @@
         "ko": "전성기 르네상스",
         "en": "전성기 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q8459/wikidata-Q1720631.jpg",
+      "targetPath": "data/images/artist-Q8459/wikidata-Q1720631.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -7270,7 +7341,7 @@
         "ko": "베네치아 화파",
         "en": "베네치아 화파"
       },
-      "targetPath": "data/thumbnails/artist-Q8459/wikidata-Q3937389.jpg",
+      "targetPath": "data/images/artist-Q8459/wikidata-Q3937389.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -7340,7 +7411,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q8459/wikidata-Q121547247.jpg",
+      "targetPath": "data/images/artist-Q8459/wikidata-Q121547247.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -7361,8 +7432,8 @@
         "ko": "전성기 르네상스",
         "en": "전성기 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q8459/wikidata-Q3924389.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q8459/wikidata-Q3924389.jpg",
+      "reviewStatus": "failed",
       "selected": {
         "score": 10,
         "artistMatches": 1,
@@ -7428,7 +7499,8 @@
           "credit": "<cite class=\"book\" style=\"font-style:normal\">The Yorck Project (2002)      <i> 10.000 Meisterwerke der Malerei</i> (DVD-ROM), distributed by <a href=\"//commons.wikimedia.org/wiki/Commons:10,000_paintings_from_Directmedia\" title=\"Commons:10,000 paintings from Directmedia\">DIRECTMEDIA</a> Publishing GmbH.  <small><span lang=\"en\" dir=\"ltr\"><a href=\"https://en.wikipedia.org/wiki/ISBN\" class=\"extiw\" title=\"en:ISBN\"><span lang=\"en\" dir=\"ltr\">ISBN</span></a></span>:  <a href=\"//commons.wikimedia.org/wiki/Special:BookSources/3936122202\" title=\"Special:BookSources/3936122202\">3936122202</a>. </small></cite>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Giorgione\" class=\"extiw\" title=\"w:en:Giorgione\"><span title=\"Venetian Renaissance painter (1478–1510)\">Giorgione</span></a></bdi>"
         }
-      ]
+      ],
+      "error": "artist-Q8459: image download 429"
     },
     {
       "artistId": "artist-Q8459",
@@ -7446,7 +7518,7 @@
         "ko": "베네치아 화파",
         "en": "베네치아 화파"
       },
-      "targetPath": "data/thumbnails/artist-Q8459/wikidata-Q3098667.jpg",
+      "targetPath": "data/images/artist-Q8459/wikidata-Q3098667.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -7468,7 +7540,7 @@
         "ko": "베네치아 화파",
         "en": "베네치아 화파"
       },
-      "targetPath": "data/thumbnails/artist-Q8459/wikidata-Q137594811.jpg",
+      "targetPath": "data/images/artist-Q8459/wikidata-Q137594811.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -7490,7 +7562,7 @@
         "ko": "베네치아 화파",
         "en": "베네치아 화파"
       },
-      "targetPath": "data/thumbnails/artist-Q8459/wikidata-Q3605531.jpg",
+      "targetPath": "data/images/artist-Q8459/wikidata-Q3605531.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -7512,8 +7584,8 @@
         "ko": "전성기 르네상스",
         "en": "전성기 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q8459/wikidata-Q3656454.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q8459/wikidata-Q3656454.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 18,
         "artistMatches": 1,
@@ -7579,7 +7651,9 @@
           "credit": "<a href=\"https://en.wikipedia.org/wiki/en:Web_Gallery_of_Art\" class=\"extiw\" title=\"w:en:Web Gallery of Art\"><span title=\"virtual art gallery for European fine art created before 1900\">Web Gallery of Art</span></a>:  <span typeof=\"mw:File\"><a href=\"http://www.wga.hu/art/g/giorgion/various/singer.jpg\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/20px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/40px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"60\" data-file-height=\"60\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://www.wga.hu/art/g/giorgion/various/singer.jpg\">Image</a> <span typeof=\"mw:File\"><a href=\"http://www.wga.hu/html/g/giorgion/various/singer.html\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/20px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/40px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"620\" data-file-height=\"620\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://www.wga.hu/html/g/giorgion/various/singer.html\">Info about artwork</a><div style=\"display: none;\">wga QS:P11807,\"g/giorgion/various/singer\"</div>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Giorgione\" class=\"extiw\" title=\"w:en:Giorgione\"><span title=\"Venetian Renaissance painter (1478–1510)\">Giorgione</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T04:30:12.592Z",
+      "bytes": 830548
     },
     {
       "artistId": "artist-Q8459",
@@ -7597,7 +7671,7 @@
         "ko": "전성기 르네상스",
         "en": "전성기 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q8459/wikidata-Q3977127.jpg",
+      "targetPath": "data/images/artist-Q8459/wikidata-Q3977127.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -7667,8 +7741,8 @@
         "ko": "전성기 르네상스",
         "en": "전성기 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q8459/wikidata-Q3948603.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q8459/wikidata-Q3948603.jpg",
+      "reviewStatus": "failed",
       "selected": {
         "score": 18,
         "artistMatches": 1,
@@ -7718,7 +7792,8 @@
           "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
           "artistCredit": "<a href=\"//commons.wikimedia.org/wiki/User:Archaeodontosaurus\" title=\"User:Archaeodontosaurus\">Didier Descouens</a>"
         }
-      ]
+      ],
+      "error": "artist-Q8459: image download 429"
     },
     {
       "artistId": "artist-Q8459",
@@ -7736,7 +7811,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q8459/wikidata-Q27968196.jpg",
+      "targetPath": "data/images/artist-Q8459/wikidata-Q27968196.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -7806,8 +7881,8 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q8459/wikidata-Q29916352.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q8459/wikidata-Q29916352.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 16,
         "artistMatches": 1,
@@ -7873,7 +7948,9 @@
           "credit": "This file was donated to Wikimedia Commons as part of a project by the <a href=\"//commons.wikimedia.org/wiki/Commons:NGA\" title=\"Commons:NGA\">National Gallery of Art</a>. Please see the Gallery's <a rel=\"nofollow\" class=\"external text\" href=\"https://images.nga.gov/en/page/openaccess.html\">Open Access Policy</a>.",
           "artistCredit": "<div class=\"fn value\">\nAttributed to Giorgione</div>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T04:32:23.285Z",
+      "bytes": 1423314
     },
     {
       "artistId": "artist-Q8459",
@@ -7891,8 +7968,8 @@
         "ko": "전성기 르네상스",
         "en": "전성기 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q8459/wikidata-Q3998923.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q8459/wikidata-Q3998923.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 10,
         "artistMatches": 1,
@@ -7958,7 +8035,9 @@
           "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
           "artistCredit": "<a href=\"//commons.wikimedia.org/wiki/User:Sailko\" title=\"User:Sailko\">Sailko</a>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T04:32:36.495Z",
+      "bytes": 1504910
     },
     {
       "artistId": "artist-Q47551",
@@ -7976,8 +8055,8 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q47551/manual-local-1787199069405.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q47551/manual-local-1787199069405.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 18,
         "artistMatches": 1,
@@ -8043,7 +8122,9 @@
           "credit": "This file was derived from:  <a href=\"//commons.wikimedia.org/wiki/File:Le_Concert_champ%C3%AAtre,_by_Titian,_from_C2RMF_retouched.jpg\" title=\"File:Le Concert champêtre, by Titian, from C2RMF retouched.jpg\">Le Concert champêtre, by Titian, from C2RMF retouched.jpg</a>: <span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Le_Concert_champ%C3%AAtre,_by_Titian,_from_C2RMF_retouched.jpg\" class=\"mw-file-description\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Le_Concert_champ%C3%AAtre%2C_by_Titian%2C_from_C2RMF_retouched.jpg/120px-Le_Concert_champ%C3%AAtre%2C_by_Titian%2C_from_C2RMF_retouched.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"120\" height=\"96\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Le_Concert_champ%C3%AAtre%2C_by_Titian%2C_from_C2RMF_retouched.jpg/250px-Le_Concert_champ%C3%AAtre%2C_by_Titian%2C_from_C2RMF_retouched.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"21170\" data-file-height=\"16851\"></a></span><br>",
           "artistCredit": "<a href=\"//commons.wikimedia.org/wiki/Giorgione\" title=\"Giorgione\">Giorgione</a> and/or his disciple <a href=\"//commons.wikimedia.org/wiki/Titian\" title=\"Titian\">Titian</a> (who probably finished the painting after Giorgione's death in 1510)."
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T04:32:45.798Z",
+      "bytes": 720466
     },
     {
       "artistId": "artist-Q47551",
@@ -8061,7 +8142,7 @@
         "ko": "베네치아 화파",
         "en": "베네치아 화파"
       },
-      "targetPath": "data/thumbnails/artist-Q47551/wikidata-Q3842778.jpg",
+      "targetPath": "data/images/artist-Q47551/wikidata-Q3842778.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -8131,8 +8212,8 @@
         "ko": "전성기 르네상스",
         "en": "전성기 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q47551/wikidata-Q3495790.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q47551/wikidata-Q3495790.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 24,
         "artistMatches": 1,
@@ -8198,7 +8279,9 @@
           "credit": "<a href=\"//commons.wikimedia.org/wiki/User:Daderot\" title=\"User:Daderot\">Daderot</a>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Titian\" class=\"extiw\" title=\"w:en:Titian\"><span title=\"Italian painter (c.1490–1576)\">Titian</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T04:32:55.147Z",
+      "bytes": 1488330
     },
     {
       "artistId": "artist-Q47551",
@@ -8216,8 +8299,8 @@
         "ko": "전성기 르네상스",
         "en": "전성기 르네상스"
       },
-      "targetPath": "data/thumbnails/artist-Q47551/wikidata-Q2046100.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q47551/wikidata-Q2046100.jpg",
+      "reviewStatus": "failed",
       "selected": {
         "score": 7,
         "artistMatches": 1,
@@ -8283,7 +8366,8 @@
           "credit": "Uffizi, Florence",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Titian\" class=\"extiw\" title=\"w:en:Titian\"><span title=\"Italian painter (c.1490–1576)\">Titian</span></a></bdi>"
         }
-      ]
+      ],
+      "error": "artist-Q47551: image download 429"
     },
     {
       "artistId": "artist-Q47551",
@@ -8301,7 +8385,7 @@
         "ko": "베네치아 화파",
         "en": "베네치아 화파"
       },
-      "targetPath": "data/thumbnails/artist-Q47551/wikidata-Q19798137.jpg",
+      "targetPath": "data/images/artist-Q47551/wikidata-Q19798137.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -8323,7 +8407,7 @@
         "ko": "베네치아 화파",
         "en": "베네치아 화파"
       },
-      "targetPath": "data/thumbnails/artist-Q47551/wikidata-Q3853901.jpg",
+      "targetPath": "data/images/artist-Q47551/wikidata-Q3853901.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -8345,7 +8429,7 @@
         "ko": "베네치아 화파",
         "en": "베네치아 화파"
       },
-      "targetPath": "data/thumbnails/artist-Q47551/wikidata-Q5128805.jpg",
+      "targetPath": "data/images/artist-Q47551/wikidata-Q5128805.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -8367,8 +8451,8 @@
         "ko": "베네치아 화파",
         "en": "베네치아 화파"
       },
-      "targetPath": "data/thumbnails/artist-Q47551/wikidata-Q2665840.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q47551/wikidata-Q2665840.jpg",
+      "reviewStatus": "failed",
       "selected": {
         "score": 7,
         "artistMatches": 1,
@@ -8434,7 +8518,8 @@
           "credit": "<span class=\"int-own-work\">Self-photographed</span>",
           "artistCredit": "<a href=\"//commons.wikimedia.org/wiki/User:Archaeodontosaurus\" title=\"User:Archaeodontosaurus\">Didier Descouens</a>"
         }
-      ]
+      ],
+      "error": "artist-Q47551: image download 429"
     },
     {
       "artistId": "artist-Q312617",
@@ -8452,8 +8537,8 @@
         "ko": "매너리즘",
         "en": "Mannerism"
       },
-      "targetPath": "data/thumbnails/artist-Q312617/rosso-fiorentino-allegory-of-salvation-1522.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q312617/rosso-fiorentino-allegory-of-salvation-1522.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 22,
         "artistMatches": 2,
@@ -8519,7 +8604,9 @@
           "credit": "Reproduction personnelle",
           "artistCredit": "<div class=\"fn value\">\n<span class=\"int-own-work\" lang=\"en\">Own work</span></div>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T04:37:07.523Z",
+      "bytes": 1117317
     },
     {
       "artistId": "artist-Q207929",
@@ -8537,8 +8624,8 @@
         "ko": "매너리즘",
         "en": "Mannerism"
       },
-      "targetPath": "data/thumbnails/artist-Q207929/pontormo-visitation-1514-1516.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q207929/pontormo-visitation-1514-1516.jpg",
+      "reviewStatus": "failed",
       "selected": {
         "score": 15,
         "artistMatches": 1,
@@ -8604,7 +8691,8 @@
           "credit": "<cite class=\"book\" style=\"font-style:normal\">The Yorck Project (2002)      <i> 10.000 Meisterwerke der Malerei</i> (DVD-ROM), distributed by <a href=\"//commons.wikimedia.org/wiki/Commons:10,000_paintings_from_Directmedia\" title=\"Commons:10,000 paintings from Directmedia\">DIRECTMEDIA</a> Publishing GmbH.  <small><span lang=\"en\" dir=\"ltr\"><a href=\"https://en.wikipedia.org/wiki/ISBN\" class=\"extiw\" title=\"en:ISBN\"><span lang=\"en\" dir=\"ltr\">ISBN</span></a></span>:  <a href=\"//commons.wikimedia.org/wiki/Special:BookSources/3936122202\" title=\"Special:BookSources/3936122202\">3936122202</a>. </small></cite>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Pontormo\" class=\"extiw\" title=\"w:en:Pontormo\"><span title=\"Florentine Mannerist painter\">Pontormo</span></a></bdi>"
         }
-      ]
+      ],
+      "error": "artist-Q207929: image download 429"
     },
     {
       "artistId": "artist-Q9348",
@@ -8622,8 +8710,8 @@
         "ko": "매너리즘",
         "en": "Mannerism"
       },
-      "targetPath": "data/thumbnails/artist-Q9348/parmigianino-vision-of-saint-jerome-1526-1527.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q9348/parmigianino-vision-of-saint-jerome-1526-1527.jpg",
+      "reviewStatus": "failed",
       "selected": {
         "score": 13,
         "artistMatches": 1,
@@ -8689,7 +8777,8 @@
           "credit": "This file was derived from:  <a href=\"//commons.wikimedia.org/wiki/File:Parmigianino_-_The_Vision_of_St_Jerome_-_WGA17044.jpg\" title=\"File:Parmigianino - The Vision of St Jerome - WGA17044.jpg\">Parmigianino - The Vision of St Jerome - WGA17044.jpg</a>: <span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Parmigianino_-_The_Vision_of_St_Jerome_-_WGA17044.jpg\" class=\"mw-file-description\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Parmigianino_-_The_Vision_of_St_Jerome_-_WGA17044.jpg/60px-Parmigianino_-_The_Vision_of_St_Jerome_-_WGA17044.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"50\" height=\"108\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Parmigianino_-_The_Vision_of_St_Jerome_-_WGA17044.jpg/120px-Parmigianino_-_The_Vision_of_St_Jerome_-_WGA17044.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"1959\" data-file-height=\"4226\"></a></span><br>, derivative work: <a href=\"//commons.wikimedia.org/wiki/User:Tetraktys\" title=\"User:Tetraktys\">Tetraktys</a>: <a href=\"//commons.wikimedia.org/wiki/File:Parmigianino_-_The_Vision_of_St_Jerome_-_WGA17044.jpg\" title=\"File:Parmigianino - The Vision of St Jerome - WGA17044.jpg\">Parmigianino_-_The_Vision_of_St_Jerome_-_WGA17044.jpg</a>: Web Gallery of Art",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Parmigianino\" class=\"extiw\" title=\"w:en:Parmigianino\"><span title=\"Italian Mannerist painter and printmaker (1503–1540)\">Parmigianino</span></a></bdi>"
         }
-      ]
+      ],
+      "error": "artist-Q9348: image download 429"
     },
     {
       "artistId": "artist-Q336747",
@@ -8707,8 +8796,8 @@
         "ko": "프랑스 르네상스",
         "en": "French Renaissance"
       },
-      "targetPath": "data/thumbnails/artist-Q336747/francois-clouet-a-lady-in-her-bath-1571.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q336747/francois-clouet-a-lady-in-her-bath-1571.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 25,
         "artistMatches": 2,
@@ -8774,7 +8863,9 @@
           "credit": "This file was donated to Wikimedia Commons as part of a project by the <a href=\"//commons.wikimedia.org/wiki/Commons:NGA\" title=\"Commons:NGA\">National Gallery of Art</a>. Please see the Gallery's <a rel=\"nofollow\" class=\"external text\" href=\"https://images.nga.gov/en/page/openaccess.html\">Open Access Policy</a>.",
           "artistCredit": "<div class=\"fn value\">\nFrançois Clouet</div>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T04:41:19.067Z",
+      "bytes": 1197988
     },
     {
       "artistId": "artist-Q336747",
@@ -8792,8 +8883,8 @@
         "ko": "프랑스 르네상스",
         "en": "French Renaissance"
       },
-      "targetPath": "data/thumbnails/artist-Q336747/francois-clouet-elisabeth-of-austria-1571.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q336747/francois-clouet-elisabeth-of-austria-1571.jpg",
+      "reviewStatus": "failed",
       "selected": {
         "score": 22,
         "artistMatches": 2,
@@ -8859,7 +8950,8 @@
           "credit": "<a rel=\"nofollow\" class=\"external free\" href=\"http://www.gogmsite.net/_Media/1571caelisabethaustria1552_.jpg\">http://www.gogmsite.net/_Media/1571caelisabethaustria1552_.jpg</a>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Fran%C3%A7ois_Clouet\" class=\"extiw\" title=\"w:en:François Clouet\"><span title=\"French Renaissance miniaturist and painter (c.1510-1572)\">François Clouet</span></a></bdi>"
         }
-      ]
+      ],
+      "error": "artist-Q336747: image download 429"
     },
     {
       "artistId": "artist-Q9319",
@@ -8877,8 +8969,8 @@
         "ko": "베네치아 르네상스",
         "en": "Venetian Renaissance"
       },
-      "targetPath": "data/thumbnails/artist-Q9319/tintoretto-finding-of-the-body-of-st-mark-1562-1566.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q9319/tintoretto-finding-of-the-body-of-st-mark-1562-1566.jpg",
+      "reviewStatus": "downloaded",
       "selected": {
         "score": 17,
         "artistMatches": 2,
@@ -8944,7 +9036,9 @@
           "credit": "<a href=\"https://en.wikipedia.org/wiki/en:Web_Gallery_of_Art\" class=\"extiw\" title=\"w:en:Web Gallery of Art\"><span title=\"virtual art gallery for European fine art created before 1900\">Web Gallery of Art</span></a>:  <span typeof=\"mw:File\"><a href=\"http://www.wga.hu/art/t/tintoret/3a/2mark.jpg\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/20px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Inkscape.svg/40px-Inkscape.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"60\" data-file-height=\"60\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://www.wga.hu/art/t/tintoret/3a/2mark.jpg\">Image</a> <span typeof=\"mw:File\"><a href=\"http://www.wga.hu/html/t/tintoret/3a/2mark.html\" rel=\"nofollow\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/20px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Information_icon.svg/40px-Information_icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"620\" data-file-height=\"620\"></a></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://www.wga.hu/html/t/tintoret/3a/2mark.html\">Info about artwork</a><div style=\"display: none;\">wga QS:P11807,\"t/tintoret/3a/2mark\"</div>",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Tintoretto\" class=\"extiw\" title=\"w:en:Tintoretto\"><span title=\"Renaissance painter (1518/1519–1594)\">Jacopo Tintoretto</span></a></bdi>"
         }
-      ]
+      ],
+      "downloadedAt": "2026-08-29T04:43:29.471Z",
+      "bytes": 715615
     },
     {
       "artistId": "artist-Q9319",
@@ -8962,8 +9056,8 @@
         "ko": "베네치아 르네상스",
         "en": "Venetian Renaissance"
       },
-      "targetPath": "data/thumbnails/artist-Q9319/tintoretto-st-marks-body-brought-to-venice-1562-1566.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q9319/tintoretto-st-marks-body-brought-to-venice-1562-1566.jpg",
+      "reviewStatus": "failed",
       "selected": {
         "score": 28,
         "artistMatches": 2,
@@ -9029,7 +9123,8 @@
           "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
           "artistCredit": "<a href=\"//commons.wikimedia.org/wiki/User:Gsimonov\" title=\"User:Gsimonov\">Gleb Simonov</a>"
         }
-      ]
+      ],
+      "error": "artist-Q9319: image download 429"
     },
     {
       "artistId": "artist-Q9319",
@@ -9047,7 +9142,7 @@
         "ko": "베네치아 르네상스",
         "en": "Venetian Renaissance"
       },
-      "targetPath": "data/thumbnails/artist-Q9319/tintoretto-baptism-of-jesus-c1580.jpg",
+      "targetPath": "data/images/artist-Q9319/tintoretto-baptism-of-jesus-c1580.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -9117,8 +9212,8 @@
         "ko": "베네치아 르네상스",
         "en": "Venetian Renaissance"
       },
-      "targetPath": "data/thumbnails/artist-Q9440/veronese-sacrificial-death-of-marcus-curtius-1550-1552.jpg",
-      "reviewStatus": "candidate",
+      "targetPath": "data/images/artist-Q9440/veronese-sacrificial-death-of-marcus-curtius-1550-1552.jpg",
+      "reviewStatus": "failed",
       "selected": {
         "score": 14,
         "artistMatches": 2,
@@ -9168,7 +9263,8 @@
           "credit": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.khm.at/objektdb/detail/386\">Kunsthistorisches Museum Wien, Bilddatenbank</a>.<br>  22 June 2006<br><a rel=\"nofollow\" class=\"external text\" href=\"http://en.gallerix.ru/album/KHM/pic/glrx-132868385\">gallerix.ru</a> 19 December 2012",
           "artistCredit": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Paolo_Veronese\" class=\"extiw\" title=\"w:en:Paolo Veronese\"><span title=\"Italian painter of the Renaissance (1528–1588)\">Paolo Veronese</span></a></bdi>"
         }
-      ]
+      ],
+      "error": "artist-Q9440: image download 429"
     },
     {
       "artistId": "artist-Q9440",
@@ -9186,7 +9282,7 @@
         "ko": "베네치아 르네상스",
         "en": "Venetian Renaissance"
       },
-      "targetPath": "data/thumbnails/artist-Q9440/veronese-saint-jerome-in-penance-1570-1580.jpg",
+      "targetPath": "data/images/artist-Q9440/veronese-saint-jerome-in-penance-1570-1580.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -9208,7 +9304,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q7824/wikidata-Q1091213.jpg",
+      "targetPath": "data/images/artist-Q7824/wikidata-Q1091213.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -9230,7 +9326,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q7824/wikidata-Q60477093.jpg",
+      "targetPath": "data/images/artist-Q7824/wikidata-Q60477093.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -9252,7 +9348,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q7824/wikidata-Q12060616.jpg",
+      "targetPath": "data/images/artist-Q7824/wikidata-Q12060616.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 19,
@@ -9337,7 +9433,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q7824/wikidata-Q19966591.jpg",
+      "targetPath": "data/images/artist-Q7824/wikidata-Q19966591.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -9375,7 +9471,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q7824/wikidata-Q21234110.png",
+      "targetPath": "data/images/artist-Q7824/wikidata-Q21234110.png",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -9445,7 +9541,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q7824/wikidata-Q97704183.jpg",
+      "targetPath": "data/images/artist-Q7824/wikidata-Q97704183.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 25,
@@ -9530,7 +9626,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q7824/wikidata-Q26767075.png",
+      "targetPath": "data/images/artist-Q7824/wikidata-Q26767075.png",
       "reviewStatus": "candidate",
       "selected": {
         "score": 28,
@@ -9615,7 +9711,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q7824/wikidata-Q19966609.jpg",
+      "targetPath": "data/images/artist-Q7824/wikidata-Q19966609.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -9685,7 +9781,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q7824/wikidata-Q126127672.jpg",
+      "targetPath": "data/images/artist-Q7824/wikidata-Q126127672.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -9755,7 +9851,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q7824/wikidata-Q18572292.jpg",
+      "targetPath": "data/images/artist-Q7824/wikidata-Q18572292.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 14,
@@ -9840,7 +9936,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q7824/wikidata-Q28668013.png",
+      "targetPath": "data/images/artist-Q7824/wikidata-Q28668013.png",
       "reviewStatus": "candidate",
       "selected": {
         "score": 14,
@@ -9925,7 +10021,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q7824/wikidata-Q28668136.jpg",
+      "targetPath": "data/images/artist-Q7824/wikidata-Q28668136.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 14,
@@ -10010,7 +10106,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q7824/wikidata-Q19966583.jpg",
+      "targetPath": "data/images/artist-Q7824/wikidata-Q19966583.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -10032,7 +10128,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q7824/wikidata-Q50323648.jpg",
+      "targetPath": "data/images/artist-Q7824/wikidata-Q50323648.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -10054,7 +10150,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q7824/wikidata-Q22337539.jpg",
+      "targetPath": "data/images/artist-Q7824/wikidata-Q22337539.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -10076,7 +10172,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q7824/wikidata-Q16268699.jpg",
+      "targetPath": "data/images/artist-Q7824/wikidata-Q16268699.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 22,
@@ -10161,7 +10257,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q7824/wikidata-Q16912528.jpg",
+      "targetPath": "data/images/artist-Q7824/wikidata-Q16912528.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -10231,7 +10327,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q7824/wikidata-Q17651291.jpg",
+      "targetPath": "data/images/artist-Q7824/wikidata-Q17651291.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 11,
@@ -10316,7 +10412,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q7824/wikidata-Q19966598.png",
+      "targetPath": "data/images/artist-Q7824/wikidata-Q19966598.png",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -10386,7 +10482,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q7824/wikidata-Q97704145.jpg",
+      "targetPath": "data/images/artist-Q7824/wikidata-Q97704145.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -10424,7 +10520,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q7824/wikidata-Q21722833.jpg",
+      "targetPath": "data/images/artist-Q7824/wikidata-Q21722833.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 20,
@@ -10509,7 +10605,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q7824/wikidata-Q3815283.jpg",
+      "targetPath": "data/images/artist-Q7824/wikidata-Q3815283.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 28,
@@ -10594,7 +10690,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q7824/wikidata-Q17628493.jpg",
+      "targetPath": "data/images/artist-Q7824/wikidata-Q17628493.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 11,
@@ -10679,7 +10775,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q7824/wikidata-Q16268730.png",
+      "targetPath": "data/images/artist-Q7824/wikidata-Q16268730.png",
       "reviewStatus": "candidate",
       "selected": {
         "score": 20,
@@ -10764,7 +10860,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-url-1786879941678/wikidata-Q2667782.jpg",
+      "targetPath": "data/images/artist-url-1786879941678/wikidata-Q2667782.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 26,
@@ -10849,7 +10945,7 @@
         "ko": "바로크",
         "en": "Baroque"
       },
-      "targetPath": "data/thumbnails/artist-Q297/velazquez-surrender-of-breda-1634-1635.jpg",
+      "targetPath": "data/images/artist-Q297/velazquez-surrender-of-breda-1634-1635.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -10871,7 +10967,7 @@
         "ko": "바로크",
         "en": "Baroque"
       },
-      "targetPath": "data/thumbnails/artist-Q297/velazquez-rokeby-venus-1647-1651.jpg",
+      "targetPath": "data/images/artist-Q297/velazquez-rokeby-venus-1647-1651.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -10893,7 +10989,7 @@
         "ko": "플랑드르 바로크 회화",
         "en": "Flemish Baroque painting"
       },
-      "targetPath": "data/thumbnails/artist-Q150679/van-dyck-princess-mary-daughter-of-charles-i-1637.jpg",
+      "targetPath": "data/images/artist-Q150679/van-dyck-princess-mary-daughter-of-charles-i-1637.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -10915,7 +11011,7 @@
         "ko": "네덜란드 황금기 회화",
         "en": "네덜란드 황금기 회화"
       },
-      "targetPath": "data/thumbnails/artist-rembrandt/wikidata-Q2646680.jpg",
+      "targetPath": "data/images/artist-rembrandt/wikidata-Q2646680.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -10985,7 +11081,7 @@
         "ko": "네덜란드 황금기 회화",
         "en": "네덜란드 황금기 회화"
       },
-      "targetPath": "data/thumbnails/artist-rembrandt/wikidata-Q650086.jpg",
+      "targetPath": "data/images/artist-rembrandt/wikidata-Q650086.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -11055,7 +11151,7 @@
         "ko": "네덜란드 황금기 회화",
         "en": "네덜란드 황금기 회화"
       },
-      "targetPath": "data/thumbnails/artist-rembrandt/wikidata-Q1130734.jpg",
+      "targetPath": "data/images/artist-rembrandt/wikidata-Q1130734.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -11125,7 +11221,7 @@
         "ko": "네덜란드 황금기 회화",
         "en": "네덜란드 황금기 회화"
       },
-      "targetPath": "data/thumbnails/artist-rembrandt/wikidata-Q1243299.jpg",
+      "targetPath": "data/images/artist-rembrandt/wikidata-Q1243299.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 26,
@@ -11210,7 +11306,7 @@
         "ko": "네덜란드 황금기 회화",
         "en": "네덜란드 황금기 회화"
       },
-      "targetPath": "data/thumbnails/artist-rembrandt/wikidata-Q17343012.jpg",
+      "targetPath": "data/images/artist-rembrandt/wikidata-Q17343012.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 21,
@@ -11295,7 +11391,7 @@
         "ko": "네덜란드 황금기 회화",
         "en": "네덜란드 황금기 회화"
       },
-      "targetPath": "data/thumbnails/artist-rembrandt/wikidata-Q2479220.jpg",
+      "targetPath": "data/images/artist-rembrandt/wikidata-Q2479220.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 21,
@@ -11380,7 +11476,7 @@
         "ko": "네덜란드 황금기 회화",
         "en": "네덜란드 황금기 회화"
       },
-      "targetPath": "data/thumbnails/artist-rembrandt/wikidata-Q1111394.jpg",
+      "targetPath": "data/images/artist-rembrandt/wikidata-Q1111394.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 21,
@@ -11465,7 +11561,7 @@
         "ko": "네덜란드 황금기 회화",
         "en": "네덜란드 황금기 회화"
       },
-      "targetPath": "data/thumbnails/artist-rembrandt/wikidata-Q1167932.jpg",
+      "targetPath": "data/images/artist-rembrandt/wikidata-Q1167932.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 18,
@@ -11550,7 +11646,7 @@
         "ko": "바로크",
         "en": "바로크"
       },
-      "targetPath": "data/thumbnails/artist-rembrandt/wikidata-Q1211651.jpg",
+      "targetPath": "data/images/artist-rembrandt/wikidata-Q1211651.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 26,
@@ -11635,7 +11731,7 @@
         "ko": "네덜란드 황금기 회화",
         "en": "네덜란드 황금기 회화"
       },
-      "targetPath": "data/thumbnails/artist-rembrandt/wikidata-Q3630751.jpg",
+      "targetPath": "data/images/artist-rembrandt/wikidata-Q3630751.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 21,
@@ -11720,7 +11816,7 @@
         "ko": "네덜란드 황금기 회화",
         "en": "네덜란드 황금기 회화"
       },
-      "targetPath": "data/thumbnails/artist-rembrandt/wikidata-Q32496.jpg",
+      "targetPath": "data/images/artist-rembrandt/wikidata-Q32496.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -11742,7 +11838,7 @@
         "ko": "네덜란드 황금기 회화",
         "en": "네덜란드 황금기 회화"
       },
-      "targetPath": "data/thumbnails/artist-rembrandt/wikidata-Q325267.jpg",
+      "targetPath": "data/images/artist-rembrandt/wikidata-Q325267.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -11764,7 +11860,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q213163/wikidata-Q19005301.jpg",
+      "targetPath": "data/images/artist-Q213163/wikidata-Q19005301.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -11786,7 +11882,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q187310/wikidata-Q108741509.jpg",
+      "targetPath": "data/images/artist-Q187310/wikidata-Q108741509.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -11807,7 +11903,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q187310/wikidata-Q136698761.jpg",
+      "targetPath": "data/images/artist-Q187310/wikidata-Q136698761.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -11877,7 +11973,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q187310/wikidata-Q130781496.jpg",
+      "targetPath": "data/images/artist-Q187310/wikidata-Q130781496.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 22,
@@ -11962,7 +12058,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q187310/wikidata-Q130870450.jpg",
+      "targetPath": "data/images/artist-Q187310/wikidata-Q130870450.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 22,
@@ -12047,7 +12143,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q187310/wikidata-Q106368926.jpg",
+      "targetPath": "data/images/artist-Q187310/wikidata-Q106368926.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -12068,7 +12164,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q187310/wikidata-Q106368930.jpg",
+      "targetPath": "data/images/artist-Q187310/wikidata-Q106368930.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -12089,7 +12185,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q187310/wikidata-Q106368934.jpg",
+      "targetPath": "data/images/artist-Q187310/wikidata-Q106368934.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -12110,7 +12206,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q187310/wikidata-Q111821710.jpg",
+      "targetPath": "data/images/artist-Q187310/wikidata-Q111821710.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -12148,7 +12244,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q187310/wikidata-Q136706040.jpg",
+      "targetPath": "data/images/artist-Q187310/wikidata-Q136706040.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -12186,7 +12282,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q187310/wikidata-Q10543635.jpg",
+      "targetPath": "data/images/artist-Q187310/wikidata-Q10543635.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -12224,7 +12320,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q187310/wikidata-Q20064873.jpg",
+      "targetPath": "data/images/artist-Q187310/wikidata-Q20064873.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -12246,7 +12342,7 @@
         "ko": "후기인상주의",
         "en": "후기인상주의"
       },
-      "targetPath": "data/thumbnails/artist-Q82445/wikidata-Q19883438.jpg",
+      "targetPath": "data/images/artist-Q82445/wikidata-Q19883438.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -12268,7 +12364,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/artist-Q82445/wikidata-Q18685999.jpg",
+      "targetPath": "data/images/artist-Q82445/wikidata-Q18685999.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -12290,7 +12386,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/frida-kahlo/wikidata-Q109930455.jpg",
+      "targetPath": "data/images/frida-kahlo/wikidata-Q109930455.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -12360,7 +12456,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/frida-kahlo/wikidata-Q111207414.jpg",
+      "targetPath": "data/images/frida-kahlo/wikidata-Q111207414.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -12381,7 +12477,7 @@
         "ko": "초현실주의",
         "en": "초현실주의"
       },
-      "targetPath": "data/thumbnails/frida-kahlo/wikidata-Q16488383.jpg",
+      "targetPath": "data/images/frida-kahlo/wikidata-Q16488383.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -12402,7 +12498,7 @@
         "ko": "소박파",
         "en": "소박파"
       },
-      "targetPath": "data/thumbnails/frida-kahlo/wikidata-Q28339146.jpg",
+      "targetPath": "data/images/frida-kahlo/wikidata-Q28339146.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -12423,7 +12519,7 @@
         "ko": "초현실주의",
         "en": "초현실주의"
       },
-      "targetPath": "data/thumbnails/frida-kahlo/wikidata-Q18343221.jpg",
+      "targetPath": "data/images/frida-kahlo/wikidata-Q18343221.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -12444,7 +12540,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/frida-kahlo/wikidata-Q63341526.jpg",
+      "targetPath": "data/images/frida-kahlo/wikidata-Q63341526.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -12465,7 +12561,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/frida-kahlo/wikidata-Q19897995.jpg",
+      "targetPath": "data/images/frida-kahlo/wikidata-Q19897995.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -12503,7 +12599,7 @@
         "ko": "초현실주의",
         "en": "초현실주의"
       },
-      "targetPath": "data/thumbnails/frida-kahlo/wikidata-Q136892338.jpg",
+      "targetPath": "data/images/frida-kahlo/wikidata-Q136892338.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -12573,7 +12669,7 @@
         "ko": "초현실주의",
         "en": "초현실주의"
       },
-      "targetPath": "data/thumbnails/frida-kahlo/wikidata-Q136891708.jpg",
+      "targetPath": "data/images/frida-kahlo/wikidata-Q136891708.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -12594,7 +12690,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/frida-kahlo/wikidata-Q5943279.jpg",
+      "targetPath": "data/images/frida-kahlo/wikidata-Q5943279.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 28,
@@ -12647,7 +12743,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/frida-kahlo/wikidata-Q118901053.jpg",
+      "targetPath": "data/images/frida-kahlo/wikidata-Q118901053.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -12669,7 +12765,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/frida-kahlo/wikidata-Q20879937.jpg",
+      "targetPath": "data/images/frida-kahlo/wikidata-Q20879937.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -12691,7 +12787,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/frida-kahlo/wikidata-Q8773940.jpg",
+      "targetPath": "data/images/frida-kahlo/wikidata-Q8773940.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -12713,7 +12809,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/frida-kahlo/wikidata-Q17629443.jpg",
+      "targetPath": "data/images/frida-kahlo/wikidata-Q17629443.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 14,
@@ -12798,7 +12894,7 @@
         "ko": "",
         "en": ""
       },
-      "targetPath": "data/thumbnails/frida-kahlo/wikidata-Q106811218.jpg",
+      "targetPath": "data/images/frida-kahlo/wikidata-Q106811218.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -12819,7 +12915,7 @@
         "ko": "로코코",
         "en": "Rococo"
       },
-      "targetPath": "data/thumbnails/artist-Q155151/artist-Q155151-pleasures-of-love.jpg",
+      "targetPath": "data/images/artist-Q155151/artist-Q155151-pleasures-of-love.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 22,
@@ -12904,7 +13000,7 @@
         "ko": "로코코",
         "en": "Rococo"
       },
-      "targetPath": "data/thumbnails/artist-Q313122/artist-Q313122-resting-girl.jpg",
+      "targetPath": "data/images/artist-Q313122/artist-Q313122-resting-girl.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 14,
@@ -12989,7 +13085,7 @@
         "ko": "로코코",
         "en": "Rococo"
       },
-      "targetPath": "data/thumbnails/artist-Q162048/local-tiepolo-glory-of-pisani-family.jpg",
+      "targetPath": "data/images/artist-Q162048/local-tiepolo-glory-of-pisani-family.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 41,
@@ -13074,7 +13170,7 @@
         "ko": "로코코",
         "en": "Rococo"
       },
-      "targetPath": "data/thumbnails/artist-Q235547/local-carriera-watteau-portrait.jpg",
+      "targetPath": "data/images/artist-Q235547/local-carriera-watteau-portrait.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 17,
@@ -13159,7 +13255,7 @@
         "ko": "낭만주의",
         "en": "Romanticism"
       },
-      "targetPath": "data/thumbnails/artist-romantic-gericault/artist-romantic-gericault-work.jpg",
+      "targetPath": "data/images/artist-romantic-gericault/artist-romantic-gericault-work.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 22,
@@ -13244,7 +13340,7 @@
         "ko": "낭만주의",
         "en": "Romanticism"
       },
-      "targetPath": "data/thumbnails/artist-romantic-gericault/gericault-raft-of-medusa.jpg",
+      "targetPath": "data/images/artist-romantic-gericault/gericault-raft-of-medusa.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 22,
@@ -13329,7 +13425,7 @@
         "ko": "바로크",
         "en": "Baroque"
       },
-      "targetPath": "data/thumbnails/artist-Q49898/rigaud-louis-xiv-royal-costume-1701.jpg",
+      "targetPath": "data/images/artist-Q49898/rigaud-louis-xiv-royal-costume-1701.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 14,
@@ -13414,7 +13510,7 @@
         "ko": "바우하우스",
         "en": "Bauhaus"
       },
-      "targetPath": "data/thumbnails/artist-art-atlas-kandinsky/kandinsky-yellow-red-blue.jpg",
+      "targetPath": "data/images/artist-art-atlas-kandinsky/kandinsky-yellow-red-blue.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -13484,7 +13580,7 @@
         "ko": "입체주의",
         "en": "Cubism"
       },
-      "targetPath": "data/thumbnails/artist-art-atlas-picasso/picasso-ma-jolie.jpg",
+      "targetPath": "data/images/artist-art-atlas-picasso/picasso-ma-jolie.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -13506,7 +13602,7 @@
         "ko": "러시아 아방가르드",
         "en": "Russian avant-garde"
       },
-      "targetPath": "data/thumbnails/artist-art-atlas-rodchenko/rodchenko-pure-colors.jpg",
+      "targetPath": "data/images/artist-art-atlas-rodchenko/rodchenko-pure-colors.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -13528,7 +13624,7 @@
         "ko": "추상표현주의",
         "en": "Abstract Expressionism"
       },
-      "targetPath": "data/thumbnails/artist-art-atlas-pollock/pollock-autumn-rhythm-30.jpg",
+      "targetPath": "data/images/artist-art-atlas-pollock/pollock-autumn-rhythm-30.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -13550,7 +13646,7 @@
         "ko": "추상표현주의",
         "en": "Abstract Expressionism"
       },
-      "targetPath": "data/thumbnails/artist-art-atlas-rothko/rothko-no-14-1960.jpg",
+      "targetPath": "data/images/artist-art-atlas-rothko/rothko-no-14-1960.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -13571,7 +13667,7 @@
         "ko": "팝아트",
         "en": "Pop Art"
       },
-      "targetPath": "data/thumbnails/artist-art-atlas-hamilton/hamilton-just-what-is-it.jpg",
+      "targetPath": "data/images/artist-art-atlas-hamilton/hamilton-just-what-is-it.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -13592,7 +13688,7 @@
         "ko": "팝아트",
         "en": "Pop Art"
       },
-      "targetPath": "data/thumbnails/artist-art-atlas-warhol/warhol-marilyn-diptych.jpg",
+      "targetPath": "data/images/artist-art-atlas-warhol/warhol-marilyn-diptych.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -13630,7 +13726,7 @@
         "ko": "포스트모더니즘",
         "en": "Postmodernism"
       },
-      "targetPath": "data/thumbnails/artist-art-atlas-sherman/sherman-untitled-film-still-21.jpg",
+      "targetPath": "data/images/artist-art-atlas-sherman/sherman-untitled-film-still-21.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -13651,7 +13747,7 @@
         "ko": "바우하우스",
         "en": "Bauhaus"
       },
-      "targetPath": "data/thumbnails/artist-art-atlas-gropius/gropius-bauhaus-dessau.jpg",
+      "targetPath": "data/images/artist-art-atlas-gropius/gropius-bauhaus-dessau.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -13721,7 +13817,7 @@
         "ko": "사회주의적 사실주의",
         "en": "Socialist Realism"
       },
-      "targetPath": "data/thumbnails/artist-art-atlas-deyneka/deyneka-defence-petrograd.jpg",
+      "targetPath": "data/images/artist-art-atlas-deyneka/deyneka-defence-petrograd.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -13742,7 +13838,7 @@
         "ko": "앵포르멜",
         "en": "Art Informel"
       },
-      "targetPath": "data/thumbnails/artist-art-atlas-dubuffet/dubuffet-corps-de-dame.jpg",
+      "targetPath": "data/images/artist-art-atlas-dubuffet/dubuffet-corps-de-dame.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -13763,7 +13859,7 @@
         "ko": "누보 레알리슴",
         "en": "Nouveau Réalisme"
       },
-      "targetPath": "data/thumbnails/artist-art-atlas-klein/klein-anthropometry-blue-epoch.jpg",
+      "targetPath": "data/images/artist-art-atlas-klein/klein-anthropometry-blue-epoch.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -13784,7 +13880,7 @@
         "ko": "미니멀리즘",
         "en": "Minimalism"
       },
-      "targetPath": "data/thumbnails/artist-art-atlas-judd/judd-untitled-stack-1967.jpg",
+      "targetPath": "data/images/artist-art-atlas-judd/judd-untitled-stack-1967.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -13805,7 +13901,7 @@
         "ko": "개념미술",
         "en": "Conceptual Art"
       },
-      "targetPath": "data/thumbnails/artist-art-atlas-kosuth/kosuth-one-three-chairs.jpg",
+      "targetPath": "data/images/artist-art-atlas-kosuth/kosuth-one-three-chairs.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -13859,7 +13955,7 @@
         "ko": "개념미술",
         "en": "Conceptual Art"
       },
-      "targetPath": "data/thumbnails/artist-art-atlas-paik/paik-tv-buddha.jpg",
+      "targetPath": "data/images/artist-art-atlas-paik/paik-tv-buddha.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -13881,7 +13977,7 @@
         "ko": "현대미술",
         "en": "Contemporary Art"
       },
-      "targetPath": "data/thumbnails/artist-art-atlas-paik/paik-electronic-superhighway.jpg",
+      "targetPath": "data/images/artist-art-atlas-paik/paik-electronic-superhighway.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -13903,7 +13999,7 @@
         "ko": "옵아트",
         "en": "Op Art"
       },
-      "targetPath": "data/thumbnails/artist-art-atlas-vasarely/vasarely-vega-nor.jpg",
+      "targetPath": "data/images/artist-art-atlas-vasarely/vasarely-vega-nor.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -13925,7 +14021,7 @@
         "ko": "현대미술",
         "en": "Contemporary Art"
       },
-      "targetPath": "data/thumbnails/artist-art-atlas-steyerl/steyerl-how-not-seen.jpg",
+      "targetPath": "data/images/artist-art-atlas-steyerl/steyerl-how-not-seen.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -13947,7 +14043,7 @@
         "ko": "현대미술",
         "en": "Contemporary Art"
       },
-      "targetPath": "data/thumbnails/artist-art-atlas-banksy/banksy-girl-balloon.jpg",
+      "targetPath": "data/images/artist-art-atlas-banksy/banksy-girl-balloon.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -13969,7 +14065,7 @@
         "ko": "후기인상주의",
         "en": "Post-Impressionism"
       },
-      "targetPath": "data/thumbnails/artist-further-emile-bernard/bernard-breton-women-meadow.jpg",
+      "targetPath": "data/images/artist-further-emile-bernard/bernard-breton-women-meadow.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 25,
@@ -14054,7 +14150,7 @@
         "ko": "표현주의",
         "en": "Expressionism"
       },
-      "targetPath": "data/thumbnails/artist-further-heckel/heckel-glassy-day.jpg",
+      "targetPath": "data/images/artist-further-heckel/heckel-glassy-day.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -14075,7 +14171,7 @@
         "ko": "표현주의",
         "en": "Expressionism"
       },
-      "targetPath": "data/thumbnails/artist-further-franz-marc/marc-blue-horse-i.jpg",
+      "targetPath": "data/images/artist-further-franz-marc/marc-blue-horse-i.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 22,
@@ -14160,7 +14256,7 @@
         "ko": "표현주의",
         "en": "Expressionism"
       },
-      "targetPath": "data/thumbnails/artist-further-kokoschka/kokoschka-bride-of-wind.jpg",
+      "targetPath": "data/images/artist-further-kokoschka/kokoschka-bride-of-wind.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -14230,7 +14326,7 @@
         "ko": "입체주의",
         "en": "Cubism"
       },
-      "targetPath": "data/thumbnails/artist-further-braque/braque-violin-and-palette.jpg",
+      "targetPath": "data/images/artist-further-braque/braque-violin-and-palette.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -14268,7 +14364,7 @@
         "ko": "러시아 아방가르드",
         "en": "Russian avant-garde"
       },
-      "targetPath": "data/thumbnails/artist-further-lissitzky/lissitzky-proun-19d.jpg",
+      "targetPath": "data/images/artist-further-lissitzky/lissitzky-proun-19d.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -14306,7 +14402,7 @@
         "ko": "다다",
         "en": "Dada"
       },
-      "targetPath": "data/thumbnails/artist-further-arp/arp-collage-squares-laws-chance.jpg",
+      "targetPath": "data/images/artist-further-arp/arp-collage-squares-laws-chance.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -14327,7 +14423,7 @@
         "ko": "다다",
         "en": "Dada"
       },
-      "targetPath": "data/thumbnails/artist-further-hausmann/hausmann-mechanical-head.png",
+      "targetPath": "data/images/artist-further-hausmann/hausmann-mechanical-head.png",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -14365,7 +14461,7 @@
         "ko": "추상표현주의",
         "en": "Abstract Expressionism"
       },
-      "targetPath": "data/thumbnails/artist-further-newman/newman-vir-heroicus-sublimis.png",
+      "targetPath": "data/images/artist-further-newman/newman-vir-heroicus-sublimis.png",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -14435,7 +14531,7 @@
         "ko": "팝아트",
         "en": "Pop Art"
       },
-      "targetPath": "data/thumbnails/artist-further-paolozzi/paolozzi-rich-man-plaything.jpg",
+      "targetPath": "data/images/artist-further-paolozzi/paolozzi-rich-man-plaything.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -14456,7 +14552,7 @@
         "ko": "팝아트",
         "en": "Pop Art"
       },
-      "targetPath": "data/thumbnails/artist-further-lichtenstein/lichtenstein-whaam.jpg",
+      "targetPath": "data/images/artist-further-lichtenstein/lichtenstein-whaam.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -14478,7 +14574,7 @@
         "ko": "포스트모더니즘",
         "en": "Postmodernism"
       },
-      "targetPath": "data/thumbnails/artist-further-levine/levine-after-walker-evans.jpg",
+      "targetPath": "data/images/artist-further-levine/levine-after-walker-evans.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -14500,7 +14596,7 @@
         "ko": "포스트모더니즘",
         "en": "Postmodernism"
       },
-      "targetPath": "data/thumbnails/artist-further-kiefer/kiefer-margarethe.jpg",
+      "targetPath": "data/images/artist-further-kiefer/kiefer-margarethe.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -14522,7 +14618,7 @@
         "ko": "낭만주의",
         "en": "Romanticism"
       },
-      "targetPath": "data/thumbnails/artist-further-runge/runge-morning.jpg",
+      "targetPath": "data/images/artist-further-runge/runge-morning.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 23,
@@ -14607,7 +14703,7 @@
         "ko": "낭만주의",
         "en": "Romanticism"
       },
-      "targetPath": "data/thumbnails/artist-further-eugenio-lucas/lucas-condemned-inquisition.jpg",
+      "targetPath": "data/images/artist-further-eugenio-lucas/lucas-condemned-inquisition.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -14628,7 +14724,7 @@
         "ko": "아르누보",
         "en": "Art Nouveau"
       },
-      "targetPath": "data/thumbnails/artist-further-koloman-moser/moser-secession-poster-13.jpg",
+      "targetPath": "data/images/artist-further-koloman-moser/moser-secession-poster-13.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -14698,7 +14794,7 @@
         "ko": "야수주의",
         "en": "Fauvism"
       },
-      "targetPath": "data/thumbnails/artist-further-friesz/friesz-la-ciotat.jpg",
+      "targetPath": "data/images/artist-further-friesz/friesz-la-ciotat.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 19,
@@ -14783,7 +14879,7 @@
         "ko": "미래주의",
         "en": "Futurism"
       },
-      "targetPath": "data/thumbnails/artist-further-balla/balla-dynamism-dog-leash.jpg",
+      "targetPath": "data/images/artist-further-balla/balla-dynamism-dog-leash.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -14853,7 +14949,7 @@
         "ko": "데 스틸",
         "en": "De Stijl"
       },
-      "targetPath": "data/thumbnails/artist-further-van-doesburg/van-doesburg-counter-composition-v.jpg",
+      "targetPath": "data/images/artist-further-van-doesburg/van-doesburg-counter-composition-v.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 26,
@@ -14938,7 +15034,7 @@
         "ko": "초현실주의",
         "en": "Surrealism"
       },
-      "targetPath": "data/thumbnails/artist-further-masson/masson-automatic-drawing.jpg",
+      "targetPath": "data/images/artist-further-masson/masson-automatic-drawing.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -15008,7 +15104,7 @@
         "ko": "초현실주의",
         "en": "Surrealism"
       },
-      "targetPath": "data/thumbnails/artist-further-magritte/magritte-treachery-images.jpg",
+      "targetPath": "data/images/artist-further-magritte/magritte-treachery-images.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -15078,7 +15174,7 @@
         "ko": "멕시코 벽화운동",
         "en": "Mexican Muralism"
       },
-      "targetPath": "data/thumbnails/artist-further-orozco/orozco-epic-american-civilization.jpg",
+      "targetPath": "data/images/artist-further-orozco/orozco-epic-american-civilization.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -15148,7 +15244,7 @@
         "ko": "사회적 사실주의",
         "en": "Social Realism"
       },
-      "targetPath": "data/thumbnails/artist-further-reginald-marsh/marsh-twenty-cent-movie.jpg",
+      "targetPath": "data/images/artist-further-reginald-marsh/marsh-twenty-cent-movie.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -15186,7 +15282,7 @@
         "ko": "사회주의적 사실주의",
         "en": "Socialist Realism"
       },
-      "targetPath": "data/thumbnails/artist-further-mukhina/mukhina-worker-kolkhoz-woman.jpg",
+      "targetPath": "data/images/artist-further-mukhina/mukhina-worker-kolkhoz-woman.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -15208,7 +15304,7 @@
         "ko": "앵포르멜",
         "en": "Art Informel"
       },
-      "targetPath": "data/thumbnails/artist-further-wols/wols-its-all-over.jpg",
+      "targetPath": "data/images/artist-further-wols/wols-its-all-over.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -15230,7 +15326,7 @@
         "ko": "누보 레알리슴",
         "en": "Nouveau Réalisme"
       },
-      "targetPath": "data/thumbnails/artist-further-arman/arman-poubelle.jpg",
+      "targetPath": "data/images/artist-further-arman/arman-poubelle.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -15252,7 +15348,7 @@
         "ko": "미니멀리즘",
         "en": "Minimalism"
       },
-      "targetPath": "data/thumbnails/artist-further-flavin/flavin-monument-tatlin.jpg",
+      "targetPath": "data/images/artist-further-flavin/flavin-monument-tatlin.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -15322,7 +15418,7 @@
         "ko": "개념미술",
         "en": "Conceptual Art"
       },
-      "targetPath": "data/thumbnails/artist-further-weiner/weiner-removal-36-square.jpg",
+      "targetPath": "data/images/artist-further-weiner/weiner-removal-36-square.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -15343,7 +15439,7 @@
         "ko": "옵아트",
         "en": "Op Art"
       },
-      "targetPath": "data/thumbnails/artist-further-riley/riley-current.jpg",
+      "targetPath": "data/images/artist-further-riley/riley-current.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -15413,7 +15509,7 @@
         "ko": "현대미술",
         "en": "Contemporary Art"
       },
-      "targetPath": "data/thumbnails/artist-further-beuys/beuys-i-like-america.png",
+      "targetPath": "data/images/artist-further-beuys/beuys-i-like-america.png",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -15451,7 +15547,7 @@
         "ko": "표현주의",
         "en": "Expressionism"
       },
-      "targetPath": "data/thumbnails/artist-mid-schmidt-rottluff/schmidt-rottluff-houses-at-night.jpg",
+      "targetPath": "data/images/artist-mid-schmidt-rottluff/schmidt-rottluff-houses-at-night.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -15521,7 +15617,7 @@
         "ko": "표현주의",
         "en": "Expressionism"
       },
-      "targetPath": "data/thumbnails/artist-mid-gabriele-munter/munter-boating.jpg",
+      "targetPath": "data/images/artist-mid-gabriele-munter/munter-boating.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -15559,7 +15655,7 @@
         "ko": "표현주의",
         "en": "Expressionism"
       },
-      "targetPath": "data/thumbnails/artist-mid-august-macke/macke-lady-green-jacket.jpg",
+      "targetPath": "data/images/artist-mid-august-macke/macke-lady-green-jacket.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -15629,7 +15725,7 @@
         "ko": "다다",
         "en": "Dada"
       },
-      "targetPath": "data/thumbnails/artist-mid-george-grosz/grosz-pillars-of-society.jpg",
+      "targetPath": "data/images/artist-mid-george-grosz/grosz-pillars-of-society.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -15650,7 +15746,7 @@
         "ko": "다다",
         "en": "Dada"
       },
-      "targetPath": "data/thumbnails/artist-mid-john-heartfield/heartfield-adolf-superman.jpg",
+      "targetPath": "data/images/artist-mid-john-heartfield/heartfield-adolf-superman.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -15671,7 +15767,7 @@
         "ko": "다다",
         "en": "Dada"
       },
-      "targetPath": "data/thumbnails/artist-mid-francis-picabia/picabia-here-is-stieglitz.jpg",
+      "targetPath": "data/images/artist-mid-francis-picabia/picabia-here-is-stieglitz.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -15709,7 +15805,7 @@
         "ko": "추상표현주의",
         "en": "Abstract Expressionism"
       },
-      "targetPath": "data/thumbnails/artist-mid-franz-kline/kline-chief.jpg",
+      "targetPath": "data/images/artist-mid-franz-kline/kline-chief.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -15731,7 +15827,7 @@
         "ko": "추상표현주의",
         "en": "Abstract Expressionism"
       },
-      "targetPath": "data/thumbnails/artist-mid-lee-krasner/krasner-the-seasons.jpg",
+      "targetPath": "data/images/artist-mid-lee-krasner/krasner-the-seasons.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -15753,7 +15849,7 @@
         "ko": "추상표현주의",
         "en": "Abstract Expressionism"
       },
-      "targetPath": "data/thumbnails/artist-mid-clyfford-still/still-1957-d-no-1.jpg",
+      "targetPath": "data/images/artist-mid-clyfford-still/still-1957-d-no-1.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -15775,7 +15871,7 @@
         "ko": "추상표현주의",
         "en": "Abstract Expressionism"
       },
-      "targetPath": "data/thumbnails/artist-mid-helen-frankenthaler/frankenthaler-mountains-and-sea.jpg",
+      "targetPath": "data/images/artist-mid-helen-frankenthaler/frankenthaler-mountains-and-sea.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -15845,7 +15941,7 @@
         "ko": "팝아트",
         "en": "Pop Art"
       },
-      "targetPath": "data/thumbnails/artist-mid-peter-blake/blake-on-the-balcony.jpg",
+      "targetPath": "data/images/artist-mid-peter-blake/blake-on-the-balcony.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -15915,7 +16011,7 @@
         "ko": "팝아트",
         "en": "Pop Art"
       },
-      "targetPath": "data/thumbnails/artist-mid-david-hockney/hockney-a-bigger-splash.jpg",
+      "targetPath": "data/images/artist-mid-david-hockney/hockney-a-bigger-splash.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -15985,7 +16081,7 @@
         "ko": "팝아트",
         "en": "Pop Art"
       },
-      "targetPath": "data/thumbnails/artist-mid-claes-oldenburg/oldenburg-floor-burger.jpg",
+      "targetPath": "data/images/artist-mid-claes-oldenburg/oldenburg-floor-burger.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -16006,7 +16102,7 @@
         "ko": "팝아트",
         "en": "Pop Art"
       },
-      "targetPath": "data/thumbnails/artist-mid-james-rosenquist/rosenquist-f-111.jpg",
+      "targetPath": "data/images/artist-mid-james-rosenquist/rosenquist-f-111.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -16076,7 +16172,7 @@
         "ko": "포스트모더니즘",
         "en": "Postmodernism"
       },
-      "targetPath": "data/thumbnails/artist-mid-barbara-kruger/kruger-your-body-battleground.jpg",
+      "targetPath": "data/images/artist-mid-barbara-kruger/kruger-your-body-battleground.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -16097,7 +16193,7 @@
         "ko": "포스트모더니즘",
         "en": "Postmodernism"
       },
-      "targetPath": "data/thumbnails/artist-mid-georg-baselitz/baselitz-the-wood-on-its-head.jpg",
+      "targetPath": "data/images/artist-mid-georg-baselitz/baselitz-the-wood-on-its-head.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -16118,7 +16214,7 @@
         "ko": "아르누보",
         "en": "Art Nouveau"
       },
-      "targetPath": "data/thumbnails/artist-mid-victor-horta/horta-hotel-tassel.jpg",
+      "targetPath": "data/images/artist-mid-victor-horta/horta-hotel-tassel.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 22,
@@ -16203,7 +16299,7 @@
         "ko": "아르누보",
         "en": "Art Nouveau"
       },
-      "targetPath": "data/thumbnails/artist-mid-josef-hoffmann/hoffmann-stoclet-palace.jpg",
+      "targetPath": "data/images/artist-mid-josef-hoffmann/hoffmann-stoclet-palace.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -16273,7 +16369,7 @@
         "ko": "야수주의",
         "en": "Fauvism"
       },
-      "targetPath": "data/thumbnails/artist-mid-maurice-de-vlaminck/vlaminck-chatou-bridge.jpg",
+      "targetPath": "data/images/artist-mid-maurice-de-vlaminck/vlaminck-chatou-bridge.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -16311,7 +16407,7 @@
         "ko": "미래주의",
         "en": "Futurism"
       },
-      "targetPath": "data/thumbnails/artist-mid-carlo-carra/carra-funeral-anarchist-galli.jpg",
+      "targetPath": "data/images/artist-mid-carlo-carra/carra-funeral-anarchist-galli.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -16333,7 +16429,7 @@
         "ko": "미래주의",
         "en": "Futurism"
       },
-      "targetPath": "data/thumbnails/artist-mid-gino-severini/severini-dynamic-hieroglyph-bal-tabarin.jpg",
+      "targetPath": "data/images/artist-mid-gino-severini/severini-dynamic-hieroglyph-bal-tabarin.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -16355,7 +16451,7 @@
         "ko": "미래주의",
         "en": "Futurism"
       },
-      "targetPath": "data/thumbnails/artist-mid-mikhail-larionov/larionov-rayonist-sausages-mackerel.jpg",
+      "targetPath": "data/images/artist-mid-mikhail-larionov/larionov-rayonist-sausages-mackerel.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -16377,7 +16473,7 @@
         "ko": "바우하우스",
         "en": "Bauhaus"
       },
-      "targetPath": "data/thumbnails/artist-mid-anni-albers/albers-wall-hanging.jpg",
+      "targetPath": "data/images/artist-mid-anni-albers/albers-wall-hanging.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 22,
@@ -16430,7 +16526,7 @@
         "ko": "초현실주의",
         "en": "Surrealism"
       },
-      "targetPath": "data/thumbnails/artist-mid-max-ernst/ernst-two-children-threatened-nightingale.jpg",
+      "targetPath": "data/images/artist-mid-max-ernst/ernst-two-children-threatened-nightingale.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -16468,7 +16564,7 @@
         "ko": "초현실주의",
         "en": "Surrealism"
       },
-      "targetPath": "data/thumbnails/artist-mid-roberto-matta/matta-inscape-psychological-morphology.jpg",
+      "targetPath": "data/images/artist-mid-roberto-matta/matta-inscape-psychological-morphology.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -16489,7 +16585,7 @@
         "ko": "초현실주의",
         "en": "Surrealism"
       },
-      "targetPath": "data/thumbnails/artist-mid-yves-tanguy/tanguy-indefinite-divisibility.jpg",
+      "targetPath": "data/images/artist-mid-yves-tanguy/tanguy-indefinite-divisibility.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -16527,7 +16623,7 @@
         "ko": "초현실주의",
         "en": "Surrealism"
       },
-      "targetPath": "data/thumbnails/artist-mid-leonora-carrington/carrington-self-portrait-inn-dawn-horse.jpg",
+      "targetPath": "data/images/artist-mid-leonora-carrington/carrington-self-portrait-inn-dawn-horse.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -16597,7 +16693,7 @@
         "ko": "멕시코 벽화운동",
         "en": "Mexican Muralism"
       },
-      "targetPath": "data/thumbnails/artist-mid-siqueiros/siqueiros-portrait-bourgeoisie.jpg",
+      "targetPath": "data/images/artist-mid-siqueiros/siqueiros-portrait-bourgeoisie.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -16618,7 +16714,7 @@
         "ko": "사회적 사실주의",
         "en": "Social Realism"
       },
-      "targetPath": "data/thumbnails/artist-mid-jacob-lawrence/lawrence-migration-series-panel-1.jpg",
+      "targetPath": "data/images/artist-mid-jacob-lawrence/lawrence-migration-series-panel-1.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -16639,7 +16735,7 @@
         "ko": "사회주의적 사실주의",
         "en": "Socialist Realism"
       },
-      "targetPath": "data/thumbnails/artist-mid-isaak-brodsky/brodsky-lenin-smolny.jpg",
+      "targetPath": "data/images/artist-mid-isaak-brodsky/brodsky-lenin-smolny.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -16709,7 +16805,7 @@
         "ko": "앵포르멜",
         "en": "Art Informel"
       },
-      "targetPath": "data/thumbnails/artist-mid-hans-hartung/hartung-t1947-20.jpg",
+      "targetPath": "data/images/artist-mid-hans-hartung/hartung-t1947-20.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -16730,7 +16826,7 @@
         "ko": "앵포르멜",
         "en": "Art Informel"
       },
-      "targetPath": "data/thumbnails/artist-mid-pierre-soulages/soulages-painting-195-130-1953.jpg",
+      "targetPath": "data/images/artist-mid-pierre-soulages/soulages-painting-195-130-1953.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -16751,7 +16847,7 @@
         "ko": "누보 레알리슴",
         "en": "Nouveau Réalisme"
       },
-      "targetPath": "data/thumbnails/artist-mid-jean-tinguely/tinguely-homage-new-york.jpg",
+      "targetPath": "data/images/artist-mid-jean-tinguely/tinguely-homage-new-york.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -16773,7 +16869,7 @@
         "ko": "누보 레알리슴",
         "en": "Nouveau Réalisme"
       },
-      "targetPath": "data/thumbnails/artist-mid-niki-de-saint-phalle/saint-phalle-shooting-picture.jpg",
+      "targetPath": "data/images/artist-mid-niki-de-saint-phalle/saint-phalle-shooting-picture.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -16795,7 +16891,7 @@
         "ko": "미니멀리즘",
         "en": "Minimalism"
       },
-      "targetPath": "data/thumbnails/artist-mid-carl-andre/andre-equivalent-viii.jpg",
+      "targetPath": "data/images/artist-mid-carl-andre/andre-equivalent-viii.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [],
@@ -16817,7 +16913,7 @@
         "ko": "미니멀리즘",
         "en": "Minimalism"
       },
-      "targetPath": "data/thumbnails/artist-mid-robert-morris/morris-untitled-l-beams.jpg",
+      "targetPath": "data/images/artist-mid-robert-morris/morris-untitled-l-beams.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -16855,7 +16951,7 @@
         "ko": "미니멀리즘",
         "en": "Minimalism"
       },
-      "targetPath": "data/thumbnails/artist-mid-agnes-martin/martin-the-tree.jpg",
+      "targetPath": "data/images/artist-mid-agnes-martin/martin-the-tree.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -16925,7 +17021,7 @@
         "ko": "개념미술",
         "en": "Conceptual Art"
       },
-      "targetPath": "data/thumbnails/artist-mid-sol-lewitt/lewitt-wall-drawing-51.jpg",
+      "targetPath": "data/images/artist-mid-sol-lewitt/lewitt-wall-drawing-51.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -16963,7 +17059,7 @@
         "ko": "개념미술",
         "en": "Conceptual Art"
       },
-      "targetPath": "data/thumbnails/artist-mid-on-kawara/kawara-today-series.jpg",
+      "targetPath": "data/images/artist-mid-on-kawara/kawara-today-series.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 18,
@@ -17048,7 +17144,7 @@
         "ko": "개념미술",
         "en": "Conceptual Art"
       },
-      "targetPath": "data/thumbnails/artist-mid-george-maciunas/maciunas-fluxus-manifesto.jpg",
+      "targetPath": "data/images/artist-mid-george-maciunas/maciunas-fluxus-manifesto.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -17069,7 +17165,7 @@
         "ko": "현대미술",
         "en": "Contemporary Art"
       },
-      "targetPath": "data/thumbnails/artist-mid-allan-kaprow/kaprow-18-happenings-6-parts.jpg",
+      "targetPath": "data/images/artist-mid-allan-kaprow/kaprow-18-happenings-6-parts.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -17090,7 +17186,7 @@
         "ko": "현대미술",
         "en": "Contemporary Art"
       },
-      "targetPath": "data/thumbnails/artist-mid-yayoi-kusama/kusama-infinity-mirror-room.jpg",
+      "targetPath": "data/images/artist-mid-yayoi-kusama/kusama-infinity-mirror-room.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -17128,7 +17224,7 @@
         "ko": "현대미술",
         "en": "Contemporary Art"
       },
-      "targetPath": "data/thumbnails/artist-mid-bill-viola/viola-the-crossing.jpg",
+      "targetPath": "data/images/artist-mid-bill-viola/viola-the-crossing.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": [
@@ -17166,7 +17262,7 @@
         "ko": "현대미술",
         "en": "Contemporary Art"
       },
-      "targetPath": "data/thumbnails/artist-mid-lynn-hershman-leeson/hershman-robberta-breitmore.jpg",
+      "targetPath": "data/images/artist-mid-lynn-hershman-leeson/hershman-robberta-breitmore.jpg",
       "reviewStatus": "unresolved",
       "selected": null,
       "candidates": []
@@ -17187,7 +17283,7 @@
         "ko": "현대미술",
         "en": "Contemporary Art"
       },
-      "targetPath": "data/thumbnails/artist-mid-keith-haring/haring-crack-is-wack.jpg",
+      "targetPath": "data/images/artist-mid-keith-haring/haring-crack-is-wack.jpg",
       "reviewStatus": "candidate",
       "selected": {
         "score": 22,

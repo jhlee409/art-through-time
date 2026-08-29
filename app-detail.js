@@ -767,7 +767,7 @@ async function uploadLocalArtworkImage(artist, work, file) {
 async function hydrateThumbnails(artist) {
   if (!artist) return;
   try {
-    const index = await (await fetch(`data/thumbnails/${encodeURIComponent(artist.id)}/index.json`)).json();
+    const index = await (await fetch(`data/images/${encodeURIComponent(artist.id)}/index.json`)).json();
     (artist.works || []).forEach(work => {
       if (index[work.id]?.thumbnail) {
         work.thumbnail = index[work.id].thumbnail;

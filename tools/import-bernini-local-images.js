@@ -8,8 +8,8 @@ const downloadDir = path.join(root, '다운로드용');
 const artistId = 'artist-Q160538';
 const qid = 'Q160538';
 const wiki = 'https://en.wikipedia.org/wiki/Gian_Lorenzo_Bernini';
-const thumbnailDir = path.join(root, 'data', 'thumbnails', artistId);
-const relativeThumbnailDir = `data/thumbnails/${artistId}`;
+const thumbnailDir = path.join(root, 'data', 'images', artistId);
+const relativeThumbnailDir = `data/images/${artistId}`;
 const now = new Date().toISOString();
 
 const imageWorks = [

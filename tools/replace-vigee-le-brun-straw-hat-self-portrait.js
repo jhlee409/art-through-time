@@ -5,7 +5,7 @@ const root = path.resolve(__dirname, '..');
 const artistId = 'artist-Q213163';
 const workId = 'wikidata-Q18719540';
 const source = path.join(root, '다운로드용', '3840px-Self-portrait_in_a_Straw_Hat_by_Elisabeth-Louise_Vigée-Lebrun.jpg');
-const destination = path.join(root, 'data', 'thumbnails', artistId, `${workId}.jpg`);
+const destination = path.join(root, 'data', 'images', artistId, `${workId}.jpg`);
 const artistsFile = path.join(root, 'data', 'artists.json');
 
 if (!fs.existsSync(source)) throw new Error(`Missing local image: ${source}`);

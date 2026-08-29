@@ -4,7 +4,7 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const dataDir = path.join(root, 'data');
 const generatedDir = path.join(dataDir, 'generated');
-const thumbnailsDir = path.join(dataDir, 'thumbnails');
+const thumbnailsDir = path.join(dataDir, 'images');
 const artistsPath = path.join(dataDir, 'artists.json');
 const featuredPath = path.join(dataDir, 'featured-works.json');
 

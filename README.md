@@ -83,7 +83,8 @@ node tools/sync-movement-learning-guides.js --check
 ## 이미지 원칙
 
 - 화면 이미지는 프로젝트의 로컬 파일만 사용합니다.
-- 화가 작품은 `data/thumbnails/`, `data/high-resolution/`에 둡니다.
+- 화가 작품은 `data/images/`에 둡니다. 고해상도 전용 `data/high-resolution/` 폴더는 사용하지 않습니다.
+- 별도 원본 보관 파일을 정리할 때는 `간략이름_제목3단어_시작연도__workId.ext` 형식을 표준 파일명으로 사용하되, 앱 표시용 경로는 `data/images/artist-id/workId.ext` 구조를 유지할 수 있습니다.
 - 사조 이미지는 `data/미술사조/images/`, 기법 이미지는 `data/techniques/`, 주제 이미지는 `data/topic-images/`에 둡니다.
 - 사용자가 "다운로드 폴더"라고 말하면 프로젝트 루트의 `다운로드용/`만 확인합니다.
 - 로컬 파일이 없으면 외부 이미지 URL을 만들지 않고 `이미지 업로드 예정` 상태를 유지합니다.

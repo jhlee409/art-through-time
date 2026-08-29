@@ -5,7 +5,7 @@ const root = path.resolve(__dirname, '..');
 const artistId = 'artist-Q312309';
 const artistsFile = path.join(root, 'data', 'artists.json');
 const sourceDir = path.join(root, '다운로드용');
-const targetDir = path.join(root, 'data', 'thumbnails', artistId);
+const targetDir = path.join(root, 'data', 'images', artistId);
 const works = [
   ['good-education', '3840px-Chardin,_Jean-Siméon_-_The_Good_Education_-_Google_Art_Project.jpg', '좋은 교육', 'The Good Education', 1753, '아이의 교육을 조용한 가정 장면으로 다루며, 로코코의 유희와 다른 절제된 도덕적 분위기를 보여준다.', 'A quiet domestic image of education whose restrained moral tone differs from Rococo playfulness.'],
   ['portrait-godefroy', '3840px-Chardin,_Jean_Siméon_-_Godefroy,_Auguste_Gabriel_-_Museu_de_Arte_de_São_Paulo_-_Google_Art_Project.jpg', '오귀스트 가브리엘 고드프루아의 초상', 'Portrait of Auguste Gabriel Godefroy', null, '인물의 표정과 물성을 절제된 색조로 관찰한 초상이다. 제작 연도는 소장처 기록 확인이 필요하다.', 'A portrait observed through restrained colour and close attention to expression and material presence; its date requires collection-record confirmation.'],

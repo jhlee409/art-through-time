@@ -115,7 +115,7 @@ function findDownloadFile(needle) {
 
 function copyWorkImage(work, source) {
   const extension = path.extname(source).toLowerCase() === '.jpeg' ? '.jpg' : path.extname(source).toLowerCase();
-  const destinationDir = path.join(root, 'data', 'thumbnails', artistId);
+  const destinationDir = path.join(root, 'data', 'images', artistId);
   const destination = path.join(destinationDir, `${work.id}${extension}`);
   fs.mkdirSync(destinationDir, {recursive:true});
   fs.copyFileSync(source, destination);

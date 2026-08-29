@@ -1,6 +1,6 @@
 const DATA_SCHEMA_VERSION = 1;
 const LOCAL_ASSET_PREFIX = /^(?:data|contribution)\//;
-const PLACEHOLDER_THUMBNAIL = 'data/thumbnails/_placeholder/artwork-placeholder.png';
+const PLACEHOLDER_THUMBNAIL = 'data/images/_placeholder/artwork-placeholder.png';
 
 function asObject(value) {
   return value && typeof value === 'object' && !Array.isArray(value) ? value : {};

@@ -284,7 +284,7 @@ async function artworkInfo(artist, work) {
   return {...work,description:{ko,en},detail:{schema:2,fetchedAt:new Date().toISOString(),summary:{ko,en},sections,sources,facts:{artist:artist.name,year:work.year || null,country:work.country || {},movement:work.movement || {}}}};
 }
 function thumbnailLocation(email, artistId) {
-  return {folder:path.join(root,'data','thumbnails',artistId), relativePrefix:`data/thumbnails/${artistId}`};
+  return {folder:path.join(root,'data','images',artistId), relativePrefix:`data/images/${artistId}`};
 }
 function thumbnailExtension(value='') { return (String(value).match(/\.(jpe?g|png|webp|gif)(?:\?|$)/i)?.[1] || '').toLowerCase().replace('jpeg','jpg'); }
 async function removeThumbnailFiles(directory, workId) {
@@ -377,7 +377,7 @@ async function resolvedHighResolutionPath(artistId, workId, relativePath) {
   const match = files.find(name => name === oldName)
     || files.find(name => name.startsWith(`${baseName}_`) && /\.display\.(?:jpe?g|png)$/i.test(name))
     || files.find(name => name.startsWith(`${safeWorkId}_`) && /\.display\.(?:jpe?g|png)$/i.test(name));
-  return match ? `data/high-resolution/${safeArtistId}/${match}` : relativePath;
+  return match ? `data/images/${safeArtistId}/${match}` : relativePath;
 }
 async function resolveHighResolutionPaths(payload) {
   if (!payload || !Array.isArray(payload.artists)) return payload;
@@ -393,12 +393,12 @@ async function readArtistsFile() { return resolveHighResolutionPaths(JSON.parse(
 function artistIndexRecord(artist) { const {works,...summary}=artist || {}; return {...summary,workCount:Array.isArray(works)?works.length:0,_detailLoaded:false}; }
 async function readArtistsIndex() { const payload=await readArtistsFile(); return {...payload,artists:(payload.artists||[]).map(artistIndexRecord)}; }
 async function readArtistDetail(id) { const payload=await readArtistsFile(), artist=(payload.artists||[]).find(item=>item.id===id); return artist ? {...artist,_detailLoaded:true} : null; }
-const offlineArtworkPlaceholder = 'data/thumbnails/_placeholder/artwork-placeholder.png';
+const offlineArtworkPlaceholder = 'data/images/_placeholder/artwork-placeholder.png';
 async function sanitizeRubensLegacyThumbnails(payload) {
   const artist=(payload.artists || []).find(item=>item.id==='artist-Q5599' || item.qid==='Q5599');
   if(!artist) return payload;
   let index={};
-  try { index=JSON.parse(await fs.readFile(path.join(root,'data','thumbnails','artist-Q5599','index.json'),'utf8')); } catch (_) { index={}; }
+  try { index=JSON.parse(await fs.readFile(path.join(root,'data','images','artist-Q5599','index.json'),'utf8')); } catch (_) { index={}; }
   for(const work of artist.works || []) {
     const item=index[work.id] || {};
     const thumbnail=String(work.thumbnail || '');

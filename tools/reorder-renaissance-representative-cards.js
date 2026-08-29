@@ -87,7 +87,7 @@ const veronese = `<article class="movement-work-card">
 </article>`;
 
 const bruegel = `<article class="movement-work-card">
-  <div class="movement-work-image"><img src="../thumbnails/artist-Q43270/wikidata-Q699091.jpg" alt="대 피터르 브뤼헐, 《바벨탑》"></div>
+  <div class="movement-work-image"><img src="../images/artist-Q43270/wikidata-Q699091.jpg" alt="대 피터르 브뤼헐, 《바벨탑》"></div>
   <div class="movement-work-body">
     <h3>${bruegelLink}, 《바벨탑》</h3>
     <small>1563 · 미술사 박물관, 빈</small>
