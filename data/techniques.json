@@ -1699,23 +1699,27 @@
       "id": "en-plein-air",
       "introduced": 1830,
       "name": {
-        "ko": "야외제작",
+        "ko": "야외제작(앙 플레네르)",
         "en": "En plein air"
       },
       "tags": [
-        "제작 기법"
+        "제작 기법",
+        "빛·색채",
+        "앙 플레네르",
+        "외광",
+        "인상주의"
       ],
       "subtitle": {
-        "ko": "현장에서 빛과 색을 직접 관찰해 그리기",
-        "en": "Painting light and colour directly on site"
+        "ko": "앙 플레네르라고도 부르는 현장 관찰 회화",
+        "en": "Painting light and colour directly outside the studio"
       },
       "definition": {
-        "ko": "야외제작(En plein air)은 화실 밖으로 나가 실제 장소의 빛, 날씨, 색 변화를 직접 보며 그리는 방식입니다. 완성작 전체를 야외에서 그릴 수도 있고, 현장 스케치를 바탕으로 화실에서 큰 그림을 완성할 수도 있습니다.",
-        "en": "En plein air means painting outdoors, directly observing a real site's light, weather, and changing colour. A work may be completed outside, or outdoor studies may later support a larger studio painting."
+        "ko": "야외제작은 앙 플레네르(En plein air)라고도 하며, 화실 밖으로 나가 실제 장소의 빛, 날씨, 색 변화를 직접 보며 그리는 제작 방식입니다. 완성작 전체를 야외에서 그릴 수도 있고, 현장 스케치를 바탕으로 화실에서 큰 그림을 완성할 수도 있습니다. 인상주의의 이름으로 자주 설명되지만, 엄밀히는 사조가 아니라 여러 사조가 공유한 작업 방법입니다.",
+        "en": "En plein air is a working method in which artists leave the studio and paint while directly observing a real site's light, weather, and changing colour. A work may be completed outside, or outdoor studies may later support a larger studio painting. Although often explained through Impressionism, it is a method rather than a movement and was shared by several artistic contexts."
       },
       "explanation": {
-        "ko": "야외제작은 19세기 바르비종파와 인상주의를 이해하는 핵심입니다. 휴대용 이젤과 금속 물감 튜브가 보급되면서 화가들은 숲, 들판, 강가에서 더 쉽게 작업할 수 있었습니다. 바르비종파의 밀레와 테오도르 루소는 농촌 풍경과 노동의 현장을 가까이 관찰했고, 모네와 르누아르 같은 인상주의 화가들은 변화하는 빛을 빠르게 붙잡았습니다. 야외제작은 단순히 장소를 옮긴 일이 아니라, 그림의 색과 붓질, 완성의 기준을 순간적 경험 쪽으로 바꾼 사건이었습니다.",
-        "en": "En plein air is central to both the Barbizon school and Impressionism. Portable easels and metal paint tubes made it easier to work in forests, fields, and riversides. Barbizon painters such as Millet and Theodore Rousseau observed rural landscape and labour at close range, while Impressionists such as Monet and Renoir caught changing light with speed. Plein-air painting did not merely change where artists worked; it changed colour, brushwork, and the standard of finish toward immediate experience."
+        "ko": "야외제작은 19세기 바르비종파와 인상주의를 이해하는 핵심입니다. 휴대용 이젤과 금속 물감 튜브가 보급되면서 화가들은 숲, 들판, 강가, 해변에서 더 쉽게 작업할 수 있었습니다. 바르비종파의 밀레와 테오도르 루소는 농촌 풍경과 노동의 현장을 가까이 관찰했고, 노르망디 해안의 외젠 부댕은 항구, 해변, 구름 낀 하늘, 습한 대기를 빠른 현장 관찰로 기록했습니다. 부댕은 르아브르에서 젊은 모네의 재능을 알아보고 야외에서 직접 그리도록 이끈 인물로, 인상주의 화가들이 빛을 다루는 방식의 중요한 선배입니다. 다만 구분이 필요합니다. 인상주의는 밝은 팔레트, 분할된 붓질, 순간적 시각 경험, 근대 생활의 주제를 묶는 사조이고, 앙 플레네르는 그 사조가 즐겨 쓴 현장 제작 방식입니다. 따라서 '인상주의 기법'이라고만 부르면 반만 맞습니다. 실제 기법명은 야외제작, 또는 앙 플레네르이며, 인상주의 이전의 바르비종파와 부댕, 용킨트 같은 선행 화가들도 이미 사용했습니다.",
+        "en": "En plein air is central to both the Barbizon school and Impressionism. Portable easels and metal paint tubes made it easier to work in forests, fields, riversides, and beaches. Barbizon painters such as Millet and Theodore Rousseau observed rural landscape and labour at close range, while Eugene Boudin on the Normandy coast recorded harbours, beaches, cloudy skies, and damp atmosphere through rapid direct observation. Boudin recognised the young Monet's talent at Le Havre and encouraged him to paint outdoors, making him an important precursor to Impressionist ways of handling light. The distinction matters: Impressionism is a movement defined by bright palettes, broken brushwork, immediate visual experience, and modern life; en plein air is the on-site working method that many Impressionists used. Calling it simply an 'Impressionist technique' is therefore only partly correct. The actual technique is plein-air painting, already practised by Barbizon painters and by precursors such as Boudin and Jongkind."
       },
       "examples": [
         {
@@ -1777,6 +1781,14 @@
             "ko": "나뭇잎 사이로 떨어지는 빛은 인물과 옷 위에 움직이는 반점으로 흩어집니다. 야외의 조건은 장면의 분위기와 붓질의 속도를 함께 결정합니다.",
             "en": "Light filtering through leaves breaks into moving patches on figures and clothing. Outdoor conditions shape both the mood of the scene and the speed of the brushwork."
           }
+        }
+      ],
+      "links": [
+        {
+          "url": "https://www.nationalgallery.org.uk/paintings/eugene-boudin-beach-scene-trouville-1"
+        },
+        {
+          "url": "https://www.metmuseum.org/pt/essays/claude-monet-1840-1926"
         }
       ]
     },
