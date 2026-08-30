@@ -11,19 +11,19 @@ const args = new Set(process.argv.slice(2));
 
 const style = `<style id="art-atlas-learning-guide-style">
 #movement-learning-guide{padding:38px 0;border-top:1px solid var(--line,#d8d4cc);border-bottom:1px solid var(--line,#d8d4cc);background:var(--panel,#f7f7f5)}
-#movement-learning-guide .movement-learning-guide-inner{width:min(1180px,92vw);margin:0 auto}
+#movement-learning-guide .movement-learning-guide-inner{width:100%;max-width:none;margin:0;padding-left:var(--art-atlas-document-gutter,clamp(20px,3vw,48px));padding-right:var(--art-atlas-document-gutter,clamp(20px,3vw,48px))}
 #movement-learning-guide .movement-learning-guide-kicker{margin:0 0 .35rem;color:var(--accent,#8a641e);font-weight:800}
-#movement-learning-guide h2{margin:.1rem 0 .7rem;font-size:clamp(1.45rem,3vw,2.35rem)}
-#movement-learning-guide .movement-learning-guide-orientation{max-width:78ch;margin:0 0 1.5rem;font-size:1.03rem}
+#movement-learning-guide h2{margin:.1rem 0 1.15rem;font-size:clamp(1.9rem,3.4vw,3.1rem);line-height:1.18}
+#movement-learning-guide .movement-learning-guide-orientation{max-width:none;margin:0 0 1.5rem;font-size:1.08rem;line-height:1.8}
 #movement-learning-guide .movement-learning-guide-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 34px}
 #movement-learning-guide .movement-learning-guide-block{padding-top:14px;border-top:2px solid var(--line,#d8d4cc)}
-#movement-learning-guide .movement-learning-guide-block h3{margin:0 0 .65rem;font-size:1.05rem}
+#movement-learning-guide .movement-learning-guide-block h3{margin:0 0 .65rem;font-size:clamp(1.3rem,2.25vw,1.75rem);line-height:1.32}
 #movement-learning-guide .movement-learning-guide-block ul,#movement-learning-guide .movement-learning-guide-block ol{margin:0;padding-left:1.35rem}
 #movement-learning-guide .movement-learning-guide-block li{margin:.42rem 0}
 #movement-learning-guide .movement-learning-guide-categories strong{display:block;color:var(--accent,#8a641e)}
 #movement-learning-guide .movement-learning-guide-categories span{display:block}
 #movement-learning-guide .movement-learning-guide-boundary{grid-column:1/-1}
-#movement-learning-guide .movement-learning-guide-boundary p{max-width:86ch;margin:.45rem 0}
+#movement-learning-guide .movement-learning-guide-boundary p{max-width:none;margin:.45rem 0}
 #movement-learning-guide .movement-learning-guide-source{margin:1.15rem 0 0;font-size:.9rem;color:var(--muted,#666)}
 #movement-learning-guide .movement-learning-guide-source a{color:inherit}
 @media(max-width:720px){#movement-learning-guide .movement-learning-guide-grid{grid-template-columns:1fr}#movement-learning-guide .movement-learning-guide-boundary{grid-column:auto}}
