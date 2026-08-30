@@ -34,11 +34,11 @@ async function migrationExport() {
 }
 const publicRootFiles = new Set([
   'index.html',
-  'app.js',
-  'app-core.js',
-  'app-artists.js',
-  'app-atlas.js',
-  'app-detail.js',
+  'app/app.js',
+  'app/app-core.js',
+  'app/app-artists.js',
+  'app/app-atlas.js',
+  'app/app-detail.js',
   'styles.css',
   'extras.css',
   'tab-session.js',
@@ -65,6 +65,7 @@ const publicDataFiles = new Set([
   'data/topics.json'
 ]);
 const publicPathPrefixes = [
+  'app/',
   'data/generated/',
   'data/techniques/',
   'data/images/',

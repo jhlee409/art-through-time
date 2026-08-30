@@ -168,7 +168,7 @@ function main() {
     }
   }
 
-  const appSource = fs.readFileSync(path.join(root, 'app-atlas.js'), 'utf8');
+  const appSource = fs.readFileSync(path.join(root, 'app', 'app-atlas.js'), 'utf8');
   check(appSource.includes('group.end = Math.max(group.end, rowEnd);'), 'Artist-list parent movement must use the latest child end year');
 
   console.log(JSON.stringify({

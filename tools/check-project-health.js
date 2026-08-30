@@ -61,7 +61,7 @@ function summarizeOversizedImages() {
 }
 
 function checkApplicationModuleSplit() {
-  const appModules = ['app-core.js', 'app-artists.js', 'app-atlas.js', 'app-detail.js', 'app.js'];
+  const appModules = ['app/app-core.js', 'app/app-artists.js', 'app/app-atlas.js', 'app/app-detail.js', 'app/app.js'];
   const indexHtml = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   let previousPosition = -1;
   for (const file of appModules) {
@@ -104,8 +104,8 @@ function checkRemovedFeatureRemnants() {
   }
 
   const interfaceSource = [
-    'index.html', 'app-core.js', 'app-artists.js', 'app-atlas.js',
-    'app-detail.js', 'app.js', 'styles.css', 'extras.css'
+    'index.html', 'app/app-core.js', 'app/app-artists.js', 'app/app-atlas.js',
+    'app/app-detail.js', 'app/app.js', 'styles.css', 'extras.css'
   ].map(file => fs.readFileSync(path.join(root, file), 'utf8')).join('\n');
   for (const fragment of ['relationship-map', 'rule-check-button', 'rules-check-button']) {
     if (interfaceSource.includes(fragment)) throw new Error(`removed interface fragment still exists: ${fragment}`);
@@ -115,7 +115,7 @@ function checkRemovedFeatureRemnants() {
 }
 
 function checkArtistPersistenceGuards() {
-  const appSource = fs.readFileSync(path.join(root, 'app-core.js'), 'utf8');
+  const appSource = fs.readFileSync(path.join(root, 'app', 'app-core.js'), 'utf8');
   const loadStart = appSource.indexOf('async function loadData()');
   const loadEnd = appSource.indexOf('async function markLegacyManualWorks()', loadStart);
   if (loadStart < 0 || loadEnd < 0) throw new Error('Could not inspect the loadData persistence boundary');
@@ -131,7 +131,7 @@ function checkArtistPersistenceGuards() {
   const serverDataSource = fs.readFileSync(path.join(root, 'server-data.js'), 'utf8');
   if (!serverDataSource.includes('previousWorks.size !== currentWorks.length')) throw new Error('artist metadata must be touched when a work is deleted');
   const consolidationSource = fs.readFileSync(path.join(root, 'tools', 'consolidate-generated-artists.js'), 'utf8');
-  for (const [file, source] of [['app-core.js', appSource], ['server-data.js', serverDataSource], ['tools/consolidate-generated-artists.js', consolidationSource]]) {
+  for (const [file, source] of [['app/app-core.js', appSource], ['server-data.js', serverDataSource], ['tools/consolidate-generated-artists.js', consolidationSource]]) {
     if (!source.includes('hasLocalArtworkAsset')) throw new Error(`${file} must preserve works with local artwork assets beyond the imported-work limit`);
   }
   if (!consolidationSource.includes('!isGeneratedWork(work) || hasLocalArtworkAsset(work)')) throw new Error('artist consolidation must retain locally materialized generated works before merging');

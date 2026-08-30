@@ -83,10 +83,10 @@ assert(rejected, 'Save transaction did not reject a cross-development card mutat
 const sourceChecks = [
   ['server-content.js', "require('./movement-sync-v1')"],
   ['server-content.js', 'assertStableEditableStructure(current,source)'],
-  ['app-detail.js', 'artAtlasDevelopmentId'],
-  ['app-detail.js', 'art-atlas-movement-document-saved'],
-  ['app-atlas.js', 'development::${entry.developmentId}'],
-  ['app-atlas.js', 'clipped.canonical']
+  ['app/app-detail.js', 'artAtlasDevelopmentId'],
+  ['app/app-detail.js', 'art-atlas-movement-document-saved'],
+  ['app/app-atlas.js', 'development::${entry.developmentId}'],
+  ['app/app-atlas.js', 'clipped.canonical']
 ];
 sourceChecks.forEach(([file, token]) => assert(fs.readFileSync(path.join(root, file), 'utf8').includes(token), `${file}: missing runtime sync token ${token}`));
 assert(countryIds.has('global-contemporary'), 'Global contemporary country axis is missing');
