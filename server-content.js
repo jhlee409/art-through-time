@@ -578,6 +578,78 @@ async function injectMovementArtworkMovementLabels(html) {
   return stripMovementArtworkMovementLabels(html);
 }
 const movementArtistLinkStyle = `.art-atlas-artist-link{font-weight:900;color:#191007!important;background:linear-gradient(180deg,rgba(255,232,151,.98),rgba(255,198,86,.9));border-bottom:2px solid #a96f12;border-radius:.22em;padding:0 .16em;text-decoration:none!important;box-decoration-break:clone;-webkit-box-decoration-break:clone}.art-atlas-artist-link:hover{filter:brightness(1.08);box-shadow:0 0 0 2px rgba(255,214,102,.24)}`;
+const movementWikipediaTermLinkStyle = `.art-atlas-wiki-term-link{color:inherit;text-decoration:underline dotted;text-decoration-thickness:.08em;text-underline-offset:.18em}.art-atlas-wiki-term-link:hover{filter:brightness(.82)}`;
+const movementWikipediaTermLinks = [
+  {terms:['앙시앵 레짐','구체제'], url:'https://en.wikipedia.org/wiki/Ancien_R%C3%A9gime'},
+  {terms:['계몽주의'], url:'https://en.wikipedia.org/wiki/Age_of_Enlightenment'},
+  {terms:['프랑스 혁명'], url:'https://en.wikipedia.org/wiki/French_Revolution'},
+  {terms:['미국 독립혁명','미국 혁명'], url:'https://en.wikipedia.org/wiki/American_Revolution'},
+  {terms:['러시아 혁명'], url:'https://en.wikipedia.org/wiki/Russian_Revolution'},
+  {terms:['제1차 세계대전'], url:'https://en.wikipedia.org/wiki/World_War_I'},
+  {terms:['산업혁명'], url:'https://en.wikipedia.org/wiki/Industrial_Revolution'},
+  {terms:['나폴레옹 전쟁'], url:'https://en.wikipedia.org/wiki/Napoleonic_Wars'},
+  {terms:['나폴레옹 시대'], url:'https://en.wikipedia.org/wiki/Napoleonic_era'},
+  {terms:['종교개혁'], url:'https://en.wikipedia.org/wiki/Reformation'},
+  {terms:['반종교개혁'], url:'https://en.wikipedia.org/wiki/Counter-Reformation'},
+  {terms:['고대 그리스'], url:'https://en.wikipedia.org/wiki/Ancient_Greece'},
+  {terms:['고대 로마'], url:'https://en.wikipedia.org/wiki/Ancient_Rome'},
+  {terms:['자연법'], url:'https://en.wikipedia.org/wiki/Natural_law'},
+  {terms:['민족주의'], url:'https://en.wikipedia.org/wiki/Nationalism'},
+  {terms:['마르크스주의'], url:'https://en.wikipedia.org/wiki/Marxism'},
+  {terms:['정신분석'], url:'https://en.wikipedia.org/wiki/Psychoanalysis'},
+  {terms:['무의식'], url:'https://en.wikipedia.org/wiki/Unconscious_mind'},
+  {terms:['오리엔탈리즘'], url:'https://en.wikipedia.org/wiki/Orientalism'},
+  {terms:['폼페이'], url:'https://en.wikipedia.org/wiki/Pompeii'},
+  {terms:['헤르쿨라네움'], url:'https://en.wikipedia.org/wiki/Herculaneum'},
+  {terms:['그랜드 투어'], url:'https://en.wikipedia.org/wiki/Grand_Tour'},
+  {terms:['로열 아카데미'], url:'https://en.wikipedia.org/wiki/Royal_Academy_of_Arts'},
+  {terms:['프랑스 아카데미'], url:'https://en.wikipedia.org/wiki/Acad%C3%A9mie_royale_de_peinture_et_de_sculpture'},
+  {terms:['미술 아카데미'], url:'https://en.wikipedia.org/wiki/Art_school'},
+  {terms:['낙선전'], url:'https://en.wikipedia.org/wiki/Salon_des_Refus%C3%A9s'},
+  {terms:['살롱'], url:'https://en.wikipedia.org/wiki/Salon_(Paris)'},
+  {terms:['오스만의 파리 개조'], url:'https://en.wikipedia.org/wiki/Haussmann%27s_renovation_of_Paris'},
+  {terms:['로카유'], url:'https://en.wikipedia.org/wiki/Rocaille'},
+  {terms:['페트 갈랑트'], url:'https://en.wikipedia.org/wiki/F%C3%AAte_galante'},
+  {terms:['베두타'], url:'https://en.wikipedia.org/wiki/Veduta'},
+  {terms:['프레스코'], url:'https://en.wikipedia.org/wiki/Fresco'},
+  {terms:['템페라'], url:'https://en.wikipedia.org/wiki/Tempera'},
+  {terms:['유화'], url:'https://en.wikipedia.org/wiki/Oil_painting'},
+  {terms:['선원근법','원근법'], url:'https://en.wikipedia.org/wiki/Linear_perspective'},
+  {terms:['키아로스쿠로','명암법'], url:'https://en.wikipedia.org/wiki/Chiaroscuro'},
+  {terms:['테네브리즘'], url:'https://en.wikipedia.org/wiki/Tenebrism'},
+  {terms:['스푸마토'], url:'https://en.wikipedia.org/wiki/Sfumato'},
+  {terms:['단축법'], url:'https://en.wikipedia.org/wiki/Foreshortening'},
+  {terms:['콘트라포스토'], url:'https://en.wikipedia.org/wiki/Contrapposto'},
+  {terms:['디세뇨','disegno'], url:'https://en.wikipedia.org/wiki/Disegno'},
+  {terms:['프리즈'], url:'https://en.wikipedia.org/wiki/Frieze'},
+  {terms:['모자이크'], url:'https://en.wikipedia.org/wiki/Mosaic'},
+  {terms:['스테인드글라스'], url:'https://en.wikipedia.org/wiki/Stained_glass'},
+  {terms:['첨두아치'], url:'https://en.wikipedia.org/wiki/Pointed_arch'},
+  {terms:['리브 볼트'], url:'https://en.wikipedia.org/wiki/Rib_vault'},
+  {terms:['플라잉 버트레스'], url:'https://en.wikipedia.org/wiki/Flying_buttress'},
+  {terms:['이콘'], url:'https://en.wikipedia.org/wiki/Icon'},
+  {terms:['제단화'], url:'https://en.wikipedia.org/wiki/Altarpiece'},
+  {terms:['패널화'], url:'https://en.wikipedia.org/wiki/Panel_painting'},
+  {terms:['초상화'], url:'https://en.wikipedia.org/wiki/Portrait_painting'},
+  {terms:['풍경화'], url:'https://en.wikipedia.org/wiki/Landscape_painting'},
+  {terms:['정물화'], url:'https://en.wikipedia.org/wiki/Still_life'},
+  {terms:['풍속화'], url:'https://en.wikipedia.org/wiki/Genre_art'},
+  {terms:['역사화'], url:'https://en.wikipedia.org/wiki/History_painting'},
+  {terms:['알레고리'], url:'https://en.wikipedia.org/wiki/Allegory'},
+  {terms:['목판화'], url:'https://en.wikipedia.org/wiki/Woodcut'},
+  {terms:['동판화'], url:'https://en.wikipedia.org/wiki/Engraving'},
+  {terms:['에칭'], url:'https://en.wikipedia.org/wiki/Etching'},
+  {terms:['석판화'], url:'https://en.wikipedia.org/wiki/Lithography'},
+  {terms:['콜라주'], url:'https://en.wikipedia.org/wiki/Collage'},
+  {terms:['아상블라주'], url:'https://en.wikipedia.org/wiki/Assemblage_(art)'},
+  {terms:['레디메이드'], url:'https://en.wikipedia.org/wiki/Readymades_of_Marcel_Duchamp'},
+  {terms:['포토몽타주'], url:'https://en.wikipedia.org/wiki/Photomontage'},
+  {terms:['자동기술'], url:'https://en.wikipedia.org/wiki/Automatism_(art)'},
+  {terms:['프로타주'], url:'https://en.wikipedia.org/wiki/Frottage_(art)'},
+  {terms:['데칼코마니'], url:'https://en.wikipedia.org/wiki/Decalcomania'},
+  {terms:['타이포그래피'], url:'https://en.wikipedia.org/wiki/Typography'},
+  {terms:['선언문'], url:'https://en.wikipedia.org/wiki/Manifesto'}
+];
 const uHangulDocumentIntegration = `<link rel="stylesheet" href="../../uhangul/uhangul-runtime.css?v=0.7" data-uhangul-integration="v0.7">\n<script defer src="../../uhangul/uhangul-runtime.js?v=0.7" data-uhangul-integration="v0.7"></script>`;
 const movementPioneerContexts = {
   '비잔틴 미술':'<b>문제의식:</b> 고대의 자연주의를 단순히 되살리기보다, 그리스도교의 초월적 진리와 전례 속 만남을 어떤 시각 언어로 보일지 탐구했다. <b>돌파:</b> 이콘·모자이크·프레스코, 금빛 바탕, 정면성·위계·상징색으로 성스러운 현존을 구성했으며, 후기에는 더 유연한 선·몸짓·서사와 공간의 암시를 더해 정서적 밀도를 높였다.',
@@ -719,6 +791,32 @@ function injectMovementWikipediaHeading(html, movementName='', movementLabel='')
   }
   const titleBlock=`<h1 style="margin:24px 28px 8px;font:700 28px/1.25 system-ui,sans-serif">${link}</h1>`;
   return /<body\b[^>]*>/i.test(output) ? output.replace(/<body\b[^>]*>/i,match=>`${match}\n${titleBlock}`) : `${titleBlock}\n${output}`;
+}
+function injectMovementWikipediaTermLinks(html) {
+  let output=String(html || '');
+  if(/data-art-atlas-wiki-term-links-ready/i.test(output)) return output;
+  const aliases=movementWikipediaTermLinks.flatMap((entry,index)=>entry.terms.map(term=>({term,index,url:entry.url})))
+    .filter(item=>item.term)
+    .sort((left,right)=>right.term.length-left.term.length || left.term.localeCompare(right.term,'ko-KR'));
+  if(!aliases.length) return output;
+  const style=`<style id="art-atlas-wiki-term-link-style" data-art-atlas-wiki-term-links-ready>\n${movementWikipediaTermLinkStyle}\n</style>`;
+  output=/<\/head>/i.test(output) ? output.replace(/<\/head>/i,`${style}\n</head>`) : `${style}\n${output}`;
+  const byAlias=new Map(aliases.map(item=>[item.term.normalize('NFC').toLocaleLowerCase('ko-KR'),item]));
+  const particles='에서|으로|부터|까지|처럼|보다|에게|께서|은|는|이|가|을|를|의|와|과|도|에|로|만';
+  const pattern=new RegExp(`(?<![A-Za-z0-9가-힣])(${aliases.map(item=>escapeRegex(item.term)).join('|')})(${particles})?(?=$|[^A-Za-z0-9가-힣])`,'giu');
+  const protectedPattern=/(<script\b[\s\S]*?<\/script>|<style\b[\s\S]*?<\/style>|<title\b[\s\S]*?<\/title>|<a\b[\s\S]*?<\/a>|<pre\b[\s\S]*?<\/pre>|<code\b[\s\S]*?<\/code>|<textarea\b[\s\S]*?<\/textarea>|<[^>]+>)/gi;
+  const linkedEntryIndexes=new Set();
+  output=output.split(protectedPattern).map(part=>{
+    if(!part || isProtectedMovementHtmlChunk(part)) return part;
+    return part.replace(pattern,(match,term,particle='')=>{
+      const entry=byAlias.get(String(term || '').normalize('NFC').toLocaleLowerCase('ko-KR'));
+      if(!entry || linkedEntryIndexes.has(entry.index)) return match;
+      linkedEntryIndexes.add(entry.index);
+      const label=term;
+      return `<a class="art-atlas-wiki-term-link" href="${escapeAttribute(entry.url)}" target="_blank" rel="noopener" title="${escapeAttribute(label)} 위키피디아">${label}</a>${particle}`;
+    });
+  }).join('');
+  return output;
 }
 function stripMovementArtistLinks(html) {
   return String(html || '')
@@ -900,7 +998,7 @@ function applyCors(req, res) {
     migrationExport, safePath, techniqueLinks, comparisonTechniqueIds, readRequestBuffer, readJsonRequest, sendJsonBodyError, multipartForm,
     movementDocumentDir, movementDocumentName, movementDocumentSlot, movementDocumentRelative, readMovementDocuments, writeMovementDocuments, removeMovementDocument, refreshMovementDocumentLinks, saveMovementDocumentHtml,
     normalizeMovementCardPresentation, synchronizeMovementCountryTableArtistOrder, linkMovementDocumentArtists, injectUHangulDocumentIntegration,
-    injectMovementArtworkMovementLabels, injectMovementCountryCardContexts, injectMovementPioneerContext, movementDocumentPioneerContextKey, injectMovementWikipediaHeading, injectMovementStickyTitle, injectMovementHighResolutionViewer,
+    injectMovementArtworkMovementLabels, injectMovementCountryCardContexts, injectMovementPioneerContext, movementDocumentPioneerContextKey, injectMovementWikipediaHeading, injectMovementWikipediaTermLinks, injectMovementStickyTitle, injectMovementHighResolutionViewer,
     saveLocalArtworkImage, saveTopicArtwork, replaceTopicArtworkImage, deleteTopicArtwork, readMovementSectionLinks, saveMovementSectionLinks, applyCors,
     movementPioneerContexts
   };

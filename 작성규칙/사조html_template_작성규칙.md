@@ -21,6 +21,7 @@
 - 설명 제목 옆 `+`로 자료 주소를 추가하는 문서는 URL 입력창과 확인 버튼 사이에 `강조` 체크박스를 둔다. 강조 링크는 `{url, emphasized:true}`로 저장하고 원형 번호 버튼의 지름과 숫자 크기를 기본의 정확히 두 배로 표시하며, 기존 `{url}` 링크는 기본 크기를 유지한다.
 - uHangul v0.7 스타일시트와 런타임을 각각 한 번 포함한다.
 - 화가 링크는 정식 한국어 이름(`data-uh-korean`), uHangul 표시명(`data-uh-display-korean`), 짧은 통용명(`data-uh-list-korean`)을 분리한다. `node tools/sync-artist-link-display-names.js`로 동기화한다.
+- 사조 설명 문서의 본문에서 독립 위키피디아 문서가 있는 주요 미술사 용어와 역사·사상·제도 배경 용어는 서버가 텍스트 노드의 문서당 첫 등장만 `.art-atlas-wiki-term-link`로 자동 링크한다. 기존 화가 링크, 사조 제목 링크, `script`·`style`·`title`·`pre`·`code`·`textarea` 내부에는 중첩 링크를 만들지 않는다. 용어 사전은 `server-content.js`의 `movementWikipediaTermLinks`에서 보수적으로 관리하고, 일상어와 문맥상 오해가 큰 단어는 넣지 않는다.
 - 공통 레이아웃 규칙(상단 고정 사조명, 심화 카드 제목의 국가별 지역·특징 설명, 해당 글자 크기·중복 레이블 제거)을 바꾸면 같은 작업에서 `node tools/sync-all-movement-html-rules.js`를 실행해 모든 저장 HTML에 반영한다. 서버의 화면 주입만으로 끝내지 않는다.
 
 ## 초심자 학습 길잡이
