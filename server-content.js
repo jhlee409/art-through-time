@@ -270,18 +270,27 @@ function normalizeMovementCardPresentation(html) {
     .replace(/\s*<style\b[^>]*id=["']art-atlas-movement-card-presentation-style["'][^>]*>[\s\S]*?<\/style>\s*/gi,'\n');
   const movement=movementCardDocumentName(source);
   if(!movement || !/<article\b(?=[^>]*\bclass=["'][^"']*\b(?:movement-work-card|card)\b[^"']*["'])/i.test(source)) return source;
-  source=source.replace(/<article\b(?=[^>]*\bclass=["'][^"']*\b(?:movement-work-card|card)\b[^"']*["'])[\s\S]*?<\/article>/gi,card=>card.replace(/(<div\b(?=[^>]*\bclass=["'][^"']*\b(?:movement-work-body|caption)\b[^"']*["'])[^>]*>)([\s\S]*?)(<\/div>)/i,(_,open,body,close)=>{
+  source=source.replace(/<article\b(?=[^>]*\bclass=["'][^"']*\b(?:movement-work-card|card)\b[^"']*["'])[\s\S]*?<\/article>/gi,card=>{
+    const bodyOpen=/<div\b(?=[^>]*\bclass=["'][^"']*\b(?:movement-work-body|caption)\b[^"']*["'])[^>]*>/i.exec(card);
+    if(!bodyOpen) return card;
+    const bodyEnd=matchingHtmlElementEnd(card,bodyOpen.index,'div'), bodyStart=bodyOpen.index+bodyOpen[0].length, closeStart=bodyEnd-6;
+    if(bodyEnd<0 || closeStart<bodyStart) return card;
+    let body=card.slice(bodyStart,closeStart);
     const withoutLabel=body.replace(/^\s*<span\b(?=[^>]*\bclass=["'][^"']*\bmini-label\b)[^>]*>[\s\S]*?<\/span>\s*/i,'');
-    const titled=withoutLabel.replace(/(<h3\b[^>]*>)([\s\S]*?)(<\/h3>)/i,(_,headingOpen,title,headingClose)=>{
+    let normalized=withoutLabel;
+    while(/<div class="movement-card-heading-row">\s*<div class="movement-card-heading-row">/i.test(normalized)) normalized=normalized.replace(/<div class="movement-card-heading-row">\s*<div class="movement-card-heading-row">/gi,'<div class="movement-card-heading-row">').replace(/<\/div>\s*<\/div>(?=\s*<p\b(?=[^>]*\bclass=["'][^"']*\bmovement-selection-reason\b))/gi,'</div>');
+    const titled=normalized.replace(/(<h3\b[^>]*>)([\s\S]*?)(<\/h3>)/i,(_,headingOpen,title,headingClose)=>{
       const activityRegion=title.match(/\s*<span\b(?=[^>]*\bclass=["'][^"']*\bmovement-card-activity-region\b)[^>]*>[\s\S]*?<\/span>\s*/i)?.[0] || '';
       const cleanTitle=title
         .replace(/\s*<span\b(?=[^>]*\bclass=["'][^"']*\bmovement-card-title-tag\b)[^>]*>[\s\S]*?<\/span>\s*/gi,'')
         .replace(/\s*<span\b(?=[^>]*\bclass=["'][^"']*\bmovement-card-activity-region\b)[^>]*>[\s\S]*?<\/span>\s*/gi,'');
       return `${headingOpen}${cleanTitle}<span class="movement-card-title-tag"> · ${escapeAttribute(movement)}</span>${activityRegion}${headingClose}`;
     });
-    return `${open}${titled}${close}`;
-  }));
-  const style='<style id="art-atlas-movement-card-presentation-style">.movement-card-title-tag,.movement-card-activity-region{color:#9aa5af;font-size:.78em;font-weight:600;white-space:nowrap}</style>';
+    const withHeadingRow=/\bmovement-card-heading-row\b/i.test(titled) ? titled : titled.replace(/(<h3\b[^>]*>[\s\S]*?<\/h3>)\s*(<p\b(?=[^>]*\bclass=["'][^"']*\bwork-meta\b)[^>]*>[\s\S]*?<\/p>)/i,'<div class="movement-card-heading-row">$1$2</div>');
+    const withReasonColons=withHeadingRow.replace(/<strong>\s*(선정 이유|더 볼 이유)\s*:?\s*<\/strong>/gi,'<strong>$1:</strong>');
+    return card.slice(0,bodyStart)+withReasonColons+card.slice(closeStart);
+  });
+  const style='<style id="art-atlas-movement-card-presentation-style">.movement-card-title-tag,.movement-card-activity-region{color:#9aa5af;font-size:.78em;font-weight:600;white-space:nowrap}.movement-card-heading-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:.45rem;margin:0 0 .85rem}.movement-card-heading-row h3{min-width:0;margin:0!important}.movement-card-heading-row .work-meta{margin:.08rem 0 0!important;text-align:right;white-space:nowrap}</style>';
   return /<\/head>/i.test(source) ? source.replace(/<\/head>/i,`${style}\n</head>`) : `${style}\n${source}`;
 }
 function movementPlainText(value='') {
@@ -297,13 +306,13 @@ function movementCountryCardContexts(html) {
   const countriesEnd=matchingHtmlElementEnd(source,countriesStart,'section');
   if(countriesEnd < 0) return [];
   const contexts=[];
-  for(const row of source.slice(countriesStart,countriesEnd).matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)) {
-    const cells=[...row[1].matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/gi)].map(cell=>movementPlainText(cell[1]));
+  for(const row of source.slice(countriesStart,countriesEnd).matchAll(/<tr\b([^>]*)>([\s\S]*?)<\/tr>/gi)) {
+    const cells=[...row[2].matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/gi)].map(cell=>movementPlainText(cell[1]));
     if(cells.length < 2) continue;
-    const [country='', region='']=cells[0].split(/\s*(?:—|–)\s*/,2);
-    const key=movementCountryLabelKey(country);
-    if(!key || !cells[1]) continue;
-    contexts.push({country:country.trim(),region:region.trim(),feature:cells[1],key});
+    const [country='', category='']=cells[0].split(/\s*(?:—|–)\s*/,2);
+    const attrs=tagAttrs(`<tr${row[1]}>`), countryKey=movementCountryLabelKey(country), categoryKey=movementCountryLabelKey(category);
+    if(!countryKey || !cells[1]) continue;
+    contexts.push({country:country.trim(),category:category.trim(),feature:cells[1].replace(/^핵심 특징\s*/,'').trim(),countryKey,categoryKey,categoryId:attrs['data-art-atlas-category-id'] || '',developmentId:attrs['data-art-atlas-development-id'] || ''});
   }
   return contexts;
 }
@@ -313,17 +322,19 @@ function injectMovementCountryCardContexts(html) {
   const contexts=movementCountryCardContexts(source);
   if(!contexts.length) return source;
   source=source.replace(/<section\b(?=[^>]*\bclass=["'][^"']*\bart-atlas-submovement-group\b[^"']*["'])[^>]*>[\s\S]*?<\/section>/gi,group=>{
-    const groupName=movementPlainText(group.match(/\bdata-art-atlas-submovement=["']([^"']+)["']/i)?.[1] || group.match(/<h3\b(?=[^>]*\bclass=["'][^"']*\bart-atlas-submovement-heading\b[^"']*["'])[^>]*>([\s\S]*?)<\/h3>/i)?.[1] || '');
+    const groupAttrs=tagAttrs(group.match(/^<section\b[^>]*>/i)?.[0] || ''), heading=group.match(/<h3\b(?=[^>]*\bclass=["'][^"']*\bart-atlas-submovement-heading\b[^"']*["'])[^>]*>([\s\S]*?)<\/h3>/i)?.[1] || '';
+    const existingTitle=heading.match(/<span\b(?=[^>]*\bclass=["'][^"']*\bart-atlas-submovement-title\b)[^>]*>([\s\S]*?)<\/span>/i)?.[1] || heading.split(/<span\b(?=[^>]*\bclass=["'][^"']*\bmovement-country-card-context\b)/i)[0];
+    const groupName=movementPlainText(group.match(/\bdata-art-atlas-submovement=["']([^"']+)["']/i)?.[1] || existingTitle);
     const groupKey=movementCountryLabelKey(groupName);
-    const context=contexts.find(item=>item.key===groupKey) || contexts.find(item=>item.key.includes(groupKey) || groupKey.includes(item.key));
+    const context=contexts.find(item=>item.categoryId && item.categoryId===groupAttrs['data-art-atlas-category-id']) || contexts.find(item=>item.developmentId && item.developmentId===groupAttrs['data-art-atlas-development-id']) || contexts.find(item=>item.categoryKey===groupKey) || contexts.find(item=>item.countryKey===groupKey);
     if(!context) return group;
     return group.replace(/(<h3\b(?=[^>]*\bclass=["'][^"']*\bart-atlas-submovement-heading\b[^"']*["'])[^>]*>)([\s\S]*?)(<\/h3>)/i,(_,open,title,close)=>{
-      const cleanTitle=title.replace(/\s*<span\b(?=[^>]*\bclass=["'][^"']*\bmovement-country-card-context\b[^"']*["'])[^>]*>[\s\S]*?<\/span>\s*/gi,'');
-      const region=context.region ? `<span class="movement-country-card-context-region">${escapeAttribute(context.region)}</span>` : '';
-      return `${open}${cleanTitle}<span class="movement-country-card-context">${region}<span class="movement-country-card-context-feature"><b>특징</b> ${escapeAttribute(context.feature)}</span></span>${close}`;
+      const titleText=context.category || groupName;
+      const region=context.country ? `<span class="movement-country-card-context-region">${escapeAttribute(context.country)}</span>` : '';
+      return `${open}<span class="art-atlas-submovement-title">${escapeAttribute(titleText)}</span><span class="movement-country-card-context">${region}<span class="movement-country-card-context-feature"><b>핵심 특징</b> ${escapeAttribute(context.feature)}</span></span>${close}`;
     });
   });
-  const style='<style id="art-atlas-movement-country-card-context-style">.movement-enhancement .art-atlas-submovement-heading{display:flex;flex-wrap:wrap;align-items:baseline;gap:.45rem}.movement-enhancement .movement-country-card-context{display:inline-flex;flex:1 1 20rem;flex-wrap:wrap;gap:.32rem .7rem;align-items:baseline;color:#aeb9c3;font-size:.912rem;font-weight:500;line-height:1.55}.movement-enhancement .movement-country-card-context b{color:#e6c98d;font-size:.92em;font-weight:800}.movement-enhancement .movement-country-card-context-region{white-space:nowrap}.movement-enhancement .movement-country-card-context-feature{min-width:12rem}</style>';
+  const style='<style id="art-atlas-movement-country-card-context-style">.movement-enhancement .art-atlas-submovement-heading{display:flex;width:100%;flex-wrap:wrap;align-items:baseline;gap:.45rem;text-align:left}.movement-enhancement .art-atlas-submovement-title{display:block;flex:0 0 100%;width:100%;text-align:left}.movement-enhancement .movement-country-card-context{display:flex;flex:1 1 100%;width:100%;flex-wrap:wrap;gap:.32rem .7rem;align-items:baseline;color:#aeb9c3;font-size:.912rem;font-weight:500;line-height:1.55}.movement-enhancement .movement-country-card-context b{color:#e6c98d;font-size:.92em;font-weight:800}.movement-enhancement .movement-country-card-context-region{white-space:nowrap}.movement-enhancement .movement-country-card-context-feature{min-width:12rem}</style>';
   return /<\/head>/i.test(source) ? source.replace(/<\/head>/i,`${style}\n</head>`) : `${style}\n${source}`;
 }
 function injectMovementStickyTitle(html) {

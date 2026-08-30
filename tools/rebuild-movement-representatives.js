@@ -101,9 +101,9 @@ function cardMarkup(entry, parent, documentFile, developmentId, countryIds, coun
     : '';
   return `<article class="movement-work-card" data-art-atlas-development-id="${escapeHtml(developmentId)}" data-art-atlas-category-id="${escapeHtml(entry.categoryId)}" data-artist-id="${escapeHtml(artist.id)}" data-work-id="${escapeHtml(work.id)}" data-art-atlas-card-role="${role}" data-art-atlas-image-state="${ready ? 'ready' : 'pending'}"${duplicateReason}>` +
     image +
-    `<div class="movement-work-body"><span class="movement-card-role">${roleLabel}</span><h3>${artistLink(artist)}, 《${escapeHtml(work.title.ko)}》<span class="movement-card-title-tag"> · ${escapeHtml(parent.name.ko)}</span><span class="movement-card-activity-region"> · ${escapeHtml(regions)}</span></h3>` +
-    `<p class="work-meta">${escapeHtml(work.yearLabel || work.year)}</p>` +
-    `<p class="movement-selection-reason" data-art-atlas-selection-reason=""><strong>${role === 'primary' ? '선정 이유' : '더 볼 이유'}</strong> ${escapeHtml(entry.selectionReason)}</p>` +
+    `<div class="movement-work-body"><span class="movement-card-role">${roleLabel}</span><div class="movement-card-heading-row"><h3>${artistLink(artist)}, 《${escapeHtml(work.title.ko)}》<span class="movement-card-title-tag"> · ${escapeHtml(parent.name.ko)}</span><span class="movement-card-activity-region"> · ${escapeHtml(regions)}</span></h3>` +
+    `<p class="work-meta">${escapeHtml(work.yearLabel || work.year)}</p></div>` +
+    `<p class="movement-selection-reason" data-art-atlas-selection-reason=""><strong>${role === 'primary' ? '선정 이유:' : '더 볼 이유:'}</strong> ${escapeHtml(entry.selectionReason)}</p>` +
     `<p class="movement-work-description" data-art-atlas-card-description="">${escapeHtml(entry.description + crossMembership)}</p></div></article>`;
 }
 
@@ -111,7 +111,7 @@ function groupMarkup(entry, parent, documentFile, developmentId, countryIds, cou
   const categoryName = entry.category.name.ko;
   const regions = countryIds.map(id => countryNames.get(id)?.ko || id).join('·');
   return `<section class="art-atlas-submovement-group" data-art-atlas-development-id="${escapeHtml(developmentId)}" data-art-atlas-category-id="${escapeHtml(entry.categoryId)}" data-art-atlas-country-ids="${escapeHtml(countryIds.join(' '))}">` +
-    `<h3 class="art-atlas-submovement-heading">${escapeHtml(categoryName)}<span class="movement-country-card-context"><span class="movement-country-card-context-region">${escapeHtml(regions)}</span><span class="movement-country-card-context-feature"><b>핵심 특징</b> ${escapeHtml(entry.feature)}</span></span></h3>` +
+    `<h3 class="art-atlas-submovement-heading"><span class="art-atlas-submovement-title">${escapeHtml(categoryName)}</span><span class="movement-country-card-context"><span class="movement-country-card-context-region">${escapeHtml(regions)}</span><span class="movement-country-card-context-feature"><b>핵심 특징</b> ${escapeHtml(entry.feature)}</span></span></h3>` +
     `<div class="movement-work-grid art-atlas-work-sortable" data-art-atlas-development-id="${escapeHtml(developmentId)}">${[entry, ...(entry.furtherArtists || [])].map((artistEntry, index) => cardMarkup(artistEntry, parent, documentFile, developmentId, countryIds, countryNames, index ? 'further' : 'primary')).join('')}</div></section>`;
 }
 

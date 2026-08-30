@@ -113,6 +113,9 @@ function validateDocument(parent, entries, artistMap, catalogByPath) {
     const group = element(representativeSection, groupMatch, 'section');
     assert(attr(groupMatch[0], attrs.developmentId) === developmentId, `${entry.categoryId}: group development ID mismatch`);
     assert(attr(groupMatch[0], attrs.countryIds) === countryIds, `${entry.categoryId}: group country IDs mismatch`);
+    const groupHeading = /<h3\b(?=[^>]*\bclass=(?:"[^"]*\bart-atlas-submovement-heading\b[^"]*"|'[^']*\bart-atlas-submovement-heading\b[^']*'))[^>]*>[\s\S]*?<\/h3>/i.exec(group)?.[0] || '';
+    const groupTitle = /<span\b(?=[^>]*\bclass=(?:"[^"]*\bart-atlas-submovement-title\b[^"]*"|'[^']*\bart-atlas-submovement-title\b[^']*'))[^>]*>([\s\S]*?)<\/span>/i.exec(groupHeading)?.[1] || '';
+    assert(textContent(groupTitle) === entry.category.name.ko, `${entry.categoryId}: full-width submovement title is missing or incorrect`);
     const grids = openingTags(group, 'div', 'movement-work-grid');
     assert(grids.length === 1, `${entry.categoryId}: card grid count is ${grids.length}`);
     assert(attr(grids[0][0], attrs.developmentId) === developmentId, `${entry.categoryId}: grid development ID mismatch`);
@@ -142,6 +145,9 @@ function validateDocument(parent, entries, artistMap, catalogByPath) {
       (cardEntry.otherMovements || []).forEach(movement => assert(textContent(card).includes(movement), `${entry.categoryId}: cross-movement note is missing`));
       assert(new RegExp(`\\b${attrs.selectionReason}=`, 'i').test(card), `${entry.categoryId}: selection reason binding missing`);
       assert(new RegExp(`\\b${attrs.cardDescription}=`, 'i').test(card), `${entry.categoryId}: description binding missing`);
+      assert(/<div\b(?=[^>]*\bclass=(?:"[^"]*\bmovement-card-heading-row\b[^"]*"|'[^']*\bmovement-card-heading-row\b[^']*'))[^>]*>\s*<h3\b[\s\S]*?<\/h3>\s*<p\b(?=[^>]*\bclass=(?:"[^"]*\bwork-meta\b[^"]*"|'[^']*\bwork-meta\b[^']*'))[^>]*>[\s\S]*?<\/p>\s*<\/div>/i.test(card), `${entry.categoryId}: card year is not in the upper heading row`);
+      const reasonLabel=role === 'primary' ? '선정 이유:' : '더 볼 이유:';
+      assert(card.includes(`<strong>${reasonLabel}</strong>`), `${entry.categoryId}: reason label colon is missing`);
 
       const artist = artistMap.get(cardEntry.artist.id);
       assert(artist, `${entry.categoryId}: artist ${cardEntry.artist.id} is absent from artists.json`);

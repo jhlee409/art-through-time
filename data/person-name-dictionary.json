@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-29T21:43:54.649Z",
+  "generatedAt": "2026-08-30T01:00:40.155Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -1915,6 +1915,31 @@
       "englishFullName": "Caspar David Friedrich",
       "wikipediaTitle": "Caspar David Friedrich",
       "wikidataQid": "Q104884"
+    },
+    {
+      "id": "name-charlesgleyre",
+      "uhangulVersion": "0.7",
+      "original": "Charles Gleyre",
+      "language": "und",
+      "korean": "샤를 글레르",
+      "displayKorean": "샤를 글레르",
+      "listKorean": "샤를 글레르",
+      "aliases": {
+        "ko": [
+          "글레르"
+        ],
+        "en": [
+          "Gleyre"
+        ]
+      },
+      "uhangul": "샤[Rㅡㄹ] 글레[Rㅡ]",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists-index.json",
+        "data/artists.json"
+      ],
+      "status": "verified-pair"
     },
     {
       "id": "Q170170",
