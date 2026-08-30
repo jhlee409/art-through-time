@@ -2,10 +2,10 @@
   "dataSchema": 1,
   "metadata": {
     "createdAt": "2026-08-22T12:46:59.824Z",
-    "updatedAt": "2026-08-30T07:01:55.080Z",
+    "updatedAt": "2026-08-30T10:52:56.016Z",
     "createdBy": "jhlee409@gmail.com",
     "updatedBy": "jhlee409@gmail.com",
-    "revision": 909,
+    "revision": 916,
     "representativeContentSchema": 2
   },
   "artists": [
@@ -98,9 +98,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-21T11:02:06.057Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "featuredWorkIds": [
         "wikidata-Q734834",
@@ -240,9 +240,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-21T10:24:32.488Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "movement": {
         "ko": "이탈리아 르네상스",
@@ -299,9 +299,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-20T06:40:08.305Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "links": [
         {
@@ -346,7 +346,7 @@
       "featuredWorkIds": [
         "wikidata-Q1131110"
       ],
-      "workCount": 55,
+      "workCount": 54,
       "_detailLoaded": false
     },
     {
@@ -378,7 +378,7 @@
       ],
       "metadata": {
         "createdAt": "2026-08-10T13:50:59.717Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-30T10:45:30.295Z",
         "createdBy": "migration-tool",
         "updatedBy": "jhlee409@gmail.com"
       },
@@ -477,9 +477,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-22T02:54:46.266Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "local image import",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "links": [
         {
@@ -681,7 +681,7 @@
       "featuredWorkIds": [
         "michelangelo-creation-of-adam"
       ],
-      "workCount": 81,
+      "workCount": 71,
       "_detailLoaded": false
     },
     {
@@ -705,9 +705,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-20T07:25:12.388Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -744,7 +744,7 @@
       "featuredWorkIds": [
         "wikidata-Q930137"
       ],
-      "workCount": 42,
+      "workCount": 41,
       "_detailLoaded": false
     },
     {
@@ -933,9 +933,9 @@
       ],
       "metadata": {
         "createdAt": "2026-08-16T03:08:17.761Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "migration-tool",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [
@@ -1088,9 +1088,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-20T02:26:11.396Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "links": [
         {
@@ -1151,7 +1151,7 @@
       "listName": {
         "ko": "티치아노"
       },
-      "workCount": 64,
+      "workCount": 63,
       "_detailLoaded": false
     },
     {
@@ -1204,9 +1204,9 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-22T09:10:55.892Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "artistSummary": {
         "ko": [],
@@ -1434,7 +1434,7 @@
       },
       "metadata": {
         "createdAt": "2026-08-22T12:46:11.670Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-30T10:45:30.295Z",
         "createdBy": "jhlee409@gmail.com",
         "updatedBy": "jhlee409@gmail.com"
       },
@@ -1742,9 +1742,9 @@
       ],
       "metadata": {
         "createdAt": "2026-08-23T01:20:01.953Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "local artist import",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "artistSummary": {
         "ko": [],
@@ -1835,7 +1835,7 @@
       "listName": {
         "ko": "브뤼헐"
       },
-      "workCount": 58,
+      "workCount": 57,
       "_detailLoaded": false
     },
     {
@@ -2228,9 +2228,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-18T01:06:12.661Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "links": [
         {
@@ -2279,7 +2279,7 @@
       "featuredWorkIds": [
         "wikidata-Q283665"
       ],
-      "workCount": 75,
+      "workCount": 74,
       "_detailLoaded": false
     },
     {
@@ -2521,9 +2521,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-16T11:39:39.817Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "migration-tool",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "profileResolved": true,
       "aliases": {
@@ -2565,7 +2565,7 @@
       "listName": {
         "ko": "루벤스"
       },
-      "workCount": 64,
+      "workCount": 63,
       "_detailLoaded": false
     },
     {
@@ -2610,7 +2610,7 @@
       ],
       "metadata": {
         "createdAt": "2026-08-23T09:17:00.101Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-30T10:45:30.295Z",
         "createdBy": "jhlee409@gmail.com",
         "updatedBy": "jhlee409@gmail.com"
       },
@@ -2775,9 +2775,9 @@
       ],
       "metadata": {
         "createdAt": "2026-08-23T07:09:41.993Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "local artist import",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "artistSummary": {
         "ko": [],
@@ -2803,7 +2803,7 @@
       "listName": {
         "ko": "베르니니"
       },
-      "workCount": 6,
+      "workCount": 5,
       "_detailLoaded": false
     },
     {
@@ -3017,9 +3017,9 @@
       ],
       "metadata": {
         "createdAt": "2026-08-23T08:31:41.272Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "local artist import",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "artistSummary": {
         "ko": [],
@@ -3063,9 +3063,9 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-17T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "links": [
         {
@@ -3119,7 +3119,7 @@
       "listName": {
         "ko": "렘브란트"
       },
-      "workCount": 53,
+      "workCount": 51,
       "_detailLoaded": false
     },
     {
@@ -3379,9 +3379,9 @@
       ],
       "metadata": {
         "createdAt": "2026-08-10T13:22:11.79Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "migration-tool",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [
@@ -3550,7 +3550,7 @@
       "listName": {
         "ko": "마네"
       },
-      "workCount": 74,
+      "workCount": 72,
       "_detailLoaded": false
     },
     {
@@ -3574,7 +3574,7 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-10T13:21:52.312Z",
-        "updatedAt": "2026-08-30T07:01:55.080Z",
+        "updatedAt": "2026-08-30T10:45:30.295Z",
         "createdBy": "migration-tool",
         "updatedBy": "jhlee409@gmail.com"
       },
@@ -3679,7 +3679,7 @@
         "1922년 (약 82세) · [화풍과 사조의 변천] 국가와의 기증 계약을 통해 연작을 특정 전시 공간을 위한 장대한 설치로 구상했다. 이는 수련 연작을 회화 단일 점으로서가 아니라 관람자가 둘러들 수 있는 환경적 풍경으로 제시하려는 의도로 이어졌다.",
         "1923년 (약 83세) · [초기 미술 교육] 시력 문제로 수술을 받으면서 색채 인식에 변화를 경험했고, 수술과 회복 과정은 이후 작품의 색조와 표현에 직접적 영향을 주었다. 그 결과 색의 수용과 표현 방식에 새로운 제약과 적응이 더해졌다."
       ],
-      "workCount": 82,
+      "workCount": 79,
       "_detailLoaded": false
     },
     {
@@ -3703,9 +3703,9 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-10T13:21:43.815Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "migration-tool",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [
@@ -3750,7 +3750,7 @@
       "featuredWorkIds": [
         "wikidata-Q45585"
       ],
-      "workCount": 103,
+      "workCount": 101,
       "_detailLoaded": false
     },
     {
@@ -3847,9 +3847,9 @@
       ],
       "metadata": {
         "createdAt": "2026-08-11T23:17:30.885Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "migration-tool",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [
@@ -3922,7 +3922,7 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-10T13:22:03.883Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-30T10:24:05.272Z",
         "createdBy": "migration-tool",
         "updatedBy": "jhlee409@gmail.com"
       },
@@ -3940,7 +3940,6 @@
       },
       "featuredWorkIds": [
         "wikidata-Q118190557",
-        "wikidata-Q21010270",
         "wikidata-Q5880026"
       ],
       "artistSummary": {
@@ -3968,7 +3967,7 @@
       "listName": {
         "ko": "칼로"
       },
-      "workCount": 36,
+      "workCount": 33,
       "_detailLoaded": false
     },
     {
@@ -4016,9 +4015,9 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-24T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "manual entry",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "movements": [
         "바로크"
@@ -4294,9 +4293,9 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-24T00:00:00Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "manual entry",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "movements": [
         "로코코"
@@ -4628,9 +4627,9 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-24T00:00:00Z",
-        "updatedAt": "2026-08-30T01:00:44.475Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "manual entry",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "movements": [
         "로코코"
@@ -5143,7 +5142,6 @@
         "en": []
       },
       "featuredWorkIds": [
-        "gericault-raft-of-medusa",
         "artist-romantic-gericault-work"
       ],
       "profileResolved": true,
@@ -5173,7 +5171,7 @@
       "listName": {
         "ko": "제리코"
       },
-      "workCount": 2,
+      "workCount": 1,
       "_detailLoaded": false
     },
     {
@@ -8198,9 +8196,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -8250,9 +8248,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -8302,9 +8300,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -8354,9 +8352,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -8406,9 +8404,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -8458,9 +8456,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -8510,9 +8508,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -8562,9 +8560,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -8614,9 +8612,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -8666,9 +8664,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -8718,9 +8716,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -8770,9 +8768,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -8822,9 +8820,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -8874,9 +8872,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -8926,9 +8924,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -8978,9 +8976,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -9030,9 +9028,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -9082,9 +9080,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -9134,9 +9132,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -9186,9 +9184,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -9238,9 +9236,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -9290,9 +9288,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -9342,9 +9340,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -9394,9 +9392,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -9446,9 +9444,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -9498,9 +9496,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -9550,9 +9548,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -9602,9 +9600,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -9654,9 +9652,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -9706,9 +9704,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -9758,9 +9756,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -9810,9 +9808,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -9862,9 +9860,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -9914,9 +9912,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -9966,9 +9964,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -10018,9 +10016,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -10070,9 +10068,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -10122,9 +10120,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -10174,9 +10172,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -10226,9 +10224,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -10278,9 +10276,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -10330,9 +10328,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -10382,9 +10380,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -10434,9 +10432,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -10486,9 +10484,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -10538,9 +10536,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -10590,9 +10588,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -10642,9 +10640,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -10694,9 +10692,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -10746,9 +10744,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -10798,9 +10796,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -10850,9 +10848,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -10902,9 +10900,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -10954,9 +10952,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -11006,9 +11004,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -11058,9 +11056,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -11110,9 +11108,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -11162,9 +11160,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -11214,9 +11212,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -11266,9 +11264,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -11318,9 +11316,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -11370,9 +11368,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -11422,9 +11420,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -11474,9 +11472,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -11526,9 +11524,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -11578,9 +11576,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -11630,9 +11628,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -11682,9 +11680,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -11734,9 +11732,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -11786,9 +11784,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -11838,9 +11836,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -11890,9 +11888,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -11942,9 +11940,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -11994,9 +11992,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -12046,9 +12044,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -12098,9 +12096,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -12150,9 +12148,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -12202,9 +12200,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -12254,9 +12252,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -12306,9 +12304,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -12358,9 +12356,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -12390,7 +12388,7 @@
         "en": "Rococo"
       },
       "featuredWorkIds": [
-        "guardi-doges-palace"
+        "guardi-cannaregio-canal-venice"
       ],
       "profileResolved": true,
       "movements": [
@@ -12410,7 +12408,7 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-30T10:52:56.016Z",
         "createdBy": "phase-5-rebuild",
         "updatedBy": "jhlee409@gmail.com"
       },
@@ -12422,7 +12420,7 @@
         "ko": [],
         "en": []
       },
-      "workCount": 1,
+      "workCount": 4,
       "_detailLoaded": false
     },
     {
@@ -12462,9 +12460,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -12514,9 +12512,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -12566,9 +12564,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -12618,9 +12616,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -12670,9 +12668,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T22:30:46.795Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -12723,9 +12721,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -12775,9 +12773,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -12827,9 +12825,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -12879,9 +12877,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -12931,9 +12929,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -12983,9 +12981,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -13035,9 +13033,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -13087,9 +13085,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -13139,9 +13137,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -13191,9 +13189,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -13243,9 +13241,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -13295,9 +13293,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -13347,9 +13345,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -13399,9 +13397,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -13451,9 +13449,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -13503,9 +13501,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -13555,9 +13553,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -13607,9 +13605,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -13659,9 +13657,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -13711,9 +13709,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -13763,9 +13761,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -13815,9 +13813,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -13867,9 +13865,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -13919,9 +13917,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -13971,9 +13969,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -14023,9 +14021,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -14075,9 +14073,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -14127,9 +14125,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -14179,9 +14177,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -14231,9 +14229,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -14283,9 +14281,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -14335,9 +14333,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -14387,9 +14385,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -14439,9 +14437,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],

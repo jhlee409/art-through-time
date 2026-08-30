@@ -1,15 +1,15 @@
 {
   "schema": 1,
-  "generatedAt": "2026-08-30T01:26:35.796Z",
+  "generatedAt": "2026-08-30T10:51:28.877Z",
   "namingStandard": "shortArtist_titleFirst3Words_startYear__workId.ext",
   "stats": {
-    "images": 1698,
-    "linkedImages": 1698,
+    "images": 1686,
+    "linkedImages": 1686,
     "unlinkedImages": 0,
-    "standardNames": 71,
-    "legacyNames": 1627,
+    "standardNames": 74,
+    "legacyNames": 1612,
     "newNonstandardNames": 0,
-    "duplicateHashGroups": 2
+    "duplicateHashGroups": 1
   },
   "images": [
     {
@@ -1715,29 +1715,6 @@
       ]
     },
     {
-      "path": "data/images/artist-1786343948059/wikidata-Q16648934.jpg",
-      "filename": "wikidata-Q16648934.jpg",
-      "bytes": 24246,
-      "sha256": "9b26035633a43aa674adf8146504ad5c108c310c6f69a9b543a3ac5c0a0e5873",
-      "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:42.530Z",
-      "aliases": [],
-      "works": [
-        {
-          "artistId": "artist-Q40599",
-          "artistQid": "Q40599",
-          "artistNameKo": "에두아르 마네",
-          "artistNameEn": "Édouard Manet",
-          "workId": "wikidata-Q16648934",
-          "workQid": "Q16648934",
-          "titleKo": "Rochefort's Escape",
-          "titleEn": "Rochefort's Escape",
-          "year": 1881
-        }
-      ]
-    },
-    {
       "path": "data/images/artist-1786343948059/wikidata-Q18413043.jpg",
       "filename": "wikidata-Q18413043.jpg",
       "bytes": 47560,
@@ -1826,29 +1803,6 @@
           "titleKo": "투우 - 소의 죽음",
           "titleEn": "The Bullfight",
           "year": 1865
-        }
-      ]
-    },
-    {
-      "path": "data/images/artist-1786343948059/wikidata-Q3207826.jpg",
-      "filename": "wikidata-Q3207826.jpg",
-      "bytes": 9060,
-      "sha256": "f67352bc1a1a4bfdfae02e66cc8eff5438d45ee42c20598aa49b89a399a09236",
-      "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:42.531Z",
-      "aliases": [],
-      "works": [
-        {
-          "artistId": "artist-Q40599",
-          "artistQid": "Q40599",
-          "artistNameKo": "에두아르 마네",
-          "artistNameEn": "Édouard Manet",
-          "workId": "wikidata-Q3207826",
-          "workQid": "Q3207826",
-          "titleKo": "투우 (마네, 뉴욕)",
-          "titleEn": "The Bullfight",
-          "year": 1864
         }
       ]
     },
@@ -6476,13 +6430,12 @@
       ]
     },
     {
-      "path": "data/images/artist-mid-francesco-guardi/guardi-doges-palace.jpg",
-      "filename": "guardi-doges-palace.jpg",
-      "bytes": 2658923,
-      "sha256": "17592a7a0717d67f1c0c8a8a431bd7a600451ee29773fa1b2f0d705b0ed84796",
+      "path": "data/images/artist-mid-francesco-guardi/과르디_대운하와 리알토 다리_1780__guardi-grand-canal-rialto-bridge.jpg",
+      "filename": "과르디_대운하와 리알토 다리_1780__guardi-grand-canal-rialto-bridge.jpg",
+      "bytes": 2350366,
+      "sha256": "0e392871a04ac4db33b28756ad90510cb535f2de6d1df308679cf553a1e6d4cb",
       "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:42.797Z",
+      "namingStatus": "standard",
       "aliases": [],
       "works": [
         {
@@ -6490,11 +6443,77 @@
           "artistQid": "",
           "artistNameKo": "프란체스코 과르디",
           "artistNameEn": "Francesco Guardi",
-          "workId": "guardi-doges-palace",
+          "workId": "guardi-grand-canal-rialto-bridge",
           "workQid": "",
-          "titleKo": "리바 델리 스키아보니와 피아체타의 풍경",
-          "titleEn": "View of the Riva degli Schiavoni and the Piazzetta",
+          "titleKo": "대운하와 리알토 다리",
+          "titleEn": "Grand Canal with the Rialto Bridge, Venice",
+          "year": 1780
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-mid-francesco-guardi/과르디_베네치아의 부친토로 축제_1780__guardi-bucintoro-festival-venice.jpg",
+      "filename": "과르디_베네치아의 부친토로 축제_1780__guardi-bucintoro-festival-venice.jpg",
+      "bytes": 2654173,
+      "sha256": "927c289c691c6f6817111f438d54b60f6b5ebd406646a47eba549b43fad63bb2",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-mid-francesco-guardi",
+          "artistQid": "",
+          "artistNameKo": "프란체스코 과르디",
+          "artistNameEn": "Francesco Guardi",
+          "workId": "guardi-bucintoro-festival-venice",
+          "workQid": "",
+          "titleKo": "베네치아의 부친토로 축제",
+          "titleEn": "The Bucintoro Festival of Venice",
+          "year": 1780
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-mid-francesco-guardi/과르디_베니스의 카나레지오 운하_1770__guardi-cannaregio-canal-venice.jpg",
+      "filename": "과르디_베니스의 카나레지오 운하_1770__guardi-cannaregio-canal-venice.jpg",
+      "bytes": 3418611,
+      "sha256": "83029939cb5e6de56bab2b53b31cd71c67f4c3ea08773a1ee40fa52592b251cc",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-mid-francesco-guardi",
+          "artistQid": "",
+          "artistNameKo": "프란체스코 과르디",
+          "artistNameEn": "Francesco Guardi",
+          "workId": "guardi-cannaregio-canal-venice",
+          "workQid": "",
+          "titleKo": "베니스의 카나레지오 운하 풍경",
+          "titleEn": "View of the Cannaregio Canal in Venice",
           "year": 1770
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-mid-francesco-guardi/과르디_카나레지오 운하 풍경_1775__guardi-view-on-cannaregio-canal.jpg",
+      "filename": "과르디_카나레지오 운하 풍경_1775__guardi-view-on-cannaregio-canal.jpg",
+      "bytes": 8415343,
+      "sha256": "f7ca77b1b751f56c7f3e91004565a8e2ed4eb37f8a341545e4da9b14889feb85",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-mid-francesco-guardi",
+          "artistQid": "",
+          "artistNameKo": "프란체스코 과르디",
+          "artistNameEn": "Francesco Guardi",
+          "workId": "guardi-view-on-cannaregio-canal",
+          "workQid": "",
+          "titleKo": "카나레지오 운하 풍경",
+          "titleEn": "View on the Cannaregio Canal, Venice",
+          "year": 1775
         }
       ]
     },
@@ -8445,29 +8464,6 @@
       ]
     },
     {
-      "path": "data/images/artist-Q160538/wikidata-Q945850.jpg",
-      "filename": "wikidata-Q945850.jpg",
-      "bytes": 34664,
-      "sha256": "86400063cc6e1a81df3ac3a3d7b6880b2a2011d85b508b99fd07953619260858",
-      "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:43.103Z",
-      "aliases": [],
-      "works": [
-        {
-          "artistId": "artist-Q160538",
-          "artistQid": "Q160538",
-          "artistNameKo": "잔 로렌초 베르니니",
-          "artistNameEn": "Gian Lorenzo Bernini",
-          "workId": "wikidata-Q945850",
-          "workQid": "Q945850",
-          "titleKo": "Apollo and Daphne",
-          "titleEn": "Apollo and Daphne",
-          "year": 1622
-        }
-      ]
-    },
-    {
       "path": "data/images/artist-Q161472/앵그르_황제의 옥좌에 앉은_1806__artist-Q161472-representative-work.jpg",
       "filename": "앵그르_황제의 옥좌에 앉은_1806__artist-Q161472-representative-work.jpg",
       "bytes": 542740,
@@ -9873,17 +9869,6 @@
           "titleKo": "Madonna with the Child",
           "titleEn": "Madonna with the Child",
           "year": 1460
-        },
-        {
-          "artistId": "artist-Q17169",
-          "artistQid": "Q17169",
-          "artistNameKo": "조반니 벨리니",
-          "artistNameEn": "Giovanni Bellini",
-          "workId": "wikidata-Q3842485",
-          "workQid": "Q3842485",
-          "titleKo": "Madonna and Child",
-          "titleEn": "Madonna and Child",
-          "year": 1506
         },
         {
           "artistId": "artist-Q17169",
@@ -13775,7 +13760,7 @@
           "artistNameEn": "Rosalba Carriera",
           "workId": "local-carriera-maria-theresa",
           "workQid": "",
-          "titleKo": "《마리아 테레사, 합스부르크 대공녀》",
+          "titleKo": "마리아 테레사, 합스부르크 대공녀",
           "titleEn": "Maria Theresa, Archduchess of Habsburg",
           "year": 1730
         }
@@ -19861,29 +19846,6 @@
       ]
     },
     {
-      "path": "data/images/artist-Q43270/wikidata-Q18686393.jpg",
-      "filename": "wikidata-Q18686393.jpg",
-      "bytes": 24336,
-      "sha256": "5b7716ae130c3eb8d1b993da94780dbce37e8c1c2073f1e24c497c5bd8d3e660",
-      "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:44.461Z",
-      "aliases": [],
-      "works": [
-        {
-          "artistId": "artist-Q43270",
-          "artistQid": "Q43270",
-          "artistNameKo": "대 피터르 브뤼헐",
-          "artistNameEn": "Pieter Brueghel the Elder",
-          "workId": "wikidata-Q18686393",
-          "workQid": "Q18686393",
-          "titleKo": "Sloth",
-          "titleEn": "Sloth",
-          "year": 1557
-        }
-      ]
-    },
-    {
       "path": "data/images/artist-Q43270/wikidata-Q1887184.jpg",
       "filename": "wikidata-Q1887184.jpg",
       "bytes": 25142,
@@ -21511,17 +21473,6 @@
           "titleKo": "Penitent Magdalene",
           "titleEn": "Penitent Magdalene",
           "year": 1533
-        },
-        {
-          "artistId": "artist-Q47551",
-          "artistQid": "Q47551",
-          "artistNameKo": "티치아노",
-          "artistNameEn": "Titian",
-          "workId": "wikidata-Q4448822",
-          "workQid": "Q4448822",
-          "titleKo": "Penitent Magdalene",
-          "titleEn": "Penitent Magdalene",
-          "year": 1563
         }
       ]
     },
@@ -22801,68 +22752,11 @@
           "artistQid": "Q5592",
           "artistNameKo": "미켈란젤로 부오나로티",
           "artistNameEn": "Michelangelo",
-          "workId": "wikipedia-Q5592-5",
-          "workQid": "Q5592",
-          "titleKo": "Bacchus by Michelangelo, early work (1496–1497)",
-          "titleEn": "Bacchus by Michelangelo, early work (1496–1497)",
-          "year": 1497
-        },
-        {
-          "artistId": "artist-Q5592",
-          "artistQid": "Q5592",
-          "artistNameKo": "미켈란젤로 부오나로티",
-          "artistNameEn": "Michelangelo",
           "workId": "michelangelo-bacchus",
           "workQid": "",
           "titleKo": "바쿠스",
           "titleEn": "Bacchus",
           "year": 1497
-        }
-      ]
-    },
-    {
-      "path": "data/images/artist-Q5592/michelangelo-battle-centaurs.JPG",
-      "filename": "michelangelo-battle-centaurs.JPG",
-      "bytes": 19777,
-      "sha256": "0b53853790f5f5750afb7169cd267d0deb5134098b4ad2732d5b34e75b015931",
-      "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:44.751Z",
-      "aliases": [],
-      "works": [
-        {
-          "artistId": "artist-Q5592",
-          "artistQid": "Q5592",
-          "artistNameKo": "미켈란젤로 부오나로티",
-          "artistNameEn": "Michelangelo",
-          "workId": "michelangelo-battle-centaurs",
-          "workQid": "",
-          "titleKo": "켄타우로스의 전투",
-          "titleEn": "Battle of the Centaurs",
-          "year": 1492
-        }
-      ]
-    },
-    {
-      "path": "data/images/artist-Q5592/michelangelo-creation-adam.jpg",
-      "filename": "michelangelo-creation-adam.jpg",
-      "bytes": 12518,
-      "sha256": "7d6dd00117efea52c1e268a28229898a12818ff9d30f8ec177e3cff078b92365",
-      "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:44.751Z",
-      "aliases": [],
-      "works": [
-        {
-          "artistId": "artist-Q5592",
-          "artistQid": "Q5592",
-          "artistNameKo": "미켈란젤로 부오나로티",
-          "artistNameEn": "Michelangelo",
-          "workId": "michelangelo-creation-adam",
-          "workQid": "",
-          "titleKo": "아담의 창조",
-          "titleEn": "The Creation of Adam",
-          "year": 1512
         }
       ]
     },
@@ -22876,17 +22770,6 @@
       "grandfatheredAt": "2026-08-29T08:11:44.754Z",
       "aliases": [],
       "works": [
-        {
-          "artistId": "artist-Q5592",
-          "artistQid": "Q5592",
-          "artistNameKo": "미켈란젤로 부오나로티",
-          "artistNameEn": "Michelangelo",
-          "workId": "wikidata-Q500242",
-          "workQid": "Q500242",
-          "titleKo": "아담의 창조",
-          "titleEn": "아담의 창조",
-          "year": 1511
-        },
         {
           "artistId": "artist-Q5592",
           "artistQid": "Q5592",
@@ -22920,17 +22803,6 @@
           "titleKo": "The Crucifixion of Saint Peter",
           "titleEn": "The Crucifixion of Saint Peter",
           "year": 1540
-        },
-        {
-          "artistId": "artist-Q5592",
-          "artistQid": "Q5592",
-          "artistNameKo": "미켈란젤로 부오나로티",
-          "artistNameEn": "Michelangelo",
-          "workId": "michelangelo-crucifixion-st-peter",
-          "workQid": "",
-          "titleKo": "성 베드로의 십자가형",
-          "titleEn": "The Crucifixion of St. Peter",
-          "year": 1550
         }
       ]
     },
@@ -22983,17 +22855,6 @@
           "artistQid": "Q5592",
           "artistNameKo": "미켈란젤로 부오나로티",
           "artistNameEn": "Michelangelo",
-          "workId": "wikipedia-Q5592-3",
-          "workQid": "Q5592",
-          "titleKo": "The Doni Tondo (1504–1506)",
-          "titleEn": "The Doni Tondo (1504–1506)",
-          "year": 1504
-        },
-        {
-          "artistId": "artist-Q5592",
-          "artistQid": "Q5592",
-          "artistNameKo": "미켈란젤로 부오나로티",
-          "artistNameEn": "Michelangelo",
           "workId": "michelangelo-doni-tondo",
           "workQid": "",
           "titleKo": "도니 톤도",
@@ -23035,17 +22896,6 @@
       "grandfatheredAt": "2026-08-29T08:11:44.761Z",
       "aliases": [],
       "works": [
-        {
-          "artistId": "artist-Q5592",
-          "artistQid": "Q5592",
-          "artistNameKo": "미켈란젤로 부오나로티",
-          "artistNameEn": "Michelangelo",
-          "workId": "wikipedia-Q5592-0",
-          "workQid": "Q5592",
-          "titleKo": "The Madonna of the Stairs (1490–1492)",
-          "titleEn": "The Madonna of the Stairs (1490–1492)",
-          "year": 1491
-        },
         {
           "artistId": "artist-Q5592",
           "artistQid": "Q5592",
@@ -24326,17 +24176,6 @@
           "artistQid": "Q5592",
           "artistNameKo": "미켈란젤로 부오나로티",
           "artistNameEn": "Michelangelo",
-          "workId": "wikipedia-Q5592-12",
-          "workQid": "Q5592",
-          "titleKo": "Battle of the Centaurs",
-          "titleEn": "Battle of the Centaurs",
-          "year": 1492
-        },
-        {
-          "artistId": "artist-Q5592",
-          "artistQid": "Q5592",
-          "artistNameKo": "미켈란젤로 부오나로티",
-          "artistNameEn": "Michelangelo",
           "workId": "wikipedia-Q5592-13",
           "workQid": "Q5592",
           "titleKo": "Copy of the lost Battle of Cascina by Bastiano da Sangallo",
@@ -24375,52 +24214,6 @@
           "titleKo": "The Prophet Jeremiah",
           "titleEn": "The Prophet Jeremiah",
           "year": 1511
-        }
-      ]
-    },
-    {
-      "path": "data/images/artist-Q5592/wikipedia-Q5592-2.jpg",
-      "filename": "wikipedia-Q5592-2.jpg",
-      "bytes": 33359,
-      "sha256": "2dacb116fa1f54612bf2ab4f57064dd28a4a62b530a7003c7745ba2d1d2cd454",
-      "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:44.813Z",
-      "aliases": [],
-      "works": [
-        {
-          "artistId": "artist-Q5592",
-          "artistQid": "Q5592",
-          "artistNameKo": "미켈란젤로 부오나로티",
-          "artistNameEn": "Michelangelo",
-          "workId": "wikipedia-Q5592-2",
-          "workQid": "Q5592",
-          "titleKo": "Madonna of Bruges",
-          "titleEn": "Madonna of Bruges",
-          "year": 1504
-        }
-      ]
-    },
-    {
-      "path": "data/images/artist-Q5592/wikipedia-Q5592-4.jpg",
-      "filename": "wikipedia-Q5592-4.jpg",
-      "bytes": 30153,
-      "sha256": "8845a0ffc074973d009bc4412c3d315273a2861accc43db0cfdf659b1cc5064a",
-      "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:44.814Z",
-      "aliases": [],
-      "works": [
-        {
-          "artistId": "artist-Q5592",
-          "artistQid": "Q5592",
-          "artistNameKo": "미켈란젤로 부오나로티",
-          "artistNameEn": "Michelangelo",
-          "workId": "wikipedia-Q5592-4",
-          "workQid": "Q5592",
-          "titleKo": "Angel by Michelangelo, early work (1494–95)",
-          "titleEn": "Angel by Michelangelo, early work (1494–95)",
-          "year": 1495
         }
       ]
     },
@@ -28717,17 +28510,6 @@
           "titleKo": "성모 승천",
           "titleEn": "Assumption of the Virgin",
           "year": 1587
-        },
-        {
-          "artistId": "artist-Q7824",
-          "artistQid": "Q7824",
-          "artistNameKo": "안니발레 카라치",
-          "artistNameEn": "Annibale Carracci",
-          "workId": "wikidata-Q57983818",
-          "workQid": "Q57983818",
-          "titleKo": "Assumption of the Virgin",
-          "titleEn": "Assumption of the Virgin",
-          "year": 1600
         }
       ]
     },
@@ -30401,17 +30183,6 @@
           "artistQid": "Q8459",
           "artistNameKo": "조르조네",
           "artistNameEn": "Giorgione",
-          "workId": "wikidata-Q87533881",
-          "workQid": "Q87533881",
-          "titleKo": "Judith",
-          "titleEn": "Judith",
-          "year": 1500
-        },
-        {
-          "artistId": "artist-Q8459",
-          "artistQid": "Q8459",
-          "artistNameKo": "조르조네",
-          "artistNameEn": "Giorgione",
           "workId": "wikidata-Q2537695",
           "workQid": "Q2537695",
           "titleKo": "Judith",
@@ -31795,17 +31566,6 @@
           "titleKo": "삼손의 눈이 멀다",
           "titleEn": "The Blinding of Samson",
           "year": 1636
-        },
-        {
-          "artistId": "artist-rembrandt",
-          "artistQid": "Q5598",
-          "artistNameKo": "렘브란트 하르먼손 반 레인",
-          "artistNameEn": "Rembrandt Harmenszoon van Rijn",
-          "workId": "wikidata-Q1211651",
-          "workQid": "Q1211651",
-          "titleKo": "The Blinding of Samson",
-          "titleEn": "The Blinding of Samson",
-          "year": 1636
         }
       ]
     },
@@ -32752,29 +32512,6 @@
       ]
     },
     {
-      "path": "data/images/artist-rembrandt/wikidata-Q512755.jpg",
-      "filename": "wikidata-Q512755.jpg",
-      "bytes": 469301,
-      "sha256": "c74cd85639c19f4b4b9d64743c3a61bc0fb419e600e24f42809bd6c121f13328",
-      "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:45.654Z",
-      "aliases": [],
-      "works": [
-        {
-          "artistId": "artist-rembrandt",
-          "artistQid": "Q5598",
-          "artistNameKo": "렘브란트 하르먼손 반 레인",
-          "artistNameEn": "Rembrandt Harmenszoon van Rijn",
-          "workId": "wikidata-Q512755",
-          "workQid": "Q512755",
-          "titleKo": "돌아온 탕자",
-          "titleEn": "The Return of the Prodigal Son",
-          "year": 1668
-        }
-      ]
-    },
-    {
       "path": "data/images/artist-romantic-church/처치_안데스의 심장_1859__artist-romantic-church-work.jpg",
       "filename": "처치_안데스의 심장_1859__artist-romantic-church-work.jpg",
       "bytes": 225813,
@@ -32887,30 +32624,6 @@
       ]
     },
     {
-      "path": "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__gericault-raft-of-medusa.jpg",
-      "filename": "제리코_메두사호의 뗏목_1819__gericault-raft-of-medusa.jpg",
-      "bytes": 717116,
-      "sha256": "930558b0de73d8f6e4ca97f9b3ccfbeb2e3d96958399b0adb14f6b8fce417e8e",
-      "mime": "image/jpeg",
-      "namingStatus": "standard",
-      "aliases": [
-        "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__artist-romantic-gericault-work.jpg"
-      ],
-      "works": [
-        {
-          "artistId": "artist-romantic-gericault",
-          "artistQid": "",
-          "artistNameKo": "테오도르 제리코",
-          "artistNameEn": "Théodore Géricault",
-          "workId": "gericault-raft-of-medusa",
-          "workQid": "",
-          "titleKo": "메두사호의 뗏목",
-          "titleEn": "The Raft of the Medusa",
-          "year": 1819
-        }
-      ]
-    },
-    {
       "path": "data/images/artist-romantic-goya/고야_1808년 5월 3일_1814__artist-romantic-goya-work.jpg",
       "filename": "고야_1808년 5월 3일_1814__artist-romantic-goya-work.jpg",
       "bytes": 234625,
@@ -32987,17 +32700,6 @@
       "grandfatheredAt": "2026-08-29T08:11:45.659Z",
       "aliases": [],
       "works": [
-        {
-          "artistId": "artist-url-1786879941678",
-          "artistQid": "Q5599",
-          "artistNameKo": "페테르 파울 루벤스",
-          "artistNameEn": "Peter Paul Rubens",
-          "workId": "wikidata-Q2667782",
-          "workQid": "Q2667782",
-          "titleKo": "The Descent from the Cross",
-          "titleEn": "The Descent from the Cross",
-          "year": 1611
-        },
         {
           "artistId": "artist-url-1786879941678",
           "artistQid": "Q5599",
@@ -35136,29 +34838,6 @@
       ]
     },
     {
-      "path": "data/images/claude-monet/wikidata-Q105099590.JPG",
-      "filename": "wikidata-Q105099590.JPG",
-      "bytes": 25996,
-      "sha256": "6449849237dce07913e12c1e3b6172032b9cc77a0433bd068341b4df39b4961f",
-      "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:45.776Z",
-      "aliases": [],
-      "works": [
-        {
-          "artistId": "claude-monet",
-          "artistQid": "Q296",
-          "artistNameKo": "클로드 모네",
-          "artistNameEn": "Claude Monet",
-          "workId": "wikidata-Q105099590",
-          "workQid": "Q105099590",
-          "titleKo": "The Artist's House Seen from the Rose Garden",
-          "titleEn": "The Artist's House Seen from the Rose Garden",
-          "year": 1923
-        }
-      ]
-    },
-    {
       "path": "data/images/claude-monet/wikidata-Q105099598.JPG",
       "filename": "wikidata-Q105099598.JPG",
       "bytes": 20347,
@@ -35964,29 +35643,6 @@
       ]
     },
     {
-      "path": "data/images/claude-monet/wikidata-Q328523.jpg",
-      "filename": "wikidata-Q328523.jpg",
-      "bytes": 14072,
-      "sha256": "ed0b201e0091c1664c403ac79ed4bbf98dea5e5c6611a7fc57380e65d023d27c",
-      "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:45.804Z",
-      "aliases": [],
-      "works": [
-        {
-          "artistId": "claude-monet",
-          "artistQid": "Q296",
-          "artistNameKo": "클로드 모네",
-          "artistNameEn": "Claude Monet",
-          "workId": "wikidata-Q328523",
-          "workQid": "Q328523",
-          "titleKo": "인상, 해돋이",
-          "titleEn": "인상, 해돋이",
-          "year": 1872
-        }
-      ]
-    },
-    {
       "path": "data/images/claude-monet/wikidata-Q3454959.jpg",
       "filename": "wikidata-Q3454959.jpg",
       "bytes": 13318,
@@ -36259,29 +35915,6 @@
           "titleKo": "카퓌신 대로",
           "titleEn": "카퓌신 대로",
           "year": 1873
-        }
-      ]
-    },
-    {
-      "path": "data/images/claude-monet/wikidata-Q49985736.jpg",
-      "filename": "wikidata-Q49985736.jpg",
-      "bytes": 18150,
-      "sha256": "cae3ae472f91d39a120c4509540768317ca6453eaa487fba099e56d996d607e5",
-      "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:45.818Z",
-      "aliases": [],
-      "works": [
-        {
-          "artistId": "claude-monet",
-          "artistQid": "Q296",
-          "artistNameKo": "클로드 모네",
-          "artistNameEn": "Claude Monet",
-          "workId": "wikidata-Q49985736",
-          "workQid": "Q49985736",
-          "titleKo": "생라자르역",
-          "titleEn": "생라자르역",
-          "year": 1877
         }
       ]
     },
@@ -36604,17 +36237,6 @@
           "titleKo": "부서진 기둥",
           "titleEn": "The Broken Column",
           "year": 1944
-        },
-        {
-          "artistId": "frida-kahlo",
-          "artistQid": "Q5588",
-          "artistNameKo": "프리다 칼로",
-          "artistNameEn": "Frida Kahlo",
-          "workId": "wikidata-Q21056477",
-          "workQid": "Q21056477",
-          "titleKo": "The Broken Column",
-          "titleEn": "The Broken Column",
-          "year": 1944
         }
       ]
     },
@@ -36638,17 +36260,6 @@
           "titleKo": "상처 입은 사슴",
           "titleEn": "The Wounded Deer",
           "year": 1946
-        },
-        {
-          "artistId": "frida-kahlo",
-          "artistQid": "Q5588",
-          "artistNameKo": "프리다 칼로",
-          "artistNameEn": "Frida Kahlo",
-          "workId": "wikidata-Q21010270",
-          "workQid": "Q21010270",
-          "titleKo": "The Wounded Deer",
-          "titleEn": "The Wounded Deer",
-          "year": 1946
         }
       ]
     },
@@ -36670,17 +36281,6 @@
           "workId": "two-fridas",
           "workQid": "",
           "titleKo": "두 명의 프리다",
-          "titleEn": "The Two Fridas",
-          "year": 1939
-        },
-        {
-          "artistId": "frida-kahlo",
-          "artistQid": "Q5588",
-          "artistNameKo": "프리다 칼로",
-          "artistNameEn": "Frida Kahlo",
-          "workId": "wikidata-Q3232010",
-          "workQid": "Q3232010",
-          "titleKo": "The Two Fridas",
           "titleEn": "The Two Fridas",
           "year": 1939
         }
@@ -38251,29 +37851,6 @@
       ]
     },
     {
-      "path": "data/images/vincent-van-gogh/wikidata-Q26221226.jpg",
-      "filename": "wikidata-Q26221226.jpg",
-      "bytes": 18953,
-      "sha256": "e31878b0afd9dd6534ff557b473e41bb32a5ee677113f214bc8e70e284d0e746",
-      "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:45.882Z",
-      "aliases": [],
-      "works": [
-        {
-          "artistId": "vincent-van-gogh",
-          "artistQid": "Q5582",
-          "artistNameKo": "빈센트 반 고흐",
-          "artistNameEn": "Vincent van Gogh",
-          "workId": "wikidata-Q26221226",
-          "workQid": "Q26221226",
-          "titleKo": "Daubigny's Garden",
-          "titleEn": "Daubigny's Garden",
-          "year": 1890
-        }
-      ]
-    },
-    {
       "path": "data/images/vincent-van-gogh/wikidata-Q26221233.jpg",
       "filename": "wikidata-Q26221233.jpg",
       "bytes": 29287,
@@ -38454,29 +38031,6 @@
           "titleKo": "종달새가 있는 밀밭",
           "titleEn": "Wheat Field with a Lark",
           "year": 1887
-        }
-      ]
-    },
-    {
-      "path": "data/images/vincent-van-gogh/wikidata-Q27700844.jpg",
-      "filename": "wikidata-Q27700844.jpg",
-      "bytes": 18548,
-      "sha256": "6d79f17cc506a6d9eac5721d5ef1fc490cbd5b5161f6fde08d8185aa9301fb41",
-      "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:45.886Z",
-      "aliases": [],
-      "works": [
-        {
-          "artistId": "vincent-van-gogh",
-          "artistQid": "Q5582",
-          "artistNameKo": "빈센트 반 고흐",
-          "artistNameEn": "Vincent van Gogh",
-          "workId": "wikidata-Q27700844",
-          "workQid": "Q27700844",
-          "titleKo": "Daubigny's Garden",
-          "titleEn": "Daubigny's Garden",
-          "year": 1890
         }
       ]
     },

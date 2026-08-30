@@ -4656,20 +4656,20 @@
             }
           },
           "work": {
-            "id": "guardi-doges-palace",
+            "id": "guardi-cannaregio-canal-venice",
             "title": {
-              "ko": "리바 델리 스키아보니와 피아체타의 풍경",
-              "en": "View of the Riva degli Schiavoni and the Piazzetta"
+              "ko": "베니스의 카나레지오 운하 풍경",
+              "en": "View of the Cannaregio Canal in Venice"
             },
             "year": 1770,
             "yearLabel": "1770년경",
-            "localImage": "data/images/artist-mid-francesco-guardi/guardi-doges-palace.jpg",
-            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Francesco_Guardi_-_View_of_the_Riva_degli_Schiavoni_and_the_Piazzetta_-_P25w47_-_Isabella_Stewart_Gardner_Museum.jpg",
-            "license": "Public domain",
-            "institution": "Wikimedia Commons"
+            "localImage": "data/images/artist-mid-francesco-guardi/과르디_베니스의 카나레지오 운하_1770__guardi-cannaregio-canal-venice.jpg",
+            "sourceUrl": "",
+            "license": "local user-provided file",
+            "institution": ""
           },
           "selectionReason": "과르디는 베네치아 로코코의 도시 풍경을 정확한 기록보다 빛과 흔들리는 대기의 인상으로 바꾼 화가다.",
-          "description": "물과 건축이 빠르고 가벼운 붓질 속에서 반짝여 베네치아적 감각성을 드러낸다. 카날레토보다 불안정한 선과 은회색 빛으로 쇠퇴기의 시정을 만든 점은 과르디만의 특성이다."
+          "description": "비스듬히 열린 운하와 건물, 작은 배와 인물들이 흔들리는 빛 속에서 이어진다. 카날레토의 정밀한 베두타보다 더 빠르고 떨리는 붓질로 베네치아의 대기와 물빛을 붙잡은 점이 과르디의 개성을 잘 보여 준다."
         }
       ]
     },
@@ -4890,14 +4890,14 @@
             }
           },
           "work": {
-            "id": "gericault-raft-of-medusa",
+            "id": "artist-romantic-gericault-work",
             "title": {
               "ko": "메두사호의 뗏목",
               "en": "The Raft of the Medusa"
             },
             "year": 1819,
             "yearLabel": "1818-1819",
-            "localImage": "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__gericault-raft-of-medusa.jpg",
+            "localImage": "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__artist-romantic-gericault-work.jpg",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Th%C3%A9odore_G%C3%A9ricault_%22The_raft_of_the_Medusa%22.jpg",
             "sourceUrls": [
               "https://commons.wikimedia.org/wiki/File:Th%C3%A9odore_G%C3%A9ricault_%22The_raft_of_the_Medusa%22.jpg",

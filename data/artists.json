@@ -2,10 +2,10 @@
   "dataSchema": 1,
   "metadata": {
     "createdAt": "2026-08-22T12:46:59.824Z",
-    "updatedAt": "2026-08-30T07:01:55.080Z",
+    "updatedAt": "2026-08-30T10:52:56.016Z",
     "createdBy": "jhlee409@gmail.com",
     "updatedBy": "jhlee409@gmail.com",
-    "revision": 909,
+    "revision": 916,
     "representativeContentSchema": 2
   },
   "artists": [
@@ -4439,9 +4439,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-21T11:02:06.057Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "featuredWorkIds": [
         "wikidata-Q734834",
@@ -7127,9 +7127,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-21T10:24:32.488Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "movement": {
         "ko": "이탈리아 르네상스",
@@ -9342,59 +9342,6 @@
           "thumbnailCacheKey": "2026-08-29T04:19:33.892Z"
         },
         {
-          "id": "wikidata-Q3842485",
-          "year": 1506,
-          "popularity": 8,
-          "title": {
-            "ko": "Madonna and Child",
-            "en": "Madonna and Child"
-          },
-          "country": {
-            "ko": "",
-            "en": ""
-          },
-          "movement": {
-            "ko": "",
-            "en": ""
-          },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%20-%20Madonna%20con%20Bambino%2C%201510%20circa%20o%201502-1503%2C%20176.jpg",
-          "description": {
-            "ko": "painting by Giovanni Bellini in the Galleria Borghese",
-            "en": "painting by Giovanni Bellini in the Galleria Borghese"
-          },
-          "source": "http://www.wikidata.org/entity/Q3842485",
-          "verified": true,
-          "representative": false,
-          "movementContribution": false,
-          "thumbnail": "data/images/artist-Q17169/wikidata-Q3842483.jpg",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-20T09:17:22.468Z",
-          "metadata": {
-            "createdAt": "2026-08-20T21:06:04.319Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/artist-Q17169/wikidata-Q3842483.jpg",
-              "highResolution": "data/images/artist-Q17169/wikidata-Q3842483.jpg",
-              "sourceUrl": "http://www.wikidata.org/entity/Q3842485",
-              "sourceUrls": [
-                "http://www.wikidata.org/entity/Q3842485",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Bellini%20-%20Madonna%20con%20Bambino%2C%201510%20circa%20o%201502-1503%2C%20176.jpg"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "highResImage": "data/images/artist-Q17169/wikidata-Q3842483.jpg",
-          "highResOriginal": "data/images/artist-Q17169/wikidata-Q3842483.jpg",
-          "imageUploadStatus": "ready"
-        },
-        {
           "id": "wikidata-Q658825",
           "year": 1506,
           "popularity": 7,
@@ -10030,9 +9977,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-20T06:40:08.305Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "links": [
         {
@@ -12335,7 +12282,7 @@
           "thumbnailCacheKey": "2026-08-29T05:01:57.129Z",
           "metadata": {
             "createdAt": "2026-08-20T20:46:28.386Z",
-            "updatedAt": "2026-08-29T21:43:52.054Z",
+            "updatedAt": "2026-08-30T10:45:30.295Z",
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -14123,7 +14070,7 @@
       ],
       "metadata": {
         "createdAt": "2026-08-10T13:50:59.717Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-30T10:45:30.295Z",
         "createdBy": "migration-tool",
         "updatedBy": "jhlee409@gmail.com"
       },
@@ -14960,9 +14907,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-22T02:54:46.266Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "local image import",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "links": [
         {
@@ -17127,169 +17074,6 @@
       },
       "works": [
         {
-          "id": "wikipedia-Q5592-0",
-          "year": 1491,
-          "title": {
-            "ko": "The Madonna of the Stairs (1490–1492)",
-            "en": "The Madonna of the Stairs (1490–1492)"
-          },
-          "country": {
-            "ko": "피렌체 공화국",
-            "en": "Republic of Florence"
-          },
-          "movement": {
-            "ko": "",
-            "en": ""
-          },
-          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Michelangelo%2C_madonna_della_scala%2C_1491_ca%2C_01.JPG/250px-Michelangelo%2C_madonna_della_scala%2C_1491_ca%2C_01.JPG?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
-          "description": {
-            "ko": "",
-            "en": ""
-          },
-          "source": "https://en.wikipedia.org/wiki/Michelangelo",
-          "verified": true,
-          "popularity": 999,
-          "movementContribution": true,
-          "movementContributionReason": "artist-movement-characteristic",
-          "representative": true,
-          "thumbnail": "data/images/artist-Q5592/michelangelo-madonna-stairs.JPG",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-22T12:46:25.429Z",
-          "metadata": {
-            "createdAt": "2026-08-20T20:16:13.846Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/artist-Q5592/michelangelo-madonna-stairs.JPG",
-              "highResolution": "data/images/artist-Q5592/michelangelo-madonna-stairs.JPG",
-              "sourceUrl": "https://en.wikipedia.org/wiki/Michelangelo",
-              "sourceUrls": [
-                "https://en.wikipedia.org/wiki/Michelangelo",
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Michelangelo%2C_madonna_della_scala%2C_1491_ca%2C_01.JPG/250px-Michelangelo%2C_madonna_della_scala%2C_1491_ca%2C_01.JPG?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "origin": "manual",
-          "highResImage": "data/images/artist-Q5592/michelangelo-madonna-stairs.JPG",
-          "highResOriginal": "data/images/artist-Q5592/michelangelo-madonna-stairs.JPG",
-          "imageUploadStatus": "ready"
-        },
-        {
-          "id": "wikipedia-Q5592-4",
-          "year": 1495,
-          "title": {
-            "ko": "Angel by Michelangelo, early work (1494–95)",
-            "en": "Angel by Michelangelo, early work (1494–95)"
-          },
-          "country": {
-            "ko": "피렌체 공화국",
-            "en": "Republic of Florence"
-          },
-          "movement": {
-            "ko": "",
-            "en": ""
-          },
-          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Autori_vari%2C_arca_di_san_domenico%2C_angelo_reggicandelabro_di_michelangelo%2C_1494%2C_02.jpg/250px-Autori_vari%2C_arca_di_san_domenico%2C_angelo_reggicandelabro_di_michelangelo%2C_1494%2C_02.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
-          "description": {
-            "ko": "",
-            "en": ""
-          },
-          "source": "https://en.wikipedia.org/wiki/Michelangelo",
-          "verified": true,
-          "popularity": 995,
-          "movementContribution": false,
-          "representative": false,
-          "thumbnail": "data/images/artist-Q5592/wikipedia-Q5592-4.jpg",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-22T12:46:28.822Z",
-          "metadata": {
-            "createdAt": "2026-08-20T20:16:13.846Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/artist-Q5592/wikipedia-Q5592-4.jpg",
-              "highResolution": "data/images/artist-Q5592/wikipedia-Q5592-4.jpg",
-              "sourceUrl": "https://en.wikipedia.org/wiki/Michelangelo",
-              "sourceUrls": [
-                "https://en.wikipedia.org/wiki/Michelangelo",
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Autori_vari%2C_arca_di_san_domenico%2C_angelo_reggicandelabro_di_michelangelo%2C_1494%2C_02.jpg/250px-Autori_vari%2C_arca_di_san_domenico%2C_angelo_reggicandelabro_di_michelangelo%2C_1494%2C_02.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "origin": "manual",
-          "highResImage": "data/images/artist-Q5592/wikipedia-Q5592-4.jpg",
-          "highResOriginal": "data/images/artist-Q5592/wikipedia-Q5592-4.jpg",
-          "imageUploadStatus": "ready"
-        },
-        {
-          "id": "wikipedia-Q5592-5",
-          "year": 1497,
-          "title": {
-            "ko": "Bacchus by Michelangelo, early work (1496–1497)",
-            "en": "Bacchus by Michelangelo, early work (1496–1497)"
-          },
-          "country": {
-            "ko": "피렌체 공화국",
-            "en": "Republic of Florence"
-          },
-          "movement": {
-            "ko": "",
-            "en": ""
-          },
-          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Michelangelo_Bacchus.jpg/120px-Michelangelo_Bacchus.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
-          "description": {
-            "ko": "",
-            "en": ""
-          },
-          "source": "https://en.wikipedia.org/wiki/Michelangelo",
-          "verified": true,
-          "popularity": 994,
-          "movementContribution": false,
-          "representative": false,
-          "thumbnail": "data/images/artist-Q5592/michelangelo-bacchus.jpg",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-22T12:46:31.979Z",
-          "metadata": {
-            "createdAt": "2026-08-20T20:16:13.846Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/artist-Q5592/michelangelo-bacchus.jpg",
-              "highResolution": "data/images/artist-Q5592/michelangelo-bacchus.jpg",
-              "sourceUrl": "https://en.wikipedia.org/wiki/Michelangelo",
-              "sourceUrls": [
-                "https://en.wikipedia.org/wiki/Michelangelo",
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Michelangelo_Bacchus.jpg/120px-Michelangelo_Bacchus.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "origin": "manual",
-          "highResImage": "data/images/artist-Q5592/michelangelo-bacchus.jpg",
-          "highResOriginal": "data/images/artist-Q5592/michelangelo-bacchus.jpg",
-          "imageUploadStatus": "ready"
-        },
-        {
           "id": "wikipedia-Q5592-8",
           "year": 1511,
           "title": {
@@ -17396,60 +17180,6 @@
           "imageUploadStatus": "ready",
           "thumbnailValidation": 2,
           "thumbnailCacheKey": "2026-08-29T04:23:41.298Z"
-        },
-        {
-          "id": "wikipedia-Q5592-12",
-          "year": 1492,
-          "title": {
-            "ko": "Battle of the Centaurs",
-            "en": "Battle of the Centaurs"
-          },
-          "country": {
-            "ko": "피렌체 공화국",
-            "en": "Republic of Florence"
-          },
-          "movement": {
-            "ko": "",
-            "en": ""
-          },
-          "image": "data/images/artist-Q5592/wikipedia-Q5592-11.jpg",
-          "description": {
-            "ko": "",
-            "en": ""
-          },
-          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Battle_of_the_Centaurs_by_Michelangelo_(casting_in_Pushkin_museum)_by_shakko_01.jpg",
-          "verified": true,
-          "popularity": 987,
-          "movementContribution": false,
-          "representative": false,
-          "metadata": {
-            "createdAt": "2026-08-20T20:16:13.846Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/artist-Q5592/wikipedia-Q5592-11.jpg",
-              "highResolution": "data/images/artist-Q5592/wikipedia-Q5592-11.jpg",
-              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Battle_of_the_Centaurs_by_Michelangelo_(casting_in_Pushkin_museum)_by_shakko_01.jpg",
-              "sourceUrls": [
-                "https://commons.wikimedia.org/wiki/File:Battle_of_the_Centaurs_by_Michelangelo_(casting_in_Pushkin_museum)_by_shakko_01.jpg",
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Battle_of_the_Centaurs_by_Michelangelo_%28casting_in_Pushkin_museum%29_by_shakko_01.jpg/1920px-Battle_of_the_Centaurs_by_Michelangelo_%28casting_in_Pushkin_museum%29_by_shakko_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
-              ],
-              "license": "CC BY-SA 3.0",
-              "institution": "Wikimedia Commons"
-            }
-          },
-          "origin": "manual",
-          "thumbnail": "data/images/artist-Q5592/wikipedia-Q5592-11.jpg",
-          "highResImage": "data/images/artist-Q5592/wikipedia-Q5592-11.jpg",
-          "highResOriginal": "data/images/artist-Q5592/wikipedia-Q5592-11.jpg",
-          "imageUploadStatus": "ready",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-29T04:23:46.360Z"
         },
         {
           "id": "wikipedia-Q5592-13",
@@ -17823,59 +17553,6 @@
           "origin": "manual",
           "highResImage": "data/images/artist-Q5592/michelangelo-madonna-stairs.JPG",
           "highResOriginal": "data/images/artist-Q5592/michelangelo-madonna-stairs.JPG",
-          "imageUploadStatus": "ready"
-        },
-        {
-          "id": "michelangelo-battle-centaurs",
-          "year": 1492,
-          "title": {
-            "ko": "켄타우로스의 전투",
-            "en": "Battle of the Centaurs"
-          },
-          "country": {
-            "ko": "피렌체 공화국",
-            "en": "Republic of Florence"
-          },
-          "movement": {
-            "ko": "전성기 르네상스",
-            "en": "High Renaissance"
-          },
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%2C%20centauromachia%2C%201492%20ca.%2001%20crop.JPG",
-          "description": {
-            "ko": "고전 신화를 격렬한 인체 군상으로 다룬 초기 대리석 부조입니다.",
-            "en": "An early marble relief that turns a classical myth into a dense, energetic study of the human body."
-          },
-          "source": "https://en.wikipedia.org/wiki/Battle_of_the_Centaurs_(Michelangelo)",
-          "representative": true,
-          "popularity": 970,
-          "thumbnail": "data/images/artist-Q5592/michelangelo-battle-centaurs.JPG",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-10T22:47:03.833Z",
-          "metadata": {
-            "createdAt": "2026-08-10T22:00:49.085Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
-            "createdBy": "migration-tool",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/artist-Q5592/michelangelo-battle-centaurs.JPG",
-              "highResolution": "data/images/artist-Q5592/michelangelo-battle-centaurs.JPG",
-              "sourceUrl": "https://en.wikipedia.org/wiki/Battle_of_the_Centaurs_(Michelangelo)",
-              "sourceUrls": [
-                "https://en.wikipedia.org/wiki/Battle_of_the_Centaurs_(Michelangelo)",
-                "https://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%2C%20centauromachia%2C%201492%20ca.%2001%20crop.JPG"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "movementContribution": false,
-          "origin": "manual",
-          "highResImage": "data/images/artist-Q5592/michelangelo-battle-centaurs.JPG",
-          "highResOriginal": "data/images/artist-Q5592/michelangelo-battle-centaurs.JPG",
           "imageUploadStatus": "ready"
         },
         {
@@ -18570,113 +18247,6 @@
           "imageUploadStatus": "ready"
         },
         {
-          "id": "wikipedia-Q5592-2",
-          "year": 1504,
-          "title": {
-            "ko": "Madonna of Bruges",
-            "en": "Madonna of Bruges"
-          },
-          "country": {
-            "ko": "피렌체 공화국",
-            "en": "Republic of Florence"
-          },
-          "movement": {
-            "ko": "",
-            "en": ""
-          },
-          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Madonna_michelangelo1.jpg/250px-Madonna_michelangelo1.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
-          "description": {
-            "ko": "",
-            "en": ""
-          },
-          "source": "https://en.wikipedia.org/wiki/Michelangelo",
-          "verified": true,
-          "popularity": 997,
-          "movementContribution": true,
-          "movementContributionReason": "artist-movement-characteristic",
-          "representative": false,
-          "thumbnail": "data/images/artist-Q5592/wikipedia-Q5592-2.jpg",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-22T12:46:25.868Z",
-          "metadata": {
-            "createdAt": "2026-08-20T20:16:13.846Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/artist-Q5592/wikipedia-Q5592-2.jpg",
-              "highResolution": "data/images/artist-Q5592/wikipedia-Q5592-2.jpg",
-              "sourceUrl": "https://en.wikipedia.org/wiki/Michelangelo",
-              "sourceUrls": [
-                "https://en.wikipedia.org/wiki/Michelangelo",
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Madonna_michelangelo1.jpg/250px-Madonna_michelangelo1.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "highResImage": "data/images/artist-Q5592/wikipedia-Q5592-2.jpg",
-          "highResOriginal": "data/images/artist-Q5592/wikipedia-Q5592-2.jpg",
-          "imageUploadStatus": "ready"
-        },
-        {
-          "id": "wikipedia-Q5592-3",
-          "year": 1504,
-          "title": {
-            "ko": "The Doni Tondo (1504–1506)",
-            "en": "The Doni Tondo (1504–1506)"
-          },
-          "country": {
-            "ko": "피렌체 공화국",
-            "en": "Republic of Florence"
-          },
-          "movement": {
-            "ko": "",
-            "en": ""
-          },
-          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Tondo_Doni%2C_por_Miguel_%C3%81ngel.jpg/250px-Tondo_Doni%2C_por_Miguel_%C3%81ngel.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
-          "description": {
-            "ko": "",
-            "en": ""
-          },
-          "source": "https://en.wikipedia.org/wiki/Michelangelo",
-          "verified": true,
-          "popularity": 996,
-          "movementContribution": false,
-          "representative": false,
-          "thumbnail": "data/images/artist-Q5592/michelangelo-doni-tondo.jpg",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-22T12:46:26.106Z",
-          "metadata": {
-            "createdAt": "2026-08-20T20:16:13.846Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/artist-Q5592/michelangelo-doni-tondo.jpg",
-              "highResolution": "data/images/artist-Q5592/michelangelo-doni-tondo.jpg",
-              "sourceUrl": "https://en.wikipedia.org/wiki/Michelangelo",
-              "sourceUrls": [
-                "https://en.wikipedia.org/wiki/Michelangelo",
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Tondo_Doni%2C_por_Miguel_%C3%81ngel.jpg/250px-Tondo_Doni%2C_por_Miguel_%C3%81ngel.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "highResImage": "data/images/artist-Q5592/michelangelo-doni-tondo.jpg",
-          "highResOriginal": "data/images/artist-Q5592/michelangelo-doni-tondo.jpg",
-          "imageUploadStatus": "ready"
-        },
-        {
           "id": "wikidata-Q785767",
           "year": 1504,
           "popularity": 14,
@@ -19151,58 +18721,6 @@
           "imageUploadStatus": "ready",
           "thumbnailValidation": 2,
           "thumbnailCacheKey": "2026-08-29T05:31:12.108Z"
-        },
-        {
-          "id": "wikidata-Q500242",
-          "year": 1511,
-          "popularity": 61,
-          "title": {
-            "ko": "아담의 창조",
-            "en": "아담의 창조"
-          },
-          "country": {
-            "ko": "",
-            "en": ""
-          },
-          "movement": {
-            "ko": "전성기 르네상스",
-            "en": "전성기 르네상스"
-          },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Creation%20of%20Adam%20perspective%20fix.jpg",
-          "thumbnail": "data/images/artist-Q5592/michelangelo-creation-of-adam.jpg",
-          "highResImage": "data/images/artist-Q5592/michelangelo-creation-of-adam.jpg",
-          "highResOriginal": "data/images/artist-Q5592/michelangelo-creation-of-adam.jpg",
-          "imageUploadStatus": "ready",
-          "thumbnailValidation": 2,
-          "description": {
-            "ko": "미켈란젤로의 프레스코화",
-            "en": "미켈란젤로의 프레스코화"
-          },
-          "source": "http://www.wikidata.org/entity/Q500242",
-          "verified": true,
-          "representative": false,
-          "movementContribution": false,
-          "metadata": {
-            "createdAt": "2026-08-20T20:16:13.846Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/artist-Q5592/michelangelo-creation-of-adam.jpg",
-              "highResolution": "data/images/artist-Q5592/michelangelo-creation-of-adam.jpg",
-              "sourceUrl": "http://www.wikidata.org/entity/Q500242",
-              "sourceUrls": [
-                "http://www.wikidata.org/entity/Q500242",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Creation%20of%20Adam%20perspective%20fix.jpg"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          }
         },
         {
           "id": "wikipedia-Q5592-6",
@@ -19893,59 +19411,6 @@
           "imageUploadStatus": "ready"
         },
         {
-          "id": "michelangelo-crucifixion-st-peter",
-          "year": 1550,
-          "title": {
-            "ko": "성 베드로의 십자가형",
-            "en": "The Crucifixion of St. Peter"
-          },
-          "country": {
-            "ko": "교황령",
-            "en": "Papal States"
-          },
-          "movement": {
-            "ko": "매너리즘",
-            "en": "Mannerism"
-          },
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%2C%20paolina%2C%20martirio%20di%20san%20pietro%2001.jpg",
-          "description": {
-            "ko": "바티칸 파올리나 경당을 위한 후기 프레스코로, 미켈란젤로의 마지막 주요 회화 작업 중 하나입니다.",
-            "en": "A late fresco for the Pauline Chapel in the Vatican and one of Michelangelo's final major painting projects."
-          },
-          "source": "https://en.wikipedia.org/wiki/The_Crucifixion_of_St._Peter_(Michelangelo)",
-          "representative": true,
-          "popularity": 900,
-          "thumbnail": "data/images/artist-Q5592/michelangelo-crucifixion-st-peter.jpg",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-10T22:55:03.531Z",
-          "metadata": {
-            "createdAt": "2026-08-10T22:00:49.085Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
-            "createdBy": "migration-tool",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/artist-Q5592/michelangelo-crucifixion-st-peter.jpg",
-              "highResolution": "data/images/artist-Q5592/michelangelo-crucifixion-st-peter.jpg",
-              "sourceUrl": "https://en.wikipedia.org/wiki/The_Crucifixion_of_St._Peter_(Michelangelo)",
-              "sourceUrls": [
-                "https://en.wikipedia.org/wiki/The_Crucifixion_of_St._Peter_(Michelangelo)",
-                "https://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%2C%20paolina%2C%20martirio%20di%20san%20pietro%2001.jpg"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "movementContribution": false,
-          "origin": "manual",
-          "highResImage": "data/images/artist-Q5592/michelangelo-crucifixion-st-peter.jpg",
-          "highResOriginal": "data/images/artist-Q5592/michelangelo-crucifixion-st-peter.jpg",
-          "imageUploadStatus": "ready"
-        },
-        {
           "id": "wikidata-Q1878666",
           "year": 1564,
           "popularity": 21,
@@ -20075,10 +19540,10 @@
           "representative": false,
           "thumbnail": "data/images/artist-Q5592/wikidata-Q2454248.JPG",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-10T22:02:11.453Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.775Z",
           "metadata": {
             "createdAt": "2026-08-10T22:00:49.085Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "updatedAt": "2026-08-30T10:01:05.327Z",
             "createdBy": "migration-tool",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -20130,10 +19595,10 @@
           "representative": false,
           "thumbnail": "data/images/artist-Q5592/wikidata-Q2626926.jpg",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-10T22:47:04.768Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.776Z",
           "metadata": {
             "createdAt": "2026-08-10T22:00:49.085Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "updatedAt": "2026-08-30T10:01:05.327Z",
             "createdBy": "migration-tool",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -20185,10 +19650,10 @@
           "representative": false,
           "thumbnail": "data/images/artist-Q5592/wikidata-Q2417706.jpg",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-10T22:04:01.893Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.768Z",
           "metadata": {
             "createdAt": "2026-08-10T22:00:49.085Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "updatedAt": "2026-08-30T10:01:05.327Z",
             "createdBy": "migration-tool",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -20240,10 +19705,10 @@
           "representative": false,
           "thumbnail": "data/images/artist-Q5592/wikidata-Q581925.jpg",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-10T22:47:34.131Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.793Z",
           "metadata": {
             "createdAt": "2026-08-10T22:00:49.085Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "updatedAt": "2026-08-30T10:01:05.327Z",
             "createdBy": "migration-tool",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -20294,10 +19759,10 @@
           "representative": false,
           "thumbnail": "data/images/artist-Q5592/wikidata-Q3613121.jpg",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-10T22:47:37.015Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.780Z",
           "metadata": {
             "createdAt": "2026-08-10T22:00:49.085Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "updatedAt": "2026-08-30T10:01:05.327Z",
             "createdBy": "migration-tool",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -20349,10 +19814,10 @@
           "representative": false,
           "thumbnail": "data/images/artist-Q5592/wikidata-Q3482971.jpg",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-10T22:49:05.037Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.779Z",
           "metadata": {
             "createdAt": "2026-08-10T22:00:49.085Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "updatedAt": "2026-08-30T10:01:05.327Z",
             "createdBy": "migration-tool",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -20404,10 +19869,10 @@
           "representative": false,
           "thumbnail": "data/images/artist-Q5592/wikidata-Q3701849.jpg",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-10T22:49:06.791Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.783Z",
           "metadata": {
             "createdAt": "2026-08-10T22:00:49.085Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "updatedAt": "2026-08-30T10:01:05.327Z",
             "createdBy": "migration-tool",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -20459,10 +19924,10 @@
           "representative": false,
           "thumbnail": "data/images/artist-Q5592/wikidata-Q3707697.jpg",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-10T23:33:16.623Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.784Z",
           "metadata": {
             "createdAt": "2026-08-10T22:00:49.085Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "updatedAt": "2026-08-30T10:01:05.327Z",
             "createdBy": "migration-tool",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -20514,10 +19979,10 @@
           "representative": false,
           "thumbnail": "data/images/artist-Q5592/wikidata-Q3944655.jpg",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-10T22:49:05.790Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.790Z",
           "metadata": {
             "createdAt": "2026-08-10T22:00:49.085Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "updatedAt": "2026-08-30T10:01:05.327Z",
             "createdBy": "migration-tool",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -20569,10 +20034,10 @@
           "representative": false,
           "thumbnail": "data/images/artist-Q5592/wikidata-Q3898510.jpg",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-10T22:50:04.072Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.787Z",
           "metadata": {
             "createdAt": "2026-08-10T22:00:49.085Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "updatedAt": "2026-08-30T10:01:05.327Z",
             "createdBy": "migration-tool",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -20627,10 +20092,10 @@
           "thumbnail": "data/images/artist-Q5592/wikidata-Q3696827.jpg",
           "thumbnailValidation": 2,
           "metadataVerifiedAt": "2026-08-20T20:16:16.484Z",
-          "thumbnailCacheKey": "2026-08-10T22:50:04.833Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.781Z",
           "metadata": {
             "createdAt": "2026-08-20T20:16:13.846Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "updatedAt": "2026-08-30T10:01:05.327Z",
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -20651,59 +20116,6 @@
           },
           "highResImage": "data/images/artist-Q5592/wikidata-Q3696827.jpg",
           "highResOriginal": "data/images/artist-Q5592/wikidata-Q3696827.jpg",
-          "imageUploadStatus": "ready"
-        },
-        {
-          "id": "michelangelo-creation-adam",
-          "year": 1512,
-          "title": {
-            "ko": "아담의 창조",
-            "en": "The Creation of Adam"
-          },
-          "country": {
-            "ko": "교황령",
-            "en": "Papal States"
-          },
-          "movement": {
-            "ko": "전성기 르네상스",
-            "en": "High Renaissance"
-          },
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%20-%20Creation%20of%20Adam%20(cropped).jpg",
-          "description": {
-            "ko": "시스티나 성당 천장화 중 가장 유명한 장면으로, 신과 아담의 손이 맞닿기 직전의 순간을 그렸습니다.",
-            "en": "The most famous scene from the Sistine ceiling, showing the charged instant before God and Adam touch."
-          },
-          "source": "https://en.wikipedia.org/wiki/The_Creation_of_Adam",
-          "representative": true,
-          "popularity": 10000,
-          "thumbnail": "data/images/artist-Q5592/michelangelo-creation-adam.jpg",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-10T22:50:05.513Z",
-          "metadata": {
-            "createdAt": "2026-08-10T22:00:49.085Z",
-            "updatedAt": "2026-08-22T12:53:22.694Z",
-            "createdBy": "migration-tool",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/artist-Q5592/michelangelo-creation-adam.jpg",
-              "highResolution": "data/images/artist-Q5592/michelangelo-creation-adam.jpg",
-              "sourceUrl": "https://en.wikipedia.org/wiki/The_Creation_of_Adam",
-              "sourceUrls": [
-                "https://en.wikipedia.org/wiki/The_Creation_of_Adam",
-                "https://commons.wikimedia.org/wiki/Special:FilePath/Michelangelo%20-%20Creation%20of%20Adam%20(cropped).jpg"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "movementContribution": false,
-          "origin": "manual",
-          "highResImage": "data/images/artist-Q5592/michelangelo-creation-adam.jpg",
-          "highResOriginal": "data/images/artist-Q5592/michelangelo-creation-adam.jpg",
           "imageUploadStatus": "ready"
         },
         {
@@ -20732,10 +20144,10 @@
           "representative": false,
           "thumbnail": "data/images/artist-Q5592/wikidata-Q3955636.jpg",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-10T22:50:06.497Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.792Z",
           "metadata": {
             "createdAt": "2026-08-10T22:00:49.085Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "updatedAt": "2026-08-30T10:01:05.327Z",
             "createdBy": "migration-tool",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -20787,10 +20199,10 @@
           "representative": false,
           "thumbnail": "data/images/artist-Q5592/wikidata-Q660876.jpg",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-10T22:51:05.771Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.797Z",
           "metadata": {
             "createdAt": "2026-08-10T22:00:49.085Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "updatedAt": "2026-08-30T10:01:05.327Z",
             "createdBy": "migration-tool",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -20845,10 +20257,10 @@
           "thumbnail": "data/images/artist-Q5592/wikidata-Q1984954.jpg",
           "thumbnailValidation": 2,
           "metadataVerifiedAt": "2026-08-20T20:16:16.484Z",
-          "thumbnailCacheKey": "2026-08-10T22:52:05.415Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.763Z",
           "metadata": {
             "createdAt": "2026-08-20T20:16:13.846Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "updatedAt": "2026-08-30T10:01:05.327Z",
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -20900,10 +20312,10 @@
           "thumbnail": "data/images/artist-Q5592/wikidata-Q596683.jpg",
           "thumbnailValidation": 2,
           "metadataVerifiedAt": "2026-08-20T20:16:16.484Z",
-          "thumbnailCacheKey": "2026-08-17T06:27:33.000Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.795Z",
           "metadata": {
             "createdAt": "2026-08-20T20:16:13.846Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "updatedAt": "2026-08-30T10:01:05.327Z",
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -20955,10 +20367,10 @@
           "thumbnail": "data/images/artist-Q5592/wikidata-Q1985154.jpg",
           "thumbnailValidation": 2,
           "metadataVerifiedAt": "2026-08-20T20:16:16.484Z",
-          "thumbnailCacheKey": "2026-08-10T22:52:07.342Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.764Z",
           "metadata": {
             "createdAt": "2026-08-20T20:16:13.846Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "updatedAt": "2026-08-30T10:01:05.327Z",
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -21010,10 +20422,10 @@
           "thumbnail": "data/images/artist-Q5592/wikidata-Q3878834.jpg",
           "thumbnailValidation": 2,
           "metadataVerifiedAt": "2026-08-20T20:16:16.484Z",
-          "thumbnailCacheKey": "2026-08-10T22:52:06.319Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.785Z",
           "metadata": {
             "createdAt": "2026-08-20T20:16:13.846Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "updatedAt": "2026-08-30T10:01:05.327Z",
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -21062,10 +20474,10 @@
           "representative": false,
           "thumbnail": "data/images/artist-Q5592/wikidata-Q3937559.jpg",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-10T22:52:08.360Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.789Z",
           "metadata": {
             "createdAt": "2026-08-10T22:00:49.085Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "updatedAt": "2026-08-30T10:01:05.327Z",
             "createdBy": "migration-tool",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -21120,10 +20532,10 @@
           "thumbnail": "data/images/artist-Q5592/wikidata-Q2154351.jpg",
           "thumbnailValidation": 2,
           "metadataVerifiedAt": "2026-08-20T20:16:16.484Z",
-          "thumbnailCacheKey": "2026-08-10T22:53:05.604Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.765Z",
           "metadata": {
             "createdAt": "2026-08-20T20:16:13.846Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "updatedAt": "2026-08-30T10:01:05.327Z",
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -21175,10 +20587,10 @@
           "thumbnail": "data/images/artist-Q5592/wikidata-Q2438217.jpg",
           "thumbnailValidation": 2,
           "metadataVerifiedAt": "2026-08-20T20:16:16.484Z",
-          "thumbnailCacheKey": "2026-08-10T22:53:07.453Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.773Z",
           "metadata": {
             "createdAt": "2026-08-20T20:16:13.846Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "updatedAt": "2026-08-30T10:01:05.327Z",
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -21226,11 +20638,11 @@
           "verified": true,
           "representative": false,
           "thumbnail": "data/images/artist-Q5592/wikidata-Q2437149.jpg",
-          "thumbnailCacheKey": "2026-08-16T13:16:25.392Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.770Z",
           "thumbnailValidation": 2,
           "metadata": {
             "createdAt": "2026-08-10T22:00:49.085Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "updatedAt": "2026-08-30T10:01:05.327Z",
             "createdBy": "migration-tool",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -21285,10 +20697,10 @@
           "thumbnail": "data/images/artist-Q5592/wikidata-Q2437692.jpg",
           "thumbnailValidation": 2,
           "metadataVerifiedAt": "2026-08-20T20:16:16.484Z",
-          "thumbnailCacheKey": "2026-08-10T22:54:08.053Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.771Z",
           "metadata": {
             "createdAt": "2026-08-20T20:16:13.846Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "updatedAt": "2026-08-30T10:01:05.327Z",
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -21340,10 +20752,10 @@
           "thumbnail": "data/images/artist-Q5592/wikidata-Q2255664.JPG",
           "thumbnailValidation": 2,
           "metadataVerifiedAt": "2026-08-20T20:16:16.484Z",
-          "thumbnailCacheKey": "2026-08-10T22:55:04.457Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.767Z",
           "metadata": {
             "createdAt": "2026-08-20T20:16:13.846Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "updatedAt": "2026-08-30T10:01:05.327Z",
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -21395,10 +20807,10 @@
           "thumbnail": "data/images/artist-Q5592/wikidata-Q2709726.jpg",
           "thumbnailValidation": 2,
           "metadataVerifiedAt": "2026-08-20T20:16:16.484Z",
-          "thumbnailCacheKey": "2026-08-10T22:55:05.383Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.777Z",
           "metadata": {
             "createdAt": "2026-08-20T20:16:13.846Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "updatedAt": "2026-08-30T10:01:05.327Z",
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -21446,11 +20858,11 @@
           "verified": true,
           "representative": false,
           "thumbnail": "data/images/artist-Q5592/wikidata-Q2342843.jpg",
-          "thumbnailCacheKey": "2026-08-16T13:17:47.650Z",
+          "thumbnailCacheKey": "2026-08-29T07:53:52.935Z",
           "thumbnailValidation": 2,
           "metadata": {
             "createdAt": "2026-08-10T22:00:49.085Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "updatedAt": "2026-08-30T10:01:05.327Z",
             "createdBy": "migration-tool",
             "updatedBy": "jhlee409@gmail.com",
             "yearReview": {
@@ -21873,59 +21285,6 @@
           },
           "highResImage": "data/images/artist-Q8459/wikidata-Q3944458.jpg",
           "highResOriginal": "data/images/artist-Q8459/wikidata-Q3944458.jpg",
-          "imageUploadStatus": "ready"
-        },
-        {
-          "id": "wikidata-Q87533881",
-          "year": 1500,
-          "popularity": 0,
-          "title": {
-            "ko": "Judith",
-            "en": "Judith"
-          },
-          "country": {
-            "ko": "",
-            "en": ""
-          },
-          "movement": {
-            "ko": "",
-            "en": ""
-          },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Giuditta-Giorgione.jpg",
-          "description": {
-            "ko": "painting by Giorgione",
-            "en": "painting by Giorgione"
-          },
-          "source": "http://www.wikidata.org/entity/Q87533881",
-          "verified": true,
-          "representative": false,
-          "movementContribution": false,
-          "thumbnail": "data/images/artist-Q8459/wikidata-Q2537695.jpg",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-20T07:34:41.162Z",
-          "metadata": {
-            "createdAt": "2026-08-20T13:39:12.318Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/artist-Q8459/wikidata-Q2537695.jpg",
-              "highResolution": "data/images/artist-Q8459/wikidata-Q2537695.jpg",
-              "sourceUrl": "http://www.wikidata.org/entity/Q87533881",
-              "sourceUrls": [
-                "http://www.wikidata.org/entity/Q87533881",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Giuditta-Giorgione.jpg"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "highResImage": "data/images/artist-Q8459/wikidata-Q2537695.jpg",
-          "highResOriginal": "data/images/artist-Q8459/wikidata-Q2537695.jpg",
           "imageUploadStatus": "ready"
         },
         {
@@ -23720,9 +23079,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-20T07:25:12.388Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -28071,9 +27430,9 @@
       ],
       "metadata": {
         "createdAt": "2026-08-16T03:08:17.761Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "migration-tool",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [
@@ -31210,59 +30569,6 @@
           "imageUploadStatus": "ready"
         },
         {
-          "id": "wikidata-Q4448822",
-          "year": 1563,
-          "popularity": 16,
-          "title": {
-            "ko": "Penitent Magdalene",
-            "en": "Penitent Magdalene"
-          },
-          "country": {
-            "ko": "",
-            "en": ""
-          },
-          "movement": {
-            "ko": "베네치아 화파",
-            "en": "베네치아 화파"
-          },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Titian%20%28Tiziano%20Vecellio%29%2C%20between%201485%20and%201490-1576%20-%20Repentant%20Mary%20Magdalene%20-%20%D0%93%D0%AD-117%20-%20Hermitage%20Museum.jpg",
-          "description": {
-            "ko": "painting by Titian in the Hermitage Museum, Saint Petersburg",
-            "en": "painting by Titian in the Hermitage Museum, Saint Petersburg"
-          },
-          "source": "http://www.wikidata.org/entity/Q4448822",
-          "verified": true,
-          "representative": false,
-          "movementContribution": false,
-          "thumbnail": "data/images/artist-Q47551/wikidata-Q15974339.jpg",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-20T02:55:20.249Z",
-          "metadata": {
-            "createdAt": "2026-08-20T10:20:35.689Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/artist-Q47551/wikidata-Q15974339.jpg",
-              "highResolution": "data/images/artist-Q47551/wikidata-Q15974339.jpg",
-              "sourceUrl": "http://www.wikidata.org/entity/Q4448822",
-              "sourceUrls": [
-                "http://www.wikidata.org/entity/Q4448822",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Titian%20%28Tiziano%20Vecellio%29%2C%20between%201485%20and%201490-1576%20-%20Repentant%20Mary%20Magdalene%20-%20%D0%93%D0%AD-117%20-%20Hermitage%20Museum.jpg"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "highResImage": "data/images/artist-Q47551/wikidata-Q15974339.jpg",
-          "highResOriginal": "data/images/artist-Q47551/wikidata-Q15974339.jpg",
-          "imageUploadStatus": "ready"
-        },
-        {
           "id": "wikidata-Q2920183",
           "year": 1564,
           "popularity": 12,
@@ -31714,8 +31020,7 @@
             }
           },
           "thumbnailCacheKey": "2026-08-20T03:14:15.872Z",
-          "movementContribution": true,
-          "movementContributionReason": "artist-movement-characteristic",
+          "movementContribution": false,
           "highResImage": "data/images/artist-Q47551/manual-local-1787195653407.jpg",
           "highResOriginal": "data/images/artist-Q47551/manual-local-1787195653407.jpg",
           "imageUploadStatus": "ready"
@@ -31946,9 +31251,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-20T02:26:11.396Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "links": [
         {
@@ -32996,9 +32301,9 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-22T09:10:55.892Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "artistSummary": {
         "ko": [],
@@ -34771,7 +34076,7 @@
           },
           "metadata": {
             "createdAt": "2026-08-22T12:46:11.670Z",
-            "updatedAt": "2026-08-29T21:43:52.054Z",
+            "updatedAt": "2026-08-30T10:45:30.295Z",
             "createdBy": "local image import",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -34807,7 +34112,7 @@
       },
       "metadata": {
         "createdAt": "2026-08-22T12:46:11.670Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-30T10:45:30.295Z",
         "createdBy": "jhlee409@gmail.com",
         "updatedBy": "jhlee409@gmail.com"
       },
@@ -37813,9 +37118,9 @@
       ],
       "metadata": {
         "createdAt": "2026-08-23T01:20:01.953Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "local artist import",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "artistSummary": {
         "ko": [],
@@ -40730,61 +40035,6 @@
           "metadataVerifiedAt": "2026-08-21T09:48:04.036Z",
           "highResImage": "data/images/artist-Q43270/wikidata-Q131359656.jpg",
           "highResOriginal": "data/images/artist-Q43270/wikidata-Q131359656.jpg",
-          "imageUploadStatus": "ready"
-        },
-        {
-          "id": "wikidata-Q18686393",
-          "year": 1557,
-          "popularity": 1,
-          "title": {
-            "ko": "Sloth",
-            "en": "Sloth"
-          },
-          "country": {
-            "ko": "",
-            "en": ""
-          },
-          "movement": {
-            "ko": "",
-            "en": ""
-          },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pieter%20Bruegel%20the%20Elder%20-%20Desidia%20%28Sloth%29%2C%201557%20-%20Google%20Art%20Project.jpg",
-          "description": {
-            "ko": "drawing by Pieter Bruegel the Elder",
-            "en": "drawing by Pieter Bruegel the Elder"
-          },
-          "source": "http://www.wikidata.org/entity/Q18686393",
-          "verified": true,
-          "representative": false,
-          "origin": "generated",
-          "thumbnail": "data/images/artist-Q43270/wikidata-Q18686393.jpg",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-11T00:14:03.898Z",
-          "metadata": {
-            "createdAt": "2026-08-11T00:11:54.092Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
-            "createdBy": "migration-tool",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/artist-Q43270/wikidata-Q18686393.jpg",
-              "highResolution": "data/images/artist-Q43270/wikidata-Q18686393.jpg",
-              "sourceUrl": "http://www.wikidata.org/entity/Q18686393",
-              "sourceUrls": [
-                "http://www.wikidata.org/entity/Q18686393",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Pieter%20Bruegel%20the%20Elder%20-%20Desidia%20%28Sloth%29%2C%201557%20-%20Google%20Art%20Project.jpg"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "movementContribution": false,
-          "metadataVerifiedAt": "2026-08-21T09:48:04.036Z",
-          "highResImage": "data/images/artist-Q43270/wikidata-Q18686393.jpg",
-          "highResOriginal": "data/images/artist-Q43270/wikidata-Q18686393.jpg",
           "imageUploadStatus": "ready"
         },
         {
@@ -49608,61 +48858,6 @@
           "imageUploadStatus": "ready"
         },
         {
-          "id": "wikidata-Q57983818",
-          "year": 1600,
-          "popularity": 7,
-          "title": {
-            "ko": "Assumption of the Virgin",
-            "en": "Assumption of the Virgin"
-          },
-          "country": {
-            "ko": "",
-            "en": ""
-          },
-          "movement": {
-            "ko": "",
-            "en": ""
-          },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Assumption%20of%20Mary%20-%20Cerasi%20Chapel%20-%20Santa%20Maria%20del%20Popolo%20-%20Rome%202015.jpg",
-          "description": {
-            "ko": "painting by Annibale Carracci in the Cerasi Chapel, Santa Maria del Popolo",
-            "en": "painting by Annibale Carracci in the Cerasi Chapel, Santa Maria del Popolo"
-          },
-          "source": "http://www.wikidata.org/entity/Q57983818",
-          "verified": true,
-          "representative": false,
-          "movementContribution": false,
-          "origin": "generated",
-          "thumbnail": "data/images/artist-Q7824/wikidata-Q4810381.jpg",
-          "thumbnailValidation": 2,
-          "metadataVerifiedAt": "2026-08-22T20:49:06.534Z",
-          "thumbnailCacheKey": "2026-08-18T01:58:10.351Z",
-          "metadata": {
-            "createdAt": "2026-08-22T20:48:59.725Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/artist-Q7824/wikidata-Q4810381.jpg",
-              "highResolution": "data/images/artist-Q7824/wikidata-Q4810381.jpg",
-              "sourceUrl": "http://www.wikidata.org/entity/Q57983818",
-              "sourceUrls": [
-                "http://www.wikidata.org/entity/Q57983818",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Assumption%20of%20Mary%20-%20Cerasi%20Chapel%20-%20Santa%20Maria%20del%20Popolo%20-%20Rome%202015.jpg"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "highResImage": "data/images/artist-Q7824/wikidata-Q4810381.jpg",
-          "highResOriginal": "data/images/artist-Q7824/wikidata-Q4810381.jpg",
-          "imageUploadStatus": "ready"
-        },
-        {
           "id": "wikidata-Q1227679",
           "year": 1601,
           "popularity": 9,
@@ -51432,9 +50627,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-18T01:06:12.661Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "links": [
         {
@@ -56852,60 +56047,6 @@
           "imageUploadStatus": "ready"
         },
         {
-          "id": "wikidata-Q2667782",
-          "year": 1611,
-          "popularity": 18,
-          "title": {
-            "ko": "The Descent from the Cross",
-            "en": "The Descent from the Cross"
-          },
-          "country": {
-            "ko": "",
-            "en": ""
-          },
-          "movement": {
-            "ko": "",
-            "en": ""
-          },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Peter%20Paul%20Rubens%20-%20Descent%20from%20the%20Cross%20-%20WGA20212.jpg",
-          "description": {
-            "ko": "triptych by Peter Paul Rubens in Cathedral of Our Lady, Antwerp",
-            "en": "triptych by Peter Paul Rubens in Cathedral of Our Lady, Antwerp"
-          },
-          "source": "http://www.wikidata.org/entity/Q2667782",
-          "verified": true,
-          "representative": false,
-          "movementContribution": false,
-          "origin": "generated",
-          "metadataVerifiedAt": "2026-08-22T20:51:12.816Z",
-          "metadata": {
-            "createdAt": "2026-08-22T20:51:10.793Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/artist-url-1786879941678/rubens-descent-antwerp-1612.jpg",
-              "highResolution": "data/images/artist-url-1786879941678/rubens-descent-antwerp-1612.jpg",
-              "sourceUrl": "http://www.wikidata.org/entity/Q2667782",
-              "sourceUrls": [
-                "http://www.wikidata.org/entity/Q2667782",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Peter%20Paul%20Rubens%20-%20Descent%20from%20the%20Cross%20-%20WGA20212.jpg"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "thumbnail": "data/images/artist-url-1786879941678/rubens-descent-antwerp-1612.jpg",
-          "highResImage": "data/images/artist-url-1786879941678/rubens-descent-antwerp-1612.jpg",
-          "highResOriginal": "data/images/artist-url-1786879941678/rubens-descent-antwerp-1612.jpg",
-          "imageUploadStatus": "ready",
-          "thumbnailValidation": 2
-        },
-        {
           "id": "wikidata-Q1247103",
           "year": 1611,
           "popularity": 17,
@@ -59765,9 +58906,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-16T11:39:39.817Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "migration-tool",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "profileResolved": true,
       "aliases": {
@@ -60152,7 +59293,7 @@
           },
           "metadata": {
             "createdAt": "2026-08-23T09:29:08.209Z",
-            "updatedAt": "2026-08-29T21:43:52.054Z",
+            "updatedAt": "2026-08-30T10:45:30.295Z",
             "createdBy": "local download import",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -60173,8 +59314,7 @@
             }
           },
           "movementContributionReason": "movement-further-study",
-          "thumbnail": "data/images/artist-Q167654/frans-hals-laughing-cavalier-1624.png",
-          "imageUploadStatus": "ready"
+          "thumbnail": "data/images/artist-Q167654/frans-hals-laughing-cavalier-1624.png"
         },
         {
           "id": "frans-hals-banquet-st-hadrian-1627",
@@ -60618,7 +59758,7 @@
       ],
       "metadata": {
         "createdAt": "2026-08-23T09:17:00.101Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-30T10:45:30.295Z",
         "createdBy": "jhlee409@gmail.com",
         "updatedBy": "jhlee409@gmail.com"
       },
@@ -63814,57 +62954,6 @@
             }
           },
           "imageUploadStatus": "ready"
-        },
-        {
-          "id": "wikidata-Q945850",
-          "year": 1622,
-          "popularity": 1,
-          "title": {
-            "ko": "Apollo and Daphne",
-            "en": "Apollo and Daphne"
-          },
-          "country": {
-            "ko": "",
-            "en": ""
-          },
-          "movement": {
-            "ko": "바로크",
-            "en": "바로크"
-          },
-          "image": "data/images/artist-Q160538/wikidata-Q945850.jpg",
-          "description": {
-            "ko": "",
-            "en": ""
-          },
-          "source": "https://www.wikidata.org/entity/Q945850",
-          "verified": true,
-          "representative": false,
-          "movementContribution": false,
-          "metadata": {
-            "createdAt": "2026-08-29T07:18:20.749Z",
-            "updatedAt": "2026-08-29T21:43:52.054Z",
-            "createdBy": "metadata-recovery",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "thumbnail": "data/images/artist-Q160538/wikidata-Q945850.jpg",
-          "highResImage": "data/images/artist-Q160538/wikidata-Q945850.jpg",
-          "highResOriginal": "data/images/artist-Q160538/wikidata-Q945850.jpg",
-          "imageUploadStatus": "ready",
-          "thumbnailValidation": 2,
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/artist-Q160538/wikidata-Q945850.jpg",
-              "highResolution": "data/images/artist-Q160538/wikidata-Q945850.jpg",
-              "sourceUrl": "https://www.wikidata.org/entity/Q945850",
-              "sourceUrls": [
-                "https://www.wikidata.org/entity/Q945850"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          }
         }
       ],
       "featuredWorkIds": [
@@ -63874,9 +62963,9 @@
       ],
       "metadata": {
         "createdAt": "2026-08-23T07:09:41.993Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "local artist import",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "artistSummary": {
         "ko": [],
@@ -66458,9 +65547,9 @@
       ],
       "metadata": {
         "createdAt": "2026-08-23T08:31:41.272Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "local artist import",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "artistSummary": {
         "ko": [],
@@ -67701,58 +66790,6 @@
               "institution": ""
             }
           }
-        },
-        {
-          "id": "wikidata-Q1211651",
-          "year": 1636,
-          "popularity": 14,
-          "title": {
-            "ko": "The Blinding of Samson",
-            "en": "The Blinding of Samson"
-          },
-          "country": {
-            "ko": "",
-            "en": ""
-          },
-          "movement": {
-            "ko": "바로크",
-            "en": "바로크"
-          },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Blinding%20of%20Samson%20%28SM%201383%29.png",
-          "description": {
-            "ko": "painting by Rembrandt at the Städel Museum, Frankfurt, Germany",
-            "en": "painting by Rembrandt at the Städel Museum, Frankfurt, Germany"
-          },
-          "source": "http://www.wikidata.org/entity/Q1211651",
-          "verified": true,
-          "representative": false,
-          "movementContribution": false,
-          "metadata": {
-            "createdAt": "2026-08-21T20:39:46.474Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/artist-rembrandt/commons-blinding-samson.jpg",
-              "highResolution": "data/images/artist-rembrandt/commons-blinding-samson.jpg",
-              "sourceUrl": "http://www.wikidata.org/entity/Q1211651",
-              "sourceUrls": [
-                "http://www.wikidata.org/entity/Q1211651",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Blinding%20of%20Samson%20%28SM%201383%29.png"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "thumbnail": "data/images/artist-rembrandt/commons-blinding-samson.jpg",
-          "highResImage": "data/images/artist-rembrandt/commons-blinding-samson.jpg",
-          "highResOriginal": "data/images/artist-rembrandt/commons-blinding-samson.jpg",
-          "imageUploadStatus": "ready",
-          "thumbnailValidation": 2
         },
         {
           "id": "louvre-inv-1736-raphael-leaving-tobit",
@@ -69249,73 +68286,14 @@
           "highResImage": "data/images/artist-rembrandt/national-gallery-NG221-self-portrait-1669.jpg",
           "highResOriginal": "data/images/artist-rembrandt/national-gallery-NG221-self-portrait-1669.jpg",
           "imageUploadStatus": "ready"
-        },
-        {
-          "id": "wikidata-Q512755",
-          "year": 1668,
-          "popularity": 30,
-          "title": {
-            "ko": "돌아온 탕자",
-            "en": "The Return of the Prodigal Son"
-          },
-          "country": {
-            "ko": "네덜란드",
-            "en": "Netherlands"
-          },
-          "movement": {
-            "ko": "",
-            "en": ""
-          },
-          "image": "data/images/artist-rembrandt/wikidata-Q512755.jpg",
-          "description": {
-            "ko": "painting by Rembrandt",
-            "en": "painting by Rembrandt"
-          },
-          "source": "http://www.wikidata.org/entity/Q512755",
-          "verified": true,
-          "representative": false,
-          "movementContribution": true,
-          "movementContributionReason": "artist-movement-characteristic",
-          "origin": "generated",
-          "metadataVerifiedAt": "2026-08-21T20:39:51.756Z",
-          "metadata": {
-            "createdAt": "2026-08-21T20:39:46.474Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/artist-rembrandt/wikidata-Q512755.jpg",
-              "highResolution": "data/images/artist-rembrandt/wikidata-Q512755.jpg",
-              "sourceUrl": "http://www.wikidata.org/entity/Q512755",
-              "sourceUrls": [
-                "http://www.wikidata.org/entity/Q512755",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt%20Harmensz%20van%20Rijn%20-%20Return%20of%20the%20Prodigal%20Son%20-%20Google%20Art%20Project.jpg"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "externalImageUrls": [
-            "http://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt%20Harmensz%20van%20Rijn%20-%20Return%20of%20the%20Prodigal%20Son%20-%20Google%20Art%20Project.jpg"
-          ],
-          "thumbnail": "data/images/artist-rembrandt/wikidata-Q512755.jpg",
-          "highResImage": "data/images/artist-rembrandt/wikidata-Q512755.jpg",
-          "highResOriginal": "data/images/artist-rembrandt/wikidata-Q512755.jpg",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-22T05:24:55.236Z",
-          "imageUploadStatus": "ready"
         }
       ],
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-17T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "links": [
         {
@@ -80046,9 +79024,9 @@
       ],
       "metadata": {
         "createdAt": "2026-08-10T13:22:11.79Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "migration-tool",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [
@@ -83836,58 +82814,6 @@
           "imageUploadStatus": "ready"
         },
         {
-          "id": "wikidata-Q3207826",
-          "year": 1864,
-          "popularity": 1,
-          "title": {
-            "ko": "투우 (마네, 뉴욕)",
-            "en": "The Bullfight"
-          },
-          "country": {
-            "ko": "",
-            "en": ""
-          },
-          "movement": {
-            "ko": "인상주의",
-            "en": "인상주의"
-          },
-          "image": "data/images/artist-1786343948059/wikidata-Q3207826.jpg",
-          "description": {
-            "ko": "",
-            "en": ""
-          },
-          "source": "https://www.wikidata.org/entity/Q3207826",
-          "verified": true,
-          "representative": false,
-          "movementContribution": false,
-          "metadata": {
-            "createdAt": "2026-08-29T07:18:20.749Z",
-            "updatedAt": "2026-08-29T21:43:52.054Z",
-            "createdBy": "metadata-recovery",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "thumbnail": "data/images/artist-1786343948059/wikidata-Q3207826.jpg",
-          "highResImage": "data/images/artist-1786343948059/wikidata-Q3207826.jpg",
-          "highResOriginal": "data/images/artist-1786343948059/wikidata-Q3207826.jpg",
-          "imageUploadStatus": "ready",
-          "thumbnailValidation": 2,
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/artist-1786343948059/wikidata-Q3207826.jpg",
-              "highResolution": "data/images/artist-1786343948059/wikidata-Q3207826.jpg",
-              "sourceUrl": "https://www.wikidata.org/entity/Q3207826",
-              "sourceUrls": [
-                "https://www.wikidata.org/entity/Q3207826"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "origin": "manual"
-        },
-        {
           "id": "wikidata-Q2997933",
           "year": 1865,
           "popularity": 1,
@@ -84088,58 +83014,6 @@
               "sourceUrl": "https://www.wikidata.org/entity/Q124704977",
               "sourceUrls": [
                 "https://www.wikidata.org/entity/Q124704977"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "origin": "manual"
-        },
-        {
-          "id": "wikidata-Q16648934",
-          "year": 1881,
-          "popularity": 1,
-          "title": {
-            "ko": "Rochefort's Escape",
-            "en": "Rochefort's Escape"
-          },
-          "country": {
-            "ko": "",
-            "en": ""
-          },
-          "movement": {
-            "ko": "인상주의",
-            "en": "인상주의"
-          },
-          "image": "data/images/artist-1786343948059/wikidata-Q16648934.jpg",
-          "description": {
-            "ko": "",
-            "en": ""
-          },
-          "source": "https://www.wikidata.org/entity/Q16648934",
-          "verified": true,
-          "representative": false,
-          "movementContribution": false,
-          "metadata": {
-            "createdAt": "2026-08-29T07:18:20.749Z",
-            "updatedAt": "2026-08-29T21:43:52.054Z",
-            "createdBy": "metadata-recovery",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "thumbnail": "data/images/artist-1786343948059/wikidata-Q16648934.jpg",
-          "highResImage": "data/images/artist-1786343948059/wikidata-Q16648934.jpg",
-          "highResOriginal": "data/images/artist-1786343948059/wikidata-Q16648934.jpg",
-          "imageUploadStatus": "ready",
-          "thumbnailValidation": 2,
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/artist-1786343948059/wikidata-Q16648934.jpg",
-              "highResolution": "data/images/artist-1786343948059/wikidata-Q16648934.jpg",
-              "sourceUrl": "https://www.wikidata.org/entity/Q16648934",
-              "sourceUrls": [
-                "https://www.wikidata.org/entity/Q16648934"
               ],
               "license": "",
               "institution": ""
@@ -85450,7 +84324,7 @@
           "thumbnailCacheKey": "2026-08-10T01:36:56.194Z",
           "metadata": {
             "createdAt": "2026-08-10T13:21:52.312Z",
-            "updatedAt": "2026-08-29T21:43:52.054Z",
+            "updatedAt": "2026-08-30T10:45:30.295Z",
             "createdBy": "migration-tool",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -85475,59 +84349,6 @@
           "movementContributionReason": "canonical-movement-representative",
           "highResImage": "data/images/claude-monet/impression-sunrise.jpg",
           "highResOriginal": "data/images/claude-monet/impression-sunrise.jpg"
-        },
-        {
-          "id": "wikidata-Q328523",
-          "year": 1872,
-          "popularity": 52,
-          "title": {
-            "ko": "인상, 해돋이",
-            "en": "인상, 해돋이"
-          },
-          "country": {
-            "ko": "",
-            "en": ""
-          },
-          "movement": {
-            "ko": "인상주의",
-            "en": "인상주의"
-          },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Monet%20-%20Impression%2C%20Sunrise.jpg",
-          "description": {
-            "ko": "1872 painting by Claude Monet",
-            "en": "1872 painting by Claude Monet"
-          },
-          "source": "http://www.wikidata.org/entity/Q328523",
-          "verified": true,
-          "representative": true,
-          "movementContribution": false,
-          "thumbnail": "data/images/claude-monet/wikidata-Q328523.jpg",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-10T21:20:01.745Z",
-          "metadata": {
-            "createdAt": "2026-08-21T09:53:45.966Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/claude-monet/wikidata-Q328523.jpg",
-              "highResolution": "data/images/claude-monet/wikidata-Q328523.jpg",
-              "sourceUrl": "http://www.wikidata.org/entity/Q328523",
-              "sourceUrls": [
-                "http://www.wikidata.org/entity/Q328523",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Monet%20-%20Impression%2C%20Sunrise.jpg"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "highResImage": "data/images/claude-monet/wikidata-Q328523.jpg",
-          "highResOriginal": "data/images/claude-monet/wikidata-Q328523.jpg",
-          "imageUploadStatus": "ready"
         },
         {
           "id": "wikidata-Q3454959",
@@ -86570,59 +85391,6 @@
           },
           "highResImage": "data/images/claude-monet/wikidata-Q3794121.jpg",
           "highResOriginal": "data/images/claude-monet/wikidata-Q3794121.jpg",
-          "imageUploadStatus": "ready"
-        },
-        {
-          "id": "wikidata-Q49985736",
-          "year": 1877,
-          "popularity": 13,
-          "title": {
-            "ko": "생라자르역",
-            "en": "생라자르역"
-          },
-          "country": {
-            "ko": "",
-            "en": ""
-          },
-          "movement": {
-            "ko": "인상주의",
-            "en": "인상주의"
-          },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/La%20Gare%20Saint-Lazare%20-%20Claude%20Monet.jpg",
-          "description": {
-            "ko": "impressionist paintings of French rail infrastructure",
-            "en": "impressionist paintings of French rail infrastructure"
-          },
-          "source": "http://www.wikidata.org/entity/Q49985736",
-          "verified": true,
-          "representative": false,
-          "movementContribution": false,
-          "thumbnail": "data/images/claude-monet/wikidata-Q49985736.jpg",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-10T21:22:03.385Z",
-          "metadata": {
-            "createdAt": "2026-08-21T09:53:45.966Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/claude-monet/wikidata-Q49985736.jpg",
-              "highResolution": "data/images/claude-monet/wikidata-Q49985736.jpg",
-              "sourceUrl": "http://www.wikidata.org/entity/Q49985736",
-              "sourceUrls": [
-                "http://www.wikidata.org/entity/Q49985736",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/La%20Gare%20Saint-Lazare%20-%20Claude%20Monet.jpg"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "highResImage": "data/images/claude-monet/wikidata-Q49985736.jpg",
-          "highResOriginal": "data/images/claude-monet/wikidata-Q49985736.jpg",
           "imageUploadStatus": "ready"
         },
         {
@@ -88953,59 +87721,6 @@
           "thumbnailCacheKey": "2026-08-29T07:18:54.953Z"
         },
         {
-          "id": "wikidata-Q105099590",
-          "year": 1923,
-          "popularity": 1,
-          "title": {
-            "ko": "The Artist's House Seen from the Rose Garden",
-            "en": "The Artist's House Seen from the Rose Garden"
-          },
-          "country": {
-            "ko": "",
-            "en": ""
-          },
-          "movement": {
-            "ko": "인상주의",
-            "en": "인상주의"
-          },
-          "image": "data/images/claude-monet/wikidata-Q105099590.JPG",
-          "description": {
-            "ko": "",
-            "en": ""
-          },
-          "source": "https://www.wikidata.org/entity/Q105099590",
-          "verified": true,
-          "representative": false,
-          "movementContribution": false,
-          "metadata": {
-            "createdAt": "2026-08-29T07:18:20.749Z",
-            "updatedAt": "2026-08-30T07:01:55.080Z",
-            "createdBy": "metadata-recovery",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "thumbnail": "data/images/claude-monet/wikidata-Q105099590.JPG",
-          "highResImage": "data/images/claude-monet/wikidata-Q105099590.JPG",
-          "highResOriginal": "data/images/claude-monet/wikidata-Q105099590.JPG",
-          "imageUploadStatus": "ready",
-          "thumbnailValidation": 2,
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/claude-monet/wikidata-Q105099590.JPG",
-              "highResolution": "data/images/claude-monet/wikidata-Q105099590.JPG",
-              "sourceUrl": "https://www.wikidata.org/entity/Q105099590",
-              "sourceUrls": [
-                "https://www.wikidata.org/entity/Q105099590"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "origin": "manual",
-          "thumbnailCacheKey": "2026-08-29T07:18:54.954Z"
-        },
-        {
           "id": "wikidata-Q105099603",
           "year": 1923,
           "popularity": 1,
@@ -89651,7 +88366,7 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-10T13:21:52.312Z",
-        "updatedAt": "2026-08-30T07:01:55.080Z",
+        "updatedAt": "2026-08-30T10:45:30.295Z",
         "createdBy": "migration-tool",
         "updatedBy": "jhlee409@gmail.com"
       },
@@ -94475,58 +93190,6 @@
           "origin": "manual"
         },
         {
-          "id": "wikidata-Q26221226",
-          "year": 1890,
-          "popularity": 1,
-          "title": {
-            "ko": "Daubigny's Garden",
-            "en": "Daubigny's Garden"
-          },
-          "country": {
-            "ko": "",
-            "en": ""
-          },
-          "movement": {
-            "ko": "후기인상주의",
-            "en": "후기인상주의"
-          },
-          "image": "data/images/vincent-van-gogh/wikidata-Q26221226.jpg",
-          "description": {
-            "ko": "",
-            "en": ""
-          },
-          "source": "https://www.wikidata.org/entity/Q26221226",
-          "verified": true,
-          "representative": false,
-          "movementContribution": false,
-          "metadata": {
-            "createdAt": "2026-08-29T07:18:20.749Z",
-            "updatedAt": "2026-08-29T21:43:52.054Z",
-            "createdBy": "metadata-recovery",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "thumbnail": "data/images/vincent-van-gogh/wikidata-Q26221226.jpg",
-          "highResImage": "data/images/vincent-van-gogh/wikidata-Q26221226.jpg",
-          "highResOriginal": "data/images/vincent-van-gogh/wikidata-Q26221226.jpg",
-          "imageUploadStatus": "ready",
-          "thumbnailValidation": 2,
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/vincent-van-gogh/wikidata-Q26221226.jpg",
-              "highResolution": "data/images/vincent-van-gogh/wikidata-Q26221226.jpg",
-              "sourceUrl": "https://www.wikidata.org/entity/Q26221226",
-              "sourceUrls": [
-                "https://www.wikidata.org/entity/Q26221226"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "origin": "manual"
-        },
-        {
           "id": "wikidata-Q26221233",
           "year": 1890,
           "popularity": 1,
@@ -94883,58 +93546,6 @@
               "sourceUrl": "https://www.wikidata.org/entity/Q26221242",
               "sourceUrls": [
                 "https://www.wikidata.org/entity/Q26221242"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "origin": "manual"
-        },
-        {
-          "id": "wikidata-Q27700844",
-          "year": 1890,
-          "popularity": 1,
-          "title": {
-            "ko": "Daubigny's Garden",
-            "en": "Daubigny's Garden"
-          },
-          "country": {
-            "ko": "",
-            "en": ""
-          },
-          "movement": {
-            "ko": "후기인상주의",
-            "en": "후기인상주의"
-          },
-          "image": "data/images/vincent-van-gogh/wikidata-Q27700844.jpg",
-          "description": {
-            "ko": "",
-            "en": ""
-          },
-          "source": "https://www.wikidata.org/entity/Q27700844",
-          "verified": true,
-          "representative": false,
-          "movementContribution": false,
-          "metadata": {
-            "createdAt": "2026-08-29T07:18:20.749Z",
-            "updatedAt": "2026-08-29T21:43:52.054Z",
-            "createdBy": "metadata-recovery",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "thumbnail": "data/images/vincent-van-gogh/wikidata-Q27700844.jpg",
-          "highResImage": "data/images/vincent-van-gogh/wikidata-Q27700844.jpg",
-          "highResOriginal": "data/images/vincent-van-gogh/wikidata-Q27700844.jpg",
-          "imageUploadStatus": "ready",
-          "thumbnailValidation": 2,
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/vincent-van-gogh/wikidata-Q27700844.jpg",
-              "highResolution": "data/images/vincent-van-gogh/wikidata-Q27700844.jpg",
-              "sourceUrl": "https://www.wikidata.org/entity/Q27700844",
-              "sourceUrls": [
-                "https://www.wikidata.org/entity/Q27700844"
               ],
               "license": "",
               "institution": ""
@@ -95314,9 +93925,9 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-10T13:21:43.815Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "migration-tool",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [
@@ -101098,9 +99709,9 @@
       ],
       "metadata": {
         "createdAt": "2026-08-11T23:17:30.885Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "migration-tool",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [
@@ -101389,12 +100000,12 @@
           "source": "http://www.wikidata.org/entity/Q16488383",
           "verified": true,
           "representative": false,
-          "movementContribution": false,
+          "movementContribution": true,
           "origin": "generated",
           "metadataVerifiedAt": "2026-08-22T21:07:31.668Z",
           "metadata": {
             "createdAt": "2026-08-22T21:07:25.214Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
+            "updatedAt": "2026-08-30T10:24:05.272Z",
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -101411,7 +100022,8 @@
               "license": "",
               "institution": ""
             }
-          }
+          },
+          "movementContributionReason": "artist-movement-characteristic"
         },
         {
           "id": "wikidata-Q28339146",
@@ -101938,61 +100550,6 @@
           "imageUploadStatus": "ready"
         },
         {
-          "id": "wikidata-Q3232010",
-          "year": 1939,
-          "popularity": 23,
-          "title": {
-            "ko": "The Two Fridas",
-            "en": "The Two Fridas"
-          },
-          "country": {
-            "ko": "",
-            "en": ""
-          },
-          "movement": {
-            "ko": "초현실주의",
-            "en": "초현실주의"
-          },
-          "image": "",
-          "description": {
-            "ko": "painting by Frida Kahlo",
-            "en": "painting by Frida Kahlo"
-          },
-          "source": "http://www.wikidata.org/entity/Q3232010",
-          "verified": true,
-          "representative": false,
-          "movementContribution": true,
-          "origin": "generated",
-          "thumbnail": "data/images/frida-kahlo/two-fridas.jpg",
-          "thumbnailValidation": 2,
-          "metadataVerifiedAt": "2026-08-22T21:07:31.668Z",
-          "thumbnailCacheKey": "2026-08-10T02:22:23.646Z",
-          "metadata": {
-            "createdAt": "2026-08-22T21:07:25.214Z",
-            "updatedAt": "2026-08-29T21:43:52.054Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/frida-kahlo/two-fridas.jpg",
-              "highResolution": "data/images/frida-kahlo/two-fridas.jpg",
-              "sourceUrl": "http://www.wikidata.org/entity/Q3232010",
-              "sourceUrls": [
-                "http://www.wikidata.org/entity/Q3232010"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "highResImage": "data/images/frida-kahlo/two-fridas.jpg",
-          "highResOriginal": "data/images/frida-kahlo/two-fridas.jpg",
-          "imageUploadStatus": "ready",
-          "movementContributionReason": "artist-movement-characteristic"
-        },
-        {
           "id": "wikidata-Q26000749",
           "year": 1939,
           "popularity": 5,
@@ -102454,60 +101011,6 @@
           "imageUploadStatus": "ready"
         },
         {
-          "id": "wikidata-Q21056477",
-          "year": 1944,
-          "popularity": 16,
-          "title": {
-            "ko": "The Broken Column",
-            "en": "The Broken Column"
-          },
-          "country": {
-            "ko": "",
-            "en": ""
-          },
-          "movement": {
-            "ko": "소박파",
-            "en": "소박파"
-          },
-          "image": "",
-          "description": {
-            "ko": "painting by Frida Kahlo",
-            "en": "painting by Frida Kahlo"
-          },
-          "source": "http://www.wikidata.org/entity/Q21056477",
-          "verified": true,
-          "representative": false,
-          "movementContribution": false,
-          "origin": "generated",
-          "thumbnail": "data/images/frida-kahlo/frida-broken-column.jpg",
-          "thumbnailValidation": 2,
-          "metadataVerifiedAt": "2026-08-22T21:07:31.668Z",
-          "thumbnailCacheKey": "2026-08-10T02:22:23.672Z",
-          "metadata": {
-            "createdAt": "2026-08-22T21:07:25.214Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/frida-kahlo/frida-broken-column.jpg",
-              "highResolution": "data/images/frida-kahlo/frida-broken-column.jpg",
-              "sourceUrl": "http://www.wikidata.org/entity/Q21056477",
-              "sourceUrls": [
-                "http://www.wikidata.org/entity/Q21056477"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "highResImage": "data/images/frida-kahlo/frida-broken-column.jpg",
-          "highResOriginal": "data/images/frida-kahlo/frida-broken-column.jpg",
-          "imageUploadStatus": "ready"
-        },
-        {
           "id": "frida-wounded-deer",
           "year": 1946,
           "title": {
@@ -102608,60 +101111,6 @@
           },
           "movementContribution": false,
           "popularity": 0,
-          "highResImage": "data/images/frida-kahlo/manual-wounded-deer.jpg",
-          "highResOriginal": "data/images/frida-kahlo/manual-wounded-deer.jpg",
-          "imageUploadStatus": "ready"
-        },
-        {
-          "id": "wikidata-Q21010270",
-          "year": 1946,
-          "popularity": 12,
-          "title": {
-            "ko": "The Wounded Deer",
-            "en": "The Wounded Deer"
-          },
-          "country": {
-            "ko": "",
-            "en": ""
-          },
-          "movement": {
-            "ko": "",
-            "en": ""
-          },
-          "image": "",
-          "description": {
-            "ko": "painting by Frida Kahlo",
-            "en": "painting by Frida Kahlo"
-          },
-          "source": "http://www.wikidata.org/entity/Q21010270",
-          "verified": true,
-          "representative": false,
-          "movementContribution": false,
-          "origin": "generated",
-          "thumbnail": "data/images/frida-kahlo/manual-wounded-deer.jpg",
-          "thumbnailValidation": 2,
-          "metadataVerifiedAt": "2026-08-22T21:07:31.668Z",
-          "thumbnailCacheKey": "2026-08-10T02:26:48.230Z",
-          "metadata": {
-            "createdAt": "2026-08-22T21:07:25.214Z",
-            "updatedAt": "2026-08-29T21:43:52.054Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/frida-kahlo/manual-wounded-deer.jpg",
-              "highResolution": "data/images/frida-kahlo/manual-wounded-deer.jpg",
-              "sourceUrl": "http://www.wikidata.org/entity/Q21010270",
-              "sourceUrls": [
-                "http://www.wikidata.org/entity/Q21010270"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
           "highResImage": "data/images/frida-kahlo/manual-wounded-deer.jpg",
           "highResOriginal": "data/images/frida-kahlo/manual-wounded-deer.jpg",
           "imageUploadStatus": "ready"
@@ -103174,7 +101623,7 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-10T13:22:03.883Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-30T10:24:05.272Z",
         "createdBy": "migration-tool",
         "updatedBy": "jhlee409@gmail.com"
       },
@@ -103192,7 +101641,6 @@
       },
       "featuredWorkIds": [
         "wikidata-Q118190557",
-        "wikidata-Q21010270",
         "wikidata-Q5880026"
       ],
       "artistSummary": {
@@ -103801,9 +102249,9 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-24T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "manual entry",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "movements": [
         "바로크"
@@ -106168,9 +104616,9 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-24T00:00:00Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "manual entry",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "movements": [
         "로코코"
@@ -107835,7 +106283,7 @@
           "file": "Rosalba_Carriera_-_Maria_Theresa,_Archduchess_of_Habsburg_(1717-1780)_-_Google_Art_Project.jpg",
           "year": 1730,
           "title": {
-            "ko": "《마리아 테레사, 합스부르크 대공녀》",
+            "ko": "마리아 테레사, 합스부르크 대공녀",
             "en": "Maria Theresa, Archduchess of Habsburg"
           },
           "description": {
@@ -107884,7 +106332,6 @@
               "institution": ""
             }
           },
-          "imageUploadStatus": "ready",
           "thumbnailValidation": 2,
           "thumbnailCacheKey": "2026-08-29T05:31:14.738Z"
         },
@@ -108121,9 +106568,9 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-24T00:00:00Z",
-        "updatedAt": "2026-08-30T01:00:44.475Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "manual entry",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "movements": [
         "로코코"
@@ -109046,7 +107493,6 @@
             "ko": "낭만주의",
             "en": "Romanticism"
           },
-          "imageUploadStatus": "ready",
           "localImageCandidates": [
             "Gericault-Raft-of-the-Medusa"
           ],
@@ -109081,66 +107527,11 @@
           "highResImage": "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__artist-romantic-gericault-work.jpg",
           "highResOriginal": "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__artist-romantic-gericault-work.jpg",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-29T10:00:14.896Z"
-        },
-        {
-          "id": "gericault-raft-of-medusa",
-          "title": {
-            "ko": "메두사호의 뗏목",
-            "en": "The Raft of the Medusa"
-          },
-          "year": 1819,
-          "popularity": 90,
-          "country": {
-            "ko": "프랑스",
-            "en": "프랑스"
-          },
-          "movement": {
-            "ko": "낭만주의",
-            "en": "Romanticism"
-          },
-          "description": {
-            "ko": "대각선으로 치솟는 몸과 폭풍우는 극적 감정과 현재 사건을 중시한 낭만주의의 특징을 드러낸다. 실제 생존자와 시신을 연구해 이상적 영웅 대신 절망과 희망이 뒤엉킨 인간 군상을 만든 점은 제리코만의 특성이다.",
-            "en": ""
-          },
-          "representative": true,
-          "movementContribution": true,
-          "movementContributionReason": "movement-further-study",
-          "verified": true,
-          "origin": "art-movement-representatives",
-          "imageUploadStatus": "ready",
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__gericault-raft-of-medusa.jpg",
-              "highResolution": "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__gericault-raft-of-medusa.jpg",
-              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Th%C3%A9odore_G%C3%A9ricault_%22The_raft_of_the_Medusa%22.jpg",
-              "sourceUrls": [
-                "https://commons.wikimedia.org/wiki/File:Th%C3%A9odore_G%C3%A9ricault_%22The_raft_of_the_Medusa%22.jpg",
-                "https://upload.wikimedia.org/wikipedia/commons/4/48/Th%C3%A9odore_G%C3%A9ricault_%22The_raft_of_the_Medusa%22.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
-              ],
-              "license": "Public domain",
-              "institution": "Wikimedia Commons"
-            }
-          },
-          "image": "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__gericault-raft-of-medusa.jpg",
-          "thumbnail": "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__gericault-raft-of-medusa.jpg",
-          "highResImage": "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__gericault-raft-of-medusa.jpg",
-          "highResOriginal": "data/images/artist-romantic-gericault/제리코_메두사호의 뗏목_1819__gericault-raft-of-medusa.jpg",
-          "source": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Th%C3%A9odore_G%C3%A9ricault_%22The_raft_of_the_Medusa%22.jpg",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-29T10:00:23.796Z",
-          "metadata": {
-            "createdAt": "2026-08-25T10:02:06.175Z",
-            "updatedAt": "2026-08-25T10:02:06.175Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          }
+          "thumbnailCacheKey": "2026-08-29T10:00:14.896Z",
+          "movementContributionReason": "movement-further-study"
         }
       ],
       "featuredWorkIds": [
-        "gericault-raft-of-medusa",
         "artist-romantic-gericault-work"
       ],
       "profileResolved": true,
@@ -116384,9 +114775,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -116487,9 +114878,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -116590,9 +114981,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -116693,9 +115084,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -116796,9 +115187,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -116851,7 +115242,6 @@
           "movementContributionReason": "movement-further-study",
           "verified": true,
           "origin": "art-movement-representatives",
-          "imageUploadStatus": "ready",
           "migration": {
             "schema": 1,
             "image": {
@@ -116903,9 +115293,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -117000,9 +115390,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -117055,7 +115445,6 @@
           "movementContributionReason": "movement-further-study",
           "verified": true,
           "origin": "art-movement-representatives",
-          "imageUploadStatus": "ready",
           "migration": {
             "schema": 1,
             "image": {
@@ -117107,9 +115496,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -117204,9 +115593,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -117301,9 +115690,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -117398,9 +115787,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -117501,9 +115890,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -117598,9 +115987,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -117695,9 +116084,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -117798,9 +116187,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -117901,9 +116290,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -117998,9 +116387,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -118095,9 +116484,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -118192,9 +116581,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -118289,9 +116678,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -118386,9 +116775,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -118441,7 +116830,6 @@
           "movementContributionReason": "movement-further-study",
           "verified": true,
           "origin": "art-movement-representatives",
-          "imageUploadStatus": "ready",
           "migration": {
             "schema": 1,
             "image": {
@@ -118493,9 +116881,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -118590,9 +116978,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -118693,9 +117081,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -118796,9 +117184,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -118899,9 +117287,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -119002,9 +117390,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -119105,9 +117493,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -119202,9 +117590,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -119305,9 +117693,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -119360,7 +117748,6 @@
           "movementContributionReason": "movement-further-study",
           "verified": true,
           "origin": "art-movement-representatives",
-          "imageUploadStatus": "ready",
           "migration": {
             "schema": 1,
             "image": {
@@ -119412,9 +117799,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -119509,9 +117896,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -119564,7 +117951,6 @@
           "movementContributionReason": "movement-further-study",
           "verified": true,
           "origin": "art-movement-representatives",
-          "imageUploadStatus": "ready",
           "migration": {
             "schema": 1,
             "image": {
@@ -119616,9 +118002,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -119719,9 +118105,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -119816,9 +118202,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -119913,9 +118299,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -120010,9 +118396,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -120107,9 +118493,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -120204,9 +118590,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -120301,9 +118687,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -120398,9 +118784,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -120495,9 +118881,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -120592,9 +118978,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -120695,9 +119081,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -120792,9 +119178,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -120889,9 +119275,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -120986,9 +119372,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -121089,9 +119475,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -121192,9 +119578,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -121295,9 +119681,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -121398,9 +119784,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -121501,9 +119887,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -121604,9 +119990,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -121707,9 +120093,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -121810,9 +120196,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -121913,9 +120299,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -122016,9 +120402,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -122119,9 +120505,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -122222,9 +120608,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -122325,9 +120711,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -122428,9 +120814,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -122525,9 +120911,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -122622,9 +121008,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -122719,9 +121105,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -122822,9 +121208,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -122925,9 +121311,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -123028,9 +121414,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -123131,9 +121517,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -123228,9 +121614,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -123325,9 +121711,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -123422,9 +121808,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -123519,9 +121905,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -123616,9 +122002,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -123713,9 +122099,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -123810,9 +122196,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -123907,9 +122293,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -124004,9 +122390,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -124101,9 +122487,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -124198,9 +122584,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -124295,9 +122681,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -124392,9 +122778,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -124423,10 +122809,10 @@
       },
       "works": [
         {
-          "id": "guardi-doges-palace",
+          "id": "guardi-cannaregio-canal-venice",
           "title": {
-            "ko": "리바 델리 스키아보니와 피아체타의 풍경",
-            "en": "View of the Riva degli Schiavoni and the Piazzetta"
+            "ko": "베니스의 카나레지오 운하 풍경",
+            "en": "View of the Cannaregio Canal in Venice"
           },
           "year": 1770,
           "popularity": 90,
@@ -124439,7 +122825,7 @@
             "en": "Rococo"
           },
           "description": {
-            "ko": "물과 건축이 빠르고 가벼운 붓질 속에서 반짝여 베네치아적 감각성을 드러낸다. 카날레토보다 불안정한 선과 은회색 빛으로 쇠퇴기의 시정을 만든 점은 과르디만의 특성이다.",
+            "ko": "비스듬히 열린 운하와 건물, 작은 배와 인물들이 흔들리는 빛 속에서 이어진다. 카날레토의 정밀한 베두타보다 더 빠르고 떨리는 붓질로 베네치아의 대기와 물빛을 붙잡은 점이 과르디의 개성을 잘 보여 준다.",
             "en": ""
           },
           "representative": true,
@@ -124451,19 +122837,17 @@
             "schema": 1,
             "image": {
               "status": "ready",
-              "localThumbnail": "data/images/artist-mid-francesco-guardi/guardi-doges-palace.jpg",
-              "highResolution": "data/images/artist-mid-francesco-guardi/guardi-doges-palace.jpg",
-              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Francesco_Guardi_-_View_of_the_Riva_degli_Schiavoni_and_the_Piazzetta_-_P25w47_-_Isabella_Stewart_Gardner_Museum.jpg",
-              "sourceUrls": [
-                "https://commons.wikimedia.org/wiki/File:Francesco_Guardi_-_View_of_the_Riva_degli_Schiavoni_and_the_Piazzetta_-_P25w47_-_Isabella_Stewart_Gardner_Museum.jpg"
-              ],
-              "license": "Public domain",
-              "institution": "Wikimedia Commons"
+              "localThumbnail": "data/images/artist-mid-francesco-guardi/과르디_베니스의 카나레지오 운하_1770__guardi-cannaregio-canal-venice.jpg",
+              "highResolution": "data/images/artist-mid-francesco-guardi/과르디_베니스의 카나레지오 운하_1770__guardi-cannaregio-canal-venice.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "local user-provided file",
+              "institution": ""
             }
           },
-          "thumbnail": "data/images/artist-mid-francesco-guardi/guardi-doges-palace.jpg",
-          "highResImage": "data/images/artist-mid-francesco-guardi/guardi-doges-palace.jpg",
-          "highResOriginal": "data/images/artist-mid-francesco-guardi/guardi-doges-palace.jpg",
+          "thumbnail": "data/images/artist-mid-francesco-guardi/과르디_베니스의 카나레지오 운하_1770__guardi-cannaregio-canal-venice.jpg",
+          "highResImage": "data/images/artist-mid-francesco-guardi/과르디_베니스의 카나레지오 운하_1770__guardi-cannaregio-canal-venice.jpg",
+          "highResOriginal": "data/images/artist-mid-francesco-guardi/과르디_베니스의 카나레지오 운하_1770__guardi-cannaregio-canal-venice.jpg",
           "thumbnailValidation": 2,
           "thumbnailCacheKey": "2026-08-29T05:31:14.944Z",
           "metadata": {
@@ -124472,10 +122856,168 @@
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
           }
+        },
+        {
+          "id": "guardi-view-on-cannaregio-canal",
+          "title": {
+            "ko": "카나레지오 운하 풍경",
+            "en": "View on the Cannaregio Canal, Venice"
+          },
+          "year": 1775,
+          "yearEnd": 1780,
+          "popularity": 88,
+          "country": {
+            "ko": "베네치아 공화국",
+            "en": "Republic of Venice"
+          },
+          "movement": {
+            "ko": "로코코",
+            "en": "Rococo"
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "description": {
+            "ko": "카나레지오 운하의 다리와 양쪽 건물, 배와 사람들을 넓게 펼쳐 베네치아 일상의 리듬을 보여 준다. 같은 운하를 다루면서도 1770년경 작품보다 더 밝고 활기찬 수면과 하늘이 과르디의 후기 베두타 감각을 드러낸다.",
+            "en": ""
+          },
+          "representative": false,
+          "movementContribution": false,
+          "verified": true,
+          "origin": "local-import",
+          "source": "local file: 다운로드용/Francesco_Guardi,_View_on_the_Cannaregio_Canal,_Venice,_c._1775-1780,_NGA_254 (1).jpg",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-mid-francesco-guardi/과르디_카나레지오 운하 풍경_1775__guardi-view-on-cannaregio-canal.jpg",
+              "highResolution": "data/images/artist-mid-francesco-guardi/과르디_카나레지오 운하 풍경_1775__guardi-view-on-cannaregio-canal.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "local user-provided file",
+              "institution": ""
+            }
+          },
+          "thumbnail": "data/images/artist-mid-francesco-guardi/과르디_카나레지오 운하 풍경_1775__guardi-view-on-cannaregio-canal.jpg",
+          "highResImage": "data/images/artist-mid-francesco-guardi/과르디_카나레지오 운하 풍경_1775__guardi-view-on-cannaregio-canal.jpg",
+          "highResOriginal": "data/images/artist-mid-francesco-guardi/과르디_카나레지오 운하 풍경_1775__guardi-view-on-cannaregio-canal.jpg",
+          "thumbnailValidation": 2,
+          "metadata": {
+            "createdAt": "2026-08-30T00:00:00.000Z",
+            "updatedAt": "2026-08-30T00:00:00.000Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
+          }
+        },
+        {
+          "id": "guardi-bucintoro-festival-venice",
+          "title": {
+            "ko": "베네치아의 부친토로 축제",
+            "en": "The Bucintoro Festival of Venice"
+          },
+          "year": 1780,
+          "yearEnd": 1793,
+          "popularity": 86,
+          "country": {
+            "ko": "베네치아 공화국",
+            "en": "Republic of Venice"
+          },
+          "movement": {
+            "ko": "로코코",
+            "en": "Rococo"
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "description": {
+            "ko": "도제의 의례용 배 부친토로와 산마르코 수역의 군중을 넓게 펼쳐 베네치아의 공적 축제를 장관으로 만든다. 과르디가 도시 풍경뿐 아니라 축제와 의례의 움직임까지 즐겨 다뤘음을 보여 준다.",
+            "en": ""
+          },
+          "representative": false,
+          "movementContribution": false,
+          "verified": true,
+          "origin": "local-import",
+          "source": "local file: 다운로드용/3840px-Francesco_Guardi_-_The_Bucintoro_Festival_of_Venice_-_Google_Art_Project.jpg",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-mid-francesco-guardi/과르디_베네치아의 부친토로 축제_1780__guardi-bucintoro-festival-venice.jpg",
+              "highResolution": "data/images/artist-mid-francesco-guardi/과르디_베네치아의 부친토로 축제_1780__guardi-bucintoro-festival-venice.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "local user-provided file",
+              "institution": ""
+            }
+          },
+          "thumbnail": "data/images/artist-mid-francesco-guardi/과르디_베네치아의 부친토로 축제_1780__guardi-bucintoro-festival-venice.jpg",
+          "highResImage": "data/images/artist-mid-francesco-guardi/과르디_베네치아의 부친토로 축제_1780__guardi-bucintoro-festival-venice.jpg",
+          "highResOriginal": "data/images/artist-mid-francesco-guardi/과르디_베네치아의 부친토로 축제_1780__guardi-bucintoro-festival-venice.jpg",
+          "thumbnailValidation": 2,
+          "metadata": {
+            "createdAt": "2026-08-30T00:00:00.000Z",
+            "updatedAt": "2026-08-30T00:00:00.000Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
+          }
+        },
+        {
+          "id": "guardi-grand-canal-rialto-bridge",
+          "title": {
+            "ko": "대운하와 리알토 다리",
+            "en": "Grand Canal with the Rialto Bridge, Venice"
+          },
+          "year": 1780,
+          "popularity": 84,
+          "country": {
+            "ko": "베네치아 공화국",
+            "en": "Republic of Venice"
+          },
+          "movement": {
+            "ko": "로코코",
+            "en": "Rococo"
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "description": {
+            "ko": "리알토 다리와 대운하의 배들을 밝은 대기 속에 배치해 베네치아의 대표적 장소성을 압축한다. 정밀한 건축 기록보다 흔들리는 수면, 빛, 통행의 활기가 앞서는 과르디식 도시 풍경이다.",
+            "en": ""
+          },
+          "representative": false,
+          "movementContribution": false,
+          "verified": true,
+          "origin": "local-import",
+          "source": "local file: 다운로드용/FrencescoGuardiGrandCanalVenice.jpg",
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-mid-francesco-guardi/과르디_대운하와 리알토 다리_1780__guardi-grand-canal-rialto-bridge.jpg",
+              "highResolution": "data/images/artist-mid-francesco-guardi/과르디_대운하와 리알토 다리_1780__guardi-grand-canal-rialto-bridge.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "local user-provided file",
+              "institution": ""
+            }
+          },
+          "thumbnail": "data/images/artist-mid-francesco-guardi/과르디_대운하와 리알토 다리_1780__guardi-grand-canal-rialto-bridge.jpg",
+          "highResImage": "data/images/artist-mid-francesco-guardi/과르디_대운하와 리알토 다리_1780__guardi-grand-canal-rialto-bridge.jpg",
+          "highResOriginal": "data/images/artist-mid-francesco-guardi/과르디_대운하와 리알토 다리_1780__guardi-grand-canal-rialto-bridge.jpg",
+          "thumbnailValidation": 2,
+          "metadata": {
+            "createdAt": "2026-08-30T00:00:00.000Z",
+            "updatedAt": "2026-08-30T00:00:00.000Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
+          }
         }
       ],
       "featuredWorkIds": [
-        "guardi-doges-palace"
+        "guardi-cannaregio-canal-venice"
       ],
       "profileResolved": true,
       "movements": [
@@ -124495,7 +123037,7 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-30T10:52:56.016Z",
         "createdBy": "phase-5-rebuild",
         "updatedBy": "jhlee409@gmail.com"
       },
@@ -124598,9 +123140,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -124701,9 +123243,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -124804,9 +123346,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -124907,9 +123449,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -125010,9 +123552,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T22:30:46.795Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -125114,9 +123656,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -125217,9 +123759,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -125320,9 +123862,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -125375,7 +123917,6 @@
           "movementContributionReason": "movement-further-study",
           "verified": true,
           "origin": "art-movement-representatives",
-          "imageUploadStatus": "ready",
           "migration": {
             "schema": 1,
             "image": {
@@ -125427,9 +123968,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -125524,9 +124065,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -125621,9 +124162,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -125718,9 +124259,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -125815,9 +124356,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -125912,9 +124453,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -126015,9 +124556,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -126070,7 +124611,6 @@
           "movementContributionReason": "movement-further-study",
           "verified": true,
           "origin": "art-movement-representatives",
-          "imageUploadStatus": "ready",
           "migration": {
             "schema": 1,
             "image": {
@@ -126122,9 +124662,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -126219,9 +124759,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -126316,9 +124856,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -126413,9 +124953,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -126510,9 +125050,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -126607,9 +125147,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -126704,9 +125244,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -126801,9 +125341,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -126898,9 +125438,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -126995,9 +125535,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -127092,9 +125632,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -127189,9 +125729,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -127286,9 +125826,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -127383,9 +125923,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -127480,9 +126020,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -127577,9 +126117,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -127632,7 +126172,6 @@
           "movementContributionReason": "movement-further-study",
           "verified": true,
           "origin": "art-movement-representatives",
-          "imageUploadStatus": "ready",
           "migration": {
             "schema": 1,
             "image": {
@@ -127684,9 +126223,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -127781,9 +126320,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -127878,9 +126417,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -127975,9 +126514,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -128072,9 +126611,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -128169,9 +126708,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -128224,7 +126763,6 @@
           "movementContributionReason": "movement-further-study",
           "verified": true,
           "origin": "art-movement-representatives",
-          "imageUploadStatus": "ready",
           "migration": {
             "schema": 1,
             "image": {
@@ -128276,9 +126814,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],
@@ -128379,9 +126917,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],

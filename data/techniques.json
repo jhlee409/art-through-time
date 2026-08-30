@@ -2513,18 +2513,20 @@
       ],
       "examples": [
         {
-          "year": "1720년대",
+          "year": "1725",
           "artist": {
             "ko": "카날레토",
             "en": "Canaletto"
           },
           "title": {
             "ko": "《석공의 마당》",
-            "en": "The Stonemason's Yard"
+            "en": "The Stonemason’s Yard"
           },
-          "image": "data/미술사조/images/Canaletto-Stonemasons-Yard.jpg",
+          "artistId": "artist-Q161866",
+          "workId": "artist-Q161866-representative-work",
+          "image": "data/images/artist-Q161866/local-canaletto-stonemasons-yard.jpg",
           "role": {
-            "ko": "베네치아 베두타의 대표 사례",
+            "ko": "카날레토 대표작이자 베네치아 베두타의 대표 사례",
             "en": "Representative Venetian veduta"
           },
           "note": {

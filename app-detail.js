@@ -277,7 +277,7 @@ function openArtworkImageWindow(imageSrc, title, caption={}) {
     const imageRect=image.getBoundingClientRect(),stageRect=stage.getBoundingClientRect();
     const imageX=event.clientX-imageRect.left,imageY=event.clientY-imageRect.top;
     if(imageX<0 || imageY<0 || imageX>imageRect.width || imageY>imageRect.height){lens.classList.remove('visible');return;}
-    const diameter=imageRect.height/3;
+    const diameter=imageRect.height*2/3;
     lens.style.width=`${diameter}px`;
     lens.style.height=`${diameter}px`;
     lens.style.left=`${event.clientX-stageRect.left-diameter/2}px`;

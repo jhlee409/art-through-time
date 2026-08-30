@@ -180,7 +180,7 @@ function openArtistSummaryArtworkPreview(work) {
   preview.append(frame);
   const fit=()=>{
     if(!image.naturalWidth || !image.naturalHeight) return;
-    const maximumWidth=Math.max(1,window.innerWidth*.4), maximumHeight=Math.max(1,window.innerHeight*.4);
+    const maximumWidth=Math.max(1,window.innerWidth*.8), maximumHeight=Math.max(1,window.innerHeight*.8);
     const scale=Math.min(maximumWidth/image.naturalWidth,maximumHeight/image.naturalHeight);
     frame.style.width=`${Math.max(1,Math.round(image.naturalWidth*scale))}px`;
     frame.style.height=`${Math.max(1,Math.round(image.naturalHeight*scale))}px`;
@@ -478,14 +478,19 @@ function isGenericSeriesLabel(label) {
       '남자','여자','여인','소녀','소년','아이','인물'
     ]).has(key);
 }
-function artworkSeriesTitleCandidates(work, artist) {
+function artworkSeriesTitleCandidateEntries(work, artist) {
   const candidates = [];
-  const add = value => {
+  const add = (value, slot='full') => {
     const label = cleanArtworkSeriesLabel(value);
     if (!label || isGenericSeriesLabel(label)) return;
     const key = compactArtworkGroupingKey(label);
     if (!key || key.length < 2) return;
-    candidates.push({key, label});
+    candidates.push({key, label, slot});
+  };
+  const addSplitParts = (cleaned, pattern, slotName) => {
+    const parts = cleaned.split(pattern).map(cleanArtworkSeriesLabel).filter(Boolean);
+    if (parts.length < 2) return;
+    parts.slice(0, 2).forEach((part, index) => add(part, `${slotName}:${index}`));
   };
   const titles = [artworkThumbnailTitle(work, artist), ...artworkTitleAliases(work)];
   titles.forEach(title => {
@@ -499,10 +504,10 @@ function artworkSeriesTitleCandidates(work, artist) {
       cleaned.split(/\s+\band\b\s+/i)[0],
       cleaned.split(/\s+\bwith\b\s+/i)[0]
     ].forEach(add);
-    const koreanConnector = cleaned.match(/^(.{2,18}?)(?:과|와|및)\s+/);
-    if (koreanConnector) add(koreanConnector[1]);
+    addSplitParts(cleaned, /\s+\band\b\s+/i, 'connector');
+    addSplitParts(cleaned, /(?:과|와|및)\s+/, 'connector');
   });
-  return [...new Map(candidates.map(item => [item.key, item])).values()];
+  return [...new Map(candidates.map(item => [`${item.slot}:${item.key}`, item])).values()];
 }
 function preferredSeriesLabel(labels) {
   const unique = [...new Set(labels.map(cleanArtworkSeriesLabel).filter(Boolean))];
@@ -520,17 +525,46 @@ function buildArtworkSeriesGroups(works, artist) {
       .map(compactArtworkGroupingKey)
       .filter(Boolean))]
   }));
+  const parent = new Map();
+  const find = key => {
+    if (!parent.has(key)) parent.set(key, key);
+    const next = parent.get(key);
+    if (next === key) return key;
+    const root = find(next);
+    parent.set(key, root);
+    return root;
+  };
+  const union = (left, right) => {
+    const leftRoot = find(left), rightRoot = find(right);
+    if (leftRoot !== rightRoot) parent.set(rightRoot, leftRoot);
+  };
   const candidateLabels = new Map();
-  records.forEach(record => artworkSeriesTitleCandidates(record.work, artist).forEach(candidate => {
-    candidateLabels.set(candidate.key, [...(candidateLabels.get(candidate.key) || []), candidate.label]);
-  }));
-  const groups = [...candidateLabels.entries()].map(([key, labels]) => {
+  records.forEach(record => {
+    const entries = artworkSeriesTitleCandidateEntries(record.work, artist);
+    const bySlot = new Map();
+    entries.forEach(candidate => {
+      find(candidate.key);
+      candidateLabels.set(candidate.key, [...(candidateLabels.get(candidate.key) || []), candidate.label]);
+      bySlot.set(candidate.slot, [...(bySlot.get(candidate.slot) || []), candidate.key]);
+    });
+    bySlot.forEach(keys => keys.slice(1).forEach(key => union(keys[0], key)));
+  });
+  const candidateClusters = new Map();
+  candidateLabels.forEach((labels, key) => {
+    const root = find(key);
+    const cluster = candidateClusters.get(root) || {keys:new Set(), labels:[]};
+    cluster.keys.add(key);
+    cluster.labels.push(...labels);
+    candidateClusters.set(root, cluster);
+  });
+  const groups = [...candidateClusters.values()].map(cluster => {
+    const keys = [...cluster.keys];
     const groupWorks = records
-      .filter(record => record.titleKeys.some(titleKey => titleKey.includes(key)))
+      .filter(record => record.titleKeys.some(titleKey => keys.some(key => titleKey.includes(key))))
       .map(record => record.work);
     return {
-      key,
-      label: preferredSeriesLabel(labels),
+      key: keys.sort((left, right) => left.length - right.length)[0],
+      label: preferredSeriesLabel(cluster.labels),
       works: [...new Map(groupWorks.map(work => [String(work.id || selectionKey(work)), work])).values()]
     };
   }).filter(group => group.works.length >= 2 && group.label && !isGenericSeriesLabel(group.label));
