@@ -112,9 +112,14 @@ function renderList() {
   $('#artist-names').innerHTML = artists.flatMap(a => [artistListKoreanName(a), artistDisplayName(a), artistUHangulDisplayName(a), a.fullName, a.name?.ko, a.name?.en, ...artistAliases(a)]).filter(Boolean).filter((value,index,self) => self.indexOf(value) === index).map(value => `<option value="${esc(value)}"></option>`).join('');
 }
 function artistSummaryArtworkKey(value) { return String(value || '').normalize('NFKC').toLocaleLowerCase().replace(/[^\p{L}\p{N}]+/gu,''); }
+function artistSummaryArtworkSource(work) {
+  const highResolution=work?.highResImage && !isExternalImageSource(work.highResImage) ? work.highResImage : '';
+  return highResolution || artworkImageDisplay(work,{detail:true}).src || '';
+}
 function artistSummaryLineMarkup(line, artist) {
   const text=String(line || ''), works=Array.isArray(artist?.works)?artist.works:[], titleRecords=[];
   works.forEach(work=>{
+    if(!artistSummaryArtworkSource(work)) return;
     const titles=[work.title?.ko,work.title?.en,work.title?.original,work.title?.native].map(value=>String(value || '').trim()).filter(value=>value.length>=2);
     titles.forEach(title=>titleRecords.push({title,key:artistSummaryArtworkKey(title),work}));
   });
@@ -143,6 +148,58 @@ function artistSummaryLineMarkup(line, artist) {
     cursor=range.end;
   });
   return markup+esc(text.slice(cursor));
+}
+
+function refreshArtistSummaryArtworkLinks(box, artist) {
+  const list=box?.querySelector('.artist-summary-lines');
+  if(!list) return;
+  const lines=localizedLines(artist?.artistSummary);
+  [...list.children].forEach((item,index)=>{
+    item.innerHTML=artistSummaryLineMarkup(lines[index] || '',artist);
+  });
+}
+
+function openArtistSummaryArtworkPreview(work) {
+  const source=artistSummaryArtworkSource(work);
+  if(!source) return;
+  const previous=document.querySelector('.artist-summary-image-preview');
+  if(typeof previous?.closeArtistSummaryPreview==='function') previous.closeArtistSummaryPreview();
+  else previous?.remove();
+  closeDetail();
+  artworkHoverPreview?.classList.add('hidden');
+  const preview=document.createElement('section'), frame=document.createElement('div'), image=document.createElement('img');
+  preview.className='artist-summary-image-preview';
+  preview.tabIndex=-1;
+  preview.setAttribute('role','dialog');
+  preview.setAttribute('aria-modal','true');
+  preview.setAttribute('aria-label',language==='ko'?`${artworkDisplayTitle(work)} 이미지`:`Image of ${artworkDisplayTitle(work)}`);
+  frame.className='artist-summary-image-preview-frame';
+  image.src=source;
+  image.alt=artworkDisplayTitle(work);
+  frame.append(image);
+  preview.append(frame);
+  const fit=()=>{
+    if(!image.naturalWidth || !image.naturalHeight) return;
+    const maximumWidth=Math.max(1,window.innerWidth*.4), maximumHeight=Math.max(1,window.innerHeight*.4);
+    const scale=Math.min(maximumWidth/image.naturalWidth,maximumHeight/image.naturalHeight);
+    frame.style.width=`${Math.max(1,Math.round(image.naturalWidth*scale))}px`;
+    frame.style.height=`${Math.max(1,Math.round(image.naturalHeight*scale))}px`;
+  };
+  const onKeyDown=event=>{ if(event.key==='Escape') close(); };
+  const close=()=>{
+    window.removeEventListener('resize',fit);
+    document.removeEventListener('keydown',onKeyDown);
+    preview.remove();
+  };
+  preview.closeArtistSummaryPreview=close;
+  image.addEventListener('load',fit);
+  image.addEventListener('error',close);
+  image.addEventListener('dblclick',event=>{event.preventDefault();event.stopPropagation();close();});
+  window.addEventListener('resize',fit);
+  document.addEventListener('keydown',onKeyDown);
+  document.body.append(preview);
+  if(image.complete) fit();
+  preview.focus();
 }
 
 function openArtistTranscriptDialog(artist) {
@@ -224,21 +281,20 @@ function setupArtistSummaryEditor(artist) {
   const summaryLines=box.querySelector('.artist-summary-lines'), expandButton=box.querySelector('.artist-summary-expand-button');
   expandButton?.addEventListener('click',()=>{
     const expanded=!summaryLines?.classList.contains('expanded');
+    if(expanded) refreshArtistSummaryArtworkLinks(box,artist);
     summaryLines?.classList.toggle('expanded',expanded);
     expandButton.setAttribute('aria-expanded',String(expanded));
     expandButton.textContent=expanded?'▴':'▾';
     expandButton.title=language==='ko'?(expanded?'해설 접기':'해설 펼치기'):(expanded?'Collapse notes':'Expand notes');
     expanded ? expandedArtistSummaryIds.add(artist.id) : expandedArtistSummaryIds.delete(artist.id);
   });
-  box.querySelectorAll('[data-summary-work]').forEach(button=>button.addEventListener('click',()=>{
+  box.addEventListener('click',event=>{
+    const button=event.target.closest('[data-summary-work]');
+    if(!button || !box.contains(button)) return;
     const work=(artist.works || []).find(item=>String(item.id || '')===String(button.dataset.summaryWork || ''));
     if(!work) return;
-    const cards=[...timeline.querySelectorAll('.art-card[data-work]')], card=cards.find(item=>String(item.dataset.work || '')===String(work.id || ''));
-    card?.scrollIntoView({behavior:'smooth',block:'center'});
-    card?.classList.add('artist-summary-work-target');
-    setTimeout(()=>card?.classList.remove('artist-summary-work-target'),1600);
-    renderArtworkDetail(work,artist,false);
-  }));
+    openArtistSummaryArtworkPreview(work);
+  });
   if (!currentUserIsAdmin) return;
   const read = box.querySelector('.artist-summary-read');
   const editor = box.querySelector('.artist-summary-editor');
@@ -289,7 +345,7 @@ function setupArtistSummaryEditor(artist) {
         result=await requestUpdate({confirmationToken:result.confirmationToken,decisions});
       }
       if (result.noChanges) {
-        alert(result.message || (language === 'ko' ? '새로 반영할 링크가 없습니다.' : 'There are no new links to process.'));
+        alert(language === 'ko' ? '추가할 자료가 없습니다.' : 'There is no new material to add.');
         return;
       }
       if (result.artist) Object.assign(artist, result.artist);
@@ -305,7 +361,10 @@ function setupArtistSummaryEditor(artist) {
       const usageNotice = usage.totalTokens
         ? `\n${language === 'ko' ? `사용량: 입력 ${Number(usage.inputTokens || 0).toLocaleString()} · 출력 ${Number(usage.outputTokens || 0).toLocaleString()} · 합계 ${Number(usage.totalTokens).toLocaleString()} 토큰${Number.isFinite(usage.estimatedUsd) ? ` · 예상 $${Number(usage.estimatedUsd).toFixed(4)}` : ''}` : `Usage: ${Number(usage.totalTokens).toLocaleString()} tokens${Number.isFinite(usage.estimatedUsd) ? ` · est. $${Number(usage.estimatedUsd).toFixed(4)}` : ''}`}`
         : '';
-      alert(`${language === 'ko' ? `새 자료 ${result.sourceCount || 0}개에서 해설 ${result.addedCount || 0}개를 정리했습니다.` : `Added ${result.addedCount || 0} notes from ${result.sourceCount || 0} new sources.`}${usageNotice}${failureNotice}${remainingNotice}`);
+      const updateMessage=Number(result.addedCount || 0)>0
+        ? (language === 'ko' ? `새 자료 ${result.sourceCount || 0}개에서 해설 ${result.addedCount || 0}개를 정리했습니다.` : `Added ${result.addedCount || 0} notes from ${result.sourceCount || 0} new sources.`)
+        : (language === 'ko' ? '추가할 자료가 없습니다.' : 'There is no new material to add.');
+      alert(`${updateMessage}${usageNotice}${failureNotice}${remainingNotice}`);
       renderTimeline();
     } catch (error) {
       alert(`${language === 'ko' ? '화가 해설 업데이트 실패: ' : 'Artist notes update failed: '}${error.message}`);
@@ -559,7 +618,7 @@ function renderTimeline() {
     const youtubeLinks=savedLinks.filter(isYouTubeLink), savedTranscriptCount=youtubeLinks.filter(link=>String(link.transcript || '').trim()).length;
     const transcriptControl=currentUserIsAdmin && youtubeLinks.length ? `<button class="artist-summary-transcript-button" type="button" title="${esc(language==='ko'?`저장된 스크립트 ${savedTranscriptCount}개`:`${savedTranscriptCount} saved transcript(s)`)}">${esc(transcriptLabel)}${savedTranscriptCount?` <span>${savedTranscriptCount}</span>`:''}</button>` : '';
     const expandControl=summaryLines.length>4?`<button class="artist-summary-expand-button" type="button" aria-expanded="${summaryExpanded}" title="${esc(language==='ko'?(summaryExpanded?'해설 접기':'해설 펼치기'):(summaryExpanded?'Collapse notes':'Expand notes'))}">${summaryExpanded?'▴':'▾'}</button>`:'';
-    const summaryBox = `<section class="artist-summary-box"><div class="artist-summary-heading"><p class="eyebrow">${esc(summaryTitle)}</p><div class="artist-summary-actions">${expandControl}${currentUserIsAdmin ? `<button class="artist-summary-edit-button" type="button">${esc(summaryEditLabel)}</button>${transcriptControl}<button class="artist-summary-update-button" type="button" title="${esc(language === 'ko' ? '화가 이름 옆에 새로 추가한 링크와 저장 스크립트를 해설에 반영' : 'Add newly linked sources and saved transcripts to the artist notes')}">${esc(summaryUpdateLabel)}</button>` : ''}</div></div><div class="artist-summary-read">${summaryBody}</div>${currentUserIsAdmin ? `<form class="artist-summary-editor hidden"><textarea rows="6" aria-label="${esc(summaryTitle)}" placeholder="${esc(summaryPlaceholder)}">${esc(artistSummaryEditorText(summaryLines))}</textarea><p>${esc(summaryHelp)}</p><div><button type="button" class="artist-summary-cancel">${esc(summaryCancelLabel)}</button><button type="submit">${esc(summarySaveLabel)}</button></div></form>` : ''}</section>`;
+    const summaryBox = `<section class="artist-summary-box"><div class="artist-summary-heading"><p class="eyebrow">${esc(summaryTitle)}</p><div class="artist-summary-actions">${currentUserIsAdmin ? `<button class="artist-summary-edit-button" type="button">${esc(summaryEditLabel)}</button>${transcriptControl}<button class="artist-summary-update-button" type="button" title="${esc(language === 'ko' ? '화가 이름 옆에 새로 추가한 링크와 저장 스크립트를 해설에 반영' : 'Add newly linked sources and saved transcripts to the artist notes')}">${esc(summaryUpdateLabel)}</button>` : ''}${expandControl}</div></div><div class="artist-summary-read">${summaryBody}</div>${currentUserIsAdmin ? `<form class="artist-summary-editor hidden"><textarea rows="6" aria-label="${esc(summaryTitle)}" placeholder="${esc(summaryPlaceholder)}">${esc(artistSummaryEditorText(summaryLines))}</textarea><p>${esc(summaryHelp)}</p><div><button type="button" class="artist-summary-cancel">${esc(summaryCancelLabel)}</button><button type="submit">${esc(summarySaveLabel)}</button></div></form>` : ''}</section>`;
     const featured = leonardoFeaturedWorks.length ? `<section class="leonardo-featured"><div class="leonardo-section-heading"><p class="eyebrow">${esc(featuredLabel)}</p><div class="leonardo-section-actions">${slideshowButton('featured', language === 'ko' ? '대표작 슬라이드 쇼 시작' : 'Start highlights slideshow')}</div><p>${esc(language === 'ko' ? '우선 크게 살펴볼 작품입니다. Ⓗ 표시는 고해상도 파일이 있음을 뜻합니다.' : 'A small set of works to study first. Ⓗ marks an available high-resolution file.')}</p></div><div class="leonardo-featured-grid">${leonardoFeaturedWorks.map(work => `<div class="leonardo-featured-card" data-featured-work="${esc(work.id)}"${canDragFeaturedWorks ? ' draggable="true"' : ''}>${card(work)}</div>`).join('')}</div></section>` : '';
     const allWorksAction = `${slideshowButton('all', language === 'ko' ? '전체 작품 슬라이드 쇼 시작' : 'Start all-works slideshow')}${currentUserIsAdmin ? `<button class="add-artwork-button leonardo-section-add-artwork" type="button" title="${esc(t('addArtwork'))}" aria-label="${esc(t('addArtwork'))}"><span>+</span><span>${esc(t('addArtwork'))}</span></button>` : ''}`;
     return `<div class="leonardo-timeline">${summaryBox}${featured}${layoutControls}<section class="leonardo-all-works"><div class="leonardo-section-heading"><p class="eyebrow">${esc(leonardoLayout === 'gallery' ? galleryLabel : chronologyLabel)}</p><div class="leonardo-section-actions">${allWorksAction}</div><p>${esc(language === 'ko' ? `${works.length}점 · 왼쪽 위에서 오른쪽 아래로 갈수록 뒤의 작품입니다.` : `${works.length} works · Earlier works begin at the upper left.`)}</p></div>${leonardoLayout === 'gallery' ? gallery : chronology}</section></div>`;

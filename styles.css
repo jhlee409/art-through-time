@@ -17,7 +17,9 @@
 .artist-summary-lines:not(.expanded) li:nth-child(n+5){display:none}
 .artist-summary-work-link{display:inline;padding:0;border:0;background:transparent;color:#315d4b;font:inherit;text-align:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
 .artist-summary-work-link:hover,.artist-summary-work-link:focus-visible{color:#a23c25;outline-offset:2px}
-.art-card.artist-summary-work-target{outline:3px solid #d66b3f;outline-offset:5px;transition:outline-color .25s}
+.artist-summary-image-preview{position:fixed;z-index:2500;inset:0;display:grid;place-items:center;background:rgba(13,16,13,.38);outline:0}
+.artist-summary-image-preview-frame{box-sizing:border-box;overflow:hidden;border:2px solid #f7f4ec;background:#0d100d;box-shadow:0 18px 54px rgba(0,0,0,.55)}
+.artist-summary-image-preview img{display:block;width:100%;height:100%;object-fit:contain;user-select:none}
 .artist-summary-empty{margin:0;color:var(--muted);font-size:13px;line-height:1.65}
 .artist-summary-editor textarea{width:100%;min-height:160px;resize:vertical;border:1px solid var(--line);border-radius:6px;background:white;padding:12px;font-size:13px;line-height:1.6;color:#334039;outline-color:#aebba8}
 .artist-summary-editor p{margin:8px 0 12px;color:var(--muted);font-size:11px;line-height:1.5}

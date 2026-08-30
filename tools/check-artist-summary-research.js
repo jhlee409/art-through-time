@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const assert = require('node:assert/strict');
+const fs = require('node:fs');
 const { sourceKey, mergeChronology, readableBlogUrl, cleanManualSummaryLines, savedTranscriptSource, finalizeResearchDraft, chronologySort } = require('../server-artist-research');
 const { presentationLinks } = require('../server-data');
 
@@ -44,6 +45,22 @@ assert.equal(storedLinks[0].transcriptUpdatedAt,'2026-08-30T00:00:00.000Z');
 assert.deepEqual(storedLinks[0].label,{ko:'영상',en:'Video'});
 assert.throws(()=>presentationLinks([{url:'https://example.com/',transcript:'본문'}],'Artist links',{allowTranscript:true}),/유튜브 링크/);
 
+const artistUiSource=fs.readFileSync(require.resolve('../app-artists.js'),'utf8');
+const summaryRenderStart=artistUiSource.indexOf("const summaryLines = localizedLines(artist.artistSummary)");
+const summaryRenderEnd=artistUiSource.indexOf('setupArtistSummaryEditor(artist)',summaryRenderStart);
+assert.ok(summaryRenderStart>=0 && summaryRenderEnd>summaryRenderStart);
+assert.doesNotMatch(artistUiSource.slice(summaryRenderStart,summaryRenderEnd),/claude-monet|monet/i);
+assert.match(artistUiSource.slice(summaryRenderStart,summaryRenderEnd),/const summaryBox =/);
+const summarySetupSource=artistUiSource.slice(artistUiSource.indexOf('function setupArtistSummaryEditor'),artistUiSource.indexOf('function favoriteKey'));
+assert.match(summarySetupSource,/openArtistSummaryArtworkPreview\(work\)/);
+assert.doesNotMatch(summarySetupSource,/renderArtworkDetail\(work,artist,false\)/);
+assert.match(summarySetupSource,/if\(expanded\) refreshArtistSummaryArtworkLinks\(box,artist\)/);
+assert.match(summarySetupSource,/event\.target\.closest\('\[data-summary-work\]'\)/);
+assert.match(summarySetupSource,/추가할 자료가 없습니다\./);
+assert.match(artistUiSource,/<button class="artist-summary-update-button"[\s\S]*?<\/button>` : ''\}\$\{expandControl\}/);
+const artistCssSource=fs.readFileSync(require.resolve('../styles.css'),'utf8');
+assert.match(artistCssSource,/\.artist-summary-image-preview\{[^}]*place-items:center/);
+
 async function checkConfirmationFlow() {
   const previousFetch=global.fetch, previousKey=process.env.OPENAI_API_KEY;
   process.env.OPENAI_API_KEY='test-key';
@@ -64,4 +81,4 @@ async function checkConfirmationFlow() {
   }
 }
 
-checkConfirmationFlow().then(()=>console.log(JSON.stringify({ok:true,checks:27}))).catch(error=>{console.error(error);process.exitCode=1;});
+checkConfirmationFlow().then(()=>console.log(JSON.stringify({ok:true,checks:37}))).catch(error=>{console.error(error);process.exitCode=1;});
