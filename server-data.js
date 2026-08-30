@@ -1,4 +1,24 @@
 /* Wikidata access, artist persistence, and thumbnail storage services. */
+const artistTranscriptCharacterLimit=80000;
+function presentationLinks(value, label, options={}) {
+  if(!Array.isArray(value) || value.length > 40) throw new Error(`${label} must be an array with at most 40 entries`);
+  return value.map(link=>{
+    const parsed=new URL(String(link?.url || link || '').trim());
+    if(!['http:','https:'].includes(parsed.protocol)) throw new Error(`${label} must use HTTP or HTTPS`);
+    const item={url:parsed.href,...(link?.emphasized===true?{emphasized:true}:{})};
+    if(typeof link?.label==='string' && link.label.trim()) item.label=link.label.trim().slice(0,200);
+    else if(link?.label && typeof link.label==='object' && !Array.isArray(link.label)) item.label={ko:String(link.label.ko || '').slice(0,200),en:String(link.label.en || '').slice(0,200)};
+    if(options.allowTranscript && typeof link?.transcript==='string' && link.transcript.trim()) {
+      const transcript=link.transcript.replace(/\r\n?/g,'\n').trim();
+      if(transcript.length > artistTranscriptCharacterLimit) throw new Error(`스크립트는 ${artistTranscriptCharacterLimit.toLocaleString()}자까지 저장할 수 있습니다.`);
+      if(!/(?:^|\.)youtube\.com$|(?:^|\.)youtu\.be$|(?:^|\.)youtube-nocookie\.com$/i.test(parsed.hostname)) throw new Error('스크립트는 유튜브 링크에만 저장할 수 있습니다.');
+      item.transcript=transcript;
+      if(typeof link.transcriptUpdatedAt==='string' && !Number.isNaN(Date.parse(link.transcriptUpdatedAt))) item.transcriptUpdatedAt=link.transcriptUpdatedAt;
+    }
+    return item;
+  });
+}
+
 module.exports = function createArtistDataService(deps) {
   const { https, fs, path, URL, createHash, randomBytes, execFileAsync, ffmpegPath, root, dataDir, highResolutionDir, imageStagingDir, artistsFile, backupsDir, auditLogFile, adminEmail, artistImportedWorkLimit, highResolutionStoredLimit, sourceImageInputLimit, normalizeArtistsPayload, validateArtistsPayload, invalidArtworkThumbnail, writeUHangulArtistMap, syncPersonNameDictionary } = deps;
   const normalizedEmail = value => String(value || '').trim().toLowerCase();
@@ -507,14 +527,6 @@ function writeArtistsFile(payload, actor='') {
   artistsWriteQueue=queued.catch(()=>{});
   return queued;
 }
-function presentationLinks(value, label) {
-  if(!Array.isArray(value) || value.length > 40) throw new Error(`${label} must be an array with at most 40 entries`);
-  return value.map(link=>{
-    const parsed=new URL(String(link?.url || link || '').trim());
-    if(!['http:','https:'].includes(parsed.protocol)) throw new Error(`${label} must use HTTP or HTTPS`);
-    return {url:parsed.href,...(link?.emphasized===true?{emphasized:true}:{})};
-  });
-}
 async function updateArtistPresentationNow(patch, actor='') {
   const data=JSON.parse(await fs.readFile(artistsFile,'utf8'));
   const artistId=String(patch?.artistId || ''), artist=(data.artists || []).find(item=>item.id===artistId);
@@ -522,7 +534,12 @@ async function updateArtistPresentationNow(patch, actor='') {
   const now=new Date().toISOString(), updatedBy=normalizedEmail(actor) || 'local-admin';
   let changed=false;
   if(Object.prototype.hasOwnProperty.call(patch,'artistLinks')) {
-    artist.links=presentationLinks(patch.artistLinks,'Artist links');
+    const previousLinks=Array.isArray(artist.links) ? artist.links : [];
+    artist.links=presentationLinks(patch.artistLinks,'Artist links',{allowTranscript:true}).map(link=>{
+      if(!link.transcript) return link;
+      const previous=previousLinks.find(item=>String(item?.url || item || '')===link.url);
+      return {...link,transcriptUpdatedAt:previous?.transcript===link.transcript && previous?.transcriptUpdatedAt ? previous.transcriptUpdatedAt : now};
+    });
     changed=true;
   }
   if(Object.prototype.hasOwnProperty.call(patch,'featuredWorkIds')) {
@@ -561,12 +578,54 @@ function updateArtistPresentation(patch, actor='') {
   artistsWriteQueue=queued.catch(()=>{});
   return queued;
 }
+async function commitArtistSummaryResearchNow(artistId, research, actor='') {
+  const data=JSON.parse(await fs.readFile(artistsFile,'utf8'));
+  const artist=(data.artists || []).find(item=>String(item.id || '')===artistId);
+  if(!artist) throw new Error('Artist not found');
+  const now=new Date().toISOString(), updatedBy=normalizedEmail(actor) || 'local-admin';
+  const existingSources=Array.isArray(artist.artistSummarySources) ? artist.artistSummarySources : [];
+  const sourceMap=new Map(existingSources.map(source=>[String(source.key || source.url || ''),source]));
+  (research.sources || []).forEach(source=>sourceMap.set(source.key,{...source}));
+  const currentSummary=artist.artistSummary && typeof artist.artistSummary==='object' ? artist.artistSummary : {};
+  const previousGenerated=Array.isArray(artist.artistSummaryGeneratedLines) ? artist.artistSummaryGeneratedLines : [];
+  const mergedLines=Array.isArray(research.lines) ? research.lines : (Array.isArray(currentSummary.ko) ? currentSummary.ko : []);
+  artist.artistSummary={...currentSummary,ko:mergedLines};
+  const removedKeys=new Set((research.removedLines || []).map(line=>String(line || '').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,'')));
+  const summaryKeys=new Set(mergedLines.map(line=>String(line || '').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,'')));
+  artist.artistSummaryGeneratedLines=[...new Set([...previousGenerated,...(Array.isArray(research.generatedLines) ? research.generatedLines : [])])].filter(line=>{const key=String(line || '').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,'');return summaryKeys.has(key)&&!removedKeys.has(key);});
+  artist.artistSummarySources=[...sourceMap.values()];
+  const previousRevision=Math.max(0,Number(data.metadata?.revision) || 0);
+  artist.metadata={...(artist.metadata || {}),updatedAt:now,updatedBy};
+  data.metadata={...(data.metadata || {}),updatedAt:now,updatedBy,revision:previousRevision+1};
+  const normalized=normalizeArtistsPayload(data,{actor:updatedBy,touch:false});
+  const validation=validateArtistsPayload(normalized);
+  if(!validation.valid) throw new Error(validation.errors.join('; '));
+  const backup=await backupArtistsFile(previousRevision);
+  const temporary=`${artistsFile}.${process.pid}.${Date.now()}.tmp`;
+  await fs.writeFile(temporary,JSON.stringify(normalized,null,2)+'\n','utf8');
+  await fs.rename(temporary,artistsFile);
+  await require('./tools/build-artist-index').writeArtistIndex(normalized);
+  await appendAudit({type:'artist.summary.research',actor:updatedBy,revision:normalized.metadata.revision,artistId,backup,addedCount:research.addedCount || 0,sourceCount:(research.sources || []).length,usage:research.usage || {}});
+  return {revision:normalized.metadata.revision,backup,artist:normalized.artists.find(item=>item.id===artistId),addedCount:research.addedCount || 0,sourceCount:(research.sources || []).length,failures:research.failures || [],remainingCount:research.remainingCount || 0,usage:research.usage || {}};
+}
+async function updateArtistSummaryFromLinks(artistId, actor='', researchArtistSummary, options={}) {
+  const id=String(artistId || '');
+  const snapshot=JSON.parse(await fs.readFile(artistsFile,'utf8'));
+  const artist=(snapshot.artists || []).find(item=>String(item.id || '')===id);
+  if(!artist) throw new Error('Artist not found');
+  const research=await researchArtistSummary(artist,options);
+  if(research.noChanges || research.needsConfirmation) return research;
+  const queued=artistsWriteQueue.then(()=>commitArtistSummaryResearchNow(id,research,actor));
+  artistsWriteQueue=queued.catch(()=>{});
+  return queued;
+}
   return {
     artistSearchCandidates, normalizeArtistWorks, artistProfileFromQid, artworkInfo,
     getJsonFast, api, similarityScore,
     getEntities, entityId, entityYear, entityLabel, koreanArtistNameOverrides,
     saveThumbnailBuffer, saveThumbnailFromLocalUpload, removeThumbnailFiles,
-    readArtistsFile, readArtistsIndex, readArtistDetail, writeArtistsFile, updateArtistPresentation, highResolutionPathExists, resolvedHighResolutionPath,
+    readArtistsFile, readArtistsIndex, readArtistDetail, writeArtistsFile, updateArtistPresentation, updateArtistSummaryFromLinks, highResolutionPathExists, resolvedHighResolutionPath,
     resolveHighResolutionPaths, safeUploadId, uploadExtension
   };
 };
+module.exports.presentationLinks=presentationLinks;

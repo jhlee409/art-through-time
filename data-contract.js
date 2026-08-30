@@ -57,6 +57,41 @@ function localizedSummaryList(value) {
   };
 }
 
+function normalizedArtistSummarySources(value) {
+  return (Array.isArray(value) ? value : []).slice(0, 100).map(source => {
+    const item = asObject(source);
+    return {
+      key:String(item.key || '').slice(0, 500),
+      url:String(item.url || '').slice(0, 2000),
+      title:String(item.title || '').slice(0, 300),
+      kind:['youtube','blog'].includes(item.kind) ? item.kind : 'blog',
+      researchVersion:Math.max(0,Number(item.researchVersion) || 0),
+      processedAt:String(item.processedAt || ''),
+      contentHash:/^[a-f0-9]{64}$/i.test(String(item.contentHash || '')) ? String(item.contentHash).toLowerCase() : ''
+    };
+  }).filter(source => /^https?:\/\//i.test(source.url) && source.key);
+}
+
+function normalizedArtistLinks(value) {
+  if (!Array.isArray(value)) return value;
+  return value.slice(0, 40).flatMap(link => {
+    let parsed;
+    try { parsed = new URL(String(link?.url || link || '').trim()); }
+    catch (_) { return []; }
+    if (!['http:', 'https:'].includes(parsed.protocol)) return [];
+    const item = {url:parsed.href,...(link?.emphasized === true ? {emphasized:true} : {})};
+    if (typeof link?.label === 'string' && link.label.trim()) item.label = link.label.trim().slice(0, 200);
+    else if (link?.label && typeof link.label === 'object' && !Array.isArray(link.label)) item.label = {ko:String(link.label.ko || '').slice(0, 200),en:String(link.label.en || '').slice(0, 200)};
+    const transcript = String(link?.transcript || '').replace(/\r\n?/g, '\n').trim().slice(0, 80000);
+    const youtube = /(?:^|\.)youtube\.com$|(?:^|\.)youtu\.be$|(?:^|\.)youtube-nocookie\.com$/i.test(parsed.hostname);
+    if (youtube && transcript) {
+      item.transcript = transcript;
+      if (isIsoDate(link?.transcriptUpdatedAt)) item.transcriptUpdatedAt = link.transcriptUpdatedAt;
+    }
+    return [item];
+  });
+}
+
 const artistNationalityOverrides = {
   Q7803: {ko:'이탈리아', en:'Italy'},
   'artist-Q7803': {ko:'이탈리아', en:'Italy'}
@@ -126,14 +161,21 @@ function normalizeWork(work, artist, options) {
 function normalizeArtist(artist, options) {
   const value = asObject(artist);
   const sourceDate = value.generated?.fetchedAt || value.metadata?.createdAt || options.now;
+  const summarySources = normalizedArtistSummarySources(value.artistSummarySources);
+  const summaryGeneratedLines = textList(value.artistSummaryGeneratedLines);
   const normalized = {
     ...value,
     name: localized(value.name),
     aliases: localizedTextList(value.aliases),
     artistSummary: localizedSummaryList(value.artistSummary),
+    links: normalizedArtistLinks(value.links),
     nationality: localized(artistNationalityOverride(value) || value.nationality),
     metadata: recordMetadata(value, timestamp(sourceDate, options.now), options.actor, options.touch, options.now)
   };
+  if (summarySources.length) normalized.artistSummarySources = summarySources;
+  else delete normalized.artistSummarySources;
+  if (summaryGeneratedLines.length) normalized.artistSummaryGeneratedLines = summaryGeneratedLines;
+  else delete normalized.artistSummaryGeneratedLines;
   normalized.works = (Array.isArray(value.works) ? value.works : []).map(work => normalizeWork(work, normalized, options));
   return normalized;
 }

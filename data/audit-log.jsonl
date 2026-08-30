@@ -1196,3 +1196,6 @@
 {"at":"2026-08-29T22:30:46.863Z","type":"artist.presentation.save","actor":"jhlee409@gmail.com","revision":899,"artistId":"artist-mid-berthe-morisot","backup":""}
 {"at":"2026-08-29T22:47:21.623Z","type":"artist.presentation.save","actor":"jhlee409@gmail.com","revision":900,"artistId":"claude-monet","backup":"data/backups/artists-r899-2026-08-29T22-47-21-555Z.json"}
 {"at":"2026-08-29T22:47:54.858Z","type":"artist.presentation.save","actor":"jhlee409@gmail.com","revision":901,"artistId":"claude-monet","backup":""}
+{"at":"2026-08-29T23:35:55.864Z","type":"artist.summary.research","actor":"jhlee409@gmail.com","revision":902,"artistId":"claude-monet","backup":"data/backups/artists-r901-2026-08-29T23-35-55-785Z.json","addedCount":8,"sourceCount":1}
+{"at":"2026-08-30T00:10:02.501Z","type":"artist.presentation.save","actor":"jhlee409@gmail.com","revision":903,"artistId":"claude-monet","backup":"data/backups/artists-r902-2026-08-30T00-10-02-439Z.json"}
+{"at":"2026-08-30T00:11:45.382Z","type":"artist.summary.research","actor":"jhlee409@gmail.com","revision":904,"artistId":"claude-monet","backup":"","addedCount":19,"sourceCount":1,"usage":{"model":"gpt-5-mini","inputTokens":21587,"outputTokens":8130,"totalTokens":29717,"webSearchCalls":0,"estimatedUsd":0.02165675}}

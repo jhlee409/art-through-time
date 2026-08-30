@@ -8,7 +8,8 @@
     "health": "node tools/check-project-health.js",
     "test": "node tools/check-project-health.js",
     "images:catalog": "node tools/build-image-catalog.js",
-    "images:check": "node tools/build-image-catalog.js --check"
+    "images:check": "node tools/build-image-catalog.js --check",
+    "research:check": "node tools/check-artist-summary-research.js"
   },
   "engines": {
     "node": ">=20"
