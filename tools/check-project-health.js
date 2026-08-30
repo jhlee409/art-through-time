@@ -130,6 +130,11 @@ function checkArtistPersistenceGuards() {
   if (!appSource.includes("work?.movementContributionReason !== 'artist-movement-characteristic'")) throw new Error('curated movement contributions must take precedence over automatic scoring');
   const serverDataSource = fs.readFileSync(path.join(root, 'server-data.js'), 'utf8');
   if (!serverDataSource.includes('previousWorks.size !== currentWorks.length')) throw new Error('artist metadata must be touched when a work is deleted');
+  const consolidationSource = fs.readFileSync(path.join(root, 'tools', 'consolidate-generated-artists.js'), 'utf8');
+  for (const [file, source] of [['app-core.js', appSource], ['server-data.js', serverDataSource], ['tools/consolidate-generated-artists.js', consolidationSource]]) {
+    if (!source.includes('hasLocalArtworkAsset')) throw new Error(`${file} must preserve works with local artwork assets beyond the imported-work limit`);
+  }
+  if (!consolidationSource.includes('!isGeneratedWork(work) || hasLocalArtworkAsset(work)')) throw new Error('artist consolidation must retain locally materialized generated works before merging');
   return 'artist persistence guards';
 }
 

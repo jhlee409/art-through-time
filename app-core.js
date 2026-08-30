@@ -742,6 +742,16 @@ const selectionKey = work => {
 };
 const isManualWork = work => work?.origin === 'manual';
 const isGeneratedWork = work => !isManualWork(work) && /^(wikidata|wikipedia)-/.test(String(work.id || ''));
+const isLocalArtworkPath = value => String(value || '').trim().replace(/\\/g,'/').startsWith('data/images/');
+const hasLocalArtworkAsset = work => [
+  work?.localImage,
+  work?.thumbnail,
+  work?.image,
+  work?.highResImage,
+  work?.highResOriginal,
+  work?.migration?.image?.localThumbnail,
+  work?.migration?.image?.highResolution
+].some(isLocalArtworkPath);
 const workPopularity = work => Number.isFinite(Number(work.popularity)) ? Number(work.popularity) : 0;
 const workYearForSort = work => {
   const value = String(work?.year ?? '').trim();
@@ -818,8 +828,10 @@ function selectArtistWorks(works, limit=artistImportedWorkLimit, artist={}) {
   const manualKeys = new Set(manualWorks.map(selectionKey));
   const curatedWorks = unique.filter(work => work?.origin === 'curated' && !manualKeys.has(selectionKey(work))).sort((a,b) => workYearForSort(a) - workYearForSort(b));
   const curatedKeys = new Set(curatedWorks.map(selectionKey));
-  const generatedWorks = unique.filter(work => !manualKeys.has(selectionKey(work)) && !curatedKeys.has(selectionKey(work))).sort((a,b) => representativeScore(b,artist) - representativeScore(a,artist) || workYearForSort(a) - workYearForSort(b));
-  const selected = [...manualWorks,...curatedWorks,...generatedWorks.slice(0,Math.max(0,limit-manualWorks.length-curatedWorks.length))];
+  const localWorks = unique.filter(work => !manualKeys.has(selectionKey(work)) && !curatedKeys.has(selectionKey(work)) && hasLocalArtworkAsset(work)).sort((a,b) => workYearForSort(a) - workYearForSort(b));
+  const localKeys = new Set(localWorks.map(selectionKey));
+  const generatedWorks = unique.filter(work => !manualKeys.has(selectionKey(work)) && !curatedKeys.has(selectionKey(work)) && !localKeys.has(selectionKey(work))).sort((a,b) => representativeScore(b,artist) - representativeScore(a,artist) || workYearForSort(a) - workYearForSort(b));
+  const selected = [...manualWorks,...curatedWorks,...localWorks,...generatedWorks.slice(0,Math.max(0,limit-manualWorks.length-curatedWorks.length-localWorks.length))];
   const authoritativeContributions = selected.filter(work =>
     work?.movementContribution && work?.movementContributionReason !== 'artist-movement-characteristic'
   );

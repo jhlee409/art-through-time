@@ -2,10 +2,10 @@
   "dataSchema": 1,
   "metadata": {
     "createdAt": "2026-08-22T12:46:59.824Z",
-    "updatedAt": "2026-08-30T01:00:44.475Z",
+    "updatedAt": "2026-08-30T01:36:53.689Z",
     "createdBy": "jhlee409@gmail.com",
     "updatedBy": "jhlee409@gmail.com",
-    "revision": 907,
+    "revision": 908,
     "representativeContentSchema": 2
   },
   "artists": [
@@ -84680,6 +84680,59 @@
           "imageUploadStatus": "ready"
         },
         {
+          "id": "wikidata-Q17491886",
+          "year": 1865,
+          "popularity": 9,
+          "title": {
+            "ko": "옹플뢰르의 눈길을 지나는 마차",
+            "en": "옹플뢰르의 눈길을 지나는 마차"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "",
+            "en": ""
+          },
+          "image": "data/images/claude-monet/wikidata-Q17491886.jpg",
+          "description": {
+            "ko": "painting by Claude Monet, Musée d’Orsay",
+            "en": "painting by Claude Monet, Musée d’Orsay"
+          },
+          "source": "http://www.wikidata.org/entity/Q17491886",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "thumbnail": "data/images/claude-monet/wikidata-Q17491886.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-10T21:17:12.400Z",
+          "metadata": {
+            "createdAt": "2026-08-21T09:53:45.966Z",
+            "updatedAt": "2026-08-28T14:20:45.285Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q17491886.jpg",
+              "highResolution": "data/images/claude-monet/wikidata-Q17491886.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q17491886",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q17491886",
+                "http://commons.wikimedia.org/wiki/Special:FilePath/Monet%2C%20A%20Cart%20on%20the%20Snowy%20Road%20at%20Honfleur%20%281865%20or%201867%29.jpg"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "highResImage": "data/images/claude-monet/wikidata-Q17491886.jpg",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q17491886.jpg",
+          "imageUploadStatus": "ready"
+        },
+        {
           "id": "wikidata-Q2734892",
           "year": 1866,
           "popularity": 23,
@@ -84730,6 +84783,112 @@
           },
           "highResImage": "data/images/claude-monet/wikidata-Q2734892.jpg",
           "highResOriginal": "data/images/claude-monet/wikidata-Q2734892.jpg",
+          "imageUploadStatus": "ready"
+        },
+        {
+          "id": "wikidata-Q829572",
+          "year": 1866,
+          "popularity": 9,
+          "title": {
+            "ko": "카미유",
+            "en": "카미유"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "사실주의",
+            "en": "사실주의"
+          },
+          "image": "data/images/claude-monet/wikidata-Q829572.JPG",
+          "description": {
+            "ko": "painting by Claude Monet in the Kunsthalle Bremen",
+            "en": "painting by Claude Monet in the Kunsthalle Bremen"
+          },
+          "source": "http://www.wikidata.org/entity/Q829572",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "thumbnail": "data/images/claude-monet/wikidata-Q829572.JPG",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-10T21:17:14.423Z",
+          "metadata": {
+            "createdAt": "2026-08-21T09:53:45.966Z",
+            "updatedAt": "2026-08-28T14:20:45.285Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q829572.JPG",
+              "highResolution": "data/images/claude-monet/wikidata-Q829572.JPG",
+              "sourceUrl": "http://www.wikidata.org/entity/Q829572",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q829572",
+                "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20Camille.JPG"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "highResImage": "data/images/claude-monet/wikidata-Q829572.JPG",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q829572.JPG",
+          "imageUploadStatus": "ready"
+        },
+        {
+          "id": "wikidata-Q3966658",
+          "year": 1867,
+          "popularity": 8,
+          "title": {
+            "ko": "생타드레스의 해변",
+            "en": "생타드레스의 해변"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "인상주의",
+            "en": "인상주의"
+          },
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20The%20Beach%20at%20Sainte-Adresse%20-%20Google%20Art%20Project.jpg",
+          "description": {
+            "ko": "painting by Claude Monet, 1867, Art Institute of Chicago",
+            "en": "painting by Claude Monet, 1867, Art Institute of Chicago"
+          },
+          "source": "http://www.wikidata.org/entity/Q3966658",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "thumbnail": "data/images/claude-monet/wikidata-Q3966658.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-10T21:18:05.132Z",
+          "metadata": {
+            "createdAt": "2026-08-21T09:53:45.966Z",
+            "updatedAt": "2026-08-28T14:20:45.285Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q3966658.jpg",
+              "highResolution": "data/images/claude-monet/wikidata-Q3966658.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q3966658",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q3966658",
+                "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20The%20Beach%20at%20Sainte-Adresse%20-%20Google%20Art%20Project.jpg"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "highResImage": "data/images/claude-monet/wikidata-Q3966658.jpg",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q3966658.jpg",
           "imageUploadStatus": "ready"
         },
         {
@@ -84892,33 +85051,33 @@
           "imageUploadStatus": "ready"
         },
         {
-          "id": "wikidata-Q3966658",
-          "year": 1867,
-          "popularity": 8,
+          "id": "wikidata-Q17002537",
+          "year": 1868,
+          "popularity": 7,
           "title": {
-            "ko": "생타드레스의 해변",
-            "en": "생타드레스의 해변"
+            "ko": "컵을 지닌 아이",
+            "en": "컵을 지닌 아이"
           },
           "country": {
             "ko": "",
             "en": ""
           },
           "movement": {
-            "ko": "인상주의",
-            "en": "인상주의"
+            "ko": "",
+            "en": ""
           },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20The%20Beach%20at%20Sainte-Adresse%20-%20Google%20Art%20Project.jpg",
+          "image": "data/images/claude-monet/wikidata-Q17002537.jpg",
           "description": {
-            "ko": "painting by Claude Monet, 1867, Art Institute of Chicago",
-            "en": "painting by Claude Monet, 1867, Art Institute of Chicago"
+            "ko": "painting by Claude Monet",
+            "en": "painting by Claude Monet"
           },
-          "source": "http://www.wikidata.org/entity/Q3966658",
+          "source": "http://www.wikidata.org/entity/Q17002537",
           "verified": true,
           "representative": false,
           "movementContribution": false,
-          "thumbnail": "data/images/claude-monet/wikidata-Q3966658.jpg",
+          "thumbnail": "data/images/claude-monet/wikidata-Q17002537.jpg",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-10T21:18:05.132Z",
+          "thumbnailCacheKey": "2026-08-10T21:19:02.690Z",
           "metadata": {
             "createdAt": "2026-08-21T09:53:45.966Z",
             "updatedAt": "2026-08-28T14:20:45.285Z",
@@ -84929,19 +85088,19 @@
             "schema": 1,
             "image": {
               "status": "ready",
-              "localThumbnail": "data/images/claude-monet/wikidata-Q3966658.jpg",
-              "highResolution": "data/images/claude-monet/wikidata-Q3966658.jpg",
-              "sourceUrl": "http://www.wikidata.org/entity/Q3966658",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q17002537.jpg",
+              "highResolution": "data/images/claude-monet/wikidata-Q17002537.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q17002537",
               "sourceUrls": [
-                "http://www.wikidata.org/entity/Q3966658",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20The%20Beach%20at%20Sainte-Adresse%20-%20Google%20Art%20Project.jpg"
+                "http://www.wikidata.org/entity/Q17002537",
+                "http://commons.wikimedia.org/wiki/Special:FilePath/L%27Enfant%20a%20la%20tasse%2C%20portrait%20de%20Jean%20Monet.jpg"
               ],
               "license": "",
               "institution": ""
             }
           },
-          "highResImage": "data/images/claude-monet/wikidata-Q3966658.jpg",
-          "highResOriginal": "data/images/claude-monet/wikidata-Q3966658.jpg",
+          "highResImage": "data/images/claude-monet/wikidata-Q17002537.jpg",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q17002537.jpg",
           "imageUploadStatus": "ready"
         },
         {
@@ -85582,6 +85741,112 @@
           "imageUploadStatus": "ready"
         },
         {
+          "id": "wikidata-Q10315096",
+          "year": 1873,
+          "popularity": 9,
+          "title": {
+            "ko": "아니에르의 센강",
+            "en": "아니에르의 센강"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "인상주의",
+            "en": "인상주의"
+          },
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/La%20Seine%20%C3%A0%20Asni%C3%A8re%20-%20Monet.jpg",
+          "description": {
+            "ko": "painting by Claude Monet, Hermitage",
+            "en": "painting by Claude Monet, Hermitage"
+          },
+          "source": "http://www.wikidata.org/entity/Q10315096",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "thumbnail": "data/images/claude-monet/wikidata-Q10315096.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-10T21:21:03.442Z",
+          "metadata": {
+            "createdAt": "2026-08-21T09:53:45.966Z",
+            "updatedAt": "2026-08-28T14:20:45.285Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q10315096.jpg",
+              "highResolution": "data/images/claude-monet/wikidata-Q10315096.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q10315096",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q10315096",
+                "http://commons.wikimedia.org/wiki/Special:FilePath/La%20Seine%20%C3%A0%20Asni%C3%A8re%20-%20Monet.jpg"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "highResImage": "data/images/claude-monet/wikidata-Q10315096.jpg",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q10315096.jpg",
+          "imageUploadStatus": "ready"
+        },
+        {
+          "id": "wikidata-Q18922918",
+          "year": 1873,
+          "popularity": 9,
+          "title": {
+            "ko": "점심",
+            "en": "점심"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "인상주의",
+            "en": "인상주의"
+          },
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Monet%20Luncheon.jpg",
+          "description": {
+            "ko": "클로드 모네의 그림",
+            "en": "클로드 모네의 그림"
+          },
+          "source": "http://www.wikidata.org/entity/Q18922918",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "thumbnail": "data/images/claude-monet/wikidata-Q18922918.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-10T21:21:02.600Z",
+          "metadata": {
+            "createdAt": "2026-08-21T09:53:45.966Z",
+            "updatedAt": "2026-08-28T14:20:45.285Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q18922918.jpg",
+              "highResolution": "data/images/claude-monet/wikidata-Q18922918.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q18922918",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q18922918",
+                "http://commons.wikimedia.org/wiki/Special:FilePath/Monet%20Luncheon.jpg"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "highResImage": "data/images/claude-monet/wikidata-Q18922918.jpg",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q18922918.jpg",
+          "imageUploadStatus": "ready"
+        },
+        {
           "id": "wikidata-Q3231771",
           "year": 1873,
           "popularity": 11,
@@ -85685,112 +85950,6 @@
           },
           "highResImage": "data/images/claude-monet/wikidata-Q4949676.jpg",
           "highResOriginal": "data/images/claude-monet/wikidata-Q4949676.jpg",
-          "imageUploadStatus": "ready"
-        },
-        {
-          "id": "wikidata-Q18922918",
-          "year": 1873,
-          "popularity": 9,
-          "title": {
-            "ko": "점심",
-            "en": "점심"
-          },
-          "country": {
-            "ko": "",
-            "en": ""
-          },
-          "movement": {
-            "ko": "인상주의",
-            "en": "인상주의"
-          },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Monet%20Luncheon.jpg",
-          "description": {
-            "ko": "클로드 모네의 그림",
-            "en": "클로드 모네의 그림"
-          },
-          "source": "http://www.wikidata.org/entity/Q18922918",
-          "verified": true,
-          "representative": false,
-          "movementContribution": false,
-          "thumbnail": "data/images/claude-monet/wikidata-Q18922918.jpg",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-10T21:21:02.600Z",
-          "metadata": {
-            "createdAt": "2026-08-21T09:53:45.966Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/claude-monet/wikidata-Q18922918.jpg",
-              "highResolution": "data/images/claude-monet/wikidata-Q18922918.jpg",
-              "sourceUrl": "http://www.wikidata.org/entity/Q18922918",
-              "sourceUrls": [
-                "http://www.wikidata.org/entity/Q18922918",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Monet%20Luncheon.jpg"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "highResImage": "data/images/claude-monet/wikidata-Q18922918.jpg",
-          "highResOriginal": "data/images/claude-monet/wikidata-Q18922918.jpg",
-          "imageUploadStatus": "ready"
-        },
-        {
-          "id": "wikidata-Q10315096",
-          "year": 1873,
-          "popularity": 9,
-          "title": {
-            "ko": "아니에르의 센강",
-            "en": "아니에르의 센강"
-          },
-          "country": {
-            "ko": "",
-            "en": ""
-          },
-          "movement": {
-            "ko": "인상주의",
-            "en": "인상주의"
-          },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/La%20Seine%20%C3%A0%20Asni%C3%A8re%20-%20Monet.jpg",
-          "description": {
-            "ko": "painting by Claude Monet, Hermitage",
-            "en": "painting by Claude Monet, Hermitage"
-          },
-          "source": "http://www.wikidata.org/entity/Q10315096",
-          "verified": true,
-          "representative": false,
-          "movementContribution": false,
-          "thumbnail": "data/images/claude-monet/wikidata-Q10315096.jpg",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-10T21:21:03.442Z",
-          "metadata": {
-            "createdAt": "2026-08-21T09:53:45.966Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
-            "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
-          },
-          "migration": {
-            "schema": 1,
-            "image": {
-              "status": "ready",
-              "localThumbnail": "data/images/claude-monet/wikidata-Q10315096.jpg",
-              "highResolution": "data/images/claude-monet/wikidata-Q10315096.jpg",
-              "sourceUrl": "http://www.wikidata.org/entity/Q10315096",
-              "sourceUrls": [
-                "http://www.wikidata.org/entity/Q10315096",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/La%20Seine%20%C3%A0%20Asni%C3%A8re%20-%20Monet.jpg"
-              ],
-              "license": "",
-              "institution": ""
-            }
-          },
-          "highResImage": "data/images/claude-monet/wikidata-Q10315096.jpg",
-          "highResOriginal": "data/images/claude-monet/wikidata-Q10315096.jpg",
           "imageUploadStatus": "ready"
         },
         {
@@ -86308,12 +86467,12 @@
           "imageUploadStatus": "ready"
         },
         {
-          "id": "wikidata-Q49985736",
+          "id": "wikidata-Q20272169",
           "year": 1877,
-          "popularity": 13,
+          "popularity": 7,
           "title": {
-            "ko": "생라자르역",
-            "en": "생라자르역"
+            "ko": "노르망디발 열차의 도착, 생라자르역",
+            "en": "노르망디발 열차의 도착, 생라자르역"
           },
           "country": {
             "ko": "",
@@ -86323,18 +86482,18 @@
             "ko": "인상주의",
             "en": "인상주의"
           },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/La%20Gare%20Saint-Lazare%20-%20Claude%20Monet.jpg",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20Arrival%20of%20the%20Normandy%20Train%2C%20Gare%20Saint-Lazare%20-%20Google%20Art%20Project.jpg",
           "description": {
-            "ko": "impressionist paintings of French rail infrastructure",
-            "en": "impressionist paintings of French rail infrastructure"
+            "ko": "painting by Claude Monet, Art Institute of Chicago",
+            "en": "painting by Claude Monet, Art Institute of Chicago"
           },
-          "source": "http://www.wikidata.org/entity/Q49985736",
+          "source": "http://www.wikidata.org/entity/Q20272169",
           "verified": true,
           "representative": false,
           "movementContribution": false,
-          "thumbnail": "data/images/claude-monet/wikidata-Q49985736.jpg",
+          "thumbnail": "data/images/claude-monet/wikidata-Q20272169.jpg",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-10T21:22:03.385Z",
+          "thumbnailCacheKey": "2026-08-10T21:22:06.618Z",
           "metadata": {
             "createdAt": "2026-08-21T09:53:45.966Z",
             "updatedAt": "2026-08-28T14:20:45.285Z",
@@ -86345,19 +86504,19 @@
             "schema": 1,
             "image": {
               "status": "ready",
-              "localThumbnail": "data/images/claude-monet/wikidata-Q49985736.jpg",
-              "highResolution": "data/images/claude-monet/wikidata-Q49985736.jpg",
-              "sourceUrl": "http://www.wikidata.org/entity/Q49985736",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q20272169.jpg",
+              "highResolution": "data/images/claude-monet/wikidata-Q20272169.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q20272169",
               "sourceUrls": [
-                "http://www.wikidata.org/entity/Q49985736",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/La%20Gare%20Saint-Lazare%20-%20Claude%20Monet.jpg"
+                "http://www.wikidata.org/entity/Q20272169",
+                "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20Arrival%20of%20the%20Normandy%20Train%2C%20Gare%20Saint-Lazare%20-%20Google%20Art%20Project.jpg"
               ],
               "license": "",
               "institution": ""
             }
           },
-          "highResImage": "data/images/claude-monet/wikidata-Q49985736.jpg",
-          "highResOriginal": "data/images/claude-monet/wikidata-Q49985736.jpg",
+          "highResImage": "data/images/claude-monet/wikidata-Q20272169.jpg",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q20272169.jpg",
           "imageUploadStatus": "ready"
         },
         {
@@ -86414,12 +86573,12 @@
           "imageUploadStatus": "ready"
         },
         {
-          "id": "wikidata-Q20272169",
+          "id": "wikidata-Q49985736",
           "year": 1877,
-          "popularity": 7,
+          "popularity": 13,
           "title": {
-            "ko": "노르망디발 열차의 도착, 생라자르역",
-            "en": "노르망디발 열차의 도착, 생라자르역"
+            "ko": "생라자르역",
+            "en": "생라자르역"
           },
           "country": {
             "ko": "",
@@ -86429,18 +86588,18 @@
             "ko": "인상주의",
             "en": "인상주의"
           },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20Arrival%20of%20the%20Normandy%20Train%2C%20Gare%20Saint-Lazare%20-%20Google%20Art%20Project.jpg",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/La%20Gare%20Saint-Lazare%20-%20Claude%20Monet.jpg",
           "description": {
-            "ko": "painting by Claude Monet, Art Institute of Chicago",
-            "en": "painting by Claude Monet, Art Institute of Chicago"
+            "ko": "impressionist paintings of French rail infrastructure",
+            "en": "impressionist paintings of French rail infrastructure"
           },
-          "source": "http://www.wikidata.org/entity/Q20272169",
+          "source": "http://www.wikidata.org/entity/Q49985736",
           "verified": true,
           "representative": false,
           "movementContribution": false,
-          "thumbnail": "data/images/claude-monet/wikidata-Q20272169.jpg",
+          "thumbnail": "data/images/claude-monet/wikidata-Q49985736.jpg",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-10T21:22:06.618Z",
+          "thumbnailCacheKey": "2026-08-10T21:22:03.385Z",
           "metadata": {
             "createdAt": "2026-08-21T09:53:45.966Z",
             "updatedAt": "2026-08-28T14:20:45.285Z",
@@ -86451,19 +86610,72 @@
             "schema": 1,
             "image": {
               "status": "ready",
-              "localThumbnail": "data/images/claude-monet/wikidata-Q20272169.jpg",
-              "highResolution": "data/images/claude-monet/wikidata-Q20272169.jpg",
-              "sourceUrl": "http://www.wikidata.org/entity/Q20272169",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q49985736.jpg",
+              "highResolution": "data/images/claude-monet/wikidata-Q49985736.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q49985736",
               "sourceUrls": [
-                "http://www.wikidata.org/entity/Q20272169",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20Arrival%20of%20the%20Normandy%20Train%2C%20Gare%20Saint-Lazare%20-%20Google%20Art%20Project.jpg"
+                "http://www.wikidata.org/entity/Q49985736",
+                "http://commons.wikimedia.org/wiki/Special:FilePath/La%20Gare%20Saint-Lazare%20-%20Claude%20Monet.jpg"
               ],
               "license": "",
               "institution": ""
             }
           },
-          "highResImage": "data/images/claude-monet/wikidata-Q20272169.jpg",
-          "highResOriginal": "data/images/claude-monet/wikidata-Q20272169.jpg",
+          "highResImage": "data/images/claude-monet/wikidata-Q49985736.jpg",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q49985736.jpg",
+          "imageUploadStatus": "ready"
+        },
+        {
+          "id": "wikidata-Q6082483",
+          "year": 1877,
+          "popularity": 7,
+          "title": {
+            "ko": "유럽교, 생라자르역",
+            "en": "유럽교, 생라자르역"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "",
+            "en": ""
+          },
+          "image": "data/images/claude-monet/wikidata-Q6082483.jpg",
+          "description": {
+            "ko": "painting by Claude Monet",
+            "en": "painting by Claude Monet"
+          },
+          "source": "http://www.wikidata.org/entity/Q6082483",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "thumbnail": "data/images/claude-monet/wikidata-Q6082483.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-16T09:19:50.191Z",
+          "metadata": {
+            "createdAt": "2026-08-21T09:53:45.966Z",
+            "updatedAt": "2026-08-28T14:20:45.285Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q6082483.jpg",
+              "highResolution": "data/images/claude-monet/wikidata-Q6082483.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q6082483",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q6082483",
+                "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%2C%201877%2C%20Pont%20de%20l%27Europe%20%28cropped%29.jpg"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "highResImage": "data/images/claude-monet/wikidata-Q6082483.jpg",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q6082483.jpg",
           "imageUploadStatus": "ready"
         },
         {
@@ -86626,6 +86838,59 @@
           "imageUploadStatus": "ready"
         },
         {
+          "id": "wikidata-Q27665416",
+          "year": 1882,
+          "popularity": 8,
+          "title": {
+            "ko": "폴 영감의 초상",
+            "en": "폴 영감의 초상"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "",
+            "en": ""
+          },
+          "image": "data/images/claude-monet/wikidata-Q27665416.jpg",
+          "description": {
+            "ko": "painting by Claude Monet, Belvedere Wien",
+            "en": "painting by Claude Monet, Belvedere Wien"
+          },
+          "source": "http://www.wikidata.org/entity/Q27665416",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "thumbnail": "data/images/claude-monet/wikidata-Q27665416.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-16T09:19:54.511Z",
+          "metadata": {
+            "createdAt": "2026-08-21T09:53:45.966Z",
+            "updatedAt": "2026-08-28T14:20:45.285Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q27665416.jpg",
+              "highResolution": "data/images/claude-monet/wikidata-Q27665416.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q27665416",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q27665416",
+                "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20Der%20Koch%20%28Le%20P%C3%A8re%20Paul%29%20-%20540%20-%20%C3%96sterreichische%20Galerie%20Belvedere.jpg"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "highResImage": "data/images/claude-monet/wikidata-Q27665416.jpg",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q27665416.jpg",
+          "imageUploadStatus": "ready"
+        },
+        {
           "id": "wikidata-Q3234987",
           "year": 1882,
           "popularity": 8,
@@ -86732,33 +86997,33 @@
           "imageUploadStatus": "ready"
         },
         {
-          "id": "wikidata-Q2395218",
-          "year": 1886,
-          "popularity": 23,
+          "id": "wikidata-Q19912578",
+          "year": 1884,
+          "popularity": 8,
           "title": {
-            "ko": "파라솔을 든 여인 - 모네 부인과 그 아들",
-            "en": "파라솔을 든 여인 - 모네 부인과 그 아들"
+            "ko": "네르비아의 계곡",
+            "en": "Valley of the Nervia"
           },
           "country": {
             "ko": "",
             "en": ""
           },
           "movement": {
-            "ko": "인상주의",
-            "en": "인상주의"
+            "ko": "",
+            "en": ""
           },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20Woman%20with%20a%20Parasol%20-%20Madame%20Monet%20and%20Her%20Son%20-%20Google%20Art%20Project.jpg",
+          "image": "data/images/claude-monet/wikidata-Q19912578.jpg",
           "description": {
-            "ko": "클로드 모네의 그림",
-            "en": "클로드 모네의 그림"
+            "ko": "painting by Claude Monet",
+            "en": "painting by Claude Monet"
           },
-          "source": "http://www.wikidata.org/entity/Q2395218",
+          "source": "http://www.wikidata.org/entity/Q19912578",
           "verified": true,
           "representative": false,
           "movementContribution": false,
-          "thumbnail": "data/images/claude-monet/monet-woman-parasol.jpg",
+          "thumbnail": "data/images/claude-monet/wikidata-Q19912578.jpg",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-16T09:20:07.401Z",
+          "thumbnailCacheKey": "2026-08-16T09:20:03.092Z",
           "metadata": {
             "createdAt": "2026-08-21T09:53:45.966Z",
             "updatedAt": "2026-08-28T14:20:45.285Z",
@@ -86769,19 +87034,19 @@
             "schema": 1,
             "image": {
               "status": "ready",
-              "localThumbnail": "data/images/claude-monet/monet-woman-parasol.jpg",
-              "highResolution": "data/images/claude-monet/monet-woman-parasol.jpg",
-              "sourceUrl": "http://www.wikidata.org/entity/Q2395218",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q19912578.jpg",
+              "highResolution": "data/images/claude-monet/wikidata-Q19912578.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q19912578",
               "sourceUrls": [
-                "http://www.wikidata.org/entity/Q2395218",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20Woman%20with%20a%20Parasol%20-%20Madame%20Monet%20and%20Her%20Son%20-%20Google%20Art%20Project.jpg"
+                "http://www.wikidata.org/entity/Q19912578",
+                "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20The%20Valley%20of%20the%20Nervia.jpg"
               ],
               "license": "",
               "institution": ""
             }
           },
-          "highResImage": "data/images/claude-monet/monet-woman-parasol.jpg",
-          "highResOriginal": "data/images/claude-monet/monet-woman-parasol.jpg",
+          "highResImage": "data/images/claude-monet/wikidata-Q19912578.jpg",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q19912578.jpg",
           "imageUploadStatus": "ready"
         },
         {
@@ -86838,12 +87103,12 @@
           "imageUploadStatus": "ready"
         },
         {
-          "id": "wikidata-Q3952498",
+          "id": "wikidata-Q2395218",
           "year": 1886,
-          "popularity": 7,
+          "popularity": 23,
           "title": {
-            "ko": "포르코통의 뾰족바위, 거친 바다",
-            "en": "포르코통의 뾰족바위, 거친 바다"
+            "ko": "파라솔을 든 여인 - 모네 부인과 그 아들",
+            "en": "파라솔을 든 여인 - 모네 부인과 그 아들"
           },
           "country": {
             "ko": "",
@@ -86853,36 +87118,42 @@
             "ko": "인상주의",
             "en": "인상주의"
           },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%27The%20Pyramids%20at%20Port-Coton%27%20by%20Claude%20Monet%2C%201886%2C%20Pushkin%20Museum.jpg",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20Woman%20with%20a%20Parasol%20-%20Madame%20Monet%20and%20Her%20Son%20-%20Google%20Art%20Project.jpg",
           "description": {
-            "ko": "painting by Claude Monet, 1866",
-            "en": "painting by Claude Monet, 1866"
+            "ko": "클로드 모네의 그림",
+            "en": "클로드 모네의 그림"
           },
-          "source": "http://www.wikidata.org/entity/Q3952498",
+          "source": "http://www.wikidata.org/entity/Q2395218",
           "verified": true,
           "representative": false,
           "movementContribution": false,
+          "thumbnail": "data/images/claude-monet/monet-woman-parasol.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-16T09:20:07.401Z",
           "metadata": {
             "createdAt": "2026-08-21T09:53:45.966Z",
-            "updatedAt": "2026-08-29T21:43:52.054Z",
+            "updatedAt": "2026-08-28T14:20:45.285Z",
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
           },
           "migration": {
             "schema": 1,
             "image": {
-              "status": "pending",
-              "localThumbnail": "",
-              "highResolution": "",
-              "sourceUrl": "http://www.wikidata.org/entity/Q3952498",
+              "status": "ready",
+              "localThumbnail": "data/images/claude-monet/monet-woman-parasol.jpg",
+              "highResolution": "data/images/claude-monet/monet-woman-parasol.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q2395218",
               "sourceUrls": [
-                "http://www.wikidata.org/entity/Q3952498",
-                "http://commons.wikimedia.org/wiki/Special:FilePath/%27The%20Pyramids%20at%20Port-Coton%27%20by%20Claude%20Monet%2C%201886%2C%20Pushkin%20Museum.jpg"
+                "http://www.wikidata.org/entity/Q2395218",
+                "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20Woman%20with%20a%20Parasol%20-%20Madame%20Monet%20and%20Her%20Son%20-%20Google%20Art%20Project.jpg"
               ],
               "license": "",
               "institution": ""
             }
-          }
+          },
+          "highResImage": "data/images/claude-monet/monet-woman-parasol.jpg",
+          "highResOriginal": "data/images/claude-monet/monet-woman-parasol.jpg",
+          "imageUploadStatus": "ready"
         },
         {
           "id": "monet-haystacks",
@@ -87835,6 +88106,112 @@
           "imageUploadStatus": "ready"
         },
         {
+          "id": "wikidata-Q19564337",
+          "year": 1908,
+          "popularity": 9,
+          "title": {
+            "ko": "대운하",
+            "en": "대운하"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "",
+            "en": ""
+          },
+          "image": "data/images/claude-monet/wikidata-Q19564337.jpg",
+          "description": {
+            "ko": "painting by Claude Monet, Museum of Fine Arts, Boston, 19.171",
+            "en": "painting by Claude Monet, Museum of Fine Arts, Boston, 19.171"
+          },
+          "source": "http://www.wikidata.org/entity/Q19564337",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "thumbnail": "data/images/claude-monet/wikidata-Q19564337.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-16T09:31:31.647Z",
+          "metadata": {
+            "createdAt": "2026-08-21T09:53:45.966Z",
+            "updatedAt": "2026-08-28T14:20:45.285Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q19564337.jpg",
+              "highResolution": "data/images/claude-monet/wikidata-Q19564337.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q19564337",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q19564337",
+                "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%2C%20Le%20Grand%20Canal.jpg"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "highResImage": "data/images/claude-monet/wikidata-Q19564337.jpg",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q19564337.jpg",
+          "imageUploadStatus": "ready"
+        },
+        {
+          "id": "wikidata-Q19914267",
+          "year": 1908,
+          "popularity": 8,
+          "title": {
+            "ko": "산조르조마조레에서 바라본 두칼레 궁전",
+            "en": "산조르조마조레에서 바라본 두칼레 궁전"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "",
+            "en": ""
+          },
+          "image": "data/images/claude-monet/wikidata-Q19914267.jpg",
+          "description": {
+            "ko": "painting by Claude Monet, Metropolitan Museum of Art",
+            "en": "painting by Claude Monet, Metropolitan Museum of Art"
+          },
+          "source": "http://www.wikidata.org/entity/Q19914267",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "thumbnail": "data/images/claude-monet/wikidata-Q19914267.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-16T12:02:35.208Z",
+          "metadata": {
+            "createdAt": "2026-08-21T09:53:45.966Z",
+            "updatedAt": "2026-08-28T14:20:45.285Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q19914267.jpg",
+              "highResolution": "data/images/claude-monet/wikidata-Q19914267.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q19914267",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q19914267",
+                "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Doge%27s%20Palace%20Seen%20from%20San%20Giorgio%20Maggiore%20MET%20DT1904.jpg"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "highResImage": "data/images/claude-monet/wikidata-Q19914267.jpg",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q19914267.jpg",
+          "imageUploadStatus": "ready"
+        },
+        {
           "id": "wikidata-Q3947218",
           "year": 1908,
           "popularity": 12,
@@ -88045,6 +88422,59 @@
           },
           "origin": "manual",
           "thumbnailCacheKey": "2026-08-29T07:18:54.974Z"
+        },
+        {
+          "id": "wikidata-Q1650049",
+          "year": 1919,
+          "popularity": 8,
+          "title": {
+            "ko": "수련 연못",
+            "en": "수련 연못"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "",
+            "en": ""
+          },
+          "image": "data/images/claude-monet/wikidata-Q1650049.jpg",
+          "description": {
+            "ko": "클로드 모네의 그림",
+            "en": "클로드 모네의 그림"
+          },
+          "source": "http://www.wikidata.org/entity/Q1650049",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "thumbnail": "data/images/claude-monet/wikidata-Q1650049.jpg",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-08-16T09:32:36.182Z",
+          "metadata": {
+            "createdAt": "2026-08-21T09:53:45.966Z",
+            "updatedAt": "2026-08-28T14:20:45.285Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q1650049.jpg",
+              "highResolution": "data/images/claude-monet/wikidata-Q1650049.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q1650049",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q1650049",
+                "http://commons.wikimedia.org/wiki/Special:FilePath/Le%20bassin%20aux%20nymph%C3%A9as%20-%20Claude%20Monet.jpg"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "highResImage": "data/images/claude-monet/wikidata-Q1650049.jpg",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q1650049.jpg",
+          "imageUploadStatus": "ready"
         },
         {
           "id": "monet-late-japanese-bridge",
@@ -88468,6 +88898,734 @@
           },
           "origin": "manual",
           "thumbnailCacheKey": "2026-08-29T07:18:54.970Z"
+        },
+        {
+          "id": "wikidata-Q105099589",
+          "year": 1923,
+          "popularity": 1,
+          "title": {
+            "ko": "The house seen from the rose garden",
+            "en": "The house seen from the rose garden"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "인상주의",
+            "en": "인상주의"
+          },
+          "image": "data/images/claude-monet/wikidata-Q105099589.JPG",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q105099589",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:18:20.749Z",
+            "updatedAt": "2026-08-30T01:36:53.689Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "thumbnail": "data/images/claude-monet/wikidata-Q105099589.JPG",
+          "highResImage": "data/images/claude-monet/wikidata-Q105099589.JPG",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q105099589.JPG",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q105099589.JPG",
+              "highResolution": "data/images/claude-monet/wikidata-Q105099589.JPG",
+              "sourceUrl": "https://www.wikidata.org/entity/Q105099589",
+              "sourceUrls": [
+                "https://www.wikidata.org/entity/Q105099589"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "origin": "manual"
+        },
+        {
+          "id": "wikidata-Q105099590",
+          "year": 1923,
+          "popularity": 1,
+          "title": {
+            "ko": "The Artist's House Seen from the Rose Garden",
+            "en": "The Artist's House Seen from the Rose Garden"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "인상주의",
+            "en": "인상주의"
+          },
+          "image": "data/images/claude-monet/wikidata-Q105099590.JPG",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q105099590",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:18:20.749Z",
+            "updatedAt": "2026-08-30T01:36:53.689Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "thumbnail": "data/images/claude-monet/wikidata-Q105099590.JPG",
+          "highResImage": "data/images/claude-monet/wikidata-Q105099590.JPG",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q105099590.JPG",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q105099590.JPG",
+              "highResolution": "data/images/claude-monet/wikidata-Q105099590.JPG",
+              "sourceUrl": "https://www.wikidata.org/entity/Q105099590",
+              "sourceUrls": [
+                "https://www.wikidata.org/entity/Q105099590"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "origin": "manual"
+        },
+        {
+          "id": "wikidata-Q105099603",
+          "year": 1923,
+          "popularity": 1,
+          "title": {
+            "ko": "The house from the rose garden",
+            "en": "The house from the rose garden"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "인상주의",
+            "en": "인상주의"
+          },
+          "image": "data/images/claude-monet/wikidata-Q105099603.JPG",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q105099603",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:18:20.749Z",
+            "updatedAt": "2026-08-30T01:36:53.689Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "thumbnail": "data/images/claude-monet/wikidata-Q105099603.JPG",
+          "highResImage": "data/images/claude-monet/wikidata-Q105099603.JPG",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q105099603.JPG",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q105099603.JPG",
+              "highResolution": "data/images/claude-monet/wikidata-Q105099603.JPG",
+              "sourceUrl": "https://www.wikidata.org/entity/Q105099603",
+              "sourceUrls": [
+                "https://www.wikidata.org/entity/Q105099603"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "origin": "manual"
+        },
+        {
+          "id": "wikidata-Q105099607",
+          "year": 1923,
+          "popularity": 1,
+          "title": {
+            "ko": "The artist's house seen from the rose garden",
+            "en": "The artist's house seen from the rose garden"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "인상주의",
+            "en": "인상주의"
+          },
+          "image": "data/images/claude-monet/wikidata-Q105099607.JPG",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q105099607",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:18:20.749Z",
+            "updatedAt": "2026-08-30T01:36:53.689Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "thumbnail": "data/images/claude-monet/wikidata-Q105099607.JPG",
+          "highResImage": "data/images/claude-monet/wikidata-Q105099607.JPG",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q105099607.JPG",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q105099607.JPG",
+              "highResolution": "data/images/claude-monet/wikidata-Q105099607.JPG",
+              "sourceUrl": "https://www.wikidata.org/entity/Q105099607",
+              "sourceUrls": [
+                "https://www.wikidata.org/entity/Q105099607"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "origin": "manual"
+        },
+        {
+          "id": "wikidata-Q20890879",
+          "year": 1923,
+          "popularity": 1,
+          "title": {
+            "ko": "The Japanese Bridge",
+            "en": "The Japanese Bridge"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "인상주의",
+            "en": "인상주의"
+          },
+          "image": "data/images/claude-monet/wikidata-Q20890879.jpg",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q20890879",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:18:20.749Z",
+            "updatedAt": "2026-08-30T01:36:53.689Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "thumbnail": "data/images/claude-monet/wikidata-Q20890879.jpg",
+          "highResImage": "data/images/claude-monet/wikidata-Q20890879.jpg",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q20890879.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q20890879.jpg",
+              "highResolution": "data/images/claude-monet/wikidata-Q20890879.jpg",
+              "sourceUrl": "https://www.wikidata.org/entity/Q20890879",
+              "sourceUrls": [
+                "https://www.wikidata.org/entity/Q20890879"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "origin": "manual"
+        },
+        {
+          "id": "wikidata-Q64174089",
+          "year": 1923,
+          "popularity": 1,
+          "title": {
+            "ko": "Waterlilies Pond, Green Reflection",
+            "en": "Waterlilies Pond, Green Reflection"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "인상주의",
+            "en": "인상주의"
+          },
+          "image": "data/images/claude-monet/wikidata-Q64174089.jpg",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q64174089",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:18:20.749Z",
+            "updatedAt": "2026-08-30T01:36:53.689Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "thumbnail": "data/images/claude-monet/wikidata-Q64174089.jpg",
+          "highResImage": "data/images/claude-monet/wikidata-Q64174089.jpg",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q64174089.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q64174089.jpg",
+              "highResolution": "data/images/claude-monet/wikidata-Q64174089.jpg",
+              "sourceUrl": "https://www.wikidata.org/entity/Q64174089",
+              "sourceUrls": [
+                "https://www.wikidata.org/entity/Q64174089"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "origin": "manual"
+        },
+        {
+          "id": "wikidata-Q105099581",
+          "year": 1924,
+          "popularity": 1,
+          "title": {
+            "ko": "붓꽃",
+            "en": "Iris"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "인상주의",
+            "en": "인상주의"
+          },
+          "image": "data/images/claude-monet/wikidata-Q105099581.jpg",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q105099581",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:18:20.749Z",
+            "updatedAt": "2026-08-30T01:36:53.689Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "thumbnail": "data/images/claude-monet/wikidata-Q105099581.jpg",
+          "highResImage": "data/images/claude-monet/wikidata-Q105099581.jpg",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q105099581.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q105099581.jpg",
+              "highResolution": "data/images/claude-monet/wikidata-Q105099581.jpg",
+              "sourceUrl": "https://www.wikidata.org/entity/Q105099581",
+              "sourceUrls": [
+                "https://www.wikidata.org/entity/Q105099581"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "origin": "manual"
+        },
+        {
+          "id": "wikidata-Q105099586",
+          "year": 1924,
+          "popularity": 1,
+          "title": {
+            "ko": "노란색과 연보라색 붓꽃",
+            "en": "Yellow and Mauve Irises"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "인상주의",
+            "en": "인상주의"
+          },
+          "image": "data/images/claude-monet/wikidata-Q105099586.jpg",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q105099586",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:18:20.749Z",
+            "updatedAt": "2026-08-30T01:36:53.689Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "thumbnail": "data/images/claude-monet/wikidata-Q105099586.jpg",
+          "highResImage": "data/images/claude-monet/wikidata-Q105099586.jpg",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q105099586.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q105099586.jpg",
+              "highResolution": "data/images/claude-monet/wikidata-Q105099586.jpg",
+              "sourceUrl": "https://www.wikidata.org/entity/Q105099586",
+              "sourceUrls": [
+                "https://www.wikidata.org/entity/Q105099586"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "origin": "manual"
+        },
+        {
+          "id": "wikidata-Q105099598",
+          "year": 1924,
+          "popularity": 1,
+          "title": {
+            "ko": "Yellow irises",
+            "en": "Yellow irises"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "인상주의",
+            "en": "인상주의"
+          },
+          "image": "data/images/claude-monet/wikidata-Q105099598.JPG",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q105099598",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:18:20.749Z",
+            "updatedAt": "2026-08-30T01:36:53.689Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "thumbnail": "data/images/claude-monet/wikidata-Q105099598.JPG",
+          "highResImage": "data/images/claude-monet/wikidata-Q105099598.JPG",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q105099598.JPG",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q105099598.JPG",
+              "highResolution": "data/images/claude-monet/wikidata-Q105099598.JPG",
+              "sourceUrl": "https://www.wikidata.org/entity/Q105099598",
+              "sourceUrls": [
+                "https://www.wikidata.org/entity/Q105099598"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "origin": "manual"
+        },
+        {
+          "id": "wikidata-Q135087938",
+          "year": 1924,
+          "popularity": 1,
+          "title": {
+            "ko": "붓꽃들",
+            "en": "The Irises"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "인상주의",
+            "en": "인상주의"
+          },
+          "image": "data/images/claude-monet/wikidata-Q135087938.jpg",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q135087938",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:18:20.749Z",
+            "updatedAt": "2026-08-30T01:36:53.689Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "thumbnail": "data/images/claude-monet/wikidata-Q135087938.jpg",
+          "highResImage": "data/images/claude-monet/wikidata-Q135087938.jpg",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q135087938.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q135087938.jpg",
+              "highResolution": "data/images/claude-monet/wikidata-Q135087938.jpg",
+              "sourceUrl": "https://www.wikidata.org/entity/Q135087938",
+              "sourceUrls": [
+                "https://www.wikidata.org/entity/Q135087938"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "origin": "manual"
+        },
+        {
+          "id": "wikidata-Q21712160",
+          "year": 1925,
+          "popularity": 1,
+          "title": {
+            "ko": "The House among the Roses",
+            "en": "The House among the Roses"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "인상주의",
+            "en": "인상주의"
+          },
+          "image": "data/images/claude-monet/wikidata-Q21712160.jpg",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q21712160",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:18:20.749Z",
+            "updatedAt": "2026-08-30T01:36:53.689Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "thumbnail": "data/images/claude-monet/wikidata-Q21712160.jpg",
+          "highResImage": "data/images/claude-monet/wikidata-Q21712160.jpg",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q21712160.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q21712160.jpg",
+              "highResolution": "data/images/claude-monet/wikidata-Q21712160.jpg",
+              "sourceUrl": "https://www.wikidata.org/entity/Q21712160",
+              "sourceUrls": [
+                "https://www.wikidata.org/entity/Q21712160"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "origin": "manual"
+        },
+        {
+          "id": "wikidata-Q24046494",
+          "year": 1925,
+          "popularity": 1,
+          "title": {
+            "ko": "Wisteria",
+            "en": "Wisteria"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "인상주의",
+            "en": "인상주의"
+          },
+          "image": "data/images/claude-monet/wikidata-Q24046494.jpg",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q24046494",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:18:20.749Z",
+            "updatedAt": "2026-08-30T01:36:53.689Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "thumbnail": "data/images/claude-monet/wikidata-Q24046494.jpg",
+          "highResImage": "data/images/claude-monet/wikidata-Q24046494.jpg",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q24046494.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q24046494.jpg",
+              "highResolution": "data/images/claude-monet/wikidata-Q24046494.jpg",
+              "sourceUrl": "https://www.wikidata.org/entity/Q24046494",
+              "sourceUrls": [
+                "https://www.wikidata.org/entity/Q24046494"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "origin": "manual"
+        },
+        {
+          "id": "wikidata-Q24058801",
+          "year": 1925,
+          "popularity": 1,
+          "title": {
+            "ko": "The House amid Roses",
+            "en": "The House amid Roses"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "인상주의",
+            "en": "인상주의"
+          },
+          "image": "data/images/claude-monet/wikidata-Q24058801.jpg",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q24058801",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:18:20.749Z",
+            "updatedAt": "2026-08-30T01:36:53.689Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "thumbnail": "data/images/claude-monet/wikidata-Q24058801.jpg",
+          "highResImage": "data/images/claude-monet/wikidata-Q24058801.jpg",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q24058801.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q24058801.jpg",
+              "highResolution": "data/images/claude-monet/wikidata-Q24058801.jpg",
+              "sourceUrl": "https://www.wikidata.org/entity/Q24058801",
+              "sourceUrls": [
+                "https://www.wikidata.org/entity/Q24058801"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "origin": "manual"
+        },
+        {
+          "id": "wikidata-Q105099599",
+          "year": 1926,
+          "popularity": 1,
+          "title": {
+            "ko": "The roses",
+            "en": "The roses"
+          },
+          "country": {
+            "ko": "",
+            "en": ""
+          },
+          "movement": {
+            "ko": "인상주의",
+            "en": "인상주의"
+          },
+          "image": "data/images/claude-monet/wikidata-Q105099599.JPG",
+          "description": {
+            "ko": "",
+            "en": ""
+          },
+          "source": "https://www.wikidata.org/entity/Q105099599",
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-29T07:18:20.749Z",
+            "updatedAt": "2026-08-30T01:36:53.689Z",
+            "createdBy": "metadata-recovery",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "thumbnail": "data/images/claude-monet/wikidata-Q105099599.JPG",
+          "highResImage": "data/images/claude-monet/wikidata-Q105099599.JPG",
+          "highResOriginal": "data/images/claude-monet/wikidata-Q105099599.JPG",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/claude-monet/wikidata-Q105099599.JPG",
+              "highResolution": "data/images/claude-monet/wikidata-Q105099599.JPG",
+              "sourceUrl": "https://www.wikidata.org/entity/Q105099599",
+              "sourceUrls": [
+                "https://www.wikidata.org/entity/Q105099599"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          },
+          "origin": "manual"
         }
       ],
       "generated": {
@@ -88479,7 +89637,7 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-10T13:21:52.312Z",
-        "updatedAt": "2026-08-30T00:44:38.711Z",
+        "updatedAt": "2026-08-30T01:36:53.689Z",
         "createdBy": "migration-tool",
         "updatedBy": "jhlee409@gmail.com"
       },
@@ -106692,6 +107850,7 @@
           "status": "verified",
           "representative": true,
           "movementContribution": true,
+          "movementContributionReason": "movement-further-study",
           "origin": "local-import",
           "metadata": {
             "createdAt": "2026-08-27T00:00:00Z",
@@ -106918,7 +108077,7 @@
           "verified": true,
           "status": "verified",
           "representative": true,
-          "movementContribution": true,
+          "movementContribution": false,
           "origin": "manual",
           "metadata": {
             "createdAt": "2026-08-24T00:00:00Z",
@@ -106938,7 +108097,6 @@
               "institution": ""
             }
           },
-          "movementContributionReason": "movement-further-study",
           "thumbnailValidation": 2,
           "thumbnailCacheKey": "2026-08-29T09:22:26.022Z"
         }

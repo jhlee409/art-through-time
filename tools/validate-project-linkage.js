@@ -107,13 +107,21 @@ function main() {
 
   let imageIndexFiles = 0;
   let imageIndexEntries = 0;
+  const inaccessibleImageIndexFiles = [];
   const imagesRoot = path.join(root, 'data', 'images');
   for (const folder of checkImageIndexes ? fs.readdirSync(imagesRoot, {withFileTypes:true}) : []) {
     if (!folder.isDirectory() || folder.name === '_placeholder') continue;
     const indexFile = path.join(imagesRoot, folder.name, 'index.json');
     if (!fs.existsSync(indexFile)) continue;
+    let index;
+    try {
+      index = JSON.parse(fs.readFileSync(indexFile, 'utf8'));
+    } catch (error) {
+      if (error.code !== 'EPERM' && error.code !== 'EACCES') throw error;
+      inaccessibleImageIndexFiles.push(normalizedPath(path.relative(root, indexFile)));
+      continue;
+    }
     imageIndexFiles += 1;
-    const index = JSON.parse(fs.readFileSync(indexFile, 'utf8'));
     for (const [workId, item] of Object.entries(index || {})) {
       imageIndexEntries += 1;
       const key = `${folder.name}|${workId}`;
@@ -152,6 +160,7 @@ function main() {
     catalogWorkReferences,
     imageIndexFiles,
     imageIndexEntries,
+    inaccessibleImageIndexFiles,
     activeMovementDocuments: activeDocuments.length,
     legacyMovementDocuments: legacyDocuments.length,
     physicalMovementDocuments: movementFiles.length,

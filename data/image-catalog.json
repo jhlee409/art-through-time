@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-08-29T10:42:30.560Z",
+  "generatedAt": "2026-08-30T01:26:35.796Z",
   "namingStandard": "shortArtist_titleFirst3Words_startYear__workId.ext",
   "stats": {
     "images": 1698,
@@ -26730,7 +26730,9 @@
       "sha256": "c5ffce27eeddedf700eb495ebddeda5029b7a9dcb89249b5f52ae9ec04781dfa",
       "mime": "image/jpeg",
       "namingStatus": "standard",
-      "aliases": [],
+      "aliases": [
+        "data/images/artist-Q7814/조토_The Annunciation_1300__wikidata-Q3618182.jpg"
+      ],
       "works": [
         {
           "artistId": "artist-Q7814",
@@ -26862,7 +26864,9 @@
       "sha256": "c5ffce27eeddedf700eb495ebddeda5029b7a9dcb89249b5f52ae9ec04781dfa",
       "mime": "image/jpeg",
       "namingStatus": "standard",
-      "aliases": [],
+      "aliases": [
+        "data/images/artist-Q7814/조토_Annunciation to Saint_1300__wikidata-Q3618200.jpg"
+      ],
       "works": [
         {
           "artistId": "artist-Q7814",
@@ -35079,8 +35083,8 @@
           "artistNameEn": "Claude Monet",
           "workId": "wikidata-Q105099581",
           "workQid": "Q105099581",
-          "titleKo": "Q105099581",
-          "titleEn": "Q105099581",
+          "titleKo": "붓꽃",
+          "titleEn": "Iris",
           "year": 1924
         }
       ]
@@ -35102,8 +35106,8 @@
           "artistNameEn": "Claude Monet",
           "workId": "wikidata-Q105099586",
           "workQid": "Q105099586",
-          "titleKo": "Q105099586",
-          "titleEn": "Q105099586",
+          "titleKo": "노란색과 연보라색 붓꽃",
+          "titleEn": "Yellow and Mauve Irises",
           "year": 1924
         }
       ]
@@ -35309,8 +35313,8 @@
           "artistNameEn": "Claude Monet",
           "workId": "wikidata-Q135087938",
           "workQid": "Q135087938",
-          "titleKo": "Q135087938",
-          "titleEn": "Q135087938",
+          "titleKo": "붓꽃들",
+          "titleEn": "The Irises",
           "year": 1924
         }
       ]

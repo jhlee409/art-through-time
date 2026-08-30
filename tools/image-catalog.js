@@ -17,6 +17,15 @@ function readJson(file, fallback = null) {
   }
 }
 
+function readOptionalJson(file, fallback = null) {
+  try {
+    return readJson(file, fallback);
+  } catch (error) {
+    if (error.code === 'EPERM' || error.code === 'EACCES') return fallback;
+    throw error;
+  }
+}
+
 function relative(file) {
   return path.relative(root, file).replace(/\\/g, '/');
 }
@@ -133,7 +142,7 @@ function referenceMap(artists) {
   for (const entry of fs.readdirSync(imagesRoot, {withFileTypes: true})) {
     if (!entry.isDirectory()) continue;
     const artist = artistsById.get(entry.name);
-    const index = readJson(path.join(imagesRoot, entry.name, 'index.json'), {});
+    const index = readOptionalJson(path.join(imagesRoot, entry.name, 'index.json'), {});
     for (const [workId, item] of Object.entries(index || {})) {
       const work = (artist?.works || []).find(candidate => String(candidate.id) === String(workId));
       if (!artist || !work) continue;
@@ -145,6 +154,10 @@ function referenceMap(artists) {
 
 function sha256(file) {
   return createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+}
+
+function isTemporarilyUnavailable(error) {
+  return error?.code === 'EPERM' || error?.code === 'EACCES';
 }
 
 function mimeFromExtension(extension) {
@@ -163,10 +176,22 @@ function buildCatalog({bootstrap = false} = {}) {
   const references = referenceMap(payload.artists || []);
   const images = walkImages().map(absolute => {
     const localPath = relative(absolute);
-    const stat = fs.statSync(absolute);
-    const hash = sha256(absolute);
     const linkedWorks = references.get(localPath) || [];
     const existing = previousByPath.get(localPath);
+    let stat;
+    let hash;
+    try {
+      stat = fs.statSync(absolute);
+      hash = sha256(absolute);
+    } catch (error) {
+      if (!isTemporarilyUnavailable(error) || !existing?.sha256) throw error;
+      return {
+        ...existing,
+        path: localPath,
+        filename: path.basename(localPath),
+        works: linkedWorks.length ? linkedWorks : (existing.works || [])
+      };
+    }
     const historical = previousByHash.get(hash) || [];
     const aliases = [...new Set([
       ...(existing?.aliases || []),
@@ -226,12 +251,18 @@ function validateCatalog({checkHashes = false} = {}) {
   const missingFromCatalog = disk.filter(item => !listedSet.has(item));
   const missingFromDisk = listed.filter(item => !diskSet.has(item));
   const changed = [];
+  const inaccessible = [];
   for (const item of catalog.images) {
     const absolute = path.join(root, item.path);
     if (!fs.existsSync(absolute)) continue;
-    const stat = fs.statSync(absolute);
-    if (stat.size !== item.bytes) changed.push({path: item.path, reason: 'bytes'});
-    else if (checkHashes && sha256(absolute) !== item.sha256) changed.push({path: item.path, reason: 'sha256'});
+    try {
+      const stat = fs.statSync(absolute);
+      if (stat.size !== item.bytes) changed.push({path: item.path, reason: 'bytes'});
+      else if (checkHashes && sha256(absolute) !== item.sha256) changed.push({path: item.path, reason: 'sha256'});
+    } catch (error) {
+      if (!isTemporarilyUnavailable(error)) throw error;
+      inaccessible.push(item.path);
+    }
   }
   const newNonstandard = catalog.images.filter(item => item.namingStatus === 'new-nonstandard').map(item => item.path);
   const unlinkedImages = catalog.images.filter(item => !(item.works || []).length).map(item => item.path);
@@ -274,6 +305,7 @@ function validateCatalog({checkHashes = false} = {}) {
     missingFromCatalog,
     missingFromDisk,
     changed,
+    inaccessible,
     newNonstandard,
     unlinkedImages,
     staleReferences,

@@ -18,6 +18,16 @@ const workKey = work => {
   return title ? `${title}-${work.year || ''}` : String(work.id || '');
 };
 const isGeneratedWork = work => /^(wikidata|wikipedia)-/.test(String(work.id || ''));
+const isLocalArtworkPath = value => String(value || '').trim().replace(/\\/g, '/').startsWith('data/images/');
+const hasLocalArtworkAsset = work => [
+  work?.localImage,
+  work?.thumbnail,
+  work?.image,
+  work?.highResImage,
+  work?.highResOriginal,
+  work?.migration?.image?.localThumbnail,
+  work?.migration?.image?.highResolution
+].some(isLocalArtworkPath);
 const workPopularity = work => Number.isFinite(Number(work.popularity)) ? Number(work.popularity) : 0;
 
 function selectArtistWorks(works, limit = 60) {
@@ -37,8 +47,10 @@ function selectArtistWorks(works, limit = 60) {
   const unique = [...byKey.values()];
   const manualRepresentatives = unique.filter(work => work.representative && !isGeneratedWork(work)).sort((a, b) => (a.year || 0) - (b.year || 0));
   const manualKeys = new Set(manualRepresentatives.map(workKey));
-  const remaining = unique.filter(work => !manualKeys.has(workKey(work))).sort((a, b) => workPopularity(b) - workPopularity(a) || (a.year || 9999) - (b.year || 9999));
-  const selected = [...manualRepresentatives.slice(0, limit), ...remaining.slice(0, Math.max(0, limit - manualRepresentatives.length))];
+  const localWorks = unique.filter(work => !manualKeys.has(workKey(work)) && hasLocalArtworkAsset(work)).sort((a, b) => (a.year || 9999) - (b.year || 9999));
+  const localKeys = new Set(localWorks.map(workKey));
+  const remaining = unique.filter(work => !manualKeys.has(workKey(work)) && !localKeys.has(workKey(work))).sort((a, b) => workPopularity(b) - workPopularity(a) || (a.year || 9999) - (b.year || 9999));
+  const selected = [...manualRepresentatives.slice(0, limit), ...localWorks, ...remaining.slice(0, Math.max(0, limit - manualRepresentatives.length - localWorks.length))];
   const representativeKeys = new Set(manualRepresentatives.slice(0, limit).map(workKey));
   const target = Math.min(12, selected.length);
   selected.filter(work => !representativeKeys.has(workKey(work))).sort((a, b) => workPopularity(b) - workPopularity(a) || (a.year || 9999) - (b.year || 9999)).slice(0, Math.max(0, target - representativeKeys.size)).forEach(work => representativeKeys.add(workKey(work)));
@@ -121,7 +133,7 @@ preferredByQid.forEach(candidate => {
     existing.movement = existing.movement || candidate.movement;
     existing.aliases = existing.aliases || candidate.aliases;
     existing.generated = candidate.generated;
-    existing.works = mergeWorks((existing.works || []).filter(work => !isGeneratedWork(work)), candidate.works);
+    existing.works = mergeWorks((existing.works || []).filter(work => !isGeneratedWork(work) || hasLocalArtworkAsset(work)), candidate.works);
     hydrateThumbnails(existing);
     return;
   }
