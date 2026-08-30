@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "generatedAt": "2026-08-30T10:51:28.877Z",
+  "generatedAt": "2026-08-30T21:20:03.534Z",
   "namingStandard": "shortArtist_titleFirst3Words_startYear__workId.ext",
   "stats": {
     "images": 1686,
     "linkedImages": 1686,
     "unlinkedImages": 0,
-    "standardNames": 74,
-    "legacyNames": 1612,
+    "standardNames": 75,
+    "legacyNames": 1611,
     "newNonstandardNames": 0,
     "duplicateHashGroups": 1
   },
@@ -2267,6 +2267,28 @@
       ]
     },
     {
+      "path": "data/images/artist-1786369007570/다 빈치_최후의 만찬_1495__wikidata-Q128910.jpg",
+      "filename": "다 빈치_최후의 만찬_1495__wikidata-Q128910.jpg",
+      "bytes": 48648,
+      "sha256": "c85b0aa35e535d4719ae5e4f5dcbb5ff8359f5f48a50548f15057611970dccd3",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-1786369007570",
+          "artistQid": "Q762",
+          "artistNameKo": "레오나르도 다 빈치",
+          "artistNameEn": "Leonardo da Vinci",
+          "workId": "wikidata-Q128910",
+          "workQid": "Q128910",
+          "titleKo": "최후의 만찬",
+          "titleEn": "The Last Supper",
+          "year": 1495
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-1786369007570/wikidata-Q100998017.jpg",
       "filename": "wikidata-Q100998017.jpg",
       "bytes": 17114,
@@ -2562,29 +2584,6 @@
           "titleKo": "지네브라 데 벤치",
           "titleEn": "지네브라 데 벤치",
           "year": 1476
-        }
-      ]
-    },
-    {
-      "path": "data/images/artist-1786369007570/wikidata-Q128910.jpg",
-      "filename": "wikidata-Q128910.jpg",
-      "bytes": 6825122,
-      "sha256": "ad0f791308fd13aa6b014001f1a46defd9f567269f416e0d476f257bffc917ce",
-      "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:42.559Z",
-      "aliases": [],
-      "works": [
-        {
-          "artistId": "artist-1786369007570",
-          "artistQid": "Q762",
-          "artistNameKo": "레오나르도 다 빈치",
-          "artistNameEn": "Leonardo da Vinci",
-          "workId": "wikidata-Q128910",
-          "workQid": "Q128910",
-          "titleKo": "최후의 만찬",
-          "titleEn": "The Last Supper",
-          "year": 1495
         }
       ]
     },

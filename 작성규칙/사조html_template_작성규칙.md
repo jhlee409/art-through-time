@@ -22,7 +22,7 @@
 - uHangul v0.7 스타일시트와 런타임을 각각 한 번 포함한다.
 - 화가 링크는 정식 한국어 이름(`data-uh-korean`), uHangul 표시명(`data-uh-display-korean`), 짧은 통용명(`data-uh-list-korean`)을 분리한다. `node tools/sync-artist-link-display-names.js`로 동기화한다.
 - 사조 설명 문서의 본문에서 독립 위키피디아 문서가 있는 주요 미술사 용어와 역사·사상·제도 배경 용어는 서버가 텍스트 노드의 문서당 첫 등장만 `.art-atlas-wiki-term-link`로 자동 링크한다. 기존 화가 링크, 사조 제목 링크, `script`·`style`·`title`·`pre`·`code`·`textarea` 내부에는 중첩 링크를 만들지 않는다. 용어 사전은 `server-content.js`의 `movementWikipediaTermLinks`에서 보수적으로 관리하고, 일상어와 문맥상 오해가 큰 단어는 넣지 않는다.
-- 공통 레이아웃 규칙(상단 고정 사조명, 심화 카드 제목의 국가별 지역·특징 설명, 해당 글자 크기·중복 레이블 제거)을 바꾸면 같은 작업에서 `node tools/sync-all-movement-html-rules.js`를 실행해 모든 저장 HTML에 반영한다. 서버의 화면 주입만으로 끝내지 않는다.
+- 공통 레이아웃 규칙(상단 고정 사조명, 심화 카드 소개 제목·소개문, 카드 묶음 제목의 국가별 지역·특징 설명, 해당 글자 크기·중복 레이블 제거)을 바꾸면 같은 작업에서 `server-content.js`와 `tools/sync-all-movement-html-rules.js`를 함께 맞추고 `node tools/sync-all-movement-html-rules.js`를 실행해 모든 저장 HTML에 반영한다. 서버의 화면 주입만으로 끝내지 않는다.
 
 ## 초심자 학습 길잡이
 
@@ -51,7 +51,8 @@
 - 국가별 전개 표에서 국가·지역·특징·대표 화가처럼 병렬 컬럼을 비교하는 편집형 표는 각 컬럼 사이를 흰색 `1px` 실선으로 구분한다. 마지막 컬럼 오른쪽에는 추가 선을 그리지 않는다.
 - 전체 사조 설명 문서의 국가 전개 표는 `국가·지역·세부 사조`·`지역적 특징`·`대표 화가·제작자`·`더 볼 화가` 4컬럼과 특징 목록 형식을 유지한다. 일괄 재생성에는 `node tools/rebuild-movement-representatives.js`를 사용하고 완료 후 대표·더 볼 셀과 카드 역할을 검증한다.
 - 심화 카드 묶음에서 국가명 뒤에 자동 표시하는 `지역`·`특징` 설명(`.movement-country-card-context`)은 기본 `0.912rem`으로 둔다. 이는 1.14rem 기준을 80%로 낮춘 크기이며, 국가명과 설명의 위계를 유지하면서도 스크롤 없이 읽을 수 있어야 한다.
-- 심화 카드 묶음의 세부 사조 제목(예: `프랑스 로코코`)은 `.art-atlas-submovement-title`로 분리하여 묶음의 전체 가로 폭을 차지하는 첫 행에 왼쪽 정렬한다. 국가·지역과 핵심 특징은 제목 아래의 별도 전체 폭 행에 둔다.
+- 심화 대표작 섹션의 소개 제목(`사조의 주요 화가를 모두 보는 대표작` 등)과 소개문(`.enhancement-intro`)은 카드 컨테이너의 중앙 정렬 폭이 아니라 화면 가로 전체 기준으로 배치하되, `--art-atlas-enhancement-edge-gutter`의 안쪽 여백 기준선에서 시작한다.
+- 심화 카드 묶음의 세부 사조 제목(예: `프랑스 로코코`)은 `.art-atlas-submovement-title`로 분리하여 묶음의 전체 가로 폭을 차지하는 첫 행에 왼쪽 정렬한다. 국가·지역과 핵심 특징은 제목 아래의 별도 행에 두고, 이 제목·맥락 묶음은 카드 컨테이너 폭이 아니라 화면 가로 전체(`100vw`)를 사용하되 심화 소개 제목·문단과 같은 왼쪽 여백 기준선에서 시작한다.
 - 카드 DOM 순서는 국가별 미술 탭의 표시 순서다. 버전 1 `complete` 문서는 같은 `developmentId`에서 표의 대표·더 볼 화가 집합과 같은 역할의 카드 집합이 저장 전부터 각각 정확히 같아야 한다. 카드 드래그 저장으로 화가를 암묵적으로 추가·삭제하거나 대표 역할을 바꾸지 않는다.
 - 버전 1 카드 드래그는 같은 `developmentId`의 `cardRole="further"` 카드끼리만 허용하고 표의 더 볼 화가 링크 순서를 같은 저장 트랜잭션에서 바꾼다. 대표 카드는 항상 첫 위치에 고정하며 다른 전개·범주로 화가를 옮길 때는 카드 드래그를 사용하지 않는다.
 - 버전 1 `complete` 문서 저장은 현재 파일과 제출 DOM의 parent·category·development·country·artist·work ID를 먼저 비교한다. 특징, 선정 이유, 작품 설명과 같은 허용 필드 및 동일 전개 안의 카드 순서 외 구조 변경은 거부하며, 전체 hard 불변식을 통과한 HTML만 임시 파일을 거쳐 한 번 교체한다. 검증·기록 실패 시 화면의 카드와 표 순서를 모두 저장 전 상태로 되돌린다.
@@ -66,11 +67,11 @@
 ## 이미지와 검증
 
 - 로컬 이미지 또는 기존 내장 이미지만 사용하며 외부 이미지 URL·다운로드 의존을 새로 만들지 않는다. 화가별 로컬 썸네일을 카드에 재사용할 때는 상대 경로와 `data-art-atlas-highres`가 같은 로컬 자산을 가리키는지 확인한다.
-- 화가 연표에 등록된 작품을 사조 대표작 카드나 본문 도판에 재사용할 때는 `data/images/artist-*/`의 정본 파일을 함께 사용한다. `data/미술사조/images/`에는 화가 작품 데이터와 연결되지 않는 사조 설명 전용 도판만 두며, 같은 바이트의 작품 이미지를 두 폴더에 중복 보관하지 않는다.
+- 화가 연표에 등록된 작품을 사조 대표작 카드나 본문 도판에 재사용할 때는 `data/images/artist-*/`의 정본 파일을 함께 사용한다. `data/미술사조/images/`에는 화가 작품 데이터와 연결되지 않는 사조 설명 전용 도판만 두며, 같은 바이트의 작품 이미지를 두 폴더에 중복 보관하지 않는다. 사조 폴더에 더 깔끔한 화면용 화가 작품 이미지가 있으면 사조 폴더 참조를 유지하지 말고 `data/images/artist-*/` 표준명 파일로 옮긴 뒤 모든 사조 HTML·대표작 JSON·화가 JSON·카탈로그 참조를 그 경로로 통일한다.
 - 옛 사조 이미지 폴더에 화가 작품 또는 동일 바이트 복사본이 남았는지는 `node tools/migrate-legacy-artwork-images.js`로 확인한다. 캐시 `data/미술사조/images/index.json`의 실제 파일 없는 항목은 `node tools/prune-movement-image-index.js`로 검사하며, 필요할 때만 각 도구의 `--apply`로 정리한다.
 - 사용자가 특정 작업에 한해 인터넷 이미지 다운로드를 명시적으로 승인한 경우에도 검토된 공개 라이선스 원본만 승인 목록에 작품별로 기록한 뒤 받는다. 화가마다 사조 특징을 설명할 대표작 1개를 우선하며 로컬 경로·원본 페이지·라이선스를 함께 보존한다. 공개 상태가 불명확하거나 적절한 도판을 확인하지 못한 카드는 다른 작품으로 임의 대체하지 않고 `다운로드 필요`로 남긴다.
 - 승인 다운로드 도구는 `tools/url-download-permission.js`의 `requireUrlFileDownloadApproval()`을 호출하고, 실행 전 `node tools/check-url-download-approval.js`를 통과해야 한다. 묶음 다운로드에서는 성공한 항목을 즉시 기록해 뒤 항목의 실패가 이미 받은 파일과 출처 기록을 취소하지 않게 한다.
 - `<img src="data:image/...">` 형태의 base64 인라인 이미지는 사조 HTML에 넣지 않는다. 사용해야 하는 기존 내장 이미지는 `data/미술사조/images/`의 로컬 파일로 분리한 뒤 상대 경로로 참조한다.
 - 대표작 카드는 전체 폭 3열, 작은 화면 1열을 유지한다.
 - 사조 설명 문서의 대표작 카드 이미지를 더블클릭하면 현재 카드 크기와 무관하게 원본 비율을 유지하면서 가로 또는 세로 중 먼저 닿는 쪽이 현재 화면의 `96%`가 되도록 확대한다. 확대 이미지에는 가능한 경우 화가 작품 데이터의 고해상도 로컬 파일을 사용하고, 확대 이미지나 배경을 다시 더블클릭하면 원래 문서 화면으로 복귀한다.
-- 완료 전 `node tools/validate-movement-canonical.js`, `node tools/validate-movement-sync-contract.js`, `node tools/validate-movement-documents-v1.js`, `node tools/validate-movement-representatives.js`, `node tools/validate-cross-tab-linkage.js`, `node tools/validate-movement-image-paths.js`, `node tools/validate-movement-sync-v1-runtime.js`, `node tools/complete-movement-sync-v1.js`, `node tools/sync-movement-learning-guides.js --check`, `node tools/validate-movement-links.js`, `node --check server.js`, `npm test`, `git diff --check`를 실행한다. 사조 HTML 제공 경로나 서버 콘텐츠 서비스를 고쳤다면 서버 재시작 뒤 `node tools/check-app-http.js http://127.0.0.1:4173`으로 활성 문서와 이미지 응답을 확인한다.
+- 완료 전 `node tools/validate-movement-canonical.js`, `node tools/validate-movement-sync-contract.js`, `node tools/validate-movement-documents-v1.js`, `node tools/validate-movement-representatives.js`, `node tools/validate-cross-tab-linkage.js`, `node tools/validate-movement-image-paths.js`, `node tools/validate-movement-sync-v1-runtime.js`, `node tools/complete-movement-sync-v1.js`, `node tools/sync-movement-learning-guides.js --check`, `node tools/validate-movement-links.js`, `node --check server.js`, `npm test`, `git diff --check`를 실행한다. 사조 HTML 제공 경로나 서버 콘텐츠 서비스를 고쳤다면 서버 재시작 뒤 `node tools/check-app-http.js http://127.0.0.1:4173` 또는 `npm run test:http`로 활성 문서와 이미지 응답을 확인한다. 이미지 정본·보조 색인까지 바뀐 작업은 `npm run test:deep`도 실행한다.

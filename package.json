@@ -7,6 +7,8 @@
     "start": "node server.js",
     "health": "node tools/check-project-health.js",
     "test": "node tools/check-project-health.js",
+    "test:deep": "npm test && node tools/validate-project-linkage.js --image-indexes && node tools/build-image-catalog.js --check --hashes",
+    "test:http": "node tools/check-app-http.js http://127.0.0.1:4173",
     "images:catalog": "node tools/build-image-catalog.js",
     "images:check": "node tools/build-image-catalog.js --check",
     "research:check": "node tools/check-artist-summary-research.js"

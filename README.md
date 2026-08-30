@@ -31,6 +31,8 @@ npm start
 3. 수정 대상 화면·데이터·문서에 해당하는 아래 작성규칙을 함께 확인합니다. 새 탭을 만드는 작업은 먼저 새 탭 템플릿의 기본 구성과 인증·동기화·검증 기준을 갖춘 뒤 구체적인 탭 기능을 구현합니다.
 4. 완료 보고에 참고한 작성규칙, 적용한 관리자 예외 여부, 실행한 검증을 남깁니다.
 
+작업 중 재사용할 규칙, 레이아웃 기준, 검증 절차, 이미지 보관 원칙이 새로 생기면 같은 변경에서 이 README와 관련 `작성규칙/` 문서를 갱신합니다. 특정 작품명·화가명 교정처럼 한 번만 쓰는 내용은 변경 기록에 남기고, 다른 화면에도 반복 적용할 기준만 작성규칙으로 올립니다.
+
 관리자가 작성규칙의 분류·대표작·문구·파일명·화면 구성 기준과 다른 지시를 하면, 어떤 규칙과 충돌하는지 먼저 밝히고 이 작업에 한해 그대로 진행할지 확인합니다. 관리자가 명확히 확인하면 관리자 예외로 진행하고, 완료 보고에 예외 적용 사실과 검증 결과를 남깁니다. 단, 외부 URL 이미지 다운로드 승인, 시스템·보안·권한 절차, 저작권·개인정보·파괴적 명령 승인 같은 상위 규칙은 이 예외로 생략하지 않습니다.
 
 | 작업 대상 | 반드시 함께 확인할 작성규칙 |
@@ -116,7 +118,8 @@ node tools/sync-movement-learning-guides.js --check
 - 이미지를 추가·교체·삭제한 뒤 `node tools/build-image-catalog.js`를 실행해 전역 색인을 갱신합니다. 새 비표준 파일명이나 카탈로그와 디스크의 불일치는 `npm test`에서 실패합니다.
 - 다운로드 전에 `node tools/find-artwork-image.js`로 작가명·작품명·QID·`workId`·SHA-256을 검색합니다. 로컬 일치 파일이 있으면 외부 다운로드보다 기존 파일 연결을 복구합니다.
 - 화가 연표에 등록된 작품은 사조·국가별 미술·기법·주제 화면에서도 `data/images/artist-*/`의 같은 정본 파일을 재사용합니다. `data/미술사조/images/`, `data/techniques/`, `data/topic-images/`에는 각 설명에만 쓰고 화가 작품과 연결되지 않는 전용 도판만 둡니다.
-- 같은 바이트의 이미지를 여러 자산 폴더에 중복 보관하지 않습니다. `data/미술사조/images/`에 화가 작품이 섞였는지는 `node tools/migrate-legacy-artwork-images.js`, 사조 이미지 캐시의 무효 경로는 `node tools/prune-movement-image-index.js`로 확인합니다.
+- 같은 바이트의 이미지를 여러 자산 폴더에 중복 보관하지 않습니다. 사조 폴더나 다른 화면 전용 폴더에 더 깔끔한 화가 작품 파일이 있으면 그 파일을 `data/images/artist-*/` 표준명 정본으로 옮기고, HTML·JSON·카탈로그·마이그레이션 참조를 모두 새 정본 경로로 맞춥니다. 이전 경로는 새 참조로 남기지 않고 필요하면 `data/image-catalog.json`의 `legacy` 별칭으로만 추적합니다.
+- `data/미술사조/images/`에 화가 작품이 섞였는지는 `node tools/migrate-legacy-artwork-images.js`, 사조 이미지 캐시의 무효 경로는 `node tools/prune-movement-image-index.js`로 확인합니다.
 - 사용자가 "다운로드 폴더"라고 말하면 프로젝트 루트의 `다운로드용/`만 확인합니다.
 - 로컬 파일이 없으면 외부 이미지 URL을 만들지 않고 `이미지 업로드 예정` 상태를 유지합니다.
 - URL에서 이미지 파일을 찾거나 응답을 파일로 저장하는 작업은 대상 사이트와 파일을 밝히고 사용자의 명시적 승인을 받은 뒤에만 수행합니다.
@@ -163,12 +166,14 @@ node tools/build-image-catalog.js --check
 npm test
 ```
 
-OneDrive 이미지 보조 색인·파일 해시와 실행 중인 로컬 서버까지 확인할 때는 다음 검사를 추가합니다.
+OneDrive 이미지 보조 색인·파일 해시와 실행 중인 로컬 서버까지 확인할 때는 다음 검사를 추가합니다. 로컬 서버 검사를 제외한 심화 검증은 `npm run test:deep`으로, 실행 중인 서버 HTTP 검사는 `npm run test:http`로 실행할 수 있습니다.
 
 ```powershell
 node tools/validate-project-linkage.js --image-indexes
 node tools/build-image-catalog.js --check --hashes
 node tools/check-app-http.js http://127.0.0.1:4173
+npm run test:deep
+npm run test:http
 ```
 
 사조 정본이나 설명 문서를 바꾼 작업에서는 필요한 경우 아래 검사를 개별 실행합니다.
@@ -186,9 +191,10 @@ node tools/sync-movement-learning-guides.js --check
 node tools/validate-movement-links.js
 ```
 
-사조 HTML 제공 경로나 서버 콘텐츠 코드를 바꾸면 서버를 재시작합니다. `check-app-http.js`는 주요 탭 진입점, 활성 사조 문서 36개, 문서 안의 모든 로컬 이미지 경로를 실제 HTTP 응답으로 확인합니다.
+사조 HTML 제공 경로나 `server-content.js`의 서버 주입 코드를 바꾸면 서버를 재시작합니다. 공통 사조 HTML 레이아웃을 바꾼 경우 서버 주입만 고치지 말고 `node tools/sync-all-movement-html-rules.js`로 저장 HTML에도 같은 규칙을 반영합니다. `check-app-http.js`는 주요 탭 진입점, 활성 사조 문서 36개, 문서 안의 모든 로컬 이미지 경로를 실제 HTTP 응답으로 확인합니다.
 
 ```powershell
+node tools/sync-all-movement-html-rules.js
 node tools/check-app-http.js http://127.0.0.1:4173
 ```
 

@@ -24,14 +24,21 @@ function imageValues(work) {
   ].map(localPath).filter(Boolean))];
 }
 
-const totals = {files:0, changedFiles:0, kept:0, removedMissingWorks:0, removedMissingImages:0, repairedPaths:0};
+const totals = {files:0, changedFiles:0, kept:0, removedMissingWorks:0, removedMissingImages:0, repairedPaths:0, inaccessibleImageIndexFiles:[]};
 
 for (const folder of fs.readdirSync(imagesRoot, {withFileTypes:true})) {
   if (!folder.isDirectory() || folder.name === '_placeholder') continue;
   const indexFile = path.join(imagesRoot, folder.name, 'index.json');
   if (!fs.existsSync(indexFile)) continue;
   totals.files += 1;
-  const current = JSON.parse(fs.readFileSync(indexFile, 'utf8'));
+  let current;
+  try {
+    current = JSON.parse(fs.readFileSync(indexFile, 'utf8'));
+  } catch (error) {
+    if (error.code !== 'EPERM' && error.code !== 'EACCES') throw error;
+    totals.inaccessibleImageIndexFiles.push(path.relative(root, indexFile).replace(/\\/g, '/'));
+    continue;
+  }
   const artist = artistsById.get(folder.name);
   const worksById = new Map((artist?.works || []).map(work => [String(work.id), work]));
   const next = {};
