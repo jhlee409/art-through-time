@@ -414,6 +414,138 @@ function selectedFavoriteWorks() {
   }));
   return selected;
 }
+function classificationTextValues(value) {
+  const values = [];
+  const visit = item => {
+    if (item === null || item === undefined) return;
+    if (typeof item === 'string' || typeof item === 'number') {
+      const text = String(item).trim();
+      if (text) values.push(text);
+      return;
+    }
+    if (Array.isArray(item)) return item.forEach(visit);
+    if (typeof item === 'object') Object.values(item).forEach(visit);
+  };
+  visit(value);
+  return values;
+}
+function artworkClassificationTexts(work, artist) {
+  return [
+    artworkThumbnailTitle(work, artist),
+    ...artworkTitleAliases(work),
+    work?.id,
+    work?.title,
+    work?.description,
+    work?.genre,
+    work?.genres,
+    work?.subjects,
+    work?.tags,
+    work?.detail?.facts?.genre,
+    work?.detail?.facts?.genres,
+    work?.detail?.facts?.subject,
+    work?.detail?.facts?.subjects
+  ].flatMap(classificationTextValues);
+}
+function isPortraitArtwork(work, artist) {
+  const texts = artworkClassificationTexts(work, artist);
+  const joined = texts.join(' \n ');
+  return /초상|자화상|인물화/.test(joined)
+    || /\b(?:self[-\s]?portrait|portrait|portraits|portraiture)\b/i.test(joined);
+}
+function compactArtworkGroupingKey(value) {
+  return String(value || '').normalize('NFKC').toLocaleLowerCase().replace(/[^\p{L}\p{N}]+/gu, '');
+}
+function cleanArtworkSeriesLabel(value) {
+  return String(value || '')
+    .normalize('NFKC')
+    .replace(/[《》〈〉"“”]/g, '')
+    .replace(/\s+/g, ' ')
+    .replace(/^\s*(?:the|a|an)\s+/i, '')
+    .replace(/\s*\(\s*(?:c\.?\s*)?\d{3,4}[^)]*\)\s*$/i, '')
+    .replace(/\s*,\s*(?:c\.?\s*)?\d{3,4}(?:\s*[–-]\s*\d{2,4})?\s*$/i, '')
+    .trim();
+}
+function isGenericSeriesLabel(label) {
+  const key = compactArtworkGroupingKey(label);
+  return !key
+    || key.length < 2
+    || new Set([
+      'portrait','portraits','portraiture','selfportrait','selfportraits',
+      '초상','초상화','자화상','인물화',
+      'study','studies','sketch','sketches','untitled','composition',
+      '무제','습작','스케치','구성',
+      'man','woman','boy','girl','figure','figures','lady','child',
+      '남자','여자','여인','소녀','소년','아이','인물'
+    ]).has(key);
+}
+function artworkSeriesTitleCandidates(work, artist) {
+  const candidates = [];
+  const add = value => {
+    const label = cleanArtworkSeriesLabel(value);
+    if (!label || isGenericSeriesLabel(label)) return;
+    const key = compactArtworkGroupingKey(label);
+    if (!key || key.length < 2) return;
+    candidates.push({key, label});
+  };
+  const titles = [artworkThumbnailTitle(work, artist), ...artworkTitleAliases(work)];
+  titles.forEach(title => {
+    const cleaned = cleanArtworkSeriesLabel(title);
+    if (!cleaned) return;
+    add(cleaned);
+    [
+      cleaned.split(/\s+[—–-]\s+/)[0],
+      cleaned.split(/\s*[:：]\s*/)[0],
+      cleaned.split(/\s*,\s*/)[0],
+      cleaned.split(/\s+\band\b\s+/i)[0],
+      cleaned.split(/\s+\bwith\b\s+/i)[0]
+    ].forEach(add);
+    const koreanConnector = cleaned.match(/^(.{2,18}?)(?:과|와|및)\s+/);
+    if (koreanConnector) add(koreanConnector[1]);
+  });
+  return [...new Map(candidates.map(item => [item.key, item])).values()];
+}
+function preferredSeriesLabel(labels) {
+  const unique = [...new Set(labels.map(cleanArtworkSeriesLabel).filter(Boolean))];
+  const preferredLocale = label => language === 'ko' ? /[가-힣]/.test(label) : /[a-z]/i.test(label);
+  return unique.sort((left, right) =>
+    Number(preferredLocale(right)) - Number(preferredLocale(left))
+    || left.length - right.length
+    || left.localeCompare(right, language === 'ko' ? 'ko' : 'en')
+  )[0] || '';
+}
+function buildArtworkSeriesGroups(works, artist) {
+  const records = works.map(work => ({
+    work,
+    titleKeys: [...new Set([artworkThumbnailTitle(work, artist), ...artworkTitleAliases(work)]
+      .map(compactArtworkGroupingKey)
+      .filter(Boolean))]
+  }));
+  const candidateLabels = new Map();
+  records.forEach(record => artworkSeriesTitleCandidates(record.work, artist).forEach(candidate => {
+    candidateLabels.set(candidate.key, [...(candidateLabels.get(candidate.key) || []), candidate.label]);
+  }));
+  const groups = [...candidateLabels.entries()].map(([key, labels]) => {
+    const groupWorks = records
+      .filter(record => record.titleKeys.some(titleKey => titleKey.includes(key)))
+      .map(record => record.work);
+    return {
+      key,
+      label: preferredSeriesLabel(labels),
+      works: [...new Map(groupWorks.map(work => [String(work.id || selectionKey(work)), work])).values()]
+    };
+  }).filter(group => group.works.length >= 2 && group.label && !isGenericSeriesLabel(group.label));
+  const selected = [];
+  groups.sort((left, right) => right.works.length - left.works.length || left.label.length - right.label.length).forEach(group => {
+    const ids = new Set(group.works.map(work => String(work.id || selectionKey(work))));
+    const duplicatesExisting = selected.some(existing => {
+      const existingIds = new Set(existing.works.map(work => String(work.id || selectionKey(work))));
+      const overlap = [...ids].filter(id => existingIds.has(id)).length;
+      return overlap / Math.min(ids.size, existingIds.size) >= 0.8;
+    });
+    if (!duplicatesExisting) selected.push(group);
+  });
+  return selected;
+}
 function persistFavoriteWorks() {
   if (currentUserIsAdmin) localStorage.setItem(favoriteWorksStorageKey, JSON.stringify([...favoriteWorkKeys]));
   else localStorage.removeItem(favoriteWorksStorageKey);
@@ -485,8 +617,9 @@ function renderTimeline() {
       ]
     : [];
   const leonardoLayoutKey = `art-atlas-timeline-layout-${artist.qid || artist.id}`;
-  const leonardoLayout = isLeonardoTimeline && sessionStorage.getItem(leonardoLayoutKey) === 'chronology'
-    ? 'chronology'
+  const storedLeonardoLayout = isLeonardoTimeline ? sessionStorage.getItem(leonardoLayoutKey) : '';
+  const leonardoLayout = ['chronology','portrait-series'].includes(storedLeonardoLayout)
+    ? storedLeonardoLayout
     : 'gallery';
   const worksByYear = new Map();
   // A timeline row represents the year a work began.  Date ranges that share
@@ -578,16 +711,26 @@ function renderTimeline() {
   const standardTimelineMarkup = `<div class="timeline timeline-century-axis">${works.length ? standardTimelineSections.join('') : `<p class="empty-timeline">${t('noWork')}</p>`}</div>`;
   const leonardoTimelineMarkup = (() => {
     const galleryLabel = language === 'ko' ? '전체 작품' : 'All works';
-    const chronologyLabel = language === 'ko' ? '시기별 연표' : 'By period';
+    const chronologyLabel = language === 'ko' ? '10년 연표' : 'By decade';
+    const portraitSeriesLabel = language === 'ko' ? '초상화·연작' : 'Portraits & series';
     const featuredLabel = language === 'ko' ? '대표작' : 'Highlights';
-    const guide = language === 'ko'
-      ? '대표작을 먼저 감상한 뒤, 모든 작품을 제작 시작 연도순으로 자유롭게 훑어보세요.'
-      : 'Start with key works, then browse every work in chronological order.';
+    const layoutLabels = {gallery:galleryLabel, chronology:chronologyLabel, 'portrait-series':portraitSeriesLabel};
+    const guide = {
+      gallery: language === 'ko'
+        ? '대표작을 먼저 감상한 뒤, 모든 작품을 제작 시작 연도순으로 자유롭게 훑어보세요.'
+        : 'Start with key works, then browse every work in chronological order.',
+      chronology: language === 'ko'
+        ? '작품을 제작 시작 연도 기준 10년 단위로 나누어 봅니다.'
+        : 'Works are grouped by starting decade.',
+      'portrait-series': language === 'ko'
+        ? '초상화는 두 점 이상일 때만, 연작은 반복되는 작품명이 두 점 이상일 때만 한 줄로 묶어 보여줍니다.'
+        : 'Portraits appear only when there are at least two; repeated-title series appear only when at least two works match.'
+    }[leonardoLayout];
     const periodGroups = new Map();
     works.forEach(work => {
       const year = Number(work.year);
-      const centuryStart = timelineCenturyStart(year);
-      const key = centuryStart === null ? 'undated' : String(centuryStart);
+      const decadeStart = timelineDecadeStart(year);
+      const key = decadeStart === null ? 'undated' : String(decadeStart);
       periodGroups.set(key, [...(periodGroups.get(key) || []), work]);
     });
     const sortedPeriodGroups = [...periodGroups.entries()].sort(([left], [right]) => {
@@ -596,9 +739,18 @@ function renderTimeline() {
       return Number(left) - Number(right);
     });
     const gallery = `<div class="leonardo-work-grid">${works.map(card).join('')}</div>`;
-    const chronology = `<div class="leonardo-period-list artist-century-timeline">${sortedPeriodGroups.map(([period, group]) => `<section class="leonardo-period artist-century-section"><h2>${esc(period === 'undated' ? (language === 'ko' ? '연도 미상' : 'Undated') : timelineCenturyLabelFromStart(Number(period)))}</h2><div class="leonardo-work-grid">${group.map(card).join('')}</div></section>`).join('')}</div>`;
+    const chronology = `<div class="leonardo-period-list artist-century-timeline">${sortedPeriodGroups.map(([period, group]) => `<section class="leonardo-period artist-century-section"><h2>${esc(period === 'undated' ? (language === 'ko' ? '연도 미상' : 'Undated') : timelineDecadeLabelFromStart(Number(period)))}</h2><div class="leonardo-work-grid">${group.map(card).join('')}</div></section>`).join('')}</div>`;
+    const portraitWorks = works.filter(work => isPortraitArtwork(work, artist));
+    const seriesGroups = buildArtworkSeriesGroups(works, artist);
+    const groupedRows = [
+      ...(portraitWorks.length >= 2 ? [{key:'portrait', label:language === 'ko' ? '초상화' : 'Portraits', works:portraitWorks}] : []),
+      ...seriesGroups.map(group => ({...group, label:language === 'ko' ? `${group.label} 연작` : `${group.label} series`}))
+    ];
+    const portraitSeries = groupedRows.length
+      ? `<div class="leonardo-special-list">${groupedRows.map(group => `<section class="leonardo-special-row"><h2>${esc(group.label)}</h2><div class="leonardo-work-grid">${group.works.map(card).join('')}</div></section>`).join('')}</div>`
+      : `<p class="leonardo-special-empty">${esc(language === 'ko' ? '두 점 이상으로 묶을 초상화나 반복 작품명이 아직 없습니다.' : 'No portrait set or repeated-title series has at least two works yet.')}</p>`;
     const slideshowButton = (scope, label) => `<button class="start-slideshow leonardo-section-slideshow" type="button" data-slideshow-scope="${scope}" aria-label="${esc(label)}" title="${esc(label)}"><span>▶</span><span>${esc(t('slideshow'))}</span></button>`;
-    const layoutControls = `<div class="leonardo-layout-controls" role="group" aria-label="${esc(language === 'ko' ? '작품 보기 방식' : 'Artwork view')}"><button class="leonardo-layout-button${leonardoLayout === 'gallery' ? ' active' : ''}" type="button" data-leonardo-layout="gallery">${esc(galleryLabel)}</button><button class="leonardo-layout-button${leonardoLayout === 'chronology' ? ' active' : ''}" type="button" data-leonardo-layout="chronology">${esc(chronologyLabel)}</button></div><p class="leonardo-layout-guide">${esc(guide)}</p>`;
+    const layoutControls = `<div class="leonardo-layout-controls" role="group" aria-label="${esc(language === 'ko' ? '작품 보기 방식' : 'Artwork view')}"><button class="leonardo-layout-button${leonardoLayout === 'gallery' ? ' active' : ''}" type="button" data-leonardo-layout="gallery">${esc(galleryLabel)}</button><button class="leonardo-layout-button${leonardoLayout === 'chronology' ? ' active' : ''}" type="button" data-leonardo-layout="chronology">${esc(chronologyLabel)}</button><button class="leonardo-layout-button${leonardoLayout === 'portrait-series' ? ' active' : ''}" type="button" data-leonardo-layout="portrait-series">${esc(portraitSeriesLabel)}</button></div><p class="leonardo-layout-guide">${esc(guide)}</p>`;
     const canDragFeaturedWorks = currentUserIsAdmin && leonardoFeaturedWorks.length > 1;
     const summaryLines = localizedLines(artist.artistSummary);
     const summaryTitle = language === 'ko' ? '화가 해설' : 'Artist Notes';
@@ -621,7 +773,13 @@ function renderTimeline() {
     const summaryBox = `<section class="artist-summary-box"><div class="artist-summary-heading"><p class="eyebrow">${esc(summaryTitle)}</p><div class="artist-summary-actions">${currentUserIsAdmin ? `<button class="artist-summary-edit-button" type="button">${esc(summaryEditLabel)}</button>${transcriptControl}<button class="artist-summary-update-button" type="button" title="${esc(language === 'ko' ? '화가 이름 옆에 새로 추가한 링크와 저장 스크립트를 해설에 반영' : 'Add newly linked sources and saved transcripts to the artist notes')}">${esc(summaryUpdateLabel)}</button>` : ''}${expandControl}</div></div><div class="artist-summary-read">${summaryBody}</div>${currentUserIsAdmin ? `<form class="artist-summary-editor hidden"><textarea rows="6" aria-label="${esc(summaryTitle)}" placeholder="${esc(summaryPlaceholder)}">${esc(artistSummaryEditorText(summaryLines))}</textarea><p>${esc(summaryHelp)}</p><div><button type="button" class="artist-summary-cancel">${esc(summaryCancelLabel)}</button><button type="submit">${esc(summarySaveLabel)}</button></div></form>` : ''}</section>`;
     const featured = leonardoFeaturedWorks.length ? `<section class="leonardo-featured"><div class="leonardo-section-heading"><p class="eyebrow">${esc(featuredLabel)}</p><div class="leonardo-section-actions">${slideshowButton('featured', language === 'ko' ? '대표작 슬라이드 쇼 시작' : 'Start highlights slideshow')}</div><p>${esc(language === 'ko' ? '우선 크게 살펴볼 작품입니다. Ⓗ 표시는 고해상도 파일이 있음을 뜻합니다.' : 'A small set of works to study first. Ⓗ marks an available high-resolution file.')}</p></div><div class="leonardo-featured-grid">${leonardoFeaturedWorks.map(work => `<div class="leonardo-featured-card" data-featured-work="${esc(work.id)}"${canDragFeaturedWorks ? ' draggable="true"' : ''}>${card(work)}</div>`).join('')}</div></section>` : '';
     const allWorksAction = `${slideshowButton('all', language === 'ko' ? '전체 작품 슬라이드 쇼 시작' : 'Start all-works slideshow')}${currentUserIsAdmin ? `<button class="add-artwork-button leonardo-section-add-artwork" type="button" title="${esc(t('addArtwork'))}" aria-label="${esc(t('addArtwork'))}"><span>+</span><span>${esc(t('addArtwork'))}</span></button>` : ''}`;
-    return `<div class="leonardo-timeline">${summaryBox}${featured}${layoutControls}<section class="leonardo-all-works"><div class="leonardo-section-heading"><p class="eyebrow">${esc(leonardoLayout === 'gallery' ? galleryLabel : chronologyLabel)}</p><div class="leonardo-section-actions">${allWorksAction}</div><p>${esc(language === 'ko' ? `${works.length}점 · 왼쪽 위에서 오른쪽 아래로 갈수록 뒤의 작품입니다.` : `${works.length} works · Earlier works begin at the upper left.`)}</p></div>${leonardoLayout === 'gallery' ? gallery : chronology}</section></div>`;
+    const layoutDescription = {
+      gallery: language === 'ko' ? `${works.length}점 · 왼쪽 위에서 오른쪽 아래로 갈수록 뒤의 작품입니다.` : `${works.length} works · Earlier works begin at the upper left.`,
+      chronology: language === 'ko' ? `${works.length}점 · 10년 단위로 묶은 제작 연표입니다.` : `${works.length} works · Grouped by decade.`,
+      'portrait-series': language === 'ko' ? `초상화 ${portraitWorks.length >= 2 ? portraitWorks.length : 0}점 · 연작 ${seriesGroups.length}묶음` : `${portraitWorks.length >= 2 ? portraitWorks.length : 0} portraits · ${seriesGroups.length} series`
+    }[leonardoLayout];
+    const layoutMarkup = leonardoLayout === 'gallery' ? gallery : (leonardoLayout === 'chronology' ? chronology : portraitSeries);
+    return `<div class="leonardo-timeline">${summaryBox}${featured}${layoutControls}<section class="leonardo-all-works"><div class="leonardo-section-heading"><p class="eyebrow">${esc(layoutLabels[leonardoLayout] || galleryLabel)}</p><div class="leonardo-section-actions">${allWorksAction}</div><p>${esc(layoutDescription)}</p></div>${layoutMarkup}</section></div>`;
   })();
   timeline.innerHTML = `${timelineHeader}${leonardoTimelineMarkup}`;
   setupArtistSummaryEditor(artist);

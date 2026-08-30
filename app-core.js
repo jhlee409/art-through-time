@@ -601,6 +601,15 @@ function timelineCenturyLabelFromStart(start) {
   const century = Math.floor(value / 100) + 1;
   return language === 'ko' ? `${century}세기` : `${century}${ordinalSuffix(century)} century`;
 }
+function timelineDecadeStart(year) {
+  const value = Number(year);
+  return Number.isFinite(value) ? Math.floor(value / 10) * 10 : null;
+}
+function timelineDecadeLabelFromStart(start) {
+  const value = Number(start);
+  if (!Number.isFinite(value)) return language === 'ko' ? '연도 미상' : 'Undated';
+  return language === 'ko' ? `${value}년대` : `${value}s`;
+}
 function timelineCenturyBands(start, end, yearScale) {
   const first = timelineCenturyStart(start);
   if (first === null) return '';
