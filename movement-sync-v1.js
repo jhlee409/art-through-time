@@ -94,7 +94,8 @@ function parseArtistGuideDocument(html) {
       markup,
       tag: match[0],
       tier: attribute(match[0], 'data-art-atlas-artist-tier'),
-      gridTier: grid.tier,
+      // Group-first artist guides may mix learning tiers inside one historical group.
+      gridTier: grid.tier || attribute(match[0], 'data-art-atlas-artist-tier'),
       learningNodeId: attribute(match[0], attrs.learningNodeId) || '',
       artistId: attribute(match[0], attrs.artistId),
       workId: attribute(match[0], attrs.workId),
@@ -136,6 +137,27 @@ function validateArtistGuideDocument(html, options = {}) {
   const identity = item => `${item.tier}|${item.artistId}|${item.workId}`;
   assert(sameValues(parsed.rows.map(identity), parsed.cards.map(identity)), 'Artist guide table and card order or identity differs');
   assert(new Set(parsed.rows.map(row => row.artistId)).size === parsed.rows.length, 'Artist guide contains a duplicate representative artist');
+  const visualSequences = openingTags(parsed.source, 'div', 'history-stage-grid')
+    .filter(match => attribute(match[0], 'data-art-atlas-visual-sequence'));
+  assert(visualSequences.length === 3, `Artist guide needs three two-work visual sequences, got ${visualSequences.length}`);
+  const sequenceRoles = ['birth', 'establishment', 'transition'];
+  sequenceRoles.forEach((role, index) => {
+    const sequence = visualSequences[index];
+    const sequenceId = attribute(sequence[0], 'data-art-atlas-visual-sequence');
+    assert(sequenceId.endsWith(`-${role}`), `Visual sequence ${index + 1} must be the ${role} stage`);
+    const sequenceSource = element(parsed.source, sequence, 'div');
+    const stageCards = openingTags(sequenceSource, 'article', 'movement-history-stage');
+    assert(stageCards.length === 2, `${sequenceId}: expected exactly two comparison works, got ${stageCards.length}`);
+    stageCards.forEach(card => {
+      const workId = attribute(card[0], attrs.workId);
+      const cardSource = element(sequenceSource, card, 'article');
+      const imageTag = /<img\b[^>]*>/i.exec(cardSource)?.[0] || '';
+      const src = attribute(imageTag, 'src');
+      assert(workId, `${sequenceId}: comparison work ID is missing`);
+      assert(src && !/^(?:https?:)?\/\//i.test(src), `${sequenceId}/${workId}: comparison image must use a local path`);
+      if (options.documentFile) assert(fs.existsSync(path.resolve(path.dirname(options.documentFile), src.split(/[?#]/)[0])), `${sequenceId}/${workId}: comparison image file is missing`);
+    });
+  });
   const learningNodes = new Map((learningMap.movements?.[parent.id]?.nodes || []).map(node => [node.id, node]));
   parsed.cards.forEach(card => {
     assert(card.gridTier === card.tier, `${card.artistId}: card tier differs from its grid`);

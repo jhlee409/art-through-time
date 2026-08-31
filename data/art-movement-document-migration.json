@@ -234,14 +234,10 @@
     "Renaissance": {
       "rows": {
         "renaissance--early": 0,
-        "renaissance--venetian": 1
-      },
-      "groups": {}
-    },
-    "Northern Renaissance": {
-      "rows": {
-        "northern-renaissance--early-netherlandish": 0,
-        "northern-renaissance--german": 1
+        "renaissance--high": 1,
+        "northern-renaissance--early-netherlandish": 2,
+        "renaissance--venetian": 3,
+        "northern-renaissance--german": 4
       },
       "groups": {}
     },
@@ -389,12 +385,6 @@
       "1": "data/미술사조/813ce956e2554f3fba756eaa-1.html",
       "ownerId": "expressionism",
       "placement": "context"
-    },
-    "Danube School": {
-      "1": "data/미술사조/080336f866ce0c573e6c2b7f-1.html",
-      "ownerId": "northern-renaissance",
-      "categoryId": "northern-renaissance--german",
-      "placement": "covered-topic"
     },
     "Russian icon painting": {
       "1": "data/미술사조/7792df2f1b12ffedf6954a68-1.html",

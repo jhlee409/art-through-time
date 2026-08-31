@@ -58,6 +58,54 @@ function openHistoricalEventEditor() {
   historicalEventDialog.querySelector('form').onsubmit = async event => { event.preventDefault(); const form = new FormData(event.currentTarget), name = String(form.get('name') || '').trim(), category = String(form.get('category') || 'history'), start = Number(form.get('start')), end = Number(form.get('end')) || null; if (!name || !historicalEventCategories.includes(category) || !start || (end && end < start)) return; customHistoricalEvents.push({id:`custom-event-${Date.now()}`,name:{ko:name,en:name},category,start,end}); await saveArtistsNow(); historicalEventDialog.close(); renderMovementAtlas(); };
   historicalEventDialog.showModal();
 }
+const renaissanceAtlasParentColor = '#c8974f';
+const renaissanceAtlasChildDefinitions = {
+  italy: [
+    {id:'renaissance--early', name:{ko:'초기 르네상스',en:'Early Renaissance'}, start:1400, end:1490, color:'#e2bd78', type:'phase', documentAnchor:'phase-early-renaissance'},
+    {id:'renaissance--high', name:{ko:'전성기 르네상스',en:'High Renaissance'}, start:1490, end:1530, color:'#ce9256', type:'phase', documentAnchor:'phase-high-renaissance'},
+    {id:'renaissance--venetian', name:{ko:'베네치아 화파',en:'Venetian School'}, start:1450, end:1600, color:'#a96f62', type:'school', documentAnchor:'school-venetian'}
+  ]
+};
+function movementAtlasRenaissanceDisplay(country) {
+  const movements = country?.movements || [];
+  const compactName = movement => compactMovementName(movement?.name?.en || movement?.name?.ko || '');
+  const isDanubeSchool = movement => ['danubeschool','도나우파'].includes(compactName(movement));
+  const isHarlemRenaissance = movement => ['harlemrenaissance','할렘르네상스'].includes(compactName(movement));
+  const isRenaissanceParent = movement => {
+    const parentId = movement?.canonical?.parentId;
+    return !isDanubeSchool(movement) && !isHarlemRenaissance(movement) && ['renaissance','northern-renaissance'].includes(parentId);
+  };
+  const parentSources = movements.filter(isRenaissanceParent);
+  const sourceParent = parentSources.sort((a,b) => (b.end - b.start) - (a.end - a.start))[0];
+  if (!sourceParent) return movements;
+  const sourceChildren = movements.filter(isDanubeSchool).map(movement => ({
+    ...movement,
+    id:'renaissance--danube-school',
+    name:{ko:'도나우파',en:'Danube School'},
+    type:'school',
+    documentAnchor:'school-danube'
+  }));
+  const configuredChildren = renaissanceAtlasChildDefinitions[country.id] || [];
+  const categoryIds = [...new Set(parentSources.flatMap(movement => movement.canonical?.categoryIds || []))];
+  const developmentIds = [...new Set(parentSources.flatMap(movement => movement.canonical?.developmentIds || []))];
+  const parent = {
+    ...sourceParent,
+    name:{ko:'르네상스',en:'Renaissance'},
+    start:Math.min(...parentSources.map(movement => movement.start)),
+    end:Math.max(...parentSources.map(movement => movement.end)),
+    color:renaissanceAtlasParentColor,
+    kind:null,
+    canonical:{
+      ...(sourceParent.canonical || {}),
+      parentId:'renaissance',
+      documentOwnerId:'renaissance',
+      categoryIds,
+      developmentIds
+    },
+    atlasChildren:[...configuredChildren, ...sourceChildren]
+  };
+  return [...movements.filter(movement => !isRenaissanceParent(movement) && !isDanubeSchool(movement)), parent];
+}
 function renderMovementAtlas() {
   timeline.classList.remove('artist-timeline-panel');
   movementView = normalizeMovementView({...movementView, start: movementAtlasStart, end: movementAtlasEnd});
@@ -78,13 +126,25 @@ function renderMovementAtlas() {
     const ends = [];
     return [...movements].sort((a,b) => a.start - b.start).map(movement => { let lane = ends.findIndex(laneEnd => laneEnd < movement.start); if (lane < 0) lane = ends.length; ends[lane] = movement.end; return {...movement,lane}; });
   };
+  const barWidth = item => item.atlasChildren?.length ? 164 : 90;
+  const layout = movements => {
+    const packed = pack(movements);
+    const laneCount = Math.max(1, ...packed.map(item => item.lane + 1));
+    const laneWidths = Array.from({length:laneCount}, (_, lane) => Math.max(90, ...packed.filter(item => item.lane === lane).map(barWidth)));
+    const laneOffsets = laneWidths.map((_, lane) => laneWidths.slice(0, lane).reduce((sum, width) => sum + width + 6, 0));
+    return {
+      entries:packed.map(item => ({...item, atlasLeft:8 + laneOffsets[item.lane], atlasWidth:barWidth(item)})),
+      width:laneWidths.reduce((sum, width) => sum + width, 0) + Math.max(0, laneCount - 1) * 6 + 16
+    };
+  };
   const yearLabel = year => Number(year) < 0 ? `${Math.abs(year)} BCE` : (year === movementAtlasEnd ? (language === 'ko' ? '현대' : 'Today') : String(year));
   const axis = (axisStart, axisEnd, axisHeight) => `<aside class="atlas-axis atlas-century-axis" style="height:${axisHeight}px">${timelineVerticalCenturyBands(axisStart, axisEnd, yearScale, 'atlas-century-band')}</aside>`;
   const atlasCenturyGrid = (axisStart, axisEnd, axisHeight) => `<div class="atlas-century-grid" aria-hidden="true" style="height:${axisHeight}px">${timelineVerticalCenturyBands(axisStart, axisEnd, yearScale, 'atlas-century-grid-band')}</div>`;
   const bar = (item, axisStart, axisEnd) => {
     const top = Math.max(0,item.start-axisStart) * yearScale;
     const barHeight = Math.max(18,(Math.min(axisEnd,item.end)-Math.max(axisStart,item.start)) * yearScale);
-    const left = 8 + item.lane * 96;
+    const left = item.atlasLeft ?? (8 + item.lane * 96);
+    const width = item.atlasWidth || 90;
     const years = `${yearLabel(item.sourceStart ?? item.start)}–${yearLabel(item.sourceEnd ?? item.end)}`;
     const rawMovementName = item.name.en || item.name.ko || '';
     const movementName = movementDocumentKey(rawMovementName) || rawMovementName;
@@ -96,14 +156,31 @@ function renderMovementAtlas() {
     const kind = contextOnly ? (language === 'ko' ? '이전 미술 참고' : 'Earlier-art context') : loc(item.kind);
     const detail = kind ? `${years} · ${kind}` : years;
     const documentMarker = hasOwnDocument ? '<b class="movement-document-marker" aria-hidden="true">*</b>' : '';
-    return `<div class="movement-bar${kind ? ' movement-bar--typed' : ''}${contextOnly ? ' movement-bar--context' : ''}${hasOwnDocument ? ' movement-bar--has-document' : ''}" title="${esc(`${loc(item.name)} · ${detail}`)}" data-movement-explanation="${esc(movementName)}" data-movement-label="${esc(loc(item.name))}" style="top:${top}px;height:${barHeight}px;left:${left}px;width:90px;--movement-color:${esc(item.color)}">${documentMarker}<span>${esc(loc(item.name))}</span><small>${esc(years)}${kind ? `<b>${esc(kind)}</b>` : ''}</small></div>`;
+    const childBars = (item.atlasChildren || []).map(child => {
+      const childStart = Math.max(item.start, axisStart, child.start);
+      const childEnd = Math.min(item.end, axisEnd, child.end);
+      if (childEnd <= childStart) return '';
+      const childTop = Math.max(0, (childStart - item.start) * yearScale);
+      const childHeight = Math.min(barHeight - childTop, Math.max(20, (childEnd - childStart) * yearScale));
+      const childType = child.type === 'phase'
+        ? (language === 'ko' ? '시대 단계' : 'Period phase')
+        : (language === 'ko' ? '화파·계보' : 'School & lineage');
+      const childYears = `${yearLabel(child.start)}–${yearLabel(child.end)}`;
+      return `<div class="movement-subbar movement-subbar--${esc(child.type)}" title="${esc(`${loc(child.name)} · ${childYears} · ${childType}`)}" data-movement-explanation="Renaissance" data-movement-label="${esc(loc(child.name))}" data-movement-child-id="${esc(child.id || '')}" data-movement-anchor="${esc(child.documentAnchor || '')}" style="top:${childTop}px;height:${childHeight}px;--movement-child-color:${esc(child.color)}"><span>${esc(loc(child.name))}</span><small>${esc(childYears)}<b>${esc(childType)}</b></small></div>`;
+    }).join('');
+    const compound = childBars ? ' movement-bar--compound' : '';
+    const content = childBars
+      ? `<span class="movement-bar-title">${esc(loc(item.name))}</span><small class="movement-bar-years">${esc(years)}</small><div class="movement-subbar-layer">${childBars}</div>`
+      : `<span>${esc(loc(item.name))}</span><small>${esc(years)}${kind ? `<b>${esc(kind)}</b>` : ''}</small>`;
+    return `<div class="movement-bar${compound}${kind ? ' movement-bar--typed' : ''}${contextOnly ? ' movement-bar--context' : ''}${hasOwnDocument ? ' movement-bar--has-document' : ''}" title="${esc(`${loc(item.name)} · ${detail}`)}" data-movement-explanation="${esc(movementName)}" data-movement-label="${esc(loc(item.name))}" style="top:${top}px;height:${barHeight}px;left:${left}px;width:${width}px;--movement-color:${esc(item.color)}">${documentMarker}${content}</div>`;
   };
   const countryColumns = start < countryEnd ? movementView.countries.map(id => countryById.get(id)).filter(Boolean).map(country => ({
     ...country,
-    movements:(country.movements || []).map(item => clippedMovement(item,start,countryEnd)).filter(Boolean)
+    movements:movementAtlasRenaissanceDisplay(country).map(item => clippedMovement(item,start,countryEnd)).filter(Boolean)
   })).filter(country => country.movements.length) : [];
   const columns = countryColumns;
-  const widthFor = column => { const lanes = Math.max(1, ...pack(column.movements).map(item => item.lane + 1)); return lanes * 96 + 16; };
+  const columnLayouts = new Map(columns.map(column => [column.id, layout(column.movements)]));
+  const widthFor = column => columnLayouts.get(column.id)?.width || 106;
   const eventGroups = showHistoricalEvents ? atlasEventGroups(start, countryEnd, eventCategory) : [];
   const eventColumnWidth = showHistoricalEvents ? atlasEventColumnWidth(eventGroups) : 0;
   const eventColumn = showHistoricalEvents ? renderAtlasEvents(start, countryEnd, height, yearScale, eventCategory) : '';
@@ -111,22 +188,22 @@ function renderMovementAtlas() {
   const chartColumns = `${showHistoricalEvents ? `${eventColumnWidth}px ` : ''}${movementCenturyAxisWidth}px ${columns.map(column => `${widthFor(column)}px`).join(' ')}`;
   const chartStickyStyle = `--atlas-century-sticky-left:${centuryStickyLeft}px;grid-template-columns:${chartColumns}`;
   const column = country => {
-    const entries = pack(country.movements);
-    const lanes = Math.max(1, ...entries.map(item => item.lane + 1));
+    const countryLayout = columnLayouts.get(country.id) || layout(country.movements);
+    const entries = countryLayout.entries;
     const draggable = ` data-country-id="${esc(country.id)}"`;
-    return `<section class="atlas-country"${draggable} style="min-width:${lanes * 96 + 16}px"><h2 class="atlas-country-heading"${draggable}>${esc(loc(country.name))}</h2><div class="atlas-bars" style="height:${height}px">${atlasCenturyGrid(start, countryEnd, height)}${entries.map(item => bar(item, start, countryEnd)).join('')}</div></section>`;
+    return `<section class="atlas-country"${draggable} style="min-width:${countryLayout.width}px"><h2 class="atlas-country-heading"${draggable}>${esc(loc(country.name))}</h2><div class="atlas-bars" style="height:${height}px">${atlasCenturyGrid(start, countryEnd, height)}${entries.map(item => bar(item, start, countryEnd)).join('')}</div></section>`;
   };
   const sharedStart = Math.max(start,movementCountryEnd);
   const sharedEnd = end;
   const sharedHeight = Math.max(1,(sharedEnd - sharedStart) * yearScale);
   const sharedItems = shared?.movements?.length && sharedEnd > sharedStart ? shared.movements.map(item => clippedMovement(item,sharedStart,sharedEnd)).filter(Boolean) : [];
-  const sharedEntries = pack(sharedItems);
-  const sharedLanes = Math.max(1, ...sharedEntries.map(item => item.lane + 1));
+  const sharedLayout = layout(sharedItems);
+  const sharedEntries = sharedLayout.entries;
   const sharedEventGroups = showHistoricalEvents ? atlasEventGroups(sharedStart, sharedEnd, eventCategory) : [];
   const sharedEventColumnWidth = showHistoricalEvents ? atlasEventColumnWidth(sharedEventGroups) : 0;
   const sharedEvents = showHistoricalEvents ? renderAtlasEvents(sharedStart, sharedEnd, sharedHeight, yearScale, eventCategory) : '';
   const sharedCenturyStickyLeft = showHistoricalEvents ? sharedEventColumnWidth + movementChartGap : 0;
-  const sharedBox = sharedEntries.length ? `<div class="atlas-shared-chart" style="--atlas-century-sticky-left:${sharedCenturyStickyLeft}px;grid-template-columns:${showHistoricalEvents ? `${sharedEventColumnWidth}px ` : ''}${movementCenturyAxisWidth}px ${sharedLanes * 96 + 16}px">${sharedEvents}${axis(sharedStart, sharedEnd, sharedHeight)}<section class="atlas-country atlas-shared-country" style="min-width:${sharedLanes * 96 + 16}px"><div class="atlas-bars" style="height:${sharedHeight}px">${atlasCenturyGrid(sharedStart, sharedEnd, sharedHeight)}${sharedEntries.map(item => bar(item, sharedStart, sharedEnd)).join('')}</div></section></div>` : '';
+  const sharedBox = sharedEntries.length ? `<div class="atlas-shared-chart" style="--atlas-century-sticky-left:${sharedCenturyStickyLeft}px;grid-template-columns:${showHistoricalEvents ? `${sharedEventColumnWidth}px ` : ''}${movementCenturyAxisWidth}px ${sharedLayout.width}px">${sharedEvents}${axis(sharedStart, sharedEnd, sharedHeight)}<section class="atlas-country atlas-shared-country" style="min-width:${sharedLayout.width}px"><div class="atlas-bars" style="height:${sharedHeight}px">${atlasCenturyGrid(sharedStart, sharedEnd, sharedHeight)}${sharedEntries.map(item => bar(item, sharedStart, sharedEnd)).join('')}</div></section></div>` : '';
   const editEventsLabel = language === 'ko' ? '역사 사건 추가' : 'Add historical event';
   const eventEditorButton = `<button class="atlas-event-editor" type="button">${editEventsLabel}</button>`;
   const toggleEventsLabel = showHistoricalEvents ? (language === 'ko' ? '역사 사건 숨기기' : 'Hide historical events') : (language === 'ko' ? '역사 사건 보기' : 'Show historical events');
@@ -222,11 +299,11 @@ function renderMovementAtlas() {
   };
   atlasScroll.addEventListener('pointerup', stopAtlasPan);
   atlasScroll.addEventListener('pointercancel', stopAtlasPan);
-  timeline.querySelectorAll('.movement-bar').forEach(bar => {
+  timeline.querySelectorAll('.movement-bar, .movement-subbar').forEach(bar => {
     bar.addEventListener('dblclick', event => {
       event.preventDefault();
       event.stopPropagation();
-      openMovementDocument(bar.dataset.movementExplanation, '1', bar.dataset.movementLabel);
+      openMovementDocument(bar.dataset.movementExplanation, '1', bar.dataset.movementLabel, bar.dataset.movementAnchor);
     });
     bar.addEventListener('contextmenu', event => {
       if (!currentUserIsAdmin) return;

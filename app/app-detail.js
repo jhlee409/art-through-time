@@ -722,7 +722,15 @@ function setupMovementImageDescriptionEditors(frame, name, slot='1') {
     });
   });
 }
+function movementDocumentOwnerName(name) {
+  const aliases = new Set(['Northern Renaissance', 'German Renaissance', 'Nordic Renaissance', 'Danish Renaissance', 'Danube School', '북방 르네상스', '독일 르네상스', '도나우파']);
+  return aliases.has(name) ? 'Renaissance' : name;
+}
+function movementDocumentUrlWithAnchor(url, anchor) {
+  return anchor ? `${String(url).split('#')[0]}#${encodeURIComponent(anchor)}` : url;
+}
 async function openMovementDocumentInDetail(name, label) {
+  name = movementDocumentOwnerName(name);
   const url = movementDocuments?.[name]?.['1'];
   if (!url) return;
   const loadingLabel = language === 'ko' ? '설명 페이지를 준비하는 중입니다.' : 'Preparing the explanation page.';
@@ -745,7 +753,8 @@ async function openMovementDocumentInDetail(name, label) {
   const updateFrameMode = () => { if (detail.contains(frame)) frame.src = uHangulModeUrl(documentUrl); };
   updateFrameMode();
 }
-async function openMovementDocument(name, slot, label) {
+async function openMovementDocument(name, slot, label, anchor) {
+  name = movementDocumentOwnerName(name);
   const url = movementDocuments?.[name]?.[slot];
   if (url) {
     const popup = movementExplanationWindow();
@@ -771,9 +780,10 @@ async function openMovementDocument(name, slot, label) {
     }
     try {
       const latestUrl = await latestMovementDocumentUrl(name, slot, url);
-      return openExplanationUrl(currentUserIsAdmin ? await refreshMovementDocument(name, slot) : latestUrl, popup, name, label || name);
+      const documentUrl = currentUserIsAdmin ? await refreshMovementDocument(name, slot) : latestUrl;
+      return openExplanationUrl(movementDocumentUrlWithAnchor(documentUrl, anchor), popup, name, label || name);
     }
-    catch (_) { return openExplanationUrl(url, popup, name, label || name); }
+    catch (_) { return openExplanationUrl(movementDocumentUrlWithAnchor(url, anchor), popup, name, label || name); }
   }
   if (slot === '1') return openMovementWikipedia(name);
   alert(language === 'ko' ? `${label || name}의 설명 HTML이 없습니다. 아이콘을 마우스 오른쪽 버튼으로 눌러 추가해 주세요.` : `There is no explanation HTML for ${label || name}. Right-click the icon to add one.`);

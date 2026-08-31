@@ -442,6 +442,19 @@
 .movement-bar small b { display: block; margin-top: 2px; font-family: var(--sans); font-size: 8px; font-weight: 800; line-height: 1.15; }
 .movement-bar--typed { border-style: double; border-width: 3px; }
 .movement-bar--context { border-style: dashed; opacity: .78; filter: saturate(.55); }
+.movement-bar--compound { display: block; padding: 0; background: var(--movement-color); border-color: var(--movement-color); overflow: hidden; }
+.movement-bar--compound > .movement-bar-title { position: absolute; z-index: 4; top: 4px; left: 50%; width: max-content; max-width: calc(100% - 18px); padding: 2px 5px; transform: translateX(-50%); border: 1px solid #80663d; border-radius: 3px; background: #fffdf8e8; font-size: 11px; line-height: 1.15; }
+.movement-bar--compound > .movement-bar-years { position: absolute; z-index: 4; top: 24px; left: 50%; width: max-content; margin: 0; padding: 1px 4px; transform: translateX(-50%); background: #fffdf8d9; font-size: 8px; line-height: 1.1; }
+.movement-bar--compound .movement-document-marker { z-index: 6; top: 3px; left: 3px; }
+.movement-subbar-layer { position: absolute; inset: 0; }
+.movement-bar--compound .movement-subbar-layer { left: 20px; }
+.movement-subbar { position: absolute; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; width: calc(50% - 7px); min-height: 20px; padding: 3px 2px; border: 2px solid #fffdf8; border-radius: 4px; background: var(--movement-child-color); color: #17211e; text-align: center; box-shadow: 0 1px 2px #18221e30; cursor: pointer; }
+.movement-subbar--phase { left: 5px; }
+.movement-subbar--school { right: 5px; border-style: double; border-width: 3px; }
+.movement-subbar:hover, .movement-subbar:focus-visible { z-index: 7; filter: brightness(1.08); outline: 2px solid var(--ink); }
+.movement-subbar span { display: block; font-size: 9px; font-weight: 800; line-height: 1.1; }
+.movement-subbar small { display: block; margin-top: 2px; font-family: 'DM Mono', monospace; font-size: 7px; line-height: 1.05; opacity: .88; }
+.movement-subbar small b { display: block; margin-top: 2px; font-family: var(--sans); font-size: 7px; line-height: 1.05; }
 .movement-document-menu { position: fixed; z-index: 1000; width: 145px; padding: 4px; border: 1px solid #8e988c; border-radius: 5px; background: #fffdf8; box-shadow: 0 5px 16px #18221e40; }
 .movement-document-menu button { display: block; width: 100%; padding: 7px 9px; border: 0; background: transparent; color: #17211e; text-align: left; font: 12px 'Noto Sans KR', sans-serif; cursor: pointer; }
 .movement-document-menu button:hover { background: #e4ecdf; }

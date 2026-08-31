@@ -10,6 +10,7 @@ const artistsData = require('../data/artists.json');
 const imageCatalog = require('../data/image-catalog.json');
 const index = require('../data/미술사조/index.json');
 const learningMap = require('../data/art-movement-learning-map.json');
+const {validateArtistGuideDocument} = require('../movement-sync-v1');
 const attrs = contract.attributes;
 
 function assert(condition, message) {
@@ -87,7 +88,6 @@ function validateLearningMapDocument(parent, artistMap) {
 }
 
 function validateDocument(parent, entries, artistMap, catalogByPath) {
-  if (parent.id === 'neoclassicism') return validateLearningMapDocument(parent, artistMap);
   const relative = index.documents?.[parent.documentKey]?.['1'];
   assert(relative, `${parent.id}: indexed document is missing`);
   const documentFile = path.join(root, relative);
@@ -96,6 +96,10 @@ function validateDocument(parent, entries, artistMap, catalogByPath) {
   assert(attr(rootTag, attrs.syncVersion) === contract.documentSyncVersion, `${parent.id}: sync version mismatch`);
   assert(attr(rootTag, attrs.syncState) === 'complete', `${parent.id}: phase 6 document must be in complete state`);
   assert(attr(rootTag, attrs.parentId) === parent.id, `${parent.id}: parent ID mismatch`);
+  if (attr(rootTag, 'data-art-atlas-document-model') === 'artist-guide') {
+    const result = validateArtistGuideDocument(html, {canonical, artists:artistsData, documentFile});
+    return {...result, ready:result.cards, pending:0};
+  }
 
   const countrySectionMatch = openingTags(html, 'section').find(match => attr(match[0], 'id') === 'countries');
   assert(countrySectionMatch, `${parent.id}: #countries is missing`);
@@ -223,18 +227,21 @@ function main() {
   const selectedArtists = entries.map(entry => entry.artist.id);
   assert(new Set(selectedArtists).size === selectedArtists.length, 'Phase 5 anchor artists must not be duplicated across categories');
 
-  const totals = {parents: 0, categories: 0, cards: 0, ready: 0, pending: 0};
+  const totals = {parents: 0, categories: 0, cards: 0, expectedCards: 0, ready: 0, pending: 0};
   canonical.parents.filter(parent => parent.role === 'document').forEach(parent => {
     const parentEntries = parent.categoryIds.map(categoryId => entryMap.get(categoryId));
     const result = validateDocument(parent, parentEntries, artistMap, catalogByPath);
     totals.parents += 1;
     totals.categories += parentEntries.length;
     totals.cards += result.cards;
+    totals.expectedCards += result.model === 'artist-guide'
+      ? result.cards
+      : parentEntries.reduce((sum, entry) => sum + 1 + entry.furtherArtists.length, 0);
     totals.ready += result.ready;
     totals.pending += result.pending;
   });
   assert(totals.categories === canonical.counts.beginnerCategories, 'Validated category total mismatch');
-  assert(totals.cards === entries.reduce((sum, entry) => sum + 1 + entry.furtherArtists.length, 0), 'Artist card total mismatch');
+  assert(totals.cards === totals.expectedCards, 'Artist card total mismatch');
   console.log(JSON.stringify(totals, null, 2));
 }
 
