@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="ko" data-art-atlas-sync-version="1" data-art-atlas-sync-state="complete" data-art-atlas-parent-id="neoclassicism" data-art-atlas-document-model="artist-guide" data-art-atlas-learning-guide-version="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>신고전주의 - 고대의 형식으로 근대의 질서를 말하다</title>
+<link rel="stylesheet" href="../../uhangul/uhangul-runtime.css?v=0.7" data-uhangul-integration="v0.7">
+<style>
+:root {
+  --bg:#0a0c0f;
+  --panel:#12161b;
+  --panel2:#181d23;
+  --text:#f2efe9;
+  --muted:#aeb6bf;
+  --line:#2b3138;
+  --line-strong:#4b555f;
+  --gold:#d6a74a;
+  --red:#bd554e;
+  --blue:#879fba;
+  --stone:#c8c1b4;
+  --green:#93b29a;
+  --paper:var(--bg);
+  --surface:var(--panel);
+  --ink:var(--text);
+  --teal:var(--blue);
+  --yellow:var(--gold);
+  --black:#07090b;
+  --accent:var(--gold);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Pretendard","Noto Sans KR",Arial,sans-serif;line-height:1.75;word-break:keep-all}
+a{color:#efc875;text-underline-offset:.16em}
+img{display:block;max-width:100%}
+.wrap{width:100%;padding-left:clamp(20px,3vw,48px);padding-right:clamp(20px,3vw,48px)}
+.hero{padding:70px 0 48px;border-top:8px solid var(--gold);border-bottom:1px solid var(--line);background:var(--paper)}
+.eyebrow{margin:0 0 12px;color:var(--gold);font-size:.82rem;font-weight:850;letter-spacing:0;text-transform:uppercase}
+h1,h2,h3,h4{letter-spacing:0}
+h1{max-width:18ch;margin:0;font-family:Georgia,"Times New Roman",serif;font-size:4.6rem;line-height:1.02}
+.hero-summary{max-width:none;margin:22px 0 0;color:#d3d9df;font-size:1.18rem;line-height:1.8}
+.hero-thesis{display:flex;gap:12px;align-items:stretch;max-width:none;margin:26px 0 0}
+.hero-thesis span{width:6px;flex:0 0 6px;background:var(--yellow)}
+.hero-thesis p{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:1.42rem;line-height:1.55}
+nav{position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line-strong);background:rgba(10,12,15,.94);backdrop-filter:blur(10px)}
+nav .wrap{display:flex;justify-content:center;align-items:center;min-height:58px}
+.art-atlas-movement-sticky-title{font-family:Georgia,"Times New Roman",serif;font-size:2rem;font-weight:700}
+main>section{padding:54px 0;border-bottom:1px solid var(--line)}
+main>section:nth-child(even){background:var(--surface)}
+h2{margin:0 0 18px;font-family:Georgia,"Times New Roman",serif;font-size:2.65rem;line-height:1.18}
+h3{margin:0 0 10px;font-size:1.32rem;line-height:1.4}
+h4{margin:0 0 8px;font-size:1.05rem;line-height:1.45}
+.lead{max-width:none;margin:0 0 28px;color:#d6dce2;font-size:1.12rem;line-height:1.82}
+.definition{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,.5fr);gap:32px;align-items:start}
+.definition-copy p{margin:0 0 16px;font-size:1.08rem}
+.definition-test{border-left:5px solid var(--gold);padding:18px 20px;background:rgba(214,167,74,.08)}
+.definition-test p{margin:0;color:#d3d9df}
+.process-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:26px}
+.process-step{min-height:100%;padding:22px;border:1px solid var(--line-strong);border-top:5px solid var(--red);background:var(--surface)}
+.process-step:nth-child(2){border-top-color:var(--yellow)}
+.process-step:nth-child(3){border-top-color:var(--teal)}
+.process-label{display:block;margin-bottom:8px;color:var(--muted);font-size:.78rem;font-weight:850}
+.process-step ul{margin:12px 0 0;padding-left:1.15rem}
+.process-step li{margin:.42rem 0}
+.event-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin-top:28px;border:1px solid var(--line);background:var(--line)}
+.event{padding:24px;background:var(--paper)}
+.event-year{display:block;margin-bottom:5px;color:var(--red);font:700 1.25rem/1.2 Georgia,"Times New Roman",serif}
+.event p{margin:0;color:#cbd2d9}
+.feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px}
+.feature{padding:20px;border:1px solid var(--line);border-left:5px solid var(--teal);background:var(--surface)}
+.feature:nth-child(3n+2){border-left-color:var(--red)}
+.feature:nth-child(3n+3){border-left-color:var(--yellow)}
+.feature-number{display:block;margin-bottom:6px;color:var(--muted);font-size:.76rem;font-weight:850}
+.feature p{margin:0;color:var(--muted)}
+.comparison-note{margin-top:24px;padding:18px 20px;border:1px solid #59471f;background:rgba(214,167,74,.08)}
+.comparison-note p{margin:0}
+.table-wrap{overflow:auto;border:1px solid var(--line-strong);background:var(--surface)}
+table{width:100%;border-collapse:collapse}
+th,td{padding:15px 16px;text-align:left;vertical-align:top;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+th:last-child,td:last-child{border-right:0}
+tbody:last-child tr:last-child td{border-bottom:0}
+th{background:#171b20;color:#f0d79f;font-size:.86rem}
+td{color:#cbd2d9}
+td strong{color:var(--ink)}
+.tier-cell{white-space:nowrap;font-weight:850}
+.tier-badge{display:inline-block;padding:2px 8px;border:1px solid var(--red);color:var(--red);font-size:.76rem;font-weight:850}
+.tier-badge.intermediate{border-color:var(--teal);color:var(--teal)}
+.medium-label{display:block;margin-top:5px;color:var(--muted);font-size:.8rem;font-weight:750}
+.art-atlas-artist-link{font-weight:850;color:#efc875;text-decoration-thickness:2px}
+.school-table td:first-child{font-weight:850;color:var(--ink)}
+.school-caution{margin-top:16px;color:var(--muted);font-size:.94rem}
+.movement-enhancement{background:#0d1014}
+.tier-heading{display:flex;align-items:baseline;gap:12px;margin:30px 0 12px}
+.tier-heading:first-of-type{margin-top:0}
+.tier-heading h3{margin:0}
+.tier-heading span{color:var(--muted);font-size:.86rem;font-weight:750}
+.movement-work-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.movement-work-card{min-width:0;overflow:hidden;border:1px solid var(--line-strong);border-radius:8px;background:var(--surface)}
+.movement-work-image{display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;overflow:hidden;background:var(--black)}
+.movement-work-image img{width:90%;height:90%;object-fit:contain}
+.movement-work-body{padding:17px}
+.movement-card-role{display:inline-block;margin-bottom:8px;color:var(--red);font-size:.76rem;font-weight:850}
+.movement-card-role.intermediate{color:var(--teal)}
+.movement-card-heading-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:start;margin-bottom:12px}
+.movement-card-heading-row h3{min-width:0;margin:0;font-size:1.02rem}
+.work-meta{margin:2px 0 0;color:var(--muted);font-size:.86rem;font-weight:800;white-space:nowrap}
+.movement-card-title-tag,.movement-card-activity-region{color:var(--muted);font-size:.78em;font-weight:650}
+.movement-selection-reason{margin:0 0 12px;padding:10px 12px;border-left:4px solid var(--yellow);background:rgba(214,167,74,.08);font-size:.92rem}
+.movement-work-description{margin:0;color:#cbd2d9;font-size:.94rem}
+.source-list{margin:0;padding-left:1.2rem}
+.source-list li{margin:.55rem 0}
+footer{padding:30px clamp(20px,3vw,48px) 52px;color:var(--muted);font-size:.86rem;background:var(--paper)}
+@media(max-width:980px){
+  h1{font-size:3.7rem}
+  .definition{grid-template-columns:1fr}
+  .process-grid,.feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .movement-work-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:720px){
+  .wrap{padding-left:18px;padding-right:18px}
+  .hero{padding:58px 0 38px}
+  h1{font-size:3rem}
+  h2{font-size:2.05rem}
+  .hero-summary{font-size:1.04rem}
+  .hero-thesis p{font-size:1.2rem}
+  .process-grid,.event-list,.feature-grid,.movement-work-grid{grid-template-columns:1fr}
+  .table-wrap{border:0;overflow:visible;background:transparent}
+  table,tbody,tr,td{display:block;width:100%}
+  thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  tr{margin-bottom:12px;border:1px solid var(--line-strong);background:var(--surface)}
+  td{display:grid;grid-template-columns:minmax(7rem,.38fr) minmax(0,1fr);gap:12px;border-right:0}
+  td::before{content:attr(data-label);color:var(--muted);font-size:.78rem;font-weight:850}
+  tbody:last-child tr:last-child td{border-bottom:1px solid var(--line)}
+  tr td:last-child{border-bottom:0}
+  .tier-cell{white-space:normal}
+  .movement-card-heading-row{grid-template-columns:1fr}
+  .work-meta{white-space:normal}
+}
+</style>
+<style id="art-atlas-learning-guide-style">
+#movement-learning-guide{padding:38px 0;border-top:1px solid var(--line,#d8d4cc);border-bottom:1px solid var(--line,#d8d4cc);background:var(--panel,#f7f7f5)}
+#movement-learning-guide .movement-learning-guide-inner{width:100%;max-width:none;margin:0;padding-left:var(--art-atlas-document-gutter,clamp(20px,3vw,48px));padding-right:var(--art-atlas-document-gutter,clamp(20px,3vw,48px))}
+#movement-learning-guide .movement-learning-guide-kicker{margin:0 0 .35rem;color:var(--accent,#8a641e);font-weight:800}
+#movement-learning-guide h2{margin:.1rem 0 1.15rem;font-size:clamp(1.9rem,3.4vw,3.1rem);line-height:1.18}
+#movement-learning-guide .movement-learning-guide-orientation{max-width:none;margin:0 0 1.5rem;font-size:1.08rem;line-height:1.8}
+#movement-learning-guide .movement-learning-guide-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 34px}
+#movement-learning-guide .movement-learning-guide-block{padding-top:14px;border-top:2px solid var(--line,#d8d4cc)}
+#movement-learning-guide .movement-learning-guide-block h3{margin:0 0 .65rem;font-size:clamp(1.3rem,2.25vw,1.75rem);line-height:1.32}
+#movement-learning-guide .movement-learning-guide-block ul,#movement-learning-guide .movement-learning-guide-block ol{margin:0;padding-left:1.35rem}
+#movement-learning-guide .movement-learning-guide-block li{margin:.42rem 0}
+#movement-learning-guide .movement-learning-guide-categories strong{display:block;color:var(--accent,#8a641e)}
+#movement-learning-guide .movement-learning-guide-categories span{display:block}
+#movement-learning-guide .movement-learning-guide-boundary{grid-column:1/-1}
+#movement-learning-guide .movement-learning-guide-boundary p{max-width:none;margin:.45rem 0}
+#movement-learning-guide .movement-learning-guide-source{margin:1.15rem 0 0;font-size:.9rem;color:var(--muted,#666)}
+#movement-learning-guide .movement-learning-guide-source a{color:inherit}
+@media(max-width:720px){#movement-learning-guide .movement-learning-guide-grid{grid-template-columns:1fr}#movement-learning-guide .movement-learning-guide-boundary{grid-column:auto}}
+</style></head>
+<body>
+<div data-uhangul-document-toolbar role="group" aria-label="이름 표기 방식" style="position:fixed!important;top:14px!important;left:16px!important;z-index:2147483647!important;display:flex!important;gap:4px!important"><button type="button" data-uh-mode="korean" data-uh-local-mode="korean" aria-label="한국어" title="한국어" style="display:grid!important;width:28px!important;height:28px!important;place-items:center!important;padding:0!important;border:1px solid #aebba8!important;border-radius:50%!important;background:#fffdf8!important;color:#425043!important;font:700 10px/1 'Noto Sans KR',sans-serif!important;cursor:pointer!important">한</button><button type="button" data-uh-mode="uhangul" data-uh-local-mode="uhangul" aria-label="uHangul" title="uHangul" style="display:grid!important;width:28px!important;height:28px!important;place-items:center!important;padding:0!important;border:1px solid #aebba8!important;border-radius:50%!important;background:#fffdf8!important;color:#425043!important;font:700 10px/1 'Noto Sans KR',sans-serif!important;cursor:pointer!important">u</button><button type="button" data-uh-mode="original" data-uh-local-mode="original" aria-label="국제 표기" title="국제 표기" style="display:grid!important;width:28px!important;height:28px!important;place-items:center!important;padding:0!important;border:1px solid #aebba8!important;border-radius:50%!important;background:#fffdf8!important;color:#425043!important;font:700 10px/1 'Noto Sans KR',sans-serif!important;cursor:pointer!important">표</button></div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">미술사 초심자 안내서 · 회화와 조각</p>
+    <h1>신고전주의</h1>
+    <p class="hero-summary">18세기 중엽부터 19세기 전반까지 미술가들은 새롭게 알려진 고대 그리스·로마의 형식에서 질서와 이상을 찾았다. 그러나 신고전주의는 옛 작품을 그대로 베끼는 양식이 아니다. 고대의 선, 비례, 절제, 역사적 모범을 이용해 근대 사회가 중요하게 여긴 이성, 도덕, 시민적 의무와 공적 권위를 새롭게 표현한 흐름이다.</p>
+    <div class="hero-thesis"><span aria-hidden="true"></span><p>핵심은 고대를 얼마나 닮았는가보다, 고대의 형식을 빌려 당대의 인간과 사회를 어떻게 다시 설명했는가에 있다.</p></div>
+  </div>
+</header>
+
+<nav aria-label="현재 사조"><div class="wrap"><span class="art-atlas-movement-sticky-title">신고전주의</span></div></nav>
+
+<main>
+<section id="movement-learning-guide" data-art-atlas-learning-guide-version="1" data-art-atlas-content-source="data/art-movement-learning-guides.json" data-art-atlas-learning-map-guide="true">
+<style>.movement-learning-guide-grid{grid-template-columns:minmax(0,1fr)!important}.movement-learning-guide-categories span{white-space:nowrap;word-break:keep-all;overflow-wrap:normal}</style><div class="movement-learning-guide-inner">
+<p class="movement-learning-guide-kicker">상세 학습</p>
+<h2>초심자 학습 길잡이</h2>
+<p class="movement-learning-guide-orientation">신고전주의는 고고학적 발견과 계몽주의의 환경에서 고대 그리스·로마를 선명한 윤곽, 질서, 절제, 이상적 비례의 언어로 다시 읽은 넓은 흐름이다. 국가나 지역별 하위 분류보다 회화와 조각에서 무엇을 우선했는지 먼저 보는 편이 쉽다. 초심자는 다비드의 공적 역사화, 카노바의 이상적 인체, 앵그르의 선과 표면을 핵심으로 잡고, 중급에서는 멩스의 이론적 질서와 카우프만의 역사화가 이 공통 언어를 어떻게 넓혔는지 비교한다.</p>
+<div class="movement-learning-guide-grid">
+<div class="movement-learning-guide-block"><h3>작품에서 볼 것</h3><ol><li>먼저 명확한 윤곽, 절제된 색, 안정된 구도가 로코코의 유동적 곡선과 사적 유희를 어떻게 바꾸는지 본다.</li><li>다비드의 작품에서는 몸짓·시선·공간이 의무, 희생, 법 같은 공적 이야기를 얼마나 명료하게 만드는지 본다. 카노바의 작품에서는 비례, 매끈한 표면, 조절된 몸짓이 이상적 인체를 어떻게 만드는지 본다.</li><li>그 다음 앵그르의 선과 표면, 멩스의 이론적 균형, 카우프만의 역사 서사를 비교한다. 활동 국가는 이동과 후원 환경을 알려 주는 정보일 뿐 분류 기준이 아니며, 각 작품이 무엇을 조형의 우선순위로 삼는지가 핵심이다.</li></ol></div>
+<div class="movement-learning-guide-block"><h3>조형 기준점과 주요 변주</h3><ul class="movement-learning-guide-categories"><li><strong>공적 역사화와 시민 윤리 <small>(기준점)</small></strong><span>고대 로마의 형식과 시민적 덕목을 명료한 윤곽, 절제된 색, 엄격한 구도로 제시했다.</span></li><li><strong>이상적 형식과 인체 <small>(기준점)</small></strong><span>고대 조각의 비례, 매끈한 표면, 절제된 감정을 이상적 인체와 관람 경험의 기준으로 삼았다.</span></li><li><strong>이론·라파엘로적 질서 <small>(기준점)</small></strong><span>고대와 라파엘로의 질서를 회화의 이론과 균형의 원리로 종합해 국제적 아카데미 언어로 확산했다.</span></li><li><strong>국제 역사화의 주요 변주 <small>(주요 변주)</small></strong><span>고전적 덕목을 여성 주인공, 가족, 교육, 감정의 역사 서사로 넓혀 국제적 관객에게 제시한 주요 변주다.</span></li><li><strong>선·표면·이상화 <small>(기준점)</small></strong><span>맑은 윤곽, 길게 다듬은 선, 매끈한 표면을 통해 종교화·역사화·초상에서 독자적인 이상화를 만들었다.</span></li></ul></div><div class="movement-learning-guide-block"><h3>함께 비교할 사례</h3><ul class="movement-learning-guide-categories"><li><strong>제국의 공적 이미지 <small>(비교 축)</small></strong><span>나폴레옹을 다룬 작품은 하나의 독립 사조나 앵그르의 전체를 대표하는 분류가 아니라, 공적 권력의 시각 언어가 신고전주의 형식과 만나는 비교 축이다.</span></li></ul></div>
+<div class="movement-learning-guide-block movement-learning-guide-boundary"><h3>인접 사조와 구분</h3><p>로코코가 친밀한 사교, 비대칭 곡선, 감각적 유희를 앞세웠다면 신고전주의는 선·질서·고대의 도덕적 또는 이상적 모범을 앞세운다. 낭만주의는 이 보편적 규범에 개인의 감정, 상상력, 역사적 특수성과 숭고한 자연을 맞세운다.</p><p><strong>흔한 오해:</strong> 신고전주의는 어느 한 국가의 양식도, 고대 작품을 정확히 복제한 미술도 아니다. 활동 지역과 정치적 후원은 중요한 배경이지만 작가를 나누는 기준은 아니며, 같은 미술가도 역사화·초상·종교화·누드에서 선, 질서, 이상화와 공적 의미를 서로 다르게 결합할 수 있다.</p></div>
+</div>
+</div>
+</section>
+
+<section id="definition">
+  <div class="wrap definition">
+    <div class="definition-copy">
+      <h2>1. 신고전주의란 무엇인가</h2>
+      <p><strong>신고전주의(Neoclassicism)</strong>는 고대 그리스·로마 미술을 이상적 기준으로 삼아 명확한 윤곽, 안정된 구성, 절제된 감정, 이상적 비례를 추구한 미술 경향이다. 회화에서는 드로잉과 선, 역사적·신화적 서사, 도덕적 선택이 중요해졌고, 조각에서는 고대 인체의 균형과 매끈하게 다듬은 대리석 표면이 중심이 되었다.</p>
+      <p>‘고전’은 단순히 오래된 것을 뜻하지 않는다. 신고전주의자에게 고전은 혼란스러운 현실을 판단할 수 있는 모범이었다. 그래서 같은 형식이 공화국의 시민 윤리, 왕정의 권위, 혁명의 순교, 제국의 선전처럼 서로 다른 목적에 쓰이기도 했다.</p>
+    </div>
+    <aside class="definition-test">
+      <h3>한 문장으로 확인하기</h3>
+      <p>고대의 형식을 빌려 <strong>명료한 질서와 이상적인 인간상</strong>을 만들고, 그것을 당대의 공적 가치와 연결한 미술이다.</p>
+    </aside>
+  </div>
+</section>
+
+<section id="birth">
+  <div class="wrap">
+    <h2>2. 태동 - 왜 다시 고대였을까</h2>
+    <p class="lead">신고전주의의 출발은 한 화가의 발명이나 한 나라의 유행으로 설명되지 않는다. 고대 유적의 발굴, 고전을 해석하는 새로운 미학, 여행과 출판, 계몽주의의 가치가 겹치며 고대가 실제로 보고 연구할 수 있는 대상으로 바뀌었다.</p>
+    <div class="event-list">
+      <article class="event"><span class="event-year">1738 · 1748</span><h3>헤르쿨라네움과 폼페이 발굴</h3><p>고대 도시의 벽화, 집, 가구와 생활상이 공개되면서 상상 속 로마가 구체적인 시각 자료가 되었다. 발굴 도판과 복제물은 유럽 전역의 미술가와 수집가에게 퍼졌다.</p></article>
+      <article class="event"><span class="event-year">1755 · 1764</span><h3>빙켈만의 고대 미술론</h3><p>요한 요아힘 빙켈만은 고대 그리스 미술의 이상적 아름다움과 절제된 위엄을 높이 평가했다. 그의 글은 고대 연구를 취향이 아니라 이론과 역사 서술의 문제로 만들었다.</p></article>
+      <article class="event"><span class="event-year">18세기 중엽</span><h3>그랜드 투어와 국제 교류</h3><p>여행자, 후원자, 미술가가 로마와 발굴지를 방문하고 고대 조각, 석고상, 판화와 지식을 옮겼다. 신고전주의는 특정 지역의 폐쇄적 화풍이 아니라 이동과 교류 속에서 자랐다.</p></article>
+      <article class="event"><span class="event-year">계몽주의 시대</span><h3>이성·교육·공공성의 요구</h3><p>계몽주의는 미술이 즐거움만 제공하는 데 그치지 않고 인간을 교육하고 사회적 덕목을 보여 주어야 한다는 기대를 키웠다. 로코코의 사적 유희와 장식성은 이 기준에서 비판받았다.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="establishment">
+  <div class="wrap">
+    <h2>3. 확립 - 취향에서 하나의 미술 언어로</h2>
+    <p class="lead">고대에 대한 관심은 먼저 이론과 실내 장식에서 퍼졌고, 곧 회화와 조각의 중심 원리로 자리 잡았다. 이 과정에서 멩스는 이론적 토대를, 다비드와 카노바는 회화와 조각의 강력한 모범을 만들었다.</p>
+    <div class="process-grid">
+      <article class="process-step"><span class="process-label">태동 · 1750~1760년대</span><h3>고전미의 기준을 세우다</h3><p>빙켈만의 저술과 멩스의 《파르나소스》는 고대와 라파엘로의 질서가 현대 미술을 갱신할 수 있다는 생각을 분명히 했다.</p><ul><li>고대 유물의 관찰과 분류</li><li>선, 균형, 이상적 아름다움의 강조</li><li>과도한 장식과 격정의 절제</li></ul></article>
+      <article class="process-step"><span class="process-label">확립 · 1780년대</span><h3>회화와 조각의 대표 형식을 만들다</h3><p>다비드의 《호라티우스 형제의 맹세》는 엄격한 구도와 도덕적 선택을 결합했고, 카노바는 고대 조각을 현대적 감각과 관람 경험으로 되살렸다.</p><ul><li>행동과 감정이 한눈에 읽히는 구성</li><li>역사적 모범과 이상적 인체</li><li>매끈한 표면과 절제된 표현</li></ul></article>
+      <article class="process-step"><span class="process-label">공적 확장 · 1789년 이후</span><h3>혁명과 제국의 이미지가 되다</h3><p>프랑스 혁명과 나폴레옹 시대에 고전의 엄숙한 형식은 시민의 희생, 정치적 순교, 국가 의례와 통치자의 권위를 전달하는 데 쓰였다.</p><ul><li>고대사와 당대 사건의 연결</li><li>대형 역사화와 공공 기념물</li><li>도덕 교육과 정치 선전의 긴장</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section id="criticism">
+  <div class="wrap">
+    <h2>4. 비판과 전환 - 질서는 언제 규범이 되는가</h2>
+    <p class="lead">신고전주의는 근대의 새로운 미술이었지만 곧 스스로 제도와 규범이 되었다. 감정을 통제하고 이상적 몸을 제시하는 방식은 명료함을 주는 동시에 현실의 다양성과 불안을 지운다는 비판을 받았다.</p>
+    <div class="process-grid">
+      <article class="process-step"><span class="process-label">비판 1</span><h3>차갑고 경직된 공식</h3><p>아카데미 교육에서 선, 역사화, 이상적 비례가 정답처럼 굳어지자 개별 경험과 생생한 감정이 억눌린다는 반발이 생겼다.</p></article>
+      <article class="process-step"><span class="process-label">비판 2</span><h3>도덕과 권력의 두 얼굴</h3><p>시민적 희생을 말하던 형식이 제국의 권위와 영웅화를 위해 사용되면서, 보편적 덕목과 정치 선전의 경계가 흐려졌다.</p></article>
+      <article class="process-step"><span class="process-label">전환</span><h3>낭만주의와의 경쟁</h3><p>낭만주의는 불안, 격정, 숭고한 자연과 역사적 특수성을 앞세웠다. 그러나 앵그르처럼 선과 이상화를 계속 밀어붙인 작가도 있어 두 경향의 경계는 단순하지 않다.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="shared-features">
+  <div class="wrap">
+    <h2>5. 작품에서 찾는 공통 특징</h2>
+    <p class="lead">아래 특징은 신고전주의 회화와 조각에서 반복되는 공통 언어다. 모든 작품이 여섯 항목을 똑같이 갖는 것은 아니며, 각 작가가 무엇을 더 강하게 선택했는지 비교하는 것이 중요하다.</p>
+    <div class="feature-grid">
+      <article class="feature"><span class="feature-number">01 · 선과 윤곽</span><h3>형태가 먼저 읽힌다</h3><p>회화에서는 색채의 흔들림보다 드로잉과 윤곽이 앞선다. 인물과 사물의 경계가 분명해 장면의 행동 관계가 빠르게 읽힌다.</p></article>
+      <article class="feature"><span class="feature-number">02 · 안정된 구성</span><h3>화면을 질서 있게 나눈다</h3><p>수평·수직선, 삼각형, 아치, 무대 같은 얕은 공간을 이용해 복잡한 이야기를 명료한 덩어리로 조직한다.</p></article>
+      <article class="feature"><span class="feature-number">03 · 절제된 감정</span><h3>감정도 통제된 몸짓으로 보인다</h3><p>극적인 상황에서도 표정과 몸짓은 과장되기보다 의미가 분명하도록 조절된다. 감정은 개인의 폭발보다 도덕적 선택을 드러낸다.</p></article>
+      <article class="feature"><span class="feature-number">04 · 고대의 모범</span><h3>신화와 역사를 현재의 질문으로 바꾼다</h3><p>고대 복식과 건축, 신화와 로마사는 장식이 아니라 용기, 의무, 절제, 이상적 아름다움을 토론하는 장치가 된다.</p></article>
+      <article class="feature"><span class="feature-number">05 · 이상화된 표면</span><h3>붓질과 도구 자국을 감춘다</h3><p>회화의 매끈한 마감과 조각의 세심한 연마는 제작 흔적을 줄이고, 현실보다 완전해 보이는 몸과 공간을 만든다.</p></article>
+      <article class="feature"><span class="feature-number">06 · 공적 의미</span><h3>개인의 장면을 공동체의 이야기로 확장한다</h3><p>가족, 죽음, 초상, 신화도 시민 윤리와 교육, 국가 의례, 권력의 정당성 같은 공적 문제와 연결될 수 있다.</p></article>
+    </div>
+    <div class="comparison-note"><p><strong>로코코와 구분:</strong> 로코코가 비대칭 곡선, 사교, 사랑과 감각적 즐거움을 즐겼다면 신고전주의는 명확한 선, 안정된 질서, 도덕적·이상적 모범을 앞세운다. 다만 밝은 색이나 우아한 감정이 보인다는 이유만으로 신고전주의가 아닌 것은 아니다.</p></div>
+  </div>
+</section>
+
+<section id="representative-artists" data-art-atlas-artist-guide="1">
+  <div class="wrap">
+    <h2>6. 먼저 알아야 할 대표 미술가</h2>
+    <p class="lead">대표 미술가는 국적별로 묶지 않는다. 초심자 핵심은 회화의 공적 서사, 조각의 이상적 인체, 19세기로 이어진 선의 전통을 잡는 세 사람이며, 중급 확장은 초기 이론과 역사화의 폭을 이해하는 두 사람이다. 활동 국가는 분류가 아니라 이동과 후원 환경을 보여 주는 정보다.</p>
+    <div class="table-wrap">
+      <table data-art-atlas-artist-guide-table="1">
+        <thead><tr><th>학습 단계</th><th>미술가·분야</th><th>주요 활동 국가</th><th>그 미술가만의 특징</th><th>신고전주의를 잘 보여 주는 작품</th></tr></thead>
+        <tbody>
+          <tr data-art-atlas-artist-tier="beginner" data-art-atlas-learning-node-id="david-civic-history" data-artist-id="artist-Q83155" data-work-id="artist-Q83155-representative-work">
+            <td class="tier-cell" data-label="학습 단계"><span class="tier-badge">초심자 핵심</span></td>
+            <td data-label="미술가·분야"><strong><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q83155" target="_blank" rel="noopener" data-artist-id="artist-Q83155" data-uh-original="Jacques-Louis David" data-uh-korean="자크루이 다비드" data-uh-display-korean="다비드, 자크루이" data-uh-list-korean="다비드" title="자크루이 다비드 연표로 이동">자크루이 다비드</a></strong><span class="medium-label">회화 · 역사화와 초상화</span></td>
+            <td data-label="주요 활동 국가">프랑스·이탈리아·벨기에</td>
+            <td data-label="고유 특징">고대사의 결단 장면을 간결한 무대처럼 구성해 시민의 의무와 정치적 선택을 설득력 있는 공적 이미지로 만들었다.</td>
+            <td data-label="대표 작품"><strong>《호라티우스 형제의 맹세》</strong><br>1784</td>
+          </tr>
+          <tr data-art-atlas-artist-tier="beginner" data-art-atlas-learning-node-id="canova-ideal-form" data-artist-id="artist-Q5547" data-work-id="artist-Q5547-representative-work">
+            <td class="tier-cell" data-label="학습 단계"><span class="tier-badge">초심자 핵심</span></td>
+            <td data-label="미술가·분야"><strong><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q5547" target="_blank" rel="noopener" data-artist-id="artist-Q5547" data-uh-original="Antonio Canova" data-uh-korean="안토니오 카노바" data-uh-display-korean="카노바, 안토니오" data-uh-list-korean="카노바" title="안토니오 카노바 연표로 이동">안토니오 카노바</a></strong><span class="medium-label">조각 · 대리석 인체와 기념 조각</span></td>
+            <td data-label="주요 활동 국가">이탈리아·프랑스</td>
+            <td data-label="고유 특징">고대 조각의 이상적 비례를 복제하는 데 머물지 않고, 부드럽게 연마한 표면과 여러 방향에서 이어지는 몸의 흐름으로 감각적인 관람 경험을 만들었다.</td>
+            <td data-label="대표 작품"><strong>《큐피드의 키스로 되살아난 프시케》</strong><br>1787~1793</td>
+          </tr>
+          <tr data-art-atlas-artist-tier="beginner" data-art-atlas-learning-node-id="ingres-line-idealization" data-artist-id="artist-Q161472" data-work-id="ingres-apotheosis-homer-1827">
+            <td class="tier-cell" data-label="학습 단계"><span class="tier-badge">초심자 핵심</span></td>
+            <td data-label="미술가·분야"><strong><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q161472" target="_blank" rel="noopener" data-artist-id="artist-Q161472" data-uh-original="Jean-Auguste-Dominique Ingres" data-uh-korean="장오귀스트도미니크 앵그르" data-uh-display-korean="앵그르, 장오귀스트도미니크" data-uh-list-korean="앵그르" title="장오귀스트도미니크 앵그르 연표로 이동">장오귀스트도미니크 앵그르</a></strong><span class="medium-label">회화 · 역사화와 초상화</span></td>
+            <td data-label="주요 활동 국가">프랑스·이탈리아</td>
+            <td data-label="고유 특징">정확한 관찰과 해부학적 자연스러움보다 길게 다듬은 윤곽, 평평하고 매끈한 표면, 라파엘로적 이상을 앞세워 고전주의를 19세기의 개인적 언어로 바꾸었다.</td>
+            <td data-label="대표 작품"><strong>《호메로스의 신격화》</strong><br>1827</td>
+          </tr>
+          <tr data-art-atlas-artist-tier="intermediate" data-art-atlas-learning-node-id="mengs-theoretical-order" data-artist-id="artist-Q312130" data-work-id="artist-Q312130-representative-work">
+            <td class="tier-cell" data-label="학습 단계"><span class="tier-badge intermediate">중급 확장</span></td>
+            <td data-label="미술가·분야"><strong><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q312130" target="_blank" rel="noopener" data-artist-id="artist-Q312130" data-uh-original="Anton Raphael Mengs" data-uh-korean="안톤 라파엘 멩스" data-uh-display-korean="멩스, 안톤 라파엘" data-uh-list-korean="멩스" title="안톤 라파엘 멩스 연표로 이동">안톤 라파엘 멩스</a></strong><span class="medium-label">회화 · 프레스코와 초상화</span></td>
+            <td data-label="주요 활동 국가">독일·이탈리아·스페인</td>
+            <td data-label="고유 특징">고대, 라파엘로, 르네상스 대가의 장점을 이론적으로 종합하고 궁정과 아카데미를 오가며 초기 신고전주의의 기준을 널리 퍼뜨렸다.</td>
+            <td data-label="대표 작품"><strong>《파르나소스》</strong><br>1761</td>
+          </tr>
+          <tr data-art-atlas-artist-tier="intermediate" data-art-atlas-learning-node-id="kauffman-international-history" data-artist-id="artist-Q155733" data-work-id="artist-Q155733-representative-work">
+            <td class="tier-cell" data-label="학습 단계"><span class="tier-badge intermediate">중급 확장</span></td>
+            <td data-label="미술가·분야"><strong><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q155733" target="_blank" rel="noopener" data-artist-id="artist-Q155733" data-uh-original="Angelica Kauffman" data-uh-korean="앙겔리카 카우프만" data-uh-display-korean="카우프만, 앙겔리카" data-uh-list-korean="카우프만" title="앙겔리카 카우프만 연표로 이동">앙겔리카 카우프만</a></strong><span class="medium-label">회화 · 역사화와 초상화</span></td>
+            <td data-label="주요 활동 국가">이탈리아·영국</td>
+            <td data-label="고유 특징">고전적 덕목을 전쟁 영웅만의 이야기가 아니라 여성 주인공, 가족, 교육과 감정의 선택으로 넓혀 신고전주의 역사화의 범위를 확장했다.</td>
+            <td data-label="대표 작품"><strong>《그라쿠스 형제의 어머니 코르넬리아》</strong><br>1785</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="schools">
+  <div class="wrap">
+    <h2>7. 명확하게 확인되는 화파와 계보</h2>
+    <p class="lead">신고전주의 전체를 국가별 화파로 나누지는 않는다. 다만 공통 교육과 작업실을 통해 실제로 형성된 집단은 별도로 이해할 수 있다.</p>
+    <div class="table-wrap">
+      <table class="school-table">
+        <thead><tr><th>화파·집단</th><th>중심 인물</th><th>공통점</th><th>미술사적 의미</th></tr></thead>
+        <tbody><tr><td data-label="화파·집단">다비드 아틀리에와 다비드파</td><td data-label="중심 인물">자크루이 다비드와 그의 제자들</td><td data-label="공통점">명확한 드로잉, 매끈한 표면, 고대사와 당대 정치의 결합, 대형 역사화의 엄격한 구성</td><td data-label="미술사적 의미">다비드의 교육 체계에서 많은 작가가 나왔지만 모두 같은 방향으로 남지는 않았다. 지로데, 그로, 앵그르 등은 스승의 언어를 각자 변형했고 일부 제자 집단은 오히려 다비드식 고전주의를 비판했다.</td></tr></tbody>
+      </table>
+    </div>
+    <p class="school-caution">‘다비드파’는 국적 분류가 아니라 작업실 교육과 영향 관계를 가리킨다. 신고전주의 전체를 이 한 계보로 환원할 수는 없다.</p>
+  </div>
+</section>
+
+<section class="movement-enhancement" id="movement-deepening" data-art-atlas-representative-section="works">
+  <div class="wrap">
+    <h2>8. 대표 작품으로 다시 보기</h2>
+    <p class="lead">표에 나온 다섯 미술가의 대표 작품을 같은 크기의 카드로 비교한다. 화면의 선, 인물 배치, 표면, 주제와 감정이 어떤 방식으로 신고전주의의 공통 언어와 각 작가의 차이를 함께 보여 주는지 살펴보자.</p>
+
+    <div class="tier-heading"><h3>초심자 핵심</h3><span>회화·조각의 가장 선명한 세 기준</span></div>
+    <div class="movement-work-grid" data-art-atlas-artist-tier="beginner">
+      <article class="movement-work-card" data-art-atlas-artist-tier="beginner" data-art-atlas-learning-node-id="david-civic-history" data-artist-id="artist-Q83155" data-work-id="artist-Q83155-representative-work" data-art-atlas-card-role="primary" data-art-atlas-image-state="ready">
+        <div class="movement-work-image"><img src="../images/artist-Q83155/다비드_호라티우스 형제의 맹세_1784__artist-Q83155-representative-work.jpg" alt="자크루이 다비드, 호라티우스 형제의 맹세"></div>
+        <div class="movement-work-body"><span class="movement-card-role">초심자 핵심 · 회화</span><div class="movement-card-heading-row"><h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q83155" target="_blank" rel="noopener" data-artist-id="artist-Q83155" data-uh-original="Jacques-Louis David" data-uh-korean="자크루이 다비드" data-uh-display-korean="다비드, 자크루이" data-uh-list-korean="다비드" title="자크루이 다비드 연표로 이동">자크루이 다비드</a>, 《호라티우스 형제의 맹세》<span class="movement-card-title-tag"> · 신고전주의</span><span class="movement-card-activity-region"> · 프랑스·이탈리아·벨기에</span></h3><p class="work-meta">1784</p></div><p class="movement-selection-reason" data-art-atlas-selection-reason=""><strong>선정 이유:</strong> 신고전주의 회화의 명료한 구성과 시민적 의무라는 주제를 가장 빠르게 함께 이해할 수 있는 작품이다.</p><p class="movement-work-description" data-art-atlas-card-description="">세 아들의 뻗은 팔, 아버지가 든 세 자루의 칼, 뒤쪽의 세 아치가 하나의 엄격한 리듬을 만든다. 오른쪽 여성들의 곡선과 슬픔은 왼쪽 남성들의 직선과 결단에 대비되며, 가족의 감정보다 공동체의 의무가 앞서는 순간을 분명하게 보여 준다.</p></div>
+      </article>
+      <article class="movement-work-card" data-art-atlas-artist-tier="beginner" data-art-atlas-learning-node-id="canova-ideal-form" data-artist-id="artist-Q5547" data-work-id="artist-Q5547-representative-work" data-art-atlas-card-role="primary" data-art-atlas-image-state="ready">
+        <div class="movement-work-image"><img src="../images/artist-Q5547/카노바_큐피드의 키스로 되살아난_1793__artist-Q5547-representative-work.jpg" alt="안토니오 카노바, 큐피드의 키스로 되살아난 프시케"></div>
+        <div class="movement-work-body"><span class="movement-card-role">초심자 핵심 · 조각</span><div class="movement-card-heading-row"><h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q5547" target="_blank" rel="noopener" data-artist-id="artist-Q5547" data-uh-original="Antonio Canova" data-uh-korean="안토니오 카노바" data-uh-display-korean="카노바, 안토니오" data-uh-list-korean="카노바" title="안토니오 카노바 연표로 이동">안토니오 카노바</a>, 《큐피드의 키스로 되살아난 프시케》<span class="movement-card-title-tag"> · 신고전주의</span><span class="movement-card-activity-region"> · 이탈리아·프랑스</span></h3><p class="work-meta">1787~1793</p></div><p class="movement-selection-reason" data-art-atlas-selection-reason=""><strong>선정 이유:</strong> 고대 조각의 이상적 인체와 매끈한 표면이 현대적인 감정과 여러 방향의 관람 경험으로 다시 태어나는 과정을 보여 준다.</p><p class="movement-work-description" data-art-atlas-card-description="">두 인물의 팔은 얼굴을 중심으로 원을 만들고, 큐피드의 날개와 프시케의 몸은 교차하는 대각선을 이룬다. 대리석을 부드러운 피부처럼 연마했지만 감정은 폭발하기 직전의 순간에 멈춰 있다. 관람자가 작품 주위를 돌 때마다 포옹의 선이 다르게 이어진다.</p></div>
+      </article>
+      <article class="movement-work-card" data-art-atlas-artist-tier="beginner" data-art-atlas-learning-node-id="ingres-line-idealization" data-artist-id="artist-Q161472" data-work-id="ingres-apotheosis-homer-1827" data-art-atlas-card-role="primary" data-art-atlas-image-state="ready">
+        <div class="movement-work-image"><img src="../images/artist-Q161472/앵그르_호메로스의 신격화_1827__ingres-apotheosis-homer-1827.jpg" alt="장오귀스트도미니크 앵그르, 호메로스의 신격화"></div>
+        <div class="movement-work-body"><span class="movement-card-role">초심자 핵심 · 회화</span><div class="movement-card-heading-row"><h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q161472" target="_blank" rel="noopener" data-artist-id="artist-Q161472" data-uh-original="Jean-Auguste-Dominique Ingres" data-uh-korean="장오귀스트도미니크 앵그르" data-uh-display-korean="앵그르, 장오귀스트도미니크" data-uh-list-korean="앵그르" title="장오귀스트도미니크 앵그르 연표로 이동">장오귀스트도미니크 앵그르</a>, 《호메로스의 신격화》<span class="movement-card-title-tag"> · 신고전주의</span><span class="movement-card-activity-region"> · 프랑스·이탈리아</span></h3><p class="work-meta">1827</p></div><p class="movement-selection-reason" data-art-atlas-selection-reason=""><strong>선정 이유:</strong> 선과 배열, 고대에서 근대로 이어지는 예술의 계보를 통해 앵그르가 고전주의를 하나의 미학적 신념으로 제시한 작품이다.</p><p class="movement-work-description" data-art-atlas-card-description="">신전 정면의 중심축에 앉은 호메로스를 기준으로 시인, 철학자와 예술가가 층층이 배열된다. 인물 하나하나의 윤곽은 또렷하고 붓질은 거의 드러나지 않는다. 실제 군중의 순간보다 시대를 초월한 이상적 예술 공동체처럼 보이도록 구성했다.</p></div>
+      </article>
+    </div>
+
+    <div class="tier-heading"><h3>중급 확장</h3><span>태동기의 이론과 역사화의 넓은 가능성</span></div>
+    <div class="movement-work-grid" data-art-atlas-artist-tier="intermediate">
+      <article class="movement-work-card" data-art-atlas-artist-tier="intermediate" data-art-atlas-learning-node-id="mengs-theoretical-order" data-artist-id="artist-Q312130" data-work-id="artist-Q312130-representative-work" data-art-atlas-card-role="primary" data-art-atlas-image-state="ready">
+        <div class="movement-work-image"><img src="../images/artist-Q312130/멩스_파르나소스_1761__artist-Q312130-representative-work.jpg" alt="안톤 라파엘 멩스, 파르나소스"></div>
+        <div class="movement-work-body"><span class="movement-card-role intermediate">중급 확장 · 회화</span><div class="movement-card-heading-row"><h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q312130" target="_blank" rel="noopener" data-artist-id="artist-Q312130" data-uh-original="Anton Raphael Mengs" data-uh-korean="안톤 라파엘 멩스" data-uh-display-korean="멩스, 안톤 라파엘" data-uh-list-korean="멩스" title="안톤 라파엘 멩스 연표로 이동">안톤 라파엘 멩스</a>, 《파르나소스》<span class="movement-card-title-tag"> · 신고전주의</span><span class="movement-card-activity-region"> · 독일·이탈리아·스페인</span></h3><p class="work-meta">1761</p></div><p class="movement-selection-reason" data-art-atlas-selection-reason=""><strong>선정 이유:</strong> 다비드 이전에 고대와 라파엘로의 질서를 현대 회화의 규범으로 제안한 초기 신고전주의의 이론적 출발점을 보여 준다.</p><p class="movement-work-description" data-art-atlas-card-description="">아폴론과 뮤즈들은 얕고 평온한 공간에 좌우 균형을 이루며 놓인다. 격렬한 움직임이나 환영적 효과를 줄이고, 각 인물의 윤곽과 자세를 차분하게 분리했다. 고대를 장식적 소재가 아니라 회화 질서를 바로잡는 기준으로 제시한다.</p></div>
+      </article>
+      <article class="movement-work-card" data-art-atlas-artist-tier="intermediate" data-art-atlas-learning-node-id="kauffman-international-history" data-artist-id="artist-Q155733" data-work-id="artist-Q155733-representative-work" data-art-atlas-card-role="primary" data-art-atlas-image-state="ready">
+        <div class="movement-work-image"><img src="../images/artist-Q155733/카우프만_그라쿠스 형제의 어머니_1785__artist-Q155733-representative-work.jpg" alt="앙겔리카 카우프만, 그라쿠스 형제의 어머니 코르넬리아"></div>
+        <div class="movement-work-body"><span class="movement-card-role intermediate">중급 확장 · 회화</span><div class="movement-card-heading-row"><h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q155733" target="_blank" rel="noopener" data-artist-id="artist-Q155733" data-uh-original="Angelica Kauffman" data-uh-korean="앙겔리카 카우프만" data-uh-display-korean="카우프만, 앙겔리카" data-uh-list-korean="카우프만" title="앙겔리카 카우프만 연표로 이동">앙겔리카 카우프만</a>, 《그라쿠스 형제의 어머니 코르넬리아》<span class="movement-card-title-tag"> · 신고전주의</span><span class="movement-card-activity-region"> · 이탈리아·영국</span></h3><p class="work-meta">1785</p></div><p class="movement-selection-reason" data-art-atlas-selection-reason=""><strong>선정 이유:</strong> 고전적 덕목과 역사화를 여성의 선택, 가족과 교육의 가치로 넓혀 신고전주의가 전쟁과 남성 영웅만의 미술이 아님을 보여 준다.</p><p class="movement-work-description" data-art-atlas-card-description="">보석을 내보이는 방문객과 자녀를 자신의 보물로 가리키는 코르넬리아의 행동이 한눈에 대비된다. 고대 복식, 안정된 실내, 명료한 몸짓은 도덕적 선택을 쉽게 읽게 한다. 영웅적 죽음 대신 양육과 교육을 시민적 덕목의 토대로 제시한다.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="references">
+  <div class="wrap">
+    <h2>참고 자료</h2>
+    <ul class="source-list">
+      <li><a href="https://www.metmuseum.org/fr/essays/neoclassicism" target="_blank" rel="noopener">The Metropolitan Museum of Art, Neoclassicism</a> - 빙켈만, 고대 미술론과 초기 신고전주의 회화.</li>
+      <li><a href="https://www.metmuseum.org/de/essays/the-grand-tour" target="_blank" rel="noopener">The Metropolitan Museum of Art, The Grand Tour</a> - 발굴지 방문과 국제적 고전 취향의 확산.</li>
+      <li><a href="https://www.louvre.fr/expositions-et-evenements/evenements-activites/presentation-d-exposition-jacques-louis-david" target="_blank" rel="noopener">Musée du Louvre, Jacques-Louis David</a> - 다비드 미술의 정치적·도덕적·사회적 성격.</li>
+      <li><a href="https://www.vam.ac.uk/articles/antonio-canova-an-introduction" target="_blank" rel="noopener">Victoria and Albert Museum, Antonio Canova - an introduction</a> - 카노바의 조각과 신고전주의적 이상.</li>
+      <li><a href="https://www.museodelprado.es/en/whats-on/exhibition/anton-raphael-mengs-1728-1779/4be2964e-3169-c21d-52ec-9c6caf24cbfb" target="_blank" rel="noopener">Museo Nacional del Prado, Anton Raphael Mengs</a> - 초기 신고전주의와 멩스의 영향.</li>
+      <li><a href="https://www.museodelprado.es/en/the-collection/artist/angelica-kauffmann/8e9e7ec9-4461-4c3c-a204-e0782072c1bd" target="_blank" rel="noopener">Museo Nacional del Prado, Angelica Kauffmann</a> - 카우프만의 이탈리아·영국 활동과 신고전주의 네트워크.</li>
+      <li><a href="https://mini-site.louvre.fr/ingres/1.4.3.1_en.html" target="_blank" rel="noopener">Musée du Louvre, Ingres: 1824-1834</a> - 앵그르의 고전주의와 낭만주의 시대의 위치.</li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>Art Through Time · 신고전주의 초심자 안내서</footer>
+<script defer src="../../uhangul/uhangul-runtime.js?v=0.7" data-uhangul-integration="v0.7"></script>
+</body>
+</html>

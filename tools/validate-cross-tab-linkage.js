@@ -77,6 +77,17 @@ function countryRows(parent) {
   const html = fs.readFileSync(path.join(root, relative), 'utf8');
   const rootTag = /<html\b[^>]*>/i.exec(html)?.[0] || '';
   check(attr(rootTag, attrs.parentId) === parent.id, `${parent.id}: document parent ID mismatch`);
+  if (attr(rootTag, 'data-art-atlas-document-model') === 'artist-guide') {
+    return (learningMap.movements?.[parent.id]?.nodes || []).map(node => ({
+      parentId:parent.id,
+      developmentId:node.developmentId,
+      learningNodeId:node.id,
+      categoryId:node.canonicalCategoryId,
+      countryIds:node.countryIds || [],
+      primaryArtistIds:[node.artist.id],
+      furtherArtistIds:[]
+    }));
+  }
   const sectionMatch = openingTags(html, 'section').find(match => attr(match[0], 'id') === 'countries');
   check(Boolean(sectionMatch), `${parent.id}: country development section is missing`);
   if (!sectionMatch) return [];

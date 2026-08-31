@@ -39,6 +39,31 @@ function openingTags(html, element, className) {
   return [...html.matchAll(new RegExp(`<${element}\\b(?=[^>]*\\bclass=["'][^"']*${className})[^>]*>`, 'gi'))].map(match => match[0]);
 }
 
+function artistGuideAudit(parent, html, attrs, globalDevelopments) {
+  assert(!/<section\b[^>]*\bid=["']countries["']/i.test(html), `${parent.documentKey}: artist guide cannot contain #countries`);
+  assert(!/data-art-atlas-(?:category-id|development-id|country-ids)=/i.test(html), `${parent.documentKey}: artist guide contains regional classification bindings`);
+  const guideStart = /<section\b[^>]*\bid=["']representative-artists["'][^>]*>/i.exec(html)?.index;
+  assert(Number.isInteger(guideStart), `${parent.documentKey}: #representative-artists is missing`);
+  const guideEnd = html.indexOf('</section>', guideStart);
+  const guideSource = html.slice(guideStart, guideEnd);
+  const rows = [...guideSource.matchAll(/<tr\b[^>]*>/gi)].map(match => match[0]).filter(tag => attr(tag, 'data-art-atlas-artist-tier'));
+  const cards = openingTags(html, 'article', 'movement-work-card');
+  assert(rows.length > 0 && rows.some(tag => attr(tag, 'data-art-atlas-artist-tier') === 'beginner'), `${parent.documentKey}: beginner representatives are missing`);
+  assert(rows.length === cards.length, `${parent.documentKey}: artist table and card counts differ`);
+  const identity = tag => [attr(tag, 'data-art-atlas-artist-tier'), attr(tag, attrs.artistId), attr(tag, attrs.workId)].join('|');
+  assert(JSON.stringify(rows.map(identity)) === JSON.stringify(cards.map(identity)), `${parent.documentKey}: artist table and card order differs`);
+  const representativeSections = openingTags(html, 'section', 'movement-enhancement').filter(tag => attr(tag, attrs.representativeSection) === 'works');
+  assert(representativeSections.length === 1, `${parent.documentKey}: expected one representative section`);
+  const learning = require(path.join(root, 'data/art-movement-learning-map.json')).movements?.[parent.id];
+  parent.categoryIds.forEach(categoryId => {
+    const node = learning?.nodes?.find(item => item.canonicalCategoryId === categoryId && !item.developmentId.includes('-learning-'));
+    assert(node, `${parent.documentKey}: transitional canonical binding is missing for ${categoryId}`);
+    assert(!globalDevelopments.has(node.developmentId), `${parent.documentKey}: duplicate transitional development ${node.developmentId}`);
+    globalDevelopments.add(node.developmentId);
+  });
+  return {state:attr(/<html\b[^>]*>/i.exec(html)?.[0] || '', attrs.syncState), rows:parent.categoryIds.length, groups:parent.categoryIds.length, cards:cards.length, artistRows:rows.length, scaffoldGroups:0, model:'artist-guide'};
+}
+
 function learningMapAudit(parent, html, categories, countries, attrs, globalDevelopments) {
   const learning = require(path.join(root, 'data/art-movement-learning-map.json')).movements?.[parent.id];
   assert(learning?.nodes?.length, `${parent.documentKey}: learning map is missing`);
@@ -67,6 +92,7 @@ function parentDocumentAudit(parent, html, categories, countries, attrs, globalD
   assert(['structure', 'content', 'complete'].includes(attr(rootTag, attrs.syncState)), `${parent.documentKey}: invalid sync state`);
   assert(attr(rootTag, attrs.parentId) === parent.id, `${parent.documentKey}: parent ID differs`);
   assert(attr(rootTag, attrs.contextId) == null, `${parent.documentKey}: parent document also has context ID`);
+  if (attr(rootTag, 'data-art-atlas-document-model') === 'artist-guide') return artistGuideAudit(parent, html, attrs, globalDevelopments);
   if (parent.id === 'neoclassicism') return learningMapAudit(parent, html, categories, countries, attrs, globalDevelopments);
 
   const representativeSections = openingTags(html, 'section', 'movement-enhancement').filter(tag => attr(tag, attrs.representativeSection) === 'works');

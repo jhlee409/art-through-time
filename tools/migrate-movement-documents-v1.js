@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-const crypto = require('node:crypto');
 const fs = require('node:fs');
 const path = require('node:path');
 
@@ -227,8 +226,9 @@ function migrateContext(html, context, migration, attrs) {
 }
 
 function targetPath(documentKey) {
-  const hash = crypto.createHash('sha256').update(`art-atlas-movement:${documentKey}:1`).digest('hex').slice(0, 24);
-  return `data/미술사조/${hash}-1.html`;
+  const stem = String(documentKey || '').normalize('NFC').replace(/[<>:"/\\|?*\u0000-\u001f]/g, ' ').replace(/\s+/g, ' ').replace(/[. ]+$/g, '').trim();
+  if (!stem) throw new Error('Invalid movement document file name');
+  return `data/미술사조/${stem}.html`;
 }
 
 function main() {

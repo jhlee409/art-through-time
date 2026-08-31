@@ -58,6 +58,105 @@ function contentBoundTo(source, attributeName) {
   return tagName ? plainText(element(source, opening, tagName)) : '';
 }
 
+function isArtistGuideDocument(html) {
+  const rootTag = /<html\b[^>]*>/i.exec(String(html || ''))?.[0] || '';
+  return attribute(rootTag, 'data-art-atlas-document-model') === 'artist-guide';
+}
+
+function parseArtistGuideDocument(html) {
+  const source = String(html || '');
+  const rootTag = /<html\b[^>]*>/i.exec(source)?.[0] || '';
+  const tableSectionMatch = openingTags(source, 'section').find(match => attribute(match[0], 'id') === 'representative-artists');
+  assert(tableSectionMatch, 'The #representative-artists section is missing');
+  const tableSource = element(source, tableSectionMatch, 'section');
+  const rows = [...tableSource.matchAll(/<tr\b[^>]*>[\s\S]*?<\/tr>/gi)].flatMap(match => {
+    const tag = /^<tr\b[^>]*>/i.exec(match[0])?.[0] || '';
+    const tier = attribute(tag, 'data-art-atlas-artist-tier');
+    if (!tier) return [];
+    return [{
+      tier,
+      learningNodeId: attribute(tag, attrs.learningNodeId) || '',
+      artistId: attribute(tag, attrs.artistId),
+      workId: attribute(tag, attrs.workId)
+    }];
+  });
+  const representativeMatches = openingTags(source, 'section').filter(match => attribute(match[0], attrs.representativeSection) === 'works');
+  assert(representativeMatches.length === 1, `Expected one representative work section, got ${representativeMatches.length}`);
+  const representativeSource = element(source, representativeMatches[0], 'section');
+  const grids = openingTags(representativeSource, 'div', 'movement-work-grid').map(match => ({
+    tier: attribute(match[0], 'data-art-atlas-artist-tier'),
+    markup: element(representativeSource, match, 'div')
+  }));
+  const cards = grids.flatMap(grid => openingTags(grid.markup, 'article', 'movement-work-card').map(match => {
+    const markup = element(grid.markup, match, 'article');
+    return {
+      markup,
+      tag: match[0],
+      tier: attribute(match[0], 'data-art-atlas-artist-tier'),
+      gridTier: grid.tier,
+      learningNodeId: attribute(match[0], attrs.learningNodeId) || '',
+      artistId: attribute(match[0], attrs.artistId),
+      workId: attribute(match[0], attrs.workId),
+      role: attribute(match[0], attrs.cardRole),
+      imageState: attribute(match[0], attrs.imageState),
+      selectionReason: contentBoundTo(markup, attrs.selectionReason),
+      description: contentBoundTo(markup, attrs.cardDescription),
+      linkArtistIds: idsFromLinks(markup),
+      imageTag: /<img\b[^>]*>/i.exec(markup)?.[0] || ''
+    };
+  }));
+  return {
+    source,
+    root: {
+      version: attribute(rootTag, attrs.syncVersion),
+      state: attribute(rootTag, attrs.syncState),
+      parentId: attribute(rootTag, attrs.parentId),
+      contextId: attribute(rootTag, attrs.contextId),
+      model: attribute(rootTag, 'data-art-atlas-document-model')
+    },
+    rows,
+    grids,
+    cards
+  };
+}
+
+function validateArtistGuideDocument(html, options = {}) {
+  const parsed = parseArtistGuideDocument(html);
+  const canonical = options.canonical || require('./data/art-movement-canonical.json');
+  const artistsData = options.artists || require('./data/artists.json');
+  const parent = canonical.parents.find(item => item.id === parsed.root.parentId && item.role === 'document');
+  const artistMap = new Map((artistsData.artists || []).map(artist => [artist.id, artist]));
+  assert(parsed.root.version === contract.documentSyncVersion && parsed.root.state === 'complete', 'Artist guide must remain a complete version 1 document');
+  assert(parent && !parsed.root.contextId, `Unknown or invalid artist-guide parent ${parsed.root.parentId || '(missing)'}`);
+  assert(!/data-art-atlas-(?:category-id|development-id|country-ids)=/i.test(parsed.source), 'Artist guide cannot contain country or regional classification bindings');
+  assert(parsed.rows.length > 0 && parsed.rows.some(row => row.tier === 'beginner'), 'Artist guide needs at least one beginner representative');
+  assert(parsed.rows.every(row => ['beginner','intermediate'].includes(row.tier)), 'Artist guide contains an invalid learning tier');
+  assert(parsed.rows.length === parsed.cards.length, 'Artist guide table and card counts differ');
+  const identity = item => `${item.tier}|${item.artistId}|${item.workId}`;
+  assert(sameValues(parsed.rows.map(identity), parsed.cards.map(identity)), 'Artist guide table and card order or identity differs');
+  assert(new Set(parsed.rows.map(row => row.artistId)).size === parsed.rows.length, 'Artist guide contains a duplicate representative artist');
+  const learningNodes = new Map((learningMap.movements?.[parent.id]?.nodes || []).map(node => [node.id, node]));
+  parsed.cards.forEach(card => {
+    assert(card.gridTier === card.tier, `${card.artistId}: card tier differs from its grid`);
+    assert(card.role === 'primary', `${card.artistId}: artist-guide cards must use the primary role`);
+    assert(card.linkArtistIds.length === 1 && card.linkArtistIds[0] === card.artistId, `${card.artistId}: card heading artist link differs`);
+    const artist = artistMap.get(card.artistId);
+    const work = (artist?.works || []).find(item => item.id === card.workId);
+    assert(artist && work, `${card.artistId}/${card.workId}: artist or work is missing from artists.json`);
+    assert(card.selectionReason && card.description, `${card.workId}: selection reason or description is empty`);
+    const node = learningNodes.get(card.learningNodeId);
+    if (node) assert(node.artist.id === card.artistId && node.work.id === card.workId, `${card.learningNodeId}: learning map identity differs`);
+    if (card.imageState === 'ready') {
+      const src = attribute(card.imageTag, 'src') || '';
+      assert(src && !/^(?:https?:)?\/\//i.test(src), `${card.workId}: ready image must use a local path`);
+      if (options.documentFile) assert(fs.existsSync(path.resolve(path.dirname(options.documentFile), src.split(/[?#]/)[0])), `${card.workId}: local image file is missing`);
+    } else {
+      assert(card.imageState === 'pending' && !card.imageTag, `${card.workId}: pending image state is invalid`);
+    }
+  });
+  return {parentId:parent.id, rows:parsed.rows.length, cards:parsed.cards.length, model:'artist-guide'};
+}
+
 function parseMovementDocument(html) {
   const source = String(html || '');
   const rootTag = /<html\b[^>]*>/i.exec(source)?.[0] || '';
@@ -161,6 +260,18 @@ function sameValues(left, right) {
 }
 
 function assertStableEditableStructure(currentHtml, submittedHtml) {
+  if (isArtistGuideDocument(currentHtml) || isArtistGuideDocument(submittedHtml)) {
+    assert(isArtistGuideDocument(currentHtml) && isArtistGuideDocument(submittedHtml), 'Document model cannot be changed in the editor');
+    const current = parseArtistGuideDocument(currentHtml);
+    const submitted = parseArtistGuideDocument(submittedHtml);
+    assert(current.root.version === '1' && current.root.state === 'complete', 'The saved artist guide is not complete');
+    assert(submitted.root.version === '1' && submitted.root.state === 'complete', 'The submitted artist guide must remain complete');
+    assert(current.root.parentId === submitted.root.parentId && !submitted.root.contextId, 'Document identity cannot be changed in the editor');
+    const identity = item => `${item.tier}|${item.artistId}|${item.workId}`;
+    assert(sameValues(current.rows.map(identity), submitted.rows.map(identity)), 'Artist guide table membership cannot be changed in the card editor');
+    assert(sameValues(current.cards.map(identity), submitted.cards.map(identity)), 'Artist guide card membership or order cannot be changed in the card editor');
+    return submitted;
+  }
   const current = parseMovementDocument(currentHtml);
   const submitted = parseMovementDocument(submittedHtml);
   assert(current.root.version === '1' && current.root.state === 'complete', 'The saved document is not a complete version 1 document');
@@ -189,6 +300,7 @@ function assertStableEditableStructure(currentHtml, submittedHtml) {
 }
 
 function validateCompleteDocument(html, options = {}) {
+  if (isArtistGuideDocument(html)) return validateArtistGuideDocument(html, options);
   const parsed = parseMovementDocument(html);
   const canonical = options.canonical || require('./data/art-movement-canonical.json');
   const artistsData = options.artists || require('./data/artists.json');
@@ -277,6 +389,7 @@ function validateCompleteDocument(html, options = {}) {
 }
 
 function synchronizeTableArtistOrder(html) {
+  if (isArtistGuideDocument(html)) return html;
   const parsed = parseMovementDocument(html);
   const groups = new Map(parsed.groups.map(group => [group.developmentId, group]));
   const replacements = [];
@@ -306,7 +419,10 @@ function synchronizeTableArtistOrder(html) {
 module.exports = {
   assertStableEditableStructure,
   attribute,
+  isArtistGuideDocument,
+  parseArtistGuideDocument,
   parseMovementDocument,
   synchronizeTableArtistOrder,
+  validateArtistGuideDocument,
   validateCompleteDocument
 };

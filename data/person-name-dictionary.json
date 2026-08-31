@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-31T03:37:44.912Z",
+  "generatedAt": "2026-08-31T11:34:47.767Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -750,7 +750,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html"
+        "data/미술사조/신고전주의.html"
       ],
       "status": "verified-pair"
     },
@@ -965,7 +965,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html"
+        "data/미술사조/신고전주의.html"
       ],
       "status": "verified-pair"
     },
@@ -1019,7 +1019,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html"
+        "data/미술사조/신고전주의.html"
       ],
       "status": "verified-pair"
     },
@@ -2962,10 +2962,8 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
-        "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html",
         "data/미술사조/c0d228e179032941f8d9ebfb-1.html",
         "tools/apply-first-batch-movement-enhancements.js",
-        "tools/link-neoclassical-document.js",
         "Wikidata"
       ],
       "status": "verified-pair",
@@ -6089,8 +6087,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/미술사조/0930062b29f8f38dd88ee1a5-1.html",
-        "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html",
-        "tools/add-missing-neoclassical-card.js"
+        "data/미술사조/신고전주의.html"
       ],
       "status": "verified-pair"
     },
@@ -6419,7 +6416,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html"
+        "data/미술사조/신고전주의.html"
       ],
       "status": "verified-pair"
     },
@@ -6579,7 +6576,6 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/1d8f8238c19b2e2743dd5ed5-1.html",
         "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"

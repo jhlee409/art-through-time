@@ -114,7 +114,8 @@ function synchronizeDocument(documentId, parent, relative, isContext=false) {
   html = html.replace(/<\/head>/i, `${style}</head>`);
   html = html.replace(/<main\b[^>]*>/i, tag => `${tag}\n${renderGuide(documentId,parent,guide,isContext)}\n`);
   html = setRootVersion(html);
-  if (html === original) return false;
+  const normalizeNewlines = value => value.replace(/\r\n/g, '\n');
+  if (normalizeNewlines(html) === normalizeNewlines(original)) return false;
   if (!args.has('--check') && !args.has('--dry-run')) fs.writeFileSync(file, html, 'utf8');
   return true;
 }

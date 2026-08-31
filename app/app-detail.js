@@ -403,6 +403,18 @@ async function refreshMovementDocument(name, slot) {
   movementDocuments[name] = {...(movementDocuments[name] || {}), [slot]:result.url};
   return result.url;
 }
+async function latestMovementDocumentUrl(name, slot, fallback='') {
+  try {
+    const response = await fetch(apiUrl('/api/movement-documents'), {cache:'no-store'});
+    const result = await response.json();
+    const documents = result?.documents;
+    const latest = documents?.[name]?.[slot] || '';
+    if (response.ok && documents && typeof documents === 'object') movementDocuments = documents;
+    return latest || fallback;
+  } catch (_) {
+    return fallback;
+  }
+}
 function chooseMovementDocumentFile() {
   return new Promise(resolve => {
     const input = document.createElement('input');
@@ -753,7 +765,10 @@ async function openMovementDocument(name, slot, label) {
       popup.addEventListener('load', attachEditorsAfterDocumentLoad);
       editorAttachTimer = setInterval(attachEditorsAfterDocumentLoad, 100);
     }
-    try { return openExplanationUrl(await refreshMovementDocument(name, slot), popup, name, label || name); }
+    try {
+      const latestUrl = await latestMovementDocumentUrl(name, slot, url);
+      return openExplanationUrl(currentUserIsAdmin ? await refreshMovementDocument(name, slot) : latestUrl, popup, name, label || name);
+    }
     catch (_) { return openExplanationUrl(url, popup, name, label || name); }
   }
   if (slot === '1') return openMovementWikipedia(name);
@@ -767,7 +782,7 @@ function showMovementDocumentMenu(event, name, slot, label) {
   menu.style.left = `${Math.min(event.clientX, window.innerWidth - 150)}px`; menu.style.top = `${Math.min(event.clientY, window.innerHeight - 92)}px`;
   menu.innerHTML = `<button type="button" data-action="add">${language === 'ko' ? '추가 / 교체' : 'Add / replace'}</button><button type="button" data-action="remove">${language === 'ko' ? '삭제' : 'Delete'}</button>`;
   menu.addEventListener('pointerdown', item => item.stopPropagation());
-  menu.querySelector('[data-action="add"]').onclick = async () => { menu.remove(); const file=await chooseMovementDocumentFile(); if(!file) return; const form=new FormData(); form.append('name',name); form.append('slot',slot); form.append('document',file); const response=await apiFetch('/api/movement-documents',{method:'POST',body:form}); const result=await response.json(); if(!response.ok || !result.ok) return alert(result.error || 'Could not save document'); movementDocuments[name]={...(movementDocuments[name]||{}),[slot]:result.url}; alert(language === 'ko' ? 'HTML을 자료 폴더에 저장했습니다.' : 'The HTML was saved in the materials folder.'); };
+  menu.querySelector('[data-action="add"]').onclick = async () => { menu.remove(); const file=await chooseMovementDocumentFile(); if(!file) return; const form=new FormData(); form.append('name',name); form.append('fileName',label || name); form.append('slot',slot); form.append('document',file); const response=await apiFetch('/api/movement-documents',{method:'POST',body:form}); const result=await response.json(); if(!response.ok || !result.ok) return alert(result.error || 'Could not save document'); movementDocuments[name]={...(movementDocuments[name]||{}),[slot]:result.url}; alert(language === 'ko' ? 'HTML을 자료 폴더에 저장했습니다.' : 'The HTML was saved in the materials folder.'); };
   menu.querySelector('[data-action="remove"]').onclick = async () => { menu.remove(); if(!movementDocuments?.[name]?.[slot]) return alert(language === 'ko' ? '삭제할 저장 문서가 없습니다.' : 'There is no saved document to delete.'); if(!confirm(language === 'ko' ? '저장된 HTML 문서를 삭제할까요?' : 'Delete the saved HTML document?')) return; const response=await apiFetch('/api/movement-documents',{method:'DELETE',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,slot})}); const result=await response.json(); if(!response.ok || !result.ok) return alert(result.error || 'Could not delete document'); delete movementDocuments[name][slot]; if(!Object.keys(movementDocuments[name]).length) delete movementDocuments[name]; };
   document.body.append(menu); setTimeout(() => document.addEventListener('pointerdown', () => menu.remove(), {once:true}), 0);
 }

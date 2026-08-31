@@ -3,6 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const {
   assertStableEditableStructure,
+  isArtistGuideDocument,
   parseMovementDocument,
   synchronizeTableArtistOrder,
   validateCompleteDocument
@@ -62,12 +63,15 @@ canonical.parents.filter(parent => parent.role === 'document').forEach(parent =>
   const result = validateCompleteDocument(html, {canonical,artists,movements,documentFile});
   assertStableEditableStructure(html, html);
   assert(synchronizeTableArtistOrder(html) === html, `${parent.id}: table and card order are not stored identically`);
-  const parsed = parseMovementDocument(html);
-  parsed.rows.forEach(row => {
-    const learningNode = (learningMap.movements?.[parent.id]?.nodes || []).find(node => node.id === row.learningNodeId);
-    if (learningNode && !['dev--neoclassicism-french-france', 'dev--neoclassicism-roman-international-italy'].includes(row.developmentId)) return;
-    assert(!globalDevelopments.has(row.developmentId), `${row.developmentId}: development ID is duplicated across documents`);
-    globalDevelopments.add(row.developmentId);
+  const developmentIds = isArtistGuideDocument(html)
+    ? (learningMap.movements?.[parent.id]?.nodes || []).filter(node => !node.developmentId.includes('-learning-')).map(node => node.developmentId)
+    : parseMovementDocument(html).rows.flatMap(row => {
+      const learningNode = (learningMap.movements?.[parent.id]?.nodes || []).find(node => node.id === row.learningNodeId);
+      return learningNode && !['dev--neoclassicism-french-france', 'dev--neoclassicism-roman-international-italy'].includes(row.developmentId) ? [] : [row.developmentId];
+    });
+  developmentIds.forEach(developmentId => {
+    assert(!globalDevelopments.has(developmentId), `${developmentId}: development ID is duplicated across documents`);
+    globalDevelopments.add(developmentId);
   });
   documents += 1;
   cards += result.cards;

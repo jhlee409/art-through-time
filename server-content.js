@@ -75,7 +75,7 @@ const publicPathPrefixes = [
 ];
 function isPublicStaticPath(relative) {
   if (publicRootFiles.has(relative) || publicDataFiles.has(relative)) return true;
-  if (/^data\/미술사조\/[a-f0-9]{24}-[12]\.html$/i.test(relative)) return true;
+  if (isMovementDocumentRelative(relative)) return true;
   if (/^data\/미술사조\/images\/[^/]+\.(?:jpe?g|png|webp|gif|json)$/i.test(relative)) return true;
   if (/^uhangul\/assets\/fonts\/[^/]+\.ttf$/i.test(relative)) return true;
   return publicPathPrefixes.some(prefix => relative === prefix || relative.startsWith(prefix));
@@ -128,7 +128,13 @@ function movementDocumentName(value) { if(!String(value || '').trim() || String(
 function movementDocumentSlot(value) { if(!['1','2'].includes(String(value))) throw new Error('Invalid document slot'); return String(value); }
 async function readMovementDocuments() { try { const data=JSON.parse(await fs.readFile(movementDocumentIndex,'utf8')); return data && typeof data.documents==='object' ? data : {documents:{}}; } catch(error) { if(error.code==='ENOENT') return {documents:{}}; throw error; } }
 async function writeMovementDocuments(data) { await fs.mkdir(movementDocumentDir,{recursive:true}); await fs.writeFile(movementDocumentIndex,JSON.stringify(data,null,2)+'\n','utf8'); }
-function movementDocumentRelative(name, slot) { return `data/미술사조/${createHash('sha256').update(`${name}:${slot}`,'utf8').digest('hex').slice(0,24)}-${slot}.html`; }
+function movementDocumentFileStem(value) {
+  const stem=String(value || '').normalize('NFC').replace(/[<>:"/\\|?*\u0000-\u001f]/g,' ').replace(/\s+/g,' ').replace(/[. ]+$/g,'').trim();
+  if(!stem) throw new Error('Invalid movement document file name');
+  return stem.slice(0,140).replace(/[. ]+$/g,'').trim();
+}
+function movementDocumentRelative(name, slot) { const stem=movementDocumentFileStem(name); return `data/미술사조/${stem}${String(slot)==='1'?'':`-${slot}`}.html`; }
+function isMovementDocumentRelative(value) { return /^data\/미술사조\/[^/\\]+\.html$/i.test(String(value || '').replace(/\\/g,'/')); }
 function movementDocumentSyncState(html) {
   return /<html\b[^>]*\bdata-art-atlas-sync-state=["']([^"']+)["']/i.exec(String(html || ''))?.[1] || '';
 }
@@ -137,7 +143,7 @@ async function saveMovementDocumentHtml(name, slot, html) {
   if(!source.trim()) throw new Error('The HTML document is empty');
   if(Buffer.byteLength(source,'utf8') > jsonRequestBodyLimit) throw new Error('The HTML document exceeds the 12 MB limit');
   const data=await readMovementDocuments(), relative=data.documents?.[safeName]?.[safeSlot];
-  if(!relative || !/^data\/미술사조\/[a-f0-9]{24}-[12]\.html$/.test(relative)) throw new Error('There is no saved movement document');
+  if(!relative || !isMovementDocumentRelative(relative)) throw new Error('There is no saved movement document');
   const savedFile=path.join(root,relative), current=await fs.readFile(savedFile,'utf8');
   if(['structure','content'].includes(movementDocumentSyncState(current))) throw new Error('Movement document editing is locked until ID-based synchronization is complete');
   if(/<html\b[^>]*\bdata-art-atlas-sync-version=["']1["']/i.test(current)) {
@@ -165,11 +171,11 @@ async function saveMovementDocumentHtml(name, slot, html) {
   syncPersonNameDictionary({additionalFiles:[savedFile]});
   return {ok:true,url:relative};
 }
-async function removeMovementDocument(relative) { if(!/^data\/미술사조\/[a-f0-9]{24}-[12]\.html$/.test(String(relative || ''))) return; await fs.unlink(path.join(root,relative)).catch(error => { if(error.code!=='ENOENT') throw error; }); }
+async function removeMovementDocument(relative) { if(!isMovementDocumentRelative(relative)) return; await fs.unlink(path.join(root,relative)).catch(error => { if(error.code!=='ENOENT') throw error; }); }
 async function refreshMovementDocumentLinks(name, slot) {
   const data=await readMovementDocuments(), relative=data.documents?.[name]?.[slot];
   if(!relative) throw new Error('There is no saved movement document');
-  if(!/^data\/미술사조\/[a-f0-9]{24}-[12]\.html$/.test(String(relative || ''))) throw new Error('Invalid movement document path');
+  if(!isMovementDocumentRelative(relative)) throw new Error('Invalid movement document path');
   const file=path.join(root,relative), before=await fs.readFile(file);
   if(['structure','content'].includes(movementDocumentSyncState(before))) return {ok:true,url:relative,changed:false,locked:true};
   if(/<html\b[^>]*\bdata-art-atlas-sync-version=["']1["']/i.test(before.toString('utf8'))) {
@@ -261,7 +267,47 @@ function movementHighResolutionEntryForImage(tag, entries) {
 }
 const movementHighResolutionViewer = `<style id="art-atlas-movement-highres-style">img[data-art-atlas-highres]{cursor:zoom-in}</style><script id="art-atlas-movement-highres-viewer">(function(){if(window.__artAtlasMovementHighresViewer)return;window.__artAtlasMovementHighresViewer=true;function esc(text){return String(text||'').replace(/[&<>]/g,function(ch){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[ch];});}function openViewer(src,title){var popup=window.open('','artAtlasMovementHighResolution','popup=yes,width=1180,height=860,noopener');if(!popup)return;var payload=JSON.stringify({src:new URL(src,location.href).href,title:title||''});popup.document.write('<!doctype html><html><head><meta charset="utf-8"><title>'+esc(title||'High-resolution image')+'</title><style>html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#10120f;color:#f7f4ec;font-family:system-ui,sans-serif}#toolbar{height:42px;box-sizing:border-box;display:flex;align-items:center;padding:0 16px;background:#242820;font-size:12px;color:#c8cdc2}#stage{height:calc(100% - 42px);position:relative;overflow:hidden;touch-action:none;cursor:grab;user-select:none}#stage.dragging{cursor:grabbing}#artwork{position:absolute;top:50%;left:50%;max-width:none;max-height:none;transform:translate(-50%,-50%);pointer-events:none;user-select:none}</style></head><body><div id="toolbar">왼쪽 버튼을 누른 채 드래그: 이동 · 휠 위로: 확대 · 휠 아래로: 축소</div><div id="stage"><img id="artwork" alt=""></div><script>const payload='+payload+',stage=document.querySelector("#stage"),image=document.querySelector("#artwork");document.title=payload.title||"High-resolution image";image.src=payload.src;image.alt=payload.title||"";let zoom=1,x=0,y=0,drag=null;const clamp=()=>{const maxX=Math.max(0,(image.offsetWidth-stage.clientWidth)/2),maxY=Math.max(0,(image.offsetHeight-stage.clientHeight)/2);x=Math.max(-maxX,Math.min(maxX,x));y=Math.max(-maxY,Math.min(maxY,y));};const draw=()=>{if(!image.naturalWidth)return;const base=Math.min(stage.clientWidth/image.naturalWidth,stage.clientHeight/image.naturalHeight);image.style.width=Math.max(1,image.naturalWidth*base*zoom)+"px";image.style.height=Math.max(1,image.naturalHeight*base*zoom)+"px";clamp();image.style.transform="translate(calc(-50% + "+x+"px), calc(-50% + "+y+"px))";};image.addEventListener("load",draw);window.addEventListener("resize",draw);stage.addEventListener("pointerdown",event=>{if(event.button!==0)return;drag={id:event.pointerId,x:event.clientX,y:event.clientY,startX:x,startY:y};stage.setPointerCapture(event.pointerId);stage.classList.add("dragging");});stage.addEventListener("pointermove",event=>{if(!drag||event.pointerId!==drag.id)return;x=drag.startX+event.clientX-drag.x;y=drag.startY+event.clientY-drag.y;draw();});const stop=event=>{if(!drag||event.pointerId!==drag.id)return;drag=null;stage.classList.remove("dragging");};stage.addEventListener("pointerup",stop);stage.addEventListener("pointercancel",stop);stage.addEventListener("wheel",event=>{event.preventDefault();const oldZoom=zoom,ratio=event.deltaY<0?1.1:1/1.1;zoom=Math.max(.5,Math.min(6,zoom*ratio));const actualRatio=zoom/oldZoom,rect=stage.getBoundingClientRect(),pointX=event.clientX-rect.left-stage.clientWidth/2,pointY=event.clientY-rect.top-stage.clientHeight/2;x=x*actualRatio+pointX*(1-actualRatio);y=y*actualRatio+pointY*(1-actualRatio);draw();},{passive:false});<\\/script></body></html>');popup.document.close();}document.addEventListener('dblclick',function(event){var image=event.target&&event.target.closest&&event.target.closest('img[data-art-atlas-highres]');if(!image)return;event.preventDefault();event.stopPropagation();openViewer(image.dataset.artAtlasHighres,image.dataset.artAtlasHighresTitle||image.getAttribute('alt')||document.title||'');},true);})();</script>`;
 const movementCardDoubleClickZoom = `<style id="art-atlas-movement-card-zoom-style">.art-atlas-movement-card-zoom{position:fixed;inset:0;z-index:2147483647;display:grid;place-items:center;box-sizing:border-box;overflow:hidden;padding:2vh 2vw;background:rgba(5,7,10,.9);cursor:zoom-out}.art-atlas-movement-card-zoom img{display:block;flex:none;max-width:none;max-height:none;object-fit:contain;box-shadow:0 18px 55px rgba(0,0,0,.55);cursor:zoom-out;user-select:none;-webkit-user-drag:none}</style><script id="art-atlas-movement-card-zoom-viewer">(function(){if(window.__artAtlasMovementCardZoom)return;window.__artAtlasMovementCardZoom=true;var overlayId='art-atlas-movement-card-zoom',fitViewer=null;function close(){var overlay=document.getElementById(overlayId);if(overlay)overlay.remove();if(fitViewer)window.removeEventListener('resize',fitViewer);fitViewer=null;}document.addEventListener('dblclick',function(event){var open=document.getElementById(overlayId);if(open){if(event.target&&event.target.closest&&event.target.closest('#'+overlayId)){event.preventDefault();event.stopPropagation();close();}return;}var image=event.target&&event.target.closest&&event.target.closest('article.movement-work-card .movement-work-image img,article.card .movement-work-image img');if(!image)return;event.preventDefault();event.stopPropagation();var overlay=document.createElement('div'),zoomed=document.createElement('img');overlay.id=overlayId;overlay.className=overlayId;overlay.title='두 번 클릭하여 닫기';zoomed.src=image.dataset.artAtlasHighres||image.currentSrc||image.src;zoomed.alt=image.alt||'';zoomed.draggable=false;fitViewer=function(){if(!zoomed.naturalWidth||!zoomed.naturalHeight)return;var maxWidth=Math.max(1,window.innerWidth*.96),maxHeight=Math.max(1,window.innerHeight*.96),scale=Math.min(maxWidth/zoomed.naturalWidth,maxHeight/zoomed.naturalHeight);zoomed.style.width=Math.max(1,Math.round(zoomed.naturalWidth*scale))+'px';zoomed.style.height=Math.max(1,Math.round(zoomed.naturalHeight*scale))+'px';};zoomed.addEventListener('load',fitViewer,{once:true});overlay.appendChild(zoomed);document.body.appendChild(overlay);window.addEventListener('resize',fitViewer);if(zoomed.complete)fitViewer();},true);})();</script>`;
-const movementContentLayoutStyle = '<style id="art-atlas-movement-content-layout-style">body{--art-atlas-document-gutter:clamp(20px,3vw,48px)}header.hero>.wrap,main>section>.wrap{width:100%;max-width:none;margin-left:0;margin-right:0;padding-left:var(--art-atlas-document-gutter);padding-right:var(--art-atlas-document-gutter)}.hero p,.lead{max-width:none}main>section:not(#movement-learning-guide)>.wrap>h2,main>section:not(#movement-learning-guide)>h2{margin:0 0 1.15rem;font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,3.4vw,3.1rem);line-height:1.18}main>section:not(#movement-learning-guide)>.wrap>h3,main>section:not(#movement-learning-guide)>h3,.movement-enhancement .art-atlas-submovement-heading{font-size:clamp(1.3rem,2.25vw,1.75rem);line-height:1.32}.movement-enhancement .art-atlas-submovement-heading{margin-top:2.1rem;margin-bottom:.7rem}.movement-enhancement .art-atlas-submovement-heading+.movement-work-grid{margin-top:0}main>section:not(#movement-learning-guide)>.wrap>h4,main>section:not(#movement-learning-guide)>h4{font-size:1.12rem;line-height:1.42;margin:1.5rem 0 .5rem}main>section:not(#movement-learning-guide)>.wrap>p:not(.work-meta):not(.movement-selection-reason),main>section:not(#movement-learning-guide)>p:not(.work-meta):not(.movement-selection-reason){max-width:none;font-size:1.08rem;line-height:1.8}main>section:not(#movement-learning-guide)>.wrap>p:not(.work-meta):not(.movement-selection-reason)~p,main>section:not(#movement-learning-guide)>p:not(.work-meta):not(.movement-selection-reason)~p{font-size:1rem;line-height:1.75}.table-wrap,main>section>.wrap>table,main>section>table{width:100%;max-width:none}.table-wrap table,main>section>.wrap>table,main>section>table{width:100%}@media(max-width:720px){body{--art-atlas-document-gutter:18px}}</style>';
+const movementCardInteractiveZoom = `<style id="art-atlas-movement-card-zoom-style">
+article.movement-work-card .movement-work-image img,article.card .movement-work-image img{cursor:zoom-in}
+.art-atlas-movement-card-zoom{position:fixed;inset:0;z-index:2147483647;box-sizing:border-box;overflow:hidden;background:rgba(5,7,10,.94);touch-action:none}
+.art-atlas-movement-card-zoom-stage{position:absolute;inset:0;overflow:hidden;cursor:grab;touch-action:none;user-select:none}
+.art-atlas-movement-card-zoom-stage.dragging{cursor:grabbing}
+.art-atlas-movement-card-zoom img{position:absolute;top:50%;left:50%;display:block;max-width:none;max-height:none;object-fit:contain;transform:translate(-50%,-50%);box-shadow:0 18px 55px rgba(0,0,0,.55);pointer-events:none;user-select:none;-webkit-user-drag:none}
+.art-atlas-movement-card-zoom-controls{position:absolute;top:16px;right:16px;z-index:2;display:flex;gap:7px;padding:7px;border:1px solid #4b555f;border-radius:8px;background:rgba(18,22,27,.92)}
+.art-atlas-movement-card-zoom-controls button{display:grid;width:38px;height:38px;place-items:center;padding:0;border:1px solid #68737d;border-radius:50%;background:#12161b;color:#f2efe9;font:700 1.25rem/1 system-ui,sans-serif;cursor:pointer}
+.art-atlas-movement-card-zoom-controls button:hover,.art-atlas-movement-card-zoom-controls button:focus-visible{border-color:#d6a74a;color:#efc875;outline:none}
+</style><script id="art-atlas-movement-card-zoom-viewer">(function(){
+if(window.__artAtlasMovementCardInteractiveZoom)return;
+window.__artAtlasMovementCardInteractiveZoom=true;
+var overlayId='art-atlas-movement-card-zoom',resizeViewer=null,keyViewer=null;
+function close(){var overlay=document.getElementById(overlayId);if(overlay)overlay.remove();if(resizeViewer)window.removeEventListener('resize',resizeViewer);if(keyViewer)window.removeEventListener('keydown',keyViewer);resizeViewer=null;keyViewer=null;}
+function openViewer(sourceImage){
+  var overlay=document.createElement('div'),stage=document.createElement('div'),zoomed=document.createElement('img'),controls=document.createElement('div');
+  overlay.id=overlayId;overlay.className='art-atlas-movement-card-zoom';overlay.setAttribute('role','dialog');overlay.setAttribute('aria-modal','true');overlay.setAttribute('aria-label','작품 이미지 확대 보기');
+  stage.className='art-atlas-movement-card-zoom-stage';controls.className='art-atlas-movement-card-zoom-controls';
+  controls.innerHTML='<button type="button" data-action="out" aria-label="축소" title="축소">−</button><button type="button" data-action="in" aria-label="확대" title="확대">＋</button><button type="button" data-action="reset" aria-label="화면 맞춤" title="화면 맞춤">↺</button><button type="button" data-action="close" aria-label="닫기" title="닫기">×</button>';
+  zoomed.src=sourceImage.dataset.artAtlasHighres||sourceImage.currentSrc||sourceImage.src;zoomed.alt=sourceImage.alt||'';zoomed.draggable=false;
+  var zoom=1,x=0,y=0,drag=null;
+  function draw(){
+    if(!zoomed.naturalWidth||!zoomed.naturalHeight)return;
+    var base=Math.min(stage.clientWidth*.90/zoomed.naturalWidth,stage.clientHeight*.90/zoomed.naturalHeight),width=Math.max(1,zoomed.naturalWidth*base*zoom),height=Math.max(1,zoomed.naturalHeight*base*zoom),maxX=Math.abs(width-stage.clientWidth)/2,maxY=Math.abs(height-stage.clientHeight)/2;
+    x=Math.max(-maxX,Math.min(maxX,x));y=Math.max(-maxY,Math.min(maxY,y));zoomed.style.width=width+'px';zoomed.style.height=height+'px';zoomed.style.transform='translate(calc(-50% + '+x+'px), calc(-50% + '+y+'px))';
+  }
+  function setZoom(next,clientX,clientY){var old=zoom;zoom=Math.max(1,Math.min(8,next));var ratio=zoom/old,rect=stage.getBoundingClientRect(),pointX=(typeof clientX==='number'?clientX:rect.left+stage.clientWidth/2)-rect.left-stage.clientWidth/2,pointY=(typeof clientY==='number'?clientY:rect.top+stage.clientHeight/2)-rect.top-stage.clientHeight/2;x=x*ratio+pointX*(1-ratio);y=y*ratio+pointY*(1-ratio);draw();}
+  function reset(){zoom=1;x=0;y=0;draw();}
+  zoomed.addEventListener('load',draw,{once:true});
+  stage.addEventListener('pointerdown',function(event){if(event.button!==0)return;drag={id:event.pointerId,x:event.clientX,y:event.clientY,startX:x,startY:y};stage.setPointerCapture(event.pointerId);stage.classList.add('dragging');});
+  stage.addEventListener('pointermove',function(event){if(!drag||event.pointerId!==drag.id)return;x=drag.startX+event.clientX-drag.x;y=drag.startY+event.clientY-drag.y;draw();});
+  function stopDrag(event){if(!drag||event.pointerId!==drag.id)return;drag=null;stage.classList.remove('dragging');}
+  stage.addEventListener('pointerup',stopDrag);stage.addEventListener('pointercancel',stopDrag);
+  stage.addEventListener('wheel',function(event){event.preventDefault();setZoom(zoom*(event.deltaY<0?1.15:1/1.15),event.clientX,event.clientY);},{passive:false});
+  controls.addEventListener('click',function(event){event.preventDefault();event.stopPropagation();var action=event.target.closest('button')&&event.target.closest('button').dataset.action;if(action==='in')setZoom(zoom*1.25);else if(action==='out')setZoom(zoom/1.25);else if(action==='reset')reset();else if(action==='close')close();});
+  overlay.appendChild(stage);stage.appendChild(zoomed);overlay.appendChild(controls);document.body.appendChild(overlay);
+  resizeViewer=draw;keyViewer=function(event){if(event.key==='Escape')close();};window.addEventListener('resize',resizeViewer);window.addEventListener('keydown',keyViewer);if(zoomed.complete)draw();controls.querySelector('[data-action="close"]').focus();
+}
+document.addEventListener('dblclick',function(event){var active=document.getElementById(overlayId);if(active){if(event.target&&event.target.closest&&event.target.closest('.art-atlas-movement-card-zoom-controls'))return;if(event.target&&event.target.closest&&event.target.closest('#'+overlayId)){event.preventDefault();event.stopPropagation();close();}return;}var image=event.target&&event.target.closest&&event.target.closest('article.movement-work-card .movement-work-image img,article.card .movement-work-image img');if(!image)return;event.preventDefault();event.stopPropagation();openViewer(image);},true);
+})();</script>`;
+const movementContentLayoutStyle = '<style id="art-atlas-movement-content-layout-style">body{--art-atlas-document-gutter:clamp(20px,3vw,48px)}header.hero>.wrap,main>section>.wrap{width:100%;max-width:none;margin-left:0;margin-right:0;padding-left:var(--art-atlas-document-gutter);padding-right:var(--art-atlas-document-gutter)}.hero p,.hero-summary,.hero-thesis,.lead{max-width:none}main>section:not(#movement-learning-guide)>.wrap>h2,main>section:not(#movement-learning-guide)>h2{margin:0 0 1.15rem;font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,3.4vw,3.1rem);line-height:1.18}main>section:not(#movement-learning-guide)>.wrap>h3,main>section:not(#movement-learning-guide)>h3,.movement-enhancement .art-atlas-submovement-heading{font-size:clamp(1.3rem,2.25vw,1.75rem);line-height:1.32}.movement-enhancement .art-atlas-submovement-heading{margin-top:2.1rem;margin-bottom:.7rem}.movement-enhancement .art-atlas-submovement-heading+.movement-work-grid{margin-top:0}main>section:not(#movement-learning-guide)>.wrap>h4,main>section:not(#movement-learning-guide)>h4{font-size:1.12rem;line-height:1.42;margin:1.5rem 0 .5rem}main>section:not(#movement-learning-guide)>.wrap>p:not(.work-meta):not(.movement-selection-reason),main>section:not(#movement-learning-guide)>p:not(.work-meta):not(.movement-selection-reason){max-width:none;font-size:1.08rem;line-height:1.8}main>section:not(#movement-learning-guide)>.wrap>p:not(.work-meta):not(.movement-selection-reason)~p,main>section:not(#movement-learning-guide)>p:not(.work-meta):not(.movement-selection-reason)~p{font-size:1rem;line-height:1.75}.table-wrap,main>section>.wrap>table,main>section>table{width:100%;max-width:none}.table-wrap table,main>section>.wrap>table,main>section>table{width:100%}@media(max-width:720px){body{--art-atlas-document-gutter:18px}}</style>';
 const movementCardImageFitStyle = '<style id="art-atlas-movement-card-image-fit-style">.movement-enhancement .movement-work-image>img{width:90%!important;height:90%!important;max-width:90%!important;max-height:90%!important;object-fit:contain!important}</style>';
 function injectMovementContentLayout(html) {
   const source=String(html || '').replace(/\s*<style\b[^>]*id=["']art-atlas-movement-content-layout-style["'][^>]*>[\s\S]*?<\/style>\s*/gi,'\n').replace(/\s*<style\b[^>]*id=["']art-atlas-movement-card-image-fit-style["'][^>]*>[\s\S]*?<\/style>\s*/gi,'\n');
@@ -434,7 +480,7 @@ async function injectMovementHighResolutionViewer(html) {
     if(!entry) return tag;
     return tag.replace(/\s*\/?>$/,match=>` data-art-atlas-highres="${escapeAttribute(entry.highRes)}" data-art-atlas-highres-title="${escapeAttribute([entry.artist,entry.title].filter(Boolean).join(' · '))}"${match}`);
   });
-  return /<\/body>/i.test(source) ? source.replace(/<\/body>/i,`${movementCardDoubleClickZoom}\n</body>`) : `${source}\n${movementCardDoubleClickZoom}`;
+  return /<\/body>/i.test(source) ? source.replace(/<\/body>/i,`${movementCardInteractiveZoom}\n</body>`) : `${source}\n${movementCardInteractiveZoom}`;
 }
 function compactArtistName(value) {
   return String(value || '').normalize('NFC').replace(/\s+/g,' ').trim();
@@ -877,7 +923,7 @@ async function ensureStoredMovementDocumentControls() {
   try { entries=await fs.readdir(movementDocumentDir,{withFileTypes:true}); } catch(error) { if(error.code==='ENOENT') return; throw error; }
   const linkEntries=await movementArtistLinkEntries();
   let changed=false;
-  await Promise.all(entries.filter(entry=>entry.isFile() && /^[a-f0-9]{24}-[12]\.html$/i.test(entry.name)).map(async entry=>{
+  await Promise.all(entries.filter(entry=>entry.isFile() && /\.html$/i.test(entry.name)).map(async entry=>{
     const file=path.join(movementDocumentDir,entry.name);
     const before=await fs.readFile(file);
     if (!movementDocumentNeedsSetup(before)) return;

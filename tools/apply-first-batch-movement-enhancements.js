@@ -242,66 +242,6 @@ ${style}
 </section>
 <!-- art-atlas-enhancement:end -->`,
 
-  '1d8f8238c19b2e2743dd5ed5-1.html': `<!-- art-atlas-enhancement:start -->
-${style}
-<section class="movement-enhancement">
-  <h2>심화 보강 - 지역 전개와 대표작으로 보는 신고전주의</h2>
-  <p class="enhancement-intro">신고전주의는 로코코의 사적 취향에 대한 반작용이면서, 고고학 발굴, 계몽주의, 시민 윤리, 혁명 정치가 결합한 국제 양식이다. 고대 그리스와 로마를 단순히 모방한 것이 아니라, 직선적 구도와 절제된 색, 명확한 윤곽으로 새로운 공적 도덕과 국가 이미지를 만들었다.</p>
-  <div class="enhancement-grid">
-    <div class="enhancement-panel">
-      <h3>따로 HTML로 나누지 않은 내부 화파</h3>
-      <ul>
-        <li>프랑스 혁명기 신고전주의는 다비드를 중심으로 시민적 덕목, 희생, 법, 공화국의 이미지를 만들었다. 고대 로마의 이야기와 현대 정치 사건은 같은 화면 언어로 번역되었고, 그림은 사적인 장식보다 공적 설득의 매체가 되었다.</li>
-        <li>제국 양식은 나폴레옹 시대의 신고전주의다. 로마 황제의 도상, 독수리, 월계관, 붉은 벨벳, 대칭 구도가 정치 권력을 시각화했고, 앵그르는 이 질서를 초상화의 표면과 선으로 극단적으로 정제했다.</li>
-        <li>로마 국제 신고전주의는 유럽 예술가들이 고대 유적과 발굴품을 직접 보며 학습한 현장이다. 빙켈만의 고전미 이론, 그랜드 투어, 로마 아카데미 네트워크가 합쳐져 회화와 조각 모두에 절제와 명료성을 요구했다.</li>
-        <li>조각에서는 카노바가 핵심이다. 흰 대리석, 매끄러운 표면, 감정의 절제, 고대 신화의 선택은 신고전주의가 회화에만 머문 사조가 아니라 신체와 공간의 이상을 다시 세운 운동임을 보여준다.</li>
-        <li>여성 화가의 위치도 중요하다. ${a.vigee}와 앙겔리카 카우프만은 초상과 역사화에서 고전적 절제와 감정의 품위를 결합했고, 남성 영웅 중심 서사 바깥의 신고전주의를 보여준다.</li>
-      </ul>
-    </div>
-    <div class="enhancement-panel">
-      <h3>국가별 발전 방식</h3>
-      <ul>
-        <li>프랑스에서는 혁명과 제국이 신고전주의의 속도를 결정했다. 다비드의 엄격한 구도는 공화국의 희생 윤리를, 앵그르의 제국 초상은 나폴레옹 권력의 의례와 위계를 시각화했다.</li>
-        <li>이탈리아와 로마는 신고전주의의 현장 학습실이었다. 폼페이와 헤르쿨라네움 발굴, 고대 조각 수집, 아카데미 교육은 "고대적인 것"을 유럽 공통의 미술 언어로 만들었다.</li>
-        <li>영국에서는 고고학, 건축, 초상, 역사화가 신고전주의를 받아들였다. 로열 아카데미와 그랜드 투어 문화는 고대의 권위를 교양 있는 상류층의 정체성과 연결했다.</li>
-        <li>독일권에서는 신고전주의가 철학과 미학의 언어로 발전했다. 고대 그리스의 단순함과 고귀함은 정치 선전보다 교육, 도덕, 미적 이상을 논하는 기준이 되었다.</li>
-      </ul>
-    </div>
-  </div>
-  <h3>표에는 나오지만 문서 상단에 도판이 없던 대표작</h3>
-  <p class="enhancement-intro">아래 카드는 앞부분에서 이미 보여준 다비드의 세 작품과 프라고나르를 반복하지 않고, 신고전주의가 제국 초상, 여성 초상, 조각, 국제 역사화로 확장되는 방식을 보여준다.</p>
-  <div class="movement-work-grid">
-    <article class="movement-work-card">
-      <div class="movement-work-image"><img src="../images/artist-Q213163/wikidata-Q23037740.jpg" alt="비제 르 브룅, 자화상"></div>
-      <div class="movement-work-body"><span class="mini-label">${a.vigee}</span><h3>${a.vigee}, 《자화상》</h3><p class="work-meta">1790년경, 우피치 미술관</p><p>부드러운 표정과 자연스러운 몸짓 속에서도 윤곽과 자세가 명료하다. 로코코 궁정 초상의 우아함이 신고전주의의 절제와 결합하는 과도기를 보여준다.</p></div>
-    </article>
-    <article class="movement-work-card">
-      <div class="movement-work-image"><img src="images/Ingres-Napoleon-on-Imperial-Throne.jpg" alt="앵그르, 황제의 옥좌에 앉은 나폴레옹"></div>
-      <div class="movement-work-body"><span class="mini-label">앵그르</span><h3>앵그르, 《황제의 옥좌에 앉은 나폴레옹》</h3><p class="work-meta">1806, 파리 군사박물관</p><p>인물은 현실의 정치가라기보다 로마 황제와 성상화가 합쳐진 권위의 기호처럼 보인다. 정면성, 대칭, 선명한 장식은 신고전주의가 제국 권력을 어떻게 시각화했는지 보여준다.</p></div>
-    </article>
-    <article class="movement-work-card">
-      <div class="movement-work-image"><img src="images/Canova-Psyche-Revived-by-Cupids-Kiss.jpg" alt="카노바, 큐피드의 키스로 되살아난 프시케"></div>
-      <div class="movement-work-body"><span class="mini-label">안토니오 카노바</span><h3>카노바, 《큐피드의 키스로 되살아난 프시케》</h3><p class="work-meta">1793, 루브르</p><p>감정적인 순간을 다루지만 표면은 차갑고 매끄럽게 절제되어 있다. 인물의 교차 곡선은 고전적 균형과 감각적 생명력을 동시에 품은 신고전주의 조각의 특징을 보여준다.</p></div>
-    </article>
-    <article class="movement-work-card">
-      <div class="movement-work-image"><img src="images/Kauffman-Cornelia-Mother-of-the-Gracchi.jpg" alt="앙겔리카 카우프만, 그라쿠스 형제의 어머니 코르넬리아"></div>
-      <div class="movement-work-body"><span class="mini-label">앙겔리카 카우프만</span><h3>카우프만, 《그라쿠스 형제의 어머니 코르넬리아》</h3><p class="work-meta">1788, 바르샤바 왕궁</p><p>화려한 보석 대신 자녀를 덕의 상징으로 내세우는 장면이다. 고대 로마의 모범, 도덕적 선택, 차분한 구도가 신고전주의 역사화의 교육적 성격을 잘 보여준다.</p></div>
-    </article>
-    <article class="movement-work-card">
-      <div class="movement-work-image"><img src="images/Reynolds-Mrs-Siddons-as-Tragic-Muse.jpg" alt="조슈아 레이놀즈, 비극의 뮤즈로 분장한 세라 시던스"></div>
-      <div class="movement-work-body"><span class="mini-label">조슈아 레이놀즈</span><h3>레이놀즈, 《비극의 뮤즈로 분장한 세라 시던스》</h3><p class="work-meta">1783-1784년경, 헌팅턴 도서관</p><p>초상화를 단순한 닮음보다 고전적 알레고리와 역사화의 품격으로 끌어올린다. 영국 신고전주의가 로열 아카데미의 그랜드 매너를 통해 교양과 사회적 권위를 표현한 방식이다.</p></div>
-    </article>
-    <article class="movement-work-card">
-      <div class="movement-work-image"><img src="images/Mengs-Parnassus.jpg" alt="안톤 라파엘 멩스, 파르나소스"></div>
-      <div class="movement-work-body"><span class="mini-label">안톤 라파엘 멩스</span><h3>멩스, 《파르나소스》</h3><p class="work-meta">1761년 이후, 에르미타주 미술관</p><p>라파엘로적 균형과 고대 신화의 절제된 인물 배치를 결합했다. 멩스는 빙켈만의 고전미 이론을 회화로 옮기며 독일어권 신고전주의의 규범적 방향을 세웠다.</p></div>
-    </article>
-    <article class="movement-work-card">
-      <div class="movement-work-image"><img src="images/Benjamin-West-Death-of-General-Wolfe.jpg" alt="벤저민 웨스트, 울프 장군의 죽음"></div>
-      <div class="movement-work-body"><span class="mini-label">벤저민 웨스트</span><h3>웨스트, 《울프 장군의 죽음》</h3><p class="work-meta">1770, 캐나다 국립미술관 판본</p><p>고대 영웅이 아니라 당대 군복을 입은 현대 인물을 역사화의 주인공으로 세웠다. 미국 출신 화가가 영국에서 신고전주의 역사화의 형식을 현대 정치와 제국의 기억에 적용한 사례다.</p></div>
-    </article>
-  </div>
-</section>
-<!-- art-atlas-enhancement:end -->`
 };
 
 function replaceBlock(fileName, block) {
