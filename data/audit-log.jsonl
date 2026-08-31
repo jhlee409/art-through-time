@@ -1211,3 +1211,4 @@
 {"at":"2026-08-30T10:52:52.895Z","type":"artist.presentation.save","actor":"jhlee409@gmail.com","revision":914,"artistId":"artist-mid-francesco-guardi","backup":"data/backups/artists-r913-2026-08-30T10-52-52-810Z.json"}
 {"at":"2026-08-30T10:52:54.418Z","type":"artist.presentation.save","actor":"jhlee409@gmail.com","revision":915,"artistId":"artist-mid-francesco-guardi","backup":""}
 {"at":"2026-08-30T10:52:56.090Z","type":"artist.presentation.save","actor":"jhlee409@gmail.com","revision":916,"artistId":"artist-mid-francesco-guardi","backup":""}
+{"at":"2026-08-30T23:57:37.422Z","type":"artists.save","actor":"jhlee409@gmail.com","revision":917,"backup":"data/backups/artists-r916-2026-08-30T23-57-36-096Z.json","stats":{"artists":246,"works":1908,"images":{"ready":1704,"pending":85,"missing":119},"assetsWithoutSource":361}}
