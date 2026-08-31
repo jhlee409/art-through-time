@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-08-31T11:38:00.798Z",
+  "generatedAt": "2026-08-31T13:33:05.717Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -109,7 +109,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/f3112cb2627a347eff543503-1.html"
+        "data/미술사조/backup/f3112cb2627a347eff543503-1.html"
       ],
       "status": "verified-pair"
     },
@@ -162,7 +162,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/8f7b750ae233057c81ea4c31-1.html"
+        "data/미술사조/backup/8f7b750ae233057c81ea4c31-1.html"
       ],
       "status": "verified-pair"
     },
@@ -192,7 +192,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/080336f866ce0c573e6c2b7f-1.html"
+        "data/미술사조/backup/080336f866ce0c573e6c2b7f-1.html"
       ],
       "status": "verified-pair"
     },
@@ -223,9 +223,9 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/080336f866ce0c573e6c2b7f-1.html",
-        "data/미술사조/9e553fb48e9a464402114360-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
+        "data/미술사조/backup/080336f866ce0c573e6c2b7f-1.html",
+        "data/미술사조/backup/9e553fb48e9a464402114360-1.html",
+        "data/미술사조/backup/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
@@ -253,7 +253,7 @@
       "sources": [
         "data/artists.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/d80bc831e2e75f52782edb83-1.html"
+        "data/미술사조/backup/d80bc831e2e75f52782edb83-1.html"
       ],
       "status": "verified-pair"
     },
@@ -281,7 +281,7 @@
       "sources": [
         "data/artists.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/12f4e943b63665f4725c9024-1.html"
+        "data/미술사조/backup/12f4e943b63665f4725c9024-1.html"
       ],
       "status": "verified-pair"
     },
@@ -377,7 +377,7 @@
       "sources": [
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/f20d01b9856f3df2c73eebf8-1.html"
+        "data/미술사조/backup/f20d01b9856f3df2c73eebf8-1.html"
       ],
       "status": "verified-pair"
     },
@@ -456,7 +456,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/8f7b750ae233057c81ea4c31-1.html"
+        "data/미술사조/backup/8f7b750ae233057c81ea4c31-1.html"
       ],
       "status": "verified-pair"
     },
@@ -484,7 +484,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/f33389a9b75de9c11d171b58-1.html"
+        "data/미술사조/backup/f33389a9b75de9c11d171b58-1.html"
       ],
       "status": "verified-pair"
     },
@@ -587,7 +587,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/236b5b248aa3129573179c3b-1.html"
+        "data/미술사조/backup/236b5b248aa3129573179c3b-1.html"
       ],
       "status": "verified-pair"
     },
@@ -617,7 +617,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/b6f307845ec9a6f73e9d4e44-1.html"
+        "data/미술사조/backup/b6f307845ec9a6f73e9d4e44-1.html"
       ],
       "status": "verified-pair"
     },
@@ -722,7 +722,7 @@
       "sources": [
         "data/artists.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/0177432364121aab51e2e404-1.html"
+        "data/미술사조/backup/0177432364121aab51e2e404-1.html"
       ],
       "status": "verified-pair"
     },
@@ -803,7 +803,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/27cd7106c6176211c4e94b56-1.html"
+        "data/미술사조/backup/27cd7106c6176211c4e94b56-1.html"
       ],
       "status": "verified-pair"
     },
@@ -832,9 +832,9 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/artist-work-image-download-manifest.json",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
-        "data/미술사조/de537ba74c4bee89423120bc-1.html",
+        "data/미술사조/backup/37a05b9246dcdbd89a685d55-1.html",
+        "data/미술사조/backup/790ffc9c0cd5d4e4a28fb6a6-1.html",
+        "data/미술사조/backup/de537ba74c4bee89423120bc-1.html",
         "Wikidata"
       ],
       "status": "verified-pair",
@@ -868,7 +868,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/aed270ba50b5c9e7d19f1050-1.html"
+        "data/미술사조/backup/aed270ba50b5c9e7d19f1050-1.html"
       ],
       "status": "verified-pair"
     },
@@ -908,7 +908,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
+        "data/미술사조/backup/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
@@ -937,7 +937,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/techniques.json",
-        "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
+        "data/미술사조/backup/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1046,7 +1046,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/f2403fbd2febcd2486d6d5b8-1.html"
+        "data/미술사조/backup/f2403fbd2febcd2486d6d5b8-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1076,7 +1076,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/4e7a664301ed396184c3cb5d-1.html"
+        "data/미술사조/backup/4e7a664301ed396184c3cb5d-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1129,7 +1129,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
+        "data/미술사조/backup/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1231,7 +1231,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/be9a35cdca8c52adb73b06c7-1.html"
+        "data/미술사조/backup/be9a35cdca8c52adb73b06c7-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1280,7 +1280,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/8f7b750ae233057c81ea4c31-1.html"
+        "data/미술사조/backup/8f7b750ae233057c81ea4c31-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1310,7 +1310,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/aed270ba50b5c9e7d19f1050-1.html"
+        "data/미술사조/backup/aed270ba50b5c9e7d19f1050-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1339,7 +1339,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/8822876f0626aa0296851626-1.html"
+        "data/미술사조/backup/8822876f0626aa0296851626-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1402,7 +1402,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
+        "data/미술사조/backup/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1453,7 +1453,7 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
-        "data/미술사조/33c2c0d33af4171ceabb8466-1.html"
+        "data/미술사조/backup/33c2c0d33af4171ceabb8466-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1533,7 +1533,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html"
+        "data/미술사조/backup/cc20f530f6597b5f2a8fd3ad-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1563,7 +1563,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/8f7b750ae233057c81ea4c31-1.html"
+        "data/미술사조/backup/8f7b750ae233057c81ea4c31-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1592,7 +1592,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/404043fc7c00ba92d8903b08-1.html"
+        "data/미술사조/backup/404043fc7c00ba92d8903b08-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1628,7 +1628,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
+        "data/미술사조/backup/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "tools/reorder-mannerism-representative-cards.js"
       ],
       "status": "verified-pair"
@@ -1705,7 +1705,7 @@
         "data/artists.json",
         "data/techniques.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html"
+        "data/미술사조/backup/cc20f530f6597b5f2a8fd3ad-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1732,7 +1732,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/techniques.json",
-        "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
+        "data/미술사조/backup/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1760,10 +1760,10 @@
       "sources": [
         "data/artists.json",
         "data/techniques.json",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
-        "data/미술사조/c0d228e179032941f8d9ebfb-1.html",
-        "data/미술사조/de537ba74c4bee89423120bc-1.html"
+        "data/미술사조/backup/37a05b9246dcdbd89a685d55-1.html",
+        "data/미술사조/backup/790ffc9c0cd5d4e4a28fb6a6-1.html",
+        "data/미술사조/backup/c0d228e179032941f8d9ebfb-1.html",
+        "data/미술사조/backup/de537ba74c4bee89423120bc-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1793,7 +1793,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/f3112cb2627a347eff543503-1.html"
+        "data/미술사조/backup/f3112cb2627a347eff543503-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1854,7 +1854,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/6826d3a46eb1a6fa61010765-1.html"
+        "data/미술사조/backup/6826d3a46eb1a6fa61010765-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1907,8 +1907,8 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/techniques.json",
-        "data/미술사조/0930062b29f8f38dd88ee1a5-1.html",
-        "data/미술사조/69d074f0099b13691bf428c4-1.html",
+        "data/미술사조/backup/0930062b29f8f38dd88ee1a5-1.html",
+        "data/미술사조/backup/69d074f0099b13691bf428c4-1.html",
         "Wikidata"
       ],
       "status": "verified-pair",
@@ -1968,7 +1968,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
+        "data/미술사조/backup/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
@@ -1996,7 +1996,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html"
+        "data/미술사조/backup/cc20f530f6597b5f2a8fd3ad-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2071,7 +2071,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/aed270ba50b5c9e7d19f1050-1.html"
+        "data/미술사조/backup/aed270ba50b5c9e7d19f1050-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2100,7 +2100,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/0177432364121aab51e2e404-1.html"
+        "data/미술사조/backup/0177432364121aab51e2e404-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2128,7 +2128,7 @@
       "sources": [
         "data/artists.json",
         "data/techniques.json",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
+        "data/미술사조/backup/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2160,9 +2160,9 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/techniques.json",
-        "data/미술사조/236b5b248aa3129573179c3b-1.html",
-        "data/미술사조/81bf5950142af1141dfcf738-1.html",
-        "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html",
+        "data/미술사조/backup/236b5b248aa3129573179c3b-1.html",
+        "data/미술사조/backup/81bf5950142af1141dfcf738-1.html",
+        "data/미술사조/backup/cc20f530f6597b5f2a8fd3ad-1.html",
         "tools/complete-impressionist-cards.js",
         "Wikidata"
       ],
@@ -2196,7 +2196,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/8822876f0626aa0296851626-1.html"
+        "data/미술사조/backup/8822876f0626aa0296851626-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2308,7 +2308,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/f3112cb2627a347eff543503-1.html"
+        "data/미술사조/backup/f3112cb2627a347eff543503-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2362,7 +2362,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/7f93471fd6e543d3f5af2c58-1.html"
+        "data/미술사조/backup/7f93471fd6e543d3f5af2c58-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2415,7 +2415,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/0177432364121aab51e2e404-1.html"
+        "data/미술사조/backup/0177432364121aab51e2e404-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2468,7 +2468,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/7f93471fd6e543d3f5af2c58-1.html"
+        "data/미술사조/backup/7f93471fd6e543d3f5af2c58-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2501,8 +2501,8 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/techniques.json",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
+        "data/미술사조/backup/37a05b9246dcdbd89a685d55-1.html",
+        "data/미술사조/backup/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2599,7 +2599,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/f3112cb2627a347eff543503-1.html"
+        "data/미술사조/backup/f3112cb2627a347eff543503-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2672,7 +2672,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html"
+        "data/미술사조/backup/cc20f530f6597b5f2a8fd3ad-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2759,7 +2759,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/0177432364121aab51e2e404-1.html"
+        "data/미술사조/backup/0177432364121aab51e2e404-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2787,7 +2787,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/4e7a664301ed396184c3cb5d-1.html"
+        "data/미술사조/backup/4e7a664301ed396184c3cb5d-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2839,7 +2839,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/be9a35cdca8c52adb73b06c7-1.html"
+        "data/미술사조/backup/be9a35cdca8c52adb73b06c7-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2895,7 +2895,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
+        "data/미술사조/backup/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "tools/apply-first-batch-movement-enhancements.js",
         "Wikidata"
       ],
@@ -2930,7 +2930,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/12f4e943b63665f4725c9024-1.html"
+        "data/미술사조/backup/12f4e943b63665f4725c9024-1.html"
       ],
       "status": "verified-pair"
     },
@@ -2962,7 +2962,7 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
-        "data/미술사조/c0d228e179032941f8d9ebfb-1.html",
+        "data/미술사조/backup/c0d228e179032941f8d9ebfb-1.html",
         "tools/apply-first-batch-movement-enhancements.js",
         "Wikidata"
       ],
@@ -3068,7 +3068,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/81bf5950142af1141dfcf738-1.html"
+        "data/미술사조/backup/81bf5950142af1141dfcf738-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3122,7 +3122,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/be9a35cdca8c52adb73b06c7-1.html"
+        "data/미술사조/backup/be9a35cdca8c52adb73b06c7-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3150,7 +3150,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/be9a35cdca8c52adb73b06c7-1.html"
+        "data/미술사조/backup/be9a35cdca8c52adb73b06c7-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3204,9 +3204,10 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/0930062b29f8f38dd88ee1a5-1.html",
-        "data/미술사조/7daaa6cee232ed701f97dea0-1.html",
-        "data/미술사조/9edf7288e6dd0ee42f7fa1bf-1.html"
+        "data/미술사조/backup/0930062b29f8f38dd88ee1a5-1.html",
+        "data/미술사조/backup/7daaa6cee232ed701f97dea0-1.html",
+        "data/미술사조/backup/9edf7288e6dd0ee42f7fa1bf-1.html",
+        "data/미술사조/신고전주의.html"
       ],
       "status": "verified-pair"
     },
@@ -3235,7 +3236,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
+        "data/미술사조/backup/0930062b29f8f38dd88ee1a5-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3337,7 +3338,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/4e7a664301ed396184c3cb5d-1.html"
+        "data/미술사조/backup/4e7a664301ed396184c3cb5d-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3438,7 +3439,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
+        "data/미술사조/backup/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3467,7 +3468,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
+        "data/미술사조/backup/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3497,7 +3498,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
+        "data/미술사조/backup/790ffc9c0cd5d4e4a28fb6a6-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3575,7 +3576,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/e9d8a876f1b83c5c174c2bbc-1.html"
+        "data/미술사조/backup/e9d8a876f1b83c5c174c2bbc-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3611,7 +3612,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
+        "data/미술사조/backup/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3639,7 +3640,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
+        "data/미술사조/backup/0930062b29f8f38dd88ee1a5-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3692,7 +3693,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
+        "data/미술사조/backup/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3780,7 +3781,7 @@
         "data/artists.json",
         "data/techniques.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
+        "data/미술사조/backup/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3833,7 +3834,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/8822876f0626aa0296851626-1.html"
+        "data/미술사조/backup/8822876f0626aa0296851626-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3863,7 +3864,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/be9a35cdca8c52adb73b06c7-1.html"
+        "data/미술사조/backup/be9a35cdca8c52adb73b06c7-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3942,7 +3943,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
+        "data/미술사조/backup/0930062b29f8f38dd88ee1a5-1.html"
       ],
       "status": "verified-pair"
     },
@@ -3998,7 +3999,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/artist-work-image-download-manifest.json",
-        "data/미술사조/b6f307845ec9a6f73e9d4e44-1.html",
+        "data/미술사조/backup/b6f307845ec9a6f73e9d4e44-1.html",
         "Wikidata"
       ],
       "status": "verified-pair",
@@ -4057,7 +4058,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/be9a35cdca8c52adb73b06c7-1.html"
+        "data/미술사조/backup/be9a35cdca8c52adb73b06c7-1.html"
       ],
       "status": "verified-pair"
     },
@@ -4113,7 +4114,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/aed270ba50b5c9e7d19f1050-1.html"
+        "data/미술사조/backup/aed270ba50b5c9e7d19f1050-1.html"
       ],
       "status": "verified-pair"
     },
@@ -4167,7 +4168,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/e9d8a876f1b83c5c174c2bbc-1.html"
+        "data/미술사조/backup/e9d8a876f1b83c5c174c2bbc-1.html"
       ],
       "status": "verified-pair"
     },
@@ -4196,7 +4197,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/a58f5e30e9cc89681111f83e-1.html"
+        "data/미술사조/backup/a58f5e30e9cc89681111f83e-1.html"
       ],
       "status": "verified-pair"
     },
@@ -4250,7 +4251,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/83e1fbbdad822f464a299cf3-1.html"
+        "data/미술사조/backup/83e1fbbdad822f464a299cf3-1.html"
       ],
       "status": "verified-pair"
     },
@@ -4281,7 +4282,7 @@
         "data/artists.json",
         "data/techniques.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
+        "data/미술사조/backup/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
@@ -4334,7 +4335,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/techniques.json",
-        "data/미술사조/81bf5950142af1141dfcf738-1.html"
+        "data/미술사조/backup/81bf5950142af1141dfcf738-1.html"
       ],
       "status": "verified-pair"
     },
@@ -4414,7 +4415,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/6826d3a46eb1a6fa61010765-1.html"
+        "data/미술사조/backup/6826d3a46eb1a6fa61010765-1.html"
       ],
       "status": "verified-pair"
     },
@@ -4490,7 +4491,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
+        "data/미술사조/backup/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
@@ -4544,7 +4545,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/6826d3a46eb1a6fa61010765-1.html"
+        "data/미술사조/backup/6826d3a46eb1a6fa61010765-1.html"
       ],
       "status": "verified-pair"
     },
@@ -4624,9 +4625,9 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/artist-work-image-download-manifest.json",
-        "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
-        "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
+        "data/미술사조/backup/0a104587439ae7b4c6b39e27-1.html",
+        "data/미술사조/backup/4ea2ffdfee88a2d13cacf07d-1.html",
+        "data/미술사조/backup/d3a0d1b58bda4f1f1ed342df-1.html",
         "Wikidata"
       ],
       "status": "verified-pair",
@@ -4662,8 +4663,8 @@
       "sources": [
         "data/artists.json",
         "data/artist-work-image-download-manifest.json",
-        "data/미술사조/0ff40245e0c5bda0e3f254d2-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
+        "data/미술사조/backup/0ff40245e0c5bda0e3f254d2-1.html",
+        "data/미술사조/backup/d3a0d1b58bda4f1f1ed342df-1.html",
         "Wikidata"
       ],
       "status": "verified-pair",
@@ -4769,7 +4770,7 @@
       "sources": [
         "data/artists.json",
         "data/artist-work-image-download-manifest.json",
-        "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
+        "data/미술사조/backup/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
     },
@@ -4798,9 +4799,9 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/artist-work-image-download-manifest.json",
-        "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
-        "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
+        "data/미술사조/backup/0a104587439ae7b4c6b39e27-1.html",
+        "data/미술사조/backup/4ea2ffdfee88a2d13cacf07d-1.html",
+        "data/미술사조/backup/d3a0d1b58bda4f1f1ed342df-1.html",
         "Wikidata"
       ],
       "status": "verified-pair",
@@ -4936,8 +4937,8 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/4e7a664301ed396184c3cb5d-1.html",
-        "data/미술사조/f33389a9b75de9c11d171b58-1.html"
+        "data/미술사조/backup/4e7a664301ed396184c3cb5d-1.html",
+        "data/미술사조/backup/f33389a9b75de9c11d171b58-1.html"
       ],
       "status": "verified-pair"
     },
@@ -4965,7 +4966,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/7daaa6cee232ed701f97dea0-1.html"
+        "data/미술사조/backup/7daaa6cee232ed701f97dea0-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5018,7 +5019,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/4e7a664301ed396184c3cb5d-1.html"
+        "data/미술사조/backup/4e7a664301ed396184c3cb5d-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5047,7 +5048,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/e9d8a876f1b83c5c174c2bbc-1.html"
+        "data/미술사조/backup/e9d8a876f1b83c5c174c2bbc-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5124,7 +5125,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/903c178f9ba65fa2554de073-1.html"
+        "data/미술사조/backup/903c178f9ba65fa2554de073-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5184,7 +5185,7 @@
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
-        "data/미술사조/9e553fb48e9a464402114360-1.html"
+        "data/미술사조/backup/9e553fb48e9a464402114360-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5213,7 +5214,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/9e553fb48e9a464402114360-1.html"
+        "data/미술사조/backup/9e553fb48e9a464402114360-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5265,7 +5266,7 @@
       "sources": [
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/f33389a9b75de9c11d171b58-1.html"
+        "data/미술사조/backup/f33389a9b75de9c11d171b58-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5295,7 +5296,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/8822876f0626aa0296851626-1.html"
+        "data/미술사조/backup/8822876f0626aa0296851626-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5388,7 +5389,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/artist-work-image-download-manifest.json",
-        "data/미술사조/81bf5950142af1141dfcf738-1.html",
+        "data/미술사조/backup/81bf5950142af1141dfcf738-1.html",
         "Wikidata"
       ],
       "status": "verified-pair",
@@ -5420,7 +5421,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/236b5b248aa3129573179c3b-1.html"
+        "data/미술사조/backup/236b5b248aa3129573179c3b-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5544,7 +5545,7 @@
       "sources": [
         "data/artists.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/8f7b750ae233057c81ea4c31-1.html"
+        "data/미술사조/backup/8f7b750ae233057c81ea4c31-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5573,7 +5574,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/7daaa6cee232ed701f97dea0-1.html"
+        "data/미술사조/backup/7daaa6cee232ed701f97dea0-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5650,8 +5651,8 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
-        "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
+        "data/미술사조/backup/37a05b9246dcdbd89a685d55-1.html",
+        "data/미술사조/backup/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5703,7 +5704,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/7daaa6cee232ed701f97dea0-1.html"
+        "data/미술사조/backup/7daaa6cee232ed701f97dea0-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5800,7 +5801,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/d80bc831e2e75f52782edb83-1.html"
+        "data/미술사조/backup/d80bc831e2e75f52782edb83-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5829,7 +5830,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/7daaa6cee232ed701f97dea0-1.html"
+        "data/미술사조/backup/7daaa6cee232ed701f97dea0-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5882,7 +5883,7 @@
         "data/artists.json",
         "data/techniques.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
+        "data/미술사조/backup/0930062b29f8f38dd88ee1a5-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5910,7 +5911,7 @@
       "sources": [
         "data/artists.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/8822876f0626aa0296851626-1.html"
+        "data/미술사조/backup/8822876f0626aa0296851626-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5939,7 +5940,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
+        "data/미술사조/backup/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
@@ -5968,7 +5969,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/33c2c0d33af4171ceabb8466-1.html"
+        "data/미술사조/backup/33c2c0d33af4171ceabb8466-1.html"
       ],
       "status": "verified-pair"
     },
@@ -6000,7 +6001,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
+        "data/미술사조/backup/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
@@ -6057,8 +6058,8 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
+        "data/미술사조/backup/790ffc9c0cd5d4e4a28fb6a6-1.html",
+        "data/미술사조/backup/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
@@ -6086,7 +6087,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/0930062b29f8f38dd88ee1a5-1.html",
+        "data/미술사조/backup/0930062b29f8f38dd88ee1a5-1.html",
         "data/미술사조/신고전주의.html"
       ],
       "status": "verified-pair"
@@ -6164,7 +6165,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/0177432364121aab51e2e404-1.html"
+        "data/미술사조/backup/0177432364121aab51e2e404-1.html"
       ],
       "status": "verified-pair"
     },
@@ -6244,8 +6245,8 @@
         "data/artists.json",
         "data/techniques.json",
         "data/artist-work-image-download-manifest.json",
-        "data/미술사조/9e553fb48e9a464402114360-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
+        "data/미술사조/backup/9e553fb48e9a464402114360-1.html",
+        "data/미술사조/backup/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
@@ -6299,7 +6300,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/e9d8a876f1b83c5c174c2bbc-1.html"
+        "data/미술사조/backup/e9d8a876f1b83c5c174c2bbc-1.html"
       ],
       "status": "verified-pair"
     },
@@ -6359,7 +6360,7 @@
       "sources": [
         "data/artists.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/903c178f9ba65fa2554de073-1.html"
+        "data/미술사조/backup/903c178f9ba65fa2554de073-1.html"
       ],
       "status": "verified-pair"
     },
@@ -6388,7 +6389,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/f2403fbd2febcd2486d6d5b8-1.html"
+        "data/미술사조/backup/f2403fbd2febcd2486d6d5b8-1.html"
       ],
       "status": "verified-pair"
     },
@@ -6547,7 +6548,7 @@
         "data/artists.json",
         "data/techniques.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/7daaa6cee232ed701f97dea0-1.html"
+        "data/미술사조/backup/7daaa6cee232ed701f97dea0-1.html"
       ],
       "status": "verified-pair"
     },
@@ -6576,7 +6577,8 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
+        "data/미술사조/backup/c0d228e179032941f8d9ebfb-1.html",
+        "data/미술사조/신고전주의.html"
       ],
       "status": "verified-pair"
     },
@@ -6604,7 +6606,7 @@
       "sources": [
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/f20d01b9856f3df2c73eebf8-1.html"
+        "data/미술사조/backup/f20d01b9856f3df2c73eebf8-1.html"
       ],
       "status": "verified-pair"
     },
@@ -6633,7 +6635,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/aed270ba50b5c9e7d19f1050-1.html"
+        "data/미술사조/backup/aed270ba50b5c9e7d19f1050-1.html"
       ],
       "status": "verified-pair"
     },
@@ -6734,7 +6736,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/b6f307845ec9a6f73e9d4e44-1.html"
+        "data/미술사조/backup/b6f307845ec9a6f73e9d4e44-1.html"
       ],
       "status": "verified-pair"
     },
@@ -6839,7 +6841,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/techniques.json",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
+        "data/미술사조/backup/37a05b9246dcdbd89a685d55-1.html",
         "tools/apply-first-batch-movement-enhancements.js",
         "Wikidata"
       ],
@@ -6873,7 +6875,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/techniques.json",
-        "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
+        "data/미술사조/backup/0930062b29f8f38dd88ee1a5-1.html"
       ],
       "status": "verified-pair"
     },
@@ -6951,7 +6953,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/e9d8a876f1b83c5c174c2bbc-1.html"
+        "data/미술사조/backup/e9d8a876f1b83c5c174c2bbc-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7077,7 +7079,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/7f93471fd6e543d3f5af2c58-1.html"
+        "data/미술사조/backup/7f93471fd6e543d3f5af2c58-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7133,7 +7135,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/f33389a9b75de9c11d171b58-1.html"
+        "data/미술사조/backup/f33389a9b75de9c11d171b58-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7163,7 +7165,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/8f7b750ae233057c81ea4c31-1.html"
+        "data/미술사조/backup/8f7b750ae233057c81ea4c31-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7192,7 +7194,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/a58f5e30e9cc89681111f83e-1.html"
+        "data/미술사조/backup/a58f5e30e9cc89681111f83e-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7298,7 +7300,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/83e1fbbdad822f464a299cf3-1.html"
+        "data/미술사조/backup/83e1fbbdad822f464a299cf3-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7353,7 +7355,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
+        "data/미술사조/backup/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7384,7 +7386,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
+        "data/미술사조/backup/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7413,7 +7415,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/be9a35cdca8c52adb73b06c7-1.html"
+        "data/미술사조/backup/be9a35cdca8c52adb73b06c7-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7442,8 +7444,8 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/12f4e943b63665f4725c9024-1.html",
-        "data/미술사조/6826d3a46eb1a6fa61010765-1.html"
+        "data/미술사조/backup/12f4e943b63665f4725c9024-1.html",
+        "data/미술사조/backup/6826d3a46eb1a6fa61010765-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7473,7 +7475,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/8f7b750ae233057c81ea4c31-1.html"
+        "data/미술사조/backup/8f7b750ae233057c81ea4c31-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7550,7 +7552,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/f33389a9b75de9c11d171b58-1.html"
+        "data/미술사조/backup/f33389a9b75de9c11d171b58-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7600,7 +7602,7 @@
       "sources": [
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/27cd7106c6176211c4e94b56-1.html"
+        "data/미술사조/backup/27cd7106c6176211c4e94b56-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7655,7 +7657,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/a58f5e30e9cc89681111f83e-1.html"
+        "data/미술사조/backup/a58f5e30e9cc89681111f83e-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7685,7 +7687,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/8822876f0626aa0296851626-1.html"
+        "data/미술사조/backup/8822876f0626aa0296851626-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7721,10 +7723,10 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/techniques.json",
-        "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
-        "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
+        "data/미술사조/backup/0a104587439ae7b4c6b39e27-1.html",
+        "data/미술사조/backup/4ea2ffdfee88a2d13cacf07d-1.html",
+        "data/미술사조/backup/790ffc9c0cd5d4e4a28fb6a6-1.html",
+        "data/미술사조/backup/d3a0d1b58bda4f1f1ed342df-1.html",
         "Wikidata"
       ],
       "status": "verified-pair",
@@ -7758,7 +7760,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/b6f307845ec9a6f73e9d4e44-1.html"
+        "data/미술사조/backup/b6f307845ec9a6f73e9d4e44-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7907,8 +7909,8 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/080336f866ce0c573e6c2b7f-1.html",
-        "data/미술사조/9e553fb48e9a464402114360-1.html"
+        "data/미술사조/backup/080336f866ce0c573e6c2b7f-1.html",
+        "data/미술사조/backup/9e553fb48e9a464402114360-1.html"
       ],
       "status": "verified-pair"
     },
@@ -7961,7 +7963,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/8f7b750ae233057c81ea4c31-1.html"
+        "data/미술사조/backup/8f7b750ae233057c81ea4c31-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8014,7 +8016,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/12f4e943b63665f4725c9024-1.html"
+        "data/미술사조/backup/12f4e943b63665f4725c9024-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8044,7 +8046,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/e9d8a876f1b83c5c174c2bbc-1.html"
+        "data/미술사조/backup/e9d8a876f1b83c5c174c2bbc-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8072,7 +8074,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/e9d8a876f1b83c5c174c2bbc-1.html"
+        "data/미술사조/backup/e9d8a876f1b83c5c174c2bbc-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8151,7 +8153,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/8f7b750ae233057c81ea4c31-1.html"
+        "data/미술사조/backup/8f7b750ae233057c81ea4c31-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8179,7 +8181,7 @@
       "sources": [
         "data/artists.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/8822876f0626aa0296851626-1.html"
+        "data/미술사조/backup/8822876f0626aa0296851626-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8232,7 +8234,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html"
+        "data/미술사조/backup/cc20f530f6597b5f2a8fd3ad-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8260,7 +8262,7 @@
         "data/artists.json",
         "data/techniques.json",
         "data/artist-work-image-download-manifest.json",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
+        "data/미술사조/backup/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8290,7 +8292,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/9e553fb48e9a464402114360-1.html"
+        "data/미술사조/backup/9e553fb48e9a464402114360-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8322,7 +8324,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/236b5b248aa3129573179c3b-1.html"
+        "data/미술사조/backup/236b5b248aa3129573179c3b-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8400,7 +8402,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/b6f307845ec9a6f73e9d4e44-1.html"
+        "data/미술사조/backup/b6f307845ec9a6f73e9d4e44-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8506,11 +8508,11 @@
         "data/artists.json",
         "data/techniques.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
-        "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
+        "data/미술사조/backup/0a104587439ae7b4c6b39e27-1.html",
+        "data/미술사조/backup/37a05b9246dcdbd89a685d55-1.html",
+        "data/미술사조/backup/4ea2ffdfee88a2d13cacf07d-1.html",
+        "data/미술사조/backup/790ffc9c0cd5d4e4a28fb6a6-1.html",
+        "data/미술사조/backup/d3a0d1b58bda4f1f1ed342df-1.html",
         "tools/apply-first-batch-movement-enhancements.js",
         "Wikidata"
       ],
@@ -8572,7 +8574,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/6826d3a46eb1a6fa61010765-1.html"
+        "data/미술사조/backup/6826d3a46eb1a6fa61010765-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8649,8 +8651,8 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/8f7b750ae233057c81ea4c31-1.html",
-        "data/미술사조/a58f5e30e9cc89681111f83e-1.html"
+        "data/미술사조/backup/8f7b750ae233057c81ea4c31-1.html",
+        "data/미술사조/backup/a58f5e30e9cc89681111f83e-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8678,7 +8680,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/6826d3a46eb1a6fa61010765-1.html"
+        "data/미술사조/backup/6826d3a46eb1a6fa61010765-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8709,7 +8711,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
+        "data/미술사조/backup/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8740,7 +8742,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/f2403fbd2febcd2486d6d5b8-1.html"
+        "data/미술사조/backup/f2403fbd2febcd2486d6d5b8-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8769,7 +8771,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/4e7a664301ed396184c3cb5d-1.html"
+        "data/미술사조/backup/4e7a664301ed396184c3cb5d-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8822,7 +8824,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/12f4e943b63665f4725c9024-1.html"
+        "data/미술사조/backup/12f4e943b63665f4725c9024-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8852,7 +8854,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/a58f5e30e9cc89681111f83e-1.html"
+        "data/미술사조/backup/a58f5e30e9cc89681111f83e-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8906,7 +8908,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/be9a35cdca8c52adb73b06c7-1.html"
+        "data/미술사조/backup/be9a35cdca8c52adb73b06c7-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8935,7 +8937,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/236b5b248aa3129573179c3b-1.html"
+        "data/미술사조/backup/236b5b248aa3129573179c3b-1.html"
       ],
       "status": "verified-pair"
     },
@@ -8989,7 +8991,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/83e1fbbdad822f464a299cf3-1.html"
+        "data/미술사조/backup/83e1fbbdad822f464a299cf3-1.html"
       ],
       "status": "verified-pair"
     },
@@ -9050,8 +9052,8 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
+        "data/미술사조/backup/790ffc9c0cd5d4e4a28fb6a6-1.html",
+        "data/미술사조/backup/d3a0d1b58bda4f1f1ed342df-1.html",
         "tools/reorder-renaissance-representative-cards.js"
       ],
       "status": "verified-pair"
@@ -9087,8 +9089,8 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
+        "data/미술사조/backup/37a05b9246dcdbd89a685d55-1.html",
+        "data/미술사조/backup/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "tools/reorder-mannerism-representative-cards.js"
       ],
       "status": "verified-pair"
@@ -9119,7 +9121,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/81bf5950142af1141dfcf738-1.html"
+        "data/미술사조/backup/81bf5950142af1141dfcf738-1.html"
       ],
       "status": "verified-pair"
     },
@@ -9195,7 +9197,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/81bf5950142af1141dfcf738-1.html"
+        "data/미술사조/backup/81bf5950142af1141dfcf738-1.html"
       ],
       "status": "verified-pair"
     },
@@ -9224,7 +9226,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/27cd7106c6176211c4e94b56-1.html"
+        "data/미술사조/backup/27cd7106c6176211c4e94b56-1.html"
       ],
       "status": "verified-pair"
     },
@@ -9254,7 +9256,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/81bf5950142af1141dfcf738-1.html"
+        "data/미술사조/backup/81bf5950142af1141dfcf738-1.html"
       ],
       "status": "verified-pair"
     },
@@ -9284,7 +9286,7 @@
         "data/artists.json",
         "data/techniques.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/81bf5950142af1141dfcf738-1.html"
+        "data/미술사조/backup/81bf5950142af1141dfcf738-1.html"
       ],
       "status": "verified-pair"
     },
@@ -9362,7 +9364,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/0177432364121aab51e2e404-1.html"
+        "data/미술사조/backup/0177432364121aab51e2e404-1.html"
       ],
       "status": "verified-pair"
     },
@@ -9390,11 +9392,11 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
-        "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
-        "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
-        "data/미술사조/c0d228e179032941f8d9ebfb-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
+        "data/미술사조/backup/0a104587439ae7b4c6b39e27-1.html",
+        "data/미술사조/backup/37a05b9246dcdbd89a685d55-1.html",
+        "data/미술사조/backup/4ea2ffdfee88a2d13cacf07d-1.html",
+        "data/미술사조/backup/c0d228e179032941f8d9ebfb-1.html",
+        "data/미술사조/backup/d3a0d1b58bda4f1f1ed342df-1.html",
         "tools/apply-first-batch-movement-enhancements.js",
         "Wikidata"
       ],
@@ -9452,7 +9454,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
+        "data/미술사조/backup/0930062b29f8f38dd88ee1a5-1.html"
       ],
       "status": "verified-pair"
     },
@@ -9509,7 +9511,7 @@
         "data/artists.json",
         "data/techniques.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
+        "data/미술사조/backup/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
@@ -9612,7 +9614,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/903c178f9ba65fa2554de073-1.html"
+        "data/미술사조/backup/903c178f9ba65fa2554de073-1.html"
       ],
       "status": "verified-pair"
     },
@@ -9642,7 +9644,7 @@
         "data/artists.json",
         "data/techniques.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html"
+        "data/미술사조/backup/cc20f530f6597b5f2a8fd3ad-1.html"
       ],
       "status": "verified-pair"
     },
@@ -9669,7 +9671,7 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
-        "data/미술사조/f70d4d9edb161288992fea9e-1.html"
+        "data/미술사조/backup/f70d4d9edb161288992fea9e-1.html"
       ],
       "status": "verified-pair"
     },
@@ -9910,7 +9912,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/techniques.json",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
+        "data/미술사조/backup/790ffc9c0cd5d4e4a28fb6a6-1.html",
         "tools/reorder-mannerism-representative-cards.js"
       ],
       "status": "verified-pair"
@@ -9992,7 +9994,7 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
-        "data/미술사조/236b5b248aa3129573179c3b-1.html"
+        "data/미술사조/backup/236b5b248aa3129573179c3b-1.html"
       ],
       "status": "verified-pair"
     },
@@ -10022,7 +10024,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/e9d8a876f1b83c5c174c2bbc-1.html"
+        "data/미술사조/backup/e9d8a876f1b83c5c174c2bbc-1.html"
       ],
       "status": "verified-pair"
     },
@@ -10059,13 +10061,13 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
-        "data/미술사조/0930062b29f8f38dd88ee1a5-1.html",
-        "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
-        "data/미술사조/4e7a664301ed396184c3cb5d-1.html",
-        "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
+        "data/미술사조/backup/0930062b29f8f38dd88ee1a5-1.html",
+        "data/미술사조/backup/0a104587439ae7b4c6b39e27-1.html",
+        "data/미술사조/backup/37a05b9246dcdbd89a685d55-1.html",
+        "data/미술사조/backup/4e7a664301ed396184c3cb5d-1.html",
+        "data/미술사조/backup/4ea2ffdfee88a2d13cacf07d-1.html",
+        "data/미술사조/backup/790ffc9c0cd5d4e4a28fb6a6-1.html",
+        "data/미술사조/backup/d3a0d1b58bda4f1f1ed342df-1.html",
         "data/미술사조/신고전주의.html",
         "Wikidata"
       ],
@@ -10123,7 +10125,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/33c2c0d33af4171ceabb8466-1.html"
+        "data/미술사조/backup/33c2c0d33af4171ceabb8466-1.html"
       ],
       "status": "verified-pair"
     },
@@ -10156,7 +10158,7 @@
       "sources": [
         "data/artists.json",
         "data/artist-work-image-download-manifest.json",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html",
+        "data/미술사조/backup/37a05b9246dcdbd89a685d55-1.html",
         "tools/apply-first-batch-movement-enhancements.js",
         "Wikidata"
       ],
@@ -10190,7 +10192,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/techniques.json",
-        "data/미술사조/37a05b9246dcdbd89a685d55-1.html"
+        "data/미술사조/backup/37a05b9246dcdbd89a685d55-1.html"
       ],
       "status": "verified-pair"
     },
@@ -10244,7 +10246,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/b6f307845ec9a6f73e9d4e44-1.html"
+        "data/미술사조/backup/b6f307845ec9a6f73e9d4e44-1.html"
       ],
       "status": "verified-pair"
     },
@@ -10272,7 +10274,7 @@
       "sources": [
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/be9a35cdca8c52adb73b06c7-1.html"
+        "data/미술사조/backup/be9a35cdca8c52adb73b06c7-1.html"
       ],
       "status": "verified-pair"
     },
@@ -10300,7 +10302,7 @@
       "sources": [
         "data/artists.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/0177432364121aab51e2e404-1.html"
+        "data/미술사조/backup/0177432364121aab51e2e404-1.html"
       ],
       "status": "verified-pair"
     },
@@ -10377,7 +10379,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/9e553fb48e9a464402114360-1.html"
+        "data/미술사조/backup/9e553fb48e9a464402114360-1.html"
       ],
       "status": "verified-pair"
     },
@@ -10430,7 +10432,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/f3112cb2627a347eff543503-1.html"
+        "data/미술사조/backup/f3112cb2627a347eff543503-1.html"
       ],
       "status": "verified-pair"
     },
@@ -10483,7 +10485,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/b6f307845ec9a6f73e9d4e44-1.html"
+        "data/미술사조/backup/b6f307845ec9a6f73e9d4e44-1.html"
       ],
       "status": "verified-pair"
     },
@@ -10540,10 +10542,10 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
-        "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
-        "data/미술사조/9e553fb48e9a464402114360-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
+        "data/미술사조/backup/0a104587439ae7b4c6b39e27-1.html",
+        "data/미술사조/backup/4ea2ffdfee88a2d13cacf07d-1.html",
+        "data/미술사조/backup/9e553fb48e9a464402114360-1.html",
+        "data/미술사조/backup/d3a0d1b58bda4f1f1ed342df-1.html",
         "Wikidata"
       ],
       "status": "verified-pair",
@@ -10600,7 +10602,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/techniques.json",
-        "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
+        "data/미술사조/backup/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
     },
@@ -10636,7 +10638,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html"
+        "data/미술사조/backup/790ffc9c0cd5d4e4a28fb6a6-1.html"
       ],
       "status": "verified-pair"
     },
@@ -10665,7 +10667,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/0177432364121aab51e2e404-1.html"
+        "data/미술사조/backup/0177432364121aab51e2e404-1.html"
       ],
       "status": "verified-pair"
     },
@@ -10694,7 +10696,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/b6f307845ec9a6f73e9d4e44-1.html"
+        "data/미술사조/backup/b6f307845ec9a6f73e9d4e44-1.html"
       ],
       "status": "verified-pair"
     },
@@ -10747,7 +10749,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html"
+        "data/미술사조/backup/d3a0d1b58bda4f1f1ed342df-1.html"
       ],
       "status": "verified-pair"
     },
@@ -10826,7 +10828,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/aed270ba50b5c9e7d19f1050-1.html"
+        "data/미술사조/backup/aed270ba50b5c9e7d19f1050-1.html"
       ],
       "status": "verified-pair"
     },
@@ -10952,7 +10954,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/a58f5e30e9cc89681111f83e-1.html"
+        "data/미술사조/backup/a58f5e30e9cc89681111f83e-1.html"
       ],
       "status": "verified-pair"
     },
@@ -11004,7 +11006,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/e9d8a876f1b83c5c174c2bbc-1.html"
+        "data/미술사조/backup/e9d8a876f1b83c5c174c2bbc-1.html"
       ],
       "status": "verified-pair"
     },
@@ -11083,7 +11085,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/f70d4d9edb161288992fea9e-1.html"
+        "data/미술사조/backup/f70d4d9edb161288992fea9e-1.html"
       ],
       "status": "verified-pair"
     },
@@ -11166,7 +11168,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
+        "data/미술사조/backup/0930062b29f8f38dd88ee1a5-1.html"
       ],
       "status": "verified-pair"
     },
@@ -11193,7 +11195,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
+        "data/미술사조/backup/0930062b29f8f38dd88ee1a5-1.html"
       ],
       "status": "verified-pair"
     },
@@ -11245,7 +11247,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
+        "data/미술사조/backup/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
     },
@@ -11322,10 +11324,10 @@
         "data/artists.json",
         "data/techniques.json",
         "data/artist-work-image-download-manifest.json",
-        "data/미술사조/0a104587439ae7b4c6b39e27-1.html",
-        "data/미술사조/4ea2ffdfee88a2d13cacf07d-1.html",
-        "data/미술사조/790ffc9c0cd5d4e4a28fb6a6-1.html",
-        "data/미술사조/d3a0d1b58bda4f1f1ed342df-1.html",
+        "data/미술사조/backup/0a104587439ae7b4c6b39e27-1.html",
+        "data/미술사조/backup/4ea2ffdfee88a2d13cacf07d-1.html",
+        "data/미술사조/backup/790ffc9c0cd5d4e4a28fb6a6-1.html",
+        "data/미술사조/backup/d3a0d1b58bda4f1f1ed342df-1.html",
         "tools/apply-first-batch-movement-enhancements.js",
         "Wikidata"
       ],
@@ -11448,7 +11450,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/6826d3a46eb1a6fa61010765-1.html"
+        "data/미술사조/backup/6826d3a46eb1a6fa61010765-1.html"
       ],
       "status": "verified-pair"
     },
@@ -11477,7 +11479,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/12f4e943b63665f4725c9024-1.html"
+        "data/미술사조/backup/12f4e943b63665f4725c9024-1.html"
       ],
       "status": "verified-pair"
     },
@@ -11535,7 +11537,7 @@
       "sources": [
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/7daaa6cee232ed701f97dea0-1.html"
+        "data/미술사조/backup/7daaa6cee232ed701f97dea0-1.html"
       ],
       "status": "verified-pair"
     },
@@ -11566,8 +11568,8 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
-        "data/미술사조/8d49878ffcd14be08ced07c5-1.html",
-        "data/미술사조/9edf7288e6dd0ee42f7fa1bf-1.html",
+        "data/미술사조/backup/8d49878ffcd14be08ced07c5-1.html",
+        "data/미술사조/backup/9edf7288e6dd0ee42f7fa1bf-1.html",
         "Wikidata"
       ],
       "status": "verified-pair",
@@ -11600,7 +11602,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/d80bc831e2e75f52782edb83-1.html"
+        "data/미술사조/backup/d80bc831e2e75f52782edb83-1.html"
       ],
       "status": "verified-pair"
     },
@@ -11629,7 +11631,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/f33389a9b75de9c11d171b58-1.html"
+        "data/미술사조/backup/f33389a9b75de9c11d171b58-1.html"
       ],
       "status": "verified-pair"
     },
@@ -11657,7 +11659,7 @@
       "sources": [
         "data/artists.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/404043fc7c00ba92d8903b08-1.html"
+        "data/미술사조/backup/404043fc7c00ba92d8903b08-1.html"
       ],
       "status": "verified-pair"
     },
@@ -11738,11 +11740,11 @@
       "sources": [
         "data/artists.json",
         "data/techniques.json",
-        "data/미술사조/236b5b248aa3129573179c3b-1.html",
-        "data/미술사조/4e7a664301ed396184c3cb5d-1.html",
-        "data/미술사조/81bf5950142af1141dfcf738-1.html",
-        "data/미술사조/be9a35cdca8c52adb73b06c7-1.html",
-        "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html",
+        "data/미술사조/backup/236b5b248aa3129573179c3b-1.html",
+        "data/미술사조/backup/4e7a664301ed396184c3cb5d-1.html",
+        "data/미술사조/backup/81bf5950142af1141dfcf738-1.html",
+        "data/미술사조/backup/be9a35cdca8c52adb73b06c7-1.html",
+        "data/미술사조/backup/cc20f530f6597b5f2a8fd3ad-1.html",
         "Wikidata"
       ],
       "status": "verified-pair",
@@ -11800,7 +11802,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/12f4e943b63665f4725c9024-1.html"
+        "data/미술사조/backup/12f4e943b63665f4725c9024-1.html"
       ],
       "status": "verified-pair"
     },
@@ -11828,7 +11830,7 @@
       "sources": [
         "data/artists.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/27cd7106c6176211c4e94b56-1.html"
+        "data/미술사조/backup/27cd7106c6176211c4e94b56-1.html"
       ],
       "status": "verified-pair"
     },
@@ -11882,8 +11884,8 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/27cd7106c6176211c4e94b56-1.html",
-        "data/미술사조/be9a35cdca8c52adb73b06c7-1.html"
+        "data/미술사조/backup/27cd7106c6176211c4e94b56-1.html",
+        "data/미술사조/backup/be9a35cdca8c52adb73b06c7-1.html"
       ],
       "status": "verified-pair"
     },
@@ -11936,7 +11938,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/8822876f0626aa0296851626-1.html"
+        "data/미술사조/backup/8822876f0626aa0296851626-1.html"
       ],
       "status": "verified-pair"
     },
@@ -11989,7 +11991,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/0930062b29f8f38dd88ee1a5-1.html"
+        "data/미술사조/backup/0930062b29f8f38dd88ee1a5-1.html"
       ],
       "status": "verified-pair"
     },
@@ -12017,7 +12019,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/c0d228e179032941f8d9ebfb-1.html"
+        "data/미술사조/backup/c0d228e179032941f8d9ebfb-1.html"
       ],
       "status": "verified-pair"
     },
@@ -12093,7 +12095,7 @@
       "sources": [
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/cc20f530f6597b5f2a8fd3ad-1.html"
+        "data/미술사조/backup/cc20f530f6597b5f2a8fd3ad-1.html"
       ],
       "status": "verified-pair"
     },
@@ -12145,7 +12147,7 @@
       "sources": [
         "data/artists.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/f20d01b9856f3df2c73eebf8-1.html"
+        "data/미술사조/backup/f20d01b9856f3df2c73eebf8-1.html"
       ],
       "status": "verified-pair"
     },
@@ -12203,7 +12205,7 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
-        "data/미술사조/080336f866ce0c573e6c2b7f-1.html"
+        "data/미술사조/backup/080336f866ce0c573e6c2b7f-1.html"
       ],
       "status": "verified-pair"
     },
@@ -12254,7 +12256,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/903c178f9ba65fa2554de073-1.html"
+        "data/미술사조/backup/903c178f9ba65fa2554de073-1.html"
       ],
       "status": "verified-pair"
     },
@@ -12332,7 +12334,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/8f7b750ae233057c81ea4c31-1.html"
+        "data/미술사조/backup/8f7b750ae233057c81ea4c31-1.html"
       ],
       "status": "verified-pair"
     },
@@ -12361,7 +12363,7 @@
         "data/미술사조/manual-person-overrides",
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
-        "data/미술사조/a58f5e30e9cc89681111f83e-1.html"
+        "data/미술사조/backup/a58f5e30e9cc89681111f83e-1.html"
       ],
       "status": "verified-pair"
     },
@@ -12389,7 +12391,7 @@
       "sources": [
         "data/artists.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/f2403fbd2febcd2486d6d5b8-1.html"
+        "data/미술사조/backup/f2403fbd2febcd2486d6d5b8-1.html"
       ],
       "status": "verified-pair"
     },
@@ -12419,7 +12421,7 @@
         "data/artists.json",
         "data/further-artist-image-download-manifest.json",
         "data/movement-table-artist-image-download-manifest.json",
-        "data/미술사조/b6f307845ec9a6f73e9d4e44-1.html"
+        "data/미술사조/backup/b6f307845ec9a6f73e9d4e44-1.html"
       ],
       "status": "verified-pair"
     },
