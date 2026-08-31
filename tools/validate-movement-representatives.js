@@ -9,6 +9,7 @@ const representatives = require('../data/art-movement-representatives.json');
 const artistsData = require('../data/artists.json');
 const imageCatalog = require('../data/image-catalog.json');
 const index = require('../data/미술사조/index.json');
+const learningMap = require('../data/art-movement-learning-map.json');
 const attrs = contract.attributes;
 
 function assert(condition, message) {
@@ -61,7 +62,28 @@ function catalogPath(file) {
   return path.relative(root, file).replace(/\\/g, '/');
 }
 
+function validateLearningMapDocument(parent, artistMap) {
+  const relative = index.documents?.[parent.documentKey]?.['1'];
+  const html = fs.readFileSync(path.join(root, relative), 'utf8');
+  const nodes = learningMap.movements?.[parent.id]?.nodes || [];
+  assert(nodes.length === 5, `${parent.id}: expected five learning nodes`);
+  nodes.forEach(node => {
+    const rowPattern = new RegExp(`<tr\\b(?=[^>]*${attrs.learningNodeId}=["']${node.id}["'])[^>]*>`, 'i');
+    const groupPattern = new RegExp(`<section\\b(?=[^>]*${attrs.learningNodeId}=["']${node.id}["'])[^>]*>`, 'i');
+    const cardPattern = new RegExp(`<article\\b(?=[^>]*${attrs.learningNodeId}=["']${node.id}["'])(?=[^>]*${attrs.artistId}=["']${node.artist.id}["'])(?=[^>]*${attrs.workId}=["']${node.work.id}["'])[^>]*>`, 'i');
+    assert(rowPattern.test(html), `${node.id}: learning table row is missing`);
+    assert(groupPattern.test(html), `${node.id}: learning card group is missing`);
+    assert(cardPattern.test(html), `${node.id}: learning representative card is missing`);
+    const artist = artistMap.get(node.artist.id);
+    const work = artist?.works?.find(item => item.id === node.work.id);
+    assert(work, `${node.id}: learning work is absent from artists.json`);
+    assert(work.movementContribution === true, `${node.id}: learning work is not marked as a movement contribution`);
+  });
+  return {ready:nodes.length, pending:0, cards:nodes.length};
+}
+
 function validateDocument(parent, entries, artistMap, catalogByPath) {
+  if (parent.id === 'neoclassicism') return validateLearningMapDocument(parent, artistMap);
   const relative = index.documents?.[parent.documentKey]?.['1'];
   assert(relative, `${parent.id}: indexed document is missing`);
   const documentFile = path.join(root, relative);

@@ -100,6 +100,7 @@ let viewMode = isPainterListPage ? 'artist-list' : (isCountryArtPage ? 'country-
 let movementCountries = [];
 let movementContextOnlyNames = new Set();
 let artMovementCanonical = {parents:[],categories:[]};
+let artMovementLearningMap = {movements:{}};
 let movementView = parseMovementView();
 let countryArtView = parseCountryArtView();
 let artistListView = parseArtistListView();
@@ -1480,6 +1481,7 @@ async function loadData() {
   // read-only page visit must never rewrite the administrator's data files.
   try { artTaxonomy = await (await fetch('data/art-taxonomy.json')).json(); } catch (_) { artTaxonomy = {periods:[], movements:[]}; }
   try { artMovementCanonical = await (await fetch('data/art-movement-canonical.json')).json(); } catch (_) { artMovementCanonical = {parents:[],categories:[]}; }
+  try { artMovementLearningMap = await (await fetch('data/art-movement-learning-map.json')).json(); } catch (_) { artMovementLearningMap = {movements:{}}; }
   try {
     const movementData = await (await fetch('data/art-movements.json')).json();
     movementCountries = movementData.countries || [];

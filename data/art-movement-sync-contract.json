@@ -27,6 +27,12 @@
       "example": "dev--baroque-french-france",
       "meaning": "한 문서 안의 국가·지역·핵심 범주 전개 한 행과 대표작 카드 한 묶음을 연결하는 ID"
     },
+    "learningNodeId": {
+      "source": "data/art-movement-learning-map.json#movements[].nodes[].id",
+      "scope": "movement document",
+      "example": "canova-ideal-form",
+      "meaning": "정식 분류를 바꾸지 않고 초심자용 조형 기준점·주요 변주를 연결하는 ID"
+    },
     "countryId": {
       "source": "data/art-movements.json#countries[].id",
       "scope": "project",
@@ -50,6 +56,7 @@
     "contextId": "data-art-atlas-context-id",
     "categoryId": "data-art-atlas-category-id",
     "developmentId": "data-art-atlas-development-id",
+    "learningNodeId": "data-art-atlas-learning-node-id",
     "countryIds": "data-art-atlas-country-ids",
     "representativeArtists": "data-art-atlas-representative-artists",
     "furtherArtists": "data-art-atlas-further-artists",
@@ -133,7 +140,7 @@
     "parentAndCategoryNames": "data/art-movement-canonical.json",
     "parentAndCategoryOrder": "data/art-movement-canonical.json",
     "movementDatesAndColors": "data/art-movements.json",
-    "countryCategoryFeatureAndArtistMembership": "movement HTML #countries developmentRow",
+    "countryCategoryFeatureAndArtistMembership": "movement HTML #countries developmentRow; learningNodeId가 있으면 data/art-movement-learning-map.json이 화가·작품·학습 역할의 정본",
     "artistRoleAndOrder": "대표 화가 셀·더 볼 화가 셀과 cardRole별 카드 DOM 순서가 동일해야 한다",
     "representativeWorkImageAndText": "movement HTML representativeCard",
     "artistAndWorkIdentityMetadata": "data/artists.json",
@@ -195,6 +202,12 @@
     "검증 또는 저장 실패 시 화면 DOM을 저장 전 상태로 되돌린다."
   ],
   "exceptions": {
+    "learningMap": {
+      "default": "not-used",
+      "allowedWhen": "한 사조의 정식 범주보다 조형 기준점·변주·비교 축으로 설명하는 편이 초심자에게 더 정확한 경우",
+      "source": "data/art-movement-learning-map.json",
+      "rule": "learningNodeId는 정식 categoryId를 추가하지 않으며 canonicalCategoryId 하나를 참조한다. 국가별 미술의 canonical binding에는 정식 developmentId만 넣는다."
+    },
     "duplicateRepresentativeArtist": {
       "default": "forbidden",
       "allowedWhen": "한 화가의 서로 다른 작품이 두 범주의 차이를 설명하는 데 대체 불가능한 경우",
@@ -217,7 +230,7 @@
       "각 developmentRow에는 art-movements 국가 ID 한 개 이상이 공백 구분 목록으로 있다.",
       "각 developmentRow에는 같은 developmentId·categoryId·countryIds를 가진 cardGroup이 정확히 하나 있다.",
       "각 cardGroup에는 같은 developmentId를 가진 grid가 정확히 하나 있다.",
-      "각 행에는 대표 화가가 정확히 1명, 더 볼 화가가 1~4명 있다.",
+      "각 행에는 대표 화가가 정확히 1명, 더 볼 화가가 1~4명 있다. 단 learningNodeId 학습 행은 더 볼 화가 열과 카드를 생략할 수 있다.",
       "각 카드 묶음에는 role=primary 카드가 정확히 1개이고 첫 카드이며 role=further 카드가 1~4개 있다.",
       "표의 대표·더 볼 artistId 집합과 같은 역할 카드의 artistId 집합은 각각 같고 순서도 같다.",
       "한 문서에서 artistId가 여러 developmentId에 속하면 모든 해당 카드에 duplicateArtistReason을 기록해야 한다.",

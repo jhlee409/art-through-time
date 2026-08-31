@@ -1074,64 +1074,6 @@
       "description": "건축의 실제 경계가 열린 하늘과 구름, 떠오르는 인물로 이어져 천장이 사라진 듯 보인다. 가벼운 빛과 빠른 붓질이 권력의 알레고리를 무겁지 않은 축제적 장면으로 바꾼다."
     },
     {
-      "categoryId": "neoclassicism--french",
-      "feature": "고대 로마의 형식과 시민적 덕목을 명료한 윤곽, 절제된 색, 엄격한 구도로 제시했다.",
-      "artist": {
-        "id": "artist-Q83155",
-        "name": {
-          "ko": "자크루이 다비드",
-          "en": "Jacques-Louis David"
-        },
-        "birth": 1748,
-        "death": 1825,
-        "nationality": {
-          "ko": "프랑스",
-          "en": "French"
-        }
-      },
-      "work": {
-        "id": "artist-Q83155-representative-work",
-        "title": {
-          "ko": "호라티우스 형제의 맹세",
-          "en": "Oath of the Horatii"
-        },
-        "year": 1784,
-        "yearLabel": "1784",
-        "localImage": "data/images/artist-Q83155/다비드_호라티우스 형제의 맹세_1784__artist-Q83155-representative-work.jpg"
-      },
-      "selectionReason": "다비드는 고전 형식과 혁명 전야의 공적 도덕을 결합해 프랑스 신고전주의의 정치적 성격을 대표한다.",
-      "description": "세 아들의 직선적 몸짓과 오른쪽 여성들의 곡선이 세 개의 아치 아래 명확히 대비된다. 개인 감정보다 공동체의 의무를 앞세우는 이야기와 엄격한 구도가 로코코의 사적 쾌락과 단절한다."
-    },
-    {
-      "categoryId": "neoclassicism--roman-international",
-      "feature": "로마의 고대 유적과 발굴을 공통 기준으로 삼아 유럽 각국의 조각가와 화가가 이상적 인체와 절제를 공유했다.",
-      "artist": {
-        "id": "artist-Q5547",
-        "name": {
-          "ko": "안토니오 카노바",
-          "en": "Antonio Canova"
-        },
-        "birth": 1757,
-        "death": 1822,
-        "nationality": {
-          "ko": "이탈리아",
-          "en": "Italian"
-        }
-      },
-      "work": {
-        "id": "artist-Q5547-representative-work",
-        "title": {
-          "ko": "큐피드의 키스로 되살아난 프시케",
-          "en": "Psyche Revived by Cupid's Kiss"
-        },
-        "year": 1793,
-        "yearLabel": "1787-1793",
-        "localImage": "data/images/artist-Q5547/카노바_큐피드의 키스로 되살아난_1793__artist-Q5547-representative-work.jpg"
-      },
-      "selectionReason": "카노바는 로마를 중심으로 활동하며 고대 조각의 이상과 국제 귀족 후원을 연결한 신고전주의 조각의 기준점이다.",
-      "description": "두 인물의 팔과 날개가 원형의 흐름을 만들고 매끈한 대리석이 살아 있는 피부처럼 보인다. 고대 주제를 고고학적 모사에 그치지 않고 절제된 감정과 관람자의 이동 속에서 새롭게 구성한다."
-    },
-    {
       "categoryId": "romanticism--german",
       "feature": "고독한 인물과 광대한 자연을 통해 내면, 신앙, 숭고, 인간 인식의 한계를 탐구했다.",
       "artist": {
@@ -2085,6 +2027,64 @@
       },
       "selectionReason": "뱅크시는 스텐실의 즉시성, 공공장소, 익명성, 대중적 복제를 결합해 거리미술의 확산 구조를 이해하기 쉽게 한다.",
       "description": "검은 소녀의 실루엣과 멀어지는 붉은 하트 풍선은 단순해서 멀리서도 즉시 읽히고 다양한 장소와 매체로 복제된다. 작품의 의미는 벽의 위치, 도시의 사건, 관객의 공유와 재해석 속에서 계속 바뀐다."
+    },
+    {
+      "categoryId": "neoclassicism--french",
+      "feature": "고대 로마의 형식과 시민적 덕목을 명료한 윤곽, 절제된 색, 엄격한 구도로 제시했다.",
+      "artist": {
+        "id": "artist-Q83155",
+        "name": {
+          "ko": "자크루이 다비드",
+          "en": "Jacques-Louis David"
+        },
+        "birth": 1748,
+        "death": 1825,
+        "nationality": {
+          "ko": "프랑스",
+          "en": "French"
+        }
+      },
+      "work": {
+        "id": "artist-Q83155-representative-work",
+        "title": {
+          "ko": "호라티우스 형제의 맹세",
+          "en": "Oath of the Horatii"
+        },
+        "year": 1784,
+        "yearLabel": "1784",
+        "localImage": "data/images/artist-Q83155/다비드_호라티우스 형제의 맹세_1784__artist-Q83155-representative-work.jpg"
+      },
+      "selectionReason": "다비드는 고전 형식과 혁명 전야의 공적 도덕을 결합해 프랑스 신고전주의의 정치적 성격을 대표한다.",
+      "description": "세 아들의 직선적 몸짓과 오른쪽 여성들의 곡선이 세 개의 아치 아래 명확히 대비된다. 개인 감정보다 공동체의 의무를 앞세우는 이야기와 엄격한 구도가 로코코의 사적 쾌락과 단절한다."
+    },
+    {
+      "categoryId": "neoclassicism--roman-international",
+      "feature": "로마의 고대 유적과 발굴을 공통 기준으로 삼아 유럽 각국의 조각가와 화가가 이상적 인체와 절제를 공유했다.",
+      "artist": {
+        "id": "artist-Q5547",
+        "name": {
+          "ko": "안토니오 카노바",
+          "en": "Antonio Canova"
+        },
+        "birth": 1757,
+        "death": 1822,
+        "nationality": {
+          "ko": "이탈리아",
+          "en": "Italian"
+        }
+      },
+      "work": {
+        "id": "artist-Q5547-representative-work",
+        "title": {
+          "ko": "큐피드의 키스로 되살아난 프시케",
+          "en": "Psyche Revived by Cupid's Kiss"
+        },
+        "year": 1793,
+        "yearLabel": "1787-1793",
+        "localImage": "data/images/artist-Q5547/카노바_큐피드의 키스로 되살아난_1793__artist-Q5547-representative-work.jpg"
+      },
+      "selectionReason": "카노바는 로마를 중심으로 활동하며 고대 조각의 이상과 국제 귀족 후원을 연결한 신고전주의 조각의 기준점이다.",
+      "description": "두 인물의 팔과 날개가 원형의 흐름을 만들고 매끈한 대리석이 살아 있는 피부처럼 보인다. 고대 주제를 고고학적 모사에 그치지 않고 절제된 감정과 관람자의 이동 속에서 새롭게 구성한다."
     }
   ],
   "furtherArtists": [
@@ -4674,97 +4674,6 @@
       ]
     },
     {
-      "categoryId": "neoclassicism--french",
-      "artists": [
-        {
-          "artist": {
-            "id": "artist-Q161472",
-            "name": {
-              "ko": "장오귀스트도미니크 앵그르",
-              "en": "Jean-Auguste-Dominique Ingres"
-            },
-            "birth": 1780,
-            "death": 1867,
-            "nationality": {
-              "ko": "프랑스",
-              "en": "France"
-            }
-          },
-          "work": {
-            "id": "ingres-vow-louis-xiii-1824",
-            "title": {
-              "ko": "루이 13세의 서원",
-              "en": "The Vow of Louis XIII"
-            },
-            "year": 1824,
-            "yearLabel": "1824",
-            "localImage": "data/images/artist-Q161472/앵그르_루이 13세의 서원_1824__ingres-vow-louis-xiii-1824.jpg"
-          },
-          "selectionReason": "앵그르는 라파엘로적 균형, 맑은 윤곽, 완결된 표면을 종교·역사·초상에 이어 붙여 프랑스 신고전주의를 19세기까지 확장했다.",
-          "description": "성모에게 프랑스를 봉헌하는 장면은 안정된 삼각형 구도, 절제된 몸짓, 맑은 선으로 조직된다. 제국 권력의 의례를 그린 나폴레옹 초상보다, 신앙·역사·이상 형식이 만나는 앵그르식 신고전주의를 직접 보여 준다."
-        }
-      ]
-    },
-    {
-      "categoryId": "neoclassicism--roman-international",
-      "artists": [
-        {
-          "artist": {
-            "id": "artist-Q312130",
-            "name": {
-              "ko": "안톤 라파엘 멩스",
-              "en": "Anton Raphael Mengs"
-            },
-            "birth": 1728,
-            "death": 1779,
-            "nationality": {
-              "ko": "독일",
-              "en": "Germany"
-            }
-          },
-          "work": {
-            "id": "artist-Q312130-representative-work",
-            "title": {
-              "ko": "파르나소스",
-              "en": "Parnassus"
-            },
-            "year": 1761,
-            "yearLabel": "1761",
-            "localImage": "data/images/artist-Q312130/멩스_파르나소스_1761__artist-Q312130-representative-work.jpg"
-          },
-          "selectionReason": "멩스는 로마를 중심으로 고대와 라파엘로의 질서를 되살린 국제 신고전주의의 이론적 중심이다.",
-          "description": "명료한 윤곽과 균형 잡힌 신화 장면은 신고전주의의 고대 모범을 드러낸다. 여러 궁정을 오가며 고고학적 이상을 국제적 장식 언어로 확산한 점은 멩스만의 특성이다."
-        },
-        {
-          "artist": {
-            "id": "artist-Q155733",
-            "name": {
-              "ko": "앙겔리카 카우프만",
-              "en": "Angelica Kauffman"
-            },
-            "birth": 1741,
-            "death": 1807,
-            "nationality": {
-              "ko": "영국",
-              "en": "United Kingdom"
-            }
-          },
-          "work": {
-            "id": "artist-Q155733-representative-work",
-            "title": {
-              "ko": "그라쿠스 형제의 어머니 코르넬리아",
-              "en": "Cornelia, Mother of the Gracchi"
-            },
-            "year": 1785,
-            "yearLabel": "1785",
-            "localImage": "data/images/artist-Q155733/카우프만_그라쿠스 형제의 어머니_1785__artist-Q155733-representative-work.jpg"
-          },
-          "selectionReason": "카우프만은 로마의 국제적 신고전주의가 여성 화가와 역사화의 새로운 주제로 확장되는 모습을 보여 준다.",
-          "description": "고대 복식과 명료한 윤곽, 절제된 몸짓은 신고전주의의 도덕적 서사를 드러낸다. 보석보다 자녀를 가치로 제시하는 여성 주인공을 중심에 놓은 점은 카우프만만의 특성이다."
-        }
-      ]
-    },
-    {
       "categoryId": "romanticism--german",
       "artists": [
         {
@@ -6984,6 +6893,97 @@
           },
           "selectionReason": "아이 웨이웨이는 설치와 참여, 디지털 소통을 통해 대량생산·국가 권력·개인의 목소리를 함께 다루는 작가다.",
           "description": "수많은 수제 도자기 씨앗은 집단과 개인, 수공예와 대량생산의 모순을 체험하게 한다. 작품 제작과 사회적 발언을 분리하지 않고 공론장으로 확장한 점은 아이 웨이웨이만의 특성이다."
+        }
+      ]
+    },
+    {
+      "categoryId": "neoclassicism--french",
+      "artists": [
+        {
+          "artist": {
+            "id": "artist-Q161472",
+            "name": {
+              "ko": "장오귀스트도미니크 앵그르",
+              "en": "Jean-Auguste-Dominique Ingres"
+            },
+            "birth": 1780,
+            "death": 1867,
+            "nationality": {
+              "ko": "프랑스",
+              "en": "France"
+            }
+          },
+          "work": {
+            "id": "ingres-vow-louis-xiii-1824",
+            "title": {
+              "ko": "루이 13세의 서원",
+              "en": "The Vow of Louis XIII"
+            },
+            "year": 1824,
+            "yearLabel": "1824",
+            "localImage": "data/images/artist-Q161472/앵그르_루이 13세의 서원_1824__ingres-vow-louis-xiii-1824.jpg"
+          },
+          "selectionReason": "앵그르는 라파엘로적 균형, 맑은 윤곽, 완결된 표면을 종교·역사·초상에 이어 붙여 프랑스 신고전주의를 19세기까지 확장했다.",
+          "description": "성모에게 프랑스를 봉헌하는 장면은 안정된 삼각형 구도, 절제된 몸짓, 맑은 선으로 조직된다. 제국 권력의 의례를 그린 나폴레옹 초상보다, 신앙·역사·이상 형식이 만나는 앵그르식 신고전주의를 직접 보여 준다."
+        }
+      ]
+    },
+    {
+      "categoryId": "neoclassicism--roman-international",
+      "artists": [
+        {
+          "artist": {
+            "id": "artist-Q312130",
+            "name": {
+              "ko": "안톤 라파엘 멩스",
+              "en": "Anton Raphael Mengs"
+            },
+            "birth": 1728,
+            "death": 1779,
+            "nationality": {
+              "ko": "독일",
+              "en": "Germany"
+            }
+          },
+          "work": {
+            "id": "artist-Q312130-representative-work",
+            "title": {
+              "ko": "파르나소스",
+              "en": "Parnassus"
+            },
+            "year": 1761,
+            "yearLabel": "1761",
+            "localImage": "data/images/artist-Q312130/멩스_파르나소스_1761__artist-Q312130-representative-work.jpg"
+          },
+          "selectionReason": "멩스는 로마를 중심으로 고대와 라파엘로의 질서를 되살린 국제 신고전주의의 이론적 중심이다.",
+          "description": "명료한 윤곽과 균형 잡힌 신화 장면은 신고전주의의 고대 모범을 드러낸다. 여러 궁정을 오가며 고고학적 이상을 국제적 장식 언어로 확산한 점은 멩스만의 특성이다."
+        },
+        {
+          "artist": {
+            "id": "artist-Q155733",
+            "name": {
+              "ko": "앙겔리카 카우프만",
+              "en": "Angelica Kauffman"
+            },
+            "birth": 1741,
+            "death": 1807,
+            "nationality": {
+              "ko": "영국",
+              "en": "United Kingdom"
+            }
+          },
+          "work": {
+            "id": "artist-Q155733-representative-work",
+            "title": {
+              "ko": "그라쿠스 형제의 어머니 코르넬리아",
+              "en": "Cornelia, Mother of the Gracchi"
+            },
+            "year": 1785,
+            "yearLabel": "1785",
+            "localImage": "data/images/artist-Q155733/카우프만_그라쿠스 형제의 어머니_1785__artist-Q155733-representative-work.jpg"
+          },
+          "selectionReason": "카우프만은 로마의 국제적 신고전주의가 여성 화가와 역사화의 새로운 주제로 확장되는 모습을 보여 준다.",
+          "description": "고대 복식과 명료한 윤곽, 절제된 몸짓은 신고전주의의 도덕적 서사를 드러낸다. 보석보다 자녀를 가치로 제시하는 여성 주인공을 중심에 놓은 점은 카우프만만의 특성이다."
         }
       ]
     }

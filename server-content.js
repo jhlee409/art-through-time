@@ -320,7 +320,7 @@ function movementCountryCardContexts(html) {
     const [country='', category='']=cells[0].split(/\s*(?:—|–)\s*/,2);
     const attrs=tagAttrs(`<tr${row[1]}>`), countryKey=movementCountryLabelKey(country), categoryKey=movementCountryLabelKey(category);
     if(!countryKey || !cells[1]) continue;
-    contexts.push({country:country.trim(),category:category.trim(),feature:cells[1].replace(/^핵심 특징\s*/,'').trim(),countryKey,categoryKey,categoryId:attrs['data-art-atlas-category-id'] || '',developmentId:attrs['data-art-atlas-development-id'] || ''});
+    contexts.push({country:country.trim(),category:category.trim(),feature:cells[1].replace(/^핵심 특징\s*/,'').trim(),countryKey,categoryKey,categoryId:attrs['data-art-atlas-category-id'] || '',developmentId:attrs['data-art-atlas-development-id'] || '',learningNodeId:attrs['data-art-atlas-learning-node-id'] || ''});
   }
   return contexts;
 }
@@ -331,14 +331,18 @@ function injectMovementCountryCardContexts(html) {
   if(!contexts.length) return source;
   source=source.replace(/<section\b(?=[^>]*\bclass=["'][^"']*\bart-atlas-submovement-group\b[^"']*["'])[^>]*>[\s\S]*?<\/section>/gi,group=>{
     const groupAttrs=tagAttrs(group.match(/^<section\b[^>]*>/i)?.[0] || ''), heading=group.match(/<h3\b(?=[^>]*\bclass=["'][^"']*\bart-atlas-submovement-heading\b[^"']*["'])[^>]*>([\s\S]*?)<\/h3>/i)?.[1] || '';
+    // 학습 지도 묶음은 정식 국가별 범주가 아니라 각 기준점의 고유한 제목을 사용한다.
+    // 일반 국가·범주 맥락 주입이 그 제목을 다시 해석하거나 덮어쓰지 않게 원문을 유지한다.
+    if(groupAttrs['data-art-atlas-learning-node-id']) return group;
     const existingTitle=heading.match(/<span\b(?=[^>]*\bclass=["'][^"']*\bart-atlas-submovement-title\b)[^>]*>([\s\S]*?)<\/span>/i)?.[1] || heading.split(/<span\b(?=[^>]*\bclass=["'][^"']*\bmovement-country-card-context\b)/i)[0];
     const groupName=movementPlainText(group.match(/\bdata-art-atlas-submovement=["']([^"']+)["']/i)?.[1] || existingTitle);
     const groupKey=movementCountryLabelKey(groupName);
-    const context=contexts.find(item=>item.categoryId && item.categoryId===groupAttrs['data-art-atlas-category-id']) || contexts.find(item=>item.developmentId && item.developmentId===groupAttrs['data-art-atlas-development-id']) || contexts.find(item=>item.categoryKey===groupKey) || contexts.find(item=>item.countryKey===groupKey);
+    const learningNodeId=groupAttrs['data-art-atlas-learning-node-id'] || '';
+    const context=contexts.find(item=>learningNodeId && item.learningNodeId===learningNodeId) || contexts.find(item=>item.developmentId && item.developmentId===groupAttrs['data-art-atlas-development-id']) || contexts.find(item=>item.categoryId && item.categoryId===groupAttrs['data-art-atlas-category-id']) || contexts.find(item=>item.categoryKey===groupKey) || contexts.find(item=>item.countryKey===groupKey);
     if(!context) return group;
     return group.replace(/(<h3\b(?=[^>]*\bclass=["'][^"']*\bart-atlas-submovement-heading\b[^"']*["'])[^>]*>)([\s\S]*?)(<\/h3>)/i,(_,open,title,close)=>{
-      const titleText=context.category || groupName;
-      const region=context.country ? `<span class="movement-country-card-context-region">${escapeAttribute(context.country)}</span>` : '';
+      const titleText=learningNodeId ? groupName : (context.category || groupName);
+      const region=!learningNodeId && context.country ? `<span class="movement-country-card-context-region">${escapeAttribute(context.country)}</span>` : '';
       return `${open}<span class="art-atlas-submovement-title">${escapeAttribute(titleText)}</span><span class="movement-country-card-context">${region}<span class="movement-country-card-context-feature"><b>핵심 특징</b> ${escapeAttribute(context.feature)}</span></span>${close}`;
     });
   });

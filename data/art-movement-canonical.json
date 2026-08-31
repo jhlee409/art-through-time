@@ -82,130 +82,1361 @@
     "practice-cluster": "동시대 미술에서 서로 연결되는 매체·실천 묶음"
   },
   "parents": [
-    {"id":"proto-renaissance","name":{"ko":"선르네상스","en":"Proto-Renaissance"},"role":"absorbed","documentOwnerId":"renaissance","placement":"context"},
-    {"id":"renaissance","name":{"ko":"르네상스","en":"Renaissance"},"role":"document","documentLevel":"detailed","categoryMode":"linked","documentKey":"Renaissance","categoryIds":["renaissance--early","renaissance--high","renaissance--venetian"]},
-    {"id":"northern-renaissance","name":{"ko":"북방 르네상스","en":"Northern Renaissance"},"role":"document","documentLevel":"detailed","categoryMode":"linked","documentKey":"Northern Renaissance","categoryIds":["northern-renaissance--early-netherlandish","northern-renaissance--german"]},
-    {"id":"mannerism","name":{"ko":"매너리즘","en":"Mannerism"},"role":"document","documentLevel":"detailed","categoryMode":"linked","documentKey":"Mannerism","categoryIds":["mannerism--italian","mannerism--fontainebleau"]},
-    {"id":"baroque","name":{"ko":"바로크","en":"Baroque"},"role":"document","documentLevel":"detailed","categoryMode":"linked","documentKey":"Baroque","categoryIds":["baroque--italian","baroque--flemish","baroque--dutch-golden-age","baroque--spanish","baroque--french"]},
-    {"id":"realism","name":{"ko":"사실주의","en":"Realism"},"role":"document","documentLevel":"detailed","categoryMode":"linked","documentKey":"Realism","categoryIds":["realism--french","realism--russian"]},
-    {"id":"post-impressionism","name":{"ko":"후기인상주의","en":"Post-Impressionism"},"role":"document","documentLevel":"detailed","categoryMode":"linked","documentKey":"Post-Impressionism","categoryIds":["post-impressionism--core","post-impressionism--neo-impressionism","post-impressionism--pont-aven-synthetism"]},
-    {"id":"neo-impressionism","name":{"ko":"신인상주의","en":"Neo-Impressionism"},"role":"absorbed","documentOwnerId":"post-impressionism","placement":"category","categoryId":"post-impressionism--neo-impressionism"},
-    {"id":"expressionism","name":{"ko":"표현주의","en":"Expressionism"},"role":"document","documentLevel":"detailed","categoryMode":"linked","documentKey":"Expressionism","categoryIds":["expressionism--brucke","expressionism--blue-rider","expressionism--austrian"]},
-    {"id":"cubism","name":{"ko":"입체주의","en":"Cubism"},"role":"document","documentLevel":"detailed","categoryMode":"linked","documentKey":"Cubism","categoryIds":["cubism--analytic","cubism--synthetic"]},
-    {"id":"russian-avant-garde","name":{"ko":"러시아 아방가르드","en":"Russian avant-garde"},"role":"document","documentLevel":"bridge","categoryMode":"linked","documentKey":"Russian avant-garde","categoryIds":["russian-avant-garde--suprematism","russian-avant-garde--constructivism"]},
-    {"id":"dada","name":{"ko":"다다","en":"Dada"},"role":"document","documentLevel":"detailed","categoryMode":"linked","documentKey":"Dada","categoryIds":["dada--zurich","dada--berlin","dada--new-york"]},
-    {"id":"abstract-expressionism","name":{"ko":"추상표현주의","en":"Abstract Expressionism"},"role":"document","documentLevel":"detailed","categoryMode":"linked","documentKey":"Abstract Expressionism","categoryIds":["abstract-expressionism--action-painting","abstract-expressionism--color-field"]},
-    {"id":"pop-art","name":{"ko":"팝아트","en":"Pop Art"},"role":"document","documentLevel":"detailed","categoryMode":"linked","documentKey":"Pop Art","categoryIds":["pop-art--british","pop-art--american"]},
-    {"id":"neo-expressionism","name":{"ko":"신표현주의","en":"Neo-Expressionism"},"role":"absorbed","documentOwnerId":"postmodernism","placement":"category","categoryId":"postmodernism--neo-expressionism"},
-    {"id":"postmodernism","name":{"ko":"포스트모더니즘","en":"Postmodernism"},"role":"document","documentLevel":"bridge","categoryMode":"linked","documentKey":"Postmodernism","categoryIds":["postmodernism--appropriation-pictures","postmodernism--neo-expressionism"]},
-    {"id":"rococo","name":{"ko":"로코코","en":"Rococo"},"role":"document","documentLevel":"detailed","categoryMode":"linked","documentKey":"Rococo","categoryIds":["rococo--french","rococo--venetian"]},
-    {"id":"neoclassicism","name":{"ko":"신고전주의","en":"Neoclassicism"},"role":"document","documentLevel":"detailed","categoryMode":"linked","documentKey":"Neoclassicism","categoryIds":["neoclassicism--french","neoclassicism--roman-international"]},
-    {"id":"romanticism","name":{"ko":"낭만주의","en":"Romanticism"},"role":"document","documentLevel":"detailed","categoryMode":"linked","documentKey":"Romanticism","categoryIds":["romanticism--german","romanticism--british","romanticism--french","romanticism--spanish"]},
-    {"id":"biedermeier","name":{"ko":"비더마이어","en":"Biedermeier"},"role":"absorbed","documentOwnerId":"romanticism","placement":"context"},
-    {"id":"pre-raphaelite","name":{"ko":"라파엘 전파","en":"Pre-Raphaelite Brotherhood"},"role":"absorbed","documentOwnerId":"symbolism","placement":"context"},
-    {"id":"academicism","name":{"ko":"아카데미즘","en":"Academicism"},"role":"document","documentLevel":"reference","categoryMode":"single","documentKey":"Academicism","categoryIds":["academicism--core"]},
-    {"id":"impressionism","name":{"ko":"인상주의","en":"Impressionism"},"role":"document","documentLevel":"detailed","categoryMode":"linked","documentKey":"Impressionism","categoryIds":["impressionism--french","impressionism--american"]},
-    {"id":"symbolism","name":{"ko":"상징주의","en":"Symbolism"},"role":"document","documentLevel":"detailed","categoryMode":"linked","documentKey":"Symbolism","categoryIds":["symbolism--french-belgian","symbolism--central-northern-european"]},
-    {"id":"art-nouveau","name":{"ko":"아르누보","en":"Art Nouveau"},"role":"document","documentLevel":"bridge","categoryMode":"linked","documentKey":"Art Nouveau","categoryIds":["art-nouveau--french-belgian","art-nouveau--vienna-secession"]},
-    {"id":"fauvism","name":{"ko":"야수주의","en":"Fauvism"},"role":"document","documentLevel":"detailed","categoryMode":"linked","documentKey":"Fauvism","categoryIds":["fauvism--matisse-chatou","fauvism--le-havre"]},
-    {"id":"futurism","name":{"ko":"미래주의","en":"Futurism"},"role":"document","documentLevel":"bridge","categoryMode":"linked","documentKey":"Futurism","categoryIds":["futurism--italian","futurism--russian-cubo"]},
-    {"id":"de-stijl","name":{"ko":"데 스틸","en":"De Stijl"},"role":"document","documentLevel":"reference","categoryMode":"single","documentKey":"De Stijl","categoryIds":["de-stijl--core"]},
-    {"id":"bauhaus","name":{"ko":"바우하우스","en":"Bauhaus"},"role":"document","documentLevel":"bridge","categoryMode":"single","documentKey":"Bauhaus","categoryIds":["bauhaus--core"]},
-    {"id":"new-objectivity","name":{"ko":"신즉물주의","en":"New Objectivity"},"role":"absorbed","documentOwnerId":"expressionism","placement":"context"},
-    {"id":"surrealism","name":{"ko":"초현실주의","en":"Surrealism"},"role":"document","documentLevel":"detailed","categoryMode":"linked","documentKey":"Surrealism","categoryIds":["surrealism--automatist","surrealism--illusionistic"]},
-    {"id":"mexican-muralism","name":{"ko":"멕시코 벽화운동","en":"Mexican Muralism"},"role":"document","documentLevel":"reference","categoryMode":"single","documentKey":"Mexican Muralism","categoryIds":["mexican-muralism--core"]},
-    {"id":"social-realism","name":{"ko":"사회적 사실주의","en":"Social Realism"},"role":"document","documentLevel":"reference","categoryMode":"single","documentKey":"Social Realism","categoryIds":["social-realism--core"]},
-    {"id":"socialist-realism","name":{"ko":"사회주의적 사실주의","en":"Socialist Realism"},"role":"document","documentLevel":"reference","categoryMode":"single","documentKey":"Socialist realism","categoryIds":["socialist-realism--core"]},
-    {"id":"art-informel","name":{"ko":"앵포르멜","en":"Art Informel"},"role":"document","documentLevel":"reference","categoryMode":"single","documentKey":"Art Informel","categoryIds":["art-informel--core"]},
-    {"id":"nouveau-realisme","name":{"ko":"누보 레알리슴","en":"Nouveau Réalisme"},"role":"document","documentLevel":"reference","categoryMode":"single","documentKey":"Nouveau Réalisme","categoryIds":["nouveau-realisme--core"]},
-    {"id":"minimalism","name":{"ko":"미니멀리즘","en":"Minimalism"},"role":"document","documentLevel":"detailed","categoryMode":"single","documentKey":"Minimalism","categoryIds":["minimalism--core"]},
-    {"id":"conceptual-art","name":{"ko":"개념미술","en":"Conceptual Art"},"role":"document","documentLevel":"detailed","categoryMode":"linked","documentKey":"Conceptual Art","categoryIds":["conceptual-art--idea-language","conceptual-art--fluxus"]},
-    {"id":"op-art","name":{"ko":"옵아트","en":"Op Art"},"role":"document","documentLevel":"reference","categoryMode":"single","documentKey":"Op Art","categoryIds":["op-art--core"]},
-    {"id":"arte-povera","name":{"ko":"아르테 포베라","en":"Arte Povera"},"role":"absorbed","documentOwnerId":"conceptual-art","placement":"context"},
-    {"id":"fluxus","name":{"ko":"플럭서스","en":"Fluxus"},"role":"absorbed","documentOwnerId":"conceptual-art","placement":"category","categoryId":"conceptual-art--fluxus"},
-    {"id":"photorealism","name":{"ko":"포토리얼리즘","en":"Photorealism"},"role":"absorbed","documentOwnerId":"postmodernism","placement":"context"},
-    {"id":"street-art","name":{"ko":"거리미술","en":"Street Art"},"role":"absorbed","documentOwnerId":"contemporary-art","placement":"category","categoryId":"contemporary-art--street-participatory"},
-    {"id":"contemporary-art","name":{"ko":"현대미술","en":"Contemporary Art"},"role":"document","documentLevel":"bridge","categoryMode":"linked","documentKey":"Contemporary Art","categoryIds":["contemporary-art--installation-performance","contemporary-art--new-media-digital","contemporary-art--street-participatory"]}
+    {
+      "id": "proto-renaissance",
+      "name": {
+        "ko": "선르네상스",
+        "en": "Proto-Renaissance"
+      },
+      "role": "absorbed",
+      "documentOwnerId": "renaissance",
+      "placement": "context"
+    },
+    {
+      "id": "renaissance",
+      "name": {
+        "ko": "르네상스",
+        "en": "Renaissance"
+      },
+      "role": "document",
+      "documentLevel": "detailed",
+      "categoryMode": "linked",
+      "documentKey": "Renaissance",
+      "categoryIds": [
+        "renaissance--early",
+        "renaissance--high",
+        "renaissance--venetian"
+      ]
+    },
+    {
+      "id": "northern-renaissance",
+      "name": {
+        "ko": "북방 르네상스",
+        "en": "Northern Renaissance"
+      },
+      "role": "document",
+      "documentLevel": "detailed",
+      "categoryMode": "linked",
+      "documentKey": "Northern Renaissance",
+      "categoryIds": [
+        "northern-renaissance--early-netherlandish",
+        "northern-renaissance--german"
+      ]
+    },
+    {
+      "id": "mannerism",
+      "name": {
+        "ko": "매너리즘",
+        "en": "Mannerism"
+      },
+      "role": "document",
+      "documentLevel": "detailed",
+      "categoryMode": "linked",
+      "documentKey": "Mannerism",
+      "categoryIds": [
+        "mannerism--italian",
+        "mannerism--fontainebleau"
+      ]
+    },
+    {
+      "id": "baroque",
+      "name": {
+        "ko": "바로크",
+        "en": "Baroque"
+      },
+      "role": "document",
+      "documentLevel": "detailed",
+      "categoryMode": "linked",
+      "documentKey": "Baroque",
+      "categoryIds": [
+        "baroque--italian",
+        "baroque--flemish",
+        "baroque--dutch-golden-age",
+        "baroque--spanish",
+        "baroque--french"
+      ]
+    },
+    {
+      "id": "realism",
+      "name": {
+        "ko": "사실주의",
+        "en": "Realism"
+      },
+      "role": "document",
+      "documentLevel": "detailed",
+      "categoryMode": "linked",
+      "documentKey": "Realism",
+      "categoryIds": [
+        "realism--french",
+        "realism--russian"
+      ]
+    },
+    {
+      "id": "post-impressionism",
+      "name": {
+        "ko": "후기인상주의",
+        "en": "Post-Impressionism"
+      },
+      "role": "document",
+      "documentLevel": "detailed",
+      "categoryMode": "linked",
+      "documentKey": "Post-Impressionism",
+      "categoryIds": [
+        "post-impressionism--core",
+        "post-impressionism--neo-impressionism",
+        "post-impressionism--pont-aven-synthetism"
+      ]
+    },
+    {
+      "id": "neo-impressionism",
+      "name": {
+        "ko": "신인상주의",
+        "en": "Neo-Impressionism"
+      },
+      "role": "absorbed",
+      "documentOwnerId": "post-impressionism",
+      "placement": "category",
+      "categoryId": "post-impressionism--neo-impressionism"
+    },
+    {
+      "id": "expressionism",
+      "name": {
+        "ko": "표현주의",
+        "en": "Expressionism"
+      },
+      "role": "document",
+      "documentLevel": "detailed",
+      "categoryMode": "linked",
+      "documentKey": "Expressionism",
+      "categoryIds": [
+        "expressionism--brucke",
+        "expressionism--blue-rider",
+        "expressionism--austrian"
+      ]
+    },
+    {
+      "id": "cubism",
+      "name": {
+        "ko": "입체주의",
+        "en": "Cubism"
+      },
+      "role": "document",
+      "documentLevel": "detailed",
+      "categoryMode": "linked",
+      "documentKey": "Cubism",
+      "categoryIds": [
+        "cubism--analytic",
+        "cubism--synthetic"
+      ]
+    },
+    {
+      "id": "russian-avant-garde",
+      "name": {
+        "ko": "러시아 아방가르드",
+        "en": "Russian avant-garde"
+      },
+      "role": "document",
+      "documentLevel": "bridge",
+      "categoryMode": "linked",
+      "documentKey": "Russian avant-garde",
+      "categoryIds": [
+        "russian-avant-garde--suprematism",
+        "russian-avant-garde--constructivism"
+      ]
+    },
+    {
+      "id": "dada",
+      "name": {
+        "ko": "다다",
+        "en": "Dada"
+      },
+      "role": "document",
+      "documentLevel": "detailed",
+      "categoryMode": "linked",
+      "documentKey": "Dada",
+      "categoryIds": [
+        "dada--zurich",
+        "dada--berlin",
+        "dada--new-york"
+      ]
+    },
+    {
+      "id": "abstract-expressionism",
+      "name": {
+        "ko": "추상표현주의",
+        "en": "Abstract Expressionism"
+      },
+      "role": "document",
+      "documentLevel": "detailed",
+      "categoryMode": "linked",
+      "documentKey": "Abstract Expressionism",
+      "categoryIds": [
+        "abstract-expressionism--action-painting",
+        "abstract-expressionism--color-field"
+      ]
+    },
+    {
+      "id": "pop-art",
+      "name": {
+        "ko": "팝아트",
+        "en": "Pop Art"
+      },
+      "role": "document",
+      "documentLevel": "detailed",
+      "categoryMode": "linked",
+      "documentKey": "Pop Art",
+      "categoryIds": [
+        "pop-art--british",
+        "pop-art--american"
+      ]
+    },
+    {
+      "id": "neo-expressionism",
+      "name": {
+        "ko": "신표현주의",
+        "en": "Neo-Expressionism"
+      },
+      "role": "absorbed",
+      "documentOwnerId": "postmodernism",
+      "placement": "category",
+      "categoryId": "postmodernism--neo-expressionism"
+    },
+    {
+      "id": "postmodernism",
+      "name": {
+        "ko": "포스트모더니즘",
+        "en": "Postmodernism"
+      },
+      "role": "document",
+      "documentLevel": "bridge",
+      "categoryMode": "linked",
+      "documentKey": "Postmodernism",
+      "categoryIds": [
+        "postmodernism--appropriation-pictures",
+        "postmodernism--neo-expressionism"
+      ]
+    },
+    {
+      "id": "rococo",
+      "name": {
+        "ko": "로코코",
+        "en": "Rococo"
+      },
+      "role": "document",
+      "documentLevel": "detailed",
+      "categoryMode": "linked",
+      "documentKey": "Rococo",
+      "categoryIds": [
+        "rococo--french",
+        "rococo--venetian"
+      ]
+    },
+    {
+      "id": "neoclassicism",
+      "name": {
+        "ko": "신고전주의",
+        "en": "Neoclassicism"
+      },
+      "role": "document",
+      "documentLevel": "detailed",
+      "categoryMode": "linked",
+      "documentKey": "Neoclassicism",
+      "categoryIds": [
+        "neoclassicism--french",
+        "neoclassicism--roman-international"
+      ]
+    },
+    {
+      "id": "romanticism",
+      "name": {
+        "ko": "낭만주의",
+        "en": "Romanticism"
+      },
+      "role": "document",
+      "documentLevel": "detailed",
+      "categoryMode": "linked",
+      "documentKey": "Romanticism",
+      "categoryIds": [
+        "romanticism--german",
+        "romanticism--british",
+        "romanticism--french",
+        "romanticism--spanish"
+      ]
+    },
+    {
+      "id": "biedermeier",
+      "name": {
+        "ko": "비더마이어",
+        "en": "Biedermeier"
+      },
+      "role": "absorbed",
+      "documentOwnerId": "romanticism",
+      "placement": "context"
+    },
+    {
+      "id": "pre-raphaelite",
+      "name": {
+        "ko": "라파엘 전파",
+        "en": "Pre-Raphaelite Brotherhood"
+      },
+      "role": "absorbed",
+      "documentOwnerId": "symbolism",
+      "placement": "context"
+    },
+    {
+      "id": "academicism",
+      "name": {
+        "ko": "아카데미즘",
+        "en": "Academicism"
+      },
+      "role": "document",
+      "documentLevel": "reference",
+      "categoryMode": "single",
+      "documentKey": "Academicism",
+      "categoryIds": [
+        "academicism--core"
+      ]
+    },
+    {
+      "id": "impressionism",
+      "name": {
+        "ko": "인상주의",
+        "en": "Impressionism"
+      },
+      "role": "document",
+      "documentLevel": "detailed",
+      "categoryMode": "linked",
+      "documentKey": "Impressionism",
+      "categoryIds": [
+        "impressionism--french",
+        "impressionism--american"
+      ]
+    },
+    {
+      "id": "symbolism",
+      "name": {
+        "ko": "상징주의",
+        "en": "Symbolism"
+      },
+      "role": "document",
+      "documentLevel": "detailed",
+      "categoryMode": "linked",
+      "documentKey": "Symbolism",
+      "categoryIds": [
+        "symbolism--french-belgian",
+        "symbolism--central-northern-european"
+      ]
+    },
+    {
+      "id": "art-nouveau",
+      "name": {
+        "ko": "아르누보",
+        "en": "Art Nouveau"
+      },
+      "role": "document",
+      "documentLevel": "bridge",
+      "categoryMode": "linked",
+      "documentKey": "Art Nouveau",
+      "categoryIds": [
+        "art-nouveau--french-belgian",
+        "art-nouveau--vienna-secession"
+      ]
+    },
+    {
+      "id": "fauvism",
+      "name": {
+        "ko": "야수주의",
+        "en": "Fauvism"
+      },
+      "role": "document",
+      "documentLevel": "detailed",
+      "categoryMode": "linked",
+      "documentKey": "Fauvism",
+      "categoryIds": [
+        "fauvism--matisse-chatou",
+        "fauvism--le-havre"
+      ]
+    },
+    {
+      "id": "futurism",
+      "name": {
+        "ko": "미래주의",
+        "en": "Futurism"
+      },
+      "role": "document",
+      "documentLevel": "bridge",
+      "categoryMode": "linked",
+      "documentKey": "Futurism",
+      "categoryIds": [
+        "futurism--italian",
+        "futurism--russian-cubo"
+      ]
+    },
+    {
+      "id": "de-stijl",
+      "name": {
+        "ko": "데 스틸",
+        "en": "De Stijl"
+      },
+      "role": "document",
+      "documentLevel": "reference",
+      "categoryMode": "single",
+      "documentKey": "De Stijl",
+      "categoryIds": [
+        "de-stijl--core"
+      ]
+    },
+    {
+      "id": "bauhaus",
+      "name": {
+        "ko": "바우하우스",
+        "en": "Bauhaus"
+      },
+      "role": "document",
+      "documentLevel": "bridge",
+      "categoryMode": "single",
+      "documentKey": "Bauhaus",
+      "categoryIds": [
+        "bauhaus--core"
+      ]
+    },
+    {
+      "id": "new-objectivity",
+      "name": {
+        "ko": "신즉물주의",
+        "en": "New Objectivity"
+      },
+      "role": "absorbed",
+      "documentOwnerId": "expressionism",
+      "placement": "context"
+    },
+    {
+      "id": "surrealism",
+      "name": {
+        "ko": "초현실주의",
+        "en": "Surrealism"
+      },
+      "role": "document",
+      "documentLevel": "detailed",
+      "categoryMode": "linked",
+      "documentKey": "Surrealism",
+      "categoryIds": [
+        "surrealism--automatist",
+        "surrealism--illusionistic"
+      ]
+    },
+    {
+      "id": "mexican-muralism",
+      "name": {
+        "ko": "멕시코 벽화운동",
+        "en": "Mexican Muralism"
+      },
+      "role": "document",
+      "documentLevel": "reference",
+      "categoryMode": "single",
+      "documentKey": "Mexican Muralism",
+      "categoryIds": [
+        "mexican-muralism--core"
+      ]
+    },
+    {
+      "id": "social-realism",
+      "name": {
+        "ko": "사회적 사실주의",
+        "en": "Social Realism"
+      },
+      "role": "document",
+      "documentLevel": "reference",
+      "categoryMode": "single",
+      "documentKey": "Social Realism",
+      "categoryIds": [
+        "social-realism--core"
+      ]
+    },
+    {
+      "id": "socialist-realism",
+      "name": {
+        "ko": "사회주의적 사실주의",
+        "en": "Socialist Realism"
+      },
+      "role": "document",
+      "documentLevel": "reference",
+      "categoryMode": "single",
+      "documentKey": "Socialist realism",
+      "categoryIds": [
+        "socialist-realism--core"
+      ]
+    },
+    {
+      "id": "art-informel",
+      "name": {
+        "ko": "앵포르멜",
+        "en": "Art Informel"
+      },
+      "role": "document",
+      "documentLevel": "reference",
+      "categoryMode": "single",
+      "documentKey": "Art Informel",
+      "categoryIds": [
+        "art-informel--core"
+      ]
+    },
+    {
+      "id": "nouveau-realisme",
+      "name": {
+        "ko": "누보 레알리슴",
+        "en": "Nouveau Réalisme"
+      },
+      "role": "document",
+      "documentLevel": "reference",
+      "categoryMode": "single",
+      "documentKey": "Nouveau Réalisme",
+      "categoryIds": [
+        "nouveau-realisme--core"
+      ]
+    },
+    {
+      "id": "minimalism",
+      "name": {
+        "ko": "미니멀리즘",
+        "en": "Minimalism"
+      },
+      "role": "document",
+      "documentLevel": "detailed",
+      "categoryMode": "single",
+      "documentKey": "Minimalism",
+      "categoryIds": [
+        "minimalism--core"
+      ]
+    },
+    {
+      "id": "conceptual-art",
+      "name": {
+        "ko": "개념미술",
+        "en": "Conceptual Art"
+      },
+      "role": "document",
+      "documentLevel": "detailed",
+      "categoryMode": "linked",
+      "documentKey": "Conceptual Art",
+      "categoryIds": [
+        "conceptual-art--idea-language",
+        "conceptual-art--fluxus"
+      ]
+    },
+    {
+      "id": "op-art",
+      "name": {
+        "ko": "옵아트",
+        "en": "Op Art"
+      },
+      "role": "document",
+      "documentLevel": "reference",
+      "categoryMode": "single",
+      "documentKey": "Op Art",
+      "categoryIds": [
+        "op-art--core"
+      ]
+    },
+    {
+      "id": "arte-povera",
+      "name": {
+        "ko": "아르테 포베라",
+        "en": "Arte Povera"
+      },
+      "role": "absorbed",
+      "documentOwnerId": "conceptual-art",
+      "placement": "context"
+    },
+    {
+      "id": "fluxus",
+      "name": {
+        "ko": "플럭서스",
+        "en": "Fluxus"
+      },
+      "role": "absorbed",
+      "documentOwnerId": "conceptual-art",
+      "placement": "category",
+      "categoryId": "conceptual-art--fluxus"
+    },
+    {
+      "id": "photorealism",
+      "name": {
+        "ko": "포토리얼리즘",
+        "en": "Photorealism"
+      },
+      "role": "absorbed",
+      "documentOwnerId": "postmodernism",
+      "placement": "context"
+    },
+    {
+      "id": "street-art",
+      "name": {
+        "ko": "거리미술",
+        "en": "Street Art"
+      },
+      "role": "absorbed",
+      "documentOwnerId": "contemporary-art",
+      "placement": "category",
+      "categoryId": "contemporary-art--street-participatory"
+    },
+    {
+      "id": "contemporary-art",
+      "name": {
+        "ko": "현대미술",
+        "en": "Contemporary Art"
+      },
+      "role": "document",
+      "documentLevel": "bridge",
+      "categoryMode": "linked",
+      "documentKey": "Contemporary Art",
+      "categoryIds": [
+        "contemporary-art--installation-performance",
+        "contemporary-art--new-media-digital",
+        "contemporary-art--street-participatory"
+      ]
+    }
   ],
   "categories": [
-    {"id":"renaissance--early","parentId":"renaissance","name":{"ko":"초기 르네상스","en":"Early Renaissance"},"kind":"phase"},
-    {"id":"renaissance--high","parentId":"renaissance","name":{"ko":"전성기 르네상스","en":"High Renaissance"},"kind":"phase"},
-    {"id":"renaissance--venetian","parentId":"renaissance","name":{"ko":"베네치아 르네상스","en":"Venetian Renaissance"},"kind":"regional-movement"},
-    {"id":"northern-renaissance--early-netherlandish","parentId":"northern-renaissance","name":{"ko":"초기 네덜란드 회화","en":"Early Netherlandish painting"},"kind":"regional-movement"},
-    {"id":"northern-renaissance--german","parentId":"northern-renaissance","name":{"ko":"독일 르네상스","en":"German Renaissance"},"kind":"regional-movement","coveredTopics":["도나우파"]},
-    {"id":"mannerism--italian","parentId":"mannerism","name":{"ko":"이탈리아 매너리즘","en":"Italian Mannerism"},"kind":"regional-movement"},
-    {"id":"mannerism--fontainebleau","parentId":"mannerism","name":{"ko":"퐁텐블로파","en":"School of Fontainebleau"},"kind":"school"},
-    {"id":"baroque--italian","parentId":"baroque","name":{"ko":"이탈리아 바로크","en":"Italian Baroque"},"kind":"regional-movement"},
-    {"id":"baroque--flemish","parentId":"baroque","name":{"ko":"플랑드르 바로크","en":"Flemish Baroque"},"kind":"regional-movement"},
-    {"id":"baroque--dutch-golden-age","parentId":"baroque","name":{"ko":"네덜란드 황금기 회화","en":"Dutch Golden Age painting"},"kind":"regional-movement"},
-    {"id":"baroque--spanish","parentId":"baroque","name":{"ko":"스페인 바로크","en":"Spanish Baroque"},"kind":"regional-movement"},
-    {"id":"baroque--french","parentId":"baroque","name":{"ko":"프랑스 바로크","en":"French Baroque"},"kind":"regional-movement"},
-    {"id":"realism--french","parentId":"realism","name":{"ko":"프랑스 사실주의","en":"French Realism"},"kind":"regional-movement","coveredTopics":["바르비종파"]},
-    {"id":"realism--russian","parentId":"realism","name":{"ko":"러시아 사실주의","en":"Russian Realism"},"kind":"regional-movement","coveredTopics":["이동파"]},
-    {"id":"post-impressionism--core","parentId":"post-impressionism","name":{"ko":"후기인상주의","en":"Post-Impressionism"},"kind":"core"},
-    {"id":"post-impressionism--neo-impressionism","parentId":"post-impressionism","name":{"ko":"신인상주의","en":"Neo-Impressionism"},"kind":"method","includesParentIds":["neo-impressionism"],"coveredTopics":["점묘주의","분할주의"]},
-    {"id":"post-impressionism--pont-aven-synthetism","parentId":"post-impressionism","name":{"ko":"퐁타방파와 종합주의","en":"Pont-Aven School and Synthetism"},"kind":"school","coveredTopics":["나비파"]},
-    {"id":"expressionism--brucke","parentId":"expressionism","name":{"ko":"다리파","en":"Die Brücke"},"kind":"school"},
-    {"id":"expressionism--blue-rider","parentId":"expressionism","name":{"ko":"청기사파","en":"Der Blaue Reiter"},"kind":"school"},
-    {"id":"expressionism--austrian","parentId":"expressionism","name":{"ko":"오스트리아 표현주의","en":"Austrian Expressionism"},"kind":"regional-movement"},
-    {"id":"cubism--analytic","parentId":"cubism","name":{"ko":"분석적 입체주의","en":"Analytic Cubism"},"kind":"phase"},
-    {"id":"cubism--synthetic","parentId":"cubism","name":{"ko":"종합적 입체주의","en":"Synthetic Cubism"},"kind":"phase","coveredTopics":["살롱 입체주의","오르피즘"]},
-    {"id":"russian-avant-garde--suprematism","parentId":"russian-avant-garde","name":{"ko":"절대주의","en":"Suprematism"},"kind":"method"},
-    {"id":"russian-avant-garde--constructivism","parentId":"russian-avant-garde","name":{"ko":"구성주의","en":"Constructivism"},"kind":"method","coveredTopics":["광선주의"]},
-    {"id":"dada--zurich","parentId":"dada","name":{"ko":"취리히 다다","en":"Zurich Dada"},"kind":"regional-movement"},
-    {"id":"dada--berlin","parentId":"dada","name":{"ko":"베를린 다다","en":"Berlin Dada"},"kind":"regional-movement"},
-    {"id":"dada--new-york","parentId":"dada","name":{"ko":"뉴욕 다다","en":"New York Dada"},"kind":"regional-movement","coveredTopics":["파리 다다"]},
-    {"id":"abstract-expressionism--action-painting","parentId":"abstract-expressionism","name":{"ko":"액션 페인팅","en":"Action painting"},"kind":"method"},
-    {"id":"abstract-expressionism--color-field","parentId":"abstract-expressionism","name":{"ko":"색면회화","en":"Color Field painting"},"kind":"method"},
-    {"id":"pop-art--british","parentId":"pop-art","name":{"ko":"영국 팝아트","en":"British Pop Art"},"kind":"regional-movement"},
-    {"id":"pop-art--american","parentId":"pop-art","name":{"ko":"미국 팝아트","en":"American Pop Art"},"kind":"regional-movement"},
-    {"id":"postmodernism--appropriation-pictures","parentId":"postmodernism","name":{"ko":"차용미술과 픽처스 제너레이션","en":"Appropriation Art and the Pictures Generation"},"kind":"method","coveredTopics":["네오지오"]},
-    {"id":"postmodernism--neo-expressionism","parentId":"postmodernism","name":{"ko":"신표현주의","en":"Neo-Expressionism"},"kind":"method","includesParentIds":["neo-expressionism"]},
-    {"id":"rococo--french","parentId":"rococo","name":{"ko":"프랑스 로코코","en":"French Rococo"},"kind":"regional-movement"},
-    {"id":"rococo--venetian","parentId":"rococo","name":{"ko":"베네치아 로코코","en":"Venetian Rococo"},"kind":"regional-movement"},
-    {"id":"neoclassicism--french","parentId":"neoclassicism","name":{"ko":"프랑스 신고전주의","en":"French Neoclassicism"},"kind":"regional-movement"},
-    {"id":"neoclassicism--roman-international","parentId":"neoclassicism","name":{"ko":"로마 국제 신고전주의","en":"International Neoclassicism in Rome"},"kind":"regional-movement"},
-    {"id":"romanticism--german","parentId":"romanticism","name":{"ko":"독일 낭만주의","en":"German Romanticism"},"kind":"regional-movement","coveredTopics":["비더마이어"]},
-    {"id":"romanticism--british","parentId":"romanticism","name":{"ko":"영국 낭만주의","en":"British Romanticism"},"kind":"regional-movement"},
-    {"id":"romanticism--french","parentId":"romanticism","name":{"ko":"프랑스 낭만주의","en":"French Romanticism"},"kind":"regional-movement"},
-    {"id":"romanticism--spanish","parentId":"romanticism","name":{"ko":"스페인 낭만주의","en":"Spanish Romanticism"},"kind":"regional-movement"},
-    {"id":"academicism--core","parentId":"academicism","name":{"ko":"아카데미즘","en":"Academicism"},"kind":"core"},
-    {"id":"impressionism--french","parentId":"impressionism","name":{"ko":"프랑스 인상주의","en":"French Impressionism"},"kind":"regional-movement"},
-    {"id":"impressionism--american","parentId":"impressionism","name":{"ko":"미국 인상주의","en":"American Impressionism"},"kind":"regional-movement"},
-    {"id":"symbolism--french-belgian","parentId":"symbolism","name":{"ko":"프랑스·벨기에 상징주의","en":"French and Belgian Symbolism"},"kind":"regional-movement"},
-    {"id":"symbolism--central-northern-european","parentId":"symbolism","name":{"ko":"중부·북유럽 상징주의","en":"Central and Northern European Symbolism"},"kind":"regional-movement","coveredTopics":["러시아 상징주의","라파엘 전파"]},
-    {"id":"art-nouveau--french-belgian","parentId":"art-nouveau","name":{"ko":"프랑스·벨기에 아르누보","en":"French and Belgian Art Nouveau"},"kind":"regional-movement"},
-    {"id":"art-nouveau--vienna-secession","parentId":"art-nouveau","name":{"ko":"빈 분리파","en":"Vienna Secession"},"kind":"regional-movement","coveredTopics":["카탈루냐 모더니슴","유겐트슈틸"]},
-    {"id":"fauvism--matisse-chatou","parentId":"fauvism","name":{"ko":"마티스·샤투 중심 야수파","en":"Matisse and Chatou Fauves"},"kind":"core","coveredTopics":["귀스타브 모로 화실 계열","샤투파"]},
-    {"id":"fauvism--le-havre","parentId":"fauvism","name":{"ko":"르아브르파 야수주의","en":"Le Havre Fauves"},"kind":"school"},
-    {"id":"futurism--italian","parentId":"futurism","name":{"ko":"이탈리아 미래주의","en":"Italian Futurism"},"kind":"regional-movement"},
-    {"id":"futurism--russian-cubo","parentId":"futurism","name":{"ko":"러시아 입체미래주의","en":"Russian Cubo-Futurism"},"kind":"regional-movement"},
-    {"id":"de-stijl--core","parentId":"de-stijl","name":{"ko":"데 스틸","en":"De Stijl"},"kind":"core"},
-    {"id":"bauhaus--core","parentId":"bauhaus","name":{"ko":"바우하우스","en":"Bauhaus"},"kind":"core"},
-    {"id":"surrealism--automatist","parentId":"surrealism","name":{"ko":"자동기술적 초현실주의","en":"Automatist Surrealism"},"kind":"method"},
-    {"id":"surrealism--illusionistic","parentId":"surrealism","name":{"ko":"환영적 초현실주의","en":"Illusionistic Surrealism"},"kind":"method"},
-    {"id":"mexican-muralism--core","parentId":"mexican-muralism","name":{"ko":"멕시코 벽화운동","en":"Mexican Muralism"},"kind":"core"},
-    {"id":"social-realism--core","parentId":"social-realism","name":{"ko":"사회적 사실주의","en":"Social Realism"},"kind":"core"},
-    {"id":"socialist-realism--core","parentId":"socialist-realism","name":{"ko":"사회주의적 사실주의","en":"Socialist Realism"},"kind":"core"},
-    {"id":"art-informel--core","parentId":"art-informel","name":{"ko":"앵포르멜","en":"Art Informel"},"kind":"core","coveredTopics":["타시즘"]},
-    {"id":"nouveau-realisme--core","parentId":"nouveau-realisme","name":{"ko":"누보 레알리슴","en":"Nouveau Réalisme"},"kind":"core"},
-    {"id":"minimalism--core","parentId":"minimalism","name":{"ko":"미니멀리즘","en":"Minimalism"},"kind":"core"},
-    {"id":"conceptual-art--idea-language","parentId":"conceptual-art","name":{"ko":"아이디어·언어 중심 개념미술","en":"Idea- and Language-Based Conceptual Art"},"kind":"method","coveredTopics":["아르테 포베라"]},
-    {"id":"conceptual-art--fluxus","parentId":"conceptual-art","name":{"ko":"플럭서스","en":"Fluxus"},"kind":"method","includesParentIds":["fluxus"]},
-    {"id":"op-art--core","parentId":"op-art","name":{"ko":"옵아트","en":"Op Art"},"kind":"core"},
-    {"id":"contemporary-art--installation-performance","parentId":"contemporary-art","name":{"ko":"설치·퍼포먼스 미술","en":"Installation and Performance Art"},"kind":"practice-cluster"},
-    {"id":"contemporary-art--new-media-digital","parentId":"contemporary-art","name":{"ko":"뉴미디어·디지털 아트","en":"New Media and Digital Art"},"kind":"practice-cluster"},
-    {"id":"contemporary-art--street-participatory","parentId":"contemporary-art","name":{"ko":"거리·참여 미술","en":"Street and Participatory Art"},"kind":"practice-cluster","includesParentIds":["street-art"]}
+    {
+      "id": "renaissance--early",
+      "parentId": "renaissance",
+      "name": {
+        "ko": "초기 르네상스",
+        "en": "Early Renaissance"
+      },
+      "kind": "phase"
+    },
+    {
+      "id": "renaissance--high",
+      "parentId": "renaissance",
+      "name": {
+        "ko": "전성기 르네상스",
+        "en": "High Renaissance"
+      },
+      "kind": "phase"
+    },
+    {
+      "id": "renaissance--venetian",
+      "parentId": "renaissance",
+      "name": {
+        "ko": "베네치아 르네상스",
+        "en": "Venetian Renaissance"
+      },
+      "kind": "regional-movement"
+    },
+    {
+      "id": "northern-renaissance--early-netherlandish",
+      "parentId": "northern-renaissance",
+      "name": {
+        "ko": "초기 네덜란드 회화",
+        "en": "Early Netherlandish painting"
+      },
+      "kind": "regional-movement"
+    },
+    {
+      "id": "northern-renaissance--german",
+      "parentId": "northern-renaissance",
+      "name": {
+        "ko": "독일 르네상스",
+        "en": "German Renaissance"
+      },
+      "kind": "regional-movement",
+      "coveredTopics": [
+        "도나우파"
+      ]
+    },
+    {
+      "id": "mannerism--italian",
+      "parentId": "mannerism",
+      "name": {
+        "ko": "이탈리아 매너리즘",
+        "en": "Italian Mannerism"
+      },
+      "kind": "regional-movement"
+    },
+    {
+      "id": "mannerism--fontainebleau",
+      "parentId": "mannerism",
+      "name": {
+        "ko": "퐁텐블로파",
+        "en": "School of Fontainebleau"
+      },
+      "kind": "school"
+    },
+    {
+      "id": "baroque--italian",
+      "parentId": "baroque",
+      "name": {
+        "ko": "이탈리아 바로크",
+        "en": "Italian Baroque"
+      },
+      "kind": "regional-movement"
+    },
+    {
+      "id": "baroque--flemish",
+      "parentId": "baroque",
+      "name": {
+        "ko": "플랑드르 바로크",
+        "en": "Flemish Baroque"
+      },
+      "kind": "regional-movement"
+    },
+    {
+      "id": "baroque--dutch-golden-age",
+      "parentId": "baroque",
+      "name": {
+        "ko": "네덜란드 황금기 회화",
+        "en": "Dutch Golden Age painting"
+      },
+      "kind": "regional-movement"
+    },
+    {
+      "id": "baroque--spanish",
+      "parentId": "baroque",
+      "name": {
+        "ko": "스페인 바로크",
+        "en": "Spanish Baroque"
+      },
+      "kind": "regional-movement"
+    },
+    {
+      "id": "baroque--french",
+      "parentId": "baroque",
+      "name": {
+        "ko": "프랑스 바로크",
+        "en": "French Baroque"
+      },
+      "kind": "regional-movement"
+    },
+    {
+      "id": "realism--french",
+      "parentId": "realism",
+      "name": {
+        "ko": "프랑스 사실주의",
+        "en": "French Realism"
+      },
+      "kind": "regional-movement",
+      "coveredTopics": [
+        "바르비종파"
+      ]
+    },
+    {
+      "id": "realism--russian",
+      "parentId": "realism",
+      "name": {
+        "ko": "러시아 사실주의",
+        "en": "Russian Realism"
+      },
+      "kind": "regional-movement",
+      "coveredTopics": [
+        "이동파"
+      ]
+    },
+    {
+      "id": "post-impressionism--core",
+      "parentId": "post-impressionism",
+      "name": {
+        "ko": "후기인상주의",
+        "en": "Post-Impressionism"
+      },
+      "kind": "core"
+    },
+    {
+      "id": "post-impressionism--neo-impressionism",
+      "parentId": "post-impressionism",
+      "name": {
+        "ko": "신인상주의",
+        "en": "Neo-Impressionism"
+      },
+      "kind": "method",
+      "includesParentIds": [
+        "neo-impressionism"
+      ],
+      "coveredTopics": [
+        "점묘주의",
+        "분할주의"
+      ]
+    },
+    {
+      "id": "post-impressionism--pont-aven-synthetism",
+      "parentId": "post-impressionism",
+      "name": {
+        "ko": "퐁타방파와 종합주의",
+        "en": "Pont-Aven School and Synthetism"
+      },
+      "kind": "school",
+      "coveredTopics": [
+        "나비파"
+      ]
+    },
+    {
+      "id": "expressionism--brucke",
+      "parentId": "expressionism",
+      "name": {
+        "ko": "다리파",
+        "en": "Die Brücke"
+      },
+      "kind": "school"
+    },
+    {
+      "id": "expressionism--blue-rider",
+      "parentId": "expressionism",
+      "name": {
+        "ko": "청기사파",
+        "en": "Der Blaue Reiter"
+      },
+      "kind": "school"
+    },
+    {
+      "id": "expressionism--austrian",
+      "parentId": "expressionism",
+      "name": {
+        "ko": "오스트리아 표현주의",
+        "en": "Austrian Expressionism"
+      },
+      "kind": "regional-movement"
+    },
+    {
+      "id": "cubism--analytic",
+      "parentId": "cubism",
+      "name": {
+        "ko": "분석적 입체주의",
+        "en": "Analytic Cubism"
+      },
+      "kind": "phase"
+    },
+    {
+      "id": "cubism--synthetic",
+      "parentId": "cubism",
+      "name": {
+        "ko": "종합적 입체주의",
+        "en": "Synthetic Cubism"
+      },
+      "kind": "phase",
+      "coveredTopics": [
+        "살롱 입체주의",
+        "오르피즘"
+      ]
+    },
+    {
+      "id": "russian-avant-garde--suprematism",
+      "parentId": "russian-avant-garde",
+      "name": {
+        "ko": "절대주의",
+        "en": "Suprematism"
+      },
+      "kind": "method"
+    },
+    {
+      "id": "russian-avant-garde--constructivism",
+      "parentId": "russian-avant-garde",
+      "name": {
+        "ko": "구성주의",
+        "en": "Constructivism"
+      },
+      "kind": "method",
+      "coveredTopics": [
+        "광선주의"
+      ]
+    },
+    {
+      "id": "dada--zurich",
+      "parentId": "dada",
+      "name": {
+        "ko": "취리히 다다",
+        "en": "Zurich Dada"
+      },
+      "kind": "regional-movement"
+    },
+    {
+      "id": "dada--berlin",
+      "parentId": "dada",
+      "name": {
+        "ko": "베를린 다다",
+        "en": "Berlin Dada"
+      },
+      "kind": "regional-movement"
+    },
+    {
+      "id": "dada--new-york",
+      "parentId": "dada",
+      "name": {
+        "ko": "뉴욕 다다",
+        "en": "New York Dada"
+      },
+      "kind": "regional-movement",
+      "coveredTopics": [
+        "파리 다다"
+      ]
+    },
+    {
+      "id": "abstract-expressionism--action-painting",
+      "parentId": "abstract-expressionism",
+      "name": {
+        "ko": "액션 페인팅",
+        "en": "Action painting"
+      },
+      "kind": "method"
+    },
+    {
+      "id": "abstract-expressionism--color-field",
+      "parentId": "abstract-expressionism",
+      "name": {
+        "ko": "색면회화",
+        "en": "Color Field painting"
+      },
+      "kind": "method"
+    },
+    {
+      "id": "pop-art--british",
+      "parentId": "pop-art",
+      "name": {
+        "ko": "영국 팝아트",
+        "en": "British Pop Art"
+      },
+      "kind": "regional-movement"
+    },
+    {
+      "id": "pop-art--american",
+      "parentId": "pop-art",
+      "name": {
+        "ko": "미국 팝아트",
+        "en": "American Pop Art"
+      },
+      "kind": "regional-movement"
+    },
+    {
+      "id": "postmodernism--appropriation-pictures",
+      "parentId": "postmodernism",
+      "name": {
+        "ko": "차용미술과 픽처스 제너레이션",
+        "en": "Appropriation Art and the Pictures Generation"
+      },
+      "kind": "method",
+      "coveredTopics": [
+        "네오지오"
+      ]
+    },
+    {
+      "id": "postmodernism--neo-expressionism",
+      "parentId": "postmodernism",
+      "name": {
+        "ko": "신표현주의",
+        "en": "Neo-Expressionism"
+      },
+      "kind": "method",
+      "includesParentIds": [
+        "neo-expressionism"
+      ]
+    },
+    {
+      "id": "rococo--french",
+      "parentId": "rococo",
+      "name": {
+        "ko": "프랑스 로코코",
+        "en": "French Rococo"
+      },
+      "kind": "regional-movement"
+    },
+    {
+      "id": "rococo--venetian",
+      "parentId": "rococo",
+      "name": {
+        "ko": "베네치아 로코코",
+        "en": "Venetian Rococo"
+      },
+      "kind": "regional-movement"
+    },
+    {
+      "id": "romanticism--german",
+      "parentId": "romanticism",
+      "name": {
+        "ko": "독일 낭만주의",
+        "en": "German Romanticism"
+      },
+      "kind": "regional-movement",
+      "coveredTopics": [
+        "비더마이어"
+      ]
+    },
+    {
+      "id": "romanticism--british",
+      "parentId": "romanticism",
+      "name": {
+        "ko": "영국 낭만주의",
+        "en": "British Romanticism"
+      },
+      "kind": "regional-movement"
+    },
+    {
+      "id": "romanticism--french",
+      "parentId": "romanticism",
+      "name": {
+        "ko": "프랑스 낭만주의",
+        "en": "French Romanticism"
+      },
+      "kind": "regional-movement"
+    },
+    {
+      "id": "romanticism--spanish",
+      "parentId": "romanticism",
+      "name": {
+        "ko": "스페인 낭만주의",
+        "en": "Spanish Romanticism"
+      },
+      "kind": "regional-movement"
+    },
+    {
+      "id": "academicism--core",
+      "parentId": "academicism",
+      "name": {
+        "ko": "아카데미즘",
+        "en": "Academicism"
+      },
+      "kind": "core"
+    },
+    {
+      "id": "impressionism--french",
+      "parentId": "impressionism",
+      "name": {
+        "ko": "프랑스 인상주의",
+        "en": "French Impressionism"
+      },
+      "kind": "regional-movement"
+    },
+    {
+      "id": "impressionism--american",
+      "parentId": "impressionism",
+      "name": {
+        "ko": "미국 인상주의",
+        "en": "American Impressionism"
+      },
+      "kind": "regional-movement"
+    },
+    {
+      "id": "symbolism--french-belgian",
+      "parentId": "symbolism",
+      "name": {
+        "ko": "프랑스·벨기에 상징주의",
+        "en": "French and Belgian Symbolism"
+      },
+      "kind": "regional-movement"
+    },
+    {
+      "id": "symbolism--central-northern-european",
+      "parentId": "symbolism",
+      "name": {
+        "ko": "중부·북유럽 상징주의",
+        "en": "Central and Northern European Symbolism"
+      },
+      "kind": "regional-movement",
+      "coveredTopics": [
+        "러시아 상징주의",
+        "라파엘 전파"
+      ]
+    },
+    {
+      "id": "art-nouveau--french-belgian",
+      "parentId": "art-nouveau",
+      "name": {
+        "ko": "프랑스·벨기에 아르누보",
+        "en": "French and Belgian Art Nouveau"
+      },
+      "kind": "regional-movement"
+    },
+    {
+      "id": "art-nouveau--vienna-secession",
+      "parentId": "art-nouveau",
+      "name": {
+        "ko": "빈 분리파",
+        "en": "Vienna Secession"
+      },
+      "kind": "regional-movement",
+      "coveredTopics": [
+        "카탈루냐 모더니슴",
+        "유겐트슈틸"
+      ]
+    },
+    {
+      "id": "fauvism--matisse-chatou",
+      "parentId": "fauvism",
+      "name": {
+        "ko": "마티스·샤투 중심 야수파",
+        "en": "Matisse and Chatou Fauves"
+      },
+      "kind": "core",
+      "coveredTopics": [
+        "귀스타브 모로 화실 계열",
+        "샤투파"
+      ]
+    },
+    {
+      "id": "fauvism--le-havre",
+      "parentId": "fauvism",
+      "name": {
+        "ko": "르아브르파 야수주의",
+        "en": "Le Havre Fauves"
+      },
+      "kind": "school"
+    },
+    {
+      "id": "futurism--italian",
+      "parentId": "futurism",
+      "name": {
+        "ko": "이탈리아 미래주의",
+        "en": "Italian Futurism"
+      },
+      "kind": "regional-movement"
+    },
+    {
+      "id": "futurism--russian-cubo",
+      "parentId": "futurism",
+      "name": {
+        "ko": "러시아 입체미래주의",
+        "en": "Russian Cubo-Futurism"
+      },
+      "kind": "regional-movement"
+    },
+    {
+      "id": "de-stijl--core",
+      "parentId": "de-stijl",
+      "name": {
+        "ko": "데 스틸",
+        "en": "De Stijl"
+      },
+      "kind": "core"
+    },
+    {
+      "id": "bauhaus--core",
+      "parentId": "bauhaus",
+      "name": {
+        "ko": "바우하우스",
+        "en": "Bauhaus"
+      },
+      "kind": "core"
+    },
+    {
+      "id": "surrealism--automatist",
+      "parentId": "surrealism",
+      "name": {
+        "ko": "자동기술적 초현실주의",
+        "en": "Automatist Surrealism"
+      },
+      "kind": "method"
+    },
+    {
+      "id": "surrealism--illusionistic",
+      "parentId": "surrealism",
+      "name": {
+        "ko": "환영적 초현실주의",
+        "en": "Illusionistic Surrealism"
+      },
+      "kind": "method"
+    },
+    {
+      "id": "mexican-muralism--core",
+      "parentId": "mexican-muralism",
+      "name": {
+        "ko": "멕시코 벽화운동",
+        "en": "Mexican Muralism"
+      },
+      "kind": "core"
+    },
+    {
+      "id": "social-realism--core",
+      "parentId": "social-realism",
+      "name": {
+        "ko": "사회적 사실주의",
+        "en": "Social Realism"
+      },
+      "kind": "core"
+    },
+    {
+      "id": "socialist-realism--core",
+      "parentId": "socialist-realism",
+      "name": {
+        "ko": "사회주의적 사실주의",
+        "en": "Socialist Realism"
+      },
+      "kind": "core"
+    },
+    {
+      "id": "art-informel--core",
+      "parentId": "art-informel",
+      "name": {
+        "ko": "앵포르멜",
+        "en": "Art Informel"
+      },
+      "kind": "core",
+      "coveredTopics": [
+        "타시즘"
+      ]
+    },
+    {
+      "id": "nouveau-realisme--core",
+      "parentId": "nouveau-realisme",
+      "name": {
+        "ko": "누보 레알리슴",
+        "en": "Nouveau Réalisme"
+      },
+      "kind": "core"
+    },
+    {
+      "id": "minimalism--core",
+      "parentId": "minimalism",
+      "name": {
+        "ko": "미니멀리즘",
+        "en": "Minimalism"
+      },
+      "kind": "core"
+    },
+    {
+      "id": "conceptual-art--idea-language",
+      "parentId": "conceptual-art",
+      "name": {
+        "ko": "아이디어·언어 중심 개념미술",
+        "en": "Idea- and Language-Based Conceptual Art"
+      },
+      "kind": "method",
+      "coveredTopics": [
+        "아르테 포베라"
+      ]
+    },
+    {
+      "id": "conceptual-art--fluxus",
+      "parentId": "conceptual-art",
+      "name": {
+        "ko": "플럭서스",
+        "en": "Fluxus"
+      },
+      "kind": "method",
+      "includesParentIds": [
+        "fluxus"
+      ]
+    },
+    {
+      "id": "op-art--core",
+      "parentId": "op-art",
+      "name": {
+        "ko": "옵아트",
+        "en": "Op Art"
+      },
+      "kind": "core"
+    },
+    {
+      "id": "contemporary-art--installation-performance",
+      "parentId": "contemporary-art",
+      "name": {
+        "ko": "설치·퍼포먼스 미술",
+        "en": "Installation and Performance Art"
+      },
+      "kind": "practice-cluster"
+    },
+    {
+      "id": "contemporary-art--new-media-digital",
+      "parentId": "contemporary-art",
+      "name": {
+        "ko": "뉴미디어·디지털 아트",
+        "en": "New Media and Digital Art"
+      },
+      "kind": "practice-cluster"
+    },
+    {
+      "id": "contemporary-art--street-participatory",
+      "parentId": "contemporary-art",
+      "name": {
+        "ko": "거리·참여 미술",
+        "en": "Street and Participatory Art"
+      },
+      "kind": "practice-cluster",
+      "includesParentIds": [
+        "street-art"
+      ]
+    },
+    {
+      "id": "neoclassicism--french",
+      "parentId": "neoclassicism",
+      "name": {
+        "ko": "프랑스 신고전주의",
+        "en": "French Neoclassicism"
+      },
+      "kind": "regional-movement"
+    },
+    {
+      "id": "neoclassicism--roman-international",
+      "parentId": "neoclassicism",
+      "name": {
+        "ko": "로마 국제 신고전주의",
+        "en": "International Neoclassicism in Rome"
+      },
+      "kind": "regional-movement"
+    }
   ],
   "contextReferences": [
-    {"id":"previous-art--late-byzantine","name":{"ko":"후기 비잔틴 미술","en":"Late Byzantine art"},"documentKey":"Late Byzantine art","role":"previous-art-example"},
-    {"id":"previous-art--gothic","name":{"ko":"고딕 미술","en":"Gothic art"},"documentKey":"Gothic art","role":"previous-art-example","coveredTopics":["영국 고딕","북유럽 고딕"]}
+    {
+      "id": "previous-art--late-byzantine",
+      "name": {
+        "ko": "후기 비잔틴 미술",
+        "en": "Late Byzantine art"
+      },
+      "documentKey": "Late Byzantine art",
+      "role": "previous-art-example"
+    },
+    {
+      "id": "previous-art--gothic",
+      "name": {
+        "ko": "고딕 미술",
+        "en": "Gothic art"
+      },
+      "documentKey": "Gothic art",
+      "role": "previous-art-example",
+      "coveredTopics": [
+        "영국 고딕",
+        "북유럽 고딕"
+      ]
+    }
   ],
   "sources": [
-    {"title":"Art Nouveau","publisher":"The Metropolitan Museum of Art","url":"https://www.metmuseum.org/toah/hd/artn/hd_artn.htm","supports":["아르누보의 국제적 지역 변형과 프랑스·벨기에 중심"]},
-    {"title":"Dada","publisher":"The Museum of Modern Art","url":"https://www.moma.org/collection/terms/dada","supports":["취리히·뉴욕에서 형성되어 베를린·파리 등으로 확산된 국제 운동"]},
-    {"title":"The Wild Beasts: Fauvism and Its Affinities","publisher":"The Museum of Modern Art","url":"https://www.moma.org/documents/moma_catalogue_2470_300298256.pdf","supports":["마티스 화실 계열·샤투파·르아브르 출신 화가들의 세 집단 구분"]},
-    {"title":"Modern Art and Ideas 8","publisher":"The Museum of Modern Art","url":"https://www.moma.org/momaorg/shared/pdfs/moma_learning/docs/MAI8_Full.pdf","supports":["추상표현주의의 액션 페인팅과 색면회화 구분"]},
-    {"title":"Surrealist Prints: An Overview","publisher":"The Museum of Modern Art","url":"https://www.moma.org/documents/moma_catalogue_1728_300200577.pdf","supports":["초현실주의의 자동기술 계열과 환영적 꿈 이미지 계열 구분"]}
+    {
+      "title": "Art Nouveau",
+      "publisher": "The Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/toah/hd/artn/hd_artn.htm",
+      "supports": [
+        "아르누보의 국제적 지역 변형과 프랑스·벨기에 중심"
+      ]
+    },
+    {
+      "title": "Dada",
+      "publisher": "The Museum of Modern Art",
+      "url": "https://www.moma.org/collection/terms/dada",
+      "supports": [
+        "취리히·뉴욕에서 형성되어 베를린·파리 등으로 확산된 국제 운동"
+      ]
+    },
+    {
+      "title": "The Wild Beasts: Fauvism and Its Affinities",
+      "publisher": "The Museum of Modern Art",
+      "url": "https://www.moma.org/documents/moma_catalogue_2470_300298256.pdf",
+      "supports": [
+        "마티스 화실 계열·샤투파·르아브르 출신 화가들의 세 집단 구분"
+      ]
+    },
+    {
+      "title": "Modern Art and Ideas 8",
+      "publisher": "The Museum of Modern Art",
+      "url": "https://www.moma.org/momaorg/shared/pdfs/moma_learning/docs/MAI8_Full.pdf",
+      "supports": [
+        "추상표현주의의 액션 페인팅과 색면회화 구분"
+      ]
+    },
+    {
+      "title": "Surrealist Prints: An Overview",
+      "publisher": "The Museum of Modern Art",
+      "url": "https://www.moma.org/documents/moma_catalogue_1728_300200577.pdf",
+      "supports": [
+        "초현실주의의 자동기술 계열과 환영적 꿈 이미지 계열 구분"
+      ]
+    }
   ]
 }

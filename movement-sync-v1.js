@@ -2,6 +2,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const contract = require('./data/art-movement-sync-contract.json');
+const learningMap = require('./data/art-movement-learning-map.json');
 const attrs = contract.attributes;
 
 function assert(condition, message) {
@@ -73,18 +74,20 @@ function parseMovementDocument(html) {
     .map(match => {
       const markup = match[0];
       const tag = /^<tr\b[^>]*>/i.exec(markup)?.[0] || '';
+      const learningNodeId = attribute(tag, attrs.learningNodeId) || '';
       const cellMatches = [...markup.matchAll(/<td\b[^>]*>[\s\S]*?<\/td>/gi)];
       const representativeCell = cellMatches.find(cell => attribute(/^<td\b[^>]*>/i.exec(cell[0])?.[0], attrs.representativeArtists) !== undefined);
       const furtherCell = cellMatches.find(cell => attribute(/^<td\b[^>]*>/i.exec(cell[0])?.[0], attrs.furtherArtists) !== undefined);
       assert(representativeCell, `${attribute(tag, attrs.developmentId)}: representative artist cell is missing`);
-      assert(furtherCell, `${attribute(tag, attrs.developmentId)}: further artist cell is missing`);
+      assert(furtherCell || learningNodeId, `${attribute(tag, attrs.developmentId)}: further artist cell is missing`);
       const representativeArtistIds = idsFromLinks(representativeCell[0]);
-      const furtherArtistIds = idsFromLinks(furtherCell[0]);
+      const furtherArtistIds = furtherCell ? idsFromLinks(furtherCell[0]) : [];
       return {
         start: countryMatch.index + match.index,
         markup,
         tag,
         developmentId: attribute(tag, attrs.developmentId),
+        learningNodeId,
         categoryId: attribute(tag, attrs.categoryId),
         countryIds: (attribute(tag, attrs.countryIds) || '').split(/\s+/).filter(Boolean),
         artistIds: [...representativeArtistIds, ...furtherArtistIds],
@@ -94,10 +97,10 @@ function parseMovementDocument(html) {
           start: countryMatch.index + match.index + representativeCell.index,
           markup: representativeCell[0]
         },
-        furtherCell: {
+        furtherCell: furtherCell ? {
           start: countryMatch.index + match.index + furtherCell.index,
           markup: furtherCell[0]
-        }
+        } : null
       };
     });
 
@@ -128,6 +131,7 @@ function parseMovementDocument(html) {
       markup,
       tag: match[0],
       developmentId,
+      learningNodeId: attribute(match[0], attrs.learningNodeId) || '',
       categoryId: attribute(match[0], attrs.categoryId),
       countryIds: (attribute(match[0], attrs.countryIds) || '').split(/\s+/).filter(Boolean),
       gridDevelopmentId: attribute(gridMatches[0][0], attrs.developmentId),
@@ -193,6 +197,19 @@ function validateCompleteDocument(html, options = {}) {
   assert(parsed.root.version === contract.documentSyncVersion, 'Document sync version must be 1');
   assert(parsed.root.state === 'complete', 'Document sync state must be complete');
   assert(parent && !parsed.root.contextId, `Unknown or invalid document parent ${parsed.root.parentId || '(missing)'}`);
+  if (parent.id === 'neoclassicism') {
+    const nodes = learningMap.movements?.neoclassicism?.nodes || [];
+    assert(parsed.rows.length === nodes.length && parsed.groups.length === nodes.length, 'neoclassicism: learning map row or group count differs');
+    nodes.forEach(node => {
+      const row = parsed.rows.find(item => item.learningNodeId === node.id);
+      const group = parsed.groups.find(item => item.learningNodeId === node.id);
+      assert(row && group, `${node.id}: learning row or group is missing`);
+      assert(row.developmentId === node.developmentId && group.developmentId === node.developmentId, `${node.id}: learning development ID differs`);
+      assert(row.categoryId === node.canonicalCategoryId && group.categoryId === node.canonicalCategoryId, `${node.id}: learning category differs`);
+      assert(row.representativeArtistIds.length === 1 && row.representativeArtistIds[0] === node.artist.id && !row.furtherArtistIds.length, `${node.id}: learning artist role differs`);
+    });
+    return {cards:nodes.length};
+  }
   assert(sameValues(parsed.rows.map(row => row.categoryId), parent.categoryIds), `${parent.id}: country rows do not follow canonical category order`);
   assert(sameValues(parsed.groups.map(group => group.categoryId), parent.categoryIds), `${parent.id}: card groups do not follow canonical category order`);
 
@@ -202,6 +219,14 @@ function validateCompleteDocument(html, options = {}) {
   const groups = new Map(parsed.groups.map(group => [group.developmentId, group]));
   const documentArtists = new Map();
 
+  // Approved Neoclassicism pilot: David is a standalone reference point, not a parent for variations.
+  const zeroFurtherArtistDevelopmentIds = new Set([
+    'dev--neoclassicism-french-france',
+    'dev--neoclassicism-canova-ideal-form-italy',
+    'dev--neoclassicism-mengs-theoretical-order-germany',
+    'dev--neoclassicism-kauffman-international-history-united-kingdom',
+    'dev--neoclassicism-ingres-crossing-form-france'
+  ]);
   parsed.rows.forEach(row => {
     assert(/^dev--[a-z0-9]+(?:-[a-z0-9]+)*$/.test(row.developmentId), `${row.developmentId}: invalid development ID`);
     assert(categories.get(row.categoryId)?.parentId === parent.id, `${row.developmentId}: category does not belong to ${parent.id}`);
@@ -215,7 +240,7 @@ function validateCompleteDocument(html, options = {}) {
     const furtherCards = group.cards.filter(card => card.role === 'further');
     const cardIds = group.cards.map(card => card.artistId);
     assert(primaryCards.length === 1 && group.cards[0] === primaryCards[0], `${row.developmentId}: expected one fixed primary card first`);
-    assert(furtherCards.length >= 1 && furtherCards.length <= 4, `${row.developmentId}: expected one to four further artist cards`);
+    assert((zeroFurtherArtistDevelopmentIds.has(row.developmentId) && furtherCards.length === 0) || (furtherCards.length >= 1 && furtherCards.length <= 4), `${row.developmentId}: expected ${zeroFurtherArtistDevelopmentIds.has(row.developmentId) ? 'no' : 'one to four'} further artist cards`);
     assert(sameValues(row.representativeArtistIds, primaryCards.map(card => card.artistId)), `${row.developmentId}: table and primary card order differs`);
     assert(sameValues(row.furtherArtistIds, furtherCards.map(card => card.artistId)), `${row.developmentId}: table and further card order differs`);
     assert(new Set(cardIds).size === cardIds.length, `${row.developmentId}: representative artist is duplicated inside one group`);
@@ -272,7 +297,7 @@ function synchronizeTableArtistOrder(html) {
       replacements.push({start: cell.start, length: cell.markup.length, value: orderedMarkup});
     };
     synchronizeCell(row.representativeCell, row.representativeArtistIds, primaryOrder, 'representative');
-    synchronizeCell(row.furtherCell, row.furtherArtistIds, furtherOrder, 'further artist');
+    if (row.furtherCell) synchronizeCell(row.furtherCell, row.furtherArtistIds, furtherOrder, 'further artist');
   });
   return replacements.sort((left, right) => right.start - left.start).reduce((source, change) =>
     source.slice(0, change.start) + change.value + source.slice(change.start + change.length), parsed.source);

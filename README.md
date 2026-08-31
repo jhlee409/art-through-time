@@ -39,6 +39,7 @@ npm start
 | --- | --- |
 | 새 탭 기본 구성, 공통 사이드바, 탭 이동, 인증, 공용 레이아웃 | [새탭 template 작성 규칙](작성규칙/새탭_template_작성규칙.md) |
 | 미술 사조의 이해 탭, 사조 막대, 역사 사건 | [미술사조 이해 탭](작성규칙/미술사조이해탭_작성규칙.md), [사조 HTML](작성규칙/사조html_template_작성규칙.md) |
+| 기존 사조 설명 HTML의 분류·길잡이·표·심화 카드 재구성 | [사조 HTML 변환 규칙](작성규칙/사조html_변환규칙.md), [사조 HTML](작성규칙/사조html_template_작성규칙.md), [미술사조 이해 탭](작성규칙/미술사조이해탭_작성규칙.md) |
 | 사조 설명 HTML, 국가 전개 표, 심화 대표작 카드 | [사조 HTML](작성규칙/사조html_template_작성규칙.md), [미술사조 이해 탭](작성규칙/미술사조이해탭_작성규칙.md) |
 | 국가별 미술 탭 | [국가별 미술 탭](작성규칙/국가별미술탭_작성규칙.md), [사조 HTML](작성규칙/사조html_template_작성규칙.md) |
 | 화가 리스트 탭 | [화가 리스트 탭](작성규칙/화가리스트탭_작성규칙.md), [사조 HTML](작성규칙/사조html_template_작성규칙.md) |
@@ -86,6 +87,7 @@ npm start
 | `data/art-movement-canonical.json` | 부모 사조, 핵심 범주, 문서 역할과 표시 순서 |
 | `data/art-movement-sync-contract.json` | 표·카드·화가 리스트의 ID 기반 동기화 규약 |
 | `data/art-movement-learning-guides.json` | 활성 사조 문서의 초심자 학습 길잡이 원문 |
+| `data/art-movement-learning-map.json` | 정식 범주와 별개인 기준점·주요 변주·비교 축 학습 지도 |
 | `data/art-movement-representatives.json` | 핵심 범주의 특징, 대표 화가·더 볼 화가, 작품과 선정 이유 |
 | `data/art-movements.json` | 국가별 사조 막대, 기간, 정본 연결 ID |
 | `data/미술사조/*.html` | 국가 전개 표, 지역 특징, 대표·더 볼 화가 링크와 작품 카드 |
@@ -97,7 +99,7 @@ npm start
 | `data/techniques.json` | 기법·용어와 대표 사례 |
 | `data/topics.json` | 주제·사건과 연결 작품 |
 
-사조 HTML의 `여러 국가에서의 전개` 표는 화가 리스트에 표시할 국가별 범주, 대표 화가 1명, 더 볼 화가 1~4명의 화면 정본입니다. 같은 `developmentId`의 카드 묶음은 표와 역할별 화가 집합 및 순서가 같아야 합니다.
+사조 HTML의 `여러 국가에서의 전개` 표는 화가 리스트에 표시할 국가별 범주, 대표 화가 1명, 더 볼 화가 1~4명의 화면 정본입니다. 같은 `developmentId`의 카드 묶음은 표와 역할별 화가 집합 및 순서가 같아야 합니다. 단 `data-art-atlas-learning-node-id`가 있는 행은 `data/art-movement-learning-map.json`의 기준점·주요 변주 학습 항목이며, 정식 범주 수나 국가별 사조 막대의 정본 연결을 늘리지 않습니다.
 
 국가 전개 행을 바꿀 때는 HTML만 수정하지 않습니다. 같은 작업에서 `data/art-movements.json`의 국가·기간·정본 연결, `data/artists.json`의 화가·작품·활동 지역, `data/art-movement-representatives.json`의 카드 정보를 맞춥니다. `node tools/validate-cross-tab-linkage.js`는 이 연결이 국가별 미술·화가 리스트·화가 연표까지 이어지는지 전수 검사합니다.
 

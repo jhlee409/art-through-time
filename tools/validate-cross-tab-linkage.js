@@ -9,8 +9,10 @@ const movementData = readJson('data/art-movements.json');
 const artistsData = readJson('data/artists.json');
 const movementIndex = readJson('data/미술사조/index.json');
 const contract = readJson('data/art-movement-sync-contract.json');
+const learningMap = readJson('data/art-movement-learning-map.json');
 const attrs = contract.attributes;
 const issues = [];
+const learningNodes = new Map((learningMap.movements?.neoclassicism?.nodes || []).map(node => [node.developmentId, node]));
 
 function check(condition, message) {
   if (!condition) issues.push(message);
@@ -88,6 +90,7 @@ function countryRows(parent) {
     return {
       parentId: parent.id,
       developmentId: attr(rowTag, attrs.developmentId),
+      learningNodeId: attr(rowTag, attrs.learningNodeId),
       categoryId: attr(rowTag, attrs.categoryId),
       countryIds: attr(rowTag, attrs.countryIds).split(/\s+/).filter(Boolean),
       primaryArtistIds: artistIds(primaryCell),
@@ -107,11 +110,16 @@ function main() {
   for (const row of rows) {
     check(row.developmentId && !rowsByDevelopment.has(row.developmentId), `Duplicate or empty development ID: ${row.developmentId || '(empty)'}`);
     rowsByDevelopment.set(row.developmentId, row);
+    const learningNode = learningNodes.get(row.developmentId);
     const category = categories.get(row.categoryId);
     check(category?.parentId === row.parentId, `${row.developmentId}: category does not belong to document parent`);
+    if (learningNode) {
+      check(row.learningNodeId === learningNode.id, `${row.developmentId}: learning node ID mismatch`);
+      check(row.categoryId === learningNode.canonicalCategoryId, `${row.developmentId}: canonical category mismatch for learning node`);
+    }
     check(row.countryIds.length > 0 && row.countryIds.every(countryId => countries.has(countryId)), `${row.developmentId}: unknown or empty country IDs`);
     check(row.primaryArtistIds.length === 1, `${row.developmentId}: expected one primary artist`);
-    check(row.furtherArtistIds.length >= 1 && row.furtherArtistIds.length <= 4, `${row.developmentId}: expected one to four further artists`);
+    check((learningNode && row.furtherArtistIds.length === 0) || (row.furtherArtistIds.length >= 1 && row.furtherArtistIds.length <= 4), `${row.developmentId}: expected ${learningNode ? 'no' : 'one to four'} further artists`);
     const rowArtistIds = [...row.primaryArtistIds, ...row.furtherArtistIds];
     check(new Set(rowArtistIds).size === rowArtistIds.length, `${row.developmentId}: duplicate artist in table row`);
     for (const artistId of rowArtistIds) {
@@ -162,6 +170,7 @@ function main() {
   }
 
   for (const row of rows) {
+    if (learningNodes.has(row.developmentId) && !['dev--neoclassicism-french-france','dev--neoclassicism-roman-international-italy'].includes(row.developmentId)) continue;
     for (const countryId of row.countryIds) {
       const count = bindingCounts.get(`${countryId}|${row.developmentId}`) || 0;
       check(count === 1, `${row.developmentId}: expected one ${countryId} movement binding, got ${count}`);

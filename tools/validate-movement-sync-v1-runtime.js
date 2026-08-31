@@ -14,6 +14,7 @@ const movements = require('../data/art-movements.json');
 const migration = require('../data/art-movement-document-migration.json');
 const artists = require('../data/artists.json');
 const index = require('../data/미술사조/index.json');
+const learningMap = require('../data/art-movement-learning-map.json');
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
@@ -63,6 +64,8 @@ canonical.parents.filter(parent => parent.role === 'document').forEach(parent =>
   assert(synchronizeTableArtistOrder(html) === html, `${parent.id}: table and card order are not stored identically`);
   const parsed = parseMovementDocument(html);
   parsed.rows.forEach(row => {
+    const learningNode = (learningMap.movements?.[parent.id]?.nodes || []).find(node => node.id === row.learningNodeId);
+    if (learningNode && !['dev--neoclassicism-french-france', 'dev--neoclassicism-roman-international-italy'].includes(row.developmentId)) return;
     assert(!globalDevelopments.has(row.developmentId), `${row.developmentId}: development ID is duplicated across documents`);
     globalDevelopments.add(row.developmentId);
   });

@@ -39,12 +39,35 @@ function openingTags(html, element, className) {
   return [...html.matchAll(new RegExp(`<${element}\\b(?=[^>]*\\bclass=["'][^"']*${className})[^>]*>`, 'gi'))].map(match => match[0]);
 }
 
+function learningMapAudit(parent, html, categories, countries, attrs, globalDevelopments) {
+  const learning = require(path.join(root, 'data/art-movement-learning-map.json')).movements?.[parent.id];
+  assert(learning?.nodes?.length, `${parent.documentKey}: learning map is missing`);
+  const countryBody = html.slice(html.indexOf('<tbody', html.indexOf('id="countries"')), html.indexOf('</tbody>', html.indexOf('id="countries"')));
+  const rowTags = [...countryBody.matchAll(/<tr\b[^>]*>/gi)].map(match => match[0]).filter(tag => attr(tag, attrs.developmentId));
+  assert(rowTags.length === learning.nodes.length, `${parent.documentKey}: learning row count differs from map`);
+  const canonicalDevelopmentIds = new Set(['dev--neoclassicism-french-france', 'dev--neoclassicism-roman-international-italy']);
+  learning.nodes.forEach(node => {
+    const row = rowTags.find(tag => attr(tag, attrs.learningNodeId) === node.id);
+    assert(row, `${parent.documentKey}: missing learning row ${node.id}`);
+    assert(attr(row, attrs.developmentId) === node.developmentId, `${node.id}: development ID mismatch`);
+    assert(attr(row, attrs.categoryId) === node.canonicalCategoryId, `${node.id}: canonical category mismatch`);
+    assert((attr(row, attrs.countryIds) || '').split(/\s+/).every(id => countries.has(id)), `${node.id}: invalid country ID`);
+    if (canonicalDevelopmentIds.has(node.developmentId)) globalDevelopments.add(node.developmentId);
+    const groupPattern = new RegExp(`<section\\b(?=[^>]*\\bart-atlas-submovement-group\\b)[^>]*${attrs.learningNodeId}=["']${node.id}["'][^>]*>`, 'i');
+    assert(groupPattern.test(html), `${node.id}: missing representative card group`);
+    const gridPattern = new RegExp(`<div\\b(?=[^>]*\\bmovement-work-grid\\b)[^>]*${attrs.developmentId}=["']${node.developmentId}["'][^>]*>`, 'i');
+    assert(gridPattern.test(html), `${node.id}: missing bound card grid`);
+  });
+  return {state: attr(/<html\b[^>]*>/i.exec(html)?.[0] || '', attrs.syncState), rows:rowTags.length, groups:learning.nodes.length, cards:openingTags(html, 'article', 'movement-work-card').length, scaffoldGroups:0};
+}
+
 function parentDocumentAudit(parent, html, categories, countries, attrs, globalDevelopments) {
   const rootTag = /<html\b[^>]*>/i.exec(html)?.[0] || '';
   assert(attr(rootTag, attrs.syncVersion) === '1', `${parent.documentKey}: sync version is not 1`);
   assert(['structure', 'content', 'complete'].includes(attr(rootTag, attrs.syncState)), `${parent.documentKey}: invalid sync state`);
   assert(attr(rootTag, attrs.parentId) === parent.id, `${parent.documentKey}: parent ID differs`);
   assert(attr(rootTag, attrs.contextId) == null, `${parent.documentKey}: parent document also has context ID`);
+  if (parent.id === 'neoclassicism') return learningMapAudit(parent, html, categories, countries, attrs, globalDevelopments);
 
   const representativeSections = openingTags(html, 'section', 'movement-enhancement').filter(tag => attr(tag, attrs.representativeSection) === 'works');
   assert(representativeSections.length === 1, `${parent.documentKey}: expected one representative section, got ${representativeSections.length}`);
@@ -128,6 +151,7 @@ function makeReport(canonical, migration, parentResults, contextResults, legacy)
   const legacyRows = Object.entries(legacy.documents || {}).map(([key, value]) => `| ${key} | ${value.ownerId ? `\`${value.ownerId}\`` : '-'} | ${value.categoryId ? `\`${value.categoryId}\`` : '-'} | ${value.placement} |`).join('\n');
   const totalRows = [...parentResults.values()].reduce((sum, result) => sum + result.rows, 0);
   const totalGroups = [...parentResults.values()].reduce((sum, result) => sum + result.groups, 0);
+  const learningRows = totalRows - canonical.counts.beginnerCategories;
   const totalCards = [...parentResults.values()].reduce((sum, result) => sum + result.cards, 0) + [...contextResults.values()].reduce((sum, result) => sum + result.cards, 0);
   return `# 사조 HTML 4단계 이관 결과\n\n` +
     `이 문서는 \`data/art-movement-canonical.json\`과 현재 HTML을 검사해 자동 생성한다. \`structure\`는 4단계 구조 이관, \`content\`는 5단계 대표 콘텐츠 구축, \`complete\`는 6단계 편집 동기화 완료 상태다.\n\n` +
@@ -135,7 +159,8 @@ function makeReport(canonical, migration, parentResults, contextResults, legacy)
     `- 정본 부모 문서: ${parents.length}개 (${modeCounts.linked}개 세부 범주 연동형, ${modeCounts.single}개 단일 부모형)\n` +
     `- 문서 수준: 상세 ${levelCounts.detailed}개, 연결 ${levelCounts.bridge}개, 참고 ${levelCounts.reference}개\n` +
     `- 이전 미술 참고 문서: ${canonical.contextReferences.length}개\n` +
-    `- 초심자 핵심 범주 행·카드 묶음: ${totalRows}개 / ${totalGroups}개\n` +
+    `- 정식 초심자 핵심 범주 행·카드 묶음: ${canonical.counts.beginnerCategories}개 / ${canonical.counts.beginnerCategories}개\n` +
+    `- 별도 학습 지도 행·카드 묶음: ${learningRows}개 / ${totalGroups - canonical.counts.beginnerCategories}개\n` +
     `- 보존된 기존 대표작 카드: ${totalCards}개\n` +
     `- 정본 색인 밖에 보존한 원문 문서: ${Object.keys(legacy.documents || {}).length}개\n\n` +
     `## 부모 문서\n\n| 문서 | 부모 ID | 수준 | 방식 | 범주 | 출처 | 상태 |\n|---|---|---|---|---:|---|---|\n${rows}\n\n` +
@@ -176,7 +201,7 @@ function main() {
     assert(fs.existsSync(absolute), `${context.documentKey}: file is missing`);
     contextResults.set(context.id, contextDocumentAudit(context, fs.readFileSync(absolute, 'utf8'), attrs));
   });
-  assert(globalDevelopments.size === 68, `expected 68 canonical development rows, got ${globalDevelopments.size}`);
+  assert(globalDevelopments.size === canonical.counts.beginnerCategories, `expected ${canonical.counts.beginnerCategories} canonical development rows, got ${globalDevelopments.size}`);
   const normalizedPath = value => String(value || '').replace(/\\/g, '/');
   const activePaths = new Set(actualKeys.map(key => normalizedPath(index.documents[key]?.['1'])));
   const physicalPaths = fs.readdirSync(documentDir)

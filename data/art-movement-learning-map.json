@@ -1,0 +1,242 @@
+{
+  "schema": 1,
+  "policy": {
+    "purpose": "정식 사조 범주와 별개로, 초심자가 한 사조 안의 조형 기준점·주요 변주·비교 축을 읽도록 돕는다.",
+    "taxonomyBoundary": "learningNodes는 정식 사조·국가·세부 사조 분류를 새로 만들지 않으며 canonicalCategoryId만 참조한다.",
+    "roles": {
+      "anchor": "조형 원리를 가장 분명하게 보여 주는 기준점",
+      "variation": "기준점을 복제하지 않는 중요한 변주",
+      "comparison": "사조 내부 또는 외부의 비교 축"
+    }
+  },
+  "movements": {
+    "neoclassicism": {
+      "title": {
+        "ko": "신고전주의의 주요 조형 지향",
+        "en": "Major Neoclassical Directions"
+      },
+      "nodes": [
+        {
+          "id": "david-civic-history",
+          "role": "anchor",
+          "canonicalCategoryId": "neoclassicism--french",
+          "developmentId": "dev--neoclassicism-french-france",
+          "countryIds": [
+            "france"
+          ],
+          "label": {
+            "ko": "공적 역사화와 시민 윤리",
+            "en": "Civic History Painting and Public Virtue"
+          },
+          "feature": "고대 로마의 형식과 시민적 덕목을 명료한 윤곽, 절제된 색, 엄격한 구도로 제시했다.",
+          "artist": {
+            "id": "artist-Q83155",
+            "name": {
+              "ko": "자크루이 다비드",
+              "en": "Jacques-Louis David"
+            },
+            "birth": 1748,
+            "death": 1825,
+            "nationality": {
+              "ko": "프랑스",
+              "en": "French"
+            }
+          },
+          "work": {
+            "id": "artist-Q83155-representative-work",
+            "title": {
+              "ko": "호라티우스 형제의 맹세",
+              "en": "Oath of the Horatii"
+            },
+            "year": 1784,
+            "yearLabel": "1784",
+            "localImage": "data/images/artist-Q83155/다비드_호라티우스 형제의 맹세_1784__artist-Q83155-representative-work.jpg"
+          },
+          "selectionReason": "다비드는 고전 형식과 혁명 전야의 공적 도덕을 결합해 프랑스 신고전주의의 정치적 성격을 대표한다.",
+          "description": "세 아들의 직선적 몸짓과 오른쪽 여성들의 곡선이 세 개의 아치 아래 명확히 대비된다. 개인 감정보다 공동체의 의무를 앞세우는 이야기와 엄격한 구도가 로코코의 사적 쾌락과 단절한다."
+        },
+        {
+          "id": "canova-ideal-form",
+          "role": "anchor",
+          "canonicalCategoryId": "neoclassicism--roman-international",
+          "developmentId": "dev--neoclassicism-roman-international-italy",
+          "countryIds": [
+            "italy"
+          ],
+          "label": {
+            "ko": "이상적 형식과 인체",
+            "en": "Ideal Form and the Human Figure"
+          },
+          "feature": "고대 조각의 비례, 매끈한 표면, 절제된 감정을 이상적 인체와 관람 경험의 기준으로 삼았다.",
+          "artist": {
+            "id": "artist-Q5547",
+            "name": {
+              "ko": "안토니오 카노바",
+              "en": "Antonio Canova"
+            },
+            "birth": 1757,
+            "death": 1822,
+            "nationality": {
+              "ko": "이탈리아",
+              "en": "Italian"
+            }
+          },
+          "work": {
+            "id": "artist-Q5547-representative-work",
+            "title": {
+              "ko": "큐피드의 키스로 되살아난 프시케",
+              "en": "Psyche Revived by Cupid's Kiss"
+            },
+            "year": 1793,
+            "yearLabel": "1787-1793",
+            "localImage": "data/images/artist-Q5547/카노바_큐피드의 키스로 되살아난_1793__artist-Q5547-representative-work.jpg"
+          },
+          "selectionReason": "카노바는 고대 조각의 이상과 절제된 감정을 독자적으로 밀어붙인 신고전주의의 조형적 기준점이다.",
+          "description": "두 인물의 팔과 날개가 원형의 흐름을 만들고 매끈한 대리석이 살아 있는 피부처럼 보인다. 고대 주제를 고고학적 모사에 그치지 않고 절제된 감정과 관람자의 이동 속에서 새롭게 구성한다."
+        },
+        {
+          "id": "mengs-theoretical-order",
+          "role": "anchor",
+          "canonicalCategoryId": "neoclassicism--roman-international",
+          "developmentId": "dev--neoclassicism-learning-mengs-germany",
+          "countryIds": [
+            "germany"
+          ],
+          "label": {
+            "ko": "이론·라파엘로적 질서",
+            "en": "Theory and Raphaelesque Order"
+          },
+          "feature": "고대와 라파엘로의 질서를 회화의 이론과 균형의 원리로 종합해 국제적 아카데미 언어로 확산했다.",
+          "artist": {
+            "id": "artist-Q312130",
+            "name": {
+              "ko": "안톤 라파엘 멩스",
+              "en": "Anton Raphael Mengs"
+            },
+            "birth": 1728,
+            "death": 1779,
+            "nationality": {
+              "ko": "독일",
+              "en": "Germany"
+            }
+          },
+          "work": {
+            "id": "artist-Q312130-representative-work",
+            "title": {
+              "ko": "파르나소스",
+              "en": "Parnassus"
+            },
+            "year": 1761,
+            "yearLabel": "1761",
+            "localImage": "data/images/artist-Q312130/멩스_파르나소스_1761__artist-Q312130-representative-work.jpg"
+          },
+          "selectionReason": "멩스는 고대와 라파엘로의 질서를 회화로 종합한 이론적 변주이며, 여러 궁정을 오가며 이 기준을 국제적으로 확산했다.",
+          "description": "명료한 윤곽과 균형 잡힌 신화 장면은 신고전주의의 고대 모범을 드러낸다. 여러 궁정을 오가며 고고학적 이상을 국제적 장식 언어로 확산한 점은 멩스만의 특성이다."
+        },
+        {
+          "id": "kauffman-international-history",
+          "role": "variation",
+          "canonicalCategoryId": "neoclassicism--roman-international",
+          "developmentId": "dev--neoclassicism-learning-kauffman-united-kingdom",
+          "countryIds": [
+            "united-kingdom"
+          ],
+          "label": {
+            "ko": "국제 역사화의 주요 변주",
+            "en": "Major Variation: International History Painting"
+          },
+          "feature": "고전적 덕목을 여성 주인공, 가족, 교육, 감정의 역사 서사로 넓혀 국제적 관객에게 제시한 주요 변주다.",
+          "artist": {
+            "id": "artist-Q155733",
+            "name": {
+              "ko": "앙겔리카 카우프만",
+              "en": "Angelica Kauffman"
+            },
+            "birth": 1741,
+            "death": 1807,
+            "nationality": {
+              "ko": "영국",
+              "en": "United Kingdom"
+            }
+          },
+          "work": {
+            "id": "artist-Q155733-representative-work",
+            "title": {
+              "ko": "그라쿠스 형제의 어머니 코르넬리아",
+              "en": "Cornelia, Mother of the Gracchi"
+            },
+            "year": 1785,
+            "yearLabel": "1785",
+            "localImage": "data/images/artist-Q155733/카우프만_그라쿠스 형제의 어머니_1785__artist-Q155733-representative-work.jpg"
+          },
+          "selectionReason": "카우프만은 고대의 덕목 서사를 국제 역사화와 여성 주인공의 시선으로 확장해, 다비드식 공적 도덕과도 다른 변주를 보여 준다.",
+          "description": "고대 복식과 명료한 윤곽, 절제된 몸짓은 신고전주의의 도덕적 서사를 드러낸다. 보석보다 자녀를 가치로 제시하는 여성 주인공은 공적 시민 윤리와 맞닿지만, 가족·교육·여성의 가치를 중심에 놓은 점은 카우프만만의 특성이다."
+        },
+        {
+          "id": "ingres-line-idealization",
+          "role": "anchor",
+          "canonicalCategoryId": "neoclassicism--roman-international",
+          "developmentId": "dev--neoclassicism-learning-ingres-france",
+          "countryIds": [
+            "france"
+          ],
+          "label": {
+            "ko": "선·표면·이상화",
+            "en": "Line, Surface, and Idealization"
+          },
+          "feature": "맑은 윤곽, 길게 다듬은 선, 매끈한 표면을 통해 종교화·역사화·초상에서 독자적인 이상화를 만들었다.",
+          "artist": {
+            "id": "artist-Q161472",
+            "name": {
+              "ko": "장오귀스트도미니크 앵그르",
+              "en": "Jean-Auguste-Dominique Ingres"
+            },
+            "birth": 1780,
+            "death": 1867,
+            "nationality": {
+              "ko": "프랑스",
+              "en": "France"
+            }
+          },
+          "work": {
+            "id": "ingres-vow-louis-xiii-1824",
+            "title": {
+              "ko": "루이 13세의 서원",
+              "en": "The Vow of Louis XIII"
+            },
+            "year": 1824,
+            "yearLabel": "1824",
+            "localImage": "data/images/artist-Q161472/앵그르_루이 13세의 서원_1824__ingres-vow-louis-xiii-1824.jpg"
+          },
+          "selectionReason": "앵그르는 다비드의 제자이지만 선·표면·이상화의 독자적 원리를 19세기까지 밀어붙인 신고전주의의 기준점이다.",
+          "description": "성모에게 프랑스를 봉헌하는 장면은 안정된 삼각형 구도, 절제된 몸짓, 맑은 선으로 조직된다. 제국 초상은 다비드적 공적 이미지와 맞닿지만, 이 작품은 신앙·역사·이상 형식이 만나는 앵그르만의 경향을 더 직접적으로 보여 준다."
+        }
+      ],
+      "comparisonAxes": [
+        {
+          "id": "empire-public-image",
+          "role": "comparison",
+          "label": {
+            "ko": "제국의 공적 이미지",
+            "en": "Imperial Public Image"
+          },
+          "description": "나폴레옹을 다룬 작품은 하나의 독립 사조나 앵그르의 전체를 대표하는 분류가 아니라, 공적 권력의 시각 언어가 신고전주의 형식과 만나는 비교 축이다.",
+          "works": [
+            {
+              "artistId": "artist-Q83155",
+              "workId": "david-napoleon-crossing-alps-1801"
+            },
+            {
+              "artistId": "artist-Q83155",
+              "workId": "david-coronation-napoleon-1807"
+            },
+            {
+              "artistId": "artist-Q161472",
+              "workId": "artist-Q161472-representative-work"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

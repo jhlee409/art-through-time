@@ -14,7 +14,7 @@
       {"name":{"ko":"르네상스","en":"Renaissance"},"start":1494,"end":1610,"color":"#c8974f","canonical":{"parentId":"renaissance","documentOwnerId":"renaissance","categoryIds":[],"developmentIds":[]}},
       {"name":{"ko":"바로크","en":"Baroque"},"start":1600,"end":1750,"color":"#9d7654","canonical":{"parentId":"baroque","documentOwnerId":"baroque","categoryIds":["baroque--french"],"developmentIds":["dev--baroque-french-france"]}},
       {"name":{"ko":"로코코","en":"Rococo"},"start":1715,"end":1770,"color":"#d9a06d","canonical":{"parentId":"rococo","documentOwnerId":"rococo","categoryIds":["rococo--french"],"developmentIds":["dev--rococo-french-france"]}},
-      {"name":{"ko":"신고전주의","en":"Neoclassicism"},"start":1760,"end":1830,"color":"#778da9","canonical":{"parentId":"neoclassicism","documentOwnerId":"neoclassicism","categoryIds":["neoclassicism--french","neoclassicism--roman-international"],"developmentIds":["dev--neoclassicism-french-france","dev--neoclassicism-roman-international-italy"]}},
+      {"name":{"ko":"신고전주의","en":"Neoclassicism"},"start":1760,"end":1830,"color":"#778da9","canonical":{"parentId":"neoclassicism","documentOwnerId":"neoclassicism","categoryIds":["neoclassicism--french"],"developmentIds":["dev--neoclassicism-french-france"]}},
       {"name":{"ko":"낭만주의","en":"Romanticism"},"start":1820,"end":1855,"color":"#bb7a62","canonical":{"parentId":"romanticism","documentOwnerId":"romanticism","categoryIds":["romanticism--french"],"developmentIds":["dev--romanticism-french-france"]}},
       {"name":{"ko":"사실주의","en":"Realism"},"start":1840,"end":1880,"color":"#7d8b72","canonical":{"parentId":"realism","documentOwnerId":"realism","categoryIds":["realism--french"],"developmentIds":["dev--realism-french-france"]}},
       {"name":{"ko":"인상주의","en":"Impressionism"},"start":1860,"end":1890,"color":"#d79747","canonical":{"parentId":"impressionism","documentOwnerId":"impressionism","categoryIds":["impressionism--french"],"developmentIds":["dev--impressionism-french-france"]}},
@@ -48,7 +48,7 @@
       {"name":{"ko":"바우하우스","en":"Bauhaus"},"start":1919,"end":1933,"color":"#557f95","kind":{"ko":"학교·교육운동","en":"School and educational movement"},"canonical":{"parentId":"bauhaus","documentOwnerId":"bauhaus","categoryIds":["bauhaus--core"],"developmentIds":["dev--bauhaus-core-germany"]}},
       {"name":{"ko":"신즉물주의","en":"New Objectivity"},"start":1918,"end":1933,"color":"#6e887e","canonical":{"parentId":"new-objectivity","documentOwnerId":"expressionism","categoryIds":[],"developmentIds":[]}},
       {"name":{"ko":"신표현주의","en":"Neo-Expressionism"},"start":1978,"end":1990,"color":"#c8974f","kind":{"ko":"정본 범주 전개","en":"Canonical category development"},"canonical":{"parentId":"neo-expressionism","documentOwnerId":"postmodernism","categoryIds":["postmodernism--neo-expressionism"],"developmentIds":["dev--postmodernism-neo-expressionism-germany"]}},
-      {"name":{"ko":"신고전주의","en":"Neoclassicism"},"start":1760,"end":1830,"color":"#778da9","kind":{"ko":"정본 범주 전개","en":"Canonical category development"},"canonical":{"parentId":"neoclassicism","documentOwnerId":"neoclassicism","categoryIds":["neoclassicism--roman-international"],"developmentIds":["dev--neoclassicism-roman-international-italy"]}},
+      {"name":{"ko":"신고전주의","en":"Neoclassicism"},"start":1760,"end":1830,"color":"#778da9","kind":{"ko":"정본 범주 전개","en":"Canonical category development"},"canonical":{"parentId":"neoclassicism","documentOwnerId":"neoclassicism","categoryIds":[],"developmentIds":[]}},
       {"name":{"ko":"앵포르멜","en":"Art Informel"},"start":1945,"end":1965,"color":"#806d9b","kind":{"ko":"정본 범주 전개","en":"Canonical category development"},"canonical":{"parentId":"art-informel","documentOwnerId":"art-informel","categoryIds":["art-informel--core"],"developmentIds":["dev--art-informel-core-france"]}}
     ]},
     {"id":"switzerland","name":{"ko":"스위스","en":"Switzerland"},"movements":[
@@ -63,7 +63,7 @@
       {"name":{"ko":"고딕 미술","en":"Gothic art"},"start":1200,"end":1500,"color":"#738b95"},
       {"name":{"ko":"북방 르네상스","en":"Northern Renaissance"},"start":1500,"end":1600,"color":"#c8974f","canonical":{"parentId":"northern-renaissance","documentOwnerId":"northern-renaissance","categoryIds":["northern-renaissance--german"],"developmentIds":["dev--northern-renaissance-german-germany"]}},
       {"name":{"ko":"오스트리아 바로크","en":"Austrian Baroque"},"start":1600,"end":1750,"color":"#9d7654","canonical":{"parentId":"baroque","documentOwnerId":"baroque","categoryIds":[],"developmentIds":[]}},
-      {"name":{"ko":"신고전주의","en":"Neoclassicism"},"start":1770,"end":1830,"color":"#778da9","canonical":{"parentId":"neoclassicism","documentOwnerId":"neoclassicism","categoryIds":["neoclassicism--roman-international"],"developmentIds":["dev--neoclassicism-roman-international-italy"]}},
+      {"name":{"ko":"신고전주의","en":"Neoclassicism"},"start":1770,"end":1830,"color":"#778da9","canonical":{"parentId":"neoclassicism","documentOwnerId":"neoclassicism","categoryIds":[],"developmentIds":[]}},
       {"name":{"ko":"비더마이어","en":"Biedermeier"},"start":1815,"end":1848,"color":"#a99370","canonical":{"parentId":"biedermeier","documentOwnerId":"romanticism","categoryIds":[],"developmentIds":[]}},
       {"name":{"ko":"역사주의","en":"Historicism"},"start":1848,"end":1890,"color":"#b58c52"},
       {"name":{"ko":"빈 분리파","en":"Vienna Secession"},"start":1897,"end":1918,"color":"#ad6c91","canonical":{"parentId":"art-nouveau","documentOwnerId":"art-nouveau","categoryIds":["art-nouveau--vienna-secession"],"developmentIds":["dev--art-nouveau-vienna-secession-austria"]}},
@@ -128,7 +128,7 @@
       {"name":{"ko":"유미주의","en":"Aestheticism"},"start":1860,"end":1900,"color":"#a8799c"},
       {"name":{"ko":"보티시즘","en":"Vorticism"},"start":1914,"end":1918,"color":"#557f95"},
       {"name":{"ko":"팝아트","en":"Pop Art"},"start":1955,"end":1975,"color":"#db6250","kind":{"ko":"정본 범주 전개","en":"Canonical category development"},"canonical":{"parentId":"pop-art","documentOwnerId":"pop-art","categoryIds":["pop-art--british"],"developmentIds":["dev--pop-art-british-united-kingdom"]}},
-      {"name":{"ko":"신고전주의","en":"Neoclassicism"},"start":1760,"end":1830,"color":"#778da9","kind":{"ko":"정본 범주 전개","en":"Canonical category development"},"canonical":{"parentId":"neoclassicism","documentOwnerId":"neoclassicism","categoryIds":["neoclassicism--roman-international"],"developmentIds":["dev--neoclassicism-roman-international-italy"]}},
+      {"name":{"ko":"신고전주의","en":"Neoclassicism"},"start":1760,"end":1830,"color":"#778da9","kind":{"ko":"정본 범주 전개","en":"Canonical category development"},"canonical":{"parentId":"neoclassicism","documentOwnerId":"neoclassicism","categoryIds":[],"developmentIds":[]}},
       {"name":{"ko":"아카데미즘","en":"Academicism"},"start":1820,"end":1900,"color":"#8a7e68","kind":{"ko":"정본 범주 전개","en":"Canonical category development"},"canonical":{"parentId":"academicism","documentOwnerId":"academicism","categoryIds":["academicism--core"],"developmentIds":["dev--academicism-core-france"]}}
     ]},
     {"id":"spain","name":{"ko":"스페인","en":"Spain"},"movements":[

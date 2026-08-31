@@ -6,6 +6,7 @@ const root = path.resolve(__dirname, '..');
 const canonical = require('../data/art-movement-canonical.json');
 const guides = require('../data/art-movement-learning-guides.json');
 const representatives = require('../data/art-movement-representatives.json');
+const learningMap = require('../data/art-movement-learning-map.json');
 const index = require('../data/미술사조/index.json');
 const args = new Set(process.argv.slice(2));
 
@@ -43,6 +44,16 @@ function documentLevelLabel(parent, isContext) {
 }
 
 function renderCategories(parent) {
+  const learningMovement = learningMap.movements?.[parent.id];
+  if (learningMovement?.nodes?.length) {
+    const roleLabels = { anchor: '기준점', variation: '주요 변주', comparison: '비교 축' };
+    const nodes = learningMovement.nodes.map(node => `<li><strong>${esc(node.label?.ko || node.id)} <small>(${roleLabels[node.role] || '학습 항목'})</small></strong><span>${esc(node.feature || '')}</span></li>`);
+    const comparisons = (learningMovement.comparisonAxes || []).map(axis => `<li><strong>${esc(axis.label?.ko || axis.id)} <small>(${roleLabels[axis.role] || '비교 축'})</small></strong><span>${esc(axis.description || '')}</span></li>`);
+    const comparisonBlock = comparisons.length
+      ? `<div class="movement-learning-guide-block"><h3>함께 비교할 사례</h3><ul class="movement-learning-guide-categories">${comparisons.join('')}</ul></div>`
+      : '';
+    return `<div class="movement-learning-guide-block"><h3>조형 기준점과 주요 변주</h3><ul class="movement-learning-guide-categories">${nodes.join('')}</ul></div>${comparisonBlock}`;
+  }
   const representativeMap = new Map(representatives.categories.map(entry => [entry.categoryId, entry]));
   const categories = (parent.categoryIds || []).map(categoryId => {
     const category = canonical.categories.find(item => item.id === categoryId);
@@ -55,11 +66,15 @@ function renderCategories(parent) {
 }
 
 function renderGuide(id, parent, guide, isContext) {
+  const hasLearningMap = Boolean(learningMap.movements?.[parent.id]?.nodes?.length);
+  const learningMapGuideStyle = hasLearningMap
+    ? '<style>.movement-learning-guide-grid{grid-template-columns:minmax(0,1fr)!important}.movement-learning-guide-categories span{white-space:nowrap;word-break:keep-all;overflow-wrap:normal}</style>'
+    : '';
   const source = guide.source
     ? `<p class="movement-learning-guide-source">학술 참고: <a href="${esc(guide.source.url)}" target="_blank" rel="noopener">${esc(guide.source.label)}</a></p>`
     : '';
-  return `<section id="movement-learning-guide" data-art-atlas-learning-guide-version="1" data-art-atlas-content-source="data/art-movement-learning-guides.json">
-<div class="movement-learning-guide-inner">
+  return `<section id="movement-learning-guide" data-art-atlas-learning-guide-version="1" data-art-atlas-content-source="data/art-movement-learning-guides.json"${hasLearningMap ? ' data-art-atlas-learning-map-guide="true"' : ''}>
+${learningMapGuideStyle}<div class="movement-learning-guide-inner">
 <p class="movement-learning-guide-kicker">${esc(documentLevelLabel(parent,isContext))}</p>
 <h2>초심자 학습 길잡이</h2>
 <p class="movement-learning-guide-orientation">${esc(guide.orientation)}</p>

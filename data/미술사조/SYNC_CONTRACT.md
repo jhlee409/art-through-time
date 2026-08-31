@@ -19,6 +19,7 @@
 | `contextId` | project | data/art-movement-canonical.json#contextReferences[].id | `previous-art--gothic` |
 | `categoryId` | project | data/art-movement-canonical.json#categories[].id | `baroque--french` |
 | `developmentId` | project | movement HTML #countries table row | `dev--baroque-french-france` |
+| `learningNodeId` | movement document | data/art-movement-learning-map.json#movements[].nodes[].id | `canova-ideal-form` |
 | `countryId` | project | data/art-movements.json#countries[].id | `france` |
 | `artistId` | project | data/artists.json#artists[].id | `artist-Q41554` |
 | `workId` | artist | data/artists.json#artists[].works[].id | `poussin-death-of-germanicus-1627` |
@@ -43,7 +44,7 @@
 | `parentAndCategoryNames` | data/art-movement-canonical.json |
 | `parentAndCategoryOrder` | data/art-movement-canonical.json |
 | `movementDatesAndColors` | data/art-movements.json |
-| `countryCategoryFeatureAndArtistMembership` | movement HTML #countries developmentRow |
+| `countryCategoryFeatureAndArtistMembership` | movement HTML #countries developmentRow; learningNodeId가 있으면 data/art-movement-learning-map.json이 화가·작품·학습 역할의 정본 |
 | `artistRoleAndOrder` | 대표 화가 셀·더 볼 화가 셀과 cardRole별 카드 DOM 순서가 동일해야 한다 |
 | `representativeWorkImageAndText` | movement HTML representativeCard |
 | `artistAndWorkIdentityMetadata` | data/artists.json |
@@ -71,7 +72,7 @@
 - 각 developmentRow에는 art-movements 국가 ID 한 개 이상이 공백 구분 목록으로 있다.
 - 각 developmentRow에는 같은 developmentId·categoryId·countryIds를 가진 cardGroup이 정확히 하나 있다.
 - 각 cardGroup에는 같은 developmentId를 가진 grid가 정확히 하나 있다.
-- 각 행에는 대표 화가가 정확히 1명, 더 볼 화가가 1~4명 있다.
+- 각 행에는 대표 화가가 정확히 1명, 더 볼 화가가 1~4명 있다. 단 learningNodeId 학습 행은 더 볼 화가 열과 카드를 생략할 수 있다.
 - 각 카드 묶음에는 role=primary 카드가 정확히 1개이고 첫 카드이며 role=further 카드가 1~4개 있다.
 - 표의 대표·더 볼 artistId 집합과 같은 역할 카드의 artistId 집합은 각각 같고 순서도 같다.
 - 한 문서에서 artistId가 여러 developmentId에 속하면 모든 해당 카드에 duplicateArtistReason을 기록해야 한다.

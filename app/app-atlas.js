@@ -635,8 +635,9 @@ function artistListArtistsForMovement(entry) {
   const documentName=entry.parentDocumentName || movementDocumentKey(entry.name?.en || entry.name?.ko || loc(entry.name));
   const canonicalRow = entry.developmentId && artistListCountryDevelopmentRepresentatives.get(`development::${entry.developmentId}`);
   const representativeRows=canonicalRow ? [canonicalRow] : [...countryIds].flatMap(countryId => artistListCountryDevelopmentRepresentatives.get(`${documentName}::${countryId}`) || []).filter(row => !entry.countryDevelopmentDetail || row.label === entry.countryDevelopmentDetail);
-  const representativeIds=representativeRows.flatMap(row => row.artistIds || []);
-  const primaryIds=new Set(representativeRows.flatMap(row => row.primaryArtistIds || []));
+  const presentationArtistIds=entry.artistListPresentation?.artistIds || [];
+  const representativeIds=presentationArtistIds.length ? presentationArtistIds : representativeRows.flatMap(row => row.artistIds || []);
+  const primaryIds=new Set(presentationArtistIds.length ? entry.artistListPresentation.primaryArtistIds : representativeRows.flatMap(row => row.primaryArtistIds || []));
   if (!artistListCountryDevelopmentRepresentativesReady) {
     loadArtistListCountryDevelopmentRepresentatives();
     return [];
@@ -648,13 +649,13 @@ function artistListArtistsForMovement(entry) {
     if (!life || life.start > movementEnd || life.end < movementStart) return null;
     if (!representativeSet.has(artist.id)) return null;
     const artistCountryIds = artistListArtistCountryIds(artist);
-    if (!canonicalRow) {
+    if (!canonicalRow && !presentationArtistIds.length) {
       if (!artistCountryIds.some(countryId => countryIds.has(countryId))) return null;
       const movementEntries = artistMovementEntries(artist);
       if (!movementEntries.some(artistEntry => artistListMovementKeyMatchesArtistEntry(movementKey, artistEntry))) return null;
     }
     const countryLabel = artistCountryIds.filter(countryId => countryIds.has(countryId)).map(countryId => loc(movementCountries.find(country => country.id === countryId)?.name)).filter(Boolean).join(', ');
-    return {artist, life, countryLabel, artistRole:primaryIds.has(artist.id) ? 'primary' : 'further'};
+    return {artist, life, countryLabel, artistRole:primaryIds.has(artist.id) ? 'primary' : 'further', presentationLabel:entry.artistListPresentation?.labels?.[artist.id] || ''};
   }).filter(Boolean);
 }
 function artistListFallbackDevelopmentDetails(canonicalBinding, countryId) {
@@ -849,7 +850,8 @@ function artistListPackedArtistOverlayMarkup(entry, chartStart, chartEnd, yearSc
     const name = artistListKoreanName(item.artist);
     const yearsText = `${item.life.start}–${item.life.end}`;
     const countryText = item.countryLabel ? ` · ${item.countryLabel}` : '';
-    const title = `${name}${countryText} · ${yearsText} · ${loc(entry.name)}`;
+    const presentationText=item.presentationLabel ? ` · ${item.presentationLabel}` : '';
+    const title = `${name}${countryText} · ${yearsText} · ${loc(entry.name)}${presentationText}`;
     const className = `${item.exceedsMovement ? ' artist-life-pill--extended' : ''}${item.artistRole === 'primary' ? ' artist-life-pill--primary' : ' artist-life-pill--further'}`;
     // A lifetime box may extend outside its country-development box.  The blue
     // activity segment must nevertheless remain inside that box's time span.
@@ -916,9 +918,16 @@ function artistListMovementEntries(countries, selectedCountryIds, start, end) {
       const owner=canonicalBinding && (artMovementCanonical.parents || []).find(parent => parent.id === canonicalBinding.documentOwnerId);
       const parentDocumentName=owner?.documentKey || movementDocumentKey(clipped.name?.en || clipped.name?.ko || loc(clipped.name));
       const canonicalDetails=(canonicalBinding?.developmentIds || []).map(developmentId => artistListCountryDevelopmentRepresentatives.get(`development::${developmentId}`)).filter(detail => detail?.countryIds?.includes(country.id));
-      const details=canonicalBinding
+      let details=canonicalBinding
         ? (artistListCountryDevelopmentRepresentativesReady ? canonicalDetails : artistListFallbackDevelopmentDetails(canonicalBinding, country.id))
         : (artistListCountryDevelopmentRepresentativesReady ? (artistListCountryDevelopmentRepresentatives.get(`${parentDocumentName}::${country.id}`) || []) : []);
+      if (canonicalBinding?.parentId === 'neoclassicism') {
+        details=(artMovementLearningMap.movements?.neoclassicism?.nodes || []).filter(node => (node.countryIds || []).includes(country.id)).map(node => ({
+          parentId:'neoclassicism', developmentId:node.developmentId, categoryId:node.canonicalCategoryId,
+          countryIds:node.countryIds || [], label:loc(node.label), artistIds:[node.artist.id], primaryArtistIds:[node.artist.id], furtherArtistIds:[],
+          featureHtml:`<p>${esc(node.feature || '')}</p>`, feature:node.feature || '', learningNodeId:node.id, learningRole:node.role
+        }));
+      }
       details.forEach((detail, detailOrder) => rows.push({
         ...clipped,
         name:(artMovementCanonical.categories || []).find(category => category.id === detail.categoryId)?.name || {ko:detail.label || loc(clipped.name),en:detail.label || loc(clipped.name)},
@@ -976,7 +985,7 @@ function artistListMovementEntries(countries, selectedCountryIds, start, end) {
       return startA - startB || endA - endB || a.sourceOrder - b.sourceOrder;
     })
     .map((group, index) => [group.key, index]));
-  return [...groups.values()].sort((a,b) => groupOrder.get(a.key) - groupOrder.get(b.key)).map(group => {
+  const parentEntries=[...groups.values()].sort((a,b) => groupOrder.get(a.key) - groupOrder.get(b.key)).map(group => {
     const children=movementRows.filter(row => row.groupKey === group.key).sort((a,b) =>
       artistListMovementSortStart(a) - artistListMovementSortStart(b)
       || artistListMovementSortEnd(a) - artistListMovementSortEnd(b)
@@ -997,6 +1006,39 @@ function artistListMovementEntries(countries, selectedCountryIds, start, end) {
       groupKey:group.key,
       children,
       sourceOrder:group.sourceOrder
+    };
+  });
+  return parentEntries.map(entry => {
+    if (entry.name?.ko !== '신고전주의' || !entry.children?.length) return entry;
+    const nodes=artMovementLearningMap.movements?.neoclassicism?.nodes || [];
+    const artistIds=nodes.map(node => node.artist.id);
+    const representedIds=new Set(entry.children.flatMap(child => {
+      const detail=child.developmentId && artistListCountryDevelopmentRepresentatives.get(`development::${child.developmentId}`);
+      return detail?.artistIds || [];
+    }));
+    const visibleArtistIds=artistIds.filter(id => representedIds.has(id));
+    if (!visibleArtistIds.length) return entry;
+    const first=entry.children[0];
+    return {
+      ...entry,
+      children:[{
+        ...first,
+        name:artMovementLearningMap.movements?.neoclassicism?.title || {ko:'신고전주의의 주요 조형 지향',en:'Major Neoclassical Directions'},
+        start:entry.start,
+        end:entry.end,
+        sourceStart:entry.start,
+        sourceEnd:entry.end,
+        countryIds:entry.countryIds,
+        countryNames:entry.countryNames,
+        developmentId:'',
+        categoryId:'',
+        mergedCanonicalSubmovement:false,
+        artistListPresentation:{
+          artistIds:visibleArtistIds,
+          primaryArtistIds:nodes.filter(node => node.role === 'anchor').map(node => node.artist.id).filter(id => visibleArtistIds.includes(id)),
+          labels:Object.fromEntries(nodes.map(node => [node.artist.id, `${node.role === 'variation' ? '주요 변주' : '기준점'} · ${loc(node.label)}`]))
+        }
+      }]
     };
   });
 }
@@ -1230,11 +1272,13 @@ function renderCountryArt(options = {}) {
           const childLeft=Math.max(0,child.start-start)*yearScale;
           const childWidth=Math.max(2,(Math.min(end,child.end)-Math.max(start,child.start))*yearScale);
           const countryName=artistListMovementCountryLabel(child);
-          const childTitle=`${countryName} · ${loc(child.name)} · ${yearLabel(child.sourceStart ?? child.start)}–${yearLabel(child.sourceEnd ?? child.end)}`;
+          const childTitle=child.artistListPresentation
+            ? `${loc(entry.name)} · ${loc(child.name)} · ${yearLabel(child.sourceStart ?? child.start)}–${yearLabel(child.sourceEnd ?? child.end)}`
+            : `${countryName} · ${loc(child.name)} · ${yearLabel(child.sourceStart ?? child.start)}–${yearLabel(child.sourceEnd ?? child.end)}`;
           const parentDocumentName=movementDocumentKey(entry.name?.en || entry.name?.ko || '');
           const regionFeatureKey=`${parentDocumentName}|${child.countryId}|${artistListMovementLabelKey(child)}`;
-          const visibleLabel = child.mergedCanonicalSubmovement ? loc(child.name) : `${countryName} · ${loc(child.name)}`;
-          return `<div class="artist-list-submovement-box" data-region-feature-key="${esc(regionFeatureKey)}" data-region-feature-development="${esc(child.developmentId || '')}" data-region-feature-parent="${esc(parentDocumentName || entry.name?.en || entry.name?.ko || '')}" data-region-feature-parent-label="${esc(loc(entry.name))}" data-region-feature-country="${esc(child.countryId || '')}" data-region-feature-country-label="${esc(countryName)}" style="left:${childLeft}px;top:${child.submovementTop}px;width:${childWidth}px;height:${child.submovementHeight}px;--movement-color:${esc(entry.artistListParentColor)}" title="${esc(childTitle)}"><span class="artist-list-submovement-title" title="${esc(childTitle)}">${esc(visibleLabel)}</span></div>`;
+          const visibleLabel = (child.mergedCanonicalSubmovement || child.artistListPresentation) ? loc(child.name) : `${countryName} · ${loc(child.name)}`;
+          return `<div class="artist-list-submovement-box" data-region-feature-key="${esc(regionFeatureKey)}" data-region-feature-development="${esc(child.developmentId || '')}" data-region-feature-parent="${esc(parentDocumentName || entry.name?.en || entry.name?.ko || '')}" data-region-feature-parent-label="${esc(loc(entry.name))}" data-region-feature-country="${esc(child.countryId || '')}" data-region-feature-country-label="${esc(countryName)}" ${child.artistListPresentation ? 'data-artist-list-presentation="neoclassicism"' : ''} style="left:${childLeft}px;top:${child.submovementTop}px;width:${childWidth}px;height:${child.submovementHeight}px;--movement-color:${esc(entry.artistListParentColor)}" title="${esc(childTitle)}"><span class="artist-list-submovement-title" title="${esc(childTitle)}">${esc(visibleLabel)}</span></div>`;
         }).join('');
         submovements.forEach(child => artistLifeOverlayPills.push(artistListPackedArtistOverlayMarkup(child, start, end, yearScale, child.submovementTop, child.artistLayout, {
           rowTop:artistListRowTops.get(entry) || 0,
@@ -1536,6 +1580,7 @@ function renderCountryArt(options = {}) {
     });
   });
   if (artistListMode) timeline.querySelectorAll('.artist-list-submovement-box[data-region-feature-key]').forEach(box => box.addEventListener('dblclick', event => {
+    if (box.dataset.artistListPresentation) return;
     if (event.target.closest('.artist-life-pill, .artist-list-submovement-title')) return;
     event.preventDefault();
     event.stopPropagation();
