@@ -9,6 +9,8 @@ const representatives = require('../data/art-movement-representatives.json');
 const learningMap = require('../data/art-movement-learning-map.json');
 const index = require('../data/미술사조/index.json');
 const args = new Set(process.argv.slice(2));
+const documentArg = [...args].find(arg => arg.startsWith('--document='));
+const onlyDocumentId = documentArg ? documentArg.slice('--document='.length).trim() : '';
 
 const style = `<style id="art-atlas-learning-guide-style">
 #movement-learning-guide{padding:38px 0;border-top:1px solid var(--line,#d8d4cc);border-bottom:1px solid var(--line,#d8d4cc);background:var(--panel,#f7f7f5)}
@@ -21,8 +23,8 @@ const style = `<style id="art-atlas-learning-guide-style">
 #movement-learning-guide .movement-learning-guide-block h3{margin:0 0 .65rem;font-size:clamp(1.3rem,2.25vw,1.75rem);line-height:1.32}
 #movement-learning-guide .movement-learning-guide-block ul,#movement-learning-guide .movement-learning-guide-block ol{margin:0;padding-left:1.35rem}
 #movement-learning-guide .movement-learning-guide-block li{margin:.42rem 0}
-#movement-learning-guide .movement-learning-guide-categories strong{display:block;color:var(--accent,#8a641e)}
-#movement-learning-guide .movement-learning-guide-categories span{display:block}
+#movement-learning-guide .movement-learning-guide-categories li>strong{display:block;color:var(--accent,#8a641e)}
+#movement-learning-guide .movement-learning-guide-categories li>span{display:block;margin-top:.12rem;word-break:keep-all;overflow-wrap:break-word}
 #movement-learning-guide .movement-learning-guide-boundary{grid-column:1/-1}
 #movement-learning-guide .movement-learning-guide-boundary p{max-width:none;margin:.45rem 0}
 #movement-learning-guide .movement-learning-guide-source{margin:1.15rem 0 0;font-size:.9rem;color:var(--muted,#666)}
@@ -68,7 +70,7 @@ function renderCategories(parent) {
 function renderGuide(id, parent, guide, isContext) {
   const hasLearningMap = Boolean(learningMap.movements?.[parent.id]?.nodes?.length);
   const learningMapGuideStyle = hasLearningMap
-    ? '<style>.movement-learning-guide-grid{grid-template-columns:minmax(0,1fr)!important}.movement-learning-guide-categories span{white-space:nowrap;word-break:keep-all;overflow-wrap:normal}</style>'
+    ? '<style>.movement-learning-guide-grid{grid-template-columns:minmax(0,1fr)!important}</style>'
     : '';
   const source = guide.source
     ? `<p class="movement-learning-guide-source">학술 참고: <a href="${esc(guide.source.url)}" target="_blank" rel="noopener">${esc(guide.source.label)}</a></p>`
@@ -114,8 +116,10 @@ function synchronizeDocument(documentId, parent, relative, isContext=false) {
   html = html.replace(/<\/head>/i, `${style}</head>`);
   html = html.replace(/<main\b[^>]*>/i, tag => `${tag}\n${renderGuide(documentId,parent,guide,isContext)}\n`);
   html = setRootVersion(html);
-  const normalizeNewlines = value => value.replace(/\r\n/g, '\n');
-  if (normalizeNewlines(html) === normalizeNewlines(original)) return false;
+  const normalizeForComparison = value => value
+    .replace(/<a\b(?=[^>]*\bclass=["'][^"']*\bart-atlas-artist-link\b)[^>]*>([\s\S]*?)<\/a>/gi, '$1')
+    .replace(/\r\n/g, '\n');
+  if (normalizeForComparison(html) === normalizeForComparison(original)) return false;
   if (!args.has('--check') && !args.has('--dry-run')) fs.writeFileSync(file, html, 'utf8');
   return true;
 }
@@ -127,19 +131,20 @@ function main() {
   ];
   const guideIds = Object.keys(guides.documents);
   assert(expectedIds.length === guideIds.length && expectedIds.every(id => guideIds.includes(id)), 'Learning guide IDs must exactly match the 36 registered documents');
+  if (onlyDocumentId) assert(expectedIds.includes(onlyDocumentId), `Unknown learning guide document: ${onlyDocumentId}`);
   const changed = [];
-  canonical.parents.filter(parent => parent.role === 'document').forEach(parent => {
+  canonical.parents.filter(parent => parent.role === 'document' && (!onlyDocumentId || parent.id === onlyDocumentId)).forEach(parent => {
     const relative = index.documents?.[parent.documentKey]?.['1'];
     assert(relative, `${parent.id}: indexed document is missing`);
     if (synchronizeDocument(parent.id,parent,relative)) changed.push(parent.id);
   });
-  canonical.contextReferences.forEach(context => {
+  canonical.contextReferences.filter(context => !onlyDocumentId || context.id === onlyDocumentId).forEach(context => {
     const relative = index.documents?.[context.documentKey]?.['1'];
     assert(relative, `${context.id}: indexed document is missing`);
     if (synchronizeDocument(context.id,{...context,categoryIds:[]},relative,true)) changed.push(context.id);
   });
   if (args.has('--check') && changed.length) throw new Error(`Learning guides are out of sync: ${changed.join(', ')}`);
-  console.log(JSON.stringify({documents: expectedIds.length, changed: changed.length, mode: args.has('--check') ? 'check' : (args.has('--dry-run') ? 'dry-run' : 'write')}, null, 2));
+  console.log(JSON.stringify({documents: onlyDocumentId ? 1 : expectedIds.length, changed: changed.length, mode: args.has('--check') ? 'check' : (args.has('--dry-run') ? 'dry-run' : 'write')}, null, 2));
 }
 
 main();
