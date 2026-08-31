@@ -290,7 +290,7 @@ function main() {
   writeJson(indexFile, {documents: nextDocuments});
   writeJson(legacyIndexFile, {
     schema: 1,
-    purpose: '정본 36개 문서 색인에서 제외했지만 5단계 내용 흡수 전까지 삭제하지 않는 기존 사조 문서',
+    purpose: '정본 36개 활성 문서 색인에서 제외했지만 아직 내용 출처로 필요한 기존 사조 문서',
     documents: legacyDocuments
   });
   if (nextMovementSource !== movementSource) fs.writeFileSync(movementsFile, nextMovementSource, 'utf8');

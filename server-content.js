@@ -1,7 +1,7 @@
 /* Movement documents, local image uploads, and public static-file services. */
 const {assertStableEditableStructure, synchronizeTableArtistOrder, validateCompleteDocument} = require('./movement-sync-v1');
 module.exports = function createContentService(deps) {
-  const { fs, path, URL, createHash, randomBytes, execFileAsync, ffmpegPath, root, dataDir, highResolutionDir, imageStagingDir, techniquesFile, topicsFile, topicImageDir, movementSectionLinksFile, migrationAssetManifestFile, adminEmail, highResolutionStoredLimit, sourceImageInputLimit, jsonRequestBodyLimit, normalizeArtistsPayload, validateArtistsPayload, firebaseExport, invalidArtworkThumbnail, syncPersonNameDictionary, readAccessControl, readArtistsFile, writeArtistsFile, saveThumbnailBuffer, highResolutionPathExists } = deps;
+  const { fs, path, URL, randomBytes, execFileAsync, ffmpegPath, root, dataDir, highResolutionDir, imageStagingDir, techniquesFile, topicsFile, topicImageDir, movementSectionLinksFile, migrationAssetManifestFile, adminEmail, highResolutionStoredLimit, sourceImageInputLimit, jsonRequestBodyLimit, normalizeArtistsPayload, validateArtistsPayload, firebaseExport, invalidArtworkThumbnail, syncPersonNameDictionary, readAccessControl, readArtistsFile, writeArtistsFile, saveThumbnailBuffer, highResolutionPathExists } = deps;
 function highResolutionLocation(email, artistId) {
   return {folder:path.join(highResolutionDir,artistId), relativePrefix:`data/images/${artistId}`};
 }
