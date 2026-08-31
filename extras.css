@@ -56,6 +56,8 @@
 .artwork-wikipedia-link[data-wikipedia-pending="true"] { text-decoration: none; pointer-events: none; cursor: default; }
 .art-card-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-width: 0; margin-top: 3px; }
 .art-card-footer .art-collection { min-width: 0; margin-top: 0; }
+.art-work-year { flex: none; color: #9b3f2d; font-family: 'DM Mono', monospace; font-size: 9px; font-weight: 800; line-height: 1.4; }
+.art-work-description { display: -webkit-box; margin-top: 6px; overflow: hidden; color: #536058; font-size: 9.5px; line-height: 1.5; overflow-wrap: anywhere; -webkit-box-orient: vertical; -webkit-line-clamp: 4; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 .movement-popup .detail-panel { display: none; }
 .movement-popup .main-area { display: block; width: auto; flex: 1 1 0; min-width: 0; height: 100vh; }

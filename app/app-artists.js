@@ -684,6 +684,7 @@ function renderTimeline() {
     const previewLabel = language === 'ko' ? `${workTitle} 크게 보기` : `Enlarge ${workTitle}`;
     const previewButton = image ? `<button class="artwork-preview-button" type="button" title="${esc(previewLabel)}" aria-label="${esc(previewLabel)}">⌕</button>` : '';
     const previewYear = workYearLabel(w) || (language === 'ko' ? '연도 미상' : 'Year unknown');
+    const workDescription = String(loc(w.description) || '').replace(/\s+/g,' ').trim();
     const previewArtist = artistDisplayName(artist);
     const fallbackImage = '';
     const urlBadge = imageInfo.urlDependent ? urlDependencyBadge() : '';
@@ -701,9 +702,10 @@ function renderTimeline() {
       : '';
     const artworkLinkEntry = currentUserIsAdmin ? `<form class="artwork-link-entry thumbnail-artwork-link-entry hidden" data-work="${esc(w.id)}"><input type="url" inputmode="url" placeholder="https://" aria-label="${esc(artworkLinkInputLabel)}" required>${linkEmphasisField()}<button type="submit">${esc(confirmArtworkLinkLabel)}</button></form>` : '';
     const titleMarkup = `<span class="art-title-row"><span class="art-title-with-links">${titleLink}${artworkLinkControls}</span>${highResBadge}</span>${artworkLinkEntry}`;
-    const footerMarkup = collectionMarkup ? `<span class="art-card-footer">${collectionMarkup}</span>` : '';
+    const footerMarkup = `<span class="art-card-footer"><small class="art-work-year">${esc(previewYear)}</small>${collectionMarkup}</span>`;
+    const descriptionMarkup = workDescription ? `<small class="art-work-description" title="${esc(workDescription)}">${esc(workDescription)}</small>` : '';
     const controls = currentUserIsAdmin ? `<button class="delete-artwork" data-work="${esc(w.id)}" title="${esc(t('delete'))}" aria-label="${esc(t('delete'))}">×</button><button class="replace-local-image" data-work="${esc(w.id)}" title="${esc(replaceLabel)}" aria-label="${esc(replaceLabel)}">↗</button>` : '';
-    return `<div class="art-card${primaryMovementArtwork ? ' primary-movement-artwork' : ''}" data-work="${esc(w.id)}" data-preview-artist="${esc(previewArtist)}" data-preview-title="${esc(workTitle)}" data-preview-year="${esc(previewYear)}" data-preview-collection="${collection && collection !== t('unknown') ? esc(collection) : ''}" title="${primaryMovementArtwork ? esc(primaryMovementArtworkLabel) : ''}"><span class="art-thumb">${featuredToggle}${image ? `<img src="${esc(image)}" alt="${esc(workTitle)}" loading="lazy"${fallbackImage ? ` data-fallback-src="${esc(fallbackImage)}"` : ''} />${urlBadge}` : `<span class="art-thumb-empty">${esc(unavailableImageLabel(work))}</span>`}${previewButton}${controls}</span><span class="art-meta">${titleMarkup}${footerMarkup}</span></div>`;
+    return `<div class="art-card${primaryMovementArtwork ? ' primary-movement-artwork' : ''}" data-work="${esc(w.id)}" data-preview-artist="${esc(previewArtist)}" data-preview-title="${esc(workTitle)}" data-preview-year="${esc(previewYear)}" data-preview-collection="${collection && collection !== t('unknown') ? esc(collection) : ''}" title="${primaryMovementArtwork ? esc(primaryMovementArtworkLabel) : ''}"><span class="art-thumb">${featuredToggle}${image ? `<img src="${esc(image)}" alt="${esc(workTitle)}" loading="lazy"${fallbackImage ? ` data-fallback-src="${esc(fallbackImage)}"` : ''} />${urlBadge}` : `<span class="art-thumb-empty">${esc(unavailableImageLabel(work))}</span>`}${previewButton}${controls}</span><span class="art-meta">${titleMarkup}${footerMarkup}${descriptionMarkup}</span></div>`;
   };
   const koreanName = artist.name?.ko || '', originalName = artist.name?.en || '';
   const savedLinks = artistLinks(artist);

@@ -430,9 +430,10 @@ function setupMovementImageDescriptionEditors(frame, name, slot='1') {
   const syncRoot = documentInFrame.documentElement.dataset;
   if (syncRoot.artAtlasSyncVersion === '1' && syncRoot.artAtlasSyncState !== 'complete') return;
   const idSyncComplete = syncRoot.artAtlasSyncVersion === '1' && syncRoot.artAtlasSyncState === 'complete';
+  const artistGuide = syncRoot.artAtlasDocumentModel === 'artist-guide';
   const editorStyle = documentInFrame.createElement('style');
   editorStyle.id = 'art-atlas-description-editor-style';
-  editorStyle.textContent = '.movement-work-body,.caption{position:relative}.movement-work-body>h3:first-child,.caption>h3:first-child{padding-right:38px}.art-atlas-description-editor{position:absolute;top:10px;right:10px;z-index:2;display:flex;align-items:center;gap:7px}.art-atlas-description-editor button{border:1px solid #8e9b8b;border-radius:5px;width:28px;height:28px;padding:0;background:#f5f1e8;color:#18221e;font:700 16px/1 system-ui,sans-serif;cursor:pointer}.art-atlas-description-editor button[data-action="save"]{background:#18221e;color:#fff;border-color:#18221e}.art-atlas-description-editor.editing{position:static;width:100%;flex-wrap:wrap;align-items:flex-start;margin-top:12px}.art-atlas-description-editor.editing label{display:block;width:100%;color:inherit;font:700 12px/1.5 system-ui,sans-serif}.art-atlas-description-editor.editing button{width:auto;height:auto;padding:6px 9px;font-size:12px}.art-atlas-description-editor.editing textarea{display:block;width:100%;min-height:110px;margin-top:4px;resize:vertical;border:1px solid #8e9b8b;border-radius:6px;padding:10px;background:#fff;color:#18221e;font:14px/1.6 system-ui,sans-serif}.movement-work-grid.art-atlas-work-sortable{outline:1px dashed rgba(142,155,139,.72);outline-offset:7px}.movement-work-card[data-art-atlas-sortable-work="true"]{cursor:grab}.movement-work-card[data-art-atlas-card-role="primary"]{cursor:default}.movement-work-card.art-atlas-work-dragging{opacity:.45;cursor:grabbing}';
+  editorStyle.textContent = '.movement-work-body,.caption{position:relative}.movement-work-body>h3:first-child,.caption>h3:first-child{padding-right:38px}.art-atlas-description-editor{position:absolute;top:10px;right:10px;z-index:2;display:flex;align-items:center;gap:7px}.art-atlas-description-editor button{border:1px solid #8e9b8b;border-radius:5px;width:28px;height:28px;padding:0;background:#f5f1e8;color:#18221e;font:700 16px/1 system-ui,sans-serif;cursor:pointer}.art-atlas-description-editor button[data-action="save"]{background:#18221e;color:#fff;border-color:#18221e}.art-atlas-description-editor.editing{position:static;width:100%;flex-wrap:wrap;align-items:flex-start;margin-top:12px}.art-atlas-description-editor.editing label{display:block;width:100%;color:inherit;font:700 12px/1.5 system-ui,sans-serif}.art-atlas-description-editor.editing button{width:auto;height:auto;padding:6px 9px;font-size:12px}.art-atlas-description-editor.editing textarea{display:block;width:100%;min-height:110px;margin-top:4px;resize:vertical;border:1px solid #8e9b8b;border-radius:6px;padding:10px;background:#fff;color:#18221e;font:14px/1.6 system-ui,sans-serif}.movement-work-grid.art-atlas-work-sortable{outline:1px dashed rgba(142,155,139,.72);outline-offset:7px}.movement-work-card[data-art-atlas-sortable-work="true"]{cursor:grab}.movement-work-card[data-art-atlas-card-role="primary"]:not([data-art-atlas-sortable-work="true"]){cursor:default}.movement-work-card.art-atlas-work-dragging{opacity:.45;cursor:grabbing}';
   documentInFrame.head.append(editorStyle);
   const genericCountryFeatureStyle=documentInFrame.createElement('style');
   genericCountryFeatureStyle.id='art-atlas-generic-country-feature-editor-style';
@@ -511,6 +512,7 @@ function setupMovementImageDescriptionEditors(frame, name, slot='1') {
         card.removeAttribute('draggable');
         card.classList.remove('art-atlas-work-dragging');
       });
+      copy.querySelectorAll('.art-atlas-work-sortable').forEach(grid => grid.classList.remove('art-atlas-work-sortable'));
       copy.querySelectorAll('img[data-art-atlas-highres]').forEach(image => {
         image.removeAttribute('data-art-atlas-highres');
         image.removeAttribute('data-art-atlas-highres-title');
@@ -673,12 +675,12 @@ function setupMovementImageDescriptionEditors(frame, name, slot='1') {
   representativeSection?.querySelectorAll('.movement-work-grid').forEach(grid => {
     const developmentId = idSyncComplete ? grid.dataset.artAtlasDevelopmentId : '';
     const cards = [...grid.querySelectorAll(':scope > article.movement-work-card, :scope > article.card')]
-      .filter(card => !idSyncComplete || card.dataset.artAtlasDevelopmentId === developmentId)
+      .filter(card => artistGuide || !idSyncComplete || card.dataset.artAtlasDevelopmentId === developmentId)
       .filter(card => idSyncComplete || card.querySelector('img'))
-      .filter(card => !idSyncComplete || card.dataset.artAtlasCardRole === 'further');
+      .filter(card => artistGuide || !idSyncComplete || card.dataset.artAtlasCardRole === 'further');
     if (cards.length < 2) return;
-    // The primary card stays first. Only further-study cards can be reordered
-    // inside the same detailed movement.
+    // Artist-guide cards stay within their learning tier. Legacy complete
+    // documents continue to sort only further-study cards by development.
     grid.classList.add('art-atlas-work-sortable');
     let dragged = null;
     let originalOrder = [];
@@ -687,7 +689,8 @@ function setupMovementImageDescriptionEditors(frame, name, slot='1') {
       card.dataset.artAtlasSortableWork = 'true';
       card.addEventListener('dragstart', event => {
         if (event.target.closest('button, input, textarea, a, form')) { event.preventDefault(); return; }
-        if (idSyncComplete && (!developmentId || card.dataset.artAtlasDevelopmentId !== developmentId)) { event.preventDefault(); return; }
+        if (artistGuide && card.dataset.artAtlasArtistTier !== grid.dataset.artAtlasArtistTier) { event.preventDefault(); return; }
+        if (!artistGuide && idSyncComplete && (!developmentId || card.dataset.artAtlasDevelopmentId !== developmentId)) { event.preventDefault(); return; }
         dragged = card;
         originalOrder = [...grid.children];
         card.classList.add('art-atlas-work-dragging');
@@ -707,9 +710,10 @@ function setupMovementImageDescriptionEditors(frame, name, slot='1') {
       });
     });
     grid.addEventListener('dragover', event => {
-      if (!dragged || (idSyncComplete && dragged.dataset.artAtlasDevelopmentId !== developmentId)) return;
+      if (!dragged || (artistGuide && dragged.dataset.artAtlasArtistTier !== grid.dataset.artAtlasArtistTier) || (!artistGuide && idSyncComplete && dragged.dataset.artAtlasDevelopmentId !== developmentId)) return;
       event.preventDefault();
-      const targets = [...grid.querySelectorAll(':scope > article.movement-work-card[data-art-atlas-card-role="further"], :scope > article.card')].filter(card => card !== dragged);
+      const targetSelector = artistGuide ? ':scope > article.movement-work-card' : ':scope > article.movement-work-card[data-art-atlas-card-role="further"], :scope > article.card';
+      const targets = [...grid.querySelectorAll(targetSelector)].filter(card => card !== dragged);
       const before = targets.find(card => {
         const rect = card.getBoundingClientRect();
         return event.clientY < rect.top + rect.height / 2 || (event.clientY <= rect.bottom && event.clientX < rect.left + rect.width / 2);

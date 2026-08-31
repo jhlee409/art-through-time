@@ -676,6 +676,20 @@ function loadArtistListCountryDevelopmentRepresentatives() {
     const response=await fetch(url,{cache:'no-store'}).catch(() => null);
     if (!response?.ok) return;
     const source=new DOMParser().parseFromString(await response.text(),'text/html');
+    const parentId=source.documentElement.dataset.artAtlasParentId || '';
+    if (source.documentElement.dataset.artAtlasDocumentModel === 'artist-guide') {
+      const rows=[...source.querySelectorAll('#representative-artists table[data-art-atlas-artist-guide-table] tbody tr[data-art-atlas-artist-tier]')];
+      const artistIds=rows.map(row => row.dataset.artistId).filter(Boolean);
+      if (parentId && artistIds.length) {
+        artistListCountryDevelopmentRepresentatives.set(`artist-guide::${parentId}`,{
+          parentId,
+          artistIds,
+          beginnerArtistIds:rows.filter(row => row.dataset.artAtlasArtistTier === 'beginner').map(row => row.dataset.artistId).filter(Boolean),
+          labels:Object.fromEntries(rows.map(row => [row.dataset.artistId,(row.querySelector('.tier-badge')?.textContent || '').replace(/\s+/g,' ').trim()]).filter(([id]) => id))
+        });
+      }
+      return;
+    }
     const section=[...source.querySelectorAll('section')].find(item => item.id === 'countries');
     const table=section?.querySelector('table');
     if (!table) return;
@@ -683,7 +697,6 @@ function loadArtistListCountryDevelopmentRepresentatives() {
     const representativeIndex=headers.findIndex(header => /(대표.*(?:화가|제작)|(?:화가|제작).*대표)/.test(header));
     const furtherIndex=headers.findIndex(header => /더\s*볼\s*화가/.test(header));
     if (representativeIndex < 0) return;
-    const parentId=source.documentElement.dataset.artAtlasParentId || '';
     const categoryNames=new Map((artMovementCanonical.categories || []).map(category => [category.id,category.name]));
     table.querySelectorAll('tbody tr').forEach(row => {
       const cells=[...row.querySelectorAll(':scope > td')];
@@ -918,16 +931,12 @@ function artistListMovementEntries(countries, selectedCountryIds, start, end) {
       const owner=canonicalBinding && (artMovementCanonical.parents || []).find(parent => parent.id === canonicalBinding.documentOwnerId);
       const parentDocumentName=owner?.documentKey || movementDocumentKey(clipped.name?.en || clipped.name?.ko || loc(clipped.name));
       const canonicalDetails=(canonicalBinding?.developmentIds || []).map(developmentId => artistListCountryDevelopmentRepresentatives.get(`development::${developmentId}`)).filter(detail => detail?.countryIds?.includes(country.id));
-      let details=canonicalBinding
-        ? (artistListCountryDevelopmentRepresentativesReady ? canonicalDetails : artistListFallbackDevelopmentDetails(canonicalBinding, country.id))
-        : (artistListCountryDevelopmentRepresentativesReady ? (artistListCountryDevelopmentRepresentatives.get(`${parentDocumentName}::${country.id}`) || []) : []);
-      if (canonicalBinding?.parentId === 'neoclassicism') {
-        details=(artMovementLearningMap.movements?.neoclassicism?.nodes || []).filter(node => (node.countryIds || []).includes(country.id)).map(node => ({
-          parentId:'neoclassicism', developmentId:node.developmentId, categoryId:node.canonicalCategoryId,
-          countryIds:node.countryIds || [], label:loc(node.label), artistIds:[node.artist.id], primaryArtistIds:[node.artist.id], furtherArtistIds:[],
-          featureHtml:`<p>${esc(node.feature || '')}</p>`, feature:node.feature || '', learningNodeId:node.id, learningRole:node.role
-        }));
-      }
+      const artistGuide=canonicalBinding?.parentId && artistListCountryDevelopmentRepresentatives.get(`artist-guide::${canonicalBinding.parentId}`);
+      let details=artistGuide
+        ? [{parentId:canonicalBinding.parentId,developmentId:'',categoryId:'',countryIds:[country.id],label:'',artistIds:artistGuide.artistIds,primaryArtistIds:artistGuide.beginnerArtistIds,furtherArtistIds:artistGuide.artistIds.filter(id => !artistGuide.beginnerArtistIds.includes(id))}]
+        : (canonicalBinding
+          ? (artistListCountryDevelopmentRepresentativesReady ? canonicalDetails : artistListFallbackDevelopmentDetails(canonicalBinding, country.id))
+          : (artistListCountryDevelopmentRepresentativesReady ? (artistListCountryDevelopmentRepresentatives.get(`${parentDocumentName}::${country.id}`) || []) : []));
       details.forEach((detail, detailOrder) => rows.push({
         ...clipped,
         name:(artMovementCanonical.categories || []).find(category => category.id === detail.categoryId)?.name || {ko:detail.label || loc(clipped.name),en:detail.label || loc(clipped.name)},
@@ -942,6 +951,7 @@ function artistListMovementEntries(countries, selectedCountryIds, start, end) {
         developmentId:detail.developmentId || '',
         categoryId:detail.categoryId || '',
         countryDevelopmentDetail:detail.label,
+        parentId:detail.parentId || canonicalBinding?.parentId || '',
         parentDocumentName,
         parentMovementKey:artistListMovementLabelKey(clipped),
         sourceOrder:rows.length,
@@ -1009,21 +1019,18 @@ function artistListMovementEntries(countries, selectedCountryIds, start, end) {
     };
   });
   return parentEntries.map(entry => {
-    if (entry.name?.ko !== '신고전주의' || !entry.children?.length) return entry;
-    const nodes=artMovementLearningMap.movements?.neoclassicism?.nodes || [];
-    const artistIds=nodes.map(node => node.artist.id);
-    const representedIds=new Set(entry.children.flatMap(child => {
-      const detail=child.developmentId && artistListCountryDevelopmentRepresentatives.get(`development::${child.developmentId}`);
-      return detail?.artistIds || [];
-    }));
-    const visibleArtistIds=artistIds.filter(id => representedIds.has(id));
+    const artistGuide=entry.parentId && artistListCountryDevelopmentRepresentatives.get(`artist-guide::${entry.parentId}`);
+    if (!artistGuide || !entry.children?.length) return entry;
+    const visibleArtistIds=artistGuide.artistIds.filter(id => artists.some(artist => artist.id === id));
     if (!visibleArtistIds.length) return entry;
+    const learningNodes=artMovementLearningMap.movements?.[entry.parentId]?.nodes || [];
+    const learningLabels=Object.fromEntries(learningNodes.map(node => [node.artist.id,loc(node.label)]));
     const first=entry.children[0];
     return {
       ...entry,
       children:[{
         ...first,
-        name:artMovementLearningMap.movements?.neoclassicism?.title || {ko:'신고전주의의 주요 조형 지향',en:'Major Neoclassical Directions'},
+        name:artMovementLearningMap.movements?.[entry.parentId]?.title || {ko:'대표 미술가',en:'Representative Artists'},
         start:entry.start,
         end:entry.end,
         sourceStart:entry.start,
@@ -1035,8 +1042,8 @@ function artistListMovementEntries(countries, selectedCountryIds, start, end) {
         mergedCanonicalSubmovement:false,
         artistListPresentation:{
           artistIds:visibleArtistIds,
-          primaryArtistIds:nodes.filter(node => node.role === 'anchor').map(node => node.artist.id).filter(id => visibleArtistIds.includes(id)),
-          labels:Object.fromEntries(nodes.map(node => [node.artist.id, `${node.role === 'variation' ? '주요 변주' : '기준점'} · ${loc(node.label)}`]))
+          primaryArtistIds:artistGuide.beginnerArtistIds.filter(id => visibleArtistIds.includes(id)),
+          labels:Object.fromEntries(visibleArtistIds.map(id => [id,[artistGuide.labels[id],learningLabels[id]].filter(Boolean).join(' · ')]))
         }
       }]
     };

@@ -74,6 +74,7 @@ function parseArtistGuideDocument(html) {
     const tier = attribute(tag, 'data-art-atlas-artist-tier');
     if (!tier) return [];
     return [{
+      markup: match[0],
       tier,
       learningNodeId: attribute(tag, attrs.learningNodeId) || '',
       artistId: attribute(tag, attrs.artistId),
@@ -101,7 +102,7 @@ function parseArtistGuideDocument(html) {
       imageState: attribute(match[0], attrs.imageState),
       selectionReason: contentBoundTo(markup, attrs.selectionReason),
       description: contentBoundTo(markup, attrs.cardDescription),
-      linkArtistIds: idsFromLinks(markup),
+      linkArtistIds: idsFromLinks(/<h3\b[^>]*>[\s\S]*?<\/h3>/i.exec(markup)?.[0] || ''),
       imageTag: /<img\b[^>]*>/i.exec(markup)?.[0] || ''
     };
   }));
@@ -268,8 +269,8 @@ function assertStableEditableStructure(currentHtml, submittedHtml) {
     assert(submitted.root.version === '1' && submitted.root.state === 'complete', 'The submitted artist guide must remain complete');
     assert(current.root.parentId === submitted.root.parentId && !submitted.root.contextId, 'Document identity cannot be changed in the editor');
     const identity = item => `${item.tier}|${item.artistId}|${item.workId}`;
-    assert(sameValues(current.rows.map(identity), submitted.rows.map(identity)), 'Artist guide table membership cannot be changed in the card editor');
-    assert(sameValues(current.cards.map(identity), submitted.cards.map(identity)), 'Artist guide card membership or order cannot be changed in the card editor');
+    assert(sameValues(sorted(current.rows.map(identity)), sorted(submitted.rows.map(identity))), 'Artist guide table membership cannot be changed in the card editor');
+    assert(sameValues(sorted(current.cards.map(identity)), sorted(submitted.cards.map(identity))), 'Artist guide card membership cannot be changed in the card editor');
     return submitted;
   }
   const current = parseMovementDocument(currentHtml);
@@ -389,7 +390,19 @@ function validateCompleteDocument(html, options = {}) {
 }
 
 function synchronizeTableArtistOrder(html) {
-  if (isArtistGuideDocument(html)) return html;
+  if (isArtistGuideDocument(html)) {
+    const parsed = parseArtistGuideDocument(html);
+    const identity = item => `${item.tier}|${item.artistId}|${item.workId}`;
+    assert(sameValues(sorted(parsed.rows.map(identity)), sorted(parsed.cards.map(identity))), 'Artist guide table and card membership differs');
+    const rowsByIdentity = new Map(parsed.rows.map(row => [identity(row), row.markup]));
+    const tablePattern = /(<table\b(?=[^>]*\bdata-art-atlas-artist-guide-table=(?:"[^"]*"|'[^']*'))[^>]*>[\s\S]*?<tbody\b[^>]*>)([\s\S]*?)(<\/tbody>)/i;
+    const tableMatch = tablePattern.exec(parsed.source);
+    assert(tableMatch, 'Artist guide table body is missing');
+    const rowIndent = /\n([ \t]*)<tr\b/i.exec(tableMatch[2])?.[1] || '  ';
+    const closingIndent = /\n([ \t]*)$/.exec(tableMatch[2])?.[1] || '';
+    const orderedRows = parsed.cards.map(card => `${rowIndent}${rowsByIdentity.get(identity(card))}`).join('\n');
+    return parsed.source.replace(tablePattern, () => `${tableMatch[1]}\n${orderedRows}\n${closingIndent}${tableMatch[3]}`);
+  }
   const parsed = parseMovementDocument(html);
   const groups = new Map(parsed.groups.map(group => [group.developmentId, group]));
   const replacements = [];
