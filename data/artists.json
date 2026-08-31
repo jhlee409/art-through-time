@@ -2,10 +2,10 @@
   "dataSchema": 1,
   "metadata": {
     "createdAt": "2026-08-22T12:46:59.824Z",
-    "updatedAt": "2026-08-30T23:57:34.809Z",
+    "updatedAt": "2026-08-31T03:37:41.546Z",
     "createdBy": "jhlee409@gmail.com",
     "updatedBy": "jhlee409@gmail.com",
-    "revision": 917,
+    "revision": 949,
     "representativeContentSchema": 2
   },
   "artists": [
@@ -12282,7 +12282,7 @@
           "thumbnailCacheKey": "2026-08-29T05:01:57.129Z",
           "metadata": {
             "createdAt": "2026-08-20T20:46:28.386Z",
-            "updatedAt": "2026-08-30T10:45:30.295Z",
+            "updatedAt": "2026-08-31T03:37:41.546Z",
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -14070,7 +14070,7 @@
       ],
       "metadata": {
         "createdAt": "2026-08-10T13:50:59.717Z",
-        "updatedAt": "2026-08-30T10:45:30.295Z",
+        "updatedAt": "2026-08-31T03:37:41.546Z",
         "createdBy": "migration-tool",
         "updatedBy": "jhlee409@gmail.com"
       },
@@ -34076,7 +34076,7 @@
           },
           "metadata": {
             "createdAt": "2026-08-22T12:46:11.670Z",
-            "updatedAt": "2026-08-30T10:45:30.295Z",
+            "updatedAt": "2026-08-31T03:37:41.546Z",
             "createdBy": "local image import",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -34112,7 +34112,7 @@
       },
       "metadata": {
         "createdAt": "2026-08-22T12:46:11.670Z",
-        "updatedAt": "2026-08-30T10:45:30.295Z",
+        "updatedAt": "2026-08-31T03:37:41.546Z",
         "createdBy": "jhlee409@gmail.com",
         "updatedBy": "jhlee409@gmail.com"
       },
@@ -59293,7 +59293,7 @@
           },
           "metadata": {
             "createdAt": "2026-08-23T09:29:08.209Z",
-            "updatedAt": "2026-08-30T10:45:30.295Z",
+            "updatedAt": "2026-08-31T03:37:41.546Z",
             "createdBy": "local download import",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -59758,7 +59758,7 @@
       ],
       "metadata": {
         "createdAt": "2026-08-23T09:17:00.101Z",
-        "updatedAt": "2026-08-30T10:45:30.295Z",
+        "updatedAt": "2026-08-31T03:37:41.546Z",
         "createdBy": "jhlee409@gmail.com",
         "updatedBy": "jhlee409@gmail.com"
       },
@@ -84324,7 +84324,7 @@
           "thumbnailCacheKey": "2026-08-10T01:36:56.194Z",
           "metadata": {
             "createdAt": "2026-08-10T13:21:52.312Z",
-            "updatedAt": "2026-08-30T10:45:30.295Z",
+            "updatedAt": "2026-08-31T03:37:41.546Z",
             "createdBy": "migration-tool",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -88366,7 +88366,7 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-10T13:21:52.312Z",
-        "updatedAt": "2026-08-30T10:45:30.295Z",
+        "updatedAt": "2026-08-31T03:37:41.546Z",
         "createdBy": "migration-tool",
         "updatedBy": "jhlee409@gmail.com"
       },
@@ -106619,29 +106619,103 @@
       },
       "artistSummary": {
         "ko": [
+          "1748년 (약 0세) · [출생 환경] 유복한 집안에서 태어나 어린 시절에 아버지의 죽음과 어머니의 결정으로 기숙학교에 맡겨졌으며, 펜싱 부상에서 비롯된 얼굴의 흉터와 발음의 변화가 내성적 성격 형성에 영향을 미쳤다.",
+          "1784년 (약 36세) · [화풍과 사조의 변천] 로마에서 고대 유적과 르네상스 거장들의 작품을 접하며 고대의 엄격하고 남성적인 미학과 시민적·희생적 가치를 적극 수용하여 이를 바탕으로 제작한 작품이 《호라티우스 형제의 맹세》(1784)이다.",
+          "1785년 (약 37세) · [우호적 교류] 파리 살롱에서의 공개 반응을 통해 관객들에게 강렬한 에너지를 전달하며 단번에 주목받아 프랑스 미술계의 스타 화가로 부상했다.",
+          "1789년 (약 41세) · [연구한 이전 대가] 바스티유 함락 이후 급진 개혁파에 적극 가담하여 혁명의 시각적 연출—축제 무대, 선전 포스터, 의상 등—을 총괄하며 정치적 이미지 제작을 전담했다.",
+          "1793년 (약 45세) · [반목과 경쟁] 왕의 운명에 대한 국민투표에서 처형에 찬성하는 입장을 취했고, 암살된 혁명 동지의 죽음을 성화적 이미지로 묘사하여 혁명 내부의 갈등과 정치적 선전에서 중심적 역할을 했다.",
+          "1800년 (약 52세) · [우호적 교류] 감옥에서 한 젊은 장군을 목격한 뒤 태도를 전환하여 그 장군의 이미지 창조에 전념하며 제국의 공식 화가로 활동했고, 북부 이탈리아 원정과 알프스 횡단을 영웅적으로 재구성하는 대작을 제작했다.",
+          "1804년 (약 56세) · [초기 미술 교육] 황제의 대관식을 거대한 역사 서사로 재구성하는 작업을 수행하며 수많은 실존 인물을 초상으로 포섭한 거대한 작품을 제작했고, 동일 주제로 루브르판과 베르사유판 두 버전을 그려 서로 다른 세부를 보이게 했다.",
+          "1815년 (약 67세) · [화풍과 사조의 변천] 나폴레옹의 몰락과 왕정복고로 인해 궁중 수석화가로서의 지위가 사라지며 정치적 보호를 잃어 작품의 사회적 영향력이 크게 약화되었다.",
+          "1816년 (약 68세) · [이주와 활동지] 왕정복고에 따라 프랑스에서 추방되어 브리셀로 망명하여 그곳에서 제자들을 가르치고 작업을 지속했으며, 본국의 사면 제의를 거부했다.",
+          "1824년 (약 76세) · [화풍과 사조의 변천] 극장에서의 관람 후 귀가하던 중 마차 사고로 중상을 입고 건강이 악화되어 이후 작업 능력과 창작 활동에 심각한 제약을 받았다.",
+          "1825년 (약 77세) · [이주와 활동지] 사고로 악화된 상태 속에서 사망하였고, 시신은 브리셀에 안장되었으나 심장만 파리로 이송되어 파리에 남겨졌다.",
           "자크루이 다비드는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다."
         ],
         "en": []
       },
-      "links": {
-        "wikidata": "https://www.wikidata.org/wiki/Q296"
-      },
+      "links": [
+        {
+          "url": "https://www.youtube.com/watch?v=L4r-n044eq4",
+          "emphasized": true
+        }
+      ],
       "works": [
+        {
+          "id": "david-belisarius-1781",
+          "year": 1781,
+          "popularity": 80,
+          "title": {
+            "ko": "벨리사리우스",
+            "en": "Belisarius Begging for Alms"
+          },
+          "description": {
+            "ko": "폐위된 장군 벨리사리우스를 고대 로마의 덕과 운명의 대비로 그린 초기 역사화입니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Palais des Beaux-Arts de Lille",
+              "en": "Palais des Beaux-Arts de Lille"
+            }
+          ],
+          "image": "data/images/artist-Q83155/다비드_벨리사리우스_1781__david-belisarius-1781.jpg",
+          "thumbnail": "data/images/artist-Q83155/다비드_벨리사리우스_1781__david-belisarius-1781.jpg",
+          "highRes": "data/images/artist-Q83155/다비드_벨리사리우스_1781__david-belisarius-1781.jpg",
+          "highResImage": "data/images/artist-Q83155/다비드_벨리사리우스_1781__david-belisarius-1781.jpg",
+          "highResOriginal": "data/images/artist-Q83155/다비드_벨리사리우스_1781__david-belisarius-1781.jpg",
+          "source": "local file: 다운로드용/David_-_Belisarius.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T00:55:43.311Z",
+            "updatedAt": "2026-08-31T00:56:48.508Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q83155/다비드_벨리사리우스_1781__david-belisarius-1781.jpg",
+              "highResolution": "data/images/artist-Q83155/다비드_벨리사리우스_1781__david-belisarius-1781.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Palais des Beaux-Arts de Lille"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T00:55:43.311Z",
+          "thumbnailValidation": 2
+        },
         {
           "id": "artist-Q83155-representative-work",
           "year": 1784,
-          "popularity": 90,
+          "popularity": 100,
           "title": {
             "ko": "호라티우스 형제의 맹세",
             "en": "Oath of the Horatii"
           },
           "description": {
-            "ko": "자크루이 다비드는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다.",
+            "ko": "서로 마주한 세 형제와 아버지의 맹세를 직선적 구도와 절제된 몸짓으로 배치해, 공적 의무와 희생의 이상을 선명히 보입니다.",
             "en": ""
           },
           "medium": {
-            "ko": "유화 또는 조각",
-            "en": "Painting or sculpture"
+            "ko": "유화",
+            "en": "Oil on canvas"
           },
           "country": {
             "ko": "프랑스",
@@ -106651,20 +106725,28 @@
             "ko": "신고전주의",
             "en": "Neoclassicism"
           },
+          "collection": [
+            {
+              "ko": "Musee du Louvre, Paris",
+              "en": "Musee du Louvre, Paris"
+            }
+          ],
           "image": "data/images/artist-Q83155/다비드_호라티우스 형제의 맹세_1784__artist-Q83155-representative-work.jpg",
           "thumbnail": "data/images/artist-Q83155/다비드_호라티우스 형제의 맹세_1784__artist-Q83155-representative-work.jpg",
+          "highRes": "data/images/artist-Q83155/다비드_호라티우스 형제의 맹세_1784__artist-Q83155-representative-work.jpg",
           "highResImage": "data/images/artist-Q83155/다비드_호라티우스 형제의 맹세_1784__artist-Q83155-representative-work.jpg",
           "highResOriginal": "data/images/artist-Q83155/다비드_호라티우스 형제의 맹세_1784__artist-Q83155-representative-work.jpg",
-          "source": "existing local project asset: data/images/artist-Q83155/다비드_호라티우스 형제의 맹세_1784__artist-Q83155-representative-work.jpg",
+          "source": "local file: 다운로드용/Jacques-Louis_David,_Le_Serment_des_Horaces.jpg",
           "verified": true,
           "status": "verified",
+          "origin": "manual",
           "representative": true,
           "movementContribution": true,
-          "origin": "manual",
+          "movementContributionReason": "canonical-movement-representative",
           "metadata": {
-            "createdAt": "2026-08-24T00:00:00Z",
-            "updatedAt": "2026-08-30T23:57:34.809Z",
-            "createdBy": "jhlee409@gmail.com",
+            "createdAt": "2026-08-31T00:55:43.311Z",
+            "updatedAt": "2026-08-31T00:56:48.508Z",
+            "createdBy": "local download import",
             "updatedBy": "jhlee409@gmail.com"
           },
           "migration": {
@@ -106676,12 +106758,551 @@
               "sourceUrl": "",
               "sourceUrls": [],
               "license": "",
-              "institution": ""
+              "institution": "Musee du Louvre, Paris"
             }
           },
-          "movementContributionReason": "canonical-movement-representative",
-          "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-29T09:22:26.034Z"
+          "thumbnailCacheKey": "2026-08-31T00:55:43.311Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "david-death-of-socrates-1787",
+          "year": 1787,
+          "popularity": 80,
+          "title": {
+            "ko": "소크라테스의 죽음",
+            "en": "The Death of Socrates"
+          },
+          "description": {
+            "ko": "독배를 앞둔 철학자를 흔들림 없는 손짓과 명료한 인물 배치로 그려 이성과 신념의 가치를 강조합니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "The Metropolitan Museum of Art, New York",
+              "en": "The Metropolitan Museum of Art, New York"
+            }
+          ],
+          "image": "data/images/artist-Q83155/다비드_소크라테스의 죽음_1787__david-death-of-socrates-1787.jpg",
+          "thumbnail": "data/images/artist-Q83155/다비드_소크라테스의 죽음_1787__david-death-of-socrates-1787.jpg",
+          "highRes": "data/images/artist-Q83155/다비드_소크라테스의 죽음_1787__david-death-of-socrates-1787.jpg",
+          "highResImage": "data/images/artist-Q83155/다비드_소크라테스의 죽음_1787__david-death-of-socrates-1787.jpg",
+          "highResOriginal": "data/images/artist-Q83155/다비드_소크라테스의 죽음_1787__david-death-of-socrates-1787.jpg",
+          "source": "local file: 다운로드용/David_-_The_Death_of_Socrates.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T00:55:43.311Z",
+            "updatedAt": "2026-08-31T00:56:48.508Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q83155/다비드_소크라테스의 죽음_1787__david-death-of-socrates-1787.jpg",
+              "highResolution": "data/images/artist-Q83155/다비드_소크라테스의 죽음_1787__david-death-of-socrates-1787.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "The Metropolitan Museum of Art, New York"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T00:55:43.311Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "david-brutus-1789",
+          "year": 1789,
+          "popularity": 80,
+          "title": {
+            "ko": "브루투스와 아들들",
+            "en": "The Lictors Bring to Brutus the Bodies of His Sons"
+          },
+          "description": {
+            "ko": "공화국의 법을 위해 아들들의 처형을 허용한 브루투스를 통해 개인적 슬픔과 공적 의무의 충돌을 다룹니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Musee du Louvre, Paris",
+              "en": "Musee du Louvre, Paris"
+            }
+          ],
+          "image": "data/images/artist-Q83155/다비드_브루투스와 아들들_1789__david-brutus-1789.jpg",
+          "thumbnail": "data/images/artist-Q83155/다비드_브루투스와 아들들_1789__david-brutus-1789.jpg",
+          "highRes": "data/images/artist-Q83155/다비드_브루투스와 아들들_1789__david-brutus-1789.jpg",
+          "highResImage": "data/images/artist-Q83155/다비드_브루투스와 아들들_1789__david-brutus-1789.jpg",
+          "highResOriginal": "data/images/artist-Q83155/다비드_브루투스와 아들들_1789__david-brutus-1789.jpg",
+          "source": "local file: 다운로드용/3840px-David_Brutus.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T00:55:43.311Z",
+            "updatedAt": "2026-08-31T00:56:48.508Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q83155/다비드_브루투스와 아들들_1789__david-brutus-1789.jpg",
+              "highResolution": "data/images/artist-Q83155/다비드_브루투스와 아들들_1789__david-brutus-1789.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Musee du Louvre, Paris"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T00:55:43.311Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "david-death-of-marat-1793",
+          "year": 1793,
+          "popularity": 80,
+          "title": {
+            "ko": "마라의 죽음",
+            "en": "The Death of Marat"
+          },
+          "description": {
+            "ko": "암살된 혁명가를 단순한 욕조와 편지, 빛으로 성인처럼 제시해 혁명기의 정치적 애도를 시각화합니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Royal Museums of Fine Arts of Belgium, Brussels",
+              "en": "Royal Museums of Fine Arts of Belgium, Brussels"
+            }
+          ],
+          "image": "data/images/artist-Q83155/다비드_마라의 죽음_1793__david-death-of-marat-1793.jpg",
+          "thumbnail": "data/images/artist-Q83155/다비드_마라의 죽음_1793__david-death-of-marat-1793.jpg",
+          "highRes": "data/images/artist-Q83155/다비드_마라의 죽음_1793__david-death-of-marat-1793.jpg",
+          "highResImage": "data/images/artist-Q83155/다비드_마라의 죽음_1793__david-death-of-marat-1793.jpg",
+          "highResOriginal": "data/images/artist-Q83155/다비드_마라의 죽음_1793__david-death-of-marat-1793.jpg",
+          "source": "local file: 다운로드용/3840px-Death_of_Marat_by_David.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T00:55:43.311Z",
+            "updatedAt": "2026-08-31T00:56:48.508Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q83155/다비드_마라의 죽음_1793__david-death-of-marat-1793.jpg",
+              "highResolution": "data/images/artist-Q83155/다비드_마라의 죽음_1793__david-death-of-marat-1793.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Royal Museums of Fine Arts of Belgium, Brussels"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T00:55:43.311Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "david-intervention-of-sabine-women-1799",
+          "year": 1799,
+          "popularity": 88,
+          "title": {
+            "ko": "사비니 여인들의 개입",
+            "en": "The Intervention of the Sabine Women"
+          },
+          "description": {
+            "ko": "전쟁 중인 로마인과 사비니인 사이에 여인들이 몸을 던져 화해를 이끄는 장면으로, 폭력보다 시민적 화해와 고전적 균형을 강조합니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "루브르 박물관, 파리",
+              "en": "Musee du Louvre, Paris"
+            }
+          ],
+          "image": "data/images/artist-Q83155/다비드_사비니 여인들의 개입_1799__david-intervention-of-sabine-women-1799.jpg",
+          "thumbnail": "data/images/artist-Q83155/다비드_사비니 여인들의 개입_1799__david-intervention-of-sabine-women-1799.jpg",
+          "highRes": "data/images/artist-Q83155/다비드_사비니 여인들의 개입_1799__david-intervention-of-sabine-women-1799.jpg",
+          "highResImage": "data/images/artist-Q83155/다비드_사비니 여인들의 개입_1799__david-intervention-of-sabine-women-1799.jpg",
+          "highResOriginal": "data/images/artist-Q83155/다비드_사비니 여인들의 개입_1799__david-intervention-of-sabine-women-1799.jpg",
+          "source": "local file: 다운로드용/3840px-F0440_Louvre_JL_David_Sabines_INV3691_rwk.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T01:16:16.365Z",
+            "updatedAt": "2026-08-31T01:19:03.584Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q83155/다비드_사비니 여인들의 개입_1799__david-intervention-of-sabine-women-1799.jpg",
+              "highResolution": "data/images/artist-Q83155/다비드_사비니 여인들의 개입_1799__david-intervention-of-sabine-women-1799.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Musee du Louvre, Paris"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T01:16:16.365Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "david-napoleon-crossing-alps-1801",
+          "year": 1801,
+          "popularity": 80,
+          "title": {
+            "ko": "알프스를 넘는 나폴레옹",
+            "en": "Napoleon Crossing the Alps"
+          },
+          "description": {
+            "ko": "현실의 이동을 말 위의 영웅적 상승 장면으로 바꾸어 나폴레옹의 권력 이미지를 구축합니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Musee national des chateaux de Malmaison et de Bois-Preau",
+              "en": "Musee national des chateaux de Malmaison et de Bois-Preau"
+            }
+          ],
+          "image": "data/images/artist-Q83155/다비드_알프스를 넘는 나폴레옹_1801__david-napoleon-crossing-alps-1801.jpg",
+          "thumbnail": "data/images/artist-Q83155/다비드_알프스를 넘는 나폴레옹_1801__david-napoleon-crossing-alps-1801.jpg",
+          "highRes": "data/images/artist-Q83155/다비드_알프스를 넘는 나폴레옹_1801__david-napoleon-crossing-alps-1801.jpg",
+          "highResImage": "data/images/artist-Q83155/다비드_알프스를 넘는 나폴레옹_1801__david-napoleon-crossing-alps-1801.jpg",
+          "highResOriginal": "data/images/artist-Q83155/다비드_알프스를 넘는 나폴레옹_1801__david-napoleon-crossing-alps-1801.jpg",
+          "source": "local file: 다운로드용/David_-_Napoleon_crossing_the_Alps_-_Malmaison2.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T00:55:43.311Z",
+            "updatedAt": "2026-08-31T00:56:48.508Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q83155/다비드_알프스를 넘는 나폴레옹_1801__david-napoleon-crossing-alps-1801.jpg",
+              "highResolution": "data/images/artist-Q83155/다비드_알프스를 넘는 나폴레옹_1801__david-napoleon-crossing-alps-1801.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Musee national des chateaux de Malmaison et de Bois-Preau"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T00:55:43.311Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "david-pope-pius-vii-1805",
+          "year": 1805,
+          "popularity": 80,
+          "title": {
+            "ko": "교황 비오 7세 초상",
+            "en": "Portrait of Pope Pius VII"
+          },
+          "description": {
+            "ko": "온화한 얼굴과 흰 의복의 섬세한 묘사로 권위와 인간적인 침착함을 함께 드러낸 초상화입니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Musee du Louvre, Paris",
+              "en": "Musee du Louvre, Paris"
+            }
+          ],
+          "image": "data/images/artist-Q83155/다비드_교황 비오 7세 초상_1805__david-pope-pius-vii-1805.jpg",
+          "thumbnail": "data/images/artist-Q83155/다비드_교황 비오 7세 초상_1805__david-pope-pius-vii-1805.jpg",
+          "highRes": "data/images/artist-Q83155/다비드_교황 비오 7세 초상_1805__david-pope-pius-vii-1805.jpg",
+          "highResImage": "data/images/artist-Q83155/다비드_교황 비오 7세 초상_1805__david-pope-pius-vii-1805.jpg",
+          "highResOriginal": "data/images/artist-Q83155/다비드_교황 비오 7세 초상_1805__david-pope-pius-vii-1805.jpg",
+          "source": "local file: 다운로드용/Jacques-Louis_David_018.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T00:55:43.311Z",
+            "updatedAt": "2026-08-31T00:56:48.508Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q83155/다비드_교황 비오 7세 초상_1805__david-pope-pius-vii-1805.jpg",
+              "highResolution": "data/images/artist-Q83155/다비드_교황 비오 7세 초상_1805__david-pope-pius-vii-1805.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Musee du Louvre, Paris"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T00:55:43.311Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "david-coronation-napoleon-1807",
+          "year": 1807,
+          "popularity": 80,
+          "title": {
+            "ko": "나폴레옹의 대관식",
+            "en": "The Coronation of Napoleon"
+          },
+          "description": {
+            "ko": "수많은 실존 인물과 의식을 거대한 역사화로 조직해 제국 권력의 위계와 정당성을 연출합니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Musee du Louvre, Paris",
+              "en": "Musee du Louvre, Paris"
+            }
+          ],
+          "image": "data/images/artist-Q83155/다비드_나폴레옹의 대관식_1807__david-coronation-napoleon-1807.jpg",
+          "thumbnail": "data/images/artist-Q83155/다비드_나폴레옹의 대관식_1807__david-coronation-napoleon-1807.jpg",
+          "highRes": "data/images/artist-Q83155/다비드_나폴레옹의 대관식_1807__david-coronation-napoleon-1807.jpg",
+          "highResImage": "data/images/artist-Q83155/다비드_나폴레옹의 대관식_1807__david-coronation-napoleon-1807.jpg",
+          "highResOriginal": "data/images/artist-Q83155/다비드_나폴레옹의 대관식_1807__david-coronation-napoleon-1807.jpg",
+          "source": "local file: 다운로드용/Jacques-Louis_David_-_Le_Sacre_de_Napoléon.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T00:55:43.311Z",
+            "updatedAt": "2026-08-31T00:56:48.508Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q83155/다비드_나폴레옹의 대관식_1807__david-coronation-napoleon-1807.jpg",
+              "highResolution": "data/images/artist-Q83155/다비드_나폴레옹의 대관식_1807__david-coronation-napoleon-1807.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Musee du Louvre, Paris"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T00:55:43.311Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "david-napoleon-study-tuileries-1812",
+          "year": 1812,
+          "popularity": 80,
+          "title": {
+            "ko": "튈르리의 나폴레옹",
+            "en": "The Emperor Napoleon in His Study at the Tuileries"
+          },
+          "description": {
+            "ko": "새벽까지 일하는 황제를 정돈된 실내와 제복의 세부로 보여 주며 통치자의 근면한 이미지를 만듭니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "National Gallery of Art, Washington, D.C.",
+              "en": "National Gallery of Art, Washington, D.C."
+            }
+          ],
+          "image": "data/images/artist-Q83155/다비드_튈르리의 나폴레옹_1812__david-napoleon-study-tuileries-1812.jpg",
+          "thumbnail": "data/images/artist-Q83155/다비드_튈르리의 나폴레옹_1812__david-napoleon-study-tuileries-1812.jpg",
+          "highRes": "data/images/artist-Q83155/다비드_튈르리의 나폴레옹_1812__david-napoleon-study-tuileries-1812.jpg",
+          "highResImage": "data/images/artist-Q83155/다비드_튈르리의 나폴레옹_1812__david-napoleon-study-tuileries-1812.jpg",
+          "highResOriginal": "data/images/artist-Q83155/다비드_튈르리의 나폴레옹_1812__david-napoleon-study-tuileries-1812.jpg",
+          "source": "local file: 다운로드용/3840px-The_Emperor_Napoleon_in_His_Study_at_the_Tuileries,_by_Jacques-Louis_David_(1812)_-_National_Gallery_of_Art_(Samuel_H._Kress_Foundation)_-_2.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T00:55:43.311Z",
+            "updatedAt": "2026-08-31T00:56:48.508Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q83155/다비드_튈르리의 나폴레옹_1812__david-napoleon-study-tuileries-1812.jpg",
+              "highResolution": "data/images/artist-Q83155/다비드_튈르리의 나폴레옹_1812__david-napoleon-study-tuileries-1812.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "National Gallery of Art, Washington, D.C."
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T00:55:43.311Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "david-leonidas-thermopylae-1814",
+          "year": 1814,
+          "popularity": 80,
+          "title": {
+            "ko": "테르모필레의 레오니다스",
+            "en": "Leonidas at Thermopylae"
+          },
+          "description": {
+            "ko": "전투를 앞둔 스파르타인들을 고대 조각처럼 배치해 희생과 용기의 이상을 마지막까지 밀어붙입니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Musee du Louvre, Paris",
+              "en": "Musee du Louvre, Paris"
+            }
+          ],
+          "image": "data/images/artist-Q83155/다비드_테르모필레의 레오니다스_1814__david-leonidas-thermopylae-1814.png",
+          "thumbnail": "data/images/artist-Q83155/다비드_테르모필레의 레오니다스_1814__david-leonidas-thermopylae-1814.png",
+          "highRes": "data/images/artist-Q83155/다비드_테르모필레의 레오니다스_1814__david-leonidas-thermopylae-1814.png",
+          "highResImage": "data/images/artist-Q83155/다비드_테르모필레의 레오니다스_1814__david-leonidas-thermopylae-1814.png",
+          "highResOriginal": "data/images/artist-Q83155/다비드_테르모필레의 레오니다스_1814__david-leonidas-thermopylae-1814.png",
+          "source": "local file: 다운로드용/Léonidas_aux_Thermopyles_(Jacques-Louis_David).png",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T00:55:43.311Z",
+            "updatedAt": "2026-08-31T00:56:48.508Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q83155/다비드_테르모필레의 레오니다스_1814__david-leonidas-thermopylae-1814.png",
+              "highResolution": "data/images/artist-Q83155/다비드_테르모필레의 레오니다스_1814__david-leonidas-thermopylae-1814.png",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Musee du Louvre, Paris"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T00:55:43.311Z",
+          "thumbnailValidation": 2
         }
       ],
       "featuredWorkIds": [
@@ -106690,9 +107311,9 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-24T00:00:00Z",
-        "updatedAt": "2026-08-30T23:57:34.809Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "manual entry",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "movements": [
         "신고전주의"
@@ -106713,7 +107334,31 @@
       "activeTo": 1825,
       "listName": {
         "ko": "다비드"
-      }
+      },
+      "artistSummaryGeneratedLines": [
+        "1748년 (약 0세) · [출생 환경] 유복한 집안에서 태어나 어린 시절에 아버지의 죽음과 어머니의 결정으로 기숙학교에 맡겨졌으며, 펜싱 부상에서 비롯된 얼굴의 흉터와 발음의 변화가 내성적 성격 형성에 영향을 미쳤다.",
+        "1784년 (약 36세) · [화풍과 사조의 변천] 로마에서 고대 유적과 르네상스 거장들의 작품을 접하며 고대의 엄격하고 남성적인 미학과 시민적·희생적 가치를 적극 수용하여 이를 바탕으로 제작한 작품이 《호라티우스 형제의 맹세》(1784)이다.",
+        "1785년 (약 37세) · [우호적 교류] 파리 살롱에서의 공개 반응을 통해 관객들에게 강렬한 에너지를 전달하며 단번에 주목받아 프랑스 미술계의 스타 화가로 부상했다.",
+        "1789년 (약 41세) · [연구한 이전 대가] 바스티유 함락 이후 급진 개혁파에 적극 가담하여 혁명의 시각적 연출—축제 무대, 선전 포스터, 의상 등—을 총괄하며 정치적 이미지 제작을 전담했다.",
+        "1793년 (약 45세) · [반목과 경쟁] 왕의 운명에 대한 국민투표에서 처형에 찬성하는 입장을 취했고, 암살된 혁명 동지의 죽음을 성화적 이미지로 묘사하여 혁명 내부의 갈등과 정치적 선전에서 중심적 역할을 했다.",
+        "1800년 (약 52세) · [우호적 교류] 감옥에서 한 젊은 장군을 목격한 뒤 태도를 전환하여 그 장군의 이미지 창조에 전념하며 제국의 공식 화가로 활동했고, 북부 이탈리아 원정과 알프스 횡단을 영웅적으로 재구성하는 대작을 제작했다.",
+        "1804년 (약 56세) · [초기 미술 교육] 황제의 대관식을 거대한 역사 서사로 재구성하는 작업을 수행하며 수많은 실존 인물을 초상으로 포섭한 거대한 작품을 제작했고, 동일 주제로 루브르판과 베르사유판 두 버전을 그려 서로 다른 세부를 보이게 했다.",
+        "1815년 (약 67세) · [화풍과 사조의 변천] 나폴레옹의 몰락과 왕정복고로 인해 궁중 수석화가로서의 지위가 사라지며 정치적 보호를 잃어 작품의 사회적 영향력이 크게 약화되었다.",
+        "1816년 (약 68세) · [이주와 활동지] 왕정복고에 따라 프랑스에서 추방되어 브리셀로 망명하여 그곳에서 제자들을 가르치고 작업을 지속했으며, 본국의 사면 제의를 거부했다.",
+        "1824년 (약 76세) · [화풍과 사조의 변천] 극장에서의 관람 후 귀가하던 중 마차 사고로 중상을 입고 건강이 악화되어 이후 작업 능력과 창작 활동에 심각한 제약을 받았다.",
+        "1825년 (약 77세) · [이주와 활동지] 사고로 악화된 상태 속에서 사망하였고, 시신은 브리셀에 안장되었으나 심장만 파리로 이송되어 파리에 남겨졌다."
+      ],
+      "artistSummarySources": [
+        {
+          "key": "youtube:L4r-n044eq4",
+          "url": "https://www.youtube.com/watch?v=L4r-n044eq4",
+          "title": "YouTube L4r-n044eq4 (저장 스크립트)",
+          "kind": "youtube",
+          "researchVersion": 3,
+          "processedAt": "2026-08-31T00:40:33.165Z",
+          "contentHash": "ef95ab8b7ce3daa6fdeed4b8e4cfb21ef22e5482d0ff288ce233631d0e2e5d8c"
+        }
+      ]
     },
     {
       "id": "artist-Q161472",
@@ -106741,29 +107386,34 @@
       },
       "artistSummary": {
         "ko": [
-          "장오귀스트도미니크 앵그르는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다."
+          "장오귀스트도미니크 앵그르는 고대 조각과 르네상스, 특히 라파엘로의 균형을 동시대 회화에 옮긴 신고전주의 화가다. 그는 색채의 즉흥성보다 윤곽, 비례, 표면의 완결성을 중시했다.",
+          "앵그르의 신고전주의는 제국 초상에만 머물지 않는다. 종교화·역사화·누드·초상화마다 인체와 의례, 감정을 길고 정교한 선으로 이상화하며 고전적 질서를 새롭게 만들었다.",
+          "《루이 13세의 서원》은 성모에게 프랑스를 봉헌하는 장면을 라파엘로풍 구도와 맑은 선으로 구성한다. 정치 권력의 표상인 나폴레옹 초상보다, 신앙·역사·이상적 형식이 만나는 앵그르식 신고전주의를 더 직접적으로 보여 주는 기준작이다."
         ],
         "en": []
       },
-      "links": {
-        "wikidata": "https://www.wikidata.org/wiki/Q161472"
-      },
+      "links": [
+        {
+          "url": "https://ko.wikipedia.org/wiki/%EC%9E%A5%EC%98%A4%EA%B7%80%EC%8A%A4%ED%8A%B8%EB%8F%84%EB%AF%B8%EB%8B%88%ED%81%AC_%EC%95%B5%EA%B7%B8%EB%A5%B4",
+          "emphasized": true
+        }
+      ],
       "works": [
         {
-          "id": "artist-Q161472-representative-work",
-          "year": 1806,
-          "popularity": 90,
+          "id": "ingres-self-portrait-1804",
+          "year": 1804,
+          "popularity": 80,
           "title": {
-            "ko": "황제의 옥좌에 앉은 나폴레옹",
-            "en": "Napoleon on His Imperial Throne"
+            "ko": "24세의 자화상",
+            "en": "Self-Portrait at the Age of Twenty-four"
           },
           "description": {
-            "ko": "장오귀스트도미니크 앵그르는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다.",
+            "ko": "젊은 화가가 자신을 날카로운 시선과 정밀한 선으로 제시한 초기 자화상입니다.",
             "en": ""
           },
           "medium": {
-            "ko": "유화 또는 조각",
-            "en": "Painting or sculpture"
+            "ko": "유화",
+            "en": "Oil on canvas"
           },
           "country": {
             "ko": "프랑스",
@@ -106773,20 +107423,147 @@
             "ko": "신고전주의",
             "en": "Neoclassicism"
           },
-          "image": "data/images/artist-Q161472/앵그르_황제의 옥좌에 앉은_1806__artist-Q161472-representative-work.jpg",
-          "thumbnail": "data/images/artist-Q161472/앵그르_황제의 옥좌에 앉은_1806__artist-Q161472-representative-work.jpg",
-          "highResImage": "data/images/artist-Q161472/앵그르_황제의 옥좌에 앉은_1806__artist-Q161472-representative-work.jpg",
-          "highResOriginal": "data/images/artist-Q161472/앵그르_황제의 옥좌에 앉은_1806__artist-Q161472-representative-work.jpg",
-          "source": "existing local project asset: data/images/artist-Q161472/앵그르_황제의 옥좌에 앉은_1806__artist-Q161472-representative-work.jpg",
+          "collection": [
+            {
+              "ko": "소장처 정보 확인 필요",
+              "en": "소장처 정보 확인 필요"
+            }
+          ],
+          "image": "data/images/artist-Q161472/앵그르_24세의 자화상_1804__ingres-self-portrait-1804.jpg",
+          "thumbnail": "data/images/artist-Q161472/앵그르_24세의 자화상_1804__ingres-self-portrait-1804.jpg",
+          "highRes": "data/images/artist-Q161472/앵그르_24세의 자화상_1804__ingres-self-portrait-1804.jpg",
+          "highResImage": "data/images/artist-Q161472/앵그르_24세의 자화상_1804__ingres-self-portrait-1804.jpg",
+          "highResOriginal": "data/images/artist-Q161472/앵그르_24세의 자화상_1804__ingres-self-portrait-1804.jpg",
+          "source": "local file: 다운로드용/Jean-Auguste-Dominique_Ingres_-_Autoportrait_à_vingt-quatre_ans_-_Google_Art_Project.jpg",
           "verified": true,
           "status": "verified",
-          "representative": true,
-          "movementContribution": true,
           "origin": "manual",
           "metadata": {
-            "createdAt": "2026-08-24T00:00:00Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
-            "createdBy": "jhlee409@gmail.com",
+            "createdAt": "2026-08-31T01:45:32.078Z",
+            "updatedAt": "2026-08-31T01:47:17.989Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q161472/앵그르_24세의 자화상_1804__ingres-self-portrait-1804.jpg",
+              "highResolution": "data/images/artist-Q161472/앵그르_24세의 자화상_1804__ingres-self-portrait-1804.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "소장처 정보 확인 필요"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T01:45:32.078Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "ingres-madame-riviere-1805",
+          "year": 1805,
+          "popularity": 80,
+          "title": {
+            "ko": "리비에르 부인의 초상",
+            "en": "Portrait of Madame Riviere"
+          },
+          "description": {
+            "ko": "흰 드레스와 풍경을 섬세한 선으로 묘사해, 앵그르 초상화 특유의 매끄러운 표면과 고요한 시선을 보여 줍니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Musee du Louvre, Paris",
+              "en": "Musee du Louvre, Paris"
+            }
+          ],
+          "image": "data/images/artist-Q161472/앵그르_리비에르 부인의 초상_1805__ingres-madame-riviere-1805.jpg",
+          "thumbnail": "data/images/artist-Q161472/앵그르_리비에르 부인의 초상_1805__ingres-madame-riviere-1805.jpg",
+          "highRes": "data/images/artist-Q161472/앵그르_리비에르 부인의 초상_1805__ingres-madame-riviere-1805.jpg",
+          "highResImage": "data/images/artist-Q161472/앵그르_리비에르 부인의 초상_1805__ingres-madame-riviere-1805.jpg",
+          "highResOriginal": "data/images/artist-Q161472/앵그르_리비에르 부인의 초상_1805__ingres-madame-riviere-1805.jpg",
+          "source": "local file: 다운로드용/Ingres,_Madame_Riviere.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T02:10:21.119Z",
+            "updatedAt": "2026-08-31T02:12:02.543Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q161472/앵그르_리비에르 부인의 초상_1805__ingres-madame-riviere-1805.jpg",
+              "highResolution": "data/images/artist-Q161472/앵그르_리비에르 부인의 초상_1805__ingres-madame-riviere-1805.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Musee du Louvre, Paris"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T02:10:21.119Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "artist-Q161472-representative-work",
+          "year": 1806,
+          "popularity": 100,
+          "title": {
+            "ko": "황제의 옥좌에 앉은 나폴레옹",
+            "en": "Napoleon on His Imperial Throne"
+          },
+          "description": {
+            "ko": "정면 대칭과 상징물의 세밀한 묘사로 나폴레옹을 인간적 초상이라기보다 절대적 제국 권위의 표상으로 만듭니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Musee de l Armee, Paris",
+              "en": "Musee de l Armee, Paris"
+            }
+          ],
+          "image": "data/images/artist-Q161472/앵그르_황제의 옥좌에 앉은_1806__artist-Q161472-representative-work.jpg",
+          "thumbnail": "data/images/artist-Q161472/앵그르_황제의 옥좌에 앉은_1806__artist-Q161472-representative-work.jpg",
+          "highRes": "data/images/artist-Q161472/앵그르_황제의 옥좌에 앉은_1806__artist-Q161472-representative-work.jpg",
+          "highResImage": "data/images/artist-Q161472/앵그르_황제의 옥좌에 앉은_1806__artist-Q161472-representative-work.jpg",
+          "highResOriginal": "data/images/artist-Q161472/앵그르_황제의 옥좌에 앉은_1806__artist-Q161472-representative-work.jpg",
+          "source": "local file: 다운로드용/Ingres,_Napoleon_on_his_Imperial_throne.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "representative": false,
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-31T01:45:32.078Z",
+            "updatedAt": "2026-08-31T01:47:17.989Z",
+            "createdBy": "local download import",
             "updatedBy": "jhlee409@gmail.com"
           },
           "migration": {
@@ -106798,16 +107575,1038 @@
               "sourceUrl": "",
               "sourceUrls": [],
               "license": "",
-              "institution": ""
+              "institution": "Musee de l Armee, Paris"
             }
           },
-          "movementContributionReason": "movement-further-study",
+          "thumbnailCacheKey": "2026-08-31T01:45:32.078Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "ingres-oedipus-sphinx-1808",
+          "year": 1808,
+          "popularity": 80,
+          "title": {
+            "ko": "오이디푸스와 스핑크스",
+            "en": "Oedipus and the Sphinx"
+          },
+          "description": {
+            "ko": "고대 신화의 수수께끼 장면을 매끈한 윤곽선과 조각 같은 인체로 구성한 초기 신고전주의 작품입니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Musee du Louvre, Paris",
+              "en": "Musee du Louvre, Paris"
+            }
+          ],
+          "image": "data/images/artist-Q161472/앵그르_오이디푸스와 스핑크스_1808__ingres-oedipus-sphinx-1808.jpg",
+          "thumbnail": "data/images/artist-Q161472/앵그르_오이디푸스와 스핑크스_1808__ingres-oedipus-sphinx-1808.jpg",
+          "highRes": "data/images/artist-Q161472/앵그르_오이디푸스와 스핑크스_1808__ingres-oedipus-sphinx-1808.jpg",
+          "highResImage": "data/images/artist-Q161472/앵그르_오이디푸스와 스핑크스_1808__ingres-oedipus-sphinx-1808.jpg",
+          "highResOriginal": "data/images/artist-Q161472/앵그르_오이디푸스와 스핑크스_1808__ingres-oedipus-sphinx-1808.jpg",
+          "source": "local file: 다운로드용/IngresOdipusAndSphinx.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T01:45:32.078Z",
+            "updatedAt": "2026-08-31T01:47:17.989Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q161472/앵그르_오이디푸스와 스핑크스_1808__ingres-oedipus-sphinx-1808.jpg",
+              "highResolution": "data/images/artist-Q161472/앵그르_오이디푸스와 스핑크스_1808__ingres-oedipus-sphinx-1808.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Musee du Louvre, Paris"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T01:45:32.078Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "ingres-valpincon-bather-1808",
+          "year": 1808,
+          "popularity": 80,
+          "title": {
+            "ko": "발팽송의 목욕하는 여인",
+            "en": "The Valpincon Bather"
+          },
+          "description": {
+            "ko": "등을 보인 인체와 천의 촉감을 절제된 윤곽과 표면 묘사로 집중시킨 누드화입니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Musee du Louvre, Paris",
+              "en": "Musee du Louvre, Paris"
+            }
+          ],
+          "image": "data/images/artist-Q161472/앵그르_발팽송의 목욕하는 여인_1808__ingres-valpincon-bather-1808.jpg",
+          "thumbnail": "data/images/artist-Q161472/앵그르_발팽송의 목욕하는 여인_1808__ingres-valpincon-bather-1808.jpg",
+          "highRes": "data/images/artist-Q161472/앵그르_발팽송의 목욕하는 여인_1808__ingres-valpincon-bather-1808.jpg",
+          "highResImage": "data/images/artist-Q161472/앵그르_발팽송의 목욕하는 여인_1808__ingres-valpincon-bather-1808.jpg",
+          "highResOriginal": "data/images/artist-Q161472/앵그르_발팽송의 목욕하는 여인_1808__ingres-valpincon-bather-1808.jpg",
+          "source": "local file: 다운로드용/Jean-Auguste-Dominique_Ingres_-_La_Baigneuse_Valpinçon.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T01:45:32.078Z",
+            "updatedAt": "2026-08-31T01:47:17.989Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q161472/앵그르_발팽송의 목욕하는 여인_1808__ingres-valpincon-bather-1808.jpg",
+              "highResolution": "data/images/artist-Q161472/앵그르_발팽송의 목욕하는 여인_1808__ingres-valpincon-bather-1808.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Musee du Louvre, Paris"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T01:45:32.078Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "ingres-jupiter-thetis-1811",
+          "year": 1811,
+          "popularity": 80,
+          "title": {
+            "ko": "주피터와 테티스",
+            "en": "Jupiter and Thetis"
+          },
+          "description": {
+            "ko": "신들의 위계를 과장된 비례와 우아한 선으로 조직해 고대 신화를 장엄한 권력의 장면으로 바꿉니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Musee Granet, Aix-en-Provence",
+              "en": "Musee Granet, Aix-en-Provence"
+            }
+          ],
+          "image": "data/images/artist-Q161472/앵그르_주피터와 테티스_1811__ingres-jupiter-thetis-1811.jpg",
+          "thumbnail": "data/images/artist-Q161472/앵그르_주피터와 테티스_1811__ingres-jupiter-thetis-1811.jpg",
+          "highRes": "data/images/artist-Q161472/앵그르_주피터와 테티스_1811__ingres-jupiter-thetis-1811.jpg",
+          "highResImage": "data/images/artist-Q161472/앵그르_주피터와 테티스_1811__ingres-jupiter-thetis-1811.jpg",
+          "highResOriginal": "data/images/artist-Q161472/앵그르_주피터와 테티스_1811__ingres-jupiter-thetis-1811.jpg",
+          "source": "local file: 다운로드용/Júpiter_y_Tetis,_por_Dominique_Ingres.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T01:45:32.078Z",
+            "updatedAt": "2026-08-31T01:47:17.989Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q161472/앵그르_주피터와 테티스_1811__ingres-jupiter-thetis-1811.jpg",
+              "highResolution": "data/images/artist-Q161472/앵그르_주피터와 테티스_1811__ingres-jupiter-thetis-1811.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Musee Granet, Aix-en-Provence"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T01:45:32.078Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "ingres-tu-marcellus-eris-1812",
+          "year": 1812,
+          "popularity": 80,
+          "title": {
+            "ko": "투 마르켈루스 에리스",
+            "en": "Tu Marcellus Eris"
+          },
+          "description": {
+            "ko": "베르길리우스의 서사시 장면을 고전 조각을 연상시키는 인물과 선명한 제스처로 풀어낸 역사화입니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Musee des Augustins, Toulouse",
+              "en": "Musee des Augustins, Toulouse"
+            }
+          ],
+          "image": "data/images/artist-Q161472/앵그르_투 마르켈루스 에리스_1812__ingres-tu-marcellus-eris-1812.jpg",
+          "thumbnail": "data/images/artist-Q161472/앵그르_투 마르켈루스 에리스_1812__ingres-tu-marcellus-eris-1812.jpg",
+          "highRes": "data/images/artist-Q161472/앵그르_투 마르켈루스 에리스_1812__ingres-tu-marcellus-eris-1812.jpg",
+          "highResImage": "data/images/artist-Q161472/앵그르_투 마르켈루스 에리스_1812__ingres-tu-marcellus-eris-1812.jpg",
+          "highResOriginal": "data/images/artist-Q161472/앵그르_투 마르켈루스 에리스_1812__ingres-tu-marcellus-eris-1812.jpg",
+          "source": "local file: 다운로드용/Jean-Auguste-Dominique_INGRES_-_Tu_Marcellus_Eris_-_Musée_des_Augustins_-_RO_124.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T01:45:32.078Z",
+            "updatedAt": "2026-08-31T01:47:17.989Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q161472/앵그르_투 마르켈루스 에리스_1812__ingres-tu-marcellus-eris-1812.jpg",
+              "highResolution": "data/images/artist-Q161472/앵그르_투 마르켈루스 에리스_1812__ingres-tu-marcellus-eris-1812.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Musee des Augustins, Toulouse"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T01:45:32.078Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "ingres-romulus-acron-1812",
+          "year": 1812,
+          "popularity": 80,
+          "title": {
+            "ko": "아크론을 이긴 로물루스",
+            "en": "Romulus, Conqueror of Acron"
+          },
+          "description": {
+            "ko": "로마 건국 신화를 영웅적 인체와 고대적 의식의 장면으로 구성한 역사화입니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Ecole des Beaux-Arts, Paris",
+              "en": "Ecole des Beaux-Arts, Paris"
+            }
+          ],
+          "image": "data/images/artist-Q161472/앵그르_아크론을 이긴 로물루스_1812__ingres-romulus-acron-1812.jpg",
+          "thumbnail": "data/images/artist-Q161472/앵그르_아크론을 이긴 로물루스_1812__ingres-romulus-acron-1812.jpg",
+          "highRes": "data/images/artist-Q161472/앵그르_아크론을 이긴 로물루스_1812__ingres-romulus-acron-1812.jpg",
+          "highResImage": "data/images/artist-Q161472/앵그르_아크론을 이긴 로물루스_1812__ingres-romulus-acron-1812.jpg",
+          "highResOriginal": "data/images/artist-Q161472/앵그르_아크론을 이긴 로물루스_1812__ingres-romulus-acron-1812.jpg",
+          "source": "local file: 다운로드용/Jean-auguste-dominique_ingres,_romolo,_vincitore_di_acron,_porta_il_bottino_nel_tempio_di_giano,_1812,_00.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T01:45:32.078Z",
+            "updatedAt": "2026-08-31T01:47:17.989Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q161472/앵그르_아크론을 이긴 로물루스_1812__ingres-romulus-acron-1812.jpg",
+              "highResolution": "data/images/artist-Q161472/앵그르_아크론을 이긴 로물루스_1812__ingres-romulus-acron-1812.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Ecole des Beaux-Arts, Paris"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T01:45:32.078Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "ingres-grande-odalisque-1814",
+          "year": 1814,
+          "popularity": 80,
+          "title": {
+            "ko": "그랑드 오달리스크",
+            "en": "La Grande Odalisque"
+          },
+          "description": {
+            "ko": "해부학적 사실보다 길게 늘인 선과 매끄러운 피부 표현을 앞세워 관능적 이상을 만든 대표 누드화입니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Musee du Louvre, Paris",
+              "en": "Musee du Louvre, Paris"
+            }
+          ],
+          "image": "data/images/artist-Q161472/앵그르_그랑드 오달리스크_1814__ingres-grande-odalisque-1814.jpg",
+          "thumbnail": "data/images/artist-Q161472/앵그르_그랑드 오달리스크_1814__ingres-grande-odalisque-1814.jpg",
+          "highRes": "data/images/artist-Q161472/앵그르_그랑드 오달리스크_1814__ingres-grande-odalisque-1814.jpg",
+          "highResImage": "data/images/artist-Q161472/앵그르_그랑드 오달리스크_1814__ingres-grande-odalisque-1814.jpg",
+          "highResOriginal": "data/images/artist-Q161472/앵그르_그랑드 오달리스크_1814__ingres-grande-odalisque-1814.jpg",
+          "source": "local file: 다운로드용/Jean_Auguste_Dominique_Ingres,_La_Grande_Odalisque,_1814.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T01:45:32.078Z",
+            "updatedAt": "2026-08-31T01:47:17.989Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q161472/앵그르_그랑드 오달리스크_1814__ingres-grande-odalisque-1814.jpg",
+              "highResolution": "data/images/artist-Q161472/앵그르_그랑드 오달리스크_1814__ingres-grande-odalisque-1814.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Musee du Louvre, Paris"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T01:45:32.078Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "ingres-death-leonardo-1818",
+          "year": 1818,
+          "popularity": 80,
+          "title": {
+            "ko": "레오나르도 다 빈치의 죽음",
+            "en": "The Death of Leonardo da Vinci"
+          },
+          "description": {
+            "ko": "프랑수아 1세가 레오나르도를 품에 안은 전설적 장면으로, 예술가와 후원자의 관계를 역사화로 이상화합니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Petit Palais, Paris",
+              "en": "Petit Palais, Paris"
+            }
+          ],
+          "image": "data/images/artist-Q161472/앵그르_레오나르도 다 빈치의 죽음_1818__ingres-death-leonardo-1818.jpg",
+          "thumbnail": "data/images/artist-Q161472/앵그르_레오나르도 다 빈치의 죽음_1818__ingres-death-leonardo-1818.jpg",
+          "highRes": "data/images/artist-Q161472/앵그르_레오나르도 다 빈치의 죽음_1818__ingres-death-leonardo-1818.jpg",
+          "highResImage": "data/images/artist-Q161472/앵그르_레오나르도 다 빈치의 죽음_1818__ingres-death-leonardo-1818.jpg",
+          "highResOriginal": "data/images/artist-Q161472/앵그르_레오나르도 다 빈치의 죽음_1818__ingres-death-leonardo-1818.jpg",
+          "source": "local file: 다운로드용/IngresDeathOfDaVinci.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T01:45:32.078Z",
+            "updatedAt": "2026-08-31T01:47:17.989Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q161472/앵그르_레오나르도 다 빈치의 죽음_1818__ingres-death-leonardo-1818.jpg",
+              "highResolution": "data/images/artist-Q161472/앵그르_레오나르도 다 빈치의 죽음_1818__ingres-death-leonardo-1818.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Petit Palais, Paris"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T01:45:32.078Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "ingres-roger-angelica-1819",
+          "year": 1819,
+          "popularity": 80,
+          "title": {
+            "ko": "안젤리카를 구하는 로제르",
+            "en": "Roger Delivering Angelica"
+          },
+          "description": {
+            "ko": "아리오스토의 서사를 차가운 윤곽과 복잡한 인체 동작으로 구성한 낭만적 주제의 역사화입니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Musee du Louvre, Paris",
+              "en": "Musee du Louvre, Paris"
+            }
+          ],
+          "image": "data/images/artist-Q161472/앵그르_안젤리카를 구하는 로제르_1819__ingres-roger-angelica-1819.jpg",
+          "thumbnail": "data/images/artist-Q161472/앵그르_안젤리카를 구하는 로제르_1819__ingres-roger-angelica-1819.jpg",
+          "highRes": "data/images/artist-Q161472/앵그르_안젤리카를 구하는 로제르_1819__ingres-roger-angelica-1819.jpg",
+          "highResImage": "data/images/artist-Q161472/앵그르_안젤리카를 구하는 로제르_1819__ingres-roger-angelica-1819.jpg",
+          "highResOriginal": "data/images/artist-Q161472/앵그르_안젤리카를 구하는 로제르_1819__ingres-roger-angelica-1819.jpg",
+          "source": "local file: 다운로드용/Jean_Auguste_Dominique_Ingres_-_Roger_Delivering_Angelica.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T01:45:32.078Z",
+            "updatedAt": "2026-08-31T01:47:17.989Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q161472/앵그르_안젤리카를 구하는 로제르_1819__ingres-roger-angelica-1819.jpg",
+              "highResolution": "data/images/artist-Q161472/앵그르_안젤리카를 구하는 로제르_1819__ingres-roger-angelica-1819.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Musee du Louvre, Paris"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T01:45:32.078Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "ingres-vow-louis-xiii-1824",
+          "year": 1824,
+          "popularity": 100,
+          "title": {
+            "ko": "루이 13세의 서원",
+            "en": "The Vow of Louis XIII"
+          },
+          "description": {
+            "ko": "루이 13세가 성모에게 프랑스를 봉헌하는 장면을 르네상스풍의 엄격한 구도와 맑은 선으로 구성한 종교 역사화입니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Cathedral of Our Lady of the Assumption, Montauban",
+              "en": "Cathedral of Our Lady of the Assumption, Montauban"
+            }
+          ],
+          "image": "data/images/artist-Q161472/앵그르_루이 13세의 서원_1824__ingres-vow-louis-xiii-1824.jpg",
+          "thumbnail": "data/images/artist-Q161472/앵그르_루이 13세의 서원_1824__ingres-vow-louis-xiii-1824.jpg",
+          "highRes": "data/images/artist-Q161472/앵그르_루이 13세의 서원_1824__ingres-vow-louis-xiii-1824.jpg",
+          "highResImage": "data/images/artist-Q161472/앵그르_루이 13세의 서원_1824__ingres-vow-louis-xiii-1824.jpg",
+          "highResOriginal": "data/images/artist-Q161472/앵그르_루이 13세의 서원_1824__ingres-vow-louis-xiii-1824.jpg",
+          "source": "local file: 다운로드용/Le_Voeu_de_Louis_XIII.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T02:10:21.119Z",
+            "updatedAt": "2026-08-31T02:12:02.543Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q161472/앵그르_루이 13세의 서원_1824__ingres-vow-louis-xiii-1824.jpg",
+              "highResolution": "data/images/artist-Q161472/앵그르_루이 13세의 서원_1824__ingres-vow-louis-xiii-1824.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Cathedral of Our Lady of the Assumption, Montauban"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T02:10:21.119Z",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-29T05:31:14.758Z"
+          "representative": true,
+          "movementContribution": true,
+          "movementContributionReason": "movement-further-study"
+        },
+        {
+          "id": "ingres-apotheosis-homer-1827",
+          "year": 1827,
+          "popularity": 91,
+          "title": {
+            "ko": "호메로스의 신격화",
+            "en": "The Apotheosis of Homer"
+          },
+          "description": {
+            "ko": "중앙의 호메로스와 그를 둘러싼 시인·철학자·예술가를 고전 신전처럼 배열해, 고대와 근대의 예술 계보를 하나의 이상적 공동체로 제시합니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "루브르 박물관, 파리",
+              "en": "Musee du Louvre, Paris"
+            }
+          ],
+          "image": "data/images/artist-Q161472/앵그르_호메로스의 신격화_1827__ingres-apotheosis-homer-1827.jpg",
+          "thumbnail": "data/images/artist-Q161472/앵그르_호메로스의 신격화_1827__ingres-apotheosis-homer-1827.jpg",
+          "highRes": "data/images/artist-Q161472/앵그르_호메로스의 신격화_1827__ingres-apotheosis-homer-1827.jpg",
+          "highResImage": "data/images/artist-Q161472/앵그르_호메로스의 신격화_1827__ingres-apotheosis-homer-1827.jpg",
+          "highResOriginal": "data/images/artist-Q161472/앵그르_호메로스의 신격화_1827__ingres-apotheosis-homer-1827.jpg",
+          "source": "local file: 다운로드용/3840px-Homère_déifié,_dit_aussi_L'apothéose_d'Homère_-_Jean-Auguste_Dominique_Ingres_-_Musée_du_Louvre_Peintures_INV_5417_;_C_196.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T03:13:41.259Z",
+            "updatedAt": "2026-08-31T03:13:59.652Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q161472/앵그르_호메로스의 신격화_1827__ingres-apotheosis-homer-1827.jpg",
+              "highResolution": "data/images/artist-Q161472/앵그르_호메로스의 신격화_1827__ingres-apotheosis-homer-1827.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Musee du Louvre, Paris"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T03:13:41.259Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "ingres-louis-francois-bertin-1832",
+          "year": 1832,
+          "popularity": 90,
+          "title": {
+            "ko": "루이프랑수아 베르탱의 초상",
+            "en": "Portrait of Louis-Francois Bertin"
+          },
+          "description": {
+            "ko": "언론인 베르탱을 넓은 몸집과 단단히 짚은 손, 정면의 시선으로 묘사해 부르주아 지식인의 자신감과 존재감을 드러낸 초상화입니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "루브르 박물관, 파리",
+              "en": "Musee du Louvre, Paris"
+            }
+          ],
+          "image": "data/images/artist-Q161472/앵그르_루이프랑수아 베르탱의 초상_1832__ingres-louis-francois-bertin-1832.jpg",
+          "thumbnail": "data/images/artist-Q161472/앵그르_루이프랑수아 베르탱의 초상_1832__ingres-louis-francois-bertin-1832.jpg",
+          "highRes": "data/images/artist-Q161472/앵그르_루이프랑수아 베르탱의 초상_1832__ingres-louis-francois-bertin-1832.jpg",
+          "highResImage": "data/images/artist-Q161472/앵그르_루이프랑수아 베르탱의 초상_1832__ingres-louis-francois-bertin-1832.jpg",
+          "highResOriginal": "data/images/artist-Q161472/앵그르_루이프랑수아 베르탱의 초상_1832__ingres-louis-francois-bertin-1832.jpg",
+          "source": "local file: 다운로드용/Louis-Francois_Bertin.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T02:25:03.061Z",
+            "updatedAt": "2026-08-31T02:25:59.979Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q161472/앵그르_루이프랑수아 베르탱의 초상_1832__ingres-louis-francois-bertin-1832.jpg",
+              "highResolution": "data/images/artist-Q161472/앵그르_루이프랑수아 베르탱의 초상_1832__ingres-louis-francois-bertin-1832.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Musee du Louvre, Paris"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T02:25:03.061Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "ingres-martyrdom-saint-symphorian-1834",
+          "year": 1834,
+          "popularity": 80,
+          "title": {
+            "ko": "성 심포리아누스의 순교",
+            "en": "The Martyrdom of Saint Symphorian"
+          },
+          "description": {
+            "ko": "대규모 종교 역사화에서 군중과 건축을 엄격한 선과 색면으로 정리해 신앙의 결단을 강조합니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Autun Cathedral, Autun",
+              "en": "Autun Cathedral, Autun"
+            }
+          ],
+          "image": "data/images/artist-Q161472/앵그르_성 심포리아누스의 순교_1834__ingres-martyrdom-saint-symphorian-1834.jpg",
+          "thumbnail": "data/images/artist-Q161472/앵그르_성 심포리아누스의 순교_1834__ingres-martyrdom-saint-symphorian-1834.jpg",
+          "highRes": "data/images/artist-Q161472/앵그르_성 심포리아누스의 순교_1834__ingres-martyrdom-saint-symphorian-1834.jpg",
+          "highResImage": "data/images/artist-Q161472/앵그르_성 심포리아누스의 순교_1834__ingres-martyrdom-saint-symphorian-1834.jpg",
+          "highResOriginal": "data/images/artist-Q161472/앵그르_성 심포리아누스의 순교_1834__ingres-martyrdom-saint-symphorian-1834.jpg",
+          "source": "local file: 다운로드용/Ingres_Martyre_Saint-Symphorien.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T01:45:32.078Z",
+            "updatedAt": "2026-08-31T01:47:17.989Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q161472/앵그르_성 심포리아누스의 순교_1834__ingres-martyrdom-saint-symphorian-1834.jpg",
+              "highResolution": "data/images/artist-Q161472/앵그르_성 심포리아누스의 순교_1834__ingres-martyrdom-saint-symphorian-1834.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Autun Cathedral, Autun"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T01:45:32.078Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "ingres-antiochus-stratonice-1840",
+          "year": 1840,
+          "popularity": 80,
+          "title": {
+            "ko": "안티오코스와 스트라토니케",
+            "en": "Antiochus and Stratonice"
+          },
+          "description": {
+            "ko": "사랑병을 앓는 왕자와 이를 알아차리는 의사의 이야기를 정교한 실내와 몸짓으로 연출한 역사화입니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Musee Conde, Chantilly",
+              "en": "Musee Conde, Chantilly"
+            }
+          ],
+          "image": "data/images/artist-Q161472/앵그르_안티오코스와 스트라토니케_1840__ingres-antiochus-stratonice-1840.jpg",
+          "thumbnail": "data/images/artist-Q161472/앵그르_안티오코스와 스트라토니케_1840__ingres-antiochus-stratonice-1840.jpg",
+          "highRes": "data/images/artist-Q161472/앵그르_안티오코스와 스트라토니케_1840__ingres-antiochus-stratonice-1840.jpg",
+          "highResImage": "data/images/artist-Q161472/앵그르_안티오코스와 스트라토니케_1840__ingres-antiochus-stratonice-1840.jpg",
+          "highResOriginal": "data/images/artist-Q161472/앵그르_안티오코스와 스트라토니케_1840__ingres-antiochus-stratonice-1840.jpg",
+          "source": "local file: 다운로드용/Antiochus_et_stratonice_-_Ingres_-_Musée_Condé.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T01:45:32.078Z",
+            "updatedAt": "2026-08-31T01:47:17.989Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q161472/앵그르_안티오코스와 스트라토니케_1840__ingres-antiochus-stratonice-1840.jpg",
+              "highResolution": "data/images/artist-Q161472/앵그르_안티오코스와 스트라토니케_1840__ingres-antiochus-stratonice-1840.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Musee Conde, Chantilly"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T01:45:32.078Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "ingres-joan-arc-coronation-charles-vii-1854",
+          "year": 1854,
+          "popularity": 83,
+          "title": {
+            "ko": "샤를 7세 대관식의 잔 다르크",
+            "en": "Joan of Arc at the Coronation of Charles VII"
+          },
+          "description": {
+            "ko": "대관식에 선 잔 다르크를 중세적 의상과 정밀한 세부로 묘사해, 프랑스 역사와 영웅적 기억을 신고전주의의 선 중심 화법으로 되살린 작품입니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "루브르 박물관, 파리",
+              "en": "Musee du Louvre, Paris"
+            }
+          ],
+          "image": "data/images/artist-Q161472/앵그르_샤를 7세 대관식의 잔 다르크_1854__ingres-joan-arc-coronation-charles-vii-1854.jpg",
+          "thumbnail": "data/images/artist-Q161472/앵그르_샤를 7세 대관식의 잔 다르크_1854__ingres-joan-arc-coronation-charles-vii-1854.jpg",
+          "highRes": "data/images/artist-Q161472/앵그르_샤를 7세 대관식의 잔 다르크_1854__ingres-joan-arc-coronation-charles-vii-1854.jpg",
+          "highResImage": "data/images/artist-Q161472/앵그르_샤를 7세 대관식의 잔 다르크_1854__ingres-joan-arc-coronation-charles-vii-1854.jpg",
+          "highResOriginal": "data/images/artist-Q161472/앵그르_샤를 7세 대관식의 잔 다르크_1854__ingres-joan-arc-coronation-charles-vii-1854.jpg",
+          "source": "local file: 다운로드용/Ingres_coronation_charles_vii.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T02:31:44.707Z",
+            "updatedAt": "2026-08-31T02:32:39.783Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q161472/앵그르_샤를 7세 대관식의 잔 다르크_1854__ingres-joan-arc-coronation-charles-vii-1854.jpg",
+              "highResolution": "data/images/artist-Q161472/앵그르_샤를 7세 대관식의 잔 다르크_1854__ingres-joan-arc-coronation-charles-vii-1854.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Musee du Louvre, Paris"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T02:31:44.707Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "ingres-spring-1856",
+          "year": 1856,
+          "popularity": 80,
+          "title": {
+            "ko": "샘",
+            "en": "The Source"
+          },
+          "description": {
+            "ko": "항아리에서 물을 따르는 인체를 유려한 윤곽과 투명한 피부 표현으로 이상화한 후기 누드화입니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Musee d Orsay, Paris",
+              "en": "Musee d Orsay, Paris"
+            }
+          ],
+          "image": "data/images/artist-Q161472/앵그르_샘_1856__ingres-spring-1856.jpg",
+          "thumbnail": "data/images/artist-Q161472/앵그르_샘_1856__ingres-spring-1856.jpg",
+          "highRes": "data/images/artist-Q161472/앵그르_샘_1856__ingres-spring-1856.jpg",
+          "highResImage": "data/images/artist-Q161472/앵그르_샘_1856__ingres-spring-1856.jpg",
+          "highResOriginal": "data/images/artist-Q161472/앵그르_샘_1856__ingres-spring-1856.jpg",
+          "source": "local file: 다운로드용/Jean_Auguste_Dominique_Ingres_-_The_Spring_-_Google_Art_Project_2.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T01:45:32.078Z",
+            "updatedAt": "2026-08-31T01:47:17.989Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q161472/앵그르_샘_1856__ingres-spring-1856.jpg",
+              "highResolution": "data/images/artist-Q161472/앵그르_샘_1856__ingres-spring-1856.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Musee d Orsay, Paris"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T01:45:32.078Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "ingres-self-portrait-1858",
+          "year": 1858,
+          "popularity": 80,
+          "title": {
+            "ko": "자화상",
+            "en": "Self-Portrait"
+          },
+          "description": {
+            "ko": "노년의 화가가 자신을 냉철한 시선과 단정한 옷차림으로 묘사해 평생의 선 중심 미학을 압축합니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Uffizi Gallery, Florence",
+              "en": "Uffizi Gallery, Florence"
+            }
+          ],
+          "image": "data/images/artist-Q161472/앵그르_자화상_1858__ingres-self-portrait-1858.jpg",
+          "thumbnail": "data/images/artist-Q161472/앵그르_자화상_1858__ingres-self-portrait-1858.jpg",
+          "highRes": "data/images/artist-Q161472/앵그르_자화상_1858__ingres-self-portrait-1858.jpg",
+          "highResImage": "data/images/artist-Q161472/앵그르_자화상_1858__ingres-self-portrait-1858.jpg",
+          "highResOriginal": "data/images/artist-Q161472/앵그르_자화상_1858__ingres-self-portrait-1858.jpg",
+          "source": "local file: 다운로드용/Ingres-autoportrait-1858_Florence.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T01:45:32.078Z",
+            "updatedAt": "2026-08-31T01:47:17.989Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q161472/앵그르_자화상_1858__ingres-self-portrait-1858.jpg",
+              "highResolution": "data/images/artist-Q161472/앵그르_자화상_1858__ingres-self-portrait-1858.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Uffizi Gallery, Florence"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T01:45:32.078Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "ingres-turkish-bath-1862",
+          "year": 1862,
+          "popularity": 80,
+          "title": {
+            "ko": "터키탕",
+            "en": "The Turkish Bath"
+          },
+          "description": {
+            "ko": "원형 화면 안에 여러 누드를 리듬처럼 배치해 앵그르가 오리엔탈리즘과 선의 감각을 결합한 말년 작품입니다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "유화",
+            "en": "Oil on canvas"
+          },
+          "country": {
+            "ko": "프랑스",
+            "en": "France"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Musee du Louvre, Paris",
+              "en": "Musee du Louvre, Paris"
+            }
+          ],
+          "image": "data/images/artist-Q161472/앵그르_터키탕_1862__ingres-turkish-bath-1862.jpg",
+          "thumbnail": "data/images/artist-Q161472/앵그르_터키탕_1862__ingres-turkish-bath-1862.jpg",
+          "highRes": "data/images/artist-Q161472/앵그르_터키탕_1862__ingres-turkish-bath-1862.jpg",
+          "highResImage": "data/images/artist-Q161472/앵그르_터키탕_1862__ingres-turkish-bath-1862.jpg",
+          "highResOriginal": "data/images/artist-Q161472/앵그르_터키탕_1862__ingres-turkish-bath-1862.jpg",
+          "source": "local file: 다운로드용/3840px-Le_Bain_Turc,_by_Jean_Auguste_Dominique_Ingres,_from_C2RMF_retouched.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-08-31T01:45:32.078Z",
+            "updatedAt": "2026-08-31T01:47:17.989Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q161472/앵그르_터키탕_1862__ingres-turkish-bath-1862.jpg",
+              "highResolution": "data/images/artist-Q161472/앵그르_터키탕_1862__ingres-turkish-bath-1862.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Musee du Louvre, Paris"
+            }
+          },
+          "thumbnailCacheKey": "2026-08-31T01:45:32.078Z",
+          "thumbnailValidation": 2
         }
       ],
       "featuredWorkIds": [
-        "artist-Q161472-representative-work"
+        "ingres-vow-louis-xiii-1824"
       ],
       "profileResolved": true,
       "metadata": {
@@ -123037,9 +124836,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-28T00:00:00.000Z",
-        "updatedAt": "2026-08-30T10:52:56.016Z",
+        "updatedAt": "2026-08-28T00:00:00.000Z",
         "createdBy": "phase-5-rebuild",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "phase-5-rebuild"
       },
       "aliases": {
         "ko": [],

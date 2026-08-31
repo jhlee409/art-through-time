@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "generatedAt": "2026-08-30T21:20:03.534Z",
+  "generatedAt": "2026-08-31T03:13:47.519Z",
   "namingStandard": "shortArtist_titleFirst3Words_startYear__workId.ext",
   "stats": {
-    "images": 1686,
-    "linkedImages": 1686,
+    "images": 1715,
+    "linkedImages": 1715,
     "unlinkedImages": 0,
-    "standardNames": 75,
+    "standardNames": 104,
     "legacyNames": 1611,
     "newNonstandardNames": 0,
     "duplicateHashGroups": 1
@@ -8463,10 +8463,428 @@
       ]
     },
     {
+      "path": "data/images/artist-Q161472/앵그르_24세의 자화상_1804__ingres-self-portrait-1804.jpg",
+      "filename": "앵그르_24세의 자화상_1804__ingres-self-portrait-1804.jpg",
+      "bytes": 2643265,
+      "sha256": "ff74b1a68e958fd25eb37482d88313fafd1829fff724abad1a002b4ce265be9a",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q161472",
+          "artistQid": "Q161472",
+          "artistNameKo": "장오귀스트도미니크 앵그르",
+          "artistNameEn": "Jean-Auguste-Dominique Ingres",
+          "workId": "ingres-self-portrait-1804",
+          "workQid": "",
+          "titleKo": "24세의 자화상",
+          "titleEn": "Self-Portrait at the Age of Twenty-four",
+          "year": 1804
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q161472/앵그르_그랑드 오달리스크_1814__ingres-grande-odalisque-1814.jpg",
+      "filename": "앵그르_그랑드 오달리스크_1814__ingres-grande-odalisque-1814.jpg",
+      "bytes": 3105799,
+      "sha256": "17309479bf95a20cdf3fcf5775996c681ad7d3aaeb71db2d3c535aba33a10991",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q161472",
+          "artistQid": "Q161472",
+          "artistNameKo": "장오귀스트도미니크 앵그르",
+          "artistNameEn": "Jean-Auguste-Dominique Ingres",
+          "workId": "ingres-grande-odalisque-1814",
+          "workQid": "",
+          "titleKo": "그랑드 오달리스크",
+          "titleEn": "La Grande Odalisque",
+          "year": 1814
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q161472/앵그르_레오나르도 다 빈치의 죽음_1818__ingres-death-leonardo-1818.jpg",
+      "filename": "앵그르_레오나르도 다 빈치의 죽음_1818__ingres-death-leonardo-1818.jpg",
+      "bytes": 2484117,
+      "sha256": "50c9b399b9d4aca0b35ce3db9d128cd9ae88b86b59e2f5baa5c5e31a73a1f4ec",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q161472",
+          "artistQid": "Q161472",
+          "artistNameKo": "장오귀스트도미니크 앵그르",
+          "artistNameEn": "Jean-Auguste-Dominique Ingres",
+          "workId": "ingres-death-leonardo-1818",
+          "workQid": "",
+          "titleKo": "레오나르도 다 빈치의 죽음",
+          "titleEn": "The Death of Leonardo da Vinci",
+          "year": 1818
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q161472/앵그르_루이 13세의 서원_1824__ingres-vow-louis-xiii-1824.jpg",
+      "filename": "앵그르_루이 13세의 서원_1824__ingres-vow-louis-xiii-1824.jpg",
+      "bytes": 1030053,
+      "sha256": "650f085bbcb62d7fd1678935ed69bc15994eb4913e721abc0d86480852936321",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q161472",
+          "artistQid": "Q161472",
+          "artistNameKo": "장오귀스트도미니크 앵그르",
+          "artistNameEn": "Jean-Auguste-Dominique Ingres",
+          "workId": "ingres-vow-louis-xiii-1824",
+          "workQid": "",
+          "titleKo": "루이 13세의 서원",
+          "titleEn": "The Vow of Louis XIII",
+          "year": 1824
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q161472/앵그르_루이프랑수아 베르탱의 초상_1832__ingres-louis-francois-bertin-1832.jpg",
+      "filename": "앵그르_루이프랑수아 베르탱의 초상_1832__ingres-louis-francois-bertin-1832.jpg",
+      "bytes": 94870,
+      "sha256": "d2faf55f76f7b586a174a12a5c73fae605dff5ec4157e7fc9e0273a912e342c3",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q161472",
+          "artistQid": "Q161472",
+          "artistNameKo": "장오귀스트도미니크 앵그르",
+          "artistNameEn": "Jean-Auguste-Dominique Ingres",
+          "workId": "ingres-louis-francois-bertin-1832",
+          "workQid": "",
+          "titleKo": "루이프랑수아 베르탱의 초상",
+          "titleEn": "Portrait of Louis-Francois Bertin",
+          "year": 1832
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q161472/앵그르_리비에르 부인의 초상_1805__ingres-madame-riviere-1805.jpg",
+      "filename": "앵그르_리비에르 부인의 초상_1805__ingres-madame-riviere-1805.jpg",
+      "bytes": 8894960,
+      "sha256": "58aa2b5bb619db0ede43be6ea93d936f4fcccee088763c8db970038b11f4044a",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q161472",
+          "artistQid": "Q161472",
+          "artistNameKo": "장오귀스트도미니크 앵그르",
+          "artistNameEn": "Jean-Auguste-Dominique Ingres",
+          "workId": "ingres-madame-riviere-1805",
+          "workQid": "",
+          "titleKo": "리비에르 부인의 초상",
+          "titleEn": "Portrait of Madame Riviere",
+          "year": 1805
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q161472/앵그르_발팽송의 목욕하는 여인_1808__ingres-valpincon-bather-1808.jpg",
+      "filename": "앵그르_발팽송의 목욕하는 여인_1808__ingres-valpincon-bather-1808.jpg",
+      "bytes": 3419131,
+      "sha256": "fdbd815e3fad8fd2d01fc180e1040a860f3a4d541732df984d705fa836afdb5b",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q161472",
+          "artistQid": "Q161472",
+          "artistNameKo": "장오귀스트도미니크 앵그르",
+          "artistNameEn": "Jean-Auguste-Dominique Ingres",
+          "workId": "ingres-valpincon-bather-1808",
+          "workQid": "",
+          "titleKo": "발팽송의 목욕하는 여인",
+          "titleEn": "The Valpincon Bather",
+          "year": 1808
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q161472/앵그르_샘_1856__ingres-spring-1856.jpg",
+      "filename": "앵그르_샘_1856__ingres-spring-1856.jpg",
+      "bytes": 7650182,
+      "sha256": "8848e1adc2b92321cadc7a3fc65955a306a6cf7d4f15f01a5338ca5a075a405f",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q161472",
+          "artistQid": "Q161472",
+          "artistNameKo": "장오귀스트도미니크 앵그르",
+          "artistNameEn": "Jean-Auguste-Dominique Ingres",
+          "workId": "ingres-spring-1856",
+          "workQid": "",
+          "titleKo": "샘",
+          "titleEn": "The Source",
+          "year": 1856
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q161472/앵그르_샤를 7세 대관식의 잔 다르크_1854__ingres-joan-arc-coronation-charles-vii-1854.jpg",
+      "filename": "앵그르_샤를 7세 대관식의 잔 다르크_1854__ingres-joan-arc-coronation-charles-vii-1854.jpg",
+      "bytes": 8798657,
+      "sha256": "f74c1875315a9874c8f5f0a16a7b70363ffac1b161bda9c6d0f8e1b8cc71ffc0",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q161472",
+          "artistQid": "Q161472",
+          "artistNameKo": "장오귀스트도미니크 앵그르",
+          "artistNameEn": "Jean-Auguste-Dominique Ingres",
+          "workId": "ingres-joan-arc-coronation-charles-vii-1854",
+          "workQid": "",
+          "titleKo": "샤를 7세 대관식의 잔 다르크",
+          "titleEn": "Joan of Arc at the Coronation of Charles VII",
+          "year": 1854
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q161472/앵그르_성 심포리아누스의 순교_1834__ingres-martyrdom-saint-symphorian-1834.jpg",
+      "filename": "앵그르_성 심포리아누스의 순교_1834__ingres-martyrdom-saint-symphorian-1834.jpg",
+      "bytes": 288290,
+      "sha256": "55d4c6074b9bb8d8618ce303031ae1ebd9d25cd6fdd3d6db25943c69438c26ce",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q161472",
+          "artistQid": "Q161472",
+          "artistNameKo": "장오귀스트도미니크 앵그르",
+          "artistNameEn": "Jean-Auguste-Dominique Ingres",
+          "workId": "ingres-martyrdom-saint-symphorian-1834",
+          "workQid": "",
+          "titleKo": "성 심포리아누스의 순교",
+          "titleEn": "The Martyrdom of Saint Symphorian",
+          "year": 1834
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q161472/앵그르_아크론을 이긴 로물루스_1812__ingres-romulus-acron-1812.jpg",
+      "filename": "앵그르_아크론을 이긴 로물루스_1812__ingres-romulus-acron-1812.jpg",
+      "bytes": 1931155,
+      "sha256": "1ff9245f25ada2f3e2e1144bff198b0356a52e47af35be5e53800be5dc561082",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q161472",
+          "artistQid": "Q161472",
+          "artistNameKo": "장오귀스트도미니크 앵그르",
+          "artistNameEn": "Jean-Auguste-Dominique Ingres",
+          "workId": "ingres-romulus-acron-1812",
+          "workQid": "",
+          "titleKo": "아크론을 이긴 로물루스",
+          "titleEn": "Romulus, Conqueror of Acron",
+          "year": 1812
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q161472/앵그르_안젤리카를 구하는 로제르_1819__ingres-roger-angelica-1819.jpg",
+      "filename": "앵그르_안젤리카를 구하는 로제르_1819__ingres-roger-angelica-1819.jpg",
+      "bytes": 1727772,
+      "sha256": "6d272502ceb72dd030c583577d2f0406a429de4c99f99646405ac872db12a8d9",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q161472",
+          "artistQid": "Q161472",
+          "artistNameKo": "장오귀스트도미니크 앵그르",
+          "artistNameEn": "Jean-Auguste-Dominique Ingres",
+          "workId": "ingres-roger-angelica-1819",
+          "workQid": "",
+          "titleKo": "안젤리카를 구하는 로제르",
+          "titleEn": "Roger Delivering Angelica",
+          "year": 1819
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q161472/앵그르_안티오코스와 스트라토니케_1840__ingres-antiochus-stratonice-1840.jpg",
+      "filename": "앵그르_안티오코스와 스트라토니케_1840__ingres-antiochus-stratonice-1840.jpg",
+      "bytes": 170999,
+      "sha256": "ecf65f6937676cfcfe612d018653c84aac904bda268811a52f7add203097e420",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q161472",
+          "artistQid": "Q161472",
+          "artistNameKo": "장오귀스트도미니크 앵그르",
+          "artistNameEn": "Jean-Auguste-Dominique Ingres",
+          "workId": "ingres-antiochus-stratonice-1840",
+          "workQid": "",
+          "titleKo": "안티오코스와 스트라토니케",
+          "titleEn": "Antiochus and Stratonice",
+          "year": 1840
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q161472/앵그르_오이디푸스와 스핑크스_1808__ingres-oedipus-sphinx-1808.jpg",
+      "filename": "앵그르_오이디푸스와 스핑크스_1808__ingres-oedipus-sphinx-1808.jpg",
+      "bytes": 2335629,
+      "sha256": "932eceb8714b8f62ce72c4a680c295cbf82077220588a075e044e9c9a773a055",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q161472",
+          "artistQid": "Q161472",
+          "artistNameKo": "장오귀스트도미니크 앵그르",
+          "artistNameEn": "Jean-Auguste-Dominique Ingres",
+          "workId": "ingres-oedipus-sphinx-1808",
+          "workQid": "",
+          "titleKo": "오이디푸스와 스핑크스",
+          "titleEn": "Oedipus and the Sphinx",
+          "year": 1808
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q161472/앵그르_자화상_1858__ingres-self-portrait-1858.jpg",
+      "filename": "앵그르_자화상_1858__ingres-self-portrait-1858.jpg",
+      "bytes": 121236,
+      "sha256": "18c1298ea1bd8af7ae61bf5b4169f485fdd774745e0da8e08f50605aa5a83857",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q161472",
+          "artistQid": "Q161472",
+          "artistNameKo": "장오귀스트도미니크 앵그르",
+          "artistNameEn": "Jean-Auguste-Dominique Ingres",
+          "workId": "ingres-self-portrait-1858",
+          "workQid": "",
+          "titleKo": "자화상",
+          "titleEn": "Self-Portrait",
+          "year": 1858
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q161472/앵그르_주피터와 테티스_1811__ingres-jupiter-thetis-1811.jpg",
+      "filename": "앵그르_주피터와 테티스_1811__ingres-jupiter-thetis-1811.jpg",
+      "bytes": 295384,
+      "sha256": "25a2479c189054b23b93fc9854170ea80fb7ff190a921ce4ea15fe82813f24b5",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q161472",
+          "artistQid": "Q161472",
+          "artistNameKo": "장오귀스트도미니크 앵그르",
+          "artistNameEn": "Jean-Auguste-Dominique Ingres",
+          "workId": "ingres-jupiter-thetis-1811",
+          "workQid": "",
+          "titleKo": "주피터와 테티스",
+          "titleEn": "Jupiter and Thetis",
+          "year": 1811
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q161472/앵그르_터키탕_1862__ingres-turkish-bath-1862.jpg",
+      "filename": "앵그르_터키탕_1862__ingres-turkish-bath-1862.jpg",
+      "bytes": 3321260,
+      "sha256": "7a0e6c0e35439530c4d6082e60b65c90a7ffaa667d67c256a54adb2b693b97dd",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q161472",
+          "artistQid": "Q161472",
+          "artistNameKo": "장오귀스트도미니크 앵그르",
+          "artistNameEn": "Jean-Auguste-Dominique Ingres",
+          "workId": "ingres-turkish-bath-1862",
+          "workQid": "",
+          "titleKo": "터키탕",
+          "titleEn": "The Turkish Bath",
+          "year": 1862
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q161472/앵그르_투 마르켈루스 에리스_1812__ingres-tu-marcellus-eris-1812.jpg",
+      "filename": "앵그르_투 마르켈루스 에리스_1812__ingres-tu-marcellus-eris-1812.jpg",
+      "bytes": 206267,
+      "sha256": "8d94a7d5076a4af7a3a9ef8a501bdbb39637a450aa0ac13d62d17dc9e1974e08",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q161472",
+          "artistQid": "Q161472",
+          "artistNameKo": "장오귀스트도미니크 앵그르",
+          "artistNameEn": "Jean-Auguste-Dominique Ingres",
+          "workId": "ingres-tu-marcellus-eris-1812",
+          "workQid": "",
+          "titleKo": "투 마르켈루스 에리스",
+          "titleEn": "Tu Marcellus Eris",
+          "year": 1812
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q161472/앵그르_호메로스의 신격화_1827__ingres-apotheosis-homer-1827.jpg",
+      "filename": "앵그르_호메로스의 신격화_1827__ingres-apotheosis-homer-1827.jpg",
+      "bytes": 3662859,
+      "sha256": "b43cc0a8c01950a16b069618f1a0fc06e1a6f3d51a7afe8fe4b62b3a2123722c",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q161472",
+          "artistQid": "Q161472",
+          "artistNameKo": "장오귀스트도미니크 앵그르",
+          "artistNameEn": "Jean-Auguste-Dominique Ingres",
+          "workId": "ingres-apotheosis-homer-1827",
+          "workQid": "",
+          "titleKo": "호메로스의 신격화",
+          "titleEn": "The Apotheosis of Homer",
+          "year": 1827
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-Q161472/앵그르_황제의 옥좌에 앉은_1806__artist-Q161472-representative-work.jpg",
       "filename": "앵그르_황제의 옥좌에 앉은_1806__artist-Q161472-representative-work.jpg",
-      "bytes": 542740,
-      "sha256": "25b7d7d862b6c270a4bedbd9e180788a673ef67bfcf924920713924f7abd9971",
+      "bytes": 1334069,
+      "sha256": "53472270524ba1cdb4e09ff0b0e8bb9943475dc8f3f00c29f145e885e2031123",
       "mime": "image/jpeg",
       "namingStatus": "standard",
       "aliases": [],
@@ -30031,10 +30449,230 @@
       ]
     },
     {
+      "path": "data/images/artist-Q83155/다비드_교황 비오 7세 초상_1805__david-pope-pius-vii-1805.jpg",
+      "filename": "다비드_교황 비오 7세 초상_1805__david-pope-pius-vii-1805.jpg",
+      "bytes": 2705969,
+      "sha256": "695392e95abbeb8f9655b7ef621bab2fc97ba026c9362c12b72504a31904135f",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q83155",
+          "artistQid": "Q83155",
+          "artistNameKo": "자크루이 다비드",
+          "artistNameEn": "Jacques-Louis David",
+          "workId": "david-pope-pius-vii-1805",
+          "workQid": "",
+          "titleKo": "교황 비오 7세 초상",
+          "titleEn": "Portrait of Pope Pius VII",
+          "year": 1805
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q83155/다비드_나폴레옹의 대관식_1807__david-coronation-napoleon-1807.jpg",
+      "filename": "다비드_나폴레옹의 대관식_1807__david-coronation-napoleon-1807.jpg",
+      "bytes": 192295,
+      "sha256": "7342efa7c92b6b537137590751bda2aae58a263c49377e30e691748bb68d4a80",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q83155",
+          "artistQid": "Q83155",
+          "artistNameKo": "자크루이 다비드",
+          "artistNameEn": "Jacques-Louis David",
+          "workId": "david-coronation-napoleon-1807",
+          "workQid": "",
+          "titleKo": "나폴레옹의 대관식",
+          "titleEn": "The Coronation of Napoleon",
+          "year": 1807
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q83155/다비드_마라의 죽음_1793__david-death-of-marat-1793.jpg",
+      "filename": "다비드_마라의 죽음_1793__david-death-of-marat-1793.jpg",
+      "bytes": 3756599,
+      "sha256": "07671153fbbecd41abab3f6177b4273f6de59a65cd0ec2c15fb09fa177d6d8a4",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q83155",
+          "artistQid": "Q83155",
+          "artistNameKo": "자크루이 다비드",
+          "artistNameEn": "Jacques-Louis David",
+          "workId": "david-death-of-marat-1793",
+          "workQid": "",
+          "titleKo": "마라의 죽음",
+          "titleEn": "The Death of Marat",
+          "year": 1793
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q83155/다비드_벨리사리우스_1781__david-belisarius-1781.jpg",
+      "filename": "다비드_벨리사리우스_1781__david-belisarius-1781.jpg",
+      "bytes": 767798,
+      "sha256": "f0859162660165bdd01eafab3eb9fe27d0ffc61d869685cec553aed3483bd5c6",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q83155",
+          "artistQid": "Q83155",
+          "artistNameKo": "자크루이 다비드",
+          "artistNameEn": "Jacques-Louis David",
+          "workId": "david-belisarius-1781",
+          "workQid": "",
+          "titleKo": "벨리사리우스",
+          "titleEn": "Belisarius Begging for Alms",
+          "year": 1781
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q83155/다비드_브루투스와 아들들_1789__david-brutus-1789.jpg",
+      "filename": "다비드_브루투스와 아들들_1789__david-brutus-1789.jpg",
+      "bytes": 2851650,
+      "sha256": "e7f053aaba5fa374891e17dfdda6b6215d630c5271fb0caa8e21edd03ae1eb20",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q83155",
+          "artistQid": "Q83155",
+          "artistNameKo": "자크루이 다비드",
+          "artistNameEn": "Jacques-Louis David",
+          "workId": "david-brutus-1789",
+          "workQid": "",
+          "titleKo": "브루투스와 아들들",
+          "titleEn": "The Lictors Bring to Brutus the Bodies of His Sons",
+          "year": 1789
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q83155/다비드_사비니 여인들의 개입_1799__david-intervention-of-sabine-women-1799.jpg",
+      "filename": "다비드_사비니 여인들의 개입_1799__david-intervention-of-sabine-women-1799.jpg",
+      "bytes": 3680860,
+      "sha256": "349ebc9c3d0e9fbadec0e140a7fe29802ac1b32ce41f0062cc3e7cc816ed23a2",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q83155",
+          "artistQid": "Q83155",
+          "artistNameKo": "자크루이 다비드",
+          "artistNameEn": "Jacques-Louis David",
+          "workId": "david-intervention-of-sabine-women-1799",
+          "workQid": "",
+          "titleKo": "사비니 여인들의 개입",
+          "titleEn": "The Intervention of the Sabine Women",
+          "year": 1799
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q83155/다비드_소크라테스의 죽음_1787__david-death-of-socrates-1787.jpg",
+      "filename": "다비드_소크라테스의 죽음_1787__david-death-of-socrates-1787.jpg",
+      "bytes": 5534896,
+      "sha256": "250ea55ba4e3840a5c0daaf26f04a7de4907f3b1bef7f5f4f1f2697ae4d84eb9",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q83155",
+          "artistQid": "Q83155",
+          "artistNameKo": "자크루이 다비드",
+          "artistNameEn": "Jacques-Louis David",
+          "workId": "david-death-of-socrates-1787",
+          "workQid": "",
+          "titleKo": "소크라테스의 죽음",
+          "titleEn": "The Death of Socrates",
+          "year": 1787
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q83155/다비드_알프스를 넘는 나폴레옹_1801__david-napoleon-crossing-alps-1801.jpg",
+      "filename": "다비드_알프스를 넘는 나폴레옹_1801__david-napoleon-crossing-alps-1801.jpg",
+      "bytes": 1445229,
+      "sha256": "088fe3f6895cc018c553081f149f6effaa8c8cab4ba097df7e10a786661ba93f",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q83155",
+          "artistQid": "Q83155",
+          "artistNameKo": "자크루이 다비드",
+          "artistNameEn": "Jacques-Louis David",
+          "workId": "david-napoleon-crossing-alps-1801",
+          "workQid": "",
+          "titleKo": "알프스를 넘는 나폴레옹",
+          "titleEn": "Napoleon Crossing the Alps",
+          "year": 1801
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q83155/다비드_테르모필레의 레오니다스_1814__david-leonidas-thermopylae-1814.png",
+      "filename": "다비드_테르모필레의 레오니다스_1814__david-leonidas-thermopylae-1814.png",
+      "bytes": 2975918,
+      "sha256": "31c2c6984d72c60aff745a2d8e931cfc6696b2152c7ade68de76f73e17d3f452",
+      "mime": "image/png",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q83155",
+          "artistQid": "Q83155",
+          "artistNameKo": "자크루이 다비드",
+          "artistNameEn": "Jacques-Louis David",
+          "workId": "david-leonidas-thermopylae-1814",
+          "workQid": "",
+          "titleKo": "테르모필레의 레오니다스",
+          "titleEn": "Leonidas at Thermopylae",
+          "year": 1814
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q83155/다비드_튈르리의 나폴레옹_1812__david-napoleon-study-tuileries-1812.jpg",
+      "filename": "다비드_튈르리의 나폴레옹_1812__david-napoleon-study-tuileries-1812.jpg",
+      "bytes": 5605171,
+      "sha256": "4351a48ce6fa20dd2d537b3ff32b3848a73786fe27afae5c0bd6073526c776a5",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q83155",
+          "artistQid": "Q83155",
+          "artistNameKo": "자크루이 다비드",
+          "artistNameEn": "Jacques-Louis David",
+          "workId": "david-napoleon-study-tuileries-1812",
+          "workQid": "",
+          "titleKo": "튈르리의 나폴레옹",
+          "titleEn": "The Emperor Napoleon in His Study at the Tuileries",
+          "year": 1812
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-Q83155/다비드_호라티우스 형제의 맹세_1784__artist-Q83155-representative-work.jpg",
       "filename": "다비드_호라티우스 형제의 맹세_1784__artist-Q83155-representative-work.jpg",
-      "bytes": 249768,
-      "sha256": "6a7fdaf36adebddf33866d635413d6aec434b1804ccd3d67a7ab8cdcb721c6f5",
+      "bytes": 2571977,
+      "sha256": "b24837d5de8804ca414ecd9a5b43182b3032831d0ee397cacf9cacb2878e376e",
       "mime": "image/jpeg",
       "namingStatus": "standard",
       "aliases": [],

@@ -654,7 +654,7 @@ function renderTimeline() {
   const storedLeonardoLayout = isLeonardoTimeline ? sessionStorage.getItem(leonardoLayoutKey) : '';
   const leonardoLayout = ['chronology','portrait-series'].includes(storedLeonardoLayout)
     ? storedLeonardoLayout
-    : 'gallery';
+    : 'chronology';
   const worksByYear = new Map();
   // A timeline row represents the year a work began.  Date ranges that share
   // the same start year therefore stay together on one horizontal row.
