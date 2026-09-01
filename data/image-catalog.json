@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-01T03:24:04.069Z",
+  "generatedAt": "2026-09-01T12:05:12.356Z",
   "namingStandard": "shortArtist_titleFirst3Words_startYear__workId.ext",
   "stats": {
-    "images": 1715,
-    "linkedImages": 1715,
+    "images": 1722,
+    "linkedImages": 1722,
     "unlinkedImages": 0,
-    "standardNames": 104,
+    "standardNames": 111,
     "legacyNames": 1611,
     "newNonstandardNames": 0,
     "duplicateHashGroups": 1
@@ -16666,8 +16666,8 @@
     {
       "path": "data/images/artist-Q313898/artist-Q313898-representative-work.jpg",
       "filename": "artist-Q313898-representative-work.jpg",
-      "bytes": 2978681,
-      "sha256": "4f415d5e7f59a6953399521abe5e549572100e02216749e2e72616639837ac16",
+      "bytes": 683079,
+      "sha256": "6a27bec1df574ecfd2703722eddcf498d61a6a237672491781fce89379cf7a08",
       "mime": "image/jpeg",
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:44.108Z",
@@ -22950,10 +22950,120 @@
       ]
     },
     {
+      "path": "data/images/artist-Q5547/카노바_삼미신_1813__canova-three-graces-1813-1816.jpg",
+      "filename": "카노바_삼미신_1813__canova-three-graces-1813-1816.jpg",
+      "bytes": 351774,
+      "sha256": "689697098c61826722f20700cb2dadb7291581dfa205d251706fc191725efe6e",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q5547",
+          "artistQid": "Q5547",
+          "artistNameKo": "안토니오 카노바",
+          "artistNameEn": "Antonio Canova",
+          "workId": "canova-three-graces-1813-1816",
+          "workQid": "",
+          "titleKo": "삼미신",
+          "titleEn": "The Three Graces",
+          "year": 1813
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q5547/카노바_승리의 비너스로 분장한_1808__canova-pauline-borghese-1808.jpg",
+      "filename": "카노바_승리의 비너스로 분장한_1808__canova-pauline-borghese-1808.jpg",
+      "bytes": 1120511,
+      "sha256": "41a03f4ac06b725ac95e772bf9700b6c0f9e8cb8a628ed7adf0bb4e7460f4371",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q5547",
+          "artistQid": "Q5547",
+          "artistNameKo": "안토니오 카노바",
+          "artistNameEn": "Antonio Canova",
+          "workId": "canova-pauline-borghese-1808",
+          "workQid": "",
+          "titleKo": "승리의 비너스로 분장한 파올리나 보르게세",
+          "titleEn": "Pauline Borghese as Venus Victrix",
+          "year": 1808
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q5547/카노바_오르페우스_1777__canova-orpheus-1777.jpg",
+      "filename": "카노바_오르페우스_1777__canova-orpheus-1777.jpg",
+      "bytes": 1362289,
+      "sha256": "4840fe1666063dd72cc7f5ccec740ef223bae0242cf3365aaa64fe9ba99a0e12",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q5547",
+          "artistQid": "Q5547",
+          "artistNameKo": "안토니오 카노바",
+          "artistNameEn": "Antonio Canova",
+          "workId": "canova-orpheus-1777",
+          "workQid": "",
+          "titleKo": "오르페우스",
+          "titleEn": "Orpheus",
+          "year": 1777
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q5547/카노바_이탈리아의 비너스_1812__canova-venus-italica-1812.jpg",
+      "filename": "카노바_이탈리아의 비너스_1812__canova-venus-italica-1812.jpg",
+      "bytes": 1689719,
+      "sha256": "153d31f81731d4bbf641e01f4322a341f89b686c051eb251dec3167bf0b79506",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q5547",
+          "artistQid": "Q5547",
+          "artistNameKo": "안토니오 카노바",
+          "artistNameEn": "Antonio Canova",
+          "workId": "canova-venus-italica-1812",
+          "workQid": "",
+          "titleKo": "이탈리아의 비너스",
+          "titleEn": "Venus Italica",
+          "year": 1812
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q5547/카노바_조지 워싱턴_1820__canova-george-washington-1820.jpg",
+      "filename": "카노바_조지 워싱턴_1820__canova-george-washington-1820.jpg",
+      "bytes": 3156913,
+      "sha256": "fe2f11bd9f14fe70ab8b74964dbcecb9a5525fe1c2478c44d908ea62b20eec3c",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q5547",
+          "artistQid": "Q5547",
+          "artistNameKo": "안토니오 카노바",
+          "artistNameEn": "Antonio Canova",
+          "workId": "canova-george-washington-1820",
+          "workQid": "",
+          "titleKo": "조지 워싱턴",
+          "titleEn": "George Washington",
+          "year": 1820
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-Q5547/카노바_큐피드의 키스로 되살아난_1793__artist-Q5547-representative-work.jpg",
       "filename": "카노바_큐피드의 키스로 되살아난_1793__artist-Q5547-representative-work.jpg",
-      "bytes": 188161,
-      "sha256": "08db1e4998f1320a8de8f725166037335836955454b6ec37fde94546d7948794",
+      "bytes": 6625234,
+      "sha256": "8694d3ca51c37284c7de7b46c622e32fc73442d2bcdc8b3a37d07cbf8e42e9eb",
       "mime": "image/jpeg",
       "namingStatus": "standard",
       "aliases": [],
@@ -22968,6 +23078,50 @@
           "titleKo": "큐피드의 키스로 되살아난 프시케",
           "titleEn": "Psyche Revived by Cupid's Kiss",
           "year": 1793
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q5547/카노바_테세우스와 미노타우로스_1783__canova-theseus-minotaur-1783.jpg",
+      "filename": "카노바_테세우스와 미노타우로스_1783__canova-theseus-minotaur-1783.jpg",
+      "bytes": 67850,
+      "sha256": "749a6e21f4350b64d2c8d5c22cb492a65d8b9c4efb95e653515a3596c50cfe0e",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q5547",
+          "artistQid": "Q5547",
+          "artistNameKo": "안토니오 카노바",
+          "artistNameEn": "Antonio Canova",
+          "workId": "canova-theseus-minotaur-1783",
+          "workQid": "",
+          "titleKo": "테세우스와 미노타우로스",
+          "titleEn": "Theseus and the Minotaur",
+          "year": 1783
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q5547/카노바_평화조정자 마르스로서의 나폴레옹_1806__canova-napoleon-as-mars-1806.jpg",
+      "filename": "카노바_평화조정자 마르스로서의 나폴레옹_1806__canova-napoleon-as-mars-1806.jpg",
+      "bytes": 7044106,
+      "sha256": "fed1a6d1049a7680aa6c711d7e9f16999ec9a17666eb3b8fefc283b15a1c5c4e",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q5547",
+          "artistQid": "Q5547",
+          "artistNameKo": "안토니오 카노바",
+          "artistNameEn": "Antonio Canova",
+          "workId": "canova-napoleon-as-mars-1806",
+          "workQid": "",
+          "titleKo": "평화조정자 마르스로서의 나폴레옹",
+          "titleEn": "Napoleon as Mars the Peacemaker",
+          "year": 1806
         }
       ]
     },

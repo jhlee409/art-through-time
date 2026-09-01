@@ -2,10 +2,10 @@
   "dataSchema": 1,
   "metadata": {
     "createdAt": "2026-08-22T12:46:59.824Z",
-    "updatedAt": "2026-08-31T03:37:41.546Z",
+    "updatedAt": "2026-09-01T12:04:53.733Z",
     "createdBy": "jhlee409@gmail.com",
     "updatedBy": "jhlee409@gmail.com",
-    "revision": 949,
+    "revision": 952,
     "representativeContentSchema": 2
   },
   "artists": [
@@ -108668,10 +108668,133 @@
         ],
         "en": []
       },
-      "links": {
-        "wikidata": "https://www.wikidata.org/wiki/Q5547"
-      },
+      "links": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Antonio_Canova",
+          "emphasized": true
+        }
+      ],
       "works": [
+        {
+          "id": "canova-orpheus-1777",
+          "year": 1777,
+          "popularity": 70,
+          "title": {
+            "ko": "오르페우스",
+            "en": "Orpheus"
+          },
+          "description": {
+            "ko": "젊은 오르페우스의 몸을 고전적 균형과 절제된 자세로 세워, 초기 카노바가 감정적 주제를 신고전주의 조각 언어로 다듬어 가는 과정을 보여 준다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "대리석 조각",
+            "en": "Marble sculpture"
+          },
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Museo Correr, Venice",
+              "en": "Museo Correr, Venice"
+            }
+          ],
+          "image": "data/images/artist-Q5547/카노바_오르페우스_1777__canova-orpheus-1777.jpg",
+          "thumbnail": "data/images/artist-Q5547/카노바_오르페우스_1777__canova-orpheus-1777.jpg",
+          "highRes": "data/images/artist-Q5547/카노바_오르페우스_1777__canova-orpheus-1777.jpg",
+          "highResImage": "data/images/artist-Q5547/카노바_오르페우스_1777__canova-orpheus-1777.jpg",
+          "highResOriginal": "data/images/artist-Q5547/카노바_오르페우스_1777__canova-orpheus-1777.jpg",
+          "source": "local file: 다운로드용/Antonio_canova,_orfeo,_1777,_01.jpeg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-09-01T12:04:53.733Z",
+            "updatedAt": "2026-09-01T12:04:53.733Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q5547/카노바_오르페우스_1777__canova-orpheus-1777.jpg",
+              "highResolution": "data/images/artist-Q5547/카노바_오르페우스_1777__canova-orpheus-1777.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Museo Correr, Venice"
+            }
+          },
+          "thumbnailCacheKey": "2026-09-01T12:04:53.733Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "canova-theseus-minotaur-1783",
+          "year": 1783,
+          "popularity": 70,
+          "title": {
+            "ko": "테세우스와 미노타우로스",
+            "en": "Theseus and the Minotaur"
+          },
+          "description": {
+            "ko": "격투가 끝난 뒤의 테세우스를 안정된 자세로 배치해 영웅적 폭력보다 승리 이후의 침착함과 고대 조각의 명료한 인체를 강조한다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "대리석 조각",
+            "en": "Marble sculpture"
+          },
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Victoria and Albert Museum, London",
+              "en": "Victoria and Albert Museum, London"
+            }
+          ],
+          "image": "data/images/artist-Q5547/카노바_테세우스와 미노타우로스_1783__canova-theseus-minotaur-1783.jpg",
+          "thumbnail": "data/images/artist-Q5547/카노바_테세우스와 미노타우로스_1783__canova-theseus-minotaur-1783.jpg",
+          "highRes": "data/images/artist-Q5547/카노바_테세우스와 미노타우로스_1783__canova-theseus-minotaur-1783.jpg",
+          "highResImage": "data/images/artist-Q5547/카노바_테세우스와 미노타우로스_1783__canova-theseus-minotaur-1783.jpg",
+          "highResOriginal": "data/images/artist-Q5547/카노바_테세우스와 미노타우로스_1783__canova-theseus-minotaur-1783.jpg",
+          "source": "local file: 다운로드용/Teseo_e_Minotauro,_Canova.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-09-01T12:04:53.733Z",
+            "updatedAt": "2026-09-01T12:04:53.733Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q5547/카노바_테세우스와 미노타우로스_1783__canova-theseus-minotaur-1783.jpg",
+              "highResolution": "data/images/artist-Q5547/카노바_테세우스와 미노타우로스_1783__canova-theseus-minotaur-1783.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Victoria and Albert Museum, London"
+            }
+          },
+          "thumbnailCacheKey": "2026-09-01T12:04:53.733Z",
+          "thumbnailValidation": 2
+        },
         {
           "id": "artist-Q5547-representative-work",
           "year": 1793,
@@ -108681,16 +108804,16 @@
             "en": "Psyche Revived by Cupid's Kiss"
           },
           "description": {
-            "ko": "안토니오 카노바는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다.",
+            "ko": "두 인물의 팔과 날개가 얼굴을 중심으로 원과 대각선을 만들며, 매끈한 대리석 표면 안에 되살아나는 순간의 감정을 절제된 긴장으로 붙잡는다.",
             "en": ""
           },
           "medium": {
-            "ko": "유화 또는 조각",
-            "en": "Painting or sculpture"
+            "ko": "대리석 조각",
+            "en": "Marble sculpture"
           },
           "country": {
             "ko": "이탈리아",
-            "en": "Italian"
+            "en": "Italy"
           },
           "movement": {
             "ko": "신고전주의",
@@ -108700,7 +108823,7 @@
           "thumbnail": "data/images/artist-Q5547/카노바_큐피드의 키스로 되살아난_1793__artist-Q5547-representative-work.jpg",
           "highResImage": "data/images/artist-Q5547/카노바_큐피드의 키스로 되살아난_1793__artist-Q5547-representative-work.jpg",
           "highResOriginal": "data/images/artist-Q5547/카노바_큐피드의 키스로 되살아난_1793__artist-Q5547-representative-work.jpg",
-          "source": "existing local project asset: data/images/artist-Q5547/카노바_큐피드의 키스로 되살아난_1793__artist-Q5547-representative-work.jpg",
+          "source": "local file: 다운로드용/0_Psyché_ranimée_par_le_baiser_de_l'Amour_-_Canova_-_Louvre_1.jpeg",
           "verified": true,
           "status": "verified",
           "representative": true,
@@ -108708,7 +108831,7 @@
           "origin": "manual",
           "metadata": {
             "createdAt": "2026-08-24T00:00:00Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
+            "updatedAt": "2026-09-01T12:04:53.733Z",
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -108721,12 +108844,320 @@
               "sourceUrl": "",
               "sourceUrls": [],
               "license": "",
-              "institution": ""
+              "institution": "Musee du Louvre, Paris"
             }
           },
           "movementContributionReason": "canonical-movement-representative",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-29T05:31:14.759Z"
+          "thumbnailCacheKey": "2026-09-01T12:04:53.733Z",
+          "collection": [
+            {
+              "ko": "Musee du Louvre, Paris",
+              "en": "Musee du Louvre, Paris"
+            }
+          ],
+          "highRes": "data/images/artist-Q5547/카노바_큐피드의 키스로 되살아난_1793__artist-Q5547-representative-work.jpg"
+        },
+        {
+          "id": "canova-napoleon-as-mars-1806",
+          "year": 1806,
+          "popularity": 70,
+          "title": {
+            "ko": "평화조정자 마르스로서의 나폴레옹",
+            "en": "Napoleon as Mars the Peacemaker"
+          },
+          "description": {
+            "ko": "나폴레옹을 고대 전쟁신 마르스의 누드 형상으로 이상화해, 현대 정치 권력과 고전적 영웅 이미지를 결합한 제정기 신고전주의 조각을 보여 준다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "대리석 조각",
+            "en": "Marble sculpture"
+          },
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Apsley House, London",
+              "en": "Apsley House, London"
+            }
+          ],
+          "image": "data/images/artist-Q5547/카노바_평화조정자 마르스로서의 나폴레옹_1806__canova-napoleon-as-mars-1806.jpg",
+          "thumbnail": "data/images/artist-Q5547/카노바_평화조정자 마르스로서의 나폴레옹_1806__canova-napoleon-as-mars-1806.jpg",
+          "highRes": "data/images/artist-Q5547/카노바_평화조정자 마르스로서의 나폴레옹_1806__canova-napoleon-as-mars-1806.jpg",
+          "highResImage": "data/images/artist-Q5547/카노바_평화조정자 마르스로서의 나폴레옹_1806__canova-napoleon-as-mars-1806.jpg",
+          "highResOriginal": "data/images/artist-Q5547/카노바_평화조정자 마르스로서의 나폴레옹_1806__canova-napoleon-as-mars-1806.jpg",
+          "source": "local file: 다운로드용/Napoleon-Canova-London_JBU01.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-09-01T12:04:53.733Z",
+            "updatedAt": "2026-09-01T12:04:53.733Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q5547/카노바_평화조정자 마르스로서의 나폴레옹_1806__canova-napoleon-as-mars-1806.jpg",
+              "highResolution": "data/images/artist-Q5547/카노바_평화조정자 마르스로서의 나폴레옹_1806__canova-napoleon-as-mars-1806.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Apsley House, London"
+            }
+          },
+          "thumbnailCacheKey": "2026-09-01T12:04:53.733Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "canova-pauline-borghese-1808",
+          "year": 1808,
+          "popularity": 70,
+          "title": {
+            "ko": "승리의 비너스로 분장한 파올리나 보르게세",
+            "en": "Pauline Borghese as Venus Victrix"
+          },
+          "description": {
+            "ko": "비스듬히 기대 누운 초상 조각에 비너스의 속성을 결합해, 실제 인물 초상과 고대 여신의 이상화가 만나는 방식을 선명하게 보여 준다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "대리석 조각",
+            "en": "Marble sculpture"
+          },
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Galleria Borghese, Rome",
+              "en": "Galleria Borghese, Rome"
+            }
+          ],
+          "image": "data/images/artist-Q5547/카노바_승리의 비너스로 분장한_1808__canova-pauline-borghese-1808.jpg",
+          "thumbnail": "data/images/artist-Q5547/카노바_승리의 비너스로 분장한_1808__canova-pauline-borghese-1808.jpg",
+          "highRes": "data/images/artist-Q5547/카노바_승리의 비너스로 분장한_1808__canova-pauline-borghese-1808.jpg",
+          "highResImage": "data/images/artist-Q5547/카노바_승리의 비너스로 분장한_1808__canova-pauline-borghese-1808.jpg",
+          "highResOriginal": "data/images/artist-Q5547/카노바_승리의 비너스로 분장한_1808__canova-pauline-borghese-1808.jpg",
+          "source": "local file: 다운로드용/3840px-Paolina_Borghese_(Canova).jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-09-01T12:04:53.733Z",
+            "updatedAt": "2026-09-01T12:04:53.733Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q5547/카노바_승리의 비너스로 분장한_1808__canova-pauline-borghese-1808.jpg",
+              "highResolution": "data/images/artist-Q5547/카노바_승리의 비너스로 분장한_1808__canova-pauline-borghese-1808.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Galleria Borghese, Rome"
+            }
+          },
+          "thumbnailCacheKey": "2026-09-01T12:04:53.733Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "canova-venus-italica-1812",
+          "year": 1812,
+          "popularity": 70,
+          "title": {
+            "ko": "이탈리아의 비너스",
+            "en": "Venus Italica"
+          },
+          "description": {
+            "ko": "몸을 감싸는 천과 비틀린 자세를 통해 고대 비너스 형식을 근대 관람자의 시선에 맞게 다시 구성한 카노바의 이상적 누드 조각이다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "대리석 조각",
+            "en": "Marble sculpture"
+          },
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Museo Correr, Venice",
+              "en": "Museo Correr, Venice"
+            }
+          ],
+          "image": "data/images/artist-Q5547/카노바_이탈리아의 비너스_1812__canova-venus-italica-1812.jpg",
+          "thumbnail": "data/images/artist-Q5547/카노바_이탈리아의 비너스_1812__canova-venus-italica-1812.jpg",
+          "highRes": "data/images/artist-Q5547/카노바_이탈리아의 비너스_1812__canova-venus-italica-1812.jpg",
+          "highResImage": "data/images/artist-Q5547/카노바_이탈리아의 비너스_1812__canova-venus-italica-1812.jpg",
+          "highResOriginal": "data/images/artist-Q5547/카노바_이탈리아의 비너스_1812__canova-venus-italica-1812.jpg",
+          "source": "local file: 다운로드용/(Venice)_Venus_Italica_by_Antonio_Canova_-_Museo_Correr.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-09-01T12:04:53.733Z",
+            "updatedAt": "2026-09-01T12:04:53.733Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q5547/카노바_이탈리아의 비너스_1812__canova-venus-italica-1812.jpg",
+              "highResolution": "data/images/artist-Q5547/카노바_이탈리아의 비너스_1812__canova-venus-italica-1812.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Museo Correr, Venice"
+            }
+          },
+          "thumbnailCacheKey": "2026-09-01T12:04:53.733Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "canova-three-graces-1813-1816",
+          "year": 1813,
+          "yearEnd": 1816,
+          "popularity": 70,
+          "title": {
+            "ko": "삼미신",
+            "en": "The Three Graces"
+          },
+          "description": {
+            "ko": "세 인물이 서로 감싸는 폐쇄적인 원형 구도와 부드러운 표면을 이루며, 이상적 인체와 감정적 친밀함이 하나의 리듬으로 연결된다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "대리석 조각",
+            "en": "Marble sculpture"
+          },
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "State Hermitage Museum, Saint Petersburg",
+              "en": "State Hermitage Museum, Saint Petersburg"
+            }
+          ],
+          "image": "data/images/artist-Q5547/카노바_삼미신_1813__canova-three-graces-1813-1816.jpg",
+          "thumbnail": "data/images/artist-Q5547/카노바_삼미신_1813__canova-three-graces-1813-1816.jpg",
+          "highRes": "data/images/artist-Q5547/카노바_삼미신_1813__canova-three-graces-1813-1816.jpg",
+          "highResImage": "data/images/artist-Q5547/카노바_삼미신_1813__canova-three-graces-1813-1816.jpg",
+          "highResOriginal": "data/images/artist-Q5547/카노바_삼미신_1813__canova-three-graces-1813-1816.jpg",
+          "source": "local file: 다운로드용/Canova_-_The_Three_Graces,_between_1813_and_1816,_Н.ск-506.jpg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-09-01T12:04:53.733Z",
+            "updatedAt": "2026-09-01T12:04:53.733Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q5547/카노바_삼미신_1813__canova-three-graces-1813-1816.jpg",
+              "highResolution": "data/images/artist-Q5547/카노바_삼미신_1813__canova-three-graces-1813-1816.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "State Hermitage Museum, Saint Petersburg"
+            }
+          },
+          "thumbnailCacheKey": "2026-09-01T12:04:53.733Z",
+          "thumbnailValidation": 2
+        },
+        {
+          "id": "canova-george-washington-1820",
+          "year": 1820,
+          "popularity": 70,
+          "title": {
+            "ko": "조지 워싱턴",
+            "en": "George Washington"
+          },
+          "description": {
+            "ko": "미국의 정치 지도자를 로마식 복장과 공화정적 태도로 표현해, 신고전주의 조각이 근대 국가의 시민적 권위를 시각화하는 방식을 보여 준다.",
+            "en": ""
+          },
+          "medium": {
+            "ko": "대리석 조각",
+            "en": "Marble sculpture"
+          },
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "신고전주의",
+            "en": "Neoclassicism"
+          },
+          "collection": [
+            {
+              "ko": "Museo Gypsotheca Antonio Canova, Possagno",
+              "en": "Museo Gypsotheca Antonio Canova, Possagno"
+            }
+          ],
+          "image": "data/images/artist-Q5547/카노바_조지 워싱턴_1820__canova-george-washington-1820.jpg",
+          "thumbnail": "data/images/artist-Q5547/카노바_조지 워싱턴_1820__canova-george-washington-1820.jpg",
+          "highRes": "data/images/artist-Q5547/카노바_조지 워싱턴_1820__canova-george-washington-1820.jpg",
+          "highResImage": "data/images/artist-Q5547/카노바_조지 워싱턴_1820__canova-george-washington-1820.jpg",
+          "highResOriginal": "data/images/artist-Q5547/카노바_조지 워싱턴_1820__canova-george-washington-1820.jpg",
+          "source": "local file: 다운로드용/Canova-Washington.jpeg",
+          "verified": true,
+          "status": "verified",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-09-01T12:04:53.733Z",
+            "updatedAt": "2026-09-01T12:04:53.733Z",
+            "createdBy": "local download import",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q5547/카노바_조지 워싱턴_1820__canova-george-washington-1820.jpg",
+              "highResolution": "data/images/artist-Q5547/카노바_조지 워싱턴_1820__canova-george-washington-1820.jpg",
+              "sourceUrl": "",
+              "sourceUrls": [],
+              "license": "",
+              "institution": "Museo Gypsotheca Antonio Canova, Possagno"
+            }
+          },
+          "thumbnailCacheKey": "2026-09-01T12:04:53.733Z",
+          "thumbnailValidation": 2
         }
       ],
       "featuredWorkIds": [
@@ -108735,9 +109166,9 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-24T00:00:00Z",
-        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-09-01T12:04:53.733Z",
         "createdBy": "manual entry",
-        "updatedBy": "phase-5-rebuild"
+        "updatedBy": "jhlee409@gmail.com"
       },
       "movements": [
         "신고전주의"

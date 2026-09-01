@@ -2,10 +2,10 @@
   "dataSchema": 1,
   "metadata": {
     "createdAt": "2026-08-22T12:46:59.824Z",
-    "updatedAt": "2026-08-31T03:37:41.546Z",
+    "updatedAt": "2026-09-01T12:04:53.733Z",
     "createdBy": "jhlee409@gmail.com",
     "updatedBy": "jhlee409@gmail.com",
-    "revision": 949,
+    "revision": 952,
     "representativeContentSchema": 2
   },
   "artists": [
@@ -4859,18 +4859,21 @@
         ],
         "en": []
       },
-      "links": {
-        "wikidata": "https://www.wikidata.org/wiki/Q5547"
-      },
+      "links": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Antonio_Canova",
+          "emphasized": true
+        }
+      ],
       "featuredWorkIds": [
         "artist-Q5547-representative-work"
       ],
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-24T00:00:00Z",
-        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-09-01T12:04:53.733Z",
         "createdBy": "manual entry",
-        "updatedBy": "phase-5-rebuild"
+        "updatedBy": "jhlee409@gmail.com"
       },
       "movements": [
         "신고전주의"
@@ -4892,7 +4895,7 @@
       "listName": {
         "ko": "카노바"
       },
-      "workCount": 1,
+      "workCount": 8,
       "_detailLoaded": false
     },
     {

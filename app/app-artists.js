@@ -652,7 +652,7 @@ function renderTimeline() {
     : [];
   const leonardoLayoutKey = `art-atlas-timeline-layout-${artist.qid || artist.id}`;
   const storedLeonardoLayout = isLeonardoTimeline ? sessionStorage.getItem(leonardoLayoutKey) : '';
-  const leonardoLayout = ['chronology','portrait-series'].includes(storedLeonardoLayout)
+  const leonardoLayout = ['gallery','chronology','portrait-series'].includes(storedLeonardoLayout)
     ? storedLeonardoLayout
     : 'chronology';
   const worksByYear = new Map();
