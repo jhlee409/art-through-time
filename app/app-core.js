@@ -109,9 +109,6 @@ let artistListScrollTopToRestore = null;
 let countryArtResetZoomOnRender = true;
 const countryArtWorkCache = new Map();
 const countryArtWorkRequests = new Map();
-const artistListCountryDevelopmentRepresentatives = new Map();
-let artistListCountryDevelopmentRepresentativesReady = false;
-let artistListCountryDevelopmentRepresentativesRequest = null;
 let countryArtEvents = {schema:1,countries:{}};
 let countryMovementBackgrounds = {schema:1,countries:{},mechanisms:{}};
 if (localStorage.getItem(movementCountryMigrationKey) !== 'v1') {

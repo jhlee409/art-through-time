@@ -36,7 +36,39 @@ function clippedMovement(item, start, end) {
   const clippedStart = Math.max(start, item.start);
   const clippedEnd = Math.min(end, item.end);
   if (clippedEnd < clippedStart) return null;
-  return {...item,start:clippedStart,end:clippedEnd,sourceStart:item.start,sourceEnd:item.end};
+  const parentId=item?.canonical?.parentId;
+  const parent=(artMovementCanonical?.parents || []).find(candidate => candidate.id === parentId);
+  // Country names describe the comparison column, not a second movement.
+  // The canonical parent keeps shared visual principles together in all three views.
+  return {...item,name:parent?.name || item.name,sourceName:item.sourceName || item.name,start:clippedStart,end:clippedEnd,sourceStart:item.start,sourceEnd:item.end};
+}
+function countryCanonicalMovements(country) {
+  const merged = new Map();
+  (country?.movements || []).forEach((movement, sourceOrder) => {
+    const parentId=movement?.canonical?.parentId || '';
+    const key=parentId ? `parent:${parentId}` : `movement:${compactMovementName(movement?.name?.en || movement?.name?.ko || '')}:${movement.start}:${movement.end}`;
+    const parent=(artMovementCanonical?.parents || []).find(candidate => candidate.id === parentId);
+    const previous=merged.get(key);
+    const artistIds=[...new Set([...(previous?.artistIds || []), ...(movement.artistIds || [])])];
+    const primaryArtistIds=[...new Set([...(previous?.primaryArtistIds || []), ...(movement.primaryArtistIds || [])])];
+    const furtherArtistIds=[...new Set([...(previous?.furtherArtistIds || []), ...(movement.furtherArtistIds || [])])];
+    const childrenById=new Map([...(previous?.atlasChildren || []), ...(movement.atlasChildren || [])].map(child => [child.id || `${loc(child.name)}:${child.start}:${child.end}`,child]));
+    merged.set(key,{
+      ...(previous || movement),
+      name:parent?.name || movement.name,
+      start:Math.min(previous?.start ?? movement.start,movement.start),
+      end:Math.max(previous?.end ?? movement.end,movement.end),
+      sourceName:previous?.sourceName || movement.name,
+      sourceNames:[...(previous?.sourceNames || []),movement.name],
+      canonical:parentId ? {...(previous?.canonical || movement.canonical || {}),parentId,documentOwnerId:parent?.id || movement.canonical?.documentOwnerId,categoryIds:[...new Set([...(previous?.canonical?.categoryIds || []),...(movement.canonical?.categoryIds || [])])],developmentIds:[...new Set([...(previous?.canonical?.developmentIds || []),...(movement.canonical?.developmentIds || [])])]} : movement.canonical,
+      artistIds,
+      primaryArtistIds,
+      furtherArtistIds,
+      atlasChildren:[...childrenById.values()],
+      sourceOrder:previous?.sourceOrder ?? sourceOrder
+    });
+  });
+  return [...merged.values()].sort((a,b) => a.start-b.start || a.end-b.end || a.sourceOrder-b.sourceOrder);
 }
 function atlasTickStep(start, end) {
   const span = end - start;
@@ -176,7 +208,7 @@ function renderMovementAtlas() {
   };
   const countryColumns = start < countryEnd ? movementView.countries.map(id => countryById.get(id)).filter(Boolean).map(country => ({
     ...country,
-    movements:movementAtlasRenaissanceDisplay(country).map(item => clippedMovement(item,start,countryEnd)).filter(Boolean)
+    movements:movementAtlasRenaissanceDisplay({...country,movements:countryCanonicalMovements(country)}).map(item => clippedMovement(item,start,countryEnd)).filter(Boolean)
   })).filter(country => country.movements.length) : [];
   const columns = countryColumns;
   const columnLayouts = new Map(columns.map(column => [column.id, layout(column.movements)]));
@@ -492,10 +524,10 @@ function renderCountryArtEventRail(countryId, start, end, chartWidth, yearScale,
   return `<div class="country-art-event-corner">${language === 'ko' ? '사건' : 'Events'}</div><div class="country-art-event-rail country-art-event-mode-${mode}" style="width:${chartWidth}px;height:${countryArtEventRailHeight}px">${legend}${eventButtons || `<p>${empty}</p>`}</div>`;
 }
 function countryMovementDataKey(movement) {
-  return compactMovementName(movement?.name?.en || movement?.movement || movement?.name?.ko || '');
+  return compactMovementName(movement?.sourceName?.en || movement?.sourceName?.ko || movement?.name?.en || movement?.movement || movement?.name?.ko || '');
 }
 function countryMovementBackgroundFor(countryId, movement) {
-  const keys = new Set([movement?.id, movement?.movement, movement?.name?.en, movement?.name?.ko].filter(Boolean).map(compactMovementName));
+  const keys = new Set([movement?.id, movement?.movement, movement?.sourceName?.en, movement?.sourceName?.ko, movement?.name?.en, movement?.name?.ko, ...(movement?.sourceNames || []).flatMap(name => [name?.en,name?.ko])].filter(Boolean).map(compactMovementName));
   return (countryMovementBackgrounds?.countries?.[countryId] || []).find(entry => {
     const entryKeys = [entry.id, entry.movement, entry.movementEn, entry.movementKo].filter(Boolean).map(compactMovementName);
     return entryKeys.some(key => keys.has(key));
@@ -504,7 +536,7 @@ function countryMovementBackgroundFor(countryId, movement) {
 function countryMovementMatchesRelatedLabel(relatedLabel, movement) {
   const relatedKey = compactMovementName(relatedLabel);
   if (!relatedKey) return false;
-  const movementKeys = [movement?.name?.en, movement?.name?.ko, movement?.movement].filter(Boolean).map(compactMovementName);
+  const movementKeys = [movement?.name?.en, movement?.name?.ko, movement?.movement, ...(movement?.sourceNames || []).flatMap(name => [name?.en,name?.ko])].filter(Boolean).map(compactMovementName);
   return movementKeys.some(key => key === relatedKey || key.includes(relatedKey) || relatedKey.includes(key));
 }
 function normalizedCountryArtEvents(countryId) {
@@ -709,15 +741,18 @@ function artistListArtistsForMovement(entry) {
   const movementStart = Number(entry.sourceStart ?? entry.start);
   const movementEnd = Number(entry.sourceEnd ?? entry.end);
   const countryIds = new Set(entry.countryIds || [entry.countryId].filter(Boolean));
-  const documentName=entry.parentDocumentName || movementDocumentKey(entry.name?.en || entry.name?.ko || loc(entry.name));
-  const canonicalRow = entry.developmentId && artistListCountryDevelopmentRepresentatives.get(`development::${entry.developmentId}`);
-  const representativeRows=canonicalRow ? [canonicalRow] : [...countryIds].flatMap(countryId => artistListCountryDevelopmentRepresentatives.get(`${documentName}::${countryId}`) || []).filter(row => !entry.countryDevelopmentDetail || row.label === entry.countryDevelopmentDetail);
-  const presentationArtistIds=entry.artistListPresentation?.artistIds || [];
-  const representativeIds=presentationArtistIds.length ? presentationArtistIds : representativeRows.flatMap(row => row.artistIds || []);
-  const primaryIds=new Set(presentationArtistIds.length ? entry.artistListPresentation.primaryArtistIds : representativeRows.flatMap(row => row.primaryArtistIds || []));
-  if (!artistListCountryDevelopmentRepresentativesReady) {
-    loadArtistListCountryDevelopmentRepresentatives();
-    return [];
+  const declaredArtistIds=entry.artistIds || [];
+  let representativeIds=declaredArtistIds;
+  let primaryIds=new Set(entry.primaryArtistIds || declaredArtistIds);
+  // Parent bars without an explicit artist assignment use only registered
+  // artists whose canonical movement and activity country match the selection.
+  if (!representativeIds.length) {
+    const fallbackArtists=(artists || []).filter(artist => {
+      const artistCountryIds=artistListArtistCountryIds(artist);
+      return artistCountryIds.some(countryId => countryIds.has(countryId)) && artistMovementEntries(artist).some(artistEntry => artistListMovementKeyMatchesArtistEntry(movementKey, artistEntry));
+    }).slice(0, 4);
+    representativeIds=fallbackArtists.map(artist => artist.id);
+    primaryIds=new Set(representativeIds.slice(0, 1));
   }
   if (!representativeIds.length) return [];
   const representativeSet=new Set(representativeIds);
@@ -726,91 +761,14 @@ function artistListArtistsForMovement(entry) {
     if (!life || life.start > movementEnd || life.end < movementStart) return null;
     if (!representativeSet.has(artist.id)) return null;
     const artistCountryIds = artistListArtistCountryIds(artist);
-    if (!canonicalRow && !presentationArtistIds.length) {
+    if (!declaredArtistIds.length) {
       if (!artistCountryIds.some(countryId => countryIds.has(countryId))) return null;
       const movementEntries = artistMovementEntries(artist);
       if (!movementEntries.some(artistEntry => artistListMovementKeyMatchesArtistEntry(movementKey, artistEntry))) return null;
     }
     const countryLabel = artistCountryIds.filter(countryId => countryIds.has(countryId)).map(countryId => loc(movementCountries.find(country => country.id === countryId)?.name)).filter(Boolean).join(', ');
-    return {artist, life, countryLabel, artistRole:primaryIds.has(artist.id) ? 'primary' : 'further', presentationLabel:entry.artistListPresentation?.labels?.[artist.id] || ''};
+    return {artist, life, countryLabel, artistRole:primaryIds.has(artist.id) ? 'primary' : 'further', presentationLabel:''};
   }).filter(Boolean);
-}
-function artistListFallbackDevelopmentDetails(canonicalBinding, countryId) {
-  const categoryById = new Map((artMovementCanonical.categories || []).map(category => [category.id, category]));
-  const developmentIds = Array.isArray(canonicalBinding?.developmentIds) ? canonicalBinding.developmentIds : [];
-  const categoryIds = Array.isArray(canonicalBinding?.categoryIds) ? canonicalBinding.categoryIds : [];
-  return developmentIds.map((developmentId, index) => {
-    const categoryId = categoryIds[index] || categoryIds[0] || '';
-    const category = categoryById.get(categoryId);
-    return {developmentId, categoryId, countryIds:[countryId], label:loc(category?.name) || '', artistIds:[], primaryArtistIds:[], furtherArtistIds:[], featureHtml:'', feature:''};
-  }).filter(detail => detail.developmentId || detail.categoryId);
-}
-function loadArtistListCountryDevelopmentRepresentatives() {
-  if (artistListCountryDevelopmentRepresentativesRequest) return artistListCountryDevelopmentRepresentativesRequest;
-  const documents=Object.entries(movementDocuments || {}).flatMap(([name,slots]) => Object.values(slots || {}).filter(Boolean).map(url => ({name,url})));
-  artistListCountryDevelopmentRepresentatives.clear();
-  artistListCountryDevelopmentRepresentativesRequest=Promise.all(documents.map(async ({name,url}) => {
-    const response=await fetch(url,{cache:'no-store'}).catch(() => null);
-    if (!response?.ok) return;
-    const source=new DOMParser().parseFromString(await response.text(),'text/html');
-    const parentId=source.documentElement.dataset.artAtlasParentId || '';
-    if (source.documentElement.dataset.artAtlasDocumentModel === 'artist-guide') {
-      const rows=[...source.querySelectorAll('#representative-artists table[data-art-atlas-artist-guide-table] tbody tr[data-art-atlas-artist-tier]')];
-      const artistIds=rows.map(row => row.dataset.artistId).filter(Boolean);
-      if (parentId && artistIds.length) {
-        artistListCountryDevelopmentRepresentatives.set(`artist-guide::${parentId}`,{
-          parentId,
-          artistIds,
-          beginnerArtistIds:rows.filter(row => row.dataset.artAtlasArtistTier === 'beginner').map(row => row.dataset.artistId).filter(Boolean),
-          labels:Object.fromEntries(rows.map(row => [row.dataset.artistId,(row.querySelector('.tier-badge')?.textContent || '').replace(/\s+/g,' ').trim()]).filter(([id]) => id))
-        });
-      }
-      return;
-    }
-    const section=[...source.querySelectorAll('section')].find(item => item.id === 'countries');
-    const table=section?.querySelector('table');
-    if (!table) return;
-    const headers=[...table.querySelectorAll('thead th')].map(cell => cell.textContent.replace(/\s+/g,' ').trim());
-    const representativeIndex=headers.findIndex(header => /(대표.*(?:화가|제작)|(?:화가|제작).*대표)/.test(header));
-    const furtherIndex=headers.findIndex(header => /더\s*볼\s*화가/.test(header));
-    if (representativeIndex < 0) return;
-    const categoryNames=new Map((artMovementCanonical.categories || []).map(category => [category.id,category.name]));
-    table.querySelectorAll('tbody tr').forEach(row => {
-      const cells=[...row.querySelectorAll(':scope > td')];
-      const developmentId=row.dataset.artAtlasDevelopmentId || '';
-      const categoryId=row.dataset.artAtlasCategoryId || '';
-      const canonicalCountries=(row.dataset.artAtlasCountryIds || '').split(/\s+/).filter(Boolean);
-      const countryText=(cells[0]?.textContent || '').replace(/\s+/g,' ').trim().toLocaleLowerCase('ko-KR');
-      const countryParts=(cells[0]?.textContent || '').replace(/\s+/g,' ').trim().split(/\s*[—–-]\s*/,2);
-      const canonicalName=categoryNames.get(categoryId);
-      const detailLabel=loc(canonicalName) || (countryParts.length > 1 ? countryParts[1] : '');
-      const primaryArtistIds=[...(cells[representativeIndex]?.querySelectorAll('[data-artist-id]') || [])].map(link => link.dataset.artistId).filter(Boolean);
-      const furtherArtistIds=furtherIndex < 0 ? [] : [...(cells[furtherIndex]?.querySelectorAll('[data-artist-id]') || [])].map(link => link.dataset.artistId).filter(Boolean);
-      const detail={parentId,developmentId,categoryId,countryIds:canonicalCountries,label:detailLabel,artistIds:[...primaryArtistIds,...furtherArtistIds],primaryArtistIds,furtherArtistIds,featureHtml:cells[1]?.innerHTML.trim() || '',feature:(cells[1]?.textContent || '').replace(/\s+/g,' ').trim()};
-      if (developmentId && canonicalCountries.length) {
-        artistListCountryDevelopmentRepresentatives.set(`development::${developmentId}`,detail);
-        canonicalCountries.forEach(countryId => {
-          const key=`${name}::${countryId}`;
-          const previous=artistListCountryDevelopmentRepresentatives.get(key) || [];
-          artistListCountryDevelopmentRepresentatives.set(key,[...previous,detail]);
-        });
-        return;
-      }
-      if (!countryText) return;
-      movementCountries.filter(country => country.id !== sharedMovementId).forEach(country => {
-        const aliases=(countryArtAliases[country.id] || []).map(value => String(value).toLocaleLowerCase('ko-KR'));
-        if (!aliases.some(alias => countryText.includes(alias))) return;
-        const key=`${name}::${country.id}`;
-        const previous=artistListCountryDevelopmentRepresentatives.get(key) || [];
-        artistListCountryDevelopmentRepresentatives.set(key,[...previous,detail]);
-      });
-    });
-  })).catch(error => console.warn('Could not load country-development representatives:',error)).finally(() => {
-    artistListCountryDevelopmentRepresentativesReady=true;
-    artistListCountryDevelopmentRepresentativesRequest=null;
-    if (viewMode === 'artist-list') renderCountryArt({artistListMode:true});
-  });
-  return artistListCountryDevelopmentRepresentativesRequest;
 }
 function artistListPillBaseHeight() {
   return Math.max(12, Math.round((window.innerHeight || window.screen?.height || 900) / 60));
@@ -819,87 +777,6 @@ const artistListSubmovementTopPadding = 6;
 const artistListSubmovementBottomPadding = 6;
 const artistListPillGap = Math.min(artistListSubmovementTopPadding, artistListSubmovementBottomPadding) * .6;
 const artistListParentMovementPalette = ['#8cbfd6','#d9ab69','#9cbd91','#bc9ac7','#d48c83','#8dbab2'];
-let artistListRegionFeaturePanel = null;
-function artistListRegionFeatureText(html, countryId) {
-  const documentHtml = new DOMParser().parseFromString(html, 'text/html');
-  const aliases=(countryArtAliases[countryId] || []).map(value => String(value).toLocaleLowerCase('ko-KR'));
-  const sections=[...documentHtml.querySelectorAll('section')].filter(section => /여러\s*국가에서의\s*전개/.test(section.querySelector('h2,h3')?.textContent || ''));
-  for (const section of sections) for (const table of section.querySelectorAll('table')) {
-    const headers=[...table.querySelectorAll('thead th')].map(cell => cell.textContent.replace(/\s+/g,' ').trim());
-    if (headers.length < 2 || !/(국가|지역|권역)/.test(headers[0])) continue;
-    const featureIndex=Math.max(1, headers.findIndex((header,index) => index > 0 && /(특징|전개|관심|의미|방식)/.test(header)));
-    for (const row of table.querySelectorAll('tbody tr')) {
-      const cells=[...row.querySelectorAll('th,td')];
-      const region=(cells[0]?.textContent || '').replace(/\s+/g,' ').trim().toLocaleLowerCase('ko-KR');
-      if (!aliases.some(alias => region.includes(alias))) continue;
-      const sourceCell=cells[featureIndex];
-      const feature=(sourceCell?.textContent || '').replace(/\s+/g,' ').trim();
-      if (!feature) continue;
-      const copy=sourceCell.cloneNode(true);
-      copy.querySelectorAll('button,textarea,input,select,option,style,script,[data-art-atlas-description-editor],[data-art-atlas-country-feature-editor-control],.art-atlas-country-feature-editor').forEach(element => element.remove());
-      return {region:(cells[0]?.textContent || '').replace(/\s+/g,' ').trim(), featureHtml:copy.innerHTML.trim(), feature};
-    }
-  }
-  return null;
-}
-function showArtistListRegionFeaturePanel(title) {
-  const sourceKey=title.dataset.regionFeatureKey;
-  const developmentId=title.dataset.regionFeatureDevelopment || '';
-  artistListRegionFeaturePanel?.remove();
-  const parent=title.dataset.regionFeatureParent || '';
-  const parentLabel=title.dataset.regionFeatureParentLabel || parent;
-  const countryId=title.dataset.regionFeatureCountry || '';
-  const countryLabel=title.dataset.regionFeatureCountryLabel || '';
-  const panel=document.createElement('section');
-  panel.className='artist-list-region-feature-panel';
-  panel.dataset.sourceKey=sourceKey;
-  panel.style.left=`${Math.max(20, Math.min(title.getBoundingClientRect().left + 18, window.innerWidth - 460))}px`;
-  panel.style.top=`${Math.max(20, Math.min(title.getBoundingClientRect().bottom + 14, window.innerHeight - 300))}px`;
-  panel.innerHTML=`<header class="artist-list-region-feature-panel-header"><strong>${esc(`${countryLabel} · ${parentLabel}`)}</strong><small>${language === 'ko' ? '창을 다시 더블 클릭하면 닫힘' : 'Double-click this window again to close'}</small></header><div class="artist-list-region-feature-panel-body">${language === 'ko' ? '지역적 특징을 불러오는 중입니다.' : 'Loading regional characteristics.'}</div>${['n','e','s','w','ne','nw','se','sw'].map(direction => `<i class="artist-list-region-feature-panel-resizer artist-list-region-feature-panel-resizer--${direction}" data-resize="${direction}"></i>`).join('')}`;
-  document.body.append(panel);
-  const panelHeader=panel.querySelector('.artist-list-region-feature-panel-header');
-  const titleWidth=panelHeader.querySelector('strong')?.scrollWidth || 0;
-  const hintWidth=panelHeader.querySelector('small')?.scrollWidth || 0;
-  const defaultWidth=Math.min(window.innerWidth-40, Math.max(430, titleWidth + hintWidth + 42));
-  panel.style.width=`${defaultWidth}px`;
-  panel.style.left=`${Math.max(20, Math.min(title.getBoundingClientRect().left + 18, window.innerWidth-defaultWidth-20))}px`;
-  artistListRegionFeaturePanel=panel;
-  panel.addEventListener('dblclick', event => {
-    event.preventDefault();
-    event.stopPropagation();
-    panel.remove();
-    if (artistListRegionFeaturePanel === panel) artistListRegionFeaturePanel=null;
-  });
-  const body=panel.querySelector('.artist-list-region-feature-panel-body');
-  const canonicalDetail=developmentId && artistListCountryDevelopmentRepresentatives.get(`development::${developmentId}`);
-  const documentName=movementDocumentKey(parent);
-  const url=documentName && movementDocuments?.[documentName]?.['1'];
-  const render=result => { if (!panel.isConnected) return; body.innerHTML=result?.featureHtml || `<p>${esc(result?.feature || (language === 'ko' ? '이 사조 설명 문서의 여러 국가에서의 전개 표에서 해당 지역의 특징을 찾지 못했습니다.' : 'No regional characteristic was found for this country in the development table.'))}</p>`; if (result?.region) panel.querySelector('strong').textContent=`${result.region} · ${parentLabel}`; };
-  if (canonicalDetail) render({featureHtml:canonicalDetail.featureHtml,feature:canonicalDetail.feature,region:`${countryLabel} · ${canonicalDetail.label}`});
-  else if (!url) render(null);
-  else fetch(url,{cache:'no-store'}).then(response => response.ok ? response.text() : Promise.reject()).then(html => render(artistListRegionFeatureText(html,countryId))).catch(() => render(null));
-  let interaction=null;
-  panel.addEventListener('pointerdown', event => {
-    const handle=event.target.closest('[data-resize]');
-    const header=event.target.closest('.artist-list-region-feature-panel-header');
-    if (!handle && !header) return;
-    const rect=panel.getBoundingClientRect();
-    interaction={pointerId:event.pointerId, direction:handle?.dataset.resize || '', startX:event.clientX, startY:event.clientY, left:rect.left, top:rect.top, width:rect.width, height:rect.height};
-    panel.setPointerCapture(event.pointerId); event.preventDefault(); event.stopPropagation();
-  });
-  panel.addEventListener('pointermove', event => {
-    if (!interaction || interaction.pointerId !== event.pointerId) return;
-    const dx=event.clientX-interaction.startX, dy=event.clientY-interaction.startY, direction=interaction.direction;
-    if (!direction) { panel.style.left=`${Math.max(0,interaction.left+dx)}px`; panel.style.top=`${Math.max(0,interaction.top+dy)}px`; return; }
-    const west=direction.includes('w'), north=direction.includes('n'), east=direction.includes('e'), south=direction.includes('s');
-    const width=Math.max(280, interaction.width+(east?dx:west?-dx:0)), height=Math.max(170, interaction.height+(south?dy:north?-dy:0));
-    panel.style.width=`${width}px`; panel.style.height=`${height}px`;
-    if (west) panel.style.left=`${interaction.left + interaction.width-width}px`;
-    if (north) panel.style.top=`${interaction.top + interaction.height-height}px`;
-  });
-  const stop=event => { if (interaction?.pointerId === event.pointerId) interaction=null; };
-  panel.addEventListener('pointerup',stop); panel.addEventListener('pointercancel',stop);
-}
 function artistListPackedArtistLayout(entry, chartStart, chartEnd, yearScale) {
   const candidates = artistListArtistsForMovement(entry).map(item => {
     const movementStart = Number(entry.sourceStart ?? entry.start);
@@ -943,7 +820,7 @@ function artistListPackedArtistOverlayMarkup(entry, chartStart, chartEnd, yearSc
     const presentationText=item.presentationLabel ? ` · ${item.presentationLabel}` : '';
     const title = `${name}${countryText} · ${yearsText} · ${loc(entry.name)}${presentationText}`;
     const className = `${item.exceedsMovement ? ' artist-life-pill--extended' : ''}${item.artistRole === 'primary' ? ' artist-life-pill--primary' : ' artist-life-pill--further'}`;
-    // A lifetime box may extend outside its country-development box.  The blue
+    // A lifetime box may extend outside its parent movement range.  The blue
     // activity segment must nevertheless remain inside that box's time span.
     const activity=artistListIndependentActivitySpan(item.artist,item.boxStart,item.boxEnd,movementStart,movementEnd);
     const activityStyle=activity ? `--artist-active-start:${activity.start}%;--artist-active-end:${activity.end}%;` : '';
@@ -974,16 +851,18 @@ function artistListSubmovementLayout(entry, chartStart, chartEnd, yearScale) {
   const packed = [...children].sort((a,b) => artistListMovementSortStart(a) - artistListMovementSortStart(b) || artistListMovementSortEnd(a) - artistListMovementSortEnd(b)).map(child => {
     const childStart=artistListMovementSortStart(child);
     const childEnd=artistListMovementSortEnd(child);
-    let lane=lanes.findIndex(end => childStart >= end);
-    if (lane < 0) { lane=lanes.length; lanes.push(childEnd); laneHeights.push(0); }
-    else lanes[lane]=childEnd;
     const artistLayout=artistListPackedArtistLayout(child,chartStart,chartEnd,yearScale);
+    // Artist life boxes can extend beyond their submovement dates. Reserve a
+    // lane for the rendered span so neighboring schools remain distinct.
+    const occupiedStart=Math.min(childStart,...artistLayout.packed.map(item => item.boxStart));
+    const occupiedEnd=Math.max(childEnd,...artistLayout.packed.map(item => item.boxEnd));
+    let lane=lanes.findIndex(end => occupiedStart >= end);
+    if (lane < 0) { lane=lanes.length; lanes.push(occupiedEnd); laneHeights.push(0); }
+    else lanes[lane]=occupiedEnd;
     const childHeight=artistListSubmovementTopPadding + artistListSubmovementBottomPadding + Math.max(1,artistLayout.laneCount) * pillHeight + Math.max(0,artistLayout.laneCount-1) * artistListPillGap;
     laneHeights[lane]=Math.max(laneHeights[lane],childHeight);
     return {...child, submovementLane:lane, artistLayout, submovementHeight:childHeight};
   });
-  const hasArtists=packed.some(child => child.artistLayout.laneCount > 0);
-  if (!hasArtists && artistListCountryDevelopmentRepresentativesReady) return {submovements:[], rowHeight:artistListSubmovementTopPadding + artistListSubmovementBottomPadding + 3 * pillHeight + 2 * artistListPillGap};
   const laneGap=4.5;
   const laneOffsets=[];
   let cursor=artistListSubmovementTopPadding;
@@ -996,27 +875,29 @@ function artistListSubmovementLayout(entry, chartStart, chartEnd, yearScale) {
 function artistListMovementEntries(countries, selectedCountryIds, start, end) {
   const selected = new Set(selectedCountryIds);
   const rows = [];
-  if (!artistListCountryDevelopmentRepresentativesReady) {
-    loadArtistListCountryDevelopmentRepresentatives();
-  }
   countries.filter(country => selected.has(country.id)).forEach((country, countryOrder) => {
-    (country.movements || []).forEach((movement, movementOrder) => {
+    countryCanonicalMovements(country).forEach((movement, movementOrder) => {
       if (movementIsContextOnly(movement)) return;
       const clipped = clippedMovement(movement, start, end);
       if (!clipped) return;
       const canonicalBinding=clipped.canonical || null;
       const owner=canonicalBinding && (artMovementCanonical.parents || []).find(parent => parent.id === canonicalBinding.documentOwnerId);
       const parentDocumentName=owner?.documentKey || movementDocumentKey(clipped.name?.en || clipped.name?.ko || loc(clipped.name));
-      const canonicalDetails=(canonicalBinding?.developmentIds || []).map(developmentId => artistListCountryDevelopmentRepresentatives.get(`development::${developmentId}`)).filter(detail => detail?.countryIds?.includes(country.id));
-      const artistGuide=canonicalBinding?.parentId && artistListCountryDevelopmentRepresentatives.get(`artist-guide::${canonicalBinding.parentId}`);
-      let details=artistGuide
-        ? [{parentId:canonicalBinding.parentId,developmentId:'',categoryId:'',countryIds:[country.id],label:'',artistIds:artistGuide.artistIds,primaryArtistIds:artistGuide.beginnerArtistIds,furtherArtistIds:artistGuide.artistIds.filter(id => !artistGuide.beginnerArtistIds.includes(id))}]
-        : (canonicalBinding
-          ? (artistListCountryDevelopmentRepresentativesReady ? canonicalDetails : artistListFallbackDevelopmentDetails(canonicalBinding, country.id))
-          : (artistListCountryDevelopmentRepresentativesReady ? (artistListCountryDevelopmentRepresentatives.get(`${parentDocumentName}::${country.id}`) || []) : []));
+      let details=[{parentId:canonicalBinding?.parentId || '',developmentId:'',categoryId:'',countryIds:[country.id],label:'',artistIds:clipped.artistIds || [],primaryArtistIds:clipped.primaryArtistIds || [],furtherArtistIds:clipped.furtherArtistIds || []}];
+      if (Array.isArray(clipped.atlasChildren) && clipped.atlasChildren.length) {
+        const parentArtistIds=clipped.artistIds || [];
+        details=[
+          ...(parentArtistIds.length ? [{parentId:canonicalBinding?.parentId || '',developmentId:'',categoryId:'',countryIds:[country.id],label:'',artistIds:parentArtistIds,primaryArtistIds:clipped.primaryArtistIds || parentArtistIds,furtherArtistIds:clipped.furtherArtistIds || []}] : []),
+          ...clipped.atlasChildren.map(child => ({parentId:canonicalBinding?.parentId || '',developmentId:child.id || '',categoryId:child.id || '',countryIds:[country.id],label:loc(child.name),name:child.name,start:child.start,end:child.end,artistIds:child.artistIds || [],primaryArtistIds:child.primaryArtistIds || child.artistIds || [],furtherArtistIds:child.furtherArtistIds || [],isExplicitSubmovement:true}))
+        ];
+      }
       details.forEach((detail, detailOrder) => rows.push({
         ...clipped,
-        name:(artMovementCanonical.categories || []).find(category => category.id === detail.categoryId)?.name || {ko:detail.label || loc(clipped.name),en:detail.label || loc(clipped.name)},
+        start:detail.start ?? clipped.start,
+        end:detail.end ?? clipped.end,
+        sourceStart:detail.start ?? clipped.sourceStart,
+        sourceEnd:detail.end ?? clipped.sourceEnd,
+        name:detail.name || owner?.name || {ko:loc(clipped.name),en:loc(clipped.name)},
         country,
         countryId:country.id,
         countryIds:[country.id],
@@ -1027,10 +908,13 @@ function artistListMovementEntries(countries, selectedCountryIds, start, end) {
         detailOrder,
         developmentId:detail.developmentId || '',
         categoryId:detail.categoryId || '',
-        countryDevelopmentDetail:detail.label,
+        artistIds:detail.artistIds || [],
+        primaryArtistIds:detail.primaryArtistIds || [],
+        furtherArtistIds:detail.furtherArtistIds || [],
         parentId:detail.parentId || canonicalBinding?.parentId || '',
         parentDocumentName,
         parentMovementKey:artistListMovementLabelKey(clipped),
+        isExplicitSubmovement:detail.isExplicitSubmovement === true,
         sourceOrder:rows.length,
         groupKey:artistListMovementGroupKey(clipped)
       }));
@@ -1095,36 +979,7 @@ function artistListMovementEntries(countries, selectedCountryIds, start, end) {
       sourceOrder:group.sourceOrder
     };
   });
-  return parentEntries.map(entry => {
-    const artistGuide=entry.parentId && artistListCountryDevelopmentRepresentatives.get(`artist-guide::${entry.parentId}`);
-    if (!artistGuide || !entry.children?.length) return entry;
-    const visibleArtistIds=artistGuide.artistIds.filter(id => artists.some(artist => artist.id === id));
-    if (!visibleArtistIds.length) return entry;
-    const learningNodes=artMovementLearningMap.movements?.[entry.parentId]?.nodes || [];
-    const learningLabels=Object.fromEntries(learningNodes.map(node => [node.artist.id,loc(node.label)]));
-    const first=entry.children[0];
-    return {
-      ...entry,
-      children:[{
-        ...first,
-        name:artMovementLearningMap.movements?.[entry.parentId]?.title || {ko:'대표 미술가',en:'Representative Artists'},
-        start:entry.start,
-        end:entry.end,
-        sourceStart:entry.start,
-        sourceEnd:entry.end,
-        countryIds:entry.countryIds,
-        countryNames:entry.countryNames,
-        developmentId:'',
-        categoryId:'',
-        mergedCanonicalSubmovement:false,
-        artistListPresentation:{
-          artistIds:visibleArtistIds,
-          primaryArtistIds:artistGuide.beginnerArtistIds.filter(id => visibleArtistIds.includes(id)),
-          labels:Object.fromEntries(visibleArtistIds.map(id => [id,[artistGuide.labels[id],learningLabels[id]].filter(Boolean).join(' · ')]))
-        }
-      }]
-    };
-  });
+  return parentEntries;
 }
 function artistListMovementRowKey(entry) {
   if (entry.children) return entry.groupKey;
@@ -1153,7 +1008,8 @@ function orderedArtistListMovementEntries(entries) {
   });
 }
 function artistListShouldMergeCanonicalSubmovement(row) {
-  return Boolean(row.developmentId && row.categoryId && row.groupKey);
+  // Explicit atlas children are real, separately named schools or phases.
+  return false;
 }
 function artistListMergeCanonicalSubmovementRows(rows) {
   const merged = new Map();
@@ -1166,7 +1022,10 @@ function artistListMergeCanonicalSubmovementRows(rows) {
       ordered.push(row);
       return;
     }
-    const key = `${row.groupKey}|${row.developmentId || row.categoryId}`;
+    // Regional development IDs are evidence and artist data, not separate submovements.
+    // Collapse them into their shared parent box; explicit school/phase boxes are supplied
+    // separately through the parent's atlasChildren definition.
+    const key = row.groupKey;
     const countryIds = (row.countryIds || [row.countryId]).filter(Boolean);
     const countryNames = (row.countryNames || [row.countryName]).filter(Boolean);
     const existing = merged.get(key);
@@ -1187,6 +1046,9 @@ function artistListMergeCanonicalSubmovementRows(rows) {
     existing.sourceEnd = Math.max(existing.sourceEnd ?? existing.end, row.sourceEnd ?? row.end);
     existing.countryIds = [...new Set([...existing.countryIds, ...countryIds])];
     existing.countryNames = mergeNames(existing.countryNames, countryNames);
+    existing.artistIds = [...new Set([...(existing.artistIds || []), ...(row.artistIds || [])])];
+    existing.primaryArtistIds = [...new Set([...(existing.primaryArtistIds || []), ...(row.primaryArtistIds || [])])];
+    existing.furtherArtistIds = [...new Set([...(existing.furtherArtistIds || []), ...(row.furtherArtistIds || [])])];
     existing.countryOrder = Math.min(existing.countryOrder, row.countryOrder);
     existing.movementOrder = Math.min(existing.movementOrder, row.movementOrder);
     existing.detailOrder = Math.min(existing.detailOrder, row.detailOrder);
@@ -1218,7 +1080,7 @@ function renderCountryArt(options = {}) {
   }
   let entries = artistListMode
     ? artistListMovementEntries(countriesByDataOrder, artistListView.countries, start, end)
-    : (country.movements || []).filter(item => !movementIsContextOnly(item)).map(item => clippedMovement(item,start,end)).filter(Boolean).sort((a,b) => a.start-b.start || a.end-b.end).map((item, column) => ({...item, column}));
+    : countryCanonicalMovements(country).filter(item => !movementIsContextOnly(item)).map(item => clippedMovement(item,start,end)).filter(Boolean).sort((a,b) => a.start-b.start || a.end-b.end).map((item, column) => ({...item, column}));
   if (artistListMode) {
     entries=orderedArtistListMovementEntries(entries).map((entry,index) => ({
       ...entry,
@@ -1352,17 +1214,13 @@ function renderCountryArt(options = {}) {
       let submovements = [];
       try {
         submovements=entry.artistListLayout.submovements;
-        submovementBoxes=submovements.map(child => {
+        // Only an explicitly declared school, lineage, period, or exhibition
+        // group receives a nested outline inside its parent movement.
+        submovementBoxes=submovements.filter(child => child.isExplicitSubmovement).map(child => {
           const childLeft=Math.max(0,child.start-start)*yearScale;
           const childWidth=Math.max(2,(Math.min(end,child.end)-Math.max(start,child.start))*yearScale);
-          const countryName=artistListMovementCountryLabel(child);
-          const childTitle=child.artistListPresentation
-            ? `${loc(entry.name)} · ${loc(child.name)} · ${yearLabel(child.sourceStart ?? child.start)}–${yearLabel(child.sourceEnd ?? child.end)}`
-            : `${countryName} · ${loc(child.name)} · ${yearLabel(child.sourceStart ?? child.start)}–${yearLabel(child.sourceEnd ?? child.end)}`;
-          const parentDocumentName=movementDocumentKey(entry.name?.en || entry.name?.ko || '');
-          const regionFeatureKey=`${parentDocumentName}|${child.countryId}|${artistListMovementLabelKey(child)}`;
-          const visibleLabel = (child.mergedCanonicalSubmovement || child.artistListPresentation) ? loc(child.name) : `${countryName} · ${loc(child.name)}`;
-          return `<div class="artist-list-submovement-box" data-region-feature-key="${esc(regionFeatureKey)}" data-region-feature-development="${esc(child.developmentId || '')}" data-region-feature-parent="${esc(parentDocumentName || entry.name?.en || entry.name?.ko || '')}" data-region-feature-parent-label="${esc(loc(entry.name))}" data-region-feature-country="${esc(child.countryId || '')}" data-region-feature-country-label="${esc(countryName)}" ${child.artistListPresentation ? 'data-artist-list-presentation="neoclassicism"' : ''} style="left:${childLeft}px;top:${child.submovementTop}px;width:${childWidth}px;height:${child.submovementHeight}px;--movement-color:${esc(entry.artistListParentColor)}" title="${esc(childTitle)}"><span class="artist-list-submovement-title" title="${esc(childTitle)}">${esc(visibleLabel)}</span></div>`;
+          const childTitle=`${loc(entry.name)} · ${loc(child.name)} · ${yearLabel(child.sourceStart ?? child.start)}–${yearLabel(child.sourceEnd ?? child.end)}`;
+          return `<div class="artist-list-submovement-box" style="left:${childLeft}px;top:${child.submovementTop}px;width:${childWidth}px;height:${child.submovementHeight}px;--movement-color:${esc(entry.artistListParentColor)}" title="${esc(childTitle)}"><span class="artist-list-submovement-title" title="${esc(childTitle)}">${esc(loc(child.name))}</span></div>`;
         }).join('');
         submovements.forEach(child => artistLifeOverlayPills.push(artistListPackedArtistOverlayMarkup(child, start, end, yearScale, child.submovementTop, child.artistLayout, {
           rowTop:artistListRowTops.get(entry) || 0,
@@ -1374,7 +1232,9 @@ function renderCountryArt(options = {}) {
       } catch (error) {
         console.error('Artist list packing failed:', error);
       }
-      const parentMovementBox = submovements.length ? '' : `<article class="country-art-movement artist-list-empty-movement" aria-hidden="true" style="left:${left}px;width:${barWidth}px;height:${rowHeight}px;--movement-color:${esc(entry.artistListParentColor)}" title="${esc(`${artistListMovementCountryLabel(entry)} · ${loc(entry.name)} · ${movementLabelMeta(entry)}`)}"><div class="country-art-work-list country-art-work-list-empty"></div></article>`;
+      // Keep the parent movement as the full-period container. School and phase boxes
+      // are an overlay inside it; their dates must never redefine the parent width.
+      const parentMovementBox = `<article class="country-art-movement artist-list-empty-movement" aria-hidden="true" style="left:${left}px;width:${barWidth}px;height:${rowHeight}px;--movement-color:${esc(entry.artistListParentColor)}" title="${esc(`${artistListMovementCountryLabel(entry)} · ${loc(entry.name)} · ${movementLabelMeta(entry)}`)}"><div class="country-art-work-list country-art-work-list-empty"></div></article>`;
       return `${movementLabelMarkup(entry)}<div class="country-art-time-row artist-list-time-row" style="width:${chartWidth}px;height:${rowHeight}px">${parentMovementBox}${submovementBoxes}</div>`;
     }
     const source = workSources.get(entry);
@@ -1663,13 +1523,6 @@ function renderCountryArt(options = {}) {
       openCountryArtMovementPreview(event.currentTarget);
     });
   });
-  if (artistListMode) timeline.querySelectorAll('.artist-list-submovement-box[data-region-feature-key]').forEach(box => box.addEventListener('dblclick', event => {
-    if (box.dataset.artistListPresentation) return;
-    if (event.target.closest('.artist-life-pill, .artist-list-submovement-title')) return;
-    event.preventDefault();
-    event.stopPropagation();
-    showArtistListRegionFeaturePanel(box);
-  }));
   const countryArtScroll = timeline.querySelector('.country-art-scroll');
   const frozenLabelColumn = timeline.querySelector('.country-art-frozen-labels');
   countryArtScroll?.classList.add('country-art-frozen-axis-active');

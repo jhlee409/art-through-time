@@ -149,9 +149,6 @@ document.addEventListener('click', event => {
 $('#logout-button').onclick = logoutEverywhere;
 function refreshMovementDocumentConsumers() {
   countryArtWorkCache.clear();
-  artistListCountryDevelopmentRepresentatives.clear();
-  artistListCountryDevelopmentRepresentativesReady=false;
-  artistListCountryDevelopmentRepresentativesRequest=null;
   document.querySelector('.country-art-movement-preview')?.remove();
   document.querySelector('.country-art-image-magnifier')?.remove();
   if (viewMode === 'country-art') renderCountryArt();

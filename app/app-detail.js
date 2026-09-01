@@ -435,76 +435,12 @@ function setupMovementImageDescriptionEditors(frame, name, slot='1') {
   editorStyle.id = 'art-atlas-description-editor-style';
   editorStyle.textContent = '.movement-work-body,.caption{position:relative}.movement-work-body>h3:first-child,.caption>h3:first-child{padding-right:38px}.art-atlas-description-editor{position:absolute;top:10px;right:10px;z-index:2;display:flex;align-items:center;gap:7px}.art-atlas-description-editor button{border:1px solid #8e9b8b;border-radius:5px;width:28px;height:28px;padding:0;background:#f5f1e8;color:#18221e;font:700 16px/1 system-ui,sans-serif;cursor:pointer}.art-atlas-description-editor button[data-action="save"]{background:#18221e;color:#fff;border-color:#18221e}.art-atlas-description-editor.editing{position:static;width:100%;flex-wrap:wrap;align-items:flex-start;margin-top:12px}.art-atlas-description-editor.editing label{display:block;width:100%;color:inherit;font:700 12px/1.5 system-ui,sans-serif}.art-atlas-description-editor.editing button{width:auto;height:auto;padding:6px 9px;font-size:12px}.art-atlas-description-editor.editing textarea{display:block;width:100%;min-height:110px;margin-top:4px;resize:vertical;border:1px solid #8e9b8b;border-radius:6px;padding:10px;background:#fff;color:#18221e;font:14px/1.6 system-ui,sans-serif}.movement-work-grid.art-atlas-work-sortable{outline:1px dashed rgba(142,155,139,.72);outline-offset:7px}.movement-work-card[data-art-atlas-sortable-work="true"]{cursor:grab}.movement-work-card[data-art-atlas-card-role="primary"]:not([data-art-atlas-sortable-work="true"]){cursor:default}.movement-work-card.art-atlas-work-dragging{opacity:.45;cursor:grabbing}';
   documentInFrame.head.append(editorStyle);
-  const genericCountryFeatureStyle=documentInFrame.createElement('style');
-  genericCountryFeatureStyle.id='art-atlas-generic-country-feature-editor-style';
-  genericCountryFeatureStyle.textContent='#countries[data-art-atlas-country-feature-editor] tbody td:nth-child(2){position:relative;padding-right:48px;text-align:left;vertical-align:middle}#countries[data-art-atlas-country-feature-editor] .art-atlas-country-feature-editor{position:absolute;top:10px;right:10px;display:inline-flex}#countries[data-art-atlas-country-feature-editor] .art-atlas-country-feature-editor button{width:25px;height:25px;border:1px solid #8e9b8b;border-radius:5px;background:#f5f1e8;color:#18221e;font:700 15px/1 system-ui,sans-serif;cursor:pointer}#countries[data-art-atlas-country-feature-editor] td textarea{display:block;width:100%;height:calc(40 * 1.6em + 20px);max-height:calc(40 * 1.6em + 20px);padding:9px;resize:vertical;border:1px solid #8e9b8b;border-radius:6px;background:#fff;color:#18221e;font:14px/1.6 system-ui,sans-serif}#countries[data-art-atlas-country-feature-editor] td>button{margin:8px 6px 0 0;padding:6px 9px;border:1px solid #8e9b8b;border-radius:5px;background:#f5f1e8;color:#18221e;font:700 12px/1 system-ui,sans-serif;cursor:pointer}#countries[data-art-atlas-country-feature-editor] td>button[data-action="save"]{background:#18221e;color:#fff;border-color:#18221e}';
-  documentInFrame.head.append(genericCountryFeatureStyle);
   const label = language === 'ko' ? '설명 편집' : 'Edit description';
   const saveLabel = language === 'ko' ? '저장' : 'Save';
   const cancelLabel = language === 'ko' ? '취소' : 'Cancel';
-  const syncCountryDevelopmentRepresentatives = () => {
-    const representativeSection=idSyncComplete
-      ? documentInFrame.querySelector('.movement-enhancement[data-art-atlas-representative-section="works"]')
-      : [...documentInFrame.querySelectorAll('.movement-enhancement')].at(-1);
-    const countrySection=documentInFrame.querySelector('#countries[data-art-atlas-country-feature-editor]');
-    if (!representativeSection || !countrySection) return;
-    if (idSyncComplete) {
-      const groups = new Map([...representativeSection.querySelectorAll('.art-atlas-submovement-group[data-art-atlas-development-id]')]
-        .map(group => [group.dataset.artAtlasDevelopmentId, group]));
-      countrySection.querySelectorAll('tbody tr[data-art-atlas-development-id]').forEach(row => {
-        const developmentId = row.dataset.artAtlasDevelopmentId;
-        const group = groups.get(developmentId);
-        const grid = group?.querySelector(`.movement-work-grid[data-art-atlas-development-id="${CSS.escape(developmentId)}"]`);
-        const representativeCell = row.querySelector('td[data-art-atlas-representative-artists]');
-        const furtherCell = row.querySelector('td[data-art-atlas-further-artists]');
-        if (!group || !grid || !representativeCell || !furtherCell) throw new Error(`${developmentId}: 연결된 화가·대표작 묶음을 찾을 수 없습니다.`);
-        if (group.dataset.artAtlasCategoryId !== row.dataset.artAtlasCategoryId || group.dataset.artAtlasCountryIds !== row.dataset.artAtlasCountryIds) throw new Error(`${developmentId}: 표와 카드 묶음의 분류 ID가 다릅니다.`);
-        const cards = [...grid.querySelectorAll(':scope > article.movement-work-card')];
-        const artistLinks = cards.map(card => {
-          if (card.dataset.artAtlasDevelopmentId !== developmentId || card.dataset.artAtlasCategoryId !== row.dataset.artAtlasCategoryId) throw new Error(`${developmentId}: 다른 범주의 카드는 이 묶음에 놓을 수 없습니다.`);
-          const link = card.querySelector('h3 a[data-artist-id]');
-          if (!link || link.dataset.artistId !== card.dataset.artistId) throw new Error(`${developmentId}: 카드와 화가 링크 ID가 다릅니다.`);
-          return {link, role:card.dataset.artAtlasCardRole};
-        });
-        const synchronizeCell = (cell, links, label) => {
-          const existingIds = [...cell.querySelectorAll('a[data-artist-id]')].map(link => link.dataset.artistId).sort();
-          const cardIds = links.map(item => item.link.dataset.artistId).sort();
-          if (JSON.stringify(existingIds) !== JSON.stringify(cardIds)) throw new Error(`${developmentId}: ${label} 소속은 카드 순서 편집으로 바꿀 수 없습니다.`);
-          cell.replaceChildren(...links.flatMap((item,index) => index ? [documentInFrame.createTextNode(', '),item.link.cloneNode(true)] : [item.link.cloneNode(true)]));
-        };
-        synchronizeCell(representativeCell, artistLinks.filter(item => item.role === 'primary'), '대표 화가');
-        synchronizeCell(furtherCell, artistLinks.filter(item => item.role === 'further'), '더 볼 화가');
-      });
-      return;
-    }
-    const countryKey=value => String(value || '').split(/\s*[—–-]\s*/)[0].replace(/\s+/g,'').trim();
-    const grids=[...representativeSection.querySelectorAll('.movement-work-grid[data-art-atlas-submovement]')];
-    countrySection.querySelectorAll('tbody tr').forEach(row => {
-      const countryCell=row.cells?.[0], representativeCell=row.cells?.[2];
-      if (!countryCell || !representativeCell) return;
-      const key=countryKey(countryCell.textContent);
-      const grid=grids.find(item => countryKey(item.dataset.artAtlasSubmovement) === key);
-      if (!grid) return;
-      const artists=[];
-      [...grid.querySelectorAll(':scope > article.movement-work-card, :scope > article.card')].forEach(card => {
-        const link=card.querySelector('.movement-work-body h3 a[data-artist-id], .caption h3 a[data-artist-id]');
-        const id=link?.dataset.artistId;
-        if (!link || !id || artists.some(item => item.dataset.artistId === id)) return;
-        artists.push(link.cloneNode(true));
-      });
-      if (!artists.length) return;
-      const existingIds=[...representativeCell.querySelectorAll('[data-artist-id]')].map(link => link.dataset.artistId).filter(Boolean);
-      // Never discard a documented representative that still lacks a card.
-      // The validation workflow must add that card before this row can be
-      // regenerated from the card order.
-      if (existingIds.some(id => !artists.some(artist => artist.dataset.artistId === id))) return;
-      representativeCell.replaceChildren(...artists.flatMap((artist,index) => index ? [documentInFrame.createTextNode(', '),artist] : [artist]));
-    });
-  };
   const saveDocument = async () => {
     const representativeSnapshots = [...documentInFrame.querySelectorAll('td[data-art-atlas-representative-artists],td[data-art-atlas-further-artists]')].map(cell => [cell,cell.innerHTML]);
     try {
-      syncCountryDevelopmentRepresentatives();
       const copy = documentInFrame.documentElement.cloneNode(true);
       copy.querySelectorAll('[data-art-atlas-description-editor], [data-art-atlas-country-feature-editor-control], #art-atlas-description-editor-style, #art-atlas-generic-country-feature-editor-style, #art-atlas-movement-highres-style, #art-atlas-movement-highres-viewer, #art-atlas-movement-card-zoom-style, #art-atlas-movement-card-zoom-viewer').forEach(element => element.remove());
       copy.querySelectorAll('[data-art-atlas-sortable-work]').forEach(card => {
@@ -584,94 +520,8 @@ function setupMovementImageDescriptionEditors(frame, name, slot='1') {
       });
     });
   });
-  const countryFeatureSection=documentInFrame.querySelector('#countries[data-art-atlas-country-feature-editor]');
-  if (countryFeatureSection) {
-    const featureToText = cell => {
-      const rows=[...cell.querySelectorAll(':scope > ol > li')];
-      if (!rows.length) return `1. 핵심 특징\n- ${cell.textContent.replace(/\s+/g,' ').trim()}`;
-      return rows.map((row,index) => {
-        const title=row.querySelector(':scope > strong')?.textContent.trim() || `항목 ${index+1}`;
-        const bullets=[...row.querySelectorAll(':scope > ul > li')].map(item => `- ${item.textContent.replace(/\s+/g,' ').trim()}`);
-        return [`${index+1}. ${title}`,...(bullets.length ? bullets : [`- ${row.textContent.replace(/\s+/g,' ').trim()}`])].join('\n');
-      }).join('\n');
-    };
-    const featureToMarkup = value => {
-      const groups=[]; let current=null;
-      String(value || '').split(/\r?\n/).map(line => line.trim()).filter(Boolean).forEach(line => {
-        const heading=line.match(/^\d+\.\s*(.+)$/);
-        if (heading) { current={title:heading[1],bullets:[]}; groups.push(current); return; }
-        if (!current) { current={title:'핵심 특징',bullets:[]}; groups.push(current); }
-        current.bullets.push(line.replace(/^[-*]\s*/,''));
-      });
-      return `<ol class="art-atlas-country-feature-list">${groups.map(group => `<li><strong>${esc(group.title)}</strong><ul>${group.bullets.map(bullet => `<li>${esc(bullet)}</li>`).join('')}</ul></li>`).join('')}</ol>`;
-    };
-    const attachEditor = cell => {
-      if (cell.querySelector('[data-art-atlas-country-feature-editor-control]')) return;
-      const control=documentInFrame.createElement('span');
-      control.dataset.artAtlasCountryFeatureEditorControl='true';
-      control.className='art-atlas-country-feature-editor';
-      const edit=documentInFrame.createElement('button');
-      edit.type='button'; edit.textContent='✎'; edit.title=language === 'ko' ? '국가별 특징 편집' : 'Edit regional characteristics'; edit.setAttribute('aria-label',edit.title);
-      control.append(edit); cell.append(control);
-      edit.addEventListener('click', () => {
-        const original=cell.innerHTML;
-        const textarea=documentInFrame.createElement('textarea');
-        textarea.value=featureToText(cell); textarea.rows=40; textarea.setAttribute('aria-label',edit.title);
-        const clampLines=() => { const lines=textarea.value.split(/\r?\n/); if (lines.length > 40) textarea.value=lines.slice(0,40).join('\n'); };
-        textarea.addEventListener('input',clampLines);
-        const save=documentInFrame.createElement('button'); save.type='button'; save.dataset.action='save'; save.textContent=saveLabel;
-        const cancel=documentInFrame.createElement('button'); cancel.type='button'; cancel.textContent=cancelLabel;
-        control.classList.add('editing'); cell.replaceChildren(textarea,save,cancel); textarea.focus();
-        cancel.addEventListener('click', () => { cell.innerHTML=original; attachEditor(cell); });
-        save.addEventListener('click', async () => {
-          clampLines(); const next=textarea.value.trim(); if (!next) return;
-          save.disabled=true; cell.innerHTML=featureToMarkup(next); attachEditor(cell);
-          try { await saveDocument(); }
-          catch (error) { cell.innerHTML=original; attachEditor(cell); alert(error.message || (language === 'ko' ? '국가별 특징을 저장하지 못했습니다.' : 'Could not save regional characteristics.')); }
-        });
-      });
-    };
-    countryFeatureSection.querySelectorAll('tbody tr').forEach(row => {
-      const feature=row.cells?.[1];
-      if (!feature) return;
-      if (!feature.querySelector(':scope > ol.art-atlas-country-feature-list')) feature.innerHTML=featureToMarkup(`1. 핵심 특징\n- ${feature.textContent.replace(/\s+/g,' ').trim()}`);
-      attachEditor(feature);
-    });
-  }
   const enhancementSections = [...documentInFrame.querySelectorAll('.movement-enhancement')];
   const representativeSection = enhancementSections.at(-1);
-  const submovementLabel = card => (card.querySelector('.movement-card-activity-region')?.textContent || '').replace(/^\s*·\s*/, '').trim() || (language === 'ko' ? '공통 전개' : 'Shared development');
-  // The representative cards are normalized by their country/regional branch.
-  // This turns mixed legacy grids into independent detailed-movement grids,
-  // which also provides the hard boundary for sortable cards.
-  if (!idSyncComplete) representativeSection?.querySelectorAll('.movement-work-grid:not([data-art-atlas-submovement])').forEach(grid => {
-    const cards = [...grid.querySelectorAll(':scope > article.movement-work-card, :scope > article.card')].filter(card => card.querySelector('img'));
-    const groups = new Map();
-    cards.forEach(card => {
-      const label = submovementLabel(card);
-      if (!groups.has(label)) groups.set(label, []);
-      groups.get(label).push(card);
-    });
-    if (groups.size < 2) {
-      grid.dataset.artAtlasSubmovement = [...groups.keys()][0] || '';
-      return;
-    }
-    const fragment = documentInFrame.createDocumentFragment();
-    groups.forEach((groupCards, label) => {
-      const group = documentInFrame.createElement('section');
-      group.className = 'art-atlas-submovement-group';
-      group.dataset.artAtlasSubmovement = label;
-      const heading = documentInFrame.createElement('h3');
-      heading.className = 'art-atlas-submovement-heading';
-      heading.textContent = label;
-      const groupGrid = grid.cloneNode(false);
-      groupGrid.dataset.artAtlasSubmovement = label;
-      groupCards.forEach(card => groupGrid.append(card));
-      group.append(heading, groupGrid);
-      fragment.append(group);
-    });
-    grid.replaceWith(fragment);
-  });
   representativeSection?.querySelectorAll('.movement-work-grid').forEach(grid => {
     const developmentId = idSyncComplete ? grid.dataset.artAtlasDevelopmentId : '';
     const cards = [...grid.querySelectorAll(':scope > article.movement-work-card, :scope > article.card')]

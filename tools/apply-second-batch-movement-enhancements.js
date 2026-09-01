@@ -135,7 +135,7 @@ const blocks = {
     ]
   ),
 
-  'cc20f530f6597b5f2a8fd3ad-1.html': section(
+  '_archived-impressionism-country-layout_': section(
     '심화 보강 - 인상주의의 분화와 국제 확산',
     '인상주의는 야외에서 빠르게 풍경만 그린 양식이 아니다. 파리의 독립 전시, 근대 도시의 여가, 철도와 교외, 사진적 구도, 실내 인물, 여성 화가의 일상 관찰, 국제 유학 네트워크가 함께 만든 느슨한 연합이었다.',
     [

@@ -792,25 +792,7 @@
 .artist-list-time-row { overflow: visible; }
 .artist-list-submovement-box { position: absolute; z-index: 2; box-sizing: border-box; min-width: 0; overflow: visible; border: var(--artist-list-representative-border-width, 1px) solid color-mix(in srgb, var(--movement-color) 72%, #17211e); border-radius: 6px; background: color-mix(in srgb, var(--movement-color) 28%, #fffdf8); color: #17211e; pointer-events: auto; }
 .artist-list-submovement-title { position: absolute; top: 0; left: 5px; z-index: 1; display: block; max-width: calc(100% - 10px); overflow: hidden; padding: 0 3px; transform: translateY(-50%) scale(var(--artist-list-label-text-x-scale, 1), var(--artist-list-label-text-y-scale, 1)); transform-origin: left center; background: color-mix(in srgb, var(--movement-color) 28%, #fffdf8); font: 800 9.36px/1 var(--sans); text-overflow: ellipsis; white-space: nowrap; }
-.artist-list-submovement-box[data-region-feature-key] { cursor: help; }
 .artist-list-submovement-box .artist-life-pill { cursor: default; }
-.artist-list-submovement-box .artist-list-submovement-title { cursor: help; }
-.artist-list-region-feature-panel { position: fixed; z-index: 1000; display: flex; flex-direction: column; width: min(430px, calc(100vw - 40px)); height: 310px; min-width: 280px; min-height: 170px; overflow: hidden; border: 2px solid #3d5c6f; border-radius: 9px; background: #fffdf8; color: #17211e; box-shadow: 0 12px 32px #17211e66; }
-.artist-list-region-feature-panel-header { display: flex; flex: 0 0 auto; align-items: baseline; justify-content: space-between; gap: 12px; padding: 10px 13px; border-bottom: 1px solid #8ca2ae; background: #dff2fa; cursor: move; user-select: none; }
-.artist-list-region-feature-panel-header strong { overflow: hidden; font: 800 15px/1.3 var(--sans); text-overflow: ellipsis; white-space: nowrap; }
-.artist-list-region-feature-panel-header small { flex: 0 0 auto; color: #4f6470; font: 600 11px/1.25 var(--sans); text-align: right; white-space: nowrap; }
-.artist-list-region-feature-panel-body { flex: 1 1 auto; overflow: auto; padding: 14px; font: 500 14px/1.65 var(--sans); white-space: normal; }
-.artist-list-region-feature-panel-body p,.artist-list-region-feature-panel-body ol,.artist-list-region-feature-panel-body ul { margin: 0 0 .8em; }
-.artist-list-region-feature-panel-body ol,.artist-list-region-feature-panel-body ul { padding-left: 1.45em; }
-.artist-list-region-feature-panel-body li { margin: .28em 0; }
-.artist-list-region-feature-panel-body strong { font-weight: 800; }
-.artist-list-region-feature-panel-resizer { position: absolute; z-index: 2; display: block; }
-.artist-list-region-feature-panel-resizer--n,.artist-list-region-feature-panel-resizer--s { right: 9px; left: 9px; height: 8px; cursor: ns-resize; }
-.artist-list-region-feature-panel-resizer--n { top: -4px; }.artist-list-region-feature-panel-resizer--s { bottom: -4px; }
-.artist-list-region-feature-panel-resizer--e,.artist-list-region-feature-panel-resizer--w { top: 9px; bottom: 9px; width: 8px; cursor: ew-resize; }
-.artist-list-region-feature-panel-resizer--e { right: -4px; }.artist-list-region-feature-panel-resizer--w { left: -4px; }
-.artist-list-region-feature-panel-resizer--ne,.artist-list-region-feature-panel-resizer--nw,.artist-list-region-feature-panel-resizer--se,.artist-list-region-feature-panel-resizer--sw { width: 13px; height: 13px; }
-.artist-list-region-feature-panel-resizer--ne { top: -6px; right: -6px; cursor: nesw-resize; }.artist-list-region-feature-panel-resizer--nw { top: -6px; left: -6px; cursor: nwse-resize; }.artist-list-region-feature-panel-resizer--se { right: -6px; bottom: -6px; cursor: nwse-resize; }.artist-list-region-feature-panel-resizer--sw { bottom: -6px; left: -6px; cursor: nesw-resize; }
 .artist-life-pill { position: absolute; z-index: 4; display: flex; align-items: center; justify-content: center; min-width: 0; box-sizing: border-box; padding: 0 4px; overflow: hidden; border: 1px solid #17211e; border-radius: 999px; background: linear-gradient(90deg, #fffdf8 0 var(--artist-active-start, 100%), #dff2fa var(--artist-active-start, 100%) var(--artist-active-end, 100%), #fffdf8 var(--artist-active-end, 100%) 100%); color: #17211e; font-family: var(--sans); font-weight: 800; line-height: 1; white-space: nowrap; box-shadow: 0 1px 2px #18221e3d; cursor: pointer; }
 .artist-life-pill--primary { border: var(--artist-list-representative-border-width, 1px) solid #c1121f; color: #c1121f; font-weight: 900; }
 .artist-life-pill span { display: block; min-width: 0; overflow: hidden; line-height: 1; text-overflow: ellipsis; white-space: nowrap; pointer-events: none; }

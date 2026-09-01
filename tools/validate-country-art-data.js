@@ -8,6 +8,8 @@ const compact = value => String(value || '').normalize('NFKC').toLowerCase().rep
 const movements = readJson('data/art-movements.json');
 const events = readJson('data/country-art-events.json');
 const backgrounds = readJson('data/country-movement-backgrounds.json');
+const canonicalParents = readJson('data/art-movement-canonical.json').parents || [];
+const canonicalParentById = new Map(canonicalParents.map(parent => [parent.id, parent]));
 
 const issues = [];
 const countryIds = new Set((movements.countries || []).map(country => country.id));
@@ -44,9 +46,18 @@ let backgroundsWithLaterEvents = 0;
 for (const [countryId, list] of Object.entries(backgrounds.countries || {})) {
   if (!countryIds.has(countryId)) issues.push(`${countryId}: unknown country in country-movement-backgrounds.json`);
   const country = (movements.countries || []).find(item => item.id === countryId);
-  const movementByKey = new Map((country?.movements || []).flatMap(movement =>
-    [movement.name?.en, movement.name?.ko].filter(Boolean).map(name => [compact(name), movement])
-  ));
+  // Historical event sources may retain a regional label (for example
+  // “Flemish Baroque”), while the three UI surfaces display its shared
+  // canonical parent (“Baroque”). Treat both as valid references.
+  const movementByKey = new Map((country?.movements || []).flatMap(movement => {
+    const parent = canonicalParentById.get(movement.canonical?.parentId);
+    const names = [
+      movement.name?.en, movement.name?.ko,
+      parent?.name?.en, parent?.name?.ko,
+      ...(movement.atlasChildren || []).flatMap(child => [child.name?.en, child.name?.ko])
+    ].filter(Boolean);
+    return names.map(name => [compact(name), movement]);
+  }));
   const seen = new Set();
   const eventMap = new Map((events.countries?.[countryId] || []).map(event => [event.id, event]));
 
