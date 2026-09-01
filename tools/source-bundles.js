@@ -4,13 +4,6 @@ const path = require('node:path');
 const root = path.join(__dirname, '..');
 
 const bundles = {
-  'extras.css': [
-    'extras/timeline-shell.css',
-    'extras/artist-works.css',
-    'extras/country-art.css',
-    'extras/movement-shell.css',
-    'extras.css'
-  ],
   'server-content.js': [
     'server-content/foundation.js',
     'server-content/presentation.js',

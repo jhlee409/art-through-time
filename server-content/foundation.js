@@ -64,7 +64,6 @@ const publicDataFiles = new Set([
 ]);
 const publicPathPrefixes = [
   'app/',
-  'extras/',
   'data/generated/',
   'data/techniques/',
   'data/images/',

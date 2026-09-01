@@ -33,12 +33,7 @@ async function main() {
     '/data/featured-works.json'
   ];
   await Promise.all(staticData.map(json));
-  await Promise.all([
-    '/extras/timeline-shell.css',
-    '/extras/artist-works.css',
-    '/extras/country-art.css',
-    '/extras/movement-shell.css'
-  ].map(response));
+  await response('/extras.css');
 
   const full = await json('/api/artists');
   const index = await json('/api/artists-index');
