@@ -2,10 +2,10 @@
   "dataSchema": 1,
   "metadata": {
     "createdAt": "2026-08-22T12:46:59.824Z",
-    "updatedAt": "2026-09-01T12:04:53.733Z",
+    "updatedAt": "2026-09-01T23:52:41.416Z",
     "createdBy": "jhlee409@gmail.com",
     "updatedBy": "jhlee409@gmail.com",
-    "revision": 952,
+    "revision": 961,
     "representativeContentSchema": 2
   },
   "artists": [
@@ -933,9 +933,9 @@
       ],
       "metadata": {
         "createdAt": "2026-08-16T03:08:17.761Z",
-        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-09-01T23:51:33.953Z",
         "createdBy": "migration-tool",
-        "updatedBy": "phase-5-rebuild"
+        "updatedBy": "jhlee409@gmail.com"
       },
       "aliases": {
         "ko": [
@@ -956,8 +956,7 @@
         "en": "Italian Renaissance"
       },
       "featuredWorkIds": [
-        "wikidata-Q186953",
-        "wikidata-Q2343778"
+        "wikidata-Q186953"
       ],
       "artistSummary": {
         "ko": [],
@@ -3369,148 +3368,12 @@
       "profileResolved": true,
       "generated": {
         "schema": 20,
-        "file": "data/generated/qid-Q104884.json",
-        "fetchedAt": "2026-08-22T20:57:07.530Z"
-      },
-      "links": [
-        {
-          "url": "https://www.youtube.com/watch?v=J3FoewQuqD4"
-        }
-      ],
-      "metadata": {
-        "createdAt": "2026-08-10T13:22:11.79Z",
-        "updatedAt": "2026-08-28T00:00:00.000Z",
-        "createdBy": "migration-tool",
-        "updatedBy": "phase-5-rebuild"
-      },
-      "aliases": {
-        "ko": [
-          "프리드리히"
-        ],
-        "en": [
-          "Friedrich"
-        ]
-      },
-      "movement": {
-        "ko": "독일 낭만주의",
-        "en": "German Romanticism"
-      },
-      "artistSummary": {
-        "ko": [],
-        "en": []
-      },
-      "movements": [
-        "낭만주의"
-      ],
-      "submovements": [
-        "독일 낭만주의"
-      ],
-      "primaryMovement": "낭만주의",
-      "regions": [
-        "독일"
-      ],
-      "periods": [
-        "1700-1780",
-        "1750-1830",
-        "1780-1850",
-        "1830-1880"
-      ],
-      "activeFrom": 1794,
-      "activeTo": 1840,
-      "listName": {
-        "ko": "프리드리히"
-      },
-      "featuredWorkIds": [
-        "wikidata-Q311243"
-      ],
-      "workCount": 72,
-      "_detailLoaded": false
-    },
-    {
-      "id": "artist-Q6394591",
-      "qid": "Q6394591",
-      "name": {
-        "ko": "바실리 푸키레프",
-        "en": "Vassili Vladimirovich Pukiryov"
-      },
-      "birth": 1832,
-      "death": 1890,
-      "nationality": {
-        "ko": "러시아 제국",
-        "en": "Russian Empire"
-      },
-      "profileResolved": true,
-      "generated": {
-        "schema": 20,
-        "file": "data/generated/qid-Q6394591.json",
-        "fetchedAt": "2026-08-22T20:58:03.696Z"
-      },
-      "metadata": {
-        "createdAt": "2026-08-10T13:22:15.828Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
-        "createdBy": "migration-tool",
-        "updatedBy": "jhlee409@gmail.com"
-      },
-      "aliases": {
-        "ko": [
-          "푸키레프"
-        ],
-        "en": [
-          "Pukiryov"
-        ]
-      },
-      "movement": {
-        "ko": "사실주의",
-        "en": "realism"
-      },
-      "artistSummary": {
-        "ko": [],
-        "en": []
-      },
-      "movements": [
-        "사실주의"
-      ],
-      "submovements": [],
-      "primaryMovement": "사실주의",
-      "regions": [
-        "러시아"
-      ],
-      "periods": [
-        "1780-1850",
-        "1830-1880",
-        "1850-1900",
-        "1880-1910"
-      ],
-      "activeFrom": 1852,
-      "activeTo": 1890,
-      "listName": {
-        "ko": "푸키레프"
-      },
-      "workCount": 6,
-      "_detailLoaded": false
-    },
-    {
-      "id": "artist-Q40599",
-      "name": {
-        "ko": "에두아르 마네",
-        "en": "Édouard Manet"
-      },
-      "qid": "Q40599",
-      "birth": 1832,
-      "death": 1883,
-      "nationality": {
-        "ko": "프랑스",
-        "en": "France"
-      },
-      "profileResolved": true,
-      "generated": {
-        "schema": 20,
         "file": "data/generated/qid-Q40599.json",
         "fetchedAt": "2026-08-22T20:58:10.892Z"
       },
       "metadata": {
         "createdAt": "2026-08-10T13:23:15.997Z",
-        "updatedAt": "2026-08-29T21:43:52.054Z",
+        "updatedAt": "2026-09-01T23:51:33.953Z",
         "createdBy": "migration-tool",
         "updatedBy": "jhlee409@gmail.com"
       },
@@ -3550,7 +3413,7 @@
       "listName": {
         "ko": "마네"
       },
-      "workCount": 72,
+      "workCount": 86,
       "_detailLoaded": false
     },
     {
@@ -4988,7 +4851,8 @@
       },
       "artistSummary": {
         "ko": [
-          "안톤 라파엘 멩스는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다."
+          "안톤 라파엘 멩스는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다.",
+          "로코코의 벽화에서 보이는 극단적 단축법(短縮法)을 피하고, 평면적인 구성을 가진 초기 고전주의의 대표적 벽화 <파르나스>에서 볼 수 있는 것과 같이 그는 뛰어난 데생력을 가지고 있었으나, 이러한 특징은 초상화의 영역에서 가장 잘 발휘되고 있다. 르네상스 이래의 과제였던 인체표현의 전통이 데생과 구도를 라파엘로에게서, 명암법(明暗法)을 코레조에게서, 색채를 티치아노에게 배운 그는 작풍에 있어서 하나의 뛰어난 성과를 낳았다"
         ],
         "en": []
       },
@@ -5001,9 +4865,9 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-24T00:00:00Z",
-        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-09-01T23:51:33.953Z",
         "createdBy": "manual entry",
-        "updatedBy": "phase-5-rebuild"
+        "updatedBy": "jhlee409@gmail.com"
       },
       "movements": [
         "신고전주의"
@@ -5025,7 +4889,7 @@
       "listName": {
         "ko": "멩스"
       },
-      "workCount": 1,
+      "workCount": 13,
       "_detailLoaded": false
     },
     {
@@ -14494,6 +14358,71 @@
       "artistSummary": {
         "ko": [],
         "en": []
+      },
+      "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-Q8457",
+      "qid": "Q8457",
+      "name": {
+        "ko": "안토니오 다 코레조",
+        "en": "Antonio da Correggio"
+      },
+      "birth": 1489,
+      "death": 1534,
+      "nationality": {
+        "ko": "이탈리아",
+        "en": "Italy"
+      },
+      "movement": {
+        "ko": "르네상스",
+        "en": "Renaissance"
+      },
+      "featuredWorkIds": [
+        "correggio-holy-night-1528"
+      ],
+      "profileResolved": true,
+      "movements": [
+        "르네상스"
+      ],
+      "submovements": [
+        "파르마파"
+      ],
+      "primaryMovement": "르네상스",
+      "regions": [
+        "이탈리아"
+      ],
+      "activeFrom": 1510,
+      "activeTo": 1534,
+      "listName": {
+        "ko": "코레조"
+      },
+      "metadata": {
+        "createdAt": "2026-09-02T00:00:00.000Z",
+        "updatedAt": "2026-09-01T23:52:41.416Z",
+        "createdBy": "manual-local-import",
+        "updatedBy": "jhlee409@gmail.com"
+      },
+      "aliases": {
+        "ko": [
+          "코레조",
+          "안토니오 알레그리"
+        ],
+        "en": [
+          "Correggio",
+          "Antonio Allegri"
+        ]
+      },
+      "artistSummary": {
+        "ko": [
+          "이탈리아 르네상스의 화가로, 빛과 부드러운 명암을 활용한 종교화와 신화화로 알려져 있다.",
+          "파르마 학파 의 대표 화가 였으며 , 16 세기 가장 활기차고 관능적인 작품들을 남겼습니다. 역동적인 구도, 환영적인 원근법, 극적인 단축법을 사용하여 코레조는 17세기 바로크 미술과 18세기 로코코 미술을 예견했습니다. 그는 키아로스쿠로 기법 의 대가로 여겨집니다 .",
+          "상상의 공간이 자연 현실을 대체하는 코레조의 환영주의적 실험은 매너리즘 , 바로크 , 로코코 양식적 접근 방식의 많은 요소를 예견하는 것처럼 보입니다."
+        ],
+        "en": [
+          "An Italian Renaissance painter known for religious and mythological works shaped by luminous, soft chiaroscuro."
+        ]
       },
       "workCount": 1,
       "_detailLoaded": false

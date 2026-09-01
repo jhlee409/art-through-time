@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-09-01T11:36:41.692Z",
+  "generatedAt": "2026-09-01T23:52:43.322Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -1009,6 +1009,36 @@
       "status": "verified-pair"
     },
     {
+      "id": "Q8457",
+      "uhangulVersion": "0.7",
+      "original": "Antonio da Correggio",
+      "language": "und",
+      "korean": "안토니오 다 코레조",
+      "displayKorean": "다 코레조, 안토니오",
+      "listKorean": "코레조",
+      "aliases": {
+        "ko": [
+          "다 코레조",
+          "코레조",
+          "안토니오 알레그리",
+          "안토니오 다 코레조"
+        ],
+        "en": [
+          "da Correggio",
+          "Correggio",
+          "Antonio Allegri",
+          "Antonio da Correggio"
+        ]
+      },
+      "uhangul": "다 코[Rㅔ]조, 안토니오",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "person",
+      "sources": [
+        "data/artists.json"
+      ],
+      "status": "verified-pair"
+    },
+    {
       "id": "artist-further-arman",
       "uhangulVersion": "0.7",
       "original": "Arman",
@@ -1858,14 +1888,17 @@
       "language": "und",
       "korean": "카스파 다비드 프리드리히",
       "displayKorean": "프리드리히, 카스파 다비드",
-      "listKorean": "프리드리히",
+      "listKorean": "마네",
       "aliases": {
         "ko": [
           "프리드리히",
+          "마네",
           "카스파 다비드 프리드리히"
         ],
         "en": [
           "Friedrich",
+          "Edouard Manet",
+          "Manet",
           "Caspar David Friedrich"
         ]
       },
@@ -2631,30 +2664,27 @@
       "status": "verified-pair"
     },
     {
-      "id": "Q40599",
+      "id": "edouard-manet-short",
       "uhangulVersion": "0.7",
       "original": "Édouard Manet",
       "language": "und",
-      "korean": "에두아르 마네",
-      "displayKorean": "마네, 에두아르",
+      "korean": "마네",
+      "displayKorean": "마네",
       "listKorean": "마네",
       "aliases": {
         "ko": [
-          "마네",
-          "에두아르 마네"
+          "마네"
         ],
         "en": [
           "Edouard Manet",
-          "Manet",
-          "Édouard Manet"
+          "Manet"
         ]
       },
-      "uhangul": "마네, 에두아[Rㅡ]",
+      "uhangul": "마네",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
-        "data/artists.json",
         "data/techniques.json",
         "Wikidata"
       ],
@@ -3095,31 +3125,6 @@
       "sources": [
         "data/미술사조/manual-person-overrides",
         "data/artists.json"
-      ],
-      "status": "verified-pair"
-    },
-    {
-      "id": "name-eugeneboudin",
-      "uhangulVersion": "0.7",
-      "original": "Eugène Boudin",
-      "language": "und",
-      "korean": "외젠 부댕",
-      "displayKorean": "외젠 부댕",
-      "listKorean": "외젠 부댕",
-      "aliases": {
-        "ko": [
-          "부댕"
-        ],
-        "en": [
-          "Eugene Boudin",
-          "Boudin"
-        ]
-      },
-      "uhangul": "외젠 부댕",
-      "note": "auto-generated from original and Korean artist names",
-      "kind": "person",
-      "sources": [
-        "data/profiles/claude-monet.json"
       ],
       "status": "verified-pair"
     },
@@ -9000,30 +9005,6 @@
       "status": "verified-pair"
     },
     {
-      "id": "name-paulgachet",
-      "uhangulVersion": "0.7",
-      "original": "Paul Gachet",
-      "language": "und",
-      "korean": "폴 가셰",
-      "displayKorean": "폴 가셰",
-      "listKorean": "폴 가셰",
-      "aliases": {
-        "ko": [
-          "가셰"
-        ],
-        "en": [
-          "Gachet"
-        ]
-      },
-      "uhangul": "폴 가셰",
-      "note": "auto-generated from original and Korean artist names",
-      "kind": "person",
-      "sources": [
-        "data/profiles/vincent-van-gogh.json"
-      ],
-      "status": "verified-pair"
-    },
-    {
       "id": "artist-art-atlas-gauguin",
       "uhangulVersion": "0.7",
       "original": "Paul Gauguin",
@@ -11346,40 +11327,6 @@
         "data/미술사조/사실주의.html"
       ],
       "status": "verified-pair"
-    },
-    {
-      "id": "Q6394591",
-      "uhangulVersion": "0.7",
-      "original": "Vassili Vladimirovich Pukiryov",
-      "language": "und",
-      "korean": "바실리 푸키레프",
-      "displayKorean": "푸키레프, 바실리",
-      "listKorean": "푸키레프",
-      "aliases": {
-        "ko": [
-          "푸키레프",
-          "바실리 푸키레프",
-          "바실리 푸키료프"
-        ],
-        "en": [
-          "Pukiryov",
-          "Vassili Vladimirovich Pukiryov",
-          "Vasily Vladimirovich Pukiryov",
-          "Vasily Pukirev",
-          "Vassili Pukiryov"
-        ]
-      },
-      "uhangul": "[Vㅜ]키레[Vㅡ], [Vㅏ]실리",
-      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
-      "kind": "person",
-      "sources": [
-        "data/artists.json",
-        "Wikidata"
-      ],
-      "status": "verified-pair",
-      "englishFullName": "Vasily Vladimirovich Pukiryov",
-      "wikipediaTitle": "Vasily Pukirev",
-      "wikidataQid": "Q6394591"
     },
     {
       "id": "artist-further-mukhina",
