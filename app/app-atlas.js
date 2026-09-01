@@ -126,7 +126,7 @@ function renderMovementAtlas() {
     const ends = [];
     return [...movements].sort((a,b) => a.start - b.start).map(movement => { let lane = ends.findIndex(laneEnd => laneEnd < movement.start); if (lane < 0) lane = ends.length; ends[lane] = movement.end; return {...movement,lane}; });
   };
-  const barWidth = item => item.atlasChildren?.length ? 164 : 90;
+  const barWidth = () => 90;
   const layout = movements => {
     const packed = pack(movements);
     const laneCount = Math.max(1, ...packed.map(item => item.lane + 1));
@@ -166,7 +166,7 @@ function renderMovementAtlas() {
         ? (language === 'ko' ? '시대 단계' : 'Period phase')
         : (language === 'ko' ? '화파·계보' : 'School & lineage');
       const childYears = `${yearLabel(child.start)}–${yearLabel(child.end)}`;
-      return `<div class="movement-subbar movement-subbar--${esc(child.type)}" title="${esc(`${loc(child.name)} · ${childYears} · ${childType}`)}" data-movement-explanation="Renaissance" data-movement-label="${esc(loc(child.name))}" data-movement-child-id="${esc(child.id || '')}" data-movement-anchor="${esc(child.documentAnchor || '')}" style="top:${childTop}px;height:${childHeight}px;--movement-child-color:${esc(child.color)}"><span>${esc(loc(child.name))}</span><small>${esc(childYears)}<b>${esc(childType)}</b></small></div>`;
+      return `<div class="movement-subbar movement-subbar--${esc(child.type)}" title="${esc(`${loc(child.name)} · ${childYears} · ${childType}`)}" data-movement-explanation="${esc(movementName)}" data-movement-label="${esc(loc(child.name))}" data-movement-child-id="${esc(child.id || '')}" data-movement-anchor="${esc(child.documentAnchor || '')}" style="top:${childTop}px;height:${childHeight}px;--movement-child-color:${esc(child.color)}"><span>${esc(loc(child.name))}</span><small>${esc(childYears)}<b>${esc(childType)}</b></small></div>`;
     }).join('');
     const compound = childBars ? ' movement-bar--compound' : '';
     const content = childBars
