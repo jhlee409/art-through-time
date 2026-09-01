@@ -1,8 +1,16 @@
 # 사조 설명 HTML 작성 규칙
 
-이 문서는 `data/미술사조/*.html`에 새 사조 설명 HTML을 만들거나 기존 해시 HTML을 전면 재구축할 때 적용한다. 형식 기준은 `data/미술사조/신고전주의.html`이다. 내용은 각 사조에 맞게 새로 쓰되, 문서 모델, 연결 방식, 대표 미술가 표와 대표작 카드의 구조, 검증 절차는 신고전주의 문서와 같은 수준으로 맞춘다.
+이 문서는 `data/미술사조/*.html`의 생성·수정·전면 재구축·삭제와 색인 연결에 적용하는 세부 정본이다. 현재 형식 기준은 Git 이력상 가장 최근에 완성된 `data/미술사조/인상주의.html`이다. 새 문서는 이 파일을 복제해 시작하고, 대상 사조의 내용과 정본 ID만 바꾼다.
 
-작업 전에는 README의 `작업 전 필수 작성규칙`, `AGENTS.md`, [새탭 template 작성 규칙](새탭_template_작성규칙.md), [미술사조 이해 탭 작성 규칙](미술사조이해탭_작성규칙.md)을 함께 확인한다.
+작업 전에는 README의 `작업 전 필수 작성규칙`, `AGENTS.md`, [공통 탭·전용 HTML 작성 규칙](새탭_template_작성규칙.md), [미술사조 이해 탭 작성 규칙](미술사조이해탭_작성규칙.md)을 함께 확인한다.
+
+## 최신 형식 기준 관리
+
+- 새 사조 문서를 만들기 직전에 `data/미술사조/index.json`에 등록된 한글 이름 HTML과 Git 이력을 확인한다. 이 문서에 적힌 현재 기준보다 나중에 형식 개선을 완료하고 검증한 문서가 있으면, 그 문서를 새 기준으로 지정하도록 이 항목도 같은 작업에서 갱신한다.
+- `가장 최근 형식`은 단순 문구 수정 시각이 아니라 공통 레이아웃·섹션·데이터 계약을 개선하고 검증을 통과해 정본으로 승인한 시점을 뜻한다. 작품명 교정이나 링크 한 건 수정만으로 기준 문서를 바꾸지 않는다.
+- 기준 문서에서 `<html>`, `<head>`, 공통 CSS, `header`, sticky `nav`, 섹션 순서, 표, 카드 DOM, 반응형 규칙, 접근성 속성을 통째로 복제한다. 서로 다른 기존 HTML의 일부를 섞어 새 형식을 만들지 않는다.
+- 복제 후 사조명, `parentId`, `documentKey`, 학습 길잡이, 작품·화가 ID와 본문을 대상 사조에 맞춘다. 기준 문서에 필수 데이터 속성이 빠져 있거나 아래 규칙·정본 계약과 충돌하면 누락을 복제하지 않고 이 규칙과 검증 도구를 우선한다.
+- 형식 기준을 바꿀 때는 README의 `사조 설명 HTML 표준`에 적힌 현재 기준 문서도 함께 갱신하고, 변경 이유와 검증 결과를 변경사항 문서에 남긴다.
 
 ## 문서 모델
 
@@ -14,7 +22,7 @@
 
 ## 기본 화면 형식
 
-- `신고전주의.html`처럼 넓은 전체 폭 레이아웃을 사용한다. 본문을 좁은 카드나 랜딩 페이지처럼 만들지 않는다.
+- 현재 형식 기준 문서처럼 넓은 전체 폭 레이아웃을 사용한다. 본문을 좁은 카드나 랜딩 페이지처럼 만들지 않는다.
 - 첫 화면은 사조명, 초심자용 요약, 핵심 명제를 바로 보여 준다.
 - 상단에는 현재 사조명을 보여 주는 sticky nav를 둔다.
 - `#movement-learning-guide`는 `data/art-movement-learning-guides.json`과 `data/art-movement-learning-map.json`의 학습 길잡이 구조를 따른다.
@@ -54,7 +62,7 @@
 
 ## 파일명과 색인 연결
 
-- 새 사조 설명 HTML은 반드시 `신고전주의.html`처럼 사람이 식별할 수 있는 한국어 또는 영어 사조 이름을 파일명으로 사용한다. 해시 파일명으로 새 문서를 만들지 않는다.
+- 새 사조 설명 HTML은 반드시 사람이 식별할 수 있는 한국어 사조 이름을 파일명으로 사용한다. 정본에 한국어 이름이 없는 예외만 영어 이름을 허용하며, 해시 파일명으로 새 문서를 만들지 않는다.
 - `data/미술사조/index.json`에서 해당 사조의 문서 키가 새 HTML 경로를 직접 가리키게 한다. 예: `"Neoclassicism": { "1": "data/미술사조/신고전주의.html" }`.
 - `data/art-movement-canonical.json`의 `documentKey`, `data/art-movements.json`의 `canonical.documentOwnerId`, 앱의 `movementDocumentKey()` 흐름이 같은 문서 키로 이어지는지 확인한다.
 - `미술 사조의 이해` 탭 오른쪽 사조 막대는 더블클릭 시 `app/app-atlas.js`의 막대 `dblclick` 이벤트에서 `openMovementDocument(...)`로 이동한다. 따라서 새 문서가 만들어진 뒤에는 해당 막대를 더블클릭하면 반드시 `data/미술사조/index.json`에 등록된 새 HTML만 열려야 한다.
@@ -80,10 +88,10 @@
 - 새 HTML 파일 존재와 이전 해시 파일 부재를 확인한다: `Test-Path`, `Get-ChildItem data/미술사조 -Filter *.html`, 이전 해시 경로 `rg`.
 - 색인 연결을 확인한다: `data/미술사조/index.json`의 해당 문서 키가 새 HTML만 가리키는지 확인한다.
 - 막대 더블클릭 연결을 확인한다: 해당 사조 막대 이름이 `movementDocumentKey()`로 문서 키에 정규화되고, `openMovementDocument()`가 새 HTML URL을 여는지 확인한다.
-- 실행 권장 검증: `node tools/validate-movement-canonical.js`, `node tools/validate-movement-sync-contract.js`, `node tools/validate-movement-documents-v1.js`, `node tools/validate-cross-tab-linkage.js`, `node tools/validate-movement-image-paths.js`, `node tools/sync-movement-learning-guides.js --check`, `node tools/validate-movement-links.js`, `npm test`, `git diff --check`.
+- 공통 규칙의 기본 검사에 추가해 재구축 중에는 `node tools/validate-movement-canonical.js`, `node tools/validate-movement-sync-contract.js`, `node tools/validate-movement-representatives.js`, `node tools/validate-cross-tab-linkage.js`, `node tools/validate-movement-image-paths.js`, `node tools/validate-movement-links.js`, `node tools/validate-project-linkage.js`를 실행한다. 정본 목표 36개가 모두 등록된 뒤에는 `node tools/validate-movement-documents-v1.js`, `node tools/validate-movement-sync-v1-runtime.js`, `node tools/complete-movement-sync-v1.js`, `node tools/sync-movement-learning-guides.js --check`를 추가한다.
 - 사조 HTML 제공 경로, 서버 보강, 색인 응답을 바꿨다면 서버 재시작 뒤 `node tools/check-app-http.js http://127.0.0.1:4173` 또는 `npm run test:http`로 새 HTML이 HTTP 200인지 확인한다.
 
 ## 완료 보고
 
-- 완료 보고에는 참고한 작성규칙, 새 HTML 경로, 삭제한 이전 해시 HTML 경로, 갱신한 색인·정본 데이터, 실행한 검증과 실패한 검증의 이유를 남긴다.
+- 완료 보고에는 참고한 작성규칙, 새 HTML 경로, 해당되는 경우 삭제한 이전 HTML 경로, 갱신한 색인·정본 데이터, 실행한 검증과 실패한 검증의 이유를 남긴다.
 - 사조 HTML을 수정했지만 이 규칙 파일에 추가할 새 기준이 없었다면, 기존 규칙을 그대로 적용한 단순 데이터·문구 변경임을 명시한다.

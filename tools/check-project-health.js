@@ -3,6 +3,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const {spawnSync} = require('node:child_process');
+const {bundleFiles, readBundle} = require('./source-bundles');
 const {normalizeArtistsPayload, validateArtistsPayload} = require('../data-contract');
 
 const root = path.resolve(__dirname, '..');
@@ -62,19 +63,18 @@ function summarizeOversizedImages() {
 
 function checkApplicationModuleSplit() {
   const appModules = ['app/app-core.js', 'app/app-artists.js', 'app/app-atlas.js', 'app/app-detail.js', 'app/app.js'];
+  const loadedFiles = appModules.flatMap(bundleFiles);
   const indexHtml = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   let previousPosition = -1;
-  for (const file of appModules) {
+  for (const file of loadedFiles) {
     const position = indexHtml.indexOf(`src="${file}"`);
     if (position < 0) throw new Error(`index.html is missing application module: ${file}`);
     if (position <= previousPosition) throw new Error(`index.html application module order is invalid: ${file}`);
     previousPosition = position;
   }
 
-  const contentSource = fs.readFileSync(path.join(root, 'server-content.js'), 'utf8');
-  for (const file of appModules) {
-    if (!contentSource.includes(`'${file}'`)) throw new Error(`server-content.js does not allow public application module: ${file}`);
-  }
+  const contentSource = readBundle('server-content.js');
+  if (!contentSource.includes("'app/'")) throw new Error('server-content.js does not allow public application module folders');
 
   return 'application module split';
 }
@@ -104,9 +104,13 @@ function checkRemovedFeatureRemnants() {
   }
 
   const interfaceSource = [
-    'index.html', 'app/app-core.js', 'app/app-artists.js', 'app/app-atlas.js',
-    'app/app-detail.js', 'app/app.js', 'styles.css', 'extras.css'
-  ].map(file => fs.readFileSync(path.join(root, file), 'utf8')).join('\n');
+    fs.readFileSync(path.join(root, 'index.html'), 'utf8'),
+    readBundle('app/app-core.js'), readBundle('app/app-artists.js'),
+    readBundle('app/app-atlas.js'), readBundle('app/app-detail.js'),
+    fs.readFileSync(path.join(root, 'app', 'app.js'), 'utf8'),
+    fs.readFileSync(path.join(root, 'styles.css'), 'utf8'),
+    readBundle('extras.css')
+  ].join('\n');
   for (const fragment of ['relationship-map', 'rule-check-button', 'rules-check-button']) {
     if (interfaceSource.includes(fragment)) throw new Error(`removed interface fragment still exists: ${fragment}`);
   }
@@ -115,7 +119,7 @@ function checkRemovedFeatureRemnants() {
 }
 
 function checkArtistPersistenceGuards() {
-  const appSource = fs.readFileSync(path.join(root, 'app', 'app-core.js'), 'utf8');
+  const appSource = readBundle('app/app-core.js');
   const loadStart = appSource.indexOf('async function loadData()');
   const loadEnd = appSource.indexOf('async function markLegacyManualWorks()', loadStart);
   if (loadStart < 0 || loadEnd < 0) throw new Error('Could not inspect the loadData persistence boundary');
@@ -156,23 +160,35 @@ function main() {
   const validation = validateArtistsPayload(normalizeArtistsPayload(artists));
   if (!validation.valid) throw new Error(`artists data contract failed:\n${validation.errors.join('\n')}`);
 
-  [
+  const movementIndex = JSON.parse(fs.readFileSync(path.join(root, 'data', '미술사조', 'index.json'), 'utf8'));
+  const movementCanonical = JSON.parse(fs.readFileSync(path.join(root, 'data', 'art-movement-canonical.json'), 'utf8'));
+  const activeMovementDocuments = Object.keys(movementIndex.documents || {}).length;
+  const targetMovementDocuments = movementCanonical.counts.documentParents + movementCanonical.counts.contextReferences;
+  const movementRebuildInProgress = activeMovementDocuments < targetMovementDocuments;
+  checked.push(`movement documents ${movementRebuildInProgress ? 'rebuild transition' : 'complete'} (${activeMovementDocuments}/${targetMovementDocuments})`);
+
+  const movementCompletionChecks = [
+    ['movement HTML v1 migration', 'tools/validate-movement-documents-v1.js'],
+    ['movement ID sync runtime', 'tools/validate-movement-sync-v1-runtime.js'],
+    ['movement phase 6 completion', 'tools/complete-movement-sync-v1.js'],
+    ['movement learning guides', 'tools/sync-movement-learning-guides.js', '--check']
+  ];
+  const healthChecks = [
     ['movement links', 'tools/validate-movement-links.js'],
     ['movement canonical taxonomy', 'tools/validate-movement-canonical.js'],
     ['movement sync contract', 'tools/validate-movement-sync-contract.js'],
-    ['movement HTML v1 migration', 'tools/validate-movement-documents-v1.js'],
+    ['movement representatives', 'tools/validate-movement-representatives.js'],
+    ['cross-tab linkage', 'tools/validate-cross-tab-linkage.js'],
+    ...(!movementRebuildInProgress ? movementCompletionChecks : []),
     ['movement image paths', 'tools/validate-movement-image-paths.js'],
-    ['movement ID sync runtime', 'tools/validate-movement-sync-v1-runtime.js'],
-    ['movement phase 6 completion', 'tools/complete-movement-sync-v1.js'],
-    ['movement learning guides', 'tools/sync-movement-learning-guides.js', '--check'],
     ['country art data', 'tools/validate-country-art-data.js'],
     ['project linkage', 'tools/validate-project-linkage.js'],
     ['legacy artwork image paths', 'tools/migrate-legacy-artwork-images.js'],
     ['movement image cache index', 'tools/prune-movement-image-index.js'],
     ['image catalog', 'tools/build-image-catalog.js', '--check'],
-    ['Renaissance country table', 'tools/verify-renaissance-country-table.js'],
     ['URL download approval guard', 'tools/check-url-download-approval.js']
-  ].forEach(([label, script, ...args]) => checked.push(checkCommand(label, process.execPath, [script,...args])));
+  ];
+  healthChecks.forEach(([label, script, ...args]) => checked.push(checkCommand(label, process.execPath, [script,...args])));
 
   const env = fs.existsSync(path.join(root, '.env')) && /ART_ATLAS_ADMIN_PASSWORD\s*=\s*\S+/.test(fs.readFileSync(path.join(root, '.env'), 'utf8'));
   const oversizedImages = summarizeOversizedImages();

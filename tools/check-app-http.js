@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const artists = require('../data/artists.json');
 const catalog = require('../data/image-catalog.json');
+const movementIndex = require('../data/미술사조/index.json');
 
 const origin = String(process.argv[2] || 'http://127.0.0.1:4173').replace(/\/$/, '');
 
@@ -18,7 +19,7 @@ async function main() {
   const entryPaths = ['/', '/?artistList=1', '/?countryArt=1', `/?artist=${encodeURIComponent(artists.artists[0].id)}`];
   for (const pathname of entryPaths) {
     const html = await response(pathname).then(result => result.text());
-    if (!html.includes('app/app-core.js') || !html.includes('app/app-atlas.js') || !html.includes('app/app-artists.js')) {
+    if (!html.includes('app/app-core/state.js') || !html.includes('app/app-atlas/movement-atlas.js') || !html.includes('app/app-artists/list-summary.js')) {
       throw new Error(`${pathname}: application scripts are missing`);
     }
   }
@@ -32,6 +33,12 @@ async function main() {
     '/data/featured-works.json'
   ];
   await Promise.all(staticData.map(json));
+  await Promise.all([
+    '/extras/timeline-shell.css',
+    '/extras/artist-works.css',
+    '/extras/country-art.css',
+    '/extras/movement-shell.css'
+  ].map(response));
 
   const full = await json('/api/artists');
   const index = await json('/api/artists-index');
@@ -39,7 +46,7 @@ async function main() {
   if ((full.artists || []).length !== artists.artists.length) throw new Error('/api/artists count mismatch');
   if ((index.artists || []).length !== artists.artists.length) throw new Error('/api/artists-index count mismatch');
   if ((index.artists || []).some(artist => Array.isArray(artist.works))) throw new Error('/api/artists-index includes work arrays');
-  if (Object.keys(movements.documents || {}).length !== 36) throw new Error('/api/movement-documents count mismatch');
+  if (Object.keys(movements.documents || {}).length !== Object.keys(movementIndex.documents || {}).length) throw new Error('/api/movement-documents count mismatch');
 
   const movementDocumentPaths = [...new Set(Object.values(movements.documents || {}).flatMap(document => Object.values(document || {})))];
   const movementImagePaths = new Set();

@@ -139,13 +139,20 @@ function main() {
 
   const activeDocuments = indexedFiles(movementIndex);
   const legacyDocuments = indexedFiles(legacyMovementIndex);
-  const movementFiles = fs.readdirSync(path.join(root, 'data', '미술사조'))
+  const movementDirectory = path.join(root, 'data', '미술사조');
+  const movementFiles = fs.readdirSync(movementDirectory)
     .filter(file => /\.html?$/i.test(file))
     .map(file => `data/미술사조/${file}`)
     .sort();
+  const legacyDirectory = path.join(movementDirectory, 'backup');
+  const legacyMovementFiles = (fs.existsSync(legacyDirectory) ? fs.readdirSync(legacyDirectory) : [])
+    .filter(file => /\.html?$/i.test(file))
+    .map(file => `data/미술사조/backup/${file}`)
+    .sort();
   const registeredDocumentFiles = [...activeDocuments, ...legacyDocuments].map(item => item.file);
   check(new Set(registeredDocumentFiles).size === registeredDocumentFiles.length, 'A movement HTML file is registered more than once');
-  check(JSON.stringify([...registeredDocumentFiles].sort()) === JSON.stringify(movementFiles), 'Movement HTML files and active/legacy indexes differ');
+  check(JSON.stringify(activeDocuments.map(item => item.file).sort()) === JSON.stringify(movementFiles), 'Active movement HTML files and index differ');
+  check(JSON.stringify(legacyDocuments.map(item => item.file).sort()) === JSON.stringify(legacyMovementFiles), 'Archived movement HTML files and legacy index differ');
   for (const item of [...activeDocuments, ...legacyDocuments]) {
     check(fs.existsSync(path.join(root, item.file)), `Indexed movement HTML is missing: ${item.key}|${item.file}`);
   }
@@ -164,6 +171,7 @@ function main() {
     activeMovementDocuments: activeDocuments.length,
     legacyMovementDocuments: legacyDocuments.length,
     physicalMovementDocuments: movementFiles.length,
+    physicalLegacyMovementDocuments: legacyMovementFiles.length,
     issues: issues.length
   }, null, 2));
   if (issues.length) {

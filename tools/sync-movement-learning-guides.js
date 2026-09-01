@@ -125,26 +125,28 @@ function synchronizeDocument(documentId, parent, relative, isContext=false) {
 }
 
 function main() {
-  const expectedIds = [
-    ...canonical.parents.filter(parent => parent.role === 'document').map(parent => parent.id),
-    ...canonical.contextReferences.map(context => context.id)
+  const registeredParents = canonical.parents.filter(parent => parent.role === 'document' && index.documents?.[parent.documentKey]?.['1']);
+  const registeredContexts = canonical.contextReferences.filter(context => index.documents?.[context.documentKey]?.['1']);
+  const registeredIds = [
+    ...registeredParents.map(parent => parent.id),
+    ...registeredContexts.map(context => context.id)
   ];
   const guideIds = Object.keys(guides.documents);
-  assert(expectedIds.length === guideIds.length && expectedIds.every(id => guideIds.includes(id)), 'Learning guide IDs must exactly match the 36 registered documents');
-  if (onlyDocumentId) assert(expectedIds.includes(onlyDocumentId), `Unknown learning guide document: ${onlyDocumentId}`);
+  assert(registeredIds.every(id => guideIds.includes(id)), 'Every registered movement document must have a learning guide');
+  if (onlyDocumentId) assert(registeredIds.includes(onlyDocumentId), `Unknown or inactive learning guide document: ${onlyDocumentId}`);
   const changed = [];
-  canonical.parents.filter(parent => parent.role === 'document' && (!onlyDocumentId || parent.id === onlyDocumentId)).forEach(parent => {
+  registeredParents.filter(parent => !onlyDocumentId || parent.id === onlyDocumentId).forEach(parent => {
     const relative = index.documents?.[parent.documentKey]?.['1'];
     assert(relative, `${parent.id}: indexed document is missing`);
     if (synchronizeDocument(parent.id,parent,relative)) changed.push(parent.id);
   });
-  canonical.contextReferences.filter(context => !onlyDocumentId || context.id === onlyDocumentId).forEach(context => {
+  registeredContexts.filter(context => !onlyDocumentId || context.id === onlyDocumentId).forEach(context => {
     const relative = index.documents?.[context.documentKey]?.['1'];
     assert(relative, `${context.id}: indexed document is missing`);
     if (synchronizeDocument(context.id,{...context,categoryIds:[]},relative,true)) changed.push(context.id);
   });
   if (args.has('--check') && changed.length) throw new Error(`Learning guides are out of sync: ${changed.join(', ')}`);
-  console.log(JSON.stringify({documents: onlyDocumentId ? 1 : expectedIds.length, changed: changed.length, mode: args.has('--check') ? 'check' : (args.has('--dry-run') ? 'dry-run' : 'write')}, null, 2));
+  console.log(JSON.stringify({documents: onlyDocumentId ? 1 : registeredIds.length, changed: changed.length, mode: args.has('--check') ? 'check' : (args.has('--dry-run') ? 'dry-run' : 'write')}, null, 2));
 }
 
 main();

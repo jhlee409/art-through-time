@@ -629,7 +629,7 @@ async function updateArtistSummaryFromLinks(artistId, actor='', researchArtistSu
     artistSearchCandidates, normalizeArtistWorks, artistProfileFromQid, artworkInfo,
     getJsonFast, api, similarityScore,
     getEntities, entityId, entityYear, entityLabel, koreanArtistNameOverrides,
-    saveThumbnailBuffer, saveThumbnailFromLocalUpload, removeThumbnailFiles,
+    saveThumbnailBuffer, saveThumbnailFromLocalUpload, removeThumbnailFiles, thumbnailLocation, makePngUnderStorageLimit,
     readArtistsFile, readArtistsIndex, readArtistDetail, writeArtistsFile, updateArtistPresentation, updateArtistSummaryFromLinks, highResolutionPathExists, resolvedHighResolutionPath,
     resolveHighResolutionPaths, safeUploadId, uploadExtension
   };

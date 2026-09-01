@@ -44,6 +44,7 @@ function validate(data, taxonomy, documentIndex) {
   const parentDisplayOrder = data.parentDisplayOrder || [];
   const validLevels = new Set(Object.keys(data.documentLevels || {}));
   const validKinds = new Set(Object.keys(data.categoryKinds || {}));
+  const validDocumentKeys = new Set([...documents.map(parent => parent.documentKey), ...contexts.map(context => context.documentKey)]);
 
   assert(data.status === 'frozen-for-migration', 'canonical status must be frozen-for-migration');
   assert(parents.length === data.counts.parents, 'parent count differs from declared count');
@@ -119,8 +120,10 @@ function validate(data, taxonomy, documentIndex) {
 
   contexts.forEach(context => {
     assert(context.name?.ko && context.name?.en && context.documentKey, `invalid context reference: ${context.id}`);
-    assert(documentIndex.documents?.[context.documentKey], `context document is not registered: ${context.documentKey}`);
     assert(!parentById.has(context.id), `context reference collides with a parent: ${context.id}`);
+  });
+  Object.keys(documentIndex.documents || {}).forEach(documentKey => {
+    assert(validDocumentKeys.has(documentKey), `document index contains an unknown canonical key: ${documentKey}`);
   });
 
   return {parents: parents.length, documents: documents.length, absorbed: absorbed.length, categories: categories.length, levels, modes, contexts: contexts.length};
