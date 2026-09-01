@@ -11,6 +11,11 @@
 <style id="art-atlas-artist-link-style">
 .art-atlas-artist-link{font-weight:900;color:#191007!important;background:linear-gradient(180deg,rgba(255,232,151,.98),rgba(255,198,86,.9));border-bottom:2px solid #a96f12;border-radius:.22em;padding:0 .16em;text-decoration:none!important;box-decoration-break:clone;-webkit-box-decoration-break:clone}.art-atlas-artist-link:hover{filter:brightness(1.08);box-shadow:0 0 0 2px rgba(255,214,102,.24)}
 </style>
+<style id="art-atlas-movement-sticky-title-style">nav .wrap{display:flex;align-items:center;justify-content:center}nav .art-atlas-movement-sticky-title{display:block;width:100%;color:inherit;font-family:inherit;font-size:2em;font-weight:inherit;letter-spacing:inherit;line-height:inherit;text-align:center}</style>
+<style id="art-atlas-movement-card-presentation-style">.movement-card-title-tag,.movement-card-activity-region{color:#9aa5af;font-size:.78em;font-weight:600;white-space:nowrap}.movement-card-heading-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:.45rem;margin:0 0 .85rem}.movement-card-heading-row h3{min-width:0;margin:0!important}.movement-card-heading-row .work-meta{margin:.08rem 0 0!important;text-align:right;white-space:nowrap}</style>
+<style id="art-atlas-movement-content-layout-style">body{--art-atlas-document-gutter:clamp(20px,3vw,48px)}header.hero>.wrap,main>section>.wrap{width:100%;max-width:none;margin-left:0;margin-right:0;padding-left:var(--art-atlas-document-gutter);padding-right:var(--art-atlas-document-gutter)}.hero p,.lead{max-width:none}main>section:not(#movement-learning-guide)>.wrap>h2,main>section:not(#movement-learning-guide)>h2{margin:0 0 1.15rem;font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,3.4vw,3.1rem);line-height:1.18}main>section:not(#movement-learning-guide)>.wrap>h3,main>section:not(#movement-learning-guide)>h3,.movement-enhancement .art-atlas-submovement-heading{font-size:clamp(1.3rem,2.25vw,1.75rem);line-height:1.32}.movement-enhancement .art-atlas-submovement-heading{margin-top:2.1rem;margin-bottom:.7rem}.movement-enhancement .art-atlas-submovement-heading+.movement-work-grid{margin-top:0}main>section:not(#movement-learning-guide)>.wrap>h4,main>section:not(#movement-learning-guide)>h4{font-size:1.12rem;line-height:1.42;margin:1.5rem 0 .5rem}main>section:not(#movement-learning-guide)>.wrap>p:not(.work-meta):not(.movement-selection-reason),main>section:not(#movement-learning-guide)>p:not(.work-meta):not(.movement-selection-reason){max-width:none;font-size:1.08rem;line-height:1.8}main>section:not(#movement-learning-guide)>.wrap>p:not(.work-meta):not(.movement-selection-reason)~p,main>section:not(#movement-learning-guide)>p:not(.work-meta):not(.movement-selection-reason)~p{font-size:1rem;line-height:1.75}.table-wrap,main>section>.wrap>table,main>section>table{width:100%;max-width:none}.table-wrap table,main>section>.wrap>table,main>section>table{width:100%}@media(max-width:720px){body{--art-atlas-document-gutter:18px}}</style>
+<style id="art-atlas-movement-card-image-fit-style">.movement-enhancement .movement-work-image>img{width:90%!important;height:90%!important;max-width:90%!important;max-height:90%!important;object-fit:contain!important}</style>
+<style id="art-atlas-movement-history-stage-image-fit-style">[data-art-atlas-visual-sequence] .history-stage-image,[data-art-atlas-visual-sequence] .movement-work-image{display:flex!important;align-items:center!important;justify-content:center!important;aspect-ratio:4/3!important;overflow:hidden!important;background:var(--black,#000)!important}[data-art-atlas-visual-sequence] .history-stage-image>img,[data-art-atlas-visual-sequence] .movement-work-image>img{width:90%!important;height:90%!important;max-width:90%!important;max-height:90%!important;object-fit:contain!important}</style>
 </head>
 <body>
 <div data-uhangul-document-toolbar role="group" aria-label="이름 표기 방식" style="position:fixed!important;top:14px!important;left:16px!important;z-index:2147483647!important;display:flex!important;gap:4px!important"><button type="button" data-uh-mode="korean" data-uh-local-mode="korean" aria-label="한국어" title="한국어" style="display:grid!important;width:28px!important;height:28px!important;place-items:center!important;padding:0!important;border:1px solid #aebba8!important;border-radius:50%!important;background:#fffdf8!important;color:#425043!important;font:700 10px/1 'Noto Sans KR',sans-serif!important;cursor:pointer!important">한</button><button type="button" data-uh-mode="uhangul" data-uh-local-mode="uhangul" aria-label="uHangul" title="uHangul" style="display:grid!important;width:28px!important;height:28px!important;place-items:center!important;padding:0!important;border:1px solid #aebba8!important;border-radius:50%!important;background:#fffdf8!important;color:#425043!important;font:700 10px/1 'Noto Sans KR',sans-serif!important;cursor:pointer!important">u</button><button type="button" data-uh-mode="original" data-uh-local-mode="original" aria-label="국제 표기" title="국제 표기" style="display:grid!important;width:28px!important;height:28px!important;place-items:center!important;padding:0!important;border:1px solid #aebba8!important;border-radius:50%!important;background:#fffdf8!important;color:#425043!important;font:700 10px/1 'Noto Sans KR',sans-serif!important;cursor:pointer!important">표</button></div>
@@ -22,16 +27,7 @@
 <p class="hero-thesis">“이상적 규칙”보다 “지금 여기의 격렬한 경험”을 — 자연, 군중, 공포, 빛을 통해 다시 그린 미술.</p>
 </div>
 </header>
-<nav>
-<div class="wrap">
-<a href="#definition">정의</a>
-<a href="#birth">태동</a>
-<a href="#establishment">확립</a>
-<a href="#criticism">비판과 전환</a>
-<a href="#artists">대표 미술가</a>
-<a href="#works">대표작 카드</a>
-</div>
-</nav>
+<nav aria-label="현재 사조"><div class="wrap"><span class="art-atlas-movement-sticky-title">낭만주의</span></div></nav>
 <main>
 <section id="movement-learning-guide" data-art-atlas-learning-guide-version="1" data-art-atlas-content-source="data/art-movement-learning-guides.json">
 <div class="wrap">
@@ -383,9 +379,8 @@
 </div>
 <div class="movement-work-body">
 <span class="movement-card-role">초심자 핵심 · 풍경</span>
-<h3>
-<a class="art-atlas-artist-link" href="../../index.html?artist=artist-1786332007363" target="_blank" rel="noopener" data-artist-id="artist-1786332007363" data-uh-original="Caspar David Friedrich" data-uh-korean="카스파 다비드 프리드리히" data-uh-display-korean="카스파 다비드 프리드리히" data-uh-list-korean="프리드리히" title="카스파 다비드 프리드리히 연표로 이동">카스파 다비드 프리드리히</a>, 《안개 바다 위의 방랑자》</h3>
-<p class="work-meta">1818 · 낭만주의</p>
+<div class="movement-card-heading-row"><h3>
+<a class="art-atlas-artist-link" href="../../index.html?artist=artist-1786332007363" target="_blank" rel="noopener" data-artist-id="artist-1786332007363" data-uh-original="Caspar David Friedrich" data-uh-korean="카스파 다비드 프리드리히" data-uh-display-korean="카스파 다비드 프리드리히" data-uh-list-korean="프리드리히" title="카스파 다비드 프리드리히 연표로 이동">카스파 다비드 프리드리히</a>, 《안개 바다 위의 방랑자》</h3><p class="work-meta">1818 · 낭만주의</p></div>
 <p class="movement-selection-reason" data-art-atlas-selection-reason="">선정 이유: 관람자를 자연과 자기 내면의 불확실성 앞에 세운다.</p>
 <p data-art-atlas-card-description="">안개로 가려진 산과 등을 보인 인물이 자연을 정신적 공간으로 바꾼다.</p>
 </div>
@@ -396,9 +391,8 @@
 </div>
 <div class="movement-work-body">
 <span class="movement-card-role">초심자 핵심 · 풍경·해양</span>
-<h3>
-<a class="art-atlas-artist-link" href="../../index.html?artist=artist-romantic-turner" target="_blank" rel="noopener" data-artist-id="artist-romantic-turner" data-uh-original="J. M. W. Turner" data-uh-korean="조지프 말로드 윌리엄 터너" data-uh-display-korean="조지프 말로드 윌리엄 터너" data-uh-list-korean="터너" title="조지프 말로드 윌리엄 터너 연표로 이동">터너</a>, 《전함 테메레르의 마지막 항해》</h3>
-<p class="work-meta">1839 · 낭만주의</p>
+<div class="movement-card-heading-row"><h3>
+<a class="art-atlas-artist-link" href="../../index.html?artist=artist-romantic-turner" target="_blank" rel="noopener" data-artist-id="artist-romantic-turner" data-uh-original="J. M. W. Turner" data-uh-korean="조지프 말로드 윌리엄 터너" data-uh-display-korean="조지프 말로드 윌리엄 터너" data-uh-list-korean="터너" title="조지프 말로드 윌리엄 터너 연표로 이동">터너</a>, 《전함 테메레르의 마지막 항해》</h3><p class="work-meta">1839 · 낭만주의</p></div>
 <p class="movement-selection-reason" data-art-atlas-selection-reason="">선정 이유: 산업화의 시간을 빛과 대기의 감정으로 바꾼다.</p>
 <p data-art-atlas-card-description="">석양과 증기선이 한 시대의 끝을 색채의 장관으로 만든다.</p>
 </div>
@@ -409,9 +403,8 @@
 </div>
 <div class="movement-work-body">
 <span class="movement-card-role">초심자 핵심 · 역사화</span>
-<h3>
-<a class="art-atlas-artist-link" href="../../index.html?artist=artist-romantic-delacroix" target="_blank" rel="noopener" data-artist-id="artist-romantic-delacroix" data-uh-original="Eugène Delacroix" data-uh-korean="외젠 들라크루아" data-uh-display-korean="외젠 들라크루아" data-uh-list-korean="들라크루아" title="외젠 들라크루아 연표로 이동">외젠 들라크루아</a>, 《민중을 이끄는 자유의 여신》</h3>
-<p class="work-meta">1830 · 낭만주의</p>
+<div class="movement-card-heading-row"><h3>
+<a class="art-atlas-artist-link" href="../../index.html?artist=artist-romantic-delacroix" target="_blank" rel="noopener" data-artist-id="artist-romantic-delacroix" data-uh-original="Eugène Delacroix" data-uh-korean="외젠 들라크루아" data-uh-display-korean="외젠 들라크루아" data-uh-list-korean="들라크루아" title="외젠 들라크루아 연표로 이동">외젠 들라크루아</a>, 《민중을 이끄는 자유의 여신》</h3><p class="work-meta">1830 · 낭만주의</p></div>
 <p class="movement-selection-reason" data-art-atlas-selection-reason="">선정 이유: 혁명과 군중을 색채의 드라마로 바꾼 기준점이다.</p>
 <p data-art-atlas-card-description="">연기·시체·삼색기와 대각선이 사건의 격렬한 감정을 만든다.</p>
 </div>
@@ -422,9 +415,8 @@
 </div>
 <div class="movement-work-body">
 <span class="movement-card-role">초심자 핵심 · 역사화</span>
-<h3>
-<a class="art-atlas-artist-link" href="../../index.html?artist=artist-romantic-goya" target="_blank" rel="noopener" data-artist-id="artist-romantic-goya" data-uh-original="Francisco Goya" data-uh-korean="프란시스코 고야" data-uh-display-korean="프란시스코 고야" data-uh-list-korean="고야" title="프란시스코 고야 연표로 이동">프란시스코 고야</a>, 《1808년 5월 3일》</h3>
-<p class="work-meta">1814 · 낭만주의</p>
+<div class="movement-card-heading-row"><h3>
+<a class="art-atlas-artist-link" href="../../index.html?artist=artist-romantic-goya" target="_blank" rel="noopener" data-artist-id="artist-romantic-goya" data-uh-original="Francisco Goya" data-uh-korean="프란시스코 고야" data-uh-display-korean="프란시스코 고야" data-uh-list-korean="고야" title="프란시스코 고야 연표로 이동">프란시스코 고야</a>, 《1808년 5월 3일》</h3><p class="work-meta">1814 · 낭만주의</p></div>
 <p class="movement-selection-reason" data-art-atlas-selection-reason="">선정 이유: 전쟁을 영웅 서사가 아닌 희생자의 공포로 바꾼다.</p>
 <p data-art-atlas-card-description="">얼굴 없는 총살대와 빛 아래의 희생자가 근대 폭력의 비인간성을 드러낸다.</p>
 </div>
@@ -440,9 +432,8 @@
 </div>
 <div class="movement-work-body">
 <span class="movement-card-role">중급 확장 · 상징 회화</span>
-<h3>
-<a class="art-atlas-artist-link" href="../../index.html?artist=artist-further-runge" target="_blank" rel="noopener" data-artist-id="artist-further-runge" data-uh-original="Philipp Otto Runge" data-uh-korean="필리프 오토 룽게" data-uh-display-korean="필리프 오토 룽게" data-uh-list-korean="룽게" title="필리프 오토 룽게 연표로 이동">필리프 오토 룽게</a>, 《아침》</h3>
-<p class="work-meta">1808 · 낭만주의</p>
+<div class="movement-card-heading-row"><h3>
+<a class="art-atlas-artist-link" href="../../index.html?artist=artist-further-runge" target="_blank" rel="noopener" data-artist-id="artist-further-runge" data-uh-original="Philipp Otto Runge" data-uh-korean="필리프 오토 룽게" data-uh-display-korean="필리프 오토 룽게" data-uh-list-korean="룽게" title="필리프 오토 룽게 연표로 이동">필리프 오토 룽게</a>, 《아침》</h3><p class="work-meta">1808 · 낭만주의</p></div>
 <p class="movement-selection-reason" data-art-atlas-selection-reason="">선정 이유: 자연과 인간 생애를 종합적 상징 체계로 결합한다.</p>
 <p data-art-atlas-card-description="">빛·식물·아이의 형상이 우주의 순환을 암시한다.</p>
 </div>
@@ -453,9 +444,8 @@
 </div>
 <div class="movement-work-body">
 <span class="movement-card-role">중급 확장 · 풍경</span>
-<h3>
-<a class="art-atlas-artist-link" href="../../index.html?artist=artist-romantic-constable" target="_blank" rel="noopener" data-artist-id="artist-romantic-constable" data-uh-original="John Constable" data-uh-korean="존 컨스터블" data-uh-display-korean="존 컨스터블" data-uh-list-korean="컨스터블" title="존 컨스터블 연표로 이동">존 컨스터블</a>, 《건초 마차》</h3>
-<p class="work-meta">1821 · 낭만주의</p>
+<div class="movement-card-heading-row"><h3>
+<a class="art-atlas-artist-link" href="../../index.html?artist=artist-romantic-constable" target="_blank" rel="noopener" data-artist-id="artist-romantic-constable" data-uh-original="John Constable" data-uh-korean="존 컨스터블" data-uh-display-korean="존 컨스터블" data-uh-list-korean="컨스터블" title="존 컨스터블 연표로 이동">존 컨스터블</a>, 《건초 마차》</h3><p class="work-meta">1821 · 낭만주의</p></div>
 <p class="movement-selection-reason" data-art-atlas-selection-reason="">선정 이유: 실제 날씨와 농촌을 관찰한 영국 낭만주의의 다른 축이다.</p>
 <p data-art-atlas-card-description="">구름과 습기, 일상적 농촌이 살아 있는 자연의 리듬을 만든다.</p>
 </div>
@@ -466,9 +456,8 @@
 </div>
 <div class="movement-work-body">
 <span class="movement-card-role">중급 확장 · 시·판화</span>
-<h3>
-<a class="art-atlas-artist-link" href="../../index.html?artist=artist-mid-william-blake" target="_blank" rel="noopener" data-artist-id="artist-mid-william-blake" data-uh-original="William Blake" data-uh-korean="윌리엄 블레이크" data-uh-display-korean="윌리엄 블레이크" data-uh-list-korean="블레이크" title="윌리엄 블레이크 연표로 이동">윌리엄 블레이크</a>, 《태고의 존재》</h3>
-<p class="work-meta">1794 · 낭만주의</p>
+<div class="movement-card-heading-row"><h3>
+<a class="art-atlas-artist-link" href="../../index.html?artist=artist-mid-william-blake" target="_blank" rel="noopener" data-artist-id="artist-mid-william-blake" data-uh-original="William Blake" data-uh-korean="윌리엄 블레이크" data-uh-display-korean="윌리엄 블레이크" data-uh-list-korean="블레이크" title="윌리엄 블레이크 연표로 이동">윌리엄 블레이크</a>, 《태고의 존재》</h3><p class="work-meta">1794 · 낭만주의</p></div>
 <p class="movement-selection-reason" data-art-atlas-selection-reason="">선정 이유: 개인 신화와 환시가 이성과 제도의 한계를 비판하는 축을 보여 준다.</p>
 <p data-art-atlas-card-description="">불타는 원 안에서 우주를 재는 형상이 숭고와 상상력을 압축한다.</p>
 </div>
@@ -479,9 +468,8 @@
 </div>
 <div class="movement-work-body">
 <span class="movement-card-role">중급 확장 · 역사화</span>
-<h3>
-<a class="art-atlas-artist-link" href="../../index.html?artist=artist-romantic-gericault" target="_blank" rel="noopener" data-artist-id="artist-romantic-gericault" data-uh-original="Théodore Géricault" data-uh-korean="테오도르 제리코" data-uh-display-korean="테오도르 제리코" data-uh-list-korean="제리코" title="테오도르 제리코 연표로 이동">테오도르 제리코</a>, 《메두사호의 뗏목》</h3>
-<p class="work-meta">1818–1819 · 낭만주의</p>
+<div class="movement-card-heading-row"><h3>
+<a class="art-atlas-artist-link" href="../../index.html?artist=artist-romantic-gericault" target="_blank" rel="noopener" data-artist-id="artist-romantic-gericault" data-uh-original="Théodore Géricault" data-uh-korean="테오도르 제리코" data-uh-display-korean="테오도르 제리코" data-uh-list-korean="제리코" title="테오도르 제리코 연표로 이동">테오도르 제리코</a>, 《메두사호의 뗏목》</h3><p class="work-meta">1818–1819 · 낭만주의</p></div>
 <p class="movement-selection-reason" data-art-atlas-selection-reason="">선정 이유: 재난의 실제 증언을 거대한 역사화로 바꾼 출발점이다.</p>
 <p data-art-atlas-card-description="">치솟는 몸과 폭풍우가 절망과 희망이 충돌하는 집단 감정을 만든다.</p>
 </div>

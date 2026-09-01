@@ -11,6 +11,11 @@
 <style id="art-atlas-artist-link-style">
 .art-atlas-artist-link{font-weight:900;color:#191007!important;background:linear-gradient(180deg,rgba(255,232,151,.98),rgba(255,198,86,.9));border-bottom:2px solid #a96f12;border-radius:.22em;padding:0 .16em;text-decoration:none!important;box-decoration-break:clone;-webkit-box-decoration-break:clone}.art-atlas-artist-link:hover{filter:brightness(1.08);box-shadow:0 0 0 2px rgba(255,214,102,.24)}
 </style>
+<style id="art-atlas-movement-sticky-title-style">nav .wrap{display:flex;align-items:center;justify-content:center}nav .art-atlas-movement-sticky-title{display:block;width:100%;color:inherit;font-family:inherit;font-size:2em;font-weight:inherit;letter-spacing:inherit;line-height:inherit;text-align:center}</style>
+<style id="art-atlas-movement-card-presentation-style">.movement-card-title-tag,.movement-card-activity-region{color:#9aa5af;font-size:.78em;font-weight:600;white-space:nowrap}.movement-card-heading-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:.45rem;margin:0 0 .85rem}.movement-card-heading-row h3{min-width:0;margin:0!important}.movement-card-heading-row .work-meta{margin:.08rem 0 0!important;text-align:right;white-space:nowrap}</style>
+<style id="art-atlas-movement-content-layout-style">body{--art-atlas-document-gutter:clamp(20px,3vw,48px)}header.hero>.wrap,main>section>.wrap{width:100%;max-width:none;margin-left:0;margin-right:0;padding-left:var(--art-atlas-document-gutter);padding-right:var(--art-atlas-document-gutter)}.hero p,.lead{max-width:none}main>section:not(#movement-learning-guide)>.wrap>h2,main>section:not(#movement-learning-guide)>h2{margin:0 0 1.15rem;font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,3.4vw,3.1rem);line-height:1.18}main>section:not(#movement-learning-guide)>.wrap>h3,main>section:not(#movement-learning-guide)>h3,.movement-enhancement .art-atlas-submovement-heading{font-size:clamp(1.3rem,2.25vw,1.75rem);line-height:1.32}.movement-enhancement .art-atlas-submovement-heading{margin-top:2.1rem;margin-bottom:.7rem}.movement-enhancement .art-atlas-submovement-heading+.movement-work-grid{margin-top:0}main>section:not(#movement-learning-guide)>.wrap>h4,main>section:not(#movement-learning-guide)>h4{font-size:1.12rem;line-height:1.42;margin:1.5rem 0 .5rem}main>section:not(#movement-learning-guide)>.wrap>p:not(.work-meta):not(.movement-selection-reason),main>section:not(#movement-learning-guide)>p:not(.work-meta):not(.movement-selection-reason){max-width:none;font-size:1.08rem;line-height:1.8}main>section:not(#movement-learning-guide)>.wrap>p:not(.work-meta):not(.movement-selection-reason)~p,main>section:not(#movement-learning-guide)>p:not(.work-meta):not(.movement-selection-reason)~p{font-size:1rem;line-height:1.75}.table-wrap,main>section>.wrap>table,main>section>table{width:100%;max-width:none}.table-wrap table,main>section>.wrap>table,main>section>table{width:100%}@media(max-width:720px){body{--art-atlas-document-gutter:18px}}</style>
+<style id="art-atlas-movement-card-image-fit-style">.movement-enhancement .movement-work-image>img{width:90%!important;height:90%!important;max-width:90%!important;max-height:90%!important;object-fit:contain!important}</style>
+<style id="art-atlas-movement-history-stage-image-fit-style">[data-art-atlas-visual-sequence] .history-stage-image,[data-art-atlas-visual-sequence] .movement-work-image{display:flex!important;align-items:center!important;justify-content:center!important;aspect-ratio:4/3!important;overflow:hidden!important;background:var(--black,#000)!important}[data-art-atlas-visual-sequence] .history-stage-image>img,[data-art-atlas-visual-sequence] .movement-work-image>img{width:90%!important;height:90%!important;max-width:90%!important;max-height:90%!important;object-fit:contain!important}</style>
 </head>
 <body>
 <div data-uhangul-document-toolbar role="group" aria-label="이름 표기 방식" style="position:fixed!important;top:14px!important;left:16px!important;z-index:2147483647!important;display:flex!important;gap:4px!important"><button type="button" data-uh-mode="korean" data-uh-local-mode="korean" aria-label="한국어" title="한국어" style="display:grid!important;width:28px!important;height:28px!important;place-items:center!important;padding:0!important;border:1px solid #aebba8!important;border-radius:50%!important;background:#fffdf8!important;color:#425043!important;font:700 10px/1 'Noto Sans KR',sans-serif!important;cursor:pointer!important">한</button><button type="button" data-uh-mode="uhangul" data-uh-local-mode="uhangul" aria-label="uHangul" title="uHangul" style="display:grid!important;width:28px!important;height:28px!important;place-items:center!important;padding:0!important;border:1px solid #aebba8!important;border-radius:50%!important;background:#fffdf8!important;color:#425043!important;font:700 10px/1 'Noto Sans KR',sans-serif!important;cursor:pointer!important">u</button><button type="button" data-uh-mode="original" data-uh-local-mode="original" aria-label="국제 표기" title="국제 표기" style="display:grid!important;width:28px!important;height:28px!important;place-items:center!important;padding:0!important;border:1px solid #aebba8!important;border-radius:50%!important;background:#fffdf8!important;color:#425043!important;font:700 10px/1 'Noto Sans KR',sans-serif!important;cursor:pointer!important">표</button></div>
@@ -22,16 +27,7 @@
 <p class="hero-thesis">“권력의 장엄함”을 “특권층의 친밀한 기호”로 바꾼 미술 — 그 매력은 곧 구체제 비판의 표적도 되었다.</p>
 </div>
 </header>
-<nav>
-<div class="wrap">
-<a href="#definition">정의</a>
-<a href="#birth">탄생</a>
-<a href="#establishment">확립</a>
-<a href="#criticism">비판과 전환</a>
-<a href="#artists">대표 미술가</a>
-<a href="#works">대표작 카드</a>
-</div>
-</nav>
+<nav aria-label="현재 사조"><div class="wrap"><span class="art-atlas-movement-sticky-title">로코코</span></div></nav>
 <main>
 <section id="movement-learning-guide" data-art-atlas-learning-guide-version="1" data-art-atlas-content-source="data/art-movement-learning-guides.json">
 <div class="wrap">
@@ -303,8 +299,7 @@
 </div>
 <div class="movement-work-body">
 <span class="movement-card-role">초심자 핵심 · 회화</span>
-<h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q155151" target="_blank" rel="noopener" data-artist-id="artist-Q155151" data-uh-original="Antoine Watteau" data-uh-korean="앙투안 바토" data-uh-display-korean="앙투안 바토" data-uh-list-korean="바토" title="앙투안 바토 연표로 이동">앙투안 바토</a>, 《키테라섬으로의 순례》</h3>
-<p class="work-meta">1717 · 로코코</p>
+<div class="movement-card-heading-row"><h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q155151" target="_blank" rel="noopener" data-artist-id="artist-Q155151" data-uh-original="Antoine Watteau" data-uh-korean="앙투안 바토" data-uh-display-korean="앙투안 바토" data-uh-list-korean="바토" title="앙투안 바토 연표로 이동">앙투안 바토</a>, 《키테라섬으로의 순례》</h3><p class="work-meta">1717 · 로코코</p></div>
 <p class="movement-selection-reason" data-art-atlas-selection-reason="">선정 이유: 사랑의 축제와 덧없는 분위기로 프랑스 로코코의 시작을 가장 잘 보여 준다.</p>
 <p data-art-atlas-card-description="">연인들의 비스듬한 행렬과 부드러운 풍경은 공적 의례를 사적인 감정의 리듬으로 바꾼다.</p>
 </div>
@@ -315,8 +310,7 @@
 </div>
 <div class="movement-work-body">
 <span class="movement-card-role">초심자 핵심 · 천장화</span>
-<h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q162048" target="_blank" rel="noopener" data-artist-id="artist-Q162048" data-uh-original="Giovanni Battista Tiepolo" data-uh-korean="조반니 바티스타 티에폴로" data-uh-display-korean="조반니 바티스타 티에폴로" data-uh-list-korean="티에폴로" title="조반니 바티스타 티에폴로 연표로 이동">조반니 바티스타 티에폴로</a>, 《아폴론과 대륙들》</h3>
-<p class="work-meta">1752–1753 · 로코코</p>
+<div class="movement-card-heading-row"><h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q162048" target="_blank" rel="noopener" data-artist-id="artist-Q162048" data-uh-original="Giovanni Battista Tiepolo" data-uh-korean="조반니 바티스타 티에폴로" data-uh-display-korean="조반니 바티스타 티에폴로" data-uh-list-korean="티에폴로" title="조반니 바티스타 티에폴로 연표로 이동">조반니 바티스타 티에폴로</a>, 《아폴론과 대륙들》</h3><p class="work-meta">1752–1753 · 로코코</p></div>
 <p class="movement-selection-reason" data-art-atlas-selection-reason="">선정 이유: 밝은 색채와 환영 천장화를 결합한 국제적 장식화의 기준점이다.</p>
 <p data-art-atlas-card-description="">열린 하늘과 빠른 붓질이 권력의 알레고리를 축제적 장면으로 바꾼다.</p>
 </div>
@@ -332,8 +326,7 @@
 </div>
 <div class="movement-work-body">
 <span class="movement-card-role">중급 확장 · 회화</span>
-<h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q313122" target="_blank" rel="noopener" data-artist-id="artist-Q313122" data-uh-original="François Boucher" data-uh-korean="프랑수아 부셰" data-uh-display-korean="프랑수아 부셰" data-uh-list-korean="부셰" title="프랑수아 부셰 연표로 이동">프랑수아 부셰</a>, 《비너스의 단장》</h3>
-<p class="work-meta">1751 · 로코코</p>
+<div class="movement-card-heading-row"><h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q313122" target="_blank" rel="noopener" data-artist-id="artist-Q313122" data-uh-original="François Boucher" data-uh-korean="프랑수아 부셰" data-uh-display-korean="프랑수아 부셰" data-uh-list-korean="부셰" title="프랑수아 부셰 연표로 이동">프랑수아 부셰</a>, 《비너스의 단장》</h3><p class="work-meta">1751 · 로코코</p></div>
 <p class="movement-selection-reason" data-art-atlas-selection-reason="">선정 이유: 관능적 신화화와 궁정 취향을 가장 화려하게 보여 준다.</p>
 <p data-art-atlas-card-description="">현실보다 연극적이고 호화로운 환상을 밀도 높게 구성한 점이 <a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q313122" target="_blank" rel="noopener" data-artist-id="artist-Q313122" data-uh-original="François Boucher" data-uh-korean="프랑수아 부셰" data-uh-display-korean="프랑수아 부셰" data-uh-list-korean="부셰" title="프랑수아 부셰 연표로 이동">부셰</a>의 특성이다.</p>
 </div>
@@ -344,8 +337,7 @@
 </div>
 <div class="movement-work-body">
 <span class="movement-card-role">중급 확장 · 회화</span>
-<h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q313898" target="_blank" rel="noopener" data-artist-id="artist-Q313898" data-uh-original="Jean-Honoré Fragonard" data-uh-korean="장오노레 프라고나르" data-uh-display-korean="장오노레 프라고나르" data-uh-list-korean="프라고나르" title="장오노레 프라고나르 연표로 이동">장오노레 프라고나르</a>, 《그네》</h3>
-<p class="work-meta">1767 · 로코코</p>
+<div class="movement-card-heading-row"><h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q313898" target="_blank" rel="noopener" data-artist-id="artist-Q313898" data-uh-original="Jean-Honoré Fragonard" data-uh-korean="장오노레 프라고나르" data-uh-display-korean="장오노레 프라고나르" data-uh-list-korean="프라고나르" title="장오노레 프라고나르 연표로 이동">장오노레 프라고나르</a>, 《그네》</h3><p class="work-meta">1767 · 로코코</p></div>
 <p class="movement-selection-reason" data-art-atlas-selection-reason="">선정 이유: 유희적 사랑과 빠르고 가벼운 붓질을 가장 활기차게 보여 준다.</p>
 <p data-art-atlas-card-description="">소용돌이치는 잎과 빛이 귀족적 놀이의 순간적 속도를 만든다.</p>
 </div>
@@ -356,8 +348,7 @@
 </div>
 <div class="movement-work-body">
 <span class="movement-card-role">중급 확장 · 초상</span>
-<h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q213163" target="_blank" rel="noopener" data-artist-id="artist-Q213163" data-uh-original="Élisabeth Louise Vigée Le Brun" data-uh-korean="엘리자베스 루이 비제 르 브룅" data-uh-display-korean="엘리자베스 루이 비제 르 브룅" data-uh-list-korean="르 브룅" title="엘리자베스 루이 비제 르 브룅 연표로 이동">엘리자베스 루이 비제 르 브룅</a>, 《밀짚모자를 쓴 자화상》</h3>
-<p class="work-meta">1782 · 로코코</p>
+<div class="movement-card-heading-row"><h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q213163" target="_blank" rel="noopener" data-artist-id="artist-Q213163" data-uh-original="Élisabeth Louise Vigée Le Brun" data-uh-korean="엘리자베스 루이 비제 르 브룅" data-uh-display-korean="엘리자베스 루이 비제 르 브룅" data-uh-list-korean="르 브룅" title="엘리자베스 루이 비제 르 브룅 연표로 이동">엘리자베스 루이 비제 르 브룅</a>, 《밀짚모자를 쓴 자화상》</h3><p class="work-meta">1782 · 로코코</p></div>
 <p class="movement-selection-reason" data-art-atlas-selection-reason="">선정 이유: 후기 로코코의 우아한 초상을 여성 화가의 전문적 자기 이미지와 결합한다.</p>
 <p data-art-atlas-card-description="">부드러운 색, 자연스러운 미소, 세련된 옷감이 궁정 초상의 친밀함을 보여 준다.</p>
 </div>
@@ -368,8 +359,7 @@
 </div>
 <div class="movement-work-body">
 <span class="movement-card-role">중급 확장 · 도시 풍경</span>
-<h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q161866" target="_blank" rel="noopener" data-artist-id="artist-Q161866" data-uh-original="Canaletto" data-uh-korean="카날레토" data-uh-display-korean="카날레토" data-uh-list-korean="카날레토" title="카날레토 연표로 이동">카날레토</a>, 《석공의 마당》</h3>
-<p class="work-meta">1725 · 로코코 시대 베네치아</p>
+<div class="movement-card-heading-row"><h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q161866" target="_blank" rel="noopener" data-artist-id="artist-Q161866" data-uh-original="Canaletto" data-uh-korean="카날레토" data-uh-display-korean="카날레토" data-uh-list-korean="카날레토" title="카날레토 연표로 이동">카날레토</a>, 《석공의 마당》</h3><p class="work-meta">1725 · 로코코 시대 베네치아</p></div>
 <p class="movement-selection-reason" data-art-atlas-selection-reason="">선정 이유: 도시 풍경과 국제 관광·수집 시장을 이해하게 한다.</p>
 <p data-art-atlas-card-description="">맑은 빛과 정교한 원근법이 실제 도시를 이상적으로 조정된 개방적 장면으로 만든다.</p>
 </div>
@@ -380,8 +370,7 @@
 </div>
 <div class="movement-work-body">
 <span class="movement-card-role">중급 확장 · 파스텔 초상</span>
-<h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q235547" target="_blank" rel="noopener" data-artist-id="artist-Q235547" data-uh-original="Rosalba Carriera" data-uh-korean="로살바 카리에라" data-uh-display-korean="로살바 카리에라" data-uh-list-korean="카리에라" title="로살바 카리에라 연표로 이동">로살바 카리에라</a>, 《마리아 테레사, 합스부르크 대공녀》</h3>
-<p class="work-meta">1730 · 로코코</p>
+<div class="movement-card-heading-row"><h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q235547" target="_blank" rel="noopener" data-artist-id="artist-Q235547" data-uh-original="Rosalba Carriera" data-uh-korean="로살바 카리에라" data-uh-display-korean="로살바 카리에라" data-uh-list-korean="카리에라" title="로살바 카리에라 연표로 이동">로살바 카리에라</a>, 《마리아 테레사, 합스부르크 대공녀》</h3><p class="work-meta">1730 · 로코코</p></div>
 <p class="movement-selection-reason" data-art-atlas-selection-reason="">선정 이유: 파스텔의 투명한 색채로 궁정 초상을 친밀한 이미지로 바꾼다.</p>
 <p data-art-atlas-card-description="">분홍·청색·흰색과 벨벳 같은 피부 표현이 엄격한 권위보다 우아한 시선을 앞세운다.</p>
 </div>
@@ -392,8 +381,7 @@
 </div>
 <div class="movement-work-body">
 <span class="movement-card-role">중급 확장 · 도시 풍경</span>
-<h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-mid-francesco-guardi" target="_blank" rel="noopener" data-artist-id="artist-mid-francesco-guardi" data-uh-original="Francesco Guardi" data-uh-korean="프란체스코 과르디" data-uh-display-korean="프란체스코 과르디" data-uh-list-korean="과르디" title="프란체스코 과르디 연표로 이동">프란체스코 과르디</a>, 《베니스의 카나레지오 운하 풍경》</h3>
-<p class="work-meta">1770년경 · 로코코</p>
+<div class="movement-card-heading-row"><h3><a class="art-atlas-artist-link" href="../../index.html?artist=artist-mid-francesco-guardi" target="_blank" rel="noopener" data-artist-id="artist-mid-francesco-guardi" data-uh-original="Francesco Guardi" data-uh-korean="프란체스코 과르디" data-uh-display-korean="프란체스코 과르디" data-uh-list-korean="과르디" title="프란체스코 과르디 연표로 이동">프란체스코 과르디</a>, 《베니스의 카나레지오 운하 풍경》</h3><p class="work-meta">1770년경 · 로코코</p></div>
 <p class="movement-selection-reason" data-art-atlas-selection-reason="">선정 이유: 정확한 기록보다 빛과 흔들리는 대기의 인상을 보여 준다.</p>
 <p data-art-atlas-card-description="">떨리는 붓질과 물빛이 <a class="art-atlas-artist-link" href="../../index.html?artist=artist-Q161866" target="_blank" rel="noopener" data-artist-id="artist-Q161866" data-uh-original="Canaletto" data-uh-korean="카날레토" data-uh-display-korean="카날레토" data-uh-list-korean="카날레토" title="카날레토 연표로 이동">카날레토</a>의 정밀한 베두타와 다른 후기 로코코의 감각을 만든다.</p>
 </div>
