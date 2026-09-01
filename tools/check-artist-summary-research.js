@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
-const {readBundle} = require('./source-bundles');
 const { sourceKey, mergeChronology, readableBlogUrl, cleanManualSummaryLines, savedTranscriptSource, finalizeResearchDraft, chronologySort } = require('../server-artist-research');
 const { presentationLinks } = require('../server-data');
 
@@ -46,7 +45,7 @@ assert.equal(storedLinks[0].transcriptUpdatedAt,'2026-08-30T00:00:00.000Z');
 assert.deepEqual(storedLinks[0].label,{ko:'영상',en:'Video'});
 assert.throws(()=>presentationLinks([{url:'https://example.com/',transcript:'본문'}],'Artist links',{allowTranscript:true}),/유튜브 링크/);
 
-const artistUiSource=readBundle('app/app-artists.js');
+const artistUiSource=fs.readFileSync(require.resolve('../app/app-artists.js'),'utf8');
 const summaryRenderStart=artistUiSource.indexOf("const summaryLines = localizedLines(artist.artistSummary)");
 const summaryRenderEnd=artistUiSource.indexOf('setupArtistSummaryEditor(artist)',summaryRenderStart);
 assert.ok(summaryRenderStart>=0 && summaryRenderEnd>summaryRenderStart);

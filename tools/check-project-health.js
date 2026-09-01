@@ -3,7 +3,6 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const {spawnSync} = require('node:child_process');
-const {bundleFiles, readBundle} = require('./source-bundles');
 const {normalizeArtistsPayload, validateArtistsPayload} = require('../data-contract');
 
 const root = path.resolve(__dirname, '..');
@@ -63,18 +62,19 @@ function summarizeOversizedImages() {
 
 function checkApplicationModuleSplit() {
   const appModules = ['app/app-core.js', 'app/app-artists.js', 'app/app-atlas.js', 'app/app-detail.js', 'app/app.js'];
-  const loadedFiles = appModules.flatMap(bundleFiles);
   const indexHtml = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   let previousPosition = -1;
-  for (const file of loadedFiles) {
+  for (const file of appModules) {
     const position = indexHtml.indexOf(`src="${file}"`);
     if (position < 0) throw new Error(`index.html is missing application module: ${file}`);
     if (position <= previousPosition) throw new Error(`index.html application module order is invalid: ${file}`);
     previousPosition = position;
   }
 
-  const contentSource = readBundle('server-content.js');
-  if (!contentSource.includes("'app/'")) throw new Error('server-content.js does not allow public application module folders');
+  const contentSource = fs.readFileSync(path.join(root, 'server-content.js'), 'utf8');
+  for (const file of appModules) {
+    if (!contentSource.includes(`'${file}'`)) throw new Error(`server-content.js does not allow public application module: ${file}`);
+  }
 
   return 'application module split';
 }
@@ -104,13 +104,9 @@ function checkRemovedFeatureRemnants() {
   }
 
   const interfaceSource = [
-    fs.readFileSync(path.join(root, 'index.html'), 'utf8'),
-    readBundle('app/app-core.js'), readBundle('app/app-artists.js'),
-    readBundle('app/app-atlas.js'), readBundle('app/app-detail.js'),
-    fs.readFileSync(path.join(root, 'app', 'app.js'), 'utf8'),
-    fs.readFileSync(path.join(root, 'styles.css'), 'utf8'),
-    readBundle('extras.css')
-  ].join('\n');
+    'index.html', 'app/app-core.js', 'app/app-artists.js', 'app/app-atlas.js',
+    'app/app-detail.js', 'app/app.js', 'styles.css', 'extras.css'
+  ].map(file => fs.readFileSync(path.join(root, file), 'utf8')).join('\n');
   for (const fragment of ['relationship-map', 'rule-check-button', 'rules-check-button']) {
     if (interfaceSource.includes(fragment)) throw new Error(`removed interface fragment still exists: ${fragment}`);
   }
@@ -119,7 +115,7 @@ function checkRemovedFeatureRemnants() {
 }
 
 function checkArtistPersistenceGuards() {
-  const appSource = readBundle('app/app-core.js');
+  const appSource = fs.readFileSync(path.join(root, 'app', 'app-core.js'), 'utf8');
   const loadStart = appSource.indexOf('async function loadData()');
   const loadEnd = appSource.indexOf('async function markLegacyManualWorks()', loadStart);
   if (loadStart < 0 || loadEnd < 0) throw new Error('Could not inspect the loadData persistence boundary');

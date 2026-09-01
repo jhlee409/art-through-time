@@ -19,7 +19,7 @@ async function main() {
   const entryPaths = ['/', '/?artistList=1', '/?countryArt=1', `/?artist=${encodeURIComponent(artists.artists[0].id)}`];
   for (const pathname of entryPaths) {
     const html = await response(pathname).then(result => result.text());
-    if (!html.includes('app/app-core/state.js') || !html.includes('app/app-atlas/movement-atlas.js') || !html.includes('app/app-artists/list-summary.js')) {
+    if (!html.includes('app/app-core.js') || !html.includes('app/app-artists.js') || !html.includes('app/app-atlas.js') || !html.includes('app/app-detail.js')) {
       throw new Error(`${pathname}: application scripts are missing`);
     }
   }

@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 const fs = require('node:fs');
 const path = require('node:path');
-const {readBundle} = require('./source-bundles');
 const {
   assertStableEditableStructure,
   isArtistGuideDocument,
@@ -96,12 +95,7 @@ const sourceChecks = [
   ['app/app-atlas.js', 'development::${entry.developmentId}'],
   ['app/app-atlas.js', 'clipped.canonical']
 ];
-sourceChecks.forEach(([file, token]) => {
-  const source = file.startsWith('app/') || file === 'server-content.js'
-    ? readBundle(file)
-    : fs.readFileSync(path.join(root, file), 'utf8');
-  assert(source.includes(token), `${file}: missing runtime sync token ${token}`);
-});
+sourceChecks.forEach(([file, token]) => assert(fs.readFileSync(path.join(root, file), 'utf8').includes(token), `${file}: missing runtime sync token ${token}`));
 assert(countryIds.has('global-contemporary'), 'Global contemporary country axis is missing');
 
 console.log(JSON.stringify({documents,cards,developments:globalDevelopments.size,boundBars,reachedCategories:reachedCategories.size,transactionRejection:true}, null, 2));
