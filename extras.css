@@ -709,6 +709,13 @@
 .artist-list-page .country-art-frozen-labels .country-art-movement-label small,
 .artist-list-page .country-art-zoom-layer .country-art-movement-label strong,
 .artist-list-page .country-art-zoom-layer .country-art-movement-label small { display: block; transform: scale(var(--artist-list-label-text-x-scale, 1), var(--artist-list-label-text-y-scale, 1)); transform-origin: center; }
+.country-art-page:not(.artist-list-page) .country-art-frozen-labels .country-art-movement-label strong,
+.country-art-page:not(.artist-list-page) .country-art-frozen-labels .country-art-movement-label small,
+.country-art-page:not(.artist-list-page) .country-art-zoom-layer .country-art-movement-label strong,
+.country-art-page:not(.artist-list-page) .country-art-zoom-layer .country-art-movement-label small,
+.country-art-page:not(.artist-list-page) .country-art-zoom-layer .country-art-movement-name strong,
+.country-art-page:not(.artist-list-page) .country-art-zoom-layer .country-art-movement-name small,
+.country-art-page:not(.artist-list-page) .country-art-time-axis .timeline-century-band span { display: block; transform: scale(var(--country-art-fixed-text-x-scale, 1), var(--country-art-fixed-text-y-scale, 1)); transform-origin: center; }
 .timeline-century-band:last-child { border-right: 1px solid #d8d2c6; }
 .timeline-century-band--tinted { background: #fdeee6; }
 .timeline-century-band span { display: block; padding: 0 8px; white-space: nowrap; }
@@ -808,29 +815,15 @@
 .artist-list-page .country-art-scroll-default-fit { scrollbar-width: none; -ms-overflow-style: none; }
 .artist-list-page .country-art-scroll-default-fit::-webkit-scrollbar { width: 0; height: 0; }
 .country-art-scroll.country-art-panning { cursor: grabbing; user-select: none; }
-.country-art-movement-preview { position: fixed; z-index: 160; overflow: hidden; border: 2px solid #8e9b8b; border-radius: 8px; background: #f8f5ed; box-shadow: 0 16px 42px #18221e52; }
-.country-art-image-magnifier { position: fixed; z-index: 220; display: grid; place-items: center; overflow: hidden; touch-action: none; border: 2px solid #71806e; border-radius: 6px; background: #fffdf8; box-shadow: 0 12px 30px #18221e66; cursor: move; }
-.country-art-movement-preview-content .country-art-work img { cursor: zoom-in; }
-.country-art-image-magnifier > img { display: block; width: 100%; height: 100%; object-fit: contain; cursor: move; user-select: none; -webkit-user-drag: none; }
-.country-art-movement-preview-caption,.country-art-image-magnifier-caption { position: absolute; z-index: 3; left: 14px; bottom: 14px; max-width: calc(100% - 28px); overflow-wrap: anywhere; padding: 8px 11px; border-radius: 4px; background: #050705c7; color: #f7f4ec; font: 600 13px/1.45 var(--sans); pointer-events: none; }
-.country-art-image-magnifier-stage { transform-origin: top left; }
-.country-art-image-magnifier .country-art-work { margin: 0; }
-.country-art-image-magnifier .country-art-work figcaption { font-size: 4.5px; }
-.country-art-image-magnifier .country-art-work figcaption small { font-size: 4.5px; }
-.country-art-movement-preview-stage { transform-origin: top left; }
-.country-art-movement-preview-content { position: relative; display: flex; width: 100%; height: 100%; box-sizing: border-box; overflow: hidden; border: 2px solid #f8f5ed; border-radius: 5px; background: color-mix(in srgb, var(--movement-color) 76%, white); color: #17211e; box-shadow: 0 1px 2px #18221e20; }
-.country-art-movement-preview-content .country-art-work-list { height: 100%; align-items: stretch; overflow: hidden; }
-.country-art-movement-preview-content .country-art-work { display: flex; flex-direction: column; height: 100%; }
-.country-art-movement-preview-content .country-art-work img { flex: 0 0 95%; height: 95%; min-height: 0; }
-.country-art-movement-preview-content .country-art-work figcaption { flex: 0 0 5%; height: auto; min-height: 0; padding: 1px 3px; font-size: 7px; line-height: 1.05; }
-.country-art-movement-preview-content .country-art-work figcaption small { margin-top: 1px; font-size: 6px; line-height: 1; }
 .country-art-zoom-menu { position: fixed; z-index: 1000; width: 160px; padding: 4px; border: 1px solid #8e988c; border-radius: 5px; background: #fffdf8; box-shadow: 0 5px 16px #18221e40; }
 .country-art-zoom-menu button { display: block; width: 100%; padding: 7px 9px; border: 0; background: transparent; color: #17211e; text-align: left; font: 12px 'Noto Sans KR', sans-serif; cursor: pointer; }
 .country-art-zoom-menu button:hover { background: #e4ecdf; }
 .country-art-movement { position: absolute; z-index: 1; display: flex; flex-direction: column; overflow: hidden; box-sizing: border-box; border: 2px solid #f8f5ed; border-radius: 5px; background: color-mix(in srgb, var(--movement-color) 76%, white); color: #17211e; box-shadow: 0 1px 2px #18221e20; }
-.country-art-movement.country-art-movement-preview-content { position: relative; display: flex; width: 100%; height: 100%; box-sizing: border-box; }
 .country-art-movement > header { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding: 5px 8px; background: color-mix(in srgb, var(--movement-color) 68%, white); font-size: 11px; }
 .country-art-movement > header small { flex: none; font: 10px/1 'DM Mono', monospace; }
+.country-art-movement-name { display: flex; flex: 1 1 auto; min-width: 0; flex-direction: column; align-items: center; justify-content: center; gap: 5px; padding: 8px 14px 8px 38px; text-align: center; }
+.country-art-movement-name strong { display: block; max-width: 100%; overflow: hidden; color: #17211e; font: 900 19px/1.15 var(--sans); text-overflow: ellipsis; white-space: nowrap; }
+.country-art-movement-name small { display: block; max-width: 100%; overflow: hidden; color: #4f5b52; font: 700 11px/1.2 'DM Mono', monospace; text-overflow: ellipsis; white-space: nowrap; }
 .country-art-background-button { position: absolute; z-index: 5; top: 5px; left: 5px; display: grid; width: 27px; height: 27px; place-items: center; border: 1px solid #f8f5ed; border-radius: 50%; background: #17211ed9; color: #fffdf8; font: 800 18px/1 'DM Mono', monospace; cursor: pointer; }
 .country-art-background-button:hover,
 .country-art-background-button:focus-visible { background: #fffdf8; color: #17211e; outline: 2px solid #17211e; }
@@ -856,13 +849,7 @@
 .artist-list-empty-movement .country-art-work-list-empty { display: block; width: 100%; height: 100%; overflow: hidden; padding: 0; }
 .country-art-page:not(.artist-list-page) .country-art-time-row,
 .country-art-page:not(.artist-list-page) .country-art-movement-label { border-bottom-color: #111; }
-.country-art-page:not(.artist-list-page) .country-art-movement:not(.country-art-movement-preview-content) { border-top-color: #111; border-bottom-color: #111; }
-.country-art-work { width: 5.714286vw; min-width: 5.714286vw; height: calc(5.714286vw + 54px); box-sizing: border-box; margin: 0; border: 1px solid #ffffff9c; background: #fffdf7b8; }
-.country-art-work img { display: block; width: 100%; height: 5.714286vw; object-fit: contain; background: #f3f0e8; }
-.country-art-work figcaption { height: 52px; min-height: 52px; box-sizing: border-box; overflow: hidden; padding: 3px 4px; font-size: 9px; line-height: 1.22; }
-.country-art-work-artist { display: block; overflow: hidden; color: #17211e; font-weight: 900; text-overflow: ellipsis; white-space: nowrap; }
-.country-art-work-title { display: block; overflow: hidden; color: #2c322d; }
-.country-art-work figcaption small { display: block; margin-top: 2px; color: var(--muted); font: 9px/1.2 'DM Mono', monospace; }
+.country-art-page:not(.artist-list-page) .country-art-movement { border-top-color: #111; border-bottom-color: #111; }
 
 @media (max-width: 840px) {
   .sidebar-page-title { font-size: 18px; }

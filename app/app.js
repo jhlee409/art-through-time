@@ -148,9 +148,6 @@ document.addEventListener('click', event => {
 });
 $('#logout-button').onclick = logoutEverywhere;
 function refreshMovementDocumentConsumers() {
-  countryArtWorkCache.clear();
-  document.querySelector('.country-art-movement-preview')?.remove();
-  document.querySelector('.country-art-image-magnifier')?.remove();
   if (viewMode === 'country-art') renderCountryArt();
   if (viewMode === 'artist-list') renderCountryArt({artistListMode:true});
 }

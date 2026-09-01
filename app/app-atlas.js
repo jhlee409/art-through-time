@@ -362,90 +362,6 @@ function countryArtTextMatches(value, countryId) {
     return text.includes(normalizedAlias);
   });
 }
-function countryArtCardBelongs(card, countryId) {
-  const canonicalCountries = (card.closest('[data-art-atlas-country-ids]')?.dataset.artAtlasCountryIds || '').split(/\s+/).filter(Boolean);
-  if (canonicalCountries.length) return canonicalCountries.includes(countryId);
-  const region = card.querySelector('.movement-card-activity-region')?.textContent || '';
-  if (countryArtTextMatches(region, countryId)) return true;
-  const artistId = new URL(card.querySelector('.art-atlas-artist-link')?.href || '', location.href).searchParams.get('artist');
-  const artist = artists.find(item => item.id === artistId);
-  return countryArtTextMatches(`${artist?.nationality?.ko || ''} ${artist?.nationality?.en || ''}`, countryId);
-}
-function countryArtCleanText(value) {
-  return String(value || '').replace(/\s+/g, ' ').trim();
-}
-function countryArtBriefArtistName(card) {
-  const artistLink = card.querySelector('h3 .art-atlas-artist-link, .art-atlas-artist-link');
-  if (artistLink) {
-    const listName = language === 'ko' ? artistLink.dataset.uhListKorean : '';
-    const originalName = language !== 'ko' ? artistLink.dataset.uhOriginal : '';
-    return countryArtCleanText(listName || originalName || artistLink.textContent);
-  }
-  return countryArtCleanText(card.querySelector('h3 .movement-card-artist-name, .movement-card-artist-name')?.textContent);
-}
-function countryArtWorkTitle(card, image) {
-  const heading = card.querySelector('h3');
-  if (!heading) return countryArtCleanText(image.alt) || (language === 'ko' ? '대표작' : 'Representative work');
-  const copy = heading.cloneNode(true);
-  copy.querySelectorAll('.movement-card-title-tag, .movement-card-activity-region, .movement-country-card-context').forEach(node => node.remove());
-  const artistNode = copy.querySelector('.art-atlas-artist-link, .movement-card-artist-name');
-  const artistText = countryArtCleanText(artistNode?.textContent);
-  if (artistNode) artistNode.remove();
-  const title = countryArtCleanText(copy.textContent).replace(/^[-–—,·:;\s]+/, '');
-  return title || countryArtCleanText(heading.textContent).replace(artistText, '').replace(/^[-–—,·:;\s]+/, '') || countryArtCleanText(image.alt) || (language === 'ko' ? '대표작' : 'Representative work');
-}
-function countryArtBriefYear(card) {
-  const meta = countryArtCleanText(card.querySelector('.work-meta, small')?.textContent);
-  return countryArtCleanText(meta.split(/\s*·\s*|\s*\|\s*|;\s*/)[0]);
-}
-function countryArtMovementDocumentName(movement) {
-  const ownerId = movement?.canonical?.documentOwnerId;
-  const owner = ownerId && (artMovementCanonical.parents || []).find(parent => parent.id === ownerId);
-  const ownerDocument = owner?.documentKey;
-  if (ownerDocument && movementDocuments?.[ownerDocument]?.['1']) return ownerDocument;
-  return movementDocumentKey(movement?.name?.en || movement?.name?.ko || '');
-}
-function countryArtWorksFor(country, movement) {
-  const documentName = countryArtMovementDocumentName(movement);
-  const documentUrl = documentName && movementDocuments?.[documentName]?.['1'];
-  if (!documentUrl) return {state:'missing',works:[]};
-  const developmentIds = new Set(movement?.canonical?.developmentIds || []);
-  const developmentKey = developmentIds.size ? [...developmentIds].join(',') : 'all';
-  const cacheKey = `${country.id}::${documentName}::${developmentKey}`;
-  if (countryArtWorkCache.has(cacheKey)) return {state:'ready',works:countryArtWorkCache.get(cacheKey)};
-  if (!countryArtWorkRequests.has(cacheKey)) {
-    countryArtWorkRequests.set(cacheKey, fetch(documentUrl).then(response => response.ok ? response.text() : '').then(html => {
-      const source = new DOMParser().parseFromString(html, 'text/html');
-      const sourceImages = [...source.querySelectorAll('main section:not(.movement-enhancement) img')];
-      source.querySelectorAll('.movement-enhancement img[data-art-atlas-reuse-image]').forEach(image => {
-        const original = sourceImages[Number(image.dataset.artAtlasReuseImage)];
-        if (original?.getAttribute('src')) image.setAttribute('src', original.getAttribute('src'));
-      });
-      // Comparison illustrations at the start of a movement document are contextual only.
-      // The final enhancement section is the canonical representative-work card collection.
-      const enhancementSections = [...source.querySelectorAll('.movement-enhancement')];
-      const representativeSection = source.querySelector('.movement-enhancement[data-art-atlas-representative-section="works"]') || enhancementSections.at(-1);
-      const works = [...(representativeSection?.querySelectorAll('article.movement-work-card, article.card') || [])].filter(card => {
-        const developmentId = card.dataset.artAtlasDevelopmentId || card.closest('[data-art-atlas-development-id]')?.dataset.artAtlasDevelopmentId || '';
-        return (!developmentIds.size || developmentIds.has(developmentId)) && countryArtCardBelongs(card, country.id);
-      }).map(card => {
-        const image = card.querySelector('img');
-        if (!image?.getAttribute('src')) return null;
-        const artistName = countryArtBriefArtistName(card);
-        const title = countryArtWorkTitle(card, image);
-        const year = countryArtBriefYear(card);
-        const sortYear = Number((year.match(/-?\d{3,4}/) || [])[0]) || 9999;
-        const description = (card.querySelector('[data-art-atlas-card-description]') || card.querySelector('.movement-work-body p, .card-body p, p'))?.textContent?.replace(/\s+/g, ' ').trim() || '';
-        return {src:new URL(image.getAttribute('src'), new URL(documentUrl, location.href)).href, alt:image.alt || title, artistName, title, year, sortYear, descriptionLength:description.length};
-      }).filter(Boolean);
-      countryArtWorkCache.set(cacheKey, works);
-    }).catch(() => countryArtWorkCache.set(cacheKey, [])).finally(() => {
-      countryArtWorkRequests.delete(cacheKey);
-      if (viewMode === 'country-art') renderCountryArt();
-    }));
-  }
-  return {state:'loading',works:[]};
-}
 const countryArtEventCategories = ['war-revolution', 'social-political', 'religion-thought', 'patronage', 'art-institution', 'technology-economy'];
 const countryArtEventCategoryLabel = category => ({
   'war-revolution': language === 'ko' ? '전쟁·혁명' : 'War & revolution',
@@ -1078,9 +994,10 @@ function renderCountryArt(options = {}) {
     artistListView.countries = selectedArtistListCountries;
     persistArtistListView();
   }
+  const countryArtMovementEntriesFor = targetCountry => countryCanonicalMovements(targetCountry).filter(item => !movementIsContextOnly(item)).map(item => clippedMovement(item,start,end)).filter(Boolean).sort((a,b) => a.start-b.start || a.end-b.end).map((item, column) => ({...item, column}));
   let entries = artistListMode
     ? artistListMovementEntries(countriesByDataOrder, artistListView.countries, start, end)
-    : countryCanonicalMovements(country).filter(item => !movementIsContextOnly(item)).map(item => clippedMovement(item,start,end)).filter(Boolean).sort((a,b) => a.start-b.start || a.end-b.end).map((item, column) => ({...item, column}));
+    : countryArtMovementEntriesFor(country);
   if (artistListMode) {
     entries=orderedArtistListMovementEntries(entries).map((entry,index) => ({
       ...entry,
@@ -1095,8 +1012,7 @@ function renderCountryArt(options = {}) {
     ? (language === 'ko' ? `사조(${chartHeading})` : `Movements (${chartHeading})`)
     : (language === 'ko' ? '사조' : 'Movement');
   const yearLabel = year => Number(year) < 0 ? `${Math.abs(year)} BCE` : String(year);
-  // The row and bar match the standardized card's maximum height, including list padding and bar borders.
-  const movementRowHeight = artistListMode ? 58 : Math.ceil((window.innerWidth / 14) * .8) + 54;
+  const movementRowHeight = artistListMode ? 58 : 76;
   const axisHeight = artistListMode ? 38 : 76;
   const labelColumnWidth = artistListMode
     ? Math.max(Math.round(countryArtLabelColumnWidth * .6), Math.ceil(countryArtMeasureTextWidth(axisHeading) + 20))
@@ -1110,11 +1026,14 @@ function renderCountryArt(options = {}) {
   const timelineVerticalPadding = parseFloat(timelineStyle.paddingTop || 0) + parseFloat(timelineStyle.paddingBottom || 0);
   const visibleChartWidth = Math.max(360, Math.floor((timelineRect.width || window.innerWidth) - timelineHorizontalPadding - 4));
   const visibleChartHeight = Math.max(220, Math.floor((timelineRect.height || window.innerHeight) - timelineVerticalPadding - 4));
-  // Country-art fits the vertical rows into the view. Artist-list starts from
+  const defaultDensityCountry = !artistListMode && (countriesByDataOrder.find(item => item.id === 'france') || country);
+  const defaultDensityEntryCount = defaultDensityCountry ? countryArtMovementEntriesFor(defaultDensityCountry).length : entries.length;
+  const defaultDensityChartHeight = artistListMode ? chartContentHeight : axisHeight + eventRailHeight + defaultDensityEntryCount * movementRowHeight;
+  // Country-art keeps every country's default zoom aligned to France. Artist-list starts from
   // its fixed artist-name box height, so row height grows from stacked boxes.
   const defaultCountryArtDensity = Math.max(densityMinimum, Math.min(
     densityMaximum,
-    (visibleChartHeight / chartContentHeight),
+    (visibleChartHeight / defaultDensityChartHeight) * countryArtDefaultDensityScale,
   ));
   const defaultFitDensity = Math.max(densityMinimum, Math.min(
     densityMaximum,
@@ -1156,15 +1075,6 @@ function renderCountryArt(options = {}) {
     verticalDensity=verticalDensityFor(density);
   }
   const chartContentWidth = labelColumnWidth + chartWidth;
-  const workSources = artistListMode ? new Map() : new Map(entries.map(entry => [entry, countryArtWorksFor(country, entry)]));
-  const preferredWorksByImage = new Map();
-  if (!artistListMode) entries.forEach(entry => {
-    workSources.get(entry).works.forEach(work => {
-      const preferred = preferredWorksByImage.get(work.src);
-      if (!preferred || work.descriptionLength < preferred.work.descriptionLength) preferredWorksByImage.set(work.src, {entry, work});
-    });
-  });
-  const displayedWorksByEntry = artistListMode ? new Map() : new Map(entries.map(entry => [entry, workSources.get(entry).works.filter(work => preferredWorksByImage.get(work.src)?.entry === entry)]));
   // In artist-list mode the complete chart is vertically scaled, whereas its
   // fixed century band is not. Use an inverse source height for both sides of
   // the chart so their screen-space boundary stays aligned at every zoom.
@@ -1198,12 +1108,15 @@ function renderCountryArt(options = {}) {
   const frozenCountryHeading = artistListMode ? '' : `<div class="country-art-country-name" style="width:${labelColumnWidth}px;min-width:${labelColumnWidth}px">${esc(chartHeading)}</div>`;
   // Counter the non-uniform chart transform exactly so the frozen movement
   // labels retain their normal font proportions at the default view and zoom.
-  const frozenLabelTextXScale = artistListMode ? 1 / Math.max(density, .001) : 1;
-  const frozenLabelTextYScale = artistListMode ? 1 / Math.max(verticalDensity, .001) : 1;
-  const frozenLabels = `<div class="country-art-frozen-labels" aria-hidden="true" style="width:${Math.ceil(labelColumnWidth * density)}px"><div class="country-art-frozen-labels-layer" style="width:${labelColumnWidth}px;transform:scale(${density}, ${verticalDensity});--artist-list-label-text-x-scale:${frozenLabelTextXScale};--artist-list-label-text-y-scale:${frozenLabelTextYScale}">${frozenCountryHeading}<div class="country-art-frozen-chart" style="width:${labelColumnWidth}px">${frozenAxisCorner}${frozenEventCorner}${frozenMovementLabels}</div></div></div>`;
+  const frozenLabelTextXScale = artistListMode ? 1 / Math.max(density, .001) : defaultFitDensity / Math.max(density, .001);
+  const frozenLabelTextYScale = artistListMode ? 1 / Math.max(verticalDensity, .001) : defaultFitDensity / Math.max(verticalDensity, .001);
+  const fixedTextScaleStyle = `--artist-list-label-text-x-scale:${frozenLabelTextXScale};--artist-list-label-text-y-scale:${frozenLabelTextYScale};--country-art-fixed-text-x-scale:${frozenLabelTextXScale};--country-art-fixed-text-y-scale:${frozenLabelTextYScale}`;
+  const frozenLabels = `<div class="country-art-frozen-labels" aria-hidden="true" style="width:${Math.ceil(labelColumnWidth * density)}px"><div class="country-art-frozen-labels-layer" style="width:${labelColumnWidth}px;transform:scale(${density}, ${verticalDensity});${fixedTextScaleStyle}">${frozenCountryHeading}<div class="country-art-frozen-chart" style="width:${labelColumnWidth}px">${frozenAxisCorner}${frozenEventCorner}${frozenMovementLabels}</div></div></div>`;
   const frozenAxisVerticalDensity = artistListMode ? 1 : verticalDensity;
-  const centuryLabelXScale = artistListMode ? 1 / Math.max(density, .001) : 1;
-  const frozenTimeAxis = `<div class="country-art-frozen-time-axis" aria-hidden="true" style="width:${Math.ceil(chartContentWidth * density)}px"><div class="country-art-frozen-time-axis-layer" style="left:${Math.ceil(labelColumnWidth * density)}px;width:${Math.ceil(chartWidth * density)}px;height:${Math.ceil(axisHeight * frozenAxisVerticalDensity)}px"><div style="width:${chartWidth}px;transform:scale(${density}, ${frozenAxisVerticalDensity});--artist-list-century-label-x-scale:${centuryLabelXScale}"><div class="country-art-time-axis" style="width:${chartWidth}px;height:${axisHeight}px">${centuryBands}</div></div></div></div>`;
+  const centuryLabelXScale = artistListMode ? 1 / Math.max(density, .001) : defaultFitDensity / Math.max(density, .001);
+  const centuryLabelYScale = artistListMode ? 1 : defaultFitDensity / Math.max(frozenAxisVerticalDensity, .001);
+  const fixedCenturyScaleStyle = `--artist-list-century-label-x-scale:${centuryLabelXScale};--country-art-fixed-text-x-scale:${centuryLabelXScale};--country-art-fixed-text-y-scale:${centuryLabelYScale}`;
+  const frozenTimeAxis = `<div class="country-art-frozen-time-axis" aria-hidden="true" style="width:${Math.ceil(chartContentWidth * density)}px"><div class="country-art-frozen-time-axis-layer" style="left:${Math.ceil(labelColumnWidth * density)}px;width:${Math.ceil(chartWidth * density)}px;height:${Math.ceil(axisHeight * frozenAxisVerticalDensity)}px"><div style="width:${chartWidth}px;transform:scale(${density}, ${frozenAxisVerticalDensity});${fixedCenturyScaleStyle}"><div class="country-art-time-axis" style="width:${chartWidth}px;height:${axisHeight}px">${centuryBands}</div></div></div></div>`;
   const artistLifeOverlayPills = [];
   const workMarkup = (entry) => {
     const rowHeight=artistListMode ? entry.artistListRowHeight : movementRowHeight;
@@ -1237,11 +1150,9 @@ function renderCountryArt(options = {}) {
       const parentMovementBox = `<article class="country-art-movement artist-list-empty-movement" aria-hidden="true" style="left:${left}px;width:${barWidth}px;height:${rowHeight}px;--movement-color:${esc(entry.artistListParentColor)}" title="${esc(`${artistListMovementCountryLabel(entry)} · ${loc(entry.name)} · ${movementLabelMeta(entry)}`)}"><div class="country-art-work-list country-art-work-list-empty"></div></article>`;
       return `${movementLabelMarkup(entry)}<div class="country-art-time-row artist-list-time-row" style="width:${chartWidth}px;height:${rowHeight}px">${parentMovementBox}${submovementBoxes}</div>`;
     }
-    const source = workSources.get(entry);
-    const works = displayedWorksByEntry.get(entry).map(work => `<figure class="country-art-work"><img src="${esc(work.src)}" alt="${esc(work.alt)}" loading="lazy"><figcaption>${work.artistName ? `<strong class="country-art-work-artist">${esc(work.artistName)}</strong>` : ''}<span class="country-art-work-title">${esc(work.title)}</span>${work.year ? `<small>${esc(work.year)}</small>` : ''}</figcaption></figure>`).join('');
-    const empty = source.state === 'loading' ? (language === 'ko' ? '대표작 자료를 불러오는 중' : 'Loading representative works') : (language === 'ko' ? '대표작 자료 없음' : 'No representative work available');
     const backgroundButton = renderCountryMovementBackgroundButton(country.id, entry);
-    return `${movementLabelMarkup(entry)}<div class="country-art-time-row" style="width:${chartWidth}px;height:${rowHeight}px"><article class="country-art-movement" style="left:${left}px;width:${barWidth}px;height:${rowHeight}px;--movement-color:${esc(entry.color)}">${backgroundButton}<div class="country-art-work-list">${works || `<p>${empty}</p>`}</div></article></div>`;
+    const title = `${loc(entry.name)} · ${movementLabelMeta(entry)}`;
+    return `${movementLabelMarkup(entry)}<div class="country-art-time-row" style="width:${chartWidth}px;height:${rowHeight}px"><article class="country-art-movement" style="left:${left}px;width:${barWidth}px;height:${rowHeight}px;--movement-color:${esc(entry.color)}" title="${esc(title)}">${backgroundButton}<div class="country-art-movement-name"><strong>${esc(loc(entry.name))}</strong><small>${esc(movementLabelMeta(entry))}</small></div></article></div>`;
   };
   const countryLabel = language === 'ko' ? '국가 선택' : 'Country selection';
   const sidebarActions = $('#movement-sidebar-actions');
@@ -1259,7 +1170,7 @@ function renderCountryArt(options = {}) {
   const chartCountryHeading = artistListMode ? '' : `<div class="country-art-country-name" style="width:${labelColumnWidth}px;min-width:${labelColumnWidth}px">${esc(chartHeading)}</div>`;
   const chartRows = entries.map(workMarkup).join('');
   const artistLifeOverlay = artistListMode && artistLifeOverlayPills.length ? `<div class="artist-life-overlay">${artistLifeOverlayPills.join('')}</div>` : '';
-  timeline.innerHTML = `${pageNav}<div class="atlas-scroll country-art-scroll${defaultFitClass}">${frozenLabels}${frozenTimeAxis}<div class="country-art-zoom-viewport" style="width:${Math.ceil(chartContentWidth * density)}px;height:${Math.ceil(chartContentHeight * verticalDensity)}px"><div class="country-art-zoom-layer country-art-event-mode-${countryArtEventMode(density)}" style="width:${chartContentWidth}px;transform:scale(${density}, ${verticalDensity});--artist-list-label-text-x-scale:${frozenLabelTextXScale};--artist-list-label-text-y-scale:${frozenLabelTextYScale}">${chartCountryHeading}<div class="country-art-chart" style="width:${chartContentWidth}px;grid-template-columns:${labelColumnWidth}px ${chartWidth}px">${centuryGrid}${axis}${eventRail}${chartRows}</div></div>${artistLifeOverlay}</div></div>`;
+  timeline.innerHTML = `${pageNav}<div class="atlas-scroll country-art-scroll${defaultFitClass}">${frozenLabels}${frozenTimeAxis}<div class="country-art-zoom-viewport" style="width:${Math.ceil(chartContentWidth * density)}px;height:${Math.ceil(chartContentHeight * verticalDensity)}px"><div class="country-art-zoom-layer country-art-event-mode-${countryArtEventMode(density)}" style="width:${chartContentWidth}px;transform:scale(${density}, ${verticalDensity});${fixedTextScaleStyle}">${chartCountryHeading}<div class="country-art-chart" style="width:${chartContentWidth}px;grid-template-columns:${labelColumnWidth}px ${chartWidth}px">${centuryGrid}${axis}${eventRail}${chartRows}</div></div>${artistLifeOverlay}</div></div>`;
   timeline.querySelector('.country-art-nav-artists')?.addEventListener('click', openArtistListPage);
   timeline.querySelector('.country-art-nav-movements')?.addEventListener('click', openMovementAtlas);
   timeline.querySelector('.country-art-nav-country-art')?.addEventListener('click', openCountryArtPage);
@@ -1304,8 +1215,6 @@ function renderCountryArt(options = {}) {
   }));
   sidebarActions?.querySelectorAll('input[name="country-art-country"]').forEach(input => input.addEventListener('change', () => {
     closeCountryMovementBackgroundPanel();
-    document.querySelector('.country-art-movement-preview')?.remove();
-    document.querySelector('.country-art-image-magnifier')?.remove();
     countryArtView.country=input.value;
     countryArtResetZoomOnRender=true;
     persistCountryArtView();
@@ -1313,8 +1222,6 @@ function renderCountryArt(options = {}) {
   }));
   const renderArtistListCountries = () => {
     closeCountryMovementBackgroundPanel();
-    document.querySelector('.country-art-movement-preview')?.remove();
-    document.querySelector('.country-art-image-magnifier')?.remove();
     artistListView.countries = [...(sidebarActions?.querySelectorAll('input[name="artist-list-country"]:checked') || [])].map(input => input.value);
     artistListManualMovementOrder = [];
     countryArtResetZoomOnRender = true;
@@ -1387,142 +1294,6 @@ function renderCountryArt(options = {}) {
       });
     });
   }
-  const openCountryArtMovementPreview = source => {
-    document.querySelector('.country-art-movement-preview')?.remove();
-    document.querySelector('.country-art-image-magnifier')?.remove();
-    const workList = source.querySelector('.country-art-work-list');
-    // Use the unscaled width of every original card, not just the currently
-    // visible part of its scroll area. This keeps image, caption and header
-    // proportions identical while making the complete strip twice as large.
-    const fullStripWidth = Math.max(source.offsetWidth, workList?.scrollWidth || 0);
-    const stageHeight = source.offsetHeight;
-    const previewWidth = Math.max(240, Math.round(window.innerWidth * .95));
-    const previewScale = previewWidth / Math.max(1, fullStripWidth);
-    const previewHeight = Math.max(210, Math.round(stageHeight * previewScale));
-    const preview = document.createElement('section');
-    preview.className = 'country-art-movement-preview';
-    preview.style.width = `${previewWidth}px`;
-    preview.style.height = `${previewHeight}px`;
-    preview.style.left = `${Math.max(0, Math.round((window.innerWidth - previewWidth) / 2))}px`;
-    preview.style.top = `${Math.max(0, Math.round((window.innerHeight - previewHeight) / 2))}px`;
-    const clone = source.cloneNode(true);
-    const color = source.style.getPropertyValue('--movement-color');
-    clone.classList.add('country-art-movement-preview-content');
-    clone.querySelectorAll('.country-art-background-button').forEach(button => button.remove());
-    clone.removeAttribute('style');
-    clone.style.setProperty('--movement-color', color);
-    preview.innerHTML = `<div class="country-art-movement-preview-stage"></div><div class="country-art-movement-preview-caption"></div>`;
-    const stage = preview.querySelector('.country-art-movement-preview-stage');
-    const previewCaption = preview.querySelector('.country-art-movement-preview-caption');
-    stage.style.width = `${fullStripWidth}px`;
-    stage.style.height = `${stageHeight}px`;
-    stage.style.transform = `scale(${previewScale})`;
-    stage.append(clone);
-    const closePreview = () => {
-      document.querySelector('.country-art-image-magnifier')?.remove();
-      preview.remove();
-    };
-    preview.addEventListener('dblclick', event => {
-      if(event.target.closest('.country-art-work'))return;
-      event.preventDefault();
-      event.stopPropagation();
-      closePreview();
-    });
-    document.body.append(preview);
-    const workCaption = image => {
-      const work=image.closest('.country-art-work');
-      return [
-        work?.querySelector('.country-art-work-artist')?.textContent?.trim(),
-        work?.querySelector('.country-art-work-title')?.textContent?.trim(),
-        work?.querySelector('figcaption small')?.textContent?.trim()
-      ].filter(Boolean).join(' · ');
-    };
-    const showPreviewCaption = image => {
-      previewCaption.textContent=workCaption(image);
-      previewCaption.classList.toggle('hidden',!previewCaption.textContent);
-    };
-    const previewImages=[...clone.querySelectorAll('.country-art-work img')];
-    if(previewImages[0])showPreviewCaption(previewImages[0]);
-    const showMagnifier = image => {
-      const src = image.currentSrc || image.getAttribute('src') || image.src || '';
-      const alt = image.getAttribute('alt') || '';
-      const caption = workCaption(image);
-      if (!src) return;
-      const current = document.querySelector('.country-art-image-magnifier');
-      if (current?.dataset.imageSrc === src) {
-        current.remove();
-        return;
-      }
-      current?.remove();
-      const naturalAspect = image.naturalWidth && image.naturalHeight ? image.naturalWidth / image.naturalHeight : null;
-      const imageRect = image.getBoundingClientRect();
-      const aspect = naturalAspect || Math.max(.2, imageRect.width) / Math.max(.2, imageRect.height);
-      const maxWidth = Math.max(120, window.innerWidth * .9);
-      const maxHeight = Math.max(120, window.innerHeight * .9);
-      let width = maxWidth;
-      let height = width / aspect;
-      if (height > maxHeight) {
-        height = maxHeight;
-        width = height * aspect;
-      }
-      width = Math.round(width);
-      height = Math.round(height);
-      const magnifier = document.createElement('aside');
-      magnifier.className = 'country-art-image-magnifier';
-      magnifier.dataset.imageSrc = src;
-      magnifier.style.width = `${width}px`;
-      magnifier.style.height = `${height}px`;
-      magnifier.style.left = `${Math.max(0, Math.round((window.innerWidth - width) / 2))}px`;
-      magnifier.style.top = `${Math.max(0, Math.round((window.innerHeight - height) / 2))}px`;
-      magnifier.style.aspectRatio = String(aspect);
-      magnifier.innerHTML = `<img src="${esc(src)}" alt="${esc(alt)}"><div class="country-art-image-magnifier-caption${caption ? '' : ' hidden'}">${esc(caption)}</div>`;
-      document.body.append(magnifier);
-      let interaction = null;
-      // Pointer capture used for dragging retargets the completed double-click
-      // to the box even though both presses begin on its full-size image.
-      magnifier.addEventListener('dblclick', event => {
-        event.preventDefault();
-        event.stopPropagation();
-        magnifier.remove();
-      });
-      magnifier.addEventListener('pointerdown', event => {
-        if (event.button !== 0) return;
-        const rect = magnifier.getBoundingClientRect();
-        interaction = {pointerId:event.pointerId, startX:event.clientX, startY:event.clientY, left:rect.left, top:rect.top};
-        magnifier.setPointerCapture(event.pointerId);
-        event.preventDefault();
-        event.stopPropagation();
-      });
-      magnifier.addEventListener('pointermove', event => {
-        if (!interaction || interaction.pointerId !== event.pointerId) return;
-        const dx = event.clientX - interaction.startX;
-        const dy = event.clientY - interaction.startY;
-        magnifier.style.left = `${Math.round(interaction.left + dx)}px`;
-        magnifier.style.top = `${Math.round(interaction.top + dy)}px`;
-        event.preventDefault();
-      });
-      const stop = event => { if (interaction?.pointerId === event.pointerId) interaction = null; };
-      magnifier.addEventListener('pointerup', stop);
-      magnifier.addEventListener('pointercancel', stop);
-    };
-    previewImages.forEach(image => {
-      image.addEventListener('pointerenter',()=>showPreviewCaption(image));
-      image.addEventListener('dblclick', event => {
-        event.preventDefault();
-        event.stopPropagation();
-        showPreviewCaption(image);
-        showMagnifier(image);
-      });
-    });
-  };
-  timeline.querySelectorAll('.country-art-movement').forEach(box => {
-    if (!box.querySelector('.country-art-work')) return;
-    box.addEventListener('dblclick', event => {
-      event.preventDefault();
-      event.stopPropagation();
-      openCountryArtMovementPreview(event.currentTarget);
-    });
-  });
   const countryArtScroll = timeline.querySelector('.country-art-scroll');
   const frozenLabelColumn = timeline.querySelector('.country-art-frozen-labels');
   countryArtScroll?.classList.add('country-art-frozen-axis-active');

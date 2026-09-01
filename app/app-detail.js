@@ -459,7 +459,6 @@ function setupMovementImageDescriptionEditors(frame, name, slot='1') {
       });
       const result = await response.json().catch(() => ({}));
       if (!response.ok || !result.ok) throw new Error(result.error || 'Could not save description');
-      countryArtWorkCache.clear();
       const revision = result.revision || `${Date.now()}-${Math.random()}`;
       localStorage.setItem(countryArtDocumentRevisionStorageKey, revision);
       window.dispatchEvent(new CustomEvent('art-atlas-movement-document-saved',{detail:{name,slot,revision}}));
