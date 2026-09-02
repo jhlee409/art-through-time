@@ -505,7 +505,13 @@ async function writeArtistsFileNow(payload, actor='') {
   const previousArtists=new Map((previous.artists || []).map(artist=>[artist.id,artist]));
   payload={...payload,artists:(payload.artists || []).map(artist=>{
     const existing=previousArtists.get(artist?.id);
-    return artist?._detailLoaded === false && existing ? {...artist,works:existing.works || []} : artist;
+    const hydrated=artist?._detailLoaded === false && existing ? {...artist,works:existing.works || []} : artist;
+    const currentSummaryVersion=String(existing?.artistSummaryUpdatedAt || '');
+    const submittedSummaryVersion=String(hydrated?.artistSummaryUpdatedAt || '');
+    if(existing && currentSummaryVersion && currentSummaryVersion !== submittedSummaryVersion) {
+      return {...hydrated,artistSummary:existing.artistSummary,artistSummaryUpdatedAt:currentSummaryVersion,artistSummarySources:existing.artistSummarySources,artistSummaryGeneratedLines:existing.artistSummaryGeneratedLines};
+    }
+    return hydrated;
   })};
   (payload.artists || []).forEach(artist=>{ if(artist && typeof artist==='object') delete artist._detailLoaded; });
   payload=await hydrateMissingArtistProfiles(payload);
@@ -584,6 +590,44 @@ function updateArtistPresentation(patch, actor='') {
   artistsWriteQueue=queued.catch(()=>{});
   return queued;
 }
+async function updateArtistSummaryNow(patch, actor='') {
+  const artistId=String(patch?.artistId || '');
+  if(!artistId) throw new Error('Artist id is required');
+  const incoming=patch?.artistSummary;
+  if(!incoming || typeof incoming !== 'object' || Array.isArray(incoming)) throw new Error('Artist summary is required');
+  const data=JSON.parse(await fs.readFile(artistsFile,'utf8'));
+  const artist=(data.artists || []).find(item=>String(item.id || '')===artistId);
+  if(!artist) throw new Error('Artist not found');
+  const currentVersion=String(artist.artistSummaryUpdatedAt || artist.metadata?.updatedAt || '');
+  const baseVersion=String(patch?.baseSummaryUpdatedAt || '');
+  if(baseVersion && currentVersion && baseVersion !== currentVersion) {
+    const error=new Error('다른 탭에서 화가 해설이 변경되었습니다. 새로고침 후 내용을 다시 확인해 주세요.');
+    error.statusCode=409;
+    throw error;
+  }
+  const now=new Date().toISOString(), updatedBy=normalizedEmail(actor) || 'local-admin';
+  const summaryLines=value=>[...new Set((Array.isArray(value) ? value : []).map(line=>String(line || '').trim().replace(/\s+/g,' ')).filter(Boolean))];
+  artist.artistSummary={ko:summaryLines(incoming.ko),en:summaryLines(incoming.en)};
+  artist.artistSummaryUpdatedAt=now;
+  const previousRevision=Math.max(0,Number(data.metadata?.revision) || 0);
+  artist.metadata={...(artist.metadata || {}),updatedAt:now,updatedBy};
+  data.metadata={...(data.metadata || {}),updatedAt:now,updatedBy,revision:previousRevision+1};
+  const normalized=normalizeArtistsPayload(data,{actor:updatedBy,touch:false});
+  const validation=validateArtistsPayload(normalized);
+  if(!validation.valid) throw new Error(validation.errors.join('; '));
+  const backup=await backupArtistsFile(previousRevision);
+  const temporary=`${artistsFile}.${process.pid}.${Date.now()}.tmp`;
+  await fs.writeFile(temporary,JSON.stringify(normalized,null,2)+'\n','utf8');
+  await fs.rename(temporary,artistsFile);
+  await require('./tools/build-artist-index').writeArtistIndex(normalized);
+  await appendAudit({type:'artist.summary.save',actor:updatedBy,revision:normalized.metadata.revision,artistId,backup});
+  return {revision:normalized.metadata.revision,backup,artist:normalized.artists.find(item=>item.id===artistId)};
+}
+function updateArtistSummary(patch, actor='') {
+  const queued=artistsWriteQueue.then(()=>updateArtistSummaryNow(patch,actor));
+  artistsWriteQueue=queued.catch(()=>{});
+  return queued;
+}
 async function commitArtistSummaryResearchNow(artistId, research, actor='') {
   const data=JSON.parse(await fs.readFile(artistsFile,'utf8'));
   const artist=(data.artists || []).find(item=>String(item.id || '')===artistId);
@@ -596,6 +640,7 @@ async function commitArtistSummaryResearchNow(artistId, research, actor='') {
   const previousGenerated=Array.isArray(artist.artistSummaryGeneratedLines) ? artist.artistSummaryGeneratedLines : [];
   const mergedLines=Array.isArray(research.lines) ? research.lines : (Array.isArray(currentSummary.ko) ? currentSummary.ko : []);
   artist.artistSummary={...currentSummary,ko:mergedLines};
+  artist.artistSummaryUpdatedAt=now;
   const removedKeys=new Set((research.removedLines || []).map(line=>String(line || '').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,'')));
   const summaryKeys=new Set(mergedLines.map(line=>String(line || '').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,'')));
   artist.artistSummaryGeneratedLines=[...new Set([...previousGenerated,...(Array.isArray(research.generatedLines) ? research.generatedLines : [])])].filter(line=>{const key=String(line || '').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,'');return summaryKeys.has(key)&&!removedKeys.has(key);});
@@ -630,7 +675,7 @@ async function updateArtistSummaryFromLinks(artistId, actor='', researchArtistSu
     getJsonFast, api, similarityScore,
     getEntities, entityId, entityYear, entityLabel, koreanArtistNameOverrides,
     saveThumbnailBuffer, saveThumbnailFromLocalUpload, removeThumbnailFiles, thumbnailLocation, makePngUnderStorageLimit,
-    readArtistsFile, readArtistsIndex, readArtistDetail, writeArtistsFile, updateArtistPresentation, updateArtistSummaryFromLinks, highResolutionPathExists, resolvedHighResolutionPath,
+    readArtistsFile, readArtistsIndex, readArtistDetail, writeArtistsFile, updateArtistPresentation, updateArtistSummary, updateArtistSummaryFromLinks, highResolutionPathExists, resolvedHighResolutionPath,
     resolveHighResolutionPaths, safeUploadId, uploadExtension
   };
 };

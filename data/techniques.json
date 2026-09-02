@@ -1117,13 +1117,36 @@
           },
           "image": "data/images/artist-Q9319/tintoretto-miracle-of-the-slave-1548.png",
           "role": {
-            "ko": "르네상스 말기의 극적 확장",
-            "en": "Dramatic expansion in the late Renaissance"
+            "ko": "기본 사례: 움직이는 인체",
+            "en": "Basic case: a moving figure"
           },
           "note": {
             "ko": "성 마르코가 화면 상단에서 급히 내려오는 모습은 몸을 깊이 방향으로 압축해, 성인이 실제 관람자 공간으로 돌진하는 듯한 속도를 만듭니다. 비대칭으로 흩어진 군상과 함께 단축법이 단순한 정확한 재현이 아니라 사건의 긴장과 운동감을 만드는 장치임을 보여줍니다.",
             "en": "Saint Mark's rapid descent from the upper field compresses the body along depth, making the saint appear to rush into the viewer's space. Together with the asymmetrically scattered crowd, it shows foreshortening as a device for dramatic tension and movement rather than merely accurate depiction."
           }
+        },
+        {
+          "year": "c. 1483",
+          "artist": {
+            "ko": "안드레아 만테냐",
+            "en": "Andrea Mantegna"
+          },
+          "title": {
+            "ko": "《죽은 그리스도를 위한 애도》",
+            "en": "Lamentation over the Dead Christ"
+          },
+          "image": "data/images/artist-Q5681/만테냐_죽은 그리스도를 위한_1483__wikidata-Q546297.jpg",
+          "role": {
+            "ko": "극단적 단축법: 정지한 인체와 관람자 개입",
+            "en": "Extreme foreshortening: a still body that implicates the viewer"
+          },
+          "note": {
+            "ko": "발에서 머리까지의 몸을 관람자 쪽으로 밀어붙여 깊이를 극단적으로 압축합니다. 만테냐는 기하학적 투시를 그대로 복제하기보다 인체가 읽히도록 비례를 조정했으며, 그 결과 관람자는 시신 곁에 선 듯한 가까운 시점과 애도의 긴장 안으로 끌려 들어갑니다. 따라서 이 작품은 단축법의 기본 원리 다음에 보는, 가장 강렬한 확장 사례입니다.",
+            "en": "The body is thrust toward the viewer from feet to head, compressing depth to an extreme. Rather than mechanically copying geometric projection, Mantegna adjusts proportions so the body remains legible; the result draws the viewer into the tension of mourning at the bier. It is therefore a strong extreme case to view after learning the basic principle of foreshortening."
+          },
+          "source": "Pinacoteca di Brera: https://pinacotecabrera.org/en/collezioni/collezione-on-line/lamentation-over-the-dead-christ/",
+          "artistId": "artist-Q5681",
+          "workId": "wikidata-Q546297"
         }
       ],
       "links": [

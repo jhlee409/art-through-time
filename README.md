@@ -157,6 +157,13 @@ npm run test:deep
 npm run test:http
 ```
 
+수동으로 추가한 로컬 작품 이미지는 정기적으로 아래 명령으로 Wikidata의 작품 창작자(P170)와 현재 화가를 대조한다. 대조 결과는 `data/artists.json`에 저장되며, QID가 없거나 창작자가 일치하지 않는 항목은 `npm run images:ownership-check`에서 확인할 수 있다.
+
+```powershell
+npm run images:ownership-audit
+npm run images:ownership-check
+```
+
 사조 정본이나 설명 문서를 바꾼 작업에서는 재구축 진행 상태와 관계없이 아래 연결 검사를 실행합니다.
 
 ```powershell

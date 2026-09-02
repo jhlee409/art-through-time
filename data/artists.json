@@ -2,10 +2,10 @@
   "dataSchema": 1,
   "metadata": {
     "createdAt": "2026-08-22T12:46:59.824Z",
-    "updatedAt": "2026-09-02T03:24:05.249Z",
+    "updatedAt": "2026-09-02T06:28:52.726Z",
     "createdBy": "jhlee409@gmail.com",
     "updatedBy": "jhlee409@gmail.com",
-    "revision": 963,
+    "revision": 965,
     "representativeContentSchema": 2
   },
   "artists": [
@@ -76106,8 +76106,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q17325449.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q17325449.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q17325449.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q17325449",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q17325449"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -76201,8 +76213,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q18602473.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q18602473.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q18602473.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q18602473",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q18602473"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -76229,7 +76253,28 @@
           "source": "http://www.wikidata.org/entity/Q16038528",
           "verified": true,
           "representative": false,
-          "movementContribution": false
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "pending",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "http://www.wikidata.org/entity/Q16038528",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q16038528",
+                "http://commons.wikimedia.org/wiki/Special:FilePath/Caspar%20David%20Friedrich%20-%20Felspartie%20im%20Harz%20%281811%29.jpg"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          }
         },
         {
           "id": "wikidata-Q17493547",
@@ -76266,8 +76311,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q17493547.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q17493547.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q17493547.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q17493547",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q17493547"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -76294,7 +76351,28 @@
           "source": "http://www.wikidata.org/entity/Q16038489",
           "verified": true,
           "representative": false,
-          "movementContribution": false
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "pending",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "http://www.wikidata.org/entity/Q16038489",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q16038489",
+                "http://commons.wikimedia.org/wiki/Special:FilePath/Caspar%20David%20Friedrich%20-%20The%20Cross%20in%20the%20Mountains%20-%20Google%20Art%20Project.jpg"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          }
         },
         {
           "id": "wikidata-Q3649324",
@@ -76331,8 +76409,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q3649324.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q3649324.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q3649324.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q3649324",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q3649324"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -76370,8 +76460,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q4346085.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q4346085.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q4346085.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q4346085",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q4346085"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -76409,8 +76511,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q232084.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q232084.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q232084.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q232084",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q232084"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -76506,8 +76620,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q1787143.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q1787143.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q1787143.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q1787143",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q1787143"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -76545,8 +76671,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q15971584.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q15971584.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q15971584.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q15971584",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q15971584"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -76584,8 +76722,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q17321856.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q17321856.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q17321856.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q17321856",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q17321856"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -76623,8 +76773,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q18602479.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q18602479.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q18602479.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q18602479",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q18602479"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -76662,8 +76824,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q4310993.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q4310993.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q4310993.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q4310993",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q4310993"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -76701,8 +76875,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q18602446.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q18602446.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q18602446.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q18602446",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q18602446"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -76729,7 +76915,28 @@
           "source": "http://www.wikidata.org/entity/Q18602463",
           "verified": true,
           "representative": false,
-          "movementContribution": false
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "pending",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "http://www.wikidata.org/entity/Q18602463",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q18602463",
+                "http://commons.wikimedia.org/wiki/Special:FilePath/Caspar%20David%20Friedrich%20-%20Der%20Greifswalder%20Markt.jpg"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          }
         },
         {
           "id": "wikidata-Q232087",
@@ -76767,8 +76974,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q232087.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q232087.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q232087.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q232087",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q232087"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -76806,8 +77025,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q1545495.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q1545495.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q1545495.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q1545495",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q1545495"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -76845,8 +77076,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q4478994.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q4478994.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q4478994.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q4478994",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q4478994"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -76884,8 +77127,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q1197913.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q1197913.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q1197913.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q1197913",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q1197913"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -76923,8 +77178,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q18603131.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q18603131.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q18603131.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q18603131",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q18603131"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -76962,8 +77229,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q16331419.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q16331419.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q16331419.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q16331419",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q16331419"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -77001,8 +77280,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q18602483.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q18602483.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q18602483.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q18602483",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q18602483"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -77040,8 +77331,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q24213.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q24213.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q24213.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q24213",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q24213"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -77079,8 +77382,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q1198515.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q1198515.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q1198515.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q1198515",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q1198515"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -77118,8 +77433,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q1451490.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q1451490.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q1451490.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q1451490",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q1451490"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -77157,8 +77484,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q1423223.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q1423223.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q1423223.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q1423223",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q1423223"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -77196,8 +77535,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q745415.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q745415.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q745415.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q745415",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q745415"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -77235,8 +77586,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q194137.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q194137.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q194137.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q194137",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q194137"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -77274,8 +77637,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q3139782.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q3139782.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q3139782.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q3139782",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q3139782"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -77302,7 +77677,28 @@
           "source": "http://www.wikidata.org/entity/Q16038517",
           "verified": true,
           "representative": false,
-          "movementContribution": false
+          "movementContribution": false,
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "pending",
+              "localThumbnail": "",
+              "highResolution": "",
+              "sourceUrl": "http://www.wikidata.org/entity/Q16038517",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q16038517",
+                "http://commons.wikimedia.org/wiki/Special:FilePath/Caspar%20David%20Friedrich%20-%20The%20Cemetery%20-%20Google%20Art%20Project.jpg"
+              ],
+              "license": "",
+              "institution": ""
+            }
+          }
         },
         {
           "id": "wikidata-Q2517970",
@@ -77339,8 +77735,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q2517970.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q2517970.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q2517970.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q2517970",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q2517970"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -77378,8 +77786,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q999836.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q999836.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q999836.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q999836",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q999836"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -77417,8 +77837,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q18021530.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q18021530.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q18021530.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q18021530",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q18021530"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -77456,8 +77888,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q18602616.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q18602616.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q18602616.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q18602616",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q18602616"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -77495,8 +77939,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q17422064.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q17422064.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q17422064.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q17422064",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q17422064"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -77534,8 +77990,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q3822640.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q3822640.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q3822640.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q3822640",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q3822640"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -77573,8 +78041,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q18603190.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q18603190.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q18603190.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q18603190",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q18603190"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -77612,8 +78092,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q1214313.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q1214313.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q1214313.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q1214313",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q1214313"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -77651,8 +78143,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q4126323.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q4126323.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q4126323.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q4126323",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q4126323"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -77690,8 +78194,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q4292427.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q4292427.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q4292427.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q4292427",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q4292427"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -77729,8 +78245,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q18202267.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q18202267.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q18202267.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q18202267",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q18202267"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -77768,8 +78296,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-1786332007363/wikidata-Q4531523.jpg",
-              "highResolution": "data/images/artist-1786332007363/wikidata-Q4531523.jpg"
+              "highResolution": "data/images/artist-1786332007363/wikidata-Q4531523.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q4531523",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q4531523"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -78043,6 +78583,12 @@
             "artistQid": "Q104884",
             "sourceWorkId": "wikidata-Q18602436",
             "verifiedAt": "2026-09-02T00:00:00.000Z"
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -78096,6 +78642,12 @@
             "artistQid": "Q104884",
             "sourceWorkId": "wikidata-Q18602437",
             "verifiedAt": "2026-09-02T00:00:00.000Z"
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -78149,6 +78701,12 @@
             "artistQid": "Q104884",
             "sourceWorkId": "wikidata-Q18602454",
             "verifiedAt": "2026-09-02T00:00:00.000Z"
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -78202,6 +78760,12 @@
             "artistQid": "Q104884",
             "sourceWorkId": "wikidata-Q18602455",
             "verifiedAt": "2026-09-02T00:00:00.000Z"
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -78255,6 +78819,12 @@
             "artistQid": "Q104884",
             "sourceWorkId": "wikidata-Q18602491",
             "verifiedAt": "2026-09-02T00:00:00.000Z"
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -78308,6 +78878,12 @@
             "artistQid": "Q104884",
             "sourceWorkId": "wikidata-Q18602536",
             "verifiedAt": "2026-09-02T00:00:00.000Z"
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -78361,6 +78937,12 @@
             "artistQid": "Q104884",
             "sourceWorkId": "wikidata-Q18602537",
             "verifiedAt": "2026-09-02T00:00:00.000Z"
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -78414,6 +78996,12 @@
             "artistQid": "Q104884",
             "sourceWorkId": "wikidata-Q18602539",
             "verifiedAt": "2026-09-02T00:00:00.000Z"
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -78467,6 +79055,12 @@
             "artistQid": "Q104884",
             "sourceWorkId": "wikidata-Q18602614",
             "verifiedAt": "2026-09-02T00:00:00.000Z"
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -78520,6 +79114,12 @@
             "artistQid": "Q104884",
             "sourceWorkId": "wikidata-Q18602618",
             "verifiedAt": "2026-09-02T00:00:00.000Z"
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -78573,6 +79173,12 @@
             "artistQid": "Q104884",
             "sourceWorkId": "wikidata-Q18603181",
             "verifiedAt": "2026-09-02T00:00:00.000Z"
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -78626,6 +79232,12 @@
             "artistQid": "Q104884",
             "sourceWorkId": "wikidata-Q18602549",
             "verifiedAt": "2026-09-02T00:00:00.000Z"
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -78679,6 +79291,12 @@
             "artistQid": "Q104884",
             "sourceWorkId": "wikidata-Q18602635",
             "verifiedAt": "2026-09-02T00:00:00.000Z"
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:57:07.530Z",
+            "updatedAt": "2026-08-22T20:57:07.530Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         }
       ]
@@ -105399,7 +106017,9 @@
       },
       "artistSummary": {
         "ko": [
-          "앙겔리카 카우프만는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다."
+          "앙겔리카 카우프만는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다.",
+          "카우프만은 초상화와 자화상을 제작했지만, 자신을 주로 역사화가로 규정했습니다. 이는 18세기 여성 화가에게는 드문 명칭이었습니다.",
+          "아카데믹 미술 이론에서 정의하는 역사화는 가장 높은 범주로 분류되었습니다. 역사화의 주제는 역사, 신화, 문학, 성경에서 가져온 주제를 바탕으로 인간의 행동을 묘사하는 것이었습니다. 이를 위해서는 성경 및 고전 문학에 대한 광범위한 학습, 미술 이론에 대한 지식, 그리고 남성 누드를 통한 해부학 연구를 포함한 실질적인 훈련이 필요했습니다. 대부분의 여성은 이러한 훈련, 특히 누드 모델을 보고 그리는 기회를 얻지 못했습니다. 그러나 카우프만은 성별의 경계를 넘어섰습니다. 그녀는 티치아노, 라파엘, 코레조, 도메니키노, 귀도 레니 등의 작품을 연구하고 드로잉, 판화, 석고 모형을 모사하여 남성 해부학을 묘사하는 법을 배웠습니다."
         ],
         "en": []
       },
@@ -106201,7 +106821,7 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-24T00:00:00Z",
-        "updatedAt": "2026-09-02T03:24:05.249Z",
+        "updatedAt": "2026-09-02T06:28:52.726Z",
         "createdBy": "manual entry",
         "updatedBy": "jhlee409@gmail.com"
       },
@@ -106224,7 +106844,8 @@
       "activeTo": 1807,
       "listName": {
         "ko": "카우프만"
-      }
+      },
+      "artistSummaryUpdatedAt": "2026-09-02T06:28:52.726Z"
     },
     {
       "id": "artist-romantic-gericault",
@@ -125928,8 +126549,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-Q40599/wikidata-Q1192090.jpg",
-              "highResolution": "data/images/artist-Q40599/wikidata-Q1192090.jpg"
+              "highResolution": "data/images/artist-Q40599/wikidata-Q1192090.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q1192090",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q1192090"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:58:10.892Z",
+            "updatedAt": "2026-08-22T20:58:10.892Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -125967,8 +126600,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-Q40599/wikidata-Q126467.jpg",
-              "highResolution": "data/images/artist-Q40599/wikidata-Q126467.jpg"
+              "highResolution": "data/images/artist-Q40599/wikidata-Q126467.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q126467",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q126467"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:58:10.892Z",
+            "updatedAt": "2026-08-22T20:58:10.892Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -126006,8 +126651,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-Q40599/wikidata-Q2024709.jpg",
-              "highResolution": "data/images/artist-Q40599/wikidata-Q2024709.jpg"
+              "highResolution": "data/images/artist-Q40599/wikidata-Q2024709.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q2024709",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q2024709"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:58:10.892Z",
+            "updatedAt": "2026-08-22T20:58:10.892Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -126045,8 +126702,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-Q40599/wikidata-Q3088614.jpg",
-              "highResolution": "data/images/artist-Q40599/wikidata-Q3088614.jpg"
+              "highResolution": "data/images/artist-Q40599/wikidata-Q3088614.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q3088614",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q3088614"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:58:10.892Z",
+            "updatedAt": "2026-08-22T20:58:10.892Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -126084,8 +126753,20 @@
             "image": {
               "status": "ready",
               "localThumbnail": "data/images/artist-Q40599/wikidata-Q1844748.jpg",
-              "highResolution": "data/images/artist-Q40599/wikidata-Q1844748.jpg"
+              "highResolution": "data/images/artist-Q40599/wikidata-Q1844748.jpg",
+              "sourceUrl": "http://www.wikidata.org/entity/Q1844748",
+              "sourceUrls": [
+                "http://www.wikidata.org/entity/Q1844748"
+              ],
+              "license": "",
+              "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:58:10.892Z",
+            "updatedAt": "2026-08-22T20:58:10.892Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -129779,6 +130460,12 @@
             "artistQid": "Q40599",
             "sourceWorkId": "wikidata-Q1810341",
             "verifiedAt": "2026-09-02T00:00:00.000Z"
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:58:10.892Z",
+            "updatedAt": "2026-08-22T20:58:10.892Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         }
       ]
@@ -129845,6 +130532,12 @@
               "license": "",
               "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:58:03.696Z",
+            "updatedAt": "2026-08-22T20:58:03.696Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -129892,6 +130585,12 @@
               "license": "",
               "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:58:03.696Z",
+            "updatedAt": "2026-08-22T20:58:03.696Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -129938,6 +130637,12 @@
               "license": "",
               "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:58:03.696Z",
+            "updatedAt": "2026-08-22T20:58:03.696Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -129983,6 +130688,12 @@
               "license": "",
               "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:58:03.696Z",
+            "updatedAt": "2026-08-22T20:58:03.696Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -130028,6 +130739,12 @@
               "license": "",
               "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:58:03.696Z",
+            "updatedAt": "2026-08-22T20:58:03.696Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         },
         {
@@ -130073,6 +130790,12 @@
               "license": "",
               "institution": ""
             }
+          },
+          "metadata": {
+            "createdAt": "2026-08-22T20:58:03.696Z",
+            "updatedAt": "2026-08-22T20:58:03.696Z",
+            "createdBy": "jhlee409@gmail.com",
+            "updatedBy": "jhlee409@gmail.com"
           }
         }
       ],
@@ -130114,6 +130837,133 @@
       "activeTo": 1877,
       "listName": {
         "ko": "바실리 푸키레프"
+      }
+    },
+    {
+      "id": "artist-Q5681",
+      "qid": "Q5681",
+      "name": {
+        "ko": "안드레아 만테냐",
+        "en": "Andrea Mantegna"
+      },
+      "birth": 1431,
+      "death": 1506,
+      "nationality": {
+        "ko": "이탈리아",
+        "en": "Italy"
+      },
+      "movement": {
+        "ko": "르네상스",
+        "en": "Renaissance"
+      },
+      "profileResolved": true,
+      "aliases": {
+        "ko": [
+          "만테냐"
+        ],
+        "en": [
+          "Mantegna"
+        ]
+      },
+      "metadata": {
+        "createdAt": "2026-09-02T00:00:00.000Z",
+        "updatedAt": "2026-09-02T00:00:00.000Z",
+        "createdBy": "local-asset-registration",
+        "updatedBy": "local-asset-registration"
+      },
+      "works": [
+        {
+          "id": "wikidata-Q546297",
+          "year": 1483,
+          "popularity": 14,
+          "title": {
+            "ko": "죽은 그리스도를 위한 애도",
+            "en": "Lamentation over the Dead Christ"
+          },
+          "country": {
+            "ko": "이탈리아",
+            "en": "Italy"
+          },
+          "movement": {
+            "ko": "르네상스",
+            "en": "Renaissance"
+          },
+          "medium": {
+            "ko": "캔버스에 템페라",
+            "en": "Tempera on canvas"
+          },
+          "institution": {
+            "ko": "브레라 미술관, 밀라노",
+            "en": "Pinacoteca di Brera, Milan"
+          },
+          "image": "data/images/artist-Q5681/만테냐_죽은 그리스도를 위한_1483__wikidata-Q546297.jpg",
+          "thumbnail": "data/images/artist-Q5681/만테냐_죽은 그리스도를 위한_1483__wikidata-Q546297.jpg",
+          "highRes": "data/images/artist-Q5681/만테냐_죽은 그리스도를 위한_1483__wikidata-Q546297.jpg",
+          "highResImage": "data/images/artist-Q5681/만테냐_죽은 그리스도를 위한_1483__wikidata-Q546297.jpg",
+          "highResOriginal": "data/images/artist-Q5681/만테냐_죽은 그리스도를 위한_1483__wikidata-Q546297.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "description": {
+            "ko": "관람자 쪽으로 누운 그리스도의 몸을 극단적으로 단축해, 애도하는 이들과 관람자를 시신 곁의 가까운 시점으로 끌어들이는 안드레아 만테냐의 작품.",
+            "en": "Andrea Mantegna’s painting compresses Christ’s recumbent body toward the viewer, drawing mourners and viewer alike into an immediate vantage beside the bier."
+          },
+          "source": "Pinacoteca di Brera: https://pinacotecabrera.org/en/collezioni/collezione-on-line/lamentation-over-the-dead-christ/",
+          "verified": true,
+          "representative": true,
+          "movementContribution": true,
+          "movementContributionReason": "artist-movement-characteristic",
+          "origin": "manual",
+          "metadata": {
+            "createdAt": "2026-09-02T00:00:00.000Z",
+            "updatedAt": "2026-09-02T00:00:00.000Z",
+            "createdBy": "local-asset-registration",
+            "updatedBy": "local-asset-registration"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-Q5681/만테냐_죽은 그리스도를 위한_1483__wikidata-Q546297.jpg",
+              "highResolution": "data/images/artist-Q5681/만테냐_죽은 그리스도를 위한_1483__wikidata-Q546297.jpg",
+              "sourceUrl": "https://pinacotecabrera.org/en/collezioni/collezione-on-line/lamentation-over-the-dead-christ/",
+              "sourceUrls": [
+                "https://pinacotecabrera.org/en/collezioni/collezione-on-line/lamentation-over-the-dead-christ/"
+              ],
+              "license": "",
+              "institution": "Pinacoteca di Brera"
+            }
+          },
+          "imageOwnershipVerification": {
+            "status": "verified",
+            "source": "wikidata-P170",
+            "artistQid": "Q5681",
+            "sourceWorkId": "wikidata-Q546297",
+            "verifiedAt": "2026-09-02T00:00:00.000Z"
+          }
+        }
+      ],
+      "featuredWorkIds": [
+        "wikidata-Q546297"
+      ],
+      "artistSummary": {
+        "ko": [],
+        "en": []
+      },
+      "movements": [
+        "르네상스"
+      ],
+      "submovements": [],
+      "primaryMovement": "르네상스",
+      "regions": [
+        "이탈리아"
+      ],
+      "periods": [
+        "1400-1500"
+      ],
+      "activeFrom": 1450,
+      "activeTo": 1506,
+      "listName": {
+        "ko": "만테냐"
       }
     }
   ],

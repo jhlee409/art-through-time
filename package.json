@@ -11,6 +11,8 @@
     "test:http": "node tools/check-app-http.js http://127.0.0.1:4173",
     "images:catalog": "node tools/build-image-catalog.js",
     "images:check": "node tools/build-image-catalog.js --check",
+    "images:ownership-audit": "node tools/verify-manual-image-ownership.js --verify --write",
+    "images:ownership-check": "node tools/verify-manual-image-ownership.js --strict",
     "research:check": "node tools/check-artist-summary-research.js"
   },
   "engines": {

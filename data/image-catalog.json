@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-02T03:50:25.821Z",
+  "generatedAt": "2026-09-02T06:10:27.906Z",
   "namingStandard": "shortArtist_titleFirst3Words_startYear__workId.ext",
   "stats": {
-    "images": 1750,
-    "linkedImages": 1750,
+    "images": 1751,
+    "linkedImages": 1751,
     "unlinkedImages": 0,
-    "standardNames": 148,
+    "standardNames": 149,
     "legacyNames": 1602,
     "newNonstandardNames": 0,
     "duplicateHashGroups": 1
@@ -27094,6 +27094,28 @@
           "titleKo": "Diana Returning from the Hunt , c. &#8201;1617 , oil on canvas, Hessisches Landesmuseum Darmstadt , collaboration with Snyders",
           "titleEn": "Diana Returning from the Hunt , c. &#8201;1617 , oil on canvas, Hessisches Landesmuseum Darmstadt , collaboration with Snyders",
           "year": 1617
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q5681/만테냐_죽은 그리스도를 위한_1483__wikidata-Q546297.jpg",
+      "filename": "만테냐_죽은 그리스도를 위한_1483__wikidata-Q546297.jpg",
+      "bytes": 863395,
+      "sha256": "008cce3226b6d9599559da52fd5edd4b9591187b980bdb36f9b2b9908da3f335",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q5681",
+          "artistQid": "Q5681",
+          "artistNameKo": "안드레아 만테냐",
+          "artistNameEn": "Andrea Mantegna",
+          "workId": "wikidata-Q546297",
+          "workQid": "Q546297",
+          "titleKo": "죽은 그리스도를 위한 애도",
+          "titleEn": "Lamentation over the Dead Christ",
+          "year": 1483
         }
       ]
     },

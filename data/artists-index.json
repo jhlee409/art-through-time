@@ -2,10 +2,10 @@
   "dataSchema": 1,
   "metadata": {
     "createdAt": "2026-08-22T12:46:59.824Z",
-    "updatedAt": "2026-09-02T03:24:05.249Z",
+    "updatedAt": "2026-09-02T06:28:52.726Z",
     "createdBy": "jhlee409@gmail.com",
     "updatedBy": "jhlee409@gmail.com",
-    "revision": 963,
+    "revision": 965,
     "representativeContentSchema": 2
   },
   "artists": [
@@ -4979,7 +4979,9 @@
       },
       "artistSummary": {
         "ko": [
-          "앙겔리카 카우프만는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다."
+          "앙겔리카 카우프만는 고대의 질서와 절제된 선을 현대의 공적·도덕적 의미와 연결한 신고전주의의 핵심 미술가다.",
+          "카우프만은 초상화와 자화상을 제작했지만, 자신을 주로 역사화가로 규정했습니다. 이는 18세기 여성 화가에게는 드문 명칭이었습니다.",
+          "아카데믹 미술 이론에서 정의하는 역사화는 가장 높은 범주로 분류되었습니다. 역사화의 주제는 역사, 신화, 문학, 성경에서 가져온 주제를 바탕으로 인간의 행동을 묘사하는 것이었습니다. 이를 위해서는 성경 및 고전 문학에 대한 광범위한 학습, 미술 이론에 대한 지식, 그리고 남성 누드를 통한 해부학 연구를 포함한 실질적인 훈련이 필요했습니다. 대부분의 여성은 이러한 훈련, 특히 누드 모델을 보고 그리는 기회를 얻지 못했습니다. 그러나 카우프만은 성별의 경계를 넘어섰습니다. 그녀는 티치아노, 라파엘, 코레조, 도메니키노, 귀도 레니 등의 작품을 연구하고 드로잉, 판화, 석고 모형을 모사하여 남성 해부학을 묘사하는 법을 배웠습니다."
         ],
         "en": []
       },
@@ -4992,7 +4994,7 @@
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-24T00:00:00Z",
-        "updatedAt": "2026-09-02T03:24:05.249Z",
+        "updatedAt": "2026-09-02T06:28:52.726Z",
         "createdBy": "manual entry",
         "updatedBy": "jhlee409@gmail.com"
       },
@@ -5016,6 +5018,7 @@
       "listName": {
         "ko": "카우프만"
       },
+      "artistSummaryUpdatedAt": "2026-09-02T06:28:52.726Z",
       "workCount": 15,
       "_detailLoaded": false
     },
@@ -14544,6 +14547,64 @@
         "ko": "바실리 푸키레프"
       },
       "workCount": 6,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-Q5681",
+      "qid": "Q5681",
+      "name": {
+        "ko": "안드레아 만테냐",
+        "en": "Andrea Mantegna"
+      },
+      "birth": 1431,
+      "death": 1506,
+      "nationality": {
+        "ko": "이탈리아",
+        "en": "Italy"
+      },
+      "movement": {
+        "ko": "르네상스",
+        "en": "Renaissance"
+      },
+      "profileResolved": true,
+      "aliases": {
+        "ko": [
+          "만테냐"
+        ],
+        "en": [
+          "Mantegna"
+        ]
+      },
+      "metadata": {
+        "createdAt": "2026-09-02T00:00:00.000Z",
+        "updatedAt": "2026-09-02T00:00:00.000Z",
+        "createdBy": "local-asset-registration",
+        "updatedBy": "local-asset-registration"
+      },
+      "featuredWorkIds": [
+        "wikidata-Q546297"
+      ],
+      "artistSummary": {
+        "ko": [],
+        "en": []
+      },
+      "movements": [
+        "르네상스"
+      ],
+      "submovements": [],
+      "primaryMovement": "르네상스",
+      "regions": [
+        "이탈리아"
+      ],
+      "periods": [
+        "1400-1500"
+      ],
+      "activeFrom": 1450,
+      "activeTo": 1506,
+      "listName": {
+        "ko": "만테냐"
+      },
+      "workCount": 1,
       "_detailLoaded": false
     }
   ],

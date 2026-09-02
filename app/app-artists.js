@@ -395,12 +395,20 @@ function setupArtistSummaryEditor(artist) {
   editor.addEventListener('submit', async event => {
     event.preventDefault();
     const previousSummary = artist.artistSummary ? JSON.parse(JSON.stringify(artist.artistSummary)) : undefined;
+    const baseSummaryUpdatedAt=artist.artistSummaryUpdatedAt || artist.metadata?.updatedAt || '';
     setArtistSummaryLines(artist, textarea.value);
-    persist();
-    if (!await saveArtistsNow()) {
+    try {
+      const response=await apiFetch('/api/artist-summary',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({artistId:artist.id,artistSummary:artist.artistSummary,baseSummaryUpdatedAt})});
+      const result=await response.json().catch(()=>({}));
+      if(!response.ok) throw new Error(result.error || `HTTP ${response.status}`);
+      if(result.artist) Object.assign(artist,result.artist);
+      if(Number.isInteger(result.revision)) collectionMetadata={...collectionMetadata,revision:result.revision};
+      lastSavedSnapshot=artistSnapshot();
+      lastSaveError='';
+    } catch(error) {
       if (previousSummary === undefined) delete artist.artistSummary;
       else artist.artistSummary = previousSummary;
-      persist();
+      lastSaveError=error?.message || '저장 요청을 처리하지 못했습니다.';
       alert(saveFailureMessage());
     }
     renderTimeline();
