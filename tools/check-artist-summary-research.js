@@ -58,7 +58,10 @@ assert.match(summarySetupSource,/if\(expanded\) refreshArtistSummaryArtworkLinks
 assert.match(summarySetupSource,/event\.target\.closest\('\[data-summary-work\]'\)/);
 assert.match(summarySetupSource,/\/api\/artist-summary-transform/);
 assert.match(summarySetupSource,/showEditor\(true\)/);
+assert.match(summarySetupSource,/artist-summary-markdown-button/);
+assert.match(summarySetupSource,/\.md,\.markdown,text\/markdown,text\/plain/);
 assert.match(artistUiSource,/<button class="artist-summary-transform-button"[\s\S]*?<\/button>` : ''\}\$\{expandControl\}/);
+assert.match(artistUiSource,/<button class="artist-summary-markdown-button"[\s\S]*?artist-summary-transform-button/);
 assert.doesNotMatch(artistUiSource,/\/api\/artist-summary-update/);
 const artistCssSource=fs.readFileSync(require.resolve('../styles.css'),'utf8');
 assert.match(artistCssSource,/\.artist-summary-image-preview\{[^}]*place-items:center/);
@@ -85,12 +88,18 @@ async function checkConfirmationFlow() {
 
 async function checkTransformFlow() {
   const previousFetch=global.fetch, previousKey=process.env.OPENAI_API_KEY;
+  let requestPayload;
   process.env.OPENAI_API_KEY='test-key';
-  global.fetch=async()=>({ok:true,json:async()=>({output_text:JSON.stringify({lines:['## 형성기','1862년 (약 22세) · [초기 미술 교육] 기존 해설과 스크립트를 합쳐 정리했다.','이미지 자료는 《인상, 해돋이》(1872)처럼 작품명과 연도만 남긴다.']}),usage:{input_tokens:120,output_tokens:40,total_tokens:160},output:[]})});
+  global.fetch=async(_url,options={})=>{ requestPayload=JSON.parse(options.body); return {ok:true,json:async()=>({output_text:JSON.stringify({lines:['## 기존 해설','기존 해설은 삭제하지 않는다.','## YouTube Q6nhX7GuliM (저장 스크립트)','1862년 (약 22세) · [초기 미술 교육] 스크립트 내용은 별도 블록으로 정리한다.','이미지 자료는 《인상, 해돋이》(1872)처럼 작품명과 연도만 남긴다.']}),usage:{input_tokens:120,output_tokens:40,total_tokens:160},output:[]})}; };
   try {
     const result=await transformArtistSummary({id:'test-artist',birth:1840,name:{ko:'시험 화가'},links:[{url:monetWatch,transcript:'모네는 르아브르에서 부댕을 만나 야외에서 빛을 관찰하는 법을 배웠다. '.repeat(8)}],artistSummary:{ko:['기존 해설은 삭제하지 않는다.']},works:[{title:{ko:'인상, 해돋이',en:'Impression, Sunrise'},year:1872}]});
     assert.equal(result.sourceCount,1);
-    assert.equal(result.artistSummary.ko[0],'## 형성기');
+    assert.equal(result.artistSummary.ko[0],'## 기존 해설');
+    assert.match(JSON.stringify(requestPayload),/입력 블록의 순서와 경계를 반드시 보존/);
+    assert.match(JSON.stringify(requestPayload),/md 업로드 내용이 저장된 순서/);
+    const userInput=JSON.parse(requestPayload.input[1].content[0].text);
+    assert.equal(userInput.inputBlocks[0].kind,'existing-summary');
+    assert.equal(userInput.inputBlocks[1].kind,'youtube-transcript');
     assert.equal(result.artistSummary.ko.some(line=>/https?:\/\//.test(line)),false);
     assert.equal(result.usage.totalTokens,160);
   } finally {

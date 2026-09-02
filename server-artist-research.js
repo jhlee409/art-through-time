@@ -291,12 +291,12 @@ function artistTransformSources(artist) {
 }
 
 function cleanTransformedSummaryLines(lines) {
-  return [...new Set((Array.isArray(lines) ? lines : []).map(line => String(line || '')
+  return (Array.isArray(lines) ? lines : []).map(line => String(line || '')
     .replace(/!\[([^\]\n]*)\]\(https?:\/\/[^)\s]+\)/gi,'$1')
     .replace(/https?:\/\/\S+\.(?:jpe?g|png|gif|webp)(?:\?\S*)?/gi,'')
     .replace(/\r\n?/g,'\n')
     .replace(/[ \t]+/g,' ')
-    .trim()).filter(Boolean))].slice(0,160);
+    .trim()).filter(Boolean).slice(0,160);
 }
 
 async function transformArtistSummary(artist) {
@@ -312,10 +312,15 @@ async function transformArtistSummary(artist) {
     titleKo:String(work.title?.ko || ''), titleEn:String(work.title?.en || ''), titleOriginal:String(work.title?.original || work.title?.native || ''),
     year:Number.isFinite(Number(work.year)) ? Number(work.year) : null
   })).filter(work => work.titleKo || work.titleEn || work.titleOriginal);
-  const system = `당신은 미술사 학습 앱의 화가 해설 편집자다. ${artistName}의 기존 해설과 사용자가 저장한 유튜브 스크립트만 사용해 읽기 좋은 한국어 문서형 해설로 정리한다. 외부 지식, 추측, 웹 검색, 자료에 없는 작품·연도·인과관계를 절대 추가하지 않는다. 기존 해설에 이미 있는 변환된 내용은 삭제하지 말고 의미가 같은 내용만 중복을 합쳐 문맥에 맞게 재배치한다. 새 스크립트의 내용은 기존 해설을 보강하거나 알맞은 위치에 추가한다. 서로 충돌하는 내용은 단정적으로 교체하지 말고 [확인 필요] 문장으로 남긴다. 최종 출력은 일반 텍스트 줄 배열이어야 하며 원본 HTML 태그를 쓰지 않는다. 허용되는 표식은 #/##/### 제목, > 인용, **굵게**, 마크다운 표, 《작품명》(연도)뿐이다. 이미지 URL이나 ![이미지](URL)는 최종 출력에 넣지 않는다. 이미지 자료가 작품을 가리키면 확인 가능한 작품명과 연도만 텍스트로 남기고, 확인할 수 없으면 생략한다. 작품명은 가능하면 프로젝트 작품 목록의 제목과 연도에 맞춘다.`;
+  const system = `당신은 미술사 학습 앱의 화가 해설 편집자다. ${artistName}의 기존 해설과 사용자가 저장한 유튜브 스크립트만 사용해 읽기 좋은 한국어 문서형 해설로 정리한다. 외부 지식, 추측, 웹 검색, 자료에 없는 작품·연도·인과관계를 절대 추가하지 않는다. 입력 블록의 순서와 경계를 반드시 보존한다. 기존 해설은 사용자가 직접 입력한 일반 텍스트와 md 업로드 내용이 저장된 순서이므로, 기존 해설 순서대로 서식만 정리한다. 유튜브 스크립트는 링크 저장 순서대로 별도 소제목 아래에 둔다. 서로 다른 입력 블록의 내용을 하나로 통합하거나 재배치하지 않는다. 의미가 비슷해도 서로 다른 입력 블록에 있으면 합치지 않는다. 한 입력 블록 안에서도 원문 흐름을 유지하면서 과도한 반복 문장만 간결하게 다듬는다. 서로 충돌하는 내용은 단정적으로 교체하지 말고 해당 입력 블록 안에 [확인 필요] 문장으로 남긴다. 최종 출력은 일반 텍스트 줄 배열이어야 하며 원본 HTML 태그를 쓰지 않는다. 허용되는 표식은 #/##/### 제목, > 인용, **굵게**, 마크다운 표, 《작품명》(연도)뿐이다. 이미지 URL이나 ![이미지](URL)는 최종 출력에 넣지 않는다. 이미지 자료가 작품을 가리키면 확인 가능한 작품명과 연도만 텍스트로 남기고, 확인할 수 없으면 생략한다. 작품명은 가능하면 프로젝트 작품 목록의 제목과 연도에 맞춘다.`;
+  const inputBlocks = [
+    ...(existingLines.length ? [{order:1,kind:'existing-summary',title:'기존 해설',lines:existingLines}] : []),
+    ...sources.map((source,index)=>({order:existingLines.length ? index+2 : index+1,kind:'youtube-transcript',title:source.title,url:source.url,text:source.text}))
+  ];
   const input = {
     artist:{name:artistName,birth:Number.isFinite(Number(artist.birth)) ? Number(artist.birth) : null,death:Number.isFinite(Number(artist.death)) ? Number(artist.death) : null},
-    existingSummary:existingLines,
+    inputBlocks,
+    existingSummary:existingLines.map((text,index)=>({lineIndex:index+1,text})),
     savedYoutubeTranscripts:sources.map((source,index)=>({sourceIndex:index+1,title:source.title,url:source.url,text:source.text})),
     projectArtworkCatalog:localWorks
   };
