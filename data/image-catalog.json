@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-02T09:20:18.433Z",
+  "generatedAt": "2026-09-02T10:50:08.792Z",
   "namingStandard": "shortArtist_titleFirst3Words_startYear__workId.ext",
   "stats": {
-    "images": 1751,
-    "linkedImages": 1751,
+    "images": 1766,
+    "linkedImages": 1766,
     "unlinkedImages": 0,
-    "standardNames": 149,
+    "standardNames": 164,
     "legacyNames": 1602,
     "newNonstandardNames": 0,
     "duplicateHashGroups": 1
@@ -34088,10 +34088,340 @@
       ]
     },
     {
+      "path": "data/images/artist-romantic-turner/터너_국회의사당 화재, 1834년_1835__turner-burning-houses-lords-commons.jpg",
+      "filename": "터너_국회의사당 화재, 1834년_1835__turner-burning-houses-lords-commons.jpg",
+      "bytes": 3483375,
+      "sha256": "e0177d953fc1e744a57eeacb6f1b43b9599f106c5cc59b38c242b0aebda1f923",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-romantic-turner",
+          "artistQid": "Q159758",
+          "artistNameKo": "조지프 말로드 윌리엄 터너",
+          "artistNameEn": "J. M. W. Turner",
+          "workId": "turner-burning-houses-lords-commons",
+          "workQid": "",
+          "titleKo": "국회의사당 화재, 1834년 10월 16일",
+          "titleEn": "The Burning of the Houses of Lords and Commons, 16 October 1834",
+          "year": 1835
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-romantic-turner/터너_그리니치 공원에서 본_1809__turner-london-from-greenwich-park.jpg",
+      "filename": "터너_그리니치 공원에서 본_1809__turner-london-from-greenwich-park.jpg",
+      "bytes": 3261677,
+      "sha256": "0b66d1b6bc6de8ab4d16b150eb12313337604fb954a5253eb0313d1512db72b6",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-romantic-turner",
+          "artistQid": "Q159758",
+          "artistNameKo": "조지프 말로드 윌리엄 터너",
+          "artistNameEn": "J. M. W. Turner",
+          "workId": "turner-london-from-greenwich-park",
+          "workQid": "",
+          "titleKo": "그리니치 공원에서 본 런던",
+          "titleEn": "London from Greenwich Park",
+          "year": 1809
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-romantic-turner/터너_난파 구조자들 -_1834__turner-wreckers-coast-northumberland.jpg",
+      "filename": "터너_난파 구조자들 -_1834__turner-wreckers-coast-northumberland.jpg",
+      "bytes": 114186,
+      "sha256": "d944e4289b6638b5bc7bb1dd66f2708930707c4606404e9f405e90d1df3c0465",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-romantic-turner",
+          "artistQid": "Q159758",
+          "artistNameKo": "조지프 말로드 윌리엄 터너",
+          "artistNameEn": "J. M. W. Turner",
+          "workId": "turner-wreckers-coast-northumberland",
+          "workQid": "",
+          "titleKo": "난파 구조자들 - 노섬벌랜드 해안",
+          "titleEn": "Wreckers -- Coast of Northumberland, with a Steam-Boat Assisting a Ship off Shore",
+          "year": 1834
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-romantic-turner/터너_난파 부표_1849__turner-the-wreck-buoy.jpg",
+      "filename": "터너_난파 부표_1849__turner-the-wreck-buoy.jpg",
+      "bytes": 109536,
+      "sha256": "06239a14da7744f6739c4cd6d14efb5f7910305f43ad3bf8936ffadee16f1ef6",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-romantic-turner",
+          "artistQid": "Q159758",
+          "artistNameKo": "조지프 말로드 윌리엄 터너",
+          "artistNameEn": "J. M. W. Turner",
+          "workId": "turner-the-wreck-buoy",
+          "workQid": "",
+          "titleKo": "난파 부표",
+          "titleEn": "The Wreck Buoy",
+          "year": 1849
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-romantic-turner/터너_노럼 성, 일출_1845__wikidata-Q28539779.jpg",
+      "filename": "터너_노럼 성, 일출_1845__wikidata-Q28539779.jpg",
+      "bytes": 127306,
+      "sha256": "a690c47a6266e7d34203335907e336ed50c859a6be0d6c42a8ed5cc2d52de6ef",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-romantic-turner",
+          "artistQid": "Q159758",
+          "artistNameKo": "조지프 말로드 윌리엄 터너",
+          "artistNameEn": "J. M. W. Turner",
+          "workId": "wikidata-Q28539779",
+          "workQid": "Q28539779",
+          "titleKo": "노럼 성, 일출",
+          "titleEn": "Norham Castle, Sunrise",
+          "year": 1845
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-romantic-turner/터너_눈보라 알프스를 넘는_1810__wikidata-Q3646554.jpg",
+      "filename": "터너_눈보라 알프스를 넘는_1810__wikidata-Q3646554.jpg",
+      "bytes": 186335,
+      "sha256": "2de61569bbae2d79cd1a5473572370f7233c2320718755d08db46d0fea67687f",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-romantic-turner",
+          "artistQid": "Q159758",
+          "artistNameKo": "조지프 말로드 윌리엄 터너",
+          "artistNameEn": "J. M. W. Turner",
+          "workId": "wikidata-Q3646554",
+          "workQid": "Q3646554",
+          "titleKo": "눈보라: 알프스를 넘는 한니발과 그의 군대",
+          "titleEn": "Snow Storm: Hannibal and his Army Crossing the Alps",
+          "year": 1810
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-romantic-turner/터너_도르트 또는 도르드레흐트_1818__turner-dort-or-dordrecht.jpg",
+      "filename": "터너_도르트 또는 도르드레흐트_1818__turner-dort-or-dordrecht.jpg",
+      "bytes": 673645,
+      "sha256": "908358a94daccab689f0db39a9e424c16198a4a5c9c96214ee1a4648de50d02c",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-romantic-turner",
+          "artistQid": "Q159758",
+          "artistNameKo": "조지프 말로드 윌리엄 터너",
+          "artistNameEn": "J. M. W. Turner",
+          "workId": "turner-dort-or-dordrecht",
+          "workQid": "",
+          "titleKo": "도르트 또는 도르드레흐트: 무풍에 멈춘 로테르담 우편선",
+          "titleEn": "Dort, or Dordrecht: The Dort Packet-Boat from Rotterdam Becalmed",
+          "year": 1818
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-romantic-turner/터너_바다의 어부들_1796__wikidata-Q3412132.jpg",
+      "filename": "터너_바다의 어부들_1796__wikidata-Q3412132.jpg",
+      "bytes": 1135756,
+      "sha256": "1d17b43107206aa6e48c9886b7aedd67760f36478075325bc2169675a3f95a1e",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-romantic-turner",
+          "artistQid": "Q159758",
+          "artistNameKo": "조지프 말로드 윌리엄 터너",
+          "artistNameEn": "J. M. W. Turner",
+          "workId": "wikidata-Q3412132",
+          "workQid": "Q3412132",
+          "titleKo": "바다의 어부들",
+          "titleEn": "Fishermen at Sea",
+          "year": 1796
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-romantic-turner/터너_베네치아 - 도가나와_1834__wikidata-Q20018614.jpg",
+      "filename": "터너_베네치아 - 도가나와_1834__wikidata-Q20018614.jpg",
+      "bytes": 3327055,
+      "sha256": "dfb01271abc0fcaf0dc5fc1c20ebd2bc54a1833797058f80d573f21aa1d975b6",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-romantic-turner",
+          "artistQid": "Q159758",
+          "artistNameKo": "조지프 말로드 윌리엄 터너",
+          "artistNameEn": "J. M. W. Turner",
+          "workId": "wikidata-Q20018614",
+          "workQid": "Q20018614",
+          "titleKo": "베네치아 - 도가나와 산 조르조 마조레",
+          "titleEn": "Venice - The Dogana and San Giorgio Maggiore",
+          "year": 1834
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-romantic-turner/터너_아오스타 계곡 눈보라,_1836__wikidata-Q20261032.jpg",
+      "filename": "터너_아오스타 계곡 눈보라,_1836__wikidata-Q20261032.jpg",
+      "bytes": 2431110,
+      "sha256": "c4a2a5745b24bb67bd8c71ccc6804fe1cc53862a0cae922737b2e97d613a8410",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-romantic-turner",
+          "artistQid": "Q159758",
+          "artistNameKo": "조지프 말로드 윌리엄 터너",
+          "artistNameEn": "J. M. W. Turner",
+          "workId": "wikidata-Q20261032",
+          "workQid": "Q20261032",
+          "titleKo": "아오스타 계곡: 눈보라, 눈사태와 뇌우",
+          "titleEn": "Valley of Aosta: Snowstorm, Avalanche, and Thunderstorm",
+          "year": 1836
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-romantic-turner/터너_얕은 물을 알리는_1840__wikidata-Q96621110.jpg",
+      "filename": "터너_얕은 물을 알리는_1840__wikidata-Q96621110.jpg",
+      "bytes": 3044944,
+      "sha256": "374f54d51c6919388a4810c7fd6599ad70be04ca6b1b0437b129922097410323",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-romantic-turner",
+          "artistQid": "Q159758",
+          "artistNameKo": "조지프 말로드 윌리엄 터너",
+          "artistNameEn": "J. M. W. Turner",
+          "workId": "wikidata-Q96621110",
+          "workQid": "Q96621110",
+          "titleKo": "얕은 물을 알리는 로켓과 푸른 신호등",
+          "titleEn": "Rockets and Blue Lights (Close at Hand) to Warn Steamboats of Shoal Water",
+          "year": 1840
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-romantic-turner/터너_칼레 부두_1801__wikidata-Q3794814.jpg",
+      "filename": "터너_칼레 부두_1801__wikidata-Q3794814.jpg",
+      "bytes": 3588297,
+      "sha256": "4eb438fc0279a44d33fbfc4de54b21567f1d9ee2bddecc0b65b1023070c242d3",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-romantic-turner",
+          "artistQid": "Q159758",
+          "artistNameKo": "조지프 말로드 윌리엄 터너",
+          "artistNameEn": "J. M. W. Turner",
+          "workId": "wikidata-Q3794814",
+          "workQid": "Q3794814",
+          "titleKo": "칼레 부두",
+          "titleEn": "Calais Pier",
+          "year": 1801
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-romantic-turner/터너_코니스턴 펠스의 아침,_1798__turner-morning-amongst-coniston-fells.jpg",
+      "filename": "터너_코니스턴 펠스의 아침,_1798__turner-morning-amongst-coniston-fells.jpg",
+      "bytes": 6429802,
+      "sha256": "6ff6b9dfe61e26e8a2828a088fa16506b29caa95b42aaa43f59a72f91faef25a",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-romantic-turner",
+          "artistQid": "Q159758",
+          "artistNameKo": "조지프 말로드 윌리엄 터너",
+          "artistNameEn": "J. M. W. Turner",
+          "workId": "turner-morning-amongst-coniston-fells",
+          "workQid": "",
+          "titleKo": "코니스턴 펠스의 아침, 컴벌랜드",
+          "titleEn": "Morning amongst the Coniston Fells, Cumberland",
+          "year": 1798
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-romantic-turner/터너_쾰른, 우편선의 도착_1826__wikidata-Q19857393.jpg",
+      "filename": "터너_쾰른, 우편선의 도착_1826__wikidata-Q19857393.jpg",
+      "bytes": 2460805,
+      "sha256": "5e80fb46247a04a20176b7530b6e8639619ca6175a302a948039f377f0cbc533",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-romantic-turner",
+          "artistQid": "Q159758",
+          "artistNameKo": "조지프 말로드 윌리엄 터너",
+          "artistNameEn": "J. M. W. Turner",
+          "workId": "wikidata-Q19857393",
+          "workQid": "Q19857393",
+          "titleKo": "쾰른, 우편선의 도착: 저녁",
+          "titleEn": "Cologne: The Arrival of a Packet-Boat: Evening",
+          "year": 1826
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-romantic-turner/터너_함대의 출항_1850__turner-departure-of-the-fleet.jpg",
+      "filename": "터너_함대의 출항_1850__turner-departure-of-the-fleet.jpg",
+      "bytes": 172328,
+      "sha256": "beab8312552997e249f84f96fbde2d34e99b6df90ad30cbfb93004acb5072397",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-romantic-turner",
+          "artistQid": "Q159758",
+          "artistNameKo": "조지프 말로드 윌리엄 터너",
+          "artistNameEn": "J. M. W. Turner",
+          "workId": "turner-departure-of-the-fleet",
+          "workQid": "",
+          "titleKo": "함대의 출항",
+          "titleEn": "The Departure of the Fleet",
+          "year": 1850
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-romantic-turner/artist-romantic-turner-work.jpg",
       "filename": "artist-romantic-turner-work.jpg",
-      "bytes": 681676,
-      "sha256": "edfbb2b198ff0a97f79e37b445e6a60a2bb1cfae155d1faf29a0aa80fa7ddce6",
+      "bytes": 2304168,
+      "sha256": "07355fbf2ca50524e2827416af139a01a1a3167616a078e9bac37e36a70289da",
       "mime": "image/jpeg",
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:45.657Z",
@@ -34099,7 +34429,7 @@
       "works": [
         {
           "artistId": "artist-romantic-turner",
-          "artistQid": "",
+          "artistQid": "Q159758",
           "artistNameKo": "조지프 말로드 윌리엄 터너",
           "artistNameEn": "J. M. W. Turner",
           "workId": "artist-romantic-turner-work",

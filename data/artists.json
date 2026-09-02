@@ -2,10 +2,10 @@
   "dataSchema": 1,
   "metadata": {
     "createdAt": "2026-08-22T12:46:59.824Z",
-    "updatedAt": "2026-09-02T10:42:53.454Z",
+    "updatedAt": "2026-09-02T11:17:24.107Z",
     "createdBy": "jhlee409@gmail.com",
     "updatedBy": "jhlee409@gmail.com",
-    "revision": 969,
+    "revision": 972,
     "representativeContentSchema": 2
   },
   "artists": [
@@ -107224,11 +107224,827 @@
           "영국의 낭만주의 화가이자 판화제작자, 수채화가였다. 그는 표현력이 풍부한 색채 사용, 상상력이 풍부한 풍경화, 그리고 격동적이고 때로는 격렬한 해양화로 잘 알려져 있다.",
           "터너의 상상력은 난파선, 화재(터너가 직접 목격하고 일련의 수채화 스케치로 기록한 1834년의 국회의사당 화재 포함), 그리고 햇빛, 폭풍, 비, 안개와 같은 자연 현상에 의해 촉발되었다. 그의 예술적 스타일은 일생에 걸쳐 발전하여 낭만주의에서 벗어나 다음에 등장할 사실주의 양식을 건너뛰고, 대신 그의 후기 작품들은 그의 사후 수십 년 뒤에 일어난 인상주의와 추상 미술 운동의 중요한 선구자가 되어 이를 예고했다",
           "《알프스를 넘는 한니발》(1812)에서는 자연의 파괴적인 힘에 대한 강조가 이미 작용하기 시작했다. 유화 물감에 수채화 기법을 사용한 그의 독특한 화법은 가벼움, 유창함, 그리고 덧없는 대기 효과를 만들어냈다.",
-          "말년에 터너는 유화를 더욱 투명하게 사용했으며 어른거리는 색채를 사용하여 거의 순수한 빛을 환기시키는 방향으로 돌아섰다. 그의 성숙한 스타일의 주요 사례는 비, 증기, 그리고 속도 – 대서부 철도에서 볼 수 있는데, 여기에서 물체들은 거의 알아보기 힘들다. 색조의 강렬함과 덧없는 빛에 대한 관심은 터너의 작품을 영국 회화의 선구적인 위치에 올려놓았을 뿐만 아니라 프랑스 예술에도 영향을 미쳤다. 인상주의자들, 특히 클로드 모네는 그의 기법을 세밀하게 연구했다. 그는 또한 일반적으로 추상화의 선구자로 간주된다."
+          "말년에 터너는 유화를 더욱 투명하게 사용했으며 어른거리는 색채를 사용하여 거의 순수한 빛을 환기시키는 방향으로 돌아섰다. 그의 성숙한 스타일의 주요 사례는 비, 증기, 그리고 속도 – 대서부 철도에서 볼 수 있는데, 여기에서 물체들은 거의 알아보기 힘들다. 색조의 강렬함과 덧없는 빛에 대한 관심은 터너의 작품을 영국 회화의 선구적인 위치에 올려놓았을 뿐만 아니라 프랑스 예술에도 영향을 미쳤다. 인상주의자들, 특히 클로드 모네는 그의 기법을 세밀하게 연구했다. 그는 또한 일반적으로 추상화의 선구자로 간주된다.",
+          "그렇습니다. 오히려 **터너(J. M. W. Turner, 1775–1851)를 제대로 이해하려면 나폴레옹 전쟁을 상당히 중요한 역사적 배경으로 놓아야 합니다.** 다만 고야처럼 전쟁을 직접 고발하는 ‘전쟁화가’는 아니었습니다. 터너에게 전쟁은 점차 **영웅적 사건 → 인간의 죽음과 혼돈 → 지나가 버린 시대의 기억**으로 변합니다.",
+          "![Image](https://www.rmg.co.uk/sites/default/files/styles/full_width_1440/public/2025-04/The%20Battle%20of%20Trafalgar%20by%20JMW%20Turner%20resized%20for%20website%20T4237.jpg.webp?itok=ezlFBBZl)",
+          "![Image](https://media.tate.org.uk/art/images/work/N/N00/N00500_9.jpg)",
+          "![Image](https://prints.rmg.co.uk/cdn/shop/files/py0761_1024x1024.jpg?v=1772702663)",
+          "![Image](https://media.tate.org.uk/aztate-prd-ew-dg-wgtail-st1-ctr-data/images/.width-600_7SbdbaE.jpg)",
+          "터너가 18세였던 1793년부터 영국과 혁명 프랑스 사이의 전쟁이 본격화되고, 이후 나폴레옹 전쟁은 1815년까지 이어집니다. 즉 **20대와 30대라는 그의 화가로서 가장 중요한 형성기가 거의 전쟁기와 겹칩니다.** 전쟁 때문에 영국인들의 유럽 여행도 장기간 어려웠고, 잠시 평화가 성립한 **아미앵 조약(Peace of Amiens) 기간인 1802년**에야 터너는 처음 프랑스와 스위스로 여행할 수 있었습니다. 따라서 전쟁은 그의 주제뿐 아니라 실제로 화가로서 무엇을 보고 공부할 수 있었는가에도 영향을 미쳤습니다. ([National Gallery of Art][1])",
+          "### 1. 《트라팔가 해전》 — 승전 그림인데 승리의 기쁨이 이상하게 없다",
+          "1805년 트라팔가 해전은 나폴레옹 전쟁에서 영국이 프랑스·스페인 연합함대를 격파한 결정적인 해전입니다. 넬슨 제독은 승리했지만 전사했습니다. 터너는 이미 1806~08년에 이 사건을 그렸고, 이후 조지 4세의 의뢰를 받아 거대한 **《The Battle of Trafalgar, 21 October 1805》, 1822–24**를 제작합니다. ([The Metropolitan Museum of Art][2])",
+          "흥미로운 것은 이것이 전형적인 **“대영제국 만세”식 승전화가 아니라는 것**입니다.",
+          "화면을 보면 승리한 함대의 질서 정연한 모습보다는 연기, 부서지는 돛대, 물에 빠진 사람, 시체, 혼란이 먼저 눈에 들어옵니다. 실제 전투의 서로 다른 시간대 사건까지 하나의 화면에 합쳐 놓았기 때문에 해군 관계자들은 역사적 오류라고 비판했습니다. 그러나 이것은 사실적 전투 기록보다는 **“승리가 치른 인간적 대가”**를 보여주려는 의도였다고 현재에는 해석됩니다. Royal Museums Greenwich도 이 그림을 해양 승리의 기념인 동시에 평범한 선원의 고통과 전쟁의 참상을 다룬 작품으로 설명합니다. ([Royal Museums Greenwich][3])",
+          "이 점이 상당히 중요합니다.",
+          "> 터너에게 전쟁은 영웅의 승리보다 **인간이 감당할 수 없는 거대한 힘과 혼돈**에 가까워집니다.",
+          "그래서 터너의 폭풍 그림과 전쟁 그림이 의외로 서로 닮아 있습니다.",
+          "--",
+          "### 2. 《알프스를 넘는 한니발》도 사실 나폴레옹 시대의 그림입니다",
+          "1812년의 유명한",
+          "*《Snow Storm: Hannibal and his Army Crossing the Alps》**",
+          "는 기원전 218년 한니발을 그린 역사화이지만, 당시 관객에게는 매우 현대적인 의미를 가지고 있었습니다.",
+          "나폴레옹 역시 1800년 알프스를 넘어 이탈리아로 진격했고, 터너가 이 작품을 전시한 1812년에는 영국이 실제로 나폴레옹과 전쟁 중이었습니다. 메트로폴리탄 미술관도 이 작품에서 고대의 한니발과 당대의 나폴레옹이라는 **고대사와 현대사가 겹쳐 보였을 것**이라고 설명합니다. ([The Metropolitan Museum of Art][2])",
+          "그런데 화면을 보면 한니발이 거의 보이지 않습니다.",
+          "거대한 검은 폭풍이 화면 전체를 집어삼키고 있고 군대는 작은 점처럼 흩어져 있습니다.",
+          "이것이 바로 터너적입니다.",
+          "*David식 역사화**",
+          "인간의 의지 → 영웅 → 역사",
+          "가 아니라,",
+          "*Turner식 역사화**",
+          "인간의 의지",
+          "↓",
+          "전쟁과 자연이라는 거대한 힘",
+          "인간은 그 속에서 거의 무력한 존재",
+          "가 됩니다.",
+          "따라서 터너가 발전시킨 **Sublime, 즉 숭고**는 단순히 산이나 폭풍 같은 자연미만을 의미하지 않습니다. 전쟁 역시 인간이 통제할 수 없는 압도적인 힘의 하나입니다.",
+          "### 3. 가장 결정적인 그림은 《워털루 전장》입니다",
+          "1815년 워털루에서 나폴레옹이 패배합니다.",
+          "터너는 **1817년 실제 워털루 전장을 방문했고**, 이듬해",
+          "*《The Field of Waterloo》, 1818**",
+          "를 발표합니다. ([The Metropolitan Museum of Art][2])",
+          "그런데 영국이 이긴 전쟁인데도 승리한 웰링턴도, 돌격하는 영국군도 없습니다.",
+          "대신 밤의 전장에",
+          "죽은 병사들",
+          "시체를 뒤지는 사람들",
+          "가족을 찾는 여자들",
+          "적과 아군이 뒤섞인 사체",
+          "가 있을 뿐입니다.",
+          "Tate 역시 이 그림을 영국의 승리를 축하하는 그림이 아니라 **loss, suffering and grief — 상실, 고통, 비탄**을 보여주는 그림이라고 설명합니다. ([Tate Online Shop][4])",
+          "이 그림에서 터너의 전쟁관은 상당히 분명합니다.",
+          "*누가 이겼는가가 별로 중요하지 않습니다.**",
+          "승리와 패배가 끝난 다음 남는 것은 죽은 사람들입니다.",
+          "이 점에서는 터너와 고야가 의외로 가까워집니다.",
+          "### 4. 그리고 24년 뒤 《The Fighting Temeraire》에서 전쟁은 ‘기억’이 됩니다",
+          "1839년의 대표작",
+          "*《The Fighting Temeraire tugged to her last berth to be broken up》**",
+          "에서 화면 속 거대한 범선 Temeraire는 그냥 오래된 배가 아닙니다.",
+          "*1805년 트라팔가 해전에서 HMS Victory와 함께 싸운 영국의 전쟁 영웅함**입니다. 1838년 이 배가 해체되기 위해 템스강을 예인되어 갔고, 터너가 그것을 그림으로 만들었습니다. ([Royal Museums Greenwich][5])",
+          "여기에는 굉장히 강한 역사적 상징이 있습니다.",
+          "*흰색의 거대한 범선 Temeraire**",
+          "= 넬슨",
+          "= 트라팔가",
+          "= 나폴레옹 전쟁",
+          "= 범선 시대의 영국",
+          "그 앞에서 끌고 가는",
+          "*작고 검은 증기 예인선**",
+          "= 증기기관",
+          "= 산업혁명",
+          "= 새로운 영국",
+          "그리고 뒤의 거대한 석양은",
+          "*한 시대의 죽음**",
+          "처럼 보입니다.",
+          "그래서 이 작품은 단순한 아름다운 석양화가 아닙니다.",
+          "*“나폴레옹 전쟁으로 영광을 얻었던 영국의 옛 시대가 산업사회로 넘어가는 장례식”**",
+          "이라고 읽어도 무리가 없습니다.",
+          "### 5. 1842년에는 아예 나폴레옹을 다시 그립니다",
+          "터너는 말년에",
+          "*《War. The Exile and the Rock Limpet》, 1842**",
+          "에서 세인트헬레나에 유배된 나폴레옹을 그립니다.",
+          "흥미로운 것은 화면 전체가 핏빛 적색으로 물들어 있다는 것입니다. Turner가 그림과 함께 붙인 시에서도 석양을 **“sea of blood”**, 피의 바다로 표현했습니다. Tate는 이 작품을 특정한 나폴레옹 평가라기보다 **전쟁의 유혈성과 허무함**을 강조한 작품으로 설명합니다. ([Tate Online Shop][6])",
+          "그러니까 터너에게 나폴레옹은 청년기에 실제로 영국을 위협했던 적이었는데, 수십 년 후에는",
+          "*“그토록 유럽을 뒤흔들었던 인간도 결국 작은 섬에 홀로 남는다.”**",
+          "라는 역사적 허무의 대상으로 변합니다.",
+          "## 그렇다면 ‘이후의 전쟁’은?",
+          "여기서는 구별할 필요가 있습니다.",
+          "터너 생전에는 그 뒤에도 그리스 독립전쟁, 벨기에 혁명, 아편전쟁, 1848년 혁명 같은 사건들이 있었습니다. 그러나 **터너의 주요 작품 세계에서 이 전쟁들이 나폴레옹 전쟁만큼 직접적인 중심 주제가 되지는 않습니다.**",
+          "그리고 크림전쟁은 1853년에 시작되므로 **1851년에 사망한 터너에게는 해당하지 않습니다.**",
+          "따라서 터너와 전쟁의 관계를 정리하면 이런 흐름이 가장 정확합니다.",
+          "| 시기 | 작품 | 전쟁의 의미 |",
+          "| ------- | ------------------------------------ | ---------------------- |",
+          "| 1806–08 | 《Battle of Trafalgar》 초기작 | 현재 진행 중인 나폴레옹 전쟁 |",
+          "| 1812 | 《Hannibal Crossing the Alps》 | 고대전쟁을 통해 나폴레옹 시대를 암시 |",
+          "| 1818 | 《Field of Waterloo》 | 승리보다 전쟁의 죽음과 비탄 |",
+          "| 1822–24 | 《Battle of Trafalgar》 | 국가적 승리 + 그 승리의 인간적 희생 |",
+          "| 1839 | 《Fighting Temeraire》 | 나폴레옹 전쟁의 기억과 사라지는 범선시대 |",
+          "| 1842 | 《War: The Exile and the Rock Limpet》 | 나폴레옹과 전쟁 자체의 허무 |",
+          "결국 **터너에게 나폴레옹 전쟁은 주변적인 사건이 아니라 그의 성인기 전체를 관통한 역사적 경험**이라고 보는 편이 맞습니다.",
+          "그리고 여기서 터너의 그림을 보는 아주 좋은 열쇠가 하나 생깁니다.",
+          "*고야가 “인간이 인간에게 가하는 폭력”을 그렸다면, 터너는 “인간이 만들어낸 역사조차 인간의 통제를 벗어나 거대한 자연현상처럼 인간을 집어삼킨다”는 방식으로 전쟁을 그렸습니다.**",
+          "그래서 터너 그림에서 **폭풍·화재·바다·전쟁·산업혁명**은 언뜻 서로 다른 소재이지만, 실제로는 모두 하나의 주제—**근대인이 자신보다 거대한 힘 앞에 놓이는 순간**—로 연결해서 보면 그의 작품세계가 상당히 선명해집니다."
         ],
         "en": []
       },
       "works": [
+        {
+          "country": {
+            "ko": "영국",
+            "en": "British"
+          },
+          "movement": {
+            "ko": "낭만주의",
+            "en": "Romanticism"
+          },
+          "medium": {
+            "ko": "캔버스에 유채",
+            "en": "Oil on canvas"
+          },
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "origin": "manual",
+          "id": "wikidata-Q3412132",
+          "year": 1796,
+          "popularity": 40,
+          "title": {
+            "ko": "바다의 어부들",
+            "en": "Fishermen at Sea"
+          },
+          "description": {
+            "ko": "밤바다의 달빛과 파도를 대비시켜, 젊은 터너가 해양 풍경을 숭고한 빛과 위험의 장면으로 바꾼 초기 유화.",
+            "en": "An early oil painting in which moonlight and waves turn a marine scene into an image of sublime danger."
+          },
+          "institution": {
+            "ko": "테이트 브리튼, 런던",
+            "en": "Tate Britain, London"
+          },
+          "image": "data/images/artist-romantic-turner/터너_바다의 어부들_1796__wikidata-Q3412132.jpg",
+          "thumbnail": "data/images/artist-romantic-turner/터너_바다의 어부들_1796__wikidata-Q3412132.jpg",
+          "highRes": "data/images/artist-romantic-turner/터너_바다의 어부들_1796__wikidata-Q3412132.jpg",
+          "highResImage": "data/images/artist-romantic-turner/터너_바다의 어부들_1796__wikidata-Q3412132.jpg",
+          "highResOriginal": "data/images/artist-romantic-turner/터너_바다의 어부들_1796__wikidata-Q3412132.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-09-02T10:49:54.876Z",
+          "source": "다운로드용/Joseph_Mallord_William_Turner_-_Fishermen_at_Sea_-_Google_Art_Project.jpg",
+          "metadata": {
+            "createdAt": "2026-09-02T10:49:54.876Z",
+            "updatedAt": "2026-09-02T10:49:54.876Z",
+            "createdBy": "local-download-folder-registration",
+            "updatedBy": "local-download-folder-registration"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-romantic-turner/터너_바다의 어부들_1796__wikidata-Q3412132.jpg",
+              "highResolution": "data/images/artist-romantic-turner/터너_바다의 어부들_1796__wikidata-Q3412132.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Joseph_Mallord_William_Turner_-_Fishermen_at_Sea_-_Google_Art_Project.jpg",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/File:Joseph_Mallord_William_Turner_-_Fishermen_at_Sea_-_Google_Art_Project.jpg"
+              ],
+              "license": "Public domain",
+              "institution": "Tate Britain, London"
+            }
+          },
+          "imageOwnershipVerification": {
+            "status": "pending"
+          }
+        },
+        {
+          "country": {
+            "ko": "영국",
+            "en": "British"
+          },
+          "movement": {
+            "ko": "낭만주의",
+            "en": "Romanticism"
+          },
+          "medium": {
+            "ko": "캔버스에 유채",
+            "en": "Oil on canvas"
+          },
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "origin": "manual",
+          "id": "turner-morning-amongst-coniston-fells",
+          "year": 1798,
+          "popularity": 40,
+          "title": {
+            "ko": "코니스턴 펠스의 아침, 컴벌랜드",
+            "en": "Morning amongst the Coniston Fells, Cumberland"
+          },
+          "description": {
+            "ko": "호수 지방의 산과 안개 낀 대기를 넓은 풍경으로 펼쳐, 초기 터너의 지형 관찰과 낭만적 빛 감각을 함께 보여 준다.",
+            "en": "A Lake District landscape that combines topographical observation with Turner's early Romantic handling of light."
+          },
+          "institution": {
+            "ko": "테이트 브리튼, 런던",
+            "en": "Tate Britain, London"
+          },
+          "image": "data/images/artist-romantic-turner/터너_코니스턴 펠스의 아침,_1798__turner-morning-amongst-coniston-fells.jpg",
+          "thumbnail": "data/images/artist-romantic-turner/터너_코니스턴 펠스의 아침,_1798__turner-morning-amongst-coniston-fells.jpg",
+          "highRes": "data/images/artist-romantic-turner/터너_코니스턴 펠스의 아침,_1798__turner-morning-amongst-coniston-fells.jpg",
+          "highResImage": "data/images/artist-romantic-turner/터너_코니스턴 펠스의 아침,_1798__turner-morning-amongst-coniston-fells.jpg",
+          "highResOriginal": "data/images/artist-romantic-turner/터너_코니스턴 펠스의 아침,_1798__turner-morning-amongst-coniston-fells.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-09-02T10:49:54.876Z",
+          "source": "다운로드용/(Barcelona)_Morning_amongst_the_Coniston_Fells,_Cumberland_-_William_Turner_-_Tate_Britain.jpg",
+          "metadata": {
+            "createdAt": "2026-09-02T10:49:54.876Z",
+            "updatedAt": "2026-09-02T10:49:54.876Z",
+            "createdBy": "local-download-folder-registration",
+            "updatedBy": "local-download-folder-registration"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-romantic-turner/터너_코니스턴 펠스의 아침,_1798__turner-morning-amongst-coniston-fells.jpg",
+              "highResolution": "data/images/artist-romantic-turner/터너_코니스턴 펠스의 아침,_1798__turner-morning-amongst-coniston-fells.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:(Barcelona)_Morning_amongst_the_Coniston_Fells,_Cumberland_-_William_Turner_-_Tate_Britain.jpg",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/File:(Barcelona)_Morning_amongst_the_Coniston_Fells,_Cumberland_-_William_Turner_-_Tate_Britain.jpg"
+              ],
+              "license": "CC BY-SA 4.0 photograph of public domain artwork",
+              "institution": "Tate Britain, London"
+            }
+          },
+          "imageOwnershipVerification": {
+            "status": "pending"
+          }
+        },
+        {
+          "country": {
+            "ko": "영국",
+            "en": "British"
+          },
+          "movement": {
+            "ko": "낭만주의",
+            "en": "Romanticism"
+          },
+          "medium": {
+            "ko": "캔버스에 유채",
+            "en": "Oil on canvas"
+          },
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "origin": "manual",
+          "id": "wikidata-Q3794814",
+          "year": 1801,
+          "popularity": 40,
+          "title": {
+            "ko": "칼레 부두",
+            "en": "Calais Pier"
+          },
+          "description": {
+            "ko": "거친 바다와 항구의 군중을 낮은 시점에서 압박감 있게 구성해, 여행과 해양 날씨의 불안을 생생하게 드러낸 작품.",
+            "en": "A low, turbulent harbour scene that makes travel, crowds, and coastal weather feel immediate and unstable."
+          },
+          "institution": {
+            "ko": "내셔널 갤러리, 런던",
+            "en": "National Gallery, London"
+          },
+          "image": "data/images/artist-romantic-turner/터너_칼레 부두_1801__wikidata-Q3794814.jpg",
+          "thumbnail": "data/images/artist-romantic-turner/터너_칼레 부두_1801__wikidata-Q3794814.jpg",
+          "highRes": "data/images/artist-romantic-turner/터너_칼레 부두_1801__wikidata-Q3794814.jpg",
+          "highResImage": "data/images/artist-romantic-turner/터너_칼레 부두_1801__wikidata-Q3794814.jpg",
+          "highResOriginal": "data/images/artist-romantic-turner/터너_칼레 부두_1801__wikidata-Q3794814.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-09-02T10:49:54.876Z",
+          "source": "다운로드용/Joseph_Mallord_William_Turner_024.jpg",
+          "metadata": {
+            "createdAt": "2026-09-02T10:49:54.876Z",
+            "updatedAt": "2026-09-02T10:49:54.876Z",
+            "createdBy": "local-download-folder-registration",
+            "updatedBy": "local-download-folder-registration"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-romantic-turner/터너_칼레 부두_1801__wikidata-Q3794814.jpg",
+              "highResolution": "data/images/artist-romantic-turner/터너_칼레 부두_1801__wikidata-Q3794814.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Joseph_Mallord_William_Turner_024.jpg",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/File:Joseph_Mallord_William_Turner_024.jpg"
+              ],
+              "license": "Public domain",
+              "institution": "National Gallery, London"
+            }
+          },
+          "imageOwnershipVerification": {
+            "status": "pending"
+          }
+        },
+        {
+          "country": {
+            "ko": "영국",
+            "en": "British"
+          },
+          "movement": {
+            "ko": "낭만주의",
+            "en": "Romanticism"
+          },
+          "medium": {
+            "ko": "캔버스에 유채",
+            "en": "Oil on canvas"
+          },
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "origin": "manual",
+          "id": "turner-london-from-greenwich-park",
+          "year": 1809,
+          "popularity": 40,
+          "title": {
+            "ko": "그리니치 공원에서 본 런던",
+            "en": "London from Greenwich Park"
+          },
+          "description": {
+            "ko": "도시와 강, 하늘을 넓게 조망하며 런던의 산업적 풍경을 대기와 빛의 층으로 정리한 작품.",
+            "en": "A broad view that organizes London, river, and sky into atmospheric layers of light."
+          },
+          "institution": {
+            "ko": "테이트 브리튼, 런던",
+            "en": "Tate Britain, London"
+          },
+          "image": "data/images/artist-romantic-turner/터너_그리니치 공원에서 본_1809__turner-london-from-greenwich-park.jpg",
+          "thumbnail": "data/images/artist-romantic-turner/터너_그리니치 공원에서 본_1809__turner-london-from-greenwich-park.jpg",
+          "highRes": "data/images/artist-romantic-turner/터너_그리니치 공원에서 본_1809__turner-london-from-greenwich-park.jpg",
+          "highResImage": "data/images/artist-romantic-turner/터너_그리니치 공원에서 본_1809__turner-london-from-greenwich-park.jpg",
+          "highResOriginal": "data/images/artist-romantic-turner/터너_그리니치 공원에서 본_1809__turner-london-from-greenwich-park.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-09-02T10:49:54.876Z",
+          "source": "다운로드용/Joseph_Mallord_William_Turner_-_London_from_Greenwich_Park_-_Google_Art_Project.jpg",
+          "metadata": {
+            "createdAt": "2026-09-02T10:49:54.876Z",
+            "updatedAt": "2026-09-02T10:49:54.876Z",
+            "createdBy": "local-download-folder-registration",
+            "updatedBy": "local-download-folder-registration"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-romantic-turner/터너_그리니치 공원에서 본_1809__turner-london-from-greenwich-park.jpg",
+              "highResolution": "data/images/artist-romantic-turner/터너_그리니치 공원에서 본_1809__turner-london-from-greenwich-park.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Joseph_Mallord_William_Turner_-_London_from_Greenwich_Park_-_Google_Art_Project.jpg",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/File:Joseph_Mallord_William_Turner_-_London_from_Greenwich_Park_-_Google_Art_Project.jpg"
+              ],
+              "license": "Public domain",
+              "institution": "Tate Britain, London"
+            }
+          },
+          "imageOwnershipVerification": {
+            "status": "pending"
+          }
+        },
+        {
+          "country": {
+            "ko": "영국",
+            "en": "British"
+          },
+          "movement": {
+            "ko": "낭만주의",
+            "en": "Romanticism"
+          },
+          "medium": {
+            "ko": "캔버스에 유채",
+            "en": "Oil on canvas"
+          },
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "origin": "manual",
+          "id": "wikidata-Q3646554",
+          "year": 1810,
+          "yearEnd": 1812,
+          "yearLabel": "1810-1812",
+          "popularity": 40,
+          "title": {
+            "ko": "눈보라: 알프스를 넘는 한니발과 그의 군대",
+            "en": "Snow Storm: Hannibal and his Army Crossing the Alps"
+          },
+          "description": {
+            "ko": "한니발의 원정을 거대한 폭풍 속에 밀어 넣어, 역사적 영웅보다 자연의 압도적 힘을 전면에 세운 작품.",
+            "en": "The Alpine crossing is engulfed by a storm, placing the force of nature ahead of heroic history."
+          },
+          "institution": {
+            "ko": "테이트 브리튼, 런던",
+            "en": "Tate Britain, London"
+          },
+          "image": "data/images/artist-romantic-turner/터너_눈보라 알프스를 넘는_1810__wikidata-Q3646554.jpg",
+          "thumbnail": "data/images/artist-romantic-turner/터너_눈보라 알프스를 넘는_1810__wikidata-Q3646554.jpg",
+          "highRes": "data/images/artist-romantic-turner/터너_눈보라 알프스를 넘는_1810__wikidata-Q3646554.jpg",
+          "highResImage": "data/images/artist-romantic-turner/터너_눈보라 알프스를 넘는_1810__wikidata-Q3646554.jpg",
+          "highResOriginal": "data/images/artist-romantic-turner/터너_눈보라 알프스를 넘는_1810__wikidata-Q3646554.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-09-02T10:49:54.876Z",
+          "source": "다운로드용/Joseph_Mallord_William_Turner_081.jpg",
+          "metadata": {
+            "createdAt": "2026-09-02T10:49:54.876Z",
+            "updatedAt": "2026-09-02T10:49:54.876Z",
+            "createdBy": "local-download-folder-registration",
+            "updatedBy": "local-download-folder-registration"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-romantic-turner/터너_눈보라 알프스를 넘는_1810__wikidata-Q3646554.jpg",
+              "highResolution": "data/images/artist-romantic-turner/터너_눈보라 알프스를 넘는_1810__wikidata-Q3646554.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Joseph_Mallord_William_Turner_081.jpg",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/File:Joseph_Mallord_William_Turner_081.jpg"
+              ],
+              "license": "Public domain",
+              "institution": "Tate Britain, London"
+            }
+          },
+          "imageOwnershipVerification": {
+            "status": "pending"
+          }
+        },
+        {
+          "country": {
+            "ko": "영국",
+            "en": "British"
+          },
+          "movement": {
+            "ko": "낭만주의",
+            "en": "Romanticism"
+          },
+          "medium": {
+            "ko": "캔버스에 유채",
+            "en": "Oil on canvas"
+          },
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "origin": "manual",
+          "id": "turner-dort-or-dordrecht",
+          "year": 1818,
+          "popularity": 40,
+          "title": {
+            "ko": "도르트 또는 도르드레흐트: 무풍에 멈춘 로테르담 우편선",
+            "en": "Dort, or Dordrecht: The Dort Packet-Boat from Rotterdam Becalmed"
+          },
+          "description": {
+            "ko": "잔잔한 항구와 배를 넓은 빛 속에 배치해, 네덜란드 해양 전통을 터너식 대기 풍경으로 다시 해석한 작품.",
+            "en": "A calm harbour scene that recasts Dutch marine tradition through Turner's atmospheric light."
+          },
+          "institution": {
+            "ko": "예일 영국 미술 센터, 뉴헤이븐",
+            "en": "Yale Center for British Art, New Haven"
+          },
+          "image": "data/images/artist-romantic-turner/터너_도르트 또는 도르드레흐트_1818__turner-dort-or-dordrecht.jpg",
+          "thumbnail": "data/images/artist-romantic-turner/터너_도르트 또는 도르드레흐트_1818__turner-dort-or-dordrecht.jpg",
+          "highRes": "data/images/artist-romantic-turner/터너_도르트 또는 도르드레흐트_1818__turner-dort-or-dordrecht.jpg",
+          "highResImage": "data/images/artist-romantic-turner/터너_도르트 또는 도르드레흐트_1818__turner-dort-or-dordrecht.jpg",
+          "highResOriginal": "data/images/artist-romantic-turner/터너_도르트 또는 도르드레흐트_1818__turner-dort-or-dordrecht.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-09-02T10:49:54.876Z",
+          "source": "다운로드용/DortorDordrecht.jpg",
+          "metadata": {
+            "createdAt": "2026-09-02T10:49:54.876Z",
+            "updatedAt": "2026-09-02T10:49:54.876Z",
+            "createdBy": "local-download-folder-registration",
+            "updatedBy": "local-download-folder-registration"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-romantic-turner/터너_도르트 또는 도르드레흐트_1818__turner-dort-or-dordrecht.jpg",
+              "highResolution": "data/images/artist-romantic-turner/터너_도르트 또는 도르드레흐트_1818__turner-dort-or-dordrecht.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:DortorDordrecht.jpg",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/File:DortorDordrecht.jpg"
+              ],
+              "license": "Public domain",
+              "institution": "Yale Center for British Art, New Haven"
+            }
+          },
+          "imageOwnershipVerification": {
+            "status": "pending"
+          }
+        },
+        {
+          "country": {
+            "ko": "영국",
+            "en": "British"
+          },
+          "movement": {
+            "ko": "낭만주의",
+            "en": "Romanticism"
+          },
+          "medium": {
+            "ko": "캔버스에 유채",
+            "en": "Oil on canvas"
+          },
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "origin": "manual",
+          "id": "wikidata-Q19857393",
+          "year": 1826,
+          "popularity": 40,
+          "title": {
+            "ko": "쾰른, 우편선의 도착: 저녁",
+            "en": "Cologne: The Arrival of a Packet-Boat: Evening"
+          },
+          "description": {
+            "ko": "저녁빛 속의 라인 강과 도시 실루엣을 부드럽게 묶어, 여행 풍경을 빛과 대기의 사건으로 만든 작품.",
+            "en": "The Rhine, packet boat, and city silhouette are unified by evening light and atmosphere."
+          },
+          "institution": {
+            "ko": "프릭 컬렉션, 뉴욕",
+            "en": "The Frick Collection, New York"
+          },
+          "image": "data/images/artist-romantic-turner/터너_쾰른, 우편선의 도착_1826__wikidata-Q19857393.jpg",
+          "thumbnail": "data/images/artist-romantic-turner/터너_쾰른, 우편선의 도착_1826__wikidata-Q19857393.jpg",
+          "highRes": "data/images/artist-romantic-turner/터너_쾰른, 우편선의 도착_1826__wikidata-Q19857393.jpg",
+          "highResImage": "data/images/artist-romantic-turner/터너_쾰른, 우편선의 도착_1826__wikidata-Q19857393.jpg",
+          "highResOriginal": "data/images/artist-romantic-turner/터너_쾰른, 우편선의 도착_1826__wikidata-Q19857393.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-09-02T10:49:54.876Z",
+          "source": "다운로드용/Turner_Cologne,_the_Arrival_of_a_Packet-Boat,_Evening.jpg",
+          "metadata": {
+            "createdAt": "2026-09-02T10:49:54.876Z",
+            "updatedAt": "2026-09-02T10:49:54.876Z",
+            "createdBy": "local-download-folder-registration",
+            "updatedBy": "local-download-folder-registration"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-romantic-turner/터너_쾰른, 우편선의 도착_1826__wikidata-Q19857393.jpg",
+              "highResolution": "data/images/artist-romantic-turner/터너_쾰른, 우편선의 도착_1826__wikidata-Q19857393.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Turner_Cologne,_the_Arrival_of_a_Packet-Boat,_Evening.jpg",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/File:Turner_Cologne,_the_Arrival_of_a_Packet-Boat,_Evening.jpg"
+              ],
+              "license": "Public domain",
+              "institution": "The Frick Collection, New York"
+            }
+          },
+          "imageOwnershipVerification": {
+            "status": "pending"
+          }
+        },
+        {
+          "country": {
+            "ko": "영국",
+            "en": "British"
+          },
+          "movement": {
+            "ko": "낭만주의",
+            "en": "Romanticism"
+          },
+          "medium": {
+            "ko": "캔버스에 유채",
+            "en": "Oil on canvas"
+          },
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "origin": "manual",
+          "id": "turner-wreckers-coast-northumberland",
+          "year": 1834,
+          "yearLabel": "c. 1834",
+          "popularity": 40,
+          "title": {
+            "ko": "난파 구조자들 - 노섬벌랜드 해안",
+            "en": "Wreckers -- Coast of Northumberland, with a Steam-Boat Assisting a Ship off Shore"
+          },
+          "description": {
+            "ko": "노섬벌랜드 해안의 난파와 구조 장면을 증기선과 폭풍의 긴장 속에 놓아, 해상 재난과 근대 기술을 함께 보여 준다.",
+            "en": "A wreck and rescue off Northumberland are set amid storm and steam power, linking maritime danger with modern technology."
+          },
+          "institution": {
+            "ko": "예일 영국 미술 센터, 뉴헤이븐",
+            "en": "Yale Center for British Art, New Haven"
+          },
+          "image": "data/images/artist-romantic-turner/터너_난파 구조자들 -_1834__turner-wreckers-coast-northumberland.jpg",
+          "thumbnail": "data/images/artist-romantic-turner/터너_난파 구조자들 -_1834__turner-wreckers-coast-northumberland.jpg",
+          "highRes": "data/images/artist-romantic-turner/터너_난파 구조자들 -_1834__turner-wreckers-coast-northumberland.jpg",
+          "highResImage": "data/images/artist-romantic-turner/터너_난파 구조자들 -_1834__turner-wreckers-coast-northumberland.jpg",
+          "highResOriginal": "data/images/artist-romantic-turner/터너_난파 구조자들 -_1834__turner-wreckers-coast-northumberland.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-09-02T10:49:54.876Z",
+          "source": "다운로드용/Wreckers_Coast_of_Northumberland_Joseph_Mallord_William_Turner.jpeg",
+          "metadata": {
+            "createdAt": "2026-09-02T10:49:54.876Z",
+            "updatedAt": "2026-09-02T10:49:54.876Z",
+            "createdBy": "local-download-folder-registration",
+            "updatedBy": "local-download-folder-registration"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-romantic-turner/터너_난파 구조자들 -_1834__turner-wreckers-coast-northumberland.jpg",
+              "highResolution": "data/images/artist-romantic-turner/터너_난파 구조자들 -_1834__turner-wreckers-coast-northumberland.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wreckers_Coast_of_Northumberland_Joseph_Mallord_William_Turner.jpeg",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/File:Wreckers_Coast_of_Northumberland_Joseph_Mallord_William_Turner.jpeg"
+              ],
+              "license": "Public domain",
+              "institution": "Yale Center for British Art, New Haven"
+            }
+          },
+          "imageOwnershipVerification": {
+            "status": "pending"
+          }
+        },
+        {
+          "country": {
+            "ko": "영국",
+            "en": "British"
+          },
+          "movement": {
+            "ko": "낭만주의",
+            "en": "Romanticism"
+          },
+          "medium": {
+            "ko": "캔버스에 유채",
+            "en": "Oil on canvas"
+          },
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "origin": "manual",
+          "id": "wikidata-Q20018614",
+          "year": 1834,
+          "popularity": 40,
+          "title": {
+            "ko": "베네치아 - 도가나와 산 조르조 마조레",
+            "en": "Venice - The Dogana and San Giorgio Maggiore"
+          },
+          "description": {
+            "ko": "베네치아의 배와 건축을 맑은 하늘과 물빛 속에 녹여, 도시를 빛의 무대로 바꾼 작품.",
+            "en": "Boats and architecture in Venice dissolve into clear sky and water, turning the city into a stage of light."
+          },
+          "institution": {
+            "ko": "내셔널 갤러리 오브 아트, 워싱턴",
+            "en": "National Gallery of Art, Washington"
+          },
+          "image": "data/images/artist-romantic-turner/터너_베네치아 - 도가나와_1834__wikidata-Q20018614.jpg",
+          "thumbnail": "data/images/artist-romantic-turner/터너_베네치아 - 도가나와_1834__wikidata-Q20018614.jpg",
+          "highRes": "data/images/artist-romantic-turner/터너_베네치아 - 도가나와_1834__wikidata-Q20018614.jpg",
+          "highResImage": "data/images/artist-romantic-turner/터너_베네치아 - 도가나와_1834__wikidata-Q20018614.jpg",
+          "highResOriginal": "data/images/artist-romantic-turner/터너_베네치아 - 도가나와_1834__wikidata-Q20018614.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-09-02T10:49:54.876Z",
+          "source": "다운로드용/Venice_-_The_Dogana_and_San_Giorgio_Maggiore_by_Joseph_Mallord_William_Turner,_1834,_oil_on_canvas,_view_2_-_National_Gallery_of_Art,_Washington_-_DSC00005.JPG",
+          "metadata": {
+            "createdAt": "2026-09-02T10:49:54.876Z",
+            "updatedAt": "2026-09-02T10:49:54.876Z",
+            "createdBy": "local-download-folder-registration",
+            "updatedBy": "local-download-folder-registration"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-romantic-turner/터너_베네치아 - 도가나와_1834__wikidata-Q20018614.jpg",
+              "highResolution": "data/images/artist-romantic-turner/터너_베네치아 - 도가나와_1834__wikidata-Q20018614.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Venice_-_The_Dogana_and_San_Giorgio_Maggiore_by_Joseph_Mallord_William_Turner,_1834,_oil_on_canvas,_view_2_-_National_Gallery_of_Art,_Washington_-_DSC00005.JPG",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/File:Venice_-_The_Dogana_and_San_Giorgio_Maggiore_by_Joseph_Mallord_William_Turner,_1834,_oil_on_canvas,_view_2_-_National_Gallery_of_Art,_Washington_-_DSC00005.JPG"
+              ],
+              "license": "Public domain",
+              "institution": "National Gallery of Art, Washington"
+            }
+          },
+          "imageOwnershipVerification": {
+            "status": "pending"
+          }
+        },
+        {
+          "country": {
+            "ko": "영국",
+            "en": "British"
+          },
+          "movement": {
+            "ko": "낭만주의",
+            "en": "Romanticism"
+          },
+          "medium": {
+            "ko": "캔버스에 유채",
+            "en": "Oil on canvas"
+          },
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "origin": "manual",
+          "id": "turner-burning-houses-lords-commons",
+          "year": 1835,
+          "popularity": 40,
+          "title": {
+            "ko": "국회의사당 화재, 1834년 10월 16일",
+            "en": "The Burning of the Houses of Lords and Commons, 16 October 1834"
+          },
+          "description": {
+            "ko": "템스 강변의 실제 화재 목격을 불길과 연기의 거대한 색채 사건으로 재구성해, 현대 도시 재난을 낭만주의적 숭고로 바꾼 작품.",
+            "en": "Turner transforms the witnessed Parliament fire into a vast event of flame, smoke, and urban sublime."
+          },
+          "institution": {
+            "ko": "클리블랜드 미술관",
+            "en": "Cleveland Museum of Art"
+          },
+          "image": "data/images/artist-romantic-turner/터너_국회의사당 화재, 1834년_1835__turner-burning-houses-lords-commons.jpg",
+          "thumbnail": "data/images/artist-romantic-turner/터너_국회의사당 화재, 1834년_1835__turner-burning-houses-lords-commons.jpg",
+          "highRes": "data/images/artist-romantic-turner/터너_국회의사당 화재, 1834년_1835__turner-burning-houses-lords-commons.jpg",
+          "highResImage": "data/images/artist-romantic-turner/터너_국회의사당 화재, 1834년_1835__turner-burning-houses-lords-commons.jpg",
+          "highResOriginal": "data/images/artist-romantic-turner/터너_국회의사당 화재, 1834년_1835__turner-burning-houses-lords-commons.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-09-02T10:49:54.876Z",
+          "source": "다운로드용/Joseph_Mallord_William_Turner,_English_-_The_Burning_of_the_Houses_of_Lords_and_Commons,_October_16,_1834_-_Google_Art_Project.jpg",
+          "metadata": {
+            "createdAt": "2026-09-02T10:49:54.876Z",
+            "updatedAt": "2026-09-02T10:49:54.876Z",
+            "createdBy": "local-download-folder-registration",
+            "updatedBy": "local-download-folder-registration"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-romantic-turner/터너_국회의사당 화재, 1834년_1835__turner-burning-houses-lords-commons.jpg",
+              "highResolution": "data/images/artist-romantic-turner/터너_국회의사당 화재, 1834년_1835__turner-burning-houses-lords-commons.jpg",
+              "sourceUrl": "https://www.clevelandart.org/art/1942.647",
+              "sourceUrls": [
+                "https://www.clevelandart.org/art/1942.647"
+              ],
+              "license": "CC0",
+              "institution": "Cleveland Museum of Art"
+            }
+          },
+          "imageOwnershipVerification": {
+            "status": "pending"
+          }
+        },
+        {
+          "country": {
+            "ko": "영국",
+            "en": "British"
+          },
+          "movement": {
+            "ko": "낭만주의",
+            "en": "Romanticism"
+          },
+          "medium": {
+            "ko": "캔버스에 유채",
+            "en": "Oil on canvas"
+          },
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "origin": "manual",
+          "id": "wikidata-Q20261032",
+          "year": 1836,
+          "yearEnd": 1837,
+          "yearLabel": "1836-1837",
+          "popularity": 40,
+          "title": {
+            "ko": "아오스타 계곡: 눈보라, 눈사태와 뇌우",
+            "en": "Valley of Aosta: Snowstorm, Avalanche, and Thunderstorm"
+          },
+          "description": {
+            "ko": "알프스의 눈보라와 눈사태를 거대한 소용돌이처럼 그려, 자연의 숭고와 인간의 왜소함을 극적으로 대비시킨 작품.",
+            "en": "Alpine storm and avalanche become a vortex of sublime natural force dwarfing human presence."
+          },
+          "institution": {
+            "ko": "시카고 미술관",
+            "en": "Art Institute of Chicago"
+          },
+          "image": "data/images/artist-romantic-turner/터너_아오스타 계곡 눈보라,_1836__wikidata-Q20261032.jpg",
+          "thumbnail": "data/images/artist-romantic-turner/터너_아오스타 계곡 눈보라,_1836__wikidata-Q20261032.jpg",
+          "highRes": "data/images/artist-romantic-turner/터너_아오스타 계곡 눈보라,_1836__wikidata-Q20261032.jpg",
+          "highResImage": "data/images/artist-romantic-turner/터너_아오스타 계곡 눈보라,_1836__wikidata-Q20261032.jpg",
+          "highResOriginal": "data/images/artist-romantic-turner/터너_아오스타 계곡 눈보라,_1836__wikidata-Q20261032.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-09-02T10:49:54.876Z",
+          "source": "다운로드용/Chicago_art_inst_turner_vallee_aoste.jpeg",
+          "metadata": {
+            "createdAt": "2026-09-02T10:49:54.876Z",
+            "updatedAt": "2026-09-02T10:49:54.876Z",
+            "createdBy": "local-download-folder-registration",
+            "updatedBy": "local-download-folder-registration"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-romantic-turner/터너_아오스타 계곡 눈보라,_1836__wikidata-Q20261032.jpg",
+              "highResolution": "data/images/artist-romantic-turner/터너_아오스타 계곡 눈보라,_1836__wikidata-Q20261032.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chicago_art_inst_turner_vallee_aoste.JPG",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/File:Chicago_art_inst_turner_vallee_aoste.JPG"
+              ],
+              "license": "CC0",
+              "institution": "Art Institute of Chicago"
+            }
+          },
+          "imageOwnershipVerification": {
+            "status": "pending"
+          }
+        },
         {
           "id": "artist-romantic-turner-work",
           "year": 1839,
@@ -107238,8 +108054,8 @@
             "en": "The Fighting Temeraire"
           },
           "description": {
-            "ko": "조지프 말로드 윌리엄 터너는 감정, 역사, 자연의 숭고를 강한 시각적 경험으로 만든 낭만주의의 핵심 화가다.",
-            "en": ""
+            "ko": "석양 속에서 해체장으로 예인되는 전함을 그려, 산업화 시대의 전환과 사라지는 해군 영광을 빛의 드라마로 압축한 작품.",
+            "en": "A warship is tugged toward dismantling at sunset, turning industrial change and fading naval glory into a drama of light."
           },
           "country": {
             "ko": "영국",
@@ -107252,16 +108068,16 @@
           "localImageCandidates": [
             "Turner-Fighting-Temeraire"
           ],
-          "source": "로컬 이미지 후보를 지정 다운로드 폴더에서 찾지 못함; 업로드 예정",
+          "source": "다운로드용/The_Fighting_Temeraire,_JMW_Turner,_National_Gallery.jpg",
           "verified": true,
           "representative": true,
           "movementContribution": true,
           "origin": "manual",
           "metadata": {
             "createdAt": "2026-08-25T10:02:06.175Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
+            "updatedAt": "2026-09-02T10:49:54.876Z",
             "createdBy": "jhlee409@gmail.com",
-            "updatedBy": "jhlee409@gmail.com"
+            "updatedBy": "local-download-folder-registration"
           },
           "migration": {
             "schema": 1,
@@ -107269,12 +108085,12 @@
               "status": "ready",
               "localThumbnail": "data/images/artist-romantic-turner/artist-romantic-turner-work.jpg",
               "highResolution": "data/images/artist-romantic-turner/artist-romantic-turner-work.jpg",
-              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Turner,_J._M._W._-_The_Fighting_T%C3%A9m%C3%A9raire_tugged_to_her_last_Berth_to_be_broken.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Fighting_Temeraire,_JMW_Turner,_National_Gallery.jpg",
               "sourceUrls": [
-                "https://commons.wikimedia.org/wiki/File:Turner,_J._M._W._-_The_Fighting_T%C3%A9m%C3%A9raire_tugged_to_her_last_Berth_to_be_broken.jpg"
+                "https://commons.wikimedia.org/wiki/File:The_Fighting_Temeraire,_JMW_Turner,_National_Gallery.jpg"
               ],
               "license": "Public domain",
-              "institution": "Wikimedia Commons"
+              "institution": "National Gallery, London"
             }
           },
           "movementContributionReason": "canonical-movement-representative",
@@ -107282,7 +108098,283 @@
           "highResImage": "data/images/artist-romantic-turner/artist-romantic-turner-work.jpg",
           "highResOriginal": "data/images/artist-romantic-turner/artist-romantic-turner-work.jpg",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-29T05:31:14.772Z"
+          "thumbnailCacheKey": "2026-09-02T10:49:54.876Z",
+          "medium": {
+            "ko": "캔버스에 유채",
+            "en": "Oil on canvas"
+          },
+          "institution": {
+            "ko": "내셔널 갤러리, 런던",
+            "en": "National Gallery, London"
+          },
+          "image": "data/images/artist-romantic-turner/artist-romantic-turner-work.jpg",
+          "highRes": "data/images/artist-romantic-turner/artist-romantic-turner-work.jpg",
+          "imageUploadStatus": "ready",
+          "imageOwnershipVerification": {
+            "status": "pending"
+          }
+        },
+        {
+          "country": {
+            "ko": "영국",
+            "en": "British"
+          },
+          "movement": {
+            "ko": "낭만주의",
+            "en": "Romanticism"
+          },
+          "medium": {
+            "ko": "캔버스에 유채",
+            "en": "Oil on canvas"
+          },
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "origin": "manual",
+          "id": "wikidata-Q96621110",
+          "year": 1840,
+          "popularity": 40,
+          "title": {
+            "ko": "얕은 물을 알리는 로켓과 푸른 신호등",
+            "en": "Rockets and Blue Lights (Close at Hand) to Warn Steamboats of Shoal Water"
+          },
+          "description": {
+            "ko": "밤바다의 신호탄과 파도를 거친 붓질로 결합해, 구조 신호마저 폭풍과 빛의 혼돈 속에 놓은 후기 해양화.",
+            "en": "Signal rockets and waves merge in rough late brushwork, placing rescue light inside maritime chaos."
+          },
+          "institution": {
+            "ko": "클라크 아트 인스티튜트, 윌리엄스타운",
+            "en": "Clark Art Institute, Williamstown"
+          },
+          "image": "data/images/artist-romantic-turner/터너_얕은 물을 알리는_1840__wikidata-Q96621110.jpg",
+          "thumbnail": "data/images/artist-romantic-turner/터너_얕은 물을 알리는_1840__wikidata-Q96621110.jpg",
+          "highRes": "data/images/artist-romantic-turner/터너_얕은 물을 알리는_1840__wikidata-Q96621110.jpg",
+          "highResImage": "data/images/artist-romantic-turner/터너_얕은 물을 알리는_1840__wikidata-Q96621110.jpg",
+          "highResOriginal": "data/images/artist-romantic-turner/터너_얕은 물을 알리는_1840__wikidata-Q96621110.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-09-02T10:49:54.876Z",
+          "source": "다운로드용/J.M.W._Turner's_Rockets_and_Blue_Lights_(Close_at_Hand)_to_Warn_Steamboats_of_Shoal_Water.jpg",
+          "metadata": {
+            "createdAt": "2026-09-02T10:49:54.876Z",
+            "updatedAt": "2026-09-02T10:49:54.876Z",
+            "createdBy": "local-download-folder-registration",
+            "updatedBy": "local-download-folder-registration"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-romantic-turner/터너_얕은 물을 알리는_1840__wikidata-Q96621110.jpg",
+              "highResolution": "data/images/artist-romantic-turner/터너_얕은 물을 알리는_1840__wikidata-Q96621110.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:J.M.W._Turner%27s_Rockets_and_Blue_Lights_(Close_at_Hand)_to_Warn_Steamboats_of_Shoal_Water.jpg",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/File:J.M.W._Turner%27s_Rockets_and_Blue_Lights_(Close_at_Hand)_to_Warn_Steamboats_of_Shoal_Water.jpg"
+              ],
+              "license": "Public domain",
+              "institution": "Clark Art Institute, Williamstown"
+            }
+          },
+          "imageOwnershipVerification": {
+            "status": "pending"
+          }
+        },
+        {
+          "country": {
+            "ko": "영국",
+            "en": "British"
+          },
+          "movement": {
+            "ko": "낭만주의",
+            "en": "Romanticism"
+          },
+          "medium": {
+            "ko": "캔버스에 유채",
+            "en": "Oil on canvas"
+          },
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "origin": "manual",
+          "id": "wikidata-Q28539779",
+          "year": 1845,
+          "yearLabel": "c. 1845",
+          "popularity": 40,
+          "title": {
+            "ko": "노럼 성, 일출",
+            "en": "Norham Castle, Sunrise"
+          },
+          "description": {
+            "ko": "성곽과 강변 풍경을 거의 빛의 막처럼 풀어내어, 후기 터너의 형태 해체와 색채 실험을 보여 주는 작품.",
+            "en": "Castle and river dissolve into a veil of light, showing Turner's late dissolution of form into colour."
+          },
+          "institution": {
+            "ko": "테이트 브리튼, 런던",
+            "en": "Tate Britain, London"
+          },
+          "image": "data/images/artist-romantic-turner/터너_노럼 성, 일출_1845__wikidata-Q28539779.jpg",
+          "thumbnail": "data/images/artist-romantic-turner/터너_노럼 성, 일출_1845__wikidata-Q28539779.jpg",
+          "highRes": "data/images/artist-romantic-turner/터너_노럼 성, 일출_1845__wikidata-Q28539779.jpg",
+          "highResImage": "data/images/artist-romantic-turner/터너_노럼 성, 일출_1845__wikidata-Q28539779.jpg",
+          "highResOriginal": "data/images/artist-romantic-turner/터너_노럼 성, 일출_1845__wikidata-Q28539779.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-09-02T10:49:54.876Z",
+          "source": "다운로드용/Joseph_Mallord_William_Turner_-_Norham_Castle,_Sunrise_-_WGA23182.jpg",
+          "metadata": {
+            "createdAt": "2026-09-02T10:49:54.876Z",
+            "updatedAt": "2026-09-02T10:49:54.876Z",
+            "createdBy": "local-download-folder-registration",
+            "updatedBy": "local-download-folder-registration"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-romantic-turner/터너_노럼 성, 일출_1845__wikidata-Q28539779.jpg",
+              "highResolution": "data/images/artist-romantic-turner/터너_노럼 성, 일출_1845__wikidata-Q28539779.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Joseph_Mallord_William_Turner_-_Norham_Castle,_Sunrise_-_WGA23182.jpg",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/File:Joseph_Mallord_William_Turner_-_Norham_Castle,_Sunrise_-_WGA23182.jpg"
+              ],
+              "license": "Public domain",
+              "institution": "Tate Britain, London"
+            }
+          },
+          "imageOwnershipVerification": {
+            "status": "pending"
+          }
+        },
+        {
+          "country": {
+            "ko": "영국",
+            "en": "British"
+          },
+          "movement": {
+            "ko": "낭만주의",
+            "en": "Romanticism"
+          },
+          "medium": {
+            "ko": "캔버스에 유채",
+            "en": "Oil on canvas"
+          },
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "origin": "manual",
+          "id": "turner-the-wreck-buoy",
+          "year": 1849,
+          "yearLabel": "c. 1849",
+          "popularity": 40,
+          "title": {
+            "ko": "난파 부표",
+            "en": "The Wreck Buoy"
+          },
+          "description": {
+            "ko": "부표와 배, 빛나는 수평선을 느슨한 색면으로 엮어, 터너 말년의 해상 풍경과 대기 표현을 보여 준다.",
+            "en": "Buoys, boats, and a luminous horizon are bound together by loose late handling of marine atmosphere."
+          },
+          "institution": {
+            "ko": "서들리 하우스, 리버풀",
+            "en": "Sudley House, Liverpool"
+          },
+          "image": "data/images/artist-romantic-turner/터너_난파 부표_1849__turner-the-wreck-buoy.jpg",
+          "thumbnail": "data/images/artist-romantic-turner/터너_난파 부표_1849__turner-the-wreck-buoy.jpg",
+          "highRes": "data/images/artist-romantic-turner/터너_난파 부표_1849__turner-the-wreck-buoy.jpg",
+          "highResImage": "data/images/artist-romantic-turner/터너_난파 부표_1849__turner-the-wreck-buoy.jpg",
+          "highResOriginal": "data/images/artist-romantic-turner/터너_난파 부표_1849__turner-the-wreck-buoy.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-09-02T10:49:54.876Z",
+          "source": "다운로드용/Turner_-_The_Wreck_Buoy,_c.1849,_WAG_310.jpg",
+          "metadata": {
+            "createdAt": "2026-09-02T10:49:54.876Z",
+            "updatedAt": "2026-09-02T10:49:54.876Z",
+            "createdBy": "local-download-folder-registration",
+            "updatedBy": "local-download-folder-registration"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-romantic-turner/터너_난파 부표_1849__turner-the-wreck-buoy.jpg",
+              "highResolution": "data/images/artist-romantic-turner/터너_난파 부표_1849__turner-the-wreck-buoy.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Turner_-_The_Wreck_Buoy,_c.1849,_WAG_310.jpg",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/File:Turner_-_The_Wreck_Buoy,_c.1849,_WAG_310.jpg"
+              ],
+              "license": "Public domain",
+              "institution": "Sudley House, Liverpool"
+            }
+          },
+          "imageOwnershipVerification": {
+            "status": "pending"
+          }
+        },
+        {
+          "country": {
+            "ko": "영국",
+            "en": "British"
+          },
+          "movement": {
+            "ko": "낭만주의",
+            "en": "Romanticism"
+          },
+          "medium": {
+            "ko": "캔버스에 유채",
+            "en": "Oil on canvas"
+          },
+          "verified": true,
+          "representative": false,
+          "movementContribution": false,
+          "origin": "manual",
+          "id": "turner-departure-of-the-fleet",
+          "year": 1850,
+          "popularity": 40,
+          "title": {
+            "ko": "함대의 출항",
+            "en": "The Departure of the Fleet"
+          },
+          "description": {
+            "ko": "고전 신화의 항해 장면을 흐릿한 빛과 항구 분위기 속에 놓아, 터너 말년의 역사화와 풍경화가 만나는 지점을 보여 준다.",
+            "en": "A mythic departure is set in hazy harbour light, where late history painting and landscape converge."
+          },
+          "institution": {
+            "ko": "테이트 브리튼, 런던",
+            "en": "Tate Britain, London"
+          },
+          "image": "data/images/artist-romantic-turner/터너_함대의 출항_1850__turner-departure-of-the-fleet.jpg",
+          "thumbnail": "data/images/artist-romantic-turner/터너_함대의 출항_1850__turner-departure-of-the-fleet.jpg",
+          "highRes": "data/images/artist-romantic-turner/터너_함대의 출항_1850__turner-departure-of-the-fleet.jpg",
+          "highResImage": "data/images/artist-romantic-turner/터너_함대의 출항_1850__turner-departure-of-the-fleet.jpg",
+          "highResOriginal": "data/images/artist-romantic-turner/터너_함대의 출항_1850__turner-departure-of-the-fleet.jpg",
+          "imageUploadStatus": "ready",
+          "thumbnailValidation": 2,
+          "thumbnailCacheKey": "2026-09-02T10:49:54.876Z",
+          "source": "다운로드용/Joseph_Mallord_William_Turner_(1775-1851)_-_The_Departure_of_the_Fleet_-_N00554_-_National_Gallery.jpg",
+          "metadata": {
+            "createdAt": "2026-09-02T10:49:54.876Z",
+            "updatedAt": "2026-09-02T10:49:54.876Z",
+            "createdBy": "local-download-folder-registration",
+            "updatedBy": "local-download-folder-registration"
+          },
+          "migration": {
+            "schema": 1,
+            "image": {
+              "status": "ready",
+              "localThumbnail": "data/images/artist-romantic-turner/터너_함대의 출항_1850__turner-departure-of-the-fleet.jpg",
+              "highResolution": "data/images/artist-romantic-turner/터너_함대의 출항_1850__turner-departure-of-the-fleet.jpg",
+              "sourceUrl": "https://commons.wikimedia.org/wiki/File:Joseph_Mallord_William_Turner_(1775-1851)_-_The_Departure_of_the_Fleet_-_N00554_-_National_Gallery.jpg",
+              "sourceUrls": [
+                "https://commons.wikimedia.org/wiki/File:Joseph_Mallord_William_Turner_(1775-1851)_-_The_Departure_of_the_Fleet_-_N00554_-_National_Gallery.jpg"
+              ],
+              "license": "Public domain",
+              "institution": "Tate Britain, London"
+            }
+          },
+          "imageOwnershipVerification": {
+            "status": "pending"
+          }
         }
       ],
       "featuredWorkIds": [
@@ -107308,14 +108400,15 @@
       "activeTo": 1851,
       "metadata": {
         "createdAt": "2026-08-25T10:02:06.175Z",
-        "updatedAt": "2026-09-02T10:42:53.454Z",
+        "updatedAt": "2026-09-02T11:17:24.107Z",
         "createdBy": "jhlee409@gmail.com",
         "updatedBy": "jhlee409@gmail.com"
       },
       "listName": {
         "ko": "터너"
       },
-      "artistSummaryUpdatedAt": "2026-09-02T10:42:53.454Z"
+      "artistSummaryUpdatedAt": "2026-09-02T11:17:24.107Z",
+      "qid": "Q159758"
     },
     {
       "id": "artist-romantic-constable",

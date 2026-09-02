@@ -6,6 +6,7 @@ const { isIP } = require('node:net');
 const MAX_REDIRECTS = 5;
 const MAX_SOURCE_BYTES = 8 * 1024 * 1024;
 const MAX_SOURCE_CHARS = 80000;
+const MAX_TRANSFORM_SOURCE_CHARS = 120000;
 const MAX_NEW_SOURCES = 5;
 const RESEARCH_VERSION = 3;
 const CONFIRMATION_TTL_MS = 15 * 60 * 1000;
@@ -270,6 +271,73 @@ async function createChronology(artist, sources, existingLines) {
   return {events,usage:{model,inputTokens:Number(usage.input_tokens) || 0,outputTokens:Number(usage.output_tokens) || 0,totalTokens:Number(usage.total_tokens) || 0,webSearchCalls,estimatedUsd}};
 }
 
+function artistTransformSources(artist) {
+  const links = Array.isArray(artist?.links) ? artist.links.map(link => typeof link==='string' ? {url:link} : link).filter(link => String(link?.url || '').trim()) : [];
+  const sources = [], failures = [];
+  let remaining = MAX_TRANSFORM_SOURCE_CHARS;
+  for (const link of links) {
+    try {
+      const source = savedTranscriptSource(link);
+      if(!source || remaining <= 0) continue;
+      const text = source.text.slice(0, Math.min(source.text.length, 30000, remaining));
+      remaining -= text.length;
+      sources.push({...source,text});
+    } catch (error) {
+      if(String(link?.transcript || '').trim()) failures.push({url:link.url,error:error.message});
+    }
+  }
+  const savedCount = links.filter(link => String(link?.transcript || '').trim()).length;
+  return {sources,failures,skippedCount:Math.max(0,savedCount-sources.length-failures.length)};
+}
+
+function cleanTransformedSummaryLines(lines) {
+  return [...new Set((Array.isArray(lines) ? lines : []).map(line => String(line || '')
+    .replace(/!\[([^\]\n]*)\]\(https?:\/\/[^)\s]+\)/gi,'$1')
+    .replace(/https?:\/\/\S+\.(?:jpe?g|png|gif|webp)(?:\?\S*)?/gi,'')
+    .replace(/\r\n?/g,'\n')
+    .replace(/[ \t]+/g,' ')
+    .trim()).filter(Boolean))].slice(0,160);
+}
+
+async function transformArtistSummary(artist) {
+  const apiKey = String(process.env.OPENAI_API_KEY || '').trim();
+  if (!apiKey) throw new Error('변환 기능을 사용하려면 .env에 OPENAI_API_KEY를 설정해야 합니다.');
+  const currentSummary = artist?.artistSummary && typeof artist.artistSummary==='object' && !Array.isArray(artist.artistSummary) ? artist.artistSummary : {};
+  const existingLines = Array.isArray(currentSummary.ko) ? currentSummary.ko.map(String).filter(Boolean) : [];
+  const {sources,failures,skippedCount} = artistTransformSources(artist);
+  if(!existingLines.length && !sources.length) return {noChanges:true,message:'변환할 해설이나 저장된 유튜브 스크립트가 없습니다.'};
+  const model = String(process.env.ART_ATLAS_SUMMARY_MODEL || 'gpt-5-mini').trim();
+  const artistName = artist.name?.ko || artist.name?.en || artist.fullName || artist.id;
+  const localWorks = (Array.isArray(artist.works) ? artist.works : []).slice(0,160).map(work => ({
+    titleKo:String(work.title?.ko || ''), titleEn:String(work.title?.en || ''), titleOriginal:String(work.title?.original || work.title?.native || ''),
+    year:Number.isFinite(Number(work.year)) ? Number(work.year) : null
+  })).filter(work => work.titleKo || work.titleEn || work.titleOriginal);
+  const system = `당신은 미술사 학습 앱의 화가 해설 편집자다. ${artistName}의 기존 해설과 사용자가 저장한 유튜브 스크립트만 사용해 읽기 좋은 한국어 문서형 해설로 정리한다. 외부 지식, 추측, 웹 검색, 자료에 없는 작품·연도·인과관계를 절대 추가하지 않는다. 기존 해설에 이미 있는 변환된 내용은 삭제하지 말고 의미가 같은 내용만 중복을 합쳐 문맥에 맞게 재배치한다. 새 스크립트의 내용은 기존 해설을 보강하거나 알맞은 위치에 추가한다. 서로 충돌하는 내용은 단정적으로 교체하지 말고 [확인 필요] 문장으로 남긴다. 최종 출력은 일반 텍스트 줄 배열이어야 하며 원본 HTML 태그를 쓰지 않는다. 허용되는 표식은 #/##/### 제목, > 인용, **굵게**, 마크다운 표, 《작품명》(연도)뿐이다. 이미지 URL이나 ![이미지](URL)는 최종 출력에 넣지 않는다. 이미지 자료가 작품을 가리키면 확인 가능한 작품명과 연도만 텍스트로 남기고, 확인할 수 없으면 생략한다. 작품명은 가능하면 프로젝트 작품 목록의 제목과 연도에 맞춘다.`;
+  const input = {
+    artist:{name:artistName,birth:Number.isFinite(Number(artist.birth)) ? Number(artist.birth) : null,death:Number.isFinite(Number(artist.death)) ? Number(artist.death) : null},
+    existingSummary:existingLines,
+    savedYoutubeTranscripts:sources.map((source,index)=>({sourceIndex:index+1,title:source.title,url:source.url,text:source.text})),
+    projectArtworkCatalog:localWorks
+  };
+  const schema = {type:'object',additionalProperties:false,required:['lines'],properties:{lines:{type:'array',minItems:1,maxItems:160,items:{type:'string',minLength:1,maxLength:1200}}}};
+  const response = await fetch('https://api.openai.com/v1/responses', {
+    method:'POST',signal:AbortSignal.timeout(120000),headers:{Authorization:`Bearer ${apiKey}`,'Content-Type':'application/json'},
+    body:JSON.stringify({model,store:false,input:[{role:'system',content:[{type:'input_text',text:system}]},{role:'user',content:[{type:'input_text',text:JSON.stringify(input)}]}],text:{format:{type:'json_schema',name:'artist_summary_transform',strict:true,schema}},max_output_tokens:12000})
+  });
+  const payload = await response.json().catch(() => ({}));
+  if (!response.ok) throw new Error(`OpenAI 변환 요청 실패: ${payload?.error?.message || `HTTP ${response.status}`}`);
+  let result;
+  try { result = JSON.parse(responseOutputText(payload)); } catch (_) { throw new Error('OpenAI가 반환한 변환 결과를 읽지 못했습니다.'); }
+  const lines = cleanTransformedSummaryLines(result?.lines);
+  if(!lines.length) return {noChanges:true,message:'변환 결과에 저장할 해설이 없습니다.',failures,skippedCount};
+  const usage = payload.usage || {};
+  const webSearchCalls = (payload.output || []).filter(item => item.type === 'web_search_call').length;
+  const estimatedUsd = /^gpt-5-mini(?:-|$)/.test(model)
+    ? ((Number(usage.input_tokens) || 0) * 0.25 + (Number(usage.output_tokens) || 0) * 2) / 1000000 + webSearchCalls * 0.01
+    : null;
+  return {artistSummary:{...currentSummary,ko:lines},artistSummaryUpdatedAt:String(artist.artistSummaryUpdatedAt || artist.metadata?.updatedAt || ''),sourceCount:sources.length,failures,skippedCount,usage:{model,inputTokens:Number(usage.input_tokens) || 0,outputTokens:Number(usage.output_tokens) || 0,totalTokens:Number(usage.total_tokens) || 0,webSearchCalls,estimatedUsd}};
+}
+
 function normalizedLine(value) { return String(value || '').toLowerCase().replace(/\([^)]*출처[^)]*\)\s*$/, '').replace(/[^\p{L}\p{N}]+/gu, ''); }
 function summaryContentKey(value) {
   return normalizedLine(String(value || '').replace(/^\s*(?:\d{3,4}년(?:\s*\([^)]*세\))?|\[확인 필요\])\s*·?\s*/, '').replace(/^\s*\[[^\]]+\]\s*/, ''));
@@ -373,7 +441,7 @@ module.exports = function createArtistResearchService() {
     }
     return finalizeResearchDraft(artist,draft,[]);
   }
-  return {researchArtistSummary};
+  return {researchArtistSummary,transformArtistSummary};
 };
 
 module.exports.sourceKey = sourceKey;
@@ -385,3 +453,6 @@ module.exports.readableBlogUrl = readableBlogUrl;
 module.exports.cleanManualSummaryLines = cleanManualSummaryLines;
 module.exports.chronologySort = chronologySort;
 module.exports.finalizeResearchDraft = finalizeResearchDraft;
+module.exports.transformArtistSummary = transformArtistSummary;
+module.exports.artistTransformSources = artistTransformSources;
+module.exports.cleanTransformedSummaryLines = cleanTransformedSummaryLines;

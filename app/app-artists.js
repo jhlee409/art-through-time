@@ -116,6 +116,23 @@ function artistSummaryArtworkSource(work) {
   const highResolution=work?.highResImage && !isExternalImageSource(work.highResImage) ? work.highResImage : '';
   return highResolution || artworkImageDisplay(work,{detail:true}).src || '';
 }
+function artistSummaryInlineMarkup(text) {
+  const source=String(text || '');
+  const tokenPattern=/\[([^\]\n]{1,140})\]\((https?:\/\/[^\s)]+)\)|\[([^\]\n]{1,140})\]\[(\d{1,3})\]|\*\*([^*\n]{1,260})\*\*|__([^_\n]{1,260})__|\*([^*\n]{1,260})\*\*/g;
+  let cursor=0, markup='';
+  for(const match of source.matchAll(tokenPattern)) {
+    markup+=esc(source.slice(cursor,match.index));
+    if(match[1] && match[2]) {
+      markup+=`<a class="artist-summary-source-link" href="${esc(match[2])}" target="_blank" rel="noopener noreferrer">${esc(match[1])}</a>`;
+    } else if(match[3] && match[4]) {
+      markup+=`<span class="artist-summary-citation">${esc(match[3])}<sup>${esc(match[4])}</sup></span>`;
+    } else {
+      markup+=`<strong>${esc(match[5] || match[6] || match[7] || '')}</strong>`;
+    }
+    cursor=match.index+match[0].length;
+  }
+  return markup+esc(source.slice(cursor));
+}
 function artistSummaryLineMarkup(line, artist) {
   const text=String(line || ''), works=Array.isArray(artist?.works)?artist.works:[], titleRecords=[];
   works.forEach(work=>{
@@ -139,24 +156,96 @@ function artistSummaryLineMarkup(line, artist) {
     let start=lower.indexOf(needle);
     while(start>=0) { addRange(start,start+record.title.length,record.work); start=lower.indexOf(needle,start+needle.length); }
   });
-  if(!ranges.length) return esc(text);
+  if(!ranges.length) return artistSummaryInlineMarkup(text);
   ranges.sort((left,right)=>left.start-right.start);
   let cursor=0, markup='';
   ranges.forEach(range=>{
-    markup+=esc(text.slice(cursor,range.start));
+    markup+=artistSummaryInlineMarkup(text.slice(cursor,range.start));
     markup+=`<button class="artist-summary-work-link" type="button" data-summary-work="${esc(range.work.id)}" title="${esc(language==='ko'?'이 작품으로 이동':'Go to this artwork')}">${esc(text.slice(range.start,range.end))}</button>`;
     cursor=range.end;
   });
-  return markup+esc(text.slice(cursor));
+  return markup+artistSummaryInlineMarkup(text.slice(cursor));
+}
+function artistSummaryLineView(line, artist) {
+  const raw=String(line || '').trim();
+  const imageMatch=raw.match(/^!\[([^\]\n]*)\]\(([^)\s]+)\)\s*$/);
+  if(imageMatch) {
+    const imageLabel=imageMatch[1] || (language==='ko'?'해설 이미지':'Note image');
+    const source=imageMatch[2] || '';
+    if(source && !isExternalImageSource(source)) {
+      return {className:'artist-summary-item artist-summary-image-item', html:`<figure><img src="${esc(source)}" alt="${esc(imageLabel)}"><figcaption>${esc(imageLabel)}</figcaption></figure>`};
+    }
+    return {className:'artist-summary-item artist-summary-image-placeholder', html:`<span>${esc(language==='ko'?'이미지 업로드 예정':'Image upload pending')}</span>`};
+  }
+  const referenceMatch=raw.match(/^\[(\d+)\]:\s*(https?:\/\/\S+)\s*$/);
+  if(referenceMatch) {
+    return {className:'artist-summary-item artist-summary-reference', html:`<span>${esc(referenceMatch[1])}</span><a class="artist-summary-source-link" href="${esc(referenceMatch[2])}" target="_blank" rel="noopener noreferrer">${esc(referenceMatch[2])}</a>`};
+  }
+  const headingMatch=raw.match(/^(#{1,4})\s+(.+)$/);
+  if(headingMatch) {
+    return {className:'artist-summary-item artist-summary-section-title', html:artistSummaryLineMarkup(headingMatch[2],artist)};
+  }
+  if(/^--+$/.test(raw)) {
+    return {className:'artist-summary-item artist-summary-divider', html:''};
+  }
+  const quoteMatch=raw.match(/^>\s*(.+)$/);
+  if(quoteMatch) {
+    return {className:'artist-summary-item artist-summary-quote', html:artistSummaryLineMarkup(quoteMatch[1],artist)};
+  }
+  const numberedMatch=raw.match(/^(\d+)[.)]\s+(.+)$/);
+  if(numberedMatch) {
+    return {className:'artist-summary-item artist-summary-numbered', html:`<span>${esc(numberedMatch[1])}</span><p>${artistSummaryLineMarkup(numberedMatch[2],artist)}</p>`};
+  }
+  const bracketLabelMatch=raw.match(/^(\d{3,4}년(?:\s*\([^)]+\))?)\s*[·:]\s*(.+)$/);
+  if(bracketLabelMatch) {
+    return {className:'artist-summary-item artist-summary-chronology', html:`<time>${esc(bracketLabelMatch[1])}</time><p>${artistSummaryLineMarkup(bracketLabelMatch[2],artist)}</p>`};
+  }
+  return {className:'artist-summary-item artist-summary-prose', html:artistSummaryLineMarkup(raw,artist)};
+}
+function artistSummaryTableCells(line) {
+  const text=String(line || '').trim();
+  if(!text.startsWith('|') || !text.endsWith('|')) return null;
+  return text.slice(1,-1).split('|').map(cell=>cell.trim());
+}
+function artistSummaryTableSeparator(cells) {
+  return Array.isArray(cells) && cells.length && cells.every(cell=>/^:?-{3,}:?$/.test(cell));
+}
+function artistSummaryTableMarkup(lines, artist) {
+  const rows=lines.map(artistSummaryTableCells).filter(Boolean);
+  const header=rows[0] || [];
+  const bodyRows=rows.slice(1).filter(row=>!artistSummaryTableSeparator(row));
+  const thead=header.length ? `<thead><tr>${header.map(cell=>`<th>${artistSummaryLineMarkup(cell,artist)}</th>`).join('')}</tr></thead>` : '';
+  const tbody=`<tbody>${bodyRows.map(row=>`<tr>${row.map(cell=>`<td>${artistSummaryLineMarkup(cell,artist)}</td>`).join('')}</tr>`).join('')}</tbody>`;
+  return `<div class="artist-summary-item artist-summary-table"><table>${thead}${tbody}</table></div>`;
+}
+function artistSummaryLinesMarkup(lines, artist) {
+  let markup='';
+  for(let index=0;index<lines.length;index+=1) {
+    const raw=String(lines[index] || '').trim();
+    const cells=artistSummaryTableCells(raw);
+    const nextCells=artistSummaryTableCells(lines[index+1]);
+    if(cells && nextCells && artistSummaryTableSeparator(nextCells)) {
+      const tableLines=[raw,lines[index+1]];
+      index+=2;
+      while(index<lines.length && artistSummaryTableCells(lines[index])) {
+        tableLines.push(lines[index]);
+        index+=1;
+      }
+      index-=1;
+      markup+=artistSummaryTableMarkup(tableLines,artist);
+      continue;
+    }
+    const view=artistSummaryLineView(raw,artist);
+    markup+=`<div class="${view.className}">${view.html}</div>`;
+  }
+  return markup;
 }
 
 function refreshArtistSummaryArtworkLinks(box, artist) {
   const list=box?.querySelector('.artist-summary-lines');
   if(!list) return;
   const lines=localizedLines(artist?.artistSummary);
-  [...list.children].forEach((item,index)=>{
-    item.innerHTML=artistSummaryLineMarkup(lines[index] || '',artist);
-  });
+  list.innerHTML=artistSummaryLinesMarkup(lines,artist);
 }
 
 function openArtistSummaryArtworkPreview(work) {
@@ -300,7 +389,7 @@ function setupArtistSummaryEditor(artist) {
   const editor = box.querySelector('.artist-summary-editor');
   const textarea = editor?.querySelector('textarea');
   const editButton = box.querySelector('.artist-summary-edit-button');
-  const updateButton = box.querySelector('.artist-summary-update-button');
+  const transformButton = box.querySelector('.artist-summary-transform-button');
   const transcriptButton = box.querySelector('.artist-summary-transcript-button');
   const cancelButton = box.querySelector('.artist-summary-cancel');
   if (!read || !editor || !textarea || !editButton || !cancelButton) return;
@@ -310,70 +399,53 @@ function setupArtistSummaryEditor(artist) {
     editButton.classList.toggle('hidden', show);
     expandButton?.classList.toggle('hidden', show);
     transcriptButton?.classList.toggle('hidden', show);
-    updateButton?.classList.toggle('hidden', show);
+    transformButton?.classList.toggle('hidden', show);
     if (show) textarea.focus();
   };
   editButton.addEventListener('click', () => showEditor(true));
   transcriptButton?.addEventListener('click',()=>openArtistTranscriptDialog(artist));
-  updateButton?.addEventListener('click', async () => {
+  transformButton?.addEventListener('click', async () => {
     const consentMessage = language === 'ko'
-      ? '새 링크 또는 저장 스크립트의 텍스트와 현재 화가 해설을 연표로 정리하기 위해 OpenAI API로 전송합니다. 계속할까요?'
-      : 'Text from new links or saved transcripts and the current artist notes will be sent to the OpenAI API to build the chronology. Continue?';
+      ? '현재 저장된 해설과 유튜브 스크립트를 OpenAI API로 보내 문서형 해설로 변환합니다. 변환 결과는 바로 저장하지 않고 편집창에서 확인합니다. 계속할까요?'
+      : 'Current artist notes and saved YouTube transcripts will be sent to the OpenAI API and converted into formatted notes. The result will open in the editor before saving. Continue?';
     if (!confirm(consentMessage)) return;
-    const originalLabel = updateButton.textContent;
-    updateButton.disabled = true;
+    const originalLabel = transformButton.textContent;
+    transformButton.disabled = true;
     editButton.disabled = true;
     if(transcriptButton) transcriptButton.disabled = true;
-    updateButton.textContent = language === 'ko' ? '정리 중…' : 'Updating…';
-    updateButton.setAttribute('aria-busy', 'true');
+    transformButton.textContent = language === 'ko' ? '변환 중…' : 'Converting…';
+    transformButton.setAttribute('aria-busy', 'true');
     try {
-      const requestUpdate=async payload=>{
-        const response=await apiFetch('/api/artist-summary-update',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({artistId:artist.id,consent:true,...payload})});
-        const result=await response.json().catch(()=>({}));
-        if(response.status===401) throw new Error(language==='ko'?'관리자 세션이 만료되었습니다. 새로고침 후 다시 로그인해 주세요.':'Administrator session expired. Refresh and sign in again.');
-        if(!response.ok || !result.ok) throw new Error(result.error || `HTTP ${response.status}`);
-        return result;
-      };
-      let result=await requestUpdate({});
-      if(result.needsConfirmation) {
-        const decisions=(result.contradictions || []).map((conflict,index)=>{
-          const message=language==='ko'
-            ? `모순 가능성이 있는 내용 ${index+1}/${result.contradictions.length}\n\n기존 해설:\n${conflict.existingText}\n\n새 자료:\n${conflict.newText}\n\n[확인] 새 자료로 교체\n[취소] 기존 해설 유지`
-            : `Possible contradiction ${index+1}/${result.contradictions.length}\n\nExisting note:\n${conflict.existingText}\n\nNew source:\n${conflict.newText}\n\nOK: replace with new source\nCancel: keep existing note`;
-          return confirm(message)?'replace':'keep';
-        });
-        result=await requestUpdate({confirmationToken:result.confirmationToken,decisions});
-      }
+      const response=await apiFetch('/api/artist-summary-transform',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({artistId:artist.id,consent:true})});
+      const result=await response.json().catch(()=>({}));
+      if(response.status===401) throw new Error(language==='ko'?'관리자 세션이 만료되었습니다. 새로고침 후 다시 로그인해 주세요.':'Administrator session expired. Refresh and sign in again.');
+      if(!response.ok || !result.ok) throw new Error(result.error || `HTTP ${response.status}`);
       if (result.noChanges) {
-        alert(language === 'ko' ? '추가할 자료가 없습니다.' : 'There is no new material to add.');
+        alert(result.message || (language === 'ko' ? '변환할 자료가 없습니다.' : 'There is no material to convert.'));
         return;
       }
-      if (result.artist) Object.assign(artist, result.artist);
-      if (Number.isInteger(result.revision)) collectionMetadata = {...collectionMetadata,revision:result.revision};
+      textarea.value = artistSummaryEditorText(result.artistSummary);
       const failureDetails = (result.failures || []).slice(0, 3).map(item => `\n- ${item.error}`).join('');
       const failureNotice = result.failures?.length
-        ? `\n${language === 'ko' ? `읽지 못한 링크 ${result.failures.length}개가 있습니다.` : `${result.failures.length} link(s) could not be read.`}${failureDetails}`
+        ? `\n${language === 'ko' ? `사용하지 못한 스크립트 ${result.failures.length}개가 있습니다.` : `${result.failures.length} transcript(s) could not be used.`}${failureDetails}`
         : '';
-      const remainingNotice = result.remainingCount
-        ? `\n${language === 'ko' ? `남은 새 링크 ${result.remainingCount}개는 업데이트를 다시 눌러 처리합니다.` : `${result.remainingCount} new link(s) remain; press Update again.`}`
+      const skippedNotice = result.skippedCount
+        ? `\n${language === 'ko' ? `입력 한도 때문에 스크립트 ${result.skippedCount}개는 이번 변환에서 제외했습니다.` : `${result.skippedCount} transcript(s) were skipped because of the input limit.`}`
         : '';
       const usage = result.usage || {};
       const usageNotice = usage.totalTokens
         ? `\n${language === 'ko' ? `사용량: 입력 ${Number(usage.inputTokens || 0).toLocaleString()} · 출력 ${Number(usage.outputTokens || 0).toLocaleString()} · 합계 ${Number(usage.totalTokens).toLocaleString()} 토큰${Number.isFinite(usage.estimatedUsd) ? ` · 예상 $${Number(usage.estimatedUsd).toFixed(4)}` : ''}` : `Usage: ${Number(usage.totalTokens).toLocaleString()} tokens${Number.isFinite(usage.estimatedUsd) ? ` · est. $${Number(usage.estimatedUsd).toFixed(4)}` : ''}`}`
         : '';
-      const updateMessage=Number(result.addedCount || 0)>0
-        ? (language === 'ko' ? `새 자료 ${result.sourceCount || 0}개에서 해설 ${result.addedCount || 0}개를 정리했습니다.` : `Added ${result.addedCount || 0} notes from ${result.sourceCount || 0} new sources.`)
-        : (language === 'ko' ? '추가할 자료가 없습니다.' : 'There is no new material to add.');
-      alert(`${updateMessage}${usageNotice}${failureNotice}${remainingNotice}`);
-      renderTimeline();
+      showEditor(true);
+      alert(`${language === 'ko' ? `변환 결과를 편집창에 열었습니다. 확인한 뒤 저장을 눌러 반영하세요. 사용한 스크립트: ${result.sourceCount || 0}개` : `Converted notes opened in the editor. Review and press Save to apply. Transcripts used: ${result.sourceCount || 0}`}${usageNotice}${failureNotice}${skippedNotice}`);
     } catch (error) {
-      alert(`${language === 'ko' ? '화가 해설 업데이트 실패: ' : 'Artist notes update failed: '}${error.message}`);
+      alert(`${language === 'ko' ? '화가 해설 변환 실패: ' : 'Artist notes conversion failed: '}${error.message}`);
     } finally {
-      updateButton.disabled = false;
+      transformButton.disabled = false;
       editButton.disabled = false;
       if(transcriptButton) transcriptButton.disabled = false;
-      updateButton.textContent = originalLabel;
-      updateButton.removeAttribute('aria-busy');
+      transformButton.textContent = originalLabel;
+      transformButton.removeAttribute('aria-busy');
     }
   });
   cancelButton.addEventListener('click', () => {
@@ -799,8 +871,8 @@ function renderTimeline() {
     const summaryLines = localizedLines(artist.artistSummary);
     const summaryTitle = language === 'ko' ? '화가 해설' : 'Artist Notes';
     const summaryEditLabel = language === 'ko' ? '편집' : 'Edit';
-    const summaryUpdateLabel = language === 'ko' ? '업데이트' : 'Update';
-    const transcriptLabel = language === 'ko' ? '스크립트' : 'Transcript';
+    const summaryTransformLabel = language === 'ko' ? '변환' : 'Convert';
+    const transcriptLabel = language === 'ko' ? '스크립트 입력' : 'Transcript';
     const summarySaveLabel = language === 'ko' ? '저장' : 'Save';
     const summaryCancelLabel = language === 'ko' ? '취소' : 'Cancel';
     const summaryHelp = language === 'ko' ? '항목 수 제한 없이 입력할 수 있습니다. Enter를 누르면 새 불릿이 생기고, 빈 항목은 저장할 때 제거됩니다.' : 'Add as many items as needed. Press Enter to add a new bullet; blank items are removed when saved.';
@@ -809,12 +881,12 @@ function renderTimeline() {
       : 'Describe subjects, techniques, influences, reception, and later impact.';
     const summaryExpanded=expandedArtistSummaryIds.has(artist.id);
     const summaryBody = summaryLines.length
-      ? `<ul class="artist-summary-lines${summaryExpanded?' expanded':''}">${summaryLines.map(line => `<li>${artistSummaryLineMarkup(line,artist)}</li>`).join('')}</ul>`
+      ? `<div class="artist-summary-lines${summaryExpanded?' expanded':''}">${artistSummaryLinesMarkup(summaryLines,artist)}</div>`
       : `<p class="artist-summary-empty">${esc(language === 'ko' ? '아직 화가 해설이 없습니다.' : 'No artist notes yet.')}</p>`;
     const youtubeLinks=savedLinks.filter(isYouTubeLink), savedTranscriptCount=youtubeLinks.filter(link=>String(link.transcript || '').trim()).length;
     const transcriptControl=currentUserIsAdmin && youtubeLinks.length ? `<button class="artist-summary-transcript-button" type="button" title="${esc(language==='ko'?`저장된 스크립트 ${savedTranscriptCount}개`:`${savedTranscriptCount} saved transcript(s)`)}">${esc(transcriptLabel)}${savedTranscriptCount?` <span>${savedTranscriptCount}</span>`:''}</button>` : '';
     const expandControl=summaryLines.length>4?`<button class="artist-summary-expand-button" type="button" aria-expanded="${summaryExpanded}" title="${esc(language==='ko'?(summaryExpanded?'해설 접기':'해설 펼치기'):(summaryExpanded?'Collapse notes':'Expand notes'))}">${summaryExpanded?'▴':'▾'}</button>`:'';
-    const summaryBox = `<section class="artist-summary-box"><div class="artist-summary-heading"><p class="eyebrow">${esc(summaryTitle)}</p><div class="artist-summary-actions">${currentUserIsAdmin ? `<button class="artist-summary-edit-button" type="button">${esc(summaryEditLabel)}</button>${transcriptControl}<button class="artist-summary-update-button" type="button" title="${esc(language === 'ko' ? '화가 이름 옆에 새로 추가한 링크와 저장 스크립트를 해설에 반영' : 'Add newly linked sources and saved transcripts to the artist notes')}">${esc(summaryUpdateLabel)}</button>` : ''}${expandControl}</div></div><div class="artist-summary-read">${summaryBody}</div>${currentUserIsAdmin ? `<form class="artist-summary-editor hidden"><textarea rows="6" aria-label="${esc(summaryTitle)}" placeholder="${esc(summaryPlaceholder)}">${esc(artistSummaryEditorText(summaryLines))}</textarea><p>${esc(summaryHelp)}</p><div><button type="button" class="artist-summary-cancel">${esc(summaryCancelLabel)}</button><button type="submit">${esc(summarySaveLabel)}</button></div></form>` : ''}</section>`;
+    const summaryBox = `<section class="artist-summary-box"><div class="artist-summary-heading"><p class="eyebrow">${esc(summaryTitle)}</p><div class="artist-summary-actions">${currentUserIsAdmin ? `<button class="artist-summary-edit-button" type="button">${esc(summaryEditLabel)}</button>${transcriptControl}<button class="artist-summary-transform-button" type="button" title="${esc(language === 'ko' ? '현재 해설과 저장된 유튜브 스크립트를 문서형 해설로 변환' : 'Convert current notes and saved YouTube transcripts into formatted notes')}">${esc(summaryTransformLabel)}</button>` : ''}${expandControl}</div></div><div class="artist-summary-read">${summaryBody}</div>${currentUserIsAdmin ? `<form class="artist-summary-editor hidden"><textarea rows="6" aria-label="${esc(summaryTitle)}" placeholder="${esc(summaryPlaceholder)}">${esc(artistSummaryEditorText(summaryLines))}</textarea><p>${esc(summaryHelp)}</p><div><button type="button" class="artist-summary-cancel">${esc(summaryCancelLabel)}</button><button type="submit">${esc(summarySaveLabel)}</button></div></form>` : ''}</section>`;
     const featured = leonardoFeaturedWorks.length ? `<section class="leonardo-featured"><div class="leonardo-section-heading"><p class="eyebrow">${esc(featuredLabel)}</p><div class="leonardo-section-actions">${slideshowButton('featured', language === 'ko' ? '대표작 슬라이드 쇼 시작' : 'Start highlights slideshow')}</div><p>${esc(language === 'ko' ? '우선 크게 살펴볼 작품입니다. Ⓗ 표시는 고해상도 파일이 있음을 뜻합니다.' : 'A small set of works to study first. Ⓗ marks an available high-resolution file.')}</p></div><div class="leonardo-featured-grid">${leonardoFeaturedWorks.map(work => `<div class="leonardo-featured-card" data-featured-work="${esc(work.id)}"${canDragFeaturedWorks ? ' draggable="true"' : ''}>${card(work)}</div>`).join('')}</div></section>` : '';
     const allWorksAction = `${slideshowButton('all', language === 'ko' ? '전체 작품 슬라이드 쇼 시작' : 'Start all-works slideshow')}${currentUserIsAdmin ? `<button class="add-artwork-button leonardo-section-add-artwork" type="button" title="${esc(t('addArtwork'))}" aria-label="${esc(t('addArtwork'))}"><span>+</span><span>${esc(t('addArtwork'))}</span></button>` : ''}`;
     const layoutDescription = {
