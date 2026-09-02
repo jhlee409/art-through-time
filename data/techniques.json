@@ -1080,6 +1080,62 @@
       ]
     },
     {
+      "id": "foreshortening",
+      "introduced": 1465,
+      "name": {
+        "ko": "단축법",
+        "en": "Foreshortening"
+      },
+      "tags": [
+        "공간·원근",
+        "구도·인체"
+      ],
+      "subtitle": {
+        "ko": "가까운 부분을 크게, 먼 부분을 작게 그려 몸과 공간을 관람자 쪽으로 돌출시키는 표현",
+        "en": "A spatial and figure device that enlarges nearer forms and shortens receding ones toward the viewer"
+      },
+      "definition": {
+        "ko": "단축법(Foreshortening)은 인체나 물체가 관람자를 향하거나 멀어지는 방향으로 놓일 때, 깊이 방향의 길이를 화면에서 짧게 압축해 보이게 하는 표현입니다. 가까운 손·발·몸통은 크게, 멀어지는 부분은 작게 보이므로 평면 위에서도 인물이나 물체가 앞쪽으로 튀어나오거나 뒤로 뻗는 듯한 입체감이 생깁니다.",
+        "en": "Foreshortening is the pictorial compression of a body or object along its direction of depth when it projects toward or recedes away from the viewer. Near hands, feet, or torsos appear larger while receding parts appear smaller, making a figure or object seem to project from or extend into a flat picture plane."
+      },
+      "explanation": {
+        "ko": "단축법은 특정 사조만의 기법이 아니라, 관람자의 위치를 화면 안에 끌어들이는 공간·인체 표현입니다. 르네상스의 원근법 연구와 천장화에서 중요해졌고, 안드레아 만테냐의 만토바 《카메라 델리 스포지》 천장 오쿨루스처럼 아래에서 올려다보는 장면에서 강한 효과를 냈습니다. 17세기 바로크는 이를 훨씬 과감하게 밀어붙여, 인물과 구름이 실제 천장을 뚫고 관람자 쪽으로 내려오는 듯한 환영을 만들었습니다. 18세기 로코코 천장화에서도 티에폴로 등이 가볍게 부유하는 인물군과 열린 하늘을 만들 때 활용했지만, 단축법 자체를 ‘로코코 전용 기법’으로 보기는 어렵습니다. 작품을 볼 때에는 한 인물의 발·팔·말·건축물이 관람자에게 가까워지는 방향으로 크게 왜곡되는지, 그 왜곡이 속도·극적 사건·천장 공간의 개방감을 어떻게 만드는지 살펴보면 됩니다.",
+        "en": "Foreshortening is not exclusive to a single movement; it is a spatial and figurative device that brings the viewer's position into the image. It became important in Renaissance perspective studies and ceiling painting, where works such as Andrea Mantegna's Camera degli Sposi oculus made the view from below especially vivid. Seventeenth-century Baroque art pushed it much further, making figures and clouds appear to break through the real ceiling toward the viewer. Eighteenth-century Rococo ceiling painters, including Tiepolo, also used it for floating groups and open sky, but foreshortening itself is not a Rococo-only technique. When looking at a work, notice whether a foot, arm, horse, or architectural element enlarges as it approaches you, and how that distortion produces speed, drama, or an opened ceiling space."
+      },
+      "examples": [
+        {
+          "artistId": "artist-Q9319",
+          "workId": "tintoretto-miracle-of-the-slave-1548",
+          "year": "1548",
+          "artist": {
+            "ko": "틴토레토",
+            "en": "Jacopo Tintoretto"
+          },
+          "title": {
+            "ko": "《노예의 기적》",
+            "en": "The Miracle of the Slave"
+          },
+          "image": "data/images/artist-Q9319/tintoretto-miracle-of-the-slave-1548.png",
+          "role": {
+            "ko": "르네상스 말기의 극적 확장",
+            "en": "Dramatic expansion in the late Renaissance"
+          },
+          "note": {
+            "ko": "성 마르코가 화면 상단에서 급히 내려오는 모습은 몸을 깊이 방향으로 압축해, 성인이 실제 관람자 공간으로 돌진하는 듯한 속도를 만듭니다. 비대칭으로 흩어진 군상과 함께 단축법이 단순한 정확한 재현이 아니라 사건의 긴장과 운동감을 만드는 장치임을 보여줍니다.",
+            "en": "Saint Mark's rapid descent from the upper field compresses the body along depth, making the saint appear to rush into the viewer's space. Together with the asymmetrically scattered crowd, it shows foreshortening as a device for dramatic tension and movement rather than merely accurate depiction."
+          }
+        }
+      ],
+      "links": [
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/339005"
+        },
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/12435"
+        }
+      ]
+    },
+    {
       "id": "quadratura",
       "introduced": 1610,
       "name": {
