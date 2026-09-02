@@ -10,6 +10,7 @@ const cardStyle = '<style id="art-atlas-movement-card-presentation-style">.movem
 const contentLayoutStyle = '<style id="art-atlas-movement-content-layout-style">body{--art-atlas-document-gutter:clamp(20px,3vw,48px)}header.hero>.wrap,main>section>.wrap{width:100%;max-width:none;margin-left:0;margin-right:0;padding-left:var(--art-atlas-document-gutter);padding-right:var(--art-atlas-document-gutter)}.hero p,.lead{max-width:none}main>section:not(#movement-learning-guide)>.wrap>h2,main>section:not(#movement-learning-guide)>h2{margin:0 0 1.15rem;font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,3.4vw,3.1rem);line-height:1.18}main>section:not(#movement-learning-guide)>.wrap>h3,main>section:not(#movement-learning-guide)>h3,.movement-enhancement .art-atlas-submovement-heading{font-size:clamp(1.3rem,2.25vw,1.75rem);line-height:1.32}.movement-enhancement .art-atlas-submovement-heading{margin-top:2.1rem;margin-bottom:.7rem}.movement-enhancement .art-atlas-submovement-heading+.movement-work-grid{margin-top:0}main>section:not(#movement-learning-guide)>.wrap>h4,main>section:not(#movement-learning-guide)>h4{font-size:1.12rem;line-height:1.42;margin:1.5rem 0 .5rem}main>section:not(#movement-learning-guide)>.wrap>p:not(.work-meta):not(.movement-selection-reason),main>section:not(#movement-learning-guide)>p:not(.work-meta):not(.movement-selection-reason){max-width:none;font-size:1.08rem;line-height:1.8}main>section:not(#movement-learning-guide)>.wrap>p:not(.work-meta):not(.movement-selection-reason)~p,main>section:not(#movement-learning-guide)>p:not(.work-meta):not(.movement-selection-reason)~p{font-size:1rem;line-height:1.75}.table-wrap,main>section>.wrap>table,main>section>table{width:100%;max-width:none}.table-wrap table,main>section>.wrap>table,main>section>table{width:100%}@media(max-width:720px){body{--art-atlas-document-gutter:18px}}</style>';
 const cardImageFitStyle = '<style id="art-atlas-movement-card-image-fit-style">.movement-enhancement .movement-work-image>img{width:90%!important;height:90%!important;max-width:90%!important;max-height:90%!important;object-fit:contain!important}</style>';
 const historyStageImageFitStyle = '<style id="art-atlas-movement-history-stage-image-fit-style">[data-art-atlas-visual-sequence] .history-stage-image,[data-art-atlas-visual-sequence] .movement-work-image{display:flex!important;align-items:center!important;justify-content:center!important;aspect-ratio:4/3!important;overflow:hidden!important;background:var(--black,#000)!important}[data-art-atlas-visual-sequence] .history-stage-image>img,[data-art-atlas-visual-sequence] .movement-work-image>img{width:90%!important;height:90%!important;max-width:90%!important;max-height:90%!important;object-fit:contain!important}</style>';
+const pendingImageStyle = '<style id="art-atlas-movement-pending-image-style">.movement-image-pending{display:flex;align-items:center;justify-content:center;min-height:12rem;padding:1.25rem;background:linear-gradient(135deg,#171b20,#0d1014);color:var(--muted,#aeb6bf);font-size:.92rem;font-weight:700;letter-spacing:.02em;text-align:center}.history-stage-image>.movement-image-pending{width:100%;height:100%;min-height:inherit}.movement-work-image>.movement-image-pending{width:100%;min-height:270px}</style>';
 
 function plain(value = '') { return String(value).replace(/<br\s*\/?\s*>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;/gi, ' ').replace(/&amp;/gi, '&').replace(/&lt;/gi, '<').replace(/&gt;/gi, '>').replace(/\s+/g, ' ').trim(); }
 function key(value = '') { return plain(value).replace(/\s+(?:공화국|왕국|제국)$/, '').replace(/\s+/g, ''); }
@@ -71,14 +72,26 @@ function syncContentLayout(source) {
   source = source.replace(/\s*<style\b[^>]*id=["']art-atlas-movement-content-layout-style["'][^>]*>[\s\S]*?<\/style>\s*/gi, '\n');
   source = source.replace(/\s*<style\b[^>]*id=["']art-atlas-movement-card-image-fit-style["'][^>]*>[\s\S]*?<\/style>\s*/gi, '\n');
   source = source.replace(/\s*<style\b[^>]*id=["']art-atlas-movement-history-stage-image-fit-style["'][^>]*>[\s\S]*?<\/style>\s*/gi, '\n');
-  return insertSharedStyle(insertSharedStyle(insertSharedStyle(source, contentLayoutStyle), cardImageFitStyle), historyStageImageFitStyle);
+  source = source.replace(/\s*<style\b[^>]*id=["']art-atlas-movement-pending-image-style["'][^>]*>[\s\S]*?<\/style>\s*/gi, '\n');
+  return insertSharedStyle(insertSharedStyle(insertSharedStyle(insertSharedStyle(source, contentLayoutStyle), cardImageFitStyle), historyStageImageFitStyle), pendingImageStyle);
+}
+
+function markUnavailableLocalImages(source) {
+  return source.replace(/<img\b[^>]*>/gi, tag => {
+    const src = attr(tag, 'src');
+    if (!src || /^(?:data:|https?:)?\/\//i.test(src)) return tag;
+    const file = path.resolve(directory, src);
+    if (fs.existsSync(file)) return tag;
+    const description = plain(attr(tag, 'alt')) || '작품 이미지';
+    return `<div class="movement-image-pending" role="img" aria-label="${escape(description)} — 이미지 업로드 예정" data-art-atlas-image-status="pending-upload">이미지 업로드 예정</div>`;
+  });
 }
 
 let changed = 0;
 for (const name of fs.readdirSync(directory).filter(name => name.endsWith('.html'))) {
   const file = path.join(directory, name);
   const source = fs.readFileSync(file, 'utf8');
-  const revised = syncContentLayout(syncCardPresentation(syncCountryContexts(syncStickyTitle(source))));
+  const revised = markUnavailableLocalImages(syncContentLayout(syncCardPresentation(syncCountryContexts(syncStickyTitle(source)))));
   if (revised === source) continue;
   fs.writeFileSync(file, revised, 'utf8');
   changed++;
