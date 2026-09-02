@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "documents": [
+    {
+      "id": "event-wreck-of-medusa",
+      "kind": "event",
+      "title": {
+        "ko": "메두사호 난파",
+        "en": "Wreck of the Medusa"
+      },
+      "path": "data/보조학습자료/사건/메두사호-난파.html",
+      "relatedMovementIds": [
+        "romanticism"
+      ],
+      "sourceUrls": [
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-147348",
+        "https://musee.louvre.fr/en/explore/the-palace/think-big",
+        "https://presse.louvre.fr/les-enquetes-du-louvre-le-radeau-de-la-meduse/"
+      ]
+    }
+  ]
+}

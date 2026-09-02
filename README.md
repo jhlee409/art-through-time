@@ -98,6 +98,7 @@ npm start
 | `data/art-movement-representatives.json` | 핵심 범주의 특징, 대표 화가·더 볼 화가, 작품과 선정 이유 |
 | `data/art-movements.json` | 국가별 비교 위치, 기간, 공통 부모 사조·명시 화파 연결 ID |
 | `data/미술사조/*.html` | 사조 학습 본문, 3단계 역사 비교, 대표 미술가 표와 작품 카드. 이전 문서는 국가 전개 구조를 전환 전까지 유지 |
+| `data/보조학습자료/index.json` 및 하위 HTML | 사조 본문에서 여는 사건·작품 배경·비교 주제의 보조 학습자료 색인과 원문 |
 | `data/artists.json` | 화가와 작품의 전체 원본 |
 | `data/artists-index.json` | 화면 로딩용 화가 색인 |
 | `data/image-catalog.json` | 이미지 경로, 작품 ID·QID, 제목·연도, SHA-256과 이전 경로 별칭을 모은 전역 검색 색인 |

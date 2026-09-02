@@ -62,6 +62,12 @@
 
 ## 파일명과 색인 연결
 
+### 보조 학습자료
+
+- 사조 설명 본문에서 여는 사건 배경, 작품 배경, 비교 주제의 독립 설명은 활성 사조 문서(`data/미술사조/*.html`)로 만들지 않는다. `data/보조학습자료/사건/`, `작품배경/`, `비교주제/` 중 성격에 맞는 하위 폴더에 사람이 읽을 수 있는 한국어 파일명으로 둔다.
+- 모든 보조 자료는 `data/보조학습자료/index.json`에 고유 `id`, 종류(`kind`), 한·영 제목, 파일 `path`, 연결된 `relatedMovementIds`, 텍스트 출처 URL을 기록한다. 사조 본문은 이 색인의 `path`와 같은 로컬 경로만 링크한다.
+- 보조 자료에도 외부 이미지 URL을 새로 쓰지 않는다. 작품 이미지는 기존 `data/images/artist-*/` 정본을 상대 경로로 재사용하며, 새 보조 자료 링크 뒤에는 해당 HTML과 로컬 이미지가 HTTP 200인지 확인한다.
+
 - 새 사조 설명 HTML은 반드시 사람이 식별할 수 있는 한국어 사조 이름을 파일명으로 사용한다. 정본에 한국어 이름이 없는 예외만 영어 이름을 허용하며, 해시 파일명으로 새 문서를 만들지 않는다.
 - `data/미술사조/index.json`에서 해당 사조의 문서 키가 새 HTML 경로를 직접 가리키게 한다. 예: `"Neoclassicism": { "1": "data/미술사조/신고전주의.html" }`.
 - `data/art-movement-canonical.json`의 `documentKey`, `data/art-movements.json`의 `canonical.documentOwnerId`, 앱의 `movementDocumentKey()` 흐름이 같은 문서 키로 이어지는지 확인한다.

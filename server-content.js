@@ -67,6 +67,7 @@ const publicDataFiles = new Set([
 const publicPathPrefixes = [
   'app/',
   'data/generated/',
+  'data/보조학습자료/',
   'data/techniques/',
   'data/images/',
   'data/topic-images/',
