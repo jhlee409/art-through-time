@@ -42,6 +42,9 @@ function urls(...values) {
 function textList(value) {
   return [...new Set((Array.isArray(value) ? value : []).map(item => String(item || '').trim().replace(/\s+/g, ' ')).filter(Boolean))];
 }
+function summaryTextList(value) {
+  return (Array.isArray(value) ? value : []).map(item => String(item || '').trim().replace(/\s+/g, ' ')).filter(Boolean).slice(0, 240);
+}
 
 function localizedTextList(value) {
   if (Array.isArray(value)) return {ko:textList(value), en:[]};
@@ -50,7 +53,9 @@ function localizedTextList(value) {
 }
 
 function localizedSummaryList(value) {
-  const summary = localizedTextList(value);
+  const summary = Array.isArray(value)
+    ? {ko:summaryTextList(value), en:[]}
+    : {ko:summaryTextList(asObject(value).ko), en:summaryTextList(asObject(value).en)};
   return {
     ko:summary.ko,
     en:summary.en

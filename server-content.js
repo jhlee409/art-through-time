@@ -89,7 +89,13 @@ const publicPathPrefixes = [
   'uhangul/uhangul-runtime.css',
   'uhangul/uhangul-runtime.js'
 ];
+function isPrivateStaticPath(relative) {
+  return /(^|\/)\.(?:env(?:\..*)?|git|gitignore|npmrc|DS_Store)(?:$|\/)/i.test(relative)
+    || /^\.env(?:\..*)?$/i.test(relative)
+    || /(?:^|\/)(?:AGENTS\.md|README\.md|package-lock\.json)$/i.test(relative);
+}
 function isPublicStaticPath(relative) {
+  if (isPrivateStaticPath(relative)) return false;
   if (publicRootFiles.has(relative) || publicDataFiles.has(relative)) return true;
   if (isMovementDocumentRelative(relative)) return true;
   if (/^data\/미술사조\/images\/[^/]+\.(?:jpe?g|png|webp|gif|json)$/i.test(relative)) return true;
@@ -101,6 +107,7 @@ function safePath(urlPath) {
   const output=path.resolve(root,name);
   const relative=path.relative(root,output).replace(/\\/g,'/');
   if(!relative || relative.startsWith('..') || path.isAbsolute(relative)) return null;
+  if(isPrivateStaticPath(relative)) return null;
   if(!isPublicStaticPath(relative)) return null;
   return output;
 }

@@ -102,11 +102,21 @@ function checkRemovedFeatureRemnants() {
   if (serverSource.includes(removedRulesEndpoint)) {
     throw new Error(`removed rules endpoint still exists: ${removedRulesEndpoint}`);
   }
+  const contentSource = fs.readFileSync(path.join(root, 'server-content.js'), 'utf8');
+  if (!contentSource.includes('function isPrivateStaticPath(relative)')) {
+    throw new Error('static server must explicitly block private dotfiles and environment files');
+  }
+  if (!contentSource.includes('^\\.env(?:\\.')) {
+    throw new Error('static server must explicitly block .env and .env.* files');
+  }
 
   const interfaceSource = [
     'index.html', 'app/app-core.js', 'app/app-artists.js', 'app/app-atlas.js',
     'app/app-detail.js', 'app/app.js', 'styles.css', 'extras.css'
   ].map(file => fs.readFileSync(path.join(root, file), 'utf8')).join('\n');
+  if (interfaceSource.includes('관리자 설정 파일(.env)')) {
+    throw new Error('viewer-facing login text must not reveal the .env filename');
+  }
   for (const fragment of ['relationship-map', 'rule-check-button', 'rules-check-button']) {
     if (interfaceSource.includes(fragment)) throw new Error(`removed interface fragment still exists: ${fragment}`);
   }

@@ -299,48 +299,120 @@ function cleanTransformedSummaryLines(lines) {
     .trim()).filter(Boolean).slice(0,160);
 }
 
+async function requestOpenAiJson(apiKey, body, label) {
+  let response;
+  try {
+    response = await fetch('https://api.openai.com/v1/responses', {
+      method:'POST',
+      signal:AbortSignal.timeout(120000),
+      headers:{Authorization:`Bearer ${apiKey}`,'Content-Type':'application/json'},
+      body:JSON.stringify(body)
+    });
+  } catch (error) {
+    const detail = [error?.cause?.code, error?.cause?.message, error?.message].filter(Boolean).join(' · ');
+    throw new Error(`OpenAI API에 연결하지 못했습니다. 인터넷 연결, 방화벽, 프록시, API 키 환경을 확인해 주세요.${detail ? ` (${detail})` : ''}`);
+  }
+  const payload = await response.json().catch(() => ({}));
+  if (!response.ok) throw new Error(`OpenAI ${label} 요청 실패: ${payload?.error?.message || `HTTP ${response.status}`}`);
+  return payload;
+}
+
+function summaryInputBlocks(lines) {
+  const blocks = [], inputLines = (Array.isArray(lines) ? lines : []).map(line => String(line || '').trim()).filter(Boolean);
+  let current = null;
+  const pushCurrent = () => {
+    if (current?.lines?.length) blocks.push(current);
+  };
+  inputLines.forEach(line => {
+    const heading = /^(#{1,3})\s+(.+)$/.exec(line);
+    if (heading) {
+      pushCurrent();
+      current = {kind:'saved-editor-input', title:heading[2].trim(), lines:[line]};
+      return;
+    }
+    if (!current) current = {kind:'saved-editor-input', title:`입력 기록 ${blocks.length + 1}`, lines:[]};
+    current.lines.push(line);
+  });
+  pushCurrent();
+  return blocks.map((block,index)=>({...block,order:index+1}));
+}
+
+async function summarizeArtistScript(artist, script, title='') {
+  const apiKey = String(process.env.OPENAI_API_KEY || '').trim();
+  if (!apiKey) throw new Error('스크립트 요약 기능을 사용하려면 .env에 OPENAI_API_KEY를 설정해야 합니다.');
+  const sourceText = String(script || '').replace(/\r\n?/g,'\n').trim();
+  if (sourceText.length < 120) throw new Error('요약할 스크립트를 120자 이상 입력해 주세요.');
+  if (sourceText.length > 120000) throw new Error('스크립트 요약 입력은 120,000자까지 가능합니다.');
+  const model = String(process.env.ART_ATLAS_SUMMARY_MODEL || 'gpt-5-mini').trim();
+  const artistName = artist.name?.ko || artist.name?.en || artist.fullName || artist.id;
+  const localWorks = (Array.isArray(artist.works) ? artist.works : []).slice(0,160).map(work => ({
+    titleKo:String(work.title?.ko || ''),
+    titleEn:String(work.title?.en || ''),
+    titleOriginal:String(work.title?.original || work.title?.native || ''),
+    year:Number.isFinite(Number(work.year)) ? Number(work.year) : null
+  })).filter(work => work.titleKo || work.titleEn || work.titleOriginal);
+  const system = `당신은 미술사 학습 앱의 스크립트 요약 편집자다. ${artistName}에 대해 사용자가 붙여 넣은 스크립트만 요약한다. 외부 지식, 추측, 웹 검색, 자료에 없는 작품·연도·인과관계를 추가하지 않는다. 화가의 생애, 미술 교육, 영향 관계, 교류와 갈등, 거주지 이동, 전쟁·질병·사고 같은 맥락, 화풍 변화, 작품 해설에 직접 필요한 내용만 남긴다. 단순 인사말, 반복 문장, 구독 요청, 진행 멘트, 정보가 없다는 안내는 제거한다. 원문 흐름을 유지하되 너무 긴 스크립트는 초심자가 읽을 수 있는 짧은 한국어 항목으로 압축한다. 최종 출력은 일반 텍스트 줄 배열이어야 하며 원본 HTML 태그를 쓰지 않는다. 허용되는 표식은 ### 제목, > 인용, **굵게**, 마크다운 표, 《작품명》(연도)뿐이다. 이미지 URL이나 ![이미지](URL)는 넣지 않는다. 이미지 자료가 작품을 가리키면 확인 가능한 작품명과 연도만 텍스트로 남기고, 작품명은 가능하면 프로젝트 작품 목록의 제목과 연도에 맞춘다.`;
+  const schema = {type:'object',additionalProperties:false,required:['lines'],properties:{lines:{type:'array',minItems:1,maxItems:80,items:{type:'string',minLength:1,maxLength:1200}}}};
+  const payload = await requestOpenAiJson(apiKey, {
+    model,
+    store:false,
+    input:[
+      {role:'system',content:[{type:'input_text',text:system}]},
+      {role:'user',content:[{type:'input_text',text:JSON.stringify({
+        artist:{name:artistName,birth:Number.isFinite(Number(artist.birth)) ? Number(artist.birth) : null,death:Number.isFinite(Number(artist.death)) ? Number(artist.death) : null},
+        title:String(title || '').slice(0,200),
+        script:sourceText,
+        projectArtworkCatalog:localWorks
+      })}]}
+    ],
+    text:{format:{type:'json_schema',name:'artist_script_summary',strict:true,schema}},
+    max_output_tokens:6000
+  }, '스크립트 요약');
+  let result;
+  try { result = JSON.parse(responseOutputText(payload)); } catch (_) { throw new Error('OpenAI가 반환한 스크립트 요약 결과를 읽지 못했습니다.'); }
+  const lines = cleanTransformedSummaryLines(result?.lines).filter(line => !/^#{1,3}\s*스크립트\s*요약\b/i.test(line));
+  if(!lines.length) return {noChanges:true,message:'요약 결과에 저장할 내용이 없습니다.'};
+  const usage = payload.usage || {};
+  const webSearchCalls = (payload.output || []).filter(item => item.type === 'web_search_call').length;
+  const estimatedUsd = /^gpt-5-mini(?:-|$)/.test(model)
+    ? ((Number(usage.input_tokens) || 0) * 0.25 + (Number(usage.output_tokens) || 0) * 2) / 1000000 + webSearchCalls * 0.01
+    : null;
+  return {lines,usage:{model,inputTokens:Number(usage.input_tokens) || 0,outputTokens:Number(usage.output_tokens) || 0,totalTokens:Number(usage.total_tokens) || 0,webSearchCalls,estimatedUsd}};
+}
+
 async function transformArtistSummary(artist) {
   const apiKey = String(process.env.OPENAI_API_KEY || '').trim();
   if (!apiKey) throw new Error('변환 기능을 사용하려면 .env에 OPENAI_API_KEY를 설정해야 합니다.');
   const currentSummary = artist?.artistSummary && typeof artist.artistSummary==='object' && !Array.isArray(artist.artistSummary) ? artist.artistSummary : {};
   const existingLines = Array.isArray(currentSummary.ko) ? currentSummary.ko.map(String).filter(Boolean) : [];
-  const {sources,failures,skippedCount} = artistTransformSources(artist);
-  if(!existingLines.length && !sources.length) return {noChanges:true,message:'변환할 해설이나 저장된 유튜브 스크립트가 없습니다.'};
+  if(!existingLines.length) return {noChanges:true,message:'변환할 해설 입력 기록이 없습니다.'};
   const model = String(process.env.ART_ATLAS_SUMMARY_MODEL || 'gpt-5-mini').trim();
   const artistName = artist.name?.ko || artist.name?.en || artist.fullName || artist.id;
   const localWorks = (Array.isArray(artist.works) ? artist.works : []).slice(0,160).map(work => ({
     titleKo:String(work.title?.ko || ''), titleEn:String(work.title?.en || ''), titleOriginal:String(work.title?.original || work.title?.native || ''),
     year:Number.isFinite(Number(work.year)) ? Number(work.year) : null
   })).filter(work => work.titleKo || work.titleEn || work.titleOriginal);
-  const system = `당신은 미술사 학습 앱의 화가 해설 편집자다. ${artistName}의 기존 해설과 사용자가 저장한 유튜브 스크립트만 사용해 읽기 좋은 한국어 문서형 해설로 정리한다. 외부 지식, 추측, 웹 검색, 자료에 없는 작품·연도·인과관계를 절대 추가하지 않는다. 입력 블록의 순서와 경계를 반드시 보존한다. 기존 해설은 사용자가 직접 입력한 일반 텍스트와 md 업로드 내용이 저장된 순서이므로, 기존 해설 순서대로 서식만 정리한다. 유튜브 스크립트는 링크 저장 순서대로 별도 소제목 아래에 둔다. 서로 다른 입력 블록의 내용을 하나로 통합하거나 재배치하지 않는다. 의미가 비슷해도 서로 다른 입력 블록에 있으면 합치지 않는다. 한 입력 블록 안에서도 원문 흐름을 유지하면서 과도한 반복 문장만 간결하게 다듬는다. 서로 충돌하는 내용은 단정적으로 교체하지 말고 해당 입력 블록 안에 [확인 필요] 문장으로 남긴다. 최종 출력은 일반 텍스트 줄 배열이어야 하며 원본 HTML 태그를 쓰지 않는다. 허용되는 표식은 #/##/### 제목, > 인용, **굵게**, 마크다운 표, 《작품명》(연도)뿐이다. 이미지 URL이나 ![이미지](URL)는 최종 출력에 넣지 않는다. 이미지 자료가 작품을 가리키면 확인 가능한 작품명과 연도만 텍스트로 남기고, 확인할 수 없으면 생략한다. 작품명은 가능하면 프로젝트 작품 목록의 제목과 연도에 맞춘다.`;
-  const inputBlocks = [
-    ...(existingLines.length ? [{order:1,kind:'existing-summary',title:'기존 해설',lines:existingLines}] : []),
-    ...sources.map((source,index)=>({order:existingLines.length ? index+2 : index+1,kind:'youtube-transcript',title:source.title,url:source.url,text:source.text}))
-  ];
+  const system = `당신은 미술사 학습 앱의 화가 해설 편집자다. ${artistName}의 저장된 입력 기록만 사용해 읽기 좋은 한국어 문서형 해설로 정리한다. 편집 버튼으로 입력한 일반 텍스트와 블로그 본문, md 업로드 내용, 스크립트 요약 버튼으로 저장된 요약 블록 외의 외부 지식, 추측, 웹 검색, 자료에 없는 작품·연도·인과관계를 절대 추가하지 않는다. 입력 블록의 순서와 경계를 반드시 보존한다. 기존 해설은 저장된 줄 순서와 제목 단위로 분리된 입력 기록이며, 제목이 있는 블록은 같은 제목을 유지하거나 더 명확하게 다듬는다. 서로 다른 입력 블록의 내용을 하나로 통합하거나 재배치하지 않는다. 의미가 비슷해도 서로 다른 입력 블록에 있으면 합치지 않는다. 한 입력 블록 안에서도 원문 흐름을 유지하면서 과도한 반복 문장만 간결하게 다듬는다. 서로 충돌하는 내용은 단정적으로 교체하지 말고 해당 입력 블록 안에 [확인 필요] 문장으로 남긴다. 최종 출력은 일반 텍스트 줄 배열이어야 하며 원본 HTML 태그를 쓰지 않는다. 허용되는 표식은 #/##/### 제목, > 인용, **굵게**, 마크다운 표, 《작품명》(연도)뿐이다. 이미지 URL이나 ![이미지](URL)는 최종 출력에 넣지 않는다. 이미지 자료가 작품을 가리키면 확인 가능한 작품명과 연도만 텍스트로 남기고, 확인할 수 없으면 생략한다. 작품명은 가능하면 프로젝트 작품 목록의 제목과 연도에 맞춘다.`;
+  const savedInputBlocks = summaryInputBlocks(existingLines);
+  const inputBlocks = savedInputBlocks;
   const input = {
     artist:{name:artistName,birth:Number.isFinite(Number(artist.birth)) ? Number(artist.birth) : null,death:Number.isFinite(Number(artist.death)) ? Number(artist.death) : null},
     inputBlocks,
     existingSummary:existingLines.map((text,index)=>({lineIndex:index+1,text})),
-    savedYoutubeTranscripts:sources.map((source,index)=>({sourceIndex:index+1,title:source.title,url:source.url,text:source.text})),
     projectArtworkCatalog:localWorks
   };
   const schema = {type:'object',additionalProperties:false,required:['lines'],properties:{lines:{type:'array',minItems:1,maxItems:160,items:{type:'string',minLength:1,maxLength:1200}}}};
-  const response = await fetch('https://api.openai.com/v1/responses', {
-    method:'POST',signal:AbortSignal.timeout(120000),headers:{Authorization:`Bearer ${apiKey}`,'Content-Type':'application/json'},
-    body:JSON.stringify({model,store:false,input:[{role:'system',content:[{type:'input_text',text:system}]},{role:'user',content:[{type:'input_text',text:JSON.stringify(input)}]}],text:{format:{type:'json_schema',name:'artist_summary_transform',strict:true,schema}},max_output_tokens:12000})
-  });
-  const payload = await response.json().catch(() => ({}));
-  if (!response.ok) throw new Error(`OpenAI 변환 요청 실패: ${payload?.error?.message || `HTTP ${response.status}`}`);
+  const payload = await requestOpenAiJson(apiKey, {model,store:false,input:[{role:'system',content:[{type:'input_text',text:system}]},{role:'user',content:[{type:'input_text',text:JSON.stringify(input)}]}],text:{format:{type:'json_schema',name:'artist_summary_transform',strict:true,schema}},max_output_tokens:12000}, '변환');
   let result;
   try { result = JSON.parse(responseOutputText(payload)); } catch (_) { throw new Error('OpenAI가 반환한 변환 결과를 읽지 못했습니다.'); }
   const lines = cleanTransformedSummaryLines(result?.lines);
-  if(!lines.length) return {noChanges:true,message:'변환 결과에 저장할 해설이 없습니다.',failures,skippedCount};
+  if(!lines.length) return {noChanges:true,message:'변환 결과에 저장할 해설이 없습니다.'};
   const usage = payload.usage || {};
   const webSearchCalls = (payload.output || []).filter(item => item.type === 'web_search_call').length;
   const estimatedUsd = /^gpt-5-mini(?:-|$)/.test(model)
     ? ((Number(usage.input_tokens) || 0) * 0.25 + (Number(usage.output_tokens) || 0) * 2) / 1000000 + webSearchCalls * 0.01
     : null;
-  return {artistSummary:{...currentSummary,ko:lines},artistSummaryUpdatedAt:String(artist.artistSummaryUpdatedAt || artist.metadata?.updatedAt || ''),sourceCount:sources.length,failures,skippedCount,usage:{model,inputTokens:Number(usage.input_tokens) || 0,outputTokens:Number(usage.output_tokens) || 0,totalTokens:Number(usage.total_tokens) || 0,webSearchCalls,estimatedUsd}};
+  return {artistSummary:{...currentSummary,ko:lines},artistSummaryUpdatedAt:String(artist.artistSummaryUpdatedAt || artist.metadata?.updatedAt || ''),sourceCount:0,failures:[],skippedCount:0,usage:{model,inputTokens:Number(usage.input_tokens) || 0,outputTokens:Number(usage.output_tokens) || 0,totalTokens:Number(usage.total_tokens) || 0,webSearchCalls,estimatedUsd}};
 }
 
 function normalizedLine(value) { return String(value || '').toLowerCase().replace(/\([^)]*출처[^)]*\)\s*$/, '').replace(/[^\p{L}\p{N}]+/gu, ''); }
@@ -446,7 +518,7 @@ module.exports = function createArtistResearchService() {
     }
     return finalizeResearchDraft(artist,draft,[]);
   }
-  return {researchArtistSummary,transformArtistSummary};
+  return {researchArtistSummary,transformArtistSummary,summarizeArtistScript};
 };
 
 module.exports.sourceKey = sourceKey;
@@ -459,5 +531,6 @@ module.exports.cleanManualSummaryLines = cleanManualSummaryLines;
 module.exports.chronologySort = chronologySort;
 module.exports.finalizeResearchDraft = finalizeResearchDraft;
 module.exports.transformArtistSummary = transformArtistSummary;
+module.exports.summarizeArtistScript = summarizeArtistScript;
 module.exports.artistTransformSources = artistTransformSources;
 module.exports.cleanTransformedSummaryLines = cleanTransformedSummaryLines;

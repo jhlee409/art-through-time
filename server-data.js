@@ -646,7 +646,7 @@ async function updateArtistSummaryNow(patch, actor='') {
     throw error;
   }
   const now=new Date().toISOString(), updatedBy=normalizedEmail(actor) || 'local-admin';
-  const summaryLines=value=>[...new Set((Array.isArray(value) ? value : []).map(line=>String(line || '').trim().replace(/\s+/g,' ')).filter(Boolean))];
+  const summaryLines=value=>(Array.isArray(value) ? value : []).map(line=>String(line || '').trim().replace(/\s+/g,' ')).filter(Boolean).slice(0,240);
   artist.artistSummary={ko:summaryLines(incoming.ko),en:summaryLines(incoming.en)};
   artist.artistSummaryUpdatedAt=now;
   const previousRevision=Math.max(0,Number(data.metadata?.revision) || 0);

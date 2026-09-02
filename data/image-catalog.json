@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-02T10:50:08.792Z",
+  "generatedAt": "2026-09-02T12:53:22.697Z",
   "namingStandard": "shortArtist_titleFirst3Words_startYear__workId.ext",
   "stats": {
-    "images": 1766,
-    "linkedImages": 1766,
+    "images": 1769,
+    "linkedImages": 1769,
     "unlinkedImages": 0,
-    "standardNames": 164,
+    "standardNames": 167,
     "legacyNames": 1602,
     "newNonstandardNames": 0,
     "duplicateHashGroups": 1
@@ -34330,6 +34330,50 @@
       ]
     },
     {
+      "path": "data/images/artist-romantic-turner/터너_워털루 전장_1818__wikidata-Q28538509.jpg",
+      "filename": "터너_워털루 전장_1818__wikidata-Q28538509.jpg",
+      "bytes": 454146,
+      "sha256": "c5a2a468bfc3e0bc275691cd7d8932e650a61e52008c094c346d8dcdbf204319",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-romantic-turner",
+          "artistQid": "Q159758",
+          "artistNameKo": "조지프 말로드 윌리엄 터너",
+          "artistNameEn": "J. M. W. Turner",
+          "workId": "wikidata-Q28538509",
+          "workQid": "Q28538509",
+          "titleKo": "워털루 전장",
+          "titleEn": "The Field of Waterloo",
+          "year": 1818
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-romantic-turner/터너_전쟁 유배자 삿갓조개_1842__turner-war-exile-rock-limpet.jpg",
+      "filename": "터너_전쟁 유배자 삿갓조개_1842__turner-war-exile-rock-limpet.jpg",
+      "bytes": 4973510,
+      "sha256": "cca11184b4e03242bf1757e64c0607074ada557d31cf27431af4f230ee7fe8e5",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-romantic-turner",
+          "artistQid": "Q159758",
+          "artistNameKo": "조지프 말로드 윌리엄 터너",
+          "artistNameEn": "J. M. W. Turner",
+          "workId": "turner-war-exile-rock-limpet",
+          "workQid": "",
+          "titleKo": "전쟁: 유배자와 삿갓조개",
+          "titleEn": "War. The Exile and the Rock Limpet",
+          "year": 1842
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-romantic-turner/터너_칼레 부두_1801__wikidata-Q3794814.jpg",
       "filename": "터너_칼레 부두_1801__wikidata-Q3794814.jpg",
       "bytes": 3588297,
@@ -34392,6 +34436,28 @@
           "titleKo": "쾰른, 우편선의 도착: 저녁",
           "titleEn": "Cologne: The Arrival of a Packet-Boat: Evening",
           "year": 1826
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-romantic-turner/터너_트라팔가 해전_1806__wikidata-Q115496256.jpg",
+      "filename": "터너_트라팔가 해전_1806__wikidata-Q115496256.jpg",
+      "bytes": 264473,
+      "sha256": "283350df5609f5d092748d937a556966be563317390658b2ad93693bb26c86eb",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-romantic-turner",
+          "artistQid": "Q159758",
+          "artistNameKo": "조지프 말로드 윌리엄 터너",
+          "artistNameEn": "J. M. W. Turner",
+          "workId": "wikidata-Q115496256",
+          "workQid": "Q115496256",
+          "titleKo": "트라팔가 해전: 빅토리호 우현 후방 밧줄에서 본 장면",
+          "titleEn": "The Battle of Trafalgar, as Seen from the Mizen Starboard Shrouds of the Victory",
+          "year": 1806
         }
       ]
     },

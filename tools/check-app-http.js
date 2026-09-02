@@ -34,6 +34,14 @@ async function main() {
   ];
   await Promise.all(staticData.map(json));
   await response('/extras.css');
+  const privatePaths = ['/.env', '/.env.example', '/README.md', '/AGENTS.md'];
+  for (const pathname of privatePaths) {
+    const result = await fetch(`${origin}${pathname}`);
+    if (![403, 404].includes(result.status)) {
+      throw new Error(`${pathname}: private file must not be publicly served, received HTTP ${result.status}`);
+    }
+    await result.body?.cancel();
+  }
 
   const full = await json('/api/artists');
   const index = await json('/api/artists-index');
@@ -107,6 +115,7 @@ async function main() {
     movementDocuments: Object.keys(movements.documents || {}).length,
     movementDocumentFiles: movementDocumentPaths.length,
     movementImages: movementImagePaths.size,
+    privateStaticFilesBlocked: privatePaths.length,
     removedEndpoints: 1,
     sampledImages: sampleIndexes.length
   }, null, 2));

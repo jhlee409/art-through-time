@@ -1316,7 +1316,7 @@ async function chooseAccessMode() {
     const response = await fetch(apiUrl('/api/access'), {cache:'no-store'});
     const access = response.ok ? await response.json() : null;
     if (access?.adminConfigured === false) {
-      adminUnavailableMessage = '관리자 설정 파일(.env)이 없어 지금은 보기 전용으로 실행 중입니다. 읽기 전용을 누르면 자료를 볼 수 있습니다.';
+      adminUnavailableMessage = '관리자 설정이 없어 지금은 보기 전용으로 실행 중입니다. 읽기 전용을 누르면 자료를 볼 수 있습니다.';
     }
   } catch (_) {
     /* When the local server is unavailable, keep the manual viewer choice. */

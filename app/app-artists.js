@@ -291,76 +291,56 @@ function openArtistSummaryArtworkPreview(work) {
   preview.focus();
 }
 
-function openArtistTranscriptDialog(artist) {
-  const youtubeLinks=artistLinks(artist).map((link,index)=>({link,index})).filter(item=>isYouTubeLink(item.link));
-  if(!youtubeLinks.length) {
-    alert(language==='ko' ? '먼저 화가 이름 옆 + 버튼으로 유튜브 주소를 추가해 주세요.' : 'Add a YouTube address beside the artist name first.');
-    return;
-  }
-  document.querySelector('.artist-transcript-dialog')?.remove();
+function openArtistScriptSummaryDialog(artist) {
+  document.querySelector('.artist-script-summary-dialog')?.remove();
   const dialog=document.createElement('dialog');
-  dialog.className='artist-transcript-dialog';
-  dialog.innerHTML=`<form class="artist-transcript-form"><button class="artist-transcript-close" type="button" title="${esc(language==='ko'?'닫기':'Close')}" aria-label="${esc(language==='ko'?'닫기':'Close')}">×</button><p class="eyebrow">${esc(language==='ko'?'연결 자료':'LINKED SOURCE')}</p><h2>${esc(language==='ko'?'유튜브 스크립트':'YouTube Transcript')}</h2><label><span>${esc(language==='ko'?'유튜브 링크':'YouTube link')}</span><select class="artist-transcript-source">${youtubeLinks.map((item,position)=>`<option value="${item.index}">${position+1} · ${esc(item.link.url)}</option>`).join('')}</select></label><a class="artist-transcript-open" href="#" target="_blank" rel="noopener">${esc(language==='ko'?'선택한 영상 열기':'Open selected video')}</a><label><span>${esc(language==='ko'?'스크립트':'Transcript')}</span><textarea class="artist-transcript-text" maxlength="80000" spellcheck="false"></textarea></label><div class="artist-transcript-meta"><span class="artist-transcript-count">0 / 80,000</span><span class="artist-transcript-state"></span></div><div class="artist-transcript-actions"><button class="artist-transcript-delete" type="button">${esc(language==='ko'?'스크립트 삭제':'Delete transcript')}</button><span><button class="artist-transcript-cancel" type="button">${esc(language==='ko'?'취소':'Cancel')}</button><button class="artist-transcript-save" type="submit">${esc(language==='ko'?'저장':'Save')}</button></span></div></form>`;
+  dialog.className='artist-transcript-dialog artist-script-summary-dialog';
+  dialog.innerHTML=`<form class="artist-script-summary-form"><button class="artist-transcript-close" type="button" title="${esc(language==='ko'?'닫기':'Close')}" aria-label="${esc(language==='ko'?'닫기':'Close')}">×</button><p class="eyebrow">${esc(language==='ko'?'입력 자료':'INPUT SOURCE')}</p><h2>${esc(language==='ko'?'스크립트 요약':'Script Summary')}</h2><label><span>${esc(language==='ko'?'자료 제목':'Source title')}</span><input class="artist-script-summary-title" type="text" maxlength="80" placeholder="${esc(language==='ko'?'예: 터너 다큐 스크립트':'e.g. Turner documentary script')}"></label><label><span>${esc(language==='ko'?'스크립트':'Script')}</span><textarea class="artist-transcript-text artist-script-summary-text" maxlength="120000" spellcheck="false"></textarea></label><div class="artist-transcript-meta"><span class="artist-script-summary-count">0 / 120,000</span><span>${esc(language==='ko'?'요약 결과는 해설에 별도 블록으로 저장됩니다.':'The summary will be saved as a separate notes section.')}</span></div><div class="artist-transcript-actions"><button class="artist-transcript-cancel" type="button">${esc(language==='ko'?'취소':'Cancel')}</button><span><button class="artist-script-summary-submit" type="submit">${esc(language==='ko'?'요약 저장':'Summarize')}</button></span></div></form>`;
   document.body.append(dialog);
-  const form=dialog.querySelector('form'), select=dialog.querySelector('.artist-transcript-source'), textarea=dialog.querySelector('textarea');
-  const openLink=dialog.querySelector('.artist-transcript-open'), count=dialog.querySelector('.artist-transcript-count'), state=dialog.querySelector('.artist-transcript-state');
-  const deleteButton=dialog.querySelector('.artist-transcript-delete'), saveButton=dialog.querySelector('.artist-transcript-save');
-  const selectedItem=()=>youtubeLinks.find(item=>item.index===Number(select.value));
-  const updateCount=()=>{ count.textContent=`${textarea.value.length.toLocaleString()} / 80,000`; };
-  const loadSelection=()=>{
-    const item=selectedItem();
-    textarea.value=String(item?.link?.transcript || '');
-    openLink.href=item?.link?.url || '#';
-    deleteButton.disabled=!textarea.value.trim();
-    const updatedAt=Date.parse(item?.link?.transcriptUpdatedAt || '');
-    state.textContent=Number.isNaN(updatedAt) ? '' : new Intl.DateTimeFormat(language==='ko'?'ko-KR':'en-US',{dateStyle:'medium',timeStyle:'short'}).format(updatedAt);
-    updateCount();
-  };
-  const close=()=>dialog.close();
-  const setBusy=busy=>{
-    select.disabled=busy;
-    textarea.disabled=busy;
-    deleteButton.disabled=busy || !textarea.value.trim();
-    saveButton.disabled=busy;
-    saveButton.textContent=busy ? (language==='ko'?'저장 중…':'Saving…') : (language==='ko'?'저장':'Save');
-  };
-  const saveTranscript=async text=>{
-    const item=selectedItem();
-    if(!item) return;
-    const normalized=String(text || '').replace(/\r\n?/g,'\n').trim();
-    if(normalized.length>80000) return alert(language==='ko'?'스크립트는 80,000자까지 저장할 수 있습니다.':'Transcripts can contain up to 80,000 characters.');
-    const previousLinks=artist.links;
-    const nextLinks=artistLinks(artist).map(link=>({...link}));
-    if(normalized) {
-      nextLinks[item.index].transcript=normalized;
-      nextLinks[item.index].transcriptUpdatedAt=new Date().toISOString();
-    } else {
-      delete nextLinks[item.index].transcript;
-      delete nextLinks[item.index].transcriptUpdatedAt;
+  const form=dialog.querySelector('form'), titleInput=dialog.querySelector('.artist-script-summary-title'), textarea=dialog.querySelector('textarea');
+  const count=dialog.querySelector('.artist-script-summary-count'), submitButton=dialog.querySelector('.artist-script-summary-submit');
+  const close=()=>dialog.close ? dialog.close() : dialog.remove();
+  const updateCount=()=>{ count.textContent=`${textarea.value.length.toLocaleString()} / 120,000`; };
+  const usageNotice=usage=>usage?.totalTokens ? `\n${language==='ko' ? `사용량: 입력 ${Number(usage.inputTokens || 0).toLocaleString()} · 출력 ${Number(usage.outputTokens || 0).toLocaleString()} · 합계 ${Number(usage.totalTokens).toLocaleString()} 토큰${Number.isFinite(usage.estimatedUsd) ? ` · 예상 $${Number(usage.estimatedUsd).toFixed(4)}` : ''}` : `Usage: ${Number(usage.totalTokens).toLocaleString()} tokens${Number.isFinite(usage.estimatedUsd) ? ` · est. $${Number(usage.estimatedUsd).toFixed(4)}` : ''}`}` : '';
+  form.addEventListener('submit',async event=>{
+    event.preventDefault();
+    const script=textarea.value.replace(/\r\n?/g,'\n').trim();
+    if(script.length<120) return alert(language==='ko'?'요약할 스크립트를 120자 이상 입력해 주세요.':'Enter at least 120 characters to summarize.');
+    const consentMessage=language==='ko'
+      ? '입력한 스크립트를 OpenAI API로 보내 요약하고, 요약 결과를 해설에 저장합니다. 계속할까요?'
+      : 'The script will be sent to the OpenAI API, summarized, and saved into the artist notes. Continue?';
+    if(!confirm(consentMessage)) return;
+    const originalLabel=submitButton.textContent;
+    submitButton.disabled=true;
+    submitButton.textContent=language==='ko'?'요약 중…':'Summarizing…';
+    try {
+      const response=await apiFetch('/api/artist-script-summary',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({artistId:artist.id,title:titleInput.value,script,consent:true})});
+      const result=await response.json().catch(()=>({}));
+      if(response.status===401) throw new Error(language==='ko'?'관리자 세션이 만료되었습니다. 새로고침 후 다시 로그인해 주세요.':'Administrator session expired. Refresh and sign in again.');
+      if(!response.ok || !result.ok) throw new Error(result.error || `HTTP ${response.status}`);
+      if(result.noChanges) return alert(result.message || (language==='ko'?'저장할 요약 결과가 없습니다.':'There is no summary to save.'));
+      if(result.artist) Object.assign(artist,result.artist);
+      if(Number.isInteger(result.revision)) collectionMetadata={...collectionMetadata,revision:result.revision};
+      lastSavedSnapshot=artistSnapshot();
+      lastSaveError='';
+      close();
+      renderTimeline();
+      alert(`${language==='ko'?'스크립트 요약을 해설에 저장했습니다.':'Script summary saved into the artist notes.'}${usageNotice(result.usage)}`);
+    } catch(error) {
+      alert(`${language==='ko'?'스크립트 요약 실패: ':'Script summary failed: '}${error.message}`);
+    } finally {
+      submitButton.disabled=false;
+      submitButton.textContent=originalLabel;
     }
-    artist.links=nextLinks;
-    setBusy(true);
-    if(!await saveArtistPresentationNow(artist,{artistLinks:nextLinks})) {
-      artist.links=previousLinks;
-      setBusy(false);
-      alert(saveFailureMessage());
-      return;
-    }
-    close();
-    renderTimeline();
-  };
-  select.addEventListener('change',loadSelection);
-  textarea.addEventListener('input',()=>{ deleteButton.disabled=!textarea.value.trim(); updateCount(); });
+  });
   dialog.querySelector('.artist-transcript-close').addEventListener('click',close);
   dialog.querySelector('.artist-transcript-cancel').addEventListener('click',close);
-  deleteButton.addEventListener('click',()=>{
-    if(confirm(language==='ko'?'이 링크에 저장한 스크립트를 삭제할까요?':'Delete the transcript saved for this link?')) saveTranscript('');
-  });
-  form.addEventListener('submit',event=>{ event.preventDefault(); saveTranscript(textarea.value); });
   dialog.addEventListener('close',()=>dialog.remove(),{once:true});
   dialog.addEventListener('click',event=>{ if(event.target===dialog) close(); });
-  loadSelection();
-  dialog.showModal();
+  textarea.addEventListener('input',updateCount);
+  updateCount();
+  if(dialog.showModal) dialog.showModal();
+  else dialog.setAttribute('open','');
   textarea.focus();
 }
 
@@ -390,8 +370,8 @@ function setupArtistSummaryEditor(artist) {
   const textarea = editor?.querySelector('textarea');
   const editButton = box.querySelector('.artist-summary-edit-button');
   const markdownButton = box.querySelector('.artist-summary-markdown-button');
+  const scriptButton = box.querySelector('.artist-summary-script-button');
   const transformButton = box.querySelector('.artist-summary-transform-button');
-  const transcriptButton = box.querySelector('.artist-summary-transcript-button');
   const cancelButton = box.querySelector('.artist-summary-cancel');
   if (!read || !editor || !textarea || !editButton || !cancelButton) return;
   const showEditor = show => {
@@ -399,8 +379,8 @@ function setupArtistSummaryEditor(artist) {
     editor.classList.toggle('hidden', !show);
     editButton.classList.toggle('hidden', show);
     markdownButton?.classList.toggle('hidden', show);
+    scriptButton?.classList.toggle('hidden', show);
     expandButton?.classList.toggle('hidden', show);
-    transcriptButton?.classList.toggle('hidden', show);
     transformButton?.classList.toggle('hidden', show);
     if (show) textarea.focus();
   };
@@ -419,8 +399,9 @@ function setupArtistSummaryEditor(artist) {
         const markdown=String(await file.text()).replace(/\r\n?/g,'\n').trim();
         if(!markdown) return alert(language==='ko'?'비어 있는 md 파일입니다.':'The Markdown file is empty.');
         if(markdown.length>120000) return alert(language==='ko'?'md 파일은 120,000자까지 불러올 수 있습니다.':'Markdown files can contain up to 120,000 characters.');
+        const title=`## ${language === 'ko' ? 'md 업로드' : 'Markdown upload'}: ${file.name}`;
         const current=textarea.value.trim();
-        textarea.value=current && current!=='-' ? `${current}\n\n${markdown}` : markdown;
+        textarea.value=current && current!=='-' ? `${current}\n\n${title}\n${markdown}` : `${title}\n${markdown}`;
         showEditor(true);
       } catch(error) {
         alert(`${language==='ko'?'md 파일을 읽지 못했습니다: ':'Could not read the Markdown file: '}${error.message}`);
@@ -428,17 +409,17 @@ function setupArtistSummaryEditor(artist) {
     };
     input.click();
   });
-  transcriptButton?.addEventListener('click',()=>openArtistTranscriptDialog(artist));
+  scriptButton?.addEventListener('click',()=>openArtistScriptSummaryDialog(artist));
   transformButton?.addEventListener('click', async () => {
     const consentMessage = language === 'ko'
-      ? '현재 저장된 해설과 유튜브 스크립트를 OpenAI API로 보내 문서형 해설로 변환합니다. 변환 결과는 바로 저장하지 않고 편집창에서 확인합니다. 계속할까요?'
-      : 'Current artist notes and saved YouTube transcripts will be sent to the OpenAI API and converted into formatted notes. The result will open in the editor before saving. Continue?';
+      ? '현재 저장된 입력 기록을 OpenAI API로 보내 문서형 해설로 변환한 뒤 바로 저장합니다. 입력 순서와 구분은 유지합니다. 계속할까요?'
+      : 'Saved input records will be sent to the OpenAI API, converted into formatted notes, and saved immediately. Input order and sections will be preserved. Continue?';
     if (!confirm(consentMessage)) return;
     const originalLabel = transformButton.textContent;
     transformButton.disabled = true;
     editButton.disabled = true;
     if(markdownButton) markdownButton.disabled = true;
-    if(transcriptButton) transcriptButton.disabled = true;
+    if(scriptButton) scriptButton.disabled = true;
     transformButton.textContent = language === 'ko' ? '변환 중…' : 'Converting…';
     transformButton.setAttribute('aria-busy', 'true');
     try {
@@ -450,27 +431,23 @@ function setupArtistSummaryEditor(artist) {
         alert(result.message || (language === 'ko' ? '변환할 자료가 없습니다.' : 'There is no material to convert.'));
         return;
       }
-      textarea.value = artistSummaryEditorText(result.artistSummary);
-      const failureDetails = (result.failures || []).slice(0, 3).map(item => `\n- ${item.error}`).join('');
-      const failureNotice = result.failures?.length
-        ? `\n${language === 'ko' ? `사용하지 못한 스크립트 ${result.failures.length}개가 있습니다.` : `${result.failures.length} transcript(s) could not be used.`}${failureDetails}`
-        : '';
-      const skippedNotice = result.skippedCount
-        ? `\n${language === 'ko' ? `입력 한도 때문에 스크립트 ${result.skippedCount}개는 이번 변환에서 제외했습니다.` : `${result.skippedCount} transcript(s) were skipped because of the input limit.`}`
-        : '';
+      if(result.artist) Object.assign(artist,result.artist);
+      if(Number.isInteger(result.revision)) collectionMetadata={...collectionMetadata,revision:result.revision};
+      lastSavedSnapshot=artistSnapshot();
+      lastSaveError='';
       const usage = result.usage || {};
       const usageNotice = usage.totalTokens
         ? `\n${language === 'ko' ? `사용량: 입력 ${Number(usage.inputTokens || 0).toLocaleString()} · 출력 ${Number(usage.outputTokens || 0).toLocaleString()} · 합계 ${Number(usage.totalTokens).toLocaleString()} 토큰${Number.isFinite(usage.estimatedUsd) ? ` · 예상 $${Number(usage.estimatedUsd).toFixed(4)}` : ''}` : `Usage: ${Number(usage.totalTokens).toLocaleString()} tokens${Number.isFinite(usage.estimatedUsd) ? ` · est. $${Number(usage.estimatedUsd).toFixed(4)}` : ''}`}`
         : '';
-      showEditor(true);
-      alert(`${language === 'ko' ? `변환 결과를 편집창에 열었습니다. 확인한 뒤 저장을 눌러 반영하세요. 사용한 스크립트: ${result.sourceCount || 0}개` : `Converted notes opened in the editor. Review and press Save to apply. Transcripts used: ${result.sourceCount || 0}`}${usageNotice}${failureNotice}${skippedNotice}`);
+      renderTimeline();
+      alert(`${language === 'ko' ? '변환 결과를 저장했습니다. 입력 기록의 순서와 구분은 유지했습니다.' : 'Converted notes were saved. Input order and sections were preserved.'}${usageNotice}`);
     } catch (error) {
       alert(`${language === 'ko' ? '화가 해설 변환 실패: ' : 'Artist notes conversion failed: '}${error.message}`);
     } finally {
       transformButton.disabled = false;
       editButton.disabled = false;
       if(markdownButton) markdownButton.disabled = false;
-      if(transcriptButton) transcriptButton.disabled = false;
+      if(scriptButton) scriptButton.disabled = false;
       transformButton.textContent = originalLabel;
       transformButton.removeAttribute('aria-busy');
     }
@@ -899,11 +876,11 @@ function renderTimeline() {
     const summaryTitle = language === 'ko' ? '화가 해설' : 'Artist Notes';
     const summaryEditLabel = language === 'ko' ? '편집' : 'Edit';
     const markdownLabel = language === 'ko' ? 'md 업로드' : 'Upload md';
+    const scriptSummaryLabel = language === 'ko' ? '스크립트 요약' : 'Script summary';
     const summaryTransformLabel = language === 'ko' ? '변환' : 'Convert';
-    const transcriptLabel = language === 'ko' ? '스크립트 입력' : 'Transcript';
     const summarySaveLabel = language === 'ko' ? '저장' : 'Save';
     const summaryCancelLabel = language === 'ko' ? '취소' : 'Cancel';
-    const summaryHelp = language === 'ko' ? '항목 수 제한 없이 입력할 수 있습니다. Enter를 누르면 새 불릿이 생기고, 빈 항목은 저장할 때 제거됩니다.' : 'Add as many items as needed. Press Enter to add a new bullet; blank items are removed when saved.';
+    const summaryHelp = language === 'ko' ? '텍스트와 블로그 본문을 붙여 넣을 수 있습니다. 긴 스크립트는 바깥의 스크립트 요약 버튼으로 먼저 줄여 저장하세요.' : 'Paste text and blog content here. Use the script summary button first for long scripts.';
     const summaryPlaceholder = language === 'ko'
       ? '화가가 무엇을 그렸고, 어떤 기법과 영향을 받았으며, 어떻게 평가되는지 적어 주세요.'
       : 'Describe subjects, techniques, influences, reception, and later impact.';
@@ -911,10 +888,8 @@ function renderTimeline() {
     const summaryBody = summaryLines.length
       ? `<div class="artist-summary-lines${summaryExpanded?' expanded':''}">${artistSummaryLinesMarkup(summaryLines,artist)}</div>`
       : `<p class="artist-summary-empty">${esc(language === 'ko' ? '아직 화가 해설이 없습니다.' : 'No artist notes yet.')}</p>`;
-    const youtubeLinks=savedLinks.filter(isYouTubeLink), savedTranscriptCount=youtubeLinks.filter(link=>String(link.transcript || '').trim()).length;
-    const transcriptControl=currentUserIsAdmin && youtubeLinks.length ? `<button class="artist-summary-transcript-button" type="button" title="${esc(language==='ko'?`저장된 스크립트 ${savedTranscriptCount}개`:`${savedTranscriptCount} saved transcript(s)`)}">${esc(transcriptLabel)}${savedTranscriptCount?` <span>${savedTranscriptCount}</span>`:''}</button>` : '';
     const expandControl=summaryLines.length>4?`<button class="artist-summary-expand-button" type="button" aria-expanded="${summaryExpanded}" title="${esc(language==='ko'?(summaryExpanded?'해설 접기':'해설 펼치기'):(summaryExpanded?'Collapse notes':'Expand notes'))}">${summaryExpanded?'▴':'▾'}</button>`:'';
-    const summaryBox = `<section class="artist-summary-box"><div class="artist-summary-heading"><p class="eyebrow">${esc(summaryTitle)}</p><div class="artist-summary-actions">${currentUserIsAdmin ? `<button class="artist-summary-edit-button" type="button">${esc(summaryEditLabel)}</button><button class="artist-summary-markdown-button" type="button" title="${esc(language === 'ko' ? 'md 파일 내용을 편집창에 추가' : 'Add a Markdown file to the editor')}">${esc(markdownLabel)}</button>${transcriptControl}<button class="artist-summary-transform-button" type="button" title="${esc(language === 'ko' ? '현재 해설과 저장된 유튜브 스크립트를 문서형 해설로 변환' : 'Convert current notes and saved YouTube transcripts into formatted notes')}">${esc(summaryTransformLabel)}</button>` : ''}${expandControl}</div></div><div class="artist-summary-read">${summaryBody}</div>${currentUserIsAdmin ? `<form class="artist-summary-editor hidden"><textarea rows="6" aria-label="${esc(summaryTitle)}" placeholder="${esc(summaryPlaceholder)}">${esc(artistSummaryEditorText(summaryLines))}</textarea><p>${esc(summaryHelp)}</p><div><button type="button" class="artist-summary-cancel">${esc(summaryCancelLabel)}</button><button type="submit">${esc(summarySaveLabel)}</button></div></form>` : ''}</section>`;
+    const summaryBox = `<section class="artist-summary-box"><div class="artist-summary-heading"><p class="eyebrow">${esc(summaryTitle)}</p><div class="artist-summary-actions">${currentUserIsAdmin ? `<button class="artist-summary-edit-button" type="button">${esc(summaryEditLabel)}</button><button class="artist-summary-markdown-button" type="button" title="${esc(language === 'ko' ? 'md 파일 내용을 이전 기록과 분리해 편집창에 추가' : 'Add a Markdown file to the editor as a separate section')}">${esc(markdownLabel)}</button><button class="artist-summary-script-button" type="button" title="${esc(language === 'ko' ? '긴 스크립트를 요약해 해설에 저장' : 'Summarize a long script into the notes')}">${esc(scriptSummaryLabel)}</button><button class="artist-summary-transform-button" type="button" title="${esc(language === 'ko' ? '현재 저장된 입력 기록을 문서형 해설로 변환해 저장' : 'Convert saved input records into formatted notes and save')}">${esc(summaryTransformLabel)}</button>` : ''}${expandControl}</div></div><div class="artist-summary-read">${summaryBody}</div>${currentUserIsAdmin ? `<form class="artist-summary-editor hidden"><textarea rows="6" aria-label="${esc(summaryTitle)}" placeholder="${esc(summaryPlaceholder)}">${esc(artistSummaryEditorText(summaryLines))}</textarea><p>${esc(summaryHelp)}</p><div><button type="button" class="artist-summary-cancel">${esc(summaryCancelLabel)}</button><button type="submit">${esc(summarySaveLabel)}</button></div></form>` : ''}</section>`;
     const featured = leonardoFeaturedWorks.length ? `<section class="leonardo-featured"><div class="leonardo-section-heading"><p class="eyebrow">${esc(featuredLabel)}</p><div class="leonardo-section-actions">${slideshowButton('featured', language === 'ko' ? '대표작 슬라이드 쇼 시작' : 'Start highlights slideshow')}</div><p>${esc(language === 'ko' ? '우선 크게 살펴볼 작품입니다. Ⓗ 표시는 고해상도 파일이 있음을 뜻합니다.' : 'A small set of works to study first. Ⓗ marks an available high-resolution file.')}</p></div><div class="leonardo-featured-grid">${leonardoFeaturedWorks.map(work => `<div class="leonardo-featured-card" data-featured-work="${esc(work.id)}"${canDragFeaturedWorks ? ' draggable="true"' : ''}>${card(work)}</div>`).join('')}</div></section>` : '';
     const allWorksAction = `${slideshowButton('all', language === 'ko' ? '전체 작품 슬라이드 쇼 시작' : 'Start all-works slideshow')}${currentUserIsAdmin ? `<button class="add-artwork-button leonardo-section-add-artwork" type="button" title="${esc(t('addArtwork'))}" aria-label="${esc(t('addArtwork'))}"><span>+</span><span>${esc(t('addArtwork'))}</span></button>` : ''}`;
     const layoutDescription = {

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
-const { sourceKey, mergeChronology, readableBlogUrl, cleanManualSummaryLines, savedTranscriptSource, finalizeResearchDraft, chronologySort, transformArtistSummary } = require('../server-artist-research');
+const { sourceKey, mergeChronology, readableBlogUrl, cleanManualSummaryLines, savedTranscriptSource, finalizeResearchDraft, chronologySort, transformArtistSummary, summarizeArtistScript } = require('../server-artist-research');
 const { presentationLinks } = require('../server-data');
 
 const monetWatch = 'https://www.youtube.com/watch?v=Q6nhX7GuliM&t=1s';
@@ -57,11 +57,14 @@ assert.doesNotMatch(summarySetupSource,/renderArtworkDetail\(work,artist,false\)
 assert.match(summarySetupSource,/if\(expanded\) refreshArtistSummaryArtworkLinks\(box,artist\)/);
 assert.match(summarySetupSource,/event\.target\.closest\('\[data-summary-work\]'\)/);
 assert.match(summarySetupSource,/\/api\/artist-summary-transform/);
-assert.match(summarySetupSource,/showEditor\(true\)/);
+assert.match(artistUiSource,/\/api\/artist-script-summary/);
+assert.match(summarySetupSource,/변환 결과를 저장했습니다/);
 assert.match(summarySetupSource,/artist-summary-markdown-button/);
+assert.match(summarySetupSource,/artist-summary-script-button/);
 assert.match(summarySetupSource,/\.md,\.markdown,text\/markdown,text\/plain/);
 assert.match(artistUiSource,/<button class="artist-summary-transform-button"[\s\S]*?<\/button>` : ''\}\$\{expandControl\}/);
-assert.match(artistUiSource,/<button class="artist-summary-markdown-button"[\s\S]*?artist-summary-transform-button/);
+assert.match(artistUiSource,/<button class="artist-summary-markdown-button"[\s\S]*?artist-summary-script-button[\s\S]*?artist-summary-transform-button/);
+assert.doesNotMatch(artistUiSource,/function openArtistTranscriptDialog/);
 assert.doesNotMatch(artistUiSource,/\/api\/artist-summary-update/);
 const artistCssSource=fs.readFileSync(require.resolve('../styles.css'),'utf8');
 assert.match(artistCssSource,/\.artist-summary-image-preview\{[^}]*place-items:center/);
@@ -90,16 +93,20 @@ async function checkTransformFlow() {
   const previousFetch=global.fetch, previousKey=process.env.OPENAI_API_KEY;
   let requestPayload;
   process.env.OPENAI_API_KEY='test-key';
-  global.fetch=async(_url,options={})=>{ requestPayload=JSON.parse(options.body); return {ok:true,json:async()=>({output_text:JSON.stringify({lines:['## 기존 해설','기존 해설은 삭제하지 않는다.','## YouTube Q6nhX7GuliM (저장 스크립트)','1862년 (약 22세) · [초기 미술 교육] 스크립트 내용은 별도 블록으로 정리한다.','이미지 자료는 《인상, 해돋이》(1872)처럼 작품명과 연도만 남긴다.']}),usage:{input_tokens:120,output_tokens:40,total_tokens:160},output:[]})}; };
+  global.fetch=async(_url,options={})=>{ requestPayload=JSON.parse(options.body); return {ok:true,json:async()=>({output_text:JSON.stringify({lines:['## 기존 해설','기존 해설은 삭제하지 않는다.','## 스크립트 요약: 영상','1862년 (약 22세) · [초기 미술 교육] 요약된 스크립트 내용은 별도 블록으로 정리한다.','이미지 자료는 《인상, 해돋이》(1872)처럼 작품명과 연도만 남긴다.']}),usage:{input_tokens:120,output_tokens:40,total_tokens:160},output:[]})}; };
   try {
-    const result=await transformArtistSummary({id:'test-artist',birth:1840,name:{ko:'시험 화가'},links:[{url:monetWatch,transcript:'모네는 르아브르에서 부댕을 만나 야외에서 빛을 관찰하는 법을 배웠다. '.repeat(8)}],artistSummary:{ko:['기존 해설은 삭제하지 않는다.']},works:[{title:{ko:'인상, 해돋이',en:'Impression, Sunrise'},year:1872}]});
-    assert.equal(result.sourceCount,1);
+    const result=await transformArtistSummary({id:'test-artist',birth:1840,name:{ko:'시험 화가'},links:[{url:monetWatch,transcript:'모네는 르아브르에서 부댕을 만나 야외에서 빛을 관찰하는 법을 배웠다. '.repeat(8)}],artistSummary:{ko:['## 기존 해설','기존 해설은 삭제하지 않는다.','## 스크립트 요약: 영상','요약된 스크립트만 저장한다.']},works:[{title:{ko:'인상, 해돋이',en:'Impression, Sunrise'},year:1872}]});
+    assert.equal(result.sourceCount,0);
     assert.equal(result.artistSummary.ko[0],'## 기존 해설');
     assert.match(JSON.stringify(requestPayload),/입력 블록의 순서와 경계를 반드시 보존/);
-    assert.match(JSON.stringify(requestPayload),/md 업로드 내용이 저장된 순서/);
+    assert.match(JSON.stringify(requestPayload),/스크립트 요약 버튼/);
     const userInput=JSON.parse(requestPayload.input[1].content[0].text);
-    assert.equal(userInput.inputBlocks[0].kind,'existing-summary');
-    assert.equal(userInput.inputBlocks[1].kind,'youtube-transcript');
+    assert.equal(userInput.inputBlocks[0].kind,'saved-editor-input');
+    assert.equal(userInput.inputBlocks[0].title,'기존 해설');
+    assert.equal(userInput.inputBlocks[1].kind,'saved-editor-input');
+    assert.equal(userInput.inputBlocks[1].title,'스크립트 요약: 영상');
+    assert.equal(userInput.inputBlocks.length,2);
+    assert.equal(Object.hasOwn(userInput,'savedYoutubeTranscripts'),false);
     assert.equal(result.artistSummary.ko.some(line=>/https?:\/\//.test(line)),false);
     assert.equal(result.usage.totalTokens,160);
   } finally {
@@ -109,8 +116,29 @@ async function checkTransformFlow() {
   }
 }
 
+async function checkScriptSummaryFlow() {
+  const previousFetch=global.fetch, previousKey=process.env.OPENAI_API_KEY;
+  let requestPayload;
+  process.env.OPENAI_API_KEY='test-key';
+  global.fetch=async(_url,options={})=>{ requestPayload=JSON.parse(options.body); return {ok:true,json:async()=>({output_text:JSON.stringify({lines:['### 초기 교육','르아브르에서 부댕을 만나 야외에서 빛을 관찰하는 법을 배웠다.','《인상, 해돋이》(1872)를 작품명과 연도로만 남긴다.']}),usage:{input_tokens:220,output_tokens:55,total_tokens:275},output:[]})}; };
+  try {
+    const result=await summarizeArtistScript({id:'test-artist',birth:1840,name:{ko:'시험 화가'},works:[{title:{ko:'인상, 해돋이',en:'Impression, Sunrise'},year:1872}]},'모네는 르아브르에서 부댕을 만나 야외에서 빛을 관찰하는 법을 배웠다. '.repeat(8),'영상 스크립트');
+    assert.equal(result.lines[0],'### 초기 교육');
+    assert.match(JSON.stringify(requestPayload),/사용자가 붙여 넣은 스크립트만 요약/);
+    const userInput=JSON.parse(requestPayload.input[1].content[0].text);
+    assert.equal(userInput.title,'영상 스크립트');
+    assert.match(userInput.script,/르아브르/);
+    assert.equal(result.usage.totalTokens,275);
+  } finally {
+    global.fetch=previousFetch;
+    if(previousKey===undefined) delete process.env.OPENAI_API_KEY;
+    else process.env.OPENAI_API_KEY=previousKey;
+  }
+}
+
 (async()=>{
   await checkConfirmationFlow();
+  await checkScriptSummaryFlow();
   await checkTransformFlow();
-  console.log(JSON.stringify({ok:true,checks:42}));
+  console.log(JSON.stringify({ok:true,checks:48}));
 })().catch(error=>{console.error(error);process.exitCode=1;});
