@@ -4,6 +4,7 @@ server.out.log
 logs/
 delivery/
 data/backups/
+data/images/
 data/images-local-backup-*/
 data/*.tmp
 data/.image-staging/
