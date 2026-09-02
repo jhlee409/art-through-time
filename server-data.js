@@ -20,7 +20,7 @@ function presentationLinks(value, label, options={}) {
 }
 
 module.exports = function createArtistDataService(deps) {
-  const { https, fs, path, URL, createHash, randomBytes, execFileAsync, ffmpegPath, root, dataDir, highResolutionDir, imageStagingDir, artistsFile, backupsDir, auditLogFile, adminEmail, artistImportedWorkLimit, highResolutionStoredLimit, sourceImageInputLimit, normalizeArtistsPayload, validateArtistsPayload, invalidArtworkThumbnail, writeUHangulArtistMap, syncPersonNameDictionary } = deps;
+  const { https, fs, path, URL, createHash, randomBytes, execFileAsync, ffmpegPath, root, dataDir, highResolutionDir, imageStagingDir, artistsFile, backupsDir, auditLogFile, adminEmail, artistImportedWorkLimit, highResolutionStoredLimit, sourceImageInputLimit, normalizeArtistsPayload, validateArtistsPayload, invalidArtworkThumbnail, writeUHangulArtistMap, syncPersonNameDictionary, canonicalArtworkFilename } = deps;
   const normalizedEmail = value => String(value || '').trim().toLowerCase();
   const uploadTypes = {'image/jpeg':'jpg','image/jpg':'jpg','image/pjpeg':'jpg','image/png':'png','image/webp':'webp','image/gif':'gif'};
   const safeUploadId = value => { if (!/^[A-Za-z0-9_-]{1,140}$/.test(String(value || ''))) throw new Error('Invalid artwork identifier'); return String(value); };
@@ -375,14 +375,14 @@ async function saveThumbnailBuffer(artist,work,image,extension,verifiedBy,email=
   image=stored.image;
   extension=stored.extension;
   if(invalidArtworkThumbnail(image)) throw new Error('Image is a small interface icon');
-  const location=thumbnailLocation(email,artist.id), directory=location.folder, fileName=`${work.id}.${extension}`, relative=`${location.relativePrefix}/${fileName}`;
+  const location=thumbnailLocation(email,artist.id), directory=location.folder;
+  const fileName=canonicalArtworkFilename(artist,work,`.${extension}`), relative=`${location.relativePrefix}/${fileName}`;
   await fs.mkdir(directory,{recursive:true});
   const indexPath=path.join(directory,'index.json');
   let index={};
   try { index=JSON.parse(await fs.readFile(indexPath,'utf8')); } catch (_) {}
   const imageHash=createHash('sha256').update(image).digest('hex');
   await assertUniqueThumbnailImage(index,work,imageHash);
-  await removeThumbnailFiles(directory,work.id);
   await fs.writeFile(path.join(directory,fileName),image);
   index[work.id]={thumbnail:relative,checkedAt:new Date().toISOString(),verifiedBy:stored.reduced ? `${verifiedBy}; reduced below 10 MB and original discarded` : verifiedBy,imageHash};
   await fs.writeFile(indexPath,JSON.stringify(index,null,2),'utf8');
@@ -539,6 +539,46 @@ function writeArtistsFile(payload, actor='') {
   artistsWriteQueue=queued.catch(()=>{});
   return queued;
 }
+async function saveArtworkImageMutationNow(patch, actor='') {
+  const data=JSON.parse(await fs.readFile(artistsFile,'utf8'));
+  const artistId=safeUploadId(patch?.artistId), workId=safeUploadId(patch?.workId);
+  if(!['add','replace'].includes(patch?.mode)) throw new Error('Invalid artwork image mutation');
+  const artist=(data.artists || []).find(item=>String(item.id || '')===artistId);
+  if(!artist) throw new Error('Artist not found');
+  let work=(artist.works || []).find(item=>String(item.id || '')===workId);
+  if(patch.mode==='add') {
+    if(work) throw new Error('Artwork already exists');
+    const incoming=patch.work && typeof patch.work==='object' && !Array.isArray(patch.work) ? patch.work : {};
+    work={
+      ...incoming,
+      id:workId,
+      origin:'manual',
+      thumbnail:patch.thumbnail,
+      thumbnailValidation:2,
+      imageUploadStatus:'ready',
+      imageOwnershipVerification:{status:'pending'}
+    };
+    artist.works=Array.isArray(artist.works) ? [...artist.works,work] : [work];
+  } else {
+    if(!work) throw new Error('Artwork not found');
+    work.thumbnail=patch.thumbnail;
+    work.thumbnailValidation=2;
+    work.thumbnailCacheKey=String(Date.now());
+    work.highResImage=patch.image;
+    work.highResOriginal=patch.image;
+    if(isLocalArtworkPath(work.localImage)) work.localImage=patch.image;
+    if(isLocalArtworkPath(work.image)) work.image=patch.image;
+    work.imageUploadStatus='ready';
+  }
+  const saved=await writeArtistsFileNow(data,actor);
+  const savedArtist=await readArtistDetail(artistId);
+  return {...saved,artist:savedArtist,work:(savedArtist?.works || []).find(item=>String(item.id || '')===workId)};
+}
+function saveArtworkImageMutation(patch, actor='') {
+  const queued=artistsWriteQueue.then(()=>saveArtworkImageMutationNow(patch,actor));
+  artistsWriteQueue=queued.catch(()=>{});
+  return queued;
+}
 async function updateArtistPresentationNow(patch, actor='') {
   const data=JSON.parse(await fs.readFile(artistsFile,'utf8'));
   const artistId=String(patch?.artistId || ''), artist=(data.artists || []).find(item=>item.id===artistId);
@@ -675,7 +715,7 @@ async function updateArtistSummaryFromLinks(artistId, actor='', researchArtistSu
     getJsonFast, api, similarityScore,
     getEntities, entityId, entityYear, entityLabel, koreanArtistNameOverrides,
     saveThumbnailBuffer, saveThumbnailFromLocalUpload, removeThumbnailFiles, thumbnailLocation, makePngUnderStorageLimit,
-    readArtistsFile, readArtistsIndex, readArtistDetail, writeArtistsFile, updateArtistPresentation, updateArtistSummary, updateArtistSummaryFromLinks, highResolutionPathExists, resolvedHighResolutionPath,
+    readArtistsFile, readArtistsIndex, readArtistDetail, writeArtistsFile, saveArtworkImageMutation, updateArtistPresentation, updateArtistSummary, updateArtistSummaryFromLinks, highResolutionPathExists, resolvedHighResolutionPath,
     resolveHighResolutionPaths, safeUploadId, uploadExtension
   };
 };

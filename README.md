@@ -118,11 +118,31 @@ node tools/sync-movement-learning-guides.js --check
 
 이미지 작업도 수정 대상 탭·HTML의 작성규칙과 [공통 탭·전용 HTML 작성 규칙](작성규칙/새탭_template_작성규칙.md)을 먼저 확인합니다. 세부 파일명, 정본 폴더, 카탈로그 갱신과 검증 명령은 공통 규칙과 [화가 및 작품 탭 작성 규칙](작성규칙/화가및작품탭_작성규칙.md)을 정본으로 삼습니다.
 
-- 화면에는 프로젝트 로컬 이미지만 사용하고, 화가 작품은 모든 탭에서 `artistId + workId`로 연결된 `data/images/artist-*/` 정본을 재사용합니다. 이 프로젝트의 `data/images`는 `C:\Users\admin\OneDrive - UOU\AI-Programming\Art_through_Time\data\images`를 가리키는 Windows Junction이며, 대량 이미지의 실제 저장 정본은 OneDrive 쪽 폴더다.
+### 화가 연표 이미지 저장 정책
+
+> **앞으로 화가 연표에 사용하는 이미지 파일은 이 Git 프로젝트 폴더에 직접 저장하지 않습니다.** 모든 신규 이미지와 교체 이미지는 OneDrive의 이미지 정본 폴더에 저장하고, 프로젝트는 `data/images` Windows Junction을 통해 그 파일을 사용합니다.
+
+| 구분 | 위치와 역할 |
+| --- | --- |
+| 실제 이미지 정본 | 각 컴퓨터에 존재하는 OneDrive 대상 경로 하나 |
+| 프로젝트 접근 경로 | `data/images` Junction |
+| 코드·JSON에 기록할 경로 | `data/images/...` 상대 경로만 사용 |
+| Git 관리 대상 | 이미지 참조가 있는 데이터와 `data/image-catalog.json`; 대량 이미지 파일은 제외 |
+
+허용하는 OneDrive Junction 대상 후보는 다음 두 경로입니다.
+
+- `C:\Users\admin\OneDrive - UOU\AI-Programming\Art_through_Time\data\images`
+- `C:\Users\jhlee\OneDrive - UOU\AI-Programming\Art_through_Time\data\images`
+
+각 컴퓨터에서는 실제로 존재하는 후보 하나만 Junction 대상으로 사용합니다. 관리자 화면에서 이미지를 추가하거나 교체해도 파일은 `data/images` Junction을 통과해 OneDrive 정본에 저장됩니다. `Art_through_Time.cmd`는 정상인 기존 Junction을 보존하고, Junction이 없을 때만 `tools/ensure-image-junction.ps1`로 두 후보를 순서대로 확인해 생성합니다. `data/images`를 일반 폴더로 바꾸거나 이미지 파일을 프로젝트 안에 복사해 Git에 추가하지 않습니다.
+
+### 공통 원칙
+
+- 화면에는 프로젝트 상대 경로의 이미지만 사용하고, 화가 작품은 모든 탭에서 `artistId + workId`로 연결된 `data/images/artist-*/` 정본을 재사용합니다.
 - 로컬 파일이 없으면 외부 이미지 URL을 만들지 않고 `이미지 업로드 예정` 또는 `다운로드 필요` 상태를 유지합니다.
 - 사용자가 "다운로드 폴더"라고 말하면 프로젝트 루트의 `다운로드용/`만 확인합니다.
 - URL 이미지 다운로드나 URL 응답 저장은 대상 사이트와 파일을 밝히고 사용자의 명시적 승인을 받은 뒤에만 수행합니다.
-- 이미지 변경 뒤에는 `data/image-catalog.json`을 갱신하고 해당 작성규칙의 검증을 실행합니다.
+- 이미지 변경 뒤에는 `data/image-catalog.json`을 갱신하고 해당 작성규칙의 검증을 실행합니다. 관리자 화면의 작품 이미지 추가·교체 API는 이미지 파일, `data/images/*/index.json`, `data/artists.json`, `data/artists-index.json`, `data/image-catalog.json`을 한 서버 요청에서 함께 갱신합니다.
 
 ## 로그인과 권한
 
@@ -207,6 +227,6 @@ node tools/record-change.js --section "섹션 이름" --item "변경 내용"
 
 ## 저장소 관리
 
-코드, JSON, 사조 HTML, 문서는 Git으로 관리합니다. `.env`, 로그, 로컬 이미지, 백업, 배포 결과물은 Git에 올리지 않습니다. 이미지 폴더가 Junction인 환경에서는 저장소 이동·백업 시 실제 대상 폴더도 별도로 확인합니다. 이 프로젝트에서는 `data/images` Junction 자체를 일반 폴더로 교체하지 않으며, 대량 이미지를 Git에 넣지 않는다.
+코드, JSON, 사조 HTML, 문서는 Git으로 관리합니다. `.env`, 로그, 이미지 파일, 백업, 배포 결과물은 Git에 올리지 않습니다. 화가 연표 이미지의 저장 위치와 연결 방식은 위의 [화가 연표 이미지 저장 정책](#화가-연표-이미지-저장-정책)을 따릅니다. 저장소를 이동하거나 백업할 때는 프로젝트와 OneDrive 이미지 정본을 각각 확인합니다.
 
 Firebase 관련 코드는 향후 이관 준비용입니다. 현재 운영 데이터의 원본은 로컬 JSON이며 외부 서비스로 자동 전송하지 않습니다. 자세한 내용은 [FIREBASE_MIGRATION.md](FIREBASE_MIGRATION.md)를 참고합니다.

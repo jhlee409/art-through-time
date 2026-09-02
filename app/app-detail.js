@@ -661,27 +661,19 @@ async function uploadLocalArtworkImage(artist, work, file) {
   const form=new FormData();
   form.append('artistId',artist.id);
   form.append('workId',work.id);
-  form.append('artistName',artist.name?.ko || loc(artist.name) || artist.id);
-  form.append('artistQid',artist.qid || '');
   form.append('image',file);
   const response=await apiFetch('/api/local-artwork-image',{method:'POST',body:form});
   const result=await response.json().catch(()=>({}));
-  if(!response.ok || !result.image || !result.thumbnail) throw new Error(result.error || `Upload failed (HTTP ${response.status})`);
-  (artist.works || []).filter(item => selectionKey(item) === selectionKey(work)).forEach(item => {
-    item.thumbnail=result.thumbnail;
-    item.thumbnailValidation=2;
-    item.thumbnailCacheKey=String(Date.now());
-    item.highResImage=result.image;
-    item.highResOriginal=result.image;
-  });
-  work.thumbnail=result.thumbnail;
-  work.thumbnailValidation=2;
-  work.thumbnailCacheKey=String(Date.now());
-  work.highResImage=result.image;
-  work.highResOriginal=result.image;
-  persist();
-  if(!await saveArtistsNow()) throw new Error(saveFailureMessage());
+  if(!response.ok || !result.image || !result.thumbnail || !result.artist || !result.work) throw new Error(result.error || `Upload failed (HTTP ${response.status})`);
+  applySavedArtworkMutation(artist,result);
   return result;
+}
+function applySavedArtworkMutation(artist, result) {
+  Object.assign(artist,result.artist);
+  if(Number.isInteger(result.revision)) collectionMetadata={...collectionMetadata,revision:result.revision};
+  lastSavedSnapshot=artistSnapshot();
+  lastSaveError='';
+  localStorage.removeItem(storageKey);
 }
 async function hydrateThumbnails(artist) {
   if (!artist) return;
@@ -783,15 +775,16 @@ function setLocalArtworkDetails(fileOrFiles) {
   notice.classList.remove('hidden');
 }
 
-async function cacheThumbnailFromFile(artist, work, file) {
+async function saveLocalArtworkFromFile(artist, work, file) {
   const form=new FormData();
   form.append('artist',JSON.stringify({id:artist.id}));
   form.append('work',JSON.stringify(work));
   form.append('image',file,file.name);
   const response=await apiFetch('/api/local-thumbnail-image',{method:'POST',body:form});
   const result=await response.json().catch(()=>({}));
-  if(!response.ok || !result.thumbnail) throw new Error(result.error || 'Could not upload the image');
-  return result.thumbnail;
+  if(!response.ok || !result.thumbnail || !result.artist || !result.work) throw new Error(result.error || 'Could not upload the image');
+  applySavedArtworkMutation(artist,result);
+  return result;
 }
 
 async function addLocalArtworkToSelectedArtist(file, title, yearInput) {
@@ -800,18 +793,10 @@ async function addLocalArtworkToSelectedArtist(file, title, yearInput) {
   if(!file) throw new Error(language === 'ko' ? '이미지 파일을 선택하세요.' : 'Choose an image file.');
   const {year,yearEnd}=localArtworkYear(yearInput || inferredArtworkYear(file));
   const name=title || inferredArtworkTitle(file) || t('untitled');
-  const work={id:`manual-local-${Date.now()}-${Math.random().toString(36).slice(2,8)}`,year,...(yearEnd ? {yearEnd} : {}),title:{ko:name,en:name},country:{ko:'',en:''},movement:{ko:'',en:''},description:{ko:'',en:''},origin:'manual'};
+  const work={id:`manual-local-${Date.now()}-${Math.random().toString(36).slice(2,8)}`,year,...(yearEnd ? {yearEnd} : {}),title:{ko:name,en:name},country:{ko:'',en:''},movement:{ko:'',en:''},description:{ko:'',en:''},origin:'manual',imageOwnershipVerification:{status:'pending'}};
   if((artist.works || []).some(item => selectionKey(item) === selectionKey(work))) throw new Error(language === 'ko' ? '같은 제목과 제작 연도의 작품이 이미 등록되어 있습니다.' : 'An artwork with this title and year is already listed.');
-  work.thumbnail=await cacheThumbnailFromFile(artist,work,file);
-  work.thumbnailValidation=2;
-  artist.works=selectArtistWorks([...(artist.works || []),work],artistImportedWorkLimit,artist);
-  await normalizeArtistWorksBeforeSave(artist);
-  persist();
-  if(!await saveArtistsNow()) {
-    artist.works=(artist.works || []).filter(item => item.id !== work.id);
-    throw new Error(language === 'ko' ? '저장 파일을 업데이트하지 못했습니다.' : 'Could not update the saved collection.');
-  }
-  return artist.works.find(item => item.id === work.id) || work;
+  const result=await saveLocalArtworkFromFile(artist,work,file);
+  return result.work;
 }
 
 async function addLocalArtworksToSelectedArtist(files, title, yearInput) {

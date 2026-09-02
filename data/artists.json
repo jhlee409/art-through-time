@@ -2,10 +2,10 @@
   "dataSchema": 1,
   "metadata": {
     "createdAt": "2026-08-22T12:46:59.824Z",
-    "updatedAt": "2026-09-02T06:28:52.726Z",
+    "updatedAt": "2026-09-02T09:51:06.233Z",
     "createdBy": "jhlee409@gmail.com",
     "updatedBy": "jhlee409@gmail.com",
-    "revision": 965,
+    "revision": 966,
     "representativeContentSchema": 2
   },
   "artists": [
@@ -27973,7 +27973,7 @@
           },
           "metadata": {
             "createdAt": "2026-08-20T04:14:01.998Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
+            "updatedAt": "2026-09-02T09:51:06.233Z",
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -27992,7 +27992,7 @@
               "institution": "Wikimedia Commons"
             }
           },
-          "thumbnailCacheKey": "2026-08-29T04:32:45.798Z",
+          "thumbnailCacheKey": "2026-08-29T07:37:20.052Z",
           "movementContribution": false,
           "image": "data/images/artist-Q47551/manual-local-1787199069405.png",
           "highResImage": "data/images/artist-Q47551/manual-local-1787199069405.png",
@@ -28861,10 +28861,10 @@
           "representative": true,
           "movementContribution": true,
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-20T02:41:22.202Z",
+          "thumbnailCacheKey": "2026-08-29T09:22:26.014Z",
           "metadata": {
             "createdAt": "2026-08-20T10:20:35.689Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
+            "updatedAt": "2026-09-02T09:51:06.233Z",
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -29016,10 +29016,10 @@
           "movementContribution": false,
           "thumbnail": "data/images/artist-Q47551/wikidata-Q1206860.jpg",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-20T02:42:49.587Z",
+          "thumbnailCacheKey": "2026-08-29T07:37:20.033Z",
           "metadata": {
             "createdAt": "2026-08-20T10:20:35.689Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
+            "updatedAt": "2026-09-02T09:51:06.233Z",
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -29528,10 +29528,10 @@
           "movementContribution": false,
           "thumbnail": "data/images/artist-Q47551/wikidata-Q727875.jpg",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-29T05:01:57.227Z",
+          "thumbnailCacheKey": "2026-08-29T05:01:57.228Z",
           "metadata": {
             "createdAt": "2026-08-20T10:20:35.689Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
+            "updatedAt": "2026-09-02T09:51:06.233Z",
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -30210,10 +30210,10 @@
           "movementContribution": false,
           "thumbnail": "data/images/artist-Q47551/wikidata-Q603703.jpg",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-29T05:01:57.220Z",
+          "thumbnailCacheKey": "2026-08-29T05:01:57.222Z",
           "metadata": {
             "createdAt": "2026-08-20T10:20:35.689Z",
-            "updatedAt": "2026-08-28T14:20:45.285Z",
+            "updatedAt": "2026-09-02T09:51:06.233Z",
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -30934,7 +30934,7 @@
           "movementContribution": false,
           "metadata": {
             "createdAt": "2026-08-29T07:18:20.749Z",
-            "updatedAt": "2026-08-29T21:43:52.054Z",
+            "updatedAt": "2026-09-02T09:51:06.233Z",
             "createdBy": "metadata-recovery",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -30957,7 +30957,8 @@
               "institution": ""
             }
           },
-          "origin": "manual"
+          "origin": "manual",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.758Z"
         },
         {
           "id": "manual-local-1787195653407",
@@ -31030,7 +31031,7 @@
           },
           "metadata": {
             "createdAt": "2026-08-20T03:14:29.316Z",
-            "updatedAt": "2026-08-20T10:45:39.958Z",
+            "updatedAt": "2026-09-02T09:51:06.233Z",
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -31046,7 +31047,7 @@
               "institution": ""
             }
           },
-          "thumbnailCacheKey": "2026-08-20T03:14:15.872Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.749Z",
           "movementContribution": false,
           "highResImage": "data/images/artist-Q47551/manual-local-1787195653407.jpg",
           "highResOriginal": "data/images/artist-Q47551/manual-local-1787195653407.jpg",
@@ -31080,7 +31081,7 @@
           "metadataVerifiedAt": "2026-08-20T04:31:49.720Z",
           "metadata": {
             "createdAt": "2026-08-20T02:26:11.396Z",
-            "updatedAt": "2026-08-20T09:47:33.006Z",
+            "updatedAt": "2026-09-02T09:51:06.233Z",
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -31101,7 +31102,7 @@
           },
           "thumbnail": "data/images/artist-Q47551/wikidata-Q24249.jpg",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-20T02:44:21.341Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.754Z",
           "highResImage": "data/images/artist-Q47551/wikidata-Q24249.jpg",
           "highResOriginal": "data/images/artist-Q47551/wikidata-Q24249.jpg",
           "imageUploadStatus": "ready",
@@ -31141,7 +31142,7 @@
           "metadataVerifiedAt": "2026-08-20T10:21:03.435Z",
           "metadata": {
             "createdAt": "2026-08-20T02:26:11.396Z",
-            "updatedAt": "2026-08-22T05:17:09.937Z",
+            "updatedAt": "2026-09-02T09:51:06.233Z",
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -31162,7 +31163,7 @@
           },
           "thumbnail": "data/images/artist-Q47551/wikidata-Q7401482.jpg",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-20T10:15:54.934Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.756Z",
           "highResImage": "data/images/artist-Q47551/wikidata-Q7401482.jpg",
           "highResOriginal": "data/images/artist-Q47551/wikidata-Q7401482.jpg",
           "imageUploadStatus": "ready",
@@ -31203,7 +31204,7 @@
           "metadataVerifiedAt": "2026-08-20T04:31:49.720Z",
           "metadata": {
             "createdAt": "2026-08-20T02:26:11.396Z",
-            "updatedAt": "2026-08-20T09:47:33.006Z",
+            "updatedAt": "2026-09-02T09:51:06.233Z",
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -31222,7 +31223,7 @@
               "institution": ""
             }
           },
-          "thumbnailCacheKey": "2026-08-20T05:30:00.000Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.753Z",
           "highResImage": "data/images/artist-Q47551/wikidata-Q14425553.jpg",
           "highResOriginal": "data/images/artist-Q47551/wikidata-Q14425553.jpg",
           "imageUploadStatus": "ready",
@@ -31261,7 +31262,7 @@
           "metadataVerifiedAt": "2026-08-20T04:31:49.720Z",
           "metadata": {
             "createdAt": "2026-08-20T02:26:11.396Z",
-            "updatedAt": "2026-08-20T09:47:33.006Z",
+            "updatedAt": "2026-09-02T09:51:06.233Z",
             "createdBy": "jhlee409@gmail.com",
             "updatedBy": "jhlee409@gmail.com"
           },
@@ -31282,7 +31283,7 @@
           },
           "thumbnail": "data/images/artist-Q47551/wikidata-Q10296499.jpg",
           "thumbnailValidation": 2,
-          "thumbnailCacheKey": "2026-08-20T02:57:22.877Z",
+          "thumbnailCacheKey": "2026-08-29T07:18:54.751Z",
           "highResImage": "data/images/artist-Q47551/wikidata-Q10296499.jpg",
           "highResOriginal": "data/images/artist-Q47551/wikidata-Q10296499.jpg",
           "imageUploadStatus": "ready",
@@ -31302,9 +31303,9 @@
       },
       "metadata": {
         "createdAt": "2026-08-20T02:26:11.396Z",
-        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-09-02T09:51:06.233Z",
         "createdBy": "jhlee409@gmail.com",
-        "updatedBy": "phase-5-rebuild"
+        "updatedBy": "jhlee409@gmail.com"
       },
       "links": [
         {

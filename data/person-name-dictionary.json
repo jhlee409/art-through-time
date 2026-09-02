@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-09-02T03:24:09.439Z",
+  "generatedAt": "2026-09-02T09:51:09.109Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -663,26 +663,29 @@
       "status": "verified-pair"
     },
     {
-      "id": "andrea-mantegna",
+      "id": "Q5681",
       "uhangulVersion": "0.7",
       "original": "Andrea Mantegna",
       "language": "und",
       "korean": "안드레아 만테냐",
-      "displayKorean": "안드레아 만테냐",
-      "listKorean": "안드레아 만테냐",
+      "displayKorean": "만테냐, 안드레아",
+      "listKorean": "만테냐",
       "aliases": {
         "ko": [
-          "만테냐"
+          "만테냐",
+          "안드레아 만테냐"
         ],
         "en": [
-          "Mantegna"
+          "Mantegna",
+          "Andrea Mantegna"
         ]
       },
-      "uhangul": "안드[Rㅔ]아 만테냐",
+      "uhangul": "만테냐, 안드[Rㅔ]아",
       "note": "auto-generated from original and Korean artist names",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
+        "data/artists.json",
         "data/techniques.json"
       ],
       "status": "verified-pair"
@@ -1888,17 +1891,14 @@
       "language": "und",
       "korean": "카스파 다비드 프리드리히",
       "displayKorean": "프리드리히, 카스파 다비드",
-      "listKorean": "마네",
+      "listKorean": "프리드리히",
       "aliases": {
         "ko": [
           "프리드리히",
-          "마네",
           "카스파 다비드 프리드리히"
         ],
         "en": [
           "Friedrich",
-          "Edouard Manet",
-          "Manet",
           "Caspar David Friedrich"
         ]
       },
@@ -2664,27 +2664,30 @@
       "status": "verified-pair"
     },
     {
-      "id": "edouard-manet-short",
+      "id": "Q40599",
       "uhangulVersion": "0.7",
       "original": "Édouard Manet",
       "language": "und",
-      "korean": "마네",
-      "displayKorean": "마네",
+      "korean": "에두아르 마네",
+      "displayKorean": "마네, 에두아르",
       "listKorean": "마네",
       "aliases": {
         "ko": [
-          "마네"
+          "마네",
+          "에두아르 마네"
         ],
         "en": [
           "Edouard Manet",
-          "Manet"
+          "Manet",
+          "Édouard Manet"
         ]
       },
-      "uhangul": "마네",
+      "uhangul": "마네, 에두아[Rㅡ]",
       "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
       "kind": "person",
       "sources": [
         "data/미술사조/manual-person-overrides",
+        "data/artists.json",
         "data/techniques.json",
         "Wikidata"
       ],
@@ -11328,6 +11331,40 @@
         "data/미술사조/사실주의.html"
       ],
       "status": "verified-pair"
+    },
+    {
+      "id": "Q6394591",
+      "uhangulVersion": "0.7",
+      "original": "Vassili Vladimirovich Pukiryov",
+      "language": "und",
+      "korean": "바실리 푸키레프",
+      "displayKorean": "푸키레프, 바실리",
+      "listKorean": "바실리 푸키레프",
+      "aliases": {
+        "ko": [
+          "푸키레프",
+          "바실리 푸키레프",
+          "바실리 푸키료프"
+        ],
+        "en": [
+          "Pukiryov",
+          "Vassili Vladimirovich Pukiryov",
+          "Vasily Vladimirovich Pukiryov",
+          "Vasily Pukirev",
+          "Vassili Pukiryov"
+        ]
+      },
+      "uhangul": "[Vㅜ]키레[Vㅡ], [Vㅏ]실리",
+      "note": "Name, Wikipedia title, and aliases verified from Wikidata.",
+      "kind": "person",
+      "sources": [
+        "data/artists.json",
+        "Wikidata"
+      ],
+      "status": "verified-pair",
+      "englishFullName": "Vasily Vladimirovich Pukiryov",
+      "wikipediaTitle": "Vasily Pukirev",
+      "wikidataQid": "Q6394591"
     },
     {
       "id": "artist-further-mukhina",

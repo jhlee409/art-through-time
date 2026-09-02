@@ -1,26 +1,41 @@
 /* Movement documents, local image uploads, and public static-file services. */
 const {assertStableEditableStructure, synchronizeTableArtistOrder, validateCompleteDocument} = require('./movement-sync-v1');
 module.exports = function createContentService(deps) {
-  const { fs, path, URL, randomBytes, execFileAsync, ffmpegPath, root, dataDir, highResolutionDir, imageStagingDir, techniquesFile, topicsFile, topicImageDir, movementSectionLinksFile, migrationAssetManifestFile, adminEmail, highResolutionStoredLimit, sourceImageInputLimit, jsonRequestBodyLimit, normalizeArtistsPayload, validateArtistsPayload, firebaseExport, invalidArtworkThumbnail, syncPersonNameDictionary, readAccessControl, readArtistsFile, writeArtistsFile, saveThumbnailBuffer, highResolutionPathExists } = deps;
+  const { fs, path, URL, randomBytes, execFileAsync, ffmpegPath, root, dataDir, highResolutionDir, imageStagingDir, techniquesFile, topicsFile, topicImageDir, movementSectionLinksFile, migrationAssetManifestFile, adminEmail, highResolutionStoredLimit, sourceImageInputLimit, jsonRequestBodyLimit, normalizeArtistsPayload, validateArtistsPayload, firebaseExport, invalidArtworkThumbnail, syncPersonNameDictionary, readAccessControl, readArtistsFile, writeArtistsFile, saveArtworkImageMutation, saveThumbnailBuffer, saveThumbnailFromLocalUpload, highResolutionPathExists, canonicalArtworkFilename, refreshImageCatalog } = deps;
 function highResolutionLocation(email, artistId) {
   return {folder:path.join(highResolutionDir,artistId), relativePrefix:`data/images/${artistId}`};
 }
-const highResolutionArtistNameOverrides = {Q5592:'미켈란젤로',Q5597:'라파엘로',Q301:'엘그레코',Q43270:'브뤼헐',Q213163:'비제르브룅',Q82445:'툴루즈로트레크'};
-function commonHighResolutionArtistName(name='', qid='') {
-  if (highResolutionArtistNameOverrides[qid]) return highResolutionArtistNameOverrides[qid];
-  const text=String(name || '').trim();
-  const matches=[['미켈란젤로','미켈란젤로'],['라파엘로','라파엘로'],['카라바조','카라바조'],['반 고흐','반고흐'],['고흐','고흐'],['프리드리히','프리드리히'],['푸키레프','푸키레프'],['브뤼헐','브뤼헐'],['비제 르 브룅','비제르브룅'],['엘 그레코','엘그레코'],['페르메이르','페르메이르'],['마네','마네'],['모네','모네'],['루벤스','루벤스'],['라르손','라르손']];
-  const found=matches.find(([needle]) => text.includes(needle));
-  return found?.[1] || text.split(/\s+/).filter(Boolean).pop() || 'artist';
-}
 function safeFileSegment(value) { return String(value || 'artist').normalize('NFKC').replace(/[<>:"/\\|?*\x00-\x1f]+/g,'').replace(/\s+/g,'').replace(/^\.+|\.+$/g,'').slice(0,60) || 'artist'; }
-function highResolutionFileBase(workId, artistName) { return `${safeUploadId(workId)}_${safeFileSegment(artistName)}`; }
-async function removeHighResolutionFiles(folder, workId) {
-  const safeWorkId=safeUploadId(workId);
-  const directNames=[...new Set(Object.values(uploadTypes))].flatMap(ext => [`${safeWorkId}.${ext}`,`${safeWorkId}.display.jpg`,`${safeWorkId}.display.png`]);
-  await Promise.all(directNames.map(name => fs.unlink(path.join(folder,name)).catch(()=>{})));
-  const entries=await fs.readdir(folder).catch(()=>[]);
-  await Promise.all(entries.filter(name => name.startsWith(`${safeWorkId}_`) && /\.(?:jpe?g|jfif|png|webp|gif)$/i.test(name)).map(name => fs.unlink(path.join(folder,name)).catch(()=>{})));
+const localArtworkFields = ['localImage','thumbnail','image','highResImage','highResOriginal'];
+function localArtworkPaths(work) {
+  return [...new Set([
+    ...localArtworkFields.map(field=>work?.[field]),
+    work?.migration?.image?.localThumbnail,
+    work?.migration?.image?.highResolution
+  ].map(value=>String(value || '').replace(/[?#].*$/,'').replace(/\\/g,'/')).filter(value=>value.startsWith('data/images/') && !value.startsWith('data/images/_placeholder/')))];
+}
+async function captureFileSnapshots(files) {
+  const snapshots=[];
+  for(const file of [...new Set(files)]) {
+    try { snapshots.push({file,data:await fs.readFile(file)}); }
+    catch(error) { if(error.code==='ENOENT') snapshots.push({file,data:null}); else throw error; }
+  }
+  return snapshots;
+}
+async function restoreFileSnapshots(snapshots) {
+  for(const snapshot of snapshots) {
+    if(snapshot.data===null) await fs.unlink(snapshot.file).catch(error=>{ if(error.code!=='ENOENT') throw error; });
+    else { await fs.mkdir(path.dirname(snapshot.file),{recursive:true}); await fs.writeFile(snapshot.file,snapshot.data); }
+  }
+}
+async function removeUnreferencedArtworkPaths(paths, artistId) {
+  const data=await readArtistsFile();
+  const used=new Set((data.artists || []).flatMap(artist=>(artist.works || []).flatMap(localArtworkPaths)));
+  const prefix=`data/images/${safeUploadId(artistId)}/`;
+  for(const relative of [...new Set(paths)]) {
+    if(!relative.startsWith(prefix) || used.has(relative)) continue;
+    await fs.unlink(path.join(root,relative)).catch(error=>{ if(error.code!=='ENOENT') throw error; });
+  }
 }
 async function migrationExport() {
   const artists=normalizeArtistsPayload(await readArtistsFile(),{touch:false});
@@ -951,26 +966,61 @@ async function makeLocalArtworkThumbnail(input, artist, work, email=adminEmail) 
     return await saveThumbnailBuffer(artist,work,image,'jpg','Local high-resolution image reduced for timeline',email);
   } finally { await fs.unlink(temporary).catch(()=>{}); }
 }
-async function saveLocalArtworkImage(form) {
+async function saveLocalArtworkImage(form, actor=adminEmail) {
   const artistId=safeUploadId(form.fields.artistId), workId=safeUploadId(form.fields.workId), file=form.files.image, extension=uploadExtension(file);
   if(!file || !extension) throw new Error('Upload a JPEG, PNG, WebP, or GIF image (up to 500 MB)');
   if(!file.data.length) throw new Error('The image file is empty');
-  const artist={id:artistId}, work={id:workId}, location=highResolutionLocation(adminEmail,artistId);
-  const artistName=commonHighResolutionArtistName(form.fields.artistName,form.fields.artistQid), fileBase=highResolutionFileBase(workId,artistName);
+  const data=await readArtistsFile(), artist=(data.artists || []).find(item=>String(item.id || '')===artistId);
+  const work=(artist?.works || []).find(item=>String(item.id || '')===workId);
+  if(!artist || !work) throw new Error('Artwork not found');
+  const location=highResolutionLocation(actor,artistId), fileBase=safeFileSegment(workId);
+  const thumbnailRelative=`${location.relativePrefix}/${canonicalArtworkFilename(artist,work,'.jpg')}`;
+  const imageRelative=`${location.relativePrefix}/${canonicalArtworkFilename(artist,work,'.png')}`;
+  const indexPath=path.join(location.folder,'index.json');
+  const snapshots=await captureFileSnapshots([path.join(root,thumbnailRelative),path.join(root,imageRelative),indexPath]);
+  const previousPaths=localArtworkPaths(work);
   const staging=path.join(imageStagingDir,`${workId}-${Date.now()}-${randomBytes(4).toString('hex')}`);
   await fs.mkdir(staging,{recursive:true});
   const input=path.join(staging,`${fileBase}.${extension}`);
   await fs.writeFile(input,file.data);
+  let persisted=false;
   try {
     const display=await makeDisplayImage(input,staging,fileBase);
     if((await fs.stat(display)).size>highResolutionStoredLimit) throw new Error('Could not create a display image smaller than 10 MB');
     const thumbnail=await makeLocalArtworkThumbnail(display,artist,work);
     await fs.mkdir(location.folder,{recursive:true});
-    await removeHighResolutionFiles(location.folder,workId);
-    await fs.rename(display,path.join(location.folder,`${fileBase}.display.png`));
-    const image=`${location.relativePrefix}/${fileBase}.display.png`;
-    return {image,thumbnail};
+    await fs.copyFile(display,path.join(root,imageRelative));
+    const result=await saveArtworkImageMutation({mode:'replace',artistId,workId,thumbnail,image:imageRelative},actor);
+    persisted=true;
+    await removeUnreferencedArtworkPaths(previousPaths,artistId);
+    refreshImageCatalog();
+    return {...result,image:imageRelative,thumbnail};
+  } catch(error) {
+    if(!persisted) await restoreFileSnapshots(snapshots);
+    throw error;
   } finally { await fs.rm(staging,{recursive:true,force:true}).catch(()=>{}); }
+}
+async function saveNewLocalArtworkImage(form, actor=adminEmail) {
+  const requestedArtist=JSON.parse(form.fields.artist || '{}'), requestedWork=JSON.parse(form.fields.work || '{}');
+  const artistId=safeUploadId(requestedArtist.id), workId=safeUploadId(requestedWork.id), file=form.files.image;
+  const data=await readArtistsFile(), artist=(data.artists || []).find(item=>String(item.id || '')===artistId);
+  if(!artist) throw new Error('Artist not found');
+  if((artist.works || []).some(work=>String(work.id || '')===workId)) throw new Error('Artwork already exists');
+  const work={...requestedWork,id:workId,origin:'manual',imageOwnershipVerification:{status:'pending'}};
+  const location=highResolutionLocation(actor,artistId), indexPath=path.join(location.folder,'index.json');
+  const possibleFiles=['.jpg','.png','.webp','.gif'].map(ext=>path.join(location.folder,canonicalArtworkFilename(artist,work,ext)));
+  const snapshots=await captureFileSnapshots([...possibleFiles,indexPath]);
+  let persisted=false;
+  try {
+    const thumbnail=await saveThumbnailFromLocalUpload(artist,work,file,actor);
+    const result=await saveArtworkImageMutation({mode:'add',artistId,workId,work,thumbnail},actor);
+    persisted=true;
+    refreshImageCatalog();
+    return {...result,thumbnail,verified:true};
+  } catch(error) {
+    if(!persisted) await restoreFileSnapshots(snapshots);
+    throw error;
+  }
 }
 async function saveTopicArtwork(form) {
   const topicId=safeUploadId(form.fields.topicId), title=String(form.fields.title || '').trim(), startYear=Number(form.fields.startYear), endYear=Number(form.fields.endYear), file=form.files.image, extension=uploadExtension(file);
@@ -1067,7 +1117,7 @@ function applyCors(req, res) {
     movementDocumentDir, movementDocumentName, movementDocumentSlot, movementDocumentRelative, readMovementDocuments, writeMovementDocuments, removeMovementDocument, refreshMovementDocumentLinks, saveMovementDocumentHtml,
     normalizeMovementCardPresentation, synchronizeMovementCountryTableArtistOrder, linkMovementDocumentArtists, injectUHangulDocumentIntegration,
     injectMovementArtworkMovementLabels, injectMovementCountryCardContexts, injectMovementPioneerContext, movementDocumentPioneerContextKey, injectMovementWikipediaHeading, injectMovementWikipediaTermLinks, injectMovementStickyTitle, injectMovementContentLayout, injectMovementHighResolutionViewer,
-    saveLocalArtworkImage, saveTopicArtwork, replaceTopicArtworkImage, deleteTopicArtwork, readMovementSectionLinks, saveMovementSectionLinks, applyCors,
+    saveLocalArtworkImage, saveNewLocalArtworkImage, saveTopicArtwork, replaceTopicArtworkImage, deleteTopicArtwork, readMovementSectionLinks, saveMovementSectionLinks, applyCors,
     movementPioneerContexts
   };
 };

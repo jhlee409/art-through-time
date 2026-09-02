@@ -138,6 +138,28 @@ function checkArtistPersistenceGuards() {
   return 'artist persistence guards';
 }
 
+function checkArtistImageUploadGuards() {
+  const appSource = fs.readFileSync(path.join(root, 'app', 'app-detail.js'), 'utf8');
+  const serverSource = fs.readFileSync(path.join(root, 'server.js'), 'utf8');
+  const serverDataSource = fs.readFileSync(path.join(root, 'server-data.js'), 'utf8');
+  const contentSource = fs.readFileSync(path.join(root, 'server-content.js'), 'utf8');
+  const junctionSource = fs.readFileSync(path.join(root, 'tools', 'ensure-image-junction.ps1'), 'utf8');
+
+  if (!serverDataSource.includes('canonicalArtworkFilename(artist,work,`.${extension}`)')) throw new Error('local artwork thumbnails must use canonical filenames');
+  if (!contentSource.includes("canonicalArtworkFilename(artist,work,'.png')")) throw new Error('local high-resolution images must use canonical filenames');
+  if (!contentSource.includes("saveArtworkImageMutation({mode:'replace'")) throw new Error('image replacement must save artwork data in the upload request');
+  if (!contentSource.includes("saveArtworkImageMutation({mode:'add'")) throw new Error('image addition must save artwork data in the upload request');
+  if ((contentSource.match(/refreshImageCatalog\(\)/g) || []).length < 2) throw new Error('local artwork uploads must refresh the global image catalog');
+  if (!appSource.includes("imageOwnershipVerification:{status:'pending'}")) throw new Error('new manual artwork images must start with pending ownership verification');
+  if (!serverSource.includes('saveNewLocalArtworkImage(form,session.email)')) throw new Error('the local thumbnail endpoint must use the atomic artwork upload service');
+  for (const account of ['admin','jhlee']) {
+    if (!junctionSource.includes(`C:\\Users\\${account}\\OneDrive - UOU\\AI-Programming\\Art_through_Time\\data\\images`)) {
+      throw new Error(`OneDrive Junction candidate is missing for ${account}`);
+    }
+  }
+  return 'artist image upload guards';
+}
+
 function main() {
   const javascript = walk(root, name => name.endsWith('.js'));
   const jsonFiles = walk(path.join(root, 'data'), name => name.endsWith('.json'));
@@ -148,6 +170,7 @@ function main() {
   checked.push(checkApplicationModuleSplit());
   checked.push(checkRemovedFeatureRemnants());
   checked.push(checkArtistPersistenceGuards());
+  checked.push(checkArtistImageUploadGuards());
 
   const artists = JSON.parse(fs.readFileSync(path.join(root, 'data', 'artists.json'), 'utf8'));
   const artistIndex = JSON.parse(fs.readFileSync(path.join(root, 'data', 'artists-index.json'), 'utf8'));

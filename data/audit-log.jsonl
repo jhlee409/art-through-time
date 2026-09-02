@@ -1249,3 +1249,4 @@
 {"at":"2026-09-02T03:24:09.456Z","type":"artists.save","actor":"jhlee409@gmail.com","revision":963,"backup":"data/backups/artists-r962-2026-09-02T03-24-06-631Z.json","stats":{"artists":245,"works":1907,"images":{"ready":1703,"pending":85,"missing":119},"assetsWithoutSource":425}}
 {"at":"2026-09-02T06:26:40.471Z","type":"artist.summary.save","actor":"jhlee409@gmail.com","revision":964,"artistId":"artist-Q155733","backup":"data/backups/artists-r963-2026-09-02T06-26-40-386Z.json"}
 {"at":"2026-09-02T06:28:52.870Z","type":"artist.summary.save","actor":"jhlee409@gmail.com","revision":965,"artistId":"artist-Q155733","backup":""}
+{"at":"2026-09-02T09:51:09.121Z","type":"artists.save","actor":"jhlee409@gmail.com","revision":966,"backup":"data/backups/artists-r965-2026-09-02T09-51-07-766Z.json","stats":{"artists":248,"works":1976,"images":{"ready":1768,"pending":89,"missing":119},"assetsWithoutSource":427}}

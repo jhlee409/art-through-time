@@ -235,6 +235,18 @@ function writeCatalog(catalog) {
   fs.writeFileSync(catalogFile, `${JSON.stringify(catalog, null, 2)}\n`, 'utf8');
 }
 
+function refreshCatalog() {
+  const catalog = buildCatalog();
+  if (catalog.stats.newNonstandardNames) {
+    throw new Error(`New image filenames do not follow the canonical naming standard (${catalog.stats.newNonstandardNames})`);
+  }
+  if (catalog.stats.unlinkedImages) {
+    throw new Error(`Image catalog contains unlinked files (${catalog.stats.unlinkedImages})`);
+  }
+  writeCatalog(catalog);
+  return catalog;
+}
+
 function validateCatalog({checkHashes = false} = {}) {
   const catalog = readJson(catalogFile);
   if (!catalog || catalog.schema !== 1 || !Array.isArray(catalog.images)) throw new Error('data/image-catalog.json is missing or invalid');
@@ -363,6 +375,7 @@ module.exports = {
   conformsToFilenameStandard,
   buildCatalog,
   writeCatalog,
+  refreshCatalog,
   validateCatalog,
   searchCatalog
 };

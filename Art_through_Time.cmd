@@ -46,6 +46,13 @@ if errorlevel 1 (
 )
 
 if not exist "logs" mkdir "logs"
+powershell -NoProfile -ExecutionPolicy Bypass -File "tools\ensure-image-junction.ps1"
+if errorlevel 1 (
+  echo.
+  echo Could not prepare the OneDrive image Junction.
+  pause
+  exit /b 1
+)
 set "ART_ATLAS_PID="
 for /f "tokens=5" %%a in ('netstat -ano ^| findstr /R /C:":4173 .*LISTENING"') do set ART_ATLAS_PID=%%a
 if defined ART_ATLAS_PID (
