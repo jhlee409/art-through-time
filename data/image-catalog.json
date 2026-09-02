@@ -1,17 +1,281 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-02T03:33:49.122Z",
+  "generatedAt": "2026-09-02T03:50:25.821Z",
   "namingStandard": "shortArtist_titleFirst3Words_startYear__workId.ext",
   "stats": {
     "images": 1750,
-    "linkedImages": 1730,
-    "unlinkedImages": 20,
-    "standardNames": 137,
-    "legacyNames": 1613,
+    "linkedImages": 1750,
+    "unlinkedImages": 0,
+    "standardNames": 148,
+    "legacyNames": 1602,
     "newNonstandardNames": 0,
     "duplicateHashGroups": 1
   },
   "images": [
+    {
+      "path": "data/images/artist-1786332007363/카스파 다비드 프리드리히_Bohemian Landscape_1828__wikidata-Q18602436.jpg",
+      "filename": "카스파 다비드 프리드리히_Bohemian Landscape_1828__wikidata-Q18602436.jpg",
+      "bytes": 11541,
+      "sha256": "8ad9c5cb3ff00cbf328749a3b1e5475ba6c5051b326ea32a7b9d5c99a48f9e87",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [
+        "data/images/artist-1786333400214/wikidata-Q18602436.jpg"
+      ],
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q18602436",
+          "workQid": "Q18602436",
+          "titleKo": "Bohemian Landscape",
+          "titleEn": "Bohemian Landscape",
+          "year": 1828
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-1786332007363/카스파 다비드 프리드리히_Doorway in Meissen_1827__wikidata-Q18602491.jpg",
+      "filename": "카스파 다비드 프리드리히_Doorway in Meissen_1827__wikidata-Q18602491.jpg",
+      "bytes": 14972,
+      "sha256": "5fdb44a70faba4e6484667e2641b37c77fd43d59497c740ab018d67cdcdffdf0",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [
+        "data/images/artist-1786333400214/wikidata-Q18602491.jpg"
+      ],
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q18602491",
+          "workQid": "Q18602491",
+          "titleKo": "Doorway in Meissen",
+          "titleEn": "Doorway in Meissen",
+          "year": 1827
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-1786332007363/카스파 다비드 프리드리히_Early Snow_1827__wikidata-Q18603181.jpg",
+      "filename": "카스파 다비드 프리드리히_Early Snow_1827__wikidata-Q18603181.jpg",
+      "bytes": 36693,
+      "sha256": "01eff713dacbf9867fd02212a9e2ce8ff84d3645e70582f32c2a005430f4a3c5",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [
+        "data/images/artist-1786333400214/wikidata-Q18603181.jpg"
+      ],
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q18603181",
+          "workQid": "Q18603181",
+          "titleKo": "Early Snow",
+          "titleEn": "Early Snow",
+          "year": 1827
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-1786332007363/카스파 다비드 프리드리히_Flat country shank_1830__wikidata-Q18602618.jpg",
+      "filename": "카스파 다비드 프리드리히_Flat country shank_1830__wikidata-Q18602618.jpg",
+      "bytes": 14152,
+      "sha256": "9ef8b05f508c6b16f87108b9653d324211b22af57676ab2e2a9c132cce5b0f0e",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [
+        "data/images/artist-1786333400214/wikidata-Q18602618.jpg"
+      ],
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q18602618",
+          "workQid": "Q18602618",
+          "titleKo": "Flat country shank at Bay of Greifswald",
+          "titleEn": "Flat country shank at Bay of Greifswald",
+          "year": 1830
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-1786332007363/카스파 다비드 프리드리히_New Moon above_1810__wikidata-Q18602437.jpg",
+      "filename": "카스파 다비드 프리드리히_New Moon above_1810__wikidata-Q18602437.jpg",
+      "bytes": 9899,
+      "sha256": "c8e27d08e3bdc5d4bbe6744cc9e30212db54a9a3acf476580be204880ff51b68",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [
+        "data/images/artist-1786333400214/wikidata-Q18602437.jpg"
+      ],
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q18602437",
+          "workQid": "Q18602437",
+          "titleKo": "New Moon above the Riesengebirge Mountains",
+          "titleEn": "New Moon above the Riesengebirge Mountains",
+          "year": 1810
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-1786332007363/카스파 다비드 프리드리히_Oak in the_1827__wikidata-Q18602536.jpg",
+      "filename": "카스파 다비드 프리드리히_Oak in the_1827__wikidata-Q18602536.jpg",
+      "bytes": 37173,
+      "sha256": "d93b77c1b8f8f6e3fdabf4d2590bf62d4b028cadefa27b7e52e941eb0dae3c6e",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [
+        "data/images/artist-1786333400214/wikidata-Q18602536.jpg"
+      ],
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q18602536",
+          "workQid": "Q18602536",
+          "titleKo": "Oak in the Snow",
+          "titleEn": "Oak in the Snow",
+          "year": 1827
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-1786332007363/카스파 다비드 프리드리히_Ruins of Teplitz_1828__wikidata-Q18602454.jpg",
+      "filename": "카스파 다비드 프리드리히_Ruins of Teplitz_1828__wikidata-Q18602454.jpg",
+      "bytes": 16574,
+      "sha256": "9f994a04c2c1a85139a5efbfcefffb5976dc549396aeb8bbfa9625f6c971ea96",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [
+        "data/images/artist-1786333400214/wikidata-Q18602454.jpg"
+      ],
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q18602454",
+          "workQid": "Q18602454",
+          "titleKo": "Ruins of Teplitz Castle",
+          "titleEn": "Ruins of Teplitz Castle",
+          "year": 1828
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-1786332007363/카스파 다비드 프리드리히_Seapiece by Moonlight_1827__wikidata-Q18602614.jpg",
+      "filename": "카스파 다비드 프리드리히_Seapiece by Moonlight_1827__wikidata-Q18602614.jpg",
+      "bytes": 21924,
+      "sha256": "150a3b3536aa2dadb5d4f44494c0bba1013661a6fed9ab0c274d295b9f16f291",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [
+        "data/images/artist-1786333400214/wikidata-Q18602614.jpg"
+      ],
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q18602614",
+          "workQid": "Q18602614",
+          "titleKo": "Seapiece by Moonlight",
+          "titleEn": "Seapiece by Moonlight",
+          "year": 1827
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-1786332007363/카스파 다비드 프리드리히_Spruce thicket in_1828__wikidata-Q18602539.jpg",
+      "filename": "카스파 다비드 프리드리히_Spruce thicket in_1828__wikidata-Q18602539.jpg",
+      "bytes": 34402,
+      "sha256": "60158b5803bfebb8ae14b87a2f79cb17045f232ce5bf4d5ba258999c0b7f5691",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [
+        "data/images/artist-1786333400214/wikidata-Q18602539.jpg"
+      ],
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q18602539",
+          "workQid": "Q18602539",
+          "titleKo": "Spruce thicket in the snow",
+          "titleEn": "Spruce thicket in the snow",
+          "year": 1828
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-1786332007363/카스파 다비드 프리드리히_The Evergreens by_1828__wikidata-Q18602537.jpg",
+      "filename": "카스파 다비드 프리드리히_The Evergreens by_1828__wikidata-Q18602537.jpg",
+      "bytes": 25529,
+      "sha256": "089f68bced0b6526683f69f31fc3c562ec65c0fadde42a0e0928395a97262fcb",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [
+        "data/images/artist-1786333400214/wikidata-Q18602537.jpg"
+      ],
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q18602537",
+          "workQid": "Q18602537",
+          "titleKo": "The Evergreens by the Waterfall",
+          "titleEn": "The Evergreens by the Waterfall",
+          "year": 1828
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-1786332007363/카스파 다비드 프리드리히_The Feldstein near_1828__wikidata-Q18602455.jpg",
+      "filename": "카스파 다비드 프리드리히_The Feldstein near_1828__wikidata-Q18602455.jpg",
+      "bytes": 25515,
+      "sha256": "4ca8ba802ad1a89af865dd37e0638359c2c492e0cd2c7bbaf4ac389d4c799c5f",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [
+        "data/images/artist-1786333400214/wikidata-Q18602455.jpg"
+      ],
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q18602455",
+          "workQid": "Q18602455",
+          "titleKo": "The Feldstein near Rathen",
+          "titleEn": "The Feldstein near Rathen",
+          "year": 1828
+        }
+      ]
+    },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q11753188.jpg",
       "filename": "wikidata-Q11753188.jpg",
@@ -734,7 +998,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.494Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q18602549",
+          "workQid": "Q18602549",
+          "titleKo": "Forest in late autumn",
+          "titleEn": "Forest in late autumn",
+          "year": 1835
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q18602616.jpg",
@@ -837,7 +1113,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.498Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q18602635",
+          "workQid": "Q18602635",
+          "titleKo": "Rock Canyon in the Harz",
+          "titleEn": "Rock Canyon in the Harz",
+          "year": 1811
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q18603131.jpg",
@@ -1390,127 +1678,6 @@
           "year": 1828
         }
       ]
-    },
-    {
-      "path": "data/images/artist-1786333400214/wikidata-Q18602436.jpg",
-      "filename": "wikidata-Q18602436.jpg",
-      "bytes": 11541,
-      "sha256": "8ad9c5cb3ff00cbf328749a3b1e5475ba6c5051b326ea32a7b9d5c99a48f9e87",
-      "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:42.525Z",
-      "aliases": [],
-      "works": []
-    },
-    {
-      "path": "data/images/artist-1786333400214/wikidata-Q18602437.jpg",
-      "filename": "wikidata-Q18602437.jpg",
-      "bytes": 9899,
-      "sha256": "c8e27d08e3bdc5d4bbe6744cc9e30212db54a9a3acf476580be204880ff51b68",
-      "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:42.525Z",
-      "aliases": [],
-      "works": []
-    },
-    {
-      "path": "data/images/artist-1786333400214/wikidata-Q18602454.jpg",
-      "filename": "wikidata-Q18602454.jpg",
-      "bytes": 16574,
-      "sha256": "9f994a04c2c1a85139a5efbfcefffb5976dc549396aeb8bbfa9625f6c971ea96",
-      "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:42.525Z",
-      "aliases": [],
-      "works": []
-    },
-    {
-      "path": "data/images/artist-1786333400214/wikidata-Q18602455.jpg",
-      "filename": "wikidata-Q18602455.jpg",
-      "bytes": 25515,
-      "sha256": "4ca8ba802ad1a89af865dd37e0638359c2c492e0cd2c7bbaf4ac389d4c799c5f",
-      "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:42.526Z",
-      "aliases": [],
-      "works": []
-    },
-    {
-      "path": "data/images/artist-1786333400214/wikidata-Q18602491.jpg",
-      "filename": "wikidata-Q18602491.jpg",
-      "bytes": 14972,
-      "sha256": "5fdb44a70faba4e6484667e2641b37c77fd43d59497c740ab018d67cdcdffdf0",
-      "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:42.526Z",
-      "aliases": [],
-      "works": []
-    },
-    {
-      "path": "data/images/artist-1786333400214/wikidata-Q18602536.jpg",
-      "filename": "wikidata-Q18602536.jpg",
-      "bytes": 37173,
-      "sha256": "d93b77c1b8f8f6e3fdabf4d2590bf62d4b028cadefa27b7e52e941eb0dae3c6e",
-      "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:42.527Z",
-      "aliases": [],
-      "works": []
-    },
-    {
-      "path": "data/images/artist-1786333400214/wikidata-Q18602537.jpg",
-      "filename": "wikidata-Q18602537.jpg",
-      "bytes": 25529,
-      "sha256": "089f68bced0b6526683f69f31fc3c562ec65c0fadde42a0e0928395a97262fcb",
-      "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:42.527Z",
-      "aliases": [],
-      "works": []
-    },
-    {
-      "path": "data/images/artist-1786333400214/wikidata-Q18602539.jpg",
-      "filename": "wikidata-Q18602539.jpg",
-      "bytes": 34402,
-      "sha256": "60158b5803bfebb8ae14b87a2f79cb17045f232ce5bf4d5ba258999c0b7f5691",
-      "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:42.527Z",
-      "aliases": [],
-      "works": []
-    },
-    {
-      "path": "data/images/artist-1786333400214/wikidata-Q18602614.jpg",
-      "filename": "wikidata-Q18602614.jpg",
-      "bytes": 21924,
-      "sha256": "150a3b3536aa2dadb5d4f44494c0bba1013661a6fed9ab0c274d295b9f16f291",
-      "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:42.528Z",
-      "aliases": [],
-      "works": []
-    },
-    {
-      "path": "data/images/artist-1786333400214/wikidata-Q18602618.jpg",
-      "filename": "wikidata-Q18602618.jpg",
-      "bytes": 14152,
-      "sha256": "9ef8b05f508c6b16f87108b9653d324211b22af57676ab2e2a9c132cce5b0f0e",
-      "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:42.528Z",
-      "aliases": [],
-      "works": []
-    },
-    {
-      "path": "data/images/artist-1786333400214/wikidata-Q18603181.jpg",
-      "filename": "wikidata-Q18603181.jpg",
-      "bytes": 36693,
-      "sha256": "01eff713dacbf9867fd02212a9e2ce8ff84d3645e70582f32c2a005430f4a3c5",
-      "mime": "image/jpeg",
-      "namingStatus": "legacy",
-      "grandfatheredAt": "2026-08-29T08:11:42.529Z",
-      "aliases": [],
-      "works": []
     },
     {
       "path": "data/images/artist-1786343948059/wikidata-Q123286344.jpg",
@@ -17963,7 +18130,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:44.227Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
+          "workId": "wikidata-Q1810341",
+          "workQid": "Q1810341",
+          "titleKo": "The Young Laundress",
+          "titleEn": "The Young Laundress",
+          "year": 1861
+        }
+      ]
     },
     {
       "path": "data/images/artist-Q40599/wikidata-Q18208688.jpg",
@@ -26973,7 +27152,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:44.896Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-Q6394591",
+          "artistQid": "Q6394591",
+          "artistNameKo": "바실리 푸키레프",
+          "artistNameEn": "Vassili Vladimirovich Pukiryov",
+          "workId": "featured-Q3918079",
+          "workQid": "Q3918079",
+          "titleKo": "불평등한 결혼",
+          "titleEn": "The Unequal Marriage",
+          "year": 1862
+        }
+      ]
     },
     {
       "path": "data/images/artist-Q6394591/wikipedia-Q6394591-0.jpg",
@@ -26984,7 +27175,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:44.897Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-Q6394591",
+          "artistQid": "Q6394591",
+          "artistNameKo": "바실리 푸키레프",
+          "artistNameEn": "Vassili Vladimirovich Pukiryov",
+          "workId": "wikipedia-Q6394591-0",
+          "workQid": "Q6394591",
+          "titleKo": "Boy with Bird's Nest",
+          "titleEn": "Boy with Bird's Nest",
+          "year": 1856
+        }
+      ]
     },
     {
       "path": "data/images/artist-Q6394591/wikipedia-Q6394591-1.jpg",
@@ -26995,7 +27198,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:44.898Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-Q6394591",
+          "artistQid": "Q6394591",
+          "artistNameKo": "바실리 푸키레프",
+          "artistNameEn": "Vassili Vladimirovich Pukiryov",
+          "workId": "wikipedia-Q6394591-1",
+          "workQid": "Q6394591",
+          "titleKo": "The Gambler",
+          "titleEn": "The Gambler",
+          "year": 1865
+        }
+      ]
     },
     {
       "path": "data/images/artist-Q6394591/wikipedia-Q6394591-2.jpg",
@@ -27006,7 +27221,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:44.899Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-Q6394591",
+          "artistQid": "Q6394591",
+          "artistNameKo": "바실리 푸키레프",
+          "artistNameEn": "Vassili Vladimirovich Pukiryov",
+          "workId": "wikipedia-Q6394591-2",
+          "workQid": "Q6394591",
+          "titleKo": "In the Artist's Studio",
+          "titleEn": "In the Artist's Studio",
+          "year": 1865
+        }
+      ]
     },
     {
       "path": "data/images/artist-Q6394591/wikipedia-Q6394591-3.jpg",
@@ -27017,7 +27244,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:44.901Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-Q6394591",
+          "artistQid": "Q6394591",
+          "artistNameKo": "바실리 푸키레프",
+          "artistNameEn": "Vassili Vladimirovich Pukiryov",
+          "workId": "wikipedia-Q6394591-3",
+          "workQid": "Q6394591",
+          "titleKo": "Reception of a Dowry in a Merchant Family",
+          "titleEn": "Reception of a Dowry in a Merchant Family",
+          "year": 1873
+        }
+      ]
     },
     {
       "path": "data/images/artist-Q6394591/wikipedia-Q6394591-4.jpg",
@@ -27028,7 +27267,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:44.903Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-Q6394591",
+          "artistQid": "Q6394591",
+          "artistNameKo": "바실리 푸키레프",
+          "artistNameEn": "Vassili Vladimirovich Pukiryov",
+          "workId": "wikipedia-Q6394591-4",
+          "workQid": "Q6394591",
+          "titleKo": "Wedding Interrupted",
+          "titleEn": "Wedding Interrupted",
+          "year": 1877
+        }
+      ]
     },
     {
       "path": "data/images/artist-Q68631/rogier-beaune-altarpiece.png",

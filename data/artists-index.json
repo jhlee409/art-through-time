@@ -3410,7 +3410,7 @@
       "featuredWorkIds": [
         "wikidata-Q311243"
       ],
-      "workCount": 63,
+      "workCount": 76,
       "_detailLoaded": false
     },
     {
@@ -14484,7 +14484,66 @@
         "ko": "마네"
       },
       "featuredWorkIds": [],
-      "workCount": 71,
+      "workCount": 72,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-Q6394591",
+      "qid": "Q6394591",
+      "name": {
+        "ko": "바실리 푸키레프",
+        "en": "Vassili Vladimirovich Pukiryov"
+      },
+      "birth": 1832,
+      "death": 1890,
+      "nationality": {
+        "ko": "러시아 제국",
+        "en": "Russian Empire"
+      },
+      "movement": {
+        "ko": "사실주의",
+        "en": "realism"
+      },
+      "profileResolved": true,
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
+      "metadata": {
+        "createdAt": "2026-09-02T00:00:00.000Z",
+        "updatedAt": "2026-09-02T00:00:00.000Z",
+        "createdBy": "legacy-linkage-recovery",
+        "updatedBy": "legacy-linkage-recovery"
+      },
+      "generated": {
+        "schema": 20,
+        "file": "data/generated/qid-Q6394591.json",
+        "fetchedAt": "2026-08-22T20:58:03.696Z"
+      },
+      "featuredWorkIds": [
+        "featured-Q3918079"
+      ],
+      "artistSummary": {
+        "ko": [],
+        "en": []
+      },
+      "movements": [
+        "사실주의"
+      ],
+      "submovements": [],
+      "primaryMovement": "사실주의",
+      "regions": [
+        "러시아"
+      ],
+      "periods": [
+        "1800-1900"
+      ],
+      "activeFrom": 1856,
+      "activeTo": 1877,
+      "listName": {
+        "ko": "바실리 푸키레프"
+      },
+      "workCount": 6,
       "_detailLoaded": false
     }
   ],
