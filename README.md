@@ -118,7 +118,7 @@ node tools/sync-movement-learning-guides.js --check
 
 이미지 작업도 수정 대상 탭·HTML의 작성규칙과 [공통 탭·전용 HTML 작성 규칙](작성규칙/새탭_template_작성규칙.md)을 먼저 확인합니다. 세부 파일명, 정본 폴더, 카탈로그 갱신과 검증 명령은 공통 규칙과 [화가 및 작품 탭 작성 규칙](작성규칙/화가및작품탭_작성규칙.md)을 정본으로 삼습니다.
 
-- 화면에는 프로젝트 로컬 이미지만 사용하고, 화가 작품은 모든 탭에서 `artistId + workId`로 연결된 `data/images/artist-*/` 정본을 재사용합니다.
+- 화면에는 프로젝트 로컬 이미지만 사용하고, 화가 작품은 모든 탭에서 `artistId + workId`로 연결된 `data/images/artist-*/` 정본을 재사용합니다. 이 프로젝트의 `data/images`는 `C:\Users\admin\OneDrive - UOU\AI-Programming\Art_through_Time\data\images`를 가리키는 Windows Junction이며, 대량 이미지의 실제 저장 정본은 OneDrive 쪽 폴더다.
 - 로컬 파일이 없으면 외부 이미지 URL을 만들지 않고 `이미지 업로드 예정` 또는 `다운로드 필요` 상태를 유지합니다.
 - 사용자가 "다운로드 폴더"라고 말하면 프로젝트 루트의 `다운로드용/`만 확인합니다.
 - URL 이미지 다운로드나 URL 응답 저장은 대상 사이트와 파일을 밝히고 사용자의 명시적 승인을 받은 뒤에만 수행합니다.
@@ -207,6 +207,6 @@ node tools/record-change.js --section "섹션 이름" --item "변경 내용"
 
 ## 저장소 관리
 
-코드, JSON, 사조 HTML, 문서는 Git으로 관리합니다. `.env`, 로그, 로컬 이미지, 백업, 배포 결과물은 Git에 올리지 않습니다. 이미지 폴더가 Junction인 환경에서는 저장소 이동·백업 시 실제 대상 폴더도 별도로 확인합니다.
+코드, JSON, 사조 HTML, 문서는 Git으로 관리합니다. `.env`, 로그, 로컬 이미지, 백업, 배포 결과물은 Git에 올리지 않습니다. 이미지 폴더가 Junction인 환경에서는 저장소 이동·백업 시 실제 대상 폴더도 별도로 확인합니다. 이 프로젝트에서는 `data/images` Junction 자체를 일반 폴더로 교체하지 않으며, 대량 이미지를 Git에 넣지 않는다.
 
 Firebase 관련 코드는 향후 이관 준비용입니다. 현재 운영 데이터의 원본은 로컬 JSON이며 외부 서비스로 자동 전송하지 않습니다. 자세한 내용은 [FIREBASE_MIGRATION.md](FIREBASE_MIGRATION.md)를 참고합니다.
