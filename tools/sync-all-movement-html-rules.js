@@ -4,6 +4,21 @@ const path = require('node:path');
 
 const root = path.resolve(__dirname, '..');
 const directory = path.join(root, 'data', '미술사조');
+const imageCatalog = require(path.join(root, 'data', 'image-catalog.json'));
+const catalogImagesByWork = new Map();
+for (const image of imageCatalog.images || []) {
+  for (const work of image.works || []) {
+    const key = `${work.artistId || ''}|${work.workId || ''}`;
+    const candidates = catalogImagesByWork.get(key) || [];
+    candidates.push({ ...image, work });
+    catalogImagesByWork.set(key, candidates);
+    if (work.workId) {
+      const fallback = catalogImagesByWork.get(`|${work.workId}`) || [];
+      fallback.push({ ...image, work });
+      catalogImagesByWork.set(`|${work.workId}`, fallback);
+    }
+  }
+}
 const stickyStyle = '<style id="art-atlas-movement-sticky-title-style">nav .wrap{display:flex;align-items:center;justify-content:center}nav .art-atlas-movement-sticky-title{display:block;width:100%;color:inherit;font-family:inherit;font-size:2em;font-weight:inherit;letter-spacing:inherit;line-height:inherit;text-align:center}</style>';
 const contextStyle = '<style id="art-atlas-movement-country-card-context-style">.movement-enhancement{--art-atlas-enhancement-edge-gutter:clamp(18px,3vw,26px)}.movement-enhancement>h3,.movement-enhancement>p.enhancement-intro,.movement-enhancement>.wrap>h3,.movement-enhancement>.wrap>p.enhancement-intro{width:calc(100vw - (var(--art-atlas-enhancement-edge-gutter)*2));max-width:none;margin-left:calc(50% - 50vw + var(--art-atlas-enhancement-edge-gutter));margin-right:calc(50% - 50vw + var(--art-atlas-enhancement-edge-gutter));box-sizing:border-box;text-align:left}.movement-enhancement .art-atlas-submovement-heading{display:flex;width:100vw;max-width:none;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding-left:var(--art-atlas-enhancement-edge-gutter);padding-right:2vw;box-sizing:border-box;flex-wrap:wrap;align-items:baseline;gap:.45rem;text-align:left}.movement-enhancement .art-atlas-submovement-title{display:block;flex:0 0 100%;width:100%;text-align:left}.movement-enhancement .movement-country-card-context{display:flex;flex:1 1 100%;width:100%;flex-wrap:wrap;gap:.32rem .7rem;align-items:baseline;color:#aeb9c3;font-size:.912rem;font-weight:500;line-height:1.55}.movement-enhancement .movement-country-card-context b{color:#e6c98d;font-size:.92em;font-weight:800}.movement-enhancement .movement-country-card-context-region{white-space:nowrap}.movement-enhancement .movement-country-card-context-feature{min-width:12rem}</style>';
 const cardStyle = '<style id="art-atlas-movement-card-presentation-style">.movement-card-title-tag,.movement-card-activity-region{color:#9aa5af;font-size:.78em;font-weight:600;white-space:nowrap}.movement-card-heading-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:.45rem;margin:0 0 .85rem}.movement-card-heading-row h3{min-width:0;margin:0!important}.movement-card-heading-row .work-meta{margin:.08rem 0 0!important;text-align:right;white-space:nowrap}</style>';
@@ -87,11 +102,31 @@ function markUnavailableLocalImages(source) {
   });
 }
 
+function restoreAvailablePendingImages(source) {
+  const revised = source.replace(/<div class="movement-image-pending"(?=[\s>])[^>]*>[\s\S]*?<\/div>/gi, (tag, offset) => {
+    const before = source.slice(0, offset);
+    const articleStart = before.lastIndexOf('<article');
+    if (articleStart < 0) return tag;
+    const articleEnd = source.indexOf('>', articleStart);
+    const article = source.slice(articleStart, articleEnd + 1);
+    const workId = attr(article, 'data-work-id');
+    const localArtistIds = [...before.slice(articleStart).matchAll(/\bdata-artist-id=(?:"([^"]*)"|'([^']*)')/gi)].map(match => match.slice(1).find(Boolean)).filter(Boolean);
+    const artistId = attr(article, 'data-artist-id') || localArtistIds.at(-1) || '';
+    const candidate = [...(catalogImagesByWork.get(`${artistId}|${workId}`) || []), ...(catalogImagesByWork.get(`|${workId}`) || [])]
+      .find(item => item.path && fs.existsSync(path.join(root, item.path)));
+    if (!candidate) return tag;
+    const imagePath = path.relative(directory, path.join(root, candidate.path)).replace(/\\/g, '/');
+    const label = [candidate.work.artistNameKo, candidate.work.titleKo].filter(Boolean).join(', ') || '작품 이미지';
+    return `<img src="${escape(imagePath)}" alt="${escape(label)}">`;
+  });
+  return revised;
+}
+
 let changed = 0;
 for (const name of fs.readdirSync(directory).filter(name => name.endsWith('.html'))) {
   const file = path.join(directory, name);
   const source = fs.readFileSync(file, 'utf8');
-  const revised = markUnavailableLocalImages(syncContentLayout(syncCardPresentation(syncCountryContexts(syncStickyTitle(source)))));
+  const revised = markUnavailableLocalImages(restoreAvailablePendingImages(syncContentLayout(syncCardPresentation(syncCountryContexts(syncStickyTitle(source))))));
   if (revised === source) continue;
   fs.writeFileSync(file, revised, 'utf8');
   changed++;
