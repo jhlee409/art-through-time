@@ -174,6 +174,7 @@ function main() {
     ['movement canonical taxonomy', 'tools/validate-movement-canonical.js'],
     ['movement sync contract', 'tools/validate-movement-sync-contract.js'],
     ['movement representatives', 'tools/validate-movement-representatives.js'],
+    ['artist ownership', 'tools/validate-artist-ownership.js'],
     ['cross-tab linkage', 'tools/validate-cross-tab-linkage.js'],
     ...(!movementRebuildInProgress ? movementCompletionChecks : []),
     ['movement image paths', 'tools/validate-movement-image-paths.js'],

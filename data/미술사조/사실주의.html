@@ -17,7 +17,25 @@
 <style id="art-atlas-movement-content-layout-style">body{--art-atlas-document-gutter:clamp(20px,3vw,48px)}header.hero>.wrap,main>section>.wrap{width:100%;max-width:none;margin-left:0;margin-right:0;padding-left:var(--art-atlas-document-gutter);padding-right:var(--art-atlas-document-gutter)}.hero p,.lead{max-width:none}main>section:not(#movement-learning-guide)>.wrap>h2,main>section:not(#movement-learning-guide)>h2{margin:0 0 1.15rem;font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,3.4vw,3.1rem);line-height:1.18}main>section:not(#movement-learning-guide)>.wrap>h3,main>section:not(#movement-learning-guide)>h3,.movement-enhancement .art-atlas-submovement-heading{font-size:clamp(1.3rem,2.25vw,1.75rem);line-height:1.32}.movement-enhancement .art-atlas-submovement-heading{margin-top:2.1rem;margin-bottom:.7rem}.movement-enhancement .art-atlas-submovement-heading+.movement-work-grid{margin-top:0}main>section:not(#movement-learning-guide)>.wrap>h4,main>section:not(#movement-learning-guide)>h4{font-size:1.12rem;line-height:1.42;margin:1.5rem 0 .5rem}main>section:not(#movement-learning-guide)>.wrap>p:not(.work-meta):not(.movement-selection-reason),main>section:not(#movement-learning-guide)>p:not(.work-meta):not(.movement-selection-reason){max-width:none;font-size:1.08rem;line-height:1.8}main>section:not(#movement-learning-guide)>.wrap>p:not(.work-meta):not(.movement-selection-reason)~p,main>section:not(#movement-learning-guide)>p:not(.work-meta):not(.movement-selection-reason)~p{font-size:1rem;line-height:1.75}.table-wrap,main>section>.wrap>table,main>section>table{width:100%;max-width:none}.table-wrap table,main>section>.wrap>table,main>section>table{width:100%}@media(max-width:720px){body{--art-atlas-document-gutter:18px}}</style>
 <style id="art-atlas-movement-card-image-fit-style">.movement-enhancement .movement-work-image>img{width:90%!important;height:90%!important;max-width:90%!important;max-height:90%!important;object-fit:contain!important}</style>
 <style id="art-atlas-movement-history-stage-image-fit-style">[data-art-atlas-visual-sequence] .history-stage-image,[data-art-atlas-visual-sequence] .movement-work-image{display:flex!important;align-items:center!important;justify-content:center!important;aspect-ratio:4/3!important;overflow:hidden!important;background:var(--black,#000)!important}[data-art-atlas-visual-sequence] .history-stage-image>img,[data-art-atlas-visual-sequence] .movement-work-image>img{width:90%!important;height:90%!important;max-width:90%!important;max-height:90%!important;object-fit:contain!important}</style>
-</head>
+<style id="art-atlas-learning-guide-style">
+#movement-learning-guide{padding:38px 0;border-top:1px solid var(--line,#d8d4cc);border-bottom:1px solid var(--line,#d8d4cc);background:var(--panel,#f7f7f5)}
+#movement-learning-guide .movement-learning-guide-inner{width:100%;max-width:none;margin:0;padding-left:var(--art-atlas-document-gutter,clamp(20px,3vw,48px));padding-right:var(--art-atlas-document-gutter,clamp(20px,3vw,48px))}
+#movement-learning-guide .movement-learning-guide-kicker{margin:0 0 .35rem;color:var(--accent,#8a641e);font-weight:800}
+#movement-learning-guide h2{margin:.1rem 0 1.15rem;font-size:clamp(1.9rem,3.4vw,3.1rem);line-height:1.18}
+#movement-learning-guide .movement-learning-guide-orientation{max-width:none;margin:0 0 1.5rem;font-size:1.08rem;line-height:1.8}
+#movement-learning-guide .movement-learning-guide-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 34px}
+#movement-learning-guide .movement-learning-guide-block{padding-top:14px;border-top:2px solid var(--line,#d8d4cc)}
+#movement-learning-guide .movement-learning-guide-block h3{margin:0 0 .65rem;font-size:clamp(1.3rem,2.25vw,1.75rem);line-height:1.32}
+#movement-learning-guide .movement-learning-guide-block ul,#movement-learning-guide .movement-learning-guide-block ol{margin:0;padding-left:1.35rem}
+#movement-learning-guide .movement-learning-guide-block li{margin:.42rem 0}
+#movement-learning-guide .movement-learning-guide-categories li>strong{display:block;color:var(--accent,#8a641e)}
+#movement-learning-guide .movement-learning-guide-categories li>span{display:block;margin-top:.12rem;word-break:keep-all;overflow-wrap:break-word}
+#movement-learning-guide .movement-learning-guide-boundary{grid-column:1/-1}
+#movement-learning-guide .movement-learning-guide-boundary p{max-width:none;margin:.45rem 0}
+#movement-learning-guide .movement-learning-guide-source{margin:1.15rem 0 0;font-size:.9rem;color:var(--muted,#666)}
+#movement-learning-guide .movement-learning-guide-source a{color:inherit}
+@media(max-width:720px){#movement-learning-guide .movement-learning-guide-grid{grid-template-columns:1fr}#movement-learning-guide .movement-learning-guide-boundary{grid-column:auto}}
+</style></head>
 <body>
 <div data-uhangul-document-toolbar role="group" aria-label="이름 표기 방식" style="position:fixed!important;top:14px!important;left:16px!important;z-index:2147483647!important;display:flex!important;gap:4px!important"><button type="button" data-uh-mode="korean" data-uh-local-mode="korean" aria-label="한국어" title="한국어" style="display:grid!important;width:28px!important;height:28px!important;place-items:center!important;padding:0!important;border:1px solid #aebba8!important;border-radius:50%!important;background:#fffdf8!important;color:#425043!important;font:700 10px/1 'Noto Sans KR',sans-serif!important;cursor:pointer!important">한</button><button type="button" data-uh-mode="uhangul" data-uh-local-mode="uhangul" aria-label="uHangul" title="uHangul" style="display:grid!important;width:28px!important;height:28px!important;place-items:center!important;padding:0!important;border:1px solid #aebba8!important;border-radius:50%!important;background:#fffdf8!important;color:#425043!important;font:700 10px/1 'Noto Sans KR',sans-serif!important;cursor:pointer!important">u</button><button type="button" data-uh-mode="original" data-uh-local-mode="original" aria-label="국제 표기" title="국제 표기" style="display:grid!important;width:28px!important;height:28px!important;place-items:center!important;padding:0!important;border:1px solid #aebba8!important;border-radius:50%!important;background:#fffdf8!important;color:#425043!important;font:700 10px/1 'Noto Sans KR',sans-serif!important;cursor:pointer!important">표</button></div>
 <header><div class="wrap">
@@ -28,11 +46,19 @@
 </div></header>
 <nav aria-label="현재 사조"><div class="wrap"><span class="art-atlas-movement-sticky-title">사실주의</span></div></nav>
 <main>
-<section id="movement-learning-guide"><div class="wrap">
-<h2>먼저 이렇게 읽어 보세요</h2>
-<div class="features"><article class="feature"><b>01 · 선택된 현실</b><p>정밀한 묘사보다 어떤 사람·노동·장소가 회화의 중심이 되는지 본다.</p></article><article class="feature"><b>02 · 물질의 무게</b><p>흙, 낡은 옷, 도구, 피곤한 자세가 계급과 생활 조건을 어떻게 느끼게 하는지 찾는다.</p></article><article class="feature"><b>03 · 큰 형식</b><p>역사화만큼 큰 화면과 수평 군상이 평범한 사건에 어떤 공적 무게를 주는지 비교한다.</p></article><article class="feature"><b>04 · 다른 전개</b><p>프랑스의 현재 비판과 러시아 이동파의 윤리적·사회적 서사를 같은 양식으로 뭉뚱그리지 않는다.</p></article></div>
-<p class="callout"><strong>흔한 오해:</strong> 사진처럼 세밀해야 사실주의인 것은 아니다. 쿠르베와 도미에의 거친 붓질도 현실을 복사하기보다, 당대 사회가 보지 않던 사람과 장소를 보이게 하는 방법이었다.</p>
-</div></section>
+<section id="movement-learning-guide" data-art-atlas-learning-guide-version="1" data-art-atlas-content-source="data/art-movement-learning-guides.json">
+<div class="movement-learning-guide-inner">
+<p class="movement-learning-guide-kicker">상세 학습</p>
+<h2>초심자 학습 길잡이</h2>
+<p class="movement-learning-guide-orientation">19세기 사실주의는 동시대의 노동, 계급, 농촌과 도시를 역사화에 견줄 규모와 진지함으로 다루려 한 태도다. 닮게 그리는 기술보다 무엇을 중요한 현실로 선택했는지가 핵심이다.</p>
+<div class="movement-learning-guide-grid">
+<div class="movement-learning-guide-block"><h3>작품에서 볼 것</h3><ol><li>평범한 인물과 노동이 영웅이나 신화 없이 어떤 규모와 자세로 제시되는지 본다.</li><li>흙, 옷, 도구, 실내 같은 물질의 무게가 사회적 조건을 드러내는지 본다.</li><li>프랑스의 비판적 현재성과 러시아 이동파의 사회·도덕적 서사가 어떻게 다른지 비교한다.</li></ol></div>
+<div class="movement-learning-guide-block"><h3>핵심 범주 비교</h3><ul class="movement-learning-guide-categories"><li><strong>프랑스 사실주의</strong><span>이상화된 역사 대신 동시대 노동과 사회 현실을 대형 회화의 주제로 올렸다.</span></li><li><strong>러시아 사실주의</strong><span>순회전람회와 사회적 서사를 통해 노동, 빈곤, 제국의 현실을 비판적 공감으로 기록했다.</span></li></ul></div>
+<div class="movement-learning-guide-block movement-learning-guide-boundary"><h3>인접 사조와 구분</h3><p>아카데미즘의 이상화된 역사·신화 주제를 현재의 구체적 삶으로 대체하고, 인상주의는 같은 현재를 빛과 순간적 지각의 문제로 다시 바꾼다.</p><p><strong>흔한 오해:</strong> 사진처럼 정밀하면 사실주의라는 뜻이 아니다. 거친 붓질도 사실주의가 될 수 있으며, 작품은 현실을 그대로 복사하기보다 어떤 현실을 보이게 할지 선택한다.</p></div>
+</div>
+</div>
+</section>
+
 <section id="definition"><div class="wrap">
 <h2>1. 정의 — 이상적 과거 대신 동시대의 사회를 역사화로 만들다</h2>
 <p class="lead">1848년 혁명 전후의 프랑스에서 사실주의는 아카데미가 권위를 부여하던 신화·성서·고대 역사와 완결된 미를 비판적으로 상대화했다. 이는 아름다움을 거부한다는 뜻이 아니라, 농촌의 반복 노동과 도시의 계급 현실도 공적 회화가 다룰 만한 진실이라는 주장이다. 러시아에서는 검열과 제국의 불평등, 농노 해방 이후의 사회 변화 속에서 순회전람회와 결합해 더 윤리적이고 서사적인 현실 관찰로 발전했다.</p>

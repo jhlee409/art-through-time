@@ -2,10 +2,10 @@
   "dataSchema": 1,
   "metadata": {
     "createdAt": "2026-08-22T12:46:59.824Z",
-    "updatedAt": "2026-09-01T23:52:41.416Z",
+    "updatedAt": "2026-09-02T03:24:05.249Z",
     "createdBy": "jhlee409@gmail.com",
     "updatedBy": "jhlee409@gmail.com",
-    "revision": 961,
+    "revision": 963,
     "representativeContentSchema": 2
   },
   "artists": [
@@ -3354,11 +3354,11 @@
     },
     {
       "id": "artist-1786332007363",
+      "qid": "Q104884",
       "name": {
         "ko": "카스파 다비드 프리드리히",
         "en": "Caspar David Friedrich"
       },
-      "qid": "Q104884",
       "birth": 1774,
       "death": 1840,
       "nationality": {
@@ -3368,52 +3368,49 @@
       "profileResolved": true,
       "generated": {
         "schema": 20,
-        "file": "data/generated/qid-Q40599.json",
-        "fetchedAt": "2026-08-22T20:58:10.892Z"
+        "file": "data/generated/qid-Q104884.json",
+        "fetchedAt": "2026-08-22T20:57:07.530Z"
       },
       "metadata": {
         "createdAt": "2026-08-10T13:23:15.997Z",
-        "updatedAt": "2026-09-01T23:51:33.953Z",
+        "updatedAt": "2026-09-02T00:00:00.000Z",
         "createdBy": "migration-tool",
-        "updatedBy": "jhlee409@gmail.com"
+        "updatedBy": "art-atlas-repair"
       },
       "aliases": {
         "ko": [
-          "마네"
+          "프리드리히"
         ],
         "en": [
-          "Edouard Manet",
-          "Manet"
+          "Caspar David Friedrich",
+          "Friedrich"
         ]
       },
       "movement": {
-        "ko": "인상주의",
-        "en": "Impressionism"
+        "ko": "독일 낭만주의",
+        "en": "German Romanticism"
       },
       "artistSummary": {
         "ko": [],
         "en": []
       },
       "movements": [
-        "인상주의"
+        "독일 낭만주의"
       ],
       "submovements": [],
-      "primaryMovement": "인상주의",
+      "primaryMovement": "독일 낭만주의",
       "regions": [
-        "프랑스"
+        "독일"
       ],
       "periods": [
-        "1780-1850",
-        "1830-1880",
-        "1850-1900",
-        "1880-1910"
+        "1780-1850"
       ],
-      "activeFrom": 1852,
-      "activeTo": 1883,
-      "listName": {
-        "ko": "마네"
-      },
-      "workCount": 86,
+      "activeFrom": 1798,
+      "activeTo": 1840,
+      "featuredWorkIds": [
+        "wikidata-Q311243"
+      ],
+      "workCount": 63,
       "_detailLoaded": false
     },
     {
@@ -4990,14 +4987,14 @@
         "wikidata": "https://www.wikidata.org/wiki/Q155733"
       },
       "featuredWorkIds": [
-        "artist-Q155733-representative-work"
+        "kauffman-judgment-paris-1781"
       ],
       "profileResolved": true,
       "metadata": {
         "createdAt": "2026-08-24T00:00:00Z",
-        "updatedAt": "2026-08-28T00:00:00.000Z",
+        "updatedAt": "2026-09-02T03:24:05.249Z",
         "createdBy": "manual entry",
-        "updatedBy": "phase-5-rebuild"
+        "updatedBy": "jhlee409@gmail.com"
       },
       "movements": [
         "신고전주의"
@@ -5019,7 +5016,7 @@
       "listName": {
         "ko": "카우프만"
       },
-      "workCount": 1,
+      "workCount": 15,
       "_detailLoaded": false
     },
     {
@@ -14425,6 +14422,69 @@
         ]
       },
       "workCount": 1,
+      "_detailLoaded": false
+    },
+    {
+      "id": "artist-Q40599",
+      "qid": "Q40599",
+      "name": {
+        "ko": "에두아르 마네",
+        "en": "Édouard Manet"
+      },
+      "birth": 1832,
+      "death": 1883,
+      "nationality": {
+        "ko": "프랑스",
+        "en": "France"
+      },
+      "profileResolved": true,
+      "generated": {
+        "schema": 20,
+        "file": "data/generated/qid-Q40599.json",
+        "fetchedAt": "2026-08-22T20:58:10.892Z"
+      },
+      "metadata": {
+        "createdAt": "2026-08-10T13:23:15.997Z",
+        "updatedAt": "2026-09-02T00:00:00.000Z",
+        "createdBy": "migration-tool",
+        "updatedBy": "art-atlas-repair"
+      },
+      "aliases": {
+        "ko": [
+          "마네"
+        ],
+        "en": [
+          "Edouard Manet",
+          "Manet"
+        ]
+      },
+      "movement": {
+        "ko": "인상주의",
+        "en": "Impressionism"
+      },
+      "artistSummary": {
+        "ko": [],
+        "en": []
+      },
+      "movements": [
+        "인상주의"
+      ],
+      "submovements": [],
+      "primaryMovement": "인상주의",
+      "regions": [
+        "프랑스"
+      ],
+      "periods": [
+        "1850-1900",
+        "1880-1910"
+      ],
+      "activeFrom": 1852,
+      "activeTo": 1883,
+      "listName": {
+        "ko": "마네"
+      },
+      "featuredWorkIds": [],
+      "workCount": 71,
       "_detailLoaded": false
     }
   ],

@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-01T23:50:48.764Z",
+  "generatedAt": "2026-09-02T03:33:49.122Z",
   "namingStandard": "shortArtist_titleFirst3Words_startYear__workId.ext",
   "stats": {
-    "images": 1736,
-    "linkedImages": 1672,
-    "unlinkedImages": 64,
-    "standardNames": 123,
+    "images": 1750,
+    "linkedImages": 1730,
+    "unlinkedImages": 20,
+    "standardNames": 137,
     "legacyNames": 1613,
     "newNonstandardNames": 0,
     "duplicateHashGroups": 1
@@ -44,7 +44,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.456Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q1197913",
+          "workQid": "Q1197913",
+          "titleKo": "The Watzmann",
+          "titleEn": "The Watzmann",
+          "year": 1820
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q1198515.jpg",
@@ -55,7 +67,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.458Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q1198515",
+          "workQid": "Q1198515",
+          "titleKo": "Solitary Tree",
+          "titleEn": "Solitary Tree",
+          "year": 1822
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q1214313.jpg",
@@ -66,7 +90,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.460Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q1214313",
+          "workQid": "Q1214313",
+          "titleKo": "Life stages",
+          "titleEn": "Life stages",
+          "year": 1834
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q1423223.jpg",
@@ -77,7 +113,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.461Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q1423223",
+          "workQid": "Q1423223",
+          "titleKo": "바다 위의 달돋이",
+          "titleEn": "Moonrise over the Sea",
+          "year": 1822
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q1451490.jpg",
@@ -88,7 +136,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.462Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q1451490",
+          "workQid": "Q1451490",
+          "titleKo": "Woman at a Window",
+          "titleEn": "Woman at a Window",
+          "year": 1822
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q1545495.jpg",
@@ -99,7 +159,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.463Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q1545495",
+          "workQid": "Q1545495",
+          "titleKo": "The Port of Greifswald",
+          "titleEn": "The Port of Greifswald",
+          "year": 1819
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q1587929.jpg",
@@ -133,7 +205,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.465Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q15971584",
+          "workQid": "Q15971584",
+          "titleKo": "Woman in Front of the Setting Sun",
+          "titleEn": "Woman in Front of the Setting Sun",
+          "year": 1818
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q16038520.jpg",
@@ -236,7 +320,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.470Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q16331419",
+          "workQid": "Q16331419",
+          "titleKo": "Daytime cycle: The Evening",
+          "titleEn": "Daytime cycle: The Evening",
+          "year": 1821
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q1652361.jpg",
@@ -270,7 +366,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.475Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q17321856",
+          "workQid": "Q17321856",
+          "titleKo": "정원 정자",
+          "titleEn": "Gazebo",
+          "year": 1818
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q17325449.jpg",
@@ -281,7 +389,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.477Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q17325449",
+          "workQid": "Q17325449",
+          "titleKo": "Neubrandenburg",
+          "titleEn": "Neubrandenburg",
+          "year": 1810
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q17422064.jpg",
@@ -292,7 +412,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.479Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q17422064",
+          "workQid": "Q17422064",
+          "titleKo": "거인산맥의 엘데나 수도원 폐허",
+          "titleEn": "The ruins of Eldena in the Giant Mountains",
+          "year": 1830
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q17493547.jpg",
@@ -303,7 +435,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.479Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q17493547",
+          "workQid": "Q17493547",
+          "titleKo": "독립전쟁 전몰자의 묘지",
+          "titleEn": "Tombs of the Fallen in the Fight for Independence",
+          "year": 1812
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q1787143.jpg",
@@ -314,7 +458,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.481Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q1787143",
+          "workQid": "Q1787143",
+          "titleKo": "Chalk Cliffs at Ruegen",
+          "titleEn": "Chalk Cliffs at Ruegen",
+          "year": 1818
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q18021530.jpg",
@@ -325,7 +481,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.482Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q18021530",
+          "workQid": "Q18021530",
+          "titleKo": "Temple of Juno in Agrigento",
+          "titleEn": "Temple of Juno in Agrigento",
+          "year": 1828
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q18202267.jpg",
@@ -336,7 +504,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.482Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q18202267",
+          "workQid": "Q18202267",
+          "titleKo": "Neubrandenburg in Flames",
+          "titleEn": "Neubrandenburg in Flames",
+          "year": 1835
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q18602442.jpg",
@@ -393,7 +573,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.486Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q18602446",
+          "workQid": "Q18602446",
+          "titleKo": "Seaside moonlight",
+          "titleEn": "Seaside moonlight",
+          "year": 1818
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q18602448.jpg",
@@ -473,7 +665,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.490Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q18602473",
+          "workQid": "Q18602473",
+          "titleKo": "Winter landscape",
+          "titleEn": "Winter landscape",
+          "year": 1811
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q18602479.jpg",
@@ -484,7 +688,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.491Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q18602479",
+          "workQid": "Q18602479",
+          "titleKo": "항구의 밤",
+          "titleEn": "Night in a Harbour",
+          "year": 1818
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q18602483.jpg",
@@ -495,7 +711,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.493Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q18602483",
+          "workQid": "Q18602483",
+          "titleKo": "Moonrise over the Sea",
+          "titleEn": "Moonrise over the Sea",
+          "year": 1821
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q18602549.jpg",
@@ -517,7 +745,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.494Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q18602616",
+          "workQid": "Q18602616",
+          "titleKo": "Easter Morning",
+          "titleEn": "Easter Morning",
+          "year": 1828
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q18602629.jpg",
@@ -608,7 +848,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.499Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q18603131",
+          "workQid": "Q18603131",
+          "titleKo": "이른 아침 안개 속의 배",
+          "titleEn": "Ship in the early morning fog",
+          "year": 1821
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q18603190.jpg",
@@ -619,7 +871,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.500Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q18603190",
+          "workQid": "Q18603190",
+          "titleKo": "Swans in the reeds at the first dawn",
+          "titleEn": "Swans in the reeds at the first dawn",
+          "year": 1832
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q194137.jpg",
@@ -630,7 +894,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.501Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q194137",
+          "workQid": "Q194137",
+          "titleKo": "The Sea of Ice",
+          "titleEn": "The Sea of Ice",
+          "year": 1823
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q232084.jpg",
@@ -641,7 +917,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.502Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q232084",
+          "workQid": "Q232084",
+          "titleKo": "Two Men by the Sea",
+          "titleEn": "Two Men by the Sea",
+          "year": 1817
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q232087.jpg",
@@ -652,7 +940,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.504Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q232087",
+          "workQid": "Q232087",
+          "titleKo": "달을 바라보는 두 남자",
+          "titleEn": "Two men contemplating the Moon",
+          "year": 1819
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q24213.jpg",
@@ -663,7 +963,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.505Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q24213",
+          "workQid": "Q24213",
+          "titleKo": "Tree of crows",
+          "titleEn": "Tree of crows",
+          "year": 1822
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q2517970.jpg",
@@ -674,7 +986,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.506Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q2517970",
+          "workQid": "Q2517970",
+          "titleKo": "눈 덮인 오두막",
+          "titleEn": "Snowy cottage",
+          "year": 1827
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q311243.jpg",
@@ -685,7 +1009,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.507Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q311243",
+          "workQid": "Q311243",
+          "titleKo": "안개 바다 위의 방랑자",
+          "titleEn": "Wanderer above the Sea of Fog",
+          "year": 1818
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q3139782.jpg",
@@ -696,7 +1032,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.507Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q3139782",
+          "workQid": "Q3139782",
+          "titleKo": "달을 바라보는 남자와 여자",
+          "titleEn": "Man and Woman contemplating the moon",
+          "year": 1824
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q334360.jpg",
@@ -730,7 +1078,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.510Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q3649324",
+          "workQid": "Q3649324",
+          "titleKo": "숲속의 엽병",
+          "titleEn": "The Chasseur in the forest",
+          "year": 1813
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q3822640.jpg",
@@ -741,7 +1101,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.511Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q3822640",
+          "workQid": "Q3822640",
+          "titleKo": "드레스덴의 큰 울타리",
+          "titleEn": "The big enclosure",
+          "year": 1832
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q4126323.jpg",
@@ -752,7 +1124,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.513Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q4126323",
+          "workQid": "Q4126323",
+          "titleKo": "거인산맥의 추억",
+          "titleEn": "Memories of the Giant Mountains",
+          "year": 1835
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q4292427.jpg",
@@ -763,7 +1147,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.514Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q4292427",
+          "workQid": "Q4292427",
+          "titleKo": "Ruins of the Oybin",
+          "titleEn": "Ruins of the Oybin",
+          "year": 1835
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q4310993.jpg",
@@ -774,7 +1170,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.515Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q4310993",
+          "workQid": "Q4310993",
+          "titleKo": "범선 위에서",
+          "titleEn": "On a Sailing Ship",
+          "year": 1818
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q4346085.jpg",
@@ -785,7 +1193,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.516Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q4346085",
+          "workQid": "Q4346085",
+          "titleKo": "Segelschiff",
+          "titleEn": "Segelschiff",
+          "year": 1815
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q4478994.jpg",
@@ -796,7 +1216,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.517Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q4478994",
+          "workQid": "Q4478994",
+          "titleKo": "Morning in the Mountains",
+          "titleEn": "Morning in the Mountains",
+          "year": 1820
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q4531523.jpg",
@@ -807,7 +1239,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.518Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q4531523",
+          "workQid": "Q4531523",
+          "titleKo": "Sunset",
+          "titleEn": "Sunset",
+          "year": 1837
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q507120.jpg",
@@ -887,7 +1331,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.523Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q745415",
+          "workQid": "Q745415",
+          "titleKo": "Hutten's Grave",
+          "titleEn": "Hutten's Grave",
+          "year": 1823
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786332007363/wikidata-Q884782.jpg",
@@ -921,7 +1377,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:42.524Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-1786332007363",
+          "artistQid": "Q104884",
+          "artistNameKo": "카스파 다비드 프리드리히",
+          "artistNameEn": "Caspar David Friedrich",
+          "workId": "wikidata-Q999836",
+          "workQid": "Q999836",
+          "titleKo": "저녁 항구의 배들",
+          "titleEn": "Boats in the Harbour at Evening",
+          "year": 1828
+        }
+      ]
     },
     {
       "path": "data/images/artist-1786333400214/wikidata-Q18602436.jpg",
@@ -1055,10 +1523,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q123286344",
           "workQid": "Q123286344",
           "titleKo": "Study of the barmaid for Le Bar des Folies Bergères",
@@ -1078,10 +1546,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q124704977",
           "workQid": "Q124704977",
           "titleKo": "Woman Wearing a Hat with Silk Gauze",
@@ -1101,10 +1569,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q18413043",
           "workQid": "Q18413043",
           "titleKo": "Q18413043",
@@ -1124,10 +1592,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q20198758",
           "workQid": "Q20198758",
           "titleKo": "At the Milliner's (La Modiste)",
@@ -1147,10 +1615,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q2105269",
           "workQid": "Q2105269",
           "titleKo": "Portrait of Henri Rochefort",
@@ -1170,10 +1638,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q2997933",
           "workQid": "Q2997933",
           "titleKo": "투우 - 소의 죽음",
@@ -1193,10 +1661,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q43325424",
           "workQid": "Q43325424",
           "titleKo": "Emmanuel Chabrier (1841-1894)",
@@ -1216,10 +1684,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q66763675",
           "workQid": "Q66763675",
           "titleKo": "Q66763675",
@@ -1239,10 +1707,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q67089144",
           "workQid": "Q67089144",
           "titleKo": "Convolvulus and Nasturtiums",
@@ -1262,10 +1730,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q71715445",
           "workQid": "Q71715445",
           "titleKo": "Q71715445",
@@ -1285,10 +1753,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q96216689",
           "workQid": "Q96216689",
           "titleKo": "Mme. Martin in a Black Hat with Roses",
@@ -1308,10 +1776,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q978841",
           "workQid": "Q978841",
           "titleKo": "쁘띠몽루주의 눈 효과",
@@ -7702,10 +8170,32 @@
       ]
     },
     {
+      "path": "data/images/artist-Q155733/카우프만_고워 백작 가족_1772__kauffman-earl-gower-family-1772.jpg",
+      "filename": "카우프만_고워 백작 가족_1772__kauffman-earl-gower-family-1772.jpg",
+      "bytes": 2777564,
+      "sha256": "b193067cce3596cdfe9ee1acb8fe92edc40d648892cb7eb80bbeccb1f1611edc",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q155733",
+          "artistQid": "Q155733",
+          "artistNameKo": "앙겔리카 카우프만",
+          "artistNameEn": "Angelica Kauffman",
+          "workId": "kauffman-earl-gower-family-1772",
+          "workQid": "",
+          "titleKo": "고워 백작 가족",
+          "titleEn": "The Family of the Earl Gower",
+          "year": 1772
+        }
+      ]
+    },
+    {
       "path": "data/images/artist-Q155733/카우프만_그라쿠스 형제의 어머니_1785__artist-Q155733-representative-work.jpg",
       "filename": "카우프만_그라쿠스 형제의 어머니_1785__artist-Q155733-representative-work.jpg",
-      "bytes": 246615,
-      "sha256": "04b13c09119c93d40f21cae155a7b0c88a9cdcf7a9532982b587372c507c7903",
+      "bytes": 423478,
+      "sha256": "ecd41e8c1aa69db09b64a7d550f086c2b4fd7d25a27594c92f634edb88e46e83",
       "mime": "image/jpeg",
       "namingStatus": "standard",
       "aliases": [],
@@ -7720,6 +8210,292 @@
           "titleKo": "그라쿠스 형제의 어머니 코르넬리아",
           "titleEn": "Cornelia, Mother of the Gracchi",
           "year": 1785
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q155733/카우프만_미세눔의 소 플리니우스와 어머니_1785__kauffman-pliny-mother-1785.jpg",
+      "filename": "카우프만_미세눔의 소 플리니우스와 어머니_1785__kauffman-pliny-mother-1785.jpg",
+      "bytes": 6126951,
+      "sha256": "70301a671f03fb71287cb6b4b238d8babcaa587f391180ccf75493ce41312c3c",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q155733",
+          "artistQid": "Q155733",
+          "artistNameKo": "앙겔리카 카우프만",
+          "artistNameEn": "Angelica Kauffman",
+          "workId": "kauffman-pliny-mother-1785",
+          "workQid": "",
+          "titleKo": "미세눔의 소 플리니우스와 어머니",
+          "titleEn": "Pliny the Younger and His Mother at Misenum, 79 A.D.",
+          "year": 1785
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q155733/카우프만_베르길리우스가 아우구스투스와 옥타비아에게_1788__kauffman-virgil-aeneid-1788.jpg",
+      "filename": "카우프만_베르길리우스가 아우구스투스와 옥타비아에게_1788__kauffman-virgil-aeneid-1788.jpg",
+      "bytes": 494557,
+      "sha256": "22a89e2cb3b874e962d7816e863d8724548fe85e60dae8ee4f02c121b15ae174",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q155733",
+          "artistQid": "Q155733",
+          "artistNameKo": "앙겔리카 카우프만",
+          "artistNameEn": "Angelica Kauffman",
+          "workId": "kauffman-virgil-aeneid-1788",
+          "workQid": "",
+          "titleKo": "베르길리우스가 아우구스투스와 옥타비아에게 아이네이스를 읽다",
+          "titleEn": "Virgil Reading the Aeneid to Augustus and Octavia",
+          "year": 1788
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q155733/카우프만_보티건 왕과 로웨나_1770__kauffman-vortigern-rowena-1770.jpg",
+      "filename": "카우프만_보티건 왕과 로웨나_1770__kauffman-vortigern-rowena-1770.jpg",
+      "bytes": 106215,
+      "sha256": "5ee0bc072aa4d52422cf107270150770823ffd6742d0c64e1d41cb1c274d36b2",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q155733",
+          "artistQid": "Q155733",
+          "artistNameKo": "앙겔리카 카우프만",
+          "artistNameEn": "Angelica Kauffman",
+          "workId": "kauffman-vortigern-rowena-1770",
+          "workQid": "",
+          "titleKo": "보티건 왕과 로웨나",
+          "titleEn": "Vortigern and Rowena",
+          "year": 1770
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q155733/카우프만_비너스가 헬레네에게 파리스를_1790__kauffman-venus-helen-paris-1790.jpg",
+      "filename": "카우프만_비너스가 헬레네에게 파리스를_1790__kauffman-venus-helen-paris-1790.jpg",
+      "bytes": 409006,
+      "sha256": "62e65badb7af57328d255d708ea58af13b8dfa11a6bfe9ccbf96b8e382975b02",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q155733",
+          "artistQid": "Q155733",
+          "artistNameKo": "앙겔리카 카우프만",
+          "artistNameEn": "Angelica Kauffman",
+          "workId": "kauffman-venus-helen-paris-1790",
+          "workQid": "",
+          "titleKo": "비너스가 헬레네에게 파리스를 사랑하게 함",
+          "titleEn": "Venus Induces Helen to Fall in Love with Paris",
+          "year": 1790
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q155733/카우프만_우물가의 그리스도와 사마리아 여인_1796__kauffman-christ-samaritan-1796.jpeg",
+      "filename": "카우프만_우물가의 그리스도와 사마리아 여인_1796__kauffman-christ-samaritan-1796.jpeg",
+      "bytes": 508508,
+      "sha256": "a3560378f18245363835526456222558aea5f09de6ff9e3193c48e77ef5149d0",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q155733",
+          "artistQid": "Q155733",
+          "artistNameKo": "앙겔리카 카우프만",
+          "artistNameEn": "Angelica Kauffman",
+          "workId": "kauffman-christ-samaritan-1796",
+          "workQid": "",
+          "titleKo": "우물가의 그리스도와 사마리아 여인",
+          "titleEn": "Christ and the Samaritan Woman at the Well",
+          "year": 1796
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q155733/카우프만_음악과 회화 사이_1794__kauffman-self-portrait-music-painting-1794.jpg",
+      "filename": "카우프만_음악과 회화 사이_1794__kauffman-self-portrait-music-painting-1794.jpg",
+      "bytes": 239374,
+      "sha256": "720805c094e6480a87e5d1e747d7ea08758286a59679da41765f281ee13c860d",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q155733",
+          "artistQid": "Q155733",
+          "artistNameKo": "앙겔리카 카우프만",
+          "artistNameEn": "Angelica Kauffman",
+          "workId": "kauffman-self-portrait-music-painting-1794",
+          "workQid": "",
+          "titleKo": "음악과 회화 사이에서 망설이는 자화상",
+          "titleEn": "Self-Portrait Hesitating Between the Arts of Music and Painting",
+          "year": 1794
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q155733/카우프만_천사와 성가족_1780__kauffman-holy-family-angel-1780.jpg",
+      "filename": "카우프만_천사와 성가족_1780__kauffman-holy-family-angel-1780.jpg",
+      "bytes": 308534,
+      "sha256": "1a5a5936f9d4f7a17826f5e3d9ec51d4e46bad024b9df49da6d744b0af53676a",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q155733",
+          "artistQid": "Q155733",
+          "artistNameKo": "앙겔리카 카우프만",
+          "artistNameEn": "Angelica Kauffman",
+          "workId": "kauffman-holy-family-angel-1780",
+          "workQid": "",
+          "titleKo": "천사와 성가족",
+          "titleEn": "The Holy Family with an Angel",
+          "year": 1780
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q155733/카우프만_칼립소의 님프들과 텔레마코스_1782__kauffman-telemachus-nymphs-1782.jpg",
+      "filename": "카우프만_칼립소의 님프들과 텔레마코스_1782__kauffman-telemachus-nymphs-1782.jpg",
+      "bytes": 2217905,
+      "sha256": "3586759f7826f193a672e03e1e9a3d4480c2c73e1755cac715b22bd4aa5682ca",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q155733",
+          "artistQid": "Q155733",
+          "artistNameKo": "앙겔리카 카우프만",
+          "artistNameEn": "Angelica Kauffman",
+          "workId": "kauffman-telemachus-nymphs-1782",
+          "workQid": "",
+          "titleKo": "칼립소의 님프들과 텔레마코스",
+          "titleEn": "Telemachus and the Nymphs of Calypso",
+          "year": 1782
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q155733/카우프만_키르케와 오디세우스_1786__kauffman-circe-odysseus-1786.jpg",
+      "filename": "카우프만_키르케와 오디세우스_1786__kauffman-circe-odysseus-1786.jpg",
+      "bytes": 53918,
+      "sha256": "3b39ff1d739326f9f2e5ba67d0c58c17c50d0259a132c9e3aadd965c83505e85",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q155733",
+          "artistQid": "Q155733",
+          "artistNameKo": "앙겔리카 카우프만",
+          "artistNameEn": "Angelica Kauffman",
+          "workId": "kauffman-circe-odysseus-1786",
+          "workQid": "",
+          "titleKo": "키르케와 오디세우스",
+          "titleEn": "Ulysses and Circe",
+          "year": 1786
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q155733/카우프만_테세우스에게 버림받은 아리아드네_1774__kauffman-ariadne-theseus-1774.jpg",
+      "filename": "카우프만_테세우스에게 버림받은 아리아드네_1774__kauffman-ariadne-theseus-1774.jpg",
+      "bytes": 1753594,
+      "sha256": "290e0bd2e941df7001e24d68b598b8bb8cf11bff096a7fdc84a1c94a77ea57d8",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q155733",
+          "artistQid": "Q155733",
+          "artistNameKo": "앙겔리카 카우프만",
+          "artistNameEn": "Angelica Kauffman",
+          "workId": "kauffman-ariadne-theseus-1774",
+          "workQid": "",
+          "titleKo": "테세우스에게 버림받은 아리아드네",
+          "titleEn": "Ariadne Abandoned by Theseus",
+          "year": 1774
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q155733/카우프만_텔레마코스의 슬픔_1783__kauffman-telemachus-sorrow-1783.jpg",
+      "filename": "카우프만_텔레마코스의 슬픔_1783__kauffman-telemachus-sorrow-1783.jpg",
+      "bytes": 1974929,
+      "sha256": "580cec9ce0ee1360e86836cccf2f5dda36bf285883774352d9af97d7b6975124",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q155733",
+          "artistQid": "Q155733",
+          "artistNameKo": "앙겔리카 카우프만",
+          "artistNameEn": "Angelica Kauffman",
+          "workId": "kauffman-telemachus-sorrow-1783",
+          "workQid": "",
+          "titleKo": "텔레마코스의 슬픔",
+          "titleEn": "The Sorrow of Telemachus",
+          "year": 1783
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q155733/카우프만_파리스의 심판_1781__kauffman-judgment-paris-1781.jpg",
+      "filename": "카우프만_파리스의 심판_1781__kauffman-judgment-paris-1781.jpg",
+      "bytes": 418429,
+      "sha256": "b86b3575c8d3543eb8a858249b7fe6200a8ec4b199979597afabcbd6fe95faf1",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q155733",
+          "artistQid": "Q155733",
+          "artistNameKo": "앙겔리카 카우프만",
+          "artistNameEn": "Angelica Kauffman",
+          "workId": "kauffman-judgment-paris-1781",
+          "workQid": "",
+          "titleKo": "파리스의 심판",
+          "titleEn": "The Judgment of Paris",
+          "year": 1781
+        }
+      ]
+    },
+    {
+      "path": "data/images/artist-Q155733/카우프만_페르디난도 4세의 가족_1782__kauffman-ferdinand-iv-family-1782.jpg",
+      "filename": "카우프만_페르디난도 4세의 가족_1782__kauffman-ferdinand-iv-family-1782.jpg",
+      "bytes": 2063092,
+      "sha256": "de8bf1a85dc2905971d6b2fb92be7909f783d91a101851a536045c1c7015aae5",
+      "mime": "image/jpeg",
+      "namingStatus": "standard",
+      "aliases": [],
+      "works": [
+        {
+          "artistId": "artist-Q155733",
+          "artistQid": "Q155733",
+          "artistNameKo": "앙겔리카 카우프만",
+          "artistNameEn": "Angelica Kauffman",
+          "workId": "kauffman-ferdinand-iv-family-1782",
+          "workQid": "",
+          "titleKo": "페르디난도 4세의 가족",
+          "titleEn": "Portrait of Ferdinand IV of Naples and His Family",
+          "year": 1782
         }
       ]
     },
@@ -16821,10 +17597,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q113262",
           "workQid": "Q113262",
           "titleKo": "마호 복장을 한 청년",
@@ -16844,10 +17620,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q1163504",
           "workQid": "Q1163504",
           "titleKo": "오페라 극장의 가면무도회",
@@ -16865,7 +17641,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:44.196Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
+          "workId": "wikidata-Q1192090",
+          "workQid": "Q1192090",
+          "titleKo": "압생트를 마시는 사람",
+          "titleEn": "압생트를 마시는 사람",
+          "year": 1859
+        }
+      ]
     },
     {
       "path": "data/images/artist-Q40599/wikidata-Q1212098.jpg",
@@ -16878,10 +17666,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q1212098",
           "workQid": "Q1212098",
           "titleKo": "기찻길 (마네)",
@@ -16901,10 +17689,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q1212269",
           "workQid": "Q1212269",
           "titleKo": "막시밀리안 황제의 처형",
@@ -16924,10 +17712,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q1245354",
           "workQid": "Q1245354",
           "titleKo": "폴리베르제르의 바",
@@ -16947,10 +17735,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q1245431",
           "workQid": "Q1245431",
           "titleKo": "작업실에서의 점심 식사",
@@ -16968,7 +17756,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:44.204Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
+          "workId": "wikidata-Q126467",
+          "workQid": "Q126467",
+          "titleKo": "마네 부모님의 초상",
+          "titleEn": "마네 부모님의 초상",
+          "year": 1860
+        }
+      ]
     },
     {
       "path": "data/images/artist-Q40599/wikidata-Q152509.jpg",
@@ -16981,10 +17781,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q152509",
           "workQid": "Q152509",
           "titleKo": "풀밭 위의 점심 식사",
@@ -17004,10 +17804,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q15290965",
           "workQid": "Q15290965",
           "titleKo": "보트 타기",
@@ -17027,10 +17827,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q154653",
           "workQid": "Q154653",
           "titleKo": "키어사지호와 앨라배마호의 해전",
@@ -17050,10 +17850,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q1551926",
           "workQid": "Q1551926",
           "titleKo": "스테판 말라르메의 초상",
@@ -17073,10 +17873,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q15917726",
           "workQid": "Q15917726",
           "titleKo": "여종업원 (마네)",
@@ -17096,10 +17896,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q15973357",
           "workQid": "Q15973357",
           "titleKo": "아스파라거스 한 가지",
@@ -17119,10 +17919,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q1632817",
           "workQid": "Q1632817",
           "titleKo": "페르 라튀유 식당에서",
@@ -17142,10 +17942,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q17495108",
           "workQid": "Q17495108",
           "titleKo": "부채를 든 베르트 모리조",
@@ -17176,10 +17976,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q18208688",
           "workQid": "Q18208688",
           "titleKo": "토르토니에서",
@@ -17199,10 +17999,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q18223037",
           "workQid": "Q18223037",
           "titleKo": "아스파라거스 다발",
@@ -17220,7 +18020,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:44.231Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
+          "workId": "wikidata-Q1844748",
+          "workQid": "Q1844748",
+          "titleKo": "칼을 든 소년",
+          "titleEn": "칼을 든 소년",
+          "year": 1861
+        }
+      ]
     },
     {
       "path": "data/images/artist-Q40599/wikidata-Q18620351.jpg",
@@ -17233,10 +18045,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q18620351",
           "workQid": "Q18620351",
           "titleKo": "봄",
@@ -17256,10 +18068,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q18625546",
           "workQid": "Q18625546",
           "titleKo": "가을",
@@ -17277,7 +18089,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:44.235Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
+          "workId": "wikidata-Q2024709",
+          "workQid": "Q2024709",
+          "titleKo": "스페인 가수",
+          "titleEn": "스페인 가수",
+          "year": 1860
+        }
+      ]
     },
     {
       "path": "data/images/artist-Q40599/wikidata-Q210277.jpg",
@@ -17290,10 +18114,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q210277",
           "workQid": "Q210277",
           "titleKo": "튈르리 정원의 음악회",
@@ -17313,10 +18137,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q2494850",
           "workQid": "Q2494850",
           "titleKo": "장례식 (마네)",
@@ -17336,10 +18160,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q2529703",
           "workQid": "Q2529703",
           "titleKo": "에밀 졸라의 초상",
@@ -17359,10 +18183,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q26250",
           "workQid": "Q26250",
           "titleKo": "피리 부는 소년",
@@ -17382,10 +18206,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q26689493",
           "workQid": "Q26689493",
           "titleKo": "카페 콩세르의 한 구석",
@@ -17405,10 +18229,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q2752079",
           "workQid": "Q2752079",
           "titleKo": "천사들과 함께 있는 죽은 그리스도",
@@ -17428,10 +18252,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q2860945",
           "workQid": "Q2860945",
           "titleKo": "아르장퇴유 (마네)",
@@ -17451,10 +18275,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q2899286",
           "workQid": "Q2899286",
           "titleKo": "제비꽃 다발을 든 베르트 모리조",
@@ -17474,10 +18298,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q2974978",
           "workQid": "Q2974978",
           "titleKo": "달빛 아래 불로뉴 항구",
@@ -17497,10 +18321,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q2977843",
           "workQid": "Q2977843",
           "titleKo": "떠다니는 작업실에서 그림 그리는 모네",
@@ -17518,7 +18342,19 @@
       "namingStatus": "legacy",
       "grandfatheredAt": "2026-08-29T08:11:44.249Z",
       "aliases": [],
-      "works": []
+      "works": [
+        {
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
+          "workId": "wikidata-Q3088614",
+          "workQid": "Q3088614",
+          "titleKo": "놀란 님프",
+          "titleEn": "놀란 님프",
+          "year": 1860
+        }
+      ]
     },
     {
       "path": "data/images/artist-Q40599/wikidata-Q3178376.jpg",
@@ -17531,10 +18367,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q3178376",
           "workQid": "Q3178376",
           "titleKo": "독서",
@@ -17554,10 +18390,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q3203711",
           "workQid": "Q3203711",
           "titleKo": "죽은 투우사",
@@ -17577,10 +18413,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q3205630",
           "workQid": "Q3205630",
           "titleKo": "로슈포르의 탈출",
@@ -17600,10 +18436,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q3222563",
           "workQid": "Q3222563",
           "titleKo": "포크스턴행 증기선의 출발",
@@ -17623,10 +18459,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q3224381",
           "workQid": "Q3224381",
           "titleKo": "인사하는 투우사",
@@ -17646,10 +18482,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q3227448",
           "workQid": "Q3227448",
           "titleKo": "자살",
@@ -17669,10 +18505,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q3231193",
           "workQid": "Q3231193",
           "titleKo": "비눗방울 부는 소년",
@@ -17692,10 +18528,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q3505997",
           "workQid": "Q3505997",
           "titleKo": "피아노를 치는 마네 부인",
@@ -17715,10 +18551,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q39226",
           "workQid": "Q39226",
           "titleKo": "거리의 가수",
@@ -17738,10 +18574,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q4373335",
           "workQid": "Q4373335",
           "titleKo": "배를 깎는 소년",
@@ -17761,10 +18597,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q44124",
           "workQid": "Q44124",
           "titleKo": "롤라 드 발랑스",
@@ -17784,10 +18620,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q481454",
           "workQid": "Q481454",
           "titleKo": "온실에서",
@@ -17807,10 +18643,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q536024",
           "workQid": "Q536024",
           "titleKo": "나나 (마네)",
@@ -17830,10 +18666,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q59815",
           "workQid": "Q59815",
           "titleKo": "늙은 음악가",
@@ -17853,10 +18689,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q661803",
           "workQid": "Q661803",
           "titleKo": "팔레트를 든 자화상 (마네)",
@@ -17876,10 +18712,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q665028",
           "workQid": "Q665028",
           "titleKo": "죽은 수리부엉이",
@@ -17899,10 +18735,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q72650",
           "workQid": "Q72650",
           "titleKo": "에스파다 복장을 한 빅토린 뫼랑",
@@ -17922,10 +18758,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q731639",
           "workQid": "Q731639",
           "titleKo": "자두 브랜디",
@@ -17945,10 +18781,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q737062",
           "workQid": "Q737062",
           "titleKo": "올랭피아",
@@ -17968,10 +18804,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q7720924",
           "workQid": "Q7720924",
           "titleKo": "카페 콩세르 (마네)",
@@ -17991,10 +18827,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q7744027",
           "workQid": "Q7744027",
           "titleKo": "불로뉴의 키어사지호",
@@ -18014,10 +18850,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q775407",
           "workQid": "Q775407",
           "titleKo": "발코니",
@@ -18037,10 +18873,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q7759156",
           "workQid": "Q7759156",
           "titleKo": "토끼",
@@ -18060,10 +18896,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q942276",
           "workQid": "Q942276",
           "titleKo": "롱샹의 경마",
@@ -18083,10 +18919,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q942523",
           "workQid": "Q942523",
           "titleKo": "1866년의 젊은 여인",
@@ -18106,10 +18942,10 @@
       "aliases": [],
       "works": [
         {
-          "artistId": "artist-1786332007363",
-          "artistQid": "Q104884",
-          "artistNameKo": "카스파 다비드 프리드리히",
-          "artistNameEn": "Caspar David Friedrich",
+          "artistId": "artist-Q40599",
+          "artistQid": "Q40599",
+          "artistNameKo": "에두아르 마네",
+          "artistNameEn": "Édouard Manet",
           "workId": "wikidata-Q957664",
           "workQid": "Q957664",
           "titleKo": "크로케 경기",

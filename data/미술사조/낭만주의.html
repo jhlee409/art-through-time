@@ -16,7 +16,25 @@
 <style id="art-atlas-movement-content-layout-style">body{--art-atlas-document-gutter:clamp(20px,3vw,48px)}header.hero>.wrap,main>section>.wrap{width:100%;max-width:none;margin-left:0;margin-right:0;padding-left:var(--art-atlas-document-gutter);padding-right:var(--art-atlas-document-gutter)}.hero p,.lead{max-width:none}main>section:not(#movement-learning-guide)>.wrap>h2,main>section:not(#movement-learning-guide)>h2{margin:0 0 1.15rem;font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,3.4vw,3.1rem);line-height:1.18}main>section:not(#movement-learning-guide)>.wrap>h3,main>section:not(#movement-learning-guide)>h3,.movement-enhancement .art-atlas-submovement-heading{font-size:clamp(1.3rem,2.25vw,1.75rem);line-height:1.32}.movement-enhancement .art-atlas-submovement-heading{margin-top:2.1rem;margin-bottom:.7rem}.movement-enhancement .art-atlas-submovement-heading+.movement-work-grid{margin-top:0}main>section:not(#movement-learning-guide)>.wrap>h4,main>section:not(#movement-learning-guide)>h4{font-size:1.12rem;line-height:1.42;margin:1.5rem 0 .5rem}main>section:not(#movement-learning-guide)>.wrap>p:not(.work-meta):not(.movement-selection-reason),main>section:not(#movement-learning-guide)>p:not(.work-meta):not(.movement-selection-reason){max-width:none;font-size:1.08rem;line-height:1.8}main>section:not(#movement-learning-guide)>.wrap>p:not(.work-meta):not(.movement-selection-reason)~p,main>section:not(#movement-learning-guide)>p:not(.work-meta):not(.movement-selection-reason)~p{font-size:1rem;line-height:1.75}.table-wrap,main>section>.wrap>table,main>section>table{width:100%;max-width:none}.table-wrap table,main>section>.wrap>table,main>section>table{width:100%}@media(max-width:720px){body{--art-atlas-document-gutter:18px}}</style>
 <style id="art-atlas-movement-card-image-fit-style">.movement-enhancement .movement-work-image>img{width:90%!important;height:90%!important;max-width:90%!important;max-height:90%!important;object-fit:contain!important}</style>
 <style id="art-atlas-movement-history-stage-image-fit-style">[data-art-atlas-visual-sequence] .history-stage-image,[data-art-atlas-visual-sequence] .movement-work-image{display:flex!important;align-items:center!important;justify-content:center!important;aspect-ratio:4/3!important;overflow:hidden!important;background:var(--black,#000)!important}[data-art-atlas-visual-sequence] .history-stage-image>img,[data-art-atlas-visual-sequence] .movement-work-image>img{width:90%!important;height:90%!important;max-width:90%!important;max-height:90%!important;object-fit:contain!important}</style>
-</head>
+<style id="art-atlas-learning-guide-style">
+#movement-learning-guide{padding:38px 0;border-top:1px solid var(--line,#d8d4cc);border-bottom:1px solid var(--line,#d8d4cc);background:var(--panel,#f7f7f5)}
+#movement-learning-guide .movement-learning-guide-inner{width:100%;max-width:none;margin:0;padding-left:var(--art-atlas-document-gutter,clamp(20px,3vw,48px));padding-right:var(--art-atlas-document-gutter,clamp(20px,3vw,48px))}
+#movement-learning-guide .movement-learning-guide-kicker{margin:0 0 .35rem;color:var(--accent,#8a641e);font-weight:800}
+#movement-learning-guide h2{margin:.1rem 0 1.15rem;font-size:clamp(1.9rem,3.4vw,3.1rem);line-height:1.18}
+#movement-learning-guide .movement-learning-guide-orientation{max-width:none;margin:0 0 1.5rem;font-size:1.08rem;line-height:1.8}
+#movement-learning-guide .movement-learning-guide-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 34px}
+#movement-learning-guide .movement-learning-guide-block{padding-top:14px;border-top:2px solid var(--line,#d8d4cc)}
+#movement-learning-guide .movement-learning-guide-block h3{margin:0 0 .65rem;font-size:clamp(1.3rem,2.25vw,1.75rem);line-height:1.32}
+#movement-learning-guide .movement-learning-guide-block ul,#movement-learning-guide .movement-learning-guide-block ol{margin:0;padding-left:1.35rem}
+#movement-learning-guide .movement-learning-guide-block li{margin:.42rem 0}
+#movement-learning-guide .movement-learning-guide-categories li>strong{display:block;color:var(--accent,#8a641e)}
+#movement-learning-guide .movement-learning-guide-categories li>span{display:block;margin-top:.12rem;word-break:keep-all;overflow-wrap:break-word}
+#movement-learning-guide .movement-learning-guide-boundary{grid-column:1/-1}
+#movement-learning-guide .movement-learning-guide-boundary p{max-width:none;margin:.45rem 0}
+#movement-learning-guide .movement-learning-guide-source{margin:1.15rem 0 0;font-size:.9rem;color:var(--muted,#666)}
+#movement-learning-guide .movement-learning-guide-source a{color:inherit}
+@media(max-width:720px){#movement-learning-guide .movement-learning-guide-grid{grid-template-columns:1fr}#movement-learning-guide .movement-learning-guide-boundary{grid-column:auto}}
+</style></head>
 <body>
 <div data-uhangul-document-toolbar role="group" aria-label="이름 표기 방식" style="position:fixed!important;top:14px!important;left:16px!important;z-index:2147483647!important;display:flex!important;gap:4px!important"><button type="button" data-uh-mode="korean" data-uh-local-mode="korean" aria-label="한국어" title="한국어" style="display:grid!important;width:28px!important;height:28px!important;place-items:center!important;padding:0!important;border:1px solid #aebba8!important;border-radius:50%!important;background:#fffdf8!important;color:#425043!important;font:700 10px/1 'Noto Sans KR',sans-serif!important;cursor:pointer!important">한</button><button type="button" data-uh-mode="uhangul" data-uh-local-mode="uhangul" aria-label="uHangul" title="uHangul" style="display:grid!important;width:28px!important;height:28px!important;place-items:center!important;padding:0!important;border:1px solid #aebba8!important;border-radius:50%!important;background:#fffdf8!important;color:#425043!important;font:700 10px/1 'Noto Sans KR',sans-serif!important;cursor:pointer!important">u</button><button type="button" data-uh-mode="original" data-uh-local-mode="original" aria-label="국제 표기" title="국제 표기" style="display:grid!important;width:28px!important;height:28px!important;place-items:center!important;padding:0!important;border:1px solid #aebba8!important;border-radius:50%!important;background:#fffdf8!important;color:#425043!important;font:700 10px/1 'Noto Sans KR',sans-serif!important;cursor:pointer!important">표</button></div>
 <header>
@@ -30,31 +48,18 @@
 <nav aria-label="현재 사조"><div class="wrap"><span class="art-atlas-movement-sticky-title">낭만주의</span></div></nav>
 <main>
 <section id="movement-learning-guide" data-art-atlas-learning-guide-version="1" data-art-atlas-content-source="data/art-movement-learning-guides.json">
-<div class="wrap">
-<p class="kicker">상세 학습</p>
-<h2>작품에서 먼저 볼 세 가지</h2>
-<div class="features">
-<article class="feature">
-<b>01 · 숭고</b>
-<p>인간보다 훨씬 큰 자연·폭풍·빛이 경외와 두려움, 고독을 만드는지 본다.</p>
-</article>
-<article class="feature">
-<b>02 · 역사적 현재</b>
-<p>혁명, 전쟁, 식민·제국의 폭력이 고대의 모범이 아니라 동시대의 감정으로 그려지는지 본다.</p>
-</article>
-<article class="feature">
-<b>03 · 색과 운동</b>
-<p>대각선, 연기, 빠른 붓질, 서로 부딪치는 색이 관람자를 사건 속으로 끌어들이는지 본다.</p>
-</article>
-<article class="feature">
-<b>04 · 지역적 변주</b>
-<p>국가명은 작가 분류가 아니라, 각기 다른 정치·경제·후원 조건이 낭만주의를 바꾼 배경으로 읽는다.</p>
-</article>
+<div class="movement-learning-guide-inner">
+<p class="movement-learning-guide-kicker">상세 학습</p>
+<h2>초심자 학습 길잡이</h2>
+<p class="movement-learning-guide-orientation">낭만주의는 계몽주의적 보편 규칙만으로 설명되지 않는 상상력, 숭고한 자연, 역사, 민족, 혁명과 개인의 내면을 탐구한 국제적 흐름이다. 국가별 정치와 풍경 전통에 따라 모습이 크게 달라진다.</p>
+<div class="movement-learning-guide-grid">
+<div class="movement-learning-guide-block"><h3>작품에서 볼 것</h3><ol><li>인간보다 압도적으로 큰 자연과 빛이 경외·두려움·고독을 만드는지 본다.</li><li>격렬한 색과 붓질, 극적 사건이 정치적 감정과 역사 기억을 어떻게 움직이는지 본다.</li><li>독일·영국·프랑스·스페인의 자연, 산업, 혁명, 폭력에 대한 태도를 비교한다.</li></ol></div>
+<div class="movement-learning-guide-block"><h3>핵심 범주 비교</h3><ul class="movement-learning-guide-categories"><li><strong>독일 낭만주의</strong><span>고독한 인물과 광대한 자연을 통해 내면, 신앙, 숭고, 인간 인식의 한계를 탐구했다.</span></li><li><strong>영국 낭만주의</strong><span>빛, 대기, 폭풍, 산업의 힘을 형태가 녹아드는 색채로 표현하며 자연과 근대의 숭고를 탐구했다.</span></li><li><strong>프랑스 낭만주의</strong><span>혁명, 이국적 사건, 폭력과 자유를 강한 색채와 대각선 운동, 격렬한 감정으로 표현했다.</span></li><li><strong>스페인 낭만주의</strong><span>전쟁, 폭력, 미신, 개인의 공포를 어두운 색과 직접적인 현실감으로 다루며 낭만주의의 비판적 면을 발전시켰다.</span></li></ul></div>
+<div class="movement-learning-guide-block movement-learning-guide-boundary"><h3>인접 사조와 구분</h3><p>신고전주의의 명료한 보편 규범에 개별 경험과 역사적 특수성을 맞세웠지만 두 흐름은 같은 시대에 겹쳐 존재했다. 사실주의는 낭만적 영웅과 상상에서 동시대의 구체적 사회로 초점을 옮긴다.</p><p><strong>흔한 오해:</strong> 낭만주의는 사랑 이야기나 아름다운 풍경의 이름이 아니다. 공포, 폐허, 전쟁, 산업, 혁명처럼 근대의 어두운 경험도 핵심 주제다.</p></div>
 </div>
-<p class="callout">
-<strong>흔한 오해:</strong> 낭만주의는 사랑이나 아름다운 풍경의 동의어가 아니다. <a class="art-atlas-artist-link" href="../../index.html?artist=artist-romantic-goya" target="_blank" rel="noopener" data-artist-id="artist-romantic-goya" data-uh-original="Francisco Goya" data-uh-korean="프란시스코 고야" data-uh-display-korean="프란시스코 고야" data-uh-list-korean="고야" title="프란시스코 고야 연표로 이동">고야</a>의 전쟁, <a class="art-atlas-artist-link" href="../../index.html?artist=artist-romantic-gericault" target="_blank" rel="noopener" data-artist-id="artist-romantic-gericault" data-uh-original="Théodore Géricault" data-uh-korean="테오도르 제리코" data-uh-display-korean="테오도르 제리코" data-uh-list-korean="제리코" title="테오도르 제리코 연표로 이동">제리코</a>의 난파, <a class="art-atlas-artist-link" href="../../index.html?artist=artist-romantic-delacroix" target="_blank" rel="noopener" data-artist-id="artist-romantic-delacroix" data-uh-original="Eugène Delacroix" data-uh-korean="외젠 들라크루아" data-uh-display-korean="외젠 들라크루아" data-uh-list-korean="들라크루아" title="외젠 들라크루아 연표로 이동">들라크루아</a>의 혁명, <a class="art-atlas-artist-link" href="../../index.html?artist=artist-romantic-turner" target="_blank" rel="noopener" data-artist-id="artist-romantic-turner" data-uh-original="J. M. W. Turner" data-uh-korean="조지프 말로드 윌리엄 터너" data-uh-display-korean="조지프 말로드 윌리엄 터너" data-uh-list-korean="터너" title="조지프 말로드 윌리엄 터너 연표로 이동">터너</a>의 산업화된 바다도 이 흐름의 핵심이다.</p>
 </div>
 </section>
+
 <section id="definition">
 <div class="wrap">
 <h2>1. 정의 — 왜 신고전주의에 새 주장을 했을까</h2>

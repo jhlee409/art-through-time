@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "generatedAt": "2026-09-01T23:52:43.322Z",
+  "generatedAt": "2026-09-02T03:24:09.439Z",
   "description": "Foreign person names and art techniques paired with standard Korean and uHangul notation. File names are not scanned.",
   "records": [
     {
@@ -5970,6 +5970,7 @@
       "kind": "person",
       "sources": [
         "data/artists.json",
+        "data/techniques.json",
         "data/미술사조/르네상스.html"
       ],
       "status": "verified-pair"
@@ -12484,6 +12485,26 @@
         ]
       },
       "uhangul": "[Fㅣ]구[Rㅏ] 세[Rㅡ]펜티나",
+      "note": "auto-generated from original and Korean artist names",
+      "kind": "technique",
+      "sources": [
+        "data/techniques.json"
+      ],
+      "status": "verified-pair"
+    },
+    {
+      "id": "foreshortening",
+      "uhangulVersion": "0.7",
+      "original": "Foreshortening",
+      "language": "und",
+      "korean": "단축법",
+      "displayKorean": "단축법",
+      "listKorean": "단축법",
+      "aliases": {
+        "ko": [],
+        "en": []
+      },
+      "uhangul": "단축법",
       "note": "auto-generated from original and Korean artist names",
       "kind": "technique",
       "sources": [
